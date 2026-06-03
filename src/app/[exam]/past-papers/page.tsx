@@ -18,30 +18,31 @@ interface PaperState {
   notes?: string
 }
 
+interface Paper {
+  id: string
+  examId: string
+  subjectId: string
+  year: number
+  url: string | null
+  source: string
+  verified: boolean
+  note?: string
+}
+
 export default function PastPapersPage({ params }: Props) {
   const { exam } = use(params)
   const subjects = getSubjectsByExam(exam as ExamId)
   if (!subjects.length) notFound()
 
-  const papers = (
-    pastPapersData.papers as Array<{
-      id: string
-      examId: string
-      subjectId: string
-      year: number
-      url: string
-      source: string
-      verified: boolean
-      note?: string
-    }>
-  ).filter((p) => p.examId === exam)
-
+  const papers = (pastPapersData.papers as Paper[]).filter((p) => p.examId === exam)
   const years = [...new Set(papers.map((p) => p.year))].sort((a, b) => b - a)
+
   const [paperStates, setPaperStates] = useState<Record<string, PaperState>>(
     () => localStorageImpl.getState().paperPractice
   )
   const [editingNotes, setEditingNotes] = useState<string | null>(null)
   const [noteText, setNoteText] = useState('')
+  const [viewingPdf, setViewingPdf] = useState<{ url: string; title: string } | null>(null)
 
   function togglePracticed(paperId: string) {
     if (paperStates[paperId]) {
@@ -73,17 +74,47 @@ export default function PastPapersPage({ params }: Props) {
   ).length
 
   return (
-    <div className="space-y-6 max-w-4xl">
+    <div className="space-y-6 max-w-5xl">
       <div>
         <h1 className="text-2xl font-bold">{EXAM_LABELS[exam as ExamId]} — 考古題</h1>
         <p className="text-muted-foreground text-sm mt-1">
-          已練習 {practicedCount} / {papers.length} 份 · 點連結開啟PDF，勾選「已練習」記錄進度
-        </p>
-        <p className="text-xs text-muted-foreground mt-1">
-          ⚠ PDF連結待手動驗證（台大圖書館 / 高點）
+          已練習 {practicedCount} / {papers.filter((p) => p.url).length} 份 ·
+          點「查看」在網站內嵌入閱讀，點「✓ 已練習」記錄進度
         </p>
       </div>
 
+      {/* PDF 嵌入閱讀區 */}
+      {viewingPdf && (
+        <div className="rounded-lg border overflow-hidden">
+          <div className="flex items-center justify-between px-4 py-2 bg-muted/50 border-b">
+            <span className="text-sm font-medium">{viewingPdf.title}</span>
+            <div className="flex gap-2">
+              <a
+                href={viewingPdf.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs text-primary hover:underline"
+              >
+                新分頁開啟 ↗
+              </a>
+              <button
+                onClick={() => setViewingPdf(null)}
+                className="text-xs text-muted-foreground hover:text-foreground"
+              >
+                關閉 ✕
+              </button>
+            </div>
+          </div>
+          <iframe
+            src={viewingPdf.url}
+            className="w-full"
+            style={{ height: '80vh' }}
+            title={viewingPdf.title}
+          />
+        </div>
+      )}
+
+      {/* 年份 × 科目表格 */}
       <div className="overflow-x-auto">
         <table className="w-full text-sm border rounded-lg overflow-hidden">
           <thead>
@@ -99,37 +130,45 @@ export default function PastPapersPage({ params }: Props) {
           <tbody>
             {years.map((year, yi) => (
               <tr key={year} className={yi % 2 === 0 ? '' : 'bg-muted/20'}>
-                <td className="p-2.5 font-medium">{year}</td>
+                <td className="p-2.5 font-semibold">{year}</td>
                 {subjects.map((s) => {
                   const paper = papers.find((p) => p.year === year && p.subjectId === s.id)
-                  if (!paper)
+
+                  if (!paper) {
                     return (
                       <td key={s.id} className="p-2.5 text-muted-foreground text-xs">
                         —
                       </td>
                     )
+                  }
+
+                  if (!paper.url) {
+                    return (
+                      <td key={s.id} className="p-2.5">
+                        <Badge variant="outline" className="text-xs">尚未上架</Badge>
+                      </td>
+                    )
+                  }
 
                   const practiced = !!paperStates[paper.id]
                   const practiceData = paperStates[paper.id]
+                  const isViewing = viewingPdf?.url === paper.url
+                  const title = `${year}年 ${EXAM_LABELS[exam as ExamId]} ${s.name.split('（')[0]}`
 
                   return (
                     <td key={s.id} className="p-2.5">
-                      <div className="flex flex-col gap-1">
-                        <div className="flex items-center gap-2">
-                          <a
-                            href={paper.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-primary hover:underline text-xs"
-                          >
-                            開啟PDF →
-                          </a>
-                          {paper.source === 'gaodian' && (
-                            <Badge variant="outline" className="text-xs h-4">
-                              高點
-                            </Badge>
-                          )}
-                        </div>
+                      <div className="flex flex-col gap-1.5">
+                        <Button
+                          size="sm"
+                          variant={isViewing ? 'default' : 'outline'}
+                          className="h-6 text-xs px-2"
+                          onClick={() =>
+                            setViewingPdf(isViewing ? null : { url: paper.url!, title })
+                          }
+                        >
+                          {isViewing ? '收起' : '查看'}
+                        </Button>
+
                         <label className="flex items-center gap-1 cursor-pointer">
                           <input
                             type="checkbox"
@@ -143,6 +182,7 @@ export default function PastPapersPage({ params }: Props) {
                               : '已練習'}
                           </span>
                         </label>
+
                         {editingNotes === paper.id ? (
                           <div className="flex gap-1">
                             <input
@@ -150,9 +190,10 @@ export default function PastPapersPage({ params }: Props) {
                               value={noteText}
                               onChange={(e) => setNoteText(e.target.value)}
                               placeholder="筆記…"
-                              className="text-xs border rounded px-1 py-0.5 w-24 bg-background"
+                              className="text-xs border rounded px-1 py-0.5 w-20 bg-background"
                               onKeyDown={(e) => {
                                 if (e.key === 'Enter') saveNotes(paper.id)
+                                if (e.key === 'Escape') setEditingNotes(null)
                               }}
                             />
                             <button
@@ -163,15 +204,17 @@ export default function PastPapersPage({ params }: Props) {
                             </button>
                           </div>
                         ) : (
-                          <button
-                            onClick={() => {
-                              setEditingNotes(paper.id)
-                              setNoteText(practiceData?.notes ?? '')
-                            }}
-                            className="text-xs text-muted-foreground hover:text-foreground text-left"
-                          >
-                            {practiceData?.notes ? practiceData.notes : practiced ? '+ 筆記' : ''}
-                          </button>
+                          practiced && (
+                            <button
+                              onClick={() => {
+                                setEditingNotes(paper.id)
+                                setNoteText(practiceData?.notes ?? '')
+                              }}
+                              className="text-xs text-muted-foreground hover:text-foreground text-left"
+                            >
+                              {practiceData?.notes ? practiceData.notes : '+ 筆記'}
+                            </button>
+                          )
                         )}
                       </div>
                     </td>
