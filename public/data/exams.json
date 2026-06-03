@@ -1,0 +1,79 @@
+[
+  {
+    "id": "im",
+    "name": "台大資管所",
+    "code": "709",
+    "format": {
+      "writtenWeight": 60,
+      "oralWeight": 40,
+      "oralThreshold": 70,
+      "note": "筆試前48名進入口試；口試未達70分不錄取"
+    },
+    "subjects": ["im-english", "im-it", "im-mis", "im-stat"],
+    "admissions": [
+      {
+        "year": 115,
+        "applicants": 240,
+        "acceptedMain": 19,
+        "acceptedWaitlist": 10,
+        "admissionRate": 7.92,
+        "lowestScore": null,
+        "pending": true
+      },
+      {
+        "year": 113,
+        "applicants": null,
+        "acceptedMain": null,
+        "acceptedWaitlist": null,
+        "admissionRate": 6.29,
+        "lowestScore": 342.20,
+        "pending": false
+      }
+    ],
+    "admissionsPending": "115學年度最低錄取分數待放榜後確認",
+    "sourceNotes": [
+      "115報名240人：官方報名表（✅與設計文件一致）",
+      "名額19正取+10備取：115學年度官方簡章",
+      "113最低錄取分數342.20（含加權）：台大碩士班招生錄取情況一覽表",
+      "資料來源：aca.ntu.edu.tw 115報名人數表、113/114錄取情況一覽表（查驗日：2026-06-02）"
+    ]
+  },
+  {
+    "id": "cs",
+    "name": "台大資工所",
+    "code": "905",
+    "format": {
+      "writtenWeight": 100,
+      "note": "100%筆試，無口試（資工+AI碩聯招）；同分比序：數學(A) > 計結+OS > 資結+演算法"
+    },
+    "subjects": ["cs-english", "cs-math", "cs-arch", "cs-algo"],
+    "admissions": [
+      {
+        "year": 115,
+        "applicants": 1243,
+        "acceptedMain": 60,
+        "acceptedWaitlist": 75,
+        "admissionRate": 5.3,
+        "lowestScore": null,
+        "pending": true
+      },
+      {
+        "year": 114,
+        "applicants": 1375,
+        "acceptedMain": 58,
+        "acceptedWaitlist": null,
+        "admissionRate": 4.22,
+        "lowestScore": 190.80,
+        "pending": false
+      }
+    ],
+    "admissionsPending": "115學年度最低錄取分數待放榜後確認",
+    "sourceNotes": [
+      "115報名1243人（非1956）：官方報名表。1956為錯誤資料（疑似拼接不同年度）",
+      "名額66（資工所60+AI碩士班6）：115學年度官方簡章",
+      "114最低錄取分數190.80：台大碩士班招生錄取情況一覽表",
+      "「最低錄取分數未公開」說法不正確：台大每年於碩士班招生錄取情況一覽表逐所公布",
+      "資料來源：aca.ntu.edu.tw 115報名人數表、113/114錄取情況一覽表（查驗日：2026-06-02）"
+    ]
+  }
+]

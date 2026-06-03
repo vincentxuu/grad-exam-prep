@@ -1,0 +1,206 @@
+[
+  {
+    "id": "im-english",
+    "examId": "im",
+    "name": "英文(B)",
+    "weight": null,
+    "topics": [
+      {
+        "id": "im-en-reading",
+        "title": "閱讀測驗（含資訊科技相關題材）",
+        "importance": 4,
+        "subtopics": ["長篇文章理解", "科技議題文章", "商業英文"]
+      },
+      {
+        "id": "im-en-grammar",
+        "title": "文法選擇題",
+        "importance": 3,
+        "subtopics": ["詞性判斷", "時態用法", "介係詞"]
+      },
+      {
+        "id": "im-en-vocab",
+        "title": "字彙",
+        "importance": 3,
+        "subtopics": ["托福/GRE核心字彙", "資訊科技專業詞彙"]
+      }
+    ],
+    "materials": [
+      {
+        "title": "托福/GRE單字書",
+        "type": "book",
+        "note": "建議搭配歷屆考古題練習"
+      },
+      {
+        "title": "歷屆資管所英文考古題",
+        "type": "notes"
+      }
+    ]
+  },
+  {
+    "id": "im-it",
+    "examId": "im",
+    "name": "資訊科技概論（計概）",
+    "weight": 100,
+    "topics": [
+      {
+        "id": "im-it-arch",
+        "title": "電腦架構基礎",
+        "importance": 3,
+        "subtopics": ["進制轉換", "數值表示法", "布林代數"]
+      },
+      {
+        "id": "im-it-prog",
+        "title": "程式語言概念",
+        "importance": 3,
+        "subtopics": ["Java/C++基礎語法", "OOP概念（封裝/繼承/多型）", "程式執行流程"]
+      },
+      {
+        "id": "im-it-ds",
+        "title": "資料結構",
+        "importance": 4,
+        "subtopics": ["Tree基本概念", "排序演算法", "Graph基礎", "Hash Table"]
+      },
+      {
+        "id": "im-it-db",
+        "title": "資料庫",
+        "importance": 4,
+        "subtopics": ["SQL語法", "正規化（1NF/2NF/3NF）", "交易管理ACID", "ER Diagram"]
+      },
+      {
+        "id": "im-it-network",
+        "title": "網路",
+        "importance": 4,
+        "subtopics": ["OSI 7層模型", "TCP/IP協定", "HTTP/HTTPS", "DNS/DHCP"]
+      },
+      {
+        "id": "im-it-os",
+        "title": "作業系統",
+        "importance": 3,
+        "subtopics": ["Process與Thread", "Memory Management", "File System", "Scheduling"]
+      },
+      {
+        "id": "im-it-security",
+        "title": "資安",
+        "importance": 3,
+        "subtopics": ["加密技術（對稱/非對稱）", "防火牆", "常見攻擊（SQL Injection, XSS）"]
+      },
+      {
+        "id": "im-it-ai",
+        "title": "AI/ML（近年必考趨勢）",
+        "importance": 5,
+        "subtopics": ["監督/非監督學習", "CNN/RNN/Transformer", "生成式AI原理", "LLM與ChatGPT", "AI應用倫理"]
+      }
+    ],
+    "materials": [
+      {
+        "title": "Discovering Computers 中譯本",
+        "type": "book",
+        "note": "計概必讀，涵蓋大部分考點"
+      },
+      {
+        "title": "補習班計概講義（大碩/TKB）",
+        "type": "cram-school"
+      }
+    ]
+  },
+  {
+    "id": "im-mis",
+    "examId": "im",
+    "name": "資訊管理導論（MIS）",
+    "weight": 100,
+    "topics": [
+      {
+        "id": "im-mis-theory",
+        "title": "MIS基礎理論",
+        "importance": 5,
+        "subtopics": ["系統生命週期SDLC", "ERP/CRM/SCM系統", "資訊系統分類", "決策支援系統DSS"]
+      },
+      {
+        "id": "im-mis-strategy",
+        "title": "策略分析工具",
+        "importance": 5,
+        "subtopics": ["Porter 五力分析", "Porter 價值鏈（9大活動）", "PEST分析", "平衡計分卡BSC", "CSF關鍵成功因素", "SWOT分析"]
+      },
+      {
+        "id": "im-mis-digital",
+        "title": "數位轉型與新興技術",
+        "importance": 4,
+        "subtopics": ["IoT物聯網", "Blockchain區塊鏈", "AI在企業中的應用", "雲端運算", "大數據分析"]
+      },
+      {
+        "id": "im-mis-management",
+        "title": "管理理論",
+        "importance": 4,
+        "subtopics": ["創新擴散理論", "平台策略與網路效應", "知識管理", "敏捷開發"]
+      },
+      {
+        "id": "im-mis-current",
+        "title": "時事申論題（每年必考）",
+        "importance": 5,
+        "subtopics": ["生成式AI與ChatGPT對MIS的影響", "ESG永續發展", "元宇宙與AR/VR應用", "Gartner科技趨勢", "資安治理"]
+      }
+    ],
+    "materials": [
+      {
+        "title": "林東清《資訊管理》（e化企業核心競爭能力）",
+        "author": "林東清",
+        "type": "book",
+        "note": "台大資管所指定用書，必讀"
+      },
+      {
+        "title": "Laudon《管理資訊系統》中譯本",
+        "author": "Laudon & Laudon",
+        "type": "book",
+        "note": "聖經本，補充理論深度"
+      },
+      {
+        "title": "補習班MIS講義（大碩/TKB）",
+        "type": "cram-school",
+        "note": "MIS申論難自學，強烈建議上補習班"
+      }
+    ]
+  },
+  {
+    "id": "im-stat",
+    "examId": "im",
+    "name": "統計學",
+    "weight": null,
+    "topics": [
+      {
+        "id": "im-stat-descriptive",
+        "title": "描述性統計",
+        "importance": 4,
+        "subtopics": ["平均數/中位數/眾數", "標準差與變異數", "偏態與峰度", "直方圖與盒鬚圖"]
+      },
+      {
+        "id": "im-stat-probability",
+        "title": "機率基礎",
+        "importance": 4,
+        "subtopics": ["條件機率", "貝氏定理", "常見機率分佈（常態/二項/Poisson）"]
+      },
+      {
+        "id": "im-stat-inference",
+        "title": "推論統計",
+        "importance": 5,
+        "subtopics": ["抽樣分佈與中央極限定理", "信賴區間", "假設檢定（t檢定/z檢定）", "卡方檢定", "ANOVA"]
+      },
+      {
+        "id": "im-stat-regression",
+        "title": "迴歸分析",
+        "importance": 4,
+        "subtopics": ["單元線性迴歸", "多元線性迴歸", "迴歸係數解釋", "R²與F檢定"]
+      }
+    ],
+    "materials": [
+      {
+        "title": "補習班統計學講義",
+        "type": "cram-school",
+        "note": "台大獨有考科，需單獨準備；補習班講義最有針對性"
+      },
+      {
+        "title": "基礎統計學教材（任一版本）",
+        "type": "book"
+      }
+    ]
+  }
+]

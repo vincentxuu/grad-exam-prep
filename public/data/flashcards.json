@@ -1,0 +1,238 @@
+[
+  {
+    "id": "fc-im-mis-porter-vc",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-strategy",
+    "prompt": "Porter 價值鏈（Value Chain）有哪9大活動？請分為主要活動與支援活動。",
+    "answer": "主要活動（5）：進料後勤（Inbound Logistics）、生產作業（Operations）、出貨後勤（Outbound Logistics）、行銷與銷售（Marketing & Sales）、服務（Service）。\n支援活動（4）：企業基礎建設（Firm Infrastructure）、人力資源管理（Human Resource Management）、技術發展（Technology Development）、採購（Procurement）。",
+    "pastPaperRef": null
+  },
+  {
+    "id": "fc-im-mis-porter-5f",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-strategy",
+    "prompt": "Porter 五力分析的5種競爭力是什麼？",
+    "answer": "1. 現有競爭者的競爭強度（Rivalry Among Existing Competitors）\n2. 新進入者威脅（Threat of New Entrants）\n3. 替代品威脅（Threat of Substitutes）\n4. 買方議價力（Bargaining Power of Buyers）\n5. 供應商議價力（Bargaining Power of Suppliers）",
+    "pastPaperRef": null
+  },
+  {
+    "id": "fc-im-mis-bsc",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-strategy",
+    "prompt": "平衡計分卡（BSC, Balanced Scorecard）的4個構面是什麼？",
+    "answer": "1. 財務構面（Financial Perspective）：如ROI、利潤率\n2. 顧客構面（Customer Perspective）：如顧客滿意度、市占率\n3. 內部流程構面（Internal Business Process）：如生產效率、品質\n4. 學習與成長構面（Learning & Growth）：如員工培訓、IT能力",
+    "pastPaperRef": null
+  },
+  {
+    "id": "fc-im-mis-sdlc",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-theory",
+    "prompt": "系統生命週期（SDLC）的6個主要階段是什麼？",
+    "answer": "1. 系統規劃（System Planning）\n2. 系統分析（System Analysis）\n3. 系統設計（System Design）\n4. 系統開發/實作（System Development/Implementation）\n5. 系統測試（System Testing）\n6. 系統維護（System Maintenance）",
+    "pastPaperRef": null
+  },
+  {
+    "id": "fc-im-mis-erp",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-theory",
+    "prompt": "ERP、CRM、SCM 各代表什麼？其核心功能為何？",
+    "answer": "ERP（Enterprise Resource Planning）：整合企業內部資源（財務、人資、生產、採購），消除資訊孤島。\nCRM（Customer Relationship Management）：管理顧客互動與關係，提升顧客終身價值。\nSCM（Supply Chain Management）：優化從原料→生產→配送的整體供應鏈效率。",
+    "pastPaperRef": null
+  },
+  {
+    "id": "fc-im-it-osi",
+    "examId": "im",
+    "subjectId": "im-it",
+    "topicId": "im-it-network",
+    "prompt": "OSI 7層模型由下到上依序為何？各層主要功能？",
+    "answer": "1. 實體層（Physical）：位元傳輸，電纜/訊號\n2. 資料連結層（Data Link）：同網路節點間傳輸，MAC位址，偵錯\n3. 網路層（Network）：跨網路路由，IP位址\n4. 傳輸層（Transport）：端對端連線，TCP/UDP，分段重組\n5. 會談層（Session）：建立/維護/終止會談\n6. 表達層（Presentation）：資料格式轉換、加密、壓縮\n7. 應用層（Application）：使用者應用介面，HTTP/SMTP/FTP",
+    "pastPaperRef": null
+  },
+  {
+    "id": "fc-im-it-acid",
+    "examId": "im",
+    "subjectId": "im-it",
+    "topicId": "im-it-db",
+    "prompt": "資料庫交易的ACID特性為何？",
+    "answer": "A - Atomicity（原子性）：交易內所有操作全部成功或全部回滾，不可部分完成。\nC - Consistency（一致性）：交易前後資料庫必須保持一致狀態。\nI - Isolation（隔離性）：並行交易互不干擾，如同序列執行。\nD - Durability（持久性）：已提交的交易永久保存，即使系統崩潰也不遺失。",
+    "pastPaperRef": null
+  },
+  {
+    "id": "fc-im-it-ml-supervised",
+    "examId": "im",
+    "subjectId": "im-it",
+    "topicId": "im-it-ai",
+    "prompt": "監督式學習與非監督式學習的主要差異？各舉2個演算法例子。",
+    "answer": "監督式學習（Supervised Learning）：有標籤訓練資料，學習輸入→輸出的映射。\n例：線性迴歸、決策樹、SVM、神經網路。\n\n非監督式學習（Unsupervised Learning）：無標籤資料，自行發現資料結構或分布。\n例：K-means聚類、PCA降維、自動編碼器（Autoencoder）。",
+    "pastPaperRef": null
+  },
+  {
+    "id": "fc-im-stat-clt",
+    "examId": "im",
+    "subjectId": "im-stat",
+    "topicId": "im-stat-inference",
+    "prompt": "中央極限定理（Central Limit Theorem）說明什麼？有何實際意義？",
+    "answer": "定理：無論母體分佈為何，當樣本數n夠大（通常≥30），樣本平均數的抽樣分佈會趨近常態分佈 N(μ, σ²/n)。\n\n實際意義：即使母體非常態，也可用常態分佈的方法做推論（信賴區間、假設檢定），是統計推論的理論基礎。",
+    "pastPaperRef": null
+  },
+  {
+    "id": "fc-im-stat-hyp",
+    "examId": "im",
+    "subjectId": "im-stat",
+    "topicId": "im-stat-inference",
+    "prompt": "假設檢定的5個步驟為何？Type I 與 Type II Error的區別？",
+    "answer": "5步驟：\n1. 設定H₀（虛無假設）與H₁（對立假設）\n2. 選擇顯著水準α（常用0.05）\n3. 計算檢定統計量（t/z/χ²）\n4. 計算p-value或查臨界值\n5. 拒絕或不拒絕H₀\n\nType I Error（α）：H₀為真卻拒絕（棄真錯誤）\nType II Error（β）：H₀為假卻不拒絕（取偽錯誤）",
+    "pastPaperRef": null
+  },
+  {
+    "id": "fc-cs-algo-pipeline",
+    "examId": "cs",
+    "subjectId": "cs-arch",
+    "topicId": "cs-arch-pipeline",
+    "prompt": "5段Pipeline的各階段名稱為何？Data Hazard有哪3種？如何用forwarding解決？",
+    "answer": "5段：IF（取指）→ ID（解碼/讀暫存器）→ EX（執行/ALU）→ MEM（記憶體存取）→ WB（寫回暫存器）\n\nData Hazard：\n1. RAW（Read After Write）：最常見，後指令讀前指令尚未寫回的值\n2. WAR（Write After Read）：亂序執行才出現\n3. WAW（Write After Write）：亂序執行才出現\n\nForwarding：將EX/MEM/WB階段的結果直接回饋給EX階段的ALU輸入，避免stall。無法解決需要memory值的load-use hazard（需stall 1 cycle）。",
+    "pastPaperRef": null
+  },
+  {
+    "id": "fc-cs-algo-pipeline-stall",
+    "examId": "cs",
+    "subjectId": "cs-arch",
+    "topicId": "cs-arch-pipeline",
+    "prompt": "計算：5段pipeline，有forwarding，遇到load-use hazard需幾個stall cycles？請舉例說明。",
+    "answer": "需要 1 個 stall cycle。\n\n範例：\nlw $t1, 0($t0)   # 第1條：MEM階段才得到值\nadd $t2, $t1, $t3 # 第2條：EX階段需要$t1，但此時前一條僅完成EX，尚在MEM\n\n→ 需插入1個bubble（stall），等lw完成MEM後再forwarding給add的EX。",
+    "pastPaperRef": null
+  },
+  {
+    "id": "fc-cs-algo-sort-complexity",
+    "examId": "cs",
+    "subjectId": "cs-algo",
+    "topicId": "cs-algo-sort",
+    "prompt": "比較常見排序演算法的時間複雜度（最壞/平均/最佳）與空間複雜度及穩定性。",
+    "answer": "| 演算法 | 最壞 | 平均 | 最佳 | 空間 | 穩定 |\n|--------|------|------|------|------|------|\n| Bubble | O(n²) | O(n²) | O(n) | O(1) | ✅ |\n| Selection | O(n²) | O(n²) | O(n²) | O(1) | ❌ |\n| Insertion | O(n²) | O(n²) | O(n) | O(1) | ✅ |\n| Merge | O(nlogn) | O(nlogn) | O(nlogn) | O(n) | ✅ |\n| Quick | O(n²) | O(nlogn) | O(nlogn) | O(logn) | ❌ |\n| Heap | O(nlogn) | O(nlogn) | O(nlogn) | O(1) | ❌ |",
+    "pastPaperRef": null
+  },
+  {
+    "id": "fc-cs-algo-avl",
+    "examId": "cs",
+    "subjectId": "cs-algo",
+    "topicId": "cs-algo-tree",
+    "prompt": "AVL Tree的平衡條件為何？有哪4種旋轉情況？",
+    "answer": "平衡條件：每個節點的左右子樹高度差（Balance Factor）≤ 1，即 |h(left) - h(right)| ≤ 1。\n\n4種旋轉：\n1. LL型（右旋）：節點左側-左側插入\n2. RR型（左旋）：節點右側-右側插入\n3. LR型（先左旋再右旋）：節點左側-右側插入\n4. RL型（先右旋再左旋）：節點右側-左側插入",
+    "pastPaperRef": null
+  },
+  {
+    "id": "fc-cs-algo-master",
+    "examId": "cs",
+    "subjectId": "cs-algo",
+    "topicId": "cs-algo-complexity",
+    "prompt": "Master Theorem：T(n) = aT(n/b) + f(n) 的3種情況分別是什麼？",
+    "answer": "令 c = log_b(a)\n\nCase 1：f(n) = O(n^(c-ε))，ε>0 → T(n) = Θ(n^c)\n（遞迴成本主導）\n\nCase 2：f(n) = Θ(n^c)，可帶log → T(n) = Θ(n^c · log n)\n（兩者相同量級）\n\nCase 3：f(n) = Ω(n^(c+ε))，ε>0，且滿足regularity condition → T(n) = Θ(f(n))\n（分割成本主導）\n\n例：Merge Sort：T(n) = 2T(n/2) + n → a=2, b=2, c=1, f(n)=n → Case 2 → O(n log n)",
+    "pastPaperRef": null
+  },
+  {
+    "id": "fc-cs-algo-np",
+    "examId": "cs",
+    "subjectId": "cs-algo",
+    "topicId": "cs-algo-np",
+    "prompt": "P、NP、NP-Complete、NP-Hard 的定義為何？它們的關係圖如何？",
+    "answer": "P（Polynomial time）：可在多項式時間內「求解」的問題。\nNP（Nondeterministic Polynomial）：可在多項式時間內「驗證」解的問題（P ⊆ NP）。\nNP-Complete：在NP中且對所有NP問題都NP-Hard（即所有NP問題可多項式時間規約到它）。\nNP-Hard：所有NP問題可規約到它，但本身不一定在NP中（如Halting Problem）。\n\n關係：P ⊆ NP，NPC = NP ∩ NP-Hard\n未解之謎：P =? NP（業界共識 P≠NP）",
+    "pastPaperRef": null
+  },
+  {
+    "id": "fc-cs-os-semaphore",
+    "examId": "cs",
+    "subjectId": "cs-arch",
+    "topicId": "cs-os-sync",
+    "prompt": "用Semaphore實作Producer-Consumer（Bounded Buffer）問題，需要哪3個semaphore？",
+    "answer": "需要3個：\n1. mutex（初值=1）：互斥鎖，保護buffer操作\n2. empty（初值=N，N為buffer大小）：記錄空位數\n3. full（初值=0）：記錄已填充位數\n\nProducer：wait(empty) → wait(mutex) → [放入item] → signal(mutex) → signal(full)\nConsumer：wait(full) → wait(mutex) → [取出item] → signal(mutex) → signal(empty)",
+    "pastPaperRef": null
+  },
+  {
+    "id": "fc-cs-os-deadlock",
+    "examId": "cs",
+    "subjectId": "cs-arch",
+    "topicId": "cs-os-deadlock",
+    "prompt": "Deadlock的4個必要條件為何？Banker's Algorithm如何避免Deadlock？",
+    "answer": "4個必要條件（Coffman Conditions）：\n1. Mutual Exclusion：資源一次只能一個process使用\n2. Hold and Wait：process持有資源同時等待其他資源\n3. No Preemption：資源不可被強制剝奪\n4. Circular Wait：存在循環等待鏈\n\nBanker's Algorithm（避免）：\n分配前先模擬，確認分配後系統仍處於「安全狀態」（存在安全序列使所有process都能完成），才予分配。",
+    "pastPaperRef": null
+  },
+  {
+    "id": "fc-cs-math-eigen",
+    "examId": "cs",
+    "subjectId": "cs-math",
+    "topicId": "cs-math-la-eigen",
+    "prompt": "如何求矩陣A的特徵值與特徵向量？對角化的條件是什麼？",
+    "answer": "求特徵值：解特徵方程式 det(A - λI) = 0，得到λ₁, λ₂, ...\n求特徵向量：對每個λ，求解 (A - λI)x = 0 的非零解。\n\n對角化條件：n×n矩陣A可對角化 ⟺ A有n個線性獨立的特徵向量。\n充分條件：A有n個不同的特徵值（重根時需額外驗證）。\n若可對角化：A = PDP⁻¹，其中P的列為特徵向量，D為對角特徵值矩陣。",
+    "pastPaperRef": null
+  },
+  {
+    "id": "fc-cs-math-dp-lcs",
+    "examId": "cs",
+    "subjectId": "cs-algo",
+    "topicId": "cs-algo-dp",
+    "prompt": "LCS（Longest Common Subsequence）的DP遞迴式為何？時間複雜度？",
+    "answer": "設X長度m，Y長度n，dp[i][j] = LCS(X[1..i], Y[1..j])的長度。\n\n遞迴式：\n若X[i] = Y[j]：dp[i][j] = dp[i-1][j-1] + 1\n否則：dp[i][j] = max(dp[i-1][j], dp[i][j-1])\n\n邊界條件：dp[i][0] = dp[0][j] = 0\n時間複雜度：O(mn)；空間複雜度：O(mn)，可優化至O(min(m,n))。",
+    "pastPaperRef": null
+  },
+  {
+    "id": "fc-im-stat-regression",
+    "examId": "im", "subjectId": "im-stat", "topicId": "im-stat-regression",
+    "prompt": "簡單線性迴歸 Y = β₀ + β₁X + ε，β₁（斜率）的OLS估計式為何？R²代表什麼意義？",
+    "answer": "β₁ = Σ[(Xᵢ-X̄)(Yᵢ-Ȳ)] / Σ[(Xᵢ-X̄)²] = Cov(X,Y) / Var(X)\nβ₀ = Ȳ - β₁X̄\n\nR²（判定係數）= SSR/SST = 1 - SSE/SST\n意義：X能解釋Y變異量的比例（0~1）。R²=0.8表示80%的Y變異可由X解釋。\n\nF檢定：整體迴歸顯著性，H₀: β₁=0",
+    "pastPaperRef": null
+  },
+  {
+    "id": "fc-im-english-vocab",
+    "examId": "im", "subjectId": "im-english", "topicId": "im-en-vocab",
+    "prompt": "列出資訊管理領域常考英文詞彙：ERP、CRM、SCM、KPI、ROI、SLA 的全名。",
+    "answer": "ERP: Enterprise Resource Planning（企業資源規劃）\nCRM: Customer Relationship Management（顧客關係管理）\nSCM: Supply Chain Management（供應鏈管理）\nKPI: Key Performance Indicator（關鍵績效指標）\nROI: Return on Investment（投資報酬率）\nSLA: Service Level Agreement（服務層級協議）",
+    "pastPaperRef": null
+  },
+  {
+    "id": "fc-im-english-reading",
+    "examId": "im", "subjectId": "im-english", "topicId": "im-en-reading",
+    "prompt": "英文閱讀測驗：常見的科技文章句型結構。「despite the fact that」和「in contrast to」分別表達什麼邏輯關係？",
+    "answer": "despite the fact that（儘管…事實）→ 讓步/轉折：前後語意相反\n例：Despite the fact that AI adoption has accelerated, many companies still lack the infrastructure to support it.\n\nin contrast to（相比/對照）→ 對比關係：強調兩者差異\n例：In contrast to traditional CRM systems, AI-powered platforms can predict customer behavior proactively.\n\n閱讀策略：先看題目，找關鍵詞定位，注意邏輯轉折詞（however, although, whereas）",
+    "pastPaperRef": null
+  },
+  {
+    "id": "fc-im-english-grammar",
+    "examId": "im", "subjectId": "im-english", "topicId": "im-en-grammar",
+    "prompt": "分辨 which vs that 的用法：限定子句與非限定子句的差異？",
+    "answer": "限定子句（Restrictive clause）用 that：\n→ 子句限定了先行詞的範圍，去掉子句意思改變\n→ 例：The system that we implemented last year is working well.\n\n非限定子句（Non-restrictive clause）用 which + 逗號：\n→ 子句是補充說明，去掉不影響主句意思\n→ 例：The ERP system, which costs millions, has been delayed.\n\n記憶口訣：that 選定人，which 多描述，人則用 who。",
+    "pastPaperRef": null
+  },
+  {
+    "id": "fc-cs-english-academic",
+    "examId": "cs", "subjectId": "cs-english", "topicId": "cs-en-vocab",
+    "prompt": "電腦科學英文：解釋 latency vs throughput、synchronous vs asynchronous、deterministic vs non-deterministic 的差別。",
+    "answer": "Latency（延遲）vs Throughput（吞吐量）：\n- Latency: 單次請求的完成時間（越低越好）\n- Throughput: 單位時間內處理的請求數（越高越好）\n\nSynchronous（同步）vs Asynchronous（非同步）：\n- Sync: 呼叫者等待結果後才繼續\n- Async: 呼叫後不等待，結果透過callback/promise回傳\n\nDeterministic（確定性）vs Non-deterministic（非確定性）：\n- Det: 相同輸入永遠得到相同輸出（P class）\n- Non-det: 可同時探索多條路徑（NP class概念）",
+    "pastPaperRef": null
+  },
+  {
+    "id": "fc-cs-english-reading",
+    "examId": "cs", "subjectId": "cs-english", "topicId": "cs-en-reading",
+    "prompt": "技術論文英文：abstract中常出現的4個部分是什麼？如何快速理解一篇CS論文的核心貢獻？",
+    "answer": "Abstract 4部分：\n1. Motivation/Problem（研究動機/問題）\n2. Method/Approach（方法/解法）\n3. Results/Findings（結果/發現）\n4. Conclusion/Implication（結論/意涵）\n\n快速閱讀策略（SQ3R）：\n1. 看標題+關鍵詞 → 判斷主題\n2. 讀Abstract → 掌握貢獻\n3. 看Introduction結尾 → 通常列出貢獻\n4. 看Conclusion → 確認結論\n5. 視需要讀Experiment結果",
+    "pastPaperRef": null
+  },
+  {
+    "id": "fc-cs-math-combinations",
+    "examId": "cs", "subjectId": "cs-math", "topicId": "cs-math-disc-comb",
+    "prompt": "排容原理（Inclusion-Exclusion Principle）的公式為何？用來解決什麼類型的問題？",
+    "answer": "|A₁∪A₂∪...∪Aₙ| = Σ|Aᵢ| - Σ|Aᵢ∩Aⱼ| + Σ|Aᵢ∩Aⱼ∩Aₖ| - ... + (-1)^(n+1)|A₁∩...∩Aₙ|\n\n用途：計算「至少」滿足某條件的計數問題\n\n例：1到100中，能被2或3整除的數有多少？\n|A|=50（被2整除），|B|=33（被3整除），|A∩B|=16（被6整除）\n|A∪B| = 50+33-16 = 67\n\n錯位排列（Derangement）也用排容：D(n) = n!·Σ(-1)^k/k! for k=0..n",
+    "pastPaperRef": null
+  },
+  {
+    "id": "fc-cs-math-gram-schmidt",
+    "examId": "cs", "subjectId": "cs-math", "topicId": "cs-math-la-inner",
+    "prompt": "Gram-Schmidt 正交化的步驟為何？給定向量集 {v₁, v₂}，求正交基底。",
+    "answer": "步驟（以2個向量為例）：\n1. u₁ = v₁\n2. u₂ = v₂ - proj_{u₁}(v₂) = v₂ - (v₂·u₁/|u₁|²)u₁\n3. 正規化：e₁ = u₁/|u₁|，e₂ = u₂/|u₂|\n\n一般式：uₖ = vₖ - Σᵢ₌₁^(k-1) (vₖ·uᵢ/|uᵢ|²)uᵢ\n\n應用：\n- QR分解的基礎\n- 最小平方法求近似解\n- 投影矩陣 P = UUᵀ（U為正規正交列）",
+    "pastPaperRef": null
+  }
+]

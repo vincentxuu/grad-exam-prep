@@ -1,0 +1,144 @@
+[
+  {
+    "examId": "im",
+    "totalMonths": 8,
+    "examWindow": "次年2月",
+    "phases": [
+      {
+        "id": "im-phase-1",
+        "name": "第一階段：正課基礎",
+        "monthStart": 1,
+        "monthEnd": 3,
+        "subjectTags": ["im-it", "im-mis"],
+        "note": "補習班春季正課，建立計概與MIS基礎框架",
+        "tasks": [
+          { "id": "im-1-1", "description": "報名補習班春季班（大碩/TKB）", "subjectTag": null },
+          { "id": "im-1-2", "description": "完成計概課程：電腦架構、程式語言、資料結構", "subjectTag": "im-it" },
+          { "id": "im-1-3", "description": "完成計概課程：資料庫、網路、作業系統", "subjectTag": "im-it" },
+          { "id": "im-1-4", "description": "完成MIS課程：基礎理論（SDLC、ERP/CRM/SCM）", "subjectTag": "im-mis" },
+          { "id": "im-1-5", "description": "完成MIS課程：策略分析工具（Porter、PEST、BSC）", "subjectTag": "im-mis" },
+          { "id": "im-1-6", "description": "開始整理MIS重點筆記（手寫或Notion）", "subjectTag": "im-mis" }
+        ]
+      },
+      {
+        "id": "im-phase-2",
+        "name": "第二階段：強化與時事",
+        "monthStart": 4,
+        "monthEnd": 5,
+        "subjectTags": ["im-mis", "im-stat", "im-it"],
+        "note": "暑期班補強，開始累積時事筆記，導入統計學",
+        "tasks": [
+          { "id": "im-2-1", "description": "報名補習班暑期班（統計學專攻）", "subjectTag": "im-stat" },
+          { "id": "im-2-2", "description": "完成統計學課程：描述統計、機率基礎", "subjectTag": "im-stat" },
+          { "id": "im-2-3", "description": "完成統計學課程：推論統計、迴歸分析", "subjectTag": "im-stat" },
+          { "id": "im-2-4", "description": "開始整理時事筆記（每週1篇科技新聞摘要）", "subjectTag": "im-mis" },
+          { "id": "im-2-5", "description": "深化AI/ML計概章節：CNN/Transformer/生成式AI", "subjectTag": "im-it" },
+          { "id": "im-2-6", "description": "MIS二輪複習：數位轉型與新興技術應用", "subjectTag": "im-mis" }
+        ]
+      },
+      {
+        "id": "im-phase-3",
+        "name": "第三階段：題庫強化",
+        "monthStart": 6,
+        "monthEnd": 7,
+        "subjectTags": ["im-it", "im-mis", "im-stat"],
+        "note": "題庫班、模擬考，全科交叉複習",
+        "tasks": [
+          { "id": "im-3-1", "description": "完成補習班題庫班課程", "subjectTag": null },
+          { "id": "im-3-2", "description": "每週至少1次全科模擬考（含計時）", "subjectTag": null },
+          { "id": "im-3-3", "description": "針對模擬考弱項進行專項補強", "subjectTag": null },
+          { "id": "im-3-4", "description": "整理計概AI/ML與資安重點速記卡", "subjectTag": "im-it" },
+          { "id": "im-3-5", "description": "完成時事筆記整理（至少20則，分類歸檔）", "subjectTag": "im-mis" },
+          { "id": "im-3-6", "description": "統計學綜合練習：各題型計算練習", "subjectTag": "im-stat" }
+        ]
+      },
+      {
+        "id": "im-phase-4",
+        "name": "第四階段：考古題衝刺",
+        "monthStart": 8,
+        "monthEnd": 8,
+        "subjectTags": ["im-it", "im-mis", "im-stat", "im-english"],
+        "note": "密集刷考古題，順序：中山→政大→台大（由易到難）",
+        "tasks": [
+          { "id": "im-4-1", "description": "完成中山大學資管所近5年考古題", "subjectTag": null },
+          { "id": "im-4-2", "description": "完成政大資管所近5年考古題", "subjectTag": null },
+          { "id": "im-4-3", "description": "完成台大資管所近5年考古題（計時練習）", "subjectTag": null },
+          { "id": "im-4-4", "description": "參加MIS讀書會（每週討論時事申論方向）", "subjectTag": "im-mis" },
+          { "id": "im-4-5", "description": "多看科技時事：Gartner趨勢報告、ESG、生成式AI最新發展", "subjectTag": "im-mis" },
+          { "id": "im-4-6", "description": "準備口試：自我介紹（含研究興趣）、可能時事問答", "subjectTag": null },
+          { "id": "im-4-7", "description": "英文考古題練習（至少3年份）", "subjectTag": "im-english" }
+        ]
+      }
+    ]
+  },
+  {
+    "examId": "cs",
+    "totalMonths": 8,
+    "examWindow": "次年2月",
+    "phases": [
+      {
+        "id": "cs-phase-1",
+        "name": "第一階段：正課基礎（數學+資結）",
+        "monthStart": 1,
+        "monthEnd": 3,
+        "subjectTags": ["cs-math", "cs-algo"],
+        "note": "正課階段，線代、離散、資料結構並行",
+        "tasks": [
+          { "id": "cs-1-1", "description": "完成線性代數課程：矩陣、行列式、向量空間", "subjectTag": "cs-math" },
+          { "id": "cs-1-2", "description": "完成線性代數課程：特徵值/向量、內積空間", "subjectTag": "cs-math" },
+          { "id": "cs-1-3", "description": "完成離散數學課程：排列組合、排容原理", "subjectTag": "cs-math" },
+          { "id": "cs-1-4", "description": "完成離散數學課程：圖論、生成函數、遞迴關係", "subjectTag": "cs-math" },
+          { "id": "cs-1-5", "description": "完成資料結構課程：Array/Linked List/Stack/Queue/Tree", "subjectTag": "cs-algo" },
+          { "id": "cs-1-6", "description": "完成資料結構課程：BST/AVL/Red-Black Tree/Heap", "subjectTag": "cs-algo" }
+        ]
+      },
+      {
+        "id": "cs-phase-2",
+        "name": "第二階段：計結OS+演算法",
+        "monthStart": 4,
+        "monthEnd": 5,
+        "subjectTags": ["cs-arch", "cs-algo"],
+        "note": "計算機結構、作業系統、演算法並行",
+        "tasks": [
+          { "id": "cs-2-1", "description": "完成計算機結構課程：ISA/ALU/Pipeline", "subjectTag": "cs-arch" },
+          { "id": "cs-2-2", "description": "完成計算機結構課程：Memory Hierarchy/Virtual Memory", "subjectTag": "cs-arch" },
+          { "id": "cs-2-3", "description": "完成作業系統課程：Process/Thread/Scheduling", "subjectTag": "cs-arch" },
+          { "id": "cs-2-4", "description": "完成作業系統課程：Synchronization/Deadlock/Memory", "subjectTag": "cs-arch" },
+          { "id": "cs-2-5", "description": "完成演算法課程：複雜度分析、排序演算法、Graph Algorithms", "subjectTag": "cs-algo" },
+          { "id": "cs-2-6", "description": "完成演算法課程：DP、Greedy、NP-Complete", "subjectTag": "cs-algo" }
+        ]
+      },
+      {
+        "id": "cs-phase-3",
+        "name": "第三階段：全科複習整理",
+        "monthStart": 6,
+        "monthEnd": 7,
+        "subjectTags": ["cs-math", "cs-arch", "cs-algo"],
+        "note": "全科二輪複習，整理筆記，開始計時練習",
+        "tasks": [
+          { "id": "cs-3-1", "description": "數學全科複習：重點定理整理與習題補強", "subjectTag": "cs-math" },
+          { "id": "cs-3-2", "description": "計結OS全科複習：Pipeline計算/Sync問題練習", "subjectTag": "cs-arch" },
+          { "id": "cs-3-3", "description": "資結演算法全科複習：Graph/DP/NP重點", "subjectTag": "cs-algo" },
+          { "id": "cs-3-4", "description": "建立各科速記卡（重要公式、定理、演算法步驟）", "subjectTag": null },
+          { "id": "cs-3-5", "description": "多滑Wikipedia相關詞條補充冷門知識", "subjectTag": null }
+        ]
+      },
+      {
+        "id": "cs-phase-4",
+        "name": "第四階段：考古題衝刺",
+        "monthStart": 8,
+        "monthEnd": 8,
+        "subjectTags": ["cs-math", "cs-arch", "cs-algo", "cs-english"],
+        "note": "密集刷考古題，順序：交大→清大→台大（由易到難）",
+        "tasks": [
+          { "id": "cs-4-1", "description": "完成交通大學資工所近5年考古題", "subjectTag": null },
+          { "id": "cs-4-2", "description": "完成清華大學資工所近5年考古題", "subjectTag": null },
+          { "id": "cs-4-3", "description": "完成台大資工所近5年考古題（計時練習）", "subjectTag": null },
+          { "id": "cs-4-4", "description": "針對數學科進行仔細檢查習慣養成（數學一分差5-6名）", "subjectTag": "cs-math" },
+          { "id": "cs-4-5", "description": "資演科延伸題練習：課本以外的延伸型題目", "subjectTag": "cs-algo" },
+          { "id": "cs-4-6", "description": "英文考古題練習", "subjectTag": "cs-english" }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,306 @@
+{
+  "urlPattern": "https://exam.lib.ntu.edu.tw/sites/default/files/exam/graduate/{year}/{file}.pdf",
+  "gaodianPattern": "https://master.get.com.tw/exam/{year}/{dept}/{file}",
+  "note": "NTU library covers 資管所 106–115 (3科×10年) and 資工所 108–114 (4科). 115資工所 falls back to 高點 URLs.",
+  "papers": [
+    {
+      "id": "pp-im-en-115", "examId": "im", "subjectId": "im-english", "year": 115,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-im-en-114", "examId": "im", "subjectId": "im-english", "year": 114,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-im-en-113", "examId": "im", "subjectId": "im-english", "year": 113,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-im-en-112", "examId": "im", "subjectId": "im-english", "year": 112,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-im-en-111", "examId": "im", "subjectId": "im-english", "year": 111,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-im-en-110", "examId": "im", "subjectId": "im-english", "year": 110,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-im-en-109", "examId": "im", "subjectId": "im-english", "year": 109,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-im-en-108", "examId": "im", "subjectId": "im-english", "year": 108,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-im-en-107", "examId": "im", "subjectId": "im-english", "year": 107,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-im-en-106", "examId": "im", "subjectId": "im-english", "year": 106,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-im-it-115", "examId": "im", "subjectId": "im-it", "year": 115,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-im-it-114", "examId": "im", "subjectId": "im-it", "year": 114,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-im-it-113", "examId": "im", "subjectId": "im-it", "year": 113,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-im-it-112", "examId": "im", "subjectId": "im-it", "year": 112,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-im-it-111", "examId": "im", "subjectId": "im-it", "year": 111,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-im-it-110", "examId": "im", "subjectId": "im-it", "year": 110,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-im-it-109", "examId": "im", "subjectId": "im-it", "year": 109,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-im-it-108", "examId": "im", "subjectId": "im-it", "year": 108,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-im-it-107", "examId": "im", "subjectId": "im-it", "year": 107,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-im-it-106", "examId": "im", "subjectId": "im-it", "year": 106,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-im-mis-115", "examId": "im", "subjectId": "im-mis", "year": 115,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-im-mis-114", "examId": "im", "subjectId": "im-mis", "year": 114,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-im-mis-113", "examId": "im", "subjectId": "im-mis", "year": 113,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-im-mis-112", "examId": "im", "subjectId": "im-mis", "year": 112,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-im-mis-111", "examId": "im", "subjectId": "im-mis", "year": 111,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-im-mis-110", "examId": "im", "subjectId": "im-mis", "year": 110,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-im-mis-109", "examId": "im", "subjectId": "im-mis", "year": 109,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-im-mis-108", "examId": "im", "subjectId": "im-mis", "year": 108,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-im-mis-107", "examId": "im", "subjectId": "im-mis", "year": 107,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-im-mis-106", "examId": "im", "subjectId": "im-mis", "year": 106,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-cs-en-115", "examId": "cs", "subjectId": "cs-english", "year": 115,
+      "url": "https://master.get.com.tw/exam/115/cs/english", "source": "gaodian", "verified": false,
+      "note": "115資工所使用高點URL（台大圖書館尚未收錄）"
+    },
+    {
+      "id": "pp-cs-en-114", "examId": "cs", "subjectId": "cs-english", "year": 114,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-cs-en-113", "examId": "cs", "subjectId": "cs-english", "year": 113,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-cs-en-112", "examId": "cs", "subjectId": "cs-english", "year": 112,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-cs-en-111", "examId": "cs", "subjectId": "cs-english", "year": 111,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-cs-en-110", "examId": "cs", "subjectId": "cs-english", "year": 110,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-cs-en-109", "examId": "cs", "subjectId": "cs-english", "year": 109,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-cs-en-108", "examId": "cs", "subjectId": "cs-english", "year": 108,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-cs-math-115", "examId": "cs", "subjectId": "cs-math", "year": 115,
+      "url": "https://master.get.com.tw/exam/115/cs/math", "source": "gaodian", "verified": false
+    },
+    {
+      "id": "pp-cs-math-114", "examId": "cs", "subjectId": "cs-math", "year": 114,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-cs-math-113", "examId": "cs", "subjectId": "cs-math", "year": 113,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-cs-math-112", "examId": "cs", "subjectId": "cs-math", "year": 112,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-cs-math-111", "examId": "cs", "subjectId": "cs-math", "year": 111,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-cs-math-110", "examId": "cs", "subjectId": "cs-math", "year": 110,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-cs-math-109", "examId": "cs", "subjectId": "cs-math", "year": 109,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-cs-math-108", "examId": "cs", "subjectId": "cs-math", "year": 108,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-cs-arch-115", "examId": "cs", "subjectId": "cs-arch", "year": 115,
+      "url": "https://master.get.com.tw/exam/115/cs/arch-os", "source": "gaodian", "verified": false
+    },
+    {
+      "id": "pp-cs-arch-114", "examId": "cs", "subjectId": "cs-arch", "year": 114,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-cs-arch-113", "examId": "cs", "subjectId": "cs-arch", "year": 113,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-cs-arch-112", "examId": "cs", "subjectId": "cs-arch", "year": 112,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-cs-arch-111", "examId": "cs", "subjectId": "cs-arch", "year": 111,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-cs-arch-110", "examId": "cs", "subjectId": "cs-arch", "year": 110,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-cs-arch-109", "examId": "cs", "subjectId": "cs-arch", "year": 109,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-cs-arch-108", "examId": "cs", "subjectId": "cs-arch", "year": 108,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-cs-algo-115", "examId": "cs", "subjectId": "cs-algo", "year": 115,
+      "url": "https://master.get.com.tw/exam/115/cs/ds-algo", "source": "gaodian", "verified": false
+    },
+    {
+      "id": "pp-cs-algo-114", "examId": "cs", "subjectId": "cs-algo", "year": 114,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-cs-algo-113", "examId": "cs", "subjectId": "cs-algo", "year": 113,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-cs-algo-112", "examId": "cs", "subjectId": "cs-algo", "year": 112,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-cs-algo-111", "examId": "cs", "subjectId": "cs-algo", "year": 111,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-cs-algo-110", "examId": "cs", "subjectId": "cs-algo", "year": 110,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-cs-algo-109", "examId": "cs", "subjectId": "cs-algo", "year": 109,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-cs-algo-108", "examId": "cs", "subjectId": "cs-algo", "year": 108,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false
+    },
+    {
+      "id": "pp-im-stat-115", "examId": "im", "subjectId": "im-stat", "year": 115,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false,
+      "note": "統計學與資訊管理導論合併為同一份考卷（資訊管理導論與統計學）"
+    },
+    {
+      "id": "pp-im-stat-114", "examId": "im", "subjectId": "im-stat", "year": 114,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false,
+      "note": "統計學與資訊管理導論合併為同一份考卷"
+    },
+    {
+      "id": "pp-im-stat-113", "examId": "im", "subjectId": "im-stat", "year": 113,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false,
+      "note": "統計學與資訊管理導論合併為同一份考卷"
+    },
+    {
+      "id": "pp-im-stat-112", "examId": "im", "subjectId": "im-stat", "year": 112,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false,
+      "note": "統計學與資訊管理導論合併為同一份考卷"
+    },
+    {
+      "id": "pp-im-stat-111", "examId": "im", "subjectId": "im-stat", "year": 111,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false,
+      "note": "統計學與資訊管理導論合併為同一份考卷"
+    },
+    {
+      "id": "pp-im-stat-110", "examId": "im", "subjectId": "im-stat", "year": 110,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false,
+      "note": "統計學與資訊管理導論合併為同一份考卷"
+    },
+    {
+      "id": "pp-im-stat-109", "examId": "im", "subjectId": "im-stat", "year": 109,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false,
+      "note": "統計學與資訊管理導論合併為同一份考卷"
+    },
+    {
+      "id": "pp-im-stat-108", "examId": "im", "subjectId": "im-stat", "year": 108,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false,
+      "note": "統計學與資訊管理導論合併為同一份考卷"
+    },
+    {
+      "id": "pp-im-stat-107", "examId": "im", "subjectId": "im-stat", "year": 107,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false,
+      "note": "統計學與資訊管理導論合併為同一份考卷"
+    },
+    {
+      "id": "pp-im-stat-106", "examId": "im", "subjectId": "im-stat", "year": 106,
+      "url": "https://exam.lib.ntu.edu.tw/exam", "source": "ntu_library", "verified": false,
+      "note": "統計學與資訊管理導論合併為同一份考卷"
+    }
+  ]
+}

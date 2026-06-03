@@ -1,0 +1,139 @@
+[
+  {
+    "id": "res-ptt-im",
+    "title": "PTT graduate版 — 資管所上榜心得",
+    "type": "PTT",
+    "examRelevance": ["im"],
+    "url": "https://www.ptt.cc/bbs/graduate/search?q=%E8%B3%87%E7%AE%A1%E6%89%80%E5%BF%83%E5%BE%97",
+    "description": "歷屆上榜心得，可了解考試風格與備考策略"
+  },
+  {
+    "id": "res-ptt-cs",
+    "title": "PTT graduate版 — 資工所上榜心得",
+    "type": "PTT",
+    "examRelevance": ["cs"],
+    "url": "https://www.ptt.cc/bbs/graduate/search?q=%E8%B3%87%E5%B7%A5%E6%89%80%E5%BF%83%E5%BE%97",
+    "description": "歷屆上榜心得，特別關注數學難度與計結策略"
+  },
+  {
+    "id": "res-hackmd-cs",
+    "title": "HackMD — 洪崗竣「十週考上台清交資工所的那些小事」",
+    "type": "HackMD",
+    "examRelevance": ["cs"],
+    "description": "快速衝刺策略分享，本科生75天衝刺參考"
+  },
+  {
+    "id": "res-yt-os",
+    "title": "YouTube — 周志遠教授作業系統課程（清大OCW）",
+    "type": "YouTube",
+    "examRelevance": ["cs"],
+    "url": "https://www.youtube.com/@NTHU_OCW",
+    "description": "免費公開課，品質極高，作業系統必看"
+  },
+  {
+    "id": "res-yt-ai",
+    "title": "YouTube — 蔡炎龍教授AI/ML課程",
+    "type": "YouTube",
+    "examRelevance": ["im"],
+    "description": "生成式AI與機器學習入門，適合計概AI部分"
+  },
+  {
+    "id": "res-notion-im",
+    "title": "Notion — Mavis IMPrepare 上榜學姐備考資源",
+    "type": "Notion",
+    "examRelevance": ["im"],
+    "description": "搜尋「Mavis IMPrepare」，整理完整的資管所備考資源連結"
+  },
+  {
+    "id": "res-cram-tkb",
+    "title": "大碩/TKB補習班（台灣最主流）",
+    "type": "補習班",
+    "examRelevance": ["im", "cs"],
+    "url": "https://www.tkb.com.tw",
+    "description": "黃子嘉（線代/離散）、林立宇（演算法）、洪逸（資結/OS）、張凡（計組）、MIS申論"
+  },
+  {
+    "id": "res-cram-gaodian",
+    "title": "高點研究所補習班",
+    "type": "補習班",
+    "examRelevance": ["im", "cs"],
+    "url": "https://master.get.com.tw",
+    "description": "亦提供115資工所考古題下載（補台大圖書館未收錄年份）"
+  },
+  {
+    "id": "res-book-im-mis-lin",
+    "title": "林東清《資訊管理》（e化企業核心競爭能力）",
+    "type": "書目",
+    "examRelevance": ["im"],
+    "description": "台大資管所MIS科必讀，林東清版是台灣主流用書"
+  },
+  {
+    "id": "res-book-im-mis-laudon",
+    "title": "Laudon & Laudon《管理資訊系統》",
+    "type": "書目",
+    "examRelevance": ["im"],
+    "description": "MIS聖經，補充理論深度"
+  },
+  {
+    "id": "res-book-cs-la",
+    "title": "黃子嘉《線性代數及其應用》",
+    "type": "書目",
+    "examRelevance": ["cs"],
+    "description": "台灣研究所線代最主流用書"
+  },
+  {
+    "id": "res-book-cs-disc",
+    "title": "黃子嘉《離散數學》",
+    "type": "書目",
+    "examRelevance": ["cs"]
+  },
+  {
+    "id": "res-book-cs-clrs",
+    "title": "CLRS《Introduction to Algorithms》",
+    "type": "書目",
+    "examRelevance": ["cs"],
+    "description": "演算法聖經，選讀重點章節即可"
+  },
+  {
+    "id": "res-book-cs-arch",
+    "title": "張凡《計算機結構與組織》",
+    "type": "書目",
+    "examRelevance": ["cs"]
+  },
+  {
+    "id": "res-book-cs-os",
+    "title": "洪逸《作業系統金寶典》",
+    "type": "書目",
+    "examRelevance": ["cs"]
+  },
+  {
+    "id": "res-book-cs-ds",
+    "title": "Discovering Computers 中譯本",
+    "type": "書目",
+    "examRelevance": ["im"],
+    "description": "計概必讀，涵蓋大部分考點"
+  },
+  {
+    "id": "res-github-solutions",
+    "title": "GitHub — SandersLin/CS-Masters-examination-solutions",
+    "type": "HackMD",
+    "examRelevance": ["cs"],
+    "url": "https://github.com/SandersLin/CS-Masters-examination-solutions",
+    "description": "社群撰寫的歷屆解答，準確度需個別驗證"
+  },
+  {
+    "id": "res-dcard-cs",
+    "title": "Dcard 研究所板 — 歷屆統計表格",
+    "type": "Dcard",
+    "examRelevance": ["im", "cs"],
+    "description": "各年錄取率、分數分布彙整"
+  },
+  {
+    "id": "res-official-ntu-lib",
+    "title": "台大圖書館歷屆考古題",
+    "type": "官方",
+    "examRelevance": ["im", "cs"],
+    "url": "https://exam.lib.ntu.edu.tw/exam",
+    "description": "資管所106–115（3科×10年）、資工所108–114（4科）官方PDF，免費公開"
+  }
+]

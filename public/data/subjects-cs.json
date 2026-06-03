@@ -1,0 +1,312 @@
+[
+  {
+    "id": "cs-english",
+    "examId": "cs",
+    "name": "英文(A)",
+    "weight": 10,
+    "topics": [
+      {
+        "id": "cs-en-reading",
+        "title": "閱讀測驗",
+        "importance": 3,
+        "subtopics": ["學術英文", "科技議題文章"]
+      },
+      {
+        "id": "cs-en-vocab",
+        "title": "字彙與文法",
+        "importance": 2,
+        "subtopics": ["GRE/托福字彙", "技術名詞"]
+      }
+    ],
+    "materials": [
+      {
+        "title": "歷屆資工所英文考古題",
+        "type": "notes",
+        "note": "英文佔10%，投資報酬率相對低"
+      }
+    ]
+  },
+  {
+    "id": "cs-math",
+    "examId": "cs",
+    "name": "數學(A)（線性代數＋離散數學）",
+    "weight": null,
+    "topics": [
+      {
+        "id": "cs-math-la-matrix",
+        "title": "矩陣運算與線性方程組",
+        "importance": 4,
+        "subtopics": ["高斯消去法", "矩陣乘法", "行化簡梯形"]
+      },
+      {
+        "id": "cs-math-la-det",
+        "title": "行列式",
+        "importance": 3,
+        "subtopics": ["行列式計算", "Cramer法則", "代數餘因子"]
+      },
+      {
+        "id": "cs-math-la-vector",
+        "title": "向量空間與基底",
+        "importance": 4,
+        "subtopics": ["線性獨立", "生成空間", "基底與維度", "行空間/零空間/列空間"]
+      },
+      {
+        "id": "cs-math-la-linear-map",
+        "title": "線性映射",
+        "importance": 3,
+        "subtopics": ["核與像", "表示矩陣"]
+      },
+      {
+        "id": "cs-math-la-eigen",
+        "title": "特徵值/特徵向量與對角化",
+        "importance": 5,
+        "subtopics": ["特徵多項式", "對角化條件", "相似矩陣"]
+      },
+      {
+        "id": "cs-math-la-inner",
+        "title": "內積空間與正交化",
+        "importance": 4,
+        "subtopics": ["Gram-Schmidt正交化", "正交投影", "最小平方法"]
+      },
+      {
+        "id": "cs-math-disc-comb",
+        "title": "排列組合與排容原理",
+        "importance": 5,
+        "subtopics": ["排列/組合公式", "重複排列/組合", "排容原理", "Pigeonhole Principle"]
+      },
+      {
+        "id": "cs-math-disc-gen",
+        "title": "生成函數與遞迴關係",
+        "importance": 5,
+        "subtopics": ["一般型生成函數", "指數型生成函數", "線性遞迴求解", "Master Theorem預備"]
+      },
+      {
+        "id": "cs-math-disc-graph",
+        "title": "圖論",
+        "importance": 5,
+        "subtopics": ["路徑與連通性", "Euler路徑/Hamilton路徑", "平面圖", "著色問題", "二部圖"]
+      },
+      {
+        "id": "cs-math-disc-tree",
+        "title": "樹論",
+        "importance": 3,
+        "subtopics": ["生成樹", "最小生成樹", "有根樹"]
+      },
+      {
+        "id": "cs-math-disc-number",
+        "title": "數論與模運算",
+        "importance": 3,
+        "subtopics": ["gcd/lcm", "模算術", "RSA基礎"]
+      }
+    ],
+    "materials": [
+      {
+        "title": "黃子嘉《線性代數及其應用》",
+        "author": "黃子嘉",
+        "type": "book",
+        "note": "台灣研究所考試最主流線代用書"
+      },
+      {
+        "title": "黃子嘉《離散數學》",
+        "author": "黃子嘉",
+        "type": "book"
+      },
+      {
+        "title": "NTHU 韓永楷教授離散數學講義",
+        "type": "online",
+        "note": "公開課程，免費"
+      }
+    ]
+  },
+  {
+    "id": "cs-arch",
+    "examId": "cs",
+    "name": "計算機結構與作業系統",
+    "weight": null,
+    "topics": [
+      {
+        "id": "cs-arch-isa",
+        "title": "ISA（指令集架構）",
+        "importance": 3,
+        "subtopics": ["RISC vs CISC", "指令格式", "定址模式"]
+      },
+      {
+        "id": "cs-arch-alu",
+        "title": "ALU設計",
+        "importance": 3,
+        "subtopics": ["加法器設計", "數值表示（補數）", "浮點數"]
+      },
+      {
+        "id": "cs-arch-pipeline",
+        "title": "Datapath與Pipeline（最高頻考點）",
+        "importance": 5,
+        "subtopics": ["5段Pipeline", "Hazard類型（data/control/structural）", "stall cycle計算", "forwarding/bypassing", "branch prediction"]
+      },
+      {
+        "id": "cs-arch-memory",
+        "title": "Memory Hierarchy",
+        "importance": 4,
+        "subtopics": ["Cache（direct-mapped/set-associative/fully-associative）", "替換策略（LRU/LFU/FIFO）", "Virtual Memory", "Page Table", "TLB"]
+      },
+      {
+        "id": "cs-arch-disk",
+        "title": "Disk與儲存",
+        "importance": 3,
+        "subtopics": ["存取時間計算（seek/rotational/transfer）", "RAID 0/1/5/6"]
+      },
+      {
+        "id": "cs-arch-multi",
+        "title": "Multiprocessor基礎",
+        "importance": 3,
+        "subtopics": ["SMP架構", "Cache coherence"]
+      },
+      {
+        "id": "cs-os-process",
+        "title": "Process與Thread（最高頻考點）",
+        "importance": 5,
+        "subtopics": ["Process狀態轉換", "PCB", "Context Switch", "Thread vs Process", "User-level vs Kernel-level Thread"]
+      },
+      {
+        "id": "cs-os-scheduling",
+        "title": "CPU Scheduling",
+        "importance": 4,
+        "subtopics": ["FCFS/SJF/Priority/Round-Robin", "Multilevel Queue", "Response Time vs Turnaround Time計算"]
+      },
+      {
+        "id": "cs-os-sync",
+        "title": "Synchronization（最高頻考點）",
+        "importance": 5,
+        "subtopics": ["Critical Section問題", "Mutex/Semaphore", "Monitor", "Producer-Consumer問題", "Readers-Writers問題", "Dining Philosophers"]
+      },
+      {
+        "id": "cs-os-deadlock",
+        "title": "Deadlock",
+        "importance": 4,
+        "subtopics": ["4個必要條件", "Banker's Algorithm", "偵測/預防/避免/恢復"]
+      },
+      {
+        "id": "cs-os-memory",
+        "title": "Memory Management",
+        "importance": 4,
+        "subtopics": ["Contiguous Allocation", "Paging", "Segmentation", "內部/外部碎裂"]
+      },
+      {
+        "id": "cs-os-virtual",
+        "title": "Virtual Memory",
+        "importance": 4,
+        "subtopics": ["Demand Paging", "Page Fault handling", "替換演算法（Optimal/LRU/FIFO/Clock）", "Thrashing"]
+      },
+      {
+        "id": "cs-os-fs",
+        "title": "File System",
+        "importance": 3,
+        "subtopics": ["目錄結構", "配置方法（連續/鏈結/索引）", "磁碟排程（SCAN/SSTF）"]
+      }
+    ],
+    "materials": [
+      {
+        "title": "張凡《計算機結構與組織》",
+        "author": "張凡",
+        "type": "book",
+        "note": "台灣研究所主流計組用書"
+      },
+      {
+        "title": "洪逸《作業系統金寶典》",
+        "author": "洪逸",
+        "type": "book"
+      },
+      {
+        "title": "周志遠教授YouTube作業系統課程",
+        "type": "video",
+        "url": "https://www.youtube.com/@NTHU_OCW",
+        "note": "免費公開課，清大OCW，非常推薦"
+      }
+    ]
+  },
+  {
+    "id": "cs-algo",
+    "examId": "cs",
+    "name": "資料結構與演算法",
+    "weight": null,
+    "topics": [
+      {
+        "id": "cs-algo-sort",
+        "title": "排序與搜尋（最高頻考點）",
+        "importance": 5,
+        "subtopics": ["Bubble/Selection/Insertion Sort", "Merge Sort/Quick Sort/Heap Sort", "時間/空間複雜度比較", "穩定性分析", "Binary Search"]
+      },
+      {
+        "id": "cs-algo-tree",
+        "title": "Tree（最高頻考點）",
+        "importance": 5,
+        "subtopics": ["Binary Search Tree (BST)", "AVL Tree（旋轉操作）", "Red-Black Tree", "B-Tree/B+Tree", "Heap操作（insert/delete/heapify）", "Trie"]
+      },
+      {
+        "id": "cs-algo-graph",
+        "title": "Graph基礎",
+        "importance": 4,
+        "subtopics": ["表示法（adjacency matrix/list）", "BFS/DFS", "連通分量", "拓撲排序"]
+      },
+      {
+        "id": "cs-algo-hash",
+        "title": "Hashing",
+        "importance": 3,
+        "subtopics": ["Hash函數設計", "Collision解決（Chaining/Open Addressing）", "Load Factor"]
+      },
+      {
+        "id": "cs-algo-complexity",
+        "title": "時間複雜度分析",
+        "importance": 5,
+        "subtopics": ["Big-O/Omega/Theta", "Master Theorem", "遞迴樹法", "Amortized Analysis"]
+      },
+      {
+        "id": "cs-algo-graph-advanced",
+        "title": "Graph Algorithms（最高頻考點）",
+        "importance": 5,
+        "subtopics": ["Dijkstra（單源最短路徑）", "Bellman-Ford（含負邊）", "Floyd-Warshall（全對最短路徑）", "Kruskal/Prim（最小生成樹）", "強連通分量（Tarjan/Kosaraju）"]
+      },
+      {
+        "id": "cs-algo-dp",
+        "title": "Dynamic Programming",
+        "importance": 5,
+        "subtopics": ["Memoization vs Tabulation", "LCS/LIS", "Knapsack問題", "Matrix Chain Multiplication", "Edit Distance"]
+      },
+      {
+        "id": "cs-algo-greedy",
+        "title": "Greedy Algorithms",
+        "importance": 3,
+        "subtopics": ["Activity Selection", "Huffman Coding", "正確性證明（exchange argument）"]
+      },
+      {
+        "id": "cs-algo-np",
+        "title": "NP-Complete（最高頻考點）",
+        "importance": 5,
+        "subtopics": ["P vs NP", "NP/NP-Complete/NP-Hard定義", "Reduction技巧", "經典NPC問題（SAT/3-SAT/Vertex Cover/Clique/Hamiltonian）"]
+      },
+      {
+        "id": "cs-algo-divide",
+        "title": "Divide and Conquer",
+        "importance": 3,
+        "subtopics": ["Merge Sort分析", "Quick Sort分析", "Karatsuba乘法"]
+      }
+    ],
+    "materials": [
+      {
+        "title": "CLRS《Introduction to Algorithms》相關章節",
+        "author": "Cormen, Leiserson, Rivest, Stein",
+        "type": "book",
+        "note": "演算法聖經，選讀重點章節"
+      },
+      {
+        "title": "林立宇《演算法》講義",
+        "author": "林立宇",
+        "type": "cram-school"
+      },
+      {
+        "title": "洪逸補習班資料結構課程",
+        "author": "洪逸",
+        "type": "cram-school"
+      }
+    ]
+  }
+]
