@@ -3,11 +3,12 @@
   "main": ".open-next/worker.js",
   "compatibility_date": "2025-01-01",
   "compatibility_flags": ["nodejs_compat_v2"],
+  "account_id": "1ff43f0d4c3ad3bd98ce5ab767546a68",
   "d1_databases": [
     {
       "binding": "DB",
       "database_name": "grad-exam-prep-db",
-      "database_id": "PLACEHOLDER_REPLACE_WITH_REAL_ID",
+      "database_id": "32564f4b-3d33-4124-9941-09b1dd71ee57",
       "migrations_dir": "migrations"
     }
   ],
@@ -23,7 +24,7 @@
         {
           "binding": "DB",
           "database_name": "grad-exam-prep-db",
-          "database_id": "PLACEHOLDER_REPLACE_WITH_REAL_ID",
+          "database_id": "32564f4b-3d33-4124-9941-09b1dd71ee57",
           "migrations_dir": "migrations"
         }
       ]
