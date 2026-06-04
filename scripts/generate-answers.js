@@ -1,13 +1,18 @@
 export const meta = {
   name: 'generate-question-answers',
-  description: 'Generate AI answers and explanations for all 1424 exam questions',
+  description: 'Generate AI answers for exam questions (batched)',
   phases: [
-    { title: 'Load', detail: 'Read question IDs from disk' },
-    { title: 'Generate', detail: 'Parallel AI answer generation per question' },
+    { title: 'Load', detail: 'Read question IDs for this batch' },
+    { title: 'Generate', detail: 'Each agent reads its question file and generates answer' },
   ],
 }
 
+// args = { start: number, end: number }
+// Processes questions[start..end) from questions.json
+const { start = 0, end = 700 } = args || {}
+
 const QUESTIONS_PATH = '/Users/xiaoxu/Projects/grad-exam-prep/public/data/questions.json'
+const QFILES_DIR = '/Users/xiaoxu/Projects/grad-exam-prep/public/data/qfiles'
 const ANSWERS_PATH = '/Users/xiaoxu/Projects/grad-exam-prep/public/data/answers.json'
 
 const IDS_SCHEMA = {
@@ -22,51 +27,68 @@ const ANSWER_SCHEMA = {
   type: 'object',
   required: ['answer', 'explanation'],
   properties: {
-    answer: { type: 'string', description: 'Correct option letter: A, B, C, D, or E' },
-    explanation: { type: 'string', description: 'Clear 3-5 sentence explanation in Traditional Chinese (繁體中文)' },
+    answer: {
+      type: 'string',
+      enum: ['A', 'B', 'C', 'D', 'E'],
+      description: 'The single correct option letter',
+    },
+    explanation: {
+      type: 'string',
+      description: '3-5 sentences in Traditional Chinese explaining why the answer is correct',
+    },
   },
 }
 
 phase('Load')
 const loadResult = await agent(
-  `Run this bash command and return the result as structured JSON with an "ids" field containing the array:
-node -e "const d=require('${QUESTIONS_PATH}'); console.log(JSON.stringify(d.questions.map(q=>q.id)))"`,
-  { label: 'load-question-ids', schema: IDS_SCHEMA }
+  `Run this bash command and return the IDs array as structured JSON:
+node -e "const d=require('${QUESTIONS_PATH}'); const ids=d.questions.slice(${start},${end}).map(q=>q.id); console.log(JSON.stringify({ids}))"`,
+  { label: 'load-ids', schema: IDS_SCHEMA }
 )
 
 const questionIds = loadResult.ids
-log(`Loaded ${questionIds.length} question IDs`)
+log(`Batch ${start}-${end}: ${questionIds.length} questions`)
 
 phase('Generate')
-log(`Starting generation for ${questionIds.length} questions...`)
 
 const results = await pipeline(
   questionIds,
   async (qId) => {
     const result = await agent(
-      `你是台灣研究所考試（資工所/資管所）解題專家。
+      `You are an expert in Taiwan graduate school entrance exams (資工所/資管所).
 
-執行此 bash 指令取得題目：
-node -e "const d=require('${QUESTIONS_PATH}'); const q=d.questions.find(x=>x.id==='${qId}'); console.log(JSON.stringify(q))"
+Read the file at: ${QFILES_DIR}/${qId}.json
 
-讀取題目內容後，判斷正確答案（A/B/C/D/E）並用繁體中文寫出 3-5 句解析。`,
+Use the Read tool to get the question content, then:
+1. Identify the correct answer (must be exactly one of: A, B, C, D, E)
+2. Write a clear 3-5 sentence explanation in Traditional Chinese (繁體中文)
+
+You MUST call the StructuredOutput tool with your final answer and explanation.`,
       {
-        label: `answer:${qId}`,
+        label: `ans:${qId}`,
         phase: 'Generate',
         schema: ANSWER_SCHEMA,
       }
     )
-    return result ? { questionId: qId, ...result } : null
+    return result ? { questionId: qId, answer: result.answer, explanation: result.explanation } : null
   }
 )
 
-const answersMap = {}
+// Merge with existing answers.json
+const existingAgent = await agent(
+  `Read the file ${ANSWERS_PATH} and return its content as a plain string. Return ONLY the raw JSON, no explanation.`,
+  { label: 'read-existing' }
+)
+
+let existing = { answers: {} }
+try { existing = JSON.parse(existingAgent) } catch {}
+
 let successCount = 0
 let failCount = 0
 
 for (const r of results) {
   if (!r) { failCount++; continue }
-  answersMap[r.questionId] = {
+  existing.answers[r.questionId] = {
     questionId: r.questionId,
     answer: r.answer,
     explanation: r.explanation,
@@ -75,14 +97,14 @@ for (const r of results) {
   successCount++
 }
 
-log(`Done: ${successCount} success, ${failCount} failed`)
+log(`Batch done: ${successCount} success, ${failCount} failed`)
 
-// Write answers.json via a save agent
+// Write merged answers back
 await agent(
-  `Write the following JSON to the file ${ANSWERS_PATH}. Use the Write tool to write this exact content:
-${JSON.stringify({ answers: answersMap }, null, 2)}`,
-  { label: 'save-answers' }
+  `Write the following JSON content to the file ${ANSWERS_PATH}. Use the Write tool. The content to write is exactly:
+${JSON.stringify(existing, null, 2)}`,
+  { label: 'write-answers' }
 )
 
-log(`Saved answers.json`)
-return { successCount, failCount }
+log(`Saved ${Object.keys(existing.answers).length} total answers to ${ANSWERS_PATH}`)
+return { successCount, failCount, total: Object.keys(existing.answers).length }

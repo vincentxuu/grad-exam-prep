@@ -5,7 +5,7 @@
     "type": "PTT",
     "examRelevance": ["im"],
     "url": "https://www.ptt.cc/bbs/graduate/search?q=%E8%B3%87%E7%AE%A1%E6%89%80%E5%BF%83%E5%BE%97",
-    "description": "歷屆上榜心得，可了解考試風格與備考策略"
+    "description": "PTT 研究所板的資管所心得文彙整，可按年份篩選，了解歷屆考試風格與各校錄取分數趨勢"
   },
   {
     "id": "res-ptt-cs",
@@ -13,7 +13,7 @@
     "type": "PTT",
     "examRelevance": ["cs"],
     "url": "https://www.ptt.cc/bbs/graduate/search?q=%E8%B3%87%E5%B7%A5%E6%89%80%E5%BF%83%E5%BE%97",
-    "description": "歷屆上榜心得，特別關注數學難度與計結策略"
+    "description": "PTT 研究所板的資工所心得文彙整，特別關注各科難度分布、數學分數與補習班選擇討論"
   },
   {
     "id": "res-hackmd-cs",
@@ -21,7 +21,7 @@
     "type": "HackMD",
     "examRelevance": ["cs"],
     "url": "https://hackmd.io/@kangchunhung/things_of_getting_admitted_by_CSIE_Department",
-    "description": "快速衝刺策略分享，本科生75天衝刺參考"
+    "description": "75天衝刺備考全紀錄，詳列每科讀書順序與考古題刷題策略，非本科跨考台大資工參考首選"
   },
   {
     "id": "res-yt-os",
@@ -29,7 +29,7 @@
     "type": "YouTube",
     "examRelevance": ["cs"],
     "url": "https://www.youtube.com/@NTHU_OCW",
-    "description": "免費公開課，品質極高，作業系統必看"
+    "description": "清大周志遠教授免費公開課，品質極高，多位上榜生一致推薦，作業系統備考必看"
   },
   {
     "id": "res-yt-ai",
@@ -37,7 +37,7 @@
     "type": "YouTube",
     "examRelevance": ["im"],
     "url": "https://www.youtube.com/playlist?list=PLpXfHEl2fzl4ipgEayqjo0veG0KPqQMwb",
-    "description": "生成式AI與機器學習入門，適合計概AI部分"
+    "description": "政大蔡炎龍教授的生成式AI與機器學習入門課，涵蓋計概AI部分常見考點，免費且淺顯易懂"
   },
   {
     "id": "res-notion-im",
@@ -45,7 +45,7 @@
     "type": "Notion",
     "examRelevance": ["im"],
     "url": "https://dapper-cacao-eac.notion.site/4ed093059f2d4c228aa0d8526af6f776",
-    "description": "整理完整的資管所備考資源連結，含科目分析與推薦書目"
+    "description": "整理完整的資管所備考資源連結，含科目分析、推薦書目、補習班比較與歷屆錄取率統計"
   },
   {
     "id": "res-cram-tkb",
@@ -53,7 +53,7 @@
     "type": "補習班",
     "examRelevance": ["im", "cs"],
     "url": "https://www.tkb.com.tw",
-    "description": "黃子嘉（線代/離散）、林立宇（演算法）、洪逸（資結/OS）、張凡（計組）、MIS申論"
+    "description": "台灣資管所/資工所最大補習班，師資含黃子嘉（線代/離散）、林立宇（演算法）、洪逸（資結/OS）、張凡（計組）、丁祺（MIS申論）"
   },
   {
     "id": "res-cram-gaodian",
@@ -61,7 +61,7 @@
     "type": "補習班",
     "examRelevance": ["im", "cs"],
     "url": "https://master.get.com.tw",
-    "description": "亦提供115資工所考古題下載（補台大圖書館未收錄年份）"
+    "description": "高點補習班提供各校研究所考古題下載（含台大圖書館未收錄年份），網站考古題區免費使用"
   },
   {
     "id": "res-book-im-mis-lin",
@@ -69,7 +69,7 @@
     "type": "書目",
     "examRelevance": ["im"],
     "url": "https://search.books.com.tw/search/query/key/%E8%B3%87%E8%A8%8A%E7%AE%A1%E7%90%86+%E6%9E%97%E6%9D%B1%E6%B8%85",
-    "description": "台大資管所MIS科必讀，林東清版是台灣主流用書"
+    "description": "台大資管所MIS科必讀，台灣最主流的MIS教科書，口試與申論題架構建立的核心參考書"
   },
   {
     "id": "res-book-im-mis-laudon",
@@ -77,7 +77,7 @@
     "type": "書目",
     "examRelevance": ["im"],
     "url": "https://search.books.com.tw/search/query/key/%E7%AE%A1%E7%90%86%E8%B3%87%E8%A8%8A%E7%B3%BB%E7%B5%B1+Laudon",
-    "description": "MIS聖經，補充理論深度"
+    "description": "MIS國際標準教科書，補充理論深度，適合在林東清版之外建立英文概念術語能力"
   },
   {
     "id": "res-book-cs-la",
@@ -85,14 +85,15 @@
     "type": "書目",
     "examRelevance": ["cs"],
     "url": "https://search.books.com.tw/search/query/key/%E7%B7%9A%E6%80%A7%E4%BB%A3%E6%95%B8+%E9%BB%83%E5%AD%90%E5%98%89",
-    "description": "台灣研究所線代最主流用書"
+    "description": "台灣研究所線代最主流用書，補習班正課標配，定理推導與計算題型完整，考前複習效率高"
   },
   {
     "id": "res-book-cs-disc",
     "title": "黃子嘉《離散數學》",
     "type": "書目",
     "examRelevance": ["cs"],
-    "url": "https://search.books.com.tw/search/query/key/%E9%9B%A2%E6%95%A3%E6%95%B8%E5%AD%B8+%E9%BB%83%E5%AD%90%E5%98%89"
+    "url": "https://search.books.com.tw/search/query/key/%E9%9B%A2%E6%95%A3%E6%95%B8%E5%AD%B8+%E9%BB%83%E5%AD%90%E5%98%89",
+    "description": "台灣研究所離散數學最主流用書，與線代並列必備，圖論、代數結構、組合數學章節均有涵蓋"
   },
   {
     "id": "res-book-cs-clrs",
@@ -100,21 +101,23 @@
     "type": "書目",
     "examRelevance": ["cs"],
     "url": "https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/",
-    "description": "演算法聖經，選讀重點章節即可"
+    "description": "演算法聖經，選讀重點章節（Graph、NP、Dynamic Programming）即可，用於查閱定義與嚴謹證明"
   },
   {
     "id": "res-book-cs-arch",
     "title": "張凡《計算機結構與組織》",
     "type": "書目",
     "examRelevance": ["cs"],
-    "url": "https://search.books.com.tw/search/query/key/%E8%A8%88%E7%AE%97%E6%A9%9F%E7%B5%90%E6%A7%8B+%E5%BC%B5%E5%87%A1"
+    "url": "https://search.books.com.tw/search/query/key/%E8%A8%88%E7%AE%97%E6%A9%9F%E7%B5%90%E6%A7%8B+%E5%BC%B5%E5%87%A1",
+    "description": "大碩張凡老師的計組講義教材，系統化整理Pipeline、Cache、Memory層級等核心考點"
   },
   {
     "id": "res-book-cs-os",
     "title": "洪逸《作業系統金寶典》",
     "type": "書目",
     "examRelevance": ["cs"],
-    "url": "https://search.books.com.tw/search/query/key/%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1+%E6%B4%AA%E9%80%B8"
+    "url": "https://search.books.com.tw/search/query/key/%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1+%E6%B4%AA%E9%80%B8",
+    "description": "大碩洪逸老師的作業系統教材，Process、Memory Management、File System等章節重點整理，配合恐龍書使用"
   },
   {
     "id": "res-book-cs-ds",
@@ -122,7 +125,7 @@
     "type": "書目",
     "examRelevance": ["im"],
     "url": "https://search.books.com.tw/search/query/key/Discovering+Computers",
-    "description": "計概必讀，涵蓋大部分考點"
+    "description": "資管所計概必讀，涵蓋硬體、軟體、網路、資安、AI等大部分考點，適合建立廣泛計概知識架構"
   },
   {
     "id": "res-github-solutions",
@@ -130,7 +133,7 @@
     "type": "HackMD",
     "examRelevance": ["cs"],
     "url": "https://github.com/SandersLin/CS-Masters-examination-solutions",
-    "description": "社群撰寫的歷屆解答，準確度需個別驗證"
+    "description": "社群撰寫的歷屆考古題解答，含台清交成各校，準確度需個別驗證，建議搭配其他解答交叉確認"
   },
   {
     "id": "res-dcard-cs",
@@ -138,7 +141,7 @@
     "type": "Dcard",
     "examRelevance": ["im", "cs"],
     "url": "https://www.dcard.tw/f/graduate_school",
-    "description": "各年錄取率、分數分布彙整"
+    "description": "各年錄取率、分數分布彙整，也是最多考生分享當年考試感受與備考討論的社群平台"
   },
   {
     "id": "res-official-ntu-lib",
@@ -146,6 +149,102 @@
     "type": "官方",
     "examRelevance": ["im", "cs"],
     "url": "https://exam.lib.ntu.edu.tw/exam",
-    "description": "資管所106–115（3科×10年）、資工所108–114（4科）官方PDF，免費公開"
+    "description": "資管所106–115（3科×10年）、資工所108–114（4科）官方PDF，免費公開，為備考考古題的首要來源"
+  },
+  {
+    "id": "res-hackmd-cs-sf90",
+    "title": "HackMD @SF90 — 113資工所九校心得+台科中正考古題+資源連結",
+    "type": "HackMD",
+    "examRelevance": ["cs"],
+    "url": "https://hackmd.io/@SF90/release",
+    "description": "報名9間考上6間的詳細備考歷程，附台科/中正考古題解答PDF、台清交成央考古題資源索引、計組datapath圖表PPT，是資工備考最完整的資源彙整之一"
+  },
+  {
+    "id": "res-hackmd-cs-ivan",
+    "title": "HackMD @ivan711031 — 114台清成資工所上榜心得",
+    "type": "HackMD",
+    "examRelevance": ["cs"],
+    "url": "https://hackmd.io/@ivan711031/r1NSdbKj1g",
+    "description": "成大本科應屆，清大/成大正取，詳述各科備考方法（推薦Bucha大筆記與Justin_wu大筆記），含每日時程安排與跑步調節心態的實戰策略"
+  },
+  {
+    "id": "res-hackmd-cs-retake",
+    "title": "HackMD — 115資工所重考一年上榜心得",
+    "type": "HackMD",
+    "examRelevance": ["cs"],
+    "url": "https://hackmd.io/@Ra6sfYbaRGumntCj6Gikkg/BydlNlicbe",
+    "description": "中央資工應屆落榜後重考一年，附114與115成績完整對比（台大備3X、交大/清大/成大/中央均備取），詳述刷題順序（交大→台成央→清大）與二手題庫班使用策略"
+  },
+  {
+    "id": "res-dcard-cs-115",
+    "title": "Dcard — 115台清交資工所本科上榜心得",
+    "type": "Dcard",
+    "examRelevance": ["cs"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/261086561",
+    "description": "清大資工應屆，115年（2026考季）最新心得，含HackMD完整版連結，六科準備策略與考場經驗分享"
+  },
+  {
+    "id": "res-dcard-cs-30",
+    "title": "Dcard — 115資工所30歲在職考試心得",
+    "type": "Dcard",
+    "examRelevance": ["cs"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/261592725",
+    "description": "2024年帶職考四大全落榜、2025年離職全職重考的非典型備考路徑，適合在職生了解心態調整與時間管理策略"
+  },
+  {
+    "id": "res-dcard-im-114",
+    "title": "Dcard — 114資管所考試上榜心得分享",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/258500878",
+    "description": "以台大為首要目標、中央/中山為保底的四大資管所備考策略，從大三寒假1月開始備考，詳述各科雲端課程選擇"
+  },
+  {
+    "id": "res-medium-im-111-a",
+    "title": "Medium — 111年跨考台大/政大/清大/成大/中山資管組所正取心得",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://medium.com/@106305019/111%E5%B9%B4%E8%B7%A8%E8%80%83%E5%8F%B0%E5%A4%A7-%E6%94%BF%E5%A4%A7-%E6%B8%85%E5%A4%A7-%E6%88%90%E5%A4%A7-%E4%B8%AD%E5%B1%B1%E8%B3%87%E7%AE%A1%E8%B3%87%E7%AE%A1%E7%B5%84%E6%89%80%E6%AD%A3%E5%8F%96%E5%BF%83%E5%BE%97-af6af59928b9",
+    "description": "跨考生五所正取（管理組），分享各科備考方式與資源整理，非本科轉考資管組的重要參考"
+  },
+  {
+    "id": "res-medium-im-111-b",
+    "title": "Medium — 111年跨考台大/政大/清大/中央資管所正取（含資源推薦）",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://waanwu.medium.com/111%E5%B9%B4%E8%B7%A8%E8%80%83%E5%8F%B0%E5%A4%A7-%E6%94%BF%E5%A4%A7-%E6%B8%85%E5%A4%A7-%E4%B8%AD%E5%A4%AE%E8%B3%87%E7%AE%A1%E6%89%80%E6%AD%A3%E5%8F%96-%E8%80%83%E5%BF%83%E5%BE%97%E5%8F%8A%E8%B3%87%E6%BA%90%E6%8E%A8%E8%96%A6-1971168e8ded",
+    "description": "跨考生四所正取（MIS組），強調資結組vs管理組的選擇分析，附師資與備考資源推薦清單"
+  },
+  {
+    "id": "res-medium-im-109",
+    "title": "Medium — 109資管所考試心得（資結組含台大）",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://ying861216.medium.com/109%E8%B3%87%E7%AE%A1%E6%89%80%E8%80%83%E8%A9%A6%E5%BF%83%E5%BE%97-5788fdea8432",
+    "description": "資結組備考完整心得，選擇台大為主要目標，詳細討論管理組vs資結組策略差異與各科準備方式"
+  },
+  {
+    "id": "res-official-ncku-im",
+    "title": "成大圖書館 — 成大資管所歷屆考古題",
+    "type": "官方",
+    "examRelevance": ["im"],
+    "url": "https://exam.lib.ncku.edu.tw/master_subject.php?department_code=BC08",
+    "description": "成大資管所106~115學年度官方考古題，三科（MIS、資結、計概）逐年PDF下載，免費公開，是台大圖書館之外的重要考古題來源"
+  },
+  {
+    "id": "res-hackmd-cs-solutions",
+    "title": "HackMD — 台清交成央資工所近年考古題詳解",
+    "type": "HackMD",
+    "examRelevance": ["cs"],
+    "url": "https://hackmd.io/@afuoVpqBTE60TjqvxK7JHA/cs_graduate",
+    "description": "社群整理的台大、清大、交大、成大、中央近年考古題詳解彙整，為多篇上榜心得文引用的核心資源，含各科解題說明"
+  },
+  {
+    "id": "res-yt-co-nycu",
+    "title": "YouTube — 交大OCW 李毅郎計算機組織",
+    "type": "YouTube",
+    "examRelevance": ["cs"],
+    "url": "https://www.youtube.com/playlist?list=PLj6E8qlqmkFvSHyGAFqY4sX0Ee7eLqmq2",
+    "description": "陽明交通大學李毅郎教授免費公開課全套，多位113/114/115上榜生推薦為補習班之外最佳計組補充，有助釐清Pipeline、Cache、Memory概念"
   }
 ]
