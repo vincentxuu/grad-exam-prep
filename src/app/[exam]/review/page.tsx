@@ -5,6 +5,7 @@ import { use, useState, useEffect } from 'react'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
+import { QuestionText } from '@/components/question-text'
 import { EXAM_LABELS, getQuestionsByExam } from '@/lib/content'
 import { getAnswer } from '@/lib/answers'
 import { getUserId } from '@/lib/user-id'
@@ -95,7 +96,7 @@ export default function ReviewPage({ params }: Props) {
             <Badge variant="outline">{q.year}年</Badge>
             <span className="text-xs text-muted-foreground">第 {q.number} 題</span>
           </div>
-          <p className="text-sm leading-relaxed whitespace-pre-wrap">{q.text}</p>
+          <QuestionText text={q.text} />
         </CardContent>
       </Card>
 
