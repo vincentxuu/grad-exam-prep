@@ -4,6 +4,9 @@ import { notFound } from 'next/navigation'
 import { use, useState } from 'react'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
+import { Input } from '@/components/ui/input'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { EXAM_LABELS, getSubjectsByExam } from '@/lib/content'
 import { localStorageImpl } from '@/lib/storage'
 import type { ExamId } from '@/types/content'
@@ -42,7 +45,7 @@ export default function PastPapersPage({ params }: Props) {
   )
   const [editingNotes, setEditingNotes] = useState<string | null>(null)
   const [noteText, setNoteText] = useState('')
-  const [viewingPdf, setViewingPdf] = useState<{ url: string; title: string } | null>(null)
+  const [viewingPdf, setViewingPdf] = useState<{ url: string; title: string; paperId: string } | null>(null)
 
   function togglePracticed(paperId: string) {
     if (paperStates[paperId]) {
@@ -74,157 +77,157 @@ export default function PastPapersPage({ params }: Props) {
   ).length
 
   return (
-    <div className="space-y-6 max-w-5xl">
+    <div className="space-y-4 max-w-3xl">
       <div>
         <h1 className="text-2xl font-bold">{EXAM_LABELS[exam as ExamId]} — 考古題</h1>
         <p className="text-muted-foreground text-sm mt-1">
-          已練習 {practicedCount} / {papers.filter((p) => p.url).length} 份 ·
-          點「查看」在網站內嵌入閱讀，點「✓ 已練習」記錄進度
+          已練習 {practicedCount} / {papers.filter((p) => p.url).length} 份
         </p>
       </div>
 
-      {/* PDF 嵌入閱讀區 */}
-      {viewingPdf && (
-        <div className="rounded-lg border overflow-hidden">
-          <div className="flex items-center justify-between px-4 py-2 bg-muted/50 border-b">
-            <span className="text-sm font-medium">{viewingPdf.title}</span>
-            <div className="flex gap-2">
-              <a
-                href={viewingPdf.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs text-primary hover:underline"
-              >
-                新分頁開啟 ↗
-              </a>
-              <button
-                onClick={() => setViewingPdf(null)}
-                className="text-xs text-muted-foreground hover:text-foreground"
-              >
-                關閉 ✕
-              </button>
-            </div>
-          </div>
-          <iframe
-            src={viewingPdf.url}
-            className="w-full"
-            style={{ height: '80vh' }}
-            title={viewingPdf.title}
-          />
+      <Tabs defaultValue={subjects[0]?.id}>
+        {/* 科目 tabs — 可橫向捲動 */}
+        <div className="overflow-x-auto pb-1">
+          <TabsList className="inline-flex w-max gap-1">
+            {subjects.map((s) => (
+              <TabsTrigger key={s.id} value={s.id} className="text-sm whitespace-nowrap">
+                {s.name.split('（')[0]}
+              </TabsTrigger>
+            ))}
+          </TabsList>
         </div>
-      )}
 
-      {/* 年份 × 科目表格 */}
-      <div className="overflow-x-auto">
-        <table className="w-full text-sm border rounded-lg overflow-hidden">
-          <thead>
-            <tr className="bg-muted/50">
-              <th className="text-left p-2.5 font-medium w-16">學年度</th>
-              {subjects.map((s) => (
-                <th key={s.id} className="text-left p-2.5 font-medium">
-                  {s.name.split('（')[0]}
-                </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {years.map((year, yi) => (
-              <tr key={year} className={yi % 2 === 0 ? '' : 'bg-muted/20'}>
-                <td className="p-2.5 font-semibold">{year}</td>
-                {subjects.map((s) => {
-                  const paper = papers.find((p) => p.year === year && p.subjectId === s.id)
+        {subjects.map((subject) => {
+          const subjectPapers = papers.filter((p) => p.subjectId === subject.id)
+          const practicedInSubject = subjectPapers.filter((p) => paperStates[p.id]).length
 
-                  if (!paper) {
-                    return (
-                      <td key={s.id} className="p-2.5 text-muted-foreground text-xs">
-                        —
-                      </td>
-                    )
-                  }
+          return (
+            <TabsContent key={subject.id} value={subject.id} className="space-y-3">
+              <p className="text-xs text-muted-foreground">
+                已練習 {practicedInSubject} / {subjectPapers.filter((p) => p.url).length} 份
+              </p>
 
-                  if (!paper.url) {
-                    return (
-                      <td key={s.id} className="p-2.5">
-                        <Badge variant="outline" className="text-xs">尚未上架</Badge>
-                      </td>
-                    )
-                  }
+              {/* PDF 閱讀器 — 顯示在選中科目下方 */}
+              {viewingPdf && papers.find((p) => p.id === viewingPdf.paperId)?.subjectId === subject.id && (
+                <Card>
+                  <div className="flex items-center justify-between px-4 py-2 border-b">
+                    <span className="text-sm font-medium truncate mr-2">{viewingPdf.title}</span>
+                    <div className="flex items-center gap-3 shrink-0">
+                      <a
+                        href={viewingPdf.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs text-primary hover:underline"
+                      >
+                        新分頁 ↗
+                      </a>
+                      <button
+                        onClick={() => setViewingPdf(null)}
+                        className="text-xs text-muted-foreground hover:text-foreground"
+                      >
+                        關閉 ✕
+                      </button>
+                    </div>
+                  </div>
+                  <iframe
+                    src={viewingPdf.url}
+                    className="w-full rounded-b-lg"
+                    style={{ height: '75vh' }}
+                    title={viewingPdf.title}
+                  />
+                </Card>
+              )}
+
+              {/* 年份清單 */}
+              <div className="space-y-2">
+                {years.map((year) => {
+                  const paper = subjectPapers.find((p) => p.year === year)
+
+                  if (!paper) return null
 
                   const practiced = !!paperStates[paper.id]
                   const practiceData = paperStates[paper.id]
-                  const isViewing = viewingPdf?.url === paper.url
-                  const title = `${year}年 ${EXAM_LABELS[exam as ExamId]} ${s.name.split('（')[0]}`
+                  const isViewing = viewingPdf?.paperId === paper.id
+                  const title = `${year}年 ${EXAM_LABELS[exam as ExamId]} ${subject.name.split('（')[0]}`
 
                   return (
-                    <td key={s.id} className="p-2.5">
-                      <div className="flex flex-col gap-1.5">
-                        <Button
-                          size="sm"
-                          variant={isViewing ? 'default' : 'outline'}
-                          className="h-6 text-xs px-2"
-                          onClick={() =>
-                            setViewingPdf(isViewing ? null : { url: paper.url!, title })
-                          }
-                        >
-                          {isViewing ? '收起' : '查看'}
-                        </Button>
+                    <Card key={year} className={isViewing ? 'ring-2 ring-primary' : ''}>
+                      <CardContent className="flex items-center justify-between gap-3 py-3 px-4">
+                        {/* 學年度 */}
+                        <span className="text-sm font-semibold w-12 shrink-0">{year}年</span>
 
-                        <label className="flex items-center gap-1 cursor-pointer">
-                          <input
-                            type="checkbox"
-                            checked={practiced}
-                            onChange={() => togglePracticed(paper.id)}
-                            className="h-3 w-3 accent-primary"
-                          />
-                          <span className="text-xs text-muted-foreground">
-                            {practiced
-                              ? `✓ ${new Date(practiceData.practicedAt).toLocaleDateString('zh-TW', { month: 'short', day: 'numeric' })}`
-                              : '已練習'}
-                          </span>
-                        </label>
-
-                        {editingNotes === paper.id ? (
-                          <div className="flex gap-1">
-                            <input
-                              autoFocus
-                              value={noteText}
-                              onChange={(e) => setNoteText(e.target.value)}
-                              placeholder="筆記…"
-                              className="text-xs border rounded px-1 py-0.5 w-20 bg-background"
-                              onKeyDown={(e) => {
-                                if (e.key === 'Enter') saveNotes(paper.id)
-                                if (e.key === 'Escape') setEditingNotes(null)
-                              }}
-                            />
-                            <button
-                              onClick={() => saveNotes(paper.id)}
-                              className="text-xs text-primary"
-                            >
-                              ✓
-                            </button>
-                          </div>
+                        {/* 操作區 */}
+                        {!paper.url ? (
+                          <Badge variant="outline" className="text-xs">尚未上架</Badge>
                         ) : (
-                          practiced && (
-                            <button
-                              onClick={() => {
-                                setEditingNotes(paper.id)
-                                setNoteText(practiceData?.notes ?? '')
-                              }}
-                              className="text-xs text-muted-foreground hover:text-foreground text-left"
+                          <div className="flex flex-1 items-center justify-between gap-2 flex-wrap">
+                            <Button
+                              size="sm"
+                              variant={isViewing ? 'default' : 'outline'}
+                              className="h-7 text-xs px-3"
+                              onClick={() =>
+                                setViewingPdf(
+                                  isViewing ? null : { url: paper.url!, title, paperId: paper.id }
+                                )
+                              }
                             >
-                              {practiceData?.notes ? practiceData.notes : '+ 筆記'}
-                            </button>
-                          )
+                              {isViewing ? '收起' : '查看 PDF'}
+                            </Button>
+
+                            <div className="flex items-center gap-2">
+                              <label className="flex items-center gap-1.5 cursor-pointer select-none">
+                                <input
+                                  type="checkbox"
+                                  checked={practiced}
+                                  onChange={() => togglePracticed(paper.id)}
+                                  className="h-3.5 w-3.5 accent-primary"
+                                />
+                                <span className="text-xs text-muted-foreground">
+                                  {practiced
+                                    ? `✓ ${new Date(practiceData.practicedAt).toLocaleDateString('zh-TW', { month: 'short', day: 'numeric' })}`
+                                    : '已練習'}
+                                </span>
+                              </label>
+
+                              {practiced && (
+                                editingNotes === paper.id ? (
+                                  <div className="flex items-center gap-1">
+                                    <Input
+                                      autoFocus
+                                      value={noteText}
+                                      onChange={(e) => setNoteText(e.target.value)}
+                                      placeholder="筆記…"
+                                      className="h-7 text-xs w-28"
+                                      onKeyDown={(e) => {
+                                        if (e.key === 'Enter') saveNotes(paper.id)
+                                        if (e.key === 'Escape') setEditingNotes(null)
+                                      }}
+                                    />
+                                    <Button size="sm" variant="ghost" className="h-7 px-2 text-xs" onClick={() => saveNotes(paper.id)}>✓</Button>
+                                  </div>
+                                ) : (
+                                  <Button
+                                    variant="ghost"
+                                    size="sm"
+                                    className="h-6 px-2 text-xs text-muted-foreground"
+                                    onClick={() => { setEditingNotes(paper.id); setNoteText(practiceData?.notes ?? '') }}
+                                  >
+                                    {practiceData?.notes ? `📝 ${practiceData.notes}` : '+ 筆記'}
+                                  </Button>
+                                )
+                              )}
+                            </div>
+                          </div>
                         )}
-                      </div>
-                    </td>
+                      </CardContent>
+                    </Card>
                   )
                 })}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+              </div>
+            </TabsContent>
+          )
+        })}
+      </Tabs>
     </div>
   )
 }

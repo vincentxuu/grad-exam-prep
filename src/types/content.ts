@@ -120,6 +120,19 @@ export interface PastPaper {
   verified: boolean
 }
 
+export interface Question {
+  id: string
+  paperId: string
+  examId: ExamId
+  subjectId: string
+  year: number
+  number: number
+  text: string
+  points: number | null
+  hasImage: boolean
+  subQuestions: string[]
+}
+
 export interface ContentData {
   exams: Exam[]
   subjects: Subject[]

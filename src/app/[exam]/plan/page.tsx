@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation'
 import { use, useEffect, useState } from 'react'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
 import { EXAM_LABELS, getStudyPlan, getSubjectsByExam } from '@/lib/content'
 import { buildPhasesWithMeta, calcProgress, getExamDate, getPlanStartDate } from '@/lib/study-plan'
 import { useStudyPlanStore } from '@/store/study-plan'
@@ -123,13 +124,15 @@ export default function PlanPage({ params }: Props) {
                       </Badge>
                     )}
                     {task.isCustom && (
-                      <button
-                        onClick={() => removeCustomTask(task.id)}
-                        className="text-xs text-destructive hover:underline"
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        className="h-5 w-5 p-0 text-destructive hover:text-destructive"
                         title="刪除自訂任務"
+                        onClick={() => removeCustomTask(task.id)}
                       >
                         ✕
-                      </button>
+                      </Button>
                     )}
                   </div>
                 </li>
@@ -140,7 +143,7 @@ export default function PlanPage({ params }: Props) {
             <div className="px-4 py-2 border-t bg-muted/10">
               {addingPhase === phase.id ? (
                 <div className="flex gap-2">
-                  <input
+                  <Input
                     autoFocus
                     value={newTaskText}
                     onChange={(e) => setNewTaskText(e.target.value)}
@@ -149,7 +152,7 @@ export default function PlanPage({ params }: Props) {
                       if (e.key === 'Escape') setAddingPhase(null)
                     }}
                     placeholder="輸入自訂任務…"
-                    className="flex-1 text-sm bg-background border rounded px-2 py-1 focus:outline-none focus:ring-1 focus:ring-ring"
+                    className="flex-1 h-8 text-sm"
                   />
                   <Button size="sm" onClick={() => handleAddTask(phase.id)}>
                     新增
@@ -159,12 +162,14 @@ export default function PlanPage({ params }: Props) {
                   </Button>
                 </div>
               ) : (
-                <button
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="h-7 text-xs text-muted-foreground"
                   onClick={() => setAddingPhase(phase.id)}
-                  className="text-xs text-muted-foreground hover:text-foreground transition-colors"
                 >
                   + 新增自訂任務
-                </button>
+                </Button>
               )}
             </div>
           </div>

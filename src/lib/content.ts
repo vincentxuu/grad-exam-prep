@@ -1,5 +1,6 @@
-import type { Exam, ExamId, Flashcard, Resource, StudyPlan, Subject } from '@/types/content'
+import type { Exam, ExamId, Flashcard, Question, Resource, StudyPlan, Subject } from '@/types/content'
 import examsRaw from '../../public/data/exams.json'
+import questionsRaw from '../../public/data/questions.json'
 import flashcardsRaw from '../../public/data/flashcards.json'
 import pastPapersRaw from '../../public/data/past-papers.json'
 import resourcesRaw from '../../public/data/resources.json'
@@ -13,6 +14,11 @@ export const studyPlans = studyPlansRaw as unknown as StudyPlan[]
 export const flashcards = flashcardsRaw as unknown as Flashcard[]
 export const resources = resourcesRaw as unknown as Resource[]
 export const pastPapers = (pastPapersRaw as { papers: unknown[] }).papers
+export const questions = (questionsRaw as { questions: unknown[] }).questions as Question[]
+
+export function getQuestionsByExam(examId: ExamId): Question[] {
+  return questions.filter((q) => q.examId === examId)
+}
 
 export function getExam(id: ExamId): Exam | undefined {
   return exams.find((e) => e.id === id)

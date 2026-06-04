@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react'
 import { SyncPanel } from '@/components/sync/sync-panel'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
 import { isAuthenticated } from '@/lib/auth'
 import type { Note } from '@/lib/sync'
 import { createNote, deleteNote, fetchNotes, updateNote } from '@/lib/sync'
@@ -95,19 +97,18 @@ export default function NotesPage() {
           {/* New note form */}
           <div className="rounded-lg border p-4 space-y-3">
             <h2 className="text-sm font-medium">新增筆記</h2>
-            <textarea
+            <Textarea
               value={newContent}
               onChange={(e) => setNewContent(e.target.value)}
               placeholder="輸入時事內容或備考心得…"
               rows={3}
-              className="w-full text-sm bg-background border rounded px-3 py-2 focus:outline-none focus:ring-1 focus:ring-ring resize-none"
             />
             <div className="flex gap-2">
-              <input
+              <Input
                 value={newTags}
                 onChange={(e) => setNewTags(e.target.value)}
                 placeholder="標籤（逗號分隔）：AI, ESG, MIS…"
-                className="flex-1 text-sm bg-background border rounded px-3 py-1.5 focus:outline-none focus:ring-1 focus:ring-ring"
+                className="flex-1"
               />
               <Button onClick={handleCreate} disabled={!newContent.trim()}>
                 新增
@@ -130,17 +131,16 @@ export default function NotesPage() {
                   <li key={note.id} className="rounded-lg border p-4 space-y-2">
                     {editingId === note.id ? (
                       <div className="space-y-2">
-                        <textarea
+                        <Textarea
                           value={editContent}
                           onChange={(e) => setEditContent(e.target.value)}
                           rows={3}
-                          className="w-full text-sm bg-background border rounded px-3 py-2 focus:outline-none focus:ring-1 focus:ring-ring resize-none"
                         />
                         <div className="flex gap-2">
-                          <input
+                          <Input
                             value={editTags}
                             onChange={(e) => setEditTags(e.target.value)}
-                            className="flex-1 text-sm bg-background border rounded px-3 py-1.5 focus:outline-none focus:ring-1 focus:ring-ring"
+                            className="flex-1"
                           />
                           <Button size="sm" onClick={() => handleUpdate(note.id)}>
                             儲存
@@ -171,22 +171,26 @@ export default function NotesPage() {
                             })}
                           </span>
                           <div className="flex gap-2">
-                            <button
+                            <Button
+                              variant="ghost"
+                              size="sm"
+                              className="h-6 px-2 text-xs"
                               onClick={() => {
                                 setEditingId(note.id)
                                 setEditContent(note.content)
                                 setEditTags(note.tags.join(', '))
                               }}
-                              className="hover:text-foreground transition-colors"
                             >
                               編輯
-                            </button>
-                            <button
+                            </Button>
+                            <Button
+                              variant="ghost"
+                              size="sm"
+                              className="h-6 px-2 text-xs text-destructive hover:text-destructive"
                               onClick={() => handleDelete(note.id)}
-                              className="hover:text-destructive transition-colors"
                             >
                               刪除
-                            </button>
+                            </Button>
                           </div>
                         </div>
                       </>
