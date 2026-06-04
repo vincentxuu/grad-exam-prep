@@ -1,19 +1,18 @@
 export const meta = {
   name: 'generate-question-answers',
-  description: 'Generate AI answers for exam questions (batched)',
+  description: 'Generate AI answers — each agent writes its own file, no large JSON passing',
   phases: [
     { title: 'Load', detail: 'Read question IDs for this batch' },
-    { title: 'Generate', detail: 'Each agent reads its question file and generates answer' },
+    { title: 'Generate', detail: 'Each agent reads question, writes answer file' },
   ],
 }
 
 // args = { start: number, end: number }
-// Processes questions[start..end) from questions.json
 const { start = 0, end = 700 } = args || {}
 
 const QUESTIONS_PATH = '/Users/xiaoxu/Projects/grad-exam-prep/public/data/questions.json'
 const QFILES_DIR = '/Users/xiaoxu/Projects/grad-exam-prep/public/data/qfiles'
-const ANSWERS_PATH = '/Users/xiaoxu/Projects/grad-exam-prep/public/data/answers.json'
+const ANSWERS_DIR = '/Users/xiaoxu/Projects/grad-exam-prep/public/data/answers_individual'
 
 const IDS_SCHEMA = {
   type: 'object',
@@ -23,26 +22,10 @@ const IDS_SCHEMA = {
   },
 }
 
-const ANSWER_SCHEMA = {
-  type: 'object',
-  required: ['answer', 'explanation'],
-  properties: {
-    answer: {
-      type: 'string',
-      enum: ['A', 'B', 'C', 'D', 'E'],
-      description: 'The single correct option letter',
-    },
-    explanation: {
-      type: 'string',
-      description: '3-5 sentences in Traditional Chinese explaining why the answer is correct',
-    },
-  },
-}
-
 phase('Load')
 const loadResult = await agent(
-  `Run this bash command and return the IDs array as structured JSON:
-node -e "const d=require('${QUESTIONS_PATH}'); const ids=d.questions.slice(${start},${end}).map(q=>q.id); console.log(JSON.stringify({ids}))"`,
+  `Run this bash command and return the result as structured JSON with an "ids" field:
+node -e "const d=require('${QUESTIONS_PATH}'); console.log(JSON.stringify({ids:d.questions.slice(${start},${end}).map(q=>q.id)}))"`,
   { label: 'load-ids', schema: IDS_SCHEMA }
 )
 
@@ -51,60 +34,34 @@ log(`Batch ${start}-${end}: ${questionIds.length} questions`)
 
 phase('Generate')
 
-const results = await pipeline(
+await pipeline(
   questionIds,
   async (qId) => {
-    const result = await agent(
+    await agent(
       `You are an expert in Taiwan graduate school entrance exams (資工所/資管所).
 
-Read the file at: ${QFILES_DIR}/${qId}.json
+Step 1: Use the Read tool to read this file: ${QFILES_DIR}/${qId}.json
 
-Use the Read tool to get the question content, then:
-1. Identify the correct answer (must be exactly one of: A, B, C, D, E)
-2. Write a clear 3-5 sentence explanation in Traditional Chinese (繁體中文)
+Step 2: Analyze the question content. Determine the single correct answer letter (A, B, C, D, or E) and write a 3-5 sentence explanation in Traditional Chinese (繁體中文).
 
-You MUST call the StructuredOutput tool with your final answer and explanation.`,
-      {
-        label: `ans:${qId}`,
-        phase: 'Generate',
-        schema: ANSWER_SCHEMA,
-      }
+Step 3: Use the Write tool to write the following JSON to: ${ANSWERS_DIR}/${qId}.json
+
+The file must contain ONLY this JSON (replace ANSWER and EXPLANATION):
+{"questionId":"${qId}","answer":"ANSWER","explanation":"EXPLANATION"}
+
+Where ANSWER is exactly one letter (A/B/C/D/E) and EXPLANATION is your 3-5 sentence Traditional Chinese explanation. Do not include any other text in the file.`,
+      { label: `ans:${qId}`, phase: 'Generate' }
     )
-    return result ? { questionId: qId, answer: result.answer, explanation: result.explanation } : null
+    return qId
   }
 )
 
-// Merge with existing answers.json
-const existingAgent = await agent(
-  `Read the file ${ANSWERS_PATH} and return its content as a plain string. Return ONLY the raw JSON, no explanation.`,
-  { label: 'read-existing' }
+// Count how many files were written
+const countResult = await agent(
+  `Run this bash command and return the count as JSON {"count": N}:
+node -e "const fs=require('fs'); const files=fs.readdirSync('${ANSWERS_DIR}').filter(f=>f.endsWith('.json')); console.log(JSON.stringify({count:files.length}))"`,
+  { label: 'count-results', schema: { type: 'object', required: ['count'], properties: { count: { type: 'number' } } } }
 )
 
-let existing = { answers: {} }
-try { existing = JSON.parse(existingAgent) } catch {}
-
-let successCount = 0
-let failCount = 0
-
-for (const r of results) {
-  if (!r) { failCount++; continue }
-  existing.answers[r.questionId] = {
-    questionId: r.questionId,
-    answer: r.answer,
-    explanation: r.explanation,
-    generatedAt: 0,
-  }
-  successCount++
-}
-
-log(`Batch done: ${successCount} success, ${failCount} failed`)
-
-// Write merged answers back
-await agent(
-  `Write the following JSON content to the file ${ANSWERS_PATH}. Use the Write tool. The content to write is exactly:
-${JSON.stringify(existing, null, 2)}`,
-  { label: 'write-answers' }
-)
-
-log(`Saved ${Object.keys(existing.answers).length} total answers to ${ANSWERS_PATH}`)
-return { successCount, failCount, total: Object.keys(existing.answers).length }
+log(`Batch ${start}-${end} done. Total answer files: ${countResult.count}`)
+return { written: countResult.count }
