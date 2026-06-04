@@ -115,17 +115,19 @@ export default function FlashcardsPage({ params }: Props) {
 
   return (
     <div className="space-y-6 max-w-3xl">
-      <div className="flex items-start justify-between">
+      <div className="space-y-3">
         <div>
-          <h1 className="text-2xl font-bold">{EXAM_LABELS[exam as ExamId]} — 閃卡練習</h1>
+          <div className="flex items-center gap-2 flex-wrap">
+            <h1 className="text-2xl font-bold">{EXAM_LABELS[exam as ExamId]} — 閃卡練習</h1>
+            {dueCount > 0 && (
+              <Badge className="text-xs">{dueCount} 張待複習</Badge>
+            )}
+          </div>
           <p className="text-muted-foreground text-sm mt-1">SM-2 間隔重複排程</p>
         </div>
-        <div className="flex items-center gap-2">
-          {dueCount > 0 && <Badge className="text-sm">{dueCount} 張待複習</Badge>}
-          <Button onClick={startReview} disabled={dueCards.length === 0}>
-            {dueCards.length > 0 ? `開始複習（${dueCards.length}）` : '暫無待複習卡'}
-          </Button>
-        </div>
+        <Button onClick={startReview} disabled={dueCards.length === 0} className="w-full sm:w-auto">
+          {dueCards.length > 0 ? `開始複習（${dueCards.length}）` : '暫無待複習卡'}
+        </Button>
       </div>
 
       {/* Subject filter */}
