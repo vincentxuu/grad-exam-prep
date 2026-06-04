@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { QuestionText } from '@/components/question-text'
 import { EXAM_LABELS, getQuestionsByExam, getSubjectsByExam } from '@/lib/content'
 import type { ExamId, Question } from '@/types/content'
 
@@ -203,9 +204,9 @@ function QuestionCard({
         </div>
 
         {/* Question text */}
-        <div className="text-sm leading-relaxed whitespace-pre-wrap">
-          {expanded || !needsTruncation ? question.text : `${preview}…`}
-        </div>
+        <QuestionText
+          text={expanded || !needsTruncation ? question.text : `${preview}…`}
+        />
 
         {/* Sub-questions */}
         {expanded && question.subQuestions.length > 0 && (

@@ -8,6 +8,7 @@ import { Card, CardContent } from '@/components/ui/card'
 import { getQuestionsByExam } from '@/lib/content'
 import { getAnswer } from '@/lib/answers'
 import { getUserId } from '@/lib/user-id'
+import { QuestionText } from '@/components/question-text'
 import type { ExamId } from '@/types/content'
 import type { PracticeMode } from '@/types/practice'
 
@@ -60,7 +61,7 @@ export default function DrillPage({ params, searchParams }: Props) {
 
       <Card>
         <CardContent className="py-4 px-4">
-          <p className="text-sm leading-relaxed whitespace-pre-wrap">{question.text}</p>
+          <QuestionText text={question.text} />
         </CardContent>
       </Card>
 
