@@ -5,14 +5,15 @@ import { use, useState } from 'react'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
+import { Separator } from '@/components/ui/separator'
+import { QuestionText } from '@/components/question-text'
 import { getQuestionsByExam } from '@/lib/content'
 import { getAnswer } from '@/lib/answers'
 import { getUserId } from '@/lib/user-id'
-import { QuestionText } from '@/components/question-text'
+import { parseQuestion } from '@/lib/question-parser'
 import type { ExamId } from '@/types/content'
 import type { PracticeMode } from '@/types/practice'
-
-const OPTIONS = ['A', 'B', 'C', 'D', 'E'] as const
 
 interface Props {
   params: Promise<{ exam: string; questionId: string }>
@@ -28,7 +29,9 @@ export default function DrillPage({ params, searchParams }: Props) {
   const question = allQuestions.find((q) => q.id === questionId)
   if (!question) notFound()
 
+  const parsed = parseQuestion(question.text)
   const answerData = getAnswer(questionId)
+
   const [selected, setSelected] = useState<string | null>(null)
   const [revealed, setRevealed] = useState(false)
   const [submitting, setSubmitting] = useState(false)
@@ -49,82 +52,149 @@ export default function DrillPage({ params, searchParams }: Props) {
     }
   }
 
+  const isCorrect = selected && answerData && selected === answerData.answer.toLowerCase()
+
   return (
-    <div className="space-y-4 max-w-3xl">
+    <div className="space-y-4 max-w-2xl">
+      {/* Header */}
       <div className="flex items-center gap-2 flex-wrap">
         <Badge variant="outline">{question.year}年</Badge>
         <span className="text-xs text-muted-foreground">第 {question.number} 題</span>
         {question.points != null && (
           <Badge variant="secondary">{question.points} 分</Badge>
         )}
+        <Button
+          variant="ghost"
+          size="sm"
+          className="ml-auto text-xs text-muted-foreground h-7"
+          onClick={() => router.push(`/${exam}/questions`)}
+        >
+          ← 返回題庫
+        </Button>
       </div>
 
+      {/* Question stem */}
       <Card>
-        <CardContent className="py-4 px-4">
-          <QuestionText text={question.text} />
+        <CardContent className="py-4 px-5">
+          <QuestionText text={parsed.stem} />
         </CardContent>
       </Card>
 
-      {!revealed && (
-        <div className="flex flex-wrap gap-2">
-          {OPTIONS.map((opt) => (
-            <Button
-              key={opt}
-              variant={selected === opt ? 'default' : 'outline'}
-              className="w-12 h-12 text-base font-bold"
-              onClick={() => setSelected(opt)}
+      {/* Options */}
+      {!revealed && parsed.options ? (
+        <RadioGroup
+          value={selected ?? ''}
+          onValueChange={setSelected}
+          className="space-y-2"
+        >
+          {parsed.options.map((opt) => (
+            <label
+              key={opt.label}
+              htmlFor={`opt-${opt.label}`}
+              className={`flex items-start gap-3 rounded-lg border px-4 py-3 cursor-pointer transition-colors
+                ${selected === opt.label
+                  ? 'border-primary bg-primary/5'
+                  : 'hover:bg-muted/50'
+                }`}
             >
-              {opt}
-            </Button>
+              <RadioGroupItem
+                id={`opt-${opt.label}`}
+                value={opt.label}
+                className="mt-0.5 shrink-0"
+              />
+              <span className="text-sm leading-relaxed">
+                <span className="font-medium uppercase mr-2">{opt.label}.</span>
+                {opt.text}
+              </span>
+            </label>
           ))}
+        </RadioGroup>
+      ) : !revealed && !parsed.options ? (
+        /* Free-form questions: just letter buttons */
+        <div className="space-y-2">
+          <p className="text-xs text-muted-foreground">選擇你的答案：</p>
+          <div className="flex flex-wrap gap-2">
+            {['a', 'b', 'c', 'd', 'e'].map((opt) => (
+              <Button
+                key={opt}
+                variant={selected === opt ? 'default' : 'outline'}
+                className="w-12 h-12 text-base font-bold uppercase"
+                onClick={() => setSelected(opt)}
+              >
+                {opt.toUpperCase()}
+              </Button>
+            ))}
+          </div>
         </div>
-      )}
+      ) : null}
 
+      {/* Confirm button */}
       {!revealed && (
         <Button
           disabled={!selected}
           onClick={() => setRevealed(true)}
           className="w-full"
+          size="lg"
         >
           確認答案
         </Button>
       )}
 
-      {revealed && answerData && (
-        <Card className="border-green-200 bg-green-50 dark:bg-green-950/20">
-          <CardContent className="py-4 px-4 space-y-2">
-            <div className="flex items-center gap-2">
-              <span className="font-bold text-green-700 dark:text-green-400">
-                正確答案：{answerData.answer}
+      {/* Result */}
+      {revealed && (
+        <Card className={isCorrect ? 'border-[hsl(var(--success))]' : 'border-destructive'}>
+          <CardContent className="py-4 px-5 space-y-3">
+            <div className="flex items-center gap-3 flex-wrap">
+              <span className={`text-base font-semibold ${isCorrect ? 'text-[hsl(var(--success))]' : 'text-destructive'}`}>
+                {isCorrect ? '✓ 答對了！' : '✗ 答錯了'}
               </span>
               {selected && (
-                <Badge variant={selected === answerData.answer ? 'default' : 'destructive'}>
-                  你選了 {selected}
+                <Badge variant={isCorrect ? 'default' : 'destructive'} className="uppercase">
+                  你選了 {selected.toUpperCase()}
+                </Badge>
+              )}
+              {answerData && !isCorrect && (
+                <Badge variant="outline" className="text-[hsl(var(--success))] border-[hsl(var(--success))] uppercase">
+                  正解 {answerData.answer}
                 </Badge>
               )}
             </div>
-            <p className="text-sm leading-relaxed text-muted-foreground">{answerData.explanation}</p>
+
+            {!isCorrect && parsed.options && answerData && (
+              <p className="text-sm text-foreground leading-relaxed">
+                <span className="font-medium">正確選項：</span>
+                {parsed.options.find(o => o.label === answerData.answer.toLowerCase())?.text ?? answerData.answer}
+              </p>
+            )}
+
+            {answerData?.explanation && (
+              <>
+                <Separator />
+                <p className="text-sm text-foreground leading-relaxed">{answerData.explanation}</p>
+              </>
+            )}
+
+            {!answerData && (
+              <p className="text-sm text-muted-foreground">此題尚無解析</p>
+            )}
           </CardContent>
         </Card>
       )}
 
-      {revealed && !answerData && (
-        <p className="text-sm text-muted-foreground text-center">此題尚無解析</p>
-      )}
-
+      {/* Know it / Don't know buttons */}
       {revealed && (
         <div className="flex gap-3">
           <Button
             variant="outline"
-            className="flex-1 border-green-500 text-green-700 hover:bg-green-50"
+            className="flex-1 border-[hsl(var(--success))] text-[hsl(var(--success))] hover:bg-[hsl(var(--success)/0.1)]"
             disabled={submitting}
             onClick={() => submitResult('correct')}
           >
             ✓ 會了
           </Button>
           <Button
-            variant="outline"
-            className="flex-1 border-red-400 text-red-600 hover:bg-red-50"
+            variant="destructive"
+            className="flex-1"
             disabled={submitting}
             onClick={() => submitResult('wrong')}
           >
