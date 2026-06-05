@@ -8,11 +8,11 @@ export const meta = {
 }
 
 // args = { start: number, end: number }
-const { start = 0, end = 700 } = args || {}
+const { start = 700, end = 1424 } = args || {}
 
 const QUESTIONS_PATH = '/Users/xiaoxu/Projects/grad-exam-prep/public/data/questions.json'
 const QFILES_DIR = '/Users/xiaoxu/Projects/grad-exam-prep/public/data/qfiles'
-const ANSWERS_DIR = '/Users/xiaoxu/Projects/grad-exam-prep/public/data/answers_individual'
+const ANSWERS_DIR = '/Users/xiaoxu/Projects/grad-exam-prep/tmp_answers_individual'
 
 const IDS_SCHEMA = {
   type: 'object',
