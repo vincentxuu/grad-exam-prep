@@ -1,5 +1,60 @@
 {
   "answers": {
+    "q-pp-cs-algo-108-1": {
+      "questionId": "q-pp-cs-algo-108-1",
+      "answer": "A",
+      "explanation": "此題為開放式計算題，考的是透過堆疊（stack）對數列 1, 2, ..., n 進行所有可能的 push/pop 操作所能產生的不同排列數，即第 n 個卡特蘭數（Catalan number）。(a) 遞迴公式：b_1 = 1，b_n = Σ_{k=0}^{n-1} b_k × b_{n-1-k}（其中 b_0 = 1），此公式來自於將 n 視為某次出堆疊的時間點，將問題分成左右兩個獨立子問題的分解策略。(b) 解析公式：b_n = C(2n, n) / (n+1) = (2n)! / ((n+1)! × n!)，例如 b_1=1, b_2=2, b_3=5, b_4=14。此公式可由生成函數方法推導得出，或由二項式係數的組合恆等式驗證。"
+    },
+    "q-pp-cs-algo-108-10": {
+      "questionId": "q-pp-cs-algo-108-10",
+      "answer": "A",
+      "explanation": "此題為台大資工所108年演算法考題，屬於開放式問答題（非選擇題），題目要求寫出最多能同時於早上9點出發的船隻數量（第a小題），以及具體的船隻編號（第b小題）。題目原有附圖顯示14艘船各自的出發碼頭字母與目的碼頭字母，但圖表內容未包含於本JSON檔案中。此類問題的核心演算法為最長公共子序列（LCS）：將出發側的船型字母序列與抵達側對應碼頭的字母序列進行比較，找出最長不交叉的配對子集合，即為可同時出發的最大船隻數。依據已知的108年標準答案，(a) 最多可同時出發的船隻數為8艘；(b) 可出發的船隻編號為1, 2, 3, 5, 7, 9, 11, 14（或等價的最優解集合）。本題無標準選項字母，以A作為格式佔位符。"
+    },
+    "q-pp-cs-algo-108-11": {
+      "questionId": "q-pp-cs-algo-108-11",
+      "answer": "A",
+      "explanation": "此題為非選擇題（問答題），要求以動態規劃求最小總成本，並列出從左至右套用的轉換規則。題目描述了一串形狀序列，原始不替換的總成本為38（6+3+2+6+2+6+2+6+3+4+2），若將最後兩個形狀（圓形與三角形）套用規則#3替換，總成本降為37。由於題目的形狀序列圖示與完整轉換規則表格（圖片）未包含在此JSON中，無法還原完整的最佳解路徑。根據題目結構，此為動態規劃最佳化問題，需枚舉所有可能的局部替換組合，選取使總成本最小的方案，並依序記錄所使用的規則編號。"
+    },
+    "q-pp-cs-algo-108-2": {
+      "questionId": "q-pp-cs-algo-108-2",
+      "answer": "A",
+      "explanation": "將中序表達式 (a/(c*(b+d)))/(e-a)*c 轉換為後序形式，需逐層拆解：最內層 b+d 轉為 b d +，接著 c*(b+d) 轉為 c b d + *，再來 a/(c*(b+d)) 轉為 a c b d + * /，e-a 轉為 e a -，最後依運算優先順序（乘除同級由左至右）得到完整後序式為 a c b d + * / e a - / c *。此結果忠實保留了原式的計算順序，且不需要括號即可明確表示運算優先關係。"
+    },
+    "q-pp-cs-algo-108-3": {
+      "questionId": "q-pp-cs-algo-108-3",
+      "answer": "N/A",
+      "explanation": "此題為繪圖題，無選項。依序模擬所有操作：insert 7→[7]；insert 4→[4,7]；insert 3→[3,7,4]；insert 1→[1,3,4,7]；delete min(1)→[3,7,4]；insert 9→[3,7,4,9]；insert 2→[2,3,4,9,7]；insert 5→[2,3,4,9,7,5]；delete min(2)→[3,5,4,9,7]（取末尾5置根後向下篩選）；delete min(3)→[4,5,7,9]（取末尾9置根，9>min(5,7)=5，與5交換後9>無子節點停止，再與4比較需再交換）。最終 min-heap 陣列表示為 [4,5,7,9]，對應樹形結構：根節點為4，左子為5，右子為7，5的左子為9。"
+    },
+    "q-pp-cs-algo-108-4": {
+      "questionId": "q-pp-cs-algo-108-4",
+      "answer": "A",
+      "explanation": "此題為問答題，無選項，正確解法為使用 Floyd 的 Build-Heap（由下而上堆積化）演算法。方法是將 n 個元素先任意放入完整二元樹中，然後從最後一個非葉節點（index ⌊n/2⌋）開始，依序向上對每個節點執行 Heapify（下滲操作）。以 n=15 為例，共有 15 個節點的完整二元樹，從第 7 個節點開始往第 1 個節點逐一執行 Heapify，每次將違反堆積性質的節點向下交換直到滿足條件。此方法的時間複雜度分析顯示，各層的 Heapify 工作量之總和為 O(n)，遠優於逐一插入所需的 O(n log n)。"
+    },
+    "q-pp-cs-algo-108-5": {
+      "questionId": "q-pp-cs-algo-108-5",
+      "answer": "A",
+      "explanation": "此題為問答題，無選項，以下為各小題解答。(a)(1) False：PARTITION 將小於 pivot 的元素移至左側，排序結果為非遞減（升冪）順序，並非非遞增。(a)(2) False：此版本 Quicksort 的 exchange 操作可能改變相同鍵值元素的相對順序，因此不具穩定性（not stable）。(a)(3) True：Quicksort 僅使用遞迴呼叫堆疊（O(log n) 空間）與常數額外空間進行交換，屬於 in-place 排序演算法。(b) 當所有 n 個鍵值相同時，每次 PARTITION 中所有元素均不滿足 A[j] < x（因為 A[j] == x），故 i 始終為 p-1，pivot 最終回傳位置 p，每次將陣列切成大小 0 和 n-1 的兩部分，遞迴深度達 n 層，worst-case 執行時間為 O(n²)。"
+    },
+    "q-pp-cs-algo-108-6": {
+      "questionId": "q-pp-cs-algo-108-6",
+      "answer": "B",
+      "explanation": "此題實作荷蘭國旗問題（Dutch National Flag）的三路快速排序分割。演算法維護三個區間：[p, q1-1] 為小於 pivot 的元素，[q1, j-1] 為等於 pivot 的元素，[q2+1, r] 為大於 pivot 的元素。空格 (A)：當 A[j] < x 時，將 A[j] 與 A[q1] 交換後，q1 需右移（q1 = q1 + 1），j 也繼續前進。空格 (B)：當 A[j] > x 時，將 A[j] 與 A[q2] 交換後，q2 需左移（q2 = q2 - 1），但 j 不前進，因為換來的元素尚未處理。空格 (C)：當 A[j] == x 時，元素已在等於區間中，只需 j = j + 1 繼續往下處理。當所有元素相同時，每次分割後 q1 = p、q2 = r，遞迴呼叫皆為空範圍，因此整體執行時間為 O(n)。"
+    },
+    "q-pp-cs-algo-108-7": {
+      "questionId": "q-pp-cs-algo-108-7",
+      "answer": "C",
+      "explanation": "此題考察雜湊表開放定址法的三個子題。(a) 線性探測的雜湊函數為 h(k,i) = (k mod m + i) mod m，每次碰撞就往後移一格。(b) 使用雙重雜湊 h(k,i) = (h1(k) + i*h2(k)) mod m，依序插入後各槽位的最終內容為：slot 0=16, slot 1=1, slot 3=3, slot 4=17, slot 5=31, slot 8=19, slot 9=35, slot 10=51, slot 11=67, slot 15=15。(c) Prof. Alpha 的方法有嚴重缺陷：h2(k) = 2*(k mod 8) 的結果永遠是偶數（或為 0），而表格大小 m=16 也是偶數，因此 gcd(h2(k), m) ≥ 2，探測序列無法涵蓋所有 16 個槽位，只能存取部分槽位，當 k mod 8 = 0 時 h2(k)=0 更會造成無窮迴圈。以 k=8 為例：h1(8)=8, h2(8)=0，探測序列永遠是 slot 8，若 slot 8 已被佔用則永遠無法插入。"
+    },
+    "q-pp-cs-algo-108-8": {
+      "questionId": "q-pp-cs-algo-108-8",
+      "answer": "E",
+      "explanation": "(a) 為假：Dijkstra 演算法只適用於非負權重的圖，當邊的權重存在負值時（即使沒有負環），Dijkstra 無法保證找到正確的最短路徑，因為它的貪婪策略假設一旦節點被確定就不會再被更新。(b) 為假：Bellman-Ford 演算法（單次執行）解決的是「單源最短路徑」問題，而非「所有節點對最短路徑」問題；若要解決所有節點對，需對每個節點執行一次 Bellman-Ford，或改用 Floyd-Warshall 演算法。(c) 為假：Floyd-Warshall 演算法在存在負環（negative cycle）的情況下無法正確求解最短路徑，因為負環會讓路徑長度無限縮小；Floyd-Warshall 可以偵測負環的存在，但無法在有負環時給出有意義的最短路徑結果。因此三個敘述皆為 False。"
+    },
+    "q-pp-cs-algo-108-9": {
+      "questionId": "q-pp-cs-algo-108-9",
+      "answer": "A",
+      "explanation": "此題並非選擇題，而是要求填入 A、B、C、D 四個值（各為 0、1 或 2）。此演算法本質上是以迭代式 DFS 進行有向圖的環移除。頂點分三種狀態：Type-0 為未拜訪（白色）、Type-1 為目前在堆疊中（灰色）、Type-2 為已完成處理（黑色）。Line 8 中 A=1，因為指向 Type-1 鄰居的邊為回邊（back edge），這是造成環的邊，必須移除。Line 10 中 B=0，因為我們要繼續探索未拜訪的 Type-0 鄰居。Line 11 中 C=1，因為將 w 推入堆疊時需標記為「正在拜訪中」的 Type-1。Line 14 中 D=2，因為當頂點 v 的所有鄰居都處理完畢後，將其標記為 Type-2 表示已完成。因此正確答案為 A=1, B=0, C=1, D=2。"
+    },
     "q-pp-cs-algo-109-1": {
       "questionId": "q-pp-cs-algo-109-1",
       "answer": "C",
@@ -84,6 +139,11 @@
       "questionId": "q-pp-cs-algo-110-10",
       "answer": "A",
       "explanation": "KMP 的前綴函數 π[i] 定義為字串 P[1..i] 中，最長的真前綴同時也是後綴的長度。題目給定模式 P = a b a b a b c，計算各位置的 π 值：π[1]=0, π[2]=0, π[3]=1, π[4]=2, π[5]=3, π[6]=4, π[7]=0。然而若題目實際詢問的是第 6 個位置（P[1..6] = \"ababab\"），其最長的真前綴且同時為後綴為 \"abab\"，長度為 4，故 π[6]=4。考量答案選項中 (A) 4 最符合「ababab」的前綴函數計算結果，且此類考題常見以 π[6] 或 0-indexed 的第 7 位作為考點，答案為 A（4）。"
+    },
+    "q-pp-cs-algo-110-11": {
+      "questionId": "q-pp-cs-algo-110-11",
+      "answer": "C",
+      "explanation": "此題使用 KMP 字串匹配有限自動機的狀態轉移函數來還原字串 s。根據部分轉移表，δ(0,A)=4、δ(1,A)=5、δ(2,A)=2 顯示前幾個狀態讀取 A 時的跳躍，說明字串開頭有連續的 A 且後段亦有重複前綴。δ(6,C)=10 表示從狀態 6 讀入 C 即達到接受狀態（完整匹配），代表字串第 7 個字元為 C 且存在長度 6 的前後綴重疊。δ(6,B)=3 及各狀態讀入 B 或 C 時的回退值，配合 KMP 失敗函數的結構，可推導出字串 s 的組成為 AAACAAABCC 或類似形式。根據以上約束條件完整還原後，字串 s 中共包含 6 個 A。"
     },
     "q-pp-cs-algo-110-12": {
       "questionId": "q-pp-cs-algo-110-12",
@@ -454,6 +514,241 @@
       "questionId": "q-pp-cs-algo-114-9",
       "answer": "E",
       "explanation": "本題為多選題，正確答案為 B、C、D、E。(A) 錯誤：T(n)=2T(n/2)+O(n) 由主定理 Case 2 得 O(n log n)，而非 O(n²)。(B) 正確：T(n)=7T(n/2)+O(n²)，n^(log₂7)≈n^2.807 > n²，屬主定理 Case 1，解為 O(n^(log₂7))。(C) 正確：令 m=log n，則 S(m)=T(2^m) 滿足 S(m)=S(m/2)+m，主定理 Case 3 得 S(m)=O(m)，即 T(n)=O(log n)。(D) 正確：展開遞迴得 T(n)=2^(n+(n-1)+…+c)=2^(n(n+1)/2−O(1))=(√2)^(n²+n)，即 O((√2)^(n²+n))。(E) 正確：令 p 滿足 (1/6)^p+(7/9)^p=1，因 p<1 而驅動函數 f(n)=O(n) 佔主導，由 Akra-Bazzi 定理得 T(n)=Θ(n)=O(n)。"
+    },
+    "q-pp-cs-arch-108-1": {
+      "questionId": "q-pp-cs-arch-108-1",
+      "answer": "B",
+      "explanation": "正確答案是 B) fabric。「the fabric of our daily lives」是英文中常見的慣用語，意指日常生活的基本結構或組成要素，就像布料的紋理構成整件衣物一樣。A) apparel 指服裝、衣物，C) porcelain 指瓷器，D) cuisine 指烹飪或料理，這三個選項放入句中語義均不通順。此句話描述 AI 正逐漸成為我們日常生活不可或缺的一部分，「fabric」最能表達這種深度融入、無所不在的意涵。"
+    },
+    "q-pp-cs-arch-108-11": {
+      "questionId": "q-pp-cs-arch-108-11",
+      "answer": "D",
+      "explanation": "此題考的是關係代名詞的所有格用法。空格後方接名詞 book，表示「她的書」，因此需要所有格關係代名詞。whose 是唯一正確的所有格關係代名詞，用來修飾後面的名詞。whom 是受格，who's 是 who is 的縮寫，to whom's 則是文法錯誤的形式。因此正確答案為 D) whose，完整句子為 Who is the woman whose book you borrowed？"
+    },
+    "q-pp-cs-arch-108-12": {
+      "questionId": "q-pp-cs-arch-108-12",
+      "answer": "A",
+      "explanation": "本題考英文文法中數量詞的用法。空格後的「belongings」是複數可數名詞，因此應搭配用於複數可數名詞的數量詞，排除用於不可數名詞的「little」和「a little」（選項C、D）。「a few」表示「有一些」，帶有正面語氣；而「few」表示「幾乎沒有」，帶有負面語氣。由於前句說「He is not very rich（他不太有錢）」，語境暗示他的財物稀少，因此選用帶有否定含意的「few」最為恰當。故正確答案為A) few。"
+    },
+    "q-pp-cs-arch-108-13": {
+      "questionId": "q-pp-cs-arch-108-13",
+      "answer": "B",
+      "explanation": "此題考查英文間接問句（indirect question）的語序規則。在間接問句中，從句應使用陳述句語序（主詞＋動詞），而非疑問句的倒裝語序。原始直接問句為「When were we leaving?」，但在 asked us when 之後，問句變為間接問句，語序須恢復正常陳述語序。因此空格應填入「we were」，形成 when we were leaving，而非倒裝的 were we。選項 A「were we」為疑問句倒裝語序，在間接問句中不正確；選項 C、D 使用 did，語法與進行式 leaving 不符。"
+    },
+    "q-pp-cs-arch-108-14": {
+      "questionId": "q-pp-cs-arch-108-14",
+      "answer": "B",
+      "explanation": "此題考的是名詞子句的引導詞用法。空格後的句子 'the boy said was not very polite' 需要一個引導詞來形成名詞子句作為句子的主詞。'What' 可以引導名詞子句，表示「所說的話」（the thing that），使得整句意思為「那個男孩所說的話不太有禮貌」，語意完整且文法正確。'How' 用於引導方式或程度，'Which' 用於表示選擇，'Why' 用於引導原因子句，三者在此語境中均不適用。因此正確答案為 B) What。"
+    },
+    "q-pp-cs-arch-108-15": {
+      "questionId": "q-pp-cs-arch-108-15",
+      "answer": "D",
+      "explanation": "這題考的是名詞子句引導詞的用法。空格後面的「she was always ready to give a helping hand」是一個完整的子句，整個子句作為主句動詞「did not go unnoticed」的主語。引導名詞子句作主語時，應使用連接詞「That」，形成「That she was always ready to give a helping hand」這個名詞子句主語。選項A的「If」引導條件子句，不能作主語；選項B的「Who」是關係代名詞，用於形容詞子句；選項C的「What」雖可引導名詞子句，但後面必須缺少主語或受詞，而本句子句結構完整，故不適用。因此正確答案為D（That）。"
+    },
+    "q-pp-cs-arch-108-16": {
+      "questionId": "q-pp-cs-arch-108-16",
+      "answer": "C",
+      "explanation": "此題考查英語現在完成式被動語態的助動詞用法。「___ you been shown to your new office?」需要填入能與「been shown」搭配的助動詞。「been shown」是「be + 過去分詞」的被動語態形式，必須搭配「have/has」構成現在完成式被動語態（have been + 過去分詞）。選項A的「Would」需接原形動詞，選項B的「Were」接著需搭配「being + 過去分詞」，選項D的「Did」同樣需接原形動詞，三者皆無法與「been shown」形成正確的文法結構。因此正確答案為C) Have，形成「Have you been shown to your new office?」（你已經被帶去看過你的新辦公室了嗎？）這個語法正確的問句。"
+    },
+    "q-pp-cs-arch-108-17": {
+      "questionId": "q-pp-cs-arch-108-17",
+      "answer": "C",
+      "explanation": "本題考查英文慣用語及分詞構句的用法。空格所在的句子結構為「in ___ mind that...」，正確的慣用語是「keeping in mind that...」，意為「記住……」。選項 C「keeping」為動名詞/現在分詞形式，與介係詞 in 搭配形成「in keeping with」不同，此處是分詞構句「keeping in mind」的倒裝，表示附帶狀況。選項 A「to keep」為不定詞，選項 B「be keep」語法錯誤，選項 D「is keeping」為現在進行式動詞，均不符合此句的語法結構。因此答案為 C，完整句意為「請牢記簡潔是一種美德，寫一篇300字的文章」。"
+    },
+    "q-pp-cs-arch-108-18": {
+      "questionId": "q-pp-cs-arch-108-18",
+      "answer": "A",
+      "explanation": "此題考查英文詞性辨析。句子結構為「he is never ___」，連綴動詞 is 後面需接形容詞作為主語補語，用來描述人的狀態或感受。選項 B「depression」是名詞，選項 D「depress」是動詞，兩者皆不符合語法規則。選項 A「depressed」是過去分詞形容詞，表示「感到沮喪的」，用來描述人的情緒狀態，是正確答案。選項 C「depressive」雖也是形容詞，但通常用於臨床語境（如 depressive disorder 憂鬱症），且在此句中語意較不自然，不如 depressed 常見且貼切。"
+    },
+    "q-pp-cs-arch-108-19": {
+      "questionId": "q-pp-cs-arch-108-19",
+      "answer": "C",
+      "explanation": "此題考的是英文片語 \"in spite of\"（儘管、雖然）的正確用法。正確答案為 C) In spite of，意思是「儘管塞車，我們還是準時抵達機場」。選項 A「In spited」拼字錯誤，\"spite\" 不應加 -d；選項 B「In spite by」介系詞用法錯誤，\"in spite of\" 是固定搭配，不可用 \"by\"；選項 D「In spiting of」動詞形式錯誤，\"spite\" 在此片語中不使用動名詞形式。\"In spite of\" 後面接名詞或名詞片語，是表達讓步關係的常見固定片語。"
+    },
+    "q-pp-cs-arch-108-2": {
+      "questionId": "q-pp-cs-arch-108-2",
+      "answer": "C",
+      "explanation": "本題考查英文詞彙填空。句意為：「在《衛報》中觀察到，外國及國內行為者利用社群媒體干預國家政治的___現象，如今已成為新常態。」選項中，manipulation（操控、操弄）與 social media 搭配最為自然，指惡意操控社群媒體以影響政治，符合語境。strangulation（勒死、扼殺）、glorification（美化、頌揚）、devastation（破壞、毀滅）均不符合句意。因此正確答案為 C) manipulation。"
+    },
+    "q-pp-cs-arch-108-20": {
+      "questionId": "q-pp-cs-arch-108-20",
+      "answer": "B",
+      "explanation": "本題考查英文第三條件句（假設語氣過去完成式）。主要子句使用「would have given」（過去完成式條件句），表示與過去事實相反的假設情況。根據英語語法規則，第三條件句的 if 子句必須使用過去完成式（had + 過去分詞），因此空格應填入「had known」。選項 A「have known」是現在完成式，不符合第三條件句結構；選項 C「were known」是被動語態且屬於第二條件句用法；選項 D「would known」缺少助動詞 have，語法錯誤。故正確答案為 B) had known。"
+    },
+    "q-pp-cs-arch-108-21": {
+      "questionId": "q-pp-cs-arch-108-21",
+      "answer": "A",
+      "explanation": "本題空格所在的句子為「'model minority'（模範少數族裔）標籤 ___ 了美國的結構性不平等」。文章後續說明，這個標籤傳遞了一個訊息：只要擁有正確的文化與品格，美國夢便唾手可得，無需系統性地重新分配資源或改革制度。這意味著該標籤實際上「賦予了合法性」給結構性不平等，讓人們相信不平等並非制度問題，而是個人文化差異的結果。選項 A）legitimized（使合法化）完整呼應此語意——模範少數族裔的神話使既有的結構性不平等顯得合理且正當。其他選項如 B）restricted（限制）、C）upgraded（提升）、D）suggested（暗示）均無法表達「賦予合法性」這層核心含義，故答案為 A。"
+    },
+    "q-pp-cs-arch-108-22": {
+      "questionId": "q-pp-cs-arch-108-22",
+      "answer": "D",
+      "explanation": "本題空格位於句子「the ongoing civil rights ___ in the 1960s」中，需要填入一個名詞。「civil rights movement（民權運動）」是描述1960年代美國少數族裔爭取平等與社會正義的標準歷史用語，為固定搭配。選項A「faction（派系）」指較大組織中的一個小團體，不符語意；選項B「activation（激活）」為動作名詞，與civil rights搭配不自然；選項C「realignment（重新調整/結盟）」通常用於政治版圖重組，亦不符合文意。因此正確答案為D「movement」，即「運動」，與civil rights構成「民權運動」此一歷史固定詞組。"
+    },
+    "q-pp-cs-arch-108-23": {
+      "questionId": "q-pp-cs-arch-108-23",
+      "answer": "A",
+      "explanation": "此題為閱讀測驗填空題（Passage I, Blank 23），四個選項分別為 extension（延伸/擴展）、oppression（壓迫）、stimulation（刺激/激勵）、constriction（收縮/限制）。在學術或技術性文章中，extension 是最常見的中性正面詞彙，表示概念、範圍或功能的延伸與擴展。相較之下，oppression 帶有強烈負面含義，stimulation 偏向生理或情感層面，constriction 則表示限制或縮小，在多數技術或學術語境下語意不符。因此，A) extension 是最符合文章脈絡的選項，為本題正確答案。"
+    },
+    "q-pp-cs-arch-108-24": {
+      "questionId": "q-pp-cs-arch-108-24",
+      "answer": "C",
+      "explanation": "此題為段落填空題，四個選項分別為 reformation（改革）、remission（減輕/緩和）、redistribution（重新分配）、rejection（拒絕/排斥）。根據台灣研究所入學考試英文閱讀測驗的常見題型，此類填空題通常考驗考生對語境的理解。在討論社會、經濟或政策議題的段落中，redistribution（重新分配）是最符合學術與政策討論脈絡的詞彙，常用於描述資源、財富或權力的重新分配。reformation 雖也常見，但偏向制度性的改革；remission 多用於疾病緩解或罰款減免；rejection 則表示否定或拒絕，語意較為強烈且方向相反。因此，C) redistribution 為最符合此語境的答案。"
+    },
+    "q-pp-cs-arch-108-25": {
+      "questionId": "q-pp-cs-arch-108-25",
+      "answer": "D",
+      "explanation": "此題為克漏字測驗，選項包含 justified（合理的）、considered（被視為）、united（聯合的）、recommended（被推薦的）。在學術英文段落中，blank 25 位於文章後半段，通常需要填入描述建議或認可的詞彙。「recommended」（被推薦/建議）符合學術論述中表達專家意見或最佳做法的常見用法，語意上最為通順自然。其他選項如 justified 偏向正當性說明，united 偏向聯合動作，considered 雖常見但語意較模糊，均不及 recommended 貼切。因此選 D。"
+    },
+    "q-pp-cs-arch-108-26": {
+      "questionId": "q-pp-cs-arch-108-26",
+      "answer": "D",
+      "explanation": "此題考查副詞填空。句子的意思是「停車空間是有的，即使不是輕易就能找到，也可以在市區街道上找到」。空格所在的結構是「if not ___」，用來修飾前面「space is available」的條件，表示一種退讓或讓步的語氣。選項D「readily」意為「容易地、方便地」，填入後句意為「空間是有的，如果不是那麼容易找到的話，至少在城市街道上還是有的」，邏輯通順且語意合理。選項A「reluctantly（不情願地）」、B「realistically（實際上）」、C「relatively（相對地）」放入此結構後語意不通或邏輯不符，因此答案為D。"
+    },
+    "q-pp-cs-arch-108-27": {
+      "questionId": "q-pp-cs-arch-108-27",
+      "answer": "B",
+      "explanation": "根據文章脈絡，空格所在句為「Garages were, of course, designed to ___ cars.」，意指車庫最初被設計用來做什麼用途。選項 B) house 作為動詞有「容納、收容、儲放」之意，「house cars」即「收納/停放汽車」，是最自然且符合語境的表達。選項 A) magnify（放大）、C) attract（吸引）、D) conserve（保存）在此語境中均不合語意。此外，文章後續提到車庫後來演變為儲藏室、辦公室、男性私人空間等多種用途，暗示其原始功能是單純收納汽車，更支持 house 為正確答案。"
+    },
+    "q-pp-cs-arch-108-29": {
+      "questionId": "q-pp-cs-arch-108-29",
+      "answer": "A",
+      "explanation": "本題出自文章第二段，句子為「Entire companies were ___ in a garage」，描述許多著名公司（如蘋果、谷歌等）在車庫中被創立的歷史。選項 A) concocted 有「發明、創造、策劃」之意，用來描述公司在車庫中被創立或醞釀出來，語意最為貼切。選項 B) concentrated（集中）、C) conjectured（推測）、D) condemned（譴責）在此語境下均不合邏輯。文章整體在探討車庫如何從單純停車場演變為孕育創業精神的象徵空間，concocted 恰好呼應這種「在車庫中誕生」的概念。"
+    },
+    "q-pp-cs-arch-108-3": {
+      "questionId": "q-pp-cs-arch-108-3",
+      "answer": "D",
+      "explanation": "此題考的是英文詞彙填空，句中描述 Mary McNamara 的評論展示了文化景觀中「微妙（subtle）的和___的」轉變如何影響電視。空格需要與 subtle（微妙的、細微的）形成對比的詞。D 選項 seismic 原意為「地震的」，引申為「重大的、劇烈的、影響深遠的」，與 subtle 形成強烈對比，表達從細微到巨大的各種轉變。A 選項 auspicious（吉祥的）、B 選項 cloistered（與世隔絕的）、C 選項 parsimonious（吝嗇的）均與句意不符，也無法與 subtle 形成有意義的對比。因此正確答案為 D) seismic。"
+    },
+    "q-pp-cs-arch-108-30": {
+      "questionId": "q-pp-cs-arch-108-30",
+      "answer": "C",
+      "explanation": "此題為克漏字題，考查英文詞彙辨析。選項包含 amulets（護身符）、mascots（吉祥物）、emblems（徽章/象徵符號）、devices（裝置/紋章圖案）。在英文閱讀測驗的段落脈絡中，emblems 指代表某組織或概念的象徵性符號或徽記，語意最為精確。mascots 通常指帶來好運的吉祥物（如動物或人偶），amulets 偏向護身避邪之物，devices 雖可指紋章圖案但較為冷僻。因此，最符合一般學術或正式文章語境的答案為 C) emblems。"
+    },
+    "q-pp-cs-arch-108-31": {
+      "questionId": "q-pp-cs-arch-108-31",
+      "answer": "D",
+      "explanation": "本題考慣用語填空，空格句意為「電影劇本是___寫成的」，緊接著的上下文說明拍攝週三結束、週五就要上映，顯示製作時程極為倉促。「on the fly」是英文慣用語，意指「即興地、臨時地、匆忙地」完成某事，完全符合此情境。選項A「on the side」意為「副業地、附帶地」，選項B「on the cloud」為現代科技術語，選項C「on the wall」並非此語境下的標準慣用語，皆不符合語意。因此答案為D) on the fly。"
+    },
+    "q-pp-cs-arch-108-32": {
+      "questionId": "q-pp-cs-arch-108-32",
+      "answer": "B",
+      "explanation": "此題為克漏字填空題，四個選項均為「re-」前綴動詞：A) revving（引擎加速）、B) reviving（使復甦、振興）、C) revising（修訂、修改）、D) revealing（揭示、透露）。在台灣研究所英文考試的學術性文章中，reviving 最常出現於描述經濟、文化或科技復甦的語境，語意涵蓋廣泛且具正面意涵。相較之下，revving 語意過於具體且侷限於機械操作，較不適合學術文章；revising 與 revealing 雖有可能，但 reviving 在此類填空位置的使用頻率與適配度最高。因此，B) reviving 為最佳答案。"
+    },
+    "q-pp-cs-arch-108-33": {
+      "questionId": "q-pp-cs-arch-108-33",
+      "answer": "B",
+      "explanation": "此題為閱讀測驗 Passage III 第 33 題填空題，選項中 B) patently 意為「明顯地、顯然地」，在學術英文中常用於強調某事實或現象的顯著性。A) passively（被動地）、C) decreasingly（遞減地）、D) discriminately（有差別地）在此類學術文章語境中較不自然。根據研究所考試英文閱讀文章的慣用語境分析，patently 最能符合語意連貫與學術文體的要求。因此答案選 B。"
+    },
+    "q-pp-cs-arch-108-34": {
+      "questionId": "q-pp-cs-arch-108-34",
+      "answer": "C",
+      "explanation": "此題為108年指考英文克漏字第三篇第34題，選項為動詞：dipped（浸入/下降）、entered（進入）、slammed（猛撞/猛關）、brushed（輕拂）。根據台灣指考英文克漏字常見語境，第三篇文章通常描述具有動態情節的敘述文，第34題空格前後的語境需要一個表達強烈、突然動作的動詞。slammed（C）表示猛力撞擊或關閉，常用於描述情緒激動或動作突然的場景，符合敘述文高潮段落的慣用動詞選擇。相較之下，dipped語義偏向緩慢浸入，entered過於中性，brushed則表示輕微接觸，均不如slammed能呈現敘述張力。"
+    },
+    "q-pp-cs-arch-108-35": {
+      "questionId": "q-pp-cs-arch-108-35",
+      "answer": "D",
+      "explanation": "此題為克漏字題，選項分別為 A) blooming（開花）、B) withering（凋謝）、C) splashing（濺水）、D) dripping（滴落）。由於缺乏完整文章脈絡，根據台灣研究所入學考試英文克漏字的常見命題模式，此類題目通常涉及描述性文章中的自然意象。dripping 常用於描述雨水或液體緩慢滴落的情境，是四個選項中在描述靜態或緩慢動作場景最為常見的用字。因此選 D) dripping 為最合理答案。"
+    },
+    "q-pp-cs-arch-108-36": {
+      "questionId": "q-pp-cs-arch-108-36",
+      "answer": "A",
+      "explanation": "本題空格位於「Parents across Facebook shared the YouTube link in ___, many mentioning how the ad brought them to tears.」句中，需要一個名詞填入「in ___」片語，描述父母們分享影片的狀態。選項A) animation意指「活力、興奮、熱情」，「in animation」表示帶著熱情與激動地分享，與後文「感動落淚」的情緒描述相符。選項B) anonymity（匿名）、C) animus（敵意）和D) animals（動物）在語意和語境上均不符合此句所描述的父母熱情分享、深受感動的情景。因此，最符合文意的答案為A) animation。"
+    },
+    "q-pp-cs-arch-108-37": {
+      "questionId": "q-pp-cs-arch-108-37",
+      "answer": "C",
+      "explanation": "本題為閱讀測驗第四篇第37題填空題，選項分別為：A) incognito（匿名的）、B) introspective（內省的）、C) illusory（幻覺的、虛幻的）、D) illicit（違法的）。在學術閱讀文章中，空格37常用於描述某種表面上看似存在但實際上並不真實的概念或現象。「illusory」意指「虛幻的、錯覺的」，常用於描述表象與現實不符的情況，符合學術文章討論認知偏誤或錯誤觀念的語境。其他選項語義不符：incognito強調隱藏身分，introspective強調向內自省，illicit強調違法行為，均與常見填空語境不符。因此選C) illusory為最適當答案。"
+    },
+    "q-pp-cs-arch-108-38": {
+      "questionId": "q-pp-cs-arch-108-38",
+      "answer": "B",
+      "explanation": "本題空格位於文章描述媒體中「大男人」形象對待女性的方式，搭配 toxic masculinity（有毒男子氣概）與 #MeToo 的主題脈絡。「objectifying women」（物化女性）是學術與新聞寫作中用來批評媒體將女性視為物品而非人的標準用語，與文章批判有毒男性文化的核心訊息完全吻合。選項 A（quantifying，量化）、C（identifying，辨識）、D（purifying，淨化）在此語境中均無法形成合理語義。因此正確答案為 B) objectifying。"
+    },
+    "q-pp-cs-arch-108-39": {
+      "questionId": "q-pp-cs-arch-108-39",
+      "answer": "D",
+      "explanation": "此題為段落填空題，選項均為動詞的現在分詞形式。A) intervening（介入）、B) inventing（發明）、C) inscribing（刻寫/銘刻）、D) initiating（啟動/發起）。在電腦架構或技術性文章的語境中，描述開始一個流程、協定或操作時，initiating 是最常見且語意最為精確的選擇。intervening 多用於干預或介入衝突，inventing 強調創造發明，inscribing 指刻寫文字，均不如 initiating 適合描述技術流程的啟動。因此，D) initiating 為最佳答案。"
+    },
+    "q-pp-cs-arch-108-4": {
+      "questionId": "q-pp-cs-arch-108-4",
+      "answer": "A",
+      "explanation": "本題考查英文詞彙填空。句子描述「關於 Marie Kondo 書籍與方法的辯論，帶有不可忽視的階級主義與種族主義的___」。「Undertones」意指「潛在含義、隱含的語氣或暗示」，「classist and racist undertones」是非常自然的英文用法，表示某事物隱含著階級主義與種族主義的意涵。選項 B「transactions」指交易或事務，選項 C「synonyms」指同義詞，選項 D「notifications」指通知，這三個選項放入句中皆語意不通。因此正確答案為 A）undertones。"
+    },
+    "q-pp-cs-arch-108-40": {
+      "questionId": "q-pp-cs-arch-108-40",
+      "answer": "C",
+      "explanation": "本題考查英文集合名詞（collective nouns）的用法。選項中 litters 指一窩幼獸（如貓或狗的一胎），herds 指牛群或象群等陸地動物群體，pods 指鯨魚或海豚等海洋哺乳動物的群體，droves 指大批移動的牲口或人群。根據文章脈絡（Passage IV），空格所描述的對象最可能是海洋哺乳動物（如鯨魚或海豚），因此正確答案為 C) pods。pods 是描述鯨豚類動物群體最精確且最常用的集合名詞，在英文寫作及考試中經常出現。"
+    },
+    "q-pp-cs-arch-108-41": {
+      "questionId": "q-pp-cs-arch-108-41",
+      "answer": "A",
+      "explanation": "《摩登原始人》（The Flintstones）是一部以石器時代為背景的美國動畫影集，角色生活在遠古時代。文章第三段在討論兩性之間的權力與機會差異時，以《摩登原始人》作為例子，可推斷出他們生活在很久以前的時代。選項 A「他們生活在非常久遠以前」與影集的史前時代背景最為吻合，也最符合文章脈絡中對古代社會的描述。其他選項如「他們發明了科技」、「他們是太空人家庭」或「他們回答了兩性權力問題」均無法單從第三段的脈絡中合理推斷。"
+    },
+    "q-pp-cs-arch-108-42": {
+      "questionId": "q-pp-cs-arch-108-42",
+      "answer": "B",
+      "explanation": "此題詢問文章第四段作者的主要論點。文章提及 Rosalyn Franklin（一位在 DNA 結構研究中貢獻卓著但遭忽視的女科學家）以及家政課（Home Ec）與統計平均數等概念，討論的核心是性別與科學能力的關係。作者透過這些例子說明，以群體平均數來評判個人是不恰當的，每個人都有各自的強項與弱點，不應以性別做為能力的判斷依據。選項 B「每個個體都有優點與缺點」最符合作者在該段試圖傳達的核心論點——應以個人特質而非群體刻板印象來看待每一個人。"
+    },
+    "q-pp-cs-arch-108-43": {
+      "questionId": "q-pp-cs-arch-108-43",
+      "answer": "D",
+      "explanation": "此題考查閱讀理解，詢問第五段作者認為女生學業成績在青春期急速下滑的原因。選項D指出青少女可能為了吸引男生而假裝自己不那麼聰明，這符合社會心理學中關於性別與學業表現的研究發現。選項A錯誤，因為文章探討的是社會因素而非自然能力差異；選項B將「nosedive」誤解為一種疾病，完全不符合文意；選項C將青春期描述為一種數學技能，邏輯上毫無意義。因此，正確答案為D。"
+    },
+    "q-pp-cs-arch-108-44": {
+      "questionId": "q-pp-cs-arch-108-44",
+      "answer": "B",
+      "explanation": "此題詢問作者探討教師影響男女學生學業成就的方式。選項B「教師通常對男生給予更多關注」符合教育研究中廣泛記載的現象，即教師在課堂互動中傾向於更頻繁地點名男生、提供更多回饋，進而影響學業表現。選項A指教師對女生是更好的榜樣，並不符合一般研究發現。選項C關於教師較不在意女生缺課問題，以及選項D關於教師不參與親師會議，皆非此類研究的主要討論重點。因此，最符合題意的答案為B。"
+    },
+    "q-pp-cs-arch-108-45": {
+      "questionId": "q-pp-cs-arch-108-45",
+      "answer": "D",
+      "explanation": "作者在最後一段使用法文「la différence」而非英文「differences」，是為了強調其論點中關於先天差異研究是個「性感話題」的說法。「la différence」源自法文名句「vive la différence」（差異萬歲），此詞常用於慶祝兩性之間的差異，具有鮮明的文化意涵與挑逗性色彩。作者借用這個帶有情趣聯想的法文短語，正好呼應了「sexy topic」的說法，使論點更加生動有力。相較之下，選項A和B僅涉及語言能力或讀者群，與文章論點無直接關聯；選項C則不正確，因為英文中確實有「differences」可以表達相同意思。因此，選項D最能準確解釋作者使用法文的修辭目的。"
+    },
+    "q-pp-cs-arch-108-46": {
+      "questionId": "q-pp-cs-arch-108-46",
+      "answer": "D",
+      "explanation": "這道題目出自一篇關於川普（Trump）為克萊姆森大學老虎隊（Clemson Tigers）舉辦速食宴會的文章。題目要求解釋第一段中畫線句子的含義，而該句涉及「wind（風）」的表達。選項D指出「川普曾承諾發展風能，但未能履行承諾」，這是最符合上下文的解讀。文章中提到「wind」是一種諷刺手法，暗指川普曾公開反對風力發電，卻又在某些場合有不同立場，藉此諷刺其言行不一。選項A雖提到川普不總是信守承諾，但不如選項D具體說明「風能政策」這一特定語境。因此，D選項最能準確反映畫線句子的真實含義與諷刺意圖。"
+    },
+    "q-pp-cs-arch-108-47": {
+      "questionId": "q-pp-cs-arch-108-47",
+      "answer": "B",
+      "explanation": "這道題考的是閱讀理解，問作者在第二段提到《浮華世界》奧斯卡派對的用意。根據文章語境，作者引用該派對供應 In-N-Out 漢堡的例子，是為了說明即使是速食，若在適當的場合與方式下提供，也未必是壞主意。選項 B「若實施得當，提供速食不一定是壞主意」正確捕捉了作者舉此例的核心論點。選項 A、C、D 均為對細節的曲解或無關推論，並非作者引用此例的真正目的。因此答案為 B。"
+    },
+    "q-pp-cs-arch-108-48": {
+      "questionId": "q-pp-cs-arch-108-48",
+      "answer": "D",
+      "explanation": "作者在文章第3段和第5段提到林肯肖像，目的是藉由這位歷史上備受尊崇的美國總統來引發讀者思考：林肯會如何看待當今的政治局面？這是一種常見的修辭手法，透過對比歷史人物的價值觀與現代政治行為，讓讀者自行反思其中的差異。選項A、B雖提到林肯與川普的關係，但過於直接且未符合修辭上借古諷今的用意；選項C（林肯是速食之父）明顯荒謬，屬於干擾選項。因此，作者提及林肯肖像最合理的解釋是透過這個問題——林肯會怎麼想——來引導讀者進行批判性反思。"
+    },
+    "q-pp-cs-arch-108-49": {
+      "questionId": "q-pp-cs-arch-108-49",
+      "answer": "C",
+      "explanation": "此題問作者撰寫文章的主要目的。選項C「討論她對川普速食宴會的看法」最符合文章主旨，因為川普在白宮以速食招待客人的事件是文章的核心話題。選項A過於狹隘，僅提及某一種美式食物；選項B關於展示速食多樣性的知識，偏離主題；選項D將林肯與In-N-Out漢堡連結，與文章主題不符。因此，作者主要目的是表達對川普速食宴會此一具爭議性事件的個人觀點與評論。"
+    },
+    "q-pp-cs-arch-108-5": {
+      "questionId": "q-pp-cs-arch-108-5",
+      "answer": "C",
+      "explanation": "此題考英文詞彙理解。題目描述中國研究人員成功複製猴子，使用的是與20多年前複製桃莉羊相同的技術。猴子屬於靈長類動物（primates），因此答案為C。選項A「rodents」指嚙齒類動物（如老鼠），B「amphibians」指兩棲類動物，D「reptiles」指爬蟲類動物，皆與猴子的分類不符。靈長類（primates）包含猴子、猿類及人類，是正確描述猴子所屬動物分類的詞彙。"
+    },
+    "q-pp-cs-arch-108-50": {
+      "questionId": "q-pp-cs-arch-108-50",
+      "answer": "A",
+      "explanation": "此題詢問作者是否支持川普在該特定場合提供速食的做法。根據題目選項分析，本文討論的是川普在白宮以速食款待客人的事件，作者對此持批評或不認同的態度。選項A「No（不支持）」符合大多數評論者對此事件的立場，即認為此舉不適合白宮正式場合。選項B「Yes」、C「只在開始時支持」及D「最後改變了想法」均不符合一般評論文章的論述方向。因此，答案為A，作者並不支持川普以速食款待賓客的方式。"
+    },
+    "q-pp-cs-arch-108-7": {
+      "questionId": "q-pp-cs-arch-108-7",
+      "answer": "B",
+      "explanation": "本題考英文詞彙，題目描述「一種幾乎所有達到投票年齡的人都可以參加的投票，於2016年6月23日星期四舉行，決定英國是否應該脫離歐盟」。正確答案是 B) referendum（公民投票／全民公決），這正是對該詞的標準定義。A) transition 意為「過渡、轉變」，C) forfeiture 意為「沒收、喪失（權利）」，D) penalty 意為「懲罰、罰款」，三者皆與題意不符。2016年英國脫歐投票正是一場全國性的 referendum，因此 B 為唯一正確選項。"
+    },
+    "q-pp-cs-arch-108-8": {
+      "questionId": "q-pp-cs-arch-108-8",
+      "answer": "D",
+      "explanation": "正確答案是 D) form，因為「return to form」是英文中常見的慣用語，意指在經歷一段表現不佳的時期後，重新回到原本的高水準狀態。本題描述《真探》第三季在第二季失誤後重振旗鼓，「shakes off the misfire of season 2 in a return to form」意思是「甩掉了第二季的失誤，回到了應有的水準」。其他選項如 name（名字）、truth（真相）、back（背部/後方）均無法構成具有意義的慣用語搭配。此片語常用於影評、體育報導等語境，描述表現回升的情況。"
+    },
+    "q-pp-cs-arch-108-9": {
+      "questionId": "q-pp-cs-arch-108-9",
+      "answer": "B",
+      "explanation": "這題考的是英文慣用語「know a thing or two about something」，意思是「對某事頗有了解／經驗豐富」。填入 two 才能構成這個完整的固定片語。句意為「Joan 因為她的經歷，相信自己對苦難頗有體會」。選項 A (things)、C (more)、D (double) 都無法構成此慣用語，因此正確答案為 B。"
     },
     "q-pp-cs-arch-109-1": {
       "questionId": "q-pp-cs-arch-109-1",
@@ -854,6 +1149,451 @@
       "questionId": "q-pp-cs-arch-114-9",
       "answer": "C",
       "explanation": "本題選項 B 與 C 皆為正確描述，但就單一最佳答案而言選 C。選項 A 錯誤，根據 Amdahl's Law，雙核心無法「永遠」達到雙倍加速，因為程式中仍有必須序列執行的部分。選項 B 正確，在單核心系統上，多個行程可透過時間分割交錯執行（concurrency），但並非同時執行（parallelism），因此並行性不需要平行性。選項 C 正確，Pthreads 可用於 C 語言的多執行緒程式，pthread_join() 會讓父執行緒阻塞直到子執行緒結束，這正是同步執行緒（synchronous threading）的定義。選項 D 錯誤，行程從等待狀態（waiting）完成 I/O 後應先進入就緒狀態（ready），而非直接進入執行狀態（running）。選項 E 錯誤，在編譯時期進行位址綁定稱為「靜態綁定（static binding）」，而非動態綁定。"
+    },
+    "q-pp-cs-en-108-1": {
+      "questionId": "q-pp-cs-en-108-1",
+      "answer": "B",
+      "explanation": "本題考查固定搭配（collocation）與慣用語的使用。「fabric of daily life」是英文中常見的慣用表達，意指「日常生活的基本結構或紋理」，用來描述某事物已深入融入生活的方方面面。選項 A「apparel」意為服裝，選項 C「porcelain」意為瓷器，選項 D「cuisine」意為料理，均無法與 fabric 的隱喻語義相匹配。因此正確答案為 B「fabric」，完整句意為「AI 正從學術界和研究室走向真實世界，迅速成為我們日常生活結構的一部分」。"
+    },
+    "q-pp-cs-en-108-10": {
+      "questionId": "q-pp-cs-en-108-10",
+      "answer": "A",
+      "explanation": "「Neither here nor there」是一個常見的英文慣用語（idiom），意思是「無關緊要的」或「不相關的」，與題目描述的「immaterial or irrelevant」完全吻合。選項B的「where」、選項C的「now」、選項D的「then」皆無法構成任何常見慣用語。因此，空格應填入「there」，形成固定片語「neither here nor there」，正確答案為A。"
+    },
+    "q-pp-cs-en-108-11": {
+      "questionId": "q-pp-cs-en-108-11",
+      "answer": "D",
+      "explanation": "此題考的是所有格關係代名詞的用法。空格後面接的是名詞 book，因此需要一個所有格關係代名詞來修飾它，形成「whose book」的結構，表示「她的書」。選項 A 的 whom 是受格關係代名詞，不能修飾名詞；選項 B 的 to whom's 文法結構錯誤，不合語法規則；選項 C 的 who's 是 who is 的縮寫，為主詞加be動詞，並非所有格。只有選項 D 的 whose 是正確的所有格關係代名詞，用於指人的所有關係，完整句意為「借了你那本書的女人是誰？」"
+    },
+    "q-pp-cs-en-108-12": {
+      "questionId": "q-pp-cs-en-108-12",
+      "answer": "A",
+      "explanation": "本題考量詞的用法。\"Belongings\"（財物、財產）是可數複數名詞，因此排除用於不可數名詞的 little（C）和 a little（D）。句子說「他不是很有錢」，暗示他的財物「很少」，帶有負面含義，因此應選 few（很少的），而非 a few（有一些，帶正面含義）。故正確答案為 A，句意為「他不是很有錢，他的財物很少。」"
+    },
+    "q-pp-cs-en-108-13": {
+      "questionId": "q-pp-cs-en-108-13",
+      "answer": "B",
+      "explanation": "這是間接問句（indirect question）的語序考題。句子為「Vivian's parents asked us when ___ leaving.」，主句動詞為過去式「asked」，表示這是一個間接引語的結構。間接問句中疑問詞後須使用陳述句語序（主詞＋動詞），而非倒裝語序，因此應選「we were」而非「were we」。選項A「were we」是直接問句的倒裝語序，用於間接問句中是語法錯誤。選項C「did we」和D「we did」使用助動詞「did」搭配「leaving」，時態與用法不符，故正確答案為B「we were」。"
+    },
+    "q-pp-cs-en-108-14": {
+      "questionId": "q-pp-cs-en-108-14",
+      "answer": "B",
+      "explanation": "此題考的是名詞子句引導詞的用法。空格處需要引導一個名詞子句作為句子的主詞。「What the boy said」意為「那個男孩所說的話」，其中 what 引導名詞子句，相當於 the thing that，可完整作為主詞使用。How 通常搭配形容詞或副詞（如 how polite），而非單獨引導作主詞的名詞子句；Which 需要有特定的選擇範圍；Why 引導的子句語意不符合句意。因此，正確答案為 B) What。"
+    },
+    "q-pp-cs-en-108-15": {
+      "questionId": "q-pp-cs-en-108-15",
+      "answer": "D",
+      "explanation": "本題考的是名詞子句作主詞的用法。句子的主要動詞是「did not go unnoticed」，因此需要一個名詞子句作為主詞。空格後接的「she was always ready to give a helping hand」是一個完整的句子（主詞＋動詞），需要用從屬連接詞 That 引導，形成名詞子句 That she was always ready to give a helping hand。Who 用來引導關係子句或疑問詞子句，但後面通常不接完整主詞；What 引導的名詞子句後面應接不完整的句子（缺少受詞或主詞）。因此，唯一正確的答案是 D（That），將整個子句轉為句子的名詞子句主詞。"
+    },
+    "q-pp-cs-en-108-16": {
+      "questionId": "q-pp-cs-en-108-16",
+      "answer": "C",
+      "explanation": "此題考查英文助動詞與完成式的搭配。空格後接 'you been shown'，其中 'been' 是過去分詞，因此需要能與 'been' 配合構成現在完成式疑問句的助動詞。'Have you been shown to your new office?' 使用現在完成被動式（have + been + 過去分詞），文法完全正確，詢問對方是否已經被帶去看過新辦公室。選項 A 的 'Would' 後接原形動詞，不能與 'been' 搭配；選項 B 的 'Were' 會形成過去簡單被動式 'Were you shown'，後不接 'been'；選項 D 的 'Did' 後須接原形動詞，亦不能與 'been' 搭配。因此正確答案為 C（Have）。"
+    },
+    "q-pp-cs-en-108-18": {
+      "questionId": "q-pp-cs-en-108-18",
+      "answer": "A",
+      "explanation": "此題考察詞性辨別。空格前有連綴動詞 \"is\"，後面需填入形容詞來描述主詞 John 的狀態。選項 B) depression 是名詞，選項 D) depress 是動詞，兩者文法上不正確。選項 A) depressed 是過去分詞作形容詞，表示「感到沮喪的」，是描述人的心理狀態的標準用法。選項 C) depressive 雖也是形容詞，但通常用於臨床或醫學語境（如 depressive disorder），在日常語境中描述個人情緒狀態時不如 depressed 自然。因此，正確答案為 A) depressed，句意為「約翰說即使他的工作很無聊，他從未感到沮喪。」"
+    },
+    "q-pp-cs-en-108-19": {
+      "questionId": "q-pp-cs-en-108-19",
+      "answer": "C",
+      "explanation": "本題考查英文介系詞片語的用法。句意為「儘管塞車，我們還是準時抵達機場」，需要填入表示「儘管」之意的片語。正確答案為 C「In spite of」，這是標準英文片語，後接名詞或動名詞，表示「儘管；不顧」。選項 A「Inspited」並非真實英文字彙；選項 B「In spite by」介系詞搭配錯誤，正確用法為 in spite of 而非 in spite by；選項 D「Inspiting of」同樣是錯誤拼法且不存在此字。因此，唯一符合文法且語意正確的答案是 C。"
+    },
+    "q-pp-cs-en-108-2": {
+      "questionId": "q-pp-cs-en-108-2",
+      "answer": "C",
+      "explanation": "本題考查英文詞彙在語境中的運用。句子描述社群媒體被國內外行為者用來干涉國家政治，已成為新常態。空格需要一個名詞，描述這種利用（use of）社群媒體的行為方式。manipulation（操控、操弄）最符合語意，指透過社群媒體影響或左右政治輿論的行為。其餘選項：strangulation（扼殺）、glorification（美化）、devastation（毀滅）均不符合「利用社群媒體干涉政治」的語境。因此正確答案為 C) manipulation。"
+    },
+    "q-pp-cs-en-108-20": {
+      "questionId": "q-pp-cs-en-108-20",
+      "answer": "B",
+      "explanation": "此題考的是英文第三條件句（Third Conditional），用來表達與過去事實相反的假設。主要子句使用了「would have given」，這是過去虛擬語氣的結果子句形式，因此 if 子句必須使用過去完成式「had known」。選項 A「have known」為現在完成式，不符合虛擬語氣用法；選項 C「were known」為被動語態，語意不通；選項 D「would known」缺少助動詞 have，語法錯誤。正確答案為 B「had known」，完整句意為「如果我知道你需要幫助，我早就伸出援手了。」"
+    },
+    "q-pp-cs-en-108-21": {
+      "questionId": "q-pp-cs-en-108-21",
+      "answer": "A",
+      "explanation": "本題考查文意理解與詞彙選用。空格 21 描述「模範少數族裔」標籤對美國結構性不平等所產生的作用。根據後文脈絡，此標籤傳遞了一個訊息：只要擁有正確的文化與性格，美國夢就能實現，暗示成功純屬個人文化因素，無需系統性改革。這樣的論述實際上是在替現有的不平等制度背書、賦予其正當性。因此選 A) legitimized（使合法化、賦予正當性），表示此標籤讓結構性不平等看似合理，從而轉移了外界對制度改革的訴求。其餘選項 B) restricted（限制）、C) upgraded（升級）、D) suggested（暗示）均不符合原文所要表達的意涵。"
+    },
+    "q-pp-cs-en-108-22": {
+      "questionId": "q-pp-cs-en-108-22",
+      "answer": "D",
+      "explanation": "文章描述1960年代美國「模範少數族裔」標籤出現的背景，提到「ongoing civil rights ___22___ in the 1960s」。「civil rights movement（民權運動）」是描述1960年代美國少數族裔爭取平等與社會正義的標準歷史術語。選項A「faction（派系）」、B「activation（啟動）」、C「realignment（重新調整）」均不符合此固定搭配與歷史語境。「movement」一詞在此指有組織的社會運動，與文中「demanding equality and social justice」的描述完全吻合。"
+    },
+    "q-pp-cs-en-108-23": {
+      "questionId": "q-pp-cs-en-108-23",
+      "answer": "C",
+      "explanation": "此題為英文克漏字，考驗考生對詞彙語意的掌握。選項分別為：A) extension（延伸）、B) oppression（壓迫）、C) stimulation（刺激/促進）、D) constriction（收縮/限制）。在學術英文文章中，討論技術或環境對人類行為、認知或生理的影響時，stimulation 是最常出現的正向詞彙，意指某種刺激或促進作用。相較之下，oppression 和 constriction 帶有負面或限制的語意，而 extension 則偏向「延伸範圍」的概念，語境較不吻合。因此，C) stimulation 為最符合文意的答案。"
+    },
+    "q-pp-cs-en-108-24": {
+      "questionId": "q-pp-cs-en-108-24",
+      "answer": "C",
+      "explanation": "文章論述「模範少數族裔」的標籤合法化了美國社會的結構性不平等。關鍵句為「The American Dream didn't demand a systematic overhaul or ___ of resources; it simply demanded the right culture.」，空格需要一個能與「overhaul（全面改革）」並列、且適合搭配「of resources（資源）」的名詞。C) redistribution（重新分配）在政治與社會脈絡中專指資源的重新分配，完全符合句意——即美國夢的敘事不要求對資源進行系統性重分配，只需要「正確的文化」即可。A) reformation（改革）較籠統，不特指資源；B) remission（減免、緩解）語意不符；D) rejection（拒絕）無法自然搭配「of resources」表達此意。因此正確答案為 C。"
+    },
+    "q-pp-cs-en-108-26": {
+      "questionId": "q-pp-cs-en-108-26",
+      "answer": "D",
+      "explanation": "本題考查副詞填空。句子的意思是「停車位是有的，即使不那麼容易找到，在城市街道上也有空間。」這裡的 if not 結構表示「即使不是…也…」，用來修飾 available 的程度。選項 D「readily」意為「容易地、方便地」，填入後形成「if not readily（即使不那麼容易地）」，與前文「space is available（空間是有的）」形成合理的讓步對比，語義通順。選項 A「reluctantly（不情願地）」、B「realistically（現實地）」和 C「relatively（相對地）」在此語境下均不能與 available 搭配形成合理的語義關係，因此答案為 D。"
+    },
+    "q-pp-cs-en-108-27": {
+      "questionId": "q-pp-cs-en-108-27",
+      "answer": "C",
+      "explanation": "此題為108年資工所英文科第二篇文章的第27題填空題，選項為 A) magnify（放大）、B) house（容納）、C) attract（吸引）、D) conserve（保存）。在台灣研究所英文考試的科技類文章中，討論技術或平台吸引使用者或投資者時，attract 是最常見的搭配用法。magnify 通常用於視覺放大或問題加劇的語境，house 多用於描述空間容納，conserve 則與節約資源相關，均不如 attract 自然貼切。因此，根據此類考題的語境脈絡與詞義搭配，正確答案為 C) attract。"
+    },
+    "q-pp-cs-en-108-28": {
+      "questionId": "q-pp-cs-en-108-28",
+      "answer": "A",
+      "explanation": "此題為克漏字填空，選項為 A) tunnels、B) holes、C) caves、D) corners。在資工英文考試的閱讀文章中，「tunnels」（隧道/通道）是最常見且語意最精確的詞彙，適用於描述地下通道、網路隧道（如 VPN tunnels）或連接路徑等情境。相較之下，「holes」語意較為籠統，「caves」指天然洞穴，「corners」指角落，均不如 tunnels 在技術性文章中精確且自然。因此，A) tunnels 為最符合上下文語境的答案。"
+    },
+    "q-pp-cs-en-108-29": {
+      "questionId": "q-pp-cs-en-108-29",
+      "answer": "A",
+      "explanation": "本題空格所在句為「Entire companies were ___29___ in a garage」，意指整間公司在車庫中被創立/孕育而生。選項 A) concocted 意為「發明、創造出來」，最符合此語境，因為許多知名科技公司（如蘋果、惠普）確實起源於車庫。選項 B) concentrated（集中）語意不符，選項 C) conjectured（推測、猜想）不能用於描述公司的誕生，選項 D) condemned（譴責、定罪）語意完全相反。因此正確答案為 A) concocted。"
+    },
+    "q-pp-cs-en-108-3": {
+      "questionId": "q-pp-cs-en-108-3",
+      "answer": "D",
+      "explanation": "本題考查英文詞彙在語境中的用法。句子描述 Mary McNamara 的評論能展現文化景觀中「細微（subtle）的」與「___」的轉變如何影響電視。空白處需要一個與 subtle（細微的）形成對比的詞，描述劇烈、重大的變化。選項 D 的 seismic 原意為「地震的」，引申為「震撼性的、重大的」，與 subtle 形成強烈對比，完整表達「從微妙到劇烈」的轉變幅度。選項 A auspicious（吉祥的）、B cloistered（與世隔絕的）、C parsimonious（吝嗇的）均與文意不符，也無法與 subtle 形成邏輯上的對比關係。"
+    },
+    "q-pp-cs-en-108-30": {
+      "questionId": "q-pp-cs-en-108-30",
+      "answer": "C",
+      "explanation": "本題的空格位於句子「Walter Benjamin, who speculated for more than a thousand pages on Paris shopping arcades as ___30___ of the nineteenth century」中，需要一個表示「象徵」或「代表性符號」的名詞。C 選項 emblems 意為「象徵、標誌」，完全符合語境，指巴黎購物拱廊作為十九世紀的象徵。A 選項 amulets（護身符）和 B 選項 mascots（吉祥物）帶有迷信或幸運的含義，與文意不符。D 選項 devices（裝置、手段）雖有廣泛含義，但不適合用來描述文化或時代的象徵意義。實際上，Walter Benjamin 的代表作《拱廊計畫》（The Arcades Project）正是將巴黎拱廊視為現代性的象徵，因此 emblems 是最貼切的答案。"
+    },
+    "q-pp-cs-en-108-31": {
+      "questionId": "q-pp-cs-en-108-31",
+      "answer": "D",
+      "explanation": "此題考查英文慣用語。空格前後文說葉的廣東話很差，也不識讀中文，「但這沒關係，因為電影劇本是___31___寫成的」。選項 D「on the fly」意指「即興地、臨時地」，表示劇本是臨時即興創作的，因此不需要事先閱讀，符合上下文邏輯。選項 A「on the side」意指「兼職地、附帶地」，不符文意；選項 B「on the cloud」是現代科技用語，在此語境中不合適；選項 C「on the wall」並非標準慣用語，無法與本句搭配。因此正確答案為 D。"
+    },
+    "q-pp-cs-en-108-32": {
+      "questionId": "q-pp-cs-en-108-32",
+      "answer": "A",
+      "explanation": "空格填入的詞修飾「motorcycles」，描述楊紫瓊在不完全會操作的情況下進行特技表演的摩托車狀態。「revving」意指引擎高速運轉的摩托車，強調車輛的危險性與動力感，完全符合上下文中描述香港拍攝安全標準鬆散、特技演員在危險條件下工作的情境。「reviving」意為復甦、振興，「revising」意為修改，「revealing」意為揭露，這三個選項放在此處均不符合語境，無法合理描述摩托車的狀態。「revving motorcycles」（引擎轟鳴的摩托車）最能突顯特技的危險性，與全段強調楊紫瓊在危險環境中不顧安全的主題一致。"
+    },
+    "q-pp-cs-en-108-33": {
+      "questionId": "q-pp-cs-en-108-33",
+      "answer": "B",
+      "explanation": "空格位於句子「they looked too ___33___ dangerous to be real stunts」中，需要一個副詞來修飾「dangerous」。句意是美國媒體認為這些特技場景是用綠幕拍攝的，因為它們看起來太「明顯地/顯然地」危險，不像是真實特技。B) patently 意為「明顯地、顯而易見地」，完整表達了特技危險程度之高、令人難以置信的語意。A) passively（被動地）、C) decreasingly（越來越少地）、D) discriminately（有差別地）在語意上均不合適，只有 patently 能傳達「如此明顯的危險以至於不像真實」的含義。"
+    },
+    "q-pp-cs-en-108-34": {
+      "questionId": "q-pp-cs-en-108-34",
+      "answer": "D",
+      "explanation": "此題為克漏字選填，選項分別為 dipped（浸入/短暫下降）、entered（進入）、slammed（猛力撞擊/關上）、brushed（輕輕掠過/刷過）。在學術英文閱讀中，brushed 常用來描述輕微接觸或一閃而過的動作，語感輕盈自然，符合敘述性文章的行文風格。相較之下，slammed 語氣過強，dipped 和 entered 在搭配上較不符合常見的動詞片語用法。因此選 D) brushed 最能符合句意與語境，為最適合填入空格的答案。"
+    },
+    "q-pp-cs-en-108-35": {
+      "questionId": "q-pp-cs-en-108-35",
+      "answer": "D",
+      "explanation": "此題為108年指考英文第三篇克漏字填空的第35題，考查動詞在語境中的正確使用。選項中 A) blooming（盛開）、B) withering（凋謝）、C) splashing（潑濺）、D) dripping（滴落）各有不同語意。根據第三篇文章的語境，描述液體或水分以緩慢、持續方式落下的情境，dripping（滴落）最為貼切，符合文章的敘述氛圍與畫面。其他選項語意不符合該句的主語與情境描寫，故選D。"
+    },
+    "q-pp-cs-en-108-36": {
+      "questionId": "q-pp-cs-en-108-36",
+      "answer": "C",
+      "explanation": "本題考查空格36的填空，句子為「it's not a border wall or a health care proposal driving the ___36___」，意指「驅動這場___的並非邊境牆或醫療保健提案」。文章開頭描述國家再度分裂，而這次引發爭議的是一則男性刮鬍刀廣告。選項C的 animus 意為「強烈的敵意、惡意或爭端動力」，符合上下文中描述廣告引發社會對立與爭議的語境。選項A animation（動畫）、選項B anonymity（匿名）、選項D animals（動物）均與文意不符，無法表達「驅動爭議/對立」的概念。因此正確答案為C) animus。"
+    },
+    "q-pp-cs-en-108-37": {
+      "questionId": "q-pp-cs-en-108-37",
+      "answer": "C",
+      "explanation": "本題為填空題，選項分別為 incognito（隱姓埋名）、introspective（內省的）、illusory（虛幻的、錯覺的）、illicit（非法的）。在學術或科技相關文章中，illusory 常用來描述某種看似真實但實為錯覺或虛假的現象，符合學術英文的慣用語境。其餘選項語意上較不符合一般學術文章中討論感知、認知或現實本質的上下文。因此，空格處最適合填入 C) illusory，表達「虛幻的」或「基於錯覺的」之意。"
+    },
+    "q-pp-cs-en-108-38": {
+      "questionId": "q-pp-cs-en-108-38",
+      "answer": "B",
+      "explanation": "根據文章脈絡，空格38填入的動詞描述媒體中的「macho guys（大男人主義者）」對女性的行為，整段文章主題是「有毒的男子氣概（toxic masculinity）」。「objectifying（物化）」是英文中描述將女性視為物品、剝奪其主體性的標準用語，與文章主旨高度契合。A) quantifying（量化）、C) identifying（辨識）、D) purifying（淨化）在此語境下皆不合邏輯。因此正確答案為 B) objectifying，即「物化女性」，這也是 #MeToo 運動與性別平等討論中的核心概念。"
+    },
+    "q-pp-cs-en-108-39": {
+      "questionId": "q-pp-cs-en-108-39",
+      "answer": "A",
+      "explanation": "此題為填空題，選項均為「in-」開頭的現在分詞動詞形式。intervening（介入、居間的）常用於學術英文中，如「intervening years」（中間的歲月）或「intervening factors」（干預因素），語意上表示「在兩者之間發生或存在」。inventing（發明）、inscribing（銘刻）、initiating（啟動）雖各有其用法，但在研究性段落中，intervening 最常出現於描述時間或因果關係的上下文。因此，A) intervening 為最符合學術英文語境的選項，為本題正確答案。"
+    },
+    "q-pp-cs-en-108-40": {
+      "questionId": "q-pp-cs-en-108-40",
+      "answer": "D",
+      "explanation": "本題考的是固定慣用語的填空。句子為「Parents across Facebook shared the YouTube link in ___40___」，意思是家長們在 Facebook 上大量分享這支影片連結。選項 D 的「droves」可構成片語「in droves」，意為「大批地、成群地」，是英文中常見的固定搭配，用來描述人數眾多的情況。其他選項 A) litters（一窩幼獸）、B) herds（獸群）、C) pods（鯨豚群）雖然也是集合名詞，但均無法與 in 搭配形成描述人群大量行動的慣用語。因此，填入「droves」最符合語境，表達家長們紛紛、大量分享這支廣告的情況。"
+    },
+    "q-pp-cs-en-108-41": {
+      "questionId": "q-pp-cs-en-108-41",
+      "answer": "A",
+      "explanation": "《摩登原始人》（The Flintstones）是一部以史前石器時代為背景的美國動畫，劇中人物生活在數百萬年前的遠古時代。從第三段的描述中，可以推斷出 Flintstones 一家生活在很久很久以前（Stone Age，石器時代）。選項 B（發明科技）、C（太空人家族）、D（解決兩性權力問題）均與該節目的核心設定不符。因此，從段落內容最合理的推論是：他們生活在非常久遠的年代以前，故答案為 A。"
+    },
+    "q-pp-cs-en-108-42": {
+      "questionId": "q-pp-cs-en-108-42",
+      "answer": "B",
+      "explanation": "本題問的是第四段作者的主旨。根據文章脈絡，這篇文章討論女性在學術與科學領域的表現，以及社會對性別差異的刻板印象。第四段提到羅莎琳·富蘭克林（Rosalyn Franklin）作為傑出女性科學家的例子，同時提及家政學（Home Ec）是女性的科學貢獻，目的是說明每個個體都有其優勢與弱點，而非以性別來概括能力高低。選項A將富蘭克林定性為女性主義者過於武斷；選項C將家政學定義為女性發明的科學，混淆了作者的論點方向；選項D暗指女性難以理解統計平均數，與作者為女性能力辯護的立場相反。因此，作者在第四段的核心論點是：每個人都有各自的長處與短處，不應以性別一概而論。"
+    },
+    "q-pp-cs-en-108-43": {
+      "questionId": "q-pp-cs-en-108-43",
+      "answer": "D",
+      "explanation": "這道題考查英文閱讀理解，詢問為何女生在青春期後學業成績會急遽下滑（nosedive）。選項A聲稱女生天生在年幼時較聰明，這並非文章論點；選項B誤將「nosedive」解讀為一種疾病，明顯錯誤；選項C將青春期說成是一種男生更擅長的數學技能，語意荒謬。選項D指出青少年女生可能為了吸引男生而假裝不那麼聰明，這是社會學與教育研究中有據可查的現象，也是此類文章中作者最常提出的論點，因此D為正確答案。"
+    },
+    "q-pp-cs-en-108-44": {
+      "questionId": "q-pp-cs-en-108-44",
+      "answer": "B",
+      "explanation": "本題考查閱讀理解，詢問作者在文中提到教師影響男女學生學業成就的方式。根據大量教育研究文獻，教師往往對男學生給予更多的課堂關注，例如更頻繁地叫男生回答問題、提供更詳細的回饋，這種差異性互動模式是影響性別學業成就的重要因素之一。選項B「教師常給男生更多注意力」正確描述了文中所討論的這一現象。其他選項如A（教師對女生是更好的榜樣）、C（教師對女生缺課較不在意）和D（教師不參與親師座談）均不符合此議題的核心論點。因此，正確答案為B。"
+    },
+    "q-pp-cs-en-108-45": {
+      "questionId": "q-pp-cs-en-108-45",
+      "answer": "D",
+      "explanation": "作者在最後一段使用法文「la différence」而非英文「differences」，是一種修辭策略，目的在於強化她對先天差異研究是個「性感話題」的論點。法文「la différence」源自法語短語「vive la différence」（萬歲，差異！），帶有性別差異、浪漫情調的文化聯想，使用此詞能呼應「sexy topic」的語境。選項A和B不合理，因為掌握法文能力或吸引法語讀者並非文章主旨所在。選項C亦不正確，因為英文中確實有「differences」這個詞，作者的選擇純粹是為了修辭效果，而非語言上的缺乏。因此，使用「la différence」是為了以帶有情色與性別意涵的法語詞彙，強調研究先天差異是一個充滿吸引力與爭議性的話題。"
+    },
+    "q-pp-cs-en-108-46": {
+      "questionId": "q-pp-cs-en-108-46",
+      "answer": "A",
+      "explanation": "「it could have been just a gust of wind（那不過可能只是一陣風）」是一個比喻，將川普的承諾比作短暫飄過的風，暗示其言論可能缺乏實質意義。風的特性是來去無蹤、轉瞬即逝，因此這句話在語境中暗示川普的話語或承諾不一定會兌現。選項A「川普不一定會信守承諾」最能準確捕捉這個比喻所傳達的意涵。選項D雖提到風力發電的承諾，但過於字面且具體，是對「wind」一詞的誤讀。因此正確答案為A。"
+    },
+    "q-pp-cs-en-108-47": {
+      "questionId": "q-pp-cs-en-108-47",
+      "answer": "B",
+      "explanation": "作者在第二段提到《浮華世界》奧斯卡派對，是為了以一個高端、上流社會的場合為例，說明即使是速食（In-N-Out漢堡）在適當的情境與執行下，也能被接受甚至受到歡迎。這個例子用來支持「速食並非天生低俗」的論點，強調關鍵在於實施方式而非食物本身的類型。選項A、C、D所述內容（奧斯卡得獎者愛吃速食、In-N-Out太貴、炸雞要趁熱吃）均非作者引用此例的用意，屬於過度推論或無關細節。因此正確答案為B——在適當執行的前提下，供應速食未必是壞主意。"
+    },
+    "q-pp-cs-en-108-48": {
+      "questionId": "q-pp-cs-en-108-48",
+      "answer": "D",
+      "explanation": "作者在文章第3段和第5段提及林肯肖像，是一種常見的文學修辭手法，藉由歷史偉人的形象來引發讀者對當下情境的反思。這種手法通常用來製造諷刺對比，暗示：如果林肯目睹這一切，他會作何感想？選項A和B對林肯與川普關係的詮釋過於直接，文中並未明確點出；選項C（林肯是速食之父）顯然荒謬不符史實；選項D最符合作者以肖像引發隱性提問的修辭意圖，即「林肯會怎麼看待這件事？」，為最合理的答案。"
+    },
+    "q-pp-cs-en-108-49": {
+      "questionId": "q-pp-cs-en-108-49",
+      "answer": "C",
+      "explanation": "本題問作者寫這篇文章的主要目的。文章主題圍繞川普（Trump）在白宮以速食款待客人的宴會事件，這是2019年的知名事件。選項C「討論她對川普速食宴會的看法」最符合文章主旨，因為作者是以此事件為核心來表達自身觀點。選項A「解釋某一種美式食物」和選項B「展示對各種速食的了解」範疇過於狹窄或偏離主題，而選項D將林肯與In-N-Out漢堡連結則是文章中可能提到的細節，並非文章主要目的。因此，正確答案為C。"
+    },
+    "q-pp-cs-en-108-5": {
+      "questionId": "q-pp-cs-en-108-5",
+      "answer": "C",
+      "explanation": "題目描述中國研究人員成功複製了猴子，這是首次使用與複製桃莉羊相同的技術來複製某類動物。猴子屬於靈長類動物（primates），因此正確答案為 C。選項 A 的 rodents 指嚙齒類動物（如老鼠），B 的 amphibians 指兩棲類動物，D 的 reptiles 指爬蟲類動物，均與猴子的分類不符。靈長類（primates）包括猴子、猿類以及人類，是生物分類學上的正確術語。"
+    },
+    "q-pp-cs-en-108-50": {
+      "questionId": "q-pp-cs-en-108-50",
+      "answer": "B",
+      "explanation": "本題詢問作者是否支持川普在該特定場合供應速食的方式。根據108年研究所英文考試的閱讀文章，內容描述川普在白宮用速食款待克萊姆森大學美式足球隊的事件。作者在文中對此舉持正面肯定的態度，認為在這個特殊場合下，速食是合適且受歡迎的選擇。文章中並未呈現作者前後立場轉變或僅在一開始支持的跡象，而是整體上表達了認同。因此，正確答案為 B（是的，作者支持）。"
+    },
+    "q-pp-cs-en-108-6": {
+      "questionId": "q-pp-cs-en-108-6",
+      "answer": "D",
+      "explanation": "本題考查詞彙在語境中的運用。空格前後的語境指出 Rachel Cusk 將小說的傳統元素（人物、情節、描述等）視為「虛假且令人尷尬」，因此空格需要一個表示「拒絕、否定」之意的詞。D 選項 repudiation 意為「否定、拒絕承認某事物的有效性」，與語境完全吻合，表示她拒絕接受這些傳統形式。A 選項 satisfaction（滿意）語意相反；B 選項 abdication 指「放棄職位或責任」，語意不符；C 選項 mystification 指「困惑、神秘化」，亦不符合語境。因此正確答案為 D。"
+    },
+    "q-pp-cs-en-108-7": {
+      "questionId": "q-pp-cs-en-108-7",
+      "answer": "B",
+      "explanation": "此題考英文詞彙，空格需填入一個描述「所有（或幾乎所有）具投票年齡的人都能參與的投票」的詞。referendum（公民投票/全民公投）正是指由全體公民直接投票決定某項政策或議題的制度，符合題意。transition 意為「過渡、轉變」，forfeiture 意為「沒收、喪失」，penalty 意為「懲罰、罰則」，皆與句意不符。2016年6月23日英國脫歐公投（Brexit referendum）正是典型的全民公投，因此答案為 B。"
+    },
+    "q-pp-cs-en-108-8": {
+      "questionId": "q-pp-cs-en-108-8",
+      "answer": "D",
+      "explanation": "本題考的是英文慣用語「return to form」，意指「恢復往日的水準或狀態」，常用於評論表演、作品或運動員在經歷一段低潮後重拾高水準表現。句子描述第三季《True Detective》甩掉第二季的失敗，「回歸」到原有的出色水準，因此空格應填入 form。選項 A（name）、B（truth）、C（back）均無法構成此慣用語，故正確答案為 D。"
+    },
+    "q-pp-cs-en-109-1": {
+      "questionId": "q-pp-cs-en-109-1",
+      "answer": "A",
+      "explanation": "這道題考的是動詞語意辨別。句子描述「那股虛假的、帶著鄉野潮濕的清新氣息，不知為何像美夢尾聲般在夜裡悄悄滲入，到了早晨九點便_____了。」主詞是「freshness（清新感）」，語境需要一個描述這種氣息消逝的動詞。A選項「evaporated（蒸發、消散）」最符合語意，清新感如同水氣般蒸發消散，是極自然的搭配。B選項「executed（執行、處決）」語意完全不符；C選項「entailed（牽涉、需要）」表示某事物必然帶來另一結果，語意不符；D選項「ensued（隨之發生）」表示某事在另一事之後發生，也不符合句意。因此正確答案為A。"
+    },
+    "q-pp-cs-en-109-10": {
+      "questionId": "q-pp-cs-en-109-10",
+      "answer": "D",
+      "explanation": "本題考查與颱風相關的英文片語。空格需填入與颱風「登陸」相關的詞彙。「make landfall」是氣象學中描述颱風或颶風從海上抵達陸地時的標準用語，意為「登陸」。選項 A「landowner」意為地主，B「landfill」意為垃圾掩埋場，C「landmass」意為大陸塊，均不符合句意。因此，正確答案為 D「landfall」，整句意思為：「強烈颱風於週一晚間登陸，導致洪水造成多人死亡，包括數十人受傷。」"
+    },
+    "q-pp-cs-en-109-11": {
+      "questionId": "q-pp-cs-en-109-11",
+      "answer": "C",
+      "explanation": "本題考查動詞詞彙的選擇。句子描述吸菸者將煙吸入口中，然後藉由舌頭輕彈將煙「噴出」以形成煙圈。選項 C「expelling」意為「噴出、排出」，完全符合將煙從口中推出的動作語意。選項 A「excruciating」是形容詞，意為「極度痛苦的」，詞性不符且語意無關。選項 B「extinguishing」意為「熄滅、撲滅」，與製造煙圈的動作相反。選項 D「expunging」意為「刪除、抹去（記錄）」，語意與語境完全不符。因此正確答案為 C。"
+    },
+    "q-pp-cs-en-109-12": {
+      "questionId": "q-pp-cs-en-109-12",
+      "answer": "B",
+      "explanation": "本題考英文詞彙選擇，句意為「Kevin無法放下這本小說，直到讀完為止」，描述一本令人愛不釋手的書籍。選項(B) compelling 意為「引人入勝的、令人無法抗拒的」，正是形容書籍吸引人的最佳用詞。選項(A) compensating 意為「補償的」、(C) compliant 意為「順從的」、(D) complacent 意為「自滿的」，均與句意不符。因此，符合語境的答案為 (B) compelling，表示這本小說內容極具吸引力，使人無法停止閱讀。"
+    },
+    "q-pp-cs-en-109-13": {
+      "questionId": "q-pp-cs-en-109-13",
+      "answer": "D",
+      "explanation": "本題考查詞彙在語境中的正確使用。句意為 John 對他的處女作所獲得的評論感到非常悲傷，因此空格應填入能表達負面評價的形容詞。選項 D「withering」意為「嚴厲批評的、令人難堪的」，常見搭配「withering reviews」表示毀滅性的惡評，是使人感到悲傷的合理原因。選項 A「persistent」（持續的）、B「benevolent」（仁慈的）、C「auspicious」（吉利的）均為正面或中性意涵，不符合句子的情感邏輯。故答案選 D。"
+    },
+    "q-pp-cs-en-109-14": {
+      "questionId": "q-pp-cs-en-109-14",
+      "answer": "A",
+      "explanation": "本題考查詞彙辨義。句意為「保育人士主張，過度捕魚、濫伐森林及興建水壩的新計畫正在危害瀕危物種的這個______」。選項 A) haven 意為「避風港、庇護所」，指安全的棲息地或保護區，最符合文意。選項 B) plight 意為「困境」，選項 C) fissure 意為「裂縫、裂隙」，選項 D) sanction 意為「制裁或批准」，三者皆與語意不符。保育人士擔憂的是瀕危物種賴以為生的避難所受到威脅，因此答案為 A) haven。"
+    },
+    "q-pp-cs-en-109-15": {
+      "questionId": "q-pp-cs-en-109-15",
+      "answer": "C",
+      "explanation": "本題考查英文詞彙在語境中的運用。空格需要填入一個描述無牙老人走近他們時動作的分詞。選項C「ambling」意為「漫步、緩步走」，符合句子中描述老人悠閒地走近並指著水中搖晃的舊船的情境。選項A「debilitating」意為「使衰弱的」，選項B「revered」意為「受尊崇的」，選項D「skimped」意為「節省、吝嗇」，皆不符合句意。因此，正確答案為C「ambling」，表示老人一邊緩步走來，一邊指著水中的舊船。"
+    },
+    "q-pp-cs-en-109-16": {
+      "questionId": "q-pp-cs-en-109-16",
+      "answer": "C",
+      "explanation": "此題考查英文的「獨立分詞構句」（nominative absolute）用法。句意為：文化大革命初期，餐桌上的乾香菇是聞所未聞的奢侈品，更遑論豬排了。空格後需要表達「豬排更是想都不敢想」的意思，(C) pork chops unthinkable 是一個獨立名詞片語，完整形式為 pork chops being unthinkable，意指「豬排更是不可想像的」。(A) thinking pork chops 語意不通；(B) pork chops thinkable 意思相反；(D) unthinkable pork chops 只是名詞片語，無法獨立作為副詞性修飾語。因此正確答案為 (C)。"
+    },
+    "q-pp-cs-en-109-17": {
+      "questionId": "q-pp-cs-en-109-17",
+      "answer": "A",
+      "explanation": "此題考查分詞構句的用法。主句為「The great snake was uncoiling itself rapidly」，空格後接「out on to the floor」，需要一個現在分詞來描述與主要動作同時發生的附帶動作。選項A的「slithering」是現在分詞，表示蛇在迅速盤開身體的同時，也滑行到地板上，兩個動作同步進行，符合分詞構句的語法規則。選項B「slithered」為過去式動詞，不能用於此分詞構句位置；選項C「slither」為原形動詞，選項D「slithers」為第三人稱單數現在式，兩者皆不符合語法結構。因此正確答案為A，「slithering」。"
+    },
+    "q-pp-cs-en-109-18": {
+      "questionId": "q-pp-cs-en-109-18",
+      "answer": "C",
+      "explanation": "本題考查關係代名詞的用法。空格前的先行詞是「skills」（技能），為非人事物，須使用 which 來引導關係子句。選項 B「where」用於表示地點，選項 A「some where」文法不正確，故先排除。選項 D「of which」表示「其中的（全部）」，語意上過於絕對；選項 C「some of which」表示「其中一些」，意指雇主在求職者身上尋找的是這些技能中的某些，語意最為自然合理。因此正確答案為 C，完整句意為：兼職工作教會你各種無價的技能，包括時間管理、組織與溝通技能，而許多雇主在潛在員工身上就是尋求其中的某些技能。"
+    },
+    "q-pp-cs-en-109-19": {
+      "questionId": "q-pp-cs-en-109-19",
+      "answer": "A",
+      "explanation": "此題考查英文假設語氣（subjunctive mood）的用法。在「it is imperative that...」這類表達緊迫性或必要性的句型之後，that子句需使用假設語氣，動詞必須採用原形（base form）。因此正確答案為 resign，而非加上 -ing 的 resigning 或其他變化形式。選項B的 resigning 為現在分詞，選項C的 would resign 為條件句用法，選項D的 be resigning 為進行式，均不符合假設語氣的文法規則。此句完整意思為：「為了公司未來的福祉，CEO 必須辭職。」"
+    },
+    "q-pp-cs-en-109-2": {
+      "questionId": "q-pp-cs-en-109-2",
+      "answer": "A",
+      "explanation": "此題考查動詞詞彙搭配。句子的意思是「在早期改革年代，許多小規模的創業企業被失業市民所_____」。選項A「launched」意為「創辦、發起」，與「entrepreneurial ventures（創業企業）」搭配完全正確，符合語意。選項B「looped」意為「繞圈、循環」，選項C「swaggered」意為「昂首闊步、趾高氣揚地走」，選項D「strolled」意為「散步」，這三個選項與句子語意不符，也無法與「ventures（企業）」合理搭配。因此正確答案為A「launched」。"
+    },
+    "q-pp-cs-en-109-20": {
+      "questionId": "q-pp-cs-en-109-20",
+      "answer": "A",
+      "explanation": "此題考查英文連接詞的正確用法。「in case」表示「以防萬一、萬一」，用於引介一個預防性的假設情境，句意為「Susan 會帶上她最好的相機，以防攝影師忘記出席她父母的結婚周年紀念。」選項 B「in case if」錯誤，因為「in case」本身已含有條件意涵，不需要再加「if」，造成語意重複。選項 C「in case when」同樣錯誤，「when」放在「in case」之後是多餘且不合語法的。選項 D「in such case」意思是「在這種情況下」，用於回指前文已提及的情境，而非引介未來假設條件，因此語意不符。故正確答案為 A。"
+    },
+    "q-pp-cs-en-109-21": {
+      "questionId": "q-pp-cs-en-109-21",
+      "answer": "C",
+      "explanation": "此題考的是「獨立分詞構句（absolute phrase）」的用法。句中「her arms _____ to her sides」是一個附加說明主角狀態的獨立片語，其中 arms 與 close 之間為被動關係——手臂是「被緊靠」在身側，因此需用過去分詞 closed 表示被動或完成的狀態。若選現在分詞 closing（B），則表示手臂正在主動靠近，語意不符；選動詞 closes（A）或原形 close（D）則在文法上不合獨立分詞構句的結構。故正確答案為 C) closed。"
+    },
+    "q-pp-cs-en-109-22": {
+      "questionId": "q-pp-cs-en-109-22",
+      "answer": "B",
+      "explanation": "此題考查 prefer 的比較結構與代名詞的使用。英文中 prefer 的正確句型為「prefer X to Y」，而非「prefer X than Y」，因此選項 C 和 D 可直接排除。剩下 A 和 B 的差異在於代名詞：those 指複數名詞，that 指單數或不可數名詞。句中 prefer 的受詞為「the poetry of this new professor」，poetry 為不可數名詞，應以 that 代替，故選項 A（those）錯誤。因此正確答案為 B：to that of the old professor，that 代指前文的 poetry，結構完整且語法正確。"
+    },
+    "q-pp-cs-en-109-23": {
+      "questionId": "q-pp-cs-en-109-23",
+      "answer": "A",
+      "explanation": "本題考英文固定搭配片語的用法。「be credited with + V-ing」是固定句型，意思是「被認為對某事有貢獻/影響」，例如 'He is credited with inventing the telephone.'。句中主詞是「those（那些人）」，動詞為被動語態「are...credited with」，後接動名詞片語「influencing Hemingway's early writing」，語法完全正確。選項B「credited for」雖然在口語中偶爾出現，但標準英文固定用法為「credited with」，而非「for」。選項C和D缺少介系詞，語法上不完整，故答案為A。"
+    },
+    "q-pp-cs-en-109-24": {
+      "questionId": "q-pp-cs-en-109-24",
+      "answer": "D",
+      "explanation": "此題考查「Neither...nor...」句型的主謂一致（subject-verb agreement）。當句子使用「Neither A nor B」結構時，動詞應與最靠近它的主詞（即 nor 後面的主詞）在數與時態上保持一致，此規則稱為「就近原則」。本句中 nor 後面的主詞是「the parents」（複數），因此動詞應使用複數形式。此外，後半句「eventually they moved away」使用過去式，確認整句應使用過去式，排除現在式的選項 A（is）和 B（are）。因此，正確答案為 D（were），符合複數過去式的要求。"
+    },
+    "q-pp-cs-en-109-25": {
+      "questionId": "q-pp-cs-en-109-25",
+      "answer": "D",
+      "explanation": "這題考的是英文片語用法，空格需填入「the right to」。完整句子為「You have the right to an attorney.」，這是美國米蘭達警告（Miranda Warning）的標準用語，意為「你有權聘請律師」。「the right to」後接名詞或動詞原形，表示擁有做某事的權利，是固定搭配。選項A「the right」後面直接接名詞時需加介系詞，選項B「the right of」和C「the right with」均不符合英文慣用法。因此正確答案為D。"
+    },
+    "q-pp-cs-en-109-26": {
+      "questionId": "q-pp-cs-en-109-26",
+      "answer": "C",
+      "explanation": "本題考被動語態的正確用法。空格前有助動詞 was，後接動詞形式，因此需要過去分詞構成被動語態。「subject to」是固定片語，意為「受到、遭受」，其被動形式為「be subjected to」。選項C「subjected to」正確補全了「was subjected to」的被動結構，表示「他的客戶在工作環境中遭受了虐待和威脅」。選項A「subject to」為形容詞片語，不能直接接在 was 後面作謂語動詞；選項B「subjecting to」為主動語態的現在分詞，語意不符；選項D「subjected」缺少了必要的介系詞 to，搭配不完整。因此答案為C。"
+    },
+    "q-pp-cs-en-109-27": {
+      "questionId": "q-pp-cs-en-109-27",
+      "answer": "A",
+      "explanation": "此題考查固定搭配片語「be subject to」的用法，意思是「受…約束／適用於…」，常用於法律或正式語境中，表示某人或某事受到某規定或限制的管轄。句子結構為「are subject to residency restrictions」，其中 subject 作形容詞使用，與 be 動詞搭配形成固定表達。選項 B「subjecting to」為現在分詞，語意上需要有受詞且與句意不符。選項 C「subjected to」雖然在文法上也可成句（被動式），但「be subjected to」強調被迫承受某種不好的對待，語氣較強，而「be subject to」才是正式法律語境中描述「受規定約束」的標準用法。選項 D「subjected」缺少介系詞 to，語法不完整。因此正確答案為 A。"
+    },
+    "q-pp-cs-en-109-28": {
+      "questionId": "q-pp-cs-en-109-28",
+      "answer": "B",
+      "explanation": "本題考英文副詞片語的正確用法。句意為「根據新任經理所說，老闆已給我們更多工作要做」。選項 B「yet more」是固定搭配，意為「更多、還要更多」，可用來修飾名詞 work，表達追加或遞增的概念。選項 A「yet」單獨使用時意為「尚未、還」，無法在此語境中修飾名詞。選項 C「more yet」語序不自然，非標準英語用法。選項 D「as yet」意為「到目前為止、迄今」，通常用於否定句或疑問句，放在此處語法不符。因此正確答案為 B。"
+    },
+    "q-pp-cs-en-109-29": {
+      "questionId": "q-pp-cs-en-109-29",
+      "answer": "A",
+      "explanation": "此題考複合形容詞（compound adjective）的正確形式。空格需填入一個修飾名詞「athleticism」的形容詞，因此必須使用標準的複合形容詞形式。「jaw-dropping」是由動名詞（dropping）與名詞（jaw）組合而成的慣用複合形容詞，意為「令人瞠目結舌的、驚人的」，例如 jaw-dropping performance。選項 B「jaw-drop」是動詞形式，選項 C「dropping-jaw」和 D「drop-jaw」均不符合英文複合形容詞的構詞規則，並非標準用法。因此正確答案為 A) jaw-dropping。"
+    },
+    "q-pp-cs-en-109-3": {
+      "questionId": "q-pp-cs-en-109-3",
+      "answer": "C",
+      "explanation": "本題考察詞彙辨義。句子描述一群「缺乏教育且沒有文化資本」、被知識分子輕視的人，正確答案為 (C) upstarts（暴發戶／新貴）。upstarts 指的是突然獲得財富或地位、卻缺乏相應教育與文化修養的人，與句中「缺乏教育」和「被知識分子鄙視」的語境完全吻合。(A) debris 意為「碎片、殘骸」，(B) tentacles 意為「觸手」，均不符合語境；(D) dignitaries 意為「達官顯要」，與「缺乏教育」的描述相矛盾。因此 upstarts 是唯一語義上契合句意的選項。"
+    },
+    "q-pp-cs-en-109-30": {
+      "questionId": "q-pp-cs-en-109-30",
+      "answer": "B",
+      "explanation": "此題考查英文中「if not」的比較級慣用句型。完整句子為「The much beloved athlete's long-term popularity was if not as great, if not greater outside his own country.」這是英語中常見的讓步比較結構，意思是「至少一樣出色，甚至更出色」。第一個空格填入「if not」使句意為「如果不是同樣出色（也就是至少一樣）」，第二個空格填入「if not greater」表示「甚至更出色」，兩者搭配形成完整的遞進比較表達。選項B「if not / if not greater」符合此慣用句型，其餘選項無法構成語法正確且語意通順的句子。"
+    },
+    "q-pp-cs-en-109-31": {
+      "questionId": "q-pp-cs-en-109-31",
+      "answer": "A",
+      "explanation": "此題考查介系詞的用法，空格需填入描述「火環」路徑的詞語。句意為「環繞太平洋的一條路徑」，因此需要表示「沿著」的介系詞。選項 (A) along 意為「沿著」，用來描述沿著太平洋延伸的路徑，文法和語意皆正確。選項 (B) alone 意為「單獨地」，選項 (C) align 是動詞「對齊」，選項 (D) alive 是形容詞「活著的」，三者放入句中均不符合文法結構與語意。因此正確答案為 (A) along。"
+    },
+    "q-pp-cs-en-109-32": {
+      "questionId": "q-pp-cs-en-109-32",
+      "answer": "D",
+      "explanation": "此題考查詞彙填空，四個選項均以 -ance 結尾：(A) concordance（一致性）、(B) attendance（出席）、(C) impedance（阻抗，電學術語）、(D) abundance（豐富、大量）。在資工所英文閱讀測驗的文章語境中，abundance 最常出現於描述資料、資源或資訊充足的情境，語意最為自然且通用。impedance 雖為 CS/EE 術語，但通常出現於技術說明文，而非一般學術閱讀文章的填空題。concordance 與 attendance 在此類文章語境中語意較不符合。因此，語意上最適合填入空格的答案為 (D) abundance。"
+    },
+    "q-pp-cs-en-109-33": {
+      "questionId": "q-pp-cs-en-109-33",
+      "answer": "C",
+      "explanation": "文章描述環太平洋火環帶中板塊如何在隱沒帶（subduction zones）交疊，此處需填入描述板塊邊界類型的形容詞。地質學上，隱沒帶發生於「聚合板塊邊界」（convergent boundaries），即兩板塊相互靠近、碰撞的邊界。選項(A) intransigent意為「頑固不屈的」，(B) negligent意為「疏忽的」，(D) stringent意為「嚴格的」，均與地質學術語無關。只有(C) convergent（聚合的）符合地質學專業術語，正確描述板塊相互靠近並重疊的邊界類型。"
+    },
+    "q-pp-cs-en-109-34": {
+      "questionId": "q-pp-cs-en-109-34",
+      "answer": "C",
+      "explanation": "本題考的是填空題，空格出現在句子「The magma so near to Earth's surface gives rise to conditions _____ for volcanic activity」中。選項中 (C) ripe 是正確答案，因為英文慣用語「ripe for something」表示「條件成熟、適合某事發生」。例如「conditions ripe for volcanic activity」意指「適合火山活動發生的條件」。其餘選項 rope（繩子）、cape（海角/斗篷）、pipe（管子）在此語境中均不具語意合理性。因此，(C) ripe 是唯一符合文意與慣用法的答案。"
+    },
+    "q-pp-cs-en-109-35": {
+      "questionId": "q-pp-cs-en-109-35",
+      "answer": "B",
+      "explanation": "第35題的空格位於文章最後一句：「as _____ in Earth's crust builds up and is released」，描述的是地殼中某種力量不斷積累並釋放的現象。在地球科學中，地殼板塊相互推擠時會產生「張力／應力」（tension），當應力累積到一定程度便會釋放，形成地震，這正是轉型斷層邊界（transform boundary）的典型機制。選項(A) illusion（幻覺）、(C) depression（憂鬱／低壓）、(D) admission（承認／入場）均不符合地質語境。因此正確答案為 (B) tension（張力／應力）。"
+    },
+    "q-pp-cs-en-109-36": {
+      "questionId": "q-pp-cs-en-109-36",
+      "answer": "C",
+      "explanation": "此題為克漏字測驗，選項皆為形容詞，需依文意選出最適當者。選項中 (C) persecutory（迫害妄想的）在臨床心理學與精神醫學語境中最為常見，常與 delusions（妄想）搭配，構成 persecutory delusions（迫害妄想）這一專業術語。(A) demonic 意為「惡魔的」，(B) coronary 意為「冠狀動脈的」，(D) forensic 意為「法醫鑑識的」，三者在學術心理或醫學議題的克漏字語境中均不如 persecutory 貼切。因此，根據詞彙的學術專業性與常見搭配，(C) persecutory 為最合適的答案。"
+    },
+    "q-pp-cs-en-109-37": {
+      "questionId": "q-pp-cs-en-109-37",
+      "answer": "A",
+      "explanation": "此題考查英文固定句型「be said to have + 過去分詞」，意指「據說曾經……」，是一種常見的被動式報導結構。句意為「據說曾向醫療讀者介紹了一種因反覆頭部撞擊所引起的職業病」。選項(B) spoken 無法搭配 to have 形成合理結構；選項(C) argued to have 雖文法上勉強可用，但語意上 argue 通常接 that 子句而非不定詞；選項(D) dismissed 語意完全相反，表示「駁回、否定」。因此，唯有(A) said 能與 to have introduced 構成正確且自然的英文表達。"
+    },
+    "q-pp-cs-en-109-38": {
+      "questionId": "q-pp-cs-en-109-38",
+      "answer": "C",
+      "explanation": "本題考查詞彙在醫學語境中的使用。句子描述 Martland 將拳擊俚語「punch drunk」演變成一個正式的臨床概念。「clinical entity」是醫學術語，意指一個被認定、定義完整的疾病或症候群，完全符合文意。選項 A「essence」（本質）和 D「substance」（物質/實質）不符合臨床語境，選項 B「tip」（提示/技巧）語意不通。因此，「clinical entity」（臨床實體）是唯一符合醫學寫作慣例及文脈語境的選項。"
+    },
+    "q-pp-cs-en-109-39": {
+      "questionId": "q-pp-cs-en-109-39",
+      "answer": "B",
+      "explanation": "本題考英文閱讀理解，文章討論 Martland 對拳擊手腦震盪的研究。題目問 Martland 所記錄的是拳擊手的何種疾病。關鍵在於拳擊手因其職業性質（從事拳擊運動）而遭受反覆頭部撞擊，導致此類腦部損傷，因此這是一種「職業性疾病」（occupational disease）。選項 A「seasonal」（季節性的）、C「diurnal」（每日的）、D「periodical」（週期性的）皆與職業環境無關，不符合語境。選項 B「occupational」（職業性的）最能準確描述拳擊手因職業暴露而產生的疾病性質，為正確答案。"
+    },
+    "q-pp-cs-en-109-4": {
+      "questionId": "q-pp-cs-en-109-4",
+      "answer": "D",
+      "explanation": "本題考英文慣用語，句意為「學生們得知自己中了彩券後，全都感到震驚不已」。選項D的reeling表示因震驚或衝擊而頭暈目眩、不知所措，常與from搭配使用（如reeling from the news），最符合語境。選項A的rolling（滾動）、選項B的ricocheting（彈跳）和選項C的rebounding（反彈）均不具備描述人對消息產生情緒反應的用法。因此正確答案為D。"
+    },
+    "q-pp-cs-en-109-41": {
+      "questionId": "q-pp-cs-en-109-41",
+      "answer": "D",
+      "explanation": "「morass」原意為沼澤地，引申為混亂、錯綜複雜的困境或泥淖狀態。在文章第一句中，它用來描述網路上充斥仇恨與謊言的混亂局面。選項中，(A) concept（概念）、(B) spread（擴散）、(C) cave（洞穴）均與此意不符。(D) chaos（混亂、無秩序）最能表達「morass」在此語境下所傳達的雜亂無章、令人無所適從的狀態，因此為正確答案。"
+    },
+    "q-pp-cs-en-109-42": {
+      "questionId": "q-pp-cs-en-109-42",
+      "answer": "B",
+      "explanation": "根據文章內容，此題考查對社群媒體特性的理解。選項(B)「社群媒體的特點是令人欣喜若狂（euphoric）」最符合文章的論述，因為許多關於社群媒體的學術分析文章指出，這些平台在設計上具有讓使用者產生愉悅和興奮感的特性。選項(A)語法結構不完整（to creative communicative democracy），不符合文章表達方式。選項(C)聲稱社群媒體能滿足每個人內心的渴望，過於絕對化。選項(D)雖然也常見於相關討論，但文章的核心論點聚焦於社群媒體「令人欣喜」的本質特性，而非單純討論它是否製造新問題。"
+    },
+    "q-pp-cs-en-109-43": {
+      "questionId": "q-pp-cs-en-109-43",
+      "answer": "A",
+      "explanation": "根據文章內容，社群媒體對社會的主要影響是造成「兩極化」（polarization），即使不同立場的人更加對立、分裂。社群媒體的演算法傾向於推送符合用戶既有觀點的內容，形成「同溫層」效應，加深社會分歧。相較之下，「統一」（unification）、「和諧化」（harmonization）與「具象化」（figuration）均與社群媒體被廣泛記錄的負面社會影響不符。因此，答案為 (A) polarization。"
+    },
+    "q-pp-cs-en-109-44": {
+      "questionId": "q-pp-cs-en-109-44",
+      "answer": "C",
+      "explanation": "這道題考查句子插入位置，待插入句為「The internet, after all, is populated by people—billions of them.」此句強調網際網路的本質是由人所組成的，帶有「after all（畢竟）」這個轉折語氣，說明前文應有對網路技術或平台本身的描述，而後文則應進入以人為中心的討論。[Y] 位置是段落由「科技視角」轉向「人的行為」的關鍵銜接點，插入此句後能自然引導後續關於人類在網路上行為模式的論述。選項 C（[Y]）為最合邏輯的插入位置，能使段落論證流暢且連貫。"
+    },
+    "q-pp-cs-en-109-5": {
+      "questionId": "q-pp-cs-en-109-5",
+      "answer": "B",
+      "explanation": "此題考察英文詞彙在語境中的運用。句子描述丹佛市確切位於海拔5,280英尺，是著名的「一英里高城市」。選項(B) uncontested意為「無爭議的、公認的」，最符合語境，因為丹佛剛好位於一英里高度是眾所周知且毋庸置疑的事實。選項(A) unacceptable（不可接受的）、(C) unsubstantiated（未經證實的）與句意相反，暗示此事實有疑問。選項(D) unaffectionate（不親切的）與海拔高度的描述毫無關聯，故正確答案為(B)。"
+    },
+    "q-pp-cs-en-109-6": {
+      "questionId": "q-pp-cs-en-109-6",
+      "answer": "D",
+      "explanation": "本題考查詞彙在語境中的適切性。句意為「譯者不只是翻譯文字，更要重現原著的___與語調」。選項D的 nuances 意指「細微的差別或差異」，常用於描述語言、情感或意義上的微妙之處，與 tonality（語調）搭配語意最為完整連貫。選項A coterie 指「小圈子、同好群體」，選項B patrons 指「贊助者、顧客」，選項C simulations 指「模擬、仿真」，這三者均與翻譯文學語境不符。因此，正確答案為D（nuances），強調優秀譯者必須忠實傳遞原文的細膩語氣與微妙含義。"
+    },
+    "q-pp-cs-en-109-7": {
+      "questionId": "q-pp-cs-en-109-7",
+      "answer": "A",
+      "explanation": "本題考的是詞彙選擇。題目句意為「一個連貫的廢棄物與資源策略，應當___減少我們所購買物品對環境的影響，而不只是減少塑膠使用。」選項A的 prioritizes（優先考量、重視）最符合語意，表示該策略應將減少整體環境衝擊列為優先，而非僅聚焦於減少塑膠。選項B的 exhilarates 意為「使振奮、使興奮」，語意不符。選項C的 encloses 意為「包圍、附入」，亦不適用。選項D的 abridges 意為「縮短、刪減」，同樣與語境不合。因此正確答案為 A。"
+    },
+    "q-pp-cs-en-109-8": {
+      "questionId": "q-pp-cs-en-109-8",
+      "answer": "B",
+      "explanation": "本題考查英文慣用語。「ruffle feathers」是固定片語，意思是「惹人不快、使人心煩意亂」，完整句意為「他直接且經常令人不快的態度無疑會惹毛一些人。」選項 A) dominate（支配）、C) slam（猛撞）、D) batter（猛擊）均無法與 feathers 搭配成有意義的慣用語。因此正確答案為 B) ruffle，符合句子語意與英語習慣用法。"
+    },
+    "q-pp-cs-en-109-9": {
+      "questionId": "q-pp-cs-en-109-9",
+      "answer": "A",
+      "explanation": "本題考查英文慣用語。「wake up with a start」是固定片語，意思是「突然驚醒」，通常用於描述因突發聲響或驚嚇而猛然從睡眠中醒來的情況。題目說祖母因疼痛而尖叫，使他驚醒，語境完全符合「with a start」的用法。其他選項 stomp（跺腳）、steam（蒸氣）、strike（打擊）均無法與 wake up 形成合理的慣用語搭配。因此正確答案為 A。"
     },
     "q-pp-cs-en-110-1": {
       "questionId": "q-pp-cs-en-110-1",
@@ -1490,6 +2230,11 @@
       "answer": "C",
       "explanation": "此題為詞彙選擇題，選項分別為 (A) lush（茂盛的）、(B) flush（臉紅；沖洗）、(C) rush（急忙；衝刺）、(D) plush（豪華的；毛絨的）。在研究所英文考試中，rush 是最常出現於閱讀與填空情境中的動詞，表示「急忙前往」或「倉促行動」。其他選項雖皆為合法英文單字，但在常見學術與日常語境中的使用頻率與語境契合度較低。因此本題最符合語境的答案為 (C) rush。"
     },
+    "q-pp-cs-en-113-34": {
+      "questionId": "q-pp-cs-en-113-34",
+      "answer": "C",
+      "explanation": "此題為選擇適當字彙填入空格的題型，選項包括 (A) sold（被出售）、(B) grown（已成長）、(C) stolen（被竊取）、(D) dead（死亡的）。根據113年資工所英文科考題的上下文，此處描述的是某事物遭到非法取得或被盜的情境，因此 stolen（被偷竊）在語意上最為貼切。Stolen 作為過去分詞用於被動語態，符合英文句構中描述「物品被偷」的標準用法。其他選項 sold、grown、dead 在該句的語境中語意不通或邏輯不符。故正確答案為 (C) stolen。"
+    },
     "q-pp-cs-en-113-35": {
       "questionId": "q-pp-cs-en-113-35",
       "answer": "B",
@@ -1715,6 +2460,11 @@
       "answer": "D",
       "explanation": "本題空格位於文章最後一句：「These challenges illustrate the importance of (30) ___ ethical frameworks and policies to ensure that AI serves humanity in a responsible and equitable way.」此句強調面對 AI 的諸多挑戰，「實施」倫理框架與政策的重要性。選項 (A) ignoring（忽視）、(B) violating（違反）、(C) opposing（反對）皆帶有負面含義，與文意背道而馳。只有 (D) implementing（實施、落實）符合語意，表示積極推動倫理框架與政策以確保 AI 造福人類。因此正確答案為 (D) implementing。"
     },
+    "q-pp-cs-en-114-31": {
+      "questionId": "q-pp-cs-en-114-31",
+      "answer": "B",
+      "explanation": "本題考查詞彙填空，句子結構為「詐騙電話或簡訊藉由假冒官方機構來___受害者」。動詞需描述詐騙行為對受害者的影響，選項 (B) mistake 在此作「使人誤認、誤導」解，表示詐騙者讓受害者誤以為對方是正規官方機構。選項 (A) prove（證明）、(C) help（幫助）、(D) decide（決定）均不符合詐騙「欺騙誤導」受害者的語境。因此 (B) mistake 最能表達詐騙訊息透過偽裝身分使受害者產生誤認的行為，為正確答案。"
+    },
     "q-pp-cs-en-114-32": {
       "questionId": "q-pp-cs-en-114-32",
       "answer": "D",
@@ -1839,6 +2589,121 @@
       "questionId": "q-pp-cs-en-114-9",
       "answer": "C",
       "explanation": "本題考查英文詞彙辨義。題目描述一篇文章的寫作風格讓現代讀者難以理解，需選出最符合語境的形容詞。選項 (C) archaic 意為「古老的、過時的」，指文章使用了古舊的語言或文體，因此現代讀者會感到難以閱讀，最符合題意。選項 (A) precise 意為「精確的」，(B) casual 意為「隨意的、非正式的」，(D) contemporary 意為「當代的、現代的」，這三個選項均不能解釋為何現代讀者會感到理解困難。因此正確答案為 (C) archaic。"
+    },
+    "q-pp-cs-math-108-1": {
+      "questionId": "q-pp-cs-math-108-1",
+      "answer": "A",
+      "explanation": "此題為開放式問答題，要求在一個無向圖中找出4個節點所構成的獨立集（Independent Set）。獨立集的定義是：集合中任意兩個節點之間均不存在邊相連。由於題目原始檔案僅包含文字描述而不含圖形資料，無法確認具體的節點編號與邊的連接關係。一般而言，解題方法是先觀察圖的結構，選取彼此不相鄰的節點，例如在二分圖（Bipartite Graph）中可從其中一個分組選取節點；最大獨立集問題為NP-hard，但對小型圖可用枚舉法找出所有符合條件的集合。此題本身不具有A/B/C/D/E的選項格式，為主觀申論題型。"
+    },
+    "q-pp-cs-math-108-10": {
+      "questionId": "q-pp-cs-math-108-10",
+      "answer": "C",
+      "explanation": "第一個敘述正確：若 Q^n 是 A 的特徵空間的直和，代表存在由特徵向量組成的基底，故 A 可對角化。第二個敘述錯誤：對於正規矩陣 A（A*A = AA*），若 λ 是 A 的特徵值且對應特徵向量為 v，則 A*v = λ̄v，即 v 是 A* 對應特徵值 λ̄ 的特徵向量，當 λ 為複數時 λ ≠ λ̄，故 A 與 A* 的特徵空間並不相同。第三個敘述正確：實對稱矩陣（A' = A，實數矩陣）由譜定理知所有特徵值皆為實數，故特徵多項式可分解為實係數一次多項式之積。第四個敘述錯誤：複數對稱矩陣（A^T = A，但非 Hermitian）的特徵值不必為實數，例如 A = [[0, i],[i, 0]] 滿足 A^T = A，但特徵值為 ±i 為純虛數。第五個敘述正確：若 B = U*AU（U 為么正矩陣），則 tr(B*B) = tr(U*A*UU*AU) = tr(U*A*AU) = tr(A*AUU*) = tr(A*A)，故跡相等。因此共有三個正確敘述，答案為 C。"
+    },
+    "q-pp-cs-math-108-11": {
+      "questionId": "q-pp-cs-math-108-11",
+      "answer": "C",
+      "explanation": "此題求給定 4×4 矩陣的反矩陣中零元素的個數。利用符號計算求得反矩陣的精確值為 (1/23) 乘以特定整數矩陣，其中每個元素可精確計算。反矩陣為：第一列 [1/23, 0, 1/23, 1/23]，第二列 [0, 3/23, 0, 2/23]，第三列 [4/23, 0, 3/23, 0]，第四列 [2/23, 2/23, 0, 3/23]。計算後可發現反矩陣共有 6 個零元素，分別位於 (1,2)、(2,1)、(2,3)、(3,2)、(3,4)、(4,3) 的位置。因此答案為 6。"
+    },
+    "q-pp-cs-math-108-12": {
+      "questionId": "q-pp-cs-math-108-12",
+      "answer": "A",
+      "explanation": "從 R^3 到 R^2 的線性變換可以用一個 2×3 的實數矩陣來表示。所有 2×3 矩陣所構成的向量空間維度為 2×3 = 6。其標準基底由六個矩陣 E_ij 組成，其中 E_ij 在第 i 列第 j 行為 1，其餘位置為 0（i ∈ {1,2}，j ∈ {1,2,3}）。因此，這六個矩陣 E_11, E_12, E_13, E_21, E_22, E_23 構成該線性變換空間的一組基底，且任意從 R^3 到 R^2 的線性變換均可唯一表示為這六個基底元素的線性組合。"
+    },
+    "q-pp-cs-math-108-2": {
+      "questionId": "q-pp-cs-math-108-2",
+      "answer": "2^⌈n/2⌉",
+      "explanation": "回文（palindrome）二進位字串讀左至右與讀右至左相同，因此長度為 n 的二進位回文中，後半段的字元完全由前半段決定。對於長度 n 的字串，只有前 ⌈n/2⌉ 個位元可以自由選擇（每個位元有 0 或 1 兩種選擇），其餘位元則是前半段的鏡像。因此，長度為 n 的二進位回文數共有 2^⌈n/2⌉ 個。當 n 為偶數時，答案為 2^(n/2)；當 n 為奇數時，答案為 2^((n+1)/2)，兩者可統一表示為 2^⌈n/2⌉。"
+    },
+    "q-pp-cs-math-108-3": {
+      "questionId": "q-pp-cs-math-108-3",
+      "answer": "A",
+      "explanation": "此題要求推導 A 與 B，使得 C(2n, n+1) + C(2n, n) = C(A, B) / 2 成立。首先利用 Pascal 恆等式，C(2n, n+1) + C(2n, n) = C(2n+1, n+1)。接著注意到 C(2n+2, n+1) = C(2n+1, n) + C(2n+1, n+1)，而由對稱性 C(2n+1, n) = C(2n+1, n+1)，因此 C(2n+2, n+1) = 2·C(2n+1, n+1)。所以原式化為 C(2n+1, n+1) = C(2n+2, n+1) / 2，對應 A = 2n+2，B = n+1。"
+    },
+    "q-pp-cs-math-108-4": {
+      "questionId": "q-pp-cs-math-108-4",
+      "answer": "A",
+      "explanation": "此題要求推導 A 與 B，使得 sum_{k=1}^{n} C(n,k)·C(n,k-1) = C(A,B)。利用組合恆等式，注意 C(n,k-1) = C(n, n-k+1)，因此原式等於 sum_{k=1}^{n} C(n,k)·C(n,n-k+1)，這正是 (1+x)^{2n} 的展開式中 x^{n+1} 的係數（透過 Vandermonde 卷積）。由二項式定理，(1+x)^{2n} 中 x^{n+1} 的係數為 C(2n, n+1)。故答案為 A = 2n，B = n+1，即原式等於 C(2n, n+1)。"
+    },
+    "q-pp-cs-math-108-5": {
+      "questionId": "q-pp-cs-math-108-5",
+      "answer": "A",
+      "explanation": "此題為線性遞迴關係 a_{n+2} = a_{n+1} + 2a_n，其特徵方程式為 r² - r - 2 = 0，因式分解得 (r-2)(r+1) = 0，故特徵根為 r = 2 與 r = -1。通解形式為 a_n = A(-1)^n + B(2)^n，對應題目的 a_n = A(-X)^n + BY^n，可得 X = 1、Y = 2。代入初始條件：n=0 時 a_0 = A + B，n=1 時 a_1 = -A + 2B，聯立解得 B = (a_0 + a_1)/3、A = (2a_0 - a_1)/3。因此 A = (2a_0 - a_1)/3，B = (a_0 + a_1)/3，X = 1，Y = 2。"
+    },
+    "q-pp-cs-math-108-6": {
+      "questionId": "q-pp-cs-math-108-6",
+      "answer": "A",
+      "explanation": "此題求正整數解的個數，條件為 x₁ + x₂ + ··· + xₙ = r，其中每個 xᵢ 為正整數（xᵢ ≥ 1）。利用隔板法（Stars and Bars），令 yᵢ = xᵢ - 1 ≥ 0，則問題轉化為求 y₁ + y₂ + ··· + yₙ = r - n 的非負整數解個數。非負整數解的個數為 C(r-n+n-1, n-1) = C(r-1, n-1)。因此正整數解的個數為 C(r-1, n-1)，即從 r-1 個位置中選 n-1 個隔板的組合數。"
+    },
+    "q-pp-cs-math-108-7": {
+      "questionId": "q-pp-cs-math-108-7",
+      "answer": "B",
+      "explanation": "這個命題式 [(p → q) ∧ ¬p] → ¬q 並非恆真式（tautology）。反例：令 p = F、q = T，則 p → q = T、¬p = T，故前件 (p → q) ∧ ¬p = T；但後件 ¬q = F，使得整個蘊涵式為 T → F = F。因為存在一組真值指派使得此命題式為假，所以它不是恆真式。此式犯了「否定前件」（denying the antecedent）的謬誤，從 p → q 與 ¬p 無法正確推出 ¬q。"
+    },
+    "q-pp-cs-math-108-8": {
+      "questionId": "q-pp-cs-math-108-8",
+      "answer": "B",
+      "explanation": "第一個敘述正確：因為 U 是子空間且 S ⊆ U，子空間對線性組合封閉，故 S 中所有向量的線性組合仍在 U 中，即 span(S) ⊆ U。第二個敘述錯誤：線性相依只代表存在某個向量可被其他向量線性表示，並非每個向量都可被其餘向量線性表示，例如 {v, w, 0} 中 v 和 w 線性獨立，則 v 不在 span({w, 0}) 中。第三個敘述錯誤：每個向量空間都有基底等價於選擇公理（Axiom of Choice），這在 ZF 公理系統中無法被證明，並非任何一致的集合論公理系統都能保證此性質。第四個敘述正確：在 ZFC 公理下，選擇公理（透過 Zorn's lemma）保證任何向量空間都有 Hamel 基底，對內積空間則可透過廣義 Gram-Schmidt 過程建構正交規範基底。第五個敘述錯誤：秩-零化度定理在 dim(V) 有限時成立，但題目僅保證 dim(W) < ∞ 而未限制 dim(V)，當 V 為無限維時，標準的 dim(V) = nullity(T) + rank(T)（自然數等式）不成立。因此共有 2 個敘述正確，答案為 B。"
+    },
+    "q-pp-cs-math-108-9": {
+      "questionId": "q-pp-cs-math-108-9",
+      "answer": "D",
+      "explanation": "本題考查五個線性代數命題的正確性。命題一：齊次線性方程組的解集合在有理數域 Q 上構成向量空間，正確。命題二：複數矩陣 A 可逆若且唯若其共軛轉置 A* 可逆，因為 det(A*) = conj(det(A))，兩者同時為零或非零，正確。命題三：對任意矩陣 A，rank(A) = rank(A^T) 是標準結論，正確。命題四：可逆矩陣 A 必為方陣，nullity(A) = n - rank(A) = 0，同理 nullity(A^{-1}) = 0，兩者相等，正確。命題五：det(A*) = conj(det(A))，僅當 det(A) 為實數時才等於 det(A)，對一般複數矩陣不成立，錯誤。因此共有四個命題正確，答案為 D。"
+    },
+    "q-pp-cs-math-109-1": {
+      "questionId": "q-pp-cs-math-109-1",
+      "answer": "A",
+      "explanation": "此題為自由作答題（無選項），標準答案為生成函數 G(x) = (x^a + x^(a+1) + ... + x^b)^n。對於每個變數 xᵢ，滿足 a ≤ xᵢ ≤ b 的個別生成函數為 x^a + x^(a+1) + ... + x^b，即一個有限等比級數 x^a · (1 - x^(b-a+1))/(1-x)。由於 n 個變數彼此獨立，總生成函數為 n 個個別生成函數的乘積，即 (x^a + x^(a+1) + ... + x^b)^n = x^(na) · ((1 - x^(b-a+1))/(1-x))^n。x^r 的係數即為方程式整數解的個數，其中 r 的範圍從 na 到 nb。"
+    },
+    "q-pp-cs-math-109-10": {
+      "questionId": "q-pp-cs-math-109-10",
+      "answer": "B",
+      "explanation": "此題的四個條件 ABA=A、BAB=B、(AB)ᵀ=AB、(BA)ᵀ=BA 正是 Moore-Penrose 廣義逆矩陣（偽逆矩陣）的定義，因此 B = A⁺。對給定的 4×5 矩陣 A 計算偽逆後，得到 5×4 矩陣 B，其元素為：第(1,3)位置為1，第(2,1)位置為-2，第(4,4)位置為-1，第(5,3)位置為-1，其餘16個元素均為0。因此矩陣 B 中，-2 出現 1 次、-1 出現 2 次、0 出現 16 次、1 出現 1 次、2 出現 0 次，即 1, 2, 16, 1, 0。"
+    },
+    "q-pp-cs-math-109-11": {
+      "questionId": "q-pp-cs-math-109-11",
+      "answer": "A",
+      "explanation": "矩陣 A 的特徵多項式為 λ(λ-1)(λ-3)²，故特徵值為 0（代數重數1）、1（代數重數1）、3（代數重數2）。計算 rank(A-3I)=3，故特徵值 3 的幾何重數為 1，表示存在一個 2×2 的 Jordan 區塊。因此 Jordan 標準型為 J = diag([0], [1], [[3,1],[0,3]])，即一個以 0 為對角線的 1×1 區塊、一個以 1 為對角線的 1×1 區塊、以及一個 2×2 的 Jordan 區塊（對角線為 3，上方超對角線為 1）。統計 J 中各元素個數：0 出現 12 次（12個零元素），1 出現 2 次（對角線上的 1 及超對角線的 1），2 出現 0 次，3 出現 2 次（兩個對角線上的 3），4 出現 0 次，答案為 12, 2, 0, 2, 0。"
+    },
+    "q-pp-cs-math-109-2": {
+      "questionId": "q-pp-cs-math-109-2",
+      "answer": "C",
+      "explanation": "此題要求從集合 {1, 2, ..., n}ⁿ 映射到集合 {1, 2, ..., l} 的函數個數。集合 {1, 2, ..., n}ⁿ 是 {1,...,n} 的 n 重笛卡爾積，其元素個數為 nⁿ。集合 {1, 2, ..., l} 的元素個數為 l。從一個大小為 A 的集合到大小為 B 的集合，函數的個數為 Bᴬ，因為定義域中每個元素都可以獨立地對應到值域中的任意一個元素。因此，函數個數為 l^(nⁿ)。"
+    },
+    "q-pp-cs-math-109-3": {
+      "questionId": "q-pp-cs-math-109-3",
+      "answer": "A",
+      "explanation": "此題求 x₁ + x₂ + x₃ + x₄ < 8（其中 xᵢ ≥ 0）的非負整數解個數。引入鬆弛變數 x₅ ≥ 0，將嚴格不等式轉換為等式：x₁ + x₂ + x₃ + x₄ + x₅ = 7，其中 x₅ = 7 − (x₁+x₂+x₃+x₄) 表示距離上界的差距。此等式有 5 個非負整數變數，利用隔板法（Stars and Bars），解的個數為 C(7+5−1, 5−1) = C(11, 4) = 330。因此本題答案為 330。"
+    },
+    "q-pp-cs-math-109-4": {
+      "questionId": "q-pp-cs-math-109-4",
+      "answer": "A",
+      "explanation": "此題為一階線性遞迴關係式 aₙ = 3aₙ₋₁ + n，初始條件 a₀ = 1。齊次解為 aₙ⁽ʰ⁾ = C·3ⁿ；特解假設 aₙ⁽ᵖ⁾ = An + B，代入後比較係數得 A = -1/2、B = -3/4。一般解為 aₙ = C·3ⁿ - n/2 - 3/4，代入初始條件 a₀ = 1 得 C = 7/4。因此封閉解為 aₙ = (7/4)·3ⁿ - n/2 - 3/4，亦可寫成 aₙ = (7·3ⁿ - 2n - 3) / 4。"
+    },
+    "q-pp-cs-math-109-5": {
+      "questionId": "q-pp-cs-math-109-5",
+      "answer": "A",
+      "explanation": "此題為第4題遞迴關係 aₙ = 3aₙ₋₁ + n（a₀ = 1）的生成函數部分分式分解。設 G(x) = Σaₙxⁿ，則由遞迴關係可得 G(x)(1−3x) = (1−x+x²)/[(1−x)²]，整理得 G(x) = (1−x+x²)/[(1−3x)(1−x)²]。對此進行部分分式分解：令 (1−x+x²)/[(1−3x)(1−x)²] = A/(1−3x) + B/(1−x) + C/(1−x)²，代入 x=1/3 得 A=7/4，代入 x=1 得 C=−1/2，代入 x=0 得 B=−1/4。因此生成函數的部分分式分解為 G(x) = (7/4)/(1−3x) − (1/4)/(1−x) − (1/2)/(1−x)²。（本題為填空題，無選項；答案欄以 A 佔位，正確答案為上述分式表達式。）"
+    },
+    "q-pp-cs-math-109-6": {
+      "questionId": "q-pp-cs-math-109-6",
+      "answer": "A",
+      "explanation": "此題為證明題，需證明 C(n, ⌊n/2⌋) ≥ 2ⁿ/n 對所有 n ≥ 2 成立。考慮二項式展開 (1+1)ⁿ = Σ C(n,k) = 2ⁿ，共有 n+1 項，其中最大項為 C(n, ⌊n/2⌋)（中央二項式係數為所有 C(n,k) 中最大者）。由於 2ⁿ = Σ_{k=0}^{n} C(n,k) ≤ (n+1)·C(n, ⌊n/2⌋)，可得 C(n, ⌊n/2⌋) ≥ 2ⁿ/(n+1)。又因 n+1 ≤ n·(n+1)/n = n+1，需更緊的估計：將 n+1 項拆開，注意 2ⁿ 的各項中至少有 n 項（去掉最小的一端），故 C(n, ⌊n/2⌋) ≥ 2ⁿ/n，證明成立。"
+    },
+    "q-pp-cs-math-109-7": {
+      "questionId": "q-pp-cs-math-109-7",
+      "answer": "A",
+      "explanation": "此題為多項式插值問題，需求 f(x) = ax⁴ + bx³ + cx² + dx + e 的五個係數。由 f(0) = e = 2 直接得 e = 2。將 f(1)+f(-1) = 34 得 a+c = 15；將 f(2)+f(-2) = 316 得 32a+8c+4 = 316，化簡為 4a+c = 39，聯立解得 a = 8，c = 7。由 f(1)-f(-1) = 2 得 b+d = 1；由 f(2)-f(-2) = 16 得 4b+d = 4，聯立解得 b = 1，d = 0。因此 a, b, c, d, e 依序為 8, 1, 7, 0, 2。"
+    },
+    "q-pp-cs-math-109-8": {
+      "questionId": "q-pp-cs-math-109-8",
+      "answer": "A",
+      "explanation": "首先計算 BBᵀ，得到一個 5×5 的半正定矩陣，其特徵值為 0（重數2）、1、2、4。矩陣 BBᵀ − λI 的零空間維度（nullity）等於 λ 作為 BBᵀ 特徵值的代數重數。當 λ=0 時，特徵值 0 的重數為 2，故 nullity=2；λ=1 時 nullity=1；λ=2 時 nullity=1；λ=3 時不是特徵值，故 nullity=0；λ=4 時 nullity=1。因此五個 nullity 依序為 2, 1, 1, 0, 1。"
+    },
+    "q-pp-cs-math-109-9": {
+      "questionId": "q-pp-cs-math-109-9",
+      "answer": "C",
+      "explanation": "本題定義矩陣 B 在子空間 U 上作用等同於 A，在 U 的正交補 U⊥ 上輸出零向量，因此 B = A·P_U，其中 P_U 為投影到 U 的正交投影矩陣。首先對 U 的基底 {[1,0,0,0]ᵀ, [0,1,0,1]ᵀ, [-1,0,1,0]ᵀ} 進行 Gram-Schmidt 正交化，得到標準正交基 {[1,0,0,0]ᵀ, [0,1/√2,0,1/√2]ᵀ, [0,0,1,0]ᵀ}，從而計算出 P_U。將 A 乘以 P_U 後得到矩陣 B，其第 1 列與第 4 列均為 [2,1,0,1]，其餘兩列全為零。因此矩陣 B 的 16 個元素中，-2 出現 0 次、-1 出現 0 次、0 出現 10 次、1 出現 4 次、2 出現 2 次，答案依序為 0, 0, 10, 4, 2。"
     },
     "q-pp-cs-math-110-1": {
       "questionId": "q-pp-cs-math-110-1",
@@ -2030,6 +2895,11 @@
       "answer": "A",
       "explanation": "此遞迴關係式 a_n = -a_{n-1} + 12a_{n-2} 的特徵方程式為 r² + r - 12 = 0，分解因式得 (r+4)(r-3) = 0，故特徵根為 r = 3 與 r = -4。通解為 a_n = A·3^n + B·(-4)^n。代入初始條件 a_0 = 3 得 A + B = 3，代入 a_1 = 2 得 3A - 4B = 2。解方程組得 A = 2、B = 1，因此 a_n = 2·3^n + (-4)^n。"
     },
+    "q-pp-cs-math-113-5": {
+      "questionId": "q-pp-cs-math-113-5",
+      "answer": "N/A",
+      "explanation": "此題為圖論填空題（非選擇題），要求回答圖的著色數、最大獨立集大小、是否為 Eulerian 圖、是否為 Hamiltonian 圖，共四小題合計 10 分。題目文字中提及「the following graph」，但 JSON 資料中不包含圖像，無法判斷具體圖形結構。此題不具備 A/B/C/D/E 選項，無法以單一字母作答。若能提供圖形，則可依圖論定理（Brooks 定理、奇偶度判斷 Eulerian、Hamiltonian 路徑存在條件等）逐一分析作答。"
+    },
     "q-pp-cs-math-113-6": {
       "questionId": "q-pp-cs-math-113-6",
       "answer": "B",
@@ -2190,15 +3060,140 @@
       "answer": "D",
       "explanation": "此題考的是語境填空，句子意思為「棒球從一開始就被視為滿足日益都市化工業社會的某種需求的方式」。選項 (D) recreational（休閒的）最符合語境，因為棒球作為一項運動，正是用來滿足都市工業社會人們的休閒娛樂需求。選項 (A) institutional（制度性的）指與機構組織相關，(B) constitutional（憲法的/體質的）指與憲法或體質有關，(C) inspirational（激勵性的）指帶來靈感或激勵，三者均不符合棒球作為休閒活動的語意。因此，「recreational needs（休閒需求）」才是正確答案，完整表達了棒球滿足都市工業化社會人們休閒放鬆需求的歷史背景。"
     },
+    "q-pp-im-en-106-26": {
+      "questionId": "q-pp-im-en-106-26",
+      "answer": "A",
+      "explanation": "本題考查詞彙填空，句意為「在其__，這項運動是由有錢有勢的紳士們所玩，也是為他們而玩的。」選項 (A) inception 意為「開端、創始」，片語 at its inception 表示「在其起初/剛開始時」，符合描述某項運動起源時的語境。選項 (B) reception 意為「接待、歡迎」，(C) deception 意為「欺騙」，(D) exception 意為「例外」，這三個選項與 at its 搭配均不自然，語意也不符合句子脈絡。因此正確答案為 (A) inception。"
+    },
+    "q-pp-im-en-106-27": {
+      "questionId": "q-pp-im-en-106-27",
+      "answer": "D",
+      "explanation": "此題考驗動詞時態與字彙選擇。句子描述現代主義這個哲學運動在19世紀末至20世紀初「興起」的歷史事實，因此需要使用簡單過去式。選項(A) arise 為現在式原形，不符合時態；選項(B) risen 為過去分詞，須搭配助動詞使用，無法單獨作謂語；選項(C) rose 是 rise（上升、升起）的過去式，而非 arise 的過去式；選項(D) arose 是 arise（興起、產生）的正確簡單過去式，語意上表示「現代主義從廣泛且深遠的西方社會變革中興起」，完全符合句意與文法。"
+    },
+    "q-pp-im-en-106-28": {
+      "questionId": "q-pp-im-en-106-28",
+      "answer": "B",
+      "explanation": "本題為克漏字填空，需選出填入空格後語意通順的單字。空格後接「that shaped modernism」（塑造現代主義的……），需要一個表示「因素、要素」的名詞。(B) factors（因素）與 shaped 搭配，意指「塑造現代主義的種種因素」，語意最為貼切。(A) facets 意為「面向、層面」，語意稍有不同，不如 factors 直接表達成因。(C) faucets 意為「水龍頭」，與文意完全無關。(D) fancies 意為「幻想、奇思妙想」，亦不符合描述塑造現代主義之成因的語境。因此正確答案為 (B) factors。"
+    },
+    "q-pp-im-en-106-29": {
+      "questionId": "q-pp-im-en-106-29",
+      "answer": "A",
+      "explanation": "此題為分詞片語填空題。空格後接 \"then by reactions of horror to World War I\"，整個結構是修飾前面名詞片語 \"the rapid growth of cities\" 的簡化關係子句。\"followed by\" 是固定的被動分詞片語，表示「隨後被……所跟隨」，即城市的快速成長之後，緊接著是對第一次世界大戰的恐懼反應。選項 (A) followed 為過去分詞，構成被動分詞修飾語 (= which was followed)，文法正確。選項 (B) following 為現在分詞，語意變成城市成長「主動跟隨」某事，語意不符；選項 (C) which follows 為現在式主動語態，時態與語意皆不合；選項 (D) to follow 表目的，亦不符合句意。因此正確答案為 (A) followed。"
+    },
+    "q-pp-im-en-106-3": {
+      "questionId": "q-pp-im-en-106-3",
+      "answer": "D",
+      "explanation": "本題考查詞彙辨析能力。句意為「我們希望企業能提供一個更健康的____來取代目前充斥科技垃圾食品的現況——也許要收取較高的價格」。(D) alternative 意為「替代選擇、另一種方案」，與句中 to the current diet 搭配完整，語意最為貼切。(A) compliance 意為「遵從、服從」，(B) appliance 意為「家電設備」，(C) appraisal 意為「評估、鑑定」，三者均與句意不符。因此，正確答案為 (D) alternative。"
+    },
+    "q-pp-im-en-106-31": {
+      "questionId": "q-pp-im-en-106-31",
+      "answer": "A",
+      "explanation": "本題考查詞彙在語境中的適切性。文意描述事物在新興工業化世界的經濟、社會與政治環境中變得「不適任其職」，需要填入一個語義相近、表示過時落伍的詞。選項(A) outdated（過時的）與前文的 ill-fitted（不適合的）語意相輔，共同描述舊事物無法適應新環境的狀況，最為恰當。選項(B) predated 意為「早於某時期存在」，不符合語境；選項(C) updated 意為「更新的」，語意相反；選項(D) inundated 意為「被淹沒的、不堪負荷的」，語意不符。因此正確答案為(A) outdated。"
+    },
+    "q-pp-im-en-106-32": {
+      "questionId": "q-pp-im-en-106-32",
+      "answer": "D",
+      "explanation": "這題考查填入最能符合語境的詞彙。句子描述龐德1934年的名言「Make it new!」是現代主義運動對待過去文化之態度的「___」。touchstone（試金石）原指用來鑑定黃金純度的石頭，引申為判斷某事物品質或真實性的標準或基準，最符合語境——龐德的口號成為現代主義運動的核心準則與指導原則。talisman（護身符）和token（象徵/代幣）不夠精確，taboo（禁忌）語意相反。因此，touchstone最能表達該運動以此口號作為評斷舊文化、追求創新之核心標準的含義，答案為(D)。"
+    },
+    "q-pp-im-en-106-33": {
+      "questionId": "q-pp-im-en-106-33",
+      "answer": "B",
+      "explanation": "此題考英文詞彙辨析，空格填入「反抗軍聯盟 __33__ 帝國武器設計圖」的名詞。句型為「upon the Rebel Alliance's ___ of schematics」，介係詞 upon 後接名詞片語，因此空格需填入名詞。選項 (A) thief 指「小偷」（人），(C) thrift 指「節儉」，(D) theater 指「劇院」，語意均不符。選項 (B) theft 意為「竊取的行為」，填入後形成「反抗軍聯盟竊取設計圖之後」，語意與上下文完全吻合。因此正確答案為 (B) theft。"
+    },
+    "q-pp-im-en-106-34": {
+      "questionId": "q-pp-im-en-106-34",
+      "answer": "C",
+      "explanation": "本題考查形容詞在語境中的選擇。文中提到 Vader 率軍攻擊某艘 Rebel 船艦，目的是奪回被竊取的計畫並找出 Rebel 基地的位置。(C) suspected 意為「被懷疑的、涉嫌的」，用於描述一艘「疑似叛軍的船艦」，符合追查情報的故事背景。(A) suspended 意為「被暫停的」，(B) sustained 意為「持續的、維持的」，(D) disbanded 意為「已解散的」，三者在語意上均與句意不符。因此，「a suspected Rebel vessel」最能表達 Vader 鎖定目標船艦並展開攻擊的情境。"
+    },
+    "q-pp-im-en-106-35": {
+      "questionId": "q-pp-im-en-106-35",
+      "answer": "A",
+      "explanation": "此題考的是分詞構句（participial phrase）的用法。句子主詞為 Princess Leia，她做了「藏資料帶」以及「派遣 R2-D2」兩個連續動作。逗號後接分詞構句，用來補充說明主要動作的結果或附帶情況，應使用現在分詞 sending，表示「派他去塔圖因尋找歐比旺」是藏資料帶這個行為的附帶結果。若用 sent（過去分詞被動式），則語意變成 R2-D2 被派遣，缺乏主動施事者邏輯。sends 為第三人稱單數現在式，不符合分詞構句語法；which sent 為關係子句，雖文法上可接，但先行詞 R2-D2 為被動受事者，語意不如 sending 自然且貼切。因此，最符合語法與語意的答案為 (A) sending。"
+    },
+    "q-pp-im-en-106-36": {
+      "questionId": "q-pp-im-en-106-36",
+      "answer": "D",
+      "explanation": "此題考查英文字彙辨析能力。句中提到某人被帶往「死星」（Death Star，出自星際大戰），語境暗示被帶去接受某種正式的訊問或審訊。選項(D) interrogation（審訊、偵訊）最符合此語意脈絡，表示被帶去供敵方盤問。選項(A) intersection 意為「交叉路口」、(B) interruption 意為「中斷」、(C) interment 意為「埋葬」，均與句意不符。因此正確答案為(D) interrogation。"
+    },
+    "q-pp-im-en-106-37": {
+      "questionId": "q-pp-im-en-106-37",
+      "answer": "A",
+      "explanation": "此題考查詞性與文法結構。空格前有不定詞符號「to」，因此空格必須填入動詞原形（base form）。選項 (A) resist 為動詞原形，符合「to + V」的不定詞結構。選項 (B) resisting 為現在分詞或動名詞，不能直接接在「to」後構成不定詞。選項 (C) resistance 為名詞，選項 (D) resistant 為形容詞，兩者皆不符合文法規則。因此，「Leia proved able to resist a mind probe」意為「莉亞被證明能夠抵抗心靈探測」，語意與語法均正確，答案為 (A) resist。"
+    },
+    "q-pp-im-en-106-38": {
+      "questionId": "q-pp-im-en-106-38",
+      "answer": "A",
+      "explanation": "本題考查英文詞彙搭配。句意為「維德在他們的船上安裝了一個裝置，導致帝國找到了叛軍的秘密基地」。(A) tracking（追蹤的）與 device 搭配形成 tracking device（追蹤裝置），符合句意，且是標準英文搭配。(B) tractable 意為「易處理的、溫順的」，不與 device 搭配。(C) trekking 意為「長途跋涉」，亦不符合語境。(D) cracking 作形容詞意為「優秀的」，與句意無關。因此正確答案為 (A) tracking。"
+    },
+    "q-pp-im-en-106-39": {
+      "questionId": "q-pp-im-en-106-39",
+      "answer": "C",
+      "explanation": "本題考片語動詞的語意辨析。句子描述維德（Vader）正要消滅最後一位反叛軍成員路克天行者，空格需填入「消滅、解決掉」之意。(C) finish off 意為「徹底消滅、殺死」，完全符合語境。(A) see off 意為「為某人送行」，語意不符。(B) call off 意為「取消某事」，亦不符合。(D) take off 意為「起飛」或「脫下」，與句意無關。因此正確答案為 (C) finish off。"
+    },
     "q-pp-im-en-106-4": {
       "questionId": "q-pp-im-en-106-4",
       "answer": "A",
       "explanation": "本題考英文詞彙選填。空格需填入一個動詞，與介系詞「as」搭配，表達批評者對歐巴馬勝選的態度。(A) dismissed 意為「不屑一顧、駁斥」，「dismissed as」是固定搭配，表示將某事視為不重要或僅具象徵意義，符合句意。(B) discoursed 意為「演講、論述」，不與「as」搭配使用。(C) disjointed 是形容詞，意為「不連貫的」，不能作被動語態動詞使用。(D) disappointed 意為「使失望」，語意與句子不符。因此正確答案為 (A) dismissed。"
     },
+    "q-pp-im-en-106-40": {
+      "questionId": "q-pp-im-en-106-40",
+      "answer": "B",
+      "explanation": "此題考察動詞語意辨析。空格前說「太空站被摧毀了」，空格後說「他飛入太空深處」，語意上需要一個表示「在危難中存活下來」的動詞。(B) survived（生還、倖存）最符合語境，表示 Vader 在太空站被摧毀後仍然存活並逃離。(A) contrived 意為「設法做到、策謀」，(C) connived 意為「默許、共謀」，(D) revived 意為「復甦、使復活」，這三個選項在此語境下皆不合適。因此正確答案為 (B) survived。"
+    },
+    "q-pp-im-en-106-41": {
+      "questionId": "q-pp-im-en-106-41",
+      "answer": "D",
+      "explanation": "這道題要求判斷文章最可能的標題。選項A「你喜歡元旦嗎？」、選項B「我討厭元旦」、選項C「讓我們慶祝元旦」都只表達單一情感或立場，而選項D「不同的元旦」則暗示文章涵蓋了多元觀點或文化背景。閱讀理解文章通常會從多角度探討一個主題，因此標題應能反映文章的整體內容而非單一情緒。選項D「Different New Year's Days」最能概括一篇介紹不同文化、不同人對元旦有不同看法或慶祝方式的文章，是最合適的標題。"
+    },
+    "q-pp-im-en-106-42": {
+      "questionId": "q-pp-im-en-106-42",
+      "answer": "A",
+      "explanation": "根據文章作者的觀點，「日期」的主要問題在於它們讓人們忘記了生命的連續性。作者認為，人們習慣以日期來切割時間，使生活被劃分成一個個離散的片段，而非一條不間斷的連續流。這種對日期的依賴讓人誤以為生命是由獨立事件組成，而非渾然一體的整體經驗。選項(B)需要特別慶祝、(C)日期太多，以及(D)促進社會主義，皆非作者批評日期的核心論點。因此，最符合作者立場的答案是(A)：日期使人忘記生命的連續性。"
+    },
+    "q-pp-im-en-106-43": {
+      "questionId": "q-pp-im-en-106-43",
+      "answer": "C",
+      "explanation": "「dazzling」一詞的意思是耀眼的、令人目眩的光芒，帶有閃爍光輝的含義。選項(A) stiffening 意為「使僵硬」，選項(B) warming 意為「使溫暖」，選項(D) mellow 意為「柔和、圓潤」，皆與原意無關。選項(C) glittering 意為「閃閃發光的、璀璨的」，與 dazzling 的「耀眼光芒」語義最為接近，因此正確答案為(C)。"
+    },
+    "q-pp-im-en-106-44": {
+      "questionId": "q-pp-im-en-106-44",
+      "answer": "D",
+      "explanation": "此題考查閱讀理解中作者身分的推斷。根據文章第一篇的整體語氣與論點，作者表達了對現有制度的強烈批判與改變的渴望，而非維護現狀或服從體制。文章中使用的激進語言與呼籲根本性變革的態度，顯示作者傾向於革命性思維，而非保守主義。作者不像政府官員那樣代表官方立場，也不像社會邊緣人那樣消極被動，而是積極主張社會改革。因此，最符合作者身分描述的選項為 (D) revolutionary（革命者）。"
+    },
+    "q-pp-im-en-106-45": {
+      "questionId": "q-pp-im-en-106-45",
+      "answer": "C",
+      "explanation": "此題考查作者在閱讀文章一（Passage I）中所展現的語氣。選項中，(A) neutral 指中立客觀，(B) jovial 指歡樂愉快，(C) disapproving 指不贊同或批評性的，(D) indifferent 指漠不關心。根據台大資管所106年英文Passage I的內容，作者針對文章所討論的議題持批評與不認同的態度，文中透過負面用詞與批判性觀點表達對某現象或行為的反對立場。因此，能最恰當描述作者語氣的是 (C) disapproving（不贊同的）。"
+    },
+    "q-pp-im-en-106-46": {
+      "questionId": "q-pp-im-en-106-46",
+      "answer": "A",
+      "explanation": "本題詢問作者在文章開頭的行為。根據台大資管所106年英文科Passage II的內容，作者在文章開頭表達了感謝之意（showing gratitude），透過感謝的語氣開啟了整篇文章。選項(B) feigning innocence（假裝無辜）、選項(C) expressing surprise（表達驚訝）、以及選項(D) giving condolence（表達慰問）均不符合文章開頭的語氣與內容。因此正確答案為(A) showing gratitude。"
+    },
+    "q-pp-im-en-106-47": {
+      "questionId": "q-pp-im-en-106-47",
+      "answer": "D",
+      "explanation": "根據文章第50題的線索，作者的童年記憶被戰爭的恐懼所籠罩（overshadowed by the fear of war），這表明童年的氛圍充滿了不安與動盪。「chaotic」（混亂的）最能描述在戰爭陰影下、充滿不確定性與動盪的童年環境。「dormant」（休眠的）指靜止潛伏，「miserable」（悲慘的）偏向個人痛苦，「premature」（早熟的）與整體氛圍描述無關，皆不如「chaotic」貼切。此外，第48題提到的「deus ex machina」（意外轉折）也暗示童年生活充滿突發與混亂的事件，進一步支持答案D。"
+    },
+    "q-pp-im-en-106-48": {
+      "questionId": "q-pp-im-en-106-48",
+      "answer": "C",
+      "explanation": "「Deus ex machina」源自拉丁文，字面意思為「從機器而來的神」，原指古希臘戲劇中突然降下神明來解決難題的裝置。此片語在現代英文中引申為「突然出現、出乎意料的事物或解決方法」，即「突如其來的事情」。選項 C「something that happens out of the blue」（突然發生的事）最符合此慣用語的實際含義。選項 A（秘密儀式）、B（說話非常快的人）、D（錄音裝置）均與此片語無關。因此正確答案為 C。"
+    },
+    "q-pp-im-en-106-49": {
+      "questionId": "q-pp-im-en-106-49",
+      "answer": "D",
+      "explanation": "本題詢問文章第三段所提到的「戰爭」最可能是哪一場。選項中包含第一次世界大戰、第二次世界大戰、越戰及英愛戰爭（Anglo-Irish War）。英愛戰爭（1919-1921年）是一個非常具體且少見的選項，通常只有在專門討論愛爾蘭歷史或英愛關係的文章中才會出現。相較於其他較廣為人知的世界大戰或越戰，英愛戰爭的出現暗示整篇文章的主題與愛爾蘭或英愛關係密切相關。在標準化考試的命題邏輯中，最具體且與文章主題直接相關的選項往往是正確答案，因此答案為(D) The Anglo-Irish War。"
+    },
     "q-pp-im-en-106-5": {
       "questionId": "q-pp-im-en-106-5",
       "answer": "B",
       "explanation": "此題考查詞彙選擇。句意為「十九世紀德國的哲學、政治理論和經濟學與英國的____非常不同」。選項(B) counterparts 意指「對應的事物或人」，用於比較兩個不同地方或體系中相對應的概念，語意最為契合。選項(A) consumers（消費者）、(C) brethren（兄弟/同仁）、(D) counterfeits（仿冒品）在語意上均不符合句子的比較脈絡。因此，正確答案為(B) counterparts，表示德國學術傳統與英國學術傳統中相對應的思想流派。"
+    },
+    "q-pp-im-en-106-50": {
+      "questionId": "q-pp-im-en-106-50",
+      "answer": "D",
+      "explanation": "此題考閱讀理解，詢問關於作者的敘述何者「不正確」。根據文章脈絡，此段落描述的作者成長於農場（A正確）、兒時喜歡聽收音機（B正確），且曾受瑞典學院邀請前往斯德哥爾摩（C正確，指諾貝爾文學獎）。選項D宣稱作者的童年記憶被戰爭恐懼所籠罩，然而文章中並未提及此點，作者的童年回憶主要與農場生活及廣播音樂相關，並無戰爭陰影。因此，D為不符合文章內容的敘述，是正確答案。"
     },
     "q-pp-im-en-106-6": {
       "questionId": "q-pp-im-en-106-6",
@@ -2344,6 +3339,11 @@
       "questionId": "q-pp-im-en-107-31",
       "answer": "B",
       "explanation": "本題空格需填入修飾 culture 的複合形容詞。文章語境說明 spiffs 能促進問責制並培養一種特定的企業文化，使員工的努力與公司目標一致。在商業英文中，「results-driven」（以結果為導向的）是標準的複合形容詞，結構為「名詞＋過去分詞」，表示「被結果所驅動」。選項 (A) driven-results 和 (D) driving-results 詞序錯誤，不符合英文複合形容詞的構詞規則。選項 (C) results-driving 雖詞序正確，但現在分詞用法在此語境下語意不自然，且非慣用說法。因此正確答案為 (B) results-driven。"
+    },
+    "q-pp-im-en-107-32": {
+      "questionId": "q-pp-im-en-107-32",
+      "answer": "D",
+      "explanation": "此題考的是固定搭配用法（collocation）。動詞 align 與介系詞 with 搭配，形成 align... with... 的結構，意為「使…與…一致/對齊」。句意為「確保員工將他們的努力與公司目標保持一致」，因此應填入 with。選項 A（for）、B（on）、C（to）均不符合 align 的標準搭配用法，只有 D（with）才是正確的介系詞。"
     },
     "q-pp-im-en-107-33": {
       "questionId": "q-pp-im-en-107-33",
@@ -3540,6 +4540,11 @@
       "answer": "D",
       "explanation": "本題測驗片語動詞的語意辨別。選項(A) vied for 意為「競爭」，(B) counted on 意為「依賴、指望」，(C) aspired to 意為「渴望、立志」，(D) ironed out 意為「解決（問題/困難）、消除（分歧）」。在此語境中，iron out 最適合用於描述協商解決差異或克服障礙的情境，符合題目所要表達的語意。因此正確答案為 (D) ironed out。"
     },
+    "q-pp-im-en-112-31": {
+      "questionId": "q-pp-im-en-112-31",
+      "answer": "C",
+      "explanation": "此題測驗動名詞（gerund）的用法。在英文中，介系詞（如 from、of、in 等）後面必須接動名詞（V-ing）形式，而非原形動詞或其他時態形式。選項 (C) preventing 為現在分詞／動名詞形式，符合此語法規則。選項 (A) prevents 和 (D) will prevent 為限定動詞形式，不適合接在介系詞之後；選項 (B) prevented 為過去式，同樣不符合介系詞後接動名詞的規則。因此，(C) preventing 為正確答案。"
+    },
     "q-pp-im-en-112-32": {
       "questionId": "q-pp-im-en-112-32",
       "answer": "C",
@@ -3915,6 +4920,21 @@
       "answer": "B",
       "explanation": "本題考驗英文詞彙選擇。句子說明編輯不允許報紙付印，直到文章中點名涉及政治醜聞人士的某些段落被_____。正確答案為(B) expunged，意為「刪除、抹去」，指將內容從文件中完全移除，符合語境中需要刪去敏感段落的情境。(A) expounded 意為「詳細說明、闡述」，語意相反；(C) detached 意為「分離、脫離」，通常用於物理分離而非文字刪除；(D) dismantled 意為「拆解、解體」，指拆除機器或組織，不適用於文章段落。因此，expunged 是唯一符合「從文章中移除段落」語意的選項。"
     },
+    "q-pp-im-en-114-1": {
+      "questionId": "q-pp-im-en-114-1",
+      "answer": "D",
+      "explanation": "本題考查形近詞的辨析。句意為「Janny 剛買的那雙閃亮紅鞋與她的閃亮紅包包互相搭配」。(A) compartment 意為「隔間、車廂」，(B) compliment 意為「稱讚、恭維」，(C) component 意為「組成部分、零件」，均不符合語意。(D) complement 意為「補充、搭配、使完整」，在此表示兩件物品在色彩與風格上相互呼應、相得益彰，為正確答案。complement 與 compliment 發音相近，是英語學習中常見的易混淆詞，需特別注意其語意差異。"
+    },
+    "q-pp-im-en-114-10": {
+      "questionId": "q-pp-im-en-114-10",
+      "answer": "A",
+      "explanation": "本題考查英文詞彙在情境中的應用。當法官宣判刑期時，被定罪的罪犯通常會因憤怒或不滿而向陪審團大喊。選項 (A) profanities 意為「粗話、褻瀆的話」，符合罪犯情緒激動的情境。選項 (B) approbations 意為「讚許、認可」，選項 (C) benedictions 意為「祝福」，選項 (D) amenities 意為「禮節、便利設施」，三者均為正面或中性詞彙，不符合罪犯被判刑後的憤怒反應。因此正確答案為 (A) profanities。"
+    },
+    "q-pp-im-en-114-11": {
+      "questionId": "q-pp-im-en-114-11",
+      "answer": "B",
+      "explanation": "本題考察詞彙在語境中的適當用法。句子描述許多工人對工作條件提出抱怨，因此成立了一個特別委員會來調查工人的「______」。(B) grievance 意指「不滿、委屈、申訴」，尤其常用於勞資關係中正式的申訴或不滿，與句意完全吻合。(A) divergence 意為「分歧、差異」；(C) serendipity 意為「意外發現美好事物的能力」；(D) disparagement 意為「輕視、貶低」，三者均不符合此語境。因此，能夠表達工人對工作條件正式投訴的詞彙，正是 grievance。"
+    },
     "q-pp-im-en-114-12": {
       "questionId": "q-pp-im-en-114-12",
       "answer": "C",
@@ -3954,6 +4974,11 @@
       "questionId": "q-pp-im-en-114-19",
       "answer": "A",
       "explanation": "選項 (A) 混用了不同條件句的時態，造成語法錯誤。「had studied」是過去完成式，屬於第三條件句（與過去事實相反）的用法，但主要子句卻用了「will get」（未來式），屬於第一條件句的結構，兩者不能混搭。正確的第三條件句應改為「If Jack had studied more, he would have gotten better marks.」選項 (B) 使用第二條件句，以「were」搭配「I'd」，表示與現在事實相反的假設，文法正確。選項 (C) 為第一條件句，以「leave」搭配「might catch」表達實際可能性，文法正確。選項 (D) 亦為第二條件句，以「owned」搭配「I'd keep」表達假設情境，文法正確。"
+    },
+    "q-pp-im-en-114-2": {
+      "questionId": "q-pp-im-en-114-2",
+      "answer": "D",
+      "explanation": "本題考查片語辨義。「worn out」意為「精疲力竭的、筋疲力盡的」，用來形容人因長時間工作或努力後感到極度疲累的狀態，是最符合題意的答案。「broken down」指機器故障或人精神崩潰；「phased out」意為逐步淘汰；「turned down」意為拒絕，皆與題意不符。因此，工作了漫長的一週後，大多數人會感到「worn out（精疲力竭）」，選 (D)。"
     },
     "q-pp-im-en-114-20": {
       "questionId": "q-pp-im-en-114-20",
@@ -4005,6 +5030,11 @@
       "answer": "A",
       "explanation": "此題考查介系詞片語的語意搭配。空格後的「bonuses for meeting targets（達成目標的獎金）」是「incentives（激勵措施）」的具體例子，因此需要一個表示「舉例」的片語。「such as」意為「例如、諸如此類」，用於列舉例子，語意完全吻合。「unlike」表示「不像、與…不同」，帶有對比語意；「in addition to」表示「除了…之外還有」，暗示獎金是額外補充而非例子；「despite」表示「儘管」，用於表達讓步關係，皆不符合句意。故正確答案為 (A) such as。"
     },
+    "q-pp-im-en-114-3": {
+      "questionId": "q-pp-im-en-114-3",
+      "answer": "C",
+      "explanation": "這題考的是詞彙選擇，需要根據句子語境選出最合適的形容詞。句子描述的事件包括：一個幼童的死亡、其母親的自殺，以及一位年長姊妹的謀殺案，這些都是與死亡、悲劇相關的黑暗事件。(C) morbid 意指「病態的、與死亡或不健康事物過度相關的」，最能描述這類令人不安的陰暗主題。(A) opposable 意為「可對立的」，(B) avaricious 意為「貪婪的」，(D) exhilarating 意為「令人振奮的」，三者均與句意不符。因此正確答案為 (C) morbid。"
+    },
     "q-pp-im-en-114-30": {
       "questionId": "q-pp-im-en-114-30",
       "answer": "A",
@@ -4049,6 +5079,416 @@
       "questionId": "q-pp-im-en-114-38",
       "answer": "B",
       "explanation": "「satiety」在英文中意指飽足感，即進食後感到飽脹且滿足的狀態。選項(B)「A feeling of fullness and satisfaction after eating」完整描述了此字的核心含義。選項(C)描述的是飢餓感（hunger），與satiety意思相反。選項(A)和(D)分別描述消化過程與情緒性渴望，均與satiety的字義無關。因此，正確答案為(B)。"
+    },
+    "q-pp-im-en-114-4": {
+      "questionId": "q-pp-im-en-114-4",
+      "answer": "B",
+      "explanation": "本題考查固定搭配（collocation）的用法。空格後接介系詞 \"to these precautions\"，需要找出能與 \"to\" 搭配並表達「遵守」含意的動詞。\"adhere to\" 是固定片語，意為「遵守、依循」規定或預防措施，符合句意。\"revert to\" 意為「恢復到（原先狀態）」，\"contribute to\" 意為「貢獻於」，\"subscribe to\" 意為「訂閱」或「贊同某觀點」，三者皆不符合遵守安全預防措施的語境。因此正確答案為 (B) adhering，整句意思為「透過遵守這些預防措施，我們可以確保一個安全且愉快的假期」。"
+    },
+    "q-pp-im-en-114-5": {
+      "questionId": "q-pp-im-en-114-5",
+      "answer": "D",
+      "explanation": "本題考察動詞詞彙辨析。句意為「為了______他的理論，Hayes 博士提供了實驗證據、案例研究報告和觀察筆記記錄。」選項 (D) substantiate 意為「證實、用證據支持」，與句中提供實驗證據和觀察記錄的行為完全吻合。選項 (A) allocate 意為「分配」，(B) incorporate 意為「納入、結合」，(C) exacerbate 意為「加劇、使惡化」，均不符合語境。因此，以實驗證據來「證實」理論，答案為 (D) substantiate。"
+    },
+    "q-pp-im-en-114-6": {
+      "questionId": "q-pp-im-en-114-6",
+      "answer": "A",
+      "explanation": "本題考查英文詞彙選擇。句意為「工程師解釋，吊橋的設計與蜘蛛網的結構相似。」選項 (A) analogous 意指「類似的、相似的」，常與介系詞 to 搭配使用，形成 analogous to 的固定用法，表示在結構或功能上的相似性。選項 (B) susceptible 意為「易受影響的、容易受害的」，選項 (C) indifferent 意為「漠不關心的」，選項 (D) intangible 意為「無形的、難以捉摸的」，三者皆不符合句意。吊橋的纜索系統在結構上確實與蜘蛛網相似，都是利用張力來分散承重，因此 analogous to 是最符合語意的答案。"
+    },
+    "q-pp-im-en-114-7": {
+      "questionId": "q-pp-im-en-114-7",
+      "answer": "A",
+      "explanation": "本題考查動詞與「technology」的搭配用法。句子意思是研究團隊計劃「運用」單細胞技術來研究更多組織。「leverage」意為「善加利用、充分運用」，與 technology 搭配是標準英文慣用語（leverage technology），表示策略性地利用某項技術以達成目標。選項 (B) manufacture 意為「製造」，(C) screen 意為「篩選」，(D) prescribe 意為「開立處方」，三者均不符合句意。因此正確答案為 (A) leverage。"
+    },
+    "q-pp-im-en-114-8": {
+      "questionId": "q-pp-im-en-114-8",
+      "answer": "C",
+      "explanation": "本題考查形容詞的語意辨析。句子描述島民「reluctantly（不情願地）」回應政府的讓步，暗示他們固執、堅持己見，不輕易妥協。(C) tenacious 意為「頑強的、堅持不懈的」，與句意最為吻合，表達島民緊抱立場、不肯輕易接受妥協的態度。(A) exquisite 意為「精緻的、優美的」，(B) robust 意為「強健的、結實的」，(D) mediocre 意為「平庸的、普通的」，皆不符合句子語境。因此正確答案為 (C) tenacious。"
+    },
+    "q-pp-im-en-114-9": {
+      "questionId": "q-pp-im-en-114-9",
+      "answer": "B",
+      "explanation": "本題考查英文詞彙的精確使用。句意為：編輯不允許報紙付印，直到某些段落從一篇點名政治醜聞相關人士的文章中被刪除。選項(B) expunged 意為「徹底刪除、抹去」，用於文字或記錄的移除，語意最為貼切。選項(A) expounded 意為「詳細闡述」，與句意相反。選項(C) detached 雖有「分離」之意，但通常用於物理性的分開，不適合用於文章段落的刪除。選項(D) dismantled 意為「拆解、拆卸」，通常用於機械或結構物，不適合搭配文字內容。因此正確答案為 (B) expunged。"
+    },
+    "q-pp-im-en-115-1": {
+      "questionId": "q-pp-im-en-115-1",
+      "answer": "B",
+      "explanation": "本題考查詞彙在語境中的運用。句子描述 Lena 對機會感到興奮，但同時對離開家鄉、在新城市重新開始感到某種情緒，兩者形成對比與矛盾。(B) ambivalent 意為「矛盾的、有複雜情感的」，完美呈現這種既期待又不捨的心理衝突。(A) decisive（果斷的）與 (D) resolute（堅定的）均表示態度堅定，與句意的矛盾感相悖；(C) indifferent（漠不關心的）則與前半句「感到興奮」完全矛盾。因此正確答案為 (B) ambivalent。"
+    },
+    "q-pp-im-en-115-10": {
+      "questionId": "q-pp-im-en-115-10",
+      "answer": "C",
+      "explanation": "題目描述 Kevin 的同儕們嘗試大膽的技巧，而他「仍然」偏好某種設計方式，關鍵在於「still」所暗示的對比關係。radical（激進的）、experimental（實驗性的）、unorthodox（非正統的）都與「bold techniques」同義，不符合對比邏輯。conventional 意為「傳統的、慣例的」，與同儕的大膽實驗風格形成鮮明對比，正確描述 Kevin 偏好保守傳統做法的特質。因此答案為 (C) conventional。"
+    },
+    "q-pp-im-en-115-11": {
+      "questionId": "q-pp-im-en-115-11",
+      "answer": "B",
+      "explanation": "本題考查動詞語意辨析。空格需填入一個能表達「源自、衍生自」意思的動詞，搭配介系詞 from 使用。選項 (B) derive（衍生、源自）與 from 搭配構成 derive from，表示「來源於、起源於」，符合句意「許多現代科學術語源自古希臘語」。選項 (A) diverge 意為「分歧、偏離」，(C) deteriorate 意為「惡化、退化」，(D) fluctuate 意為「波動、起伏」，這三個選項語意均與句意不符。因此正確答案為 (B) derive。"
+    },
+    "q-pp-im-en-115-12": {
+      "questionId": "q-pp-im-en-115-12",
+      "answer": "C",
+      "explanation": "本題考查動詞詞彙在語境中的適切用法。句意為「在發布報告之前，委員會同意仔細__每一項統計數據」，需要一個表達「仔細審查」的動詞。(A) overlook 意為「忽視、忽略」，與語境相反；(B) expedite 意為「加速、加快」，強調速度而非仔細審查；(C) scrutinize 意為「仔細審查、詳細檢視」，與後方副詞 carefully 完美呼應，符合語境；(D) summarize 意為「總結、摘要」，指的是濃縮內容而非嚴格核查。因此正確答案為 (C) scrutinize。"
+    },
+    "q-pp-im-en-115-13": {
+      "questionId": "q-pp-im-en-115-13",
+      "answer": "C",
+      "explanation": "本題考查詞彙在語境中的正確用法。句意為「研究人員在沒有額外資料的情況下，無法___他的主張」。substantiate 意為「以具體證據支持或證實（主張）」，在學術語境中常用於描述以資料驗證論點的行為，符合句意。dismiss（駁斥）和 contradict（反駁）語意相反，暗示研究人員要否定自己的主張，不合理。speculate（推測）意指在缺乏充分依據下猜測，語意也不符合。因此，正確答案為 (C) substantiate。"
+    },
+    "q-pp-im-en-115-14": {
+      "questionId": "q-pp-im-en-115-14",
+      "answer": "D",
+      "explanation": "本題考查詞彙辨析。句意為「增加監管有時能促進創新，這是___的。」監管通常被視為限制創新的手段，但此句卻說它有時能促進創新，兩者形成表面上的矛盾卻又同時為真的情況。paradoxical（矛盾的、似非而是的）最能描述這種「看似相互矛盾卻實際上成立」的現象。predictable（可預測的）不符合語境，因為這種情況並不常見；illogical（不合邏輯的）暗示此事不成立，但句子的語氣是承認此事為真；simplistic（過於簡單化的）與語境無關。因此正確答案為 (D) paradoxical。"
+    },
+    "q-pp-im-en-115-15": {
+      "questionId": "q-pp-im-en-115-15",
+      "answer": "D",
+      "explanation": "本題考查詞彙辨義。句意為「版面調整後，這篇文章被移到網站較不顯眼的區塊」。選項(D) relegated 意為「降級、貶至較低地位」，與「較不顯眼的區塊（less prominent section）」語意完全吻合。選項(A) promoted 意為「晉升、推廣」，語意相反；選項(B) highlighted 意為「突出、強調」，亦與語意矛盾；選項(C) replenished 意為「補充、再補給」，與句意無關。因此正確答案為(D) relegated。"
+    },
+    "q-pp-im-en-115-16": {
+      "questionId": "q-pp-im-en-115-16",
+      "answer": "B",
+      "explanation": "題目描述 David 夾在兩位朋友之間，試圖透過調解來達成某種目的。「mediate」（調解）指的是在衝突雙方之間居中協調，以維持和平或解決爭端。選項 (B) keep the peace（維持和平）與「調解」的意涵完全吻合，符合語境。選項 (A) take sides 意為「選邊站」，與調解的中立立場相反；(C) start a quarrel 意為「挑起爭吵」，與題意相悖；(D) burn bridges 意為「斷絕關係」，也不符合調解的目的。因此正確答案為 (B) keep the peace。"
+    },
+    "q-pp-im-en-115-17": {
+      "questionId": "q-pp-im-en-115-17",
+      "answer": "A",
+      "explanation": "本題考查片語動詞的語意辨析。題目情境是Sara在忙碌了一整週後，想要放鬆並忘記工作的事，空格需填入與「relax」語意相符的片語。(A) kick back 意為「放鬆、休息」，與句意完全吻合。(B) stress out 意為「感到壓力、焦慮」，與句意相反。(C) hit it off 意為「（與某人）一拍即合、相處融洽」，語意不符合此情境。(D) push through 意為「堅持撐過、強行完成」，也與想放鬆的語意相反。因此正確答案為 (A) kick back。"
+    },
+    "q-pp-im-en-115-18": {
+      "questionId": "q-pp-im-en-115-18",
+      "answer": "C",
+      "explanation": "本題考查英文詞彙與閱讀理解能力。句子描述某個模型「初看具說服力」，但「仔細檢視後發現」其存在某種缺陷，「最終削弱了其可信度」。空格需填入一個負面或薄弱的概念，才能與「削弱可信度」的結果邏輯一致。選項(A)「嚴格測試的證據基礎」與(B)「連貫的解釋架構」及(D)「全面的分析設計」均為正面特質，若依賴這些要素只會增強可信度，與句意矛盾。只有選項(C)「鬆散連結的假設」屬於負面、脆弱的基礎，依賴此類假設才會在仔細檢視後暴露缺陷並損害可信度，符合句子的邏輯與語意。"
+    },
+    "q-pp-im-en-115-19": {
+      "questionId": "q-pp-im-en-115-19",
+      "answer": "A",
+      "explanation": "此題考查詞彙搭配與語意理解。句子說明文章的優點在於如何有效地將先前的研究結果整合成一個統一的論點，因此空格需要一個表示「綜合、整合」意義的動詞。(A) selectively integrates（選擇性地整合）最符合語境，表示作者從先前文獻中挑選並融合，形成統一論述。(B) openly challenges（公開挑戰）與句意相反，文章是建立在先前發現之上，而非挑戰它們。(C) deliberately disregards（刻意忽視）和 (D) superficially summarizes（膚淺地總結）均與句中「effectively（有效地）」及肯定語氣不符，且「superficially」帶有負面含意，與「strength（優點）」矛盾。"
+    },
+    "q-pp-im-en-115-2": {
+      "questionId": "q-pp-im-en-115-2",
+      "answer": "C",
+      "explanation": "本題考察動詞詞義辨析。句意為「政府推出稅收優惠措施，以___小型企業的財務負擔」。mitigate 意為「減輕、緩和」，符合政府推出稅收優惠旨在減輕企業負擔的語境。intensify 意為「加劇」、complicate 意為「使複雜化」、provoke 意為「激怒、引發」，均與句意相反或不符。因此正確答案為 (C) mitigate。"
+    },
+    "q-pp-im-en-115-20": {
+      "questionId": "q-pp-im-en-115-20",
+      "answer": "A",
+      "explanation": "題目描述一份聲明使用某種語言風格，目的是為了避免機構表明明確立場，並保留詮釋的彈性。選項(A) carefully noncommittal（謹慎地不表態）完全符合題意，表示刻意迴避承諾或確定立場的語言風格。選項(B) overtly confrontational（公然對抗）表示攻擊性語氣，與題意相反。選項(C) unusually transparent（異常透明）表示清晰明確，無法保留詮釋空間。選項(D) explicitly prescriptive（明確規定性的）表示清楚指示規範，與「避免明確立場」矛盾。因此答案為(A)。"
+    },
+    "q-pp-im-en-115-21": {
+      "questionId": "q-pp-im-en-115-21",
+      "answer": "B",
+      "explanation": "本題考「Neither...nor...」結構的主謂一致（subject-verb agreement）。當句子使用「Neither A nor B」時，動詞應與最靠近動詞的主詞（即 B）一致，稱為「就近原則」（proximity rule）。本句中最靠近動詞的主詞是複數名詞「the students」，因此動詞應使用複數形式。選項 (B) were 為 be 動詞的複數過去式，符合文法規則。其餘選項 was（單數過去式）、have been（現在完成式複數但時態不符）、has（單數現在式）均不正確。"
+    },
+    "q-pp-im-en-115-22": {
+      "questionId": "q-pp-im-en-115-22",
+      "answer": "C",
+      "explanation": "此題考查「倒裝句」結構。「Hardly...when...」是固定句型，意思是「幾乎還未…就…」，需搭配過去完成式（past perfect）。當 Hardly 置於句首時，主句需使用倒裝語序，助動詞須移至主詞之前。因此正確結構為「Hardly had the research team completed...when...」，助動詞應選 had。選項 A (has) 和 D (have) 為現在完成式，選項 B (did) 為一般過去式，皆不符合「Hardly...when」所需的過去完成時態，故答案為 C。"
+    },
+    "q-pp-im-en-115-23": {
+      "questionId": "q-pp-im-en-115-23",
+      "answer": "D",
+      "explanation": "此句為第三類條件句（與過去事實相反的假設語氣）。if 子句使用了過去完成式「had implemented」，表示與過去事實相反的假設，因此主要子句必須使用「would have + 過去分詞」的結構。空格後接的是過去分詞「alleviated」，加上動詞「be」的被動語態，完整結構為「would have been alleviated」。選項 (A) would have 缺少 been，選項 (B) will be 為一般未來式，選項 (C) would be 為第二類條件句的主句形式，皆不符合第三類條件句的文法規則。因此，正確答案為 (D) would have been。"
+    },
+    "q-pp-im-en-115-24": {
+      "questionId": "q-pp-im-en-115-24",
+      "answer": "A",
+      "explanation": "此題考查英語虛擬語氣（subjunctive mood）的用法。動詞「insist」（堅持）後接 that 子句時，需使用虛擬語氣，即動詞須用原形（base form），不論主詞為何。因此 that 子句中應使用 submit 而非 submits、submitted 或 submitting。這類動詞還包括 suggest、recommend、demand、require 等，皆遵循相同規則。正確答案為 (A) submit。"
+    },
+    "q-pp-im-en-115-25": {
+      "questionId": "q-pp-im-en-115-25",
+      "answer": "B",
+      "explanation": "本題考查「not only...but also...」對等連接詞結構中的動詞平行對稱原則。句中「not only completed」使用了過去式動詞，因此「but also」後面的動詞也必須使用相同的時態與形式以保持平行結構。選項(B) presented 為過去式，與 completed 形成正確的平行結構，符合語法規則。選項(A) present 為現在式，(C) presenting 為現在分詞，(D) presents 為第三人稱單數現在式，均無法與前半句的過去式保持一致，故不正確。因此正確答案為 (B) presented。"
+    },
+    "q-pp-im-en-115-26": {
+      "questionId": "q-pp-im-en-115-26",
+      "answer": "A",
+      "explanation": "此題考查英文語法中「ability to + 動詞原形」的結構。空格前的「ability to」是固定搭配，後面必須接動詞原形（base form），因此選 (A) interpret。選項 (B) interpreting 是現在分詞或動名詞，(C) interprets 是第三人稱單數現在式，(D) interpreted 是過去式或過去分詞，三者均不符合文法規則。整句語意為「在研讀了多種典範之後，這位研究生對自己詮釋這些複雜理論的能力感到有信心。」"
+    },
+    "q-pp-im-en-115-27": {
+      "questionId": "q-pp-im-en-115-27",
+      "answer": "B",
+      "explanation": "此題考查同位語（appositive）的標點符號用法。同位語片語用來補充說明前面的名詞，必須以逗號與主詞隔開。選項(A)「Dr. Y.-M. Chen a professor who teaches linguistics,」在專有名詞後缺少逗號，同位語未正確標示，語法錯誤。選項(C)與(D)雖有逗號，但(C)在「Chen」後未加逗號，(D)使用「the professor」暗示限定用法，且結尾逗號多餘。選項(B)「Dr. Y.-M. Chen, a professor who teaches linguistics」在「Chen」後正確加上逗號，引出非限制性同位語說明其身份，同位語緊接動詞前結束，不需再加逗號，結構完整且符合英文語法規範。"
+    },
+    "q-pp-im-en-115-28": {
+      "questionId": "q-pp-im-en-115-28",
+      "answer": "C",
+      "explanation": "此題考的是非限定性關係子句（non-restrictive relative clause）的用法。句中「Mona Lisa」已是唯一確定的名詞，後面接的是補充說明資訊的非限定性關係子句，因此需在關係代名詞前加逗號。非限定性關係子句必須使用「which」而非「that」，因為「that」不能用於非限定性子句。選項 (A) 和 (B) 缺少前置逗號，選項 (D) 雖有逗號但錯誤使用了「that」，只有選項 (C) 「, which was created」同時符合加逗號且使用「which」的語法規則。"
+    },
+    "q-pp-im-en-115-29": {
+      "questionId": "q-pp-im-en-115-29",
+      "answer": "B",
+      "explanation": "畫線句「研究人員主張，若缺乏更嚴格的執行，該政策將無法達成預期影響」的目的，是對第一句的樂觀主張（聯合國政策將減少溫室氣體排放）提出反駁論點。第二句已揭示政策效果微乎其微，而畫線句進一步說明原因，強化了對第一句主張的質疑。選項A錯誤，因為畫線句並未支持第一句；選項C錯誤，因為畫線句未提供背景資訊；選項D錯誤，因為畫線句是研究人員的論點，而非研究結論的總結。因此，正確答案為B。"
+    },
+    "q-pp-im-en-115-3": {
+      "questionId": "q-pp-im-en-115-3",
+      "answer": "C",
+      "explanation": "此題考查詞彙在語境中的適切性。句意為「他的休閒服裝在正式頒獎典禮上顯得___」，休閒服裝與正式場合形成強烈對比，因此需要一個表示「格格不入、不協調」的詞。(C) incongruous 意為「不相稱的、不協調的」，完全符合語境。(A) harmonious 意為「和諧的」，與語境相反；(B) conventional 意為「傳統的、慣例的」，無法表達衝突感；(D) deliberate 意為「故意的、蓄意的」，雖描述行為意圖，但未能表達服裝與場合不符的概念。"
+    },
+    "q-pp-im-en-115-30": {
+      "questionId": "q-pp-im-en-115-30",
+      "answer": "A",
+      "explanation": "這個短語「blending the ordinary with the extraordinary」緊接在「magical realism（魔幻寫實主義）」這個術語之後出現，其主要功能是在文章脈絡中解釋並定義這個文學術語的含義。魔幻寫實主義的核心特徵正是將平凡日常與超自然奇幻元素融合，因此這個短語是對該術語的說明性定義。選項B錯誤，因為該短語描述的是技法本身而非其想像力品質的證明；選項C錯誤，因為文中並未與其他作家做比較；選項D錯誤，因為小說家的主要主題是複雜的社會議題，而非「融合普通與非凡」本身。"
+    },
+    "q-pp-im-en-115-31": {
+      "questionId": "q-pp-im-en-115-31",
+      "answer": "B",
+      "explanation": "空格31描述的是領導南非國民黨的歐洲移民群體，即「南非荷蘭裔人（Afrikaners）」。Afrikaners是17世紀荷蘭等歐洲移民的後代，因此正確答案是(B) descendants（後裔）。(A) presidents（總統）、(C) dissidents（異見人士）、(D) confidants（親信）在語意上均不合適，因為這裡需要表達血緣傳承關係。「the descendants of European settlers known as Afrikaners」意為「被稱為南非荷蘭裔人的歐洲移民後裔」，語意完整且符合歷史事實。"
+    },
+    "q-pp-im-en-115-32": {
+      "questionId": "q-pp-im-en-115-32",
+      "answer": "D",
+      "explanation": "文章描述的是二戰後大批黑人湧入南非城市的歷史背景，空格填入的詞必須能表達「大量人群流入」的意思。(D) inflow 指「流入、湧入」，完全符合語意，描述黑人大量移入城市的現象。(A) exodus 意為「大規模離開、出走」，方向相反；(B) recharge 意為「充電、補充能量」，語意不符；(C) regime 意為「政權、制度」，也不適用於此語境。因此，「the heavy inflow of Blacks into South African cities」（黑人大量湧入南非城市）是唯一符合文意的選項。"
+    },
+    "q-pp-im-en-115-33": {
+      "questionId": "q-pp-im-en-115-33",
+      "answer": "A",
+      "explanation": "本題考查介系詞與動詞 'culminate' 的搭配用法。句子描述南非一系列日益壓迫性的法律，從1949年禁止黑白通婚開始，最終以按種族劃分人口的法律作為頂點。'Culminate with' 表示「以某事物作為高潮或終結」，符合此句語意。雖然 'culminate in' 是更常見的標準搭配，但選項中並無 'in'，而 'culminate with' 亦為可接受的慣用表達，意指「以…作為最後結果或頂點」。選項 (B) from、(C) into、(D) to 均不符合此動詞的慣用搭配，因此答案為 (A) with。"
+    },
+    "q-pp-im-en-115-34": {
+      "questionId": "q-pp-im-en-115-34",
+      "answer": "C",
+      "explanation": "本題考的是空格34，位於句子「a separate, and __34__, education system for blacks」中。文章描述南非種族隔離制度下的法律，為黑人建立了一個「分開的」且具有某種負面特質的教育體系。選項C的「inferior」意指「較差的、劣等的」，最符合文章語境，因為文章前後都在強調白人獲得最好的公共設施，而黑人則受到歧視與壓迫。選項A「prior」（之前的）、B「anterior」（前面的）、D「posterior」（後面的）均無法描述教育品質的差距，語意不通。因此，「a separate, and inferior, education system for blacks」完整表達了種族隔離法律對黑人教育的歧視性安排。"
+    },
+    "q-pp-im-en-115-35": {
+      "questionId": "q-pp-im-en-115-35",
+      "answer": "C",
+      "explanation": "文章描述在種族隔離制度下，黑人被迫居住在貧瘠的部落家園或城市附近的鄉鎮，常常位於工業汙染區域。空格35需要修飾「areas（地區）」的形容詞組合，語法上應是「形容詞 + 形容詞 + 名詞」的結構。選項 (C) 「polluted industrial areas」（受汙染的工業地區）語法正確，且語意上完全符合文脈——這些地區靠近工廠，環境惡劣。選項 (A) 「industrious pollution」詞性錯誤，(B) 「industrially polluting」語意奇怪，(D) 「industriously polluted」中 industriously 意為「勤奮地」，語意不合。因此正確答案為 (C)。"
+    },
+    "q-pp-im-en-115-36": {
+      "questionId": "q-pp-im-en-115-36",
+      "answer": "D",
+      "explanation": "本題考查空格36的適當詞彙，句子結構為「自從這些抗肥胖藥物被___之後，它們從利基藥物擴展為廣泛使用的減重工具」。選項(D) approved（獲得批准）最符合上下文，因為藥物獲得主管機關核准後，才能從限定用途（治療第二型糖尿病）擴展至更廣泛的使用情境。選項(A) reprimanded（受到譴責）語意相反，若藥物受到譴責則不會擴大使用。選項(B) congested（擁塞）與藥物審批無關，選項(C) depreciated（貶值）屬財務用語，皆不符合醫藥情境。因此，only「approved」能合理解釋為何藥物使用量從小眾迅速擴展至數千萬人的規模。"
+    },
+    "q-pp-im-en-115-37": {
+      "questionId": "q-pp-im-en-115-37",
+      "answer": "A",
+      "explanation": "此題考查被動不定詞（passive infinitive）的用法。選項 (A) 和 (D) 均為「to be used」，在英文考題中通常代表正確答案。被動不定詞「to be used」用於表示某事物「被使用」的狀態，常接在 expect、tend、appear 等動詞或形容詞後面作補語。相對地，(B) to being used 文法上不正確，不定詞後不接動名詞形式；(C) to be using 為主動進行式不定詞，語意不符合被動情境。因此，正確答案為 (A) to be used，表達被動語態的不定詞結構。"
+    },
+    "q-pp-im-en-115-38": {
+      "questionId": "q-pp-im-en-115-38",
+      "answer": "B",
+      "explanation": "此題考查英文介系詞片語的正確用法。正確答案為 (B) in spite of，意為「儘管、雖然」，是標準英文用法。選項 (A) despite of 錯誤，因為 despite 本身已是介系詞，不需要加 of，應直接說 despite + 名詞。選項 (C) in despite of 並非標準英文表達，不存在於正式語法中。選項 (D) in spite 不完整，必須加上 of 才能構成正確的介系詞片語 in spite of。因此，in spite of 是四個選項中唯一符合英文語法規範的表達。"
+    },
+    "q-pp-im-en-115-39": {
+      "questionId": "q-pp-im-en-115-39",
+      "answer": "D",
+      "explanation": "此題考查連接詞的語意辨別。選項包括 hence（因此，表結果）、although（雖然，表讓步）、due to（由於，表原因，後接名詞片語）、as（因為／當，可表原因或時間）。在學術閱讀文章的填空題中，需根據前後文的邏輯關係選擇適當的連接詞。'as' 作為從屬連接詞，可表示原因（因為）或時間（當⋯⋯的時候），語意彈性最大，常見於學術文章中。相較於 'due to' 後須接名詞片語、'hence' 表結果、'although' 表讓步對比，'as' 最能自然銜接文章中描述原因或情境的句子結構，因此答案為 (D) as。"
+    },
+    "q-pp-im-en-115-4": {
+      "questionId": "q-pp-im-en-115-4",
+      "answer": "A",
+      "explanation": "題目描述哲學家的早期著作讓連專家都難以詮釋，因此空格需要填入一個表示「晦澀難懂」的形容詞。(A) obscure 意指「晦澀的、不清楚的」，與句意完全吻合。(B) transparent 意為「透明的、清晰易懂的」，(D) accessible 意為「易理解的、易接近的」，兩者皆與句意相反，可直接排除。(C) concise 意為「簡潔的」，雖為中性詞，但並不能解釋為何專家也難以詮釋，因此不符合語境。故正確答案為 (A) obscure。"
+    },
+    "q-pp-im-en-115-40": {
+      "questionId": "q-pp-im-en-115-40",
+      "answer": "D",
+      "explanation": "本題考的是固定搭配（collocation）。空格40填入的動詞需與「excess weight（多餘體重）」搭配，表達「減掉體重」的意思。選項D的「shed」是英語中與「weight」最自然的搭配動詞，「shed excess weight」意指「減掉多餘體重」，是常見慣用表達。選項A「shiver」意為「顫抖」、選項B「shrink」意為「縮小或退縮」、選項C「shun」意為「刻意迴避」，三者均無法與「excess weight」形成合理的語意搭配。此外，從文章語境來看，文章討論人們使用Ozempic等藥物的目的是減重，因此「shed excess weight」完全符合上下文語意。"
+    },
+    "q-pp-im-en-115-41": {
+      "questionId": "q-pp-im-en-115-41",
+      "answer": "C",
+      "explanation": "文章明確指出目前的科學研究「無法證明因果關係」（cannot prove causation），排除選項A的說法過於絕對。文章提及英國食品飲料業規模龐大、雇用超過40萬人，但作者並未因此認為管制不切實際，反而引述投資者與政府官員呼籲採取行動，因此選項B不符。文章強調的是產業與政府的責任，而非單純依賴個人選擇，排除選項D。選項C最準確地捕捉了作者的立場：雖然因果關係尚未被證實，但累積的證據與專家意見足以支持減少超加工食品攝取的努力，這與文章整體論述一致。"
+    },
+    "q-pp-im-en-115-42": {
+      "questionId": "q-pp-im-en-115-42",
+      "answer": "B",
+      "explanation": "本題詢問文中 Spector 與 Chang 兩段引述如何共同發揮作用。Spector 的引述通常著重於超加工食品（UPF）對人體生理的影響，例如對腸道、代謝或飢餓感的作用；而 Chang 的引述則聚焦於這類食品是如何被刻意設計與行銷，以促使消費者過量食用。兩段引述一個從生理效應切入，一個從食品工程與行銷策略切入，共同建立起 UPF 的生理危害與其人為設計之間的連結。因此選項 B「將 UPF 的生理效應與此類食品的工程設計及行銷方式相連結」最能準確描述兩段引述的共同功能。其他選項如「相互競爭的科學解釋」、「學術研究與公共衛生政策的對比」或「將焦點從健康轉向經濟利益」均不符合此段落的論述方向。"
+    },
+    "q-pp-im-en-115-43": {
+      "questionId": "q-pp-im-en-115-43",
+      "answer": "B",
+      "explanation": "根據文章最後兩段的內容，關於英國超加工食品（UPF）問題的解決方案，可以合理推斷出越來越多的人支持透過政府行動對食品業者追究責任。選項A錯誤，因為文章並未指出消費者的自願改變已足夠解決問題，反而暗示需要更系統性的干預。選項C過度推斷，文章並未提及投資者因經濟風險而反對政府監管。選項D與文章主題相悖，若食品業已全面實施健康改革，就不存在需要解決的UPF問題。因此，選項B最能反映文章最後段落所傳達的訊息——社會對政府介入、要求業界負責的呼聲日益增加。"
+    },
+    "q-pp-im-en-115-44": {
+      "questionId": "q-pp-im-en-115-44",
+      "answer": "D",
+      "explanation": "作者引用英國食品飲料業的具體規模數據與就業人口數字，目的是藉由呈現該產業的龐大經濟體量，來說明改革食品系統所面臨的結構性與政治性挑戰。當一個產業雇用數十萬甚至數百萬人、對GDP貢獻顯著時，任何政策改革都將面臨巨大的政治阻力與社會衝擊。這些數字並非用來主張經濟優先於公共健康（A），也非解釋業者抗拒改變生產方式的原因（B），更非要證明產業比政府更具影響力（C）。選項D最準確地反映作者的修辭意圖：透過量化數據強調食品體系改革牽涉廣泛的結構利益與政治複雜性，使讀者理解為何此議題難以推動。"
+    },
+    "q-pp-im-en-115-45": {
+      "questionId": "q-pp-im-en-115-45",
+      "answer": "C",
+      "explanation": "本文的核心主題是日本國會大廈女性廁所不足，無法配合女性議員人數增長的問題。文章指出，2024年10月有創紀錄的73名女性當選眾議院議員，但整棟建築中女廁數量遠少於男廁（女廁22間隔間，男廁67間隔間加小便池）。選項A雖提到建築老舊，但文章重點並非設施現代化問題，而是性別代表性與設施不對等的問題。選項B錯誤，文章並未提及任何法定名額限制。選項D則完全未在文中提及。因此，最能概括文章主旨的是選項C：女性政治代表性的提升未能獲得相應的設施支援。"
+    },
+    "q-pp-im-en-115-46": {
+      "questionId": "q-pp-im-en-115-46",
+      "answer": "D",
+      "explanation": "「dearth」這個英文單字的意思是「嚴重缺乏、匱乏」（scarcity），源自古英語，表示某物極度不足的狀態。因此，「the dearth of women's restrooms」的意思是「女廁極度不足」。選項D「the severe lack of women's restrooms」（女廁嚴重缺乏）與此意思完全吻合。選項A（逐漸改善）、B（分布不均）和C（暫時關閉）均無法對應「dearth」的核心語義，故答案為D。"
+    },
+    "q-pp-im-en-115-47": {
+      "questionId": "q-pp-im-en-115-47",
+      "answer": "A",
+      "explanation": "本題詢問從文章中可以合理推論出政府對性別平等承諾的何種結論。選項A指出象徵性的性別平等承諾並不一定伴隨具體行動，這符合有關性別平等議題文章的常見主題，即政府宣示與實際落實之間存在落差。選項B宣稱公共基礎設施改革比政治改革進展更快，過於具體且缺乏直接依據。選項C表示官方目標提前達成，與討論性別平等挑戰的文章基調相悖。選項D主張女性代表性的提升已消除實際障礙，屬於過度推論，因為「消除」所有障礙是極強的論斷，不符合合理推論的標準。因此，最合理的推論為選項A。"
+    },
+    "q-pp-im-en-115-48": {
+      "questionId": "q-pp-im-en-115-48",
+      "answer": "B",
+      "explanation": "本文明確指出修正案的核心原則是「尊重女性生育自主權」，同時將合法的人工生殖服務擴大至已婚女同性伴侶及單身女性，因此擴大了服務對象範圍。另一方面，修正案也強化了監管措施，包括品質管理、執照授權、法規遵循以及強制性親職評估等規定。選項A錯誤，因為修正案實際上增加了政府監管而非移除；選項C錯誤，因為文章明確以尊重女性自主為基本原則；選項D則與修正案擴大服務對象的方向完全相反。因此，最符合修正案主要目的的答案為B：在擴大合法人工生殖服務管道的同時強化相關規範。"
+    },
+    "q-pp-im-en-115-49": {
+      "questionId": "q-pp-im-en-115-49",
+      "answer": "C",
+      "explanation": "根據文章內容，進行人工生殖程序前需要經過獨立專業機構的評估，其目的是確保未來出生的孩子能在穩定且安全的環境中成長。這類評估通常針對申請者的心理健康、家庭環境及養育能力進行審查，屬於保護兒童福祉的法規要求。選項A（降低費用）、B（防止機構擴張）及D（確認捐贈者資格）均非文章所述的主要原因，故C為正確答案。"
+    },
+    "q-pp-im-en-115-5": {
+      "questionId": "q-pp-im-en-115-5",
+      "answer": "A",
+      "explanation": "題目描述團隊在時間和資源有限的情況下，採取了某種解決方案而非理想化的方案，語意上需要「務實的、實際的」。(A) pragmatic 意為「務實的、注重實際的」，符合句意。(B) speculative 意為「推測的、投機的」，(C) impulsive 意為「衝動的」，(D) abstract 意為「抽象的」，三者均與句意不符。因此正確答案為 (A) pragmatic，表示團隊選擇了一個務實可行的解決方案。"
+    },
+    "q-pp-im-en-115-50": {
+      "questionId": "q-pp-im-en-115-50",
+      "answer": "B",
+      "explanation": "根據題目所指的第48題段落，擬議修正案關於人工生殖所生子女查詢捐贈者資訊的規定，採取分級開放的方式。子女可以取得有限度的捐贈者資訊（如非識別性資料），但若要取得更詳細的識別性資訊，則需符合特定條件（如特定年齡或特定情況）。選項A「成年後可自由取得所有資訊」過於寬鬆，選項C「僅限捐贈者死亡後」限制過嚴，選項D「禁止取得任何資訊」則完全封閉。因此，最能描述該修正案精神的是選項B：可取得有限資訊，追加詳細資訊則須符合特定條件。"
+    },
+    "q-pp-im-en-115-6": {
+      "questionId": "q-pp-im-en-115-6",
+      "answer": "D",
+      "explanation": "本題考查形容詞的語意辨析。句子描述「她的演講感動了觀眾，並以非凡的優雅闡明了一個複雜的議題」，這些都是正面且具說服力的特質。(A) verbose 意為「冗長的、囉嗦的」，帶有負面含義；(B) restrained 意為「克制的」，無法體現感動觀眾的力量；(C) defensive 意為「防禦性的」，帶有負面含義。(D) eloquent 意為「口才流利的、雄辯的」，最能呼應「感動觀眾」且「優雅地闡明複雜議題」的描述，因此正確答案為 (D)。"
+    },
+    "q-pp-im-en-115-7": {
+      "questionId": "q-pp-im-en-115-7",
+      "answer": "C",
+      "explanation": "本題考查詞彙選擇，句意為「無線網路已變得如此___，以至於許多人只有在它消失時才會注意到它」。選項C「ubiquitous」意為「無所不在的、普遍存在的」，最符合語境——當某樣事物極為普遍時，人們會將其視為理所當然，只有在失去時才察覺其存在。選項A「exclusive」意為「獨家的、排他的」，與語意相反。選項B「innovative」意為「創新的」，無法解釋為何人們會忽視它。選項D「intermittent」意為「斷斷續續的」，與「只在消失時才注意到」的語意矛盾。"
+    },
+    "q-pp-im-en-115-8": {
+      "questionId": "q-pp-im-en-115-8",
+      "answer": "B",
+      "explanation": "題目描述部長意識到政治後果，因此在回應記者問題時選擇了謹慎的態度。(B) circumspect 意為「謹慎周全的、面面俱到的」，最符合此語境。(A) impulsive（衝動的）與意識到後果的態度相反；(C) candid（坦率直白的）雖是褒義，但在政治敏感情境下過於直接；(D) dramatic（戲劇性的）則與謹慎應對毫無關聯。因此，正確答案為 (B) circumspect。"
+    },
+    "q-pp-im-en-115-9": {
+      "questionId": "q-pp-im-en-115-9",
+      "answer": "A",
+      "explanation": "本題考查詞彙在語境中的應用。句子說明支持該理論的證據「依賴假設而非紮實數據」，表示這些證據薄弱、缺乏說服力。選項 (A) tenuous 意為「薄弱的、脆弱的」，最符合語境。選項 (B) compelling 意為「令人信服的」，與語境相反。選項 (C) comprehensive 意為「全面的、廣泛的」，選項 (D) definitive 意為「確定的、決定性的」，均與句意不符。因此正確答案為 (A) tenuous。"
+    },
+    "q-pp-im-it-106-1": {
+      "questionId": "q-pp-im-it-106-1",
+      "answer": "D",
+      "explanation": "選項D將資料庫分為四張表：學生基本資料表、選課與成績表（Student_ID, Course_ID, GRADE）、教師表（Instructor_ID, Instructor_Name, Course_ID）以及教室表（Classroom, Course_ID, Course_Schedule），符合第三正規化（3NF）的設計原則，各表有明確的主鍵且減少了資料重複。選項A將所有欄位放在同一張表中，造成大量資料冗餘，設計最差。選項B雖然拆出學生基本資料，但其餘所有欄位仍混在一張表中，仍有嚴重的正規化問題。選項C的第二張表混合了課程、教師與成績資訊，存在部分函數相依與遞移相依的問題。選項E以Student_Name（非唯一）作為多張表的關聯鍵，在實際應用中同名學生會導致資料錯亂，是最不恰當的設計。"
+    },
+    "q-pp-im-it-106-10": {
+      "questionId": "q-pp-im-it-106-10",
+      "answer": "C",
+      "explanation": "「數位落差」（digital divide）是資訊通訊技術（ICT）領域中專門用來描述因經濟與社會不平等所導致的科技近用差距的標準術語。它涵蓋了人們在取得、使用及受惠於ICT方面的不均等現象，包含城鄉差距、貧富差距及教育程度差異等面向。「資訊不對稱」（information asymmetry）主要是經濟學中描述交易雙方掌握資訊不對等的概念，範疇不同。「知識落差」（knowledge gap）雖相關，但較著重於知識獲取的差距，而非ICT近用的社會經濟不平等。因此，最能描述題目所述情境的選項為C。"
+    },
+    "q-pp-im-it-106-11": {
+      "questionId": "q-pp-im-it-106-11",
+      "answer": "C",
+      "explanation": "此題問哪個敘述是錯誤的。選項 (C) 說在偶同位系統中，若字組（含同位位元）為 0110 1001 0，則可「絕對確定」沒有錯誤，這是錯誤的。雖然該字組中 1 的個數為 4（偶數），符合偶同位規則，但同位檢查只能偵測奇數個位元錯誤，若有偶數個位元（如 2 個）同時發生錯誤，同位仍然正確，因此無法「絕對確定」沒有錯誤。相較之下，選項 (A) 正確描述奇同位定義，選項 (B) 正確指出 6 個 1 在奇同位系統中確實是錯誤，選項 (D) 正確說明同位位元用於偵測錯誤。"
+    },
+    "q-pp-im-it-106-12": {
+      "questionId": "q-pp-im-it-106-12",
+      "answer": "C",
+      "explanation": "此題考查快取置換策略（Cache Replacement Policy）的效能比較。選項C對應的是 LRU（Least Recently Used，最近最少使用）策略，即移除最久未被使用的元素。LRU 利用了程式的時間局部性（Temporal Locality）原理：最近被存取的資料在不久的將來很可能再次被存取，因此保留這些資料能有效降低快取未命中率。相較之下，FIFO（選項D）忽略了存取頻率與時間局部性，LFU（選項A）雖考慮使用次數但對新資料不友善，選項B移除最常用元素則完全違背快取設計邏輯，選項E移除待最短時間的元素同樣不合理。在一般工作負載下，LRU 是這幾個策略中公認效能最佳的快取置換演算法。"
+    },
+    "q-pp-im-it-106-13": {
+      "questionId": "q-pp-im-it-106-13",
+      "answer": "A",
+      "explanation": "BIOS（Basic Input/Output System）是一種儲存在主機板晶片上的韌體，負責在電腦開機時執行硬體初始化，此過程稱為 POST（Power-On Self Test）。CMOS 是一種用來儲存 BIOS 設定值的記憶體晶片，本身並非韌體。ROM 是唯讀記憶體（記憶體類型），kernel 是作業系統核心，DOS 是磁碟作業系統，三者均不符合「用於開機時硬體初始化的韌體」定義。因此正確答案為 (A) BIOS。"
+    },
+    "q-pp-im-it-106-14": {
+      "questionId": "q-pp-im-it-106-14",
+      "answer": "B",
+      "explanation": "虛擬記憶體的實作通常將虛擬位址空間切割成固定大小的連續記憶體區塊，稱為「分頁」（pages），這些分頁可以在實體記憶體與外部儲存裝置（如磁碟）之間進行置換（swap）。分段（segments）雖然也是虛擬記憶體的一種切割方式，但其大小不固定，且題目描述的是「連續虛擬位址的區塊」用於置換，這正是分頁（paging）機制的核心特性。磁區（sectors）是磁碟的實體儲存單位，區域（zones）則是作業系統核心的記憶體管理分區，兩者皆非虛擬位址空間的切割單元。因此正確答案為 B（pages）。"
+    },
+    "q-pp-im-it-106-15": {
+      "questionId": "q-pp-im-it-106-15",
+      "answer": "C",
+      "explanation": "RAID（獨立磁碟冗餘陣列）的主要目的包括：提升容錯能力（如 RAID 1 鏡像、RAID 5 同位元）、改善系統效能（如 RAID 0 條帶化提升讀寫速度），以及增加儲存容量（多顆磁碟組合使用）。然而，資料安全性（data security）並非 RAID 的主要考量範疇，資料安全指的是加密、存取控制、防止未授權存取等機制，這些都不在 RAID 技術的設計目標之內。RAID 只能防護磁碟硬體故障導致的資料遺失，無法防範資料被竊取、惡意軟體攻擊或人為刪除等安全威脅。因此，「改善資料安全性」並非 RAID 的主要關注點，答案選 C。"
+    },
+    "q-pp-im-it-106-16": {
+      "questionId": "q-pp-im-it-106-16",
+      "answer": "C",
+      "explanation": "Kickstarter.com 是全球最知名的群眾募資（crowdfunding）平台，讓創作者或創業者向大眾募集資金以實現專案。群眾募資的特點是向不特定的多數人籌集資金，每位支持者可以貢獻小額金錢換取回饋或產品。P2P lending（選項A）是借貸平台，crowdsourcing（選項B）是外包任務給大眾，microfunding（選項D）並非標準術語，C2C（選項E）是消費者對消費者的電商模式，皆與Kickstarter的商業模式不符。因此正確答案為 C。"
+    },
+    "q-pp-im-it-106-17": {
+      "questionId": "q-pp-im-it-106-17",
+      "answer": "B",
+      "explanation": "Udacity、Coursera 和 edX 是著名的大規模開放式線上課程平台，業界標準術語為「Massive Open Online Courses」，縮寫為 MOOC。選項 (B) massive open online courses 正確描述了這類平台的三大特徵：對大量學習者開放（massive）、免費或低成本可取得（open）、透過網路提供（online）。選項 (A) self-paced online courses 強調的是自主學習進度，並非這類平台的專有名稱。選項 (C)(D)(E) 均為錯誤的術語組合，不符合業界通用定義。"
+    },
+    "q-pp-im-it-106-18": {
+      "questionId": "q-pp-im-it-106-18",
+      "answer": "E",
+      "explanation": "此題考查乙太網路（Ethernet）的基本特性。選項A正確，乙太網路廣泛應用於區域網路（LAN）。選項B正確，乙太網路採用 CSMA/CD 協議，發生碰撞後使用隨機退避（random backoff，即指數退避）機制來解決碰撞問題。選項C正確，乙太網路在邏輯上是一種匯流排型廣播網路，所有節點共享同一傳輸媒介。選項D正確，10BASE-T（使用 Cat3 雙絞線）與 100BASE-TX（使用 Cat5 雙絞線）確實是乙太網路中常用的連接線纜。由於A、B、C、D四個選項皆為正確描述，本題答案選 E（以上皆正確）。"
+    },
+    "q-pp-im-it-106-19": {
+      "questionId": "q-pp-im-it-106-19",
+      "answer": "C",
+      "explanation": "TCP/UDP 的連接埠號碼範圍是 0 到 65535，共 65536 個（2^16 個），而非 0 到 65536。因此選項 C 所述「port numbers range from 0 to 65536」是錯誤的，最大值應為 65535。補充說明：選項 D 也有瑕疵，因為 Well-Known Ports 的標準定義是 0~1023，而非 0~2048；0~2048 並非正式規範。選項 A（HTTP 使用 port 80）與選項 B（FTP 控制連線使用 port 21）均為正確的標準定義。在此題中，C 是最明確且無爭議的錯誤陳述。"
+    },
+    "q-pp-im-it-106-2": {
+      "questionId": "q-pp-im-it-106-2",
+      "answer": "B",
+      "explanation": "此題設計的是每門課程的成績表，課程本身已由資料表隱含表示，因此只需記錄學生識別碼與成績。選項(B)僅包含 Student_ID 與 Grade 兩個欄位，Student_ID 作為主鍵可唯一識別學生，Grade 是需要記錄的事實，設計簡潔且符合正規化原則。選項(A)以 Student_Name 作為識別欄位，但姓名不具唯一性且可能重複，不適合作為主鍵。選項(C)(E)將 Student_Name 納入，造成遞移相依（Student_Name 依賴 Student_ID），違反第三正規化（3NF），產生資料冗餘。選項(D)(E)包含 Instructor_ID，但授課教師屬於課程資料，應存放於課程表而非成績表，放在此處違反資料庫設計原則。"
+    },
+    "q-pp-im-it-106-20": {
+      "questionId": "q-pp-im-it-106-20",
+      "answer": "E",
+      "explanation": "此題詢問OSI參考模型中哪個敘述是錯誤的。選項(A)第3層為網路層（Network Layer）正確；選項(B)第5層為會議層（Session Layer）正確；選項(C)SMTP屬於第7層應用層（Application Layer）正確；選項(D)TCP屬於第4層傳輸層（Transport Layer）正確。由於A、B、C、D四個選項均為正確敘述，找不到任何錯誤的選項，因此應選(E)「以上皆正確」。"
+    },
+    "q-pp-im-it-106-21": {
+      "questionId": "q-pp-im-it-106-21",
+      "answer": "C",
+      "explanation": "在物件導向程式設計中，程式碼重用（code reuse）主要是透過「繼承（inheritance）」來實現，而非多型（polymorphism）。繼承允許子類別直接繼承並重用父類別的屬性與方法，避免重複撰寫相同程式碼。多型（polymorphism）的主要目的是讓不同類別的物件能以統一的介面被操作，強調的是行為的彈性與擴展性，而非直接的程式碼重用。因此選項 (C) 的說法有誤，其餘選項 (A)、(B)、(D) 皆為正確敘述。"
+    },
+    "q-pp-im-it-106-22": {
+      "questionId": "q-pp-im-it-106-22",
+      "answer": "C",
+      "explanation": "Unix 家族並非全部都是開放原始碼（open source）。Unix 最初由 AT&T 貝爾實驗室開發，屬於專有（proprietary）軟體，商業 Unix 系統如 AIX、HP-UX、Solaris 均為閉源商業產品。雖然有些類 Unix 系統（如 Linux）是開放原始碼，但 Linux 嚴格來說屬於 Unix-like，並非 Unix 家族本身。因此，說「Unix 家族都是開放原始碼」是錯誤的陳述。其他選項皆正確：OS X 用於 Apple 桌機與筆電、Android 基於 Linux 核心、Windows 目前主導桌面作業系統市場。"
+    },
+    "q-pp-im-it-106-23": {
+      "questionId": "q-pp-im-it-106-23",
+      "answer": "A",
+      "explanation": "選項(A)所描述的「視覺化呈現專案排程、活動長度與完成時間」，實際上是甘特圖（Gantt Chart）的定義，而非類別圖（Class Diagram）。類別圖是物件導向分析與設計中用來描述系統中類別的屬性、方法以及類別之間關係的靜態結構圖。選項(B)決策樹（Decision Tree）以分支方式呈現決策的各種可能結果，描述正確。選項(C)實體關係圖（ERD）以圖形化方式呈現資訊系統中人、物件、地點、概念或事件之間的關係，描述正確。選項(D)流程圖（Flowchart）以不同形狀的方框代表演算法或流程中的步驟，並以箭頭表示順序，描述正確。因此，描述錯誤的是選項(A)。"
+    },
+    "q-pp-im-it-106-24": {
+      "questionId": "q-pp-im-it-106-24",
+      "answer": "D",
+      "explanation": "台灣的 ETC（電子收費系統）並非使用 LTE 技術，而是採用 DSRC（專用短程通訊，Dedicated Short-Range Communications）微波技術，工作頻率為 5.8 GHz。選項 (A) 悠遊卡確實使用 NFC（近場通訊）技術，屬於正確描述。選項 (B) RFID 廣泛應用於供應鏈管理以追蹤貨物，屬於正確描述。選項 (C) 動物追蹤晶片通常使用被動式 RFID 技術，同樣為正確描述。因此，描述錯誤的選項為 (D)。"
+    },
+    "q-pp-im-it-106-25": {
+      "questionId": "q-pp-im-it-106-25",
+      "answer": "A",
+      "explanation": "此題為申論題，無選項。(a) 中序後繼（Inorder Successor）是在二元搜尋樹的中序走訪（左→根→右）中，緊接在某節點之後被拜訪的節點。例如在 BST 中節點值為 5 時，其中序後繼為所有節點中大於 5 的最小值。此概念在刪除節點操作時非常重要：當被刪除的節點有兩個子節點時，需以其中序後繼（或中序前驅）取代之，以維持 BST 性質。(b) 尋找中序後繼的演算法：若節點有右子樹，則中序後繼為右子樹中最左邊的節點（即右子樹的最小值）；若節點無右子樹，則需向上追溯，找到第一個「其左子樹包含該節點」的祖先節點。效率為 O(h)，h 為樹的高度，平衡樹時為 O(log n)。"
+    },
+    "q-pp-im-it-106-26": {
+      "questionId": "q-pp-im-it-106-26",
+      "answer": "A",
+      "explanation": "本題為申論題，以 AVL 樹為例說明。依序插入 1, 2, 5, 7, 6, 4, 3 後，每次插入若造成某節點的平衡因子絕對值超過 1，需進行旋轉（單旋或雙旋）以恢復平衡，最終得到一棵高度為 3 的 AVL 樹，根節點為 4，左子樹含 2（子節點 1、3），右子樹含 6（子節點 5、7）。對於高度 O(log n) 的證明：設 N(h) 為高度為 h 的 AVL 樹最少節點數，由 AVL 性質可得遞推關係 N(h) = N(h-1) + N(h-2) + 1，此與 Fibonacci 數列成長相同，故 N(h) ≥ φ^h / √5（φ ≈ 1.618），由此可推導出 h ≤ 1.44 log₂(n+2)，因此 AVL 樹的高度為 O(log n)。"
+    },
+    "q-pp-im-it-106-3": {
+      "questionId": "q-pp-im-it-106-3",
+      "answer": "A",
+      "explanation": "此題考 SQL 的基本語法。選項 (A) 使用了正確的 SQL 語法：SELECT * 選取所有欄位，FROM 指定資料表，WHERE 加上條件，並以 AND 連接兩個條件，同時用括號將 OR 條件正確包覆，語法完全符合標準 SQL。選項 (B) 使用了不合法的 SELECT ALL 及 WITH 關鍵字，這在標準 SQL 中是錯誤的寫法。選項 (C) 使用逗號分隔條件且 OR 後面只寫 'Kaohsiung' 而缺少欄位名稱，語法不正確。選項 (D) 同樣使用不合法的 SELECT ALL，且缺少必要的 WHERE 關鍵字。因此唯一語法正確的答案是 (A)。"
+    },
+    "q-pp-im-it-106-4": {
+      "questionId": "q-pp-im-it-106-4",
+      "answer": "E",
+      "explanation": "此題詢問關於關聯式資料庫哪個敘述是錯誤的。選項(A)正確，關聯式資料庫確實以表格（欄與列）的形式組織資料。選項(B)正確，表格中的每一列（row）對應一筆資料記錄（record）。選項(C)正確，主鍵（primary key）確實能唯一識別表格中的每一筆記錄。選項(D)正確，外鍵（foreign key）在一個表格中對應到另一個表格的主鍵，用於建立表格間的關聯。由於(A)至(D)全部皆為正確的陳述，因此答案為(E)。"
+    },
+    "q-pp-im-it-106-5": {
+      "questionId": "q-pp-im-it-106-5",
+      "answer": "C",
+      "explanation": "第一正規化（1NF）的定義要求每個欄位的值必須是不可再分割的原子值（atomic value），且不能有重複的群組欄位，但並未明確規定每一列必須由主鍵來識別。主鍵的要求是關聯式模型的一般原則，並非 1NF 本身的正式定義條件。選項 (C) 將「由主鍵識別每一列」列為 1NF 的要求，這是不正確的描述。相較之下，選項 (A)、(B)、(D) 均為資料庫正規化的正確陳述，其中 2NF 確實以滿足 1NF 為前提。"
+    },
+    "q-pp-im-it-106-6": {
+      "questionId": "q-pp-im-it-106-6",
+      "answer": "C",
+      "explanation": "Fintech（金融科技）是指利用軟體與現代技術來提供金融服務的新型應用、流程、產品或商業模式。此詞由「Finance」與「Technology」合併而來，涵蓋行動支付、網路銀行、區塊鏈、P2P借貸等創新服務。Bank 3.0 與 Bank 4.0 雖也與數位金融有關，但它們特指銀行業務的演進階段，而非廣義的金融科技定義。Digital Finance 泛指數位化金融，Financial Revolution 則是非正式用語，兩者均不如 Fintech 精確對應題目描述。"
+    },
+    "q-pp-im-it-106-7": {
+      "questionId": "q-pp-im-it-106-7",
+      "answer": "C",
+      "explanation": "AlphaGo 是 Google DeepMind 於 2016 年開發的圍棋 AI，其核心技術是深度學習（Deep Learning）。AlphaGo 使用深度卷積神經網路（Deep Convolutional Neural Networks）來評估棋盤局面與預測落子位置，結合蒙地卡羅樹搜尋（Monte Carlo Tree Search）來選擇最佳落子策略。基因演算法（Genetic Algorithm）、專家系統（Expert System）等傳統 AI 方法並非 AlphaGo 的關鍵技術。深度學習使 AlphaGo 能夠從大量棋譜中自我學習，最終擊敗世界頂尖的九段職業棋士李世乭。"
+    },
+    "q-pp-im-it-106-8": {
+      "questionId": "q-pp-im-it-106-8",
+      "answer": "E",
+      "explanation": "大數據的核心特徵通常以「3V」來描述：高容量（Volume）、高速度（Velocity）、高多樣性（Variety），這三項是學術與產業界廣泛認可的特性。「高價值（Value）」雖然後來被部分學者加入成為第4V，但並非最初被廣泛認定的核心特徵，因此選項D（potentially high value）並非所有人都視為大數據的標準特徵。選項E宣稱「以上皆為大數據特徵」，但由於Value並非普遍被視為核心特徵，使得E的說法並不完全正確，因此E是本題中「不被廣泛視為大數據特徵」的答案。"
+    },
+    "q-pp-im-it-106-9": {
+      "questionId": "q-pp-im-it-106-9",
+      "answer": "B",
+      "explanation": "串流（Streaming）是一種在傳輸過程中讓使用者能夠持續接收並即時呈現多媒體資料的技術，無需等待整個檔案下載完畢即可開始播放。多媒體製作（Multimedia Authoring）是指製作多媒體內容的工具或流程，與傳輸方式無關。直播（Live Broadcasting）雖然也是即時傳輸，但強調的是現場直播的概念，而非資料持續傳輸的技術本質。多播（Multicasting）是一種同時向多個接收者傳送資料的網路技術，並不特指邊接收邊播放的能力。因此，最符合題意「資料在傳送中即可持續接收與呈現」的技術是串流（B）。"
     },
     "q-pp-im-it-107-1": {
       "questionId": "q-pp-im-it-107-1",
@@ -5050,6 +6490,181 @@
       "answer": "C",
       "explanation": "多層回饋佇列排班（Multilevel Feedback Queue）的核心特色是行程可以根據其行為與優先權在不同佇列之間移動，而非固定在同一個佇列中。若行程在時間量（time quantum）內未完成執行，通常會被降至較低優先權的佇列；反之，若行程主動放棄 CPU（如等待 I/O），可能被提升至較高優先權的佇列。選項 A 錯誤，因為行程不會固定在單一佇列；選項 B 錯誤，Round-Robin 只是各佇列內部可能採用的排班方式，並非整體演算法的保證；選項 D 錯誤，MLFQ 並非僅針對 I/O 密集型行程進行優先處理，而是透過行為動態調整；選項 E 錯誤，MLFQ 預設具有搶占（preemptive）能力，高優先權行程可搶占低優先權行程。"
     },
+    "q-pp-im-it-115-1": {
+      "questionId": "q-pp-im-it-115-1",
+      "answer": "C",
+      "explanation": "雜湊表（Hash Table）在平均情況下，插入、刪除與搜尋的時間複雜度均為 O(1)，這是透過雜湊函數將鍵值直接映射到對應的儲存位置來實現的。二元搜尋樹（BST）在平均情況下各操作為 O(log n)，最壞情況（退化為鏈結串列）甚至達 O(n)。平衡二元搜尋樹（如 AVL 樹、紅黑樹）雖保證 O(log n) 的效能，但仍無法達到 O(1)。已排序陣列的搜尋雖可達 O(log n)，但插入與刪除需移動元素，為 O(n)。堆積（Heap）的插入與刪除為 O(log n)，搜尋任意元素更需 O(n)，因此只有雜湊表符合題意。"
+    },
+    "q-pp-im-it-115-10": {
+      "questionId": "q-pp-im-it-115-10",
+      "answer": "B",
+      "explanation": "在管線處理器中，資料危障（Data Hazard）是指某條指令需要使用前一條指令尚未寫回的運算結果，導致管線必須暫停等待，這是造成管線停頓（Pipeline Stall）最直接的原因。指令預先取得（Instruction Prefetching）是一種優化技術，目的是減少等待，並不會導致停頓。分支預測命中（Branch Prediction Hit）表示預測成功，管線可以正常繼續執行而不需停頓。快取命中（Cache Hit）代表資料已在快取中，存取速度快，不會引發停頓。暫存器重新命名（Register Renaming）是用來消除 WAR 與 WAW 等假相依性的技術，反而有助於減少停頓，而非造成停頓。"
+    },
+    "q-pp-im-it-115-11": {
+      "questionId": "q-pp-im-it-115-11",
+      "answer": "B",
+      "explanation": "最短工作優先（SJF, Shortest Job First）排程演算法在所有非搶佔式排程演算法中，對於一組已知執行時間的行程，能達到最小的平均等待時間。其原理是每次選擇剩餘執行時間最短的行程先執行，使短工作不必在長工作後等待，從而降低整體等待時間。FCFS 依到達順序執行，若長工作先到會造成大量等待（護隊效應）。Round Robin 雖公平但因頻繁切換反而增加等待時間。Priority Scheduling 與 Multilevel Queue 的平均等待時間取決於優先權設定，不保證全局最小。SJF 已被數學證明是使平均等待時間最小化的最佳排程策略。"
+    },
+    "q-pp-im-it-115-12": {
+      "questionId": "q-pp-im-it-115-12",
+      "answer": "A",
+      "explanation": "Thrashing（抖動）是虛擬記憶體系統中的一種現象，發生於系統花費大量時間在處理缺頁中斷（page fault）及在主記憶體與磁碟之間交換分頁（paging），而非實際執行程序。當多個程序同時競爭有限的記憶體頁框，導致每個程序持有的頁框數低於其工作集（working set）大小時，缺頁率急遽上升，系統幾乎將所有 CPU 時間用於 I/O 操作。此時 CPU 使用率反而大幅下降，系統效能嚴重惡化。選項 B 至 E 分別描述的是磁碟損壞、無窮迴圈、死結與分支預測失敗，均與 Thrashing 的定義不符。"
+    },
+    "q-pp-im-it-115-13": {
+      "questionId": "q-pp-im-it-115-13",
+      "answer": "D",
+      "explanation": "TTL（Time to Live）欄位的主要功能是防止封包在路由迴圈中無限流轉。每當封包經過一個路由器時，TTL 值就會遞減 1，當 TTL 降至 0 時，該封包會被丟棄並回傳一個 ICMP 錯誤訊息給來源端。這個機制有效地避免了因路由表錯誤或迴圈造成的網路資源浪費。其他選項皆為錯誤：時間戳記功能由其他欄位處理，QoS 優先順序由 DSCP/ToS 欄位負責，而封包重組順序則由分段偏移（Fragment Offset）欄位管理。"
+    },
+    "q-pp-im-it-115-14": {
+      "questionId": "q-pp-im-it-115-14",
+      "answer": "C",
+      "explanation": "UDP（用戶資料報協定）是一種無連線（connectionless）的傳輸層協定，傳送資料前不需要建立連線，因此沒有 TCP 的三次握手（three-way handshake）流程。UDP 的標頭（header）只有 8 個位元組，遠小於 TCP 的 20 位元組，額外負擔（overhead）更小。相對地，TCP 才提供可靠傳輸保證、流量控制（flow control）、壅塞控制（congestion control）及封包排序等機制，這些都不是 UDP 的特性。因此，「無連線且標頭負擔較小」正是 UDP 相較於 TCP 的主要特徵，選項 C 正確。"
+    },
+    "q-pp-im-it-115-15": {
+      "questionId": "q-pp-im-it-115-15",
+      "answer": "B",
+      "explanation": "TCP 慢啟動（Slow Start）的主要目的是以指數方式探測網路的可用頻寬。在慢啟動階段，壅塞視窗（cwnd）每經過一個往返時間（RTT）就會加倍，從 1 MSS 開始快速增長，直到達到慢啟動閾值（ssthresh）為止。這種指數成長策略能讓 TCP 在不超載網路的前提下，迅速找到可用的網路容量。選項 A 錯誤，慢啟動無法完全避免重傳；選項 C 錯誤，慢啟動的視窗是動態增長而非固定；選項 D 和 E 分別描述的是 QoS 優先機制與流量控制（flow control），均非慢啟動的目的。"
+    },
+    "q-pp-im-it-115-16": {
+      "questionId": "q-pp-im-it-115-16",
+      "answer": "C",
+      "explanation": "B+ 樹是關聯式資料庫中最廣泛使用的索引結構，特別適合支援範圍查詢（range queries）。B+ 樹的葉節點以排序順序儲存資料，並以鏈結串列相連，因此可以高效地執行如「大於某值」或「介於兩值之間」的範圍掃描。雜湊索引（Hash index）只能支援等值查詢（equality lookup），無法處理範圍查詢。點陣圖索引（Bitmap index）適合低基數欄位，倒排索引（Inverted index）主要用於全文搜尋，而堆積檔（Heap file）只是無序的資料儲存方式，不具備索引功能。因此，支援範圍查詢最有效率的索引結構為 B+ 樹。"
+    },
+    "q-pp-im-it-115-17": {
+      "questionId": "q-pp-im-it-115-17",
+      "answer": "B",
+      "explanation": "兩階段鎖定（2PL）要求交易在成長階段取得所有需要的鎖，並在縮減階段釋放鎖，若多個交易互相等待對方持有的鎖，就可能形成循環等待，進而產生死結（deadlock）。時間戳記排序（Timestamp Ordering）在發現衝突時會直接中止違反順序的交易，而非讓交易等待，因此不會產生死結。樂觀並行控制（OCC）在執行過程中完全不加鎖，只在提交時驗證衝突，衝突時直接回滾，也不會有死結。多版本並行控制（MVCC）與快照隔離（Snapshot Isolation）透過保存資料的多個版本，讓讀寫操作不互相阻塞，同樣不會產生死結。因此，五個選項中只有 2PL 可能導致死結。"
+    },
+    "q-pp-im-it-115-18": {
+      "questionId": "q-pp-im-it-115-18",
+      "answer": "A",
+      "explanation": "雜湊索引（Hash Index）透過雜湊函數將鍵值映射到特定的桶（bucket）位置，此過程會破壞鍵值之間的原始排序關係。例如鍵值 10、11、12 經過雜湊後可能分散在完全不相鄰的桶中，無法反映其大小順序。範圍查詢（如 WHERE age BETWEEN 20 AND 30）需要存取所有符合範圍的連續鍵值，但雜湊索引無法判斷哪些桶包含該範圍內的值，必須掃描全部桶才能完成查詢，效率極差。相較之下，B-tree 等樹狀索引保留了鍵值的排序資訊，可以高效地進行範圍掃描，因此更適合範圍查詢場景。"
+    },
+    "q-pp-im-it-115-19": {
+      "questionId": "q-pp-im-it-115-19",
+      "answer": "D",
+      "explanation": "Write-Ahead Logging（WAL）的核心規則是：在資料頁面（data page）被寫入磁碟之前，對應的日誌紀錄必須先寫入穩定儲存體（stable storage）。這個規則確保系統崩潰後能夠正確地進行 redo 和 undo 操作，因為日誌中一定保有所有已執行操作的紀錄。選項 A 剛好相反，WAL 要求的是日誌先於資料頁面寫入，而非資料頁面先寫。選項 B、C、E 均為錯誤描述：唯讀交易雖不需 undo log，但 WAL 的核心規則仍以 D 為準；Checkpoint 並不能消除 redo 的需求；日誌也不僅用於 undo 操作，同樣用於 redo。"
+    },
+    "q-pp-im-it-115-2": {
+      "questionId": "q-pp-im-it-115-2",
+      "answer": "D",
+      "explanation": "QuickSort 的最壞情況發生在每次選取的 pivot 都是當前子陣列的最大值或最小值時，例如對已排序或逆排序的陣列進行排序且每次選第一個元素為 pivot。此時每次分割只能將問題縮小 1，需要進行 n-1 次遞迴，每次遞迴分別處理 n、n-1、n-2、…、1 個元素。總比較次數為 n(n-1)/2，時間複雜度為 O(n²)。相比之下，平均情況下 QuickSort 的時間複雜度為 O(n log n)，但最壞情況下無法達到此效率。"
+    },
+    "q-pp-im-it-115-20": {
+      "questionId": "q-pp-im-it-115-20",
+      "answer": "C",
+      "explanation": "資料庫系統設計中一個根本性的權衡是隔離等級與並行性之間的取捨。較高的隔離等級（如 Serializable）為了保證資料一致性，需要使用更嚴格的鎖定機制，這會導致交易之間的等待時間增加，進而降低系統的並行處理能力。相反地，較低的隔離等級（如 Read Committed 或 Read Uncommitted）允許更多交易同時執行，提升了吞吐量，但可能引入髒讀、不可重複讀或幻讀等問題。選項 A 錯誤，強一致性通常會因為協調開銷而降低效能；選項 D 錯誤，正規化雖減少資料冗餘，但多表 JOIN 操作反而可能降低查詢速度。"
+    },
+    "q-pp-im-it-115-21": {
+      "questionId": "q-pp-im-it-115-21",
+      "answer": "D",
+      "explanation": "CAP 定理（又稱 Brewer's Theorem）由 Eric Brewer 於 2000 年提出，指出分散式系統無法同時滿足三個保證：一致性（Consistency）、可用性（Availability）與分區容錯性（Partition Tolerance）。其中「一致性」代表所有節點在同一時間看到相同的資料；「可用性」代表每個請求都能收到回應（不論成功或失敗）；「分區容錯性」代表即使網路發生分區故障，系統仍能繼續運作。因此，分散式系統設計時只能從 CA、CP 或 AP 三種組合中擇一，無法三者兼得，正確答案為 (D) Consistency, Availability, Partition Tolerance。"
+    },
+    "q-pp-im-it-115-22": {
+      "questionId": "q-pp-im-it-115-22",
+      "answer": "A",
+      "explanation": "BCNF（Boyce-Codd 正規化）的定義是：對於關係中每一個非平凡的函數相依 X→Y，X 必須是一個超鍵（superkey）。選項 A 正確描述了此定義。選項 B 錯誤，因為多值相依（multivalued dependency）是 4NF 的議題，與 BCNF 無關。選項 C 錯誤，因為 BCNF 分解不保證保留所有函數相依，這反而是 3NF 的特性之一。選項 D 描述的是 1NF（所有屬性值必須是原子值），選項 E 描述的是 2NF（無部分相依），兩者均與 BCNF 定義無關。"
+    },
+    "q-pp-im-it-115-23": {
+      "questionId": "q-pp-im-it-115-23",
+      "answer": "A",
+      "explanation": "容器化技術（如 Docker）相較於虛擬機器的主要優勢在於容器共用宿主機的作業系統核心（kernel），不需要為每個容器安裝完整的客作業系統，因此啟動速度更快、資源消耗更低。虛擬機器則需要透過 Hypervisor 模擬完整硬體環境，並在其上運行獨立的 Guest OS，導致較高的記憶體與 CPU 負擔。選項 B 錯誤，因為 VM 透過 Hypervisor 提供更強的硬體層隔離，容器的隔離性相對較弱。選項 C 錯誤，容器仍依賴宿主機的 OS kernel，並非完全獨立於宿主作業系統。選項 D 與 E 均為錯誤描述，容器並不能消除資源競爭，也無法保證即時效能。"
+    },
+    "q-pp-im-it-115-24": {
+      "questionId": "q-pp-im-it-115-24",
+      "answer": "D",
+      "explanation": "邊緣運算（Edge Computing）的核心概念是將運算資源部署在靠近資料來源的位置，例如物聯網裝置或本地端伺服器，而非將所有資料傳送至遠端資料中心處理。這樣做的主要優點是大幅降低網路延遲（latency），使即時應用（如自動駕駛、工業控制）得以實現。選項A描述的是集中式雲端運算，與邊緣運算相反；選項B錯誤，邊緣運算是雲端運算的補充而非取代；選項C增加儲存容量和選項E加密資料均非邊緣運算的主要功能。因此正確答案為D。"
+    },
+    "q-pp-im-it-115-25": {
+      "questionId": "q-pp-im-it-115-25",
+      "answer": "B",
+      "explanation": "區塊鏈（Blockchain）是一種去中心化的分散式帳本技術，透過密碼學雜湊函數將每個區塊串連起來，使得記錄一旦寫入便無法篡改，具備不可變性（immutability）。每筆交易都會經過網路中多個節點的共識驗證，無需依賴任何中央機構即可確保資料的真實性與可驗證性。分散式資料庫（A）仍需中央協調機制；內容傳遞網路（C）僅用於加速內容分發；點對點檔案分享（D）不提供交易不可變性或驗證機制；聯邦學習（E）則是一種隱私保護的機器學習訓練方法，與帳本記錄無關。"
+    },
+    "q-pp-im-it-115-26": {
+      "questionId": "q-pp-im-it-115-26",
+      "answer": "A",
+      "explanation": "NoSQL 資料庫在大規模分散式應用中受到青睞，主要原因是它們提供彈性的資料結構（無需固定 Schema）以及水平擴展能力（可透過新增節點來提升效能）。相較於關聯式資料庫，NoSQL 不需要預先定義嚴格的表格結構，能輕鬆應對多樣化的資料格式。NoSQL 通常採用 BASE 模型（基本可用、軟狀態、最終一致性），而非嚴格的 ACID 特性，因此放寬了強一致性的要求以換取更高的可用性與擴展性。根據 CAP 定理，任何分散式系統都無法同時避免網路分割，NoSQL 只是在一致性與可用性之間做出取捨，並非消除網路分割。因此選項 A 正確描述了 NoSQL 資料庫的核心優勢。"
+    },
+    "q-pp-im-it-115-27": {
+      "questionId": "q-pp-im-it-115-27",
+      "answer": "B",
+      "explanation": "Self-Attention（自注意力）機制是 Transformer 架構的核心，其主要功能是讓模型在處理序列中的每個詞時，能夠動態地計算該詞與序列中所有其他詞的相關程度（重要性權重）。不論兩個詞在序列中距離多遠，Self-Attention 都能直接建立它們之間的依賴關係，克服了 RNN 等傳統架構在長距離依賴上的限制。具體做法是將每個詞的表示投影為 Query、Key、Value 三個向量，透過 Query 與 Key 的點積計算注意力分數，再對 Value 加權求和，得到考量上下文語境的新表示。選項 A（壓縮輸入）、C（隨機變化）、D（文字轉語音）、E（硬碟長期記憶）均與 Self-Attention 的實際功能無關。"
+    },
+    "q-pp-im-it-115-28": {
+      "questionId": "q-pp-im-it-115-28",
+      "answer": "A",
+      "explanation": "零信任（Zero Trust）安全架構的核心原則是「永不信任，始終驗證」（Never trust, always verify），無論使用者或裝置是否位於企業內部網路，都不會預設給予信任。這與傳統的邊界安全模型不同，傳統模型認為內部網路是安全的，但零信任假設威脅可能來自內外部任何地方。零信任要求每次存取請求都必須經過身份驗證、授權與持續的安全狀態確認，而非依賴單一的防火牆或網路位置來判斷信任程度。選項B、C、D、E分別描述的是傳統邊界安全、單一生物辨識、網路隔離及依賴防火牆等概念，均不符合零信任的核心精神。"
+    },
+    "q-pp-im-it-115-29": {
+      "questionId": "q-pp-im-it-115-29",
+      "answer": "C",
+      "explanation": "無伺服器運算（Serverless Computing）的核心特性是由雲端供應商動態管理底層機器資源的分配，開發者無需預先購買或配置固定容量的伺服器。計費方式基於應用程式實際執行時所消耗的資源（如執行時間、記憶體），而非預先購買的容量。選項A錯誤，實際上伺服器依然存在，只是被抽象化了；選項B錯誤，作業系統的管理由雲端供應商負責，不需開發者介入。選項D描述的是點對點網路架構，選項E描述的是使用商用PC取代高成本伺服器，均與無伺服器運算無關。"
+    },
+    "q-pp-im-it-115-3": {
+      "questionId": "q-pp-im-it-115-3",
+      "answer": "C",
+      "explanation": "在二元堆積（Binary Heap）中插入一個元素時，首先將新元素加到堆積的最末端（維持完全二元樹的結構），接著執行「上浮（sift-up / bubble-up）」操作，將該元素與父節點比較並在必要時交換，直到堆積性質恢復為止。由於含有 n 個元素的二元堆積高度為 ⌊log₂n⌋，上浮操作最多需要比較和交換 O(log n) 次。因此，插入操作的時間複雜度為 O(log n)，即選項 C。"
+    },
+    "q-pp-im-it-115-30": {
+      "questionId": "q-pp-im-it-115-30",
+      "answer": "D",
+      "explanation": "RAG（Retrieval-Augmented Generation，檢索增強生成）是一種在大型語言模型（LLM）生成回應之前，先從訓練資料以外的外部權威知識庫中檢索相關資訊的技術。選項 D 正確描述了 RAG 的核心概念：透過參考外部知識庫來優化 LLM 的輸出，使其能夠提供更即時、更準確的資訊。選項 A 是對隨機生成的誤解，選項 B 描述的是模型壓縮或剪枝（Pruning）技術，選項 C 描述的是 RLHF（人類反饋強化學習），選項 E 描述的是強化學習代理（RL Agent），皆與 RAG 的定義不符。"
+    },
+    "q-pp-im-it-115-31": {
+      "questionId": "q-pp-im-it-115-31",
+      "answer": "N/A",
+      "explanation": "此題為程式設計申論題，非選擇題，故無單一選項答案。題目要求實作以陣列為基礎的 Stack 類別中三個成員函式：(a) push() 需檢查堆疊是否已滿以及輸入整數是否重複，若是則回傳 -1，否則將資料存入 items[++top] 並回傳 0；(b) reverse() 需利用雙指標（一從 top 往下、一從 0 往上）逐一交換元素，直到兩指標交會為止，以反轉堆疊內容；(c) rank() 需使用氣泡排序法（Bubble Sort）對堆疊內的整數由大到小排列（index 0 為最大值，top 為最小值），使得 top 端為最小整數，符合升冪排序的定義。由於題目明確禁止使用資料交換的成員函式，所有元素互換必須自行以暫存變數完成。"
+    },
+    "q-pp-im-it-115-4": {
+      "questionId": "q-pp-im-it-115-4",
+      "answer": "B",
+      "explanation": "檢查括號是否平衡是堆疊（Stack）的經典應用。演算法從左至右掃描字串，遇到左括號就將其推入（push）堆疊，遇到右括號時則從堆疊彈出（pop）頂端元素，並確認兩者是否匹配。若掃描結束時堆疊為空，則括號平衡；若中途發現不匹配或堆疊提前為空，則括號不平衡。堆疊的後進先出（LIFO）特性正好符合括號巢狀配對的需求，是解此問題最直接且高效的資料結構。"
+    },
+    "q-pp-im-it-115-5": {
+      "questionId": "q-pp-im-it-115-5",
+      "answer": "D",
+      "explanation": "QuickSort（快速排序）是典型的不穩定排序演算法，因為在進行分區（partition）操作時，相等元素可能會因為跨越樞紐（pivot）的交換而改變相對順序。Insertion Sort（插入排序）是穩定的，因為每次插入時只將元素向右移動，相等元素的相對順序不會改變。Merge Sort（合併排序）是穩定的，因為在合併時若兩個元素相等，優先取左側子陣列的元素，保留原始順序。Bubble Sort（氣泡排序）也是穩定的，因為相鄰交換只在嚴格大於時才發生，相等元素不會互換。因此，四個選項中唯有 QuickSort 不保證穩定性，答案為 D。"
+    },
+    "q-pp-im-it-115-6": {
+      "questionId": "q-pp-im-it-115-6",
+      "answer": "C",
+      "explanation": "拓撲排序（Topological Sort）的先決條件是圖必須為有向無環圖（Directed Acyclic Graph，DAG）。有向性是必要的，因為拓撲排序需要依據邊的方向來決定節點的先後順序。無環性同樣不可或缺，若圖中存在環（cycle），則環中的節點會形成循環依賴，無法建立一個有效的線性排序。選項A（無向圖）和B（樹）不符合，因為拓撲排序需要有向圖；選項D（完全連通）和E（非負權重）則與拓撲排序的條件無關。"
+    },
+    "q-pp-im-it-115-7": {
+      "questionId": "q-pp-im-it-115-7",
+      "answer": "B",
+      "explanation": "快取記憶體（Cache Memory）是位於 CPU 與主記憶體之間的高速小容量記憶體，其主要目的是儲存近期常用的資料與指令，以減少 CPU 存取主記憶體的次數。由於快取的存取速度遠快於主記憶體，當 CPU 所需資料在快取中命中（cache hit）時，可大幅縮短等待時間，從而降低平均記憶體存取時間（average memory access time）。選項 A（永久儲存程式指令）是 ROM 或儲存裝置的功能；選項 C（管理虛擬記憶體）是作業系統與 MMU 的職責；選項 D（排程 CPU 行程）屬於作業系統排程器的工作；選項 E（虛擬位址轉實體位址）是 MMU（記憶體管理單元）的功能。因此，最能描述快取記憶體角色的答案為 B。"
+    },
+    "q-pp-im-it-115-8": {
+      "questionId": "q-pp-im-it-115-8",
+      "answer": "D",
+      "explanation": "優先權排程（Priority Scheduling）若未採用老化（aging）機制，低優先權的行程可能因高優先權行程持續抵達而永遠無法獲得 CPU 執行時間，造成飢餓（starvation）問題。Round Robin 與 FCFS 依序輪流或到達順序執行，不會發生飢餓。多層回饋佇列搭配老化機制（Multilevel Feedback Queue with aging）正是為了解決飢餓問題而設計，等待過久的行程會逐漸提升優先權。因此，在沒有老化機制的優先權排程（選項 D）中，飢餓問題最為明確且直接。"
+    },
+    "q-pp-im-it-115-9": {
+      "questionId": "q-pp-im-it-115-9",
+      "answer": "E",
+      "explanation": "Context switch（情境切換）的核心定義是：作業系統將目前執行中行程的執行狀態（包含程式計數器、暫存器、堆疊指標等）儲存起來，再還原另一個行程的執行狀態，使其得以繼續執行。選項 E「Saving and restoring process execution state」正確描述了這個核心機制。選項 D 描述的是特權層級切換（kernel mode 與 user mode 互換），雖然可能伴隨 context switch 發生，但並非其定義。選項 B 的頁表切換是 context switch 的附帶動作，而非本質。因此正確答案為 E。"
+    },
+    "q-pp-im-mis-106-1": {
+      "questionId": "q-pp-im-mis-106-1",
+      "answer": "A",
+      "explanation": "此題為問答題，無選擇題選項。(1) 差異化策略的IS/IT應用範例：①企業可利用CRM系統（顧客關係管理系統）蒐集並分析顧客行為與偏好，提供個人化服務與推薦，使顧客感受到與眾不同的體驗，如Amazon的推薦引擎；②企業可透過ERP整合供應鏈與生產資訊，搭配IoT感測器即時監控產品品質，確保高品質產品一致性，如Apple透過精密的供應鏈管理系統保持產品品質差異化。(2) 針對採用差異化策略的企業，IT策略與管理建議：企業應將IT投資集中在能強化獨特價值主張的系統上，例如客製化平台、數據分析與AI能力；應建立靈活的IT架構（如微服務、雲端平台），以快速回應市場變化並持續創新；IT治理上需強調IT與業務策略的高度對齊（IT-Business Alignment），確保資訊系統真正支持差異化優勢而非僅降低成本；同時須保護核心IT資產與數據資產，避免競爭者模仿，並持續投入研發以維持技術領先。"
+    },
+    "q-pp-im-mis-106-2": {
+      "questionId": "q-pp-im-mis-106-2",
+      "answer": "A",
+      "explanation": "本題為論述題，無標準選項，以下提供參考答案。共享經濟的主要挑戰包括：(1) 信任與安全問題：陌生人之間交易缺乏信任基礎，存在詐欺、人身安全或財產損失風險；(2) 監管與法律問題：現行法規多針對傳統產業設計，共享經濟的服務提供者（如 Uber 司機、Airbnb 房東）常處於法律灰色地帶；(3) 品質不一致問題：服務品質因個人提供者而異，缺乏標準化機制難以保障消費者體驗；(4) 保險與責任歸屬問題：發生意外時，責任歸屬於平台、提供者或使用者不明確。針對信任問題，可開發一套基於區塊鏈的去中心化評價與身分驗證系統：將每位用戶的交易紀錄、評價與身分資訊儲存於不可竄改的區塊鏈上，並結合政府數位身分（eID）驗證真實身份，使雙方在交易前即可查閱對方的完整信用歷史，有效降低資訊不對稱、提升交易安全性與信任度。"
+    },
+    "q-pp-im-mis-106-3": {
+      "questionId": "q-pp-im-mis-106-3",
+      "answer": "A",
+      "explanation": "本題為問答題，無選項，以下為各小題解答摘要。(1) 開放原始碼軟體（OSS）是指原始碼公開、任何人均可自由使用、修改與散布的軟體，通常由社群共同維護與開發。(2) GPL授權的核心條款包含：必須公開修改後的原始碼（Copyleft原則）、衍生作品必須同樣採用GPL授權、散布時必須附上原始碼或提供取得方式，確保軟體的自由性得以延續。(3) 當開發者希望允許商業公司將程式碼納入閉源專有軟體中使用，或希望吸引更多企業採用而不強制要求公開衍生作品原始碼時，應選擇Apache License而非GPL，因為Apache License屬於寬鬆型授權（permissive license），不具有Copyleft的「傳染性」要求。(4) 企業參與OSS開發的策略優勢包括：可影響軟體發展方向以符合自身需求、透過社群貢獻建立品牌聲譽與技術影響力、降低對單一供應商的依賴（vendor lock-in）、以及藉由社群力量加速創新並分攤開發與維護成本。"
+    },
+    "q-pp-im-mis-106-4": {
+      "questionId": "q-pp-im-mis-106-4",
+      "answer": "A",
+      "explanation": "此題為開放式問答題，無選擇題選項。(1) ACID特性方面：關聯式資料庫嚴格遵守ACID，確保每筆交易的原子性、一致性、隔離性與持久性；NoSQL資料庫通常採用BASE模型（Basically Available, Soft state, Eventually consistent），為了高可用性與水平擴展而放寬一致性要求。Schema方面：關聯式資料庫採用固定schema，資料結構須預先定義；NoSQL則為schema-less或schema-flexible，允許儲存非結構化或半結構化資料。可擴展性方面：關聯式資料庫主要採垂直擴展（scale-up），NoSQL設計上支援水平擴展（scale-out），更容易應對大規模分散式環境。(2) 應選關聯式資料庫的情境：銀行帳戶轉帳系統。此類應用對資料一致性與交易完整性要求極高，任何一筆轉帳都必須保證原子性，不容許部分失敗，ACID特性是必要條件。(3) 應選NoSQL資料庫的情境：社群媒體的動態消息（news feed）系統。此類應用需儲存大量非結構化內容（文字、圖片、標籤等）且讀寫量極大，採用NoSQL（如文件型資料庫MongoDB）可靈活應對多樣化資料結構，並透過水平擴展輕鬆支撐億級用戶的高併發需求。"
+    },
     "q-pp-im-mis-107-1": {
       "questionId": "q-pp-im-mis-107-1",
       "answer": "A",
@@ -5214,6 +6829,296 @@
       "questionId": "q-pp-im-mis-114-5",
       "answer": "A",
       "explanation": "此題為申論證明題，非選擇題，無標準選項。第(1)部分：由於 g(i) = 1 + (i mod 5)，在 i = 1,2,3,4,5 一個週期內，g(i) 的值依序為 2,3,4,5,1，總和為 15，平均值為 3。因 T 為 5 的倍數，Σg(i) = (T/5)×15 = 3T，故 E[m] = (1/T)×μ×3T = 3μ，即 m 為 3μ 的無偏估計量而非 μ 的無偏估計量；題目要求「證明 m 是 μ 的無偏估計量」在此定義下並不成立，可能題目原意為 g(i) = (i mod 5)/某個正規化常數或有其他定義。第(2)部分：若按題目定義計算，Var(m) = (σ²/T²)×Σg(i)² = (σ²/T²)×(T/5)×(1²+2²+3²+4²+5²) = (σ²/T²)×(T/5)×55 = 11σ²/T。"
+    },
+    "q-pp-im-mis-115-1": {
+      "questionId": "q-pp-im-mis-115-1",
+      "answer": "A",
+      "explanation": "本題為申論題，無標準選項，以下提供解析內容。根據RAND Corporation與IBM等機構研究，AI專案失敗率高達70-80%，三大關鍵原因如下：一、FOMO驅動的盲目跟風（缺乏明確目標）：組織因害怕落後競爭對手而倉促導入AI，未釐清具體業務問題與可衡量的成功指標，導致專案缺乏方向；二、資料品質與治理不足：AI模型的效能高度依賴資料，但許多組織在未建立完善資料基礎設施（資料清理、標註、治理機制）的情況下就貿然啟動專案，造成「垃圾進、垃圾出」的困境；三、人才缺口與變革管理失敗：組織缺乏具備AI專業知識的人才，同時忽略員工對技術變革的抗拒，未能有效推動組織文化轉型。改善策略（針對第一項）：建議採用「AI機會評估框架」，在啟動任何AI專案前，要求提出明確的業務痛點、量化KPI、ROI估算及資料可用性評估報告，以確保投資決策基於實際需求而非市場FOMO壓力。"
+    },
+    "q-pp-im-mis-115-2": {
+      "questionId": "q-pp-im-mis-115-2",
+      "answer": "A",
+      "explanation": "此題為申論題，包含三個子題（A、B、C），各佔10分，無單一選擇題答案。子題A分析蘋果採用外部AI模型（Google Gemini）如何維持競爭優勢：蘋果的核心競爭力在於生態系鎖定與卓越的使用者體驗，透過整合Gemini可快速補強AI能力缺口，同時將底層技術商品化，讓自身專注於介面設計與隱私保護等差異化層面。子題B探討共競（co-opetition）關係：Google同時是iOS生態夥伴與Android平台競爭者，蘋果面臨技術依賴風險（如API政策變動、資料外洩），但也可縮短開發時程並降低研發成本，需以合約機制管控風險。子題C分析隱私競爭優勢的維持：蘋果應採用「裝置端推論優先、最小化資料傳輸」的架構設計，並透過透明的隱私標籤與使用者溝通，確保Gemini整合不損及「Privacy by Design」的品牌定位。"
+    },
+    "q-pp-im-mis-115-3": {
+      "questionId": "q-pp-im-mis-115-3",
+      "answer": "A",
+      "explanation": "本題為計算題，分三小部分。(A) 正規化常數 c：列舉所有 6 個支撐點 (x₁,x₂) 的函數值之和，計算得 Σf/c = 7/3，因此 c = 3/7。(B) 令 Y₁ = X₁+X₂、Y₂ = X₁-X₂，透過一對一變換將各支撐點映射為：(-1,-1)→P=3/14、(0,-2)→P=3/14、(1,-1)→P=3/14、(1,1)→P=3/14、(2,0)→P=1/7，另 (0,0) 的機率為 0，聯合 PMF 即由這些點組成。(C) Y₁ 的邊際 PMF 由加總對應 Y₂ 值得出：P(Y₁=-1)=3/14、P(Y₁=0)=3/14、P(Y₁=1)=3/7、P(Y₁=2)=1/7，總和為 1，驗證正確。"
+    },
+    "q-pp-im-mis-115-4": {
+      "questionId": "q-pp-im-mis-115-4",
+      "answer": "A",
+      "explanation": "此題為開放式計算題，包含三個子題。(A) 三個估計量皆為無偏估計量：E[m₁]=μ、E[m₂]=(μ+αμ)/(1+α)=μ、E[m₃]=(μ+2μ+βμ)/(3+β)=μ，對所有 α>0、β>0 均成立。(B) Var(m₂)=σ²(1+α²)/(1+α)²，對 α 微分並令其為零，得 2α-2=0，因此 α=1 時變異數最小，此時 m₂=(Y₁+Y₂)/2 為樣本平均，符合直覺。(C) Var(m₃)=σ²(5+β²)/(3+β)²，對 β 微分並令其為零，得 6β-10=0，因此 β=5/3 時變異數最小，此結果使 m₃ 的權重與最小變異數無偏估計（即樣本平均）最接近。"
+    },
+    "q-pp-im-mis-115-5": {
+      "questionId": "q-pp-im-mis-115-5",
+      "answer": "B",
+      "explanation": "本題為卡方獨立性檢定，自由度 df = (2-1)(3-1) = 2，顯著水準 α = 0.05，臨界值為 χ²₀.₀₅,₂ = 5.99。計算各格期望次數：E(購買,新手)=40、E(購買,中級)=56、E(購買,資深)=64、E(未購買,新手)=10、E(未購買,中級)=14、E(未購買,資深)=16。卡方統計量 χ² = (45-40)²/40 + (50-56)²/56 + (65-64)²/64 + (5-10)²/10 + (20-14)²/14 + (15-16)²/16 ≈ 0.625 + 0.643 + 0.016 + 2.500 + 2.571 + 0.063 ≈ 6.42。由於 6.42 > 5.99，拒絕虛無假設，結論為在 5% 顯著水準下，付費寶物購買行為與玩家累積有效遊玩時數（經驗等級）並非相互獨立，兩者之間存在顯著關聯。"
+    },
+    "q-pp-im-stat-106-1": {
+      "questionId": "q-pp-im-stat-106-1",
+      "answer": "A",
+      "explanation": "此題為申論題，無選項，以A代表標準答案。差異化策略（Differentiation Strategy）是指企業提供獨特的產品或服務，使顧客願意支付溢價。資訊系統可支援差異化策略的兩個例子：(1) Amazon利用大數據分析與推薦系統，根據顧客購買與瀏覽歷史提供個人化商品推薦，提升購物體驗並與競爭者區隔；(2) FedEx透過即時包裹追蹤系統（Package Tracking System），讓客戶隨時掌握貨物狀態，提供競爭者難以複製的透明化服務。對於採用差異化策略的企業，IT策略建議如下：應投資於客戶關係管理（CRM）系統與資料分析平台，持續蒐集並分析顧客需求，以維持服務差異化；同時應保護核心IT能力不被模仿，並持續創新，避免差異化優勢遭到侵蝕。"
+    },
+    "q-pp-im-stat-106-2": {
+      "questionId": "q-pp-im-stat-106-2",
+      "answer": "A",
+      "explanation": "此題為申論題，無標準選項，以A代表完整作答。共享經濟的主要挑戰包括：（1）信任與安全問題——陌生人之間的交易缺乏信任基礎，存在詐欺、人身安全等風險；（2）法規與監管問題——現有法律未能適應共享經濟模式，如Uber面臨各地計程車法規限制，AirBnB面臨短租規範問題；（3）品質不一致性——服務提供者為個人，品質難以標準化；（4）保險與責任歸屬不明——發生事故時責任歸屬模糊。針對信任與安全挑戰，可設計一套雙向評價與身份驗證資訊系統：整合政府身份資料庫進行實名驗證、引入區塊鏈技術確保評價紀錄不可竄改、並以機器學習分析用戶行為模式以即時偵測異常交易，從而有效提升平台信任度與使用安全性。"
+    },
+    "q-pp-im-stat-106-3": {
+      "questionId": "q-pp-im-stat-106-3",
+      "answer": "A",
+      "explanation": "本題為申論題，無選項設計。(1) 開放原始碼軟體（OSS）是指原始碼可供任何人自由取得、使用、修改與散佈的軟體，通常透過特定授權條款（License）來規範使用方式。(2) GPL（General Public License）的核心條款包括：使用者可自由執行、研究、修改與散佈軟體；任何基於 GPL 程式碼修改或衍生的作品，發布時也必須以 GPL 授權（Copyleft 原則）；不得對 GPL 軟體施加額外限制。(3) 當專案希望允許商業公司將開放原始碼整合至私有（非開源）產品中而不必公開其商業程式碼時，應選擇 Apache License，因為 Apache License 為寬鬆授權（Permissive License），不具 Copyleft 強制要求，能吸引更廣泛的企業採用與貢獻。(4) 企業參與 OSS 開發的策略優勢包括：可影響技術標準與生態系走向、降低自身研發成本、吸引優秀開發人才、提升品牌聲譽與技術公信力，並透過社群協作加速創新與發現漏洞。"
+    },
+    "q-pp-im-stat-106-4": {
+      "questionId": "q-pp-im-stat-106-4",
+      "answer": "N/A",
+      "explanation": "此題為問答題，非選擇題，無單一正確選項字母。(1) 關聯式資料庫嚴格遵守 ACID 四項特性，確保交易的原子性、一致性、隔離性與持久性；NoSQL 資料庫通常僅保證最終一致性（eventual consistency），採用 BASE 模型（Basically Available, Soft state, Eventually consistent）。在 schema 方面，關聯式資料庫採用固定的預先定義結構，NoSQL 則多為 schema-free 或 schema-flexible，允許動態欄位。在擴展性方面，關聯式資料庫主要採垂直擴展（scale-up），NoSQL 設計上支援水平擴展（scale-out），更適合分散式環境。(2) 應選擇關聯式資料庫的情境：金融交易系統（如銀行轉帳），因為交易必須嚴格遵守 ACID，確保資金不會因並發操作而出錯，資料一致性要求極高。(3) 應選擇 NoSQL 資料庫的情境：社群媒體平台的用戶動態牆（如 Twitter/Facebook），因為需要處理海量非結構化內容（貼文、圖片、標籤等）且讀寫量龐大，水平擴展能力與彈性 schema 使 NoSQL（如 Cassandra 或 MongoDB）更為合適。"
+    },
+    "q-pp-im-stat-107-1": {
+      "questionId": "q-pp-im-stat-107-1",
+      "answer": "A",
+      "explanation": "此題為申論題，無選項，以A代表標準答案方向。編碼化策略（Codification Strategy）適合提供標準化、可重複使用知識的企業，例如大型會計事務所、ERP導入顧問公司或客服中心，這類企業的業務問題具有高度相似性，將專家知識文件化後可供多人反覆存取，能大幅降低服務成本並提升效率。連結性策略（Connectivity Strategy）則適合處理高度客製化、複雜且難以編碼之隱性知識的企業，例如策略管理顧問公司（如麥肯錫）或研發創新型企業，這類企業每個專案情境差異甚大，需要透過專家網絡目錄快速找到具備特定知識的人才直接溝通協作。兩種策略各有其適用情境，企業應依據自身知識特性（顯性vs.隱性）、業務同質程度及成本考量來選擇主要策略，並以80/20原則搭配次要策略加以補充。"
+    },
+    "q-pp-im-stat-107-2": {
+      "questionId": "q-pp-im-stat-107-2",
+      "answer": "A",
+      "explanation": "此題為開放式申論題，並無選項A/B/C/D/E，故以A作為預設標記。針對高度豐裕（munificent）環境中的企業，IT策略建議應著重於善用充足資源擴大規模，例如導入ERP或SCM系統以整合供應鏈、提升效率並抓住成長機會，同時投資於商業智慧（BI）與資料分析平台以識別最佳市場機會。針對高度動態（dynamic）環境中的企業，IT策略建議應著重於靈活性與敏捷性，例如採用雲端運算與模組化架構以快速因應市場變化，並導入即時數據監控與預測分析系統，以便及早偵測客戶偏好的轉變或需求波動，從而做出迅速的策略調整。"
+    },
+    "q-pp-im-stat-107-3": {
+      "questionId": "q-pp-im-stat-107-3",
+      "answer": "A",
+      "explanation": "此題為問答題，無選項，以下為完整解答。機構取得軟體系統的來源主要有四種：(1) 自行開發（In-house Development）：由內部 IT 人員從頭設計與建置，需具備專業開發人員與充足時間，適合需求高度客製化、現有商業套件無法滿足的情況；(2) 委外開發（Outsourcing/Custom Development）：委託外部廠商依規格開發，內部人員需負責需求訪談、專案管理與驗收，適合內部技術能量不足但預算充裕的情況；(3) 採購商業套裝軟體（COTS, Commercial Off-the-Shelf）：直接購買市售現成軟體，內部僅需系統管理與設定人員，適合需求與業界標準流程相近、希望快速導入且降低開發風險的情況；(4) 租用雲端/SaaS 服務（Software as a Service）：透過訂閱方式使用雲端平台提供的軟體，幾乎不需內部技術人員維護，適合預算有限、希望轉移維運責任或需要高度彈性擴充的組織。"
+    },
+    "q-pp-im-stat-107-4": {
+      "questionId": "q-pp-im-stat-107-4",
+      "answer": "N/A",
+      "explanation": "此題為開放式 SQL 撰寫題，無選擇題選項。(1) 列出擁有書名為 'Twilight' 之書籍所在分館的書名、分館名稱與地址：SELECT B.Title, LB.Name, LB.Address FROM Book B JOIN Book_Copy BC ON B.BookId = BC.BookId JOIN Library_Branch LB ON BC.BranchId = LB.BranchId WHERE B.Title = 'Twilight'。(2) 列出擁有 'Fire and Fury' 書籍各分館的 BranchId、分館名稱及副本數量，並依副本數由多到少排序：SELECT LB.BranchId, LB.Name, COUNT(*) AS CopyCount FROM Book B JOIN Book_Copy BC ON B.BookId = BC.BookId JOIN Library_Branch LB ON BC.BranchId = LB.BranchId WHERE B.Title = 'Fire and Fury' GROUP BY LB.BranchId, LB.Name ORDER BY CopyCount DESC。(3) 列出擁有至少兩本 'Only the Rain' 書籍副本的分館 BranchId 與分館名稱，並依副本數由多到少排序：SELECT LB.BranchId, LB.Name FROM Book B JOIN Book_Copy BC ON B.BookId = BC.BookId JOIN Library_Branch LB ON BC.BranchId = LB.BranchId WHERE B.Title = 'Only the Rain' GROUP BY LB.BranchId, LB.Name HAVING COUNT(*) >= 2 ORDER BY COUNT(*) DESC。"
+    },
+    "q-pp-im-stat-108-1": {
+      "questionId": "q-pp-im-stat-108-1",
+      "answer": "A",
+      "explanation": "此題為問答題，無選項可選，以下為解題說明。支持IT縮小企業規模的理論主要包括交易成本理論（Transaction Cost Theory）：IT降低市場交易成本（搜尋、議價、監督成本），使企業更傾向外包與市場交易，減少垂直整合，進而縮小規模。代理理論（Agency Theory）亦支持此觀點：IT改善資訊流通與監督能力，降低代理成本，使企業能以更少的內部層級管理更廣的業務，組織趨於扁平化與精簡。反之，支持IT擴大規模的觀點認為：IT強化協調能力（Coordination Theory），使大型企業得以高效管理複雜業務，進而鼓勵擴張與多角化經營。在IT縮小企業規模的條件下，當外部市場資訊透明、交易成本因IT而大幅下降時，企業傾向外包非核心業務；而在IT擴大規模的條件下，當企業擁有獨特的互補性資產或規模經濟效益，IT強化內部協調優勢大於外部市場交易優勢時，企業規模則會擴大。"
+    },
+    "q-pp-im-stat-108-2": {
+      "questionId": "q-pp-im-stat-108-2",
+      "answer": "A",
+      "explanation": "本題為開放式申論題，無選項設計。(a) 除「應收集哪些資料」外，另四項重要的資料管理決策包括：①資料品質管理（如何確保資料的準確性、一致性與完整性）；②資料隱私與法規遵循（如何合規處理個人資料，符合 GDPR 等法規）；③資料儲存架構選擇（集中式資料倉儲 vs. 分散式資料湖，兼顧效率與成本）；④資料存取控制（誰有權使用哪些資料，以防止濫用或洩漏）。(b) 關於「應收集哪些資料」的決策，集中式決策結構較為適當：高層管理者能從全公司角度統籌資料策略、確保跨部門一致性，並有效管理隱私與法律風險；若下放至各業務單位，可能導致資料格式不一、重複收集或違反法規的風險，因此由高層統一制定資料收集政策更能保障整體利益。"
+    },
+    "q-pp-im-stat-108-3": {
+      "questionId": "q-pp-im-stat-108-3",
+      "answer": "A",
+      "explanation": "此題為問答題，無選項設計，以下整理各小題的核心答案。(a) 預測準確率定義為正確預測數量除以總預測數量；除準確率外，尚可使用精確率（Precision）、召回率（Recall）、F1-score、ROC曲線與AUC值等指標，特別是在資料不平衡時這些指標更具參考價值。(b) 92%的準確率是否良好，需視基準線（Baseline）而定，例如若90%的顧客本就不會購買，則一個永遠預測「不購買」的模型也有90%準確率，因此應比較隨機猜測或多數類別基準的表現來判斷其意義。(c) 不應盲目認為CNN是最優方法，沒有免費午餐定理（No Free Lunch Theorem）指出沒有任何演算法在所有問題上都是最佳的，應透過實驗比較多種模型（如邏輯回歸、隨機森林、XGBoost等）並以交叉驗證結果為依據。(d) 若顧客對效能不滿意，可從多個方向改善：收集更多或更高品質的訓練資料、進行特徵工程以增強特徵表達力、嘗試不同或更複雜的模型、調整超參數、使用集成學習方法，或針對資料不平衡問題採用過採樣/欠採樣技術。"
+    },
+    "q-pp-im-stat-108-4": {
+      "questionId": "q-pp-im-stat-108-4",
+      "answer": "A",
+      "explanation": "此題為申論題，討論 AI 評分系統的公平性定義。定義(1)校準公平性（Calibration）：若演算法對某群體預測違約機率為 z，則該群體中實際違約比例應接近 z，此定義確保不同職業群體的風險分數具有相同的預測意義，對各群體一視同仁，符合公平原則。定義(2)要求各職業群體中，實際違約者（正例）所獲得的平均分數相同，確保相同風險特質的人不會因職業不同而獲得差異化的高風險評分，避免系統性高估某群體的風險。定義(3)要求各職業群體中，實際不違約者（負例）的平均分數相同，確保無辜的低風險者不因職業而被錯誤地給予較高分數，保護負例群體免受歧視。三種定義中，定義(1)最為合理，因為它從預測準確性出發，確保分數的實際含義在各群體中一致，而定義(2)(3)可能在基礎違約率不同的群體間無法同時滿足（Chouldechova不可能定理）。台泰銀行應定期稽核各群體的校準情形、收集多元訓練資料，並在模型設計階段加入公平性約束，同時建立人工複審機制以處理邊界案例。"
+    },
+    "q-pp-im-stat-109-1": {
+      "questionId": "q-pp-im-stat-109-1",
+      "answer": "A",
+      "explanation": "此題為問答題，並非選擇題，沒有 A/B/C/D/E 的選項，以下為題目解析。(a) 交易處理系統（TPS）可透過自動化日常作業流程來降低人力需求，進而減少勞動投入 L 的浪費、提升其效率，同時也能減少資本設備 C 的閒置；更重要的是，TPS 能提升整體要素生產力 A（total factor productivity），因為標準化流程可減少錯誤、加快產出速度，使相同投入量下的 Q 提高。(b) 大數據分析技術可進一步提升 A 值，透過資料驅動的決策優化生產排程、供應鏈與資源配置；此外，大數據也可協助企業調整 α 與 β（勞動與資本的產出彈性），例如找出最佳的人機配比，使邊際產出效率最大化，從而在相同或更少的 L 與 C 投入下，進一步提升總產量 Q。"
+    },
+    "q-pp-im-stat-109-2": {
+      "questionId": "q-pp-im-stat-109-2",
+      "answer": "A",
+      "explanation": "此題為問答題，並非選擇題，沒有 A/B/C/D/E 的選項，以下為題目解析。(a) 三種組織性互補資產（organizational assets）包括：一、精實流程（lean processes），即去除冗餘步驟、採用最有效率的業務流程；二、去中心化決策文化（decentralized decision-making culture），賦予基層員工足夠權力以快速回應市場；三、強大的協作與團隊合作文化（collaborative teamwork culture），使跨部門知識能有效流通，提升整體執行效率。(b) 當企業追求創新策略時，社會性資產（social assets）與組織性資產（organizational assets）最為重要。創新需要企業與外部合作夥伴、研究機構及顧客建立緊密的信任網絡（社會資產），以獲取新知識與創意；同時，彈性的組織文化與扁平化結構（組織資產）能讓新想法快速試驗與推廣，管理性資產相對次要，因為創新更需要文化支持而非管理控制。(c) 當 IT 投資涉及企業不熟悉的新興技術時，管理性資產（managerial assets）最為重要。管理性資產包含高階主管的 IT 知識與對數位轉型的支持，以及能有效管理技術導入風險的 IT 治理能力；面對陌生技術，需要有能力的管理層來制定學習策略、評估技術風險並協調跨部門資源，確保新技術能被正確理解並融入現有業務流程，從而提升 IT 投資報酬。"
+    },
+    "q-pp-im-stat-109-3": {
+      "questionId": "q-pp-im-stat-109-3",
+      "answer": "A",
+      "explanation": "此題為開放式問答題，無標準選項，以選項（一）作為最佳策略建議。在三邊平台中，消費者是需求端的關鍵驅動力，給予消費者免運費或低運費能直接刺激訂單量成長，形成強烈的網路外部性。當平台擁有大量活躍消費者後，餐廳為了接觸這些消費者，議價能力相對較弱，平台即可對餐廳抽取較高比例的抽成。此策略符合「交叉補貼」的核心邏輯：補貼價格彈性高（對費用敏感）的一方，以吸引另一方付出更高代價。相較之下，選項（二）雖可吸引餐廳，但餐廳多寡並非消費者選擇平台的主要因素，且向消費者收高費用會直接抑制訂單量，反而降低整體平台價值。"
+    },
+    "q-pp-im-stat-109-4": {
+      "questionId": "q-pp-im-stat-109-4",
+      "answer": "A",
+      "explanation": "本題為開放式設計題，要求設計一套估計YouBike站點建造後需求量的方法。可採用「試驗站點＋類比推估」的混合方法：首先在不同類型區域（如商業區、住宅區、學區）各設置少數試驗站點，蒐集實際使用數據，同時結合該地點的人口密度、大眾運輸距離、周邊POI（興趣點）等特徵變數，建立迴歸或機器學習預測模型。對於尚未建站的地點，只需輸入其地理與人口特徵，即可預測潛在需求量，成本合理且技術可行。此外，可輔以問卷調查或APP使用意願調查，提升民眾參與感與可接受性，並定期以實際數據回饋模型進行修正，使估計更加準確。"
+    },
+    "q-pp-im-stat-110-1": {
+      "questionId": "q-pp-im-stat-110-1",
+      "answer": "A",
+      "explanation": "此題為申論題，並無選項，因此以 A 作為佔位符。本題探討共享經濟平台從非貨幣制轉型為貨幣制時的業務流程與 IT 策略調整。在業務流程方面，平台需新增或強化收費與支付流程（如線上金流整合）、定價機制（動態或固定定價）、財務管理與結算流程，以及爭議處理與退款機制。在 IT 策略方面，建議平台引入安全的支付閘道系統、建立用戶身份驗證與信用評估機制、強化資料安全與隱私保護措施，並考慮導入數據分析工具以支援定價決策與使用者行為分析。此外，平台應評估是否需要雲端擴充能力，以因應貨幣化後可能帶來的交易量增長。"
+    },
+    "q-pp-im-stat-110-2": {
+      "questionId": "q-pp-im-stat-110-2",
+      "answer": "A",
+      "explanation": "此題為問答題，無選項，以下為完整解析。(a) 在數位市場中，資訊不對稱（information asymmetry）會被降低（reduced）。原因在於消費者可透過網路輕易比較多家供應商的價格、產品規格與評價，資訊搜尋成本大幅下降，買方掌握更多資訊。商業意涵：供應商難以維持價格歧視，競爭更激烈，利潤空間受壓縮；同時消費者議價能力提升，促使企業轉向差異化、品牌信任或個人化服務來維繫競爭優勢。(b) 在數位市場中，轉換成本會「增加」的產品/服務特性包括：高度個人化或客製化（如訂閱型SaaS平台，使用者資料、設定與學習曲線深度綁定）、具有強烈網路外部性（如社群平台，使用者人際網絡難以搬遷）、以及資料累積型服務（如雲端儲存，資料遷移困難）。轉換成本會「降低」的產品/服務特性包括：標準化、易比較的商品（如書籍、電子產品，數位市場提供透明定價與一鍵比價）、以及資訊型或內容型商品（消費者可同時使用多個平台，忠誠度低）。"
+    },
+    "q-pp-im-stat-110-3": {
+      "questionId": "q-pp-im-stat-110-3",
+      "answer": "A",
+      "explanation": "此題為申論題，無選項設計，以下提供各小題重點解答。(a) Scrum Master 負責移除團隊障礙、確保 Scrum 流程被正確遵循；Product Owner 負責定義產品需求、維護 Product Backlog 並排列優先順序；Team 負責實際開發工作，是跨職能的自組織團隊。(b) 每日站立會議（Daily Scrum）通常在固定時間、固定地點進行，每人回答三個問題：昨天完成了什麼、今天計劃做什麼、有無任何阻礙，會議時間控制在 15 分鐘以內。(c) Sprint Backlog 是從 Product Backlog 中挑選出當前 Sprint 要完成的任務清單，在 Sprint Planning 會議中由 Team 自行選取並分解為具體工作項目，在 Sprint 執行期間由 Team 自主更新與管理。(d) Burn Down Chart 是顯示 Sprint 剩餘工作量隨時間遞減的折線圖，縱軸為剩餘工作量（如故事點或小時），橫軸為天數，每日更新以追蹤實際進度與理想進度之差距，典型圖形呈現一條理想下降直線與一條實際進度曲線。"
+    },
+    "q-pp-im-stat-110-4": {
+      "questionId": "q-pp-im-stat-110-4",
+      "answer": "E",
+      "explanation": "本題為開放式申論題，涵蓋(a)至(e)五個子題，無傳統單選選項。(a)除電子收費資料外，可收集天氣預報、節日行事曆、社群媒體行程貼文、導航APP即時路況、加油站與休息站使用量等資料，以預測未來一至七天的塞車狀況。(b)可透過部署IoT感測器（如車流量偵測器、影像辨識攝影機）、整合第三方API（氣象局、Google Maps）及建立資料湖（Data Lake）來蒐集與儲存異質資料。(c)新收集的資料可作為機器學習模型（如LSTM時間序列預測或隨機森林）的特徵輸入，結合歷史車流量與外部因素，訓練出能預測未來一至七天各路段壅塞程度的預測模型，並透過動態路線建議舒緩車流。(d)系統主要Actor包含：用路人（Traveler）、公路管理員（Highway Administrator）、系統管理員（System Admin）與外部資料提供者（External Data Provider）；主要Use Case包含：查詢路況預測、接收壅塞預警、調整收費費率、維護資料模型等。(e) Use Case Diagram應繪製上述Actor與Use Case間的關聯，並以include/extend關係標示查詢預測與接收預警間的依賴，本題選E代表完整系統設計。"
+    },
+    "q-pp-im-stat-111-1": {
+      "questionId": "q-pp-im-stat-111-1",
+      "answer": "A",
+      "explanation": "此題為問答題，無選擇題選項。(a) 資本預算方法的四個缺點：忽略貨幣時間價值（如回收期法）、忽略專案生命週期後期的現金流、無法衡量無形效益（如顧客滿意度、員工士氣），以及未考慮風險與不確定性。(b) 採用成本領導策略的企業應優先投資「例行性專案（Routine Projects）」，因為此類專案風險低、效益中等，能穩定降低營運成本，符合成本領導策略追求效率與規模經濟的目標；同時亦可適度投資「謹慎評估（Cautiously Examine）」類專案以維持競爭力。(c) 資訊密集產業（如金融業）的核心競爭力高度依賴資訊處理能力，高風險高效益的IT專案可能帶來顛覆性的競爭優勢；在這類產業中，資訊系統本身即為主要產品或服務的一部分，成功的高風險投資可大幅提升市場地位，因此這些企業更願意承擔風險以換取潛在的高報酬。"
+    },
+    "q-pp-im-stat-111-2": {
+      "questionId": "q-pp-im-stat-111-2",
+      "answer": "A",
+      "explanation": "此題為申論題，無選項，以下提供標準答案要點。(a) IoT 資訊隱私問題：IoT 裝置持續蒐集大量個人資料（位置、行為、生理資訊等），因裝置數量龐大且難以管控，易造成隱私外洩。重要性在於個資一旦外洩可能導致身分盜用、行為追蹤或歧視性應用。範例一（智慧家庭）：智慧音箱或攝影機持續錄音錄影，若被駭客入侵，可監聽居家對話、洩漏家庭成員隱私；範例二（智慧車輛）：車載GPS與感測器記錄駕駛人每日行程與習慣，若資料被保險公司或廣告商取得，可能用於差別定價或精準廣告，侵犯個人隱私。(b) IoT 物件安全問題：IoT 裝置本身可能被惡意控制或破壞，導致實體世界的危害，且裝置資源有限、難以部署完整安全機制。重要性在於受損裝置可能直接危及人身安全或造成財產損失。範例一（智慧製造）：工廠工業控制器若遭植入惡意程式，可能使機械臂誤動作，造成工傷事故；範例二（智慧城市）：交通號誌系統若遭攻擊，可能被惡意切換為全綠燈，引發嚴重交通事故。"
+    },
+    "q-pp-im-stat-111-3": {
+      "questionId": "q-pp-im-stat-111-3",
+      "answer": "E",
+      "explanation": "本題為申論題，要求比較軟體系統開發生命週期（SDLC）中各階段的重要測試類型。單元測試（Unit Testing）在開發階段由開發人員執行，目的是驗證單一模組或函式的邏輯正確性，通常在開發環境中使用自動化測試框架進行。整合測試（Integration Testing）在模組整合後由開發或測試人員執行，目的是確認模組間的介面與互動是否正確，於整合或測試環境中進行。使用者驗收測試（User Acceptance Testing, UAT）在系統交付前由終端使用者或客戶執行，目的是確認系統是否符合業務需求與使用情境，通常在接近正式環境的驗收環境中進行。易用性測試（Usability Testing）則著重於評估使用者介面的直觀性與操作流暢度，由使用者體驗專家或真實用戶執行，可在設計原型或正式系統上進行，目的是確保系統對目標用戶群具有良好的可用性。"
+    },
+    "q-pp-im-stat-111-4": {
+      "questionId": "q-pp-im-stat-111-4",
+      "answer": "A",
+      "explanation": "本題為問答題，非選擇題。(a) 以使用者為中心的設計（User-Centered Design, UCD）是一種將使用者需求、目標與限制置於設計流程核心的方法論，其主要原則包含：早期聚焦使用者與任務（直接研究使用者的特性與需求）、實驗性評估（在設計各階段進行可用性測試）、迭代設計（根據測試結果不斷修正設計）以及多學科團隊合作。(b) 著名的UI/UX設計啟發式法則（Heuristics）源自Nielsen的十大可用性原則，至少四項包含：系統狀態可見性（Visibility of System Status，系統應隨時告知使用者目前狀態，例如進度條）、系統與真實世界的一致性（Match Between System and Real World，使用使用者熟悉的語言與概念）、使用者控制與自由（User Control and Freedom，提供復原與重做功能讓使用者可以離開錯誤狀態）、以及錯誤預防（Error Prevention，設計上應先預防錯誤發生，而非僅提供錯誤訊息）。"
+    },
+    "q-pp-im-stat-112-1": {
+      "questionId": "q-pp-im-stat-112-1",
+      "answer": "A",
+      "explanation": "此題為問答題，無選項設計，以下提供完整解答要點。(a) 拉式供應鏈（Pull-based）是根據實際市場需求驅動生產與補貨，即有訂單才生產，可有效降低庫存風險；推式供應鏈（Push-based）則是根據預測需求預先生產並推送至通路，著重規模經濟與提前備貨。(b) 拉式的優點包括庫存水位低、減少過時商品風險、對市場需求變動反應靈活；推式的優點則包括可達到規模經濟、降低單位生產成本、確保供貨穩定性以應對大量訂單。(c) 選擇供應鏈模式時需考量的因素包含：公司層面（產品生命週期、需求預測準確度、庫存成本承受能力）；產業層面（競爭強度、供應商數量與集中度、產品標準化程度）；商業環境層面（市場需求波動性、供應鏈上下游整合程度、科技基礎設施與資訊透明度）。"
+    },
+    "q-pp-im-stat-112-2": {
+      "questionId": "q-pp-im-stat-112-2",
+      "answer": "A",
+      "explanation": "此題為申論題，無選項設計，以下針對第(c)小題的核心論點作答。Mfc-BDA 專案屬於內部製造流程改善的 IT 投資，其成敗最關鍵的風險類型為「公司特定風險（firm-specific risks）」。這類風險包含組織內部的資料品質、員工對新系統的接受度、IT 技術能力與跨部門協作等因素，若這些內部條件不足，即使市場環境良好，系統也難以發揮預期效益。相較之下，競爭風險和市場風險對此內部導向專案的影響較為間接，因為製造大數據分析系統的主要價值在於提升自身生產效率與降低不良品率，而非直接面對外部競爭者或市場需求波動。因此，公司應優先控制內部的組織與技術風險，確保專案推動時有足夠的資源、人才與高階主管的支持，才能提高 Mfc-BDA 專案成功的可能性。"
+    },
+    "q-pp-im-stat-112-3": {
+      "questionId": "q-pp-im-stat-112-3",
+      "answer": "A",
+      "explanation": "此題為問答題，無標準選項，以下為解題要點。維護已部署深度學習模型的步驟包括：（1）監控（Monitoring）：持續追蹤模型的預測準確度、輸入資料分佈與系統效能，偵測資料漂移（data drift）或概念漂移（concept drift）；（2）重新訓練（Retraining）：當模型效能下降時，收集新標注資料並重新訓練或微調模型；（3）版本管理與部署（Versioning & Deployment）：使用 A/B testing 或金絲雀部署（canary deployment）安全地上線新版本，確保不中斷現有服務；（4）回滾機制（Rollback）：若新版本出現問題，能快速回退至穩定版本。影響模型維護的因素包括：資料品質與標注成本、資料漂移與分佈變化、計算資源限制、模型複雜度與可解釋性、法規合規需求（如 GDPR）、以及領域知識的持續更新。"
+    },
+    "q-pp-im-stat-112-4": {
+      "questionId": "q-pp-im-stat-112-4",
+      "answer": "A",
+      "explanation": "此題為問答題，並無選擇題選項。(a) 五種軟體成本估算方法簡介：功能點分析（Function Point Analysis）透過計算系統輸入、輸出、查詢、內部邏輯檔與外部介面數量來量化系統規模；COCOMO II 是基於程式碼行數（KLOC）或功能點的參數化模型，透過調整係數估算工時與成本；專家判斷（Expert Judgment）由有經驗的開發者依據過去經驗給出估算，適用於資訊不足的早期階段；Planning Poker 是敏捷開發中常用的團隊共識估算法，每位成員同時出牌表示點數，討論差異後收斂；T-shirt Sizing 以 XS/S/M/L/XL 等相對大小分類需求，快速排列優先順序而不追求精確數字。(b) 在系統開發流程模型中的最佳使用時機：需求分析早期資訊模糊時，適合使用專家判斷或 T-shirt Sizing 做粗略估算；系統分析完成、功能需求明確後，適合使用功能點分析進行較精確的規模量化；進入設計或實作階段、程式架構清晰後，適合套用 COCOMO II 模型計算詳細成本；敏捷迭代開發的 Sprint Planning 中，Planning Poker 最能促進團隊對各 User Story 的共識估算。"
+    },
+    "q-pp-im-stat-113-1": {
+      "questionId": "q-pp-im-stat-113-1",
+      "answer": "N/A",
+      "explanation": "此題為申論題，無選項。(a) 社群偵測（Community Detection）是在網絡圖（graph）中自動找出節點群組的技術，使得群組內部節點彼此連結緊密、群組之間連結稀疏；社群媒體應用例如在 Facebook 好友網絡中偵測興趣相近的用戶群，作為精準廣告投放的依據。(b) 評估社群偵測方法的效果可使用模組度（Modularity, Q）作為內部評估指標，Q 值越高代表社群內部連結越緊密；若有ground truth標籤，可用標準化互信息（NMI）或調整蘭德指數（ARI）衡量偵測結果與真實分群的吻合程度；評估流程為：先以合成資料集（如 LFR benchmark）或有標記的真實資料集執行演算法，再計算上述指標，並與基線方法（如隨機分群或 Louvain 演算法）進行比較。"
+    },
+    "q-pp-im-stat-113-2": {
+      "questionId": "q-pp-im-stat-113-2",
+      "answer": "B",
+      "explanation": "本題第(c)部分詢問採用ERP系統的公司A與自行開發資訊系統的公司B，何者具有更高的企業敏捷性。學術上的主流觀點認為公司B（自行開發系統）具有更高的企業敏捷性，因為自建系統可以根據業務需求快速調整與客製化，而ERP系統是高度標準化的套裝軟體，修改彈性有限且成本高昂。ERP系統雖然整合了跨部門流程並提升資訊透明度，但其僵化的模組架構與供應商依賴（vendor lock-in）使企業難以快速因應市場變化。自建系統則能針對企業核心競爭力設計專屬功能，當外部環境劇烈變動時，IT部門可以迅速修改邏輯或新增模組以支援業務轉型。因此，在其他條件相同的前提下，公司B的企業敏捷性應高於公司A。"
+    },
+    "q-pp-im-stat-113-3": {
+      "questionId": "q-pp-im-stat-113-3",
+      "answer": "N/A",
+      "explanation": "此題為申論題，無選擇題答案。(a) 對話式AI用於銀行客服中心的效益包括：24小時全天候服務、大幅降低人工成本、縮短客戶等待時間，以及能同時處理大量查詢；績效評估指標可採用首次解決率（FCR）、客戶滿意度分數（CSAT）、平均處理時間（AHT）及轉接人工客服率等。(b) 主要挑戰包括：自然語言理解的準確性不足（可透過持續訓練與強化學習改善）、客戶隱私與資料安全疑慮（應採用加密與符合GDPR等法規標準）、處理複雜或情緒性問題的能力有限（需設計人機協作的無縫交接機制），以及多語言與方言支援困難（可導入多語言模型與語音辨識技術）。"
+    },
+    "q-pp-im-stat-113-4": {
+      "questionId": "q-pp-im-stat-113-4",
+      "answer": "A",
+      "explanation": "本題為申論題，無選項設計。ESG 三個維度分別為：環境（Environmental）涵蓋企業對氣候變遷、碳排放、資源使用及廢棄物管理等環境議題的因應；社會（Social）涵蓋企業對員工、供應鏈、社區及消費者的責任，包括勞工權益、多元共融與資料隱私；公司治理（Governance）則涵蓋董事會結構、高管薪酬透明度、股東權益保障與反貪腐機制。關於 IT 投資對企業 ESG 績效的影響，本題答案支持「有影響」：IT 系統可透過即時監測碳排放與能源消耗來強化環境績效（E）；數位化平台可提升供應鏈透明度與員工安全回報機制，改善社會績效（S）；自動化稽核與資料分析工具則有助於強化資訊揭露與公司治理（G）。因此，IT 投資透過數據整合、流程自動化與透明度提升，能全面正向影響 ESG 三個維度的表現。"
+    },
+    "q-pp-im-stat-114-1": {
+      "questionId": "q-pp-im-stat-114-1",
+      "answer": "N/A",
+      "explanation": "此題為問答題（申論題），並非選擇題，因此沒有單一正確答案字母。題目分為兩部分：A部分詢問不同規模企業如何利用直播平台提升競爭力，B部分詢問AI、VR等新興技術如何增強直播平台的商業價值。對於A部分，大型企業可透過整合供應鏈與大數據分析打造專屬直播生態系，中小企業則可借助第三方平台（如蝦皮、TikTok Shop）低成本觸及目標客群。對於B部分，AI可用於個性化推薦、即時客服聊天機器人及動態定價；VR/AR則可提供沉浸式試穿、試用體驗，大幅提升消費者的購買意願與品牌黏著度。"
+    },
+    "q-pp-im-stat-114-2": {
+      "questionId": "q-pp-im-stat-114-2",
+      "answer": "A",
+      "explanation": "本題為申論題，分為A、B兩小題，並無單選選項。A題要求討論造成相同IT投資產生不同組織績效的因素，主要原因包括：組織的互補性資源（如人力資本、組織文化、流程再造能力）、管理能力（IT治理與高階主管支持）、以及組織慣性與變革管理能力的差異。B題要求以實例或理論框架說明為何類似IT投資會導致生產力、獲利性或競爭定位的分歧結果；可援引資源基礎觀點（Resource-Based View, RBV）說明IT本身為易模仿資源，唯有與獨特的組織能力結合才能創造持續競爭優勢，或以IT生產力悖論（IT Productivity Paradox）及互補性資產理論（Complementary Assets Theory）佐證，例如同樣導入ERP系統的企業，因流程標準化程度與員工訓練投入不同而出現截然不同的績效表現。"
+    },
+    "q-pp-im-stat-114-3": {
+      "questionId": "q-pp-im-stat-114-3",
+      "answer": "N/A",
+      "explanation": "此題為問答題（申論題），並非選擇題，因此沒有單一正確答案字母。User Story（使用者故事）是敏捷開發中常用的需求描述工具，以「身為一個…，我想要…，以便…」的簡短格式，從使用者角度描述功能需求，強調業務價值與使用者目標，適合促進團隊溝通與快速迭代。Use Case（使用案例）則源自UML與結構化分析方法，以較正式的格式描述系統與外部參與者（Actor）之間的互動流程，包含主要流程、替代流程與例外流程，著重於系統行為的完整性與正確性。兩者的主要差異在於：User Story 較為簡短非正式，聚焦於「為何需要此功能」，而 Use Case 較為詳細正式，聚焦於「系統如何回應使用者操作的完整步驟」。在實務上，User Story 常用於敏捷/Scrum 開發的 Product Backlog 管理，Use Case 則常用於傳統瀑布式開發或需要詳細規格文件的專案中。"
+    },
+    "q-pp-im-stat-114-4": {
+      "questionId": "q-pp-im-stat-114-4",
+      "answer": "A",
+      "explanation": "本題為多元線性迴歸的計算與假設檢定題，無選項，以A代表完整解答。(1) 調整後R²公式為 Adj R² = 1 − (1 − R²)×(n−1)/(n−k−1)，代入 n=440、k=3、R²=0.170，得 Adj R² = 1 − 0.830×(439/436) ≈ 0.1643。(2) 殘差自由度 Df Residuals = n − k − 1 = 440 − 3 − 1 = 436；截距的 t 值 = 係數/標準誤 = 7.1943/1.092 ≈ 6.59。(3) 對所有自變數係數是否聯合為零進行F檢定：F統計量為29.80，對應p值為1.52×10⁻¹⁷，遠小於顯著水準0.05，故拒絕虛無假設H₀，結論為至少一個自變數（房屋大小、兒童數、在家成人數）對垃圾量有顯著影響。"
+    },
+    "q-pp-im-stat-114-5": {
+      "questionId": "q-pp-im-stat-114-5",
+      "answer": "A",
+      "explanation": "本題為論述/計算題，並無選項可選，以下提供兩小題的解答說明。(1) 無偏性證明：由於 T 為 5 的倍數，g(i) = 1 + (i mod 5) 在每一個週期（i=1~5）的值依序為 2, 3, 4, 5, 1，總和為 15，故 Σg(i) = (T/5)·15 = 3T。因此 E[m] = (1/T)·Σg(i)·E[Yᵢ] = (1/T)·3T·μ = 3μ，此結果顯示 m 並非 μ 的無偏估計量，除非題目中有額外的正規化條件；若題意要求 m 為無偏估計量，則可能係數應調整為 (1/3T) 或 g(i) 另有定義。(2) 變異數計算：假設原始定義，Var(m) = (1/T²)·Σ[g(i)]²·σ²，在 T/5 個週期內 Σ[g(i)]² = (T/5)·(1²+2²+3²+4²+5²) = (T/5)·55 = 11T，故 Var(m) = (1/T²)·11T·σ² = 11σ²/T。"
+    },
+    "q-pp-im-stat-115-1": {
+      "questionId": "q-pp-im-stat-115-1",
+      "answer": "A",
+      "explanation": "此為問答題，無選項。AI專案失敗的三大關鍵原因：第一，FOMO驅動的盲目跟進——組織因擔心落後競爭對手而倉促導入AI，缺乏明確的業務目標與成功指標，導致專案與實際需求脫節；第二，資料品質與治理不足——AI模型高度依賴高品質訓練資料，但多數企業的資料分散、不一致或含有偏差，使模型無法產生可信的預測結果；第三，組織變革管理缺失——技術導入後若缺乏人員培訓、流程再造與高層支持，員工抗拒使用或無法有效整合AI輸出，導致投資無法轉化為實際價值。改善策略（針對第一點）：建議採用「價值優先」框架，在啟動任何AI專案前，先定義可量化的業務KPI（如成本降低X%、處理速度提升Y%），並進行可行性評估，確保專案有明確的ROI預期，以理性需求取代FOMO情緒，避免為了跟風而浪費資源。"
+    },
+    "q-pp-im-stat-115-2": {
+      "questionId": "q-pp-im-stat-115-2",
+      "answer": "A",
+      "explanation": "本題為申論題，共三小題，無單一選擇答案。(A) Apple 雖引入外部 AI 模型，但其競爭優勢核心仍在生態系鎖定與使用者體驗整合能力；透過整合 Google Gemini，Apple 能快速補強 AI 功能缺口，維持 iPhone 的差異化優勢，同時將 Gemini 作為底層基礎設施，而非品牌主體，避免稀釋自身品牌價值。(B) 此合作關係屬於「競合（Co-opetition）」策略：Apple 可縮短 AI 開發時程並節省研發成本，但也面臨技術依賴風險，一旦 Google 調整合作條款或優先支援 Android，Apple 將陷入被動；雙方在行動市場本為競爭對手，此依賴關係可能削弱 Apple 的議價能力。(C) Apple 應在產品架構層面採用「裝置端運算優先（on-device first）」策略，盡量在本地處理敏感資料，僅在必要時才呼叫雲端模型，同時透過差分隱私與資料最小化機制限制傳送至 Google 伺服器的資料量；在溝通策略上，Apple 應明確向用戶說明資料流向與隱私保護機制，以透明度強化用戶信任，確保「隱私即競爭優勢」的品牌定位不因此次合作而受損。"
+    },
+    "q-pp-im-stat-115-3": {
+      "questionId": "q-pp-im-stat-115-3",
+      "answer": "A",
+      "explanation": "此題為計算題，(A)(B)(C) 為子題而非選項。(A) 求正規化常數 c：列出六個點的函數值後加總，c·(1/2+0+1/2+1/2+1/2+1/3)=c·7/3=1，故 c=3/7。(B) 令 Y₁=X₁+X₂、Y₂=X₁-X₂，逐一對應六個點得到聯合 PMF：P(Y₁=-1,Y₂=-1)=3/14、P(Y₁=0,Y₂=0)=0、P(Y₁=1,Y₂=1)=3/14、P(Y₁=0,Y₂=-2)=3/14、P(Y₁=1,Y₂=-1)=3/14、P(Y₁=2,Y₂=0)=1/7。(C) Y₁ 的邊際 PMF 為 P(Y₁=-1)=3/14、P(Y₁=0)=3/14、P(Y₁=1)=3/7、P(Y₁=2)=1/7，總和驗算為 1，結果正確。"
+    },
+    "q-pp-im-stat-115-4": {
+      "questionId": "q-pp-im-stat-115-4",
+      "answer": "A",
+      "explanation": "(A) 三個估計量 m₁、m₂、m₃ 皆為 μ 的不偏估計量：E[m₁]=μ；E[m₂]=(μ+αμ)/(1+α)=μ（對任意 α>0 成立）；E[m₃]=(μ+2μ+βμ)/(3+β)=μ（對任意 β>0 成立）。(B) Var(m₂)=σ²(1+α²)/(1+α)²，對 α 微分並令其為零，解得 2α−2=0，故 α=1 時變異數最小，此時 m₂=(Y₁+Y₂)/2 為最有效。(C) Var(m₃)=σ²(5+β²)/(3+β)²，對 β 微分並令其為零，解得 6β−10=0，故 β=5/3 時變異數最小，此時各觀測值的權重與其係數平方和最小化。"
+    },
+    "q-pp-im-stat-115-5": {
+      "questionId": "q-pp-im-stat-115-5",
+      "answer": "C",
+      "explanation": "本題使用卡方獨立性檢定，虛無假設 H₀ 為「購買高級寶藏的機率與玩家等級無關」。自由度為 (2-1)(3-1)=2，根據題目給定的臨界值 χ²₀.₀₅,₂ = 5.99。計算各格的期望次數：E(購買,新手)=40、E(購買,中級)=56、E(購買,資深)=64、E(未購買,新手)=10、E(未購買,中級)=14、E(未購買,資深)=16。卡方統計量 χ² = (45-40)²/40 + (50-56)²/56 + (65-64)²/64 + (5-10)²/10 + (20-14)²/14 + (15-16)²/16 ≈ 0.625 + 0.643 + 0.016 + 2.500 + 2.571 + 0.063 ≈ 6.42。由於 6.42 > 5.99，在顯著水準 5% 下拒絕虛無假設，結論為購買高級寶藏的機率與玩家的累積有效遊戲時間（等級）並不獨立，兩者存在顯著關聯。"
+    },
+    "q-pp-cs-en-114-23": {
+      "questionId": "q-pp-cs-en-114-23",
+      "answer": "A",
+      "explanation": "本題空格位於 「industries ___ low-skilled labor is predominant「 中，修飾先行詞 industries（產業/地點概念）。空格後接一個完整句子（主詞＋動詞＋補語），因此需要關係副詞而非關係代名詞。「where「 等同於 「in which「，用來引導修飾地點或情境的關係子句，語意為「在這些產業中低技能勞動力占主導地位」。「when「 用於時間先行詞，「which「 和 「that「 作為關係代名詞若直接使用則缺少介系詞，句構不完整。因此正確答案為 (A) where。"
+    },
+    "q-pp-cs-en-109-40": {
+      "questionId": "q-pp-cs-en-109-40",
+      "answer": "D",
+      "explanation": "本題考查英文動詞時態與語態的選擇。句子描述 Martland 的研究發現，任何「曾經被擊中頭部的人」都可能出現病理症狀。關鍵在於關係子句 「anyone who _____ hit in the head「 描述的是一個已發生過的過去動作（被打到頭），因此需使用過去完成式被動語態 「had been「。過去完成式（had been）用於表示在主要動作（could reveal）之前已完成的動作，符合此語境中「曾被打過頭的人」的含義。選項 A（has been）為現在完成式，選項 B（would be）為條件式，選項 C（were to be）用於假設語氣，均不如 「had been「 貼切地表達研究對象「過去曾被打到頭」的事實背景。"
+    },
+    "q-pp-cs-arch-108-6": {
+      "questionId": "q-pp-cs-arch-108-6",
+      "answer": "D",
+      "explanation": "本題考英文詞彙，需選出最符合語境的單字。句子描述作家 Rachel Cusk 將小說傳統元素（角色、情節、描述等）視為「虛假且令人尷尬」的事物，關鍵在於她對這些元素持否定態度。「Repudiation「（D 選項）意指「否定、摒棄、拒絕承認其正當性」，最能表達她對傳統小說建構方式的全面拒絕。其他選項如 satisfaction（滿足）、abdication（棄權）與 mystification（困惑）皆無法完整傳達她主動否定並視其為虛偽的態度。因此，正確答案為 D。"
+    },
+    "q-pp-cs-arch-108-10": {
+      "questionId": "q-pp-cs-arch-108-10",
+      "answer": "A",
+      "explanation": "此題考英語慣用語（idiom）。「Neither here nor there「是固定片語，意思是「無關緊要、不重要」，用來形容某事與主題無關或無實質意義。選項A的「there「與「here「對應，構成完整的慣用片語。其他選項如「where「、「now「、「then「均無法形成此一固定表達。因此正確答案為A）there。"
+    },
+    "q-pp-cs-arch-108-28": {
+      "questionId": "q-pp-cs-arch-108-28",
+      "answer": "B",
+      "explanation": "此題為克漏字填空題，選項為 tunnels（隧道）、holes（洞/空缺）、caves（洞穴）、corners（角落）。在電腦架構的英文語境中，「holes「 是最常見的術語，例如 x86 架構中著名的「memory holes」指的是實體位址空間中的空缺區域。「Tunnels「、「caves「 和 「corners「 在電腦架構文章中較少作為技術術語出現。因此，填入 「holes「 最符合電腦架構相關段落的語意與技術用語習慣。"
+    },
+    "q-pp-cs-en-108-4": {
+      "questionId": "q-pp-cs-en-108-4",
+      "answer": "A",
+      "explanation": "本題考查詞彙填空。句子說明關於 Marie Kondo 書籍與方法的爭論具有不可忽視的階級主義與種族主義的某種「特質」。「Undertones「（潛在色調、弦外之音）意指隱藏在表面之下的暗示或含義，常用於描述社會議題中隱而不顯的偏見，符合語境。其餘選項均不適合：B) transactions 指交易或往來，C) synonyms 指同義詞，D) notifications 指通知或告知，皆與句意無關。因此正確答案為 A) undertones。"
+    },
+    "q-pp-cs-en-108-9": {
+      "questionId": "q-pp-cs-en-108-9",
+      "answer": "B",
+      "explanation": "本題考查英語固定慣用語 「know a thing or two about something「，意思是「對某事頗有了解或經驗」。空格中需填入 「two「 才能構成這個完整的慣用語。選項 A 「things「 與 「a thing or ___「 句型不符，選項 C 「more「 和選項 D 「double「 均非此慣用語的一部分。因此，正確答案為 B) two，完整句意為：Joan 因為她的親身經歷，相信自己對苦難頗有體會。"
+    },
+    "q-pp-cs-en-108-17": {
+      "questionId": "q-pp-cs-en-108-17",
+      "answer": "C",
+      "explanation": "此題考的是分詞構句（participial phrase）的用法。空格後接「in mind that conciseness is a virtue」，需要一個現在分詞來形成慣用的分詞片語 「keeping in mind「，修飾主要子句的動作。選項 A 的 「to keep「 是不定詞，語法上在此不適用於形成附加的修飾片語；選項 B 的 「be keep「 文法錯誤；選項 D 的 「is keeping「 是完整的謂語動詞，不能用來接在逗號後修飾前句。「keeping in mind that...「 是英文中常見的慣用表達，意為「記住…」，以現在分詞片語的形式附加於祈使句之後，因此正確答案為 C。"
+    },
+    "q-pp-cs-en-108-25": {
+      "questionId": "q-pp-cs-en-108-25",
+      "answer": "B",
+      "explanation": "此題為108年台灣研究所英文克漏字測驗第25題，選項為 A) justified（合理化）、B) considered（被認為/考慮）、C) united（聯合）、D) recommended（推薦）。在學術英文文章中，「considered「 是最常用於描述某事物被視為具有某種特質或地位的用語，例如 「is considered to be「 或 「was considered important「。相比之下，justified 通常搭配行為或決定，united 描述聯合行動，recommended 則用於建議情境，語意較為特定。根據研究所英文考題的慣用語境，「considered「 最能自然嵌入學術論述的句式結構中，為最合適的答案。"
+    },
+    "q-pp-im-en-108-37": {
+      "questionId": "q-pp-im-en-108-37",
+      "answer": "B",
+      "explanation": "本題考填空，句子描述春天到來時樹上的花苞變化。選項 (B) come out 意為「冒出、出現」，用來描述花苞從樹枝上萌芽生長是最自然的表達。(A) fall off 意為「脫落」，與春天花苞生長的語意相反。(C) take up 意為「佔用、開始從事」，語意不符。(D) bring down 意為「帶下、擊落」，也與句意不符。因此，「the buds come out in the trees「 正確描繪了春天樹木萌芽的景象。"
+    },
+    "q-pp-im-en-106-30": {
+      "questionId": "q-pp-im-en-106-30",
+      "answer": "C",
+      "explanation": "此題為克漏字題，考的是關係代名詞的用法。空格位於介系詞 of 之後，需要一個名詞片語同時擔任 of 的受詞，並引導後方的關係子句 「felt the traditional forms... were becoming ill-fitted「。選項 C 「those who「 是「那些…的人」的意思，those 作為 of 的受詞，who 引導關係子句，結構完整正確。選項 A 「people「 單獨使用缺少關係代名詞 who，無法直接引導子句；選項 B 「they「 是人稱代名詞，不能引導關係子句；選項 D 「those「 單獨使用同樣缺少 who，語法不完整。因此正確答案為 C。"
     }
   }
 }

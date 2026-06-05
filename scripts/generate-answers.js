@@ -22,15 +22,17 @@ const IDS_SCHEMA = {
   },
 }
 
+const MISSING_IDS_PATH = '/Users/xiaoxu/Projects/grad-exam-prep/tmp_missing_ids.json'
+
 phase('Load')
 const loadResult = await agent(
   `Run this bash command and return the result as structured JSON with an "ids" field:
-node -e "const d=require('${QUESTIONS_PATH}'); console.log(JSON.stringify({ids:d.questions.slice(${start},${end}).map(q=>q.id)}))"`,
+node -e "const ids=require('${MISSING_IDS_PATH}'); console.log(JSON.stringify({ids}))"`,
   { label: 'load-ids', schema: IDS_SCHEMA }
 )
 
 const questionIds = loadResult.ids
-log(`Batch ${start}-${end}: ${questionIds.length} questions`)
+log(`Retry batch: ${questionIds.length} missing questions`)
 
 phase('Generate')
 
