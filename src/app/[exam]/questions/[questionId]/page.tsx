@@ -8,17 +8,31 @@ import { Card, CardContent } from '@/components/ui/card'
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
 import { Separator } from '@/components/ui/separator'
 import { QuestionText } from '@/components/question-text'
-import { getQuestionsByExam, findPassageParent, getPaperUrl } from '@/lib/content'
+import { QuestionGroupView } from '@/components/question-group-view'
+import { getQuestionsByExam, getQuestionGroup, getPaperUrl } from '@/lib/content'
 import { getAnswer } from '@/lib/answers'
 import { getQuestionImages } from '@/lib/question-images'
 import { getUserId } from '@/lib/user-id'
 import { parseQuestion } from '@/lib/question-parser'
 import type { ExamId } from '@/types/content'
+import type { Question } from '@/types/content'
 import type { PracticeMode } from '@/types/practice'
 
 interface Props {
   params: Promise<{ exam: string; questionId: string }>
   searchParams: Promise<{ mode?: string; next?: string }>
+}
+
+function extractPassage(parentQuestion: Question): string {
+  const parsed = parseQuestion(parentQuestion.text)
+  const lines = parsed.stem.split('\n')
+  const qLineIdx = lines.findIndex((l) =>
+    new RegExp(`^\\s*${parentQuestion.number}\\.\\s`).test(l),
+  )
+  if (qLineIdx > 0) {
+    return lines.slice(0, qLineIdx).join('\n').trim()
+  }
+  return parsed.stem
 }
 
 export default function DrillPage({ params, searchParams }: Props) {
@@ -30,11 +44,59 @@ export default function DrillPage({ params, searchParams }: Props) {
   const question = allQuestions.find((q) => q.id === questionId)
   if (!question) notFound()
 
+  // Check if this question belongs to a passage group
+  const group = getQuestionGroup(question, allQuestions)
+
+  if (group) {
+    const passage = extractPassage(group.parentQuestion)
+    const lastInGroup = group.questions[group.questions.length - 1]
+    const nextAfterGroup = allQuestions
+      .filter(
+        (q) =>
+          q.paperId === question.paperId && q.number > lastInGroup.number,
+      )
+      .sort((a, b) => a.number - b.number)[0]
+
+    return (
+      <QuestionGroupView
+        exam={exam}
+        passage={passage}
+        questions={group.questions}
+        parentNumber={group.parentQuestion.number}
+        mode={mode}
+        nextQuestionId={nextAfterGroup?.id}
+      />
+    )
+  }
+
+  // Single question view (non-group)
+  return (
+    <SingleQuestionView
+      exam={exam}
+      question={question}
+      mode={mode}
+      next={next}
+    />
+  )
+}
+
+function SingleQuestionView({
+  exam,
+  question,
+  mode,
+  next,
+}: {
+  exam: string
+  question: Question
+  mode: string
+  next?: string
+}) {
+  const router = useRouter()
   const parsed = parseQuestion(question.text)
-  const passageParent = findPassageParent(question, allQuestions)
-  const passageStem = passageParent ? parseQuestion(passageParent.text).stem : null
-  const answerData = getAnswer(questionId)
-  const questionImages = question.hasImage ? getQuestionImages(questionId) : []
+  const answerData = getAnswer(question.id)
+  const questionImages = question.hasImage
+    ? getQuestionImages(question.id)
+    : []
   const paperUrl = question.hasImage ? getPaperUrl(question.paperId) : undefined
 
   const [selected, setSelected] = useState<string | null>(null)
@@ -47,7 +109,12 @@ export default function DrillPage({ params, searchParams }: Props) {
     await fetch('/api/practice', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userId, questionId, mode: mode as PracticeMode, result }),
+      body: JSON.stringify({
+        userId,
+        questionId: question.id,
+        mode: mode as PracticeMode,
+        result,
+      }),
     })
     setSubmitting(false)
     if (next) {
@@ -57,14 +124,17 @@ export default function DrillPage({ params, searchParams }: Props) {
     }
   }
 
-  const isCorrect = selected && answerData && selected === answerData.answer.toLowerCase()
+  const isCorrect =
+    selected && answerData && selected === answerData.answer.toLowerCase()
 
   return (
     <div className="space-y-4 max-w-2xl">
       {/* Header */}
       <div className="flex items-center gap-2 flex-wrap">
         <Badge variant="outline">{question.year}年</Badge>
-        <span className="text-xs text-muted-foreground">第 {question.number} 題</span>
+        <span className="text-xs text-muted-foreground">
+          第 {question.number} 題
+        </span>
         {question.points != null && (
           <Badge variant="secondary">{question.points} 分</Badge>
         )}
@@ -77,16 +147,6 @@ export default function DrillPage({ params, searchParams }: Props) {
           ← 返回題庫
         </Button>
       </div>
-
-      {/* Passage context for cloze / reading comprehension children */}
-      {passageStem && (
-        <Card className="border-dashed bg-muted/30">
-          <CardContent className="py-4 px-5 space-y-1">
-            <p className="text-xs font-medium text-muted-foreground">閱讀文章</p>
-            <QuestionText text={passageStem} />
-          </CardContent>
-        </Card>
-      )}
 
       {/* Question stem */}
       {parsed.stem && (
@@ -141,9 +201,10 @@ export default function DrillPage({ params, searchParams }: Props) {
               key={opt.label}
               htmlFor={`opt-${opt.label}`}
               className={`flex items-start gap-3 rounded-lg border px-4 py-3 cursor-pointer transition-colors
-                ${selected === opt.label
-                  ? 'border-primary bg-primary/5'
-                  : 'hover:bg-muted/50'
+                ${
+                  selected === opt.label
+                    ? 'border-primary bg-primary/5'
+                    : 'hover:bg-muted/50'
                 }`}
             >
               <RadioGroupItem
@@ -152,14 +213,15 @@ export default function DrillPage({ params, searchParams }: Props) {
                 className="mt-0.5 shrink-0"
               />
               <span className="text-sm leading-relaxed">
-                <span className="font-medium uppercase mr-2">{opt.label}.</span>
+                <span className="font-medium uppercase mr-2">
+                  {opt.label}.
+                </span>
                 {opt.text}
               </span>
             </label>
           ))}
         </RadioGroup>
       ) : !revealed && !parsed.options ? (
-        /* Free-form questions: just letter buttons */
         <div className="space-y-2">
           <p className="text-xs text-muted-foreground">選擇你的答案：</p>
           <div className="flex flex-wrap gap-2">
@@ -191,19 +253,33 @@ export default function DrillPage({ params, searchParams }: Props) {
 
       {/* Result */}
       {revealed && (
-        <Card className={isCorrect ? 'border-[hsl(var(--success))]' : 'border-destructive'}>
+        <Card
+          className={
+            isCorrect
+              ? 'border-[hsl(var(--success))]'
+              : 'border-destructive'
+          }
+        >
           <CardContent className="py-4 px-5 space-y-3">
             <div className="flex items-center gap-3 flex-wrap">
-              <span className={`text-base font-semibold ${isCorrect ? 'text-[hsl(var(--success))]' : 'text-destructive'}`}>
+              <span
+                className={`text-base font-semibold ${isCorrect ? 'text-[hsl(var(--success))]' : 'text-destructive'}`}
+              >
                 {isCorrect ? '✓ 答對了！' : '✗ 答錯了'}
               </span>
               {selected && (
-                <Badge variant={isCorrect ? 'default' : 'destructive'} className="uppercase">
+                <Badge
+                  variant={isCorrect ? 'default' : 'destructive'}
+                  className="uppercase"
+                >
                   你選了 {selected.toUpperCase()}
                 </Badge>
               )}
               {answerData && !isCorrect && (
-                <Badge variant="outline" className="text-[hsl(var(--success))] border-[hsl(var(--success))] uppercase">
+                <Badge
+                  variant="outline"
+                  className="text-[hsl(var(--success))] border-[hsl(var(--success))] uppercase"
+                >
                   正解 {answerData.answer}
                 </Badge>
               )}
@@ -212,14 +288,18 @@ export default function DrillPage({ params, searchParams }: Props) {
             {!isCorrect && parsed.options && answerData && (
               <p className="text-sm text-foreground leading-relaxed">
                 <span className="font-medium">正確選項：</span>
-                {parsed.options.find(o => o.label === answerData.answer.toLowerCase())?.text ?? answerData.answer}
+                {parsed.options.find(
+                  (o) => o.label === answerData.answer.toLowerCase(),
+                )?.text ?? answerData.answer}
               </p>
             )}
 
             {answerData?.explanation && (
               <>
                 <Separator />
-                <p className="text-sm text-foreground leading-relaxed">{answerData.explanation}</p>
+                <p className="text-sm text-foreground leading-relaxed">
+                  {answerData.explanation}
+                </p>
               </>
             )}
 

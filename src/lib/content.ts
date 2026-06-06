@@ -61,6 +61,34 @@ export function findPassageParent(question: Question, allQuestions: Question[]):
   return null
 }
 
+export interface QuestionGroup {
+  parentQuestion: Question
+  questions: Question[]
+}
+
+export function getQuestionGroup(question: Question, allQuestions: Question[]): QuestionGroup | null {
+  let parentQuestion: Question
+
+  const parent = findPassageParent(question, allQuestions)
+  if (parent) {
+    parentQuestion = parent
+  } else {
+    const m = question.text.match(PASSAGE_RANGE_RE)
+    if (!m) return null
+    parentQuestion = question
+  }
+
+  const m = parentQuestion.text.match(PASSAGE_RANGE_RE)!
+  const start = parseInt(m[1])
+  const end = parseInt(m[2])
+
+  const groupQuestions = allQuestions
+    .filter((q) => q.paperId === question.paperId && q.number >= start && q.number <= end)
+    .sort((a, b) => a.number - b.number)
+
+  return { parentQuestion, questions: groupQuestions }
+}
+
 export function getPaperUrl(paperId: string): string | undefined {
   const paper = (pastPapers as unknown as PastPaper[]).find((p) => p.id === paperId)
   return paper?.url
