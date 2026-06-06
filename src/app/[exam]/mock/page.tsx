@@ -6,6 +6,7 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { QuestionText } from '@/components/question-text'
+import { useQueryState } from '@/hooks/use-query-state'
 import { EXAM_LABELS, getQuestionsByExam, getSubjectsByExam } from '@/lib/content'
 import { getAnswer } from '@/lib/answers'
 import { getUserId } from '@/lib/user-id'
@@ -27,8 +28,9 @@ export default function MockExamPage({ params }: Props) {
   const years = [...new Set(allQuestions.map((q) => q.year))].sort((a, b) => b - a)
 
   const [phase, setPhase] = useState<Phase>('setup')
-  const [selectedSubject, setSelectedSubject] = useState(subjects[0].id)
-  const [selectedYear, setSelectedYear] = useState(years[0])
+  const [selectedSubject, setSelectedSubject] = useQueryState('subject', subjects[0].id)
+  const [selectedYearStr, setSelectedYearStr] = useQueryState('year', String(years[0]))
+  const selectedYear = Number(selectedYearStr)
   const [timeLimitMin, setTimeLimitMin] = useState(90)
   const [questions, setQuestions] = useState<Question[]>([])
   const [answers, setAnswers] = useState<Record<string, string>>({})
@@ -120,7 +122,7 @@ export default function MockExamPage({ params }: Props) {
                   key={y}
                   size="sm"
                   variant={selectedYear === y ? 'default' : 'outline'}
-                  onClick={() => setSelectedYear(y)}
+                  onClick={() => setSelectedYearStr(String(y))}
                 >
                   {y}年
                 </Button>

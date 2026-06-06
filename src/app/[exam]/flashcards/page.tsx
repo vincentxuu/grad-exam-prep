@@ -2,14 +2,27 @@
 
 import { notFound } from 'next/navigation'
 import { use, useMemo, useState } from 'react'
+import { SpeakButton } from '@/components/flashcard/speak-button'
+import { VocabAnswer } from '@/components/flashcard/vocab-answer'
+import { VoiceSelect } from '@/components/flashcard/voice-select'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
+import { useQueryState } from '@/hooks/use-query-state'
+import { useSpeech } from '@/hooks/use-speech'
 import { EXAM_LABELS, flashcards, getSubjectsByExam } from '@/lib/content'
 import type { RecallRating } from '@/lib/srs'
-import { daysUntilDue, initialCardState, RECALL_LABELS } from '@/lib/srs'
-import { localStorageImpl } from '@/lib/storage'
+import { daysUntilDue, RECALL_LABELS } from '@/lib/srs'
 import { useFlashcardStore } from '@/store/flashcard'
 import type { ExamId } from '@/types/content'
+
+function extractWord(prompt: string): string | null {
+  const m = prompt.match(/^([\w][\w\s-]*?)\s*[\(（]/)
+  return m ? m[1].trim() : null
+}
+
+function isVocabCard(card: { subjectId: string; topicId: string }) {
+  return card.subjectId.endsWith('-english') && card.topicId.includes('vocabulary')
+}
 
 interface Props {
   params: Promise<{ exam: string }>
@@ -24,8 +37,9 @@ export default function FlashcardsPage({ params }: Props) {
   const subjectLabel = Object.fromEntries(subjects.map((s) => [s.id, s.name.split('（')[0]]))
 
   const { reviewCard, getDueCards, getDueCount, getCardState } = useFlashcardStore()
+  const { voices, selectedVoiceURI, setVoice, speak, speakingId } = useSpeech()
 
-  const [subjectFilter, setSubjectFilter] = useState<string>('all')
+  const [subjectFilter, setSubjectFilter] = useQueryState('subject', 'all')
   const [mode, setMode] = useState<'browse' | 'review'>('browse')
   const [reviewQueue, setReviewQueue] = useState<typeof examCards>([])
   const [currentIdx, setCurrentIdx] = useState(0)
@@ -34,7 +48,7 @@ export default function FlashcardsPage({ params }: Props) {
   const filteredCards = useMemo(
     () =>
       subjectFilter === 'all' ? examCards : examCards.filter((c) => c.subjectId === subjectFilter),
-    [exam, subjectFilter]
+    [exam, subjectFilter],
   )
 
   const dueCards = getDueCards(filteredCards)
@@ -57,7 +71,6 @@ export default function FlashcardsPage({ params }: Props) {
     }
   }
 
-  // Coverage report by subject
   const coverageBySubject = subjects.map((s) => {
     const cards = examCards.filter((c) => c.subjectId === s.id)
     const due = getDueCount(cards)
@@ -66,22 +79,41 @@ export default function FlashcardsPage({ params }: Props) {
 
   if (mode === 'review' && reviewQueue.length > 0) {
     const card = reviewQueue[currentIdx]
+    const word = isVocabCard(card) ? extractWord(card.prompt) : null
+
     return (
       <div className="max-w-xl mx-auto space-y-6">
         <div className="flex items-center justify-between text-sm text-muted-foreground">
           <span>
             {currentIdx + 1} / {reviewQueue.length}
           </span>
-          <Button variant="ghost" size="sm" onClick={() => setMode('browse')}>
-            結束複習
-          </Button>
+          <div className="flex items-center gap-2">
+            <VoiceSelect voices={voices} selectedVoiceURI={selectedVoiceURI} onSelect={setVoice} />
+            <Button variant="ghost" size="sm" onClick={() => setMode('browse')}>
+              結束複習
+            </Button>
+          </div>
         </div>
 
         <div className="rounded-lg border p-6 space-y-4 min-h-48">
           <Badge variant="secondary" className="text-xs">
             {subjectLabel[card.subjectId]} · {card.topicId.split('-').pop()}
           </Badge>
-          <p className="text-lg font-medium leading-relaxed whitespace-pre-line">{card.prompt}</p>
+          <div className="flex items-center gap-2">
+            <p className="text-lg font-medium leading-relaxed whitespace-pre-line">
+              {card.prompt}
+            </p>
+            {word && (
+              <SpeakButton
+                text={word}
+                id={`${card.id}-word`}
+                speak={speak}
+                speakingId={speakingId}
+                size="md"
+                label={`播放 ${word} 發音`}
+              />
+            )}
+          </div>
 
           {!revealed ? (
             <Button className="w-full" onClick={() => setRevealed(true)}>
@@ -89,9 +121,20 @@ export default function FlashcardsPage({ params }: Props) {
             </Button>
           ) : (
             <div className="space-y-4">
-              <div className="rounded-md bg-muted/40 p-4 text-sm whitespace-pre-line leading-relaxed">
-                {card.answer}
-              </div>
+              {isVocabCard(card) ? (
+                <div className="rounded-md bg-muted/40 p-4">
+                  <VocabAnswer
+                    cardId={card.id}
+                    answer={card.answer}
+                    speak={speak}
+                    speakingId={speakingId}
+                  />
+                </div>
+              ) : (
+                <div className="rounded-md bg-muted/40 p-4 text-sm whitespace-pre-line leading-relaxed">
+                  {card.answer}
+                </div>
+              )}
               {card.pastPaperRef && (
                 <p className="text-xs text-muted-foreground">→ 參見：{card.pastPaperRef}</p>
               )}
@@ -119,12 +162,11 @@ export default function FlashcardsPage({ params }: Props) {
         <div>
           <div className="flex items-center gap-2 flex-wrap">
             <h1 className="text-2xl font-bold">{EXAM_LABELS[exam as ExamId]} — 閃卡練習</h1>
-            {dueCount > 0 && (
-              <Badge className="text-xs">{dueCount} 張待複習</Badge>
-            )}
+            {dueCount > 0 && <Badge className="text-xs">{dueCount} 張待複習</Badge>}
           </div>
           <p className="text-muted-foreground text-sm mt-1">SM-2 間隔重複排程</p>
         </div>
+
         <Button onClick={startReview} disabled={dueCards.length === 0} className="w-full sm:w-auto">
           {dueCards.length > 0 ? `開始複習（${dueCards.length}）` : '暫無待複習卡'}
         </Button>

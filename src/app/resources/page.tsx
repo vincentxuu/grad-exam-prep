@@ -1,8 +1,8 @@
 'use client'
 
-import { useState } from 'react'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
+import { useQueryState } from '@/hooks/use-query-state'
 import { resources } from '@/lib/content'
 import type { ExamId, ResourceType } from '@/types/content'
 
@@ -29,11 +29,11 @@ const ALL_TYPES: ResourceType[] = [
 ]
 
 export default function ResourcesPage() {
-  const [examFilter, setExamFilter] = useState<ExamId | 'all'>('all')
-  const [typeFilter, setTypeFilter] = useState<ResourceType | 'all'>('all')
+  const [examFilter, setExamFilter] = useQueryState('exam', 'all')
+  const [typeFilter, setTypeFilter] = useQueryState('type', 'all')
 
   const filtered = resources.filter((r) => {
-    const examMatch = examFilter === 'all' || r.examRelevance.includes(examFilter)
+    const examMatch = examFilter === 'all' || r.examRelevance.includes(examFilter as ExamId)
     const typeMatch = typeFilter === 'all' || r.type === typeFilter
     return examMatch && typeMatch
   })

@@ -8,6 +8,7 @@ import { Card, CardContent } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { QuestionText } from '@/components/question-text'
+import { useQueryState } from '@/hooks/use-query-state'
 import { EXAM_LABELS, getQuestionsByExam, getSubjectsByExam } from '@/lib/content'
 import type { ExamId, Question } from '@/types/content'
 
@@ -25,8 +26,10 @@ export default function QuestionsPage({ params }: Props) {
   const allQuestions = getQuestionsByExam(exam as ExamId)
   const years = [...new Set(allQuestions.map((q) => q.year))].sort((a, b) => b - a)
 
-  const [search, setSearch] = useState('')
-  const [yearFilter, setYearFilter] = useState<number | 'all'>('all')
+  const [search, setSearch] = useQueryState('q', '')
+  const [yearFilterStr, setYearFilterStr] = useQueryState('year', 'all')
+  const [subjectTab, setSubjectTab] = useQueryState('subject', subjects[0]?.id ?? '')
+  const yearFilter: number | 'all' = yearFilterStr === 'all' ? 'all' : Number(yearFilterStr)
   const [expandedIds, setExpandedIds] = useState<Set<string>>(new Set())
   const [pageLimits, setPageLimits] = useState<Record<string, number>>({})
 
@@ -76,7 +79,7 @@ export default function QuestionsPage({ params }: Props) {
           size="sm"
           variant={yearFilter === 'all' ? 'default' : 'outline'}
           className="h-7 text-xs"
-          onClick={() => setYearFilter('all')}
+          onClick={() => setYearFilterStr('all')}
         >
           全部年份
         </Button>
@@ -86,7 +89,7 @@ export default function QuestionsPage({ params }: Props) {
             size="sm"
             variant={yearFilter === y ? 'default' : 'outline'}
             className="h-7 text-xs"
-            onClick={() => setYearFilter(yearFilter === y ? 'all' : y)}
+            onClick={() => setYearFilterStr(yearFilter === y ? 'all' : String(y))}
           >
             {y}年
           </Button>
@@ -94,7 +97,7 @@ export default function QuestionsPage({ params }: Props) {
       </div>
 
       {/* Subject tabs */}
-      <Tabs defaultValue={subjects[0]?.id}>
+      <Tabs value={subjectTab} onValueChange={setSubjectTab}>
         <div className="overflow-x-auto pb-1">
           <TabsList className="inline-flex w-max gap-1">
             {subjects.map((s) => {
