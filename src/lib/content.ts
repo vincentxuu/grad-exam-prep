@@ -1,4 +1,4 @@
-import type { Exam, ExamId, Flashcard, Question, Resource, StudyPlan, Subject } from '@/types/content'
+import type { Exam, ExamId, Flashcard, PastPaper, Question, Resource, StudyPlan, Subject } from '@/types/content'
 import examsRaw from '../../public/data/exams.json'
 import questionsRaw from '../../public/data/questions.json'
 import flashcardsRaw from '../../public/data/flashcards.json'
@@ -42,6 +42,28 @@ export function getFlashcardsBySubject(subjectId: string): Flashcard[] {
 
 export function getResourcesByExam(examId: ExamId): Resource[] {
   return resources.filter((r) => r.examRelevance.includes(examId))
+}
+
+const PASSAGE_RANGE_RE = /[Qq]uestions?\s+(\d+)\s*[-–—]+\s*(\d+)/
+
+export function findPassageParent(question: Question, allQuestions: Question[]): Question | null {
+  for (const q of allQuestions) {
+    if (q.id === question.id || q.paperId !== question.paperId) continue
+    const m = q.text.match(PASSAGE_RANGE_RE)
+    if (m) {
+      const start = parseInt(m[1])
+      const end = parseInt(m[2])
+      if (question.number >= start && question.number <= end) {
+        return q
+      }
+    }
+  }
+  return null
+}
+
+export function getPaperUrl(paperId: string): string | undefined {
+  const paper = (pastPapers as unknown as PastPaper[]).find((p) => p.id === paperId)
+  return paper?.url
 }
 
 export const EXAM_LABELS: Record<ExamId, string> = {

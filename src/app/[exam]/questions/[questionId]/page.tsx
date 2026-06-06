@@ -8,8 +8,9 @@ import { Card, CardContent } from '@/components/ui/card'
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
 import { Separator } from '@/components/ui/separator'
 import { QuestionText } from '@/components/question-text'
-import { getQuestionsByExam } from '@/lib/content'
+import { getQuestionsByExam, findPassageParent, getPaperUrl } from '@/lib/content'
 import { getAnswer } from '@/lib/answers'
+import { getQuestionImages } from '@/lib/question-images'
 import { getUserId } from '@/lib/user-id'
 import { parseQuestion } from '@/lib/question-parser'
 import type { ExamId } from '@/types/content'
@@ -30,7 +31,11 @@ export default function DrillPage({ params, searchParams }: Props) {
   if (!question) notFound()
 
   const parsed = parseQuestion(question.text)
+  const passageParent = findPassageParent(question, allQuestions)
+  const passageStem = passageParent ? parseQuestion(passageParent.text).stem : null
   const answerData = getAnswer(questionId)
+  const questionImages = question.hasImage ? getQuestionImages(questionId) : []
+  const paperUrl = question.hasImage ? getPaperUrl(question.paperId) : undefined
 
   const [selected, setSelected] = useState<string | null>(null)
   const [revealed, setRevealed] = useState(false)
@@ -73,12 +78,56 @@ export default function DrillPage({ params, searchParams }: Props) {
         </Button>
       </div>
 
+      {/* Passage context for cloze / reading comprehension children */}
+      {passageStem && (
+        <Card className="border-dashed bg-muted/30">
+          <CardContent className="py-4 px-5 space-y-1">
+            <p className="text-xs font-medium text-muted-foreground">閱讀文章</p>
+            <QuestionText text={passageStem} />
+          </CardContent>
+        </Card>
+      )}
+
       {/* Question stem */}
-      <Card>
-        <CardContent className="py-4 px-5">
-          <QuestionText text={parsed.stem} />
-        </CardContent>
-      </Card>
+      {parsed.stem && (
+        <Card>
+          <CardContent className="py-4 px-5">
+            <QuestionText text={parsed.stem} />
+          </CardContent>
+        </Card>
+      )}
+
+      {/* Original exam images for questions that contain figures */}
+      {questionImages.length > 0 && (
+        <Card className="border-amber-300 bg-amber-50/50 dark:bg-amber-950/20">
+          <CardContent className="py-4 px-5 space-y-3">
+            <div className="flex items-center justify-between">
+              <p className="text-xs font-medium text-amber-700 dark:text-amber-400">
+                原始試卷圖片
+              </p>
+              {paperUrl && (
+                <a
+                  href={paperUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-amber-600 hover:text-amber-800 dark:text-amber-400 dark:hover:text-amber-200 underline"
+                >
+                  查看完整試卷 PDF
+                </a>
+              )}
+            </div>
+            {questionImages.map((src, i) => (
+              <img
+                key={i}
+                src={src}
+                alt={`試卷第 ${src.match(/page-(\d+)/)?.[1] ?? i + 1} 頁`}
+                className="w-full rounded border border-border"
+                loading="lazy"
+              />
+            ))}
+          </CardContent>
+        </Card>
+      )}
 
       {/* Options */}
       {!revealed && parsed.options ? (
