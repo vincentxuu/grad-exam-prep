@@ -1,16 +1,9 @@
-import { getGuide, getGuidesByExam, getSubject, guides } from '@/lib/content'
+import { getGuidesByExam, guides, resources } from '@/lib/content'
 
-const BLOCK_TYPES = new Set([
-  'prose',
-  'list',
-  'callout',
-  'compare',
-  'table',
-  'prompt',
-  'quote',
-  'subject',
-  'links',
-])
+// Guides point at other people's articles; they must never grow into copies of
+// them. These tests pin that boundary: a working source URL, and topics that
+// stay short enough to be labels rather than a retelling.
+const TOPIC_MAX_LENGTH = 40
 
 describe('guides content', () => {
   it('has at least one guide', () => {
@@ -22,58 +15,30 @@ describe('guides content', () => {
     expect(new Set(ids).size).toBe(ids.length)
   })
 
-  it('looks up a guide by id', () => {
-    const guide = getGuide('guide-dcard-115-im-tech')
-    expect(guide).toBeDefined()
-    expect(guide?.examRelevance).toContain('im')
-  })
-
-  it('returns undefined for an unknown id', () => {
-    expect(getGuide('nope')).toBeUndefined()
-  })
-
   it('filters guides by exam', () => {
     const imGuides = getGuidesByExam('im')
     expect(imGuides.length).toBeGreaterThan(0)
     expect(imGuides.every((g) => g.examRelevance.includes('im'))).toBe(true)
   })
 
-  it.each(guides.map((g) => [g.id, g] as const))('%s has a valid structure', (_id, guide) => {
+  it.each(guides.map((g) => [g.id, g] as const))('%s links to its original', (_id, guide) => {
     expect(guide.source.url).toMatch(/^https?:\/\//)
-    expect(guide.summary.length).toBeGreaterThan(0)
-    expect(guide.takeaways.length).toBeGreaterThan(0)
-    expect(guide.sections.length).toBeGreaterThan(0)
-
-    const sectionIds = guide.sections.map((s) => s.id)
-    expect(new Set(sectionIds).size).toBe(sectionIds.length)
-
-    for (const section of guide.sections) {
-      expect(section.blocks.length).toBeGreaterThan(0)
-      for (const block of section.blocks) {
-        expect(BLOCK_TYPES.has(block.type)).toBe(true)
-        if (block.type === 'prompt') expect(block.prompt).toBeTruthy()
-        if (block.type === 'compare') {
-          for (const col of block.columns ?? []) {
-            expect(['pro', 'con', 'neutral']).toContain(col.tone)
-            expect(col.items.length).toBeGreaterThan(0)
-          }
-        }
-        if (block.type === 'subject' && block.subjectId) {
-          expect(getSubject(block.subjectId)).toBeDefined()
-        }
-        if (block.type === 'table') {
-          const cols = block.headers?.length ?? 0
-          expect(cols).toBeGreaterThan(0)
-          for (const row of block.rows ?? []) expect(row).toHaveLength(cols)
-        }
-      }
-    }
+    expect(guide.source.platform.length).toBeGreaterThan(0)
   })
 
   it.each(
-    guides.filter((g) => g.timeAllocation).map((g) => [g.id, g] as const)
-  )('%s time allocation sums to 100%%', (_id, guide) => {
-    const total = guide.timeAllocation?.items.reduce((sum, item) => sum + item.pct, 0)
-    expect(total).toBe(100)
+    guides.map((g) => [g.id, g] as const)
+  )('%s topics are labels, not a retelling', (_id, guide) => {
+    expect(guide.topics.length).toBeGreaterThan(0)
+    for (const topic of guide.topics) {
+      expect(topic.length).toBeLessThanOrEqual(TOPIC_MAX_LENGTH)
+    }
+  })
+
+  it('every guide is also reachable from the resource library', () => {
+    const resourceUrls = new Set(resources.map((r) => r.url))
+    for (const guide of guides) {
+      expect(resourceUrls.has(guide.source.url)).toBe(true)
+    }
   })
 })

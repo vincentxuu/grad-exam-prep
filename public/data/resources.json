@@ -253,7 +253,7 @@
     "type": "Dcard",
     "examRelevance": ["im"],
     "url": "https://www.dcard.tw/f/graduate_school/p/261258186",
-    "description": "臺科大資管系非應屆考生的完整心得：補習與否的決策、生成式AI用法、兩本筆記法、計概/資結/MIS/統計各科策略與70:10:20時間分配（本站已整理成「上榜心得」頁）"
+    "description": "臺科大資管系非應屆考生的心得，涵蓋補習與否的決策、生成式AI用法、筆記整理方式、各科準備方向、讀書時間分配與備考心態"
   },
   {
     "id": "res-dcard-im-115-admitted",
@@ -261,7 +261,7 @@
     "type": "Dcard",
     "examRelevance": ["im"],
     "url": "https://www.dcard.tw/f/graduate_school/p/261162089",
-    "description": "四大資管系考生正取台大資管所（筆試260–280、口試90–95），詳述唸書日／休息日節奏設計、考古題嚴格訂正流程、各科加權取捨與考場實務（本站已整理成「上榜心得」頁）"
+    "description": "四大資管系考生正取台大資管所的心得，涵蓋讀書節奏設計、考古題訂正流程、各科在加權下的取捨、二階口試計分結構與考場實務"
   },
   {
     "id": "res-dcard-im-115-schedule",
@@ -285,7 +285,7 @@
     "type": "HackMD",
     "examRelevance": ["cs"],
     "url": "https://hackmd.io/@BunanSia/HJYTNE95Wx",
-    "description": "115上榜生的免費資源總整理：六科OCW清單（洪士灝計組、周志遠OS、趙啟超線代離散、彭文志資結、陳韞儂演算法等）、原文書與考古題雲端連結、考試趨勢分析（RISC-V、GPU/FLOPS、AI與機率、K-map、Akra-Bazzi），另有讀書時程/日程規劃與常見問答。針對沒錢補習的考生特別實用"
+    "description": "115 上榜生整理的免費資源索引：六科開放式課程清單、原文書與考古題雲端連結、近年考試趨勢分析、讀書時程與日程規劃，以及給無補習考生的常見問答"
   },
   {
     "id": "res-dcard-im-115-stats",
@@ -293,7 +293,7 @@
     "type": "Dcard",
     "examRelevance": ["im"],
     "url": "https://www.dcard.tw/f/graduate_school/p/261224272",
-    "description": "115台大資管統計佔了50分，作者建議把統計的重要性往上拉；含各科準備方式與模擬考（MIS＋計概）運用心得"
+    "description": "115 資管所考取心得，談統計加考後的科目權重調整、各科準備方式，以及模擬考的運用"
   },
   {
     "id": "res-dcard-im-115-mgmt",
@@ -301,7 +301,7 @@
     "type": "Dcard",
     "examRelevance": ["im"],
     "url": "https://www.dcard.tw/f/graduate_school/p/261358166",
-    "description": "管理組視角的完整心得：背景、考試成績、準備過程、面試與心得。作者認為計概與資結是最基本、最好拿分的送分題，不能因為考管理組就放掉"
+    "description": "管理組視角的心得，含背景、考試成績、準備過程與面試，並談管理組考生該如何看待計概與資結"
   },
   {
     "id": "res-dcard-im-115-mgmt-cross",
@@ -309,7 +309,7 @@
     "type": "Dcard",
     "examRelevance": ["im"],
     "url": "https://www.dcard.tw/f/graduate_school/p/261452528",
-    "description": "企管系跨考資管所（政大、台大）心得，把考科分成計概、資結、MIS 三大塊分別說明準備重點，含考試成績與 115 統計加考 50 分的應對"
+    "description": "企管系跨考資管所（政大、台大）的心得，依計概、資結、MIS 三塊說明準備重點，並含考試成績與統計加考後的調整"
   },
   {
     "id": "res-dcard-im-115-drill",
@@ -317,7 +317,7 @@
     "type": "Dcard",
     "examRelevance": ["im"],
     "url": "https://www.dcard.tw/f/graduate_school/p/261639649",
-    "description": "以台大于天立教授的計概課程快速確認觀念、搭配市售整理筆記，主力放在考前刷題與錯題筆記來建立實力，適合想用最短路徑補計概的考生"
+    "description": "以公開課與市售筆記補計概觀念、主力放在刷題與錯題筆記的備考路線"
   },
   {
     "id": "res-dcard-im-115-retake",
@@ -325,7 +325,7 @@
     "type": "Dcard",
     "examRelevance": ["im"],
     "url": "https://www.dcard.tw/f/graduate_school/p/261316410",
-    "description": "重考生視角，強調依考古題往外延伸準備新技術；作者當年額外準備 RAG、AI Agent、Transformer 架構、LLM 攻防與 WiFi 7，實際只有 RAG 考出來——可看出趨勢題的押題命中率與投報比"
+    "description": "資結組重考生的心得，談如何依考古題往外延伸準備 AI 與新技術趨勢題，並回顧自己押題的實際命中情形"
   },
   {
     "id": "res-dcard-im-115-ds",
@@ -333,7 +333,7 @@
     "type": "Dcard",
     "examRelevance": ["im"],
     "url": "https://www.dcard.tw/f/graduate_school/p/261218467",
-    "description": "對 115 各校資結考題的逐題感受與拆解，示範遇到沒看過的名詞（如 reentrant list）時如何從相鄰題目反推答案的臨場策略"
+    "description": "115 資管所考試心得，含各校資結考題的逐題感受與臨場作答策略"
   },
   {
     "id": "res-dcard-im-115-cross",
@@ -341,7 +341,7 @@
     "type": "Dcard",
     "examRelevance": ["im"],
     "url": "https://www.dcard.tw/f/graduate_school/p/261184228",
-    "description": "跨考生半補習的長篇心得，含各科考場檢討；作者因資結寫太慢、沒發現後面還有一頁而失分，是提醒考場時間分配與翻頁檢查的實例"
+    "description": "跨考生半補習的長篇心得，含各科考場檢討與作答時間分配的反省"
   },
   {
     "id": "res-dcard-im-115-exam",
@@ -365,7 +365,7 @@
     "type": "Dcard",
     "examRelevance": ["cs"],
     "url": "https://www.dcard.tw/f/graduate_school/p/261121606",
-    "description": "跨考生報遍台清交成央的心得，明確給出科目攻讀順序：離散 → 作業系統 → 線代、資結 → 演算法、計組，並說明數位邏輯等低 CP 值範圍的取捨"
+    "description": "跨考生報遍台清交成央的心得，談六科的攻讀順序安排，以及低投報率範圍的取捨"
   },
   {
     "id": "res-dcard-cs-115-discipline",
@@ -373,7 +373,7 @@
     "type": "Dcard",
     "examRelevance": ["cs"],
     "url": "https://www.dcard.tw/f/graduate_school/p/261352618",
-    "description": "重點在讀書計畫的執行力：一開始就要建立完整計畫並預留 delay 的 buffer；基本題要練到成為肌肉記憶，頂大難題也要另外練"
+    "description": "跨考心得，重點放在讀書計畫的擬定與執行，以及基本題與頂大難題的練習配置"
   },
   {
     "id": "res-dcard-cs-115-cross-mgmt",
@@ -397,7 +397,7 @@
     "type": "Dcard",
     "examRelevance": ["cs"],
     "url": "https://www.dcard.tw/f/graduate_school/p/261103020",
-    "description": "詳述自己的數位筆記架構：以科目分類、科目內再依章節分類、每則筆記獨立成檔，內容先經自己消化再寫，適合想建立可長期複習之筆記系統的考生"
+    "description": "超長心得文，詳述作者自己的數位筆記系統如何分類與維護，適合想建立長期複習架構的考生"
   },
   {
     "id": "res-dcard-cs-115-recommend",

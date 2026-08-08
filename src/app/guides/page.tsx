@@ -1,66 +1,89 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
 import { Badge } from '@/components/ui/badge'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { EXAM_LABELS, guides } from '@/lib/content'
 
 export const metadata: Metadata = {
-  title: '上榜心得 | 台大研所備考',
-  description: '歷屆上榜生的備考策略、各科準備方式與心態整理',
+  title: '上榜心得導讀 | 台大研所備考',
+  description: '值得一讀的上榜心得索引，說明每篇涵蓋哪些主題，內容請至原文閱讀',
 }
 
 export default function GuidesPage() {
   return (
     <div className="space-y-6 max-w-3xl">
       <div>
-        <h1 className="text-2xl font-bold">上榜心得</h1>
+        <h1 className="text-2xl font-bold">上榜心得導讀</h1>
         <p className="text-muted-foreground text-sm mt-1">
-          把公開分享的上榜心得整理成可執行的策略：時間分配、各科準備方式、工具用法與心態
+          這裡只說明每篇心得涵蓋哪些主題，方便你決定要不要點進去。內容請至原文閱讀，著作權屬各原作者所有。
         </p>
       </div>
 
       <div className="space-y-4">
         {guides.map((guide) => (
-          <Link key={guide.id} href={`/guides/${guide.id}`} className="block group">
-            <Card className="transition-shadow group-hover:shadow-md">
-              <CardHeader>
-                <div className="flex items-start justify-between gap-3 flex-wrap">
-                  <CardTitle className="text-lg">{guide.title}</CardTitle>
-                  <div className="flex gap-1 shrink-0">
-                    {guide.examRelevance.map((e) => (
-                      <Badge key={e} variant="outline" className="text-xs">
-                        {EXAM_LABELS[e]}
-                      </Badge>
-                    ))}
-                  </div>
-                </div>
-                <CardDescription>{guide.subtitle}</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-3">
-                <p className="text-sm text-muted-foreground leading-6">{guide.summary}</p>
-                <div className="flex flex-wrap gap-1">
-                  {guide.tags.map((tag) => (
-                    <Badge key={tag} variant="secondary" className="text-xs">
-                      {tag}
+          <article key={guide.id} className="rounded-lg border p-5 space-y-4">
+            <div className="space-y-2">
+              <div className="flex items-start justify-between gap-3 flex-wrap">
+                <h2 className="text-lg font-semibold leading-snug">{guide.title}</h2>
+                <div className="flex gap-1 shrink-0">
+                  {guide.examRelevance.map((e) => (
+                    <Badge key={e} variant="outline" className="text-xs">
+                      {EXAM_LABELS[e]}
                     </Badge>
                   ))}
                 </div>
-                <p className="text-xs text-muted-foreground">
-                  出處：{guide.source.platform}
-                  {guide.source.author ? ` · ${guide.source.author}` : ''}
-                  {guide.readingMinutes ? ` · 約 ${guide.readingMinutes} 分鐘讀完` : ''}
-                </p>
-              </CardContent>
-            </Card>
-          </Link>
+              </div>
+              {guide.subtitle && <p className="text-sm text-muted-foreground">{guide.subtitle}</p>}
+              <div className="flex flex-wrap gap-1">
+                {guide.tags.map((tag) => (
+                  <Badge key={tag} variant="secondary" className="text-xs">
+                    {tag}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+
+            <div className="space-y-1.5">
+              <p className="text-xs font-medium text-muted-foreground">這篇談到</p>
+              <ul className="grid sm:grid-cols-2 gap-x-4 gap-y-1">
+                {guide.topics.map((topic) => (
+                  <li key={topic} className="flex gap-2 text-sm leading-6">
+                    <span className="text-primary shrink-0">•</span>
+                    <span>{topic}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="flex items-center justify-between gap-3 flex-wrap border-t pt-3">
+              <p className="text-xs text-muted-foreground">
+                {guide.source.platform}
+                {guide.source.author ? ` · ${guide.source.author}` : ''}
+              </p>
+              <a
+                href={guide.source.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 rounded-md bg-primary px-3 py-1.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+              >
+                到 {guide.source.platform.split(' ')[0]} 閱讀原文 →
+              </a>
+            </div>
+          </article>
         ))}
       </div>
 
       {guides.length === 0 && (
         <div className="text-center py-10 text-muted-foreground">
-          <p>目前還沒有整理好的心得</p>
+          <p>目前還沒有收錄的心得</p>
         </div>
       )}
+
+      <p className="text-xs text-muted-foreground border-t pt-4">
+        更多各年度心得文、開放式課程與書目整理在
+        <a href="/resources" className="text-primary hover:underline mx-1">
+          資源庫
+        </a>
+        。
+      </p>
     </div>
   )
 }

@@ -110,69 +110,35 @@ resources.forEach((res) => {
   })
 })
 
-// Validate guides
-const GUIDE_BLOCK_TYPES = new Set([
-  'prose',
-  'list',
-  'callout',
-  'compare',
-  'table',
-  'prompt',
-  'quote',
-  'subject',
-  'links',
-])
+// Validate guides.
+// Guides are pointers to other people's articles, never copies of them: each one
+// must carry a working source URL, and `topics` must stay a list of short subject
+// labels rather than a retelling of the article.
+const TOPIC_MAX_LENGTH = 40
 const guideIds = new Set()
 
 guides.forEach((guide) => {
   if (guideIds.has(guide.id)) err(`Duplicate guide id: ${guide.id}`)
   guideIds.add(guide.id)
-  if (!guide.source?.url) err(`Guide ${guide.id} missing source url`)
-  if (!guide.summary) err(`Guide ${guide.id} missing summary`)
-  if (!guide.takeaways?.length) warn(`Guide ${guide.id} has no takeaways`)
+  if (!guide.source?.url?.startsWith('http')) err(`Guide ${guide.id} missing a valid source url`)
+  if (!guide.source?.platform) err(`Guide ${guide.id} missing source platform`)
+  if (!guide.topics?.length) err(`Guide ${guide.id} has no topics`)
   guide.examRelevance.forEach((eid) => {
     if (!examIds.has(eid)) err(`Guide ${guide.id} has invalid examRelevance: ${eid}`)
   })
-
-  const pctSum = (guide.timeAllocation?.items ?? []).reduce((sum, item) => sum + item.pct, 0)
-  if (guide.timeAllocation && pctSum !== 100) {
-    err(`Guide ${guide.id} timeAllocation percentages sum to ${pctSum}, expected 100`)
-  }
-
-  const sectionIds = new Set()
-  guide.sections.forEach((section) => {
-    if (sectionIds.has(section.id)) err(`Guide ${guide.id} has duplicate section id: ${section.id}`)
-    sectionIds.add(section.id)
-    if (!section.blocks?.length) warn(`Guide ${guide.id} section ${section.id} has no blocks`)
-    section.blocks.forEach((block, i) => {
-      const where = `Guide ${guide.id} section ${section.id} block ${i}`
-      if (!GUIDE_BLOCK_TYPES.has(block.type)) err(`${where} has unknown type: ${block.type}`)
-      if (block.type === 'subject' && block.subjectId && !subjectIds.has(block.subjectId)) {
-        err(`${where} references unknown subjectId: ${block.subjectId}`)
-      }
-      if (block.type === 'prompt' && !block.prompt) err(`${where} is a prompt block with no prompt`)
-      if (block.type === 'compare') {
-        block.columns?.forEach((col) => {
-          if (!['pro', 'con', 'neutral'].includes(col.tone)) {
-            err(`${where} column "${col.title}" has invalid tone: ${col.tone}`)
-          }
-        })
-      }
-      if (block.type === 'table') {
-        const cols = block.headers?.length ?? 0
-        block.rows?.forEach((row, r) => {
-          if (row.length !== cols) err(`${where} row ${r} has ${row.length} cells, expected ${cols}`)
-        })
-      }
-    })
+  guide.topics?.forEach((topic) => {
+    if (topic.length > TOPIC_MAX_LENGTH) {
+      err(
+        `Guide ${guide.id} topic is ${topic.length} chars (max ${TOPIC_MAX_LENGTH}) — topics label what the original covers, they do not restate it: "${topic}"`
+      )
+    }
   })
 })
 
-console.log('\n📖 Guides:')
+console.log('\n📖 Guides (導讀，非轉載):')
 guides.forEach((guide) => {
-  const blockCount = guide.sections.reduce((sum, s) => sum + (s.blocks?.length ?? 0), 0)
   console.log(
-    `  ✅ ${guide.title} (${guide.examRelevance.join('/')}): ${guide.sections.length} sections, ${blockCount} blocks`
+    `  ✅ ${guide.title} (${guide.examRelevance.join('/')}): ${guide.topics.length} topics → ${guide.source.url}`
   )
 })
 

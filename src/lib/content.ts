@@ -28,10 +28,6 @@ export const pastPapers = (pastPapersRaw as { papers: unknown[] }).papers
 export const questions = (questionsRaw as { questions: unknown[] }).questions as Question[]
 export const guides = guidesRaw as unknown as Guide[]
 
-export function getGuide(id: string): Guide | undefined {
-  return guides.find((g) => g.id === id)
-}
-
 export function getGuidesByExam(examId: ExamId): Guide[] {
   return guides.filter((g) => g.examRelevance.includes(examId))
 }
