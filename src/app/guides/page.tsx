@@ -1,13 +1,28 @@
-import type { Metadata } from 'next'
-import { Badge } from '@/components/ui/badge'
-import { EXAM_LABELS, guides } from '@/lib/content'
+'use client'
 
-export const metadata: Metadata = {
-  title: '上榜心得導讀 | 台大研所備考',
-  description: '值得一讀的上榜心得索引，說明每篇涵蓋哪些主題，內容請至原文閱讀',
-}
+import { Suspense } from 'react'
+import { PageLoading } from '@/components/page-loading'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { useQueryState } from '@/hooks/use-query-state'
+import { EXAM_LABELS, guides } from '@/lib/content'
+import type { ExamId } from '@/types/content'
 
 export default function GuidesPage() {
+  return (
+    <Suspense fallback={<PageLoading />}>
+      <GuidesContent />
+    </Suspense>
+  )
+}
+
+function GuidesContent() {
+  const [examFilter, setExamFilter] = useQueryState('exam', 'all')
+
+  const filtered = guides.filter(
+    (g) => examFilter === 'all' || g.examRelevance.includes(examFilter as ExamId)
+  )
+
   return (
     <div className="space-y-6 max-w-3xl">
       <div>
@@ -17,8 +32,22 @@ export default function GuidesPage() {
         </p>
       </div>
 
+      <div className="flex items-center gap-2 flex-wrap">
+        {(['all', 'im', 'cs'] as const).map((id) => (
+          <Button
+            key={id}
+            variant={examFilter === id ? 'default' : 'outline'}
+            size="sm"
+            onClick={() => setExamFilter(id)}
+          >
+            {id === 'all' ? '全部' : EXAM_LABELS[id]}
+          </Button>
+        ))}
+        <span className="text-xs text-muted-foreground ml-1">{filtered.length} 篇</span>
+      </div>
+
       <div className="space-y-4">
-        {guides.map((guide) => (
+        {filtered.map((guide) => (
           <article key={guide.id} className="rounded-lg border p-5 space-y-4">
             <div className="space-y-2">
               <div className="flex items-start justify-between gap-3 flex-wrap">
@@ -71,9 +100,9 @@ export default function GuidesPage() {
         ))}
       </div>
 
-      {guides.length === 0 && (
+      {filtered.length === 0 && (
         <div className="text-center py-10 text-muted-foreground">
-          <p>目前還沒有收錄的心得</p>
+          <p>此篩選條件下沒有心得</p>
         </div>
       )}
 
