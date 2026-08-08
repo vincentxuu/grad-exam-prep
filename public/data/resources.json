@@ -278,5 +278,141 @@
     "examRelevance": ["im"],
     "url": "https://www.dcard.tw/f/graduate_school/p/261225472",
     "description": "各校資管所二階口試流程、常見問題與準備方式；台大資管所口試佔40%且未達70分不錄取，需提早準備"
+  },
+  {
+    "id": "res-hackmd-cs-115-resources",
+    "title": "HackMD — 115資工碩考資源整理與問答（無補習．重考）",
+    "type": "HackMD",
+    "examRelevance": ["cs"],
+    "url": "https://hackmd.io/@BunanSia/HJYTNE95Wx",
+    "description": "115上榜生的免費資源總整理：六科OCW清單（洪士灝計組、周志遠OS、趙啟超線代離散、彭文志資結、陳韞儂演算法等）、原文書與考古題雲端連結、考試趨勢分析（RISC-V、GPU/FLOPS、AI與機率、K-map、Akra-Bazzi），另有讀書時程/日程規劃與常見問答。針對沒錢補習的考生特別實用"
+  },
+  {
+    "id": "res-dcard-im-115-stats",
+    "title": "Dcard — 115資管所考取心得（統計佔50分）",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/261224272",
+    "description": "115台大資管統計佔了50分，作者建議把統計的重要性往上拉；含各科準備方式與模擬考（MIS＋計概）運用心得"
+  },
+  {
+    "id": "res-dcard-im-115-mgmt",
+    "title": "Dcard — 115 資管所考試心得（管理組）",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/261358166",
+    "description": "管理組視角的完整心得：背景、考試成績、準備過程、面試與心得。作者認為計概與資結是最基本、最好拿分的送分題，不能因為考管理組就放掉"
+  },
+  {
+    "id": "res-dcard-im-115-mgmt-cross",
+    "title": "Dcard — 115資管所管理組 企管系跨考心得",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/261452528",
+    "description": "企管系跨考資管所（政大、台大）心得，把考科分成計概、資結、MIS 三大塊分別說明準備重點，含考試成績與 115 統計加考 50 分的應對"
+  },
+  {
+    "id": "res-dcard-im-115-drill",
+    "title": "Dcard — 115 資管所考試心得（刷題與錯題筆記派）",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/261639649",
+    "description": "以台大于天立教授的計概課程快速確認觀念、搭配市售整理筆記，主力放在考前刷題與錯題筆記來建立實力，適合想用最短路徑補計概的考生"
+  },
+  {
+    "id": "res-dcard-im-115-retake",
+    "title": "Dcard — 115資管所資結組重考上榜心得",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/261316410",
+    "description": "重考生視角，強調依考古題往外延伸準備新技術；作者當年額外準備 RAG、AI Agent、Transformer 架構、LLM 攻防與 WiFi 7，實際只有 RAG 考出來——可看出趨勢題的押題命中率與投報比"
+  },
+  {
+    "id": "res-dcard-im-115-ds",
+    "title": "Dcard — 115資管所考試心得（資結考題分析）",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/261218467",
+    "description": "對 115 各校資結考題的逐題感受與拆解，示範遇到沒看過的名詞（如 reentrant list）時如何從相鄰題目反推答案的臨場策略"
+  },
+  {
+    "id": "res-dcard-im-115-cross",
+    "title": "Dcard — 115資管所跨考心路歷程（半補習）",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/261184228",
+    "description": "跨考生半補習的長篇心得，含各科考場檢討；作者因資結寫太慢、沒發現後面還有一頁而失分，是提醒考場時間分配與翻頁檢查的實例"
+  },
+  {
+    "id": "res-dcard-im-115-exam",
+    "title": "Dcard — 115 資管所考試心得",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/261221009",
+    "description": "115 資管所考試心得，含各校考科準備方式與當年考題風格觀察，可與本站「上榜心得」的兩篇交叉比對"
+  },
+  {
+    "id": "res-dcard-im-115-recommend",
+    "title": "Dcard — 115資管推甄心得【台大／交大／政大資管】",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/260556750",
+    "description": "推甄（甄試）路線的心得，涵蓋台大、交大、政大資管所的書審與面試；若同時要走推甄與考試雙軌，可先看這篇評估時程"
+  },
+  {
+    "id": "res-dcard-cs-115-brush",
+    "title": "Dcard — 115跨考資工所 台清交成央刷榜心得",
+    "type": "Dcard",
+    "examRelevance": ["cs"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/261121606",
+    "description": "跨考生報遍台清交成央的心得，明確給出科目攻讀順序：離散 → 作業系統 → 線代、資結 → 演算法、計組，並說明數位邏輯等低 CP 值範圍的取捨"
+  },
+  {
+    "id": "res-dcard-cs-115-discipline",
+    "title": "Dcard — 115資工所 還算自律的跨考心得",
+    "type": "Dcard",
+    "examRelevance": ["cs"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/261352618",
+    "description": "重點在讀書計畫的執行力：一開始就要建立完整計畫並預留 delay 的 buffer；基本題要練到成為肌肉記憶，頂大難題也要另外練"
+  },
+  {
+    "id": "res-dcard-cs-115-cross-mgmt",
+    "title": "Dcard — 115資工所 管院非應屆準備一年跨考心得（交大／中央正取）",
+    "type": "Dcard",
+    "examRelevance": ["cs"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/261048222",
+    "description": "管理學院背景、非應屆、準備一年跨考資工所，正取交大與中央的完整歷程，適合零 CS 基礎但打算全職準備一年的跨考生參考"
+  },
+  {
+    "id": "res-dcard-cs-115-exam",
+    "title": "Dcard — 115資工所考試上榜心得",
+    "type": "Dcard",
+    "examRelevance": ["cs"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/261243117",
+    "description": "115 資工所上榜心得，含備考心路歷程與各科經驗；作者報考動機主要來自兵役時程考量，男性考生可一併參考時程規劃"
+  },
+  {
+    "id": "res-dcard-cs-115-notes",
+    "title": "Dcard — 115資工所考試超長心得文（筆記系統）",
+    "type": "Dcard",
+    "examRelevance": ["cs"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/261103020",
+    "description": "詳述自己的數位筆記架構：以科目分類、科目內再依章節分類、每則筆記獨立成檔，內容先經自己消化再寫，適合想建立可長期複習之筆記系統的考生"
+  },
+  {
+    "id": "res-dcard-cs-115-recommend",
+    "title": "Dcard — 115 資工推甄結果分享",
+    "type": "Dcard",
+    "examRelevance": ["cs"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/260306912",
+    "description": "115 資工所推甄結果與心得彙整，可用來評估自己的成績與經歷在推甄管道的落點，以及是否要同時準備考試"
+  },
+  {
+    "id": "res-dcard-cs-115-ntust-recommend",
+    "title": "Dcard — 115 台科大資工推甄心得",
+    "type": "Dcard",
+    "examRelevance": ["cs"],
+    "url": "https://www.dcard.tw/f/ntust/p/260752351",
+    "description": "台科大資工系（輔系財金）視角的 115 推甄心得，含背景、報考校系與結果，適合評估推甄志願配置"
   }
 ]
