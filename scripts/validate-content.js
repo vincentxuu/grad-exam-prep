@@ -17,6 +17,7 @@ const flashcards = loadJson('flashcards.json')
 const resources = loadJson('resources.json')
 const pastPapersData = loadJson('past-papers.json')
 const pastPapers = pastPapersData.papers
+const guides = loadJson('guides.json')
 
 const errors = []
 const warnings = []
@@ -109,6 +110,65 @@ resources.forEach((res) => {
   })
 })
 
+// Validate guides
+const GUIDE_BLOCK_TYPES = new Set([
+  'prose',
+  'list',
+  'callout',
+  'compare',
+  'table',
+  'prompt',
+  'quote',
+  'subject',
+  'links',
+])
+const guideIds = new Set()
+
+guides.forEach((guide) => {
+  if (guideIds.has(guide.id)) err(`Duplicate guide id: ${guide.id}`)
+  guideIds.add(guide.id)
+  if (!guide.source?.url) err(`Guide ${guide.id} missing source url`)
+  if (!guide.summary) err(`Guide ${guide.id} missing summary`)
+  if (!guide.takeaways?.length) warn(`Guide ${guide.id} has no takeaways`)
+  guide.examRelevance.forEach((eid) => {
+    if (!examIds.has(eid)) err(`Guide ${guide.id} has invalid examRelevance: ${eid}`)
+  })
+
+  const pctSum = (guide.timeAllocation?.items ?? []).reduce((sum, item) => sum + item.pct, 0)
+  if (guide.timeAllocation && pctSum !== 100) {
+    err(`Guide ${guide.id} timeAllocation percentages sum to ${pctSum}, expected 100`)
+  }
+
+  const sectionIds = new Set()
+  guide.sections.forEach((section) => {
+    if (sectionIds.has(section.id)) err(`Guide ${guide.id} has duplicate section id: ${section.id}`)
+    sectionIds.add(section.id)
+    if (!section.blocks?.length) warn(`Guide ${guide.id} section ${section.id} has no blocks`)
+    section.blocks.forEach((block, i) => {
+      const where = `Guide ${guide.id} section ${section.id} block ${i}`
+      if (!GUIDE_BLOCK_TYPES.has(block.type)) err(`${where} has unknown type: ${block.type}`)
+      if (block.type === 'subject' && block.subjectId && !subjectIds.has(block.subjectId)) {
+        err(`${where} references unknown subjectId: ${block.subjectId}`)
+      }
+      if (block.type === 'prompt' && !block.prompt) err(`${where} is a prompt block with no prompt`)
+      if (block.type === 'table') {
+        const cols = block.headers?.length ?? 0
+        block.rows?.forEach((row, r) => {
+          if (row.length !== cols) err(`${where} row ${r} has ${row.length} cells, expected ${cols}`)
+        })
+      }
+    })
+  })
+})
+
+console.log('\n📖 Guides:')
+guides.forEach((guide) => {
+  const blockCount = guide.sections.reduce((sum, s) => sum + (s.blocks?.length ?? 0), 0)
+  console.log(
+    `  ✅ ${guide.title} (${guide.examRelevance.join('/')}): ${guide.sections.length} sections, ${blockCount} blocks`
+  )
+})
+
 // Past papers coverage
 console.log('\n📄 Past Paper Coverage:')
 const imSubjects = subjects.filter((s) => s.examId === 'im')
@@ -131,6 +191,7 @@ console.log(`  Study plans: ${studyPlans.length}`)
 console.log(`  Flashcards: ${flashcards.length}`)
 console.log(`  Resources: ${resources.length}`)
 console.log(`  Past papers: ${pastPapers.length}`)
+console.log(`  Guides: ${guides.length}`)
 
 if (warnings.length) {
   console.log(`\n⚠️  Warnings (${warnings.length}):`)

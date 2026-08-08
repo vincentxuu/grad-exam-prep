@@ -246,5 +246,29 @@
     "examRelevance": ["cs"],
     "url": "https://www.youtube.com/playlist?list=PLj6E8qlqmkFvSHyGAFqY4sX0Ee7eLqmq2",
     "description": "陽明交通大學李毅郎教授免費公開課全套，多位113/114/115上榜生推薦為補習班之外最佳計組補充，有助釐清Pipeline、Cache、Memory概念"
+  },
+  {
+    "id": "res-dcard-im-115-tech",
+    "title": "Dcard — 115資管所資結組上榜心得（目標臺大）",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/261258186",
+    "description": "臺科大資管系非應屆考生的完整心得：補習與否的決策、生成式AI用法、兩本筆記法、計概/資結/MIS/統計各科策略與70:10:20時間分配（本站已整理成「上榜心得」頁）"
+  },
+  {
+    "id": "res-dcard-im-115-schedule",
+    "title": "Dcard — 資管所考試時程與筆試內容整理",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/261238983",
+    "description": "同一位115上榜生整理的各校資管所報名與筆試時程、各組考科內容，排考程與選校時可對照參考"
+  },
+  {
+    "id": "res-dcard-im-115-oral",
+    "title": "Dcard — 資管所口試內容與準備分享",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/261225472",
+    "description": "各校資管所二階口試流程、常見問題與準備方式；台大資管所口試佔40%且未達70分不錄取，需提早準備"
   }
 ]

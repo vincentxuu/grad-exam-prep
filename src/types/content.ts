@@ -133,6 +133,83 @@ export interface Question {
   subQuestions: string[]
 }
 
+export type GuideBlockType =
+  | 'prose'
+  | 'list'
+  | 'callout'
+  | 'compare'
+  | 'table'
+  | 'prompt'
+  | 'quote'
+  | 'subject'
+  | 'links'
+
+export type CalloutVariant = 'tip' | 'warn' | 'insight'
+
+export interface GuideCompareColumn {
+  title: string
+  tone: 'pro' | 'con'
+  items: string[]
+}
+
+export interface GuideLink {
+  href: string
+  label: string
+  desc?: string
+}
+
+export interface GuideBlock {
+  type: GuideBlockType
+  title?: string
+  text?: string
+  items?: string[]
+  variant?: CalloutVariant
+  columns?: GuideCompareColumn[]
+  headers?: string[]
+  rows?: string[][]
+  note?: string
+  prompt?: string
+  cite?: string
+  subjectId?: string
+  weightHint?: string
+  links?: GuideLink[]
+}
+
+export interface GuideSection {
+  id: string
+  title: string
+  icon?: string
+  intro?: string
+  blocks: GuideBlock[]
+}
+
+export interface GuideSource {
+  platform: string
+  url: string
+  author?: string
+  note?: string
+}
+
+export interface GuideTimeAllocation {
+  note?: string
+  items: { label: string; pct: number; hint?: string }[]
+}
+
+export interface Guide {
+  id: string
+  title: string
+  subtitle?: string
+  examRelevance: ExamId[]
+  year?: number
+  readingMinutes?: number
+  tags: string[]
+  source: GuideSource
+  summary: string
+  takeaways: string[]
+  timeAllocation?: GuideTimeAllocation
+  sections: GuideSection[]
+}
+
 export interface ContentData {
   exams: Exam[]
   subjects: Subject[]
@@ -140,4 +217,5 @@ export interface ContentData {
   flashcards: Flashcard[]
   resources: Resource[]
   pastPapers: PastPaper[]
+  guides: Guide[]
 }

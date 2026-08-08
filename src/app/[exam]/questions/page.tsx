@@ -1,13 +1,14 @@
 'use client'
 
 import { notFound } from 'next/navigation'
-import { use, useMemo, useState } from 'react'
+import { Suspense, use, useMemo, useState } from 'react'
+import { PageLoading } from '@/components/page-loading'
+import { QuestionText } from '@/components/question-text'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { QuestionText } from '@/components/question-text'
 import { useQueryState } from '@/hooks/use-query-state'
 import { EXAM_LABELS, getQuestionsByExam, getSubjectsByExam } from '@/lib/content'
 import type { ExamId, Question } from '@/types/content'
@@ -18,7 +19,15 @@ interface Props {
 
 const PAGE_SIZE = 30
 
-export default function QuestionsPage({ params }: Props) {
+export default function QuestionsPage(props: Props) {
+  return (
+    <Suspense fallback={<PageLoading />}>
+      <QuestionsContent {...props} />
+    </Suspense>
+  )
+}
+
+function QuestionsContent({ params }: Props) {
   const { exam } = use(params)
   const subjects = getSubjectsByExam(exam as ExamId)
   if (!subjects.length) notFound()
@@ -61,7 +70,8 @@ export default function QuestionsPage({ params }: Props) {
       <div>
         <h1 className="text-2xl font-bold">{EXAM_LABELS[exam as ExamId]} — 題庫</h1>
         <p className="text-muted-foreground text-sm mt-1">
-          {totalFiltered} 題{search || yearFilter !== 'all' ? '（篩選後）' : ''} · 共 {allQuestions.length} 題
+          {totalFiltered} 題{search || yearFilter !== 'all' ? '（篩選後）' : ''} · 共{' '}
+          {allQuestions.length} 題
         </p>
       </div>
 
@@ -198,18 +208,13 @@ function QuestionCard({
               含圖
             </Badge>
           )}
-          <a
-            href={drillHref}
-            className="ml-auto text-xs text-primary hover:underline shrink-0"
-          >
+          <a href={drillHref} className="ml-auto text-xs text-primary hover:underline shrink-0">
             練習 →
           </a>
         </div>
 
         {/* Question text */}
-        <QuestionText
-          text={expanded || !needsTruncation ? question.text : `${preview}…`}
-        />
+        <QuestionText text={expanded || !needsTruncation ? question.text : `${preview}…`} />
 
         {/* Sub-questions */}
         {expanded && question.subQuestions.length > 0 && (
@@ -224,10 +229,7 @@ function QuestionCard({
 
         {/* Expand toggle */}
         {needsTruncation && (
-          <button
-            onClick={onToggle}
-            className="text-xs text-primary hover:underline"
-          >
+          <button onClick={onToggle} className="text-xs text-primary hover:underline">
             {expanded ? '收起 ▲' : '展開全題 ▼'}
           </button>
         )}

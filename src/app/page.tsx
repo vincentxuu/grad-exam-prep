@@ -56,7 +56,8 @@ export default function HomePage() {
         })}
       </div>
 
-      <div className="grid sm:grid-cols-3 gap-4 text-center text-sm text-muted-foreground">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center text-sm text-muted-foreground">
+        <QuickLink href="/guides" icon="🏆" label="上榜心得" desc="時間分配、各科策略、心態" />
         <QuickLink href="/compare" icon="⚖️" label="兩所比較" desc="考試形式、難度、適合對象" />
         <QuickLink href="/resources" icon="📚" label="資源庫" desc="補習班、書目、YouTube、PTT" />
         <QuickLink href="/im" icon="📅" label="備考計畫" desc="8個月完整時程規劃" />

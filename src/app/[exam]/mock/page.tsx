@@ -1,14 +1,15 @@
 'use client'
 
 import { notFound } from 'next/navigation'
-import { use, useState, useEffect, useCallback } from 'react'
+import { Suspense, use, useCallback, useEffect, useState } from 'react'
+import { PageLoading } from '@/components/page-loading'
+import { QuestionText } from '@/components/question-text'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
-import { QuestionText } from '@/components/question-text'
 import { useQueryState } from '@/hooks/use-query-state'
-import { EXAM_LABELS, getQuestionsByExam, getSubjectsByExam } from '@/lib/content'
 import { getAnswer } from '@/lib/answers'
+import { EXAM_LABELS, getQuestionsByExam, getSubjectsByExam } from '@/lib/content'
 import { getUserId } from '@/lib/user-id'
 import type { ExamId, Question } from '@/types/content'
 
@@ -19,7 +20,15 @@ interface Props {
   params: Promise<{ exam: string }>
 }
 
-export default function MockExamPage({ params }: Props) {
+export default function MockExamPage(props: Props) {
+  return (
+    <Suspense fallback={<PageLoading />}>
+      <MockExamContent {...props} />
+    </Suspense>
+  )
+}
+
+function MockExamContent({ params }: Props) {
   const { exam } = use(params)
   const subjects = getSubjectsByExam(exam as ExamId)
   if (!subjects.length) notFound()
@@ -46,8 +55,7 @@ export default function MockExamPage({ params }: Props) {
       questions.map((q) => {
         const userAnswer = answers[q.id]
         const correct = getAnswer(q.id)?.answer
-        const result =
-          !userAnswer ? 'skipped' : userAnswer === correct ? 'correct' : 'wrong'
+        const result = !userAnswer ? 'skipped' : userAnswer === correct ? 'correct' : 'wrong'
         return fetch('/api/practice', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -159,7 +167,9 @@ export default function MockExamPage({ params }: Props) {
     return (
       <div className="space-y-4 max-w-3xl">
         <div className="flex items-center justify-between text-sm">
-          <span>{currentIdx + 1} / {questions.length} 題</span>
+          <span>
+            {currentIdx + 1} / {questions.length} 題
+          </span>
           <span className={secondsLeft < 300 ? 'text-red-500 font-bold' : ''}>
             ⏱ {formatTime(secondsLeft)}
           </span>
@@ -215,10 +225,12 @@ export default function MockExamPage({ params }: Props) {
       <h2 className="text-xl font-bold">成績單</h2>
       <Card>
         <CardContent className="py-4 px-4 text-center space-y-1">
-          <p className="text-3xl font-bold">{score} / {total}</p>
+          <p className="text-3xl font-bold">
+            {score} / {total}
+          </p>
           <p className="text-muted-foreground text-sm">
-            答對 {questions.filter((q) => answers[q.id] === getAnswer(q.id)?.answer).length} 題，
-            共 {questions.length} 題
+            答對 {questions.filter((q) => answers[q.id] === getAnswer(q.id)?.answer).length} 題， 共{' '}
+            {questions.length} 題
           </p>
         </CardContent>
       </Card>
