@@ -146,9 +146,12 @@ export type GuideBlockType =
 
 export type CalloutVariant = 'tip' | 'warn' | 'insight'
 
+export type CompareTone = 'pro' | 'con' | 'neutral'
+
 export interface GuideCompareColumn {
   title: string
-  tone: 'pro' | 'con'
+  tone: CompareTone
+  icon?: string
   items: string[]
 }
 

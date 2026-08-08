@@ -2,7 +2,31 @@ import Link from 'next/link'
 import { CopyButton } from '@/components/guide/copy-button'
 import { Badge } from '@/components/ui/badge'
 import { getSubject } from '@/lib/content'
-import type { CalloutVariant, ExamId, GuideBlock } from '@/types/content'
+import type { CalloutVariant, CompareTone, ExamId, GuideBlock } from '@/types/content'
+
+const COMPARE_TONES: Record<
+  CompareTone,
+  { wrapper: string; heading: string; icon: string; marker: string }
+> = {
+  pro: {
+    wrapper: 'bg-emerald-500/5',
+    heading: 'text-emerald-700 dark:text-emerald-400',
+    icon: '👍',
+    marker: '✓',
+  },
+  con: {
+    wrapper: 'bg-rose-500/5',
+    heading: 'text-rose-700 dark:text-rose-400',
+    icon: '👎',
+    marker: '✕',
+  },
+  neutral: {
+    wrapper: 'bg-muted/30',
+    heading: 'text-foreground',
+    icon: '',
+    marker: '•',
+  },
+}
 
 const CALLOUT_STYLES: Record<CalloutVariant, { wrapper: string; icon: string; label: string }> = {
   tip: {
@@ -60,32 +84,26 @@ export function GuideBlockView({ block, examId }: { block: GuideBlock; examId: E
         <div className="space-y-2">
           {block.title && <h3 className="text-sm font-semibold">{block.title}</h3>}
           <div className="grid md:grid-cols-2 gap-3">
-            {block.columns?.map((col) => (
-              <div
-                key={col.title}
-                className={`rounded-lg border p-4 space-y-2 ${
-                  col.tone === 'pro' ? 'bg-emerald-500/5' : 'bg-rose-500/5'
-                }`}
-              >
-                <h4
-                  className={`text-sm font-semibold ${
-                    col.tone === 'pro'
-                      ? 'text-emerald-700 dark:text-emerald-400'
-                      : 'text-rose-700 dark:text-rose-400'
-                  }`}
-                >
-                  {col.tone === 'pro' ? '👍' : '👎'} {col.title}
-                </h4>
-                <ul className="space-y-1.5">
-                  {col.items.map((item) => (
-                    <li key={item} className="flex gap-2 text-sm leading-6 text-muted-foreground">
-                      <span className="shrink-0">{col.tone === 'pro' ? '✓' : '✕'}</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+            {block.columns?.map((col) => {
+              const tone = COMPARE_TONES[col.tone]
+              const icon = col.icon ?? tone.icon
+              return (
+                <div key={col.title} className={`rounded-lg border p-4 space-y-2 ${tone.wrapper}`}>
+                  <h4 className={`text-sm font-semibold ${tone.heading}`}>
+                    {icon ? `${icon} ` : ''}
+                    {col.title}
+                  </h4>
+                  <ul className="space-y-1.5">
+                    {col.items.map((item) => (
+                      <li key={item} className="flex gap-2 text-sm leading-6 text-muted-foreground">
+                        <span className="shrink-0">{tone.marker}</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )
+            })}
           </div>
         </div>
       )

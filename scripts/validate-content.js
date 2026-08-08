@@ -151,6 +151,13 @@ guides.forEach((guide) => {
         err(`${where} references unknown subjectId: ${block.subjectId}`)
       }
       if (block.type === 'prompt' && !block.prompt) err(`${where} is a prompt block with no prompt`)
+      if (block.type === 'compare') {
+        block.columns?.forEach((col) => {
+          if (!['pro', 'con', 'neutral'].includes(col.tone)) {
+            err(`${where} column "${col.title}" has invalid tone: ${col.tone}`)
+          }
+        })
+      }
       if (block.type === 'table') {
         const cols = block.headers?.length ?? 0
         block.rows?.forEach((row, r) => {

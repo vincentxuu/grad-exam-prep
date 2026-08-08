@@ -256,6 +256,14 @@
     "description": "臺科大資管系非應屆考生的完整心得：補習與否的決策、生成式AI用法、兩本筆記法、計概/資結/MIS/統計各科策略與70:10:20時間分配（本站已整理成「上榜心得」頁）"
   },
   {
+    "id": "res-dcard-im-115-admitted",
+    "title": "Dcard — 115台大資管所正取考研心得",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/261162089",
+    "description": "四大資管系考生正取台大資管所（筆試260–280、口試90–95），詳述唸書日／休息日節奏設計、考古題嚴格訂正流程、各科加權取捨與考場實務（本站已整理成「上榜心得」頁）"
+  },
+  {
     "id": "res-dcard-im-115-schedule",
     "title": "Dcard — 資管所考試時程與筆試內容整理",
     "type": "Dcard",

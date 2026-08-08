@@ -1,4 +1,4 @@
-import { getGuide, getGuidesByExam, guides, getSubject } from '@/lib/content'
+import { getGuide, getGuidesByExam, getSubject, guides } from '@/lib/content'
 
 const BLOCK_TYPES = new Set([
   'prose',
@@ -52,6 +52,12 @@ describe('guides content', () => {
       for (const block of section.blocks) {
         expect(BLOCK_TYPES.has(block.type)).toBe(true)
         if (block.type === 'prompt') expect(block.prompt).toBeTruthy()
+        if (block.type === 'compare') {
+          for (const col of block.columns ?? []) {
+            expect(['pro', 'con', 'neutral']).toContain(col.tone)
+            expect(col.items.length).toBeGreaterThan(0)
+          }
+        }
         if (block.type === 'subject' && block.subjectId) {
           expect(getSubject(block.subjectId)).toBeDefined()
         }
@@ -64,11 +70,10 @@ describe('guides content', () => {
     }
   })
 
-  it.each(guides.filter((g) => g.timeAllocation).map((g) => [g.id, g] as const))(
-    '%s time allocation sums to 100%%',
-    (_id, guide) => {
-      const total = guide.timeAllocation?.items.reduce((sum, item) => sum + item.pct, 0)
-      expect(total).toBe(100)
-    }
-  )
+  it.each(
+    guides.filter((g) => g.timeAllocation).map((g) => [g.id, g] as const)
+  )('%s time allocation sums to 100%%', (_id, guide) => {
+    const total = guide.timeAllocation?.items.reduce((sum, item) => sum + item.pct, 0)
+    expect(total).toBe(100)
+  })
 })
