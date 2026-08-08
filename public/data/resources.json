@@ -293,7 +293,7 @@
     "type": "Dcard",
     "examRelevance": ["im"],
     "url": "https://www.dcard.tw/f/graduate_school/p/261224272",
-    "description": "115 資管所考取心得，談統計加考後的科目權重調整、各科準備方式，以及模擬考的運用"
+    "description": "國立本科應屆、有補習，台大／政大／交大／成大／中央資管五校全正取。含讀書計畫、各科準備、考古題與模擬考運用、書審"
   },
   {
     "id": "res-dcard-im-115-mgmt",
@@ -301,7 +301,7 @@
     "type": "Dcard",
     "examRelevance": ["im"],
     "url": "https://www.dcard.tw/f/graduate_school/p/261358166",
-    "description": "管理組視角的心得，含背景、考試成績、準備過程與面試，並談管理組考生該如何看待計概與資結"
+    "description": "清大應屆、有補習，台大／政大／成大資管正取、交大資管備取。管理組視角，含考試成績、讀書方法與面試"
   },
   {
     "id": "res-dcard-im-115-mgmt-cross",
@@ -309,7 +309,7 @@
     "type": "Dcard",
     "examRelevance": ["im"],
     "url": "https://www.dcard.tw/f/graduate_school/p/261452528",
-    "description": "企管系跨考資管所（政大、台大）的心得，依計概、資結、MIS 三塊說明準備重點，並含考試成績與統計加考後的調整"
+    "description": "企管系非應屆跨考、有補習，交大／政大資管正取、台大／中央資管備取。含讀書計畫、考古題運用與面試"
   },
   {
     "id": "res-dcard-im-115-drill",
@@ -317,7 +317,7 @@
     "type": "Dcard",
     "examRelevance": ["im"],
     "url": "https://www.dcard.tw/f/graduate_school/p/261639649",
-    "description": "以公開課與市售筆記補計概觀念、主力放在刷題與錯題筆記的備考路線"
+    "description": "資管本科（系排 68%），交大正取、台大／政大備取、成大／中央落榜。含背景、成績、考試準備與心態調整"
   },
   {
     "id": "res-dcard-im-115-retake",
@@ -325,7 +325,7 @@
     "type": "Dcard",
     "examRelevance": ["im"],
     "url": "https://www.dcard.tw/f/graduate_school/p/261316410",
-    "description": "資結組重考生的心得，談如何依考古題往外延伸準備 AI 與新技術趨勢題，並回顧自己押題的實際命中情形"
+    "description": "私立大學非應屆重考、TOEIC 785、有報題庫班，交大與中央上榜。含備考時程、計概／資結／網路／資料庫／程式語言／AI 各科學習資源、作息運動與焦慮緩解"
   },
   {
     "id": "res-dcard-im-115-ds",
@@ -333,7 +333,7 @@
     "type": "Dcard",
     "examRelevance": ["im"],
     "url": "https://www.dcard.tw/f/graduate_school/p/261218467",
-    "description": "115 資管所考試心得，含各校資結考題的逐題感受與臨場作答策略"
+    "description": "陽明交大學生，交大管科乙／成大資管乙／中央／中山資管正取、交大資管備取、政大科技組落榜。含補習建議、唸書時間、各科準備與逐校考試心得"
   },
   {
     "id": "res-dcard-im-115-cross",
@@ -341,15 +341,7 @@
     "type": "Dcard",
     "examRelevance": ["im"],
     "url": "https://www.dcard.tw/f/graduate_school/p/261184228",
-    "description": "跨考生半補習的長篇心得，含各科考場檢討與作答時間分配的反省"
-  },
-  {
-    "id": "res-dcard-im-115-exam",
-    "title": "Dcard — 115 資管所考試心得",
-    "type": "Dcard",
-    "examRelevance": ["im"],
-    "url": "https://www.dcard.tw/f/graduate_school/p/261221009",
-    "description": "115 資管所考試心得，含各校考科準備方式與當年考題風格觀察，可與本站「上榜心得」的兩篇交叉比對"
+    "description": "重考跨考生、半補習，政大／中央資管正取，台大資管、清大資應、中正落榜。含跨考原因、備考時長、使用資源與逐校考試心得"
   },
   {
     "id": "res-dcard-im-115-recommend",
@@ -357,7 +349,7 @@
     "type": "Dcard",
     "examRelevance": ["im"],
     "url": "https://www.dcard.tw/f/graduate_school/p/260556750",
-    "description": "推甄（甄試）路線的心得，涵蓋台大、交大、政大資管所的書審與面試；若同時要走推甄與考試雙軌，可先看這篇評估時程"
+    "description": "中山資管（系排 12%），台大／交大／政大資管皆備前 10 並備上、中山逕取，最終就讀台大。含準備方式與台大、交大、政大三校的面試紀錄"
   },
   {
     "id": "res-dcard-cs-115-brush",
@@ -365,7 +357,7 @@
     "type": "Dcard",
     "examRelevance": ["cs"],
     "url": "https://www.dcard.tw/f/graduate_school/p/261121606",
-    "description": "跨考生報遍台清交成央的心得，談六科的攻讀順序安排，以及低投報率範圍的取捨"
+    "description": "跨考生報遍台清交成央的心得，清大與交大資安甲備取。含背景、成績、準備時程、各科準備、考古題與考場紀錄"
   },
   {
     "id": "res-dcard-cs-115-discipline",
@@ -373,7 +365,7 @@
     "type": "Dcard",
     "examRelevance": ["cs"],
     "url": "https://www.dcard.tw/f/graduate_school/p/261352618",
-    "description": "跨考心得，重點放在讀書計畫的擬定與執行，以及基本題與頂大難題的練習配置"
+    "description": "交大非本科重考生，台大網媒／交大資甲／交大資安／清大／中央正取，交大網工、多工、成大備取。含準備時程、六科讀法與建議"
   },
   {
     "id": "res-dcard-cs-115-cross-mgmt",
@@ -381,7 +373,7 @@
     "type": "Dcard",
     "examRelevance": ["cs"],
     "url": "https://www.dcard.tw/f/graduate_school/p/261048222",
-    "description": "管理學院背景、非應屆、準備一年跨考資工所，正取交大與中央的完整歷程，適合零 CS 基礎但打算全職準備一年的跨考生參考"
+    "description": "管院背景非應屆、準備一年跨考，交大與中央正取。含背景與動機、成績與報考策略、讀書方法、各科準備與考試當週安排"
   },
   {
     "id": "res-dcard-cs-115-exam",
@@ -389,7 +381,7 @@
     "type": "Dcard",
     "examRelevance": ["cs"],
     "url": "https://www.dcard.tw/f/graduate_school/p/261243117",
-    "description": "115 資工所上榜心得，含備考心路歷程與各科經驗；作者報考動機主要來自兵役時程考量，男性考生可一併參考時程規劃"
+    "description": "私立大學本科、因兵役延畢半年，中央資工正取、中山備取。含準備過程與規劃、要不要補習的討論與各校考試分享"
   },
   {
     "id": "res-dcard-cs-115-notes",
@@ -397,7 +389,7 @@
     "type": "Dcard",
     "examRelevance": ["cs"],
     "url": "https://www.dcard.tw/f/graduate_school/p/261103020",
-    "description": "超長心得文，詳述作者自己的數位筆記系統如何分類與維護，適合想建立長期複習架構的考生"
+    "description": "成大資訊本科（系排 80%），台大落榜、成大與清大備取，最終選擇重考。超長心得，含備考生活方式、筆記與準備方式、補習班評價、逐校考試總結"
   },
   {
     "id": "res-dcard-cs-115-recommend",
@@ -405,7 +397,7 @@
     "type": "Dcard",
     "examRelevance": ["cs"],
     "url": "https://www.dcard.tw/f/graduate_school/p/260306912",
-    "description": "115 資工所推甄結果與心得彙整，可用來評估自己的成績與經歷在推甄管道的落點，以及是否要同時準備考試"
+    "description": "台大網媒／台大 AI／清大資應正取，清大資甲、成大資甲備取。含背景經歷、申請過程、面試紀錄與志願投遞數量的建議"
   },
   {
     "id": "res-dcard-cs-115-ntust-recommend",
