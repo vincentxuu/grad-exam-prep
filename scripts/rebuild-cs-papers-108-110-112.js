@@ -224,8 +224,8 @@ const ALGO112 = [
   ],
   [
     5,
-    false,
-    `The following is a binary tree and the alphabet on the node is simply the "name" (instead of value) of the node. Please select the correct statements from the following:\n(A) The successor of node B is E.\n(B) The successor of node A is C.\n(C) The tree is not a AVL tree.\n(D) If we remove node J, the result is an AVL tree.\n(E) If we remove node H, the result is an AVL tree.${MISSING_FIGURE('一張二元樹圖')}`,
+    true,
+    'The following is a binary tree and the alphabet on the node is simply the "name" (instead of value) of the node. Please select the correct statements from the following:\n(A) The successor of node B is E.\n(B) The successor of node A is C.\n(C) The tree is not a AVL tree.\n(D) If we remove node J, the result is an AVL tree.\n(E) If we remove node H, the result is an AVL tree.',
   ],
   [
     5,
@@ -360,7 +360,8 @@ for (const id of oldIds) {
 for (const id of Object.keys(images)) {
   if (oldIds.has(id)) delete images[id]
 }
-// algo-112 第 7 題的二元樹圖就在已下載的 page-3.jpg 上
+// page-3.jpg 這一頁同時含第 6 題的二元樹（頁首那棵 A~M 的樹）與第 7 題的七棵樹
+images['q-pp-cs-algo-112-6'] = ['/images/papers/pp-cs-algo-112/page-3.jpg']
 images['q-pp-cs-algo-112-7'] = ['/images/papers/pp-cs-algo-112/page-3.jpg']
 
 save('questions.json', questionsData)

@@ -2275,9 +2275,9 @@
       "subjectId": "cs-algo",
       "year": 112,
       "number": 6,
-      "text": "The following is a binary tree and the alphabet on the node is simply the \"name\" (instead of value) of the node. Please select the correct statements from the following:\n(A) The successor of node B is E.\n(B) The successor of node A is C.\n(C) The tree is not a AVL tree.\n(D) If we remove node J, the result is an AVL tree.\n(E) If we remove node H, the result is an AVL tree.\n\n[原卷此處有一張二元樹圖，本題庫尚未收錄該頁圖檔]",
+      "text": "The following is a binary tree and the alphabet on the node is simply the \"name\" (instead of value) of the node. Please select the correct statements from the following:\n(A) The successor of node B is E.\n(B) The successor of node A is C.\n(C) The tree is not a AVL tree.\n(D) If we remove node J, the result is an AVL tree.\n(E) If we remove node H, the result is an AVL tree.",
       "points": 5,
-      "hasImage": false,
+      "hasImage": true,
       "subQuestions": []
     },
     {
