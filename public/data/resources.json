@@ -269,7 +269,7 @@
     "type": "Dcard",
     "examRelevance": ["im"],
     "url": "https://www.dcard.tw/f/graduate_school/p/261238983",
-    "description": "同一位115上榜生整理的各校資管所報名與筆試時程、各組考科內容，排考程與選校時可對照參考"
+    "description": "同一位 115 上榜生（台大／政大／陽交大／中央資管所正取）整理的各校報名與考試時程、各校系筆試考科與內容，排考程與選校時可對照參考"
   },
   {
     "id": "res-dcard-im-115-oral",
@@ -277,7 +277,7 @@
     "type": "Dcard",
     "examRelevance": ["im"],
     "url": "https://www.dcard.tw/f/graduate_school/p/261225472",
-    "description": "各校資管所二階口試流程、常見問題與準備方式；台大資管所口試佔40%且未達70分不錄取，需提早準備"
+    "description": "同一位 115 上榜生的台大資管所與政大資管科技組口試紀錄（兩校口試皆逾 91 分並正取），含台大四關的組成與政大的英文閱讀、團體面試、程式題"
   },
   {
     "id": "res-hackmd-cs-115-resources",
