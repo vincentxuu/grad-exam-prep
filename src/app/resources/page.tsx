@@ -1,5 +1,7 @@
 'use client'
 
+import { Suspense } from 'react'
+import { PageLoading } from '@/components/page-loading'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { useQueryState } from '@/hooks/use-query-state'
@@ -29,6 +31,14 @@ const ALL_TYPES: ResourceType[] = [
 ]
 
 export default function ResourcesPage() {
+  return (
+    <Suspense fallback={<PageLoading />}>
+      <ResourcesContent />
+    </Suspense>
+  )
+}
+
+function ResourcesContent() {
   const [examFilter, setExamFilter] = useQueryState('exam', 'all')
   const [typeFilter, setTypeFilter] = useQueryState('type', 'all')
 

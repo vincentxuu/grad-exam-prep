@@ -1,10 +1,11 @@
 'use client'
 
 import { notFound } from 'next/navigation'
-import { use, useMemo, useState } from 'react'
+import { Suspense, use, useMemo, useState } from 'react'
 import { SpeakButton } from '@/components/flashcard/speak-button'
 import { VocabAnswer } from '@/components/flashcard/vocab-answer'
 import { VoiceSelect } from '@/components/flashcard/voice-select'
+import { PageLoading } from '@/components/page-loading'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { useQueryState } from '@/hooks/use-query-state'
@@ -28,7 +29,15 @@ interface Props {
   params: Promise<{ exam: string }>
 }
 
-export default function FlashcardsPage({ params }: Props) {
+export default function FlashcardsPage(props: Props) {
+  return (
+    <Suspense fallback={<PageLoading />}>
+      <FlashcardsContent {...props} />
+    </Suspense>
+  )
+}
+
+function FlashcardsContent({ params }: Props) {
   const { exam } = use(params)
   const subjects = getSubjectsByExam(exam as ExamId)
   if (!subjects.length) notFound()
@@ -48,7 +57,7 @@ export default function FlashcardsPage({ params }: Props) {
   const filteredCards = useMemo(
     () =>
       subjectFilter === 'all' ? examCards : examCards.filter((c) => c.subjectId === subjectFilter),
-    [exam, subjectFilter],
+    [exam, subjectFilter]
   )
 
   const dueCards = getDueCards(filteredCards)
@@ -100,9 +109,7 @@ export default function FlashcardsPage({ params }: Props) {
             {subjectLabel[card.subjectId]} · {card.topicId.split('-').pop()}
           </Badge>
           <div className="flex items-center gap-2">
-            <p className="text-lg font-medium leading-relaxed whitespace-pre-line">
-              {card.prompt}
-            </p>
+            <p className="text-lg font-medium leading-relaxed whitespace-pre-line">{card.prompt}</p>
             {word && (
               <SpeakButton
                 text={word}

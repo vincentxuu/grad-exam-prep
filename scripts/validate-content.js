@@ -17,6 +17,7 @@ const flashcards = loadJson('flashcards.json')
 const resources = loadJson('resources.json')
 const pastPapersData = loadJson('past-papers.json')
 const pastPapers = pastPapersData.papers
+const guides = loadJson('guides.json')
 
 const errors = []
 const warnings = []
@@ -109,6 +110,38 @@ resources.forEach((res) => {
   })
 })
 
+// Validate guides.
+// Guides are pointers to other people's articles, never copies of them: each one
+// must carry a working source URL, and `topics` must stay a list of short subject
+// labels rather than a retelling of the article.
+const TOPIC_MAX_LENGTH = 40
+const guideIds = new Set()
+
+guides.forEach((guide) => {
+  if (guideIds.has(guide.id)) err(`Duplicate guide id: ${guide.id}`)
+  guideIds.add(guide.id)
+  if (!guide.source?.url?.startsWith('http')) err(`Guide ${guide.id} missing a valid source url`)
+  if (!guide.source?.platform) err(`Guide ${guide.id} missing source platform`)
+  if (!guide.topics?.length) err(`Guide ${guide.id} has no topics`)
+  guide.examRelevance.forEach((eid) => {
+    if (!examIds.has(eid)) err(`Guide ${guide.id} has invalid examRelevance: ${eid}`)
+  })
+  guide.topics?.forEach((topic) => {
+    if (topic.length > TOPIC_MAX_LENGTH) {
+      err(
+        `Guide ${guide.id} topic is ${topic.length} chars (max ${TOPIC_MAX_LENGTH}) — topics label what the original covers, they do not restate it: "${topic}"`
+      )
+    }
+  })
+})
+
+console.log('\n📖 Guides (導讀，非轉載):')
+guides.forEach((guide) => {
+  console.log(
+    `  ✅ ${guide.title} (${guide.examRelevance.join('/')}): ${guide.topics.length} topics → ${guide.source.url}`
+  )
+})
+
 // Past papers coverage
 console.log('\n📄 Past Paper Coverage:')
 const imSubjects = subjects.filter((s) => s.examId === 'im')
@@ -131,6 +164,7 @@ console.log(`  Study plans: ${studyPlans.length}`)
 console.log(`  Flashcards: ${flashcards.length}`)
 console.log(`  Resources: ${resources.length}`)
 console.log(`  Past papers: ${pastPapers.length}`)
+console.log(`  Guides: ${guides.length}`)
 
 if (warnings.length) {
   console.log(`\n⚠️  Warnings (${warnings.length}):`)

@@ -133,6 +133,28 @@ export interface Question {
   subQuestions: string[]
 }
 
+export interface GuideSource {
+  platform: string
+  url: string
+  author?: string
+}
+
+/**
+ * A pointer to someone else's published 心得 article — never a copy of it.
+ * `topics` lists what the original covers so readers can decide whether to open
+ * it; the article's own arguments, methods and data stay at `source.url`.
+ */
+export interface Guide {
+  id: string
+  title: string
+  subtitle?: string
+  examRelevance: ExamId[]
+  year?: number
+  tags: string[]
+  source: GuideSource
+  topics: string[]
+}
+
 export interface ContentData {
   exams: Exam[]
   subjects: Subject[]
@@ -140,4 +162,5 @@ export interface ContentData {
   flashcards: Flashcard[]
   resources: Resource[]
   pastPapers: PastPaper[]
+  guides: Guide[]
 }

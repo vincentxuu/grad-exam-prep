@@ -20,6 +20,7 @@ const examItems = [
 
 const globalItems = [
   { href: '/notes', label: '時事筆記' },
+  { href: '/guides', label: '上榜心得' },
   { href: '/compare', label: '比較' },
   { href: '/resources', label: '資源庫' },
 ]
