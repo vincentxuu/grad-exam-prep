@@ -1,0 +1,46 @@
+name: Deploy to Cloudflare Workers
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# 一次只跑一個部署。進行中的不取消 —— opennext 部署到一半被砍會留下半套 assets。
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    name: Build & deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      # --forceExit：jest 跑完不會自己退出（--detectOpenHandles 也抓不到來源），
+      # 少了這個旗標 CI 會一路卡到 timeout。
+      - name: Test
+        run: npx jest --ci --forceExit
+
+      # 不帶 --env，對應 wrangler.json 最外層的 name: grad-exam-prep，
+      # 也就是 grad-exam-prep.<subdomain>.workers.dev 這個線上站台。
+      # account_id 已寫在 wrangler.json，所以只需要 API token 這一個 secret。
+      - name: Deploy
+        run: npm run deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
