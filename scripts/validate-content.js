@@ -18,6 +18,7 @@ const resources = loadJson('resources.json')
 const pastPapersData = loadJson('past-papers.json')
 const pastPapers = pastPapersData.papers
 const guides = loadJson('guides.json')
+const questions = loadJson('questions.json').questions
 
 const errors = []
 const warnings = []
@@ -101,6 +102,38 @@ subjects.forEach((subj) => {
   const count = flashcards.filter((fc) => fc.subjectId === subj.id).length
   const status = count >= 3 ? '✅' : count > 0 ? '⚠️ ' : '❌'
   console.log(`  ${status} ${subj.name}: ${count} cards ${count < 3 ? '(target: 3+)' : ''}`)
+})
+
+// Validate questions.
+// 資管所的資訊管理導論與統計學共用同一份 PDF，抽題時整份卷子曾被同時寫進兩個科目，
+// 讓每個科目的分頁都混進另一科的題目。同一段題目文字只能屬於一個科目。
+const questionIds = new Set()
+const questionsByText = new Map()
+
+questions.forEach((q) => {
+  if (questionIds.has(q.id)) err(`Duplicate question id: ${q.id}`)
+  questionIds.add(q.id)
+  if (!examIds.has(q.examId)) err(`Question ${q.id} has invalid examId: ${q.examId}`)
+  if (!subjectIds.has(q.subjectId)) err(`Question ${q.id} has invalid subjectId: ${q.subjectId}`)
+  if (!pastPapers.find((pp) => pp.id === q.paperId))
+    err(`Question ${q.id} references unknown paperId: ${q.paperId}`)
+
+  const textKey = q.text.trim()
+  const seen = questionsByText.get(textKey)
+  if (seen && seen.subjectId !== q.subjectId) {
+    err(`Question ${q.id} (${q.subjectId}) duplicates ${seen.id} (${seen.subjectId})`)
+  } else if (seen) {
+    warn(`Question ${q.id} has the same text as ${seen.id}`)
+  } else {
+    questionsByText.set(textKey, q)
+  }
+})
+
+console.log('\n📝 Question Coverage:')
+subjects.forEach((subj) => {
+  const count = questions.filter((q) => q.subjectId === subj.id).length
+  const status = count > 0 ? '✅' : '❌'
+  console.log(`  ${status} ${subj.name}: ${count} questions`)
 })
 
 // Validate resources

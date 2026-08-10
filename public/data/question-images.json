@@ -20,9 +20,6 @@
   "q-pp-cs-algo-111-19": [
     "/images/papers/pp-cs-algo-111/page-4.jpg"
   ],
-  "q-pp-cs-algo-112-4": [
-    "/images/papers/pp-cs-algo-112/page-3.jpg"
-  ],
   "q-pp-cs-algo-113-5": [
     "/images/papers/pp-cs-algo-113/page-3.jpg"
   ],
@@ -83,9 +80,6 @@
   "q-pp-cs-arch-114-8": [
     "/images/papers/pp-cs-arch-114/page-5.jpg"
   ],
-  "q-pp-cs-en-110-1": [
-    "/images/papers/pp-cs-en-110/page-1.jpg"
-  ],
   "q-pp-cs-en-111-42": [
     "/images/papers/pp-cs-en-111/page-7.jpg"
   ],
@@ -143,19 +137,16 @@
   "q-pp-im-mis-111-1": [
     "/images/papers/pp-im-mis-111/page-1.jpg"
   ],
-  "q-pp-im-stat-111-1": [
-    "/images/papers/pp-im-mis-111/page-1.jpg"
-  ],
-  "q-pp-im-mis-114-4": [
-    "/images/papers/pp-im-mis-114/page-3.jpg"
-  ],
   "q-pp-im-stat-114-4": [
     "/images/papers/pp-im-mis-114/page-3.jpg"
   ],
-  "q-pp-im-mis-115-5": [
-    "/images/papers/pp-im-mis-115/page-2.jpg"
-  ],
   "q-pp-im-stat-115-5": [
     "/images/papers/pp-im-mis-115/page-2.jpg"
+  ],
+  "q-pp-cs-algo-112-6": [
+    "/images/papers/pp-cs-algo-112/page-3.jpg"
+  ],
+  "q-pp-cs-algo-112-7": [
+    "/images/papers/pp-cs-algo-112/page-3.jpg"
   ]
 }
