@@ -9,7 +9,8 @@ describe('initialCardState', () => {
     expect(state.cardId).toBe('card-1')
     expect(state.repetitions).toBe(0)
     expect(state.easeFactor).toBe(2.5)
-    expect(isDue(state, NOW + 1000)).toBe(true)
+    // initialCardState 以真實時鐘為基準，不能拿固定的 NOW 來比
+    expect(isDue(state, Date.now() + 1000)).toBe(true)
   })
 })
 
