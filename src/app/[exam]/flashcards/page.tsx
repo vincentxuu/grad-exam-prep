@@ -1,5 +1,6 @@
 'use client'
 
+import { ChevronRight } from 'lucide-react'
 import { notFound } from 'next/navigation'
 import { Suspense, use, useMemo, useState } from 'react'
 import { SpeakButton } from '@/components/flashcard/speak-button'
@@ -13,17 +14,9 @@ import { useSpeech } from '@/hooks/use-speech'
 import { EXAM_LABELS, flashcards, getSubjectsByExam } from '@/lib/content'
 import type { RecallRating } from '@/lib/srs'
 import { daysUntilDue, RECALL_LABELS } from '@/lib/srs'
+import { extractWord, isVocabCard } from '@/lib/vocab'
 import { useFlashcardStore } from '@/store/flashcard'
-import type { ExamId } from '@/types/content'
-
-function extractWord(prompt: string): string | null {
-  const m = prompt.match(/^([\w][\w\s-]*?)\s*[\(（]/)
-  return m ? m[1].trim() : null
-}
-
-function isVocabCard(card: { subjectId: string; topicId: string }) {
-  return card.subjectId.endsWith('-english') && card.topicId.includes('vocabulary')
-}
+import type { ExamId, Flashcard } from '@/types/content'
 
 interface Props {
   params: Promise<{ exam: string }>
@@ -53,6 +46,7 @@ function FlashcardsContent({ params }: Props) {
   const [reviewQueue, setReviewQueue] = useState<typeof examCards>([])
   const [currentIdx, setCurrentIdx] = useState(0)
   const [revealed, setRevealed] = useState(false)
+  const [expandedId, setExpandedId] = useState<string | null>(null)
 
   const filteredCards = useMemo(
     () =>
@@ -174,9 +168,12 @@ function FlashcardsContent({ params }: Props) {
           <p className="text-muted-foreground text-sm mt-1">SM-2 間隔重複排程</p>
         </div>
 
-        <Button onClick={startReview} disabled={dueCards.length === 0} className="w-full sm:w-auto">
-          {dueCards.length > 0 ? `開始複習（${dueCards.length}）` : '暫無待複習卡'}
-        </Button>
+        <div className="flex flex-wrap items-center gap-3">
+          <Button onClick={startReview} disabled={dueCards.length === 0}>
+            {dueCards.length > 0 ? `開始複習（${dueCards.length}）` : '暫無待複習卡'}
+          </Button>
+          <VoiceSelect voices={voices} selectedVoiceURI={selectedVoiceURI} onSelect={setVoice} />
+        </div>
       </div>
 
       {/* Subject filter */}
@@ -230,35 +227,118 @@ function FlashcardsContent({ params }: Props) {
 
       {/* Card list */}
       <div className="space-y-2">
+        {filteredCards.length > 0 && (
+          <p className="text-xs text-muted-foreground">
+            點卡片可展開答案，英文字彙卡附單字與例句發音。
+          </p>
+        )}
         {filteredCards.length === 0 ? (
           <div className="text-center py-10 text-muted-foreground">
             <p>此科目尚無閃卡</p>
             <p className="text-xs mt-1">之後會持續補充</p>
           </div>
         ) : (
-          filteredCards.map((card) => {
-            const state = getCardState(card.id)
-            const days = daysUntilDue(state)
-            return (
-              <div key={card.id} className="rounded-lg border p-3 text-sm">
-                <div className="flex items-start justify-between gap-2">
-                  <p className="font-medium line-clamp-2">{card.prompt}</p>
-                  <div className="shrink-0 flex items-center gap-1">
-                    <Badge variant="outline" className="text-xs">
-                      {subjectLabel[card.subjectId]}
-                    </Badge>
-                    {days === 0 ? (
-                      <Badge className="text-xs">到期</Badge>
-                    ) : (
-                      <span className="text-xs text-muted-foreground">{days}天後</span>
-                    )}
-                  </div>
-                </div>
-              </div>
-            )
-          })
+          filteredCards.map((card) => (
+            <CardRow
+              key={card.id}
+              card={card}
+              subjectLabel={subjectLabel[card.subjectId]}
+              days={daysUntilDue(getCardState(card.id))}
+              expanded={expandedId === card.id}
+              onToggle={() => setExpandedId(expandedId === card.id ? null : card.id)}
+              speak={speak}
+              speakingId={speakingId}
+            />
+          ))
         )}
       </div>
+    </div>
+  )
+}
+
+interface CardRowProps {
+  card: Flashcard
+  subjectLabel: string
+  days: number
+  expanded: boolean
+  onToggle: () => void
+  speak: (text: string, id?: string) => void
+  speakingId: string | null
+}
+
+/**
+ * 瀏覽模式的單張卡片。點開就能看答案 —— 例句與發音不必等到 SRS 排程到期
+ * 才進得了複習模式。
+ */
+function CardRow({
+  card,
+  subjectLabel,
+  days,
+  expanded,
+  onToggle,
+  speak,
+  speakingId,
+}: CardRowProps) {
+  const vocab = isVocabCard(card)
+  const word = vocab ? extractWord(card.prompt) : null
+
+  return (
+    <div className="rounded-lg border text-sm">
+      <button
+        type="button"
+        onClick={onToggle}
+        aria-expanded={expanded}
+        className="w-full p-3 text-left flex items-start justify-between gap-2 hover:bg-muted/40 rounded-lg transition-colors"
+      >
+        <div className="flex items-start gap-1 min-w-0">
+          <ChevronRight
+            className={`h-4 w-4 mt-0.5 shrink-0 text-muted-foreground transition-transform ${expanded ? 'rotate-90' : ''}`}
+          />
+          <p className={`font-medium ${expanded ? '' : 'line-clamp-2'}`}>{card.prompt}</p>
+        </div>
+        <div className="shrink-0 flex items-center gap-1">
+          <Badge variant="outline" className="text-xs">
+            {subjectLabel}
+          </Badge>
+          {days === 0 ? (
+            <Badge className="text-xs">到期</Badge>
+          ) : (
+            <span className="text-xs text-muted-foreground">{days}天後</span>
+          )}
+        </div>
+      </button>
+
+      {expanded && (
+        <div className="px-3 pb-3 space-y-3">
+          {word && (
+            <div className="flex items-center gap-1">
+              <SpeakButton
+                text={word}
+                id={`${card.id}-word`}
+                speak={speak}
+                speakingId={speakingId}
+                label={`播放 ${word} 發音`}
+              />
+              <span className="text-muted-foreground text-xs">點擊播放單字發音</span>
+            </div>
+          )}
+          <div className="rounded-md bg-muted/40 p-3">
+            {vocab ? (
+              <VocabAnswer
+                cardId={card.id}
+                answer={card.answer}
+                speak={speak}
+                speakingId={speakingId}
+              />
+            ) : (
+              <div className="whitespace-pre-line leading-relaxed">{card.answer}</div>
+            )}
+          </div>
+          {card.pastPaperRef && (
+            <p className="text-xs text-muted-foreground">→ 參見：{card.pastPaperRef}</p>
+          )}
+        </div>
+      )}
     </div>
   )
 }
