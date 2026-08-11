@@ -406,5 +406,93 @@
     "examRelevance": ["cs"],
     "url": "https://www.dcard.tw/f/ntust/p/260752351",
     "description": "台科大資工系（輔系財金）視角的 115 推甄心得，含背景、報考校系與結果，適合評估推甄志願配置"
+  },
+  {
+    "id": "res-official-ntu-im-admission",
+    "title": "官方 — 台大資管系碩士班招生規定（考科與計分）",
+    "type": "官方",
+    "examRelevance": ["im"],
+    "url": "https://management.ntu.edu.tw/IM/admission/mba",
+    "description": "系網公告的考試入學與甄試入學相關規定：筆試三科、筆試60%／口試40%、資訊科技概論與資訊管理導論各加權100%、筆試前48名進口試、口試未達70分不錄取"
+  },
+  {
+    "id": "res-official-nccu-lib",
+    "title": "政大圖書館歷屆考古題",
+    "type": "官方",
+    "examRelevance": ["im"],
+    "url": "https://www.lib.nccu.edu.tw/p/426-1000-3.php?Lang=zh-tw",
+    "description": "選「商學院 → 碩士班」查政大資管所考古題，依院／所／學年度打包成 PDF。只提供試題不附解答；同頁另有 93–115 年歷屆招生簡章"
+  },
+  {
+    "id": "res-ocw-ntu-intro-cs",
+    "title": "臺大開放式課程 — 于天立《計算機概論》",
+    "type": "線上課程",
+    "examRelevance": ["im", "cs"],
+    "url": "https://ocw.aca.ntu.edu.tw/courses/101S210",
+    "description": "無補習路線最常被推薦的計概影音教材，21 講涵蓋資料型（儲存／資料結構／資料庫）、系統型（計算機結構／OS／網路）、科學型（演算法／程式語言／AI）。原為電機系課程，C/C++ 程式部分資管所可略過"
+  },
+  {
+    "id": "res-google-ml-crash",
+    "title": "Google Machine Learning Crash Course",
+    "type": "線上課程",
+    "examRelevance": ["im", "cs"],
+    "url": "https://developers.google.com/machine-learning/crash-course",
+    "description": "補計概與 MIS 的 AI 題型。近年 AI/ML 在資管所計概比重逐年上升，這門課涵蓋監督式學習、損失函數、過擬合、神經網路等常考名詞"
+  },
+  {
+    "id": "res-news-ithome",
+    "title": "iThome — 資訊科技時事",
+    "type": "時事",
+    "examRelevance": ["im"],
+    "url": "https://www.ithome.com.tw/",
+    "description": "MIS 申論舉例的主要案例來源。建議邊看邊建一本「案例筆記」，考場上直接調用；計概的新興科技題也常從這裡出"
+  },
+  {
+    "id": "res-news-bnext",
+    "title": "數位時代 — 數位轉型與商業科技",
+    "type": "時事",
+    "examRelevance": ["im"],
+    "url": "https://www.bnext.com.tw/",
+    "description": "偏商業視角的科技時事，適合補 MIS 的數位轉型、平台經濟、ESG 等申論題材"
+  },
+  {
+    "id": "res-book-im-brookshear",
+    "title": "Brookshear《Computer Science: An Overview》",
+    "type": "書目",
+    "examRelevance": ["im"],
+    "url": "https://search.books.com.tw/search/query/key/Computer+Science+An+Overview",
+    "description": "計概原文教材，無補習考生常拿來搭配于天立開放式課程，與 Discovering Computers 互補"
+  },
+  {
+    "id": "res-solutions-im-108",
+    "title": "108 年資管所計概試題＋解答（台大／政大／中央／成大／中山）",
+    "type": "HackMD",
+    "examRelevance": ["im"],
+    "url": "https://www.slideshare.net/slideshow/108-6efa/283753051",
+    "description": "張逸老師版五校計概解答，逐題標註題型（網路／作業系統／資料庫／資料結構）。台大圖書館只給試題不附解答，這是少數公開的解答來源"
+  },
+  {
+    "id": "res-blog-im-mavis",
+    "title": "Mavis — 112 資管所（管理組）正取心得（政/山/央/興/北）",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://shinyu0430.github.io/2023/03/22/IMPrepare",
+    "description": "逐科拆解最完整的一篇：計概子科目一路拆到資安與 AI、題型三分類（不可掉分／部分人會／大家都不會）、MIS 與計概的時間分配檢討。既有的 Notion 版為同一份資源的整理"
+  },
+  {
+    "id": "res-medium-im-111-nocram",
+    "title": "Medium — 111 無補習跨考資管/資應準備心得",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://medium.com/@lee920024/111-%E7%84%A1%E8%A3%9C%E7%BF%92%E8%B7%A8%E8%80%83%E8%B3%87%E7%AE%A1-%E8%B3%87%E6%87%89%E6%BA%96%E5%82%99%E5%BF%83%E5%BE%97-8905e66b3472",
+    "description": "無補習路線的教材配置：于天立計概開放式課程搭配 Computer Science: An Overview 原文書，並說明如何補足補習班講義的覆蓋率"
+  },
+  {
+    "id": "res-dcard-im-114-nocram",
+    "title": "Dcard — 114 資應/資管沒補習心路歷程（超長文）",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/258384284",
+    "description": "作者為政大資管科技組正取，對各校計概與資結的題型差異描述最直接，含各科準備方式與各校考場心得"
   }
 ]

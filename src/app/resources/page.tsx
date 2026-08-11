@@ -17,17 +17,23 @@ const TYPE_ICONS: Record<ResourceType, string> = {
   書目: '📖',
   Dcard: '💬',
   官方: '🏛️',
+  部落格: '✍️',
+  線上課程: '🎓',
+  時事: '📰',
 }
 
 const ALL_TYPES: ResourceType[] = [
   '書目',
   '補習班',
   'YouTube',
+  '線上課程',
   'HackMD',
   'PTT',
   'Notion',
+  '部落格',
   '官方',
   'Dcard',
+  '時事',
 ]
 
 export default function ResourcesPage() {
