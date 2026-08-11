@@ -494,5 +494,141 @@
     "examRelevance": ["im"],
     "url": "https://www.dcard.tw/f/graduate_school/p/258384284",
     "description": "作者為政大資管科技組正取，對各校計概與資結的題型差異描述最直接，含各科準備方式與各校考場心得"
+  },
+  {
+    "id": "res-dcard-im-114-cross",
+    "title": "Dcard — 114 資管所跨考／台大正取心得分享",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/258401429",
+    "description": "跨考台大資管正取。含補習班各科師資的實際評價與數位／面授的取捨"
+  },
+  {
+    "id": "res-dcard-im-114-nocram-oral",
+    "title": "Dcard — 114 資管所｜無補習跨考心得＋台大口試",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/258482673",
+    "description": "無補習路線加上台大口試實錄，兩個最缺資料的環節都有寫。附各科成績"
+  },
+  {
+    "id": "res-dcard-im-114-mgmt",
+    "title": "Dcard — 114 資管所管理組考試心得分享",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/258426281",
+    "description": "管理組視角，有貼各科原始成績與準備過程，可用來校準各科該拿幾分"
+  },
+  {
+    "id": "res-dcard-im-114-retake",
+    "title": "Dcard — 114 資管所重考生考試上榜心得分享",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/258523027",
+    "description": "重考生視角。核心結論是計概範圍不能挑著唸——覺得冷門懶得準備的，考試就會遇到"
+  },
+  {
+    "id": "res-dcard-im-114-rejected",
+    "title": "Dcard — 114 資管所/資安所推甄考試心得與面試經驗分享",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/258527035",
+    "description": "台大沒上、交大資管正取的檢討文。落榜視角的失敗分析，補足上榜文看不到的部分"
+  },
+  {
+    "id": "res-cram-im-114-ntu-overview",
+    "title": "TKB — 掌握台大資管所｜考科簡介與四位學長姐上榜經驗",
+    "type": "補習班",
+    "examRelevance": ["im"],
+    "url": "https://www.tkbgo.com.tw/schoolZone/graduate/article/toDetail?article_id=2035",
+    "description": "四位 114 台大資管上榜者的心得，另附各科命題趨勢拆解：資訊科技概論的 OS／AI／資安比重、資結手寫題約佔四到五成、選擇題答錯倒扣。補習班業配文，考科分析部分仍有參考價值"
+  },
+  {
+    "id": "res-cram-im-114-liu",
+    "title": "TKB — 114 年考取台大資管所 劉O倫",
+    "type": "補習班",
+    "examRelevance": ["im"],
+    "url": "https://www.tkbgo.com.tw/schoolZone/graduate/comment/toDetail?comment_id=2429",
+    "description": "逐科準備重點，提到基礎計概與數位邏輯近年比重已降低。補習班學員見證，帶業配性質"
+  },
+  {
+    "id": "res-cram-im-114-huang",
+    "title": "TKB — 114 年考取台大資管所 黃O瑋",
+    "type": "補習班",
+    "examRelevance": ["im"],
+    "url": "https://www.tkbgo.com.tw/schoolZone/graduate/comment/toDetail?comment_id=2431",
+    "description": "重考生、技術組方向，講第一年因為「大範圍就好」的心態而落榜的教訓。補習班學員見證，帶業配性質"
+  },
+  {
+    "id": "res-cram-im-114-get-shen",
+    "title": "高點 — 114 台大資管／政大資管組／中山資管（成大經濟系跨考）",
+    "type": "補習班",
+    "examRelevance": ["im"],
+    "url": "https://www.get.com.tw/media/master/ListDetail.aspx?iS=67447&iC=3253",
+    "description": "大三上就起跑的長線時程表，一路排到大四上題庫班。補習班學員見證，帶業配性質"
+  },
+  {
+    "id": "res-cram-im-114-get-tsai",
+    "title": "高點 — 114 台大資管／清大資應／中央資管甲組",
+    "type": "補習班",
+    "examRelevance": ["im"],
+    "url": "https://www.get.com.tw/media/master/ListDetail.aspx?iS=67391&iC=3253",
+    "description": "在校成績不佳者的備考時程與心態調適。補習班學員見證，帶業配性質"
+  },
+  {
+    "id": "res-dcard-im-113-cross",
+    "title": "Dcard — 113 資管所跨考｜台大正取心得分享",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/255404730",
+    "description": "跨考台大正取。面試段落講怎麼把非本科經歷連結到資管特質，回答「為什麼要錄取你」"
+  },
+  {
+    "id": "res-dcard-im-113-admitted",
+    "title": "Dcard — 113 資管／資應上榜心得",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/255067859",
+    "description": "社科院背景跨考上台大資管，跨度最大的一篇"
+  },
+  {
+    "id": "res-dcard-im-113-mgmt",
+    "title": "Dcard — 113 研究所資管所管理組考試心得",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/255055090",
+    "description": "管理組長文，附作者自己備考時蒐集的資源清單"
+  },
+  {
+    "id": "res-blog-im-113-nocram",
+    "title": "巴哈姆特 — 113 無補習資管所跨考心得",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://home.gamer.com.tw/artwork.php?sn=5969944",
+    "description": "少見的非 Dcard／Medium 來源，無補習跨考路線"
+  },
+  {
+    "id": "res-cram-im-113-ntu-nccu",
+    "title": "TKB — 113 年台大、政大資管所上榜學長姐分享",
+    "type": "補習班",
+    "examRelevance": ["im"],
+    "url": "https://www.tkbgo.com.tw/schoolZone/graduate/article/toDetail?article_id=1689",
+    "description": "四位 113 台大資管上榜者（含非本科、離職備考、只補 MIS 等不同路線）加上政大資管所心得。補習班業配文"
+  },
+  {
+    "id": "res-cram-im-113-get-huang",
+    "title": "高點 — 113 成大資管甲組狀元、台大資管所探花",
+    "type": "補習班",
+    "examRelevance": ["im"],
+    "url": "https://www.get.com.tw/media/master/ListDetail.aspx?iS=64815&iC=3253",
+    "description": "指出台大資訊科技概論固定出 30–40 分手寫題、基本上都考資料結構，建議找近十年考古加強。也提到台大／清大資應的 OS 題近年變多。補習班學員見證"
+  },
+  {
+    "id": "res-cram-im-113-get-cheng",
+    "title": "高點 — 113 成大資管乙組探花、台大資管所、交大資管所",
+    "type": "補習班",
+    "examRelevance": ["im"],
+    "url": "https://www.get.com.tw/media/master/ListDetail.aspx?iS=64817&iC=3253",
+    "description": "台大考題結構描述最具體的一篇：全選擇題加一題程式題、選擇題有倒扣、程式題常考 Heap／Hash Table／BST 的 C++ 實作且配分很重，建議練手寫程式碼。補習班學員見證"
   }
 ]
