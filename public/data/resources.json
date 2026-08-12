@@ -990,5 +990,21 @@
     "examRelevance": ["im"],
     "url": "https://www.dcard.tw/f/graduate_school/p/241587396",
     "description": "管理組視角。記錄了把抽象概念轉成生活化比喻的記憶法（買蛋餅比喻 CPU-bound、引擎比喻 thread），複習時不必重新推導一次"
+  },
+  {
+    "id": "res-dcard-im-115-ds-exam",
+    "title": "Dcard — 115 資管所資結組考試心得",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/261414891",
+    "description": "115 年政大團體面試的實況，該年時間約 15 分鐘（其他年份心得記為 20 分鐘），逐關記錄英文關等流程"
+  },
+  {
+    "id": "res-dcard-im-114-ds-central",
+    "title": "Dcard — 114 資管所中字輩上榜心得（資結組）",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/258472832",
+    "description": "一個具體教訓：資結自認很簡單、檢查三遍提早交卷，後來發現考古題那題要全對才給分，而自己把 8 寫成 0。提早交卷與抄寫失誤的代價"
   }
 ]
