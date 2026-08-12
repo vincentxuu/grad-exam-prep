@@ -12,6 +12,7 @@ import { Button } from '@/components/ui/button'
 import { useQueryState } from '@/hooks/use-query-state'
 import { useSpeech } from '@/hooks/use-speech'
 import { EXAM_LABELS, flashcards, getSubjectsByExam } from '@/lib/content'
+import { fromFlashcard, toFlashcards } from '@/lib/review-card'
 import type { RecallRating } from '@/lib/srs'
 import { daysUntilDue, RECALL_LABELS } from '@/lib/srs'
 import { extractWord, isVocabCard } from '@/lib/vocab'
@@ -54,18 +55,22 @@ function FlashcardsContent({ params }: Props) {
     [exam, subjectFilter]
   )
 
-  const dueCards = getDueCards(filteredCards)
-  const dueCount = getDueCount(examCards)
+  // SRS store 以 ReviewCard 為單位（靜態閃卡與查來的字共用排程），
+  // 這個頁面目前只渲染靜態閃卡，所以在邊界轉進轉出
+  const toReview = (cards: Flashcard[]) => cards.map((c) => fromFlashcard(c))
+
+  const dueCards = toFlashcards(getDueCards(toReview(filteredCards)))
+  const dueCount = getDueCount(toReview(examCards))
 
   function startReview() {
-    setReviewQueue(getDueCards(filteredCards))
+    setReviewQueue(toFlashcards(getDueCards(toReview(filteredCards))))
     setCurrentIdx(0)
     setRevealed(false)
     setMode('review')
   }
 
   function handleRating(rating: RecallRating) {
-    reviewCard(reviewQueue[currentIdx], rating)
+    reviewCard(fromFlashcard(reviewQueue[currentIdx]), rating)
     if (currentIdx + 1 < reviewQueue.length) {
       setCurrentIdx((i) => i + 1)
       setRevealed(false)
@@ -76,7 +81,7 @@ function FlashcardsContent({ params }: Props) {
 
   const coverageBySubject = subjects.map((s) => {
     const cards = examCards.filter((c) => c.subjectId === s.id)
-    const due = getDueCount(cards)
+    const due = getDueCount(toReview(cards))
     return { subject: s, cardCount: cards.length, due }
   })
 
