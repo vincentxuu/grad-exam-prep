@@ -45,6 +45,16 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 `account_id` 已經寫在 `wrangler.json`，不必另外設 `CLOUDFLARE_ACCOUNT_ID`。
 
+### Worker secrets / 環境變數
+
+查詞功能（`/api/lexicon`）需要以下設定，用 `npx wrangler secret put <NAME>` 寫入：
+
+| 名稱 | 必要 | 用途 |
+| --- | --- | --- |
+| `ANTHROPIC_API_KEY` | 生成路徑必要 | 生成詞條與個人化例句。**沒設定時 `POST /api/lexicon` 回 503**；`GET`（只讀快取）不受影響。 |
+| `LEXICON_DAILY_QUOTA` | 否 | 每人每日生成次數上限，預設 60。快取命中不計入。 |
+| `PASSPHRASE_HASH` | 否 | 既有的同步用密語。帶此 bearer token 的請求不受配額限制。 |
+
 **手動部署**（本機）：
 
 ```bash
@@ -56,3 +66,5 @@ D1 migrations 不在自動流程裡，schema 有變動時要自己跑：
 ```bash
 npx wrangler d1 migrations apply grad-exam-prep-db --remote
 ```
+
+查詞功能需要 `0003_lexicon.sql`，**部署前要先套用**，否則 `/api/lexicon` 會因為找不到資料表而回 500。
