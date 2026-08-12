@@ -878,5 +878,21 @@
     "examRelevance": ["im"],
     "url": "https://hackmd.io/tlKeHMLrQwqbcnpRosin7g",
     "description": "四校推甄心得。作者在文中註明「千萬不要外流，only for 中央資管的學弟妹」，引用時建議改寫為歸納重點、勿整篇轉貼"
+  },
+  {
+    "id": "res-dcard-im-112-admitted",
+    "title": "Dcard — 112 資管所正取心得",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/241580712",
+    "description": "五校對照：台大資管正取、清大資應正取，政大／成大／中央資管備取。背景為兩份實習（其中一份與資管相關、有做小專案）"
+  },
+  {
+    "id": "res-dcard-im-111-cross",
+    "title": "Dcard — 111 年跨考台大/政大/清大/中央資管所正取｜考試心得及資源分享",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/238478758",
+    "description": "跨考四校正取。指出管理組的資結是所有科目裡最好準備的——把補習班正課筆記讀熟、多練題維持手感即可。內容與庫內同名的 Medium 版（waanwu）疑為同一作者跨平台發文，未逐字比對"
   }
 ]
