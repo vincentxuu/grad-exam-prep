@@ -686,5 +686,69 @@
     "examRelevance": ["im"],
     "url": "https://master.get.com.tw/it/MIS/proposition.aspx",
     "description": "台大／政大／陽明交大／成大各科的命題特色與年度差異對照。台大資訊科技概論段落載明選擇題答錯倒扣、資料結構手寫題每年約佔 40%~50%。補習班網頁，帶招生性質"
+  },
+  {
+    "id": "res-blog-im-ntu-oral-poc",
+    "title": "柏C的電影雜記 — 台大資管所碩甄口試經驗分享",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://pocmovie.com/blog/post/ntu_im_application",
+    "description": "目前找到最詳細的台大四關口試紀錄：場地在管院一號館三樓玉山廳四小間研討室、一關四分鐘、四人同時錯開跑關。四關教授與題目全記錄（生涯關曹承礎、資管關孔令傑＋魏志平、統計數學關盧信銘＋林永松、技術關李瑞庭）。含「每個學生都說數據分析，好無聊」等教授實際回應"
+  },
+  {
+    "id": "res-medium-im-ntu-oral",
+    "title": "Medium — 班排第 10 也能推甄台大：資管所口試心得",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://medium.com/@weichenglily/%E7%8F%AD%E6%8E%92%E7%AC%AC-10-%E4%B9%9F%E8%83%BD%E6%8E%A8%E7%94%84%E4%B8%8A%E5%8F%B0%E5%A4%A7-599946e1581e",
+    "description": "四關一關四分鐘的逐關紀錄，含統計數學關的實際題目。班排非頂尖仍上榜的案例"
+  },
+  {
+    "id": "res-tun-im-ntu-oral",
+    "title": "TUN 大學網 — 台大資管口試經驗分享",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://university.1111.com.tw/zone/university/discussTopic.asp?cat=University&id=348642",
+    "description": "會計系跨考視角。資管關抽到「服飾店用攝影機記錄顧客行為可達到什麼效益、有什麼非技術阻礙」，數學邏輯關抽到擲骰期望值題。自介關被直球問「你是會計系的，為什麼我要錄取你」、「系上有哪些老師做這方面研究」（測你有沒有查過教授）"
+  },
+  {
+    "id": "res-cram-im-112-get-wu",
+    "title": "高點 — 112 台大資管所、清大資應所（台大經濟系跨考）",
+    "type": "補習班",
+    "examRelevance": ["im"],
+    "url": "https://www.get.com.tw/media/master/ListDetail.aspx?iS=62375&iC=3253",
+    "description": "明列台大口試四關為生涯關、數學關、MIS 關、技術關，一關四分鐘；數學關範圍涵蓋統計、線性代數、微積分、作業研究，技術關考資結與演算法。口試要訣「不能愣住」。補習班學員見證，帶業配性質"
+  },
+  {
+    "id": "res-dcard-im-115-oral-bank",
+    "title": "Dcard — 115 資管推甄/面試心得【政大/台科/央山】附歷屆口試題庫",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/261155179",
+    "description": "附歷屆口試題庫與 Notion 資源整理，是找到的唯一一份系統性口試題庫"
+  },
+  {
+    "id": "res-dcard-im-115-recommend2",
+    "title": "Dcard — 115 資管所推甄面試/考試心得分享",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/261166607",
+    "description": "同組三人被問不同題目的實例（有人被問被動式 AI 與代理式 AI 的差別），可看出抽題制下的題目分布"
+  },
+  {
+    "id": "res-dcard-im-115-nccu-ncku",
+    "title": "Dcard — 115 推甄分享【政大資管｜成大資管】",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/260810886",
+    "description": "強調如何把過往經歷與資管連結、非本系背景怎麼講出結合優勢"
+  },
+  {
+    "id": "res-dcard-im-115-nthu-nccu",
+    "title": "Dcard — 115 資管推甄面試心得分享【清大服科/政大資管】",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/260339730",
+    "description": "政大資管資管組團體面試細節（被作者形容為最硬的面試）：面試前先到教室閱讀英文文章 10 分鐘，同組每人拿到的文章不同，內容近似 paper 摘要"
   }
 ]
