@@ -790,5 +790,53 @@
     "examRelevance": ["im"],
     "url": "https://www.dcard.tw/f/graduate_school/p/237588496",
     "description": "政大團體面試的排序機制：按准考證序號排 10~11 人一組，回答順序有時 1→10 有時 10→1，排中間較有利可多想一下。強調要聽別人的回答"
+  },
+  {
+    "id": "res-dcard-im-115-cross-oral",
+    "title": "Dcard — 115 資管所跨考心得（含台大、政大面試）",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/261342021",
+    "description": "含台大與政大兩校面試。另記錄了備取遞補的實際時程：4/9 台大備取 2，5/13 才收到備取通知——備取生等待期比想像中長"
+  },
+  {
+    "id": "res-dcard-im-115-mgmt2",
+    "title": "Dcard — 115 資管所管理組考試心得",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/261316775",
+    "description": "管理組視角的完整準備過程與心態調適"
+  },
+  {
+    "id": "res-dcard-im-115-cross2",
+    "title": "Dcard — 115 資管所跨考心得分享",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/261340291",
+    "description": "記錄 115 年資結考題形式的變化（「一開始看到變全選擇還開心了一下，第一部份寫下去就知道大事不妙」），可看出年度題型會突變"
+  },
+  {
+    "id": "res-dcard-im-115-recommend3",
+    "title": "Dcard — 115 資管推甄心得【政大資管、成大資管、台科資管乙組】",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/260600298",
+    "description": "推甄與考試雙軌並行的案例，最後推甄上榜"
+  },
+  {
+    "id": "res-dcard-im-114-recommend",
+    "title": "Dcard — 114 推甄心得分享【台大資管、政大資管】",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/257446612",
+    "description": "台大二階落榜、政大正取的對照。明確記載台大面試「分成四關，共 16 分鐘」，佐證一關四分鐘的說法。另有自傳如何展現過往經歷與資管連結性的建議"
+  },
+  {
+    "id": "res-medium-im-2020-apply",
+    "title": "Medium — 2020 台大資管／台大商研／政大資管推甄心得",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://medium.com/@j4427515/%E7%A0%94%E7%A9%B6%E6%89%80%E7%94%B3%E8%AB%8B-2020-%E5%8F%B0%E5%A4%A7%E8%B3%87%E7%AE%A1-%E5%8F%B0%E5%A4%A7%E5%95%86%E7%A0%94-%E6%94%BF%E5%A4%A7%E8%B3%87%E7%AE%A1%E6%8E%A8%E7%94%84%E5%BF%83%E5%BE%97-4714b1339bce",
+    "description": "台大資管推甄正取（書審 60%／面試 40%）。作者自評書審與面試成績都不算特別優異仍上榜，可作為期望值的參考點"
   }
 ]
