@@ -1070,5 +1070,37 @@
     "examRelevance": ["im"],
     "url": "https://futureparenting.cwgv.com.tw/family/content/index/36139",
     "description": "談的是大學個人申請的二階面試，不是研究所口試。收錄的理由是講者孔令傑為台大資管系副教授，正是研究所口試數學關的常見考官——可從口試委員本人的視角理解評分邏輯：面試在測抗壓性而非專業、中規中矩比標新立異安全、說實話最安全、最忌吹牛"
+  },
+  {
+    "id": "res-dcard-im-115-ntu-oral",
+    "title": "Dcard — 115 台大資管所考試二階口試題目分享",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/261162383",
+    "description": "115 考試入學二階的逐關題目。場地描述：門口有一道大門、每組時間到才開啟，進去後有四間小型會議室依序跑關，每關 4 分鐘且「時間控制非常精準，完全沒有延後」"
+  },
+  {
+    "id": "res-medium-im-110-ntu-oral",
+    "title": "Medium — 110 台大資管面試心得",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://medium.com/@a0909570109/110%E5%8F%B0%E5%A4%A7%E8%B3%87%E7%AE%A1%E9%9D%A2%E8%A9%A6%E5%BF%83%E5%BE%97-562390653b60",
+    "description": "重要的形式對照：110 那年台大只有三關（中文基本問答、數學關、英文關），全程約 15 分鐘。四關制並非一直如此，且該年還有獨立的英文關"
+  },
+  {
+    "id": "res-blog-im-110-ntu-oral",
+    "title": "巴哈姆特 — 110 臺大資管面試分享＆心得",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://home.gamer.com.tw/artwork.php?sn=5127998",
+    "description": "同為 110 年的台大面試紀錄，可與同年的 Medium 版互相對照"
+  },
+  {
+    "id": "res-cram-im-ntu-top",
+    "title": "大碩 — 台大資管所榜首上榜心得",
+    "type": "補習班",
+    "examRelevance": ["im"],
+    "url": "https://www.daso.com.tw/winner/inside?str=38D6419864A231D974995EA569B2F5EF",
+    "description": "四關逐關題目：生涯關問專題與遇到的困難、研究計畫、非本科系能力是否足夠；數學關考機率與期望值；MIS 關問競合關係；技術關問 Dequeue。補習班學員見證，帶業配性質；該站網址含 session 參數，直接開啟可能被導回列表頁"
   }
 ]
