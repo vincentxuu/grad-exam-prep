@@ -1102,5 +1102,45 @@
     "examRelevance": ["im"],
     "url": "https://www.daso.com.tw/winner/inside?str=38D6419864A231D974995EA569B2F5EF",
     "description": "四關逐關題目：生涯關問專題與遇到的困難、研究計畫、非本科系能力是否足夠；數學關考機率與期望值；MIS 關問競合關係；技術關問 Dequeue。補習班學員見證，帶業配性質；該站網址含 session 參數，直接開啟可能被導回列表頁"
+  },
+  {
+    "id": "res-tun-im-nccu-tech",
+    "title": "TUN 大學網 — 政大資管科技組面試分享",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://university.1111.com.tw/zone/university/discussTopic.asp?cat=University&id=243948",
+    "description": "科技組逐關流程：報到 → 抽英文文章 → 閱讀 → 英文文章朗讀及翻譯 → 程式問題（由郁方教授負責）。屬於早年「朗讀＋翻譯」版本的紀錄"
+  },
+  {
+    "id": "res-cram-im-114-nccu-tech",
+    "title": "TKB — 114 年考取政大資管所（科技組）榜眼",
+    "type": "補習班",
+    "examRelevance": ["im"],
+    "url": "https://www.tkbgo.com.tw/schoolZone/graduate/comment/toDetail?comment_id=2608",
+    "description": "政大面試三段：英文文章大綱（可用英文或中文回答）、程式題五小題搶答制、研究計畫或專題提問。特別提醒程式題「程式碼會 call 前面的 function，要看仔細一點」。補習班學員見證，帶業配性質"
+  },
+  {
+    "id": "res-cram-im-nccu-oral",
+    "title": "TKB — 政大資管所考試經驗談（科技組、資管組面試）",
+    "type": "補習班",
+    "examRelevance": ["im"],
+    "url": "https://www.tkbgo.com.tw/schoolZone/graduate/article/toDetail?article_id=2104",
+    "description": "多位 114 上榜者的政大面試紀錄。關鍵細節：程式關**分 AB 卷**，題目卷上共 7 題但老師不會每題都問，教授有時會出變化題（有考生說回答變化題是加分關鍵）。另強調搶答制下答錯也要繼續舉手，怯場機會就是別人的。補習班文章，帶招生性質"
+  },
+  {
+    "id": "res-ig-im-nccu-oral",
+    "title": "Instagram — 政大資管所資管組碩士班考試面試紀錄",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://www.instagram.com/p/CSEpSeGJxkl",
+    "description": "另一種團面配置：共三關、六人一組、一關十分鐘，前兩關各三位面試官，英文關僅一名外師。人數偏多且為搶答制。IG 貼文，未登入可能無法完整瀏覽"
+  },
+  {
+    "id": "res-blog-im-nccu-joanne",
+    "title": "Joanne's Blog — 政大資管所推甄面試分享（資管組）",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://blog.joannefei.com/nccu-mis-graduate-school-interview",
+    "description": "資管組推甄面試心得，文中另附了前兩年同樣詳細的心得連結，可做跨年度對照"
   }
 ]
