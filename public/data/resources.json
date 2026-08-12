@@ -1006,5 +1006,53 @@
     "examRelevance": ["im"],
     "url": "https://www.dcard.tw/f/graduate_school/p/258472832",
     "description": "一個具體教訓：資結自認很簡單、檢查三遍提早交卷，後來發現考古題那題要全對才給分，而自己把 8 寫成 0。提早交卷與抄寫失誤的代價"
+  },
+  {
+    "id": "res-medium-im-112-ds",
+    "title": "Medium — 112 資管所資結組心得",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://medium.com/@cloudoo/112-%E8%B3%87%E7%AE%A1%E6%89%80%E8%B3%87%E7%B5%90%E7%B5%84%E5%BF%83%E5%BE%97-53505ddca898",
+    "description": "資結組完整流程：背景、成績、時間規劃、各科準備方式"
+  },
+  {
+    "id": "res-medium-im-112-cross",
+    "title": "Medium — 112 資管所跨考心得",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://medium.com/@wealthy_lawn_cattle_951/112%E8%B3%87%E7%AE%A1%E6%89%80%E8%B7%A8%E8%80%83%E5%BF%83%E5%BE%97-90654efa5af8",
+    "description": "跨考視角。提到政大科技組面試的準備方式：先讀前人的面試經驗掌握流程，再針對「如何用英文簡短摘要」「如何回答延伸問題」預先演練"
+  },
+  {
+    "id": "res-dcard-im-112-ntu-nccu",
+    "title": "Dcard — 112 資管所考試、面試、補習心得（台大、政大）",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/241626803",
+    "description": "台大與政大兩校的考試與面試對照，另有補習班選擇的評估。留言串有討論政大組別是否影響日後找教授"
+  },
+  {
+    "id": "res-dcard-im-111-ds-cross",
+    "title": "Dcard — 111 台/政/清/成資管所資結組跨考心得",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/238478427",
+    "description": "政大團體面試四人一組、分兩關：先到小房間念五分鐘英文短文，第一關唸短文第一句並翻譯，再依短文內容延伸提問"
+  },
+  {
+    "id": "res-dcard-im-110-ds",
+    "title": "Dcard — 110 資管所資結組考試心得",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/235744166",
+    "description": "政大資管科技組團體面試：面試前到另一間教室給五分鐘看一篇英文短文（大概六七行），面試有五位面試官，開場先英文自我介紹"
+  },
+  {
+    "id": "res-medium-im-2021-oral",
+    "title": "Medium — 2021 台政交山資管所推甄面試心得",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://medium.com/@zihong518/2021-%E5%8F%B0%E6%94%BF%E4%BA%A4%E5%B1%B1-%E8%B3%87%E7%AE%A1%E6%8E%A8%E7%94%84%E9%9D%A2%E8%A9%A6%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB-e0e6821a5b3d",
+    "description": "四校面試對照。政大資管組為三人團體面試 20 分鐘，面試前 10 分鐘在小房間抽讀英文題目"
   }
 ]
