@@ -630,5 +630,61 @@
     "examRelevance": ["im"],
     "url": "https://www.get.com.tw/media/master/ListDetail.aspx?iS=64817&iC=3253",
     "description": "台大考題結構描述最具體的一篇：全選擇題加一題程式題、選擇題有倒扣、程式題常考 Heap／Hash Table／BST 的 C++ 實作且配分很重，建議練手寫程式碼。補習班學員見證"
+  },
+  {
+    "id": "res-ptt-im-108-ntu",
+    "title": "PTT — 資管所台大／交大資管甲組正取心得",
+    "type": "PTT",
+    "examRelevance": ["im"],
+    "url": "https://www.ptt.cc/bbs/graduate/M.1556902187.A.AC3.html",
+    "description": "108 年台大資管正取 7。成績為資訊科技 65.5／MIS 25／英文 58／口試 87.14——MIS 只有 25 分仍正取，具體印證口試 40% 的份量。含台大四關口試逐題記錄（統計關盧信銘＋孔令傑、技術關、生涯關魏志平、MIS 關吳玲玲＋陳靜枝），並提到該年非選題比重拉高到 50%、選擇題寫錯倒扣"
+  },
+  {
+    "id": "res-ptt-im-ten-schools",
+    "title": "PTT — 資管所十校正取心得",
+    "type": "PTT",
+    "examRelevance": ["im"],
+    "url": "https://www.ptt.cc/bbs/graduate/M.1523095685.A.A9E.html",
+    "description": "逐校拆解題型（台／政／交／成／中央／中山等十校），台大四關面試題目全記錄。另提到政大英文有前 80% 篩選門檻、政大 MIS 答案紙很少不要浪費空間、台大 MIS 常考系統分析"
+  },
+  {
+    "id": "res-medium-im-111-zheng",
+    "title": "Medium — 111 資管所正取心得",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://medium.com/@vnaticzhock/111%E8%B3%87%E7%AE%A1%E6%89%80%E6%AD%A3%E5%8F%96-d121dd48cfc9",
+    "description": "MIS 準備法最具體的一篇：考前一個月每天寫一篇 Topic 心得、累積 30–40 篇，用電腦打字產出以專注思考而非筆速，刻意不寫補習班的起承轉合而採精煉寫法。另附 Laudon 的三種用法（含翻書末名詞索引逐條理解）與台大四關面試題目"
+  },
+  {
+    "id": "res-hackmd-im-tung",
+    "title": "HackMD — 商管類跨考資管所心路歷程",
+    "type": "HackMD",
+    "examRelevance": ["im"],
+    "url": "https://hackmd.io/@TUNG/SySealK4U",
+    "description": "商管背景跨考，各校題型比較很細，含台大四關面試（資訊科技趨勢／生涯規劃／程式設計／機率）。提到台大某年 MIS「竟然有中文沙必斯」，可佐證台大 MIS 常態為全英文命題"
+  },
+  {
+    "id": "res-blog-im-moli",
+    "title": "考研心酸血淚史 — 台/政/交/成/山 資管所．資結組考試心得",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://blog.moli.rocks/2017/08/17/journey-of-becoming-a-graduate-student",
+    "description": "台大四關與政大口試逐題記錄（台大技術關問如何找 inorder successor、抽題關問 database schema 並無限追問為什麼）。作者最後選擇政大，文末有選校與報考間數的建議"
+  },
+  {
+    "id": "res-dcard-im-114-mgmt-cross2",
+    "title": "Dcard — 114 資管所（管理組）跨考心得",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/258715553",
+    "description": "談組別選擇的判斷依據：作者發現自己喜歡申論這種開放式答案、寫有標準答案的資結手感很差，建議依「答題手感」而不只是學科背景來選組"
+  },
+  {
+    "id": "res-cram-im-proposition",
+    "title": "高點 — 資管所命題趨勢（逐校逐科）",
+    "type": "補習班",
+    "examRelevance": ["im"],
+    "url": "https://master.get.com.tw/it/MIS/proposition.aspx",
+    "description": "台大／政大／陽明交大／成大各科的命題特色與年度差異對照。台大資訊科技概論段落載明選擇題答錯倒扣、資料結構手寫題每年約佔 40%~50%。補習班網頁，帶招生性質"
   }
 ]
