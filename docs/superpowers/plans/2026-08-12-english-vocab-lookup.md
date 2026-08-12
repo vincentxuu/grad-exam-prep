@@ -2,11 +2,13 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Turn the five pain points in the handwritten note into shipped features — arbitrary word/phrase lookup with deep entries, personalized example sentences, one-tap SRS capture, and a reading-assist mode.
+**Goal:** Turn the five pain points in the handwritten note into shipped features — arbitrary word/phrase lookup with deep entries, personalized example sentences, one-tap SRS capture, a reading-assist mode, and a conversation-practice mode that forces the saved words back out.
 
 **Design doc:** `docs/superpowers/specs/2026-08-12-english-vocab-lookup-design.md`
 
-**Architecture:** AI-generated lexicon entries cached permanently in Cloudflare D1, split into a globally-shared generic layer (`lexicon_entries`, keyed by headword) and a per-persona layer (`lexicon_personal`, keyed by headword + persona hash). Looked-up words become SRS cards with id `lx-<slug>`, reusing the existing SM-2 engine and localStorage `srsState` map with no migration.
+**Architecture:** AI-generated lexicon entries cached permanently in Cloudflare D1, split into a globally-shared generic layer (`lexicon_entries`, keyed by headword) and a per-persona layer (`lexicon_personal`, keyed by headword + persona hash). Looked-up words become SRS cards with id `lx-<slug>`, reusing the existing SM-2 engine and localStorage `srsState` map with no migration. Conversation practice pulls due cards as target words, streams a text reply, and runs correction as a separate structured call so the stream stays token-by-token.
+
+**Two shippable halves.** Tasks 0–13 are lookup + reading (migration `0003`). Tasks 14–17 are conversation (migration `0004`). The second half depends on the first (it reuses the lookup panel and the `ReviewCard` abstraction), but the first ships on its own if you want to stop there.
 
 **Tech Stack:** Next.js (OpenNext/Cloudflare Workers), Cloudflare D1, `@anthropic-ai/sdk`, TypeScript, Tailwind, existing shadcn/ui components.
 
@@ -34,12 +36,28 @@
 | Create | `src/app/[exam]/reading/page.tsx` | Paste passage → tokenize → tap → lookup → save |
 | Create | `src/lib/reading/tokenize.ts` | Offset-preserving tokenizer |
 | Create | `src/lib/review-card.ts` | Unified `ReviewCard` + adapters from `Flashcard` and `SavedWord` |
+| Create | `migrations/0004_chat.sql` | D1 schema: chat sessions, messages, corrections |
+| Create | `src/types/chat.ts` | `ChatSession`, `ChatMessage`, `Correction`, `SessionSummary` |
+| Create | `src/lib/chat/prompts.ts` | Cacheable system prompts for conversation + correction |
+| Create | `src/lib/chat/target-words.ts` | Pick target words from SRS; detect usage in a message |
+| Create | `src/lib/chat/store.ts` | D1 read/write for sessions, messages, corrections |
+| Create | `src/lib/chat/converse.ts` | Streaming reply; separate structured correction call |
+| Create | `src/app/api/chat/session/route.ts` | `POST` open a session, pick targets, return opening line |
+| Create | `src/app/api/chat/[id]/route.ts` | `GET` full history |
+| Create | `src/app/api/chat/[id]/message/route.ts` | `POST` user message → SSE stream of the reply |
+| Create | `src/app/api/chat/[id]/correct/route.ts` | `POST` structured correction for one user message |
+| Create | `src/app/api/chat/[id]/end/route.ts` | `POST` end session → `SessionSummary` |
+| Create | `src/components/chat/message-bubble.tsx` | Renders a message; every word tappable → lookup |
+| Create | `src/components/chat/correction-block.tsx` | Collapsible corrections under a user message |
+| Create | `src/components/chat/session-summary.tsx` | End-of-session recap + one-tap actions |
+| Create | `src/components/chat/composer.tsx` | Text input + optional `SpeechRecognition` mic |
+| Create | `src/app/[exam]/chat/page.tsx` | Conversation practice page |
 | Create | `scripts/warm-lexicon.js` | Batches API pre-warm for the 160 existing exam words |
 | Modify | `src/types/storage.ts` | Add `SavedWord`, `savedWords`, `PersonaProfile` on `UserPreferences` |
 | Modify | `src/lib/storage.ts` | `addSavedWord` / `removeSavedWord` / `getSavedWords` |
 | Modify | `src/store/flashcard.ts` | Operate on `ReviewCard[]` instead of `Flashcard[]` |
 | Modify | `src/app/[exam]/flashcards/page.tsx` | Merge static cards with saved lexicon cards |
-| Modify | `src/components/layout/header.tsx` | Add 查詞 / 閱讀 nav links |
+| Modify | `src/components/layout/header.tsx` | Add 查詞 / 閱讀 / 對話 nav links |
 | Modify | `wrangler.json` | No change needed for D1; document `ANTHROPIC_API_KEY` secret |
 | Modify | `README.md` | Document the new secret + migration step |
 
@@ -206,7 +224,9 @@
 
 ---
 
-## Task 13: Docs, config, verification
+## Task 13: Docs, config, verification — phase 1 (lookup + reading)
+
+**This is a shippable stopping point.** Everything through here is lookup, reading assist, and SRS capture; conversation is Tasks 14–18.
 
 - [ ] **Step 1:** README — add `ANTHROPIC_API_KEY` (wrangler secret) and `LEXICON_DAILY_QUOTA` to the secrets table; note that `0003_lexicon.sql` must be applied manually before deploy.
 - [ ] **Step 2:** `npm run typecheck` and `npm run lint` clean.
@@ -216,8 +236,77 @@
 
 ---
 
+## Task 14: Chat schema, types, target words
+
+**Files:** Create `migrations/0004_chat.sql`, `src/types/chat.ts`, `src/lib/chat/target-words.ts`, `src/lib/chat/store.ts`
+
+- [ ] **Step 1:** Write `0004_chat.sql` exactly as in the design doc (three tables + three indexes, all `IF NOT EXISTS`). Apply locally and verify the schema.
+- [ ] **Step 2:** `src/types/chat.ts` with `Correction`, `ChatMessage`, `ChatSession`, `SessionSummary`.
+- [ ] **Step 3:** `target-words.ts` — `pickTargetWords(cards, n = 6)`: prefer due cards, then cards with `repetitions === 0` (last rated 不會), then recently added. Return headwords only.
+- [ ] **Step 4:** Same file — `detectUsedWords(message, targets)`: case-insensitive match on each target plus the regular inflections (`-s`, `-es`, `-ed`, `-ing`, and the doubled-consonant and `y→ied` variants). Use word boundaries so `act` doesn't match `contract`.
+- [ ] **Step 5:** `store.ts` — create/read/end sessions, append messages, append corrections, load full history ordered by `created_at`. Enforce the 30-message-per-session cap here, not in the UI.
+- [ ] **Step 6:** Unit tests for `detectUsedWords`: `"intercepted"` matches target `intercept`; `"contract"` does **not** match target `act`; `"studied"` matches `study`. Assert the known gap explicitly — `"took"` does not match `take` — so the limitation is documented in a test rather than discovered later.
+
+---
+
+## Task 15: Conversation generation layer
+
+**Files:** Create `src/lib/chat/prompts.ts`, `src/lib/chat/converse.ts`
+
+- [ ] **Step 1:** `prompts.ts` — two constant system prompts.
+  - **Conversation:** an English conversation partner for a Taiwanese learner. Given `PersonaProfile` and target words, hold a natural conversation on the topic and weave the target words in. **Explicitly instruct: never list the target words, never announce which words are being practiced, never quiz.** If the user is told, they copy instead of produce, and the whole exercise is worthless.
+  - **Correction:** given one learner sentence, return `Correction[]`. Only flag things that matter (grammar, word choice, collocation, register, naturalness) — not stylistic preference. Return an empty array when the sentence is fine; do not manufacture findings.
+- [ ] **Step 2:** `converse.ts` → `streamReply(session, history, userMessage)`:
+  - `client.messages.stream`, `model: 'claude-opus-5'`, `max_tokens: 8000`
+  - System array with `cache_control: { type: 'ephemeral' }`
+  - **Multi-turn cache breakpoint:** also put `cache_control` on the last content block of the most recent turn, so each request reads the whole prior conversation from cache. Without this the history is re-billed in full every turn.
+  - Return the stream; the route adapts it to SSE.
+- [ ] **Step 3:** `converse.ts` → `correctMessage(userMessage)`: a separate non-streaming call with `output_config.format` bound to the `Correction[]` schema. **Send only the single message, not the history** — this keeps it small and lets its system prompt cache.
+- [ ] **Step 4:** Check `stop_reason === 'refusal'` before reading content in both paths; on the streaming path check `stream.finalMessage()`.
+- [ ] **Step 5:** Confirm `cache_read_input_tokens` is non-zero from turn 3 onward in a manual multi-turn test. Zero means the breakpoint is misplaced or something volatile is in the prefix — fix it before moving on, because this is the difference between affordable and not.
+
+---
+
+## Task 16: Chat API routes
+
+**Files:** Create the five routes under `src/app/api/chat/`
+
+- [ ] **Step 1:** `POST /api/chat/session` — read persona + saved words from the body (client owns localStorage), pick target words, insert the session, generate the opening line, return `{ session, opening }`.
+- [ ] **Step 2:** `POST /api/chat/[id]/message` — append the user message, run `detectUsedWords`, stream the reply back as SSE, and append the assistant message once the stream completes. Persist even if the client disconnects mid-stream.
+- [ ] **Step 3:** `POST /api/chat/[id]/correct` — structured correction for one message id; store and return `Correction[]`.
+- [ ] **Step 4:** `GET /api/chat/[id]` and `POST /api/chat/[id]/end` (computes `SessionSummary` from stored messages).
+- [ ] **Step 5:** Quota — a separate `CHAT_DAILY_QUOTA` (env, default 40 messages/day) counted in `lexicon_quota` under a distinct key so chat spend can't be masked by lookup spend. Same `PASSPHRASE_HASH` bypass. 429 with a readable Chinese message.
+- [ ] **Step 6:** Enforce the 30-message session cap: return a `sessionFull` flag rather than an error, so the UI can offer 結束並看總結.
+- [ ] **Step 7:** Verify SSE actually streams through OpenNext on Workers — `wrangler.json` already routes `/api/*` with `run_worker_first`, but confirm no buffering. If streaming can't be made to work, fall back to a non-streaming reply and note it; do not ship a version that appears to hang.
+
+---
+
+## Task 17: Chat UI
+
+**Files:** Create the four components under `src/components/chat/` and `src/app/[exam]/chat/page.tsx`; modify `src/components/layout/header.tsx`
+
+- [ ] **Step 1:** `message-bubble.tsx` — reuse `tokenize` from Task 10 so every word in an assistant message is tappable and opens the existing lookup panel. Do not write a second tokenizer or a second lookup path.
+- [ ] **Step 2:** `correction-block.tsx` — collapsed by default under the user's message; shows `original → corrected`, the `kind` badge, and the Chinese explanation.
+- [ ] **Step 3:** `composer.tsx` — textarea + send. Add a mic button **only when** `window.SpeechRecognition || window.webkitSpeechRecognition` exists; hide it entirely otherwise rather than showing a broken control.
+- [ ] **Step 4:** Page — session setup (topic, 糾錯模式 toggle defaulting to off), message list, composer. Add a `SpeakButton` on assistant messages using the existing `useSpeech`.
+- [ ] **Step 5:** `session-summary.tsx` — used / missed target words, corrections grouped by `kind`, new words. One-tap 「記為熟悉」 for used words and 「加入單字庫」 for new ones. **Neither fires automatically** — the user's review schedule is not something to change behind their back.
+- [ ] **Step 6:** Add the 對話 nav link. Check mobile: the composer must stay pinned above the keyboard.
+
+---
+
+## Task 18: Docs, config, verification — phase 2 (conversation)
+
+- [ ] **Step 1:** README — add `CHAT_DAILY_QUOTA`; note `0004_chat.sql` must be applied manually.
+- [ ] **Step 2:** `npm run typecheck`, `npm run lint`, `npm test` all clean.
+- [ ] **Step 3:** End-to-end: save a few words → start a conversation → confirm the target words appear naturally and are **not** announced → use one in a reply → tap an unknown word in the AI's message and get a lookup → enable 糾錯模式 and get a correction on a deliberately wrong sentence → end → summary shows used/missed correctly.
+- [ ] **Step 4:** Cost check — run one full 20-message session and record actual token spend from `usage`, including cache reads. Report the real number; it decides whether `CHAT_DAILY_QUOTA: 40` is sane or nonsense.
+
+---
+
 ## Tuning (after it works, not before)
 
 - [ ] Sweep `output_config.effort` across `low` / `medium` / `high` on a fixed set of ~20 terms and compare entry quality against cost. Opus 5 is unusually strong at the low end — but establish the `high` baseline first.
 - [ ] Measure cache hit rate after a week of real use; adjust `LEXICON_DAILY_QUOTA` from data rather than from the guessed default of 60.
 - [ ] Check `usage.cache_read_input_tokens` on burst lookups (reading mode) to confirm the system-prompt cache is actually hitting. Zero across repeated calls means a silent invalidator in the prompt prefix.
+- [ ] Tune target-word count per conversation. Six is a guess — too many and the AI's replies get stilted trying to fit them all in, which defeats the "natural conversation" requirement. Watch for stilted output and drop to 4 if it shows up.
+- [ ] Decide whether correction should default on. Off is the safe default for flow, but if real usage shows the same mistakes repeating across sessions, the flow cost is worth paying.
