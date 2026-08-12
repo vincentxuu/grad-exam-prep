@@ -45,7 +45,7 @@
       {
         "id": "im-it-arch",
         "title": "電腦架構基礎",
-        "importance": 3,
+        "importance": 2,
         "subtopics": ["進制轉換", "數值表示法", "布林代數"]
       },
       {
@@ -57,7 +57,7 @@
       {
         "id": "im-it-ds",
         "title": "資料結構",
-        "importance": 4,
+        "importance": 5,
         "subtopics": ["Tree基本概念", "排序演算法", "Graph基礎", "Hash Table"]
       },
       {
@@ -75,7 +75,7 @@
       {
         "id": "im-it-os",
         "title": "作業系統",
-        "importance": 3,
+        "importance": 4,
         "subtopics": ["Process與Thread", "Memory Management", "File System", "Scheduling"]
       },
       {
