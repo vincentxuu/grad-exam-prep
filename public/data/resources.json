@@ -1080,14 +1080,6 @@
     "description": "115 考試入學二階的逐關題目。場地描述：門口有一道大門、每組時間到才開啟，進去後有四間小型會議室依序跑關，每關 4 分鐘且「時間控制非常精準，完全沒有延後」"
   },
   {
-    "id": "res-medium-im-110-ntu-oral",
-    "title": "Medium — 110 台大資管面試心得",
-    "type": "部落格",
-    "examRelevance": ["im"],
-    "url": "https://medium.com/@a0909570109/110%E5%8F%B0%E5%A4%A7%E8%B3%87%E7%AE%A1%E9%9D%A2%E8%A9%A6%E5%BF%83%E5%BE%97-562390653b60",
-    "description": "重要的形式對照：110 那年台大只有三關（中文基本問答、數學關、英文關），全程約 15 分鐘。四關制並非一直如此，且該年還有獨立的英文關"
-  },
-  {
     "id": "res-blog-im-110-ntu-oral",
     "title": "巴哈姆特 — 110 臺大資管面試分享＆心得",
     "type": "部落格",
@@ -1142,5 +1134,45 @@
     "examRelevance": ["im"],
     "url": "https://blog.joannefei.com/nccu-mis-graduate-school-interview",
     "description": "資管組推甄面試心得，文中另附了前兩年同樣詳細的心得連結，可做跨年度對照"
+  },
+  {
+    "id": "res-medium-im-111-ntu-oral-b",
+    "title": "Medium — 111 年資管所考試心得（台大四關逐關實錄）",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://medium.com/@ryanlai880122/111%E5%B9%B4%E8%B3%87%E7%AE%A1%E6%89%80%E8%80%83%E8%A9%A6%E5%BF%83%E5%BE%97-97c1f29ba7b8",
+    "description": "四關全記錄：MIS 關抽到共享平台並被追問 Uber/foodpanda 為何走向中心化；數學關孔令傑出微積分體積最大化並全程引導；技術關李瑞庭從資料探勘一路追到 PCA 的 eigenvector 與 Gradient Boosting；生涯關莊裕澤只給三個問題「自介、你的優勢、說服我」。另記該年數學關考線代與微積分而非統計"
+  },
+  {
+    "id": "res-medium-im-111-cross-3",
+    "title": "Medium — 111 年跨考資管／資應／服科考試、面試心得",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://medium.com/@positive_mantis_minnow_33/111%E5%B9%B4-%E8%B7%A8%E8%80%83%E8%B3%87%E7%AE%A1-%E8%B3%87%E6%87%89-%E6%9C%8D%E7%A7%91%E8%80%83%E8%A9%A6-%E9%9D%A2%E8%A9%A6%E5%BF%83%E5%BE%97-3152b6d035b8",
+    "description": "台大四關各 4 分鐘。MIS 關抽到電商 CIO 的隱私投訴題，答完還有時間又被要求再抽一題「如何導入大型 IS」；生涯關被問「為什麼台大要錄取你不錄取其他同學」；技術關 ER Model 二元一對一轉關聯，作者把完全／部分參與講成強弱關係而答錯；數學關準備統計卻遇作業研究，四分鐘空白。含跨考六科自學路線"
+  },
+  {
+    "id": "res-medium-im-112-cross-7",
+    "title": "Medium — 112 應屆跨考資管／應／財所（台清交成政央北）心得文",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://medium.com/@s410879057/112%E6%87%89%E5%B1%86%E8%B7%A8%E8%80%83%E8%B3%87%E7%AE%A1-%E6%87%89-%E8%B2%A1%E6%89%80-%E5%8F%B0-%E6%B8%85-%E4%BA%A4-%E6%88%90-%E6%94%BF-%E5%A4%AE-%E5%8C%97-%E5%BF%83%E5%BE%97%E6%96%87-3fbf8189ca56",
+    "description": "七校逐校攻略。台大計概「出得很細」的具體例證（OS 的 page 大小），該年主題集中 OS、手寫題考類似 KMP 的演算法、MIS 第一題考供應鏈；口試四關各 4 分鐘（與「考試入學 5 分鐘」的說法相左）。另有依志願校決定資結該讀多深的分層建議"
+  },
+  {
+    "id": "res-medium-im-ntu-recommend-scores",
+    "title": "Medium — 台大跨領域推甄經驗（資科學程／電信丙／資管／工工）",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://datafox-tw.medium.com/%E5%8F%B0%E7%81%A3%E5%A4%A7%E5%AD%B8%E8%B7%A8%E9%A0%98%E5%9F%9F%E6%8E%A8%E7%94%84%E7%B6%93%E9%A9%97%E8%88%87%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB-%E5%8F%B0%E5%A4%A7%E8%B3%87%E6%96%99%E7%A7%91%E5%AD%B8%E5%AD%B8%E7%A8%8B-%E9%9B%BB%E4%BF%A1%E4%B8%99-%E8%B3%87%E7%AE%A1-%E5%B7%A5%E6%A5%AD%E5%B7%A5%E7%A8%8B%E5%AD%B8-69eb3a1737bf",
+    "description": "推甄路線的門檻實證：資管所書審 76.13、最低錄取 86.38，連面試都沒進（名額 41／報名 232），同一人在資科學程與工工所都正取。附資管系教授的原話建議——要修過六大必修（程設、資結、演算法、網路、資料庫、OS）且拿 A，以及他各科的實際成績對照"
+  },
+  {
+    "id": "res-medium-im-112-ntu-priority",
+    "title": "Medium — 112 年臺大資訊相關科系推甄（資工／資工 AI／資管／資科／電信丙）",
+    "type": "部落格",
+    "examRelevance": ["im", "cs"],
+    "url": "https://medium.com/@JackChen89/112-%E5%B9%B4%E8%87%BA%E5%A4%A7%E8%B3%87%E8%A8%8A%E7%9B%B8%E9%97%9C%E7%A7%91%E7%B3%BB%E6%8E%A8%E7%94%84-%E8%B3%87%E5%B7%A5-%E8%B3%87%E5%B7%A5-ai-%E8%B3%87%E7%AE%A1-%E8%B3%87%E6%96%99%E7%A7%91%E5%AD%B8-%E9%9B%BB%E4%BF%A1%E4%B8%99-6a344fb306e8",
+    "description": "少見地記錄到台大資管所推甄的「優先錄取」——書審突出者直接錄取、不用面試。另記資管四關的另一種叫法（資訊應用、資訊技術、數學、生涯），以及備審四段式架構與找指導教授的時程提醒"
   }
 ]
