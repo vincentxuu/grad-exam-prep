@@ -958,5 +958,37 @@
     "examRelevance": ["im"],
     "url": "https://www.youtube.com/watch?v=VYntQ1eXKCs",
     "description": "影片形式的上榜心得（台大資管所＋清大資應所），有分段時間軸涵蓋各科準備要領、正課班與題庫班的差異、口試模擬的幫助。補習班官方影片，帶招生性質"
+  },
+  {
+    "id": "res-medium-im-108-failed",
+    "title": "Medium — 108 年台大資管所落榜心得",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://medium.com/@yzmsp7/108%E5%B9%B4%E5%8F%B0%E5%A4%A7%E8%B3%87%E7%AE%A1%E6%89%80%E8%90%BD%E6%A6%9C%E5%BF%83%E5%BE%97-bbe8b26dfa22",
+    "description": "手寫比例變化的歷史起點：「往年資結在計概佔比 30% 左右，今年提高到 50%」，該年資結考 Heap。落榜視角的檢討"
+  },
+  {
+    "id": "res-medium-im-111-recommend",
+    "title": "Medium — 111 年非本科／非應屆資管所甄試心得",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://medium.com/@po_yk/111%E5%B9%B4-%E8%B3%87%E7%AE%A1%E6%89%80%E7%94%84%E8%A9%A6%E5%BF%83%E5%BE%97-367496423c5c",
+    "description": "非應屆視角的甄試心得，含書審撰寫邏輯與建議、中央／成大／政大面試紀錄，以及中央／成大／政大／台大的考古題整理"
+  },
+  {
+    "id": "res-dcard-im-112-seven",
+    "title": "Dcard — 112 應屆跨考資管/資應/財所七校心得（台清交成政央北）",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/exam/p/241819789",
+    "description": "七校對照。指出政大計概有越來越簡單的趨勢，但若目標是台大資管仍建議全部讀熟，尤其演算法與程式碼部分要越熟越好"
+  },
+  {
+    "id": "res-dcard-im-mgmt-ordinary",
+    "title": "Dcard — 平凡女子的資管所管理組備考心得",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/241587396",
+    "description": "管理組視角。記錄了把抽象概念轉成生活化比喻的記憶法（買蛋餅比喻 CPU-bound、引擎比喻 thread），複習時不必重新推導一次"
   }
 ]
