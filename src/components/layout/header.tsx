@@ -13,6 +13,7 @@ const examItems = [
   { key: 'plan', label: '備考計畫' },
   { key: 'flashcards', label: '閃卡練習' },
   { key: 'lookup', label: '查詞' },
+  { key: 'reading', label: '閱讀' },
   { key: 'past-papers', label: '考古題' },
   { key: 'questions', label: '題庫' },
   { key: 'mock', label: '模擬考' },

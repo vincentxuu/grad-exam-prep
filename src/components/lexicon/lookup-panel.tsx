@@ -20,6 +20,8 @@ interface Props {
   source?: WordSource
   /** 是否顯示搜尋輸入框。嵌在側欄時通常關掉 */
   showInput?: boolean
+  /** 收藏狀態變動時通知外層（閱讀模式要據此重畫底線標記） */
+  onSaveChange?: () => void
 }
 
 type State =
@@ -28,7 +30,7 @@ type State =
   | { status: 'done'; data: LookupResponse }
   | { status: 'error'; message: string }
 
-export function LookupPanel({ term, persona, source, showInput = true }: Props) {
+export function LookupPanel({ term, persona, source, showInput = true, onSaveChange }: Props) {
   const [query, setQuery] = useState(term ?? '')
   const [state, setState] = useState<State>({ status: 'idle' })
   const [savedWords, setSavedWords] = useState<string[]>([])
@@ -96,11 +98,13 @@ export function LookupPanel({ term, persona, source, showInput = true }: Props) 
       source: source ?? { kind: 'manual' },
     })
     setSavedWords((prev) => [...prev, headword])
+    onSaveChange?.()
   }
 
   function unsave(headword: string) {
     localStorageImpl.removeSavedWord(headword)
     setSavedWords((prev) => prev.filter((h) => h !== headword))
+    onSaveChange?.()
   }
 
   return (

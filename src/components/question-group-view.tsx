@@ -1,15 +1,17 @@
 'use client'
 
-import { useState } from 'react'
 import { useRouter } from 'next/navigation'
+import { useState } from 'react'
+import { LookupSheet } from '@/components/lexicon/lookup-sheet'
+import { QuestionText } from '@/components/question-text'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
-import { QuestionText } from '@/components/question-text'
+import { useWordLookup } from '@/hooks/use-word-lookup'
 import { getAnswer } from '@/lib/answers'
-import { getUserId } from '@/lib/user-id'
 import { parseQuestion } from '@/lib/question-parser'
+import { getUserId } from '@/lib/user-id'
 import type { Question } from '@/types/content'
 import type { PracticeMode } from '@/types/practice'
 
@@ -27,9 +29,7 @@ function getQuestionStem(question: Question, parentNumber: number): string {
   if (question.number !== parentNumber) return parsed.stem
 
   const lines = parsed.stem.split('\n')
-  const qLineIdx = lines.findIndex((l) =>
-    new RegExp(`^\\s*${parentNumber}\\.\\s`).test(l),
-  )
+  const qLineIdx = lines.findIndex((l) => new RegExp(`^\\s*${parentNumber}\\.\\s`).test(l))
   if (qLineIdx >= 0) {
     return lines.slice(qLineIdx).join('\n').trim()
   }
@@ -45,6 +45,10 @@ export function QuestionGroupView({
   nextQuestionId,
 }: Props) {
   const router = useRouter()
+  // 閱讀測驗的生字絕大多數在文章裡，不在題幹 —— 這裡是查詞最該出現的地方
+  const isEnglish = questions[0]?.subjectId.endsWith('-english') ?? false
+  const lookup = useWordLookup(isEnglish)
+
   const [answers, setAnswers] = useState<Record<string, string>>({})
   const [revealed, setRevealed] = useState(false)
   const [submitting, setSubmitting] = useState(false)
@@ -78,7 +82,7 @@ export function QuestionGroupView({
             result,
           }),
         })
-      }),
+      })
     )
     setSubmitting(false)
   }
@@ -93,15 +97,19 @@ export function QuestionGroupView({
 
   const correctCount = questions.filter((q) => {
     const answerData = getAnswer(q.id)
-    return (
-      answers[q.id] &&
-      answerData &&
-      answers[q.id] === answerData.answer.toLowerCase()
-    )
+    return answers[q.id] && answerData && answers[q.id] === answerData.answer.toLowerCase()
   }).length
 
   return (
     <div className="space-y-4">
+      <LookupSheet
+        selected={lookup.selected}
+        onClose={lookup.close}
+        persona={lookup.persona}
+        source={{ kind: 'question', questionId: questions[0]?.id }}
+        onSaveChange={lookup.refreshMarks}
+      />
+
       {/* Header */}
       <div className="flex items-center gap-2 flex-wrap">
         <Badge variant="outline">{questions[0].year}年</Badge>
@@ -131,17 +139,25 @@ export function QuestionGroupView({
               </summary>
               <Card className="border-dashed bg-muted/30">
                 <CardContent className="py-4 px-5">
-                  <QuestionText text={passage} />
+                  <QuestionText
+                    text={passage}
+                    onWordSelect={isEnglish ? lookup.onSelect : undefined}
+                    mark={lookup.mark}
+                    activeTerm={lookup.selected?.term}
+                  />
                 </CardContent>
               </Card>
             </details>
             {/* Desktop: always visible */}
             <Card className="border-dashed bg-muted/30 hidden lg:block">
               <CardContent className="py-4 px-5 space-y-1">
-                <p className="text-xs font-medium text-muted-foreground">
-                  閱讀文章
-                </p>
-                <QuestionText text={passage} />
+                <p className="text-xs font-medium text-muted-foreground">閱讀文章</p>
+                <QuestionText
+                  text={passage}
+                  onWordSelect={isEnglish ? lookup.onSelect : undefined}
+                  mark={lookup.mark}
+                  activeTerm={lookup.selected?.term}
+                />
               </CardContent>
             </Card>
           </div>
@@ -153,10 +169,7 @@ export function QuestionGroupView({
             const parsed = parseQuestion(q.text)
             const answerData = getAnswer(q.id)
             const selected = answers[q.id]
-            const isCorrect =
-              selected &&
-              answerData &&
-              selected === answerData.answer.toLowerCase()
+            const isCorrect = selected && answerData && selected === answerData.answer.toLowerCase()
             const stem = getQuestionStem(q, parentNumber)
 
             return (
@@ -181,9 +194,7 @@ export function QuestionGroupView({
                     {stem ? (
                       <QuestionText text={stem} className="flex-1 min-w-0" />
                     ) : (
-                      <span className="text-sm text-muted-foreground flex-1">
-                        ___
-                      </span>
+                      <span className="text-sm text-muted-foreground flex-1">___</span>
                     )}
                     {revealed && (
                       <span
@@ -191,9 +202,7 @@ export function QuestionGroupView({
                       >
                         {isCorrect ? '✓' : '✗'}
                         {!isCorrect && answerData && (
-                          <span className="ml-1 uppercase">
-                            正解 {answerData.answer}
-                          </span>
+                          <span className="ml-1 uppercase">正解 {answerData.answer}</span>
                         )}
                       </span>
                     )}
@@ -204,8 +213,7 @@ export function QuestionGroupView({
                     <div className="flex flex-wrap gap-1.5 pl-5">
                       {parsed.options.map((opt) => {
                         const isSelected = selected === opt.label
-                        const isAnswer =
-                          opt.label === answerData?.answer.toLowerCase()
+                        const isAnswer = opt.label === answerData?.answer.toLowerCase()
                         let className =
                           'px-3 py-1.5 text-xs rounded-md border transition-colors text-left '
                         if (revealed) {
@@ -231,9 +239,7 @@ export function QuestionGroupView({
                             onClick={() => selectAnswer(q.id, opt.label)}
                             className={className}
                           >
-                            <span className="font-medium uppercase mr-1">
-                              {opt.label}.
-                            </span>
+                            <span className="font-medium uppercase mr-1">{opt.label}.</span>
                             {opt.text}
                           </button>
                         )
@@ -243,8 +249,7 @@ export function QuestionGroupView({
                     <div className="flex gap-1.5 pl-5">
                       {['a', 'b', 'c', 'd', 'e'].map((opt) => {
                         const isSelected = selected === opt
-                        const isAnswer =
-                          opt === answerData?.answer.toLowerCase()
+                        const isAnswer = opt === answerData?.answer.toLowerCase()
                         let className =
                           'w-9 h-9 text-xs font-bold uppercase rounded-md border transition-colors '
                         if (revealed) {
@@ -310,12 +315,7 @@ export function QuestionGroupView({
                   </p>
                 </CardContent>
               </Card>
-              <Button
-                onClick={handleNext}
-                className="w-full"
-                size="lg"
-                disabled={submitting}
-              >
+              <Button onClick={handleNext} className="w-full" size="lg" disabled={submitting}>
                 {nextQuestionId ? '下一組 →' : '返回題庫'}
               </Button>
             </div>

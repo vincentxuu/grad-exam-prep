@@ -2,20 +2,21 @@
 
 import { notFound, useRouter } from 'next/navigation'
 import { use, useState } from 'react'
+import { LookupSheet } from '@/components/lexicon/lookup-sheet'
+import { QuestionGroupView } from '@/components/question-group-view'
+import { QuestionText } from '@/components/question-text'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
 import { Separator } from '@/components/ui/separator'
-import { QuestionText } from '@/components/question-text'
-import { QuestionGroupView } from '@/components/question-group-view'
-import { getQuestionsByExam, getQuestionGroup, getPaperUrl } from '@/lib/content'
+import { useWordLookup } from '@/hooks/use-word-lookup'
 import { getAnswer } from '@/lib/answers'
+import { getPaperUrl, getQuestionGroup, getQuestionsByExam } from '@/lib/content'
 import { getQuestionImages } from '@/lib/question-images'
-import { getUserId } from '@/lib/user-id'
 import { parseQuestion } from '@/lib/question-parser'
-import type { ExamId } from '@/types/content'
-import type { Question } from '@/types/content'
+import { getUserId } from '@/lib/user-id'
+import type { ExamId, Question } from '@/types/content'
 import type { PracticeMode } from '@/types/practice'
 
 interface Props {
@@ -26,9 +27,7 @@ interface Props {
 function extractPassage(parentQuestion: Question): string {
   const parsed = parseQuestion(parentQuestion.text)
   const lines = parsed.stem.split('\n')
-  const qLineIdx = lines.findIndex((l) =>
-    new RegExp(`^\\s*${parentQuestion.number}\\.\\s`).test(l),
-  )
+  const qLineIdx = lines.findIndex((l) => new RegExp(`^\\s*${parentQuestion.number}\\.\\s`).test(l))
   if (qLineIdx > 0) {
     return lines.slice(0, qLineIdx).join('\n').trim()
   }
@@ -51,10 +50,7 @@ export default function DrillPage({ params, searchParams }: Props) {
     const passage = extractPassage(group.parentQuestion)
     const lastInGroup = group.questions[group.questions.length - 1]
     const nextAfterGroup = allQuestions
-      .filter(
-        (q) =>
-          q.paperId === question.paperId && q.number > lastInGroup.number,
-      )
+      .filter((q) => q.paperId === question.paperId && q.number > lastInGroup.number)
       .sort((a, b) => a.number - b.number)[0]
 
     return (
@@ -70,14 +66,7 @@ export default function DrillPage({ params, searchParams }: Props) {
   }
 
   // Single question view (non-group)
-  return (
-    <SingleQuestionView
-      exam={exam}
-      question={question}
-      mode={mode}
-      next={next}
-    />
-  )
+  return <SingleQuestionView exam={exam} question={question} mode={mode} next={next} />
 }
 
 function SingleQuestionView({
@@ -94,14 +83,16 @@ function SingleQuestionView({
   const router = useRouter()
   const parsed = parseQuestion(question.text)
   const answerData = getAnswer(question.id)
-  const questionImages = question.hasImage
-    ? getQuestionImages(question.id)
-    : []
+  const questionImages = question.hasImage ? getQuestionImages(question.id) : []
   const paperUrl = question.hasImage ? getPaperUrl(question.paperId) : undefined
 
   const [selected, setSelected] = useState<string | null>(null)
   const [revealed, setRevealed] = useState(false)
   const [submitting, setSubmitting] = useState(false)
+
+  // 英文科才開查詞 —— 讓演算法題的每個字都可點只是噪音
+  const isEnglish = question.subjectId.endsWith('-english')
+  const lookup = useWordLookup(isEnglish)
 
   async function submitResult(result: 'correct' | 'wrong') {
     setSubmitting(true)
@@ -124,20 +115,15 @@ function SingleQuestionView({
     }
   }
 
-  const isCorrect =
-    selected && answerData && selected === answerData.answer.toLowerCase()
+  const isCorrect = selected && answerData && selected === answerData.answer.toLowerCase()
 
   return (
     <div className="space-y-4 max-w-2xl">
       {/* Header */}
       <div className="flex items-center gap-2 flex-wrap">
         <Badge variant="outline">{question.year}年</Badge>
-        <span className="text-xs text-muted-foreground">
-          第 {question.number} 題
-        </span>
-        {question.points != null && (
-          <Badge variant="secondary">{question.points} 分</Badge>
-        )}
+        <span className="text-xs text-muted-foreground">第 {question.number} 題</span>
+        {question.points != null && <Badge variant="secondary">{question.points} 分</Badge>}
         <Button
           variant="ghost"
           size="sm"
@@ -152,19 +138,30 @@ function SingleQuestionView({
       {parsed.stem && (
         <Card>
           <CardContent className="py-4 px-5">
-            <QuestionText text={parsed.stem} />
+            <QuestionText
+              text={parsed.stem}
+              onWordSelect={isEnglish ? lookup.onSelect : undefined}
+              mark={lookup.mark}
+              activeTerm={lookup.selected?.term}
+            />
           </CardContent>
         </Card>
       )}
+
+      <LookupSheet
+        selected={lookup.selected}
+        onClose={lookup.close}
+        persona={lookup.persona}
+        source={{ kind: 'question', questionId: question.id }}
+        onSaveChange={lookup.refreshMarks}
+      />
 
       {/* Original exam images for questions that contain figures */}
       {questionImages.length > 0 && (
         <Card className="border-amber-300 bg-amber-50/50 dark:bg-amber-950/20">
           <CardContent className="py-4 px-5 space-y-3">
             <div className="flex items-center justify-between">
-              <p className="text-xs font-medium text-amber-700 dark:text-amber-400">
-                原始試卷圖片
-              </p>
+              <p className="text-xs font-medium text-amber-700 dark:text-amber-400">原始試卷圖片</p>
               {paperUrl && (
                 <a
                   href={paperUrl}
@@ -191,21 +188,13 @@ function SingleQuestionView({
 
       {/* Options */}
       {!revealed && parsed.options ? (
-        <RadioGroup
-          value={selected ?? ''}
-          onValueChange={setSelected}
-          className="space-y-2"
-        >
+        <RadioGroup value={selected ?? ''} onValueChange={setSelected} className="space-y-2">
           {parsed.options.map((opt) => (
             <label
               key={opt.label}
               htmlFor={`opt-${opt.label}`}
               className={`flex items-start gap-3 rounded-lg border px-4 py-3 cursor-pointer transition-colors
-                ${
-                  selected === opt.label
-                    ? 'border-primary bg-primary/5'
-                    : 'hover:bg-muted/50'
-                }`}
+                ${selected === opt.label ? 'border-primary bg-primary/5' : 'hover:bg-muted/50'}`}
             >
               <RadioGroupItem
                 id={`opt-${opt.label}`}
@@ -213,9 +202,7 @@ function SingleQuestionView({
                 className="mt-0.5 shrink-0"
               />
               <span className="text-sm leading-relaxed">
-                <span className="font-medium uppercase mr-2">
-                  {opt.label}.
-                </span>
+                <span className="font-medium uppercase mr-2">{opt.label}.</span>
                 {opt.text}
               </span>
             </label>
@@ -241,25 +228,14 @@ function SingleQuestionView({
 
       {/* Confirm button */}
       {!revealed && (
-        <Button
-          disabled={!selected}
-          onClick={() => setRevealed(true)}
-          className="w-full"
-          size="lg"
-        >
+        <Button disabled={!selected} onClick={() => setRevealed(true)} className="w-full" size="lg">
           確認答案
         </Button>
       )}
 
       {/* Result */}
       {revealed && (
-        <Card
-          className={
-            isCorrect
-              ? 'border-[hsl(var(--success))]'
-              : 'border-destructive'
-          }
-        >
+        <Card className={isCorrect ? 'border-[hsl(var(--success))]' : 'border-destructive'}>
           <CardContent className="py-4 px-5 space-y-3">
             <div className="flex items-center gap-3 flex-wrap">
               <span
@@ -268,10 +244,7 @@ function SingleQuestionView({
                 {isCorrect ? '✓ 答對了！' : '✗ 答錯了'}
               </span>
               {selected && (
-                <Badge
-                  variant={isCorrect ? 'default' : 'destructive'}
-                  className="uppercase"
-                >
+                <Badge variant={isCorrect ? 'default' : 'destructive'} className="uppercase">
                   你選了 {selected.toUpperCase()}
                 </Badge>
               )}
@@ -288,24 +261,19 @@ function SingleQuestionView({
             {!isCorrect && parsed.options && answerData && (
               <p className="text-sm text-foreground leading-relaxed">
                 <span className="font-medium">正確選項：</span>
-                {parsed.options.find(
-                  (o) => o.label === answerData.answer.toLowerCase(),
-                )?.text ?? answerData.answer}
+                {parsed.options.find((o) => o.label === answerData.answer.toLowerCase())?.text ??
+                  answerData.answer}
               </p>
             )}
 
             {answerData?.explanation && (
               <>
                 <Separator />
-                <p className="text-sm text-foreground leading-relaxed">
-                  {answerData.explanation}
-                </p>
+                <p className="text-sm text-foreground leading-relaxed">{answerData.explanation}</p>
               </>
             )}
 
-            {!answerData && (
-              <p className="text-sm text-muted-foreground">此題尚無解析</p>
-            )}
+            {!answerData && <p className="text-sm text-muted-foreground">此題尚無解析</p>}
           </CardContent>
         </Card>
       )}
