@@ -894,5 +894,45 @@
     "examRelevance": ["im"],
     "url": "https://www.dcard.tw/f/graduate_school/p/238478758",
     "description": "跨考四校正取。指出管理組的資結是所有科目裡最好準備的——把補習班正課筆記讀熟、多練題維持手感即可。內容與庫內同名的 Medium 版（waanwu）疑為同一作者跨平台發文，未逐字比對"
+  },
+  {
+    "id": "res-dcard-im-113-recommend",
+    "title": "Dcard — 113 年推甄心得【台大資管、政大資管、交大資管】",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/254871230",
+    "description": "台大資管正取、政大資管逕取、交大資管備取（已備上）。作者為政大資管系背景，本系推甄視角"
+  },
+  {
+    "id": "res-ptt-im-113-exam",
+    "title": "PTT — 113 資管所考試心得",
+    "type": "PTT",
+    "examRelevance": ["im"],
+    "url": "https://www.ptt.cc/bbs/graduate/M.1712921843.A.207.html",
+    "description": "成大工資管應屆、系排 66%、無實習無競賽無證照、多益約 700 的背景。條件普通者的考試路線參考"
+  },
+  {
+    "id": "res-medium-im-112-recommend",
+    "title": "Medium — 112 資管所推甄心得｜台大資管／政大資管",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://medium.com/@miczzl/2022-%E8%B3%87%E7%AE%A1%E6%89%80%E6%8E%A8%E7%94%84%E5%BF%83%E5%BE%97-%E5%8F%B0%E5%A4%A7%E8%B3%87%E7%AE%A1-%E6%94%BF%E5%A4%A7%E8%B3%87%E7%AE%A1-%E6%AD%A3%E5%8F%96-c49e260589d9",
+    "description": "台大資管與政大資管推甄雙正取，含書審與面試的準備過程"
+  },
+  {
+    "id": "res-dcard-im-114-ds-admitted",
+    "title": "Dcard — 114 資管所資結組上岸心得",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/258572459",
+    "description": "記錄 114 年政大計概「改成全手寫」的題型變化，以及遇到題風突變時如何穩住心態"
+  },
+  {
+    "id": "res-dcard-im-114-ds-exam",
+    "title": "Dcard — 114 資管所資結組考試心得",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/258602544",
+    "description": "政大資管科技組面試細節：三人一組團體面試 20 分鐘，先在小房間閱讀英文文章，一頁 A4 有四段文章抽籤擇一。另提到台大該年計概偏簡單、MIS 多考歷年沒考過的統計題"
   }
 ]
