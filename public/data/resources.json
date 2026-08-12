@@ -934,5 +934,29 @@
     "examRelevance": ["im"],
     "url": "https://www.dcard.tw/f/graduate_school/p/258602544",
     "description": "政大資管科技組面試細節：三人一組團體面試 20 分鐘，先在小房間閱讀英文文章，一頁 A4 有四段文章抽籤擇一。另提到台大該年計概偏簡單、MIS 多考歷年沒考過的統計題"
+  },
+  {
+    "id": "res-dcard-im-114-ds-three",
+    "title": "Dcard — 114 資管所資結組上岸心得（政大／清大／交大）",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/258608914",
+    "description": "很值得注意的一點：政大計概的程式題自估應有 80 分以上、實際開 IDE 跑也都正確，分數卻遠低於預期，作者推測是「程式寫法不合老師的想法」。手寫程式題的評分不只看跑不跑得出來"
+  },
+  {
+    "id": "res-dcard-im-115-screening",
+    "title": "Dcard — 115 推甄一階篩選結果請益（含背景與結果對照）",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/261375737",
+    "description": "不是心得文而是請益串，但貼出了完整背景（系排 10%、修過資管相關課程、交換一年、無實習無專題）與推甄一階結果（台大資管、台科資管皆一階被刷）。可用來校準推甄的一階門檻"
+  },
+  {
+    "id": "res-yt-im-ntu-daso",
+    "title": "YouTube — 從輔仁到台大資管所：大碩金榜生備考分享",
+    "type": "補習班",
+    "examRelevance": ["im"],
+    "url": "https://www.youtube.com/watch?v=VYntQ1eXKCs",
+    "description": "影片形式的上榜心得（台大資管所＋清大資應所），有分段時間軸涵蓋各科準備要領、正課班與題庫班的差異、口試模擬的幫助。補習班官方影片，帶招生性質"
   }
 ]
