@@ -56,6 +56,14 @@ export function getFlashcardsBySubject(subjectId: string): Flashcard[] {
   return flashcards.filter((f) => f.subjectId === subjectId)
 }
 
+/**
+ * 從資源標題抓出民國年（100–119）。抓不到的多半是書目、官方入口或工具，
+ * 這些沒有年度屬性，回傳 null 由呼叫端歸類為「不分年」。
+ */
+export function resourceYear(title: string): string | null {
+  return title.match(/1[01]\d(?!\d)/)?.[0] ?? null
+}
+
 export function getResourcesByExam(examId: ExamId): Resource[] {
   return resources.filter((r) => r.examRelevance.includes(examId))
 }
@@ -82,7 +90,10 @@ export interface QuestionGroup {
   questions: Question[]
 }
 
-export function getQuestionGroup(question: Question, allQuestions: Question[]): QuestionGroup | null {
+export function getQuestionGroup(
+  question: Question,
+  allQuestions: Question[]
+): QuestionGroup | null {
   let parentQuestion: Question
 
   const parent = findPassageParent(question, allQuestions)
