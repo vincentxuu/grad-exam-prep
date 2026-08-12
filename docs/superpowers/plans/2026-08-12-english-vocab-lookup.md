@@ -17,7 +17,7 @@
 | Source | Surface | Task |
 |---|---|---|
 | 文章、論文 | Paste text → tappable | 10 |
-| 考試 | Question bank → tappable | 19 |
+| 考試 | 考古題 → 題庫 cross-link, then tappable text | 19 |
 | app、課程、家教 | Quick capture dialog | 20 |
 | 書籍 | Photo → vision → tappable | 21 (optional) |
 
@@ -67,7 +67,9 @@
 | Create | `src/components/lexicon/tappable-text.tsx` | Shared word-tappable renderer (reading, questions, chat) |
 | Create | `src/components/lexicon/photo-capture.tsx` | Optional: photo of a book page → vision → tappable text |
 | Create | `src/app/api/lexicon/ocr/route.ts` | Optional: image → text via Claude vision |
-| Modify | `src/app/[exam]/questions/[questionId]/page.tsx` | Make question text word-tappable → lookup |
+| Modify | `src/app/[exam]/questions/[questionId]/page.tsx` | Make question text + passage word-tappable → lookup |
+| Modify | `src/app/[exam]/questions/page.tsx` | Filter by `paperId` (for the cross-link) |
+| Modify | `src/app/[exam]/past-papers/page.tsx` | Link each paper to its parsed questions; flag unparsed papers |
 | Create | `scripts/warm-lexicon.js` | Batches API pre-warm for the 160 existing exam words |
 | Modify | `src/types/storage.ts` | Add `SavedWord`, `savedWords`, `PersonaProfile` on `UserPreferences` |
 | Modify | `src/lib/storage.ts` | `addSavedWord` / `removeSavedWord` / `getSavedWords` |
@@ -319,17 +321,28 @@
 
 ---
 
-## Task 19: Capture from the question bank
+## Task 19: Capture from past papers / question bank
 
-**Files:** Modify `src/app/[exam]/questions/[questionId]/page.tsx`
+**Files:** Modify `src/app/[exam]/questions/[questionId]/page.tsx`, `src/app/[exam]/questions/page.tsx`, `src/app/[exam]/past-papers/page.tsx`
 
-**Pull this forward.** It is the cheapest task in the plan and probably the highest-value one — the content is already in `public/data/questions.json`, the user is already on the page, and 考試 is the source where an unknown word most obviously deserves to be captured. It only sits at 19 because it depends on Tasks 5–10 existing; do it the moment they do.
+**Pull this forward.** Cheapest task in the plan, probably the highest-value one — the content is already in `public/data/questions.json`, the user is already on the page, and 考試 is the source where an unknown word most obviously deserves capturing. It sits at 19 only because it depends on Tasks 5–10; do it the moment they land.
 
-- [ ] **Step 1:** Render English question text through `TappableText` instead of a plain string. Scope it to English subjects (`subjectId.endsWith('-english')`) — making every word in a 演算法 question tappable is noise.
-- [ ] **Step 2:** Tapping a word opens the same lookup panel used in reading mode. No second implementation.
-- [ ] **Step 3:** Saving from here sets `source: { kind: 'question', questionId, sentence }` where `sentence` is the sentence containing the word, sliced from the question text.
-- [ ] **Step 4:** Also apply to the passage parent for reading-comprehension groups (`getQuestionGroup` in `src/lib/content.ts` already resolves these) — the passage is where most of the unknown vocabulary actually is, not the question stem.
-- [ ] **Step 5:** Verify against a real reading-comprehension paper (`pp-cs-en-110` or `pp-im-en-114`) that the passage renders identically to before, just tappable.
+**Two surfaces, currently disconnected.** `/past-papers` renders 72 papers as PDF links with practice tracking; `/questions` holds the 1,424 parsed questions. Same papers, same `paperId`, **no link between them** — `past-papers/page.tsx` has no reference to the question bank, and the reverse link exists only when `hasImage`. Words in a PDF can't be tapped, so a user reading a paper on the 考古題 page has no capture path at all unless they know to go find the same paper in 題庫.
+
+### 19a — Connect the two pages
+
+- [ ] **Step 1:** On each paper row in `past-papers/page.tsx`, add a 「逐題練習」 link to the question bank filtered to that `paperId`. The IDs already match across both JSON files — this is a link, not a data change.
+- [ ] **Step 2:** Verify `/questions` can filter by `paperId`; add the query param if it only filters by subject today.
+- [ ] **Step 3:** Papers with no parsed questions must say so. 12 of 72 have none — including `pp-cs-en-115`, the newest CS English paper. Show 「此卷尚未進題庫」 and offer quick capture (Task 20) instead of a link that lands on an empty list.
+- [ ] **Step 4:** This half is worth shipping **even with no AI features at all** — the cross-link should have existed already. Don't bury it behind the rest of the plan.
+
+### 19b — Make the text tappable
+
+- [ ] **Step 5:** Render question text through `TappableText`. Scope to English subjects (`subjectId.endsWith('-english')`) — every word in a 演算法 question being tappable is noise.
+- [ ] **Step 6:** Tapping opens the same lookup panel as reading mode. No second implementation.
+- [ ] **Step 7:** Apply to the **passage parent** of reading-comprehension groups too (`getQuestionGroup` in `src/lib/content.ts` already resolves these). Most unknown vocabulary is in the passage, not the stem — covering only the stem misses the bulk of it.
+- [ ] **Step 8:** Saving sets `source: { kind: 'question', questionId, sentence }`, `sentence` being the containing sentence sliced from the question text.
+- [ ] **Step 9:** Verify against a real reading-comprehension paper (`pp-cs-en-110` or `pp-im-en-114`) that the passage renders identically to before, just tappable. 819 English questions across 17 papers go through this path — a rendering regression here is very visible.
 
 ---
 
