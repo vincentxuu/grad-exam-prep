@@ -110,6 +110,22 @@ export function getPaperUrl(paperId: string): string | undefined {
   return paper?.url
 }
 
+/**
+ * 每份考卷解析進題庫的題數。
+ *
+ * 考古題（`past-papers.json`，PDF 連結）與題庫（`questions.json`，已解析的
+ * 題目文字）是同一批考卷的兩種呈現，靠 `paperId` 對應 —— 但不是每份都解析過，
+ * 所以連過去之前要先問這裡拿題數。
+ */
+const questionCountByPaper: Record<string, number> = {}
+for (const q of questions) {
+  questionCountByPaper[q.paperId] = (questionCountByPaper[q.paperId] ?? 0) + 1
+}
+
+export function getQuestionCount(paperId: string): number {
+  return questionCountByPaper[paperId] ?? 0
+}
+
 export const EXAM_LABELS: Record<ExamId, string> = {
   im: '台大資管所',
   cs: '台大資工所',

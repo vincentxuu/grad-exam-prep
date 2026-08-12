@@ -38,6 +38,8 @@ function QuestionsContent({ params }: Props) {
   const [search, setSearch] = useQueryState('q', '')
   const [yearFilterStr, setYearFilterStr] = useQueryState('year', 'all')
   const [subjectTab, setSubjectTab] = useQueryState('subject', subjects[0]?.id ?? '')
+  // 從考古題頁連過來時帶的 ?paper=<paperId>，把題庫收斂到那一份考卷
+  const [paperFilter, setPaperFilter] = useQueryState('paper', 'all')
   const yearFilter: number | 'all' = yearFilterStr === 'all' ? 'all' : Number(yearFilterStr)
   const [expandedIds, setExpandedIds] = useState<Set<string>>(new Set())
   const [pageLimits, setPageLimits] = useState<Record<string, number>>({})
@@ -58,22 +60,48 @@ function QuestionsContent({ params }: Props) {
     const q = search.toLowerCase()
     return allQuestions.filter((question) => {
       const yearMatch = yearFilter === 'all' || question.year === yearFilter
+      const paperMatch = paperFilter === 'all' || question.paperId === paperFilter
       const searchMatch = !q || question.text.toLowerCase().includes(q)
-      return yearMatch && searchMatch
+      return yearMatch && paperMatch && searchMatch
     })
-  }, [allQuestions, yearFilter, search])
+  }, [allQuestions, yearFilter, paperFilter, search])
 
   const totalFiltered = filtered.length
+  const isFiltered = !!search || yearFilter !== 'all' || paperFilter !== 'all'
+
+  // 單卷檢視的標題，例如「110年 英文(A)」
+  const paperLabel = useMemo(() => {
+    if (paperFilter === 'all') return null
+    const q = allQuestions.find((x) => x.paperId === paperFilter)
+    if (!q) return paperFilter
+    const subject = subjects.find((s) => s.id === q.subjectId)
+    return `${q.year}年 ${subject?.name.split('（')[0] ?? q.subjectId}`
+  }, [paperFilter, allQuestions, subjects])
 
   return (
     <div className="space-y-4 max-w-3xl">
       <div>
         <h1 className="text-2xl font-bold">{EXAM_LABELS[exam as ExamId]} — 題庫</h1>
         <p className="text-muted-foreground text-sm mt-1">
-          {totalFiltered} 題{search || yearFilter !== 'all' ? '（篩選後）' : ''} · 共{' '}
-          {allQuestions.length} 題
+          {totalFiltered} 題{isFiltered ? '（篩選後）' : ''} · 共 {allQuestions.length} 題
         </p>
       </div>
+
+      {/* 從考古題頁連過來的單卷檢視 */}
+      {paperLabel && (
+        <div className="flex items-center gap-2 rounded-md border bg-muted/40 px-3 py-2">
+          <span className="text-xs text-muted-foreground shrink-0">單卷檢視</span>
+          <span className="text-sm font-medium truncate">{paperLabel}</span>
+          <Button
+            variant="ghost"
+            size="sm"
+            className="ml-auto h-7 text-xs shrink-0"
+            onClick={() => setPaperFilter('all')}
+          >
+            顯示全部 ✕
+          </Button>
+        </div>
+      )}
 
       {/* Search */}
       <Input
