@@ -47,7 +47,7 @@ export function TappableText({ text, onSelect, mark, activeTerm, className }: Pr
   }
 
   return (
-    // biome-ignore lint/a11y/noStaticElementInteractions: 選取片語需要容器層的 mouseup，個別的字本身是可聚焦的 button
+    // 容器層的 mouseup 負責處理拖曳選取的片語；個別的字本身是可聚焦的 button
     <span className={className} onMouseUp={handleMouseUp} onTouchEnd={handleMouseUp}>
       {tokens.map((t) => {
         if (!t.isWord) return <span key={t.start}>{t.text}</span>
