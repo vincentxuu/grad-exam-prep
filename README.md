@@ -53,6 +53,7 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 | --- | --- | --- |
 | `ANTHROPIC_API_KEY` | 生成路徑必要 | 生成詞條與個人化例句。**沒設定時 `POST /api/lexicon` 回 503**；`GET`（只讀快取）不受影響。 |
 | `LEXICON_DAILY_QUOTA` | 否 | 每人每日生成次數上限，預設 60。快取命中不計入。 |
+| `CHAT_DAILY_QUOTA` | 否 | 每人每日對話訊息上限，預設 40。**與查詞額度分開計** —— 對話貴得多。 |
 | `PASSPHRASE_HASH` | 否 | 既有的同步用密語。帶此 bearer token 的請求不受配額限制。 |
 
 ### 預暖詞條快取
@@ -84,7 +85,8 @@ D1 migrations 不在自動流程裡，schema 有變動時要自己跑：
 npx wrangler d1 migrations apply grad-exam-prep-db --remote
 ```
 
-查詞功能需要 `0003_lexicon.sql`，**部署前要先套用**，否則 `/api/lexicon` 會因為找不到資料表而回 500。
+查詞需要 `0003_lexicon.sql`、對話需要 `0004_chat.sql`，**部署前要先套用**，
+否則對應的 API 會因為找不到資料表而回 500。兩者互相獨立，可以只上其中一半。
 
 ## 英文查詞與單字庫
 
@@ -93,8 +95,17 @@ npx wrangler d1 migrations apply grad-exam-prep-db --remote
 | `/[exam]/lookup` | 查單字與片語，管理單字庫與個人化情境 |
 | `/[exam]/reading` | 貼上文章 → 逐字可點查詞 → 一鍵加入單字庫 |
 | `/[exam]/questions/[id]` | 英文題目與題組文章逐字可點（只在英文科開啟） |
+| `/[exam]/chat` | 英文對話練習，把單字庫裡到期的字逼出來 |
 | `/[exam]/flashcards` | 收藏的字與既有閃卡共用同一個 SM-2 排程 |
 
 詞條走兩層快取：通用詞條（`lexicon_entries`）全站共享，個人化例句
 （`lexicon_personal`）依 persona 分開存。查過的字全站免費，只有第一次
 生成會計入配額。
+
+對話會從 SRS 撈到期與不熟的字當練習目標，但**不會告訴使用者今天在練
+哪些字** —— 一旦講明就會照抄，而不是自己產出。結束時的總結可以一鍵把
+用出來的字記為熟悉，或把 AI 帶出來的新字加進單字庫；兩者都要手動按，
+不自動改複習排程。
+
+**成本提醒**：查詞會隨快取變熱趨近於零，對話不會 —— 每則訊息都要送整段
+歷史。所以對話有獨立配額、單場 30 則上限、糾錯預設關閉。
