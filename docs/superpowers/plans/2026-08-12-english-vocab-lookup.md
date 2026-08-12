@@ -8,7 +8,18 @@
 
 **Architecture:** AI-generated lexicon entries cached permanently in Cloudflare D1, split into a globally-shared generic layer (`lexicon_entries`, keyed by headword) and a per-persona layer (`lexicon_personal`, keyed by headword + persona hash). Looked-up words become SRS cards with id `lx-<slug>`, reusing the existing SM-2 engine and localStorage `srsState` map with no migration. Conversation practice pulls due cards as target words, streams a text reply, and runs correction as a separate structured call so the stream stays token-by-token.
 
-**Two shippable halves.** Tasks 0–13 are lookup + reading (migration `0003`). Tasks 14–17 are conversation (migration `0004`). The second half depends on the first (it reuses the lookup panel and the `ReviewCard` abstraction), but the first ships on its own if you want to stop there.
+**Three shippable phases.** Tasks 0–13 are lookup + reading (migration `0003`). Tasks 14–18 are conversation (migration `0004`). Tasks 19–21 are the remaining capture surfaces — question bank, quick capture, photo — needing no schema change at all. Each phase ships on its own; later phases reuse the earlier ones' components rather than adding parallel implementations.
+
+**Task 19 is mis-numbered by value.** Capturing words from the question bank is the cheapest task here and arguably the most useful — the content is already in the repo and the user is already on the page. It sits at 19 only because it depends on the lookup panel and tokenizer existing. Do it as soon as Task 10 lands, not last.
+
+**Capture surface per source** (the note's left column — 書籍、文章、論文、考試、app、課程、家教):
+
+| Source | Surface | Task |
+|---|---|---|
+| 文章、論文 | Paste text → tappable | 10 |
+| 考試 | Question bank → tappable | 19 |
+| app、課程、家教 | Quick capture dialog | 20 |
+| 書籍 | Photo → vision → tappable | 21 (optional) |
 
 **Tech Stack:** Next.js (OpenNext/Cloudflare Workers), Cloudflare D1, `@anthropic-ai/sdk`, TypeScript, Tailwind, existing shadcn/ui components.
 
@@ -52,6 +63,11 @@
 | Create | `src/components/chat/session-summary.tsx` | End-of-session recap + one-tap actions |
 | Create | `src/components/chat/composer.tsx` | Text input + optional `SpeechRecognition` mic |
 | Create | `src/app/[exam]/chat/page.tsx` | Conversation practice page |
+| Create | `src/components/lexicon/quick-capture.tsx` | Global "快速加字" — type a word, look it up, save |
+| Create | `src/components/lexicon/tappable-text.tsx` | Shared word-tappable renderer (reading, questions, chat) |
+| Create | `src/components/lexicon/photo-capture.tsx` | Optional: photo of a book page → vision → tappable text |
+| Create | `src/app/api/lexicon/ocr/route.ts` | Optional: image → text via Claude vision |
+| Modify | `src/app/[exam]/questions/[questionId]/page.tsx` | Make question text word-tappable → lookup |
 | Create | `scripts/warm-lexicon.js` | Batches API pre-warm for the 160 existing exam words |
 | Modify | `src/types/storage.ts` | Add `SavedWord`, `savedWords`, `PersonaProfile` on `UserPreferences` |
 | Modify | `src/lib/storage.ts` | `addSavedWord` / `removeSavedWord` / `getSavedWords` |
@@ -147,7 +163,7 @@
 
 **Files:** Modify `src/types/storage.ts`, `src/lib/storage.ts`
 
-- [ ] **Step 1:** Add `PersonaProfile` (imported from `@/types/lexicon`) as an optional field on `UserPreferences`, and add `savedWords: SavedWord[]` to `StorageState`. Define `SavedWord` in `src/types/storage.ts`.
+- [ ] **Step 1:** Add `PersonaProfile` (imported from `@/types/lexicon`) as an optional field on `UserPreferences`, and add `savedWords: SavedWord[]` to `StorageState`. Define `SavedWord` and `WordSource` in `src/types/storage.ts` — every saved word records where it came from (`reading` / `question` / `book` / `course` / `chat` / `manual`) plus the original sentence when one exists. The note lists seven different sources; the data model has to be able to tell them apart from day one, because retrofitting a required field onto saved rows later is painful.
 - [ ] **Step 2:** Extend `defaultState()` with `savedWords: []`. The existing `{ ...defaultState(), ...JSON.parse(raw) }` merge already handles old payloads that lack the key.
 - [ ] **Step 3:** Add `addSavedWord`, `removeSavedWord`, `getSavedWords` to `IStorage` and `localStorageImpl`. `removeSavedWord` must also delete the card's `srsState` entry.
 - [ ] **Step 4:** Confirm `exportJSON` / `importJSON` and `/api/sync` carry the new fields — they serialize the whole `StorageState`, so this should be free. Verify rather than assume.
@@ -192,7 +208,7 @@
 
 **Files:** Create `src/lib/reading/tokenize.ts`, `src/app/[exam]/reading/page.tsx`
 
-- [ ] **Step 1:** `tokenize(text): Token[]` where `Token = { text, start, end, isWord }`. Split on `/[^A-Za-z'-]+/` while preserving offsets so the original passage renders unchanged (whitespace and punctuation intact).
+- [ ] **Step 1:** `tokenize(text): Token[]` where `Token = { text, start, end, isWord }`. Split on `/[^A-Za-z'-]+/` while preserving offsets so the original passage renders unchanged (whitespace and punctuation intact). Extract the tappable renderer into `src/components/lexicon/tappable-text.tsx` — reading, the question bank (Task 19), and chat (Task 17) all need it. One implementation, three callers.
 - [ ] **Step 2:** Page: a textarea for the passage (persisted to localStorage), and a rendered view where word tokens are clickable buttons.
 - [ ] **Step 3:** Click a word → open the side panel with `LookupPanel` pre-filled. Drag-select across words → offer a "查片語" action for the selected span (this is the 片語 half of pain point 1 — don't skip it).
 - [ ] **Step 4:** Underline tokens whose normalized form is in `savedWords`, or whose SRS state has `repetitions === 0` (last rated 不會). Add a legend.
@@ -300,6 +316,48 @@
 - [ ] **Step 2:** `npm run typecheck`, `npm run lint`, `npm test` all clean.
 - [ ] **Step 3:** End-to-end: save a few words → start a conversation → confirm the target words appear naturally and are **not** announced → use one in a reply → tap an unknown word in the AI's message and get a lookup → enable 糾錯模式 and get a correction on a deliberately wrong sentence → end → summary shows used/missed correctly.
 - [ ] **Step 4:** Cost check — run one full 20-message session and record actual token spend from `usage`, including cache reads. Report the real number; it decides whether `CHAT_DAILY_QUOTA: 40` is sane or nonsense.
+
+---
+
+## Task 19: Capture from the question bank
+
+**Files:** Modify `src/app/[exam]/questions/[questionId]/page.tsx`
+
+**Pull this forward.** It is the cheapest task in the plan and probably the highest-value one — the content is already in `public/data/questions.json`, the user is already on the page, and 考試 is the source where an unknown word most obviously deserves to be captured. It only sits at 19 because it depends on Tasks 5–10 existing; do it the moment they do.
+
+- [ ] **Step 1:** Render English question text through `TappableText` instead of a plain string. Scope it to English subjects (`subjectId.endsWith('-english')`) — making every word in a 演算法 question tappable is noise.
+- [ ] **Step 2:** Tapping a word opens the same lookup panel used in reading mode. No second implementation.
+- [ ] **Step 3:** Saving from here sets `source: { kind: 'question', questionId, sentence }` where `sentence` is the sentence containing the word, sliced from the question text.
+- [ ] **Step 4:** Also apply to the passage parent for reading-comprehension groups (`getQuestionGroup` in `src/lib/content.ts` already resolves these) — the passage is where most of the unknown vocabulary actually is, not the question stem.
+- [ ] **Step 5:** Verify against a real reading-comprehension paper (`pp-cs-en-110` or `pp-im-en-114`) that the passage renders identically to before, just tappable.
+
+---
+
+## Task 20: Quick capture
+
+**Files:** Create `src/components/lexicon/quick-capture.tsx`; modify `src/components/layout/header.tsx`
+
+Covers the sources with no text to paste — app、課程、家教, and anything heard rather than read.
+
+- [ ] **Step 1:** A floating button or header action available on every page, opening a small dialog (reuse the existing `@radix-ui/react-dialog`).
+- [ ] **Step 2:** One input. Type a word → Enter → lookup runs → save button. Optional second field for 出處 (free text → `source.label`) and a note. **Both optional** — if capture isn't done in about three seconds it won't get used during a class, and a half-captured word beats a lost one.
+- [ ] **Step 3:** Sets `source: { kind: 'manual', label }` unless the user picks a more specific kind.
+- [ ] **Step 4:** Bind a keyboard shortcut. Check it doesn't collide with anything in the existing pages.
+- [ ] **Step 5:** Verify it works mid-review without destroying flashcard state.
+
+---
+
+## Task 21: Photo capture (optional)
+
+**Files:** Create `src/components/lexicon/photo-capture.tsx`, `src/app/api/lexicon/ocr/route.ts`
+
+Covers 書籍 — physical pages that can't be copy-pasted.
+
+- [ ] **Step 1:** Decide whether to build this at all. Ship Tasks 19–20 first, then check how often paper books are actually the blocker. If the answer is rarely, quick capture already covers it and this is wasted work.
+- [ ] **Step 2:** If building: file/camera input → downscale client-side before upload (long edge ≤ 1568px unless the text is genuinely too small to read at that size).
+- [ ] **Step 3:** `POST /api/lexicon/ocr` — Claude vision, structured output returning the page text. Quota-gated on the same daily counter, and **weighted heavier than a lookup**: a full-resolution image can run to ~4,784 tokens on Opus 5 and none of it caches.
+- [ ] **Step 4:** Feed the returned text into `TappableText`, same as reading mode. Everything downstream is already built.
+- [ ] **Step 5:** Report the measured per-photo token cost in the PR. If it's out of line with the rest of the system, say so plainly rather than shipping it quietly.
 
 ---
 
