@@ -750,5 +750,45 @@
     "examRelevance": ["im"],
     "url": "https://www.dcard.tw/f/graduate_school/p/260339730",
     "description": "政大資管資管組團體面試細節（被作者形容為最硬的面試）：面試前先到教室閱讀英文文章 10 分鐘，同組每人拿到的文章不同，內容近似 paper 摘要"
+  },
+  {
+    "id": "res-hackmd-im-108-oral",
+    "title": "HackMD — 108【台大資管/交大資管/清大服科/中央資管】推甄面試+考試心得",
+    "type": "HackMD",
+    "examRelevance": ["im"],
+    "url": "https://hackmd.io/@25yaxaMGQC2Edo6cOCx_mw/Hk-8i4UHB",
+    "description": "結構最完整的一篇：台大考試與推甄兩場口試各四關、逐關標註教授與時間、逐題編號並附作者整理的參考答案。另有台大考古題寫 10 年份每份三次的做法、MIS 三遍讀法、加權公式（計概×2＋MIS×2＋英文×1），以及推薦看 Harvard Business Review 的 Technology topic 補 MIS 新觀念"
+  },
+  {
+    "id": "res-medium-im-2020-hanson",
+    "title": "Medium — 2020 資管所推甄＆考試分享",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://medium.com/something-about-hanson/2020%E8%B3%87%E7%AE%A1%E6%89%80%E6%8E%A8%E7%94%84-%E8%80%83%E8%A9%A6%E5%88%86%E4%BA%AB-c9d9bada2ad1",
+    "description": "同一人推甄與考試兩次台大口試的對照（推甄落榜、考試正取 5）。技術關被問 Multilevel Queue Scheduling 圖並被連環追問、數學關的茶與咖啡混合濃度題，兩題都寫出了完整的被問倒過程"
+  },
+  {
+    "id": "res-cram-im-oral-bank-get",
+    "title": "高點 — 資管所甄試口試題庫（依題型與年份分類）",
+    "type": "補習班",
+    "examRelevance": ["im"],
+    "url": "https://master.get.com.tw/screen/big_data/interview/information.aspx",
+    "description": "把口試題分成個人探索題、想法反應題、專業相關題、團體面試題四類，每題標註年份與學校。台大部分涵蓋 111–114 年，是目前找到唯一有年份標註的口試題庫。補習班網頁，帶招生性質"
+  },
+  {
+    "id": "res-medium-im-oral-jimmy",
+    "title": "Medium — 台政資管所推甄心得（面試篇）",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://medium.com/jimmyfu87/%E5%8F%B0%E6%94%BF%E8%B3%87%E7%AE%A1%E6%89%80%E6%8E%A8%E7%94%84%E5%BF%83%E5%BE%97-%E5%8F%A3%E8%A9%A6%E7%AF%87-88dc954bf46e",
+    "description": "台大與政大兩校面試的對照，描述台大跑關「每一關時間都非常趕，時間一到就會有人進來敲門」"
+  },
+  {
+    "id": "res-dcard-im-2021-oral",
+    "title": "Dcard — 2021 資管所推甄面試心得【台大資管/政大資管科技組/交大】",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/237588496",
+    "description": "政大團體面試的排序機制：按准考證序號排 10~11 人一組，回答順序有時 1→10 有時 10→1，排中間較有利可多想一下。強調要聽別人的回答"
   }
 ]
