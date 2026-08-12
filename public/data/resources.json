@@ -838,5 +838,37 @@
     "examRelevance": ["im"],
     "url": "https://medium.com/@j4427515/%E7%A0%94%E7%A9%B6%E6%89%80%E7%94%B3%E8%AB%8B-2020-%E5%8F%B0%E5%A4%A7%E8%B3%87%E7%AE%A1-%E5%8F%B0%E5%A4%A7%E5%95%86%E7%A0%94-%E6%94%BF%E5%A4%A7%E8%B3%87%E7%AE%A1%E6%8E%A8%E7%94%84%E5%BF%83%E5%BE%97-4714b1339bce",
     "description": "台大資管推甄正取（書審 60%／面試 40%）。作者自評書審與面試成績都不算特別優異仍上榜，可作為期望值的參考點"
+  },
+  {
+    "id": "res-hackmd-im-114-oral-bank",
+    "title": "HackMD — 114【各校系】推甄口試題目總整理（多人共筆）",
+    "type": "HackMD",
+    "examRelevance": ["im"],
+    "url": "https://hackmd.io/@UgviSLEFQle1MBwe1D01uQ/SJYU-vNE1x",
+    "description": "六位考生協作的跨校口試題庫，台大資管、政大資管、交大資管、成大資管、中央資管都有逐關題目與回答過程。台大段落載明四關為管理／數學／技術／生涯、一對二教授、嚴格控時會響鈴敲門，並列出考生自己的準備清單（李宏毅生成式 AI 導論、孔令傑作業研究、科技浪 Podcast）"
+  },
+  {
+    "id": "res-dcard-im-114-ds",
+    "title": "Dcard — 114 資管所資結組考試心得",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/258562680",
+    "description": "資結組視角。指出政大資結「完全是考古題，題目都很簡單但很複雜然後寫不完」，大量刷題就能拿高分——政大資結拚的是速度不是難度"
+  },
+  {
+    "id": "res-dcard-im-114-scores",
+    "title": "Dcard — 114 資管所管理組考試心得（含成績單）",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/258498440",
+    "description": "貼出台大資管成績單的管理組心得，可用來校準各科實際分數落點"
+  },
+  {
+    "id": "res-medium-im-ntu-courses",
+    "title": "Medium — 114-1 台大資管所修課心得",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://medium.com/@sangyz/114-1-%E5%8F%B0%E5%A4%A7%E8%B3%87%E7%AE%A1%E6%89%80-%E4%BF%AE%E8%AA%B2%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB-9d1858f74fe7",
+    "description": "入學後的修課心得，不是考試心得。用途是口試前了解系所實際課程內容與教授，回答「為什麼選台大資管」「想修什麼課」時能講得具體"
   }
 ]
