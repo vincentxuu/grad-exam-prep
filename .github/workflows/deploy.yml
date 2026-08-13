@@ -34,6 +34,11 @@ jobs:
       - name: Typecheck
         run: npm run typecheck
 
+      # 擋的是「新壞掉的考卷」。已知還沒修好的記在 paper-integrity-baseline.json，
+      # 不然這一關從第一天就是紅的 —— 紅久了沒人看，等於沒有這道關卡。
+      - name: Check paper integrity
+        run: npm run check:papers
+
       # --forceExit：jest 跑完不會自己退出（--detectOpenHandles 也抓不到來源），
       # 少了這個旗標 CI 會一路卡到 timeout。
       - name: Test

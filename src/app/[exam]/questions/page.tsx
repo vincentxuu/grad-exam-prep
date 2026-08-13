@@ -3,6 +3,7 @@
 import { notFound } from 'next/navigation'
 import { Suspense, use, useMemo, useState } from 'react'
 import { PageLoading } from '@/components/page-loading'
+import { PaperContentWarning } from '@/components/paper-content-warning'
 import { QuestionText } from '@/components/question-text'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -102,6 +103,8 @@ function QuestionsContent({ params }: Props) {
           </Button>
         </div>
       )}
+
+      {paperFilter !== 'all' && <PaperContentWarning paperId={paperFilter} />}
 
       {/* Search */}
       <Input

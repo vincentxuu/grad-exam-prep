@@ -3,6 +3,7 @@
 import { notFound, useRouter } from 'next/navigation'
 import { use, useState } from 'react'
 import { LookupSheet } from '@/components/lexicon/lookup-sheet'
+import { PaperContentWarning } from '@/components/paper-content-warning'
 import { QuestionGroupView } from '@/components/question-group-view'
 import { QuestionText } from '@/components/question-text'
 import { Badge } from '@/components/ui/badge'
@@ -133,6 +134,8 @@ function SingleQuestionView({
           ← 返回題庫
         </Button>
       </div>
+
+      <PaperContentWarning paperId={question.paperId} />
 
       {/* Question stem */}
       {parsed.stem && (

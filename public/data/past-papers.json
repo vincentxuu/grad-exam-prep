@@ -120,7 +120,9 @@
       "year": 112,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/112/2023-9.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "contentStatus": "suspect",
+      "contentIssue": "與 109 年英文卷有 32 題完全相同（題號也對得上），兩份之中必有一份裝了另一份的內容，尚未取得原始 PDF 判定是哪一份。"
     },
     {
       "id": "pp-im-it-112",
@@ -157,7 +159,9 @@
       "year": 111,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/111/111-9.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "contentStatus": "suspect",
+      "contentIssue": "第 1–20、42–50 共 28 題與資工所 110 年英文(A) 相同 —— 那份已依原卷重建過，所以是這份裝錯了。第 21–40 題的克漏字文章也沒抽進來，只留下摘要式的佔位文字。"
     },
     {
       "id": "pp-im-it-111",
@@ -231,7 +235,9 @@
       "year": 109,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/109/9_graduate-109.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "contentStatus": "suspect",
+      "contentIssue": "與 112 年英文卷有 32 題完全相同（題號也對得上），兩份之中必有一份裝了另一份的內容，尚未取得原始 PDF 判定是哪一份。"
     },
     {
       "id": "pp-im-it-109",
@@ -342,7 +348,9 @@
       "year": 106,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam/graduate/106g/106_graduate_9.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "contentStatus": "incomplete",
+      "contentIssue": "克漏字與閱讀測驗的文章沒抽進來，第 21–50 題只剩單句與 [Passage I Cloze] 這類註記，無法作答；這 30 題的詳解也是在沒有文章的情況下從選項推測出來的，答案不可信。"
     },
     {
       "id": "pp-im-it-106",

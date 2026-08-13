@@ -30,6 +30,8 @@ interface Paper {
   source: string
   verified: boolean
   note?: string
+  contentStatus?: 'incomplete' | 'suspect'
+  contentIssue?: string
 }
 
 export default function PastPapersPage({ params }: Props) {
@@ -178,12 +180,26 @@ export default function PastPapersPage({ params }: Props) {
                               </Button>
 
                               {questionCount > 0 ? (
-                                <a
-                                  href={`/${exam}/questions?paper=${paper.id}&subject=${paper.subjectId}`}
-                                  className="text-xs text-primary hover:underline whitespace-nowrap"
-                                >
-                                  逐題練習（{questionCount}）→
-                                </a>
+                                <>
+                                  <a
+                                    href={`/${exam}/questions?paper=${paper.id}&subject=${paper.subjectId}`}
+                                    className="text-xs text-primary hover:underline whitespace-nowrap"
+                                  >
+                                    逐題練習（{questionCount}）→
+                                  </a>
+                                  {/* PDF 是對的，出問題的是抽進題庫的那份文字 */}
+                                  {paper.contentStatus && (
+                                    <Badge
+                                      variant="pending"
+                                      className="text-xs cursor-help"
+                                      title={paper.contentIssue}
+                                    >
+                                      {paper.contentStatus === 'incomplete'
+                                        ? '題庫內容不完整'
+                                        : '題庫內容存疑'}
+                                    </Badge>
+                                  )}
+                                </>
                               ) : (
                                 <span className="text-xs text-muted-foreground whitespace-nowrap">
                                   尚未進題庫

@@ -132,9 +132,42 @@ export function getQuestionGroup(
   return { parentQuestion, questions: groupQuestions }
 }
 
+export function getPaper(paperId: string): PastPaper | undefined {
+  return (pastPapers as unknown as PastPaper[]).find((p) => p.id === paperId)
+}
+
 export function getPaperUrl(paperId: string): string | undefined {
-  const paper = (pastPapers as unknown as PastPaper[]).find((p) => p.id === paperId)
-  return paper?.url
+  return getPaper(paperId)?.url
+}
+
+/**
+ * 內容不可信的考卷。
+ *
+ * 這些卷子在畫面上與正常卷子沒有差別 —— 題數齊、每題有答案有詳解 —— 所以凡是
+ * 「拿題目當真題用」的地方都要主動問這裡，不能等使用者自己看出來。
+ * 判定依據與逐卷理由寫在 `scripts/flag-paper-content-status.js`。
+ */
+const unreliablePaperIds = new Set(
+  (pastPapers as unknown as PastPaper[]).filter((p) => p.contentStatus).map((p) => p.id)
+)
+
+export function getPaperContentIssue(paperId: string): PastPaper | undefined {
+  const paper = getPaper(paperId)
+  return paper?.contentStatus ? paper : undefined
+}
+
+export function isPaperUnreliable(paperId: string): boolean {
+  return unreliablePaperIds.has(paperId)
+}
+
+/**
+ * 適合拿來計分的題目：排除內容不可信的卷子。
+ *
+ * 模擬考與錯題本用這個，題庫瀏覽不用 —— 瀏覽時掛警告即可，直接藏起來反而讓人
+ * 以為某些年份不存在。
+ */
+export function getReliableQuestions(questionList: Question[]): Question[] {
+  return questionList.filter((q) => !unreliablePaperIds.has(q.paperId))
 }
 
 /**
