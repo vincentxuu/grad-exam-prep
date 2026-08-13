@@ -331,6 +331,6 @@
 
 **與本 repo 的對照**：本次更新 `subjects-im.json` 四科的 `materials`、`resources.json`（補無補習心得、教材連結，並補寫 `res-dcard-im-115-tech` 與 `res-dcard-im-114-cross` 的描述）、`guides.json` 六筆導引卡。
 
-**尚未處理**：`study-plans.json` 只有一套八個月的通用節奏；要把第六節做進 app，需要 `StudyPlan` 支援同一考試多套計畫（目前 `getStudyPlan` 以 `examId` 單筆對應）。
+**第六節已做進 app**：`StudyPlan` 加上 `id`／`name`／`summary`／`isDefault`，`getStudyPlan(examId, planId?)` 可指定計畫、`getStudyPlans(examId)` 取全部，計畫頁多了切換鈕（`?plan=` 帶得走）。第六節的路線就是 `im-nocram-6m`「六個月不補習版」，六個階段共 40 項可打勾任務。台大資管的預設仍是原本的八個月標準版。
 
 **待確認**：116 學年度簡章（2026 年 10 月底公告）出來前，考科名稱、統計佔比、口試計分公式一律沿用 115 的數字，不應視為已確認。

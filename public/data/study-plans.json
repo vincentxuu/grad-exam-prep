@@ -1,6 +1,10 @@
 [
   {
+    "id": "im-standard-8m",
     "examId": "im",
+    "name": "八個月標準版",
+    "summary": "跟著補習班春季班到題庫班的節奏，從第一年 6 月排到隔年 2 月筆試",
+    "isDefault": true,
     "totalMonths": 8,
     "examWindow": "次年2月",
     "phases": [
@@ -72,7 +76,11 @@
     ]
   },
   {
+    "id": "cs-standard-8m",
     "examId": "cs",
+    "name": "八個月標準版",
+    "summary": "線代、離散、資結並行的八個月節奏，從第一年 6 月排到隔年 2 月筆試",
+    "isDefault": true,
     "totalMonths": 8,
     "examWindow": "次年2月",
     "phases": [
@@ -137,6 +145,116 @@
           { "id": "cs-4-4", "description": "針對數學科進行仔細檢查習慣養成（數學一分差5-6名）", "subjectTag": "cs-math" },
           { "id": "cs-4-5", "description": "資演科延伸題練習：課本以外的延伸型題目", "subjectTag": "cs-algo" },
           { "id": "cs-4-6", "description": "英文考古題練習", "subjectTag": "cs-english" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "im-nocram-6m",
+    "examId": "im",
+    "name": "六個月不補習版",
+    "summary": "8 月起跑、隔年 2 月筆試的自學路線，教材全部是開放式課程與可借閱的教科書。適合不補習或只補單科的人",
+    "totalMonths": 6,
+    "examWindow": "次年2月",
+    "phases": [
+      {
+        "id": "im6-phase-1",
+        "name": "第 1 個月（8 月）：先定範圍再開讀",
+        "monthStart": 1,
+        "monthEnd": 1,
+        "subjectTags": ["im-it"],
+        "note": "沒有補習班幫你篩範圍時，考古題就是唯一的範圍表。這個月的重點是先看懂台大在考什麼，再開始讀",
+        "tasks": [
+          { "id": "im6-1-1", "description": "掃過台大近 3 年資訊科技概論考古題（只看不寫），列出重複出現的主題", "subjectTag": "im-it" },
+          { "id": "im6-1-2", "description": "掃過台大近 3 年資訊管理導論與統計學考古題，確認統計實際佔分", "subjectTag": "im-mis" },
+          { "id": "im6-1-3", "description": "建立兩份筆記：重點比較表（如 CISC/RISC、VM/Container）與錯題本", "subjectTag": null },
+          { "id": "im6-1-4", "description": "看完于天立《計算機概論》台大開放式課程 21 講", "subjectTag": "im-it" },
+          { "id": "im6-1-5", "description": "借到 Brookshear《Computer Science: An Overview》並讀完前四章", "subjectTag": "im-it" },
+          { "id": "im6-1-6", "description": "看完周志遠《作業系統》清大 OCW 前半（到記憶體管理）", "subjectTag": "im-it" },
+          { "id": "im6-1-7", "description": "確認手寫程式語言為 C++，並把編譯環境架好", "subjectTag": "im-it" }
+        ]
+      },
+      {
+        "id": "im6-phase-2",
+        "name": "第 2 個月（9 月）：程式與網路",
+        "monthStart": 2,
+        "monthEnd": 2,
+        "subjectTags": ["im-it", "im-english"],
+        "note": "台大手寫程式題近年可達 40 分，是最能拉開差距的地方。C++ 用出題系所的大一必修課準備",
+        "tasks": [
+          { "id": "im6-2-1", "description": "孔令傑《程式設計（C++）》看到指標與物件導向", "subjectTag": "im-it" },
+          { "id": "im6-2-2", "description": "每天默寫一段程式碼：stack、queue、各 sorting，不看講義", "subjectTag": "im-it" },
+          { "id": "im6-2-3", "description": "看完周志遠《作業系統》OCW 後半（檔案系統、死結）", "subjectTag": "im-it" },
+          { "id": "im6-2-4", "description": "黃能富《計算機網路》OCW 看到無線區域網路結束", "subjectTag": "im-it" },
+          { "id": "im6-2-5", "description": "杰哥《資料結構》完成 Array、Stack、Queue、Tree 章節", "subjectTag": "im-it" },
+          { "id": "im6-2-6", "description": "開始每天讀一篇英文科技新聞並記生字（同時餵 MIS 時事庫）", "subjectTag": "im-english" }
+        ]
+      },
+      {
+        "id": "im6-phase-3",
+        "name": "第 3 個月（10 月）：資結主攻與 MIS 第一輪",
+        "monthStart": 3,
+        "monthEnd": 3,
+        "subjectTags": ["im-it", "im-mis"],
+        "note": "資結是手寫題的來源，程式碼要練到能默寫；MIS 這個月只求讀完一遍並開始累積案例",
+        "tasks": [
+          { "id": "im6-3-1", "description": "杰哥《資料結構》完成 Heap、Hash、Graph、Sorting 章節", "subjectTag": "im-it" },
+          { "id": "im6-3-2", "description": "蔡明志《資料結構：使用C++》把常考結構的程式碼練到能默寫", "subjectTag": "im-it" },
+          { "id": "im6-3-3", "description": "Laudon《管理資訊系統》讀完一遍，每章末題目先在腦中作答", "subjectTag": "im-mis" },
+          { "id": "im6-3-4", "description": "建立 MIS 案例庫，先收 10 個案例並標注可套用的理論", "subjectTag": "im-mis" },
+          { "id": "im6-3-5", "description": "李宏毅生成式 AI 課程看完，整理 LLM、Transformer 名詞卡", "subjectTag": "im-it" },
+          { "id": "im6-3-6", "description": "資料庫讀到正規化與 SQL 為止，刷 LeetCode SQL 50 的 easy 題", "subjectTag": "im-it" },
+          { "id": "im6-3-7", "description": "每讀完一章就找題目自測，確認不是只有看過", "subjectTag": null }
+        ]
+      },
+      {
+        "id": "im6-phase-4",
+        "name": "第 4 個月（11 月）：統計與整份考古",
+        "monthStart": 4,
+        "monthEnd": 4,
+        "subjectTags": ["im-stat", "im-it", "im-mis"],
+        "note": "統計自 114 學年度起併入資訊管理導論卷、約佔 50 分。這個月開始寫整份、計時的考古題",
+        "tasks": [
+          { "id": "im6-4-1", "description": "唐麗英《統計學(一) 基礎統計》16 講看完", "subjectTag": "im-stat" },
+          { "id": "im6-4-2", "description": "唐麗英《統計學(二) 進階統計》13 講看完（假設檢定、ANOVA、迴歸）", "subjectTag": "im-stat" },
+          { "id": "im6-4-3", "description": "Lind《商用統計學》挑章節練習題，補強不偏估計量與機率", "subjectTag": "im-stat" },
+          { "id": "im6-4-4", "description": "每週寫一份「整份、計時」的台大考古題", "subjectTag": null },
+          { "id": "im6-4-5", "description": "每份考古題訂正後，把錯題與觀念寫進錯題本", "subjectTag": null },
+          { "id": "im6-4-6", "description": "補齊新科技名詞：IoT、區塊鏈、雲端、邊緣運算、大數據", "subjectTag": "im-it" },
+          { "id": "im6-4-7", "description": "每週寫一篇 MIS 時事申論，用列點與表格作答", "subjectTag": "im-mis" }
+        ]
+      },
+      {
+        "id": "im6-phase-5",
+        "name": "第 5 個月（12 月）：全科複習與弱點回填",
+        "monthStart": 5,
+        "monthEnd": 5,
+        "subjectTags": ["im-it", "im-mis", "im-english"],
+        "note": "用錯題本反推弱章節，而不是從頭重讀。這個月要開始練「為什麼需要這個機制」的說明能力",
+        "tasks": [
+          { "id": "im6-5-1", "description": "用錯題本反推弱章節，回頭重讀教科書對應段落", "subjectTag": null },
+          { "id": "im6-5-2", "description": "資安整理成一頁：對稱/非對稱加密、PKI、雜湊、常見攻擊手法", "subjectTag": "im-it" },
+          { "id": "im6-5-3", "description": "網路與資料庫二輪，練到能解釋每個機制存在的原因", "subjectTag": "im-it" },
+          { "id": "im6-5-4", "description": "台大考古題累積寫滿 3 年份並全部訂正", "subjectTag": null },
+          { "id": "im6-5-5", "description": "英文考古題每週一份，累積字彙表（托福/GRE 等級）", "subjectTag": "im-english" },
+          { "id": "im6-5-6", "description": "MIS 申論改為計時作答，練整卷的時間分配", "subjectTag": "im-mis" }
+        ]
+      },
+      {
+        "id": "im6-phase-6",
+        "name": "第 6 個月（1–2 月）：衝刺與二階前置",
+        "monthStart": 6,
+        "monthEnd": 6,
+        "subjectTags": ["im-it", "im-stat"],
+        "note": "口試在筆試後只有一週準備時間，所以二階資料要在這個月先寫完，不要等放榜",
+        "tasks": [
+          { "id": "im6-6-1", "description": "台大考古題刷滿 10 年份，或把寫過的重寫第二次", "subjectTag": null },
+          { "id": "im6-6-2", "description": "政大／成大考古題各寫 3–6 年當補充題庫", "subjectTag": null },
+          { "id": "im6-6-3", "description": "每天默寫一次常考排序與樹的程式碼維持手感", "subjectTag": "im-it" },
+          { "id": "im6-6-4", "description": "統計與微積分維持手感，為口試數學關做準備", "subjectTag": "im-stat" },
+          { "id": "im6-6-5", "description": "準備口試四關擬答：生涯、資管、數學、技術", "subjectTag": null },
+          { "id": "im6-6-6", "description": "先寫好個人資料表、自傳與研究計畫，不等放榜", "subjectTag": null },
+          { "id": "im6-6-7", "description": "考前一週只複習錯題本與重點筆記，不開新進度", "subjectTag": null }
         ]
       }
     ]

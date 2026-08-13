@@ -1,11 +1,13 @@
 'use client'
 
 import { notFound } from 'next/navigation'
-import { use, useEffect, useState } from 'react'
+import { Suspense, use, useState } from 'react'
+import { PageLoading } from '@/components/page-loading'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { EXAM_LABELS, getStudyPlan, getSubjectsByExam } from '@/lib/content'
+import { useQueryState } from '@/hooks/use-query-state'
+import { EXAM_LABELS, getStudyPlan, getStudyPlans, getSubjectsByExam } from '@/lib/content'
 import { buildPhasesWithMeta, calcProgress, getExamDate, getPlanStartDate } from '@/lib/study-plan'
 import { useStudyPlanStore } from '@/store/study-plan'
 import type { ExamId } from '@/types/content'
@@ -16,7 +18,18 @@ interface Props {
 
 export default function PlanPage({ params }: Props) {
   const { exam } = use(params)
-  const plan = getStudyPlan(exam as ExamId)
+  return (
+    <Suspense fallback={<PageLoading />}>
+      <PlanContent exam={exam} />
+    </Suspense>
+  )
+}
+
+function PlanContent({ exam }: { exam: string }) {
+  const plans = getStudyPlans(exam as ExamId)
+  const defaultPlanId = plans[0]?.id ?? ''
+  const [planId, setPlanId] = useQueryState('plan', defaultPlanId)
+  const plan = getStudyPlan(exam as ExamId, planId)
   if (!plan) notFound()
 
   const subjects = getSubjectsByExam(exam as ExamId)
@@ -50,9 +63,29 @@ export default function PlanPage({ params }: Props) {
         <h1 className="text-2xl font-bold">{EXAM_LABELS[exam as ExamId]} — 備考計畫</h1>
         <p className="text-muted-foreground text-sm mt-1">
           距考試約 {daysToExam} 天 · 目標考期：
-          {examDate.toLocaleDateString('zh-TW', { year: 'numeric', month: 'long' })}
+          {examDate.toLocaleDateString('zh-TW', { year: 'numeric', month: 'long' })} ·{' '}
+          {plan.totalMonths} 個月計畫
         </p>
       </div>
+
+      {/* Plan switcher — 每套計畫的任務進度各自獨立 */}
+      {plans.length > 1 && (
+        <div className="space-y-2">
+          <div className="flex flex-wrap gap-2">
+            {plans.map((p) => (
+              <Button
+                key={p.id}
+                size="sm"
+                variant={p.id === plan.id ? 'secondary' : 'outline'}
+                onClick={() => setPlanId(p.id)}
+              >
+                {p.name}
+              </Button>
+            ))}
+          </div>
+          {plan.summary && <p className="text-xs text-muted-foreground">{plan.summary}</p>}
+        </div>
+      )}
 
       {/* Overall progress */}
       <div className="rounded-lg border p-4 space-y-3">

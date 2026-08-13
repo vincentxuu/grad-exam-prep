@@ -1,9 +1,12 @@
+import { getStudyPlan, getStudyPlans, studyPlans } from '@/lib/content'
 import { buildPhasesWithMeta, calcProgress, getExamDate, getPlanStartDate } from '@/lib/study-plan'
 import type { StudyPlan } from '@/types/content'
 import type { StorageState } from '@/types/storage'
 
 const mockPlan: StudyPlan = {
+  id: 'mock-plan',
   examId: 'im',
+  name: 'Mock Plan',
   totalMonths: 8,
   examWindow: '次年2月',
   phases: [
@@ -103,6 +106,36 @@ describe('calcProgress', () => {
     const progress = calcProgress(phases)
     expect(progress.bySubject['__general__'].total).toBe(1)
     expect(progress.bySubject['__general__'].completed).toBe(1)
+  })
+})
+
+describe('多套計畫的選取', () => {
+  it('同一個考試可以有多套計畫，預設的排最前面', () => {
+    const imPlans = getStudyPlans('im')
+    expect(imPlans.length).toBeGreaterThan(1)
+    expect(imPlans[0].isDefault).toBe(true)
+  })
+
+  it('不帶 planId 時回傳預設計畫', () => {
+    expect(getStudyPlan('im')?.id).toBe(getStudyPlans('im')[0].id)
+  })
+
+  it('帶 planId 時回傳指定的那一套', () => {
+    expect(getStudyPlan('im', 'im-nocram-6m')?.totalMonths).toBe(6)
+  })
+
+  it('planId 不存在時退回預設計畫而不是壞掉', () => {
+    expect(getStudyPlan('im', 'no-such-plan')?.id).toBe(getStudyPlans('im')[0].id)
+  })
+
+  it('任務 id 在所有計畫之間不重複——否則進度會互相污染', () => {
+    const taskIds = studyPlans.flatMap((p) => p.phases.flatMap((ph) => ph.tasks.map((t) => t.id)))
+    expect(new Set(taskIds).size).toBe(taskIds.length)
+  })
+
+  it('階段 id 也不重複——自訂任務是掛在階段上的', () => {
+    const phaseIds = studyPlans.flatMap((p) => p.phases.map((ph) => ph.id))
+    expect(new Set(phaseIds).size).toBe(phaseIds.length)
   })
 })
 

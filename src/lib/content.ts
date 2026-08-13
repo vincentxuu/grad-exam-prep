@@ -48,8 +48,24 @@ export function getSubject(id: string): Subject | undefined {
   return subjects.find((s) => s.id === id)
 }
 
-export function getStudyPlan(examId: ExamId): StudyPlan | undefined {
-  return studyPlans.find((p) => p.examId === examId)
+/** 同一個考試的所有計畫，預設計畫排在最前面。 */
+export function getStudyPlans(examId: ExamId): StudyPlan[] {
+  return studyPlans
+    .filter((p) => p.examId === examId)
+    .sort((a, b) => Number(!!b.isDefault) - Number(!!a.isDefault))
+}
+
+/**
+ * 指定 planId 就取那一套；沒指定（或指定的不存在）就退回該考試的預設計畫，
+ * 讓舊連結與沒帶參數的呼叫端維持原本行為。
+ */
+export function getStudyPlan(examId: ExamId, planId?: string): StudyPlan | undefined {
+  const plans = getStudyPlans(examId)
+  if (planId) {
+    const match = plans.find((p) => p.id === planId)
+    if (match) return match
+  }
+  return plans[0]
 }
 
 export function getFlashcardsBySubject(subjectId: string): Flashcard[] {
