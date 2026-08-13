@@ -244,7 +244,7 @@ export interface SessionSummary {
 | --- | --- | --- |
 | 抽象層 | **LangChain**（`@langchain/core` + 各家 provider 套件） | 做法沿用 `vincentxuu/quidproquo` 的 `src/lib/rag/model.ts`：provider 由 env 決定，換家不用改業務邏輯 |
 | 預設 provider / model | `groq` / `llama-3.3-70b-versatile` | 與 quidproquo 一致；免費額度實用、速度快 |
-| 可選 provider | google、openai、openrouter、cerebras、ollama | 後三家走 OpenAI 相容端點，只換 baseURL |
+| 可選 provider | google、openai、cloudflare、openrouter、cerebras、ollama | 後四家走 OpenAI 相容端點，只換 baseURL |
 | fallback | `LLM_FALLBACK_PROVIDER` | 主 provider 失敗時退一次；未設定就不退 |
 | 結構化輸出 | 先試 `withStructuredOutput(zodSchema)`，失敗退到手動 JSON 解析 | 不是每家 provider 的 function calling 都可靠。quidproquo 直接手動解析，這裡多留原生那條路，兩層都不過才算失敗 |
 | env 來源 | Workers 的 `env` 物件 | Workers 上 `process.env` 拿不到 secret（quidproquo 同樣做法） |

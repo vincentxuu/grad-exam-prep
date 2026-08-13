@@ -14,6 +14,14 @@ GROQ_API_KEY=gsk_xxxxxxxxxxxxxxxxxxxx
 # LLM_MODEL=gemini-2.0-flash
 # GEMINI_API_KEY=AIzaxxxxxxxxxxxxxxxxxxxx
 
+# Cloudflare Workers AI（跟站台同一個帳號，走 OpenAI 相容端點）
+# 端點路徑帶帳號，所以 token 之外還要 account id；account id 不機密，
+# 線上放 wrangler.json 的 vars 即可，只有 token 要當 secret。
+# LLM_PROVIDER=cloudflare
+# LLM_MODEL=@cf/meta/llama-3.3-70b-instruct-fp8-fast
+# CLOUDFLARE_API_TOKEN=xxxxxxxxxxxxxxxxxxxx
+# CLOUDFLARE_ACCOUNT_ID=1ff43f0d4c3ad3bd98ce5ab767546a68
+
 # 其他可選：openai / openrouter / cerebras / ollama
 # LLM_PROVIDER=openai
 # LLM_MODEL=gpt-4o-mini

@@ -111,11 +111,12 @@ npx wrangler d1 execute grad-exam-prep-db --remote --command \
 | 名稱 | 必要 | 用途 |
 | --- | --- | --- |
 | `GROQ_API_KEY` | 預設 provider 必要 | 預設走 Groq。**沒設定時 `POST /api/lexicon` 回 503**；`GET`（只讀快取）不受影響。 |
-| `LLM_PROVIDER` | 否 | `groq`（預設）/ `google` / `openai` / `openrouter` / `cerebras` / `ollama`。可用表覆蓋。 |
+| `LLM_PROVIDER` | 否 | `groq`（預設）/ `google` / `openai` / `cloudflare` / `openrouter` / `cerebras` / `ollama`。可用表覆蓋。 |
 | `LLM_MODEL` | 否 | 預設 `llama-3.3-70b-versatile`。可用表覆蓋。 |
 | `LLM_FALLBACK_PROVIDER`／`LLM_FALLBACK_MODEL` | 否 | 主 provider 失敗時退到這家。未設定就不退。可用表覆蓋。 |
 | `GOOGLE_API_KEY`／`GEMINI_API_KEY` | 用 Gemini 時 | |
 | `OPENAI_API_KEY`／`OPENROUTER_API_KEY`／`CEREBRAS_API_KEY` | 用該家時 | |
+| `CLOUDFLARE_API_TOKEN`＋`CLOUDFLARE_ACCOUNT_ID` | 用 Workers AI 時 | **兩個都要**。account id 不機密。 |
 | `OLLAMA_API_BASE` | 用 Ollama 時 | 預設 `http://localhost:11434/v1` |
 | `LEXICON_DAILY_QUOTA` | 否 | 每人每日生成次數上限，預設 60。快取命中不計入。可用表覆蓋。 |
 | `CHAT_DAILY_QUOTA` | 否 | 每人每日對話訊息上限，預設 40。**與查詞額度分開計** —— 對話貴得多。可用表覆蓋。 |
@@ -154,7 +155,38 @@ npx wrangler d1 execute grad-exam-prep-db --remote --command \
 只有 key 需要重新部署（secret 綁在 worker 上），provider 與 model 立即生效。
 
 程式碼只有 `src/lib/llm/model.ts` 知道 provider 的差異；其餘一律不受影響。
-`openrouter` / `cerebras` / `ollama` 都走 OpenAI 相容端點，只是換 baseURL。
+`cloudflare` / `openrouter` / `cerebras` / `ollama` 都走 OpenAI 相容端點，只是換 baseURL。
+
+**寫錯的 provider 不會報錯。** 不在清單裡的值（打錯字、寫了沒支援的一家）
+會被當成沒設定，安靜地退到 env 再退到 groq。改完最好查一個沒查過的字確認。
+
+#### 用 Cloudflare Workers AI
+
+站台本來就在 Workers 上，模型可以走同一個帳號。端點是 OpenAI 相容的，
+路徑帶帳號，所以 token 之外還要 account id：
+
+```bash
+npx wrangler secret put CLOUDFLARE_API_TOKEN   # 需 Account > Workers AI > Read 權限
+```
+
+account id 不機密（`wrangler.json` 裡本來就有），放 `vars` 就好：
+
+```jsonc
+{
+  "vars": { "CLOUDFLARE_ACCOUNT_ID": "1ff43f0d4c3ad3bd98ce5ab767546a68" }
+}
+```
+
+```bash
+npm run deploy
+npx wrangler d1 execute grad-exam-prep-db --remote --command \
+  "UPDATE llm_config SET provider='cloudflare',
+   model='@cf/meta/llama-3.3-70b-instruct-fp8-fast',
+   updated_at=unixepoch() WHERE id='main'"
+```
+
+model 要帶 `@cf/` 前綴，可用清單見 Cloudflare 的 Workers AI models 頁。
+兩個環境變數少一個就算沒設定好，`POST /api/lexicon` 會回 503。
 
 **手動部署**（本機）：
 

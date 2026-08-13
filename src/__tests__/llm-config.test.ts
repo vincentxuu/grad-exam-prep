@@ -11,7 +11,9 @@ import { clearConfigCache, loadConfig, saveConfig } from '@/lib/llm/config'
 import {
   DEFAULT_MODEL,
   DEFAULT_PROVIDER,
+  hasCredentials,
   type LlmEnv,
+  type ModelProvider,
   resolveFallbackRoute,
   resolveRoute,
 } from '@/lib/llm/model'
@@ -167,6 +169,10 @@ describe('resolveRoute 的優先序', () => {
     expect(resolveRoute(env, { provider: 'deepseek' }).provider).toBe('openai')
     expect(resolveRoute({ LLM_PROVIDER: 'deepseek' }).provider).toBe(DEFAULT_PROVIDER)
   })
+
+  it('cloudflare 認得', () => {
+    expect(resolveRoute({}, { provider: 'cloudflare' }).provider).toBe('cloudflare')
+  })
 })
 
 describe('resolveFallbackRoute', () => {
@@ -183,6 +189,34 @@ describe('resolveFallbackRoute', () => {
       model: 'gpt-4o-mini',
       fallback: true,
     })
+  })
+})
+
+describe('hasCredentials', () => {
+  const route = (provider: ModelProvider) => ({ provider, model: 'x', fallback: false })
+
+  it.each<[ModelProvider, LlmEnv]>([
+    ['groq', { GROQ_API_KEY: 'k' }],
+    ['google', { GOOGLE_API_KEY: 'k' }],
+    ['google', { GEMINI_API_KEY: 'k' }],
+    ['openai', { OPENAI_API_KEY: 'k' }],
+    ['openrouter', { OPENROUTER_API_KEY: 'k' }],
+    ['cerebras', { CEREBRAS_API_KEY: 'k' }],
+  ])('%s 有 key 就算設定好', (provider, env) => {
+    expect(hasCredentials(env, route(provider))).toBe(true)
+    expect(hasCredentials({}, route(provider))).toBe(false)
+  })
+
+  it('ollama 是本機端點，不需要 key', () => {
+    expect(hasCredentials({}, route('ollama'))).toBe(true)
+  })
+
+  it('cloudflare 要 token 也要 account id —— 端點路徑帶帳號，少一個就打不出去', () => {
+    expect(hasCredentials({ CLOUDFLARE_API_TOKEN: 't' }, route('cloudflare'))).toBe(false)
+    expect(hasCredentials({ CLOUDFLARE_ACCOUNT_ID: 'a' }, route('cloudflare'))).toBe(false)
+    expect(
+      hasCredentials({ CLOUDFLARE_API_TOKEN: 't', CLOUDFLARE_ACCOUNT_ID: 'a' }, route('cloudflare'))
+    ).toBe(true)
   })
 })
 

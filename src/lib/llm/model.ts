@@ -20,7 +20,14 @@ import type { LlmRuntimeConfig } from './config'
  * env 從 Workers 的 `env` 物件讀，不用 `process.env` —— Workers 上
  * `process.env` 拿不到 secret。
  */
-export type ModelProvider = 'groq' | 'google' | 'openai' | 'openrouter' | 'cerebras' | 'ollama'
+export type ModelProvider =
+  | 'groq'
+  | 'google'
+  | 'openai'
+  | 'cloudflare'
+  | 'openrouter'
+  | 'cerebras'
+  | 'ollama'
 
 export interface ModelRoute {
   provider: ModelProvider
@@ -42,12 +49,25 @@ export interface LlmEnv {
   OPENROUTER_API_KEY?: string
   CEREBRAS_API_KEY?: string
   OLLAMA_API_BASE?: string
+
+  /** Workers AI。token 要有 Account > Workers AI > Read 權限。 */
+  CLOUDFLARE_API_TOKEN?: string
+  /** Workers AI 的端點帶帳號，所以 token 之外還要這個。不機密。 */
+  CLOUDFLARE_ACCOUNT_ID?: string
 }
 
 export const DEFAULT_PROVIDER: ModelProvider = 'groq'
 export const DEFAULT_MODEL = 'llama-3.3-70b-versatile'
 
-const PROVIDERS = new Set<string>(['groq', 'google', 'openai', 'openrouter', 'cerebras', 'ollama'])
+const PROVIDERS = new Set<string>([
+  'groq',
+  'google',
+  'openai',
+  'cloudflare',
+  'openrouter',
+  'cerebras',
+  'ollama',
+])
 
 function asProvider(value: string | undefined): ModelProvider | undefined {
   return value && PROVIDERS.has(value) ? (value as ModelProvider) : undefined
@@ -81,6 +101,9 @@ export function hasCredentials(env: LlmEnv, route: ModelRoute): boolean {
       return !!(env.GOOGLE_API_KEY || env.GEMINI_API_KEY)
     case 'openai':
       return !!env.OPENAI_API_KEY
+    case 'cloudflare':
+      // 端點路徑帶帳號，少一個就打不出去 —— 兩個都要才算設定好
+      return !!(env.CLOUDFLARE_API_TOKEN && env.CLOUDFLARE_ACCOUNT_ID)
     case 'openrouter':
       return !!env.OPENROUTER_API_KEY
     case 'cerebras':
@@ -116,7 +139,16 @@ export function createModel(
     case 'openai':
       return new ChatOpenAI(route.model, { apiKey: env.OPENAI_API_KEY, maxTokens })
 
-    // 以下三家都是 OpenAI 相容端點，換 baseURL 就好
+    // 以下四家都是 OpenAI 相容端點，換 baseURL 就好
+    case 'cloudflare':
+      return new ChatOpenAI(route.model, {
+        apiKey: env.CLOUDFLARE_API_TOKEN,
+        maxTokens,
+        configuration: {
+          baseURL: `https://api.cloudflare.com/client/v4/accounts/${env.CLOUDFLARE_ACCOUNT_ID}/ai/v1`,
+        },
+      })
+
     case 'openrouter':
       return new ChatOpenAI(route.model, {
         apiKey: env.OPENROUTER_API_KEY,
