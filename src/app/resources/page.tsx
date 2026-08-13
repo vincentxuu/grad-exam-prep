@@ -1,11 +1,12 @@
 'use client'
 
-import { Suspense } from 'react'
+import { Suspense, useState } from 'react'
 import { PageLoading } from '@/components/page-loading'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
 import { useQueryState } from '@/hooks/use-query-state'
-import { resources } from '@/lib/content'
+import { resources, resourceYear } from '@/lib/content'
 import type { ExamId, ResourceType } from '@/types/content'
 
 const TYPE_ICONS: Record<ResourceType, string> = {
@@ -17,18 +18,28 @@ const TYPE_ICONS: Record<ResourceType, string> = {
   書目: '📖',
   Dcard: '💬',
   官方: '🏛️',
+  部落格: '✍️',
+  線上課程: '🎓',
+  時事: '📰',
 }
 
 const ALL_TYPES: ResourceType[] = [
   '書目',
   '補習班',
   'YouTube',
+  '線上課程',
   'HackMD',
   'PTT',
   'Notion',
+  '部落格',
   '官方',
   'Dcard',
+  '時事',
 ]
+
+const ALL_YEARS = [...new Set(resources.map((r) => resourceYear(r.title)).filter(Boolean))].sort(
+  (a, b) => Number(b) - Number(a)
+) as string[]
 
 export default function ResourcesPage() {
   return (
@@ -41,11 +52,22 @@ export default function ResourcesPage() {
 function ResourcesContent() {
   const [examFilter, setExamFilter] = useQueryState('exam', 'all')
   const [typeFilter, setTypeFilter] = useQueryState('type', 'all')
+  const [yearFilter, setYearFilter] = useQueryState('year', 'all')
+  const [query, setQuery] = useState('')
+
+  const keyword = query.trim().toLowerCase()
 
   const filtered = resources.filter((r) => {
     const examMatch = examFilter === 'all' || r.examRelevance.includes(examFilter as ExamId)
     const typeMatch = typeFilter === 'all' || r.type === typeFilter
-    return examMatch && typeMatch
+    const year = resourceYear(r.title)
+    const yearMatch =
+      yearFilter === 'all' || (yearFilter === 'none' ? year === null : year === yearFilter)
+    const keywordMatch =
+      !keyword ||
+      r.title.toLowerCase().includes(keyword) ||
+      (r.description?.toLowerCase().includes(keyword) ?? false)
+    return examMatch && typeMatch && yearMatch && keywordMatch
   })
 
   const grouped = ALL_TYPES.reduce<Record<string, typeof resources>>((acc, type) => {
@@ -62,6 +84,14 @@ function ResourcesContent() {
           書目、補習班、YouTube、PTT、HackMD 等備考資源彙整
         </p>
       </div>
+
+      <Input
+        type="search"
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+        placeholder="搜尋標題與說明，例如：口試、洪逸、無補習、考古題"
+        aria-label="搜尋資源"
+      />
 
       <div className="flex flex-wrap gap-2">
         <div className="flex gap-1">
@@ -95,7 +125,35 @@ function ResourcesContent() {
             </Button>
           ))}
         </div>
+        <div className="flex flex-wrap gap-1">
+          <Button
+            variant={yearFilter === 'all' ? 'secondary' : 'outline'}
+            size="sm"
+            onClick={() => setYearFilter('all')}
+          >
+            全部年份
+          </Button>
+          {ALL_YEARS.map((y) => (
+            <Button
+              key={y}
+              variant={yearFilter === y ? 'secondary' : 'outline'}
+              size="sm"
+              onClick={() => setYearFilter(y)}
+            >
+              {y}
+            </Button>
+          ))}
+          <Button
+            variant={yearFilter === 'none' ? 'secondary' : 'outline'}
+            size="sm"
+            onClick={() => setYearFilter('none')}
+          >
+            不分年
+          </Button>
+        </div>
       </div>
+
+      <p className="text-muted-foreground text-xs">共 {filtered.length} 筆</p>
 
       {Object.entries(grouped).map(([type, items]) => (
         <section key={type} className="space-y-2">

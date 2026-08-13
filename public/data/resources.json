@@ -406,5 +406,853 @@
     "examRelevance": ["cs"],
     "url": "https://www.dcard.tw/f/ntust/p/260752351",
     "description": "台科大資工系（輔系財金）視角的 115 推甄心得，含背景、報考校系與結果，適合評估推甄志願配置"
+  },
+  {
+    "id": "res-official-ntu-im-admission",
+    "title": "官方 — 台大資管系碩士班招生規定（考科與計分）",
+    "type": "官方",
+    "examRelevance": ["im"],
+    "url": "https://management.ntu.edu.tw/IM/admission/mba",
+    "description": "系網公告的考試入學與甄試入學相關規定：筆試三科、筆試60%／口試40%、資訊科技概論與資訊管理導論各加權100%、筆試前48名進口試、口試未達70分不錄取"
+  },
+  {
+    "id": "res-official-nccu-lib",
+    "title": "政大圖書館歷屆考古題",
+    "type": "官方",
+    "examRelevance": ["im"],
+    "url": "https://www.lib.nccu.edu.tw/p/426-1000-3.php?Lang=zh-tw",
+    "description": "選「商學院 → 碩士班」查政大資管所考古題，依院／所／學年度打包成 PDF。只提供試題不附解答；同頁另有 93–115 年歷屆招生簡章"
+  },
+  {
+    "id": "res-ocw-ntu-intro-cs",
+    "title": "臺大開放式課程 — 于天立《計算機概論》",
+    "type": "線上課程",
+    "examRelevance": ["im", "cs"],
+    "url": "https://ocw.aca.ntu.edu.tw/courses/101S210",
+    "description": "無補習路線最常被推薦的計概影音教材，21 講涵蓋資料型（儲存／資料結構／資料庫）、系統型（計算機結構／OS／網路）、科學型（演算法／程式語言／AI）。原為電機系課程，C/C++ 程式部分資管所可略過"
+  },
+  {
+    "id": "res-google-ml-crash",
+    "title": "Google Machine Learning Crash Course",
+    "type": "線上課程",
+    "examRelevance": ["im", "cs"],
+    "url": "https://developers.google.com/machine-learning/crash-course",
+    "description": "補計概與 MIS 的 AI 題型。近年 AI/ML 在資管所計概比重逐年上升，這門課涵蓋監督式學習、損失函數、過擬合、神經網路等常考名詞"
+  },
+  {
+    "id": "res-news-ithome",
+    "title": "iThome — 資訊科技時事",
+    "type": "時事",
+    "examRelevance": ["im"],
+    "url": "https://www.ithome.com.tw/",
+    "description": "MIS 申論舉例的主要案例來源。建議邊看邊建一本「案例筆記」，考場上直接調用；計概的新興科技題也常從這裡出"
+  },
+  {
+    "id": "res-news-bnext",
+    "title": "數位時代 — 數位轉型與商業科技",
+    "type": "時事",
+    "examRelevance": ["im"],
+    "url": "https://www.bnext.com.tw/",
+    "description": "偏商業視角的科技時事，適合補 MIS 的數位轉型、平台經濟、ESG 等申論題材"
+  },
+  {
+    "id": "res-book-im-brookshear",
+    "title": "Brookshear《Computer Science: An Overview》",
+    "type": "書目",
+    "examRelevance": ["im"],
+    "url": "https://search.books.com.tw/search/query/key/Computer+Science+An+Overview",
+    "description": "計概原文教材，無補習考生常拿來搭配于天立開放式課程，與 Discovering Computers 互補"
+  },
+  {
+    "id": "res-solutions-im-108",
+    "title": "108 年資管所計概試題＋解答（台大／政大／中央／成大／中山）",
+    "type": "HackMD",
+    "examRelevance": ["im"],
+    "url": "https://www.slideshare.net/slideshow/108-6efa/283753051",
+    "description": "張逸老師版五校計概解答，逐題標註題型（網路／作業系統／資料庫／資料結構）。台大圖書館只給試題不附解答，這是少數公開的解答來源"
+  },
+  {
+    "id": "res-blog-im-mavis",
+    "title": "Mavis — 112 資管所（管理組）正取心得（政/山/央/興/北）",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://shinyu0430.github.io/2023/03/22/IMPrepare",
+    "description": "逐科拆解最完整的一篇：計概子科目一路拆到資安與 AI、題型三分類（不可掉分／部分人會／大家都不會）、MIS 與計概的時間分配檢討。既有的 Notion 版為同一份資源的整理"
+  },
+  {
+    "id": "res-medium-im-111-nocram",
+    "title": "Medium — 111 無補習跨考資管/資應準備心得",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://medium.com/@lee920024/111-%E7%84%A1%E8%A3%9C%E7%BF%92%E8%B7%A8%E8%80%83%E8%B3%87%E7%AE%A1-%E8%B3%87%E6%87%89%E6%BA%96%E5%82%99%E5%BF%83%E5%BE%97-8905e66b3472",
+    "description": "無補習路線的教材配置：于天立計概開放式課程搭配 Computer Science: An Overview 原文書，並說明如何補足補習班講義的覆蓋率"
+  },
+  {
+    "id": "res-dcard-im-114-nocram",
+    "title": "Dcard — 114 資應/資管沒補習心路歷程（超長文）",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/258384284",
+    "description": "作者為政大資管科技組正取，對各校計概與資結的題型差異描述最直接，含各科準備方式與各校考場心得"
+  },
+  {
+    "id": "res-dcard-im-114-cross",
+    "title": "Dcard — 114 資管所跨考／台大正取心得分享",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/258401429",
+    "description": "跨考台大資管正取。含補習班各科師資的實際評價與數位／面授的取捨"
+  },
+  {
+    "id": "res-dcard-im-114-nocram-oral",
+    "title": "Dcard — 114 資管所｜無補習跨考心得＋台大口試",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/258482673",
+    "description": "無補習路線加上台大口試實錄，兩個最缺資料的環節都有寫。附各科成績"
+  },
+  {
+    "id": "res-dcard-im-114-mgmt",
+    "title": "Dcard — 114 資管所管理組考試心得分享",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/258426281",
+    "description": "管理組視角，有貼各科原始成績與準備過程，可用來校準各科該拿幾分"
+  },
+  {
+    "id": "res-dcard-im-114-retake",
+    "title": "Dcard — 114 資管所重考生考試上榜心得分享",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/258523027",
+    "description": "重考生視角。核心結論是計概範圍不能挑著唸——覺得冷門懶得準備的，考試就會遇到"
+  },
+  {
+    "id": "res-dcard-im-114-rejected",
+    "title": "Dcard — 114 資管所/資安所推甄考試心得與面試經驗分享",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/258527035",
+    "description": "台大沒上、交大資管正取的檢討文。落榜視角的失敗分析，補足上榜文看不到的部分"
+  },
+  {
+    "id": "res-cram-im-114-ntu-overview",
+    "title": "TKB — 掌握台大資管所｜考科簡介與四位學長姐上榜經驗",
+    "type": "補習班",
+    "examRelevance": ["im"],
+    "url": "https://www.tkbgo.com.tw/schoolZone/graduate/article/toDetail?article_id=2035",
+    "description": "四位 114 台大資管上榜者的心得，另附各科命題趨勢拆解：資訊科技概論的 OS／AI／資安比重、資結手寫題約佔四到五成、選擇題答錯倒扣。補習班業配文，考科分析部分仍有參考價值"
+  },
+  {
+    "id": "res-cram-im-114-liu",
+    "title": "TKB — 114 年考取台大資管所 劉O倫",
+    "type": "補習班",
+    "examRelevance": ["im"],
+    "url": "https://www.tkbgo.com.tw/schoolZone/graduate/comment/toDetail?comment_id=2429",
+    "description": "逐科準備重點，提到基礎計概與數位邏輯近年比重已降低。補習班學員見證，帶業配性質"
+  },
+  {
+    "id": "res-cram-im-114-huang",
+    "title": "TKB — 114 年考取台大資管所 黃O瑋",
+    "type": "補習班",
+    "examRelevance": ["im"],
+    "url": "https://www.tkbgo.com.tw/schoolZone/graduate/comment/toDetail?comment_id=2431",
+    "description": "重考生、技術組方向，講第一年因為「大範圍就好」的心態而落榜的教訓。補習班學員見證，帶業配性質"
+  },
+  {
+    "id": "res-cram-im-114-get-shen",
+    "title": "高點 — 114 台大資管／政大資管組／中山資管（成大經濟系跨考）",
+    "type": "補習班",
+    "examRelevance": ["im"],
+    "url": "https://www.get.com.tw/media/master/ListDetail.aspx?iS=67447&iC=3253",
+    "description": "大三上就起跑的長線時程表，一路排到大四上題庫班。補習班學員見證，帶業配性質"
+  },
+  {
+    "id": "res-cram-im-114-get-tsai",
+    "title": "高點 — 114 台大資管／清大資應／中央資管甲組",
+    "type": "補習班",
+    "examRelevance": ["im"],
+    "url": "https://www.get.com.tw/media/master/ListDetail.aspx?iS=67391&iC=3253",
+    "description": "在校成績不佳者的備考時程與心態調適。補習班學員見證，帶業配性質"
+  },
+  {
+    "id": "res-dcard-im-113-cross",
+    "title": "Dcard — 113 資管所跨考｜台大正取心得分享",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/255404730",
+    "description": "跨考台大正取。面試段落講怎麼把非本科經歷連結到資管特質，回答「為什麼要錄取你」"
+  },
+  {
+    "id": "res-dcard-im-113-admitted",
+    "title": "Dcard — 113 資管／資應上榜心得",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/255067859",
+    "description": "社科院背景跨考上台大資管，跨度最大的一篇"
+  },
+  {
+    "id": "res-dcard-im-113-mgmt",
+    "title": "Dcard — 113 研究所資管所管理組考試心得",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/255055090",
+    "description": "管理組長文，附作者自己備考時蒐集的資源清單"
+  },
+  {
+    "id": "res-blog-im-113-nocram",
+    "title": "巴哈姆特 — 113 無補習資管所跨考心得",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://home.gamer.com.tw/artwork.php?sn=5969944",
+    "description": "少見的非 Dcard／Medium 來源，無補習跨考路線"
+  },
+  {
+    "id": "res-cram-im-113-ntu-nccu",
+    "title": "TKB — 113 年台大、政大資管所上榜學長姐分享",
+    "type": "補習班",
+    "examRelevance": ["im"],
+    "url": "https://www.tkbgo.com.tw/schoolZone/graduate/article/toDetail?article_id=1689",
+    "description": "四位 113 台大資管上榜者（含非本科、離職備考、只補 MIS 等不同路線）加上政大資管所心得。補習班業配文"
+  },
+  {
+    "id": "res-cram-im-113-get-huang",
+    "title": "高點 — 113 成大資管甲組狀元、台大資管所探花",
+    "type": "補習班",
+    "examRelevance": ["im"],
+    "url": "https://www.get.com.tw/media/master/ListDetail.aspx?iS=64815&iC=3253",
+    "description": "指出台大資訊科技概論固定出 30–40 分手寫題、基本上都考資料結構，建議找近十年考古加強。也提到台大／清大資應的 OS 題近年變多。補習班學員見證"
+  },
+  {
+    "id": "res-cram-im-113-get-cheng",
+    "title": "高點 — 113 成大資管乙組探花、台大資管所、交大資管所",
+    "type": "補習班",
+    "examRelevance": ["im"],
+    "url": "https://www.get.com.tw/media/master/ListDetail.aspx?iS=64817&iC=3253",
+    "description": "台大考題結構描述最具體的一篇：全選擇題加一題程式題、選擇題有倒扣、程式題常考 Heap／Hash Table／BST 的 C++ 實作且配分很重，建議練手寫程式碼。補習班學員見證"
+  },
+  {
+    "id": "res-ptt-im-108-ntu",
+    "title": "PTT — 資管所台大／交大資管甲組正取心得",
+    "type": "PTT",
+    "examRelevance": ["im"],
+    "url": "https://www.ptt.cc/bbs/graduate/M.1556902187.A.AC3.html",
+    "description": "108 年台大資管正取 7。成績為資訊科技 65.5／MIS 25／英文 58／口試 87.14——MIS 只有 25 分仍正取，具體印證口試 40% 的份量。含台大四關口試逐題記錄（統計關盧信銘＋孔令傑、技術關、生涯關魏志平、MIS 關吳玲玲＋陳靜枝），並提到該年非選題比重拉高到 50%、選擇題寫錯倒扣"
+  },
+  {
+    "id": "res-ptt-im-ten-schools",
+    "title": "PTT — 資管所十校正取心得",
+    "type": "PTT",
+    "examRelevance": ["im"],
+    "url": "https://www.ptt.cc/bbs/graduate/M.1523095685.A.A9E.html",
+    "description": "逐校拆解題型（台／政／交／成／中央／中山等十校），台大四關面試題目全記錄。另提到政大英文有前 80% 篩選門檻、政大 MIS 答案紙很少不要浪費空間、台大 MIS 常考系統分析"
+  },
+  {
+    "id": "res-medium-im-111-zheng",
+    "title": "Medium — 111 資管所正取心得",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://medium.com/@vnaticzhock/111%E8%B3%87%E7%AE%A1%E6%89%80%E6%AD%A3%E5%8F%96-d121dd48cfc9",
+    "description": "MIS 準備法最具體的一篇：考前一個月每天寫一篇 Topic 心得、累積 30–40 篇，用電腦打字產出以專注思考而非筆速，刻意不寫補習班的起承轉合而採精煉寫法。另附 Laudon 的三種用法（含翻書末名詞索引逐條理解）與台大四關面試題目"
+  },
+  {
+    "id": "res-hackmd-im-tung",
+    "title": "HackMD — 商管類跨考資管所心路歷程",
+    "type": "HackMD",
+    "examRelevance": ["im"],
+    "url": "https://hackmd.io/@TUNG/SySealK4U",
+    "description": "商管背景跨考，各校題型比較很細，含台大四關面試（資訊科技趨勢／生涯規劃／程式設計／機率）。提到台大某年 MIS「竟然有中文沙必斯」，可佐證台大 MIS 常態為全英文命題"
+  },
+  {
+    "id": "res-blog-im-moli",
+    "title": "考研心酸血淚史 — 台/政/交/成/山 資管所．資結組考試心得",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://blog.moli.rocks/2017/08/17/journey-of-becoming-a-graduate-student",
+    "description": "台大四關與政大口試逐題記錄（台大技術關問如何找 inorder successor、抽題關問 database schema 並無限追問為什麼）。作者最後選擇政大，文末有選校與報考間數的建議"
+  },
+  {
+    "id": "res-dcard-im-114-mgmt-cross2",
+    "title": "Dcard — 114 資管所（管理組）跨考心得",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/258715553",
+    "description": "談組別選擇的判斷依據：作者發現自己喜歡申論這種開放式答案、寫有標準答案的資結手感很差，建議依「答題手感」而不只是學科背景來選組"
+  },
+  {
+    "id": "res-cram-im-proposition",
+    "title": "高點 — 資管所命題趨勢（逐校逐科）",
+    "type": "補習班",
+    "examRelevance": ["im"],
+    "url": "https://master.get.com.tw/it/MIS/proposition.aspx",
+    "description": "台大／政大／陽明交大／成大各科的命題特色與年度差異對照。台大資訊科技概論段落載明選擇題答錯倒扣、資料結構手寫題每年約佔 40%~50%。補習班網頁，帶招生性質"
+  },
+  {
+    "id": "res-blog-im-ntu-oral-poc",
+    "title": "柏C的電影雜記 — 台大資管所碩甄口試經驗分享",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://pocmovie.com/blog/post/ntu_im_application",
+    "description": "目前找到最詳細的台大四關口試紀錄：場地在管院一號館三樓玉山廳四小間研討室、一關四分鐘、四人同時錯開跑關。四關教授與題目全記錄（生涯關曹承礎、資管關孔令傑＋魏志平、統計數學關盧信銘＋林永松、技術關李瑞庭）。含「每個學生都說數據分析，好無聊」等教授實際回應"
+  },
+  {
+    "id": "res-medium-im-ntu-oral",
+    "title": "Medium — 班排第 10 也能推甄台大：資管所口試心得",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://medium.com/@weichenglily/%E7%8F%AD%E6%8E%92%E7%AC%AC-10-%E4%B9%9F%E8%83%BD%E6%8E%A8%E7%94%84%E4%B8%8A%E5%8F%B0%E5%A4%A7-599946e1581e",
+    "description": "四關一關四分鐘的逐關紀錄，含統計數學關的實際題目。班排非頂尖仍上榜的案例"
+  },
+  {
+    "id": "res-tun-im-ntu-oral",
+    "title": "TUN 大學網 — 台大資管口試經驗分享",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://university.1111.com.tw/zone/university/discussTopic.asp?cat=University&id=348642",
+    "description": "會計系跨考視角。資管關抽到「服飾店用攝影機記錄顧客行為可達到什麼效益、有什麼非技術阻礙」，數學邏輯關抽到擲骰期望值題。自介關被直球問「你是會計系的，為什麼我要錄取你」、「系上有哪些老師做這方面研究」（測你有沒有查過教授）"
+  },
+  {
+    "id": "res-cram-im-112-get-wu",
+    "title": "高點 — 112 台大資管所、清大資應所（台大經濟系跨考）",
+    "type": "補習班",
+    "examRelevance": ["im"],
+    "url": "https://www.get.com.tw/media/master/ListDetail.aspx?iS=62375&iC=3253",
+    "description": "明列台大口試四關為生涯關、數學關、MIS 關、技術關，一關四分鐘；數學關範圍涵蓋統計、線性代數、微積分、作業研究，技術關考資結與演算法。口試要訣「不能愣住」。補習班學員見證，帶業配性質"
+  },
+  {
+    "id": "res-dcard-im-115-oral-bank",
+    "title": "Dcard — 115 資管推甄/面試心得【政大/台科/央山】附歷屆口試題庫",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/261155179",
+    "description": "附歷屆口試題庫與 Notion 資源整理，是找到的唯一一份系統性口試題庫"
+  },
+  {
+    "id": "res-dcard-im-115-recommend2",
+    "title": "Dcard — 115 資管所推甄面試/考試心得分享",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/261166607",
+    "description": "同組三人被問不同題目的實例（有人被問被動式 AI 與代理式 AI 的差別），可看出抽題制下的題目分布"
+  },
+  {
+    "id": "res-dcard-im-115-nccu-ncku",
+    "title": "Dcard — 115 推甄分享【政大資管｜成大資管】",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/260810886",
+    "description": "強調如何把過往經歷與資管連結、非本系背景怎麼講出結合優勢"
+  },
+  {
+    "id": "res-dcard-im-115-nthu-nccu",
+    "title": "Dcard — 115 資管推甄面試心得分享【清大服科/政大資管】",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/260339730",
+    "description": "政大資管資管組團體面試細節（被作者形容為最硬的面試）：面試前先到教室閱讀英文文章 10 分鐘，同組每人拿到的文章不同，內容近似 paper 摘要"
+  },
+  {
+    "id": "res-hackmd-im-108-oral",
+    "title": "HackMD — 108【台大資管/交大資管/清大服科/中央資管】推甄面試+考試心得",
+    "type": "HackMD",
+    "examRelevance": ["im"],
+    "url": "https://hackmd.io/@25yaxaMGQC2Edo6cOCx_mw/Hk-8i4UHB",
+    "description": "結構最完整的一篇：台大考試與推甄兩場口試各四關、逐關標註教授與時間、逐題編號並附作者整理的參考答案。另有台大考古題寫 10 年份每份三次的做法、MIS 三遍讀法、加權公式（計概×2＋MIS×2＋英文×1），以及推薦看 Harvard Business Review 的 Technology topic 補 MIS 新觀念"
+  },
+  {
+    "id": "res-medium-im-2020-hanson",
+    "title": "Medium — 2020 資管所推甄＆考試分享",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://medium.com/something-about-hanson/2020%E8%B3%87%E7%AE%A1%E6%89%80%E6%8E%A8%E7%94%84-%E8%80%83%E8%A9%A6%E5%88%86%E4%BA%AB-c9d9bada2ad1",
+    "description": "同一人推甄與考試兩次台大口試的對照（推甄落榜、考試正取 5）。技術關被問 Multilevel Queue Scheduling 圖並被連環追問、數學關的茶與咖啡混合濃度題，兩題都寫出了完整的被問倒過程"
+  },
+  {
+    "id": "res-cram-im-oral-bank-get",
+    "title": "高點 — 資管所甄試口試題庫（依題型與年份分類）",
+    "type": "補習班",
+    "examRelevance": ["im"],
+    "url": "https://master.get.com.tw/screen/big_data/interview/information.aspx",
+    "description": "把口試題分成個人探索題、想法反應題、專業相關題、團體面試題四類，每題標註年份與學校。台大部分涵蓋 111–114 年，是目前找到唯一有年份標註的口試題庫。補習班網頁，帶招生性質"
+  },
+  {
+    "id": "res-medium-im-oral-jimmy",
+    "title": "Medium — 台政資管所推甄心得（面試篇）",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://medium.com/jimmyfu87/%E5%8F%B0%E6%94%BF%E8%B3%87%E7%AE%A1%E6%89%80%E6%8E%A8%E7%94%84%E5%BF%83%E5%BE%97-%E5%8F%A3%E8%A9%A6%E7%AF%87-88dc954bf46e",
+    "description": "台大與政大兩校面試的對照，描述台大跑關「每一關時間都非常趕，時間一到就會有人進來敲門」"
+  },
+  {
+    "id": "res-dcard-im-2021-oral",
+    "title": "Dcard — 2021 資管所推甄面試心得【台大資管/政大資管科技組/交大】",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/237588496",
+    "description": "政大團體面試的排序機制：按准考證序號排 10~11 人一組，回答順序有時 1→10 有時 10→1，排中間較有利可多想一下。強調要聽別人的回答"
+  },
+  {
+    "id": "res-dcard-im-115-cross-oral",
+    "title": "Dcard — 115 資管所跨考心得（含台大、政大面試）",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/261342021",
+    "description": "含台大與政大兩校面試。另記錄了備取遞補的實際時程：4/9 台大備取 2，5/13 才收到備取通知——備取生等待期比想像中長"
+  },
+  {
+    "id": "res-dcard-im-115-mgmt2",
+    "title": "Dcard — 115 資管所管理組考試心得",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/261316775",
+    "description": "管理組視角的完整準備過程與心態調適"
+  },
+  {
+    "id": "res-dcard-im-115-cross2",
+    "title": "Dcard — 115 資管所跨考心得分享",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/261340291",
+    "description": "記錄 115 年資結考題形式的變化（「一開始看到變全選擇還開心了一下，第一部份寫下去就知道大事不妙」），可看出年度題型會突變"
+  },
+  {
+    "id": "res-dcard-im-115-recommend3",
+    "title": "Dcard — 115 資管推甄心得【政大資管、成大資管、台科資管乙組】",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/260600298",
+    "description": "推甄與考試雙軌並行的案例，最後推甄上榜"
+  },
+  {
+    "id": "res-dcard-im-114-recommend",
+    "title": "Dcard — 114 推甄心得分享【台大資管、政大資管】",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/257446612",
+    "description": "台大二階落榜、政大正取的對照。明確記載台大面試「分成四關，共 16 分鐘」，佐證一關四分鐘的說法。另有自傳如何展現過往經歷與資管連結性的建議"
+  },
+  {
+    "id": "res-medium-im-2020-apply",
+    "title": "Medium — 2020 台大資管／台大商研／政大資管推甄心得",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://medium.com/@j4427515/%E7%A0%94%E7%A9%B6%E6%89%80%E7%94%B3%E8%AB%8B-2020-%E5%8F%B0%E5%A4%A7%E8%B3%87%E7%AE%A1-%E5%8F%B0%E5%A4%A7%E5%95%86%E7%A0%94-%E6%94%BF%E5%A4%A7%E8%B3%87%E7%AE%A1%E6%8E%A8%E7%94%84%E5%BF%83%E5%BE%97-4714b1339bce",
+    "description": "台大資管推甄正取（書審 60%／面試 40%）。作者自評書審與面試成績都不算特別優異仍上榜，可作為期望值的參考點"
+  },
+  {
+    "id": "res-hackmd-im-114-oral-bank",
+    "title": "HackMD — 114【各校系】推甄口試題目總整理（多人共筆）",
+    "type": "HackMD",
+    "examRelevance": ["im"],
+    "url": "https://hackmd.io/@UgviSLEFQle1MBwe1D01uQ/SJYU-vNE1x",
+    "description": "六位考生協作的跨校口試題庫，台大資管、政大資管、交大資管、成大資管、中央資管都有逐關題目與回答過程。台大段落載明四關為管理／數學／技術／生涯、一對二教授、嚴格控時會響鈴敲門，並列出考生自己的準備清單（李宏毅生成式 AI 導論、孔令傑作業研究、科技浪 Podcast）"
+  },
+  {
+    "id": "res-dcard-im-114-ds",
+    "title": "Dcard — 114 資管所資結組考試心得",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/258562680",
+    "description": "資結組視角。指出政大資結「完全是考古題，題目都很簡單但很複雜然後寫不完」，大量刷題就能拿高分——政大資結拚的是速度不是難度"
+  },
+  {
+    "id": "res-dcard-im-114-scores",
+    "title": "Dcard — 114 資管所管理組考試心得（含成績單）",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/258498440",
+    "description": "貼出台大資管成績單的管理組心得，可用來校準各科實際分數落點"
+  },
+  {
+    "id": "res-medium-im-ntu-courses",
+    "title": "Medium — 114-1 台大資管所修課心得",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://medium.com/@sangyz/114-1-%E5%8F%B0%E5%A4%A7%E8%B3%87%E7%AE%A1%E6%89%80-%E4%BF%AE%E8%AA%B2%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB-9d1858f74fe7",
+    "description": "入學後的修課心得，不是考試心得。用途是口試前了解系所實際課程內容與教授，回答「為什麼選台大資管」「想修什麼課」時能講得具體"
+  },
+  {
+    "id": "res-hackmd-im-114-recommend",
+    "title": "HackMD — 114【台大資管/清大資應/交大資管/中央資管】推甄心得",
+    "type": "HackMD",
+    "examRelevance": ["im"],
+    "url": "https://hackmd.io/tlKeHMLrQwqbcnpRosin7g",
+    "description": "四校推甄心得。作者在文中註明「千萬不要外流，only for 中央資管的學弟妹」，引用時建議改寫為歸納重點、勿整篇轉貼"
+  },
+  {
+    "id": "res-dcard-im-112-admitted",
+    "title": "Dcard — 112 資管所正取心得",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/241580712",
+    "description": "五校對照：台大資管正取、清大資應正取，政大／成大／中央資管備取。背景為兩份實習（其中一份與資管相關、有做小專案）"
+  },
+  {
+    "id": "res-dcard-im-111-cross",
+    "title": "Dcard — 111 年跨考台大/政大/清大/中央資管所正取｜考試心得及資源分享",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/238478758",
+    "description": "跨考四校正取。指出管理組的資結是所有科目裡最好準備的——把補習班正課筆記讀熟、多練題維持手感即可。內容與庫內同名的 Medium 版（waanwu）疑為同一作者跨平台發文，未逐字比對"
+  },
+  {
+    "id": "res-dcard-im-113-recommend",
+    "title": "Dcard — 113 年推甄心得【台大資管、政大資管、交大資管】",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/254871230",
+    "description": "台大資管正取、政大資管逕取、交大資管備取（已備上）。作者為政大資管系背景，本系推甄視角"
+  },
+  {
+    "id": "res-ptt-im-113-exam",
+    "title": "PTT — 113 資管所考試心得",
+    "type": "PTT",
+    "examRelevance": ["im"],
+    "url": "https://www.ptt.cc/bbs/graduate/M.1712921843.A.207.html",
+    "description": "成大工資管應屆、系排 66%、無實習無競賽無證照、多益約 700 的背景。條件普通者的考試路線參考"
+  },
+  {
+    "id": "res-medium-im-112-recommend",
+    "title": "Medium — 112 資管所推甄心得｜台大資管／政大資管",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://medium.com/@miczzl/2022-%E8%B3%87%E7%AE%A1%E6%89%80%E6%8E%A8%E7%94%84%E5%BF%83%E5%BE%97-%E5%8F%B0%E5%A4%A7%E8%B3%87%E7%AE%A1-%E6%94%BF%E5%A4%A7%E8%B3%87%E7%AE%A1-%E6%AD%A3%E5%8F%96-c49e260589d9",
+    "description": "台大資管與政大資管推甄雙正取，含書審與面試的準備過程"
+  },
+  {
+    "id": "res-dcard-im-114-ds-admitted",
+    "title": "Dcard — 114 資管所資結組上岸心得",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/258572459",
+    "description": "記錄 114 年政大計概「改成全手寫」的題型變化，以及遇到題風突變時如何穩住心態"
+  },
+  {
+    "id": "res-dcard-im-114-ds-exam",
+    "title": "Dcard — 114 資管所資結組考試心得",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/258602544",
+    "description": "政大資管科技組面試細節：三人一組團體面試 20 分鐘，先在小房間閱讀英文文章，一頁 A4 有四段文章抽籤擇一。另提到台大該年計概偏簡單、MIS 多考歷年沒考過的統計題"
+  },
+  {
+    "id": "res-dcard-im-114-ds-three",
+    "title": "Dcard — 114 資管所資結組上岸心得（政大／清大／交大）",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/258608914",
+    "description": "很值得注意的一點：政大計概的程式題自估應有 80 分以上、實際開 IDE 跑也都正確，分數卻遠低於預期，作者推測是「程式寫法不合老師的想法」。手寫程式題的評分不只看跑不跑得出來"
+  },
+  {
+    "id": "res-dcard-im-115-screening",
+    "title": "Dcard — 115 推甄一階篩選結果請益（含背景與結果對照）",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/261375737",
+    "description": "不是心得文而是請益串，但貼出了完整背景（系排 10%、修過資管相關課程、交換一年、無實習無專題）與推甄一階結果（台大資管、台科資管皆一階被刷）。可用來校準推甄的一階門檻"
+  },
+  {
+    "id": "res-yt-im-ntu-daso",
+    "title": "YouTube — 從輔仁到台大資管所：大碩金榜生備考分享",
+    "type": "補習班",
+    "examRelevance": ["im"],
+    "url": "https://www.youtube.com/watch?v=VYntQ1eXKCs",
+    "description": "影片形式的上榜心得（台大資管所＋清大資應所），有分段時間軸涵蓋各科準備要領、正課班與題庫班的差異、口試模擬的幫助。補習班官方影片，帶招生性質"
+  },
+  {
+    "id": "res-medium-im-108-failed",
+    "title": "Medium — 108 年台大資管所落榜心得",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://medium.com/@yzmsp7/108%E5%B9%B4%E5%8F%B0%E5%A4%A7%E8%B3%87%E7%AE%A1%E6%89%80%E8%90%BD%E6%A6%9C%E5%BF%83%E5%BE%97-bbe8b26dfa22",
+    "description": "手寫比例變化的歷史起點：「往年資結在計概佔比 30% 左右，今年提高到 50%」，該年資結考 Heap。落榜視角的檢討"
+  },
+  {
+    "id": "res-medium-im-111-recommend",
+    "title": "Medium — 111 年非本科／非應屆資管所甄試心得",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://medium.com/@po_yk/111%E5%B9%B4-%E8%B3%87%E7%AE%A1%E6%89%80%E7%94%84%E8%A9%A6%E5%BF%83%E5%BE%97-367496423c5c",
+    "description": "非應屆視角的甄試心得，含書審撰寫邏輯與建議、中央／成大／政大面試紀錄，以及中央／成大／政大／台大的考古題整理"
+  },
+  {
+    "id": "res-dcard-im-112-seven",
+    "title": "Dcard — 112 應屆跨考資管/資應/財所七校心得（台清交成政央北）",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/exam/p/241819789",
+    "description": "七校對照。指出政大計概有越來越簡單的趨勢，但若目標是台大資管仍建議全部讀熟，尤其演算法與程式碼部分要越熟越好"
+  },
+  {
+    "id": "res-dcard-im-mgmt-ordinary",
+    "title": "Dcard — 平凡女子的資管所管理組備考心得",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/241587396",
+    "description": "管理組視角。記錄了把抽象概念轉成生活化比喻的記憶法（買蛋餅比喻 CPU-bound、引擎比喻 thread），複習時不必重新推導一次"
+  },
+  {
+    "id": "res-dcard-im-115-ds-exam",
+    "title": "Dcard — 115 資管所資結組考試心得",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/261414891",
+    "description": "115 年政大團體面試的實況，該年時間約 15 分鐘（其他年份心得記為 20 分鐘），逐關記錄英文關等流程"
+  },
+  {
+    "id": "res-dcard-im-114-ds-central",
+    "title": "Dcard — 114 資管所中字輩上榜心得（資結組）",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/258472832",
+    "description": "一個具體教訓：資結自認很簡單、檢查三遍提早交卷，後來發現考古題那題要全對才給分，而自己把 8 寫成 0。提早交卷與抄寫失誤的代價"
+  },
+  {
+    "id": "res-medium-im-112-ds",
+    "title": "Medium — 112 資管所資結組心得",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://medium.com/@cloudoo/112-%E8%B3%87%E7%AE%A1%E6%89%80%E8%B3%87%E7%B5%90%E7%B5%84%E5%BF%83%E5%BE%97-53505ddca898",
+    "description": "資結組完整流程：背景、成績、時間規劃、各科準備方式"
+  },
+  {
+    "id": "res-medium-im-112-cross",
+    "title": "Medium — 112 資管所跨考心得",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://medium.com/@wealthy_lawn_cattle_951/112%E8%B3%87%E7%AE%A1%E6%89%80%E8%B7%A8%E8%80%83%E5%BF%83%E5%BE%97-90654efa5af8",
+    "description": "跨考視角。提到政大科技組面試的準備方式：先讀前人的面試經驗掌握流程，再針對「如何用英文簡短摘要」「如何回答延伸問題」預先演練"
+  },
+  {
+    "id": "res-dcard-im-112-ntu-nccu",
+    "title": "Dcard — 112 資管所考試、面試、補習心得（台大、政大）",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/241626803",
+    "description": "台大與政大兩校的考試與面試對照，另有補習班選擇的評估。留言串有討論政大組別是否影響日後找教授"
+  },
+  {
+    "id": "res-dcard-im-111-ds-cross",
+    "title": "Dcard — 111 台/政/清/成資管所資結組跨考心得",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/238478427",
+    "description": "政大團體面試四人一組、分兩關：先到小房間念五分鐘英文短文，第一關唸短文第一句並翻譯，再依短文內容延伸提問"
+  },
+  {
+    "id": "res-dcard-im-110-ds",
+    "title": "Dcard — 110 資管所資結組考試心得",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/235744166",
+    "description": "政大資管科技組團體面試：面試前到另一間教室給五分鐘看一篇英文短文（大概六七行），面試有五位面試官，開場先英文自我介紹"
+  },
+  {
+    "id": "res-medium-im-2021-oral",
+    "title": "Medium — 2021 台政交山資管所推甄面試心得",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://medium.com/@zihong518/2021-%E5%8F%B0%E6%94%BF%E4%BA%A4%E5%B1%B1-%E8%B3%87%E7%AE%A1%E6%8E%A8%E7%94%84%E9%9D%A2%E8%A9%A6%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB-e0e6821a5b3d",
+    "description": "四校面試對照。政大資管組為三人團體面試 20 分鐘，面試前 10 分鐘在小房間抽讀英文題目"
+  },
+  {
+    "id": "res-medium-im-111-ntu-oral",
+    "title": "Medium — 111 台大資管所推甄經驗分享（心理系跨考）",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://medium.com/@jessiechin1056/2022-%E8%87%BA%E5%A4%A7%E8%B3%87%E7%AE%A1%E6%89%80%E6%8E%A8%E7%94%84%E7%B6%93%E9%A9%97%E5%88%86%E4%BA%AB-da0fa76bdc8c",
+    "description": "唯一一篇完整記錄「作業研究關」的心得：孔令傑與盧信銘給了一題生產排程的線性規劃（N 張訂單各有利潤、工時、原料，工廠工時與原料有上限，求利潤最大化），要當場列目標式與限制式，再追問整數解與 branch-and-bound。技術關被要求描述一段 destroy_tree 的遞迴行為。心理系跨考視角，另附書審章節架構與用 Notion 把考古題分四關歸檔的做法"
+  },
+  {
+    "id": "res-podcast-im-kung",
+    "title": "未來親子 Podcast EP135 — 台大教授的二階面試指南 ft. 孔令傑",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://futureparenting.cwgv.com.tw/family/content/index/36139",
+    "description": "談的是大學個人申請的二階面試，不是研究所口試。收錄的理由是講者孔令傑為台大資管系副教授，正是研究所口試數學關的常見考官——可從口試委員本人的視角理解評分邏輯：面試在測抗壓性而非專業、中規中矩比標新立異安全、說實話最安全、最忌吹牛"
+  },
+  {
+    "id": "res-dcard-im-115-ntu-oral",
+    "title": "Dcard — 115 台大資管所考試二階口試題目分享",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/261162383",
+    "description": "115 考試入學二階的逐關題目。場地描述：門口有一道大門、每組時間到才開啟，進去後有四間小型會議室依序跑關，每關 4 分鐘且「時間控制非常精準，完全沒有延後」"
+  },
+  {
+    "id": "res-cram-im-ntu-top",
+    "title": "大碩 — 台大資管所榜首上榜心得",
+    "type": "補習班",
+    "examRelevance": ["im"],
+    "url": "https://www.daso.com.tw/winner/inside?str=38D6419864A231D974995EA569B2F5EF",
+    "description": "四關逐關題目：生涯關問專題與遇到的困難、研究計畫、非本科系能力是否足夠；數學關考機率與期望值；MIS 關問競合關係；技術關問 Dequeue。補習班學員見證，帶業配性質；該站網址含 session 參數，直接開啟可能被導回列表頁"
+  },
+  {
+    "id": "res-tun-im-nccu-tech",
+    "title": "TUN 大學網 — 政大資管科技組面試分享",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://university.1111.com.tw/zone/university/discussTopic.asp?cat=University&id=243948",
+    "description": "科技組逐關流程：報到 → 抽英文文章 → 閱讀 → 英文文章朗讀及翻譯 → 程式問題（由郁方教授負責）。屬於早年「朗讀＋翻譯」版本的紀錄"
+  },
+  {
+    "id": "res-cram-im-114-nccu-tech",
+    "title": "TKB — 114 年考取政大資管所（科技組）榜眼",
+    "type": "補習班",
+    "examRelevance": ["im"],
+    "url": "https://www.tkbgo.com.tw/schoolZone/graduate/comment/toDetail?comment_id=2608",
+    "description": "政大面試三段：英文文章大綱（可用英文或中文回答）、程式題五小題搶答制、研究計畫或專題提問。特別提醒程式題「程式碼會 call 前面的 function，要看仔細一點」。補習班學員見證，帶業配性質"
+  },
+  {
+    "id": "res-cram-im-nccu-oral",
+    "title": "TKB — 政大資管所考試經驗談（科技組、資管組面試）",
+    "type": "補習班",
+    "examRelevance": ["im"],
+    "url": "https://www.tkbgo.com.tw/schoolZone/graduate/article/toDetail?article_id=2104",
+    "description": "多位 114 上榜者的政大面試紀錄。關鍵細節：程式關**分 AB 卷**，題目卷上共 7 題但老師不會每題都問，教授有時會出變化題（有考生說回答變化題是加分關鍵）。另強調搶答制下答錯也要繼續舉手，怯場機會就是別人的。補習班文章，帶招生性質"
+  },
+  {
+    "id": "res-ig-im-nccu-oral",
+    "title": "Instagram — 政大資管所資管組碩士班考試面試紀錄",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://www.instagram.com/p/CSEpSeGJxkl",
+    "description": "另一種團面配置：共三關、六人一組、一關十分鐘，前兩關各三位面試官，英文關僅一名外師。人數偏多且為搶答制。IG 貼文，未登入可能無法完整瀏覽"
+  },
+  {
+    "id": "res-blog-im-nccu-joanne",
+    "title": "Joanne's Blog — 政大資管所推甄面試分享（資管組）",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://blog.joannefei.com/nccu-mis-graduate-school-interview",
+    "description": "資管組推甄面試心得，文中另附了前兩年同樣詳細的心得連結，可做跨年度對照"
+  },
+  {
+    "id": "res-medium-im-111-ntu-oral-b",
+    "title": "Medium — 111 年資管所考試心得（台大四關逐關實錄）",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://medium.com/@ryanlai880122/111%E5%B9%B4%E8%B3%87%E7%AE%A1%E6%89%80%E8%80%83%E8%A9%A6%E5%BF%83%E5%BE%97-97c1f29ba7b8",
+    "description": "四關全記錄：MIS 關抽到共享平台並被追問 Uber/foodpanda 為何走向中心化；數學關孔令傑出微積分體積最大化並全程引導；技術關李瑞庭從資料探勘一路追到 PCA 的 eigenvector 與 Gradient Boosting；生涯關莊裕澤只給三個問題「自介、你的優勢、說服我」。另記該年數學關考線代與微積分而非統計"
+  },
+  {
+    "id": "res-medium-im-111-cross-3",
+    "title": "Medium — 111 年跨考資管／資應／服科考試、面試心得",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://medium.com/@positive_mantis_minnow_33/111%E5%B9%B4-%E8%B7%A8%E8%80%83%E8%B3%87%E7%AE%A1-%E8%B3%87%E6%87%89-%E6%9C%8D%E7%A7%91%E8%80%83%E8%A9%A6-%E9%9D%A2%E8%A9%A6%E5%BF%83%E5%BE%97-3152b6d035b8",
+    "description": "台大四關各 4 分鐘。MIS 關抽到電商 CIO 的隱私投訴題，答完還有時間又被要求再抽一題「如何導入大型 IS」；生涯關被問「為什麼台大要錄取你不錄取其他同學」；技術關 ER Model 二元一對一轉關聯，作者把完全／部分參與講成強弱關係而答錯；數學關準備統計卻遇作業研究，四分鐘空白。含跨考六科自學路線"
+  },
+  {
+    "id": "res-medium-im-112-cross-7",
+    "title": "Medium — 112 應屆跨考資管／應／財所（台清交成政央北）心得文",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://medium.com/@s410879057/112%E6%87%89%E5%B1%86%E8%B7%A8%E8%80%83%E8%B3%87%E7%AE%A1-%E6%87%89-%E8%B2%A1%E6%89%80-%E5%8F%B0-%E6%B8%85-%E4%BA%A4-%E6%88%90-%E6%94%BF-%E5%A4%AE-%E5%8C%97-%E5%BF%83%E5%BE%97%E6%96%87-3fbf8189ca56",
+    "description": "七校逐校攻略。台大計概「出得很細」的具體例證（OS 的 page 大小），該年主題集中 OS、手寫題考類似 KMP 的演算法、MIS 第一題考供應鏈；口試四關各 4 分鐘（與「考試入學 5 分鐘」的說法相左）。另有依志願校決定資結該讀多深的分層建議"
+  },
+  {
+    "id": "res-medium-im-ntu-recommend-scores",
+    "title": "Medium — 台大跨領域推甄經驗（資科學程／電信丙／資管／工工）",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://datafox-tw.medium.com/%E5%8F%B0%E7%81%A3%E5%A4%A7%E5%AD%B8%E8%B7%A8%E9%A0%98%E5%9F%9F%E6%8E%A8%E7%94%84%E7%B6%93%E9%A9%97%E8%88%87%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB-%E5%8F%B0%E5%A4%A7%E8%B3%87%E6%96%99%E7%A7%91%E5%AD%B8%E5%AD%B8%E7%A8%8B-%E9%9B%BB%E4%BF%A1%E4%B8%99-%E8%B3%87%E7%AE%A1-%E5%B7%A5%E6%A5%AD%E5%B7%A5%E7%A8%8B%E5%AD%B8-69eb3a1737bf",
+    "description": "推甄路線的門檻實證：資管所書審 76.13、最低錄取 86.38，連面試都沒進（名額 41／報名 232），同一人在資科學程與工工所都正取。附資管系教授的原話建議——要修過六大必修（程設、資結、演算法、網路、資料庫、OS）且拿 A，以及他各科的實際成績對照"
+  },
+  {
+    "id": "res-medium-im-112-ntu-priority",
+    "title": "Medium — 112 年臺大資訊相關科系推甄（資工／資工 AI／資管／資科／電信丙）",
+    "type": "部落格",
+    "examRelevance": ["im", "cs"],
+    "url": "https://medium.com/@JackChen89/112-%E5%B9%B4%E8%87%BA%E5%A4%A7%E8%B3%87%E8%A8%8A%E7%9B%B8%E9%97%9C%E7%A7%91%E7%B3%BB%E6%8E%A8%E7%94%84-%E8%B3%87%E5%B7%A5-%E8%B3%87%E5%B7%A5-ai-%E8%B3%87%E7%AE%A1-%E8%B3%87%E6%96%99%E7%A7%91%E5%AD%B8-%E9%9B%BB%E4%BF%A1%E4%B8%99-6a344fb306e8",
+    "description": "少見地記錄到台大資管所推甄的「優先錄取」——書審突出者直接錄取、不用面試。另記資管四關的另一種叫法（資訊應用、資訊技術、數學、生涯），以及備審四段式架構與找指導教授的時程提醒"
+  },
+  {
+    "id": "res-hackmd-im-112-nocram",
+    "title": "HackMD — 112 資管所資結組／科技組 無補習考試心得",
+    "type": "HackMD",
+    "examRelevance": ["im"],
+    "url": "https://hackmd.io/Jz_Xl2HKRNm0MN4IJvN7jw",
+    "description": "無補習路線最完整的一份教材清單：杰哥（資結／資料庫／OS）、清大黃能富網路 OCW、周志遠 OS OCW、李宏毅 ML、GeeksforGeeks 題庫、MySQL 練習 50 題。作者觀察各校資結每年題型差異大但反覆考同幾個題型，每校寫 6–7 年考古就抓得到"
+  },
+  {
+    "id": "res-medium-im-110-4schools",
+    "title": "Medium — 110 台政交成資管所考試心得",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://joannachou713.medium.com/110-%E5%8F%B0%E6%94%BF%E4%BA%A4%E6%88%90%E8%B3%87%E7%AE%A1%E6%89%80%E8%80%83%E8%A9%A6%E5%BF%83%E5%BE%97-ea0665a47dea",
+    "description": "110 年四校同時報考的路線圖，全數位課（含題庫班）：洪逸計概與資結、丁祺 MIS、林瑋網路與資料庫"
+  },
+  {
+    "id": "res-medium-im-111-tools",
+    "title": "Medium — 111／2022 資管所考試心得（讀書工具與時程）",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://medium.com/@michellechen58/111-2022-%E8%B3%87%E7%AE%A1%E6%89%80%E8%80%83%E8%A9%A6%E5%BF%83%E5%BE%97-fcff15c99498",
+    "description": "少見地把備考工具寫清楚：Notion 管報名狀態與時事、Excel 記錄各科讀書時間比例避免偏科、iPad 寫考古。政大面試部分是重要對照——雖然考的是資管組，第二關卻被問網路流量處理、hash、工作量證明等技術題"
+  },
+  {
+    "id": "res-get-im-110-top",
+    "title": "高點 — 110 台大資管所、成大資管所榜首（中央企管跨考）",
+    "type": "補習班",
+    "examRelevance": ["im"],
+    "url": "https://www.get.com.tw/media/master/ListDetail.aspx?iS=61830&iC=3271",
+    "description": "非本科系、升大四暑假才開始準備的雙榜首路線，可與「準備一年以上」的心得對照，判斷最短可行時程"
+  },
+  {
+    "id": "res-tkb-im-112-top",
+    "title": "TKB — 112 年台大資管所榜首 黃O綸",
+    "type": "補習班",
+    "examRelevance": ["im"],
+    "url": "https://www.tkbgo.com.tw/schoolZone/graduate/comment/toDetail?comment_id=1399",
+    "description": "推甄已正取政大資管，仍推辭大四下交換、續考台大並拿下榜首。資結的觀念串法值得看：從線性結構→Tree→偏斜引出的平衡樹（AVL／RB）→排序複雜度→非比較排序，一條線把整科串起來"
+  },
+  {
+    "id": "res-tkb-im-113-ntu",
+    "title": "TKB — 113 年台大資管所 黃O熹",
+    "type": "補習班",
+    "examRelevance": ["im"],
+    "url": "https://www.tkbgo.com.tw/schoolZone/graduate/comment/toDetail?comment_id=1774",
+    "description": "大一到大三忙社團、成績差到推甄無望，大三下才全面轉考試路線的時程樣本。內容偏補習班心得，主要價值在時間點"
+  },
+  {
+    "id": "res-tkb-nccu-113-case",
+    "title": "TKB — 113 年政大資管所 蔡O玄（國企系輔資工）",
+    "type": "補習班",
+    "examRelevance": ["im"],
+    "url": "https://www.tkbgo.com.tw/schoolZone/graduate/comment/toDetail?comment_id=1779",
+    "description": "MIS「案例庫」的具體練法：背熟理論後每週做 2–3 次案例分析、傳給老師討論，持續 2–3 個月再進題庫班練架構。遇到不會的題目就讀一本專書補（例：平台經濟題去讀《平台革命》）。另有依目標校決定手寫語言的建議（C++ 為主，成大／中山 C、中央 Java）"
+  },
+  {
+    "id": "res-tkb-im-review-oral",
+    "title": "TKB — 資管所書審、口面試心得一覽",
+    "type": "補習班",
+    "examRelevance": ["im"],
+    "url": "https://www.tkbgo.com.tw/schoolZone/graduate/article/toDetail?article_id=1729",
+    "description": "跨校的書審與口面試彙整入口，適合在推甄季開始前先掃一遍各校形式差異"
+  },
+  {
+    "id": "res-tkb-im-115-schedule",
+    "title": "TKB — 2026／115 全台資管所簡章、考科與報名時間",
+    "type": "補習班",
+    "examRelevance": ["im"],
+    "url": "https://www.tkbgo.com.tw/schoolZone/graduate/news/toDetail?news_id=5286",
+    "description": "115 各校考科與考試日期一覽（台大筆試 2/2、面試 3/13；政大筆試 2/6、面試 3/20）。次級來源，報名前仍以官方簡章為準"
+  },
+  {
+    "id": "res-tkb-im-115-exam-changes",
+    "title": "TKB 甄戰 — 115 研究所考試簡章總整理（含台大招生改制）",
+    "type": "補習班",
+    "examRelevance": ["im", "cs"],
+    "url": "https://www.reallygood.com.tw/newExam/inside?str=0AB98C37435A1716A3CA5BFEF5596942",
+    "description": "值得注意的趨勢整理：台大近年大幅壓縮面試準備時間（113 商研所公告名單到口試僅一週，114 已出現最短僅一天的校系），以及 115 有校系把考試入學從筆試改為書審＋面試。台大資管目前仍是筆試 60%＋口試 40%，但這個方向要持續盯"
+  },
+  {
+    "id": "res-pixnet-im-110-working",
+    "title": "痞客邦 — 110 年資管所考試心得（在職備考）",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://pegglife.pixnet.net/blog/posts/16036962722",
+    "description": "在職邊上班邊考的時程樣本（一天 4–6 小時、共 7–8 個月），並附完整成績與最低錄取分對照。作者結論很直接：非必要不要在職準備。無台大成績，適合當中字輩校系的落點參考"
   }
 ]

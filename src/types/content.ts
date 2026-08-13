@@ -11,6 +11,9 @@ export type ResourceType =
   | '書目'
   | 'Dcard'
   | '官方'
+  | '部落格'
+  | '線上課程'
+  | '時事'
 
 export type MaterialType = 'book' | 'notes' | 'video' | 'online' | 'cram-school'
 
