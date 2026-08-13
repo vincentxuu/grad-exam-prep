@@ -56,3 +56,6 @@ next-env.d.ts
 
 # generated question files (regenerable from questions.json)
 /public/data/qfiles/
+
+# Claude Code 本機權限設定（含 session 專屬的 MCP server id，不進版控）
+.claude/settings.local.json
