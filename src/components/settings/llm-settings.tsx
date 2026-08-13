@@ -1,9 +1,18 @@
 'use client'
 
 import { useCallback, useEffect, useState } from 'react'
+import { ModelPicker } from '@/components/settings/model-picker'
+import { TrialChat } from '@/components/settings/trial-chat'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select'
 import { clearToken, getAuthHeader, hashPassphrase, isAuthenticated, storeToken } from '@/lib/auth'
 import { PROVIDER_CATALOG, providerInfo } from '@/lib/llm/catalog'
 
@@ -35,6 +44,9 @@ type Form = Record<
   'provider' | 'model' | 'fallbackProvider' | 'fallbackModel' | 'lexiconQuota' | 'chatQuota',
   string
 >
+
+/** Radix Select 不接受空字串當值，所以「不設定」要有個自己的哨兵。 */
+const NONE = '__none__'
 
 const EMPTY_FORM: Form = {
   provider: '',
@@ -221,15 +233,15 @@ export function LlmSettings() {
           </p>
         )}
 
-        <label className="block space-y-1">
+        <div className="space-y-1">
           <span className="text-sm">Model</span>
-          <Input
+          <ModelPicker
+            provider={form.provider}
             value={form.model}
-            onChange={(e) => setForm((f) => ({ ...f, model: e.target.value }))}
+            onChange={(model) => setForm((f) => ({ ...f, model }))}
             placeholder={selected?.sampleModel ?? '留空沿用環境變數或預設'}
-            className="font-mono"
           />
-        </label>
+        </div>
 
         <div className="flex flex-wrap items-center gap-3">
           <Button onClick={handleTest} disabled={busy !== null} variant="outline">
@@ -262,29 +274,51 @@ export function LlmSettings() {
         )}
       </section>
 
+      <section className="rounded-lg border p-4">
+        <TrialChat provider={form.provider} model={form.model} />
+      </section>
+
       <section className="space-y-3">
         <h2 className="font-semibold">備援 provider</h2>
         <p className="text-muted-foreground text-xs">
           主要那家失敗時改打這家。留空就不退，直接回報錯誤。
         </p>
         <div className="grid gap-3 sm:grid-cols-2">
-          <label className="block space-y-1">
+          <div className="space-y-1">
             <span className="text-sm">Provider</span>
-            <Input
-              value={form.fallbackProvider}
-              onChange={(e) => setForm((f) => ({ ...f, fallbackProvider: e.target.value }))}
-              placeholder="留空 = 不退"
-              className="font-mono"
-            />
-          </label>
-          <label className="block space-y-1">
+            <Select
+              value={form.fallbackProvider || NONE}
+              onValueChange={(v) =>
+                setForm((f) => ({
+                  ...f,
+                  fallbackProvider: v === NONE ? '' : v,
+                  // 換了 provider 就清掉 model，不然會留著別家的型號
+                  fallbackModel: '',
+                }))
+              }
+            >
+              <SelectTrigger>
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value={NONE}>不退</SelectItem>
+                {PROVIDER_CATALOG.map((p) => (
+                  <SelectItem key={p.id} value={p.id}>
+                    {p.label}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+          <div className="space-y-1">
             <span className="text-sm">Model</span>
-            <Input
+            <ModelPicker
+              provider={form.fallbackProvider}
               value={form.fallbackModel}
-              onChange={(e) => setForm((f) => ({ ...f, fallbackModel: e.target.value }))}
-              className="font-mono"
+              onChange={(fallbackModel) => setForm((f) => ({ ...f, fallbackModel }))}
+              placeholder={providerInfo(form.fallbackProvider)?.sampleModel}
             />
-          </label>
+          </div>
         </div>
       </section>
 

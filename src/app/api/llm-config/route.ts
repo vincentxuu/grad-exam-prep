@@ -1,42 +1,18 @@
-import { getCloudflareContext } from '@opennextjs/cloudflare'
 import { type NextRequest, NextResponse } from 'next/server'
-import { validateBearerToken } from '@/lib/auth'
 import type { Db } from '@/lib/lexicon/store'
+import { requireAdmin } from '@/lib/llm/admin-auth'
 import { asProvider, PROVIDER_CATALOG } from '@/lib/llm/catalog'
 import { type LlmRuntimeConfig, loadConfig, saveConfig } from '@/lib/llm/config'
-import {
-  hasCredentials,
-  type LlmEnv,
-  resolveFallbackRoute,
-  resolveRoute,
-  routeLabel,
-} from '@/lib/llm/model'
-
-interface ConfigEnv extends LlmEnv {
-  DB: D1Database
-  PASSPHRASE_HASH?: string
-}
-
-async function getEnv(): Promise<ConfigEnv> {
-  const { env } = await getCloudflareContext({ async: true })
-  return env as unknown as ConfigEnv
-}
+import { hasCredentials, resolveFallbackRoute, resolveRoute, routeLabel } from '@/lib/llm/model'
 
 function unauthorized() {
   return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 }
 
-/**
- * 設定頁是要改全站的 provider 與額度，所以一律要通關密語 —— 沒設
- * `PASSPHRASE_HASH` 的話這支就整個關掉，不留沒有鎖的後門。
- */
-function authed(request: NextRequest, env: ConfigEnv): boolean {
-  return !!env.PASSPHRASE_HASH && validateBearerToken(request, env.PASSPHRASE_HASH)
-}
-
 export async function GET(request: NextRequest) {
-  const env = await getEnv()
-  if (!authed(request, env)) return unauthorized()
+  const auth = await requireAdmin(request)
+  if (!auth.ok) return unauthorized()
+  const { env } = auth
 
   const config = await loadConfig(env.DB as unknown as Db)
   const primary = resolveRoute(env, config)
@@ -76,8 +52,9 @@ function optionalCount(value: unknown): number | undefined {
 }
 
 export async function PUT(request: NextRequest) {
-  const env = await getEnv()
-  if (!authed(request, env)) return unauthorized()
+  const auth = await requireAdmin(request)
+  if (!auth.ok) return unauthorized()
+  const { env } = auth
 
   const body = (await request.json().catch(() => null)) as Record<string, unknown> | null
   if (!body) return NextResponse.json({ error: '請求格式錯誤' }, { status: 400 })

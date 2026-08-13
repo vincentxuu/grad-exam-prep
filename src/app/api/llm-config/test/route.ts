@@ -1,16 +1,10 @@
-import { getCloudflareContext } from '@opennextjs/cloudflare'
 import { type NextRequest, NextResponse } from 'next/server'
-import { validateBearerToken } from '@/lib/auth'
 import type { Db } from '@/lib/lexicon/store'
+import { requireAdmin } from '@/lib/llm/admin-auth'
 import { asProvider, providerInfo } from '@/lib/llm/catalog'
 import { loadConfig } from '@/lib/llm/config'
 import { pingRoute } from '@/lib/llm/invoke'
-import { DEFAULT_MODEL, type LlmEnv, resolveRoute } from '@/lib/llm/model'
-
-interface ConfigEnv extends LlmEnv {
-  DB: D1Database
-  PASSPHRASE_HASH?: string
-}
+import { DEFAULT_MODEL, resolveRoute } from '@/lib/llm/model'
 
 /**
  * 測試連線：打一次最小的真實呼叫。
@@ -19,12 +13,9 @@ interface ConfigEnv extends LlmEnv {
  * 讓查詞壞掉再回頭改好。不帶就測目前生效的設定。
  */
 export async function POST(request: NextRequest) {
-  const { env: raw } = await getCloudflareContext({ async: true })
-  const env = raw as unknown as ConfigEnv
-
-  if (!env.PASSPHRASE_HASH || !validateBearerToken(request, env.PASSPHRASE_HASH)) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
-  }
+  const auth = await requireAdmin(request)
+  if (!auth.ok) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  const { env } = auth
 
   const body = (await request.json().catch(() => ({}))) as {
     provider?: string

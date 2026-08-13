@@ -106,6 +106,46 @@ export interface CreateModelOptions {
   maxRetries?: number
 }
 
+/**
+ * 各家的 OpenAI 相容端點與該用哪把 key。
+ *
+ * 抽出來是因為列出可用 model（`models.ts`）要打同一個 baseURL 的
+ * `/models`。寫兩份遲早會有一份忘了改 —— 尤其 Cloudflare 那條路徑帶帳號。
+ *
+ * groq 與 google 有自己的 SDK，`createModel` 不吃這裡的 baseURL，但它們
+ * 一樣有相容端點可以列 model，所以也放進來。
+ */
+export function providerEndpoint(
+  env: LlmEnv,
+  provider: ModelProvider
+): { baseUrl: string; apiKey?: string } {
+  switch (provider) {
+    case 'groq':
+      return { baseUrl: 'https://api.groq.com/openai/v1', apiKey: env.GROQ_API_KEY }
+    case 'google':
+      return {
+        baseUrl: 'https://generativelanguage.googleapis.com/v1beta/openai',
+        apiKey: env.GOOGLE_API_KEY || env.GEMINI_API_KEY,
+      }
+    case 'openai':
+      return { baseUrl: 'https://api.openai.com/v1', apiKey: env.OPENAI_API_KEY }
+    case 'cloudflare':
+      return {
+        baseUrl: `https://api.cloudflare.com/client/v4/accounts/${env.CLOUDFLARE_ACCOUNT_ID}/ai/v1`,
+        apiKey: env.CLOUDFLARE_API_TOKEN,
+      }
+    case 'openrouter':
+      return { baseUrl: 'https://openrouter.ai/api/v1', apiKey: env.OPENROUTER_API_KEY }
+    case 'cerebras':
+      return { baseUrl: 'https://api.cerebras.ai/v1', apiKey: env.CEREBRAS_API_KEY }
+    case 'ollama':
+      return {
+        baseUrl: env.OLLAMA_API_BASE || 'http://localhost:11434/v1',
+        apiKey: 'ollama', // 端點不驗證，但 SDK 要求非空
+      }
+  }
+}
+
 export function createModel(
   env: LlmEnv,
   route: ModelRoute,
@@ -114,6 +154,7 @@ export function createModel(
   const maxTokens = opts.maxTokens ?? 4000
   const { maxRetries } = opts
 
+  // groq 與 google 走各自的 SDK，其餘一律 OpenAI 相容端點
   switch (route.provider) {
     case 'groq':
       return new ChatGroq(route.model, { apiKey: env.GROQ_API_KEY, maxTokens, maxRetries })
@@ -125,43 +166,16 @@ export function createModel(
         maxRetries,
       })
 
-    case 'openai':
-      return new ChatOpenAI(route.model, { apiKey: env.OPENAI_API_KEY, maxTokens, maxRetries })
-
-    // 以下四家都是 OpenAI 相容端點，換 baseURL 就好
-    case 'cloudflare':
+    default: {
+      const { baseUrl, apiKey } = providerEndpoint(env, route.provider)
       return new ChatOpenAI(route.model, {
-        apiKey: env.CLOUDFLARE_API_TOKEN,
+        apiKey,
         maxTokens,
         maxRetries,
-        configuration: {
-          baseURL: `https://api.cloudflare.com/client/v4/accounts/${env.CLOUDFLARE_ACCOUNT_ID}/ai/v1`,
-        },
+        // openai 用預設 baseURL 就好，但明寫也不會錯，少一個分支
+        configuration: { baseURL: baseUrl },
       })
-
-    case 'openrouter':
-      return new ChatOpenAI(route.model, {
-        apiKey: env.OPENROUTER_API_KEY,
-        maxTokens,
-        maxRetries,
-        configuration: { baseURL: 'https://openrouter.ai/api/v1' },
-      })
-
-    case 'cerebras':
-      return new ChatOpenAI(route.model, {
-        apiKey: env.CEREBRAS_API_KEY,
-        maxTokens,
-        maxRetries,
-        configuration: { baseURL: 'https://api.cerebras.ai/v1' },
-      })
-
-    case 'ollama':
-      return new ChatOpenAI(route.model, {
-        apiKey: 'ollama', // 端點不驗證，但 SDK 要求非空
-        maxTokens,
-        maxRetries,
-        configuration: { baseURL: env.OLLAMA_API_BASE || 'http://localhost:11434/v1' },
-      })
+    }
   }
 }
 
