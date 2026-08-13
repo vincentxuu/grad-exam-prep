@@ -3,6 +3,7 @@ import { correctMessage } from '@/lib/chat/converse'
 import { getChatEnv, getUserId } from '@/lib/chat/env'
 import { addCorrections, getSession } from '@/lib/chat/store'
 import type { Db } from '@/lib/lexicon/store'
+import { loadConfig } from '@/lib/llm/config'
 
 interface Body {
   messageId?: string
@@ -39,7 +40,7 @@ export async function POST(request: NextRequest, ctx: { params: Promise<{ id: st
   const session = await getSession(db, id, getUserId(request))
   if (!session) return NextResponse.json({ error: '找不到這場對話' }, { status: 404 })
 
-  const result = await correctMessage(env, content)
+  const result = await correctMessage(env, content, await loadConfig(db))
   if (!result.ok) {
     // 糾錯失敗不該讓對話中斷，回空陣列讓前端安靜地略過
     return NextResponse.json({ corrections: [] })

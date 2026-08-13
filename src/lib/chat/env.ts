@@ -2,6 +2,7 @@ import { getCloudflareContext } from '@opennextjs/cloudflare'
 import type { NextRequest } from 'next/server'
 import { validateBearerToken } from '@/lib/auth'
 import { checkAndIncrementQuota, type Db, readQuota } from '@/lib/lexicon/store'
+import type { LlmRuntimeConfig } from '@/lib/llm/config'
 import type { LlmEnv } from '@/lib/llm/model'
 
 export const DEFAULT_CHAT_QUOTA = 40
@@ -17,7 +18,9 @@ export async function getChatEnv(): Promise<ChatEnv> {
   return env as unknown as ChatEnv
 }
 
-export function chatQuotaLimit(env: ChatEnv): number {
+/** 優先序：D1 設定 → env → 程式預設。 */
+export function chatQuotaLimit(env: ChatEnv, config?: LlmRuntimeConfig): number {
+  if (config?.chatQuota) return config.chatQuota
   const n = Number(env.CHAT_DAILY_QUOTA)
   return Number.isFinite(n) && n > 0 ? n : DEFAULT_CHAT_QUOTA
 }

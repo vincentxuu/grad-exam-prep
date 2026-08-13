@@ -11,6 +11,7 @@ import {
 import { suggestTopic } from '@/lib/chat/prompts'
 import { addMessage, createSession } from '@/lib/chat/store'
 import type { Db } from '@/lib/lexicon/store'
+import { loadConfig } from '@/lib/llm/config'
 import type { ChatSession } from '@/types/chat'
 import type { PersonaProfile } from '@/types/lexicon'
 
@@ -41,6 +42,7 @@ export async function POST(request: NextRequest) {
 
   const env = await getChatEnv()
   const db = env.DB as unknown as Db
+  const config = await loadConfig(db)
   const userId = getUserId(request)
   const unlimited = isUnlimited(request, env)
 
@@ -53,10 +55,11 @@ export async function POST(request: NextRequest) {
   }
 
   try {
-    await spendChatQuota(db, userId, chatQuotaLimit(env), unlimited)
+    await spendChatQuota(db, userId, chatQuotaLimit(env, config), unlimited)
 
     const stream = await streamReply({
       env,
+      config,
       topic: session.topic,
       targetWords: session.targetWords,
       persona: body.persona,

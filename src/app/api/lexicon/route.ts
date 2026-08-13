@@ -13,6 +13,7 @@ import {
   putPersonal,
   readQuota,
 } from '@/lib/lexicon/store'
+import { type LlmRuntimeConfig, loadConfig } from '@/lib/llm/config'
 import type { LlmEnv } from '@/lib/llm/model'
 import type { LookupResponse, PersonaProfile } from '@/types/lexicon'
 
@@ -27,7 +28,9 @@ async function getEnv(): Promise<Env> {
   return env as unknown as Env
 }
 
-function quotaLimit(env: Env): number {
+/** 優先序：D1 設定 → env → 程式預設。 */
+function quotaLimit(env: Env, config: LlmRuntimeConfig): number {
+  if (config.lexiconQuota) return config.lexiconQuota
   const n = Number(env.LEXICON_DAILY_QUOTA)
   return Number.isFinite(n) && n > 0 ? n : DEFAULT_DAILY_QUOTA
 }
@@ -90,7 +93,8 @@ export async function POST(request: NextRequest) {
 
   // 有沒有 key 由 provider 路由自己判斷（不同 provider 看不同的 env）
   const db = env.DB as unknown as Db
-  const limit = quotaLimit(env)
+  const config = await loadConfig(db)
+  const limit = quotaLimit(env, config)
 
   // 帶通關密語的請求不受配額限制
   const unlimited = !!env.PASSPHRASE_HASH && validateBearerToken(request, env.PASSPHRASE_HASH)
@@ -111,7 +115,7 @@ export async function POST(request: NextRequest) {
 
     if (!entry) {
       await spend()
-      const result = await generateEntry(env, normalized.term)
+      const result = await generateEntry(env, normalized.term, config)
       if (!result.ok) return generationError(result.reason, result.message)
 
       entry = result.data
@@ -129,7 +133,7 @@ export async function POST(request: NextRequest) {
 
       if (!personal) {
         await spend()
-        const result = await generatePersonal(env, entry.headword, payload.persona)
+        const result = await generatePersonal(env, entry.headword, payload.persona, config)
         // 個人化失敗不該讓整次查詢失敗 —— 詞條本身已經有了，先給使用者
         if (result.ok) {
           personal = result.data

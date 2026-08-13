@@ -2,11 +2,20 @@ import type { BaseChatModel } from '@langchain/core/language_models/chat_models'
 import { ChatGoogleGenerativeAI } from '@langchain/google-genai'
 import { ChatGroq } from '@langchain/groq'
 import { ChatOpenAI } from '@langchain/openai'
+import type { LlmRuntimeConfig } from './config'
 
 /**
  * LLM provider 路由，做法沿用 quidproquo（vincentxuu/quidproquo 的
- * `src/lib/rag/model.ts`）：用 LangChain 當抽象層，provider 由 env 決定，
- * 預設 Groq，並支援失敗時退到另一家。
+ * `src/lib/rag/model.ts`）：用 LangChain 當抽象層，預設 Groq，並支援
+ * 失敗時退到另一家。
+ *
+ * 設定來源分兩層，優先序由高到低：
+ *   1. D1 的 `llm_config`（`LlmRuntimeConfig`）—— 改完不用重新部署
+ *   2. env 變數 —— 部署期設定
+ *   3. 程式預設 groq / llama-3.3-70b-versatile
+ *
+ * **API key 只從 env 讀，不進設定表** —— wrangler secret 是加密存放且讀不
+ * 回來，D1 是明文。
  *
  * env 從 Workers 的 `env` 物件讀，不用 `process.env` —— Workers 上
  * `process.env` 拿不到 secret。
@@ -44,18 +53,23 @@ function asProvider(value: string | undefined): ModelProvider | undefined {
   return value && PROVIDERS.has(value) ? (value as ModelProvider) : undefined
 }
 
-export function resolveRoute(env: LlmEnv): ModelRoute {
+export function resolveRoute(env: LlmEnv, config?: LlmRuntimeConfig): ModelRoute {
   return {
-    provider: asProvider(env.LLM_PROVIDER) ?? DEFAULT_PROVIDER,
-    model: env.LLM_MODEL || DEFAULT_MODEL,
+    provider: asProvider(config?.provider) ?? asProvider(env.LLM_PROVIDER) ?? DEFAULT_PROVIDER,
+    model: config?.model || env.LLM_MODEL || DEFAULT_MODEL,
     fallback: false,
   }
 }
 
-export function resolveFallbackRoute(env: LlmEnv): ModelRoute | null {
-  const provider = asProvider(env.LLM_FALLBACK_PROVIDER)
+export function resolveFallbackRoute(env: LlmEnv, config?: LlmRuntimeConfig): ModelRoute | null {
+  const provider = asProvider(config?.fallbackProvider) ?? asProvider(env.LLM_FALLBACK_PROVIDER)
   if (!provider) return null
-  return { provider, model: env.LLM_FALLBACK_MODEL || DEFAULT_MODEL, fallback: true }
+
+  return {
+    provider,
+    model: config?.fallbackModel || env.LLM_FALLBACK_MODEL || DEFAULT_MODEL,
+    fallback: true,
+  }
 }
 
 /** 這條 route 需要的 key 有沒有設定。 */

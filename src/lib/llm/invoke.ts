@@ -1,5 +1,6 @@
 import { HumanMessage, SystemMessage } from '@langchain/core/messages'
 import type { z } from 'zod'
+import type { LlmRuntimeConfig } from './config'
 import {
   createModel,
   hasCredentials,
@@ -59,6 +60,8 @@ function messageText(content: unknown): string {
 
 interface StructuredOptions<T> {
   env: LlmEnv
+  /** D1 的執行期設定，優先於 env */
+  config?: LlmRuntimeConfig
   system: string
   user: string
   schema: z.ZodType<T>
@@ -110,10 +113,10 @@ async function tryRoute<T>(route: ModelRoute, opts: StructuredOptions<T>): Promi
  * 要一份結構化輸出，主 route 失敗時退到 fallback route。
  */
 export async function generateStructured<T>(opts: StructuredOptions<T>): Promise<LlmResult<T>> {
-  const primary = await tryRoute(resolveRoute(opts.env), opts)
+  const primary = await tryRoute(resolveRoute(opts.env, opts.config), opts)
   if (primary.ok) return primary
 
-  const fallback = resolveFallbackRoute(opts.env)
+  const fallback = resolveFallbackRoute(opts.env, opts.config)
   if (!fallback) return primary
 
   const second = await tryRoute(fallback, opts)
@@ -123,6 +126,7 @@ export async function generateStructured<T>(opts: StructuredOptions<T>): Promise
 
 export interface StreamOptions {
   env: LlmEnv
+  config?: LlmRuntimeConfig
   system: string
   /** 已經是 LangChain 訊息陣列（對話歷史） */
   messages: (SystemMessage | HumanMessage)[]
@@ -131,7 +135,7 @@ export interface StreamOptions {
 
 /** 串流純文字。對話用。 */
 export function streamText(opts: StreamOptions) {
-  const route = resolveRoute(opts.env)
+  const route = resolveRoute(opts.env, opts.config)
   const model = createModel(opts.env, route, {
     maxTokens: opts.maxTokens,
     streaming: true,

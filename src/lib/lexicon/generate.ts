@@ -1,3 +1,4 @@
+import type { LlmRuntimeConfig } from '@/lib/llm/config'
 import { generateStructured, type LlmResult } from '@/lib/llm/invoke'
 import type { LlmEnv } from '@/lib/llm/model'
 import type { LexiconEntry, PersonalBridge, PersonaProfile } from '@/types/lexicon'
@@ -15,9 +16,14 @@ const PERSONAL_MAX_TOKENS = 1500
 
 export type GenerateResult<T> = LlmResult<T>
 
-export function generateEntry(env: LlmEnv, term: string): Promise<GenerateResult<LexiconEntry>> {
+export function generateEntry(
+  env: LlmEnv,
+  term: string,
+  config?: LlmRuntimeConfig
+): Promise<GenerateResult<LexiconEntry>> {
   return generateStructured({
     env,
+    config,
     system: ENTRY_SYSTEM_PROMPT,
     user: entryUserPrompt(term),
     schema: lexiconEntrySchema,
@@ -28,10 +34,12 @@ export function generateEntry(env: LlmEnv, term: string): Promise<GenerateResult
 export function generatePersonal(
   env: LlmEnv,
   headword: string,
-  persona: PersonaProfile
+  persona: PersonaProfile,
+  config?: LlmRuntimeConfig
 ): Promise<GenerateResult<PersonalBridge>> {
   return generateStructured({
     env,
+    config,
     system: PERSONAL_SYSTEM_PROMPT,
     user: personalUserPrompt(headword, persona),
     schema: personalBridgeSchema,

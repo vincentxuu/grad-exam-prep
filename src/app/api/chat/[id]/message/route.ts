@@ -12,6 +12,7 @@ import {
 import { addMessage, getMessages, getSession, isSessionFull } from '@/lib/chat/store'
 import { detectUsedWords } from '@/lib/chat/target-words'
 import type { Db } from '@/lib/lexicon/store'
+import { loadConfig } from '@/lib/llm/config'
 import type { PersonaProfile } from '@/types/lexicon'
 
 interface Body {
@@ -44,6 +45,7 @@ export async function POST(request: NextRequest, ctx: { params: Promise<{ id: st
 
   const env = await getChatEnv()
   const db = env.DB as unknown as Db
+  const config = await loadConfig(db)
   const userId = getUserId(request)
 
   const session = await getSession(db, id, userId)
@@ -55,7 +57,7 @@ export async function POST(request: NextRequest, ctx: { params: Promise<{ id: st
   }
 
   try {
-    await spendChatQuota(db, userId, chatQuotaLimit(env), isUnlimited(request, env))
+    await spendChatQuota(db, userId, chatQuotaLimit(env, config), isUnlimited(request, env))
   } catch (err) {
     if (err instanceof ChatQuotaExceeded) {
       return sseError(`今天的對話額度用完了（${err.used}/${err.limit}）。明天會重置。`, 429)
@@ -77,6 +79,7 @@ export async function POST(request: NextRequest, ctx: { params: Promise<{ id: st
 
   const upstream = streamReply({
     env,
+    config,
     topic: session.topic,
     targetWords: session.targetWords,
     persona: body.persona,

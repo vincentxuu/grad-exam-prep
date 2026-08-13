@@ -1,5 +1,6 @@
 import { AIMessage, HumanMessage } from '@langchain/core/messages'
 import { z } from 'zod'
+import type { LlmRuntimeConfig } from '@/lib/llm/config'
 import { generateStructured, messageText, streamText } from '@/lib/llm/invoke'
 import type { LlmEnv } from '@/lib/llm/model'
 import type { ChatMessage, Correction } from '@/types/chat'
@@ -28,6 +29,7 @@ const correctionsSchema = z.object({
 
 interface ConverseOptions {
   env: LlmEnv
+  config?: LlmRuntimeConfig
   topic: string
   targetWords: string[]
   persona?: PersonaProfile
@@ -47,7 +49,7 @@ interface ConverseOptions {
  * 上限因此不只是體驗考量，也是成本上限。
  */
 export function streamReply(opts: ConverseOptions) {
-  const { env, topic, targetWords, persona, history, userMessage } = opts
+  const { env, config, topic, targetWords, persona, history, userMessage } = opts
 
   const context = conversationContext(topic, targetWords, persona)
   const opening = history.length === 0 && !userMessage
@@ -70,6 +72,7 @@ export function streamReply(opts: ConverseOptions) {
 
   return streamText({
     env,
+    config,
     system: CONVERSATION_SYSTEM_PROMPT,
     messages: messages as HumanMessage[],
     maxTokens: CHAT_MAX_TOKENS,
@@ -87,9 +90,14 @@ export type CorrectionResult =
  * 有結構約束的輸出沒辦法逐字渲染成自然對話。拆開之後對話不被打斷，
  * 訂正安靜地補在旁邊。
  */
-export async function correctMessage(env: LlmEnv, userMessage: string): Promise<CorrectionResult> {
+export async function correctMessage(
+  env: LlmEnv,
+  userMessage: string,
+  config?: LlmRuntimeConfig
+): Promise<CorrectionResult> {
   const result = await generateStructured({
     env,
+    config,
     system: CORRECTION_SYSTEM_PROMPT,
     user: userMessage,
     schema: correctionsSchema,
