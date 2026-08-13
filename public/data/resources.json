@@ -1080,14 +1080,6 @@
     "description": "115 考試入學二階的逐關題目。場地描述：門口有一道大門、每組時間到才開啟，進去後有四間小型會議室依序跑關，每關 4 分鐘且「時間控制非常精準，完全沒有延後」"
   },
   {
-    "id": "res-blog-im-110-ntu-oral",
-    "title": "巴哈姆特 — 110 臺大資管面試分享＆心得",
-    "type": "部落格",
-    "examRelevance": ["im"],
-    "url": "https://home.gamer.com.tw/artwork.php?sn=5127998",
-    "description": "同為 110 年的台大面試紀錄，可與同年的 Medium 版互相對照"
-  },
-  {
     "id": "res-cram-im-ntu-top",
     "title": "大碩 — 台大資管所榜首上榜心得",
     "type": "補習班",
@@ -1174,5 +1166,93 @@
     "examRelevance": ["im", "cs"],
     "url": "https://medium.com/@JackChen89/112-%E5%B9%B4%E8%87%BA%E5%A4%A7%E8%B3%87%E8%A8%8A%E7%9B%B8%E9%97%9C%E7%A7%91%E7%B3%BB%E6%8E%A8%E7%94%84-%E8%B3%87%E5%B7%A5-%E8%B3%87%E5%B7%A5-ai-%E8%B3%87%E7%AE%A1-%E8%B3%87%E6%96%99%E7%A7%91%E5%AD%B8-%E9%9B%BB%E4%BF%A1%E4%B8%99-6a344fb306e8",
     "description": "少見地記錄到台大資管所推甄的「優先錄取」——書審突出者直接錄取、不用面試。另記資管四關的另一種叫法（資訊應用、資訊技術、數學、生涯），以及備審四段式架構與找指導教授的時程提醒"
+  },
+  {
+    "id": "res-hackmd-im-112-nocram",
+    "title": "HackMD — 112 資管所資結組／科技組 無補習考試心得",
+    "type": "HackMD",
+    "examRelevance": ["im"],
+    "url": "https://hackmd.io/Jz_Xl2HKRNm0MN4IJvN7jw",
+    "description": "無補習路線最完整的一份教材清單：杰哥（資結／資料庫／OS）、清大黃能富網路 OCW、周志遠 OS OCW、李宏毅 ML、GeeksforGeeks 題庫、MySQL 練習 50 題。作者觀察各校資結每年題型差異大但反覆考同幾個題型，每校寫 6–7 年考古就抓得到"
+  },
+  {
+    "id": "res-medium-im-110-4schools",
+    "title": "Medium — 110 台政交成資管所考試心得",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://joannachou713.medium.com/110-%E5%8F%B0%E6%94%BF%E4%BA%A4%E6%88%90%E8%B3%87%E7%AE%A1%E6%89%80%E8%80%83%E8%A9%A6%E5%BF%83%E5%BE%97-ea0665a47dea",
+    "description": "110 年四校同時報考的路線圖，全數位課（含題庫班）：洪逸計概與資結、丁祺 MIS、林瑋網路與資料庫"
+  },
+  {
+    "id": "res-medium-im-111-tools",
+    "title": "Medium — 111／2022 資管所考試心得（讀書工具與時程）",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://medium.com/@michellechen58/111-2022-%E8%B3%87%E7%AE%A1%E6%89%80%E8%80%83%E8%A9%A6%E5%BF%83%E5%BE%97-fcff15c99498",
+    "description": "少見地把備考工具寫清楚：Notion 管報名狀態與時事、Excel 記錄各科讀書時間比例避免偏科、iPad 寫考古。政大面試部分是重要對照——雖然考的是資管組，第二關卻被問網路流量處理、hash、工作量證明等技術題"
+  },
+  {
+    "id": "res-get-im-110-top",
+    "title": "高點 — 110 台大資管所、成大資管所榜首（中央企管跨考）",
+    "type": "補習班",
+    "examRelevance": ["im"],
+    "url": "https://www.get.com.tw/media/master/ListDetail.aspx?iS=61830&iC=3271",
+    "description": "非本科系、升大四暑假才開始準備的雙榜首路線，可與「準備一年以上」的心得對照，判斷最短可行時程"
+  },
+  {
+    "id": "res-tkb-im-112-top",
+    "title": "TKB — 112 年台大資管所榜首 黃O綸",
+    "type": "補習班",
+    "examRelevance": ["im"],
+    "url": "https://www.tkbgo.com.tw/schoolZone/graduate/comment/toDetail?comment_id=1399",
+    "description": "推甄已正取政大資管，仍推辭大四下交換、續考台大並拿下榜首。資結的觀念串法值得看：從線性結構→Tree→偏斜引出的平衡樹（AVL／RB）→排序複雜度→非比較排序，一條線把整科串起來"
+  },
+  {
+    "id": "res-tkb-im-113-ntu",
+    "title": "TKB — 113 年台大資管所 黃O熹",
+    "type": "補習班",
+    "examRelevance": ["im"],
+    "url": "https://www.tkbgo.com.tw/schoolZone/graduate/comment/toDetail?comment_id=1774",
+    "description": "大一到大三忙社團、成績差到推甄無望，大三下才全面轉考試路線的時程樣本。內容偏補習班心得，主要價值在時間點"
+  },
+  {
+    "id": "res-tkb-nccu-113-case",
+    "title": "TKB — 113 年政大資管所 蔡O玄（國企系輔資工）",
+    "type": "補習班",
+    "examRelevance": ["im"],
+    "url": "https://www.tkbgo.com.tw/schoolZone/graduate/comment/toDetail?comment_id=1779",
+    "description": "MIS「案例庫」的具體練法：背熟理論後每週做 2–3 次案例分析、傳給老師討論，持續 2–3 個月再進題庫班練架構。遇到不會的題目就讀一本專書補（例：平台經濟題去讀《平台革命》）。另有依目標校決定手寫語言的建議（C++ 為主，成大／中山 C、中央 Java）"
+  },
+  {
+    "id": "res-tkb-im-review-oral",
+    "title": "TKB — 資管所書審、口面試心得一覽",
+    "type": "補習班",
+    "examRelevance": ["im"],
+    "url": "https://www.tkbgo.com.tw/schoolZone/graduate/article/toDetail?article_id=1729",
+    "description": "跨校的書審與口面試彙整入口，適合在推甄季開始前先掃一遍各校形式差異"
+  },
+  {
+    "id": "res-tkb-im-115-schedule",
+    "title": "TKB — 2026／115 全台資管所簡章、考科與報名時間",
+    "type": "補習班",
+    "examRelevance": ["im"],
+    "url": "https://www.tkbgo.com.tw/schoolZone/graduate/news/toDetail?news_id=5286",
+    "description": "115 各校考科與考試日期一覽（台大筆試 2/2、面試 3/13；政大筆試 2/6、面試 3/20）。次級來源，報名前仍以官方簡章為準"
+  },
+  {
+    "id": "res-tkb-im-115-exam-changes",
+    "title": "TKB 甄戰 — 115 研究所考試簡章總整理（含台大招生改制）",
+    "type": "補習班",
+    "examRelevance": ["im", "cs"],
+    "url": "https://www.reallygood.com.tw/newExam/inside?str=0AB98C37435A1716A3CA5BFEF5596942",
+    "description": "值得注意的趨勢整理：台大近年大幅壓縮面試準備時間（113 商研所公告名單到口試僅一週，114 已出現最短僅一天的校系），以及 115 有校系把考試入學從筆試改為書審＋面試。台大資管目前仍是筆試 60%＋口試 40%，但這個方向要持續盯"
+  },
+  {
+    "id": "res-pixnet-im-110-working",
+    "title": "痞客邦 — 110 年資管所考試心得（在職備考）",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://pegglife.pixnet.net/blog/posts/16036962722",
+    "description": "在職邊上班邊考的時程樣本（一天 4–6 小時、共 7–8 個月），並附完整成績與最低錄取分對照。作者結論很直接：非必要不要在職準備。無台大成績，適合當中字輩校系的落點參考"
   }
 ]
