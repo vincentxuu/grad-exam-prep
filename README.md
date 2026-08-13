@@ -96,6 +96,7 @@ npx wrangler d1 migrations apply grad-exam-prep-db --remote
 | `/[exam]/reading` | 貼上文章 → 逐字可點查詞 → 一鍵加入單字庫 |
 | `/[exam]/questions/[id]` | 英文題目與題組文章逐字可點（只在英文科開啟） |
 | `/[exam]/chat` | 英文對話練習，把單字庫裡到期的字逼出來 |
+| 全站 header「加字」 | 快速加字（`Ctrl/⌘ + K`）—— 課堂、家教、app 上聽到的字 |
 | `/[exam]/flashcards` | 收藏的字與既有閃卡共用同一個 SM-2 排程 |
 
 詞條走兩層快取：通用詞條（`lexicon_entries`）全站共享，個人化例句

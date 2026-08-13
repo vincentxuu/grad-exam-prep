@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { QuickCapture } from '@/components/lexicon/quick-capture'
 import { cn } from '@/lib/utils'
 
 const staticItems = [
@@ -62,6 +63,8 @@ export function Header() {
             </Link>
           ))}
         </nav>
+
+        <QuickCapture />
       </div>
     </header>
   )
