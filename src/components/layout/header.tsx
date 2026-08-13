@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { QuickCapture } from '@/components/lexicon/quick-capture'
 import { cn } from '@/lib/utils'
 
 const staticItems = [
@@ -12,6 +13,9 @@ const staticItems = [
 const examItems = [
   { key: 'plan', label: '備考計畫' },
   { key: 'flashcards', label: '閃卡練習' },
+  { key: 'lookup', label: '查詞' },
+  { key: 'reading', label: '閱讀' },
+  { key: 'chat', label: '對話' },
   { key: 'past-papers', label: '考古題' },
   { key: 'questions', label: '題庫' },
   { key: 'mock', label: '模擬考' },
@@ -23,6 +27,7 @@ const globalItems = [
   { href: '/guides', label: '上榜心得' },
   { href: '/compare', label: '比較' },
   { href: '/resources', label: '資源庫' },
+  { href: '/settings/llm', label: 'LLM 設定' },
 ]
 
 export function Header() {
@@ -59,6 +64,8 @@ export function Header() {
             </Link>
           ))}
         </nav>
+
+        <QuickCapture />
       </div>
     </header>
   )

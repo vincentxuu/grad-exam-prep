@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { EXAM_LABELS, getSubjectsByExam } from '@/lib/content'
+import { EXAM_LABELS, getQuestionCount, getSubjectsByExam } from '@/lib/content'
 import { localStorageImpl } from '@/lib/storage'
 import type { ExamId } from '@/types/content'
 import pastPapersData from '../../../../public/data/past-papers.json'
@@ -149,6 +149,8 @@ export default function PastPapersPage({ params }: Props) {
                   const practiceData = paperStates[paper.id]
                   const isViewing = viewingPdf?.paperId === paper.id
                   const title = `${year}年 ${EXAM_LABELS[exam as ExamId]} ${subject.name.split('（')[0]}`
+                  // PDF 裡的字沒辦法點，題庫裡的可以 —— 兩邊靠 paperId 對應
+                  const questionCount = getQuestionCount(paper.id)
 
                   return (
                     <Card key={year} className={isViewing ? 'ring-2 ring-primary' : ''}>
@@ -161,18 +163,33 @@ export default function PastPapersPage({ params }: Props) {
                           <Badge variant="outline" className="text-xs">尚未上架</Badge>
                         ) : (
                           <div className="flex flex-1 items-center justify-between gap-2 flex-wrap">
-                            <Button
-                              size="sm"
-                              variant={isViewing ? 'default' : 'outline'}
-                              className="h-7 text-xs px-3"
-                              onClick={() =>
-                                setViewingPdf(
-                                  isViewing ? null : { url: paper.url!, title, paperId: paper.id }
-                                )
-                              }
-                            >
-                              {isViewing ? '收起' : '查看 PDF'}
-                            </Button>
+                            <div className="flex items-center gap-2">
+                              <Button
+                                size="sm"
+                                variant={isViewing ? 'default' : 'outline'}
+                                className="h-7 text-xs px-3"
+                                onClick={() =>
+                                  setViewingPdf(
+                                    isViewing ? null : { url: paper.url!, title, paperId: paper.id }
+                                  )
+                                }
+                              >
+                                {isViewing ? '收起' : '查看 PDF'}
+                              </Button>
+
+                              {questionCount > 0 ? (
+                                <a
+                                  href={`/${exam}/questions?paper=${paper.id}&subject=${paper.subjectId}`}
+                                  className="text-xs text-primary hover:underline whitespace-nowrap"
+                                >
+                                  逐題練習（{questionCount}）→
+                                </a>
+                              ) : (
+                                <span className="text-xs text-muted-foreground whitespace-nowrap">
+                                  尚未進題庫
+                                </span>
+                              )}
+                            </div>
 
                             <div className="flex items-center gap-2">
                               <label className="flex items-center gap-1.5 cursor-pointer select-none">

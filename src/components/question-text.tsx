@@ -1,8 +1,18 @@
+'use client'
+
+import { TappableText, type WordMark } from '@/components/lexicon/tappable-text'
 import { cn } from '@/lib/utils'
 
 interface Props {
   text: string
   className?: string
+  /**
+   * 提供這個 callback 就讓每個英文字可以點來查詞（只在英文科開啟）。
+   * 表格內容維持原樣 —— 表格裡多半是數字與符號，不是生字。
+   */
+  onWordSelect?: (term: string, sentence: string) => void
+  mark?: (word: string) => WordMark
+  activeTerm?: string
 }
 
 // Parse markdown table rows: | a | b | c |
@@ -92,7 +102,7 @@ function MarkdownTable({ content }: { content: string }) {
   )
 }
 
-export function QuestionText({ text, className }: Props) {
+export function QuestionText({ text, className, onWordSelect, mark, activeTerm }: Props) {
   const segments = parseSegments(text)
 
   return (
@@ -102,7 +112,16 @@ export function QuestionText({ text, className }: Props) {
           <MarkdownTable key={i} content={seg.content} />
         ) : (
           <p key={i} className="whitespace-pre-wrap">
-            {seg.content}
+            {onWordSelect ? (
+              <TappableText
+                text={seg.content}
+                onSelect={onWordSelect}
+                mark={mark}
+                activeTerm={activeTerm}
+              />
+            ) : (
+              seg.content
+            )}
           </p>
         )
       )}

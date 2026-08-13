@@ -1,0 +1,42 @@
+# 本機開發用的 secret。複製成 .dev.vars 後填入真實值。
+#   cp .dev.vars.example .dev.vars
+# .dev.vars 已被 .gitignore 忽略，不會進版控。
+#
+# 線上（Cloudflare Workers）不吃這支檔案，要用：
+#   npx wrangler secret put <NAME>
+
+# ── LLM provider ────────────────────────────────────────────────
+# 不設 LLM_PROVIDER 就走預設：groq / llama-3.3-70b-versatile
+GROQ_API_KEY=gsk_xxxxxxxxxxxxxxxxxxxx
+
+# 換 Gemini 的話改成這三行（並把上面那行拿掉或留著都行）
+# LLM_PROVIDER=google
+# LLM_MODEL=gemini-2.0-flash
+# GEMINI_API_KEY=AIzaxxxxxxxxxxxxxxxxxxxx
+
+# Cloudflare Workers AI（跟站台同一個帳號，走 OpenAI 相容端點）
+# 端點路徑帶帳號，所以 token 之外還要 account id；account id 不機密，
+# 線上放 wrangler.json 的 vars 即可，只有 token 要當 secret。
+# LLM_PROVIDER=cloudflare
+# LLM_MODEL=@cf/meta/llama-3.3-70b-instruct-fp8-fast
+# CLOUDFLARE_API_TOKEN=xxxxxxxxxxxxxxxxxxxx
+# CLOUDFLARE_ACCOUNT_ID=1ff43f0d4c3ad3bd98ce5ab767546a68
+
+# 其他可選：openai / openrouter / cerebras / ollama
+# LLM_PROVIDER=openai
+# LLM_MODEL=gpt-4o-mini
+# OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxx
+
+# 本機跑 Ollama（不需要 key）
+# LLM_PROVIDER=ollama
+# LLM_MODEL=llama3.3
+# OLLAMA_API_BASE=http://localhost:11434/v1
+
+# 主 provider 失敗時退到這家（選填）
+# LLM_FALLBACK_PROVIDER=google
+# LLM_FALLBACK_MODEL=gemini-2.0-flash
+
+# ── 額度與認證（都可不設，有預設值）──────────────────────────────
+# LEXICON_DAILY_QUOTA=60
+# CHAT_DAILY_QUOTA=40
+# PASSPHRASE_HASH=<sha256 雜湊，帶此 bearer token 可不受配額限制>

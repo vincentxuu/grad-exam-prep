@@ -2,6 +2,7 @@ import type {
   CardSRSState,
   CustomTask,
   IStorage,
+  SavedWord,
   StorageState,
   UserPreferences,
 } from '@/types/storage'
@@ -14,6 +15,7 @@ function defaultState(): StorageState {
     customTasks: [],
     srsState: {},
     paperPractice: {},
+    savedWords: [],
     preferences: { examId: 'im' },
   }
 }
@@ -88,6 +90,31 @@ export const localStorageImpl: IStorage = {
       state.paperPractice[paperId] = data
     }
     save(state)
+  },
+
+  addSavedWord(word) {
+    const state = load()
+    // 同一個字重複加就更新，不要疊出兩張卡
+    const existing = state.savedWords.findIndex((w) => w.headword === word.headword)
+    if (existing >= 0) {
+      state.savedWords[existing] = { ...state.savedWords[existing], ...word }
+    } else {
+      state.savedWords = [...state.savedWords, word]
+    }
+    save(state)
+  },
+
+  removeSavedWord(headword) {
+    const state = load()
+    const word = state.savedWords.find((w) => w.headword === headword)
+    state.savedWords = state.savedWords.filter((w) => w.headword !== headword)
+    // 一併清掉 SRS 狀態，否則 srsState 會留下永遠不會被複習到的孤兒
+    if (word) delete state.srsState[word.cardId]
+    save(state)
+  },
+
+  getSavedWords() {
+    return load().savedWords
   },
 
   setPreferences(prefs) {

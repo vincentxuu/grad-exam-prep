@@ -39,6 +39,7 @@ function makeState(completedIds: string[]): StorageState {
     customTasks: [],
     srsState: {},
     paperPractice: {},
+    savedWords: [],
     preferences: { examId: 'im' },
   }
 }

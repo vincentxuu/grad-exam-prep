@@ -1,14 +1,18 @@
 import { create } from 'zustand'
+import type { ReviewCard } from '@/lib/review-card'
 import type { RecallRating } from '@/lib/srs'
 import { initialCardState, isDue, reviewCard } from '@/lib/srs'
 import { localStorageImpl } from '@/lib/storage'
-import type { Flashcard } from '@/types/content'
 
+/**
+ * SRS store。吃 `ReviewCard` 而不是 `Flashcard`，靜態閃卡與查來的字才能
+ * 共用同一個排程 —— SM-2 演算法本身沒有任何改動，它只認 cardId。
+ */
 interface FlashcardStore {
-  reviewCard: (card: Flashcard, rating: RecallRating) => void
+  reviewCard: (card: ReviewCard, rating: RecallRating) => void
   getCardState: (cardId: string) => ReturnType<typeof initialCardState>
-  getDueCards: (cards: Flashcard[]) => Flashcard[]
-  getDueCount: (cards: Flashcard[]) => number
+  getDueCards: (cards: ReviewCard[]) => ReviewCard[]
+  getDueCount: (cards: ReviewCard[]) => number
 }
 
 export const useFlashcardStore = create<FlashcardStore>(() => ({
