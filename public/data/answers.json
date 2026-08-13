@@ -1162,8 +1162,8 @@
     },
     "q-pp-cs-en-109-21": {
       "questionId": "q-pp-cs-en-109-21",
-      "answer": "C",
-      "explanation": "此題考的是「獨立分詞構句（absolute phrase）」的用法。句中「her arms _____ to her sides」是一個附加說明主角狀態的獨立片語，其中 arms 與 close 之間為被動關係——手臂是「被緊靠」在身側，因此需用過去分詞 closed 表示被動或完成的狀態。若選現在分詞 closing（B），則表示手臂正在主動靠近，語意不符；選動詞 closes（A）或原形 close（D）則在文法上不合獨立分詞構句的結構。故正確答案為 C) closed。"
+      "answer": "D",
+      "explanation": "本題考查獨立分詞構句中的形容詞用法。close to one's sides 意為「（雙臂）緊貼身側」，close 在此是形容詞「靠近的」，整個 her arms close to her sides 是「名詞＋形容詞片語」的獨立結構，與後面的 her shoulders hunched 並列描述女孩的姿態。(C) closed 看似能與 hunched 形成過去分詞的對稱，是本題最大的陷阱，但 close X to Y 的意思是「把某物關上／封閉」，說 arms closed to her sides 並不成立。(A) closes 是限定動詞，句中已有主要動詞 entered，不能再放一個。(B) closing 表主動進行，語意上雙臂並非正在把自己合上。故選 (D)。"
     },
     "q-pp-cs-en-109-22": {
       "questionId": "q-pp-cs-en-109-22",
@@ -1242,23 +1242,23 @@
     },
     "q-pp-cs-en-109-36": {
       "questionId": "q-pp-cs-en-109-36",
-      "answer": "C",
-      "explanation": "此題為克漏字測驗，選項皆為形容詞，需依文意選出最適當者。選項中 (C) persecutory（迫害妄想的）在臨床心理學與精神醫學語境中最為常見，常與 delusions（妄想）搭配，構成 persecutory delusions（迫害妄想）這一專業術語。(A) demonic 意為「惡魔的」，(B) coronary 意為「冠狀動脈的」，(D) forensic 意為「法醫鑑識的」，三者在學術心理或醫學議題的克漏字語境中均不如 persecutory 貼切。因此，根據詞彙的學術專業性與常見搭配，(C) persecutory 為最合適的答案。"
+      "answer": "B",
+      "explanation": "out of concern for someone 意為「出於對某人的關心」，本句在為 altruism（利他）下定義：出於對他人福祉的關心而行動。(A) conduit 管道、(C) convict 罪犯、(D) contour 輪廓，皆是與 con- 開頭形成干擾的名詞，語意完全不合。故選 (B)。"
     },
     "q-pp-cs-en-109-37": {
       "questionId": "q-pp-cs-en-109-37",
-      "answer": "A",
-      "explanation": "此題考查英文固定句型「be said to have + 過去分詞」，意指「據說曾經……」，是一種常見的被動式報導結構。句意為「據說曾向醫療讀者介紹了一種因反覆頭部撞擊所引起的職業病」。選項(B) spoken 無法搭配 to have 形成合理結構；選項(C) argued to have 雖文法上勉強可用，但語意上 argue 通常接 that 子句而非不定詞；選項(D) dismissed 語意完全相反，表示「駁回、否定」。因此，唯有(A) said 能與 to have introduced 構成正確且自然的英文表達。"
+      "answer": "D",
+      "explanation": "空格與 a desire to help 並列，描述看到他人身處困境時產生的情緒，empathy（同理心）最合。同字根選項是典型陷阱：(A) telepathy 心電感應、(B) antipathy 反感、(C) apathy 冷漠——後兩者語意與「想幫忙」正好相反。故選 (D)。"
     },
     "q-pp-cs-en-109-38": {
       "questionId": "q-pp-cs-en-109-38",
-      "answer": "C",
-      "explanation": "本題考查詞彙在醫學語境中的使用。句子描述 Martland 將拳擊俚語「punch drunk」演變成一個正式的臨床概念。「clinical entity」是醫學術語，意指一個被認定、定義完整的疾病或症候群，完全符合文意。選項 A「essence」（本質）和 D「substance」（物質/實質）不符合臨床語境，選項 B「tip」（提示/技巧）語意不通。因此，「clinical entity」（臨床實體）是唯一符合醫學寫作慣例及文脈語境的選項。"
+      "answer": "A",
+      "explanation": "本句解釋 reciprocal altruism（互惠利他）：幫助他人時期待自己能得到某種好處或回報，benefit or payoff 為同義並列。(B) standoff 僵局、(C) blastoff 發射升空、(D) layoff 裁員，都是 -off 結尾的干擾項，語意不合。故選 (A)。"
     },
     "q-pp-cs-en-109-39": {
       "questionId": "q-pp-cs-en-109-39",
-      "answer": "B",
-      "explanation": "本題考英文閱讀理解，文章討論 Martland 對拳擊手腦震盪的研究。題目問 Martland 所記錄的是拳擊手的何種疾病。關鍵在於拳擊手因其職業性質（從事拳擊運動）而遭受反覆頭部撞擊，導致此類腦部損傷，因此這是一種「職業性疾病」（occupational disease）。選項 A「seasonal」（季節性的）、C「diurnal」（每日的）、D「periodical」（週期性的）皆與職業環境無關，不符合語境。選項 B「occupational」（職業性的）最能準確描述拳擊手因職業暴露而產生的疾病性質，為正確答案。"
+      "answer": "A",
+      "explanation": "句意為「當個體『不顧』自身代價、為更大的群體效力時，許多物種因此受益」，disregard personal costs 意為置個人代價於度外，與後半句 act in service of the larger group 相呼應。(B) dispend 罕用且語意不合、(C) dismay 使沮喪、(D) disrupt 擾亂，皆無法表達「不計代價」。故選 (A)。"
     },
     "q-pp-cs-en-109-4": {
       "questionId": "q-pp-cs-en-109-4",
@@ -1267,23 +1267,23 @@
     },
     "q-pp-cs-en-109-41": {
       "questionId": "q-pp-cs-en-109-41",
-      "answer": "D",
-      "explanation": "「morass」原意為沼澤地，引申為混亂、錯綜複雜的困境或泥淖狀態。在文章第一句中，它用來描述網路上充斥仇恨與謊言的混亂局面。選項中，(A) concept（概念）、(B) spread（擴散）、(C) cave（洞穴）均與此意不符。(D) chaos（混亂、無秩序）最能表達「morass」在此語境下所傳達的雜亂無章、令人無所適從的狀態，因此為正確答案。"
+      "answer": "A",
+      "explanation": "pose a threat to 是固定搭配，意為「對……構成威脅」，主詞為焦土戰術與化學戰。(B) poise 意為「使平衡、泰然自若」，與 threats 不搭配，且拼字近似正是陷阱所在。(C) paste 黏貼、(D) probe 探查，語意皆不合。故選 (A)。"
     },
     "q-pp-cs-en-109-42": {
       "questionId": "q-pp-cs-en-109-42",
-      "answer": "B",
-      "explanation": "根據文章內容，此題考查對社群媒體特性的理解。選項(B)「社群媒體的特點是令人欣喜若狂（euphoric）」最符合文章的論述，因為許多關於社群媒體的學術分析文章指出，這些平台在設計上具有讓使用者產生愉悅和興奮感的特性。選項(A)語法結構不完整（to creative communicative democracy），不符合文章表達方式。選項(C)聲稱社群媒體能滿足每個人內心的渴望，過於絕對化。選項(D)雖然也常見於相關討論，但文章的核心論點聚焦於社群媒體「令人欣喜」的本質特性，而非單純討論它是否製造新問題。"
+      "answer": "C",
+      "explanation": "本句描述衝突結束、停火協議達成、軍隊「撤離」，retreat 意為撤退。(A) retrace 是「折返、回溯（retrace one's steps）」。(B) retard 拖慢。(D) retract 縮回、收回（言論），主詞通常不是軍隊本身。故選 (C)。"
     },
     "q-pp-cs-en-109-43": {
       "questionId": "q-pp-cs-en-109-43",
       "answer": "A",
-      "explanation": "根據文章內容，社群媒體對社會的主要影響是造成「兩極化」（polarization），即使不同立場的人更加對立、分裂。社群媒體的演算法傾向於推送符合用戶既有觀點的內容，形成「同溫層」效應，加深社會分歧。相較之下，「統一」（unification）、「和諧化」（harmonization）與「具象化」（figuration）均與社群媒體被廣泛記錄的負面社會影響不符。因此，答案為 (A) polarization。"
+      "explanation": "in their wake 是固定片語，原指船行過後的航跡，引申為「在其身後、隨之而來」，句意為軍隊撤離後留下了意想不到的野生動物庇護所。(B) wire 電線、(C) will 意志、(D) wage 工資，皆無此片語用法。故選 (A)。"
     },
     "q-pp-cs-en-109-44": {
       "questionId": "q-pp-cs-en-109-44",
-      "answer": "C",
-      "explanation": "這道題考查句子插入位置，待插入句為「The internet, after all, is populated by people—billions of them.」此句強調網際網路的本質是由人所組成的，帶有「after all（畢竟）」這個轉折語氣，說明前文應有對網路技術或平台本身的描述，而後文則應進入以人為中心的討論。[Y] 位置是段落由「科技視角」轉向「人的行為」的關鍵銜接點，插入此句後能自然引導後續關於人類在網路上行為模式的論述。選項 C（[Y]）為最合邏輯的插入位置，能使段落論證流暢且連貫。"
+      "answer": "B",
+      "explanation": "空格與 ecological 並列，由 cultural 修飾，指 DMZ 論壇所要保護的「生態與文化遺產」，heritage 意為遺產、傳承。(A) withdrawal 撤離（雖與上文的撤軍有關，但此處要的是被保護的對象）、(C) deputy 代理人、(D) tenure 任期，皆不合。故選 (B)。"
     },
     "q-pp-cs-en-109-5": {
       "questionId": "q-pp-cs-en-109-5",
@@ -1563,77 +1563,77 @@
     "q-pp-cs-en-112-36": {
       "questionId": "q-pp-cs-en-112-36",
       "answer": "C",
-      "explanation": "本題考查文章中未提及的自閉症者溝通挑戰。文章通常提及自閉症者在非語言溝通（如眼神接觸、肢體語言）上的困難（選項B），以及情感障礙（選項A）等議題。然而，自閉症相關文章討論語言發展遲緩時，通常著重於口語表達而非書寫層面，因此「書寫方面的語言發展遲緩」（選項C）並不是文章中提及的內容。選項A的情感障礙與選項B的非語言溝通困難是自閉症文獻中最常見的主題，故C為文章未提及的挑戰。"
+      "explanation": "文章列出的溝通困難包括「not speaking at all（完全不說話）、needing longer to process information（需要較長時間處理訊息）、not understanding facial expressions（看不懂臉部表情）」，後者即 (B) 的非語言溝通困難；文中也多次提到 anxiety、emotional meltdowns，對應 (A) 的情緒障礙。唯獨「書寫方面的語言發展遲緩」全文未提，故選 (C)。"
     },
     "q-pp-cs-en-112-37": {
       "questionId": "q-pp-cs-en-112-37",
       "answer": "B",
-      "explanation": "「overwhelming」這個形容詞的核心含義是「壓倒性的、極為巨大的」，用來形容數量、程度或力量上遠超預期的情況。選項 (A) 意指「力量非常微弱」，與 overwhelming 的語意相反。選項 (C) 意指「顏色非常深暗」，與該詞毫無關聯。選項 (B)「數量非常龐大」最貼切地反映了 overwhelming 的實際語意，例如 overwhelming evidence（壓倒性的證據）或 overwhelming majority（絕大多數）。因此正確答案為 (B)。"
+      "explanation": "該字出現在 \"sensory overload when noise, smells, touch, and bright lights become very painful and overwhelming\"，描述感官刺激多到難以承受，因此 overwhelming 在此意為「量大到無法招架」，對應 (B) very great in amount。(A) 語意相反，(C) 與顏色有關，與感官超載的語境無關。故選 (B)。"
     },
     "q-pp-cs-en-112-38": {
       "questionId": "q-pp-cs-en-112-38",
       "answer": "C",
-      "explanation": "根據文章內容，英國國家自閉症協會（National Autistic Society）確實是英國領先的自閉症慈善機構（選項A正確），文章也支持自閉症患者應盡早獲得幫助（選項B正確）。然而，選項C宣稱「超過半數的自閉症成人回報有嚴重心理健康問題」，與文章中實際引用的數據不符——文章中提到的比例遠高於此，約有七成（70%）的自閉症人士有心理健康問題。因此，選項C的敘述與文章內容不符，是本題的錯誤陳述。"
+      "explanation": "文章原文為 \"over a third of autistic adults have reported serious mental health problems\"（超過三分之一），(C) 卻寫成 over half（超過一半），數字被放大，與原文不符。(A) 對應 \"The National Autistic Society is the UK's leading charity for autistic people.\"，(B) 對應 \"It is very important that autistic people get help from an early age.\"，兩者皆與原文一致。故選 (C)。"
     },
     "q-pp-cs-en-112-39": {
       "questionId": "q-pp-cs-en-112-39",
       "answer": "B",
-      "explanation": "本題考查閱讀理解，判斷文章主旨。選項(A)描述的是關於歧視自閉症兒童與成人的個案研究，選項(C)描述的是比較自閉症與注意力缺乏過動症的特徵，這兩者均過於狹隘或偏向比較性研究。選項(B)指出文章呈現自閉症族群在教育與就業上的不平等，這符合此類以社會議題為核心的英文閱讀文章的常見主旨——探討自閉症者在教育機會及職場上所面臨的系統性障礙與不公平待遇。因此，本題正確答案為(B)。"
+      "explanation": "文章以兩個數據點呈現教育與就業上的不平等：「Autistic children are three times more likely to be excluded from school」與「Only one in six autistic people in the UK have a full-time job」，正是 (B) 所述。(A) 錯在本文不是個案研究（case study），而是概述加上倡議。(C) 錯在全文從未提及 ADHD，更沒有比較。故選 (B)。"
     },
     "q-pp-cs-en-112-40": {
       "questionId": "q-pp-cs-en-112-40",
       "answer": "A",
-      "explanation": "這篇文章的內容涵蓋自閉症譜系障礙的溝通挑戰、心理健康問題，以及英國自閉症協會（National Autistic Society）作為英國主要慈善機構的介紹。這類內容與自閉症倡議組織代表發表的演講稿高度吻合，語氣嚴肅且具教育性。選項B（單口喜劇腳本）與文章嚴肅的主題完全不符；選項C（教授在課程網站的公告）雖有學術性，但文章重點在於倡導與公眾意識，而非課程事宜。因此，最符合的答案是選項A，即由自閉症協會代表所發表的簡短演講稿。"
+      "explanation": "判斷文體要看人稱與結尾訴求。文中以 \"all of us have difficulties\"、\"send us into…meltdowns\" 這種第一人稱複數自述，又說 \"The National Autistic Society is the UK's leading charity… Since 1962, we have been changing society's attitude\"，最後以 \"with your help, we can\" 對聽眾喊話，明顯是該協會代表對外發言的講稿。(B) 全文無任何幽默鋪陳，(C) 課程公告不會有募款式訴求。故選 (A)。"
     },
     "q-pp-cs-en-112-41": {
       "questionId": "q-pp-cs-en-112-41",
       "answer": "B",
-      "explanation": "本題考查各年代環境意識的歷史發展。選項B聲稱1940年代由於生態災難，大眾對企業破壞生態行為變得非常敏感，此說法為錯誤（FALSE）。1940年代正值二次世界大戰及戰後工業擴張時期，社會大眾的關注焦點在於戰爭與重建，而非環境議題。大規模的環保意識覺醒實際上是從1960至1970年代才逐漸形成，例如1970年的地球日（Earth Day）創立及美國環境保護署（EPA）的成立。相較之下，選項A關於1970年代環保意識提升的描述，以及選項C關於1990年代消費者與監管機構日益重視環境議題的描述，均符合歷史事實。"
+      "explanation": "文章談的年代是 60s、70s（industries were already greenwashing…to calm fears）、80s（several ecological catastrophes…prompted various greenwashing campaigns，且民調顯示逾八成民眾視環境犯罪為最可惡的企業罪行）與 90s（各種環保標語出現）。(B) 把生態浩劫引發的大眾反感移到 1940 年代，文中完全沒有提及該年代，故為錯誤敘述。(A)(C) 分別對應 60s–70s 與 90s 的段落。故選 (B)。"
     },
     "q-pp-cs-en-112-42": {
       "questionId": "q-pp-cs-en-112-42",
       "answer": "B",
-      "explanation": "本題考查句義改寫，原底線句描述綠色流行語（green buzzwords）與漂綠（greenwashing）之間的關係。選項(B)「Although they can be misused for greenwashing, green buzzwords are reassuring」使用讓步結構，表達雖然綠色流行語可能被濫用於漂綠，但仍能讓人感到安心，最能保留原句的語意重心。選項(A)暗示不論是否有漂綠行為，綠色流行語都能讓人放心，過於絕對，忽略了潛在的負面使用情境。選項(C)將安心感限縮在「簡單的漂綠案例」中，語意過於狹窄，與原句意思不符。因此，答案為(B)。"
+      "explanation": "原句是 While 引導的讓步句：「雖然在包裝上看到這些字眼讓人安心，但這是不是漂綠，要看這些詞究竟指什麼。」(B) 用 Although 保留了同樣的讓步結構——標語令人安心，但可能被拿來漂綠。(A) 把「whether… depends on」讀成「不論是否漂綠都令人安心」，抹掉了原句的但書。(C) 誤讀 simply，把「單純只是漂綠而已」的 simply 當成「單純的漂綠案例」。故選 (B)。"
     },
     "q-pp-cs-en-112-43": {
       "questionId": "q-pp-cs-en-112-43",
       "answer": "C",
-      "explanation": "此題考查兩句之間的修辭關係。第二句使用讓步結構，先承認某件事只是小過失（concedes a minor point），再說明罰款的原因（provides a reason for the fine），這是學術英文中常見的「讓步＋說明」結構。選項（A）錯誤，因為「ignores a small point」並非讓步，而是迴避；選項（B）錯誤，因為「emphasizes slight wrongdoing」代表強調過失，與讓步語氣相反。選項（C）正確描述了第二句先退一步承認過失輕微，再給出罰款理由的邏輯脈絡。"
+      "explanation": "第二句以 \"Although technically correct\" 開頭，先退一步承認「就技術上而言標示沒錯」——這是讓步（concede a minor point）；接著說瓶子在掩埋場要一千年才分解、不符當地標示規範，這正是被罰款的理由。(A) 錯在 ignores（忽略）而非讓步，且罰款的例子出現在第一句而非第二句。(B) 錯在 emphasizes——第二句是淡化而非強調該過失。故選 (C)。"
     },
     "q-pp-cs-en-112-44": {
       "questionId": "q-pp-cs-en-112-44",
       "answer": "A",
-      "explanation": "本題詢問文章中未涵蓋的主題。關於「漂綠」（greenwashing）的文章，通常會說明漂綠的定義（選項B）以及給消費者的建議（選項C），這兩項都是此類文章的常見內容。選項A「如何漂綠的技巧」則與此類文章的目的相悖——這類文章旨在揭露和警告漂綠行為，而非教導企業如何進行漂綠。因此，文章中不會涵蓋如何實施漂綠的技巧，答案為A。"
+      "explanation": "文末四點建議是教消費者「如何不被漂綠話術騙倒」（tips to help you avoid being fooled by greenwashing），立場站在消費者這邊，對應 (C)；第一段給出 greenwashing 的定義，對應 (B)。全文從未教企業「怎麼漂綠」，(A) 是把建議的對象與方向都反過來的陷阱選項。故選 (A)。"
     },
     "q-pp-cs-en-112-45": {
       "questionId": "q-pp-cs-en-112-45",
       "answer": "C",
-      "explanation": "本題考查文章中提及的「漂綠」（greenwashing）常見行銷用語。根據該類文章的常見內容，「biodegradable（可生物降解）」和「all natural（純天然）」是傳統漂綠行銷中最常被引用的術語，幾乎出現在所有討論漂綠的文章中。「carbon neutral（碳中和）」則是較新的企業氣候承諾用語，在討論傳統漂綠術語的文章中未必會提及。因此，文章中未提到的用語為 carbon neutral，答案選 (C)。"
+      "explanation": "文章列舉的標語有 recyclable、biodegradable、environmentally friendly、all natural，以及近年常見的 sustainable、renewable、organic，另外提到 green、pure、natural。(A) 與 (B) 都在其中，唯獨 carbon neutral（碳中和）全文未出現。故選 (C)。"
     },
     "q-pp-cs-en-112-46": {
       "questionId": "q-pp-cs-en-112-46",
       "answer": "C",
-      "explanation": "情緒消退偏誤（fading affect bias）是指負面情緒記憶的強度比正面情緒記憶消退得更快的心理現象。這種偏誤使得人們在回顧過去時，負面感受已大幅減弱而正面感受相對保留，從而導致對過去事件產生比實際更美好的印象。玫瑰色回憶（rosy retrospection）正是這種機制的結果，即人們傾向於將過去的經歷記憶得比當時實際感受更為正面、愉快。選項(A)錯誤，因為兩者均非記憶喪失的原因；選項(B)所描述的是虛假共識效應（false consensus effect），與題目中兩個概念的定義不符。因此，選項(C)正確說明了情緒消退偏誤是導致玫瑰色回憶的機制。"
+      "explanation": "文章定義 fading affect bias 為 \"how the brain retains positive memories while allowing negative ones to fade\"，而這正是 rosy retrospection（回憶美化）背後的機制，(C) 完整重述了這層因果。(A) 兩者造成的是記憶偏差而非記憶喪失。(B) 描述的是 false consensus effect（假共識效應），且把因果方向弄反。故選 (C)。"
     },
     "q-pp-cs-en-112-47": {
       "questionId": "q-pp-cs-en-112-47",
       "answer": "A",
-      "explanation": "「yearning」意指強烈的渴望或嚮往之情，是一種深切的情感需求。選項 (A) desire 意為「渴望、欲望」，與 yearning 同義，皆表示強烈的期盼或嚮往。選項 (B) slogan 意為「口號」，(C) complaint 意為「抱怨」，(D) memory 意為「記憶」，三者均與 yearning 的語義無關。因此正確答案為 (A) desire。"
+      "explanation": "該字出現在 \"instills the idea that our best days are behind us and a yearning for 'the good old days'\"，指對過去美好時光的強烈嚮往，與 (A) desire（渴望）同義。(B) slogan 口號、(C) complaint 抱怨、(D) memory 記憶，皆非 yearning 的同義詞——(D) 尤其是陷阱，本文雖在談記憶，但 yearning 本身指的是渴望而非記憶。故選 (A)。"
     },
     "q-pp-cs-en-112-48": {
       "questionId": "q-pp-cs-en-112-48",
       "answer": "A",
-      "explanation": "本題考查句意最接近的選項。根據政治衰退論（declinist arguments）的常見論述脈絡，原句的核心意涵通常是：衰退論述在政治上雖然常常缺乏事實依據，卻依然具有說服力。選項(A)「In politics, declinist arguments, despite often being false, are persuasive.」以讓步結構（despite）呈現「雖假卻有說服力」的關係，與原句最為吻合。選項(B)認為衰退論因常為假而吸引力有限，邏輯方向相反。選項(C)強調衰退論不具說服力且常被揭穿，語氣更為負面，亦與原句不符。因此正確答案為(A)。"
+      "explanation": "原句為 \"Declinist arguments are often used by politicians, and although historians have shown that they are frequently false, they can effectively appeal to a bias toward a past that looks enviable in retrospect.\"，讓步結構是「雖然常被證明是假的，卻仍然很有說服力」，(A) 以 despite 保留了同樣的轉折。(B) 與 (C) 都把結論反過來，說這類論述沒有吸引力或沒有說服力，與 effectively appeal 矛盾。故選 (A)。"
     },
     "q-pp-cs-en-112-49": {
       "questionId": "q-pp-cs-en-112-49",
       "answer": "B",
-      "explanation": "衰退主義（declinism）是一種認為社會正在走下坡的悲觀觀點，政客常利用這種情緒來獲取政治利益。選項B指出政客藉由「衰退論述」來吸引那些懷念「美好舊日時光」的選民，這正是衰退主義被政治操弄的典型方式。例如「讓國家再次偉大」這類口號，即是訴諸懷舊情感與對過去的嚮往。選項A強調散布虛假資訊製造分裂，選項C強調對未來的恐懼，這兩者雖有部分關聯，但並非文章所描述的衰退主義被利用的核心手段。因此，最符合題意的答案為B。"
+      "explanation": "文章說政治人物利用衰退論訴諸「對回顧起來令人稱羨的過去的偏好」，也就是打動那些嚮往 \"the good old days\" 的人，(B) 正是這個機制。(A) 的社群媒體與製造社會分裂在文中完全沒提。(C) 的方向錯了——衰退論的著力點是美化過去，而非渲染對未來的恐懼。故選 (B)。"
     },
     "q-pp-cs-en-112-50": {
       "questionId": "q-pp-cs-en-112-50",
       "answer": "C",
-      "explanation": "根據文章，作者建議我們應對「玫瑰色回顧」（rosy retrospection）效應的方式是：首先要意識到它對我們判斷與決策的影響，其次要避免「衰退主義」（declinist perspective）的觀點，最後要注意不要過度偏好美化過去而忽視未來。選項C完整涵蓋了這三個核心建議，與作者的論述最為吻合。選項A雖提到使用多方資訊來源，但這並非文章針對玫瑰色回顧效應所給出的主要建議；選項B關於記憶訓練的說法在文章中並無提及。"
+      "explanation": "最後一段的三個要點依序是：maintaining an awareness of its effects 以改善判斷與決策、help us avoid falling into a declinist perspective、not to prefer that rosy view of the past to a genuinely bright future，(C) 正是這三點的總結。(A) 的多方查證與 (B) 的記憶訓練文中都沒有提到。故選 (C)。"
     },
     "q-pp-cs-en-113-1": {
       "questionId": "q-pp-cs-en-113-1",
@@ -5752,8 +5752,8 @@
     },
     "q-pp-cs-en-109-40": {
       "questionId": "q-pp-cs-en-109-40",
-      "answer": "D",
-      "explanation": "本題考查英文動詞時態與語態的選擇。句子描述 Martland 的研究發現，任何「曾經被擊中頭部的人」都可能出現病理症狀。關鍵在於關係子句 「anyone who _____ hit in the head「 描述的是一個已發生過的過去動作（被打到頭），因此需使用過去完成式被動語態 「had been「。過去完成式（had been）用於表示在主要動作（could reveal）之前已完成的動作，符合此語境中「曾被打過頭的人」的含義。選項 A（has been）為現在完成式，選項 B（would be）為條件式，選項 C（were to be）用於假設語氣，均不如 「had been「 貼切地表達研究對象「過去曾被打到頭」的事實背景。"
+      "answer": "C",
+      "explanation": "be prone to something 是固定搭配，意為「傾向於、易於」，句意為活在當下的人與資源較少的人比較容易做出利他行為。(A) profound 深刻的、(D) proper 適當的，都不與 to 構成此語意；(B) proof 是名詞／形容詞「防……的」，搭配也不對。故選 (C)。"
     },
     "q-pp-cs-en-108-4": {
       "questionId": "q-pp-cs-en-108-4",
@@ -7079,6 +7079,286 @@
       "questionId": "q-pp-cs-en-112-35",
       "answer": "B",
       "explanation": "介系詞 without 後接動名詞，且後方有 with the process，interfere with 意為「干擾」，句意為「觀察者可在完全不干擾過程的情況下蒐集深度資料」，正是田野觀察相對於實驗室的優點。(A) illuminating 闡明、(C) indicating 指出、(D) investigating 調查，皆不與 with 構成此語意。故選 (B)。"
+    },
+    "q-pp-cs-en-109-45": {
+      "questionId": "q-pp-cs-en-109-45",
+      "answer": "D",
+      "explanation": "seek refuge 是固定搭配，意為「尋求庇護」，呼應全段「戰爭遺留的無人地帶反而成為野生動物庇護所」的主旨。(A) confection 糖果、(C) reflex 反射動作，語意不合。(B) canopy 樹冠層雖與生態有關，但 seek canopy 並非固定用法，也無法承接前文的 sanctuaries。故選 (D)。"
+    },
+    "q-pp-cs-en-109-46": {
+      "questionId": "q-pp-cs-en-109-46",
+      "answer": "A",
+      "explanation": "全文先講實驗室培養肉的發展與 2040 年的預測，最後又以「這一切目前多半仍屬假設」與大眾的心理障礙收尾，整體是開放式的探問而非定論，(A) 的問句標題最能涵蓋。(B) 把預測寫成斷言，且原文說的是六成而非全部取代。(C)(D) 各自只涵蓋最後一段的一部分，格局太小。故選 (A)。"
+    },
+    "q-pp-cs-en-109-47": {
+      "questionId": "q-pp-cs-en-109-47",
+      "answer": "D",
+      "explanation": "原文寫 Just「turned its attention to cultured meats, and is now one of the companies leading the way」，(D) 正確。(A) 錯在順序：第一份可食用的實驗室樣本是 2000 年的金魚細胞魚片，NASA 是「隔年」才開始資助火雞細胞研究。(B) 錯在原文說的是 2040 年全球六成的肉不來自屠宰動物，不是全部都在實驗室生產。(C) 錯在原文是 \"viewed by many as an unnecessary evil\"（許多人視大規模畜牧業為必要之惡般的存在），並非人類憎恨殺生。故選 (D)。"
+    },
+    "q-pp-cs-en-109-48": {
+      "questionId": "q-pp-cs-en-109-48",
+      "answer": "B",
+      "explanation": "空格前後為 \"a culinary race, with companies ____ to be the first to bring 'clean meat' to the mass market\"，既然是一場競賽，各家公司是在「競逐」成為第一，vie to do something 意為爭相做某事。(A) revolting 令人作嘔的（或 revolt 反叛）、(C) vanishing 消失、(D) wiggling 扭動，皆與 race 的語境不符。故選 (B)。"
+    },
+    "q-pp-cs-en-109-49": {
+      "questionId": "q-pp-cs-en-109-49",
+      "answer": "B",
+      "explanation": "空格前是 \"people are seemingly becoming more accepting,\" he adds, \"but ____.\"，but 要求轉折：民調變好看，但那和真的端上餐桌是兩回事，(B) 正是這個保留態度。(C) 語氣樂觀，與 but 的轉折方向相反。(A)(D) 雖然都是文中相關的話題，卻沒有承接「調查結果 vs. 實際購買」的對比，接在 but 之後語意不通。故選 (B)。"
+    },
+    "q-pp-cs-en-109-50": {
+      "questionId": "q-pp-cs-en-109-50",
+      "answer": "D",
+      "explanation": "最後一段以反問句質疑培養肉能否撼動人類 240 萬年的吃肉習慣與年產值一兆美元的產業，接著引用 Tetrick 的 \"it's just hypothetical for the most part right now\"，並指出一般人對實驗室培養的肉仍感陌生，通篇是保留、存疑的語氣。(A) 諷刺、(B) 緊張的情緒文中沒有，(C) 樂觀則與整段的質疑方向相反。故選 (D)。"
+    },
+    "q-pp-cs-en-115-1": {
+      "questionId": "q-pp-cs-en-115-1",
+      "answer": "B",
+      "explanation": "後文的 the wealth gap… has reached historic levels 與 this imbalance 是關鍵線索，空格要填的是「不平等」，income inequality（所得不均）為固定術語。(A) equality 與 (C) harmony 語意相反，(D) stability 也與 imbalance 矛盾。故選 (B)。"
+    },
+    "q-pp-cs-en-115-2": {
+      "questionId": "q-pp-cs-en-115-2",
+      "answer": "B",
+      "explanation": "empirical evidence（實證證據）是學術寫作的固定搭配，且後句的 raw data and measurable results 正是在說明何謂證據。(A) imagination 想像、(C) ideology 意識形態、(D) rhetoric 修辭，三者都與「可測量的資料」相斥，也無法 be gathered over a longitudinal study。故選 (B)。"
+    },
+    "q-pp-cs-en-115-3": {
+      "questionId": "q-pp-cs-en-115-3",
+      "answer": "A",
+      "explanation": "rather than 建立對比：永續發展 vs. 短期的什麼？後句的 immediate financial profit 直接點明答案是「短期利益」，short-term gains 為固定搭配。(B) delays 延誤不會讓股東滿意，(C) ethics 倫理與 deplete natural resources 矛盾，(D) equity 公平／股權在此語意不通。故選 (A)。"
+    },
+    "q-pp-cs-en-115-4": {
+      "questionId": "q-pp-cs-en-115-4",
+      "answer": "B",
+      "explanation": "後句的 This successful reproduction of the original results 是同義改寫，replicate 意為「複製、重現（研究結果）」，是科學方法的核心術語。(A) contradicted 反駁與 confirmed the reliability 矛盾，(C) ignored 忽視、(D) concealed 隱瞞，都無法由獨立研究「執行」。故選 (B)。"
+    },
+    "q-pp-cs-en-115-5": {
+      "questionId": "q-pp-cs-en-115-5",
+      "answer": "D",
+      "explanation": "without showing personal bias 與 This objective approach 兩處都指向「中立」，neutral tone 即中立語氣。(A) sarcastic 諷刺、(C) hostile 敵意，都是帶立場的語氣；(B) sentimental 情感用事，與 objective 相斥。故選 (D)。"
+    },
+    "q-pp-cs-en-115-6": {
+      "questionId": "q-pp-cs-en-115-6",
+      "answer": "B",
+      "explanation": "ethical dilemma（倫理兩難）是固定搭配，後句的 debating whether… outweighs the potential social risks 正是在描述兩難。(A) conveniences 便利與 (C) advantages 優點都是正面詞，與 serious、risks 的語氣不合；(D) traditions 傳統與 raised 也搭配不起來。故選 (B)。"
+    },
+    "q-pp-cs-en-115-7": {
+      "questionId": "q-pp-cs-en-115-7",
+      "answer": "A",
+      "explanation": "theoretical rigor（理論嚴謹度）是學術評審用語，與後文「靠軼事觀察而非既有學術框架」正好呼應——缺的就是嚴謹。(B) decoration 裝飾語意不通，(C) ambition 企圖心與 anecdotal observation 的問題無關，(D) curiosity 好奇心亦然。故選 (A)。"
+    },
+    "q-pp-cs-en-115-8": {
+      "questionId": "q-pp-cs-en-115-8",
+      "answer": "B",
+      "explanation": "空格接 between A and B，且後句以 this link 回指，correlation（相關性）是最合的統計術語。(A) obstacle 障礙不會存在於「教育程度與健康結果之間」這種關係語境。(C) contradiction 矛盾與句中「學歷越高、醫療可近性越好」的一致趨勢不合。(D) illusion 錯覺則與 The data suggest a clear… 相斥。故選 (B)。"
+    },
+    "q-pp-cs-en-115-9": {
+      "questionId": "q-pp-cs-en-115-9",
+      "answer": "A",
+      "explanation": "every member was in full agreement 與 This total consensus 都是同義提示，unanimous decision 即「全體一致的決議」。(B) accidental 偶然、(C) impulsive 衝動，都與 after extensive discussion 矛盾；(D) reluctant 勉強的雖可修飾 decision，但與 full agreement、show of unity 的正面語氣不符。故選 (A)。"
+    },
+    "q-pp-cs-en-115-10": {
+      "questionId": "q-pp-cs-en-115-10",
+      "answer": "C",
+      "explanation": "\"food deserts\"、limited access、underserved populations 三處線索一致指向「被邊緣化的」社群，marginalized 為社會學固定用語。(A) dominant 主導的與 (B) privileged 享有特權的語意相反，(D) commercial 商業的則與社經弱勢無關。故選 (C)。"
+    },
+    "q-pp-cs-en-115-11": {
+      "questionId": "q-pp-cs-en-115-11",
+      "answer": "D",
+      "explanation": "the sheer volume of digital content（數位內容的龐大數量）是關鍵，information overload 即「資訊超載」。(A) scarcity 稀缺正好相反，(B) balance 平衡與 (C) equality 平等都無法解釋「難以辨別真假」的成因。故選 (D)。"
+    },
+    "q-pp-cs-en-115-12": {
+      "questionId": "q-pp-cs-en-115-12",
+      "answer": "D",
+      "explanation": "not without ___ 是雙重否定的讓步結構，後句以 Despite these objections 回指，可知空格是「批評」。(A) consensus 共識與 (B) popularity 受歡迎程度都是正面詞，放進 not without 會與 who believe the mathematical model is incomplete 矛盾；(C) efficiency 效率則與整句無關。故選 (D)。"
+    },
+    "q-pp-cs-en-115-13": {
+      "questionId": "q-pp-cs-en-115-13",
+      "answer": "C",
+      "explanation": "第二段的關鍵句是 \"Algorithms that rank, filter, or generate language do not eliminate power relations; instead, they reconfigure them in less visible forms.\"——不是消除而是重新配置，(C) 的 reshape 正是 reconfigure 的同義改寫。(A) 與 (D) 都被 do not eliminate 直接否定。(B) 與全文「語言、權力與技術交纏」的立論相反。故選 (C)。"
+    },
+    "q-pp-cs-en-115-14": {
+      "questionId": "q-pp-cs-en-115-14",
+      "answer": "C",
+      "explanation": "原文 \"Although such systems are often framed as neutral tools, their design embeds assumptions about legitimacy and normativity.\" 以 Although 讓步後直接指出：設計本身就內嵌了對正當性與規範性的假設，(C) 即此句的濃縮。(A) 運算錯誤、(B) 市場誘因、(D) 使用者抵抗，全文皆未提及。故選 (C)。"
+    },
+    "q-pp-cs-en-115-15": {
+      "questionId": "q-pp-cs-en-115-15",
+      "answer": "D",
+      "explanation": "該片語承接 they reconfigure them，指權力關係被重新編排成「較不可見的形式」——並非消失，而是藏進技術系統裡，(D) 的 concealed within technical systems 正是此意。(A) diminishing 會誤讀成權力減弱，恰是本題陷阱；(B) 語意相反；(C) 與全文主張相反。故選 (D)。"
+    },
+    "q-pp-cs-en-115-16": {
+      "questionId": "q-pp-cs-en-115-16",
+      "answer": "D",
+      "explanation": "末段原文為 \"As universities work to cultivate critical awareness of technological mediation…\"，(D) 幾乎是原句照抄。(A) 把重點錯置為導入新技術，(B) 的 abandon 過強——原文說的是 extend beyond mere proficiency（延伸而非拋棄），(C) 抵抗數位轉型則是文中沒有的立場。故選 (D)。"
+    },
+    "q-pp-cs-en-115-17": {
+      "questionId": "q-pp-cs-en-115-17",
+      "answer": "A",
+      "explanation": "全文圍繞語言如何「acquires authority」、以及 \"linguistic authority becomes intertwined with technical infrastructure\"，核心概念即話語權威（discursive authority）。(B) technological autonomy 恰恰是本文要反駁的中立／自主工具觀，(C) 經濟生產力與 (D) 語言效率在文中都沒有著墨。故選 (A)。"
+    },
+    "q-pp-cs-en-115-18": {
+      "questionId": "q-pp-cs-en-115-18",
+      "answer": "C",
+      "explanation": "全文依序處理 hallucination、bias、真實案例與責任歸屬，主軸是檢視 AI 使用的風險，(C) 最能概括。(A) 錯在本文談的是缺陷而非技術進展。(B) 錯在 harmless——文中舉了律師引用虛構判例的實例，正說明其危害。(D) 與末段「責任仍在人」的審慎立場不符。故選 (C)。"
+    },
+    "q-pp-cs-en-115-19": {
+      "questionId": "q-pp-cs-en-115-19",
+      "answer": "C",
+      "explanation": "原文 \"Because such outputs often sound confident, hallucinations can be difficult to detect without careful scrutiny.\" 直接給出理由：聽起來太有把握，因此難以察覺。(A) 文中把成因歸於語言模型的機率本質，而非隨機不可預測。(B) 錯在 intentional。(D) 錯在 only——律師是專業人士，正是反例。故選 (C)。"
+    },
+    "q-pp-cs-en-115-20": {
+      "questionId": "q-pp-cs-en-115-20",
+      "answer": "D",
+      "explanation": "該段結論句寫得很明白：\"These incidents demonstrate how fluency can mask inaccuracy…\"，(D) 的 conceal 即 mask 的同義改寫。(A) 文章意不在批評法界。(B) 全文主張的是負責任地使用而非禁用。(C) 偏誤是前一段的主題，這個例子講的是流暢度掩蓋錯誤。故選 (D)。"
+    },
+    "q-pp-cs-en-115-21": {
+      "questionId": "q-pp-cs-en-115-21",
+      "answer": "C",
+      "explanation": "末段 \"Responsibility therefore remains with human users.\" 即結論。(A) 與 \"AI systems lack understanding and epistemic judgment\" 相反。(B) 被 \"they cannot eliminate these limitations\" 直接否定，fully 一詞更是明顯的過度推論。(D) 文中從未做此比較。故選 (C)。"
+    },
+    "q-pp-cs-en-115-22": {
+      "questionId": "q-pp-cs-en-115-22",
+      "answer": "D",
+      "explanation": "該片語出現在 \"the ability to evaluate AI-generated content with informed skepticism\"，指在了解其限制的前提下審慎評估，(D) 正是此意。(A) 的 complete rejection 過強，與末句 \"not on replacing judgment, but on strengthening it\" 的建設性立場不符。(B) 與懷疑相反，(C) 與「責任在人」相反。故選 (D)。"
+    },
+    "q-pp-cs-en-115-23": {
+      "questionId": "q-pp-cs-en-115-23",
+      "answer": "B",
+      "explanation": "全文花大半篇幅指出風險（critical），但結尾主張透過培養批判素養來「成功整合」AI（constructive），並未主張禁用，(B) 精準描述這種審慎而不否定的立場。(A) 過度樂觀，(C) 的 entirely oppositional 與 \"Integrating AI successfully\" 矛盾，(D) 錯在本文有明確立場，不只是客觀描述。故選 (B)。"
+    },
+    "q-pp-cs-en-115-24": {
+      "questionId": "q-pp-cs-en-115-24",
+      "answer": "D",
+      "explanation": "reigning monarch 是固定搭配，意為「在位的君主」，句中查爾斯是現任國王，故為 the first reigning British monarch。(A) crowning 是「加冕的、最高的（crowning achievement）」，不修飾 monarch 表在位。(B) aspiring 有志成為……的，(C) achieving 語意不通。故選 (D)。"
+    },
+    "q-pp-cs-en-115-25": {
+      "questionId": "q-pp-cs-en-115-25",
+      "answer": "B",
+      "explanation": "enact regulations／legislation 是「制定法規」的固定用法，主詞為各國政府，且後文說明法規要求科技公司揭露更多細節，方向是加強管制。(A) loosen 放寬與 growing concern 的語境矛盾。(C) inherit 繼承、(D) speculate 臆測（且為不及物），皆不與 regulations 搭配。故選 (B)。"
+    },
+    "q-pp-cs-en-115-26": {
+      "questionId": "q-pp-cs-en-115-26",
+      "answer": "C",
+      "explanation": "not… but… 的對比是解題關鍵：不是單一突破或孤立實驗，而是數十年「持續不輟」的研究，sustained research 正合。(A) intermittent 斷斷續續的與 decades of 的持續性矛盾，(D) accidental 偶然的與 isolated experiment 屬同一側，(B) speculative 臆測性的則與 fundamentally reshaped 的實績不符。故選 (C)。"
+    },
+    "q-pp-cs-en-115-27": {
+      "questionId": "q-pp-cs-en-115-27",
+      "answer": "A",
+      "explanation": "公司道歉並承認先前聲明有問題，才會 failed to address key concerns，ambiguous（含糊不清）最能解釋為何沒能回應關切。(C) transparent 透明與 (D) consistent 前後一致都是正面評價，放進道歉語境自相矛盾。(B) redundant 冗贅雖是缺點，但冗贅不會導致「沒講到重點」。故選 (A)。"
+    },
+    "q-pp-cs-en-115-28": {
+      "questionId": "q-pp-cs-en-115-28",
+      "answer": "A",
+      "explanation": "空格的受詞是 containment efforts（圍堵行動），後接 overwhelming emergency responders，可知野火是「破壞、瓦解」了圍堵努力，undermine 意為削弱、使失效。(B) justified 使正當化、(C) predicted 預測，主詞是野火時語意不通。(D) regulated 規範亦然。故選 (A)。"
+    },
+    "q-pp-cs-en-115-29": {
+      "questionId": "q-pp-cs-en-115-29",
+      "answer": "C",
+      "explanation": "Although 建立轉折：起初被質疑，後來卻被顯示財政改善的數據「證明是對的」，vindicate 意為為……平反、證實其正確。(A) dismissed 被否決、(B) contested 被爭論，都與 Although 的轉折方向相同，等於沒有轉折。(D) postponed 延後與 by subsequent data 的施動者不合。故選 (C)。"
+    },
+    "q-pp-cs-en-115-30": {
+      "questionId": "q-pp-cs-en-115-30",
+      "answer": "B",
+      "explanation": "What began as… soon ___ 的句式在描述事件的擴大，trigger a debate 意為「引發辯論」，與 broader 呼應。(A) obscured 模糊、(C) neutralized 中和、(D) confined 侷限，三者方向都是縮小或壓抑，與 broader public debate 矛盾。故選 (B)。"
+    },
+    "q-pp-cs-en-115-31": {
+      "questionId": "q-pp-cs-en-115-31",
+      "answer": "C",
+      "explanation": "Rather than 的對比加上後半句的 careful and evidence-based，指向「節制、審慎」的手法，measured approach 即此意。(A) superficial 膚淺與 careful 相反，(B) partisan 帶黨派立場與 evidence-based 相斥，(D) fragmented 零碎則與 examination 的系統性不合。故選 (C)。"
+    },
+    "q-pp-cs-en-115-32": {
+      "questionId": "q-pp-cs-en-115-32",
+      "answer": "D",
+      "explanation": "Despite 讓步加上 failed to reach agreement，可知和談最終「破局」，collapse 意為崩潰、告吹。(A) culminated（達到高潮）、(B) stabilized（趨於穩定）、(C) converged（趨於一致）全是正面結果，與談判失敗矛盾。故選 (D)。"
+    },
+    "q-pp-cs-en-115-33": {
+      "questionId": "q-pp-cs-en-115-33",
+      "answer": "D",
+      "explanation": "although… nevertheless 的雙重轉折要求空格與 justified 相對立：雖然基於國安有其正當性，卻仍「侵害」了隱私與正當程序的憲法保障，infringe 意為侵犯（權利）。(A) reinforced 強化、(B) expanded 擴大、(C) clarified 釐清，都不構成轉折。故選 (D)。"
+    },
+    "q-pp-cs-en-115-34": {
+      "questionId": "q-pp-cs-en-115-34",
+      "answer": "A",
+      "explanation": "be symptomatic of 是固定搭配，意為「是……的徵兆」，句意為原以為只是小故障，後來才發現是設計中更深層結構缺陷的徵兆。(C) incidental（附帶的、無關緊要的）會讓句子失去 What initially appeared… was later recognized 的轉折張力。(B) dismissive 輕蔑的、(D) decorative 裝飾性的，語意皆不合。故選 (A)。"
+    },
+    "q-pp-cs-en-115-35": {
+      "questionId": "q-pp-cs-en-115-35",
+      "answer": "B",
+      "explanation": "While the surge has delivered clear economic benefits, it has also ___ 的 While 與 also 要求空格帶出負面效果，exacerbate 意為「加劇（既有問題）」，正好搭配 long-standing tensions。(A) resolved 解決、(C) neutralized 化解，方向相反；(D) postponed 延後則不與 tensions 搭配。故選 (B)。"
+    },
+    "q-pp-cs-en-115-36": {
+      "questionId": "q-pp-cs-en-115-36",
+      "answer": "B",
+      "explanation": "地方政府夾在「促進經濟復甦」與「回應民怨」之間，find themselves constrained by 意為受制、動彈不得。(A) insulated 被隔絕保護，與夾在中間的處境相反；(C) suspended 停職／暫停，主詞不合；(D) aligned 一致，與兩難的語境矛盾。故選 (B)。"
+    },
+    "q-pp-cs-en-115-37": {
+      "questionId": "q-pp-cs-en-115-37",
+      "answer": "A",
+      "explanation": "本句在批評日本觀光模式重量不重永續，分詞構句 ___ short-term gains while externalizing social costs 形成對比：偏重短期利益、卻把社會成本外部化。privilege 當動詞意為「優先看待、給予特權」，最合。(B) obscuring 模糊化 gains 語意不通，(C) redistributing 重新分配與 externalizing 的對比失焦，(D) compensating 補償方向相反。故選 (A)。"
+    },
+    "q-pp-cs-en-115-38": {
+      "questionId": "q-pp-cs-en-115-38",
+      "answer": "B",
+      "explanation": "句意為文化遺產應受保護，而不該被「工具化」成可供消費的奇觀，instrumentalize into a consumable spectacle 正是把文化當成手段的批判用語，呼應前文 who tourism is for、who bears its costs 的提問。(A) diluted 稀釋、(D) standardized 標準化雖也是負面，但都無法與 into a consumable spectacle 構成「淪為……」的語意；(C) commemorated 紀念是正面詞。故選 (B)。"
+    },
+    "q-pp-cs-en-115-39": {
+      "questionId": "q-pp-cs-en-115-39",
+      "answer": "C",
+      "explanation": "句式為 a genuine shift toward sustainable tourism or merely a temporary ___，兩者對比：真正的轉向 vs. 只是暫時的微調。前段已鋪陳 \"a policy environment marked less by decisive reform than by incremental adjustment\"，recalibration（重新校準、微調）正是 incremental adjustment 的同義改寫。(A) anomaly 異常、(B) concession 讓步、(D) solution 解方，都接不上這個伏筆。故選 (C)。"
+    },
+    "q-pp-cs-en-115-40": {
+      "questionId": "q-pp-cs-en-115-40",
+      "answer": "B",
+      "explanation": "raise the stakes 源自賭桌上的「加注」，引申為「提高風險與後果的嚴重性」，(B) 正是其字面意義的展開。(A) 把 stakes 誤讀成媒體關注，且句尾已另有 scrutiny 一詞。(C) 與資安爭議無關。(D) 說的是揭露既有弱點，並非提高風險。故選 (B)。"
+    },
+    "q-pp-cs-en-115-41": {
+      "questionId": "q-pp-cs-en-115-41",
+      "answer": "B",
+      "explanation": "hedge one's bets 意為「分散押注以降低損失風險」，句中的 diversifying… across multiple sectors 正是這個做法的說明，(B) 完全吻合。(A) 冒大風險與避險相反。(C) 全數撤資與 (D) 集中單一標的，都與「分散」矛盾。故選 (B)。"
+    },
+    "q-pp-cs-en-115-42": {
+      "questionId": "q-pp-cs-en-115-42",
+      "answer": "C",
+      "explanation": "stifle 原意為「使窒息」，引申為壓抑、扼殺，句中由 warned 與 excessive administrative hurdles 確認是負面效果，(C) suppress or prevent 為其同義。(A) 與 (B) 都是正面詞，與 warned 的語氣相斥。(D) 監督進度並非 stifle 的意思。故選 (C)。"
+    },
+    "q-pp-cs-en-115-43": {
+      "questionId": "q-pp-cs-en-115-43",
+      "answer": "A",
+      "explanation": "merely rhetoric 帶貶義，指「只是漂亮話」——有說服效果卻缺乏誠意與實質，(A) 的定義正好對應句尾的 without offering any concrete policy solutions。(B) 與 without… concrete policy 直接矛盾。(C) 把 rhetoric 誤解成好辯的風格，(D) 道歉則與 appease the crowd 的語境不同。故選 (A)。"
+    },
+    "q-pp-cs-en-115-44": {
+      "questionId": "q-pp-cs-en-115-44",
+      "answer": "B",
+      "explanation": "caveat 意為「須注意的但書、限制性的提醒」，句中樣本數過小正是結論的保留條件，與 remained cautious 呼應，(B) 為其同義。(A) 支持性證據與 (D) 突破都是正面詞，與 Although… cautious 的轉折不合；(C) 總結亦非其意。故選 (B)。"
+    },
+    "q-pp-cs-en-115-45": {
+      "questionId": "q-pp-cs-en-115-45",
+      "answer": "B",
+      "explanation": "lend credence to 意為「使……更可信、為……提供佐證」，句中獨立調查讓指控更站得住腳，因而引發監管呼聲，(B) 即其同義。(A) 媒體報導量與 credence（可信度）不同。(C) 延後查證與 Following… audits 的推進方向相反。(D) 削弱其他解釋是間接效果，並非該片語的意思。故選 (B)。"
+    },
+    "q-pp-cs-en-115-46": {
+      "questionId": "q-pp-cs-en-115-46",
+      "answer": "D",
+      "explanation": "close ranks 原是軍事用語「收攏隊形」，引申為「內部團結一致對外」，句中 presenting a unified front 就是同義提示，(D) 完全對應。(A) 四散躲避與團結相反。(B) 改組領導層與 (C) 延後決策，句中都沒有依據。故選 (D)。"
+    },
+    "q-pp-cs-en-115-47": {
+      "questionId": "q-pp-cs-en-115-47",
+      "answer": "B",
+      "explanation": "reshape the narrative 意為「改變事件被理解與詮釋的方式」，句尾 shifting public perception 是同義提示，(B) 正合。(A) 的 without alteration 與 challenged earlier assumptions 直接矛盾。(C) 下定論、(D) 轉移焦點，都不是 reshape 的語意。故選 (B)。"
+    },
+    "q-pp-cs-en-115-48": {
+      "questionId": "q-pp-cs-en-115-48",
+      "answer": "C",
+      "explanation": "outpace 意為「速度超前於」，句尾 lawmakers struggling to update legal frameworks quickly enough to keep up 把落後的一方點得很清楚，(C) 為其忠實改寫。(A) 主客易位，變成創新被法規拖慢。(B) 遵循規則與超前無關。(D) 過度推論——跑得比法規快不等於不需要監理。故選 (C)。"
+    },
+    "q-pp-cs-en-115-49": {
+      "questionId": "q-pp-cs-en-115-49",
+      "answer": "A",
+      "explanation": "walk back 是美式政治用語，意為「收回或淡化先前的說法」，句中 clarifying their position and softening the language 即其具體做法，(A) 正是同義。(B) 強硬辯護與 softening 矛盾。(C) 無限期延後與 (D) 轉移話題，句中都沒有依據。故選 (A)。"
+    },
+    "q-pp-cs-en-115-50": {
+      "questionId": "q-pp-cs-en-115-50",
+      "answer": "C",
+      "explanation": "on shaky ground 意為「立足不穩、根基薄弱」，句尾 raising doubts about whether it can withstand judicial review 說明不穩的正是法律上的正當性，(C) 精準對應。(A) 獲得支持與「不穩」相反。(B) 錯在該法案還只是 proposed，尚未 enacted。(D) 的 structurally sound 同樣與 shaky 矛盾。故選 (C)。"
     }
   }
 }
