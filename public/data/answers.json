@@ -1560,26 +1560,6 @@
       "answer": "A",
       "explanation": "本題考查動詞語意辨析。題目描述柏林滕珀爾霍夫難民庇護所是德國最大的，能夠容納多達 7,000 人。選項 (A) accommodate 意為「容納、收容」，在描述空間或設施能容納多少人時是標準用法。選項 (B) reciprocate 意為「回報、互惠」，選項 (C) demonstrate 意為「示範、展示」，選項 (D) fabricate 意為「捏造、製造」，這三者在語意上皆不符合本句的語境。因此，唯有 accommodate 能正確表達「提供容身之所」的意思，答案為 (A)。"
     },
-    "q-pp-cs-en-112-1": {
-      "questionId": "q-pp-cs-en-112-1",
-      "answer": "A",
-      "explanation": "此題並非選擇題，而是一道作答說明指令，要求考生在答案卷第一頁畫出指定的表格並填入答案。題目內容為：「Please draw the following table on the first page of the answer sheets and fill in the answers accordingly.」此類題型屬於英文科的作答格式要求，考生須依照指示完成表格。由於本題無選項 A/B/C/D/E 供選擇，此處以 A 作為佔位符，實際上本題為非選擇題形式。"
-    },
-    "q-pp-cs-en-112-10": {
-      "questionId": "q-pp-cs-en-112-10",
-      "answer": "A",
-      "explanation": "此題為開放式填答題（非選擇題），答案為數值。矩陣 A 為 5×3 的非方陣，無法直接定義 f(A)，需先計算 AᵀA（3×3 對稱正半定矩陣）。AᵀA 的特徵多項式為 -λ³ + 80λ² - 1415λ + 3092 = 0，其三個特徵值近似為 λ₁ ≈ 2.538、λ₂ ≈ 21.948、λ₃ ≈ 55.514。由於 f(AᵀA) 的特徵值等於 f(λᵢ)，計算 f(λ₃) = (55.514)⁴ - 7(55.514)³ + 13(55.514)² - 6(55.514) + 1 ≈ 8,339,927，此為 f(AᵀA) 的最大特徵值，即 f(A) 的最大特徵值約為 8,339,927。"
-    },
-    "q-pp-cs-en-112-2": {
-      "questionId": "q-pp-cs-en-112-2",
-      "answer": "C",
-      "explanation": "此題要求計算布林公式 (¬w ∧ x ∧ ¬y) ∨ (¬w ∧ ¬x ∧ y ∧ ¬z) 的滿足賦值數量。第一個子句 ¬w ∧ x ∧ ¬y 要求 w=F、x=T、y=F，而 z 可以是 T 或 F，共有 2 種滿足賦值。第二個子句 ¬w ∧ ¬x ∧ y ∧ ¬z 要求 w=F、x=F、y=T、z=F，恰好只有 1 種滿足賦值。由於第一個子句要求 x=T，第二個子句要求 x=F，兩者無重疊，因此總滿足賦值數為 2 + 1 = 3。"
-    },
-    "q-pp-cs-en-112-3": {
-      "questionId": "q-pp-cs-en-112-3",
-      "answer": "9",
-      "explanation": "從集合 {A, B, C, D}（4個元素）到集合 {1, 2, 3, 4, 5}（5個元素）的二元關係，是笛卡兒積 {A,B,C,D} × {1,2,3,4,5} 的任意子集。笛卡兒積共有 4×5=20 個有序對，因此二元關係的總數為 N = 2^20 = 1,048,576。計算 2^20 mod 13：由費馬小定理知 2^12 ≡ 1 (mod 13)，故 2^20 = 2^12 × 2^8 ≡ 1 × 2^8 (mod 13)。而 2^8 = 256 = 19×13 + 9，所以 2^8 ≡ 9 (mod 13)。因此 N mod 13 = 9。"
-    },
     "q-pp-cs-en-112-36": {
       "questionId": "q-pp-cs-en-112-36",
       "answer": "C",
@@ -1599,11 +1579,6 @@
       "questionId": "q-pp-cs-en-112-39",
       "answer": "B",
       "explanation": "本題考查閱讀理解，判斷文章主旨。選項(A)描述的是關於歧視自閉症兒童與成人的個案研究，選項(C)描述的是比較自閉症與注意力缺乏過動症的特徵，這兩者均過於狹隘或偏向比較性研究。選項(B)指出文章呈現自閉症族群在教育與就業上的不平等，這符合此類以社會議題為核心的英文閱讀文章的常見主旨——探討自閉症者在教育機會及職場上所面臨的系統性障礙與不公平待遇。因此，本題正確答案為(B)。"
-    },
-    "q-pp-cs-en-112-4": {
-      "questionId": "q-pp-cs-en-112-4",
-      "answer": "A",
-      "explanation": "此題為線性遞迴關係，特徵方程式為 r² + 3r - 10 = 0，分解因式得 (r+5)(r-2) = 0，故特徵根為 r = 2 與 r = -5。通解形式為 a_n = A·2^n + B·(-5)^n。代入初始條件 a_0 = 3 得 A + B = 3，代入 a_1 = 2 得 2A - 5B = 2，解方程組得 A = 17/7、B = 4/7。因此最終解為 a_n = (17·2^n + 4·(-5)^n) / 7。"
     },
     "q-pp-cs-en-112-40": {
       "questionId": "q-pp-cs-en-112-40",
@@ -1655,35 +1630,10 @@
       "answer": "B",
       "explanation": "衰退主義（declinism）是一種認為社會正在走下坡的悲觀觀點，政客常利用這種情緒來獲取政治利益。選項B指出政客藉由「衰退論述」來吸引那些懷念「美好舊日時光」的選民，這正是衰退主義被政治操弄的典型方式。例如「讓國家再次偉大」這類口號，即是訴諸懷舊情感與對過去的嚮往。選項A強調散布虛假資訊製造分裂，選項C強調對未來的恐懼，這兩者雖有部分關聯，但並非文章所描述的衰退主義被利用的核心手段。因此，最符合題意的答案為B。"
     },
-    "q-pp-cs-en-112-5": {
-      "questionId": "q-pp-cs-en-112-5",
-      "answer": "A",
-      "explanation": "由第4題的遞迴關係式 a_n = -3a_{n-1} + 10a_{n-2}（a_0=3, a_1=2），設生成函數 G(x) = Σ a_n x^n。對遞迴式兩邊取生成函數，得 G(x) - a_0 - a_1·x = -3x(G(x) - a_0) + 10x²·G(x)，整理後為 G(x)(1 + 3x - 10x²) = 3 + 11x。分母因式分解為 (1 - 2x)(1 + 5x)，故 G(x) = (3 + 11x) / ((1 - 2x)(1 + 5x))。進行部分分數分解可得 G(x) = (17/7)/(1-2x) + (4/7)/(1+5x)，對應解為 a_n = (17/7)·2^n + (4/7)·(-5)^n，可驗證 a_0=3, a_1=2 均正確。"
-    },
     "q-pp-cs-en-112-50": {
       "questionId": "q-pp-cs-en-112-50",
       "answer": "C",
       "explanation": "根據文章，作者建議我們應對「玫瑰色回顧」（rosy retrospection）效應的方式是：首先要意識到它對我們判斷與決策的影響，其次要避免「衰退主義」（declinist perspective）的觀點，最後要注意不要過度偏好美化過去而忽視未來。選項C完整涵蓋了這三個核心建議，與作者的論述最為吻合。選項A雖提到使用多方資訊來源，但這並非文章針對玫瑰色回顧效應所給出的主要建議；選項B關於記憶訓練的說法在文章中並無提及。"
-    },
-    "q-pp-cs-en-112-6": {
-      "questionId": "q-pp-cs-en-112-6",
-      "answer": "C",
-      "explanation": "本題求 x₁ + x₂ + ... + x₅ ≤ 7 的非負整數解個數。引入鬆弛變數 x₆ ≥ 0，將不等式轉化為等式 x₁ + x₂ + ... + x₅ + x₆ = 7，共有 6 個變數。根據「隔板法」（stars and bars），k 個非負整數變數之和等於 n 的解個數為 C(n+k-1, k-1)，代入 n=7、k=6，得 C(12, 5)。計算得 C(12,5) = 12!/(5!×7!) = 792，即為所求答案。"
-    },
-    "q-pp-cs-en-112-7": {
-      "questionId": "q-pp-cs-en-112-7",
-      "answer": "A",
-      "explanation": "判斷集合 {−x²+3x+6, x³+2, x³−3x²+5} 在 P3(R) 中是否線性獨立，設 c₁(−x²+3x+6) + c₂(x³+2) + c₃(x³−3x²+5) = 0，比較各次方係數：x³ 項得 c₂+c₃=0，x² 項得 −c₁−3c₃=0，x¹ 項得 3c₁=0，常數項得 6c₁+2c₂+5c₃=0。由 x¹ 項可得 c₁=0，代入 x² 項得 c₃=0，再代入 x³ 項得 c₂=0，三個係數均為零，因此此集合線性獨立。"
-    },
-    "q-pp-cs-en-112-8": {
-      "questionId": "q-pp-cs-en-112-8",
-      "answer": "A",
-      "explanation": "此題為計算題，分為 (A)(B) 兩小題，並非選擇題，故無單一選項答案。(A) 小題要求以基底 {1, x, x², x³} 建立內積 Gram 矩陣 A，其元素為 A_{ij} = ∫_{-1}^{1} e_i(x)e_j(x)dx，由於奇函數在對稱區間積分為零，矩陣呈現稀疏對稱結構，對角線外的非零元素為 2/3（行列均為偶數次）和 2/5（一偶一奇組合），對角元素依序為 2, 2/3, 2/5, 2/7。(B) 小題求 x⁵ 在向量 x² − (1/3)x 上的 Fourier 係數，計算內積 ⟨x⁵, x²−(1/3)x⟩ = −2/21，再除以 ∥x²−(1/3)x∥² = 64/135，得 Fourier 係數為 −45/224。"
-    },
-    "q-pp-cs-en-112-9": {
-      "questionId": "q-pp-cs-en-112-9",
-      "answer": "A",
-      "explanation": "此題的矩陣 A 為一個伴隨矩陣（companion-style matrix），其列向量為 [q^n, q^{n-1}, ..., q, 1]，構成一個 (n+1)×(n+1) 的矩陣。所有特徵值的乘積等於矩陣的行列式（determinant）。根據伴隨矩陣的性質，其行列式可透過代入特徵多項式的常數項求得：det(A) = q^{n(n+1)/2}。此結果來自矩陣各行的 q 冪次相乘，從 q^0 到 q^n，總冪次為 0+1+2+...+n = n(n+1)/2，因此所有特徵值之積的最簡形式為 q^{n(n+1)/2}。"
     },
     "q-pp-cs-en-113-1": {
       "questionId": "q-pp-cs-en-113-1",
@@ -6954,6 +6904,181 @@
       "questionId": "q-pp-im-en-107-50",
       "answer": "A",
       "explanation": "原文說哈雷管弦樂團由「一位德國移民」在五十年前創立，緊接著說一位年輕的西發里亞（德國）音樂神童 Charles Hallé 選擇定居曼城 —— 兩處指的是同一人，樂團也以他為名。(b) 錯 —— 創辦者是一位移民個人，並非「德國僑民群體」；(c) 錯 —— 推動討論文學與藝術的是那群德國僑民，不是樂團；(d) 文中並無此呼籲。"
+    },
+    "q-pp-cs-en-112-1": {
+      "questionId": "q-pp-cs-en-112-1",
+      "answer": "A",
+      "explanation": "本題考查動詞語意。abound in／with 意為「充滿、富含」，主詞為 poems，句意為「她的詩作充滿意象」。(B) abandon 是「拋棄」，且為及物動詞，後面不接 in。(C) abate 是「減弱、緩和」，語意相反。(D) able 是形容詞而非動詞，詞性就不合。故選 (A)。"
+    },
+    "q-pp-cs-en-112-2": {
+      "questionId": "q-pp-cs-en-112-2",
+      "answer": "C",
+      "explanation": "空格修飾 attacks，需要形容詞。句尾 without distinction（不加區別）是關鍵線索，indiscriminate 正是「不分青紅皂白的、無差別的」。(A) Identification 是名詞「識別」。(B) Incidental 是「附帶的、偶發的」，與「不加區別攻擊平民」的語意不符。(D) Inactive 是「不活躍的」。故選 (C)。"
+    },
+    "q-pp-cs-en-112-3": {
+      "questionId": "q-pp-cs-en-112-3",
+      "answer": "A",
+      "explanation": "keep a vigilant eye on someone 是固定搭配，意為「對某人保持警戒、盯緊」。前句說訪客在垃圾桶旁徘徊很可疑，因此要「警覺地」盯著他。(B) violent 暴力的、(C) vulnerable 脆弱的、(D) voluntary 自願的，皆無法與 eye 搭配成合理語意。故選 (A)。"
+    },
+    "q-pp-cs-en-112-4": {
+      "questionId": "q-pp-cs-en-112-4",
+      "answer": "D",
+      "explanation": "本題考查 house 當動詞的用法：「容納、收藏（展品、機構）」，博物館「收藏」一批羅馬雕塑。四個選項拼字相近是典型陷阱：(A) horses 馬、(B) hoses 以水管沖洗、(C) hales 硬拉（罕用），皆與博物館收藏無關。故選 (D)。"
+    },
+    "q-pp-cs-en-112-5": {
+      "questionId": "q-pp-cs-en-112-5",
+      "answer": "B",
+      "explanation": "binge on something 意為「暴飲暴食、狂吃某物」，符合「寂寞時就狂嗑冰淇淋」的語意。(A) break on 無此搭配。(C) bond 是「建立情感連結」，bond over food 才是常見說法。(D) boil 是「煮沸」。故選 (B)。"
+    },
+    "q-pp-cs-en-112-6": {
+      "questionId": "q-pp-cs-en-112-6",
+      "answer": "A",
+      "explanation": "空格需要及物動詞的過去式，emit 意為「排放、散發」，煙囪「排放」濃煙。(B) emergent（新興的）與 (D) eternal（永恆的）是形容詞，詞性不合。(C) escalated 是「升高、加劇」，不能直接接 smoke 當受詞。故選 (A)。"
+    },
+    "q-pp-cs-en-112-7": {
+      "questionId": "q-pp-cs-en-112-7",
+      "answer": "B",
+      "explanation": "be indigenous to + 地點 是固定用法，意為「原產於、原生於某地」，香菜原產於南歐。(A) impassive 面無表情的、(C) indiscreet 不謹慎的、(D) indirect 間接的，皆不與 to + 地點搭配表示原產地。故選 (B)。"
+    },
+    "q-pp-cs-en-112-8": {
+      "questionId": "q-pp-cs-en-112-8",
+      "answer": "C",
+      "explanation": "have access to 是固定搭配，意為「有取得／接觸的管道」，句意為「只有少數人能接觸到本案的全部事實」。(A) archive 檔案庫、(D) academy 學院，語意不合且無此搭配。(B) accuse 是動詞「指控」，have accuse 文法上不成立。故選 (C)。"
+    },
+    "q-pp-cs-en-112-9": {
+      "questionId": "q-pp-cs-en-112-9",
+      "answer": "C",
+      "explanation": "myriads of + 複數名詞意為「無數的、成群的」，句意為「每到黃昏，無數蚊子從水溝湧入村子」。(A) Monstrous 是形容詞「巨大的、可怕的」，不能接 of 當主詞。(B) Minerals 礦物語意不通。(D) Migrations of mosquitoes 語意勉強但搭配 invaded 與 every twilight 不自然，且未表達「數量龐大」這個重點。故選 (C)。"
+    },
+    "q-pp-cs-en-112-10": {
+      "questionId": "q-pp-cs-en-112-10",
+      "answer": "D",
+      "explanation": "component 意為「組成成分」，氫是所有有機化合物的組成元素之一。四個選項同樣以 com- 開頭形成干擾：(A) competition 競爭、(B) compartment 隔間、(C) company 公司／陪伴，皆與化學組成無關。故選 (D)。"
+    },
+    "q-pp-cs-en-112-11": {
+      "questionId": "q-pp-cs-en-112-11",
+      "answer": "B",
+      "explanation": "本題考查動詞後接動名詞的用法。deny 後面接動名詞（deny doing something），意為「否認做過某事」。(A) request 後接 that 子句或不定詞。(C) claim 與 (D) maintain 表達「聲稱、主張」時後面要接 that 子句或不定詞（claim to have done），不能直接接動名詞。故選 (B)。"
+    },
+    "q-pp-cs-en-112-12": {
+      "questionId": "q-pp-cs-en-112-12",
+      "answer": "D",
+      "explanation": "本題考查「數量詞 + of + 關係代名詞」。先行詞 two job offers 是事物且為兩者，關係代名詞須用 which，故排除指人的 (B) both of whom 與所有格的 (C) most of whose。(A) much of which 用於不可數名詞，與 two offers 不合。兩者皆不的 neither of which 語意與數量都相符。故選 (D)。"
+    },
+    "q-pp-cs-en-112-13": {
+      "questionId": "q-pp-cs-en-112-13",
+      "answer": "A",
+      "explanation": "be to + 原形動詞表示「預定要做某事」，過去式 was to start 意為「原本預定要開始」，與主句過去式 got sick 時態一致，句意為「亨利在原訂要上新工作的那天病倒了」。(B) was started 是被動語態，job 才是被開始的東西，主詞 he 不合。(C)(D) 為現在／未來式，與過去式主句時態衝突。故選 (A)。"
+    },
+    "q-pp-cs-en-112-14": {
+      "questionId": "q-pp-cs-en-112-14",
+      "answer": "C",
+      "explanation": "neither of + 複數名詞當主詞時視為單數，動詞須用第三人稱單數，故 (B) know 不合。(A) know 是狀態動詞，一般不用進行式，且 are 也與單數主詞衝突。(D) is known 是被動語態，但 know 在此有受詞子句，須用主動。故選 (C)。"
+    },
+    "q-pp-cs-en-112-15": {
+      "questionId": "q-pp-cs-en-112-15",
+      "answer": "B",
+      "explanation": "時間副詞 last night 指明確的過去時間點，須搭配過去簡單式。(A) occurs 是現在式。(D) has occurred 為現在完成式，不能與明確過去時間並用。(C) was occurred 錯在 occur 是不及物動詞，沒有被動語態。故選 (B)。"
+    },
+    "q-pp-cs-en-112-16": {
+      "questionId": "q-pp-cs-en-112-16",
+      "answer": "A",
+      "explanation": "空格後為完整子句 you agree with his theory，需要能引導名詞子句的疑問片語。to what extent 意為「到什麼程度」，句意為「我不確定你認同他的理論到什麼程度」。(B) as regards（關於）後接名詞。(C) on the whole（整體而言）是副詞片語，不能引導子句。(D) by means of which 是關係子句用法，此處無先行詞。故選 (A)。"
+    },
+    "q-pp-cs-en-112-17": {
+      "questionId": "q-pp-cs-en-112-17",
+      "answer": "C",
+      "explanation": "albeit 意為「儘管、雖然」，後面可直接接介系詞片語或形容詞（albeit with help／albeit slowly），是本句最精簡自然的接法。(A) even so 是「即使如此」，用於句首連接兩句。(B) as well as 表示「以及」，語意不含讓步。(D) despite the fact 後面必須接 that 子句。故選 (C)。"
+    },
+    "q-pp-cs-en-112-18": {
+      "questionId": "q-pp-cs-en-112-18",
+      "answer": "D",
+      "explanation": "in the sense that 意為「就……這層意義而言」，用來說明前句成立的理由或角度：「就其作品深深影響其他作家這點而言，他是偉大的詩人」。(A) apart from 後接名詞或動名詞，不接子句。(B) provided that 表條件「只要」，語意不合。(C) on top of which 是關係子句，語意為「除此之外」，與因果說明的語境不符。故選 (D)。"
+    },
+    "q-pp-cs-en-112-19": {
+      "questionId": "q-pp-cs-en-112-19",
+      "answer": "C",
+      "explanation": "to 之後需要原形動詞，且要能與 between 搭配。differentiate between A and B 意為「區分兩者」。(A) differ 雖是動詞，但 differ from 才是正確搭配，且語意為「與……不同」，主詞應是被比較的事物本身。(B) different 是形容詞、(D) difference 是名詞，詞性皆不合。故選 (C)。"
+    },
+    "q-pp-cs-en-112-20": {
+      "questionId": "q-pp-cs-en-112-20",
+      "answer": "B",
+      "explanation": "compare poorly／favorably with 是固定用法，意為「比起來遜色／出色」，句意為「我的英文比她的差多了」。(A) competes with 是「與……競爭」，主詞通常是人或組織，且不與 poorly 搭配成此語意。(C) combines with 是「與……結合」。(D) contributes to 是「有助於」，介系詞也不對。故選 (B)。"
+    },
+    "q-pp-cs-en-112-21": {
+      "questionId": "q-pp-cs-en-112-21",
+      "answer": "B",
+      "explanation": "空格為本句主要動詞，主詞 He、時間為 in his early period（過去），受詞是 his political ideas。express ideas through songs 意為「透過歌曲表達理念」。(A) excess 是名詞「過量」。(C) exceeded 是「超過」，與 ideas 搭配不通。(D) existed 是不及物動詞，不能接受詞。故選 (B)。"
+    },
+    "q-pp-cs-en-112-22": {
+      "questionId": "q-pp-cs-en-112-22",
+      "answer": "A",
+      "explanation": "主詞是 his words，受詞是 complex messages。convey a message 是固定搭配，意為「傳達訊息」，且與前半句 his melodies were often simple 形成「曲調簡單、歌詞卻承載複雜訊息」的對比。(B) convince 的受詞應是人（convince someone of something）。(C) confirm 是「證實」。(D) consent 是不及物動詞（consent to）。故選 (A)。"
+    },
+    "q-pp-cs-en-112-23": {
+      "questionId": "q-pp-cs-en-112-23",
+      "answer": "A",
+      "explanation": "with subtle ___ 用來修飾傳達訊息的方式，nuance 意為「細微差別、微妙之處」，與形容詞 subtle 是最自然的搭配，呼應歌詞表面簡單、意涵幽微。(B) minds 心智、(D) fractions 分數／片段，語意不合。(C) notions（概念）雖為名詞，但不與 subtle 構成「幽微的表達層次」這個慣用語意。故選 (A)。"
+    },
+    "q-pp-cs-en-112-24": {
+      "questionId": "q-pp-cs-en-112-24",
+      "answer": "C",
+      "explanation": "本句主要子句為 the words ___ real, radioactive rain，需要主動語態的限定動詞。全段描述歌詞的意涵時使用現在式（speaks、will fall、are many），主詞 the words 為複數，故用原形 denote。(A) denoting 是分詞，不能單獨當主要動詞。(B) denoted 時態與全段現在式不一致。(D) are denoted 為被動，但後面接了受詞 real rain，文法不成立。故選 (C)。"
+    },
+    "q-pp-cs-en-112-25": {
+      "questionId": "q-pp-cs-en-112-25",
+      "answer": "D",
+      "explanation": "前半句說 on one level the words denote real rain（字面義），此處以 but 轉折，並列舉「人生艱難、或許無以為繼」等引申義，正是 connotation（言外之意、引申義）與 denotation（字面義）的經典對比。(A) criteria 標準、(B) contradictions 矛盾、(C) constructions 建構，皆無法與 denote 形成這組語意學上的對照。故選 (D)。"
+    },
+    "q-pp-cs-en-112-26": {
+      "questionId": "q-pp-cs-en-112-26",
+      "answer": "D",
+      "explanation": "主詞是 we（讀者），從歌詞「推論」出許多意涵，故用 infer（由既有資訊推論）。(A) imply 是「暗示」，主詞應為文本或說話者本身，是 infer 的反向動作，也是本題最常見的陷阱。(B) invent 是「發明」。(C) impose 是「強加」。故選 (D)。"
+    },
+    "q-pp-cs-en-112-27": {
+      "questionId": "q-pp-cs-en-112-27",
+      "answer": "B",
+      "explanation": "political discourse 意為「政治論述、政治話語」，句意為「這首歌是 1960 年代冷戰政治論述的一部分」。(A) discipline 學科／紀律、(C) diversity 多樣性、(D) diploma 文憑，皆無法與 political 組成描述時代言論氛圍的片語。故選 (B)。"
+    },
+    "q-pp-cs-en-112-28": {
+      "questionId": "q-pp-cs-en-112-28",
+      "answer": "A",
+      "explanation": "evoke 意為「喚起（情緒、氛圍、記憶）」，evoke an atmosphere of fear 意為「營造／喚起恐懼氛圍」。(B) evolves 是「演化」，且多為不及物用法。(C) excludes 排除、(D) exports 出口，與 atmosphere 搭配不通。故選 (A)。"
+    },
+    "q-pp-cs-en-112-29": {
+      "questionId": "q-pp-cs-en-112-29",
+      "answer": "C",
+      "explanation": "seen from the perspective of 是固定用法，意為「從……的角度來看」，此處指「從後冷戰時代的角度看」。(A) percentage 百分比。(B) perceptive 是形容詞「有洞察力的」，前面有冠詞 the 需接名詞。(D) presentative 極罕用且語意不合。故選 (C)。"
+    },
+    "q-pp-cs-en-112-30": {
+      "questionId": "q-pp-cs-en-112-30",
+      "answer": "B",
+      "explanation": "句意為「從後冷戰的角度看，可能難以『理解』那樣的恐懼，但在當時那份恐懼非常真實」，comprehend（理解）最合語境，並與句尾 that fear was very real 的轉折呼應。(A) contribute 貢獻、(C) consume 消耗，語意不通。(D) correspond 是不及物動詞（correspond to／with），不能直接接 such fear。故選 (B)。"
+    },
+    "q-pp-cs-en-112-31": {
+      "questionId": "q-pp-cs-en-112-31",
+      "answer": "D",
+      "explanation": "句意為「有些語言學家認為，透過實驗室實驗最能『確定』語言如何被處理」。determine 意為「確定、判定」，與後文比較兩種研究方法何者更能得知真相的主旨相符。(A) destroy 破壞、(C) decline 婉拒／衰退，語意不通。(B) deduct 是「扣除」，常與意為「推論」的 deduce 混淆，正是本題陷阱。故選 (D)。"
+    },
+    "q-pp-cs-en-112-32": {
+      "questionId": "q-pp-cs-en-112-32",
+      "answer": "A",
+      "explanation": "by definition 是固定片語，意為「就定義而言、本質上」，句意為「實驗室實驗就定義上來說即為人為的」。(B) through、(C) at、(D) on 與 definition 皆無此固定搭配。故選 (A)。"
+    },
+    "q-pp-cs-en-112-33": {
+      "questionId": "q-pp-cs-en-112-33",
+      "answer": "B",
+      "explanation": "承接前句「實驗本質上是人為的」，此處說它「可能無法『反映』真實世界所發生的事」，reflect 意為「反映」。(A) reappear 是不及物動詞「再次出現」。(C) repeat 是「重複」，語意上實驗並非要重演真實世界。(D) rejoin 是「重新加入」。故選 (B)。"
+    },
+    "q-pp-cs-en-112-34": {
+      "questionId": "q-pp-cs-en-112-34",
+      "answer": "B",
+      "explanation": "carry out field studies 意為「進行田野研究」，是 study／research 的標準搭配動詞片語。(A) equip with 是「以……裝備」，語意與結構皆不合。(C) depart from 是「偏離」。(D) set off 是「出發、引發」。故選 (B)。"
+    },
+    "q-pp-cs-en-112-35": {
+      "questionId": "q-pp-cs-en-112-35",
+      "answer": "B",
+      "explanation": "介系詞 without 後接動名詞，且後方有 with the process，interfere with 意為「干擾」，句意為「觀察者可在完全不干擾過程的情況下蒐集深度資料」，正是田野觀察相對於實驗室的優點。(A) illuminating 闡明、(C) indicating 指出、(D) investigating 調查，皆不與 with 構成此語意。故選 (B)。"
     }
   }
 }
