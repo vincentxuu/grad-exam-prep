@@ -253,7 +253,7 @@
     "type": "Dcard",
     "examRelevance": ["im"],
     "url": "https://www.dcard.tw/f/graduate_school/p/261258186",
-    "description": "臺科大資管系非應屆考生的心得，涵蓋補習與否的決策、生成式AI用法、筆記整理方式、各科準備方向、讀書時間分配與備考心態"
+    "description": "臺科大資管系延畢非應屆，臺／政／交／央資管全正取。庫內對「補習與否」分析最完整的一篇：逐條列出補習班的三個優點與四個缺點（學費四萬以上、課程不含 AI 與新科技、不含統計、老師解考古題會錯），並給出不補習者的替代讀法。另有生成式 AI 的使用界線與考古題 prompt、兩種筆記的分法、計概資結:MIS:統計 = 70:10:20 的時間比重"
   },
   {
     "id": "res-dcard-im-115-admitted",
@@ -460,8 +460,8 @@
     "title": "Brookshear《Computer Science: An Overview》",
     "type": "書目",
     "examRelevance": ["im"],
-    "url": "https://search.books.com.tw/search/query/key/Computer+Science+An+Overview",
-    "description": "計概原文教材，無補習考生常拿來搭配于天立開放式課程，與 Discovering Computers 互補"
+    "url": "https://www.tenlong.com.tw/products/9781292263427",
+    "description": "計概原文教材（13/e，有中譯本），無補習考生最常拿來搭配于天立開放式課程，與 Discovering Computers 互補。多篇心得指出影音課講得淺、觀念要靠這本補；書附線上練習題，有心得記載清大考出一模一樣的題目"
   },
   {
     "id": "res-solutions-im-108",
@@ -501,7 +501,7 @@
     "type": "Dcard",
     "examRelevance": ["im"],
     "url": "https://www.dcard.tw/f/graduate_school/p/258401429",
-    "description": "跨考台大資管正取。含補習班各科師資的實際評價與數位／面授的取捨"
+    "description": "跨考台大資管正取（其他考試學校全落榜或備取）。對自學者最有用的是補習班內部的實況：資料庫正課時數只有五小時、網路教得不夠、計概與資料庫題庫班「很多題目老師講的答案都是錯的」導致讀書效率慢五倍。另記該年台大考 40 分手寫程式碼、統計突然加考但身邊沒人特別準備、以及因英文較低被清大刷掉的教訓"
   },
   {
     "id": "res-dcard-im-114-nocram-oral",
@@ -1254,5 +1254,173 @@
     "examRelevance": ["im"],
     "url": "https://pegglife.pixnet.net/blog/posts/16036962722",
     "description": "在職邊上班邊考的時程樣本（一天 4–6 小時、共 7–8 個月），並附完整成績與最低錄取分對照。作者結論很直接：非必要不要在職準備。無台大成績，適合當中字輩校系的落點參考"
+  },
+  {
+    "id": "res-dcard-im-112-ntu-nocram",
+    "title": "Dcard — 112 臺大資管所正取心得｜無補習＋跨考",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/242348911",
+    "description": "成大文學院跨考、完全不補習而正取台大資管。逐科標出「讀不夠多／多讀的／份量完美的」，並警告某補習班網站賣的考古題解答錯誤率極高。附四關口試逐題紀錄（線代連問十題）"
+  },
+  {
+    "id": "res-dcard-im-113-nocram-tech",
+    "title": "Dcard — 113 台大／政大／成大資管所 資結組 無補習心得",
+    "type": "Dcard",
+    "examRelevance": ["im"],
+    "url": "https://www.dcard.tw/f/graduate_school/p/255151431",
+    "description": "本科生九、十月才起跑的無補習路線，逐科列出自己用的書與課（洪維恩 C++、王致強資結、杰哥、吳仁和系分）。開篇連寫三次「請先研究考古」，並整理考試迷思與台大四關實錄"
+  },
+  {
+    "id": "res-hackmd-im-112-nocram-ordinary",
+    "title": "HackMD — 112 資管所考試：致普通背景且不想補習的人看",
+    "type": "HackMD",
+    "examRelevance": ["im"],
+    "url": "https://hackmd.io/@eleanorLin/ryJWey7X2",
+    "description": "每一科都附「慘痛經驗」段落，是少見的失分歸因紀錄：資料庫交易處理讀太多、紅黑樹刪除白讀、時間複雜度只會算短程式導致台大程式題寫爛。並列出網路與資安該讀到能回答哪些問題"
+  },
+  {
+    "id": "res-github-im-resource-hub",
+    "title": "GitHub — 資管所考試資源整理（KartaYu）",
+    "type": "部落格",
+    "examRelevance": ["im"],
+    "url": "https://github.com/KartaYu/im-master-exam-resource",
+    "description": "公開彙整的資管所自學資源索引：各校開放式課程、計概名詞、MIS 與資訊倫理的延伸閱讀連結，另含心智圖與考古題練習目錄"
+  },
+  {
+    "id": "res-yt-ntu-cpp-kung",
+    "title": "YouTube — 孔令傑《程式設計（C++）— 完整課程》",
+    "type": "線上課程",
+    "examRelevance": ["im"],
+    "url": "https://www.youtube.com/playlist?list=PLMHSr8fseBzUvwjKtR6pX0Vv9Q9H-V3lY",
+    "description": "台大資管大一必修課本身，15 講共 150 部影片。台大資訊科技概論固定考兩題 C++ 手寫題，用出題系所的母課程準備最直接"
+  },
+  {
+    "id": "res-yt-nthu-os-chou",
+    "title": "YouTube — 周志遠《作業系統》（清大開放式課程，字幕版）",
+    "type": "線上課程",
+    "examRelevance": ["im", "cs"],
+    "url": "https://www.youtube.com/playlist?list=PLS0SUwlYe8cxj8FCPRoPHAehIiN9Vo6VZ",
+    "description": "78 部完整課程。多篇心得的原話是「無補習考取資管、資工所的朋友們肯定都會推薦」；台大近年 OS 比重在上升"
+  },
+  {
+    "id": "res-yt-nthu-network-huang",
+    "title": "YouTube — 黃能富《計算機網路》（清大開放式課程）",
+    "type": "線上課程",
+    "examRelevance": ["im", "cs"],
+    "url": "https://www.youtube.com/playlist?list=PLS0SUwlYe8cxktXNovos9xleroaWyb-z5",
+    "description": "網路的主幹課程。114、113、112 三位上榜者都只看到無線區域網路／Ethernet 結束就停；有人認為台大網路廣而不深，PowerCert 動畫就夠用"
+  },
+  {
+    "id": "res-yt-jay-ds",
+    "title": "YouTube — 杰哥數位教室《資料結構課程》",
+    "type": "線上課程",
+    "examRelevance": ["im", "cs"],
+    "url": "https://www.youtube.com/playlist?list=PLpbuzGqDFzkhHPz11AeGrU7K8AKNqp0fj",
+    "description": "聯大陳士杰教授，56 部影片附投影片，音質較差但內容與補習班筆記高度重疊。同頻道另有演算法、作業系統、資料庫課程"
+  },
+  {
+    "id": "res-yt-jay-algo",
+    "title": "YouTube — 杰哥數位教室《演算法課程》",
+    "type": "線上課程",
+    "examRelevance": ["im", "cs"],
+    "url": "https://www.youtube.com/playlist?list=PLpbuzGqDFzkj3DMCryCdgWQ1FwpgnMpR6",
+    "description": "73 部，遞迴、排序、搜尋、雜湊到動態規劃。心得建議排序與複雜度多花時間，P/NP 那段也偶爾入題"
+  },
+  {
+    "id": "res-yt-jay-os",
+    "title": "YouTube — 杰哥數位教室《作業系統課程》",
+    "type": "線上課程",
+    "examRelevance": ["im", "cs"],
+    "url": "https://www.youtube.com/playlist?list=PLpbuzGqDFzkjnTHfaTWdGONDFYHTrgO-i",
+    "description": "152 部，搭配 Silberschatz《Operating System Concepts》。心得定位是周志遠課程的替代方案：覺得周志遠太難就改看這套"
+  },
+  {
+    "id": "res-yt-stat-tang-1",
+    "title": "YouTube — 唐麗英《統計學(一) 基礎統計》",
+    "type": "線上課程",
+    "examRelevance": ["im"],
+    "url": "https://www.youtube.com/playlist?list=PLj6E8qlqmkFvsst4-ww1mrax1D65FQI1m",
+    "description": "16 講，敘述統計、機率、抽樣分佈。台大自 114 學年度起把統計併入資訊管理導論卷，這是無補習者最常用的統計課"
+  },
+  {
+    "id": "res-yt-stat-tang-2",
+    "title": "YouTube — 唐麗英《統計學(二) 進階統計》",
+    "type": "線上課程",
+    "examRelevance": ["im"],
+    "url": "https://www.youtube.com/playlist?list=PLj6E8qlqmkFtFl1HFux0XUHiPjBmBoZno",
+    "description": "13 講，假設檢定、變異數分析、迴歸、無母數——正好對應台大統計題的考試重心"
+  },
+  {
+    "id": "res-yt-hylee-genai",
+    "title": "YouTube — 李宏毅【機器學習 2023】(生成式 AI)",
+    "type": "線上課程",
+    "examRelevance": ["im", "cs"],
+    "url": "https://www.youtube.com/playlist?list=PLJV_el3uVTsOePyfmkfivYZ7Rqr2nMk3W",
+    "description": "30 部，ChatGPT 與生成式模型原理。AI 是計概逐年加重的趨勢題，也是口試技術關（Transformer、Self-Attention）的常見追問"
+  },
+  {
+    "id": "res-book-foundations-cs",
+    "title": "Forouzan《Foundations of Computer Science》4/e",
+    "type": "書目",
+    "examRelevance": ["im"],
+    "url": "https://www.tenlong.com.tw/products/9781473751040",
+    "description": "清大資應官網公告的考試參考書目之一。台大考生可當補充，同時報清大則建議讀完"
+  },
+  {
+    "id": "res-book-ds-cpp-tsai",
+    "title": "蔡明志《資料結構：使用C++》第五版",
+    "type": "書目",
+    "examRelevance": ["im"],
+    "url": "https://www.books.com.tw/products/0010903831",
+    "description": "114 台大正取者搭配影音課用的資結中文書。台大手寫題固定出在資結，書中程式碼要練到能默寫"
+  },
+  {
+    "id": "res-book-laudon-mis-16e",
+    "title": "Laudon《管理資訊系統》16/e 中譯本",
+    "type": "書目",
+    "examRelevance": ["im"],
+    "url": "https://www.tenlong.com.tw/products/9789867696397",
+    "description": "MIS 自學的主力教科書，幾乎每篇無補習心得都用。用法是按章節對應考古題練習，先想「本章哪些概念能解釋這題」"
+  },
+  {
+    "id": "res-book-lin-im-8e",
+    "title": "林東清《資訊管理：智慧化企業的核心競爭能力》八版",
+    "type": "書目",
+    "examRelevance": ["im"],
+    "url": "https://www.books.com.tw/products/0010932309",
+    "description": "即舊版《e化企業的核心競爭能力》改版（智勝，2022）。與 Laudon 互補，補理論深度與中文名詞"
+  },
+  {
+    "id": "res-book-lind-stat-19e",
+    "title": "Lind《商用統計學》19e 中譯本",
+    "type": "書目",
+    "examRelevance": ["im"],
+    "url": "https://www.books.com.tw/products/0010991598",
+    "description": "114 台大正取者搭配唐麗英線上課用的統計課本，重點是拿它的習題大量練，提升解題速度"
+  },
+  {
+    "id": "res-site-geeksforgeeks",
+    "title": "GeeksforGeeks — 資結／演算法／OS／網路題庫",
+    "type": "線上課程",
+    "examRelevance": ["im", "cs"],
+    "url": "https://www.geeksforgeeks.org/",
+    "description": "無補習心得反覆提到的英文題庫，用來釐清模糊觀念。注意有少數題目的答案可能有誤，對答案時要保留判斷"
+  },
+  {
+    "id": "res-site-nien-network",
+    "title": "粘添壽 — 翻轉工作室《電腦網路與連結技術》",
+    "type": "線上課程",
+    "examRelevance": ["im", "cs"],
+    "url": "https://www.tsnien.idv.tw/Manager_WebBook/main.html",
+    "description": "網路的中文工具書，講義非常詳細甚至偏難。心得的共同定位是「不要當教材、當考古題查詢用」，幾乎都能在裡面找到答案"
+  },
+  {
+    "id": "res-news-hbr-tech",
+    "title": "Harvard Business Review — Technology topic",
+    "type": "時事",
+    "examRelevance": ["im"],
+    "url": "https://hbr.org/topic/subject/technology-and-analytics",
+    "description": "108 台大上榜者推薦的 MIS 補充讀物，理由是三點：MIS 是英文考題、觀念很新、內文是架構式說明還附背景知識連結。等公車之類的零碎時間就能讀"
   }
 ]

@@ -71,15 +71,51 @@ subjects.forEach((subj) => {
 })
 
 // Validate study plans
+const planIds = new Set()
+const planTaskIds = new Set()
+const planPhaseIds = new Set()
+const defaultPlanByExam = {}
+
 studyPlans.forEach((plan) => {
   if (!examIds.has(plan.examId)) err(`StudyPlan has invalid examId: ${plan.examId}`)
+  if (!plan.id) err(`StudyPlan for ${plan.examId} is missing an id`)
+  if (!plan.name) err(`StudyPlan ${plan.id} is missing a name`)
+  if (planIds.has(plan.id)) err(`Duplicate study plan id: ${plan.id}`)
+  planIds.add(plan.id)
+
+  if (plan.isDefault) {
+    if (defaultPlanByExam[plan.examId]) {
+      err(
+        `Exam ${plan.examId} has more than one default plan: ${defaultPlanByExam[plan.examId]}, ${plan.id}`
+      )
+    }
+    defaultPlanByExam[plan.examId] = plan.id
+  }
+
   plan.phases.forEach((phase) => {
+    // Custom tasks are stored against a phase id, so phase ids must not collide
+    // across plans either.
+    if (planPhaseIds.has(phase.id)) err(`Duplicate study phase id: ${phase.id}`)
+    planPhaseIds.add(phase.id)
+
     phase.tasks.forEach((task) => {
+      // Completed tasks live in localStorage keyed by task id alone — a
+      // collision across plans would silently share progress between them.
+      if (planTaskIds.has(task.id)) err(`Duplicate study task id: ${task.id}`)
+      planTaskIds.add(task.id)
+
       if (task.subjectTag && !subjectIds.has(task.subjectTag)) {
         warn(`Task ${task.id} references unknown subject: ${task.subjectTag}`)
       }
     })
   })
+})
+
+examIds.forEach((examId) => {
+  const plansForExam = studyPlans.filter((p) => p.examId === examId)
+  if (plansForExam.length && !defaultPlanByExam[examId]) {
+    warn(`Exam ${examId} has no plan marked isDefault; the first one will be used`)
+  }
 })
 
 // Validate flashcards

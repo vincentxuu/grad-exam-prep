@@ -85,8 +85,17 @@ export interface StudyPhase {
   note?: string
 }
 
+/**
+ * 一個考試可以有多套計畫（例如八個月標準版與六個月不補習版）。
+ * `id` 必須全域唯一——任務完成狀態是以 task id 存在 localStorage，
+ * 不同計畫的 task id 也因此不能重複，否則進度會互相污染。
+ */
 export interface StudyPlan {
+  id: string
   examId: ExamId
+  name: string
+  summary?: string
+  isDefault?: boolean
   totalMonths: number
   examWindow: string
   phases: StudyPhase[]

@@ -26,13 +26,19 @@
     ],
     "materials": [
       {
-        "title": "托福/GRE單字書",
-        "type": "book",
-        "note": "建議搭配歷屆考古題練習"
+        "title": "歷屆資管所英文考古題",
+        "type": "notes",
+        "note": "主力。台大英文不加權，靠考古題練手感即可；114 台大正取者是裸考只刷考古"
       },
       {
-        "title": "歷屆資管所英文考古題",
-        "type": "notes"
+        "title": "GRE Mason 2000／TOEFL 單字",
+        "type": "book",
+        "note": "行有餘力再背。心得原話：高中 7000 單與多益單字會完全不夠用"
+      },
+      {
+        "title": "CNN／BBC 科技與商業新聞",
+        "type": "online",
+        "note": "每天一篇。同時累積 MIS 的時事與案例，一石二鳥"
       }
     ]
   },
@@ -93,13 +99,70 @@
     ],
     "materials": [
       {
-        "title": "Discovering Computers 中譯本",
+        "title": "于天立《計算機概論》（台大開放式課程，21 講）",
+        "author": "于天立",
+        "type": "video",
+        "url": "https://ocw.aca.ntu.edu.tw/courses/101S210",
+        "note": "無補習路線的主幹課程，講義可下載。多篇上榜心得的第一門課"
+      },
+      {
+        "title": "Brookshear《Computer Science: An Overview》13/e",
+        "author": "J. Glenn Brookshear",
         "type": "book",
-        "note": "計概必讀，涵蓋大部分考點"
+        "url": "https://www.tenlong.com.tw/products/9781292263427",
+        "note": "自學者的主力用書，有中譯本。心得共識：影音課講得淺，觀念要靠這本補"
+      },
+      {
+        "title": "孔令傑《程式設計（C++）— 完整課程》（15 講）",
+        "author": "孔令傑",
+        "type": "video",
+        "url": "https://www.youtube.com/playlist?list=PLMHSr8fseBzUvwjKtR6pX0Vv9Q9H-V3lY",
+        "note": "台大資管大一必修課本身。台大計概固定考兩題 C++ 手寫題"
+      },
+      {
+        "title": "周志遠《作業系統》（清大開放式課程，78 部）",
+        "author": "周志遠",
+        "type": "video",
+        "url": "https://www.youtube.com/playlist?list=PLS0SUwlYe8cxj8FCPRoPHAehIiN9Vo6VZ",
+        "note": "無補習考資管／資工所的共同推薦。覺得太難可改看杰哥數位教室的作業系統"
+      },
+      {
+        "title": "黃能富《計算機網路》（清大開放式課程）",
+        "author": "黃能富",
+        "type": "video",
+        "url": "https://www.youtube.com/playlist?list=PLS0SUwlYe8cxktXNovos9xleroaWyb-z5",
+        "note": "多位心得只看到無線區域網路／Ethernet 結束。台大網路題廣而不深，PowerCert 也夠用"
+      },
+      {
+        "title": "杰哥數位教室 資料結構／演算法／資料庫課程",
+        "author": "陳士杰",
+        "type": "video",
+        "url": "https://www.youtube.com/playlist?list=PLpbuzGqDFzkhHPz11AeGrU7K8AKNqp0fj",
+        "note": "免費且附投影片，音質較差。資料庫讀到正規化與 SQL 即可，交易管理很少考"
+      },
+      {
+        "title": "蔡明志《資料結構：使用C++》第五版",
+        "author": "蔡明志",
+        "type": "book",
+        "url": "https://www.books.com.tw/products/0010903831",
+        "note": "配影音課用。手寫題出在資結，程式碼要練到能默寫"
+      },
+      {
+        "title": "李宏毅《機器學習》與生成式 AI 課程",
+        "author": "李宏毅",
+        "type": "video",
+        "url": "https://www.youtube.com/playlist?list=PLJV_el3uVTsOePyfmkfivYZ7Rqr2nMk3W",
+        "note": "AI 是逐年加重的趨勢題。深度學習基礎可用 iThome 鐵人賽系列文補"
+      },
+      {
+        "title": "蝦皮資管所計概筆記（藍底白字那套）",
+        "type": "notes",
+        "note": "開讀前掃一遍建立地圖、後期當索引。心得明講資結與網路部分太簡略，不能當唯一教材"
       },
       {
         "title": "補習班計概講義（大碩/TKB）",
-        "type": "cram-school"
+        "type": "cram-school",
+        "note": "非必需。心得評語：參考書要搭配上課才有效益，自學不如直接讀原文書"
       }
     ]
   },
@@ -142,21 +205,33 @@
     ],
     "materials": [
       {
-        "title": "林東清《資訊管理》（e化企業核心競爭能力）",
-        "author": "林東清",
-        "type": "book",
-        "note": "台大資管所指定用書，必讀"
-      },
-      {
-        "title": "Laudon《管理資訊系統》中譯本",
+        "title": "Laudon《管理資訊系統》16/e 中譯本",
         "author": "Laudon & Laudon",
         "type": "book",
-        "note": "聖經本，補充理論深度"
+        "url": "https://www.tenlong.com.tw/products/9789867696397",
+        "note": "無補習者的主力。按章節對應考古題練習，先回想本章哪些概念能解釋題目"
+      },
+      {
+        "title": "林東清《資訊管理：智慧化企業的核心競爭能力》八版",
+        "author": "林東清",
+        "type": "book",
+        "url": "https://www.books.com.tw/products/0010932309",
+        "note": "即舊版《e化企業的核心競爭能力》改版，補理論深度"
+      },
+      {
+        "title": "每天一篇時事申論（科技新報／科技報橘／iThome）",
+        "type": "online",
+        "note": "111 正取者的做法：考前累積 30–40 篇並每天回頭複習。這科考產出速度，不是背誦量"
+      },
+      {
+        "title": "Podcast：矽谷輕鬆談、曼報",
+        "type": "online",
+        "note": "零碎時間用。心得說法：聽力輸入對口試比視覺輸入更有幫助"
       },
       {
         "title": "補習班MIS講義（大碩/TKB）",
         "type": "cram-school",
-        "note": "MIS申論難自學，強烈建議上補習班"
+        "note": "庫內意見分歧最大的一科：一派說沒有回饋就不知道怎麼進步，另一派（台清政交全正取）說補習班的答題框架只適合中字輩、台政考的是案例分析。共識是要練產出與回饋機制，不是模板"
       }
     ]
   },
@@ -193,13 +268,30 @@
     ],
     "materials": [
       {
-        "title": "補習班統計學講義",
-        "type": "cram-school",
-        "note": "台大獨有考科，需單獨準備；補習班講義最有針對性"
+        "title": "唐麗英《統計學(一) 基礎統計》（16 講）",
+        "author": "唐麗英",
+        "type": "video",
+        "url": "https://www.youtube.com/playlist?list=PLj6E8qlqmkFvsst4-ww1mrax1D65FQI1m",
+        "note": "免費影音，敘述統計到抽樣分佈。114 台大正取者兩三週看完這兩套"
       },
       {
-        "title": "基礎統計學教材（任一版本）",
-        "type": "book"
+        "title": "唐麗英《統計學(二) 進階統計》（13 講）",
+        "author": "唐麗英",
+        "type": "video",
+        "url": "https://www.youtube.com/playlist?list=PLj6E8qlqmkFtFl1HFux0XUHiPjBmBoZno",
+        "note": "假設檢定、ANOVA、迴歸——正好是考試重心"
+      },
+      {
+        "title": "Lind《商用統計學》19e 中譯本",
+        "author": "Lind, Marchal & Wathen",
+        "type": "book",
+        "url": "https://www.books.com.tw/products/0010991598",
+        "note": "配影音課的習題來源，關鍵在大量練題提升解題速度"
+      },
+      {
+        "title": "補習班統計學講義",
+        "type": "cram-school",
+        "note": "非必需。統計是可自學度最高的一科，跨考生只要修過基礎統計就不吃虧"
       }
     ]
   }
