@@ -460,8 +460,8 @@
     "title": "Brookshear《Computer Science: An Overview》",
     "type": "書目",
     "examRelevance": ["im"],
-    "url": "https://search.books.com.tw/search/query/key/Computer+Science+An+Overview",
-    "description": "計概原文教材，無補習考生常拿來搭配于天立開放式課程，與 Discovering Computers 互補"
+    "url": "https://www.tenlong.com.tw/products/9781292263427",
+    "description": "計概原文教材（13/e，有中譯本），無補習考生最常拿來搭配于天立開放式課程，與 Discovering Computers 互補。多篇心得指出影音課講得淺、觀念要靠這本補；書附線上練習題，有心得記載清大考出一模一樣的題目"
   },
   {
     "id": "res-solutions-im-108",
@@ -1398,5 +1398,29 @@
     "examRelevance": ["im"],
     "url": "https://www.books.com.tw/products/0010991598",
     "description": "114 台大正取者搭配唐麗英線上課用的統計課本，重點是拿它的習題大量練，提升解題速度"
+  },
+  {
+    "id": "res-site-geeksforgeeks",
+    "title": "GeeksforGeeks — 資結／演算法／OS／網路題庫",
+    "type": "線上課程",
+    "examRelevance": ["im", "cs"],
+    "url": "https://www.geeksforgeeks.org/",
+    "description": "無補習心得反覆提到的英文題庫，用來釐清模糊觀念。注意有少數題目的答案可能有誤，對答案時要保留判斷"
+  },
+  {
+    "id": "res-site-nien-network",
+    "title": "粘添壽 — 翻轉工作室《電腦網路與連結技術》",
+    "type": "線上課程",
+    "examRelevance": ["im", "cs"],
+    "url": "https://www.tsnien.idv.tw/Manager_WebBook/main.html",
+    "description": "網路的中文工具書，講義非常詳細甚至偏難。心得的共同定位是「不要當教材、當考古題查詢用」，幾乎都能在裡面找到答案"
+  },
+  {
+    "id": "res-news-hbr-tech",
+    "title": "Harvard Business Review — Technology topic",
+    "type": "時事",
+    "examRelevance": ["im"],
+    "url": "https://hbr.org/topic/subject/technology-and-analytics",
+    "description": "108 台大上榜者推薦的 MIS 補充讀物，理由是三點：MIS 是英文考題、觀念很新、內文是架構式說明還附背景知識連結。等公車之類的零碎時間就能讀"
   }
 ]
