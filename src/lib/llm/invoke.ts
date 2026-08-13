@@ -1,5 +1,6 @@
 import { HumanMessage, SystemMessage } from '@langchain/core/messages'
 import type { z } from 'zod'
+import { providerInfo } from './catalog'
 import type { LlmRuntimeConfig } from './config'
 import {
   createModel,
@@ -141,6 +142,64 @@ export function streamText(opts: StreamOptions) {
     streaming: true,
   })
   return model.stream([new SystemMessage(opts.system), ...opts.messages])
+}
+
+export interface PingResult {
+  ok: boolean
+  route: string
+  /** 模型實際回了什麼。空字串代表連上了但沒吐東西。 */
+  reply?: string
+  error?: string
+  ms: number
+}
+
+/**
+ * 打一次最小的真實呼叫，確認這條 route 通不通。
+ *
+ * 設定頁的「測試連線」用。刻意不吃快取也不走 fallback —— 要測的就是
+ * 眼前這一家通不通，退到別家會讓結果變得看不懂。
+ *
+ * `now` 可以注入，測試才不用碰真的時鐘。
+ */
+export async function pingRoute(
+  env: LlmEnv,
+  route: ModelRoute,
+  now: () => number = Date.now
+): Promise<PingResult> {
+  const started = now()
+  const label = routeLabel(route)
+
+  if (!hasCredentials(env, route)) {
+    const missing = missingCredentialHint(route.provider)
+    return { ok: false, route: label, error: `尚未設定 ${missing}`, ms: 0 }
+  }
+
+  try {
+    // 不重試：要的是「現在通不通」的即時答案，退避重試只會讓人多等
+    const model = createModel(env, route, { maxTokens: 16, maxRetries: 0 })
+    const response = await model.invoke([
+      new SystemMessage('Reply with exactly: OK'),
+      new HumanMessage('ping'),
+    ])
+    return {
+      ok: true,
+      route: label,
+      reply: messageText(response.content).trim(),
+      ms: now() - started,
+    }
+  } catch (err) {
+    return {
+      ok: false,
+      route: label,
+      error: err instanceof Error ? err.message : String(err),
+      ms: now() - started,
+    }
+  }
+}
+
+function missingCredentialHint(provider: string): string {
+  const keys = providerInfo(provider)?.envKeys ?? []
+  return keys.length ? keys.join(' 與 ') : 'API key'
 }
 
 export { messageText }

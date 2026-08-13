@@ -27,6 +27,7 @@ const globalItems = [
   { href: '/guides', label: '上榜心得' },
   { href: '/compare', label: '比較' },
   { href: '/resources', label: '資源庫' },
+  { href: '/settings/llm', label: 'LLM 設定' },
 ]
 
 export function Header() {

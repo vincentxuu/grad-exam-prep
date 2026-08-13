@@ -2,6 +2,7 @@ import type { BaseChatModel } from '@langchain/core/language_models/chat_models'
 import { ChatGoogleGenerativeAI } from '@langchain/google-genai'
 import { ChatGroq } from '@langchain/groq'
 import { ChatOpenAI } from '@langchain/openai'
+import { asProvider, type ModelProvider } from './catalog'
 import type { LlmRuntimeConfig } from './config'
 
 /**
@@ -20,14 +21,7 @@ import type { LlmRuntimeConfig } from './config'
  * env 從 Workers 的 `env` 物件讀，不用 `process.env` —— Workers 上
  * `process.env` 拿不到 secret。
  */
-export type ModelProvider =
-  | 'groq'
-  | 'google'
-  | 'openai'
-  | 'cloudflare'
-  | 'openrouter'
-  | 'cerebras'
-  | 'ollama'
+export type { ModelProvider }
 
 export interface ModelRoute {
   provider: ModelProvider
@@ -58,20 +52,6 @@ export interface LlmEnv {
 
 export const DEFAULT_PROVIDER: ModelProvider = 'groq'
 export const DEFAULT_MODEL = 'llama-3.3-70b-versatile'
-
-const PROVIDERS = new Set<string>([
-  'groq',
-  'google',
-  'openai',
-  'cloudflare',
-  'openrouter',
-  'cerebras',
-  'ollama',
-])
-
-function asProvider(value: string | undefined): ModelProvider | undefined {
-  return value && PROVIDERS.has(value) ? (value as ModelProvider) : undefined
-}
 
 export function resolveRoute(env: LlmEnv, config?: LlmRuntimeConfig): ModelRoute {
   return {
@@ -117,6 +97,13 @@ export interface CreateModelOptions {
   maxTokens?: number
   /** 對話要串流，詞條不用 */
   streaming?: boolean
+  /**
+   * 失敗時重試幾次。預設沿用各家 SDK 的值（通常是 2～3 次退避重試）。
+   *
+   * 設定頁的「測試連線」會設 0 —— 那裡要的是「現在通不通」的即時答案，
+   * 退避重試只會讓使用者對著轉圈多等十幾秒才看到同一個錯誤。
+   */
+  maxRetries?: number
 }
 
 export function createModel(
@@ -125,25 +112,28 @@ export function createModel(
   opts: CreateModelOptions = {}
 ): BaseChatModel {
   const maxTokens = opts.maxTokens ?? 4000
+  const { maxRetries } = opts
 
   switch (route.provider) {
     case 'groq':
-      return new ChatGroq(route.model, { apiKey: env.GROQ_API_KEY, maxTokens })
+      return new ChatGroq(route.model, { apiKey: env.GROQ_API_KEY, maxTokens, maxRetries })
 
     case 'google':
       return new ChatGoogleGenerativeAI(route.model, {
         apiKey: env.GOOGLE_API_KEY || env.GEMINI_API_KEY,
         maxOutputTokens: maxTokens,
+        maxRetries,
       })
 
     case 'openai':
-      return new ChatOpenAI(route.model, { apiKey: env.OPENAI_API_KEY, maxTokens })
+      return new ChatOpenAI(route.model, { apiKey: env.OPENAI_API_KEY, maxTokens, maxRetries })
 
     // 以下四家都是 OpenAI 相容端點，換 baseURL 就好
     case 'cloudflare':
       return new ChatOpenAI(route.model, {
         apiKey: env.CLOUDFLARE_API_TOKEN,
         maxTokens,
+        maxRetries,
         configuration: {
           baseURL: `https://api.cloudflare.com/client/v4/accounts/${env.CLOUDFLARE_ACCOUNT_ID}/ai/v1`,
         },
@@ -153,6 +143,7 @@ export function createModel(
       return new ChatOpenAI(route.model, {
         apiKey: env.OPENROUTER_API_KEY,
         maxTokens,
+        maxRetries,
         configuration: { baseURL: 'https://openrouter.ai/api/v1' },
       })
 
@@ -160,6 +151,7 @@ export function createModel(
       return new ChatOpenAI(route.model, {
         apiKey: env.CEREBRAS_API_KEY,
         maxTokens,
+        maxRetries,
         configuration: { baseURL: 'https://api.cerebras.ai/v1' },
       })
 
@@ -167,6 +159,7 @@ export function createModel(
       return new ChatOpenAI(route.model, {
         apiKey: 'ollama', // 端點不驗證，但 SDK 要求非空
         maxTokens,
+        maxRetries,
         configuration: { baseURL: env.OLLAMA_API_BASE || 'http://localhost:11434/v1' },
       })
   }

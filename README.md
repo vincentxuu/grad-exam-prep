@@ -70,10 +70,19 @@ npx wrangler secret list                  # 確認寫進去了
 [Google AI Studio](https://aistudio.google.com/apikey)（Gemini）、
 [OpenAI](https://platform.openai.com/api-keys)。
 
-### 執行期設定（`llm_config` 表）
+### 執行期設定：`/settings/llm`
 
 非機密的設定 —— provider、model、fallback、每日額度 —— 放在 D1 的
-`llm_config` 表（`0005_llm_config.sql`）。改完最多一分鐘生效，**不用重新部署**。
+`llm_config` 表（`0005_llm_config.sql`），改完最多一分鐘生效，**不用重新部署**。
+
+平常從 **`/settings/llm`** 改就好（header 上有連結），要通關密語，手機也能用：
+
+- 選 provider、填 model，**「測試連線」會打一次真的呼叫**，當場回報通不通、
+  花了幾毫秒、模型回了什麼 —— 測的是表單上這一組，不用先存
+- key 沒設好的 provider 會標「未設 key」，選了會直接說缺哪個環境變數
+- 上方常駐顯示目前真正生效的 route（三層疊完的結果）
+
+需要腳本化時 SQL 也還在：
 
 ```bash
 npx wrangler d1 execute grad-exam-prep-db --remote --command \
@@ -85,8 +94,9 @@ npx wrangler d1 execute grad-exam-prep-db --remote --command \
      updated_at = excluded.updated_at"
 ```
 
-**API key 不要寫進這張表。** D1 存的是明文，拿得到資料庫的人都看得到；
-`wrangler secret` 是加密存放而且讀不回來。表裡只放「洩漏了也不痛」的東西。
+**API key 不要寫進這張表，設定頁也不收 key。** D1 存的是明文，拿得到資料庫
+的人都看得到；`wrangler secret` 是加密存放而且讀不回來。表裡只放「洩漏了
+也不痛」的東西，`GET /api/llm-config` 對每家 key 只回布林值，不回內容。
 
 優先序是 **D1 表 → 環境變數 → 程式預設**，欄位各自獨立 —— 表裡
 `model` 留 NULL 就沿用 `LLM_MODEL`，兩個都沒有才用 `llama-3.3-70b-versatile`。
@@ -142,17 +152,17 @@ system prompt 與 schema 只有一份，不會走鐘。帶通關密語所以不�
 ### 換 LLM provider
 
 生成層用 **LangChain** 當抽象層（做法沿用 `vincentxuu/quidproquo` 的
-`src/lib/rag/model.ts`），換家要做兩件事：把新的 key 寫進 secret，然後改
-`llm_config`（見上一節）指向那家。
+`src/lib/rag/model.ts`），換家要做兩件事，**順序不能顛倒**：
 
 ```bash
-npx wrangler secret put GEMINI_API_KEY
-npx wrangler d1 execute grad-exam-prep-db --remote --command \
-  "UPDATE llm_config SET provider='google', model='gemini-2.0-flash',
-   updated_at=unixepoch() WHERE id='main'"
+npx wrangler secret put GEMINI_API_KEY   # 1. key 進 secret
+npm run deploy                            # 2. 部署（secret 綁在 worker 上）
 ```
 
-只有 key 需要重新部署（secret 綁在 worker 上），provider 與 model 立即生效。
+3. 到 `/settings/llm` 選 Google Gemini、填 model、按「測試連線」確認通了，再存檔。
+
+先改設定再給 key 的話，中間那段時間 provider 指向一家沒有 key 的服務，
+查詞會回 503。設定頁會先擋下來提醒，但腳本化的時候沒有人擋。
 
 程式碼只有 `src/lib/llm/model.ts` 知道 provider 的差異；其餘一律不受影響。
 `cloudflare` / `openrouter` / `cerebras` / `ollama` 都走 OpenAI 相容端點，只是換 baseURL。
@@ -177,16 +187,10 @@ account id 不機密（`wrangler.json` 裡本來就有），放 `vars` 就好：
 }
 ```
 
-```bash
-npm run deploy
-npx wrangler d1 execute grad-exam-prep-db --remote --command \
-  "UPDATE llm_config SET provider='cloudflare',
-   model='@cf/meta/llama-3.3-70b-instruct-fp8-fast',
-   updated_at=unixepoch() WHERE id='main'"
-```
-
-model 要帶 `@cf/` 前綴，可用清單見 Cloudflare 的 Workers AI models 頁。
-兩個環境變數少一個就算沒設定好，`POST /api/lexicon` 會回 503。
+部署後到 `/settings/llm` 切過去。model 要帶 `@cf/` 前綴（例如
+`@cf/meta/llama-3.3-70b-instruct-fp8-fast`），可用清單見 Cloudflare 的
+Workers AI models 頁。兩個環境變數少一個就算沒設定好，設定頁會標成
+「未設 key」，直接呼叫 `POST /api/lexicon` 則回 503。
 
 **手動部署**（本機）：
 
@@ -214,6 +218,7 @@ npx wrangler d1 migrations apply grad-exam-prep-db --remote
 | `/[exam]/reading` | 貼上文章 → 逐字可點查詞 → 一鍵加入單字庫 |
 | `/[exam]/questions/[id]` | 英文題目與題組文章逐字可點（只在英文科開啟） |
 | `/[exam]/chat` | 英文對話練習，把單字庫裡到期的字逼出來 |
+| `/settings/llm` | 換 provider／model、調額度、測試連線（需通關密語） |
 | 全站 header「加字」 | 快速加字（`Ctrl/⌘ + K`）—— 課堂、家教、app 上聽到的字 |
 | `/[exam]/flashcards` | 收藏的字與既有閃卡共用同一個 SM-2 排程 |
 
