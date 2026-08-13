@@ -22,9 +22,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # wrangler 要求 Node.js >= 22。釘 20 的話前面 build 全部會過，只有最後
+      # 的 deploy 步驟失敗，症狀看起來像部署問題而不是版本問題。
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
 
       - run: npm ci
