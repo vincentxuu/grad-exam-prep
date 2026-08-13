@@ -1,0 +1,132 @@
+import type { BaseChatModel } from '@langchain/core/language_models/chat_models'
+import { ChatGoogleGenerativeAI } from '@langchain/google-genai'
+import { ChatGroq } from '@langchain/groq'
+import { ChatOpenAI } from '@langchain/openai'
+
+/**
+ * LLM provider 路由，做法沿用 quidproquo（vincentxuu/quidproquo 的
+ * `src/lib/rag/model.ts`）：用 LangChain 當抽象層，provider 由 env 決定，
+ * 預設 Groq，並支援失敗時退到另一家。
+ *
+ * env 從 Workers 的 `env` 物件讀，不用 `process.env` —— Workers 上
+ * `process.env` 拿不到 secret。
+ */
+export type ModelProvider = 'groq' | 'google' | 'openai' | 'openrouter' | 'cerebras' | 'ollama'
+
+export interface ModelRoute {
+  provider: ModelProvider
+  model: string
+  /** 這條 route 本身是不是 fallback（避免無限退） */
+  fallback: boolean
+}
+
+export interface LlmEnv {
+  LLM_PROVIDER?: string
+  LLM_MODEL?: string
+  LLM_FALLBACK_PROVIDER?: string
+  LLM_FALLBACK_MODEL?: string
+
+  GROQ_API_KEY?: string
+  GOOGLE_API_KEY?: string
+  GEMINI_API_KEY?: string
+  OPENAI_API_KEY?: string
+  OPENROUTER_API_KEY?: string
+  CEREBRAS_API_KEY?: string
+  OLLAMA_API_BASE?: string
+}
+
+export const DEFAULT_PROVIDER: ModelProvider = 'groq'
+export const DEFAULT_MODEL = 'llama-3.3-70b-versatile'
+
+const PROVIDERS = new Set<string>(['groq', 'google', 'openai', 'openrouter', 'cerebras', 'ollama'])
+
+function asProvider(value: string | undefined): ModelProvider | undefined {
+  return value && PROVIDERS.has(value) ? (value as ModelProvider) : undefined
+}
+
+export function resolveRoute(env: LlmEnv): ModelRoute {
+  return {
+    provider: asProvider(env.LLM_PROVIDER) ?? DEFAULT_PROVIDER,
+    model: env.LLM_MODEL || DEFAULT_MODEL,
+    fallback: false,
+  }
+}
+
+export function resolveFallbackRoute(env: LlmEnv): ModelRoute | null {
+  const provider = asProvider(env.LLM_FALLBACK_PROVIDER)
+  if (!provider) return null
+  return { provider, model: env.LLM_FALLBACK_MODEL || DEFAULT_MODEL, fallback: true }
+}
+
+/** 這條 route 需要的 key 有沒有設定。 */
+export function hasCredentials(env: LlmEnv, route: ModelRoute): boolean {
+  switch (route.provider) {
+    case 'groq':
+      return !!env.GROQ_API_KEY
+    case 'google':
+      return !!(env.GOOGLE_API_KEY || env.GEMINI_API_KEY)
+    case 'openai':
+      return !!env.OPENAI_API_KEY
+    case 'openrouter':
+      return !!env.OPENROUTER_API_KEY
+    case 'cerebras':
+      return !!env.CEREBRAS_API_KEY
+    case 'ollama':
+      return true // 本機端點，不需要 key
+  }
+}
+
+export interface CreateModelOptions {
+  maxTokens?: number
+  /** 對話要串流，詞條不用 */
+  streaming?: boolean
+}
+
+export function createModel(
+  env: LlmEnv,
+  route: ModelRoute,
+  opts: CreateModelOptions = {}
+): BaseChatModel {
+  const maxTokens = opts.maxTokens ?? 4000
+
+  switch (route.provider) {
+    case 'groq':
+      return new ChatGroq(route.model, { apiKey: env.GROQ_API_KEY, maxTokens })
+
+    case 'google':
+      return new ChatGoogleGenerativeAI(route.model, {
+        apiKey: env.GOOGLE_API_KEY || env.GEMINI_API_KEY,
+        maxOutputTokens: maxTokens,
+      })
+
+    case 'openai':
+      return new ChatOpenAI(route.model, { apiKey: env.OPENAI_API_KEY, maxTokens })
+
+    // 以下三家都是 OpenAI 相容端點，換 baseURL 就好
+    case 'openrouter':
+      return new ChatOpenAI(route.model, {
+        apiKey: env.OPENROUTER_API_KEY,
+        maxTokens,
+        configuration: { baseURL: 'https://openrouter.ai/api/v1' },
+      })
+
+    case 'cerebras':
+      return new ChatOpenAI(route.model, {
+        apiKey: env.CEREBRAS_API_KEY,
+        maxTokens,
+        configuration: { baseURL: 'https://api.cerebras.ai/v1' },
+      })
+
+    case 'ollama':
+      return new ChatOpenAI(route.model, {
+        apiKey: 'ollama', // 端點不驗證，但 SDK 要求非空
+        maxTokens,
+        configuration: { baseURL: env.OLLAMA_API_BASE || 'http://localhost:11434/v1' },
+      })
+  }
+}
+
+/** 記在快取裡的 model 標記，方便日後知道哪些詞條是哪個模型生的。 */
+export function routeLabel(route: ModelRoute): string {
+  return `${route.provider}:${route.model}`
+}

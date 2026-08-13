@@ -34,15 +34,12 @@ export async function POST(request: NextRequest, ctx: { params: Promise<{ id: st
   }
 
   const env = await getChatEnv()
-  const apiKey = env.ANTHROPIC_API_KEY
-  if (!apiKey) return NextResponse.json({ error: '尚未設定 ANTHROPIC_API_KEY' }, { status: 503 })
-
   const db = env.DB as unknown as Db
 
   const session = await getSession(db, id, getUserId(request))
   if (!session) return NextResponse.json({ error: '找不到這場對話' }, { status: 404 })
 
-  const result = await correctMessage(apiKey, content)
+  const result = await correctMessage(env, content)
   if (!result.ok) {
     // 糾錯失敗不該讓對話中斷，回空陣列讓前端安靜地略過
     return NextResponse.json({ corrections: [] })

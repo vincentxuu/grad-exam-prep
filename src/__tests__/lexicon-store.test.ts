@@ -102,13 +102,13 @@ function entry(headword: string): LexiconEntry {
 describe('getEntry / putEntry', () => {
   it('查得到剛寫入的詞條', async () => {
     const { db } = fakeDb()
-    await putEntry(db, entry('intercept'), 'claude-opus-5', 'intercept')
+    await putEntry(db, entry('intercept'), 'groq:llama-3.3-70b-versatile', 'intercept')
     expect((await getEntry(db, 'intercept'))?.headword).toBe('intercept')
   })
 
   it('查詢字是屈折形時建立 alias，下次直接命中', async () => {
     const { db, aliases } = fakeDb()
-    await putEntry(db, entry('intercept'), 'claude-opus-5', 'intercepted')
+    await putEntry(db, entry('intercept'), 'groq:llama-3.3-70b-versatile', 'intercepted')
 
     expect(aliases.get('intercepted')).toBe('intercept')
     expect((await getEntry(db, 'intercepted'))?.headword).toBe('intercept')
@@ -116,16 +116,16 @@ describe('getEntry / putEntry', () => {
 
   it('查詢字等於原形時不寫多餘的 alias', async () => {
     const { db, aliases } = fakeDb()
-    await putEntry(db, entry('intercept'), 'claude-opus-5', 'intercept')
+    await putEntry(db, entry('intercept'), 'groq:llama-3.3-70b-versatile', 'intercept')
     expect(aliases.size).toBe(0)
   })
 
   it('查詢字本身已是另一筆詞條時，不建立會遮蔽它的 alias', async () => {
     const { db, aliases } = fakeDb()
     // left 本身是一個詞條（左邊）
-    await putEntry(db, entry('left'), 'claude-opus-5', 'left')
+    await putEntry(db, entry('left'), 'groq:llama-3.3-70b-versatile', 'left')
     // 之後有人查 left，模型把它還原成 leave 的過去式
-    await putEntry(db, entry('leave'), 'claude-opus-5', 'left')
+    await putEntry(db, entry('leave'), 'groq:llama-3.3-70b-versatile', 'left')
 
     expect(aliases.has('left')).toBe(false)
     // 查 left 仍然拿到 left 自己，不會被導去 leave
@@ -134,7 +134,7 @@ describe('getEntry / putEntry', () => {
 
   it('孤兒 alias 當成 cache miss，不變成查詢黑洞', async () => {
     const { db, entries } = fakeDb()
-    await putEntry(db, entry('intercept'), 'claude-opus-5', 'intercepted')
+    await putEntry(db, entry('intercept'), 'groq:llama-3.3-70b-versatile', 'intercepted')
     entries.delete('intercept')
 
     expect(await getEntry(db, 'intercepted')).toBeNull()

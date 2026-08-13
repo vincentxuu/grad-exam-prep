@@ -2,12 +2,12 @@ import { getCloudflareContext } from '@opennextjs/cloudflare'
 import type { NextRequest } from 'next/server'
 import { validateBearerToken } from '@/lib/auth'
 import { checkAndIncrementQuota, type Db, readQuota } from '@/lib/lexicon/store'
+import type { LlmEnv } from '@/lib/llm/model'
 
 export const DEFAULT_CHAT_QUOTA = 40
 
-export interface ChatEnv {
+export interface ChatEnv extends LlmEnv {
   DB: D1Database
-  ANTHROPIC_API_KEY?: string
   PASSPHRASE_HASH?: string
   CHAT_DAILY_QUOTA?: string
 }

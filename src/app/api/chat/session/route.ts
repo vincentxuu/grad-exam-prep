@@ -1,5 +1,5 @@
 import { type NextRequest, NextResponse } from 'next/server'
-import { streamReply } from '@/lib/chat/converse'
+import { messageText, streamReply } from '@/lib/chat/converse'
 import {
   ChatQuotaExceeded,
   chatQuotaLimit,
@@ -40,9 +40,6 @@ export async function POST(request: NextRequest) {
   }
 
   const env = await getChatEnv()
-  const apiKey = env.ANTHROPIC_API_KEY
-  if (!apiKey) return NextResponse.json({ error: '尚未設定 ANTHROPIC_API_KEY' }, { status: 503 })
-
   const db = env.DB as unknown as Db
   const userId = getUserId(request)
   const unlimited = isUnlimited(request, env)
@@ -58,20 +55,22 @@ export async function POST(request: NextRequest) {
   try {
     await spendChatQuota(db, userId, chatQuotaLimit(env), unlimited)
 
-    const stream = streamReply({
-      apiKey,
+    const stream = await streamReply({
+      env,
       topic: session.topic,
       targetWords: session.targetWords,
       persona: body.persona,
       history: [],
     })
-    const final = await stream.finalMessage()
 
-    if (final.stop_reason === 'refusal') {
-      return NextResponse.json({ error: '無法開始這場對話，換個主題試試。' }, { status: 422 })
+    let opening = ''
+    for await (const chunk of stream) {
+      opening += messageText(chunk.content)
     }
 
-    const opening = final.content.find((b) => b.type === 'text')?.text ?? ''
+    if (!opening.trim()) {
+      return NextResponse.json({ error: '無法開始這場對話，換個主題試試。' }, { status: 422 })
+    }
 
     await createSession(db, { ...session, userId })
     await addMessage(db, session.id, {

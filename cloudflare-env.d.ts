@@ -4,10 +4,26 @@ interface CloudflareEnv {
   DB: D1Database
   ASSETS: Fetcher
   PASSPHRASE_HASH: string
-  /** Anthropic API key（wrangler secret）。沒設定時查詞的生成路徑會回 503。 */
-  ANTHROPIC_API_KEY: string
-  /** 每人每日生成次數上限，未設定時用 DEFAULT_DAILY_QUOTA（60）。 */
+
+  // ── LLM provider 路由（做法沿用 vincentxuu/quidproquo）──────────────
+  /** groq | google | openai | openrouter | cerebras | ollama，預設 groq */
+  LLM_PROVIDER?: string
+  /** 預設 llama-3.3-70b-versatile */
+  LLM_MODEL?: string
+  /** 主 provider 失敗時退到這家，未設定就不退 */
+  LLM_FALLBACK_PROVIDER?: string
+  LLM_FALLBACK_MODEL?: string
+
+  GROQ_API_KEY?: string
+  GOOGLE_API_KEY?: string
+  GEMINI_API_KEY?: string
+  OPENAI_API_KEY?: string
+  OPENROUTER_API_KEY?: string
+  CEREBRAS_API_KEY?: string
+  OLLAMA_API_BASE?: string
+
+  /** 每人每日查詞生成上限，預設 60。 */
   LEXICON_DAILY_QUOTA?: string
-  /** 每人每日對話訊息上限，未設定時用 DEFAULT_CHAT_QUOTA（40）。與查詞額度分開計。 */
+  /** 每人每日對話訊息上限，預設 40。與查詞額度分開計。 */
   CHAT_DAILY_QUOTA?: string
 }

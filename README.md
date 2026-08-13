@@ -51,7 +51,13 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 | 名稱 | 必要 | 用途 |
 | --- | --- | --- |
-| `ANTHROPIC_API_KEY` | 生成路徑必要 | 生成詞條與個人化例句。**沒設定時 `POST /api/lexicon` 回 503**；`GET`（只讀快取）不受影響。 |
+| `GROQ_API_KEY` | 預設 provider 必要 | 預設走 Groq。**沒設定時 `POST /api/lexicon` 回 503**；`GET`（只讀快取）不受影響。 |
+| `LLM_PROVIDER` | 否 | `groq`（預設）/ `google` / `openai` / `openrouter` / `cerebras` / `ollama` |
+| `LLM_MODEL` | 否 | 預設 `llama-3.3-70b-versatile` |
+| `LLM_FALLBACK_PROVIDER`／`LLM_FALLBACK_MODEL` | 否 | 主 provider 失敗時退到這家。未設定就不退。 |
+| `GOOGLE_API_KEY`／`GEMINI_API_KEY` | 用 Gemini 時 | |
+| `OPENAI_API_KEY`／`OPENROUTER_API_KEY`／`CEREBRAS_API_KEY` | 用該家時 | |
+| `OLLAMA_API_BASE` | 用 Ollama 時 | 預設 `http://localhost:11434/v1` |
 | `LEXICON_DAILY_QUOTA` | 否 | 每人每日生成次數上限，預設 60。快取命中不計入。 |
 | `CHAT_DAILY_QUOTA` | 否 | 每人每日對話訊息上限，預設 40。**與查詞額度分開計** —— 對話貴得多。 |
 | `PASSPHRASE_HASH` | 否 | 既有的同步用密語。帶此 bearer token 的請求不受配額限制。 |
@@ -72,6 +78,20 @@ node scripts/warm-lexicon.js
 
 腳本打的是已部署的 `/api/lexicon`，不是自己重寫一套生成邏輯 —— 這樣
 system prompt 與 schema 只有一份，不會走鐘。帶通關密語所以不受每日配額限制。
+
+### 換 LLM provider
+
+生成層用 **LangChain** 當抽象層（做法沿用 `vincentxuu/quidproquo` 的
+`src/lib/rag/model.ts`），provider 由 env 決定，換家只要改環境變數：
+
+```bash
+npx wrangler secret put GEMINI_API_KEY
+npx wrangler secret put LLM_PROVIDER   # google
+npx wrangler secret put LLM_MODEL      # gemini-2.0-flash
+```
+
+程式碼只有 `src/lib/llm/model.ts` 知道 provider 的差異；其餘一律不受影響。
+`openrouter` / `cerebras` / `ollama` 都走 OpenAI 相容端點，只是換 baseURL。
 
 **手動部署**（本機）：
 

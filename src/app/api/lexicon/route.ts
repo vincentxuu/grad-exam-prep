@@ -1,7 +1,7 @@
 import { getCloudflareContext } from '@opennextjs/cloudflare'
 import { type NextRequest, NextResponse } from 'next/server'
 import { validateBearerToken } from '@/lib/auth'
-import { generateEntry, generatePersonal, LEXICON_MODEL } from '@/lib/lexicon/generate'
+import { generateEntry, generatePersonal } from '@/lib/lexicon/generate'
 import { normalizeTerm, personaHash } from '@/lib/lexicon/normalize'
 import {
   checkAndIncrementQuota,
@@ -13,11 +13,11 @@ import {
   putPersonal,
   readQuota,
 } from '@/lib/lexicon/store'
+import type { LlmEnv } from '@/lib/llm/model'
 import type { LookupResponse, PersonaProfile } from '@/types/lexicon'
 
-interface Env {
+interface Env extends LlmEnv {
   DB: D1Database
-  ANTHROPIC_API_KEY?: string
   PASSPHRASE_HASH?: string
   LEXICON_DAILY_QUOTA?: string
 }
@@ -88,11 +88,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: '伺服器錯誤' }, { status: 500 })
   }
 
-  const apiKey = env.ANTHROPIC_API_KEY
-  if (!apiKey) {
-    return NextResponse.json({ error: '尚未設定 ANTHROPIC_API_KEY' }, { status: 503 })
-  }
-
+  // 有沒有 key 由 provider 路由自己判斷（不同 provider 看不同的 env）
   const db = env.DB as unknown as Db
   const limit = quotaLimit(env)
 
@@ -115,11 +111,11 @@ export async function POST(request: NextRequest) {
 
     if (!entry) {
       await spend()
-      const result = await generateEntry(apiKey, normalized.term)
+      const result = await generateEntry(env, normalized.term)
       if (!result.ok) return generationError(result.reason, result.message)
 
       entry = result.data
-      await putEntry(db, entry, LEXICON_MODEL, normalized.term)
+      await putEntry(db, entry, result.route, normalized.term)
     }
 
     // ——— 個人化橋接 ———
@@ -133,7 +129,7 @@ export async function POST(request: NextRequest) {
 
       if (!personal) {
         await spend()
-        const result = await generatePersonal(apiKey, entry.headword, payload.persona)
+        const result = await generatePersonal(env, entry.headword, payload.persona)
         // 個人化失敗不該讓整次查詢失敗 —— 詞條本身已經有了，先給使用者
         if (result.ok) {
           personal = result.data
@@ -174,9 +170,15 @@ class QuotaExceeded extends Error {
   }
 }
 
-function generationError(reason: 'refusal' | 'invalid' | 'error', message: string) {
-  if (reason === 'refusal') {
-    return NextResponse.json({ error: '這個詞無法生成詞條，換一個試試。' }, { status: 422 })
+function generationError(reason: 'no-credentials' | 'invalid' | 'error', message: string) {
+  if (reason === 'no-credentials') {
+    return NextResponse.json(
+      { error: '尚未設定 LLM API key，請參考 README 設定 worker secret。' },
+      { status: 503 }
+    )
+  }
+  if (reason === 'invalid') {
+    return NextResponse.json({ error: '這個詞生成的結果不完整，再試一次。' }, { status: 422 })
   }
   return NextResponse.json({ error: `生成失敗：${message}` }, { status: 503 })
 }

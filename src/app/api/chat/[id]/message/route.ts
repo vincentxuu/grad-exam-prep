@@ -1,6 +1,6 @@
 import type { NextRequest } from 'next/server'
 import { NextResponse } from 'next/server'
-import { streamReply } from '@/lib/chat/converse'
+import { messageText, streamReply } from '@/lib/chat/converse'
 import {
   ChatQuotaExceeded,
   chatQuotaLimit,
@@ -43,9 +43,6 @@ export async function POST(request: NextRequest, ctx: { params: Promise<{ id: st
   if (!content) return sseError('訊息不可為空', 400)
 
   const env = await getChatEnv()
-  const apiKey = env.ANTHROPIC_API_KEY
-  if (!apiKey) return sseError('尚未設定 ANTHROPIC_API_KEY', 503)
-
   const db = env.DB as unknown as Db
   const userId = getUserId(request)
 
@@ -79,7 +76,7 @@ export async function POST(request: NextRequest, ctx: { params: Promise<{ id: st
   })
 
   const upstream = streamReply({
-    apiKey,
+    env,
     topic: session.topic,
     targetWords: session.targetWords,
     persona: body.persona,
@@ -98,21 +95,20 @@ export async function POST(request: NextRequest, ctx: { params: Promise<{ id: st
       send('meta', { userMessageId, usedWords })
 
       try {
-        for await (const chunk of upstream) {
-          if (chunk.type === 'content_block_delta' && chunk.delta.type === 'text_delta') {
-            send('delta', { text: chunk.delta.text })
-          }
+        // LangChain 的 stream 沒有 finalMessage，逐塊自己累積
+        let reply = ''
+        for await (const chunk of await upstream) {
+          const text = messageText(chunk.content)
+          if (!text) continue
+          reply += text
+          send('delta', { text })
         }
 
-        const final = await upstream.finalMessage()
-
-        if (final.stop_reason === 'refusal') {
-          send('error', { message: '模型拒絕回應這則訊息' })
+        if (!reply.trim()) {
+          send('error', { message: '模型沒有回應內容' })
           controller.close()
           return
         }
-
-        const reply = final.content.find((b) => b.type === 'text')?.text ?? ''
 
         // client 斷線也要留下完整紀錄
         await addMessage(db, id, {

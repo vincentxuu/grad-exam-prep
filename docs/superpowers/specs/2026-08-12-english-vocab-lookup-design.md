@@ -242,14 +242,19 @@ export interface SessionSummary {
 
 | 項目 | 值 | 理由 |
 | --- | --- | --- |
-| model | `claude-opus-5` | 專案預設；成本 $5 / $25 per MTok |
-| max_tokens | 8000 | Opus 5 **thinking 預設開啟**，且 `max_tokens` 同時涵蓋 thinking 與回應文字，要留餘裕否則會中途截斷 |
-| output_config.effort | 先用預設（`high`），另立調校任務往下掃 | `low` / `medium` 在這個模型上表現異常好，但要先有基準再降 |
-| output_config.format | `json_schema` | 結構化輸出，直接拿到 `LexiconEntry`，不必解析散文 |
-| system | 固定的詞條規格 + `cache_control: ephemeral` | Opus 5 快取門檻是 512 tokens，system prompt 遠超過；輔助閱讀一次連查多字時命中率高 |
-| fallbacks | `"default"`（beta `server-side-fallback-2026-07-01`） | Opus 5 的安全分類器可能回 `stop_reason: "refusal"`，交給伺服器端 fallback 而不是把失敗丟給使用者 |
+| 抽象層 | **LangChain**（`@langchain/core` + 各家 provider 套件） | 做法沿用 `vincentxuu/quidproquo` 的 `src/lib/rag/model.ts`：provider 由 env 決定，換家不用改業務邏輯 |
+| 預設 provider / model | `groq` / `llama-3.3-70b-versatile` | 與 quidproquo 一致；免費額度實用、速度快 |
+| 可選 provider | google、openai、openrouter、cerebras、ollama | 後三家走 OpenAI 相容端點，只換 baseURL |
+| fallback | `LLM_FALLBACK_PROVIDER` | 主 provider 失敗時退一次；未設定就不退 |
+| 結構化輸出 | 先試 `withStructuredOutput(zodSchema)`，失敗退到手動 JSON 解析 | 不是每家 provider 的 function calling 都可靠。quidproquo 直接手動解析，這裡多留原生那條路，兩層都不過才算失敗 |
+| env 來源 | Workers 的 `env` 物件 | Workers 上 `process.env` 拿不到 secret（quidproquo 同樣做法） |
 
-**必做的錯誤處理：** 讀 `response.content` 之前先檢查 `stop_reason === 'refusal'`。無條件讀 `content[0]` 在被拒絕時會直接壞掉。
+**沒有 prompt caching。** Groq 這類 provider 沒有 Anthropic 那種 `cache_control`
+斷點，所以：
+- 查詞的 system prompt 每次都會重新計費 —— 但 Groq 單價低很多，而且詞條
+  快取命中後就完全不呼叫
+- **對話每一輪都要把整段歷史重新計費**。單場 30 則的上限因此不只是體驗
+  考量，也是成本上限
 
 ### 兩個 prompt
 
@@ -375,7 +380,7 @@ interface ReviewCard {
 
 紙本書沒辦法複製貼上。Claude 有視覺能力，一張書頁照片可以直接辨識出文字，接進同一套逐字可點的介面。
 
-放在選做，因為它是這批功能裡唯一會顯著推高單次成本的：Opus 5 的高解析度影像單張最多約 4,784 tokens，而且沒有快取可言（每張照片都是新的）。先做前三種入口，看實際上有多常真的要從紙本書抓字，再決定。
+放在選做，因為它是這批功能裡唯一會顯著推高單次成本的：一張高解析度照片的視覺 token 數遠高於一次文字查詢，而且每張都是新的、沒有快取可言。另外預設的 Groq `llama-3.3-70b-versatile` 沒有視覺能力，要做的話這條路得單獨指定一個多模態 model。先做前三種入口，看實際上有多常真的要從紙本書抓字，再決定。
 
 ### 帶著出處存下來
 
@@ -486,6 +491,6 @@ export interface WordSource {
 | **對話成本遠高於查詞** | 獨立配額、單場 30 則上限、糾錯預設關、多輪快取斷點；查詞會隨快取變熱而趨近零成本，對話不會 —— 這是主要的持續支出 |
 | 對話歷史撐爆 sync payload | 歷史存 D1 的 `chat_messages`，不進會同步的 `StorageState` |
 | 冷啟動延遲（生成要數秒） | 先打 GET 探測快取；生成時顯示 skeleton；暖機批次讓高頻字一開始就是熱的 |
-| Opus 5 拒絕回應 | 讀 content 前先檢查 `stop_reason`，並開 `fallbacks: "default"` |
+| 單一 provider 掛掉或拒絕 | `LLM_FALLBACK_PROVIDER` 退一次；結構化輸出失敗還有手動 JSON 解析那層 |
 | 生成內容有錯 | 詞條頁標示「AI 生成」；提供「重新生成」按鈕（計入配額） |
 | localStorage 配額 | `savedWords` 只存 headword 與 metadata，詞條本體留在 D1 |
