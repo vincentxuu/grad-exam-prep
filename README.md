@@ -45,9 +45,46 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 `account_id` 已經寫在 `wrangler.json`，不必另外設 `CLOUDFLARE_ACCOUNT_ID`。
 
-### Worker secrets / 環境變數
+### 設定 API key
 
-查詞功能（`/api/lexicon`）需要以下設定，用 `npx wrangler secret put <NAME>` 寫入：
+**本機開發**：複製範本後填值，`npm run dev` 會自動讀（`next.config.mjs` 有呼叫
+`initOpenNextCloudflareForDev()`）。
+
+```bash
+cp .dev.vars.example .dev.vars
+# 編輯 .dev.vars，填入 GROQ_API_KEY
+npm run dev
+```
+
+`.dev.vars` 已在 `.gitignore` 裡，不會進版控。**不要**把 key 寫進 `.env`，
+Workers 讀不到那支。
+
+**線上（Cloudflare Workers）**：`.dev.vars` 不會被部署，要另外寫進 secret。
+
+```bash
+npx wrangler secret put GROQ_API_KEY      # 貼上 key，不會顯示在畫面上
+npx wrangler secret list                  # 確認寫進去了
+```
+
+非機密的設定（provider、model、額度）可以直接寫在 `wrangler.json` 的 `vars`，
+不必當 secret：
+
+```jsonc
+{
+  "vars": {
+    "LLM_PROVIDER": "groq",
+    "LLM_MODEL": "llama-3.3-70b-versatile"
+  }
+}
+```
+
+取得 key：[Groq Console](https://console.groq.com/keys)（預設，有免費額度）、
+[Google AI Studio](https://aistudio.google.com/apikey)（Gemini）、
+[OpenAI](https://platform.openai.com/api-keys)。
+
+### 環境變數一覽
+
+查詞功能（`/api/lexicon`）會讀以下設定：
 
 | 名稱 | 必要 | 用途 |
 | --- | --- | --- |
