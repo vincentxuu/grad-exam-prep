@@ -121,6 +121,17 @@ export interface Resource {
   author?: string
 }
 
+/**
+ * 題庫內容的可信度。`verified` 講的是 PDF 連結，這裡講的是解析進 `questions.json`
+ * 的題目本身。
+ *
+ * - `incomplete`：題目在，但缺了作答必需的東西（文章沒抽進來、選項少一個）。
+ * - `suspect`：內容可能根本不屬於這份卷子（與別份大量重複），未經原卷確認。
+ *
+ * 沒有這個欄位＝目前沒有已知問題，**不等於**已經逐題對過原卷。
+ */
+export type PaperContentStatus = 'incomplete' | 'suspect'
+
 export interface PastPaper {
   id: string
   examId: ExamId
@@ -130,6 +141,9 @@ export interface PastPaper {
   urlFallback?: string
   source: PaperSource
   verified: boolean
+  contentStatus?: PaperContentStatus
+  /** 給使用者看的一句話：這份卷子哪裡不能信。 */
+  contentIssue?: string
 }
 
 export interface Question {

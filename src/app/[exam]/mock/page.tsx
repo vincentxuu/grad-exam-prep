@@ -9,7 +9,13 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { useQueryState } from '@/hooks/use-query-state'
 import { getAnswer } from '@/lib/answers'
-import { EXAM_LABELS, getQuestionsByExam, getSubjectsByExam } from '@/lib/content'
+import {
+  EXAM_LABELS,
+  getPaperContentIssue,
+  getQuestionsByExam,
+  getReliableQuestions,
+  getSubjectsByExam,
+} from '@/lib/content'
 import { getUserId } from '@/lib/user-id'
 import type { ExamId, Question } from '@/types/content'
 
@@ -34,6 +40,8 @@ function MockExamContent({ params }: Props) {
   if (!subjects.length) notFound()
 
   const allQuestions = getQuestionsByExam(exam as ExamId)
+  // 模擬考會算分，內容不可信的卷子不能進來 —— 練到錯的選項比沒練更糟
+  const examQuestions = getReliableQuestions(allQuestions)
   const years = [...new Set(allQuestions.map((q) => q.year))].sort((a, b) => b - a)
 
   const [phase, setPhase] = useState<Phase>('setup')
@@ -67,7 +75,7 @@ function MockExamContent({ params }: Props) {
   }, [submitted, questions, answers])
 
   const startExam = useCallback(() => {
-    const qs = allQuestions.filter(
+    const qs = examQuestions.filter(
       (q) => q.subjectId === selectedSubject && q.year === selectedYear
     )
     if (qs.length === 0) return
@@ -77,7 +85,7 @@ function MockExamContent({ params }: Props) {
     setSecondsLeft(timeLimitMin * 60)
     setSubmitted(false)
     setPhase('exam')
-  }, [allQuestions, selectedSubject, selectedYear, timeLimitMin])
+  }, [examQuestions, selectedSubject, selectedYear, timeLimitMin])
 
   useEffect(() => {
     if (phase !== 'exam' || submitted) return
@@ -101,6 +109,13 @@ function MockExamContent({ params }: Props) {
   const total = questions.reduce((acc, q) => acc + (q.points ?? 5), 0)
 
   if (phase === 'setup') {
+    const matches = (q: Question) => q.subjectId === selectedSubject && q.year === selectedYear
+    const availableCount = examQuestions.filter(matches).length
+    // 這個組合完全沒題目時，要分得出來是「本來就沒收錄」還是「被我們擋掉了」
+    const excludedPaper = availableCount
+      ? undefined
+      : getPaperContentIssue(allQuestions.find(matches)?.paperId ?? '')
+
     return (
       <div className="space-y-6 max-w-lg">
         <h1 className="text-2xl font-bold">{EXAM_LABELS[exam as ExamId]} — 模擬考</h1>
@@ -155,8 +170,20 @@ function MockExamContent({ params }: Props) {
           </div>
         </div>
 
-        <Button className="w-full" onClick={startExam}>
-          開始考試
+        {excludedPaper && (
+          <div className="rounded-md border border-amber-300 bg-amber-50 px-4 py-3 text-sm dark:border-amber-800 dark:bg-amber-950">
+            <p className="font-semibold text-amber-900 dark:text-amber-200">
+              ⚠️ 這一年的卷子暫時不能拿來模擬考
+            </p>
+            <p className="mt-1 text-amber-800 dark:text-amber-300">{excludedPaper.contentIssue}</p>
+            <p className="mt-1 text-amber-800 dark:text-amber-300">
+              題庫裡仍可瀏覽這些題目，但計分會失真，所以先擋在模擬考之外。
+            </p>
+          </div>
+        )}
+
+        <Button className="w-full" disabled={availableCount === 0} onClick={startExam}>
+          {availableCount === 0 ? '這個組合沒有可用題目' : `開始考試（${availableCount} 題）`}
         </Button>
       </div>
     )

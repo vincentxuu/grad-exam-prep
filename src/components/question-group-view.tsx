@@ -3,6 +3,7 @@
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import { LookupSheet } from '@/components/lexicon/lookup-sheet'
+import { PaperContentWarning } from '@/components/paper-content-warning'
 import { QuestionText } from '@/components/question-text'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -126,6 +127,8 @@ export function QuestionGroupView({
           ← 返回題庫
         </Button>
       </div>
+
+      <PaperContentWarning paperId={questions[0].paperId} />
 
       {/* Split pane: passage left, questions right (desktop) */}
       <div className="flex flex-col lg:flex-row gap-4">

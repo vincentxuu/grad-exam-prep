@@ -1,0 +1,45 @@
+name: Checks
+
+# deploy.yml 也跑同一批檢查，但那是在合進 main 之後 —— 壞掉的考卷會在部署時才炸，
+# 而不是在 review 時被擋下來。這支的存在意義就是把那道關卡往前搬到 PR。
+on:
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: checks-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    name: Typecheck, test & content integrity
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      # --forceExit：jest 跑完不會自己退出（--detectOpenHandles 也抓不到來源），
+      # 少了這個旗標 CI 會一路卡到 timeout。
+      - name: Test
+        run: npx jest --ci --forceExit
+
+      - name: Validate content
+        run: npm run validate:content
+
+      # 擋的是「新壞掉的考卷」。已知還沒修好的記在 paper-integrity-baseline.json。
+      - name: Check paper integrity
+        run: npm run check:papers
