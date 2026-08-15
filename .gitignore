@@ -50,9 +50,8 @@ next-env.d.ts
 /.open-next/
 /.wrangler/
 
-# omc state
-/.omc/state/
-/.omc/project-memory.json
+# omc
+/.omc/
 
 # generated question files (regenerable from questions.json)
 /public/data/qfiles/
