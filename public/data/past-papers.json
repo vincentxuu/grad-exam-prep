@@ -9,7 +9,8 @@
       "year": 115,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/115/115-9.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-im-en-115.pdf"
     },
     {
       "id": "pp-im-it-115",
@@ -18,7 +19,8 @@
       "year": 115,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/115/115-258.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-im-it-115.pdf"
     },
     {
       "id": "pp-im-mis-115",
@@ -27,7 +29,8 @@
       "year": 115,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/115/115-259.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-im-mis-115.pdf"
     },
     {
       "id": "pp-im-stat-115",
@@ -37,7 +40,8 @@
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/115/115-259.pdf",
       "source": "ntu_library",
       "verified": true,
-      "note": "與資訊管理導論合併為同一份考卷"
+      "note": "與資訊管理導論合併為同一份考卷",
+      "localPath": "/papers/pp-im-stat-115.pdf"
     },
     {
       "id": "pp-im-en-114",
@@ -46,7 +50,8 @@
       "year": 114,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/114/114-9.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-im-en-114.pdf"
     },
     {
       "id": "pp-im-it-114",
@@ -55,7 +60,8 @@
       "year": 114,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/114/114-277.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-im-it-114.pdf"
     },
     {
       "id": "pp-im-mis-114",
@@ -64,7 +70,8 @@
       "year": 114,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/114/114-278.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-im-mis-114.pdf"
     },
     {
       "id": "pp-im-stat-114",
@@ -74,7 +81,8 @@
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/114/114-278.pdf",
       "source": "ntu_library",
       "verified": true,
-      "note": "與資訊管理導論合併為同一份考卷"
+      "note": "與資訊管理導論合併為同一份考卷",
+      "localPath": "/papers/pp-im-stat-114.pdf"
     },
     {
       "id": "pp-im-en-113",
@@ -83,7 +91,8 @@
       "year": 113,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/113/113-9.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-im-en-113.pdf"
     },
     {
       "id": "pp-im-it-113",
@@ -92,7 +101,8 @@
       "year": 113,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/113/113-294.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-im-it-113.pdf"
     },
     {
       "id": "pp-im-mis-113",
@@ -101,7 +111,8 @@
       "year": 113,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/113/113-295.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-im-mis-113.pdf"
     },
     {
       "id": "pp-im-stat-113",
@@ -122,7 +133,8 @@
       "source": "ntu_library",
       "verified": true,
       "contentStatus": "suspect",
-      "contentIssue": "與 109 年英文卷有 32 題完全相同（題號也對得上），兩份之中必有一份裝了另一份的內容，尚未取得原始 PDF 判定是哪一份。"
+      "contentIssue": "與 109 年英文卷有 32 題完全相同（題號也對得上），兩份之中必有一份裝了另一份的內容，尚未取得原始 PDF 判定是哪一份。",
+      "localPath": "/papers/pp-im-en-112.pdf"
     },
     {
       "id": "pp-im-it-112",
@@ -131,7 +143,8 @@
       "year": 112,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/112/2023-324.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-im-it-112.pdf"
     },
     {
       "id": "pp-im-mis-112",
@@ -140,7 +153,8 @@
       "year": 112,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/112/2023-325.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-im-mis-112.pdf"
     },
     {
       "id": "pp-im-stat-112",
@@ -161,7 +175,8 @@
       "source": "ntu_library",
       "verified": true,
       "contentStatus": "suspect",
-      "contentIssue": "第 1–20、42–50 共 28 題與資工所 110 年英文(A) 相同 —— 那份已依原卷重建過，所以是這份裝錯了。第 21–40 題的克漏字文章也沒抽進來，只留下摘要式的佔位文字。"
+      "contentIssue": "第 1–20、42–50 共 28 題與資工所 110 年英文(A) 相同 —— 那份已依原卷重建過，所以是這份裝錯了。第 21–40 題的克漏字文章也沒抽進來，只留下摘要式的佔位文字。",
+      "localPath": "/papers/pp-im-en-111.pdf"
     },
     {
       "id": "pp-im-it-111",
@@ -170,7 +185,8 @@
       "year": 111,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/111/111-343.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-im-it-111.pdf"
     },
     {
       "id": "pp-im-mis-111",
@@ -179,7 +195,8 @@
       "year": 111,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/111/111-344.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-im-mis-111.pdf"
     },
     {
       "id": "pp-im-stat-111",
@@ -198,7 +215,8 @@
       "year": 110,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam/graduate/110/9.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-im-en-110.pdf"
     },
     {
       "id": "pp-im-it-110",
@@ -207,7 +225,8 @@
       "year": 110,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam/graduate/110/375.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-im-it-110.pdf"
     },
     {
       "id": "pp-im-mis-110",
@@ -216,7 +235,8 @@
       "year": 110,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam/graduate/110/376.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-im-mis-110.pdf"
     },
     {
       "id": "pp-im-stat-110",
@@ -237,7 +257,8 @@
       "source": "ntu_library",
       "verified": true,
       "contentStatus": "suspect",
-      "contentIssue": "與 112 年英文卷有 32 題完全相同（題號也對得上），兩份之中必有一份裝了另一份的內容，尚未取得原始 PDF 判定是哪一份。"
+      "contentIssue": "與 112 年英文卷有 32 題完全相同（題號也對得上），兩份之中必有一份裝了另一份的內容，尚未取得原始 PDF 判定是哪一份。",
+      "localPath": "/papers/pp-im-en-109.pdf"
     },
     {
       "id": "pp-im-it-109",
@@ -246,7 +267,8 @@
       "year": 109,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/109/378_graduate-109.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-im-it-109.pdf"
     },
     {
       "id": "pp-im-mis-109",
@@ -255,7 +277,8 @@
       "year": 109,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/109/379_graduate-109.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-im-mis-109.pdf"
     },
     {
       "id": "pp-im-stat-109",
@@ -274,7 +297,8 @@
       "year": 108,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam/graduate/108/108_graduate_9.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-im-en-108.pdf"
     },
     {
       "id": "pp-im-it-108",
@@ -283,7 +307,8 @@
       "year": 108,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam/graduate/108/108_graduate_383.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-im-it-108.pdf"
     },
     {
       "id": "pp-im-mis-108",
@@ -292,7 +317,8 @@
       "year": 108,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam/graduate/108/108_graduate_384.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-im-mis-108.pdf"
     },
     {
       "id": "pp-im-stat-108",
@@ -311,7 +337,8 @@
       "year": 107,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam/graduate/107_1/107_graduate_9.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-im-en-107.pdf"
     },
     {
       "id": "pp-im-it-107",
@@ -320,7 +347,8 @@
       "year": 107,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam/graduate/107_1/107_graduate_386.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-im-it-107.pdf"
     },
     {
       "id": "pp-im-mis-107",
@@ -329,7 +357,8 @@
       "year": 107,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam/graduate/107_1/107_graduate_387.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-im-mis-107.pdf"
     },
     {
       "id": "pp-im-stat-107",
@@ -350,7 +379,8 @@
       "source": "ntu_library",
       "verified": true,
       "contentStatus": "incomplete",
-      "contentIssue": "克漏字與閱讀測驗的文章沒抽進來，第 21–50 題只剩單句與 [Passage I Cloze] 這類註記，無法作答；這 30 題的詳解也是在沒有文章的情況下從選項推測出來的，答案不可信。"
+      "contentIssue": "克漏字與閱讀測驗的文章沒抽進來，第 21–50 題只剩單句與 [Passage I Cloze] 這類註記，無法作答；這 30 題的詳解也是在沒有文章的情況下從選項推測出來的，答案不可信。",
+      "localPath": "/papers/pp-im-en-106.pdf"
     },
     {
       "id": "pp-im-it-106",
@@ -359,7 +389,8 @@
       "year": 106,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam/graduate/106g/106_graduate_381.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-im-it-106.pdf"
     },
     {
       "id": "pp-im-mis-106",
@@ -368,7 +399,8 @@
       "year": 106,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam/graduate/106g/106_graduate_382.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-im-mis-106.pdf"
     },
     {
       "id": "pp-im-stat-106",
@@ -387,7 +419,8 @@
       "year": 115,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/115/115-8.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-cs-en-115.pdf"
     },
     {
       "id": "pp-cs-math-115",
@@ -426,7 +459,8 @@
       "year": 114,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/114/114-8.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-cs-en-114.pdf"
     },
     {
       "id": "pp-cs-math-114",
@@ -435,7 +469,8 @@
       "year": 114,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/114/114-296.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-cs-math-114.pdf"
     },
     {
       "id": "pp-cs-arch-114",
@@ -444,7 +479,8 @@
       "year": 114,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/114/114-294.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-cs-arch-114.pdf"
     },
     {
       "id": "pp-cs-algo-114",
@@ -453,7 +489,8 @@
       "year": 114,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/114/114-295.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-cs-algo-114.pdf"
     },
     {
       "id": "pp-cs-en-113",
@@ -462,7 +499,8 @@
       "year": 113,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/113/113-8.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-cs-en-113.pdf"
     },
     {
       "id": "pp-cs-math-113",
@@ -471,7 +509,8 @@
       "year": 113,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/113/113-313.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-cs-math-113.pdf"
     },
     {
       "id": "pp-cs-arch-113",
@@ -480,7 +519,8 @@
       "year": 113,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/113/113-311.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-cs-arch-113.pdf"
     },
     {
       "id": "pp-cs-algo-113",
@@ -489,7 +529,8 @@
       "year": 113,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/113/113-312.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-cs-algo-113.pdf"
     },
     {
       "id": "pp-cs-en-112",
@@ -498,7 +539,8 @@
       "year": 112,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/112/2023-8.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-cs-en-112.pdf"
     },
     {
       "id": "pp-cs-math-112",
@@ -507,7 +549,8 @@
       "year": 112,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/112/2023-348.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-cs-math-112.pdf"
     },
     {
       "id": "pp-cs-arch-112",
@@ -516,7 +559,8 @@
       "year": 112,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/112/2023-346.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-cs-arch-112.pdf"
     },
     {
       "id": "pp-cs-algo-112",
@@ -525,7 +569,8 @@
       "year": 112,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/112/2023-347.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-cs-algo-112.pdf"
     },
     {
       "id": "pp-cs-en-111",
@@ -534,7 +579,8 @@
       "year": 111,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/111/111-8.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-cs-en-111.pdf"
     },
     {
       "id": "pp-cs-math-111",
@@ -543,7 +589,8 @@
       "year": 111,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/111/111-362.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-cs-math-111.pdf"
     },
     {
       "id": "pp-cs-arch-111",
@@ -552,7 +599,8 @@
       "year": 111,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/111/111-360.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-cs-arch-111.pdf"
     },
     {
       "id": "pp-cs-algo-111",
@@ -561,7 +609,8 @@
       "year": 111,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/111/111-361.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-cs-algo-111.pdf"
     },
     {
       "id": "pp-cs-en-110",
@@ -570,7 +619,8 @@
       "year": 110,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam/graduate/110/8.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-cs-en-110.pdf"
     },
     {
       "id": "pp-cs-math-110",
@@ -579,7 +629,8 @@
       "year": 110,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam/graduate/110/398.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-cs-math-110.pdf"
     },
     {
       "id": "pp-cs-arch-110",
@@ -588,7 +639,8 @@
       "year": 110,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam/graduate/110/396.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-cs-arch-110.pdf"
     },
     {
       "id": "pp-cs-algo-110",
@@ -597,7 +649,8 @@
       "year": 110,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam/graduate/110/397.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-cs-algo-110.pdf"
     },
     {
       "id": "pp-cs-en-109",
@@ -606,7 +659,8 @@
       "year": 109,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/109/8_graduate-109.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-cs-en-109.pdf"
     },
     {
       "id": "pp-cs-math-109",
@@ -615,7 +669,8 @@
       "year": 109,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/109/408_graduate-109.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-cs-math-109.pdf"
     },
     {
       "id": "pp-cs-arch-109",
@@ -624,7 +679,8 @@
       "year": 109,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/109/406_graduate-109.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-cs-arch-109.pdf"
     },
     {
       "id": "pp-cs-algo-109",
@@ -633,7 +689,8 @@
       "year": 109,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/109/407_graduate-109.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-cs-algo-109.pdf"
     },
     {
       "id": "pp-cs-en-108",
@@ -642,7 +699,8 @@
       "year": 108,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam/graduate/108/108_graduate_8.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-cs-en-108.pdf"
     },
     {
       "id": "pp-cs-math-108",
@@ -651,7 +709,8 @@
       "year": 108,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam/graduate/108/108_graduate_414.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-cs-math-108.pdf"
     },
     {
       "id": "pp-cs-arch-108",
@@ -660,7 +719,8 @@
       "year": 108,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam/graduate/108/108_graduate_412.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-cs-arch-108.pdf"
     },
     {
       "id": "pp-cs-algo-108",
@@ -669,7 +729,8 @@
       "year": 108,
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam/graduate/108/108_graduate_413.pdf",
       "source": "ntu_library",
-      "verified": true
+      "verified": true,
+      "localPath": "/papers/pp-cs-algo-108.pdf"
     }
   ]
 }

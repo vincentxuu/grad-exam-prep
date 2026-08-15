@@ -10,6 +10,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { EXAM_LABELS, getQuestionCount, getSubjectsByExam } from '@/lib/content'
 import { localStorageImpl } from '@/lib/storage'
 import type { ExamId } from '@/types/content'
+import { Download } from 'lucide-react'
 import pastPapersData from '../../../../public/data/past-papers.json'
 
 interface Props {
@@ -27,6 +28,7 @@ interface Paper {
   subjectId: string
   year: number
   url: string | null
+  localPath?: string
   source: string
   verified: boolean
   note?: string
@@ -83,7 +85,7 @@ export default function PastPapersPage({ params }: Props) {
       <div>
         <h1 className="text-2xl font-bold">{EXAM_LABELS[exam as ExamId]} — 考古題</h1>
         <p className="text-muted-foreground text-sm mt-1">
-          已練習 {practicedCount} / {papers.filter((p) => p.url).length} 份
+          已練習 {practicedCount} / {papers.filter((p) => p.url || p.localPath).length} 份
         </p>
       </div>
 
@@ -106,7 +108,7 @@ export default function PastPapersPage({ params }: Props) {
           return (
             <TabsContent key={subject.id} value={subject.id} className="space-y-3">
               <p className="text-xs text-muted-foreground">
-                已練習 {practicedInSubject} / {subjectPapers.filter((p) => p.url).length} 份
+                已練習 {practicedInSubject} / {subjectPapers.filter((p) => p.url || p.localPath).length} 份
               </p>
 
               {/* PDF 閱讀器 — 顯示在選中科目下方 */}
@@ -151,6 +153,7 @@ export default function PastPapersPage({ params }: Props) {
                   const practiceData = paperStates[paper.id]
                   const isViewing = viewingPdf?.paperId === paper.id
                   const title = `${year}年 ${EXAM_LABELS[exam as ExamId]} ${subject.name.split('（')[0]}`
+                  const pdfUrl = paper.localPath ?? paper.url
                   // PDF 裡的字沒辦法點，題庫裡的可以 —— 兩邊靠 paperId 對應
                   const questionCount = getQuestionCount(paper.id)
 
@@ -161,7 +164,7 @@ export default function PastPapersPage({ params }: Props) {
                         <span className="text-sm font-semibold w-12 shrink-0">{year}年</span>
 
                         {/* 操作區 */}
-                        {!paper.url ? (
+                        {!pdfUrl ? (
                           <Badge variant="outline" className="text-xs">尚未上架</Badge>
                         ) : (
                           <div className="flex flex-1 items-center justify-between gap-2 flex-wrap">
@@ -172,12 +175,21 @@ export default function PastPapersPage({ params }: Props) {
                                 className="h-7 text-xs px-3"
                                 onClick={() =>
                                   setViewingPdf(
-                                    isViewing ? null : { url: paper.url!, title, paperId: paper.id }
+                                    isViewing ? null : { url: pdfUrl!, title, paperId: paper.id }
                                   )
                                 }
                               >
                                 {isViewing ? '收起' : '查看 PDF'}
                               </Button>
+
+                              <a
+                                href={paper.localPath ?? `/api/papers/download?id=${paper.id}`}
+                                download={`${paper.id}.pdf`}
+                                className="inline-flex items-center gap-1 h-7 px-2 text-xs border rounded-md hover:bg-accent"
+                              >
+                                <Download className="h-3 w-3" />
+                                下載
+                              </a>
 
                               {questionCount > 0 ? (
                                 <>
