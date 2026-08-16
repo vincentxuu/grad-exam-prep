@@ -1,8 +1,8 @@
 import Link from 'next/link'
-import conceptMasterRaw from '../../../public/data/im-it-concept-master.json'
-import questionMetadataRaw from '../../../public/data/im-it-question-metadata.json'
 import { Badge } from '@/components/ui/badge'
 import type { ImportanceRating } from '@/types/content'
+import conceptMasterRaw from '../../../public/data/im-it-concept-master.json'
+import questionMetadataRaw from '../../../public/data/im-it-question-metadata.json'
 import { ImportanceStars } from './importance-stars'
 
 const questionCounts = new Map<string, number>()
@@ -11,6 +11,9 @@ for (const question of questionMetadataRaw.questions) {
 }
 
 export function ImItConceptOverview() {
+  const eligibleCount = questionMetadataRaw.answerReview.autoGradeEligible
+  const disputedCount = questionMetadataRaw.answerReview.disputed
+
   return (
     <div className="space-y-4">
       <div className="rounded-lg border bg-muted/30 p-4">
@@ -22,7 +25,11 @@ export function ImItConceptOverview() {
           </span>
         </div>
         <p className="mt-2 text-pretty text-sm text-muted-foreground">
-          題目已完成主題分類；答案目前仍是未附官方來源的參考解析，因此先開放瀏覽，尚不列入正式練習、自動判分或模擬考成績。
+          目前有{' '}
+          <span className="font-medium tabular-nums text-foreground">{eligibleCount} 題</span>
+          完成可重現的技術覆核，可用於單題練習；另有{' '}
+          <span className="font-medium tabular-nums text-foreground">{disputedCount} 題</span>
+          答案存在爭議，只提供瀏覽、不判分。全部答案皆非官方答案，暫不列入完整模擬考成績。
         </p>
         <Link
           href="/im/questions?subject=im-it"

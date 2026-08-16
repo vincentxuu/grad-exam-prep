@@ -14,6 +14,7 @@ import { Separator } from '@/components/ui/separator'
 import { useWordLookup } from '@/hooks/use-word-lookup'
 import { getAnswer } from '@/lib/answers'
 import { getPaperUrl, getQuestionGroup, getQuestionsByExam } from '@/lib/content'
+import { getImItPracticeStatus } from '@/lib/im-it-practice-status'
 import { getQuestionImages } from '@/lib/question-images'
 import { parseQuestion } from '@/lib/question-parser'
 import { getUserId } from '@/lib/user-id'
@@ -38,7 +39,6 @@ function extractPassage(parentQuestion: Question): string {
 export default function DrillPage({ params, searchParams }: Props) {
   const { exam, questionId } = use(params)
   const { mode = 'drill', next } = use(searchParams)
-  const router = useRouter()
 
   const allQuestions = getQuestionsByExam(exam as ExamId)
   const question = allQuestions.find((q) => q.id === questionId)
@@ -84,8 +84,13 @@ function SingleQuestionView({
   const router = useRouter()
   const parsed = parseQuestion(question.text)
   const answerData = getAnswer(question.id)
+  const reviewStatus =
+    question.subjectId === 'im-it' ? getImItPracticeStatus(question.id) : undefined
+  const isSelfReviewOnly = reviewStatus?.status === 'self_review_only'
+  const isDisputed = reviewStatus?.status === 'disputed'
+  const canAutoGrade = reviewStatus ? reviewStatus.autoGradeEligible : true
   const questionImages = question.hasImage ? getQuestionImages(question.id) : []
-  const paperUrl = question.hasImage ? getPaperUrl(question.paperId) : undefined
+  const paperUrl = getPaperUrl(question.paperId)
 
   const [selected, setSelected] = useState<string | null>(null)
   const [revealed, setRevealed] = useState(false)
@@ -116,7 +121,8 @@ function SingleQuestionView({
     }
   }
 
-  const isCorrect = selected && answerData && selected === answerData.answer.toLowerCase()
+  const isCorrect =
+    canAutoGrade && selected && answerData && selected === answerData.answer.toLowerCase()
 
   return (
     <div className="space-y-4 max-w-2xl">
@@ -136,6 +142,28 @@ function SingleQuestionView({
       </div>
 
       <PaperContentWarning paperId={question.paperId} />
+
+      {reviewStatus && (
+        <div
+          className={`rounded-lg border px-4 py-3 text-pretty text-sm ${
+            isDisputed
+              ? 'border-amber-300 bg-amber-50 text-amber-900 dark:bg-amber-950/20 dark:text-amber-200'
+              : 'bg-muted/30 text-muted-foreground'
+          }`}
+        >
+          {reviewStatus.note}
+          {paperUrl && (
+            <a
+              href={paperUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-1 font-medium underline underline-offset-2"
+            >
+              查看原始試卷
+            </a>
+          )}
+        </div>
+      )}
 
       {/* Question stem */}
       {parsed.stem && (
@@ -190,7 +218,7 @@ function SingleQuestionView({
       )}
 
       {/* Options */}
-      {!revealed && parsed.options ? (
+      {!revealed && !isSelfReviewOnly && parsed.options ? (
         <RadioGroup value={selected ?? ''} onValueChange={setSelected} className="space-y-2">
           {parsed.options.map((opt) => (
             <label
@@ -211,7 +239,7 @@ function SingleQuestionView({
             </label>
           ))}
         </RadioGroup>
-      ) : !revealed && !parsed.options ? (
+      ) : !revealed && !isSelfReviewOnly && !parsed.options ? (
         <div className="space-y-2">
           <p className="text-xs text-muted-foreground">選擇你的答案：</p>
           <div className="flex flex-wrap gap-2">
@@ -229,39 +257,66 @@ function SingleQuestionView({
         </div>
       ) : null}
 
+      {!revealed && isSelfReviewOnly && (
+        <div className="rounded-lg border bg-muted/30 p-4">
+          <p className="text-pretty text-sm text-muted-foreground">
+            這是程式或開放題，不使用 A–E 判分。請先在紙上完成答案，再查看參考解析並自行評估。
+          </p>
+        </div>
+      )}
+
       {/* Confirm button */}
       {!revealed && (
-        <Button disabled={!selected} onClick={() => setRevealed(true)} className="w-full" size="lg">
-          確認答案
+        <Button
+          disabled={!isSelfReviewOnly && !selected}
+          onClick={() => setRevealed(true)}
+          className="w-full"
+          size="lg"
+        >
+          {isSelfReviewOnly ? '查看參考解析' : isDisputed ? '查看審核狀態' : '確認答案'}
         </Button>
       )}
 
       {/* Result */}
       {revealed && (
-        <Card className={isCorrect ? 'border-[hsl(var(--success))]' : 'border-destructive'}>
+        <Card
+          className={
+            canAutoGrade
+              ? isCorrect
+                ? 'border-[hsl(var(--success))]'
+                : 'border-destructive'
+              : 'border-border'
+          }
+        >
           <CardContent className="py-4 px-5 space-y-3">
-            <div className="flex items-center gap-3 flex-wrap">
-              <span
-                className={`text-base font-semibold ${isCorrect ? 'text-[hsl(var(--success))]' : 'text-destructive'}`}
-              >
-                {isCorrect ? '✓ 答對了！' : '✗ 答錯了'}
-              </span>
-              {selected && (
-                <Badge variant={isCorrect ? 'default' : 'destructive'} className="uppercase">
-                  你選了 {selected.toUpperCase()}
-                </Badge>
-              )}
-              {answerData && !isCorrect && (
-                <Badge
-                  variant="outline"
-                  className="text-[hsl(var(--success))] border-[hsl(var(--success))] uppercase"
+            {canAutoGrade ? (
+              <div className="flex items-center gap-3 flex-wrap">
+                <span
+                  className={`text-base font-semibold ${isCorrect ? 'text-[hsl(var(--success))]' : 'text-destructive'}`}
                 >
-                  正解 {answerData.answer}
-                </Badge>
-              )}
-            </div>
+                  {isCorrect ? '✓ 答對了！' : '✗ 答錯了'}
+                </span>
+                {selected && (
+                  <Badge variant={isCorrect ? 'default' : 'destructive'} className="uppercase">
+                    你選了 {selected.toUpperCase()}
+                  </Badge>
+                )}
+                {answerData && !isCorrect && (
+                  <Badge
+                    variant="outline"
+                    className="text-[hsl(var(--success))] border-[hsl(var(--success))] uppercase"
+                  >
+                    正解 {answerData.answer}
+                  </Badge>
+                )}
+              </div>
+            ) : (
+              <p className="text-pretty text-sm font-medium">
+                {isDisputed ? '此題答案有爭議，目前不顯示正解或計分。' : '請依參考解析自行評估。'}
+              </p>
+            )}
 
-            {!isCorrect && parsed.options && answerData && (
+            {canAutoGrade && !isCorrect && parsed.options && answerData && (
               <p className="text-sm text-foreground leading-relaxed">
                 <span className="font-medium">正確選項：</span>
                 {parsed.options.find((o) => o.label === answerData.answer.toLowerCase())?.text ??
@@ -269,20 +324,22 @@ function SingleQuestionView({
               </p>
             )}
 
-            {answerData?.explanation && (
+            {answerData?.explanation && !isDisputed && (
               <>
                 <Separator />
                 <p className="text-sm text-foreground leading-relaxed">{answerData.explanation}</p>
               </>
             )}
 
-            {!answerData && <p className="text-sm text-muted-foreground">此題尚無解析</p>}
+            {!answerData && !isDisputed && (
+              <p className="text-sm text-muted-foreground">此題尚無解析</p>
+            )}
           </CardContent>
         </Card>
       )}
 
       {/* Know it / Don't know buttons */}
-      {revealed && (
+      {revealed && !isDisputed && (
         <div className="flex gap-3">
           <Button
             variant="outline"

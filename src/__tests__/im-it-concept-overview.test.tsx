@@ -2,15 +2,17 @@ import { render, screen } from '@testing-library/react'
 import { ImItConceptOverview } from '@/components/exam/im-it-concept-overview'
 
 describe('IM-IT concept overview', () => {
-  test('shows reviewed taxonomy coverage without promising scored practice', () => {
+  test('shows reviewed taxonomy and qualified practice coverage', () => {
     render(<ImItConceptOverview />)
 
     expect(screen.getByText('分類已審核')).toBeInTheDocument()
     expect(screen.getByText(/8 大主題 · 58 個子主題 · 260 題/)).toBeInTheDocument()
-    expect(screen.getByText(/尚不列入正式練習、自動判分或模擬考成績/)).toBeInTheDocument()
+    expect(screen.getByText(/226 題/)).toBeInTheDocument()
+    expect(screen.getByText(/20 題/)).toBeInTheDocument()
+    expect(screen.getByText(/暫不列入完整模擬考成績/)).toBeInTheDocument()
     expect(screen.getByRole('link', { name: '瀏覽 260 題計概題庫' })).toHaveAttribute(
       'href',
-      '/im/questions?subject=im-it',
+      '/im/questions?subject=im-it'
     )
   })
 

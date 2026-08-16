@@ -4387,18 +4387,18 @@
     },
     "q-pp-im-it-107-10": {
       "questionId": "q-pp-im-it-107-10",
-      "answer": "E",
-      "explanation": "HTTPS（超文字傳輸安全協定）的核心目標在於三個安全層面：網站身份驗證（authentication）、通訊隱私保護（privacy）以及資料完整性（data integrity）與防竄改（tamper protection）。容錯性（fault tolerance）是指系統在部分故障時仍能正常運作的能力，屬於系統可靠性與高可用性架構的範疇，與 HTTPS 的安全協定設計完全無關。HTTPS 雖然因為加密運算會略微影響傳輸速度（選項 C），但效能本來就不是其設計目標，然而容錯性（選項 E）更明確地與 HTTPS 協定的任何功能毫無關聯。因此，在所有選項中，容錯性（E）是 HTTPS 協定「相對最不關注」的議題。"
+      "answer": "D",
+      "explanation": "答案經技術覆核後修正為 D（非官方答案）。HTTPS/TLS addresses authentication, confidentiality, integrity, and MITM resistance; fault tolerance is outside its security goals. 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-107-11": {
       "questionId": "q-pp-im-it-107-11",
-      "answer": "A",
-      "explanation": "數位憑證中的「序號（Serial Number）」欄位的主要用途是唯一識別由某個憑證頒發機構（CA）所簽發的特定憑證，而非用於追蹤撤銷資訊。憑證的撤銷是透過憑證撤銷清單（CRL）或線上憑證狀態協定（OCSP）來管理的，序號只是在 CRL 中被引用以指明哪張憑證被撤銷，但本身並非「用來追蹤撤銷資訊」的欄位。其餘選項皆正確：(B) Issuer 欄位確實指定驗證並簽署憑證的實體；(C) 數位憑證至少需包含公開金鑰；(D) X.509 確為定義公開金鑰憑證格式的標準。因此選項 (A) 的描述有誤，是本題答案。"
+      "answer": "E",
+      "explanation": "答案經技術覆核後修正為 E（非官方答案）。certificate serial number 可作為 CRL/OCSP revocation tracking 的識別值；issuer、subject public key 與 X.509 敘述也正確，因此 A 至 D 均正確，應選 E。 二次覆核：X.509 certificate serial number 由 issuer 指派並唯一識別該 issuer 簽發的憑證；CRL entry 與 OCSP request 都以 issuer/serial number 識別要查詢或撤銷的憑證，所以 A 所稱用來追蹤 revocation information 是合理敘述。Issuer 欄位指出簽發與簽章實體，certificate 包含 subject public key，X.509 也確實規範 public-key certificate 格式，因此 B、C、D 均正確。不存在另一個合理錯項，應由現有 A 更正為 E。 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-107-12": {
       "questionId": "q-pp-im-it-107-12",
-      "answer": "D",
-      "explanation": "單一登入（SSO）的核心概念是使用者只需一組身分憑證，即可存取多個不同的系統或服務，而非登入不同的帳號。選項(A)正確，SSO確實能減少記憶多組帳號密碼的疲勞感。選項(B)正確，SSO減少了重複輸入密碼的時間。選項(C)正確，使用Facebook帳號登入第三方網站是聯合身分驗證（Federated Identity）的一種實作，屬於SSO的典型範例。選項(D)錯誤，「登入不同帳號」與SSO的定義相悖——SSO強調的是以單一身分認證跨越多個服務，而非使用多個不同帳號登入。"
+      "answer": "E",
+      "explanation": "答案經技術覆核後修正為 E（非官方答案）。Password-fatigue reduction and Facebook/Google federated login are all valid SSO examples in the item’s framing. 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-107-13": {
       "questionId": "q-pp-im-it-107-13",
@@ -4422,8 +4422,8 @@
     },
     "q-pp-im-it-107-17": {
       "questionId": "q-pp-im-it-107-17",
-      "answer": "D",
-      "explanation": "虛擬化（Virtualization）是指建立某樣事物之虛擬版本的行為，包含虛擬電腦硬體平台、儲存裝置及電腦網路資源等。虛擬實境（Virtual Reality）是指沉浸式的虛擬環境體驗，與硬體虛擬化無關。擴增實境（Augmented Reality）則是將虛擬資訊疊加於真實世界之上，同樣不符合題意。Hypervisor 是實現虛擬化的監控軟體，是虛擬化的工具而非虛擬化行為本身的名稱。因此正確答案為 (D) virtualization。"
+      "answer": "C",
+      "explanation": "答案經技術覆核後修正為 C（非官方答案）。Creating virtual versions of compute, storage, and network resources is virtualization, option C in the verified PDF. 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-107-18": {
       "questionId": "q-pp-im-it-107-18",
@@ -4632,8 +4632,8 @@
     },
     "q-pp-im-it-109-11": {
       "questionId": "q-pp-im-it-109-11",
-      "answer": "E",
-      "explanation": "本題詢問哪一項「不是」大數據的應用。選項A的決策制定、選項B的預測與預報、選項C的弱點評估（資安風險分析）、選項D的政府治理，全部都是大數據的實際應用領域。大數據可協助企業與政府進行決策、透過機器學習模型進行預測、分析系統漏洞與資安威脅、以及優化公共政策與治理效能。因此，A至D皆為大數據的應用，選項E「以上皆可作為大數據的應用」為正確答案，代表沒有任何一項不是大數據的應用。"
+      "answer": "B",
+      "explanation": "答案經技術覆核後修正為 B（非官方答案）。IPv6 uses 128-bit, not 120-bit, addresses; B is the uniquely wrong statement. 二次覆核：IPv6 address space 是 128 bits，不是 120 bits，因此 B 錯。 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-109-12": {
       "questionId": "q-pp-im-it-109-12",
@@ -4652,8 +4652,8 @@
     },
     "q-pp-im-it-109-15": {
       "questionId": "q-pp-im-it-109-15",
-      "answer": "E",
-      "explanation": "在深度學習中，「深度」（deep）指的是神經網路中隱藏層的數量，也就是網路的層數深度。選項A（訓練資料量）、B（輸入資料的標籤數）、C（節點的扇入數）、D（節點的扇出數）皆與「深度」的定義無關。因此，上述選項皆不正確，正確答案為E（以上皆非）。深度神經網路透過堆疊多層非線性轉換來學習資料的抽象特徵表示，層數越多代表網路越「深」。"
+      "answer": "B",
+      "explanation": "答案經技術覆核後修正為 B（非官方答案）。DDR4 RAM is volatile; SSD, ROM, and flash retain data without power. 二次覆核：DDR4 DRAM 是 volatile memory；SSD、ROM 與 flash 都可在斷電後保留資料。 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-109-16": {
       "questionId": "q-pp-im-it-109-16",
@@ -4662,13 +4662,13 @@
     },
     "q-pp-im-it-109-17": {
       "questionId": "q-pp-im-it-109-17",
-      "answer": "C",
-      "explanation": "選項 (C) 的描述有誤，因為它描述的是「蠕蟲（Worm）」而非「病毒（Virus）」的行為特徵。病毒（Virus）需要附著在宿主檔案上，通常需要使用者的操作（例如執行檔案）才能傳播，本身無法主動自我複製並散播到其他電腦。蠕蟲（Worm）才是能夠主動自我複製、無需宿主程式、並透過網路自動散播到其他電腦的惡意程式。選項 (A)、(B)、(D) 對間諜軟體、木馬程式、殭屍網路的描述均正確。因此，選項 (C) 是唯一錯誤的敘述。"
+      "answer": "A",
+      "explanation": "答案經技術覆核後修正為 A（非官方答案）。The information-security CIA triad is Confidentiality, Integrity, and Availability. 二次覆核：CIA triad 的標準展開為 Confidentiality、Integrity、Availability。 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-109-18": {
       "questionId": "q-pp-im-it-109-18",
-      "answer": "D",
-      "explanation": "社交工程（Social Engineering）是資訊安全領域中專門指透過心理操縱手段，誘使人們執行特定行為或洩露機密資訊的攻擊方式。網路釣魚（Phishing）雖然也涉及欺騙，但特指透過偽造電子郵件或網站來竊取帳號密碼等具體技術手法。蜜罐（Honeypot）是一種主動防禦機制，用來偵測或誘捕惡意攻擊者，與心理操縱無關。偽裝（Spoofing）是指偽造IP位址、電子郵件來源等技術性欺騙行為，並非心理操縱的代名詞。Psychology Engineering 並非標準資安術語，因此正確答案為 Social Engineering（D）。"
+      "answer": "A",
+      "explanation": "答案經技術覆核後修正為 A（非官方答案）。CREATE TABLE Customers (...) is the valid SQL table-creation statement. 二次覆核：標準 SQL 建表語法是 CREATE TABLE，欄位定義置於括號中，只有 A 合法。 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-109-19": {
       "questionId": "q-pp-im-it-109-19",
@@ -4677,13 +4677,13 @@
     },
     "q-pp-im-it-109-2": {
       "questionId": "q-pp-im-it-109-2",
-      "answer": "B",
-      "explanation": "Cookie 是由網站伺服器傳送並儲存在使用者瀏覽器中的一小段資料，用於記錄使用者的狀態資訊（如登入狀態、購物車內容等）。Proxy 是代理伺服器，負責轉發網路請求；ETag 是 HTTP 快取機制中用於驗證資源版本的標識符；Cache 雖然也儲存於本地，但其目的是加速資源載入而非記錄狀態。因此，題目所描述「由網站傳送、由瀏覽器儲存、用以記憶狀態資訊」的機制，正是 Cookie（選項 B）。"
+      "answer": "C",
+      "explanation": "答案經技術覆核後修正為 C（非官方答案）。Protected, not private, grants access to the defining class and subclasses (and package peers in Java). 二次覆核：protected 允許目前 class、subclasses，且部分語言也允許 same-package access，與題幹完全對應。 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-109-20": {
       "questionId": "q-pp-im-it-109-20",
-      "answer": "E",
-      "explanation": "本題詢問哪一個應用程式或協定通常「不是」基於主從式架構（client-server architecture）。選項 (A) 網路列印使用列印伺服器，屬於主從式架構；選項 (B) 遠端程序呼叫（RPC）由客戶端呼叫遠端伺服器上的程序，亦屬主從式架構；選項 (C) 電子郵件透過 SMTP、POP3、IMAP 等協定與郵件伺服器溝通，同樣是主從式架構；選項 (D) HTTP 協定本身即是最典型的主從式架構，瀏覽器為客戶端、Web 伺服器為伺服端。由於 (A)(B)(C)(D) 全部都是基於主從式架構，因此正確答案為 (E)，即以上皆是基於主從式架構。"
+      "answer": "D",
+      "explanation": "答案經技術覆核後修正為 D（非官方答案）。Contemporary estimates commonly placed 2020 connected devices in the tens of billions, matching 10-50 billion. 二次覆核：2020 年全球 connected/IoT devices 的常見估計約為百億量級，落在 10–50 billion。 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-109-21": {
       "questionId": "q-pp-im-it-109-21",
@@ -4697,28 +4697,28 @@
     },
     "q-pp-im-it-109-3": {
       "questionId": "q-pp-im-it-109-3",
-      "answer": "D",
-      "explanation": "IPv6（Internet Protocol version 6）使用128位元（bit）的位址長度，因此理論上可以提供 2^128 個不同的網際網路位址。相較之下，IPv4 僅使用32位元，只能提供約 43 億（2^32）個位址，已面臨耗盡問題。IPv6 的 2^128 約等於 3.4×10^38 個位址，足以為地球上每個裝置甚至每個原子分配唯一的位址。因此本題正確答案為 (D) 2^128。"
+      "answer": "E",
+      "explanation": "答案經技術覆核後修正為 E（非官方答案）。Python supports functional, object-oriented, procedural, and imperative styles, so E is the only “none wrong” answer. 二次覆核：Python 支援 functional、object-oriented、procedural 與 imperative styles，A 至 D 均正確，因此選 E。 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-109-4": {
       "questionId": "q-pp-im-it-109-4",
-      "answer": "A",
-      "explanation": "TCP/IP（傳輸控制協定/網際網路協定）是網際網路上連接所有網路裝置的基礎協定組合，提供了資料傳輸與路由的核心機制。UDP/TCP（選項B）雖涵蓋傳輸層協定，但缺少負責定址與路由的網路層協定IP，並不完整。HTTP與HTTP/HTTPS（選項C、D）屬於應用層協定，建立在TCP/IP之上，僅處理網頁資料交換，而非底層互連基礎。DNS（選項E）是域名解析服務，同樣屬於應用層，功能是將網域名稱轉換為IP位址，而非網路互連的基礎協定。因此，真正作為網際網路裝置互連基礎的協定組合是TCP/IP。"
+      "answer": "B",
+      "explanation": "答案經技術覆核後修正為 B（非官方答案）。Python is dynamically typed, making B false; it is general-purpose, interpreted, and indentation-delimited. 二次覆核：Python 是 dynamically typed，不是 statically typed；其餘敘述描述一般 Python 特性。 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-109-5": {
       "questionId": "q-pp-im-it-109-5",
-      "answer": "E",
-      "explanation": "作業系統的核心功能涵蓋了選項中所有項目。CPU 排程（CPU scheduling）負責決定哪個行程可以使用處理器，是作業系統的基本任務之一。記憶體配置（memory allocation）管理程序所需的記憶體空間分配與回收，儲存管理（storage management）則負責磁碟與檔案系統的管理。I/O 管理（I/O management）協調輸入輸出裝置的存取，同樣是作業系統不可或缺的功能。因此，選項 A、B、C、D 全都是作業系統的常見任務，正確答案為 (E)。"
+      "answer": "A",
+      "explanation": "答案經技術覆核後修正為 A（非官方答案）。The model described is software delivered on demand over a vendor-managed cloud; among the provided options, A is the direct match. 二次覆核：由 vendor 在 cloud 管理並依需求透過 Internet 提供的軟體，選項中對應 on-demand software。 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-109-6": {
       "questionId": "q-pp-im-it-109-6",
-      "answer": "E",
-      "explanation": "選項(A) Linux 是開放原始碼（Open Source）的作業系統，由 Linus Torvalds 於 1991 年發布，採用 GPL 授權，正確。選項(B) Linux 是類 Unix（Unix-like）系統，其設計理念與架構深受 Unix 影響，雖非直接衍生自 Unix 原始碼，但符合 POSIX 標準，正確。選項(C) Android 作業系統是基於 Linux 核心（Linux Kernel）所建立的，Google 採用修改過的 Linux 核心作為 Android 的底層，正確。選項(D) Android 透過 AOSP（Android Open Source Project）以開放原始碼方式釋出，任何人均可下載、修改與使用，正確。由於(A)(B)(C)(D)皆為正確敘述，因此應選(E)。"
+      "answer": "D",
+      "explanation": "答案經技術覆核後修正為 D（非官方答案）。Google App Engine is a canonical platform-as-a-service offering. 二次覆核：Google App Engine 提供受管 application runtime/platform，分類為 Platform-as-a-Service。 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-109-7": {
       "questionId": "q-pp-im-it-109-7",
-      "answer": "C",
-      "explanation": "RFID（無線射頻識別）是最適合用於追蹤物件的技術，廣泛應用於供應鏈管理、零售庫存、圖書館書籍管理與資產追蹤等場景。RFID 不需要視線接觸即可讀取標籤，且被動式標籤成本低廉、可大量部署。智慧卡（Smart Card）主要用於身份識別與存取控制；NFC 通訊距離極短（約4公分），適合感應付款而非追蹤；Beacon 雖可用於室內定位，但其應用場景與準確度不及 RFID。IoT 是廣義的生態系統概念，本身並非一種具體的追蹤技術。"
+      "answer": "E",
+      "explanation": "答案經技術覆核後修正為 E（非官方答案）。LINE Pay, Pi wallet, JKo/街口, and Taiwan Pay are payment services; 嘖嘖 is crowdfunding. 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-109-8": {
       "questionId": "q-pp-im-it-109-8",
@@ -4727,8 +4727,8 @@
     },
     "q-pp-im-it-109-9": {
       "questionId": "q-pp-im-it-109-9",
-      "answer": "D",
-      "explanation": "本題考的是歐盟資料保護與隱私法規。一般資料保護規則（General Data Protection Regulation，GDPR）是歐盟於2016年通過、2018年5月正式生效的法規，適用於所有歐盟境內個人，取代了1995年的歐盟資料保護指令（EU Data Protection Directive）。選項(A) International Safe Harbor Privacy Principles 是美歐之間的隱私協議，已於2015年被廢止。選項(B) Digital Millennium Copyright Act (DMCA) 是美國的著作權法，與資料保護無關。選項(C) Digital Transition Content Security Act 為虛構法規名稱。因此正確答案為(D) General Data Protection Regulation。"
+      "answer": "B",
+      "explanation": "答案經技術覆核後修正為 B（非官方答案）。A server intermediating client requests to origin servers is a proxy. 二次覆核：代替 client 向 origin server 請求資源的 intermediary server 是 proxy。 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-110-1": {
       "questionId": "q-pp-im-it-110-1",
@@ -5012,13 +5012,13 @@
     },
     "q-pp-im-it-112-11": {
       "questionId": "q-pp-im-it-112-11",
-      "answer": "C",
-      "explanation": "作業系統在儲存管理方面的職責包括：建立與刪除檔案及目錄、磁碟排程（disk scheduling）、以及提供操作檔案與目錄的基本原語（primitives）。然而，將檔案備份至穩定的永久儲存媒介（如磁帶、外部硬碟）通常不是作業系統的責任，而是由使用者、應用程式或專門的備份軟體來負責執行。作業系統提供儲存機制與介面，但不主動執行備份任務。因此，選項 C 是一般情況下作業系統不負責的工作。"
+      "answer": "B",
+      "explanation": "答案經技術覆核後修正為 B（非官方答案）。依作業系統教材的 file/storage management 責任，建立刪除檔案、disk scheduling、檔案操作 primitives 與備份至穩定儲存媒體都屬管理工作；「file integrity check」不是該標準責任清單，因此唯一可選的是 B，不是現有 D。 二次覆核：標準 OS file/storage management 責任包含建立刪除檔案、disk scheduling、提供檔案與目錄操作 primitives，以及把檔案備份到穩定儲存媒體；file integrity check 不在該典型責任清單。因此 B 是唯一符合『generally not the responsibility』的選項，現有 D 應更正為 B。 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-112-12": {
       "questionId": "q-pp-im-it-112-12",
-      "answer": "A",
-      "explanation": "單處理器系統只有一顆CPU，無法真正同時執行多個程式，因此需要透過CPU排程（CPU scheduling）來實現多元程式設計（multiprogramming）。CPU排程讓作業系統在多個行程之間快速切換CPU的使用權，從而製造出並行執行的假象。選項B的動態配置（dynamic allocation）屬於記憶體管理概念，與多元程式設計的實現機制無直接關係。選項C的檔案與目錄操作屬於檔案系統功能，同樣與多元程式設計無關。因此，正確答案為A，CPU排程是單處理器系統實現多元程式設計的核心機制。"
+      "answer": "D",
+      "explanation": "答案經技術覆核後修正為 D（非官方答案）。單處理器透過 time slicing 與 context switching 讓多行程交錯執行。 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-112-13": {
       "questionId": "q-pp-im-it-112-13",
@@ -5027,8 +5027,8 @@
     },
     "q-pp-im-it-112-14": {
       "questionId": "q-pp-im-it-112-14",
-      "answer": "A",
-      "explanation": "CSMA/CA（載波感測多重存取/碰撞避免）的標準技術包括：指數退避（Exponential Backoff）、RTS/CTS（Request to Send/Clear to Send）機制，以及碰撞避免（Collision Avoidance）本身的概念。「Cache-Sense to Robin」（選項A）是完全虛構、不存在的術語，在任何網路協定標準中均無此定義，因此是錯誤的描述。選項E的「Round to Robin」雖然表述有誤（正確應為 Round Robin），但 Round Robin 本身是排程演算法，並非碰撞避免機制，然而選項A的「Cache-Sense to Robin」更是毫無意義的組合詞，為最明顯的錯誤答案。"
+      "answer": "B",
+      "explanation": "答案經技術覆核後修正為 B（非官方答案）。共享式 Ethernet 的 CSMA/CD 碰撞後使用 binary exponential backoff。 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-112-15": {
       "questionId": "q-pp-im-it-112-15",
@@ -5042,33 +5042,33 @@
     },
     "q-pp-im-it-112-17": {
       "questionId": "q-pp-im-it-112-17",
-      "answer": "D",
-      "explanation": "TCP 確實使用滑動視窗（sliding window）機制，但該機制的目的是「流量控制」（flow control），而非「free control」。選項 D 將 sliding window 的功能描述為 free control，這是錯誤的說法，並非任何標準 TCP 術語。選項 A 正確描述 TCP 使用滑動視窗進行流量控制；選項 B 正確，TCP 是連線導向（connection-oriented）協定，通訊前需建立三向交握；選項 C 正確，TCP 以位元組串流（byte stream）方式傳輸資料。因此，唯一錯誤的敘述是選項 D。"
+      "answer": "A",
+      "explanation": "答案經技術覆核後修正為 A（非官方答案）。TCP 建連使用 three-way handshake；stream、sliding window、sequence number 三項均正確。 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-112-18": {
       "questionId": "q-pp-im-it-112-18",
-      "answer": "A",
-      "explanation": "選項 (A) 所描述的「攻擊者介入兩方通訊之間，竊取並篡改資料」是中間人攻擊（Man-in-the-Middle Attack）的定義，而非緩衝區溢位攻擊（Buffer Overflow Attack）。選項 (B) 正確描述了緩衝區溢位攻擊的原理：攻擊者讓輸入資料超出緩衝區大小，進而覆蓋記憶體中相鄰的區域（如堆疊框架指標）。選項 (C) 正確描述了 SQL 注入攻擊：攻擊者透過查詢語言輸入惡意程式碼，迫使伺服器回傳受保護的資料。因此選項 (A) 對緩衝區溢位的描述是錯誤的，故答案為 (A)。"
+      "answer": "D",
+      "explanation": "答案經技術覆核後修正為 D（非官方答案）。題面 D 的描述是 zero-day attack，不是 first-day attack。 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-112-19": {
       "questionId": "q-pp-im-it-112-19",
-      "answer": "B",
-      "explanation": "外鍵（foreign key）的定義是指向另一張表（被參考表）的主鍵或唯一鍵欄位，而非指向「本表」自身的欄位。選項(B)描述外鍵「referring to the fields in this one」（指向本表欄位），此說法有誤，正確應為指向另一張相關表的欄位。選項(A)正確描述主鍵用於唯一識別每筆記錄，選項(C)通常描述關聯式資料庫同時支援列（row/tuple）與欄（column/attribute）的概念，皆為正確敘述。選項(D)為「以上皆非」的替代選項，只在其他選項皆正確時才選，但此處(B)已明顯有誤，故答案為(B)。"
+      "answer": "E",
+      "explanation": "答案經技術覆核後修正為 E（非官方答案）。assembler、linker、static/dynamic linking、lexical/syntax analysis 四項敘述均正確。 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-112-2": {
       "questionId": "q-pp-im-it-112-2",
-      "answer": "B",
-      "explanation": "此題詢問關於處理器架構（CISC vs RISC）何者敘述有誤。CISC（Complex Instruction Set Computing，複雜指令集）顧名思義擁有數量龐大且功能複雜的指令集，而 RISC（Reduced Instruction Set Computing，精簡指令集）的設計哲學則是使用較少但執行效率高的簡單指令。選項 (B) 聲稱「CISC 架構編譯後的指令數通常比 RISC 少」，這是錯誤的——事實上 CISC 指令集的指令種類遠多於 RISC。選項 (C) 與 (B) 表達相同的錯誤概念，即 CISC 的指令數量比 RISC 少，同樣與事實相反。然而本題要求選出「有誤」的單一選項，而 (B) 直接且明確地陳述了 CISC 指令數少於 RISC 的錯誤觀念，為最佳答案。"
+      "answer": "D",
+      "explanation": "答案經技術覆核後修正為 D（非官方答案）。CISC 通常具有較大、較複雜的指令集，不是比 RISC 更小。 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-112-20": {
       "questionId": "q-pp-im-it-112-20",
-      "answer": "D",
-      "explanation": "圖形資料庫（Graph Store）是一種 NoSQL 資料庫，專門以節點（node）和邊（edge）來儲存資料及關係，與資料結構中的「最小堆積（min heap）」完全無關。選項 D 將圖形資料庫與堆積（heap）資料結構混為一談，描述的是向含 n 個節點的最小堆積插入元素的操作，這與圖形資料庫的定義和用途完全不符。選項 A 正確描述了欄式資料庫以欄為單位儲存資料，選項 B 和 C 雖然敘述有些混亂，但核心概念——文件型資料庫使用 XML 或 JSON 格式——是正確的。因此，唯一錯誤的描述是選項 D。"
+      "answer": "A",
+      "explanation": "答案經技術覆核後修正為 A（非官方答案）。wide-column stores 通常允許稀疏或動態欄位，不能概括為固定預定欄數；B–D 是其資料模型的標準描述。 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-112-21": {
       "questionId": "q-pp-im-it-112-21",
-      "answer": "D",
-      "explanation": "關聯式資料庫中，外鍵（foreign key）的定義是必須參照（refer to）另一個資料表中的主鍵（primary key）或唯一鍵（unique key），這是關聯式資料庫確保參照完整性（referential integrity）的核心機制。選項(D)聲稱外鍵不需要參照某個欄位，此說法違反了關聯式資料庫的基本定義，因此是錯誤的敘述。選項(A)正確描述了關聯式資料庫以二維表格（rows and columns）組織資料的特性。選項(B)正確說明外鍵用於連結兩個相關資料表的功能。因此，題目中描述錯誤的是選項(D)。"
+      "answer": "E",
+      "explanation": "答案經技術覆核後修正為 E（非官方答案）。table、row、key、record、attribute 的四項敘述符合基本 relational model。 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-112-22": {
       "questionId": "q-pp-im-it-112-22",
@@ -5097,13 +5097,13 @@
     },
     "q-pp-im-it-112-27": {
       "questionId": "q-pp-im-it-112-27",
-      "answer": "D",
-      "explanation": "將一個有 n 個元素的陣列建構成最小堆積（min-heap）的過程稱為 Heapification，其時間複雜度為 O(n)。標準做法是從最後一個非葉節點（索引 n/2 - 1）開始，向上逐一執行 sift-down（下移）操作。雖然每次 sift-down 最差需要 O(log n)，但由於樹底層節點數量多且下移距離短、頂層節點下移距離長但數量少，對所有層的操作加總後，其總時間複雜度可以透過等比級數求和證明為 O(n)，而非直覺上的 O(n log n)。因此正確答案為 D，即 O(n)。"
+      "answer": "B",
+      "explanation": "答案經技術覆核後修正為 B（非官方答案）。binary heap 插入放在末端後沿父鏈 sift，最壞走樹高 O(log n)；題面不等號方向錯誤不改變此複雜度。 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-112-28": {
       "questionId": "q-pp-im-it-112-28",
-      "answer": "D",
-      "explanation": "在 Min Heap 中，唯一被保證的性質是每個節點的鍵值小於或等於其子節點的鍵值，但兄弟節點之間或不同子樹之間並無排序關係。因此，若要在 Min Heap 中尋找一個任意元素（非最小值），無法利用堆的結構來縮小搜尋範圍。在最壞情況下，必須逐一檢查所有 n 個節點，故時間複雜度為 O(n)。這與二元搜尋樹不同，二元搜尋樹因為有左小右大的性質，可以在 O(log n) 內找到任意元素；而 Min Heap 缺乏此特性，搜尋任意元素只能線性掃描。"
+      "answer": "C",
+      "explanation": "答案經技術覆核後修正為 C（非官方答案）。heap 只有親子偏序，搜尋任意值最壞需檢查所有節點，為 O(n)。 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-112-29": {
       "questionId": "q-pp-im-it-112-29",
@@ -5112,13 +5112,13 @@
     },
     "q-pp-im-it-112-3": {
       "questionId": "q-pp-im-it-112-3",
-      "answer": "B",
-      "explanation": "選項(A)正確：具有32位元位址匯流排的微處理器，最多可定址 2^32 個記憶體位置（即約4GB）。選項(C)正確：處理器內部的資料儲存單元稱為暫存器（registers），這是基本的計算機組織概念。選項(B)錯誤：它將「處理器內部資料儲存」描述為「存取I/O裝置和記憶體裝置」，這在定義上是錯誤的，處理器內部資料儲存應稱為暫存器（registers），而非I/O存取機制。因此，選項(B)是描述錯誤的敘述，為本題答案。"
+      "answer": "E",
+      "explanation": "答案經技術覆核後修正為 E（非官方答案）。在題目採用的 byte-addressable 基本模型下，32-bit 位址可定位 2^32 bytes；memory-mapped I/O 與 registers 的敘述也正確。 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-112-4": {
       "questionId": "q-pp-im-it-112-4",
-      "answer": "C",
-      "explanation": "在 DMA（直接記憶體存取）架構中，I/O 裝置並非透過向處理器發出中斷訊號來啟動資料傳輸。正確的運作方式是：I/O 裝置向 DMA 控制器發出 DMA 請求（DMA Request），由 DMA 控制器直接與記憶體溝通並完成資料傳輸，整個過程不需要處理器參與。只有在 DMA 傳輸完成後，DMA 控制器才會向處理器發出中斷訊號以通知傳輸結束。因此選項 (C) 描述「硬體裝置透過觸發中斷訊號給 DMA 來中斷處理器」的說法是錯誤的，混淆了 DMA 請求與中斷的概念。選項 (A) 和 (B) 的描述皆正確，DMA 確實減少了處理器的參與，並允許資料在不干擾處理器的情況下傳輸至記憶體。"
+      "answer": "E",
+      "explanation": "答案經技術覆核後修正為 E（非官方答案）。interrupt-driven I/O 與 DMA 的四項敘述均符合基本架構；DMA hardware 可降低 CPU 搬移資料的參與。 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-112-5": {
       "questionId": "q-pp-im-it-112-5",
@@ -5147,13 +5147,13 @@
     },
     "q-pp-im-it-113-1": {
       "questionId": "q-pp-im-it-113-1",
-      "answer": "C",
-      "explanation": "馮紐曼架構（Von Neumann Architecture）的核心特徵之一，就是程式指令與資料共用同一記憶體空間，這被稱為「儲存程式概念」（stored-program concept）。選項 (C) 說「資料與指令被分離到不同的記憶體」，這描述的是哈佛架構（Harvard Architecture），而非馮紐曼架構，因此是錯誤的敘述。選項 (A) 正確描述了馮紐曼架構的四個主要組成：CPU、記憶體、輸入與輸出。選項 (B) 正確說明記憶體是一個線性的儲存位置陣列，選項 (D) 也正確指出 CPU 包含控制單元（CU）與算術邏輯單元（ALU）。"
+      "answer": "E",
+      "explanation": "答案經技術覆核後修正為 E（非官方答案）。FAT32、exFAT、NTFS、APFS 都是實際廣泛使用的檔案系統，故應選 none-of-the-above 型的 E。 二次覆核：FAT32、exFAT、NTFS 與 APFS 都是實際且廣泛部署的檔案系統；A 至 D 無一符合 not popularly used，故唯一答案是 E。 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-113-10": {
       "questionId": "q-pp-im-it-113-10",
-      "answer": "A",
-      "explanation": "CIA 三元組（CIA Triad）是資訊安全領域最基本的框架，其中 CIA 代表 Confidentiality（機密性）、Integrity（完整性）與 Availability（可用性）。機密性確保資訊只有授權的人才能存取；完整性確保資訊的正確性與不被未授權竄改；可用性確保授權使用者在需要時能夠存取資訊。此模型廣泛應用於組織制定資訊安全政策的依據，是資訊安全管理的核心基礎概念。選項 B、C、D 均為錯誤的展開，其中 C 的 Central Intelligence Agency 是美國中央情報局，與資訊安全框架無關。"
+      "answer": "C",
+      "explanation": "答案經技術覆核後修正為 C（非官方答案）。把資料暫存在記憶體、等候程式或裝置使用的概念是 buffering。 二次覆核：將資料暫存於記憶體或其他儲存區，直到裝置或程式請求使用，正是 buffering；spooling 特指把工作排入周邊裝置佇列。 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-113-11": {
       "questionId": "q-pp-im-it-113-11",
@@ -5162,8 +5162,8 @@
     },
     "q-pp-im-it-113-12": {
       "questionId": "q-pp-im-it-113-12",
-      "answer": "D",
-      "explanation": "MariaDB 是由 MySQL 的原始開發者 Michael Widenius 在 2009 年 Oracle 收購 MySQL 後所創建的分支版本。其創建目的是為了確保資料庫系統能夠保持自由且開放原始碼，同時維持與 MySQL 高度相容性。MariaDB 以 Widenius 女兒 Maria 的名字命名，屬於社群驅動的開發專案。其他選項中，MonetDB 是欄式資料庫、SAP R3 是企業資源規劃系統、Sybase 是商業資料庫產品，而 Firebird 雖是開源資料庫但與 MySQL 收購事件無關。"
+      "answer": "B",
+      "explanation": "答案經技術覆核後修正為 B（非官方答案）。DNS 是階層式且分散式的命名系統，因此 centralized 敘述錯誤。 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-113-13": {
       "questionId": "q-pp-im-it-113-13",
@@ -5172,13 +5172,13 @@
     },
     "q-pp-im-it-113-14": {
       "questionId": "q-pp-im-it-113-14",
-      "answer": "B",
-      "explanation": "Digital twin（數位孿生）是指現實世界物件的數位對應體，用於模擬、整合、測試、監控和維護等用途。這個概念最早由 NASA 等機構發展，現廣泛應用於工業 4.0 與智慧製造領域。Avatar 指的是使用者在虛擬環境中的化身，Virtual reality 是沉浸式虛擬環境技術，Cloud object 並非標準術語，均與題意不符。因此正確答案為 B，digital twin。"
+      "answer": "E",
+      "explanation": "答案經技術覆核後修正為 E（非官方答案）。CIA 的 C/A 分別為 confidentiality/availability，ISMS 與 ISO 27000 敘述也正確。 二次覆核：CIA 的 C 與 A 分別是 confidentiality、availability；C 正確描述 ISMS，ISO/IEC 27000 系列也涵蓋資訊安全管理最佳實務。A 至 D 皆正確，故選 E。 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-113-15": {
       "questionId": "q-pp-im-it-113-15",
-      "answer": "D",
-      "explanation": "在比特幣區塊鏈中，「挖礦」（mining）的主要目的是透過工作量證明（Proof-of-Work）機制來驗證交易（validate transaction），只有經過挖礦確認並被納入區塊的交易才被網路認可為有效。挖礦節點競爭解決一道困難的數學難題，勝出者有權將一批待確認的交易打包成區塊加入鏈中，從而達成去中心化的共識。選項 (A) 並行控制與選項 (B) 原子性都是資料庫的 ACID 概念，與挖礦無關；選項 (C) 分發交易描述的是廣播機制，也不是挖礦的主要用途。因此正確答案為 (D) validate transaction。"
+      "answer": "C",
+      "explanation": "答案經技術覆核後修正為 C（非官方答案）。決定可存取哪些資源與可執行哪些操作是 authorization；accountability 是行為可追責。 二次覆核：決定使用者可存取哪些資源及允許哪些操作是 authorization；accountability 是讓行為可歸責與稽核，因此 C 將兩者混淆。 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-113-16": {
       "questionId": "q-pp-im-it-113-16",
@@ -5187,13 +5187,13 @@
     },
     "q-pp-im-it-113-17": {
       "questionId": "q-pp-im-it-113-17",
-      "answer": "E",
-      "explanation": "此題詢問關於生成樹（spanning tree）哪個敘述是錯誤的。選項(A)與(B)：若圖G的所有邊都是其生成樹T的邊，則G與T擁有相同的頂點集合與邊集合，因此G等同於T，且由於T是樹，G也是樹——(A)與(B)均正確。選項(C)：若T是G的生成樹，且e是G中不屬於T的邊，則將e加入T必然形成環（cycle），這是生成樹的基本性質——(C)正確。選項(D)：一個圖可以有多棵生成樹（例如含環的連通圖通常有多個生成樹）——(D)正確。由於(A)、(B)、(C)、(D)全部正確，故答案為(E)，表示以上皆正確（沒有任何錯誤敘述）。"
+      "answer": "C",
+      "explanation": "答案經技術覆核後修正為 C（非官方答案）。TLS 可使用自簽或私有 CA 憑證；建立 HTTPS 並不在協定上必然要求受信任第三方簽署。 二次覆核：HTTPS 是 HTTP over TLS，也能配置 mutual TLS；但 TLS 技術上可使用 self-signed certificate 或直接信任私有 CA，協定不強制由受信任第三方簽發 server certificate，因此 C 的 requires 過強。 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-113-18": {
       "questionId": "q-pp-im-it-113-18",
-      "answer": "B",
-      "explanation": "在堆積（heap）中插入一個新鍵值時，首先將其放在完全二元樹的最後一個位置（O(1)），接著執行「上移（bubble up / sift up）」操作，不斷與父節點比較並交換，直到滿足堆積性質為止。由於完全二元樹的高度為 O(log n)，因此上移操作最多執行 O(log n) 次。故插入操作的時間複雜度為 O(log n)。"
+      "answer": "A",
+      "explanation": "答案經技術覆核後修正為 A（非官方答案）。ACID 的 A 是 atomicity，不是 availability。 二次覆核：ACID 的 A 是 atomicity，不是 availability；C、I、D 的展開均正確，因此唯一錯項是 A。 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-113-19": {
       "questionId": "q-pp-im-it-113-19",
@@ -5202,8 +5202,8 @@
     },
     "q-pp-im-it-113-2": {
       "questionId": "q-pp-im-it-113-2",
-      "answer": "D",
-      "explanation": "CISC（複雜指令集電腦）的指令集比 RISC（精簡指令集電腦）更大、更複雜，而非更小，因此選項 (D) 的說法是錯誤的。RISC 的設計哲學正是「精簡」指令集，每條指令功能單純；CISC 則相反，擁有龐大且多樣化的指令集以支援複雜操作。選項 (A) 正確，因為 CISC 指令功能強大，完成相同工作所需的指令數量通常較少。選項 (B) 正確，CISC 的核心設計目標就是讓每條指令能完成更多工作。選項 (C) 正確，CISC 指令較複雜，通常需要多個時脈週期執行，而 RISC 指令通常可在單一週期內完成。"
+      "answer": "B",
+      "explanation": "答案經技術覆核後修正為 B（非官方答案）。不同 process 各自具有獨立位址空間、stack 與 program counter；B 把 process 誤述成 thread。 二次覆核：由同一 parent spawn 的不同 processes 通常仍各有獨立位址空間、stack 與 program counter；需要 shared memory 或 message passing 才能交換資料，因此 B 錯。 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-113-20": {
       "questionId": "q-pp-im-it-113-20",
@@ -5212,13 +5212,13 @@
     },
     "q-pp-im-it-113-21": {
       "questionId": "q-pp-im-it-113-21",
-      "answer": "A",
-      "explanation": "此題為申論題，要求實作 max-heap 的 boostPriority 函式，並無選項 A/B/C/D/E。正確實作方式為：先將 items[i] 更新為 newPriorityValue，再執行「向上調整（bubble up / sift up）」操作。在 max-heap 中，父節點索引為 (i-1)/2，若更新後的節點值大於其父節點，則兩者交換並繼續向上比較，直到根節點或父節點值大於等於當前節點為止。此操作時間複雜度為 O(log n)，可確保堆積性質在 priority 提升後仍然維持。完整實作：items[i] = newPriorityValue; while (i > 0 && items[(i-1)/2] < items[i]) { swap(items[(i-1)/2], items[i]); i = (i-1)/2; }"
+      "answer": "B",
+      "explanation": "答案經技術覆核後修正為 B（非官方答案）。繼承不保證子類可存取或繼承「所有」屬性與方法，例如 private member；B 的全稱敘述錯誤。 二次覆核：繼承不保證 subclass 可繼承或存取 superclass 的所有 attributes 與 methods，例如 private members；B 的全稱敘述錯誤，其他三項是 OOP 基本定義。 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-113-22": {
       "questionId": "q-pp-im-it-113-22",
-      "answer": "A",
-      "explanation": "本題實作 Boyer-Moore 演算法的 Bad Character 啟發式搜尋。對於 txt=\"ABAAABCDABC\" 和 pat=\"ABC\"，PREPROCESS 建立 badchar 表：badchar['A']=0, badchar['B']=1, badchar['C']=2，其餘為 -1。執行 search 時，s=0 時 txt[2]='A' 與 pat[2]='C' 不符，位移 max(1,2-0)=2；s=2 時同樣不符再位移 2；s=4 時三個字元完全匹配，輸出 \"pattern occurs at 4\"，再位移 3-badchar['D']=4；s=8 時再次完全匹配，輸出 \"pattern occurs at 8\"。最壞時間複雜度為 O(n*m)（如全為相同字元時每次僅移動 1），最佳時間複雜度為 O(n/m)（模式末字元從未出現在文本中時每次可跳過 m 個字元）。"
+      "answer": "B",
+      "explanation": "答案經技術覆核後修正為 B（非官方答案）。member variable 宣告在 class body，而不是必須宣告在 method body。 二次覆核：member variable 宣告在 class body；在 method body 宣告的是 local variable。class variable 單份共享與 instance variable 每物件一份的敘述均正確，因此 B 是唯一錯項。 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-113-23": {
       "questionId": "q-pp-im-it-113-23",
@@ -5242,8 +5242,8 @@
     },
     "q-pp-im-it-113-4": {
       "questionId": "q-pp-im-it-113-4",
-      "answer": "E",
-      "explanation": "選項 (A) 正確：中斷驅動 I/O 中，外部裝置會向處理器發出中斷，使其執行中斷服務常式。選項 (B) 正確：外部裝置透過觸發中斷訊號來中斷處理器，這是中斷機制的基本運作方式。選項 (C) 正確：直接記憶體存取（DMA）允許資料在 I/O 裝置與記憶體之間直接傳輸，無需處理器持續介入。選項 (D) 正確：DMA 控制器正是一種硬體裝置，使 I/O 裝置能夠直接存取記憶體，大幅減少處理器的參與。由於 (A)、(B)、(C)、(D) 四個選項均為正確敘述，因此答案為 (E)。"
+      "answer": "A",
+      "explanation": "答案經技術覆核後修正為 A（非官方答案）。馮紐曼架構的四個功能組成是 processor、memory、input 與 output；A 最直接對應。 二次覆核：Von Neumann 架構的四個功能單元是 processor、memory、input、output；A 逐項對應，其他選項遺漏或混入 program counter、GPU、disk 等次層元件。 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-113-5": {
       "questionId": "q-pp-im-it-113-5",
@@ -5257,18 +5257,18 @@
     },
     "q-pp-im-it-113-7": {
       "questionId": "q-pp-im-it-113-7",
-      "answer": "E",
-      "explanation": "本題詢問哪一個「不是」藍牙的常見應用。選項A（手機與VR頭戴裝置）、選項B（手機與車用音響）、選項C（穿戴裝置與手機）、選項D（滑鼠與筆電）皆為藍牙技術的典型實際應用場景。由於A到D全部都是藍牙的常見用途，因此不存在任何例外，選項E「以上皆為藍牙的常見應用」為正確敘述，即為本題「except（除了……之外）」問法下的正確答案。"
+      "answer": "C",
+      "explanation": "答案經技術覆核後修正為 C（非官方答案）。polled interrupt 是 processor 主動輪詢裝置；由裝置直接導向 ISR 描述的是 vectored interrupt。 二次覆核：polled interrupt 由 processor 逐一詢問裝置以辨識來源；由裝置提供向量直接導向 ISR 是 vectored interrupt 的特徵，因此 C 錯。 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-113-8": {
       "questionId": "q-pp-im-it-113-8",
-      "answer": "B",
-      "explanation": "DDR4 是一種動態隨機存取記憶體（DRAM），屬於揮發性記憶體（volatile memory），斷電後資料即消失，因此它不是非揮發性記憶體。固態硬碟（SSD）使用快閃記憶體晶片儲存資料，屬於非揮發性儲存裝置。唯讀記憶體（ROM）和快閃記憶體（Flash memory）同樣屬於非揮發性記憶體，斷電後資料仍能保留。因此，四個選項中唯一不是非揮發性記憶體的是 DDR4，正確答案為 B。"
+      "answer": "A",
+      "explanation": "答案經技術覆核後修正為 A（非官方答案）。p 已定義為不可平行化比例，平行時間為 p+(1-p)/n，speedup 為其倒數。 二次覆核：p 已明定為不受增加 processors 影響的 serial fraction；正規化執行時間是 p+(1-p)/n，speedup 是其倒數，所以選 A。 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-113-9": {
       "questionId": "q-pp-im-it-113-9",
-      "answer": "D",
-      "explanation": "ISO 27001 是資訊安全管理系統（ISMS）的國際標準規範，提供一套完整的政策與程序框架，涵蓋組織資訊風險管理所需的法律、實體及技術控制措施。ISO 9001 是品質管理系統標準，ISO 14000 系列是環境管理標準，而 ISO 7700 並非資訊安全相關的有效標準。因此，正確答案為 ISO 27001，選項 D。"
+      "answer": "E",
+      "explanation": "答案經技術覆核後修正為 E（非官方答案）。互斥機制設計不當確實可能造成 starvation、deadlock 或 livelock，A 至 D 都正確。 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-114-1": {
       "questionId": "q-pp-im-it-114-1",
@@ -5342,8 +5342,8 @@
     },
     "q-pp-im-it-114-22": {
       "questionId": "q-pp-im-it-114-22",
-      "answer": "D",
-      "explanation": "NAT（網路位址轉換）的運作並不僅限於 OSI 模型的網路層（第三層）。在實際應用中，最常見的 NAPT（Network Address Port Translation）還需要修改傳輸層（第四層）的 TCP/UDP 埠號，因此 NAT 實際上跨越了網路層與傳輸層兩個層次，選項 (D) 聲稱 NAT 僅在網路層運作是不正確的。選項 (A) 正確，NAT 確實能隱藏內部網路的 IP 位址，防止外部直接存取。選項 (B) 正確，NAT 讓多台內部裝置共用一個公有 IP，有效節省了 IPv4 位址空間。選項 (C) 也正確，NAT 破壞了網路的端對端連線能力，某些需要直接 IP 連線的應用（如 VoIP、P2P）會因此受到影響。"
+      "answer": "E",
+      "explanation": "答案經技術覆核後修正為 E（非官方答案）。A 至 C 正確，NAT 一般歸於 OSI network layer，因此 D 也非錯誤敘述。 二次覆核：NAT 可隱藏內部位址、節省 IPv4 位址，且會破壞部分 end-to-end connectivity；基本 NAT 改寫 IP header，通常歸在 OSI network layer。A 至 D 均成立，故選 E。 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-114-23": {
       "questionId": "q-pp-im-it-114-23",
