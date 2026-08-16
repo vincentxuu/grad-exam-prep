@@ -28,6 +28,7 @@ import {
   findLatestTaskEvidence,
   getCurrentPhase,
   getPlanMonth,
+  getTaskLearningHref,
   getTodayFocusTasks,
   isTaskEvidencePassing,
   localDateKey,
@@ -160,6 +161,7 @@ function TodayContent({ params }: Props) {
                 {focusTasks.map((task) => {
                   const latestEvidence = findLatestTaskEvidence(state.dailyLearning, task.id)
                   const isOpen = openTaskId === task.id
+                  const learningHref = getTaskLearningHref(examId, task.subjectTag)
                   return (
                     <div key={task.id} className="rounded-lg border bg-background p-3">
                       <div className="flex items-start justify-between gap-3">
@@ -194,14 +196,21 @@ function TodayContent({ params }: Props) {
                             ) : null}
                           </div>
                         </div>
-                        <Button
-                          type="button"
-                          size="sm"
-                          variant={latestEvidence ? 'outline' : 'default'}
-                          onClick={() => setOpenTaskId(isOpen ? null : task.id)}
-                        >
-                          {isOpen ? '收起' : latestEvidence ? '更新成果' : '記錄成果'}
-                        </Button>
+                        <div className="flex shrink-0 flex-col gap-2 sm:flex-row">
+                          {learningHref ? (
+                            <Button asChild type="button" size="sm" variant="outline">
+                              <Link href={learningHref}>開啟課程</Link>
+                            </Button>
+                          ) : null}
+                          <Button
+                            type="button"
+                            size="sm"
+                            variant={latestEvidence ? 'outline' : 'default'}
+                            onClick={() => setOpenTaskId(isOpen ? null : task.id)}
+                          >
+                            {isOpen ? '收起' : latestEvidence ? '更新成果' : '記錄成果'}
+                          </Button>
+                        </div>
                       </div>
                       {isOpen ? (
                         <TaskEvidenceForm

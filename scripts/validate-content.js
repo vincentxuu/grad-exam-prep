@@ -197,7 +197,7 @@ for (const entry of selectedImWords) {
 
 // Flashcard coverage gaps
 console.log('\n📇 Flashcard Coverage:')
-const quarantinedFlashcardSubjects = new Set(['im-it', 'im-mis', 'im-stat'])
+const quarantinedFlashcardSubjects = new Set(['im-it'])
 subjects.forEach((subj) => {
   const count = flashcards.filter((fc) => fc.subjectId === subj.id).length
   if (quarantinedFlashcardSubjects.has(subj.id)) {

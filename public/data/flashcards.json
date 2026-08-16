@@ -56759,5 +56759,594 @@
     "prompt": "lob",
     "answer": "【意思】拋擲；（言語）丟向、攻擊\n【詞性】v\n【例句】In fact, one common trait of many US presidents __(33)__ the capacity to launch self-deprecating jokes—a move that often undercuts any similar jokes lobbed at them.\n【來源】台大資管所必要字庫 · worth_studying · english-exam · 111",
     "pastPaperRef": "pp-im-en-111 Q31"
+  },
+  {
+    "id": "fc-im-mis-strategy-alignment-differentiation-definition",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-strategy",
+    "prompt": "IT-business alignment 與差異化：答題時先定義什麼？",
+    "answer": "先界定 IT-business alignment 與差異化 的分析單位、核心機制與適用條件。\n\nMIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。\n\n【來源】src-im-mis-laudon-17e",
+    "pastPaperRef": "q-pp-im-mis-106-1"
+  },
+  {
+    "id": "fc-im-mis-strategy-alignment-differentiation-tradeoff",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-strategy",
+    "prompt": "IT-business alignment 與差異化：完整申論至少要補哪三類內容？",
+    "answer": "機制、條件／權衡、可觀察指標與限制。\n\n以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。\n\n【來源】src-im-mis-laudon-17e",
+    "pastPaperRef": "q-pp-im-mis-106-1"
+  },
+  {
+    "id": "fc-im-mis-strategy-investment-value-definition",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-strategy",
+    "prompt": "IT 投資、互補性資產與價值：答題時先定義什麼？",
+    "answer": "先界定 IT 投資、互補性資產與價值 的分析單位、核心機制與適用條件。\n\nMIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。\n\n【來源】src-im-mis-laudon-17e",
+    "pastPaperRef": "q-pp-im-mis-109-2"
+  },
+  {
+    "id": "fc-im-mis-strategy-investment-value-tradeoff",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-strategy",
+    "prompt": "IT 投資、互補性資產與價值：完整申論至少要補哪三類內容？",
+    "answer": "機制、條件／權衡、可觀察指標與限制。\n\n以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。\n\n【來源】src-im-mis-laudon-17e",
+    "pastPaperRef": "q-pp-im-mis-109-2"
+  },
+  {
+    "id": "fc-im-mis-strategy-agility-environment-definition",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-strategy",
+    "prompt": "環境不確定性與企業敏捷：答題時先定義什麼？",
+    "answer": "先界定 環境不確定性與企業敏捷 的分析單位、核心機制與適用條件。\n\nMIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。\n\n【來源】src-im-mis-laudon-17e",
+    "pastPaperRef": "q-pp-im-mis-107-2"
+  },
+  {
+    "id": "fc-im-mis-strategy-agility-environment-tradeoff",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-strategy",
+    "prompt": "環境不確定性與企業敏捷：完整申論至少要補哪三類內容？",
+    "answer": "機制、條件／權衡、可觀察指標與限制。\n\n以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。\n\n【來源】src-im-mis-laudon-17e",
+    "pastPaperRef": "q-pp-im-mis-107-2"
+  },
+  {
+    "id": "fc-im-mis-strategy-organization-economics-definition",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-strategy",
+    "prompt": "IT 與組織邊界：答題時先定義什麼？",
+    "answer": "先界定 IT 與組織邊界 的分析單位、核心機制與適用條件。\n\nMIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。\n\n【來源】src-im-mis-laudon-17e",
+    "pastPaperRef": "q-pp-im-mis-108-1"
+  },
+  {
+    "id": "fc-im-mis-strategy-organization-economics-tradeoff",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-strategy",
+    "prompt": "IT 與組織邊界：完整申論至少要補哪三類內容？",
+    "answer": "機制、條件／權衡、可觀察指標與限制。\n\n以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。\n\n【來源】src-im-mis-laudon-17e",
+    "pastPaperRef": "q-pp-im-mis-108-1"
+  },
+  {
+    "id": "fc-im-mis-platforms-sharing-economy-definition",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-platforms",
+    "prompt": "共享經濟與信任機制：答題時先定義什麼？",
+    "answer": "先界定 共享經濟與信任機制 的分析單位、核心機制與適用條件。\n\nMIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。\n\n【來源】src-im-mis-laudon-17e",
+    "pastPaperRef": "q-pp-im-mis-106-2"
+  },
+  {
+    "id": "fc-im-mis-platforms-sharing-economy-tradeoff",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-platforms",
+    "prompt": "共享經濟與信任機制：完整申論至少要補哪三類內容？",
+    "answer": "機制、條件／權衡、可觀察指標與限制。\n\n以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。\n\n【來源】src-im-mis-laudon-17e",
+    "pastPaperRef": "q-pp-im-mis-106-2"
+  },
+  {
+    "id": "fc-im-mis-platforms-multisided-pricing-definition",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-platforms",
+    "prompt": "多邊平台、網路效應與定價：答題時先定義什麼？",
+    "answer": "先界定 多邊平台、網路效應與定價 的分析單位、核心機制與適用條件。\n\nMIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。\n\n【來源】src-im-mis-laudon-17e",
+    "pastPaperRef": "q-pp-im-mis-109-3"
+  },
+  {
+    "id": "fc-im-mis-platforms-multisided-pricing-tradeoff",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-platforms",
+    "prompt": "多邊平台、網路效應與定價：完整申論至少要補哪三類內容？",
+    "answer": "機制、條件／權衡、可觀察指標與限制。\n\n以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。\n\n【來源】src-im-mis-laudon-17e",
+    "pastPaperRef": "q-pp-im-mis-109-3"
+  },
+  {
+    "id": "fc-im-mis-platforms-digital-markets-commerce-definition",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-platforms",
+    "prompt": "數位市場與直播商務：答題時先定義什麼？",
+    "answer": "先界定 數位市場與直播商務 的分析單位、核心機制與適用條件。\n\nMIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。\n\n【來源】src-im-mis-laudon-17e",
+    "pastPaperRef": "q-pp-im-mis-110-2"
+  },
+  {
+    "id": "fc-im-mis-platforms-digital-markets-commerce-tradeoff",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-platforms",
+    "prompt": "數位市場與直播商務：完整申論至少要補哪三類內容？",
+    "answer": "機制、條件／權衡、可觀察指標與限制。\n\n以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。\n\n【來源】src-im-mis-laudon-17e",
+    "pastPaperRef": "q-pp-im-mis-110-2"
+  },
+  {
+    "id": "fc-im-mis-enterprise-knowledge-management-definition",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-enterprise",
+    "prompt": "知識編碼與人際連結：答題時先定義什麼？",
+    "answer": "先界定 知識編碼與人際連結 的分析單位、核心機制與適用條件。\n\nMIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。\n\n【來源】src-im-mis-laudon-17e",
+    "pastPaperRef": "q-pp-im-mis-107-1"
+  },
+  {
+    "id": "fc-im-mis-enterprise-knowledge-management-tradeoff",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-enterprise",
+    "prompt": "知識編碼與人際連結：完整申論至少要補哪三類內容？",
+    "answer": "機制、條件／權衡、可觀察指標與限制。\n\n以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。\n\n【來源】src-im-mis-laudon-17e",
+    "pastPaperRef": "q-pp-im-mis-107-1"
+  },
+  {
+    "id": "fc-im-mis-enterprise-enterprise-processes-definition",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-enterprise",
+    "prompt": "企業系統與流程整合：答題時先定義什麼？",
+    "answer": "先界定 企業系統與流程整合 的分析單位、核心機制與適用條件。\n\nMIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。\n\n【來源】src-im-mis-laudon-17e"
+  },
+  {
+    "id": "fc-im-mis-enterprise-enterprise-processes-tradeoff",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-enterprise",
+    "prompt": "企業系統與流程整合：完整申論至少要補哪三類內容？",
+    "answer": "機制、條件／權衡、可觀察指標與限制。\n\n以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。\n\n【來源】src-im-mis-laudon-17e"
+  },
+  {
+    "id": "fc-im-mis-enterprise-supply-chain-definition",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-enterprise",
+    "prompt": "推式與拉式供應鏈：答題時先定義什麼？",
+    "answer": "先界定 推式與拉式供應鏈 的分析單位、核心機制與適用條件。\n\nMIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。\n\n【來源】src-im-mis-laudon-17e",
+    "pastPaperRef": "q-pp-im-mis-112-1"
+  },
+  {
+    "id": "fc-im-mis-enterprise-supply-chain-tradeoff",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-enterprise",
+    "prompt": "推式與拉式供應鏈：完整申論至少要補哪三類內容？",
+    "answer": "機制、條件／權衡、可觀察指標與限制。\n\n以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。\n\n【來源】src-im-mis-laudon-17e",
+    "pastPaperRef": "q-pp-im-mis-112-1"
+  },
+  {
+    "id": "fc-im-mis-data-ai-data-lifecycle-definition",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-data-ai",
+    "prompt": "資料生命週期與分析可行性：答題時先定義什麼？",
+    "answer": "先界定 資料生命週期與分析可行性 的分析單位、核心機制與適用條件。\n\nMIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。\n\n【來源】src-im-mis-google-ml-rules、src-im-mis-nist-privacy-framework",
+    "pastPaperRef": "q-pp-im-mis-108-2"
+  },
+  {
+    "id": "fc-im-mis-data-ai-data-lifecycle-tradeoff",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-data-ai",
+    "prompt": "資料生命週期與分析可行性：完整申論至少要補哪三類內容？",
+    "answer": "機制、條件／權衡、可觀察指標與限制。\n\n以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。\n\n【來源】src-im-mis-google-ml-rules、src-im-mis-nist-privacy-framework",
+    "pastPaperRef": "q-pp-im-mis-108-2"
+  },
+  {
+    "id": "fc-im-mis-data-ai-model-evaluation-fairness-definition",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-data-ai",
+    "prompt": "模型評估、公平與漂移：答題時先定義什麼？",
+    "answer": "先界定 模型評估、公平與漂移 的分析單位、核心機制與適用條件。\n\nMIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。\n\n【來源】src-im-mis-google-ml-rules、src-im-mis-nist-ai-rmf",
+    "pastPaperRef": "q-pp-im-mis-108-3"
+  },
+  {
+    "id": "fc-im-mis-data-ai-model-evaluation-fairness-tradeoff",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-data-ai",
+    "prompt": "模型評估、公平與漂移：完整申論至少要補哪三類內容？",
+    "answer": "機制、條件／權衡、可觀察指標與限制。\n\n以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。\n\n【來源】src-im-mis-google-ml-rules、src-im-mis-nist-ai-rmf",
+    "pastPaperRef": "q-pp-im-mis-108-3"
+  },
+  {
+    "id": "fc-im-mis-data-ai-analytics-forecasting-definition",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-data-ai",
+    "prompt": "預測、社群分析與決策：答題時先定義什麼？",
+    "answer": "先界定 預測、社群分析與決策 的分析單位、核心機制與適用條件。\n\nMIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。\n\n【來源】src-im-mis-laudon-17e",
+    "pastPaperRef": "q-pp-im-mis-109-4"
+  },
+  {
+    "id": "fc-im-mis-data-ai-analytics-forecasting-tradeoff",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-data-ai",
+    "prompt": "預測、社群分析與決策：完整申論至少要補哪三類內容？",
+    "answer": "機制、條件／權衡、可觀察指標與限制。\n\n以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。\n\n【來源】src-im-mis-laudon-17e",
+    "pastPaperRef": "q-pp-im-mis-109-4"
+  },
+  {
+    "id": "fc-im-mis-data-ai-ai-operations-governance-definition",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-data-ai",
+    "prompt": "AI 維運、導入與治理：答題時先定義什麼？",
+    "answer": "先界定 AI 維運、導入與治理 的分析單位、核心機制與適用條件。\n\nMIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。\n\n【來源】src-im-mis-google-ml-rules、src-im-mis-nist-ai-rmf",
+    "pastPaperRef": "q-pp-im-mis-112-3"
+  },
+  {
+    "id": "fc-im-mis-data-ai-ai-operations-governance-tradeoff",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-data-ai",
+    "prompt": "AI 維運、導入與治理：完整申論至少要補哪三類內容？",
+    "answer": "機制、條件／權衡、可觀察指標與限制。\n\n以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。\n\n【來源】src-im-mis-google-ml-rules、src-im-mis-nist-ai-rmf",
+    "pastPaperRef": "q-pp-im-mis-112-3"
+  },
+  {
+    "id": "fc-im-mis-development-acquisition-estimation-definition",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-development",
+    "prompt": "系統取得與成本估算：答題時先定義什麼？",
+    "answer": "先界定 系統取得與成本估算 的分析單位、核心機制與適用條件。\n\nMIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。\n\n【來源】src-im-mis-laudon-17e",
+    "pastPaperRef": "q-pp-im-mis-107-3"
+  },
+  {
+    "id": "fc-im-mis-development-acquisition-estimation-tradeoff",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-development",
+    "prompt": "系統取得與成本估算：完整申論至少要補哪三類內容？",
+    "answer": "機制、條件／權衡、可觀察指標與限制。\n\n以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。\n\n【來源】src-im-mis-laudon-17e",
+    "pastPaperRef": "q-pp-im-mis-107-3"
+  },
+  {
+    "id": "fc-im-mis-development-agile-delivery-definition",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-development",
+    "prompt": "Scrum 與敏捷交付：答題時先定義什麼？",
+    "answer": "先界定 Scrum 與敏捷交付 的分析單位、核心機制與適用條件。\n\nMIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。\n\n【來源】src-im-mis-scrum-guide-2020",
+    "pastPaperRef": "q-pp-im-mis-110-3"
+  },
+  {
+    "id": "fc-im-mis-development-agile-delivery-tradeoff",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-development",
+    "prompt": "Scrum 與敏捷交付：完整申論至少要補哪三類內容？",
+    "answer": "機制、條件／權衡、可觀察指標與限制。\n\n以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。\n\n【來源】src-im-mis-scrum-guide-2020",
+    "pastPaperRef": "q-pp-im-mis-110-3"
+  },
+  {
+    "id": "fc-im-mis-development-testing-quality-definition",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-development",
+    "prompt": "測試層級與品質風險：答題時先定義什麼？",
+    "answer": "先界定 測試層級與品質風險 的分析單位、核心機制與適用條件。\n\nMIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。\n\n【來源】src-im-mis-laudon-17e",
+    "pastPaperRef": "q-pp-im-mis-111-3"
+  },
+  {
+    "id": "fc-im-mis-development-testing-quality-tradeoff",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-development",
+    "prompt": "測試層級與品質風險：完整申論至少要補哪三類內容？",
+    "answer": "機制、條件／權衡、可觀察指標與限制。\n\n以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。\n\n【來源】src-im-mis-laudon-17e",
+    "pastPaperRef": "q-pp-im-mis-111-3"
+  },
+  {
+    "id": "fc-im-mis-development-requirements-ux-definition",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-development",
+    "prompt": "需求表達與使用者體驗：答題時先定義什麼？",
+    "answer": "先界定 需求表達與使用者體驗 的分析單位、核心機制與適用條件。\n\nMIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。\n\n【來源】src-im-mis-laudon-17e、src-im-mis-nielsen-heuristics",
+    "pastPaperRef": "q-pp-im-mis-111-4"
+  },
+  {
+    "id": "fc-im-mis-development-requirements-ux-tradeoff",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-development",
+    "prompt": "需求表達與使用者體驗：完整申論至少要補哪三類內容？",
+    "answer": "機制、條件／權衡、可觀察指標與限制。\n\n以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。\n\n【來源】src-im-mis-laudon-17e、src-im-mis-nielsen-heuristics",
+    "pastPaperRef": "q-pp-im-mis-111-4"
+  },
+  {
+    "id": "fc-im-mis-data-architecture-relational-nosql-definition",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-data-architecture",
+    "prompt": "關聯式資料庫與 NoSQL：答題時先定義什麼？",
+    "answer": "先界定 關聯式資料庫與 NoSQL 的分析單位、核心機制與適用條件。\n\nMIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。\n\n【來源】src-im-mis-laudon-17e",
+    "pastPaperRef": "q-pp-im-mis-106-4"
+  },
+  {
+    "id": "fc-im-mis-data-architecture-relational-nosql-tradeoff",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-data-architecture",
+    "prompt": "關聯式資料庫與 NoSQL：完整申論至少要補哪三類內容？",
+    "answer": "機制、條件／權衡、可觀察指標與限制。\n\n以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。\n\n【來源】src-im-mis-laudon-17e",
+    "pastPaperRef": "q-pp-im-mis-106-4"
+  },
+  {
+    "id": "fc-im-mis-data-architecture-sql-schema-definition",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-data-architecture",
+    "prompt": "SQL、schema 與查詢：答題時先定義什麼？",
+    "answer": "先界定 SQL、schema 與查詢 的分析單位、核心機制與適用條件。\n\nMIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。\n\n【來源】src-im-mis-postgresql-sql",
+    "pastPaperRef": "q-pp-im-mis-107-4"
+  },
+  {
+    "id": "fc-im-mis-data-architecture-sql-schema-tradeoff",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-data-architecture",
+    "prompt": "SQL、schema 與查詢：完整申論至少要補哪三類內容？",
+    "answer": "機制、條件／權衡、可觀察指標與限制。\n\n以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。\n\n【來源】src-im-mis-postgresql-sql",
+    "pastPaperRef": "q-pp-im-mis-107-4"
+  },
+  {
+    "id": "fc-im-mis-data-architecture-oss-licensing-definition",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-data-architecture",
+    "prompt": "開源軟體、授權與 sourcing：答題時先定義什麼？",
+    "answer": "先界定 開源軟體、授權與 sourcing 的分析單位、核心機制與適用條件。\n\nMIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。\n\n【來源】src-im-mis-apache-license-2、src-im-mis-gpl-3",
+    "pastPaperRef": "q-pp-im-mis-106-3"
+  },
+  {
+    "id": "fc-im-mis-data-architecture-oss-licensing-tradeoff",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-data-architecture",
+    "prompt": "開源軟體、授權與 sourcing：完整申論至少要補哪三類內容？",
+    "answer": "機制、條件／權衡、可觀察指標與限制。\n\n以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。\n\n【來源】src-im-mis-apache-license-2、src-im-mis-gpl-3",
+    "pastPaperRef": "q-pp-im-mis-106-3"
+  },
+  {
+    "id": "fc-im-mis-governance-privacy-security-definition",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-governance",
+    "prompt": "IoT、資料與隱私風險：答題時先定義什麼？",
+    "answer": "先界定 IoT、資料與隱私風險 的分析單位、核心機制與適用條件。\n\nMIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。\n\n【來源】src-im-mis-nist-privacy-framework",
+    "pastPaperRef": "q-pp-im-mis-111-2"
+  },
+  {
+    "id": "fc-im-mis-governance-privacy-security-tradeoff",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-governance",
+    "prompt": "IoT、資料與隱私風險：完整申論至少要補哪三類內容？",
+    "answer": "機制、條件／權衡、可觀察指標與限制。\n\n以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。\n\n【來源】src-im-mis-nist-privacy-framework",
+    "pastPaperRef": "q-pp-im-mis-111-2"
+  },
+  {
+    "id": "fc-im-mis-governance-esg-accountability-definition",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-governance",
+    "prompt": "ESG、揭露與問責：答題時先定義什麼？",
+    "answer": "先界定 ESG、揭露與問責 的分析單位、核心機制與適用條件。\n\nMIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。\n\n【來源】src-im-mis-ifrs-sustainability",
+    "pastPaperRef": "q-pp-im-mis-113-4"
+  },
+  {
+    "id": "fc-im-mis-governance-esg-accountability-tradeoff",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-governance",
+    "prompt": "ESG、揭露與問責：完整申論至少要補哪三類內容？",
+    "answer": "機制、條件／權衡、可觀察指標與限制。\n\n以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。\n\n【來源】src-im-mis-ifrs-sustainability",
+    "pastPaperRef": "q-pp-im-mis-113-4"
+  },
+  {
+    "id": "fc-im-mis-governance-vendor-ai-governance-definition",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-governance",
+    "prompt": "AI 供應商、共競與信任治理：答題時先定義什麼？",
+    "answer": "先界定 AI 供應商、共競與信任治理 的分析單位、核心機制與適用條件。\n\nMIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。\n\n【來源】src-im-mis-nist-privacy-framework、src-im-mis-nist-ai-rmf",
+    "pastPaperRef": "q-pp-im-mis-115-2"
+  },
+  {
+    "id": "fc-im-mis-governance-vendor-ai-governance-tradeoff",
+    "examId": "im",
+    "subjectId": "im-mis",
+    "topicId": "im-mis-governance",
+    "prompt": "AI 供應商、共競與信任治理：完整申論至少要補哪三類內容？",
+    "answer": "機制、條件／權衡、可觀察指標與限制。\n\n以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。\n\n【來源】src-im-mis-nist-privacy-framework、src-im-mis-nist-ai-rmf",
+    "pastPaperRef": "q-pp-im-mis-115-2"
+  },
+  {
+    "id": "fc-im-stat-expectation-linearity",
+    "examId": "im",
+    "subjectId": "im-stat",
+    "topicId": "im-stat-probability",
+    "prompt": "E(aX+b) 等於？",
+    "answer": "aE(X)+b\n\n期望值具線性性，不需要獨立。\n\n【來源】src-im-stat-openintro、src-im-stat-psu-414"
+  },
+  {
+    "id": "fc-im-stat-variance-scale",
+    "examId": "im",
+    "subjectId": "im-stat",
+    "topicId": "im-stat-probability",
+    "prompt": "Var(aX) 等於？",
+    "answer": "a²Var(X)\n\n變異數使用倍率平方。\n\n【來源】src-im-stat-openintro、src-im-stat-psu-414"
+  },
+  {
+    "id": "fc-im-stat-pmf-normalize",
+    "examId": "im",
+    "subjectId": "im-stat",
+    "topicId": "im-stat-probability",
+    "prompt": "未正規化權重如何變成 PMF？",
+    "answer": "每個權重除以權重總和\n\n最後總機率必須為 1。\n\n【來源】src-im-stat-ntu-115-pdf、src-im-stat-openintro、src-im-stat-psu-414",
+    "pastPaperRef": "q-pp-im-stat-115-3"
+  },
+  {
+    "id": "fc-im-stat-pmf-marginal",
+    "examId": "im",
+    "subjectId": "im-stat",
+    "topicId": "im-stat-probability",
+    "prompt": "由 joint PMF 求 Y1 marginal？",
+    "answer": "固定 Y1，對所有 Y2 加總\n\n加總方向由要保留的變數決定。\n\n【來源】src-im-stat-ntu-115-pdf、src-im-stat-openintro、src-im-stat-psu-414",
+    "pastPaperRef": "q-pp-im-stat-115-3"
+  },
+  {
+    "id": "fc-im-stat-transform-preimage",
+    "examId": "im",
+    "subjectId": "im-stat",
+    "topicId": "im-stat-probability",
+    "prompt": "多個舊點映到同一新點時？",
+    "answer": "把所有 preimage 的機率相加\n\n不能只保留其中一點。\n\n【來源】src-im-stat-ntu-115-pdf、src-im-stat-openintro、src-im-stat-psu-414",
+    "pastPaperRef": "q-pp-im-stat-115-3"
+  },
+  {
+    "id": "fc-im-stat-unbiased-weights",
+    "examId": "im",
+    "subjectId": "im-stat",
+    "topicId": "im-stat-estimation",
+    "prompt": "iid 平均數 μ 的線性估計量何時不偏？",
+    "answer": "權重和等於 1\n\nE(ΣwiYi)=μΣwi。\n\n【來源】src-im-stat-ntu-114-pdf、src-im-stat-ntu-115-pdf、src-im-stat-psu-415",
+    "pastPaperRef": "q-pp-im-stat-114-5"
+  },
+  {
+    "id": "fc-im-stat-unbiased-not-efficient",
+    "examId": "im",
+    "subjectId": "im-stat",
+    "topicId": "im-stat-estimation",
+    "prompt": "不偏是否保證最小變異數？",
+    "answer": "不保證\n\n不偏只約束中心，不約束波動。\n\n【來源】src-im-stat-ntu-114-pdf、src-im-stat-ntu-115-pdf、src-im-stat-psu-415",
+    "pastPaperRef": "q-pp-im-stat-114-5"
+  },
+  {
+    "id": "fc-im-stat-weighted-variance",
+    "examId": "im",
+    "subjectId": "im-stat",
+    "topicId": "im-stat-estimation",
+    "prompt": "獨立同變異 Yi 的加權和變異數？",
+    "answer": "σ²Σwi²\n\n獨立使 covariance 項為 0。\n\n【來源】src-im-stat-ntu-114-pdf、src-im-stat-ntu-115-pdf、src-im-stat-psu-415",
+    "pastPaperRef": "q-pp-im-stat-114-5"
+  },
+  {
+    "id": "fc-im-stat-periodic-weights",
+    "examId": "im",
+    "subjectId": "im-stat",
+    "topicId": "im-stat-estimation",
+    "prompt": "114-5 的 g 循環為 2,3,4,5,1，Σg²？",
+    "answer": "11T\n\n每五項平方和 55，共 T/5 組。\n\n【來源】src-im-stat-ntu-114-pdf、src-im-stat-ntu-115-pdf、src-im-stat-psu-415",
+    "pastPaperRef": "q-pp-im-stat-114-5"
+  },
+  {
+    "id": "fc-im-stat-equal-weight",
+    "examId": "im",
+    "subjectId": "im-stat",
+    "topicId": "im-stat-estimation",
+    "prompt": "iid 等變異且權重和固定時，何者通常最穩？",
+    "answer": "等權重平均\n\n平方和在等權重時最小。\n\n【來源】src-im-stat-ntu-114-pdf、src-im-stat-ntu-115-pdf、src-im-stat-psu-415",
+    "pastPaperRef": "q-pp-im-stat-114-5"
+  },
+  {
+    "id": "fc-im-stat-hypothesis-decision",
+    "examId": "im",
+    "subjectId": "im-stat",
+    "topicId": "im-stat-regression",
+    "prompt": "p<α 時的決策？",
+    "answer": "拒絕 H0\n\n代表資料與 H0 不相容程度達門檻。\n\n【來源】src-im-stat-openintro、src-im-stat-nist-handbook"
+  },
+  {
+    "id": "fc-im-stat-regression-df",
+    "examId": "im",
+    "subjectId": "im-stat",
+    "topicId": "im-stat-regression",
+    "prompt": "含截距、k 個斜率的殘差自由度？",
+    "answer": "n-k-1\n\n扣掉 k 個斜率和 1 個截距。\n\n【來源】src-im-stat-ntu-114-pdf、src-im-stat-openintro、src-im-stat-nist-handbook",
+    "pastPaperRef": "q-pp-im-stat-114-4"
+  },
+  {
+    "id": "fc-im-stat-adjusted-r2",
+    "examId": "im",
+    "subjectId": "im-stat",
+    "topicId": "im-stat-regression",
+    "prompt": "Adjusted R² 的用途？",
+    "answer": "對加入更多變數施加複雜度懲罰\n\n不能只靠增加變數保證上升。\n\n【來源】src-im-stat-ntu-114-pdf、src-im-stat-openintro、src-im-stat-nist-handbook",
+    "pastPaperRef": "q-pp-im-stat-114-4"
+  },
+  {
+    "id": "fc-im-stat-coefficient-t",
+    "examId": "im",
+    "subjectId": "im-stat",
+    "topicId": "im-stat-regression",
+    "prompt": "係數 t 值如何算？",
+    "answer": "coef / standard error\n\n檢查單一係數相對於 0。\n\n【來源】src-im-stat-ntu-114-pdf、src-im-stat-openintro、src-im-stat-nist-handbook",
+    "pastPaperRef": "q-pp-im-stat-114-4"
+  },
+  {
+    "id": "fc-im-stat-joint-f",
+    "examId": "im",
+    "subjectId": "im-stat",
+    "topicId": "im-stat-regression",
+    "prompt": "聯合 F 檢定的 H0？",
+    "answer": "所有斜率係數同時為 0\n\n與單一係數 t 檢定不同。\n\n【來源】src-im-stat-ntu-114-pdf、src-im-stat-openintro、src-im-stat-nist-handbook",
+    "pastPaperRef": "q-pp-im-stat-114-4"
+  },
+  {
+    "id": "fc-im-stat-expected-count",
+    "examId": "im",
+    "subjectId": "im-stat",
+    "topicId": "im-stat-categorical",
+    "prompt": "獨立性下某格期望次數？",
+    "answer": "列合計×欄合計÷總數\n\n算完應恢復原列欄合計。\n\n【來源】src-im-stat-ntu-115-pdf、src-im-stat-openintro、src-im-stat-nist-handbook",
+    "pastPaperRef": "q-pp-im-stat-115-5"
+  },
+  {
+    "id": "fc-im-stat-chi-square-stat",
+    "examId": "im",
+    "subjectId": "im-stat",
+    "topicId": "im-stat-categorical",
+    "prompt": "Pearson χ² 統計量？",
+    "answer": "Σ(O-E)²/E\n\n每格差距依期望次數標準化。\n\n【來源】src-im-stat-ntu-115-pdf、src-im-stat-openintro、src-im-stat-nist-handbook",
+    "pastPaperRef": "q-pp-im-stat-115-5"
+  },
+  {
+    "id": "fc-im-stat-chi-square-df",
+    "examId": "im",
+    "subjectId": "im-stat",
+    "topicId": "im-stat-categorical",
+    "prompt": "r×c 列聯表自由度？",
+    "answer": "(r-1)(c-1)\n\n不是 rc。\n\n【來源】src-im-stat-ntu-115-pdf、src-im-stat-openintro、src-im-stat-nist-handbook",
+    "pastPaperRef": "q-pp-im-stat-115-5"
   }
 ]

@@ -1,0 +1,249 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "im-stat",
+  "status": "reviewed",
+  "coverage": "114-115-past-paper-slice-plus-prerequisites",
+  "examScope": {
+    "applicableYears": [
+      114,
+      115
+    ],
+    "notApplicableYears": [
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113
+    ],
+    "notApplicableReason": "106–113 學年度資訊管理學研究所招生筆試未設獨立統計考科；官方索引與各年完整 MIS 卷均無統計題，因此不是缺卷。",
+    "firstAppearance": "114 學年度統計題首次出現在資訊管理導論合科卷；115 學年度官方科名改為資訊管理導論與統計學。"
+  },
+  "topics": [
+    {
+      "id": "im-stat-probability",
+      "title": "機率與隨機變數",
+      "subtopics": [
+        {
+          "id": "im-stat-probability-expectation-variance",
+          "title": "期望值與變異數",
+          "kind": "prerequisite",
+          "topicId": "im-stat-probability",
+          "keywords": [
+            "expectation",
+            "variance",
+            "linearity",
+            "independence"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-stat-probability-joint-pmf",
+          "title": "聯合與邊際 PMF",
+          "kind": "past_paper_backed",
+          "topicId": "im-stat-probability",
+          "keywords": [
+            "joint PMF",
+            "marginal PMF",
+            "support",
+            "normalization"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-stat-probability-transformations",
+          "title": "離散變數轉換",
+          "kind": "past_paper_backed",
+          "topicId": "im-stat-probability",
+          "keywords": [
+            "random-variable transformation",
+            "preimage",
+            "many-to-one mapping"
+          ],
+          "status": "reviewed"
+        }
+      ],
+      "importance": 5,
+      "status": "reviewed",
+      "learningObjectives": [
+        {
+          "id": "im-stat-probability-lo-1",
+          "statement": "計算離散隨機變數的期望值與變異數"
+        },
+        {
+          "id": "im-stat-probability-lo-2",
+          "statement": "由聯合分配進行轉換與邊際化"
+        },
+        {
+          "id": "im-stat-probability-lo-3",
+          "statement": "檢查 PMF 的 support 與正規化"
+        }
+      ]
+    },
+    {
+      "id": "im-stat-estimation",
+      "title": "估計量",
+      "subtopics": [
+        {
+          "id": "im-stat-estimation-unbiasedness",
+          "title": "不偏性",
+          "kind": "past_paper_backed",
+          "topicId": "im-stat-estimation",
+          "keywords": [
+            "unbiased estimator",
+            "weights sum",
+            "bias"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-stat-estimation-variance",
+          "title": "估計量變異數",
+          "kind": "past_paper_backed",
+          "topicId": "im-stat-estimation",
+          "keywords": [
+            "estimator variance",
+            "weighted mean",
+            "covariance"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-stat-estimation-efficiency",
+          "title": "最適權重與效率",
+          "kind": "past_paper_backed",
+          "topicId": "im-stat-estimation",
+          "keywords": [
+            "efficiency",
+            "minimum variance",
+            "optimal weights"
+          ],
+          "status": "reviewed"
+        }
+      ],
+      "importance": 5,
+      "status": "reviewed",
+      "learningObjectives": [
+        {
+          "id": "im-stat-estimation-lo-1",
+          "statement": "以期望值判斷估計量不偏性"
+        },
+        {
+          "id": "im-stat-estimation-lo-2",
+          "statement": "計算線性估計量變異數"
+        },
+        {
+          "id": "im-stat-estimation-lo-3",
+          "statement": "比較權重選擇與估計效率"
+        }
+      ]
+    },
+    {
+      "id": "im-stat-regression",
+      "title": "迴歸與檢定",
+      "subtopics": [
+        {
+          "id": "im-stat-inference-hypothesis-workflow",
+          "title": "假設檢定共同流程",
+          "kind": "prerequisite",
+          "topicId": "im-stat-regression",
+          "keywords": [
+            "null hypothesis",
+            "p-value",
+            "significance level",
+            "decision"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-stat-regression-multiple",
+          "title": "多元迴歸輸出",
+          "kind": "past_paper_backed",
+          "topicId": "im-stat-regression",
+          "keywords": [
+            "multiple regression",
+            "adjusted R-squared",
+            "residual degrees of freedom"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-stat-regression-t-f-tests",
+          "title": "t 與聯合 F 檢定",
+          "kind": "past_paper_backed",
+          "topicId": "im-stat-regression",
+          "keywords": [
+            "coefficient t-test",
+            "joint F-test",
+            "standard error"
+          ],
+          "status": "reviewed"
+        }
+      ],
+      "importance": 5,
+      "status": "reviewed",
+      "learningObjectives": [
+        {
+          "id": "im-stat-regression-lo-1",
+          "statement": "依序完成假設檢定決策"
+        },
+        {
+          "id": "im-stat-regression-lo-2",
+          "statement": "解讀多元迴歸摘要"
+        },
+        {
+          "id": "im-stat-regression-lo-3",
+          "statement": "區分單一係數 t 檢定與聯合 F 檢定"
+        }
+      ]
+    },
+    {
+      "id": "im-stat-categorical",
+      "title": "類別資料分析",
+      "subtopics": [
+        {
+          "id": "im-stat-categorical-contingency",
+          "title": "列聯表與期望次數",
+          "kind": "past_paper_backed",
+          "topicId": "im-stat-categorical",
+          "keywords": [
+            "contingency table",
+            "observed count",
+            "expected count"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-stat-categorical-chi-square",
+          "title": "卡方獨立性檢定",
+          "kind": "past_paper_backed",
+          "topicId": "im-stat-categorical",
+          "keywords": [
+            "chi-square",
+            "independence test",
+            "degrees of freedom"
+          ],
+          "status": "reviewed"
+        }
+      ],
+      "importance": 4,
+      "status": "reviewed",
+      "learningObjectives": [
+        {
+          "id": "im-stat-categorical-lo-1",
+          "statement": "由列聯表計算獨立性下期望次數"
+        },
+        {
+          "id": "im-stat-categorical-lo-2",
+          "statement": "計算 Pearson 卡方統計量與自由度"
+        },
+        {
+          "id": "im-stat-categorical-lo-3",
+          "statement": "在限制內陳述類別變數關聯"
+        }
+      ]
+    }
+  ]
+}

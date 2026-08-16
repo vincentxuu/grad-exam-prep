@@ -1,0 +1,680 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "im-stat",
+  "status": "reviewed",
+  "examScope": {
+    "applicableYears": [
+      114,
+      115
+    ],
+    "notApplicableYears": [
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113
+    ],
+    "notApplicableReason": "106–113 學年度資訊管理學研究所招生筆試未設獨立統計考科；官方索引與各年完整 MIS 卷均無統計題，因此不是缺卷。",
+    "firstAppearance": "114 學年度統計題首次出現在資訊管理導論合科卷；115 學年度官方科名改為資訊管理導論與統計學。"
+  },
+  "contentPolicy": "4 堂 micro-lessons 以官方 PDF 五題為 evidence；2 堂 prerequisite 明確不宣稱歷屆題背書。",
+  "counts": {
+    "lessons": 6,
+    "pdfBackedMicroLessons": 4,
+    "prerequisiteLessons": 2,
+    "coveredQuestions": 5
+  },
+  "lessons": [
+    {
+      "reviewStatus": "reviewed",
+      "minimumPastPaperRefs": 0,
+      "id": "lesson-im-stat-prereq-expectation-variance",
+      "kind": "prerequisite",
+      "subtopicId": "im-stat-probability-expectation-variance",
+      "coveredSubtopicIds": [
+        "im-stat-probability-expectation-variance"
+      ],
+      "title": "先備：把平均與波動拆開看",
+      "summary": "先建立期望值、變異數、線性組合與獨立性的運算骨架，供 PMF 與估計量課使用。",
+      "estimatedMinutes": 24,
+      "evidenceNote": "這是必要先備課，不宣稱由 114–115 的某一題直接完整覆蓋。",
+      "sourceRefs": [
+        "src-im-stat-openintro",
+        "src-im-stat-psu-414"
+      ],
+      "pastPaperRefs": [],
+      "learningObjectives": [
+        "計算離散變數期望值",
+        "分辨變異數與標準差",
+        "處理獨立變數線性組合的變異數"
+      ],
+      "learningScenario": {
+        "title": "多次量體溫的讀數",
+        "hook": "同一支溫度計每次讀值略有不同；中心位置與晃動程度是兩件事。",
+        "predict": "若把兩次讀數相加，中心與波動會如何改變？",
+        "mapping": [
+          {
+            "everyday": "長期平均讀數",
+            "technical": "期望值 E(Y)"
+          },
+          {
+            "everyday": "讀值上下晃動",
+            "technical": "變異數 Var(Y)"
+          },
+          {
+            "everyday": "把讀數乘倍率",
+            "technical": "Var(aY)=a²Var(Y)"
+          },
+          {
+            "everyday": "兩次誤差互不影響",
+            "technical": "獨立時 covariance 為 0"
+          }
+        ],
+        "boundary": "實際量測可能有系統性偏誤與相關誤差，不能一律當作 iid。",
+        "examCues": [
+          "E(aX+b)",
+          "Var(aX)",
+          "independent sample",
+          "σ²"
+        ]
+      },
+      "sections": [
+        {
+          "title": "中心",
+          "body": "期望值是依機率加權的長期平均。",
+          "bullets": [
+            "E(aX+b)=aE(X)+b"
+          ]
+        },
+        {
+          "title": "波動",
+          "body": "變異數衡量離中心的平方距離。",
+          "bullets": [
+            "Var(aX)=a²Var(X)"
+          ]
+        },
+        {
+          "title": "相加",
+          "body": "變異數相加需要處理 covariance。",
+          "bullets": [
+            "獨立時 covariance=0"
+          ]
+        },
+        {
+          "title": "檢查",
+          "body": "先確認權重、單位與獨立假設。",
+          "bullets": [
+            "標準差與原變數同單位"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "E(Y)=μ、Var(Y)=σ²，求 E(2Y+1)。",
+          "steps": [
+            "套線性性"
+          ],
+          "answer": "2μ+1"
+        },
+        {
+          "prompt": "Y1,Y2 iid，求 Var((Y1+Y2)/2)。",
+          "steps": [
+            "獨立所以變異數相加",
+            "係數平方"
+          ],
+          "answer": "σ²/2"
+        }
+      ],
+      "commonPitfalls": [
+        "把 Var(aY) 寫成 aVar(Y)",
+        "未確認獨立就直接加變異數",
+        "把標準差和變異數混用"
+      ]
+    },
+    {
+      "reviewStatus": "reviewed",
+      "minimumPastPaperRefs": 0,
+      "id": "lesson-im-stat-prereq-hypothesis-workflow",
+      "kind": "prerequisite",
+      "subtopicId": "im-stat-inference-hypothesis-workflow",
+      "coveredSubtopicIds": [
+        "im-stat-inference-hypothesis-workflow"
+      ],
+      "title": "先備：假設檢定是一條決策流程",
+      "summary": "把 H0/H1、統計量、參考分配、p 值與結論串成同一條不跳步的流程。",
+      "estimatedMinutes": 22,
+      "evidenceNote": "這是迴歸 F 檢定與卡方檢定的共同先備，不代表歷屆題涵蓋所有檢定。",
+      "sourceRefs": [
+        "src-im-stat-openintro",
+        "src-im-stat-nist-handbook"
+      ],
+      "pastPaperRefs": [],
+      "learningObjectives": [
+        "寫出可檢驗的 H0/H1",
+        "以顯著水準作決策",
+        "避免把顯著關聯說成因果"
+      ],
+      "learningScenario": {
+        "title": "煙霧警報器的決策",
+        "hook": "警報器先假設沒有火災，再看感測訊號是否異常到足以推翻原假設。",
+        "predict": "警報響了，能否直接斷言起火原因？",
+        "mapping": [
+          {
+            "everyday": "先假設沒有火災",
+            "technical": "虛無假設 H0"
+          },
+          {
+            "everyday": "感測器異常程度",
+            "technical": "test statistic"
+          },
+          {
+            "everyday": "允許的誤報門檻",
+            "technical": "significance level α"
+          },
+          {
+            "everyday": "警報後的決策",
+            "technical": "reject / fail to reject H0"
+          }
+        ],
+        "boundary": "統計檢定量化資料與 H0 的不相容程度，不會自動證明因果或 H1 為真。",
+        "examCues": [
+          "H0/H1",
+          "α=0.05",
+          "p-value",
+          "reject H0"
+        ]
+      },
+      "sections": [
+        {
+          "title": "立假設",
+          "body": "先寫母體層次命題。",
+          "bullets": [
+            "H0 含等號"
+          ]
+        },
+        {
+          "title": "選統計量",
+          "body": "依資料型態選參考分配。",
+          "bullets": [
+            "確認假設條件"
+          ]
+        },
+        {
+          "title": "作決策",
+          "body": "比較 p 與 α 或統計量與臨界值。",
+          "bullets": [
+            "p<α 才拒絕 H0"
+          ]
+        },
+        {
+          "title": "下結論",
+          "body": "結論要回到題目語境。",
+          "bullets": [
+            "不把關聯寫成因果"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "p=0.03、α=0.05。",
+          "steps": [
+            "比較 p 與 α"
+          ],
+          "answer": "拒絕 H0"
+        },
+        {
+          "prompt": "p=0.12、α=0.05。",
+          "steps": [
+            "比較 p 與 α"
+          ],
+          "answer": "未能拒絕 H0，不是證明 H0"
+        }
+      ],
+      "commonPitfalls": [
+        "把未拒絕寫成接受 H0",
+        "先看答案再補 H0/H1",
+        "把顯著關聯宣稱為因果"
+      ]
+    },
+    {
+      "reviewStatus": "reviewed",
+      "minimumPastPaperRefs": 1,
+      "id": "lesson-im-stat-pmf-transformations",
+      "kind": "past_paper_micro_lesson",
+      "subtopicId": "im-stat-probability-joint-pmf",
+      "coveredSubtopicIds": [
+        "im-stat-probability-joint-pmf",
+        "im-stat-probability-transformations"
+      ],
+      "title": "把聯合機率表搬到新座標",
+      "summary": "用 115-3 練習正規化、離散變數轉換、合併重複像點與邊際化。",
+      "estimatedMinutes": 32,
+      "sourceRefs": [
+        "src-im-stat-ntu-115-pdf",
+        "src-im-stat-openintro",
+        "src-im-stat-psu-414"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-stat-115-3"
+      ],
+      "learningObjectives": [
+        "由 support 權重求正規化常數",
+        "逐點完成離散變數轉換",
+        "由聯合 PMF 加總出邊際 PMF"
+      ],
+      "learningScenario": {
+        "title": "抽獎券換籃子",
+        "hook": "每個舊格放著不同張數的抽獎券，新規則會把它們搬到標有 Y1、Y2 的籃子。",
+        "predict": "兩個舊格搬到同一個新籃子時，機率應如何處理？",
+        "mapping": [
+          {
+            "everyday": "舊格子的票數",
+            "technical": "未正規化權重"
+          },
+          {
+            "everyday": "全部票數",
+            "technical": "normalizing constant c"
+          },
+          {
+            "everyday": "依新標籤搬票",
+            "technical": "變數轉換 mapping"
+          },
+          {
+            "everyday": "同籃票數相加",
+            "technical": "preimage probabilities sum"
+          }
+        ],
+        "boundary": "連續型變數轉換還要處理密度與 Jacobian，不能直接沿用數票模型。",
+        "examCues": [
+          "joint PMF",
+          "support",
+          "normalizing constant",
+          "marginal"
+        ]
+      },
+      "sections": [
+        {
+          "title": "列 support",
+          "body": "先列出所有可能輸入點。",
+          "bullets": [
+            "support 外機率為 0"
+          ]
+        },
+        {
+          "title": "正規化",
+          "body": "權重除以總和。",
+          "bullets": [
+            "總機率必為 1"
+          ]
+        },
+        {
+          "title": "轉換",
+          "body": "逐點算新座標。",
+          "bullets": [
+            "重複像點要合併"
+          ]
+        },
+        {
+          "title": "邊際化",
+          "body": "固定 Y1 對 Y2 加總。",
+          "bullets": [
+            "最後再次檢查總和"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "六點權重總和為 12。",
+          "steps": [
+            "令總機率為 1"
+          ],
+          "answer": "c=12"
+        },
+        {
+          "prompt": "兩個舊點映到同一新點。",
+          "steps": [
+            "找完整 preimage",
+            "機率相加"
+          ],
+          "answer": "新點機率為兩者之和"
+        }
+      ],
+      "commonPitfalls": [
+        "漏列零權重 support 點",
+        "一對多或多對一時未合併",
+        "邊際化加錯維度"
+      ]
+    },
+    {
+      "reviewStatus": "reviewed",
+      "minimumPastPaperRefs": 1,
+      "id": "lesson-im-stat-unbiased-efficient-estimators",
+      "kind": "past_paper_micro_lesson",
+      "subtopicId": "im-stat-estimation-unbiasedness",
+      "coveredSubtopicIds": [
+        "im-stat-estimation-unbiasedness",
+        "im-stat-estimation-variance",
+        "im-stat-estimation-efficiency"
+      ],
+      "title": "多支有雜訊的溫度計怎麼加權",
+      "summary": "用 114-5 與 115-4 練習權重和、不偏性、估計量變異數與最小變異權重。",
+      "estimatedMinutes": 38,
+      "sourceRefs": [
+        "src-im-stat-ntu-114-pdf",
+        "src-im-stat-ntu-115-pdf",
+        "src-im-stat-psu-415"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-stat-114-5",
+        "q-pp-im-stat-115-4"
+      ],
+      "learningObjectives": [
+        "由權重和判斷不偏性",
+        "正確計算加權估計量變異數",
+        "以微分或對稱性尋找最適權重"
+      ],
+      "learningScenario": {
+        "title": "合併多支溫度計",
+        "hook": "每支溫度計都在真實溫度附近晃動，權重代表你多相信哪一支。",
+        "predict": "權重總和為 1 是否已保證波動最小？",
+        "mapping": [
+          {
+            "everyday": "每支讀值",
+            "technical": "iid observations Yi"
+          },
+          {
+            "everyday": "採信程度",
+            "technical": "weights wi"
+          },
+          {
+            "everyday": "刻度不整體偏移",
+            "technical": "Σwi=1 使估計量不偏"
+          },
+          {
+            "everyday": "讀數最穩定",
+            "technical": "minimize Var(estimator)"
+          }
+        ],
+        "boundary": "若儀器變異數不同或彼此相關，等權重不一定最佳；需使用完整 covariance。",
+        "examCues": [
+          "unbiased estimator",
+          "Σweights=1",
+          "Var(weighted mean)",
+          "efficiency"
+        ]
+      },
+      "sections": [
+        {
+          "title": "先看期望值",
+          "body": "權重和控制中心位置。",
+          "bullets": [
+            "Σwi=1"
+          ]
+        },
+        {
+          "title": "再算變異數",
+          "body": "獨立時用權重平方加總。",
+          "bullets": [
+            "Var=σ²Σwi²"
+          ]
+        },
+        {
+          "title": "找最小值",
+          "body": "可用微分或 Cauchy。",
+          "bullets": [
+            "等品質 iid 常導向平均"
+          ]
+        },
+        {
+          "title": "核對限制",
+          "body": "先確認 iid 與有限變異數。",
+          "bullets": [
+            "相關時要加 covariance"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "g(i) 每五項為 2,3,4,5,1。",
+          "steps": [
+            "Σg=3T",
+            "Σg²=11T"
+          ],
+          "answer": "Var(m)=11σ²/(9T)"
+        },
+        {
+          "prompt": "m2=(Y1+αY2)/(1+α)。",
+          "steps": [
+            "寫變異數",
+            "微分"
+          ],
+          "answer": "α=1"
+        }
+      ],
+      "commonPitfalls": [
+        "把原卷分母看成 T",
+        "權重和為 1 就誤認一定最有效率",
+        "漏掉權重平方"
+      ]
+    },
+    {
+      "reviewStatus": "reviewed",
+      "minimumPastPaperRefs": 1,
+      "id": "lesson-im-stat-regression-dashboard",
+      "kind": "past_paper_micro_lesson",
+      "subtopicId": "im-stat-regression-multiple",
+      "coveredSubtopicIds": [
+        "im-stat-regression-multiple",
+        "im-stat-regression-t-f-tests"
+      ],
+      "title": "讀懂多元迴歸儀表板",
+      "summary": "用 114-4 解讀 adjusted R²、殘差自由度、係數 t 值與整體 F 檢定。",
+      "estimatedMinutes": 34,
+      "sourceRefs": [
+        "src-im-stat-ntu-114-pdf",
+        "src-im-stat-openintro",
+        "src-im-stat-nist-handbook"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-stat-114-4"
+      ],
+      "learningObjectives": [
+        "由 n 與 k 算殘差自由度",
+        "由 coef/std err 算 t 值",
+        "區分單一係數 t 檢定與聯合 F 檢定"
+      ],
+      "learningScenario": {
+        "title": "垃圾量預測儀表板",
+        "hook": "儀表板有多個旋鈕解釋家庭垃圾量，但多裝旋鈕不代表模型真的更好。",
+        "predict": "哪個數字會對無用旋鈕扣分？整組旋鈕是否有用又看哪裡？",
+        "mapping": [
+          {
+            "everyday": "每個旋鈕效果",
+            "technical": "regression coefficient"
+          },
+          {
+            "everyday": "效果相對噪音",
+            "technical": "t=coef/std err"
+          },
+          {
+            "everyday": "對多裝旋鈕扣分",
+            "technical": "adjusted R²"
+          },
+          {
+            "everyday": "整組旋鈕共同測試",
+            "technical": "joint F-test"
+          }
+        ],
+        "boundary": "迴歸係數與顯著性不是因果證據；模型設定、共線性與資料品質仍需檢查。",
+        "examCues": [
+          "Adj. R-squared",
+          "Df Residuals",
+          "coef/std err",
+          "Prob(F-statistic)"
+        ]
+      },
+      "sections": [
+        {
+          "title": "辨識 n 與 k",
+          "body": "n 是樣本數，k 是斜率個數。",
+          "bullets": [
+            "df residual=n-k-1"
+          ]
+        },
+        {
+          "title": "adjusted R²",
+          "body": "比較不同複雜度模型。",
+          "bullets": [
+            "使用 n、k、R²"
+          ]
+        },
+        {
+          "title": "t 值",
+          "body": "係數除以標準誤。",
+          "bullets": [
+            "不要拿 p 值當 t"
+          ]
+        },
+        {
+          "title": "F 檢定",
+          "body": "檢查所有斜率是否共同為零。",
+          "bullets": [
+            "p<0.05 拒絕 H0"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "n=440,k=3,R²=.170。",
+          "steps": [
+            "代 adjusted R² 公式"
+          ],
+          "answer": "約 .1643"
+        },
+        {
+          "prompt": "coef=7.1943,se=1.092。",
+          "steps": [
+            "相除"
+          ],
+          "answer": "t≈6.59"
+        }
+      ],
+      "commonPitfalls": [
+        "把 Df Model 當殘差自由度",
+        "把 individual t 與 joint F 混用",
+        "把顯著係數解讀為因果"
+      ]
+    },
+    {
+      "reviewStatus": "reviewed",
+      "minimumPastPaperRefs": 1,
+      "id": "lesson-im-stat-chi-square-independence",
+      "kind": "past_paper_micro_lesson",
+      "subtopicId": "im-stat-categorical-contingency",
+      "coveredSubtopicIds": [
+        "im-stat-categorical-contingency",
+        "im-stat-categorical-chi-square"
+      ],
+      "title": "座位分布是否真的互不相關",
+      "summary": "用 115-5 從列聯表建立期望次數、卡方統計量、自由度與檢定結論。",
+      "estimatedMinutes": 30,
+      "sourceRefs": [
+        "src-im-stat-ntu-115-pdf",
+        "src-im-stat-openintro",
+        "src-im-stat-nist-handbook"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-stat-115-5"
+      ],
+      "learningObjectives": [
+        "由邊際合計計算期望次數",
+        "計算 Pearson χ² 與自由度",
+        "以臨界值作決策並正確敘述關聯"
+      ],
+      "learningScenario": {
+        "title": "商店時段與商品選擇",
+        "hook": "店長想知道商品選擇是否與到店時段有關，先算兩者若獨立時每格應有多少人。",
+        "predict": "觀察格與期望格差多少，才值得懷疑兩者有關？",
+        "mapping": [
+          {
+            "everyday": "實際每格人數",
+            "technical": "observed count O"
+          },
+          {
+            "everyday": "若互不相關應有的人數",
+            "technical": "expected count E"
+          },
+          {
+            "everyday": "標準化後累積差距",
+            "technical": "Σ(O-E)²/E"
+          },
+          {
+            "everyday": "表格可自由變動程度",
+            "technical": "df=(r-1)(c-1)"
+          }
+        ],
+        "boundary": "顯著關聯不代表因果；期望次數過小、樣本不獨立或抽樣偏誤會破壞檢定。",
+        "examCues": [
+          "contingency table",
+          "expected count",
+          "χ²",
+          "(r-1)(c-1)"
+        ]
+      },
+      "sections": [
+        {
+          "title": "立假設",
+          "body": "H0 是兩類別變數獨立。",
+          "bullets": [
+            "H1 是不獨立"
+          ]
+        },
+        {
+          "title": "算期望值",
+          "body": "E=row total×column total/grand total。",
+          "bullets": [
+            "各列各欄合計要吻合"
+          ]
+        },
+        {
+          "title": "累積差距",
+          "body": "每格計算 (O-E)²/E。",
+          "bullets": [
+            "全部格相加"
+          ]
+        },
+        {
+          "title": "決策",
+          "body": "比較臨界值或 p 值。",
+          "bullets": [
+            "只陳述關聯"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "2×3 表的自由度。",
+          "steps": [
+            "(2-1)(3-1)"
+          ],
+          "answer": "df=2"
+        },
+        {
+          "prompt": "χ²=6.42，5% 臨界值 5.99。",
+          "steps": [
+            "比較大小"
+          ],
+          "answer": "拒絕獨立假設"
+        }
+      ],
+      "commonPitfalls": [
+        "以觀察值代替期望值當分母",
+        "自由度用 rc",
+        "拒絕獨立就宣稱因果"
+      ]
+    }
+  ]
+}

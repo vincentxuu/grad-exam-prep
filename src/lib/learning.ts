@@ -52,7 +52,7 @@ export interface LearningSource {
   title: string
   author: string
   publisher?: string
-  type: 'book' | 'course' | 'documentation' | 'official-guidance'
+  type: 'book' | 'course' | 'documentation' | 'official-guidance' | 'official-exam'
   url: string
   scope: string[]
   usage: string

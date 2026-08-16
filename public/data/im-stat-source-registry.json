@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "im-stat",
+  "status": "reviewed",
+  "policy": "原始 PDF 決定題面；公開教材只支撐概念與推導。所有 worked solutions 均非官方答案。",
+  "sources": [
+    {
+      "id": "src-im-stat-ntu-114-pdf",
+      "title": "114 學年度台大資管所招生筆試原卷",
+      "author": "國立臺灣大學",
+      "type": "official-guidance",
+      "publisher": "國立臺灣大學圖書館",
+      "url": "https://exam.lib.ntu.edu.tw/graduate?year=114&tid=資訊管理學研究所&title=",
+      "paths": [
+        "public/papers/pp-im-stat-114.pdf"
+      ],
+      "sha256": "bb31e0ec75ff9ca84715465de5f4cf2746bbac9e2eadf6ae9c9c7be9bb618a34",
+      "scope": [
+        "official-question-text",
+        "pages-2-3",
+        "questions-4-5"
+      ],
+      "usage": "question-evidence-only",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-im-stat-ntu-115-pdf",
+      "title": "115 學年度台大資管所招生筆試原卷",
+      "author": "國立臺灣大學",
+      "type": "official-guidance",
+      "publisher": "國立臺灣大學圖書館",
+      "url": "https://exam.lib.ntu.edu.tw/graduate?year=115&tid=資訊管理學研究所&title=",
+      "paths": [
+        "public/papers/pp-im-stat-115.pdf"
+      ],
+      "sha256": "07ac6f84ecf5ca77c6338b5d7705d9e5c5915118f0a037946ebccda674476479",
+      "scope": [
+        "official-question-text",
+        "page-2",
+        "questions-3-5"
+      ],
+      "usage": "question-evidence-only",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-im-stat-openintro",
+      "title": "OpenIntro Statistics, Fourth Edition",
+      "author": "Diez, Barr, Cetinkaya-Rundel",
+      "publisher": "OpenIntro",
+      "type": "book",
+      "url": "https://www.openintro.org/book/os/",
+      "scope": [
+        "probability",
+        "inference",
+        "regression",
+        "contingency-tables"
+      ],
+      "usage": "conceptual-summary-and-worked-examples",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-im-stat-nist-handbook",
+      "title": "NIST/SEMATECH e-Handbook of Statistical Methods",
+      "author": "NIST/SEMATECH",
+      "publisher": "National Institute of Standards and Technology",
+      "type": "official-guidance",
+      "url": "https://www.itl.nist.gov/div898/handbook/",
+      "scope": [
+        "regression",
+        "hypothesis-testing",
+        "chi-square"
+      ],
+      "usage": "definitions-method-boundaries-and-cross-check",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-im-stat-psu-414",
+      "title": "STAT 414: Introduction to Probability Theory",
+      "author": "Penn State Department of Statistics",
+      "publisher": "Penn State Eberly College of Science",
+      "type": "course",
+      "url": "https://online.stat.psu.edu/stat414/",
+      "scope": [
+        "discrete-random-variables",
+        "joint-distributions",
+        "expectation",
+        "variance"
+      ],
+      "usage": "prerequisite-and-probability-lesson-support",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-im-stat-psu-415",
+      "title": "STAT 415: Introduction to Mathematical Statistics",
+      "author": "Penn State Department of Statistics",
+      "publisher": "Penn State Eberly College of Science",
+      "type": "course",
+      "url": "https://online.stat.psu.edu/stat415/",
+      "scope": [
+        "estimators",
+        "unbiasedness",
+        "variance",
+        "efficiency"
+      ],
+      "usage": "estimation-lesson-support",
+      "status": "reviewed"
+    }
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "im-mis",
+  "official": false,
+  "counts": {
+    "selfReviewOnly": 37,
+    "autoGradeEligible": 0,
+    "fullMockEligible": 0
+  },
+  "questions": {
+    "q-pp-im-mis-106-1": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "開放式申論題；現有 explanation 僅為非官方待審草稿，使用 rubric 自評。"
+    },
+    "q-pp-im-mis-106-2": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "開放式申論題；現有 explanation 僅為非官方待審草稿，使用 rubric 自評。"
+    },
+    "q-pp-im-mis-106-3": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "開放式申論題；現有 explanation 僅為非官方待審草稿，使用 rubric 自評。"
+    },
+    "q-pp-im-mis-106-4": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "開放式申論題；現有 explanation 僅為非官方待審草稿，使用 rubric 自評。"
+    },
+    "q-pp-im-mis-107-1": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "開放式申論題；現有 explanation 僅為非官方待審草稿，使用 rubric 自評。"
+    },
+    "q-pp-im-mis-107-2": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "開放式申論題；現有 explanation 僅為非官方待審草稿，使用 rubric 自評。"
+    },
+    "q-pp-im-mis-107-3": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "開放式申論題；現有 explanation 僅為非官方待審草稿，使用 rubric 自評。"
+    },
+    "q-pp-im-mis-107-4": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "開放式申論題；現有 explanation 僅為非官方待審草稿，使用 rubric 自評。"
+    },
+    "q-pp-im-mis-108-1": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "開放式申論題；現有 explanation 僅為非官方待審草稿，使用 rubric 自評。"
+    },
+    "q-pp-im-mis-108-2": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "開放式申論題；現有 explanation 僅為非官方待審草稿，使用 rubric 自評。"
+    },
+    "q-pp-im-mis-108-3": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "開放式申論題；現有 explanation 僅為非官方待審草稿，使用 rubric 自評。"
+    },
+    "q-pp-im-mis-108-4": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "開放式申論題；現有 explanation 僅為非官方待審草稿，使用 rubric 自評。"
+    },
+    "q-pp-im-mis-109-1": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "開放式申論題；現有 explanation 僅為非官方待審草稿，使用 rubric 自評。"
+    },
+    "q-pp-im-mis-109-2": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "開放式申論題；現有 explanation 僅為非官方待審草稿，使用 rubric 自評。"
+    },
+    "q-pp-im-mis-109-3": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "開放式申論題；現有 explanation 僅為非官方待審草稿，使用 rubric 自評。"
+    },
+    "q-pp-im-mis-109-4": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "開放式申論題；現有 explanation 僅為非官方待審草稿，使用 rubric 自評。"
+    },
+    "q-pp-im-mis-110-1": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "開放式申論題；現有 explanation 僅為非官方待審草稿，使用 rubric 自評。"
+    },
+    "q-pp-im-mis-110-2": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "開放式申論題；現有 explanation 僅為非官方待審草稿，使用 rubric 自評。"
+    },
+    "q-pp-im-mis-110-3": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "開放式申論題；現有 explanation 僅為非官方待審草稿，使用 rubric 自評。"
+    },
+    "q-pp-im-mis-110-4": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "開放式申論題；現有 explanation 僅為非官方待審草稿，使用 rubric 自評。"
+    },
+    "q-pp-im-mis-111-1": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "開放式申論題；現有 explanation 僅為非官方待審草稿，使用 rubric 自評。"
+    },
+    "q-pp-im-mis-111-2": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "開放式申論題；現有 explanation 僅為非官方待審草稿，使用 rubric 自評。"
+    },
+    "q-pp-im-mis-111-3": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "開放式申論題；現有 explanation 僅為非官方待審草稿，使用 rubric 自評。"
+    },
+    "q-pp-im-mis-111-4": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "開放式申論題；現有 explanation 僅為非官方待審草稿，使用 rubric 自評。"
+    },
+    "q-pp-im-mis-112-1": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "開放式申論題；現有 explanation 僅為非官方待審草稿，使用 rubric 自評。"
+    },
+    "q-pp-im-mis-112-2": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "開放式申論題；現有 explanation 僅為非官方待審草稿，使用 rubric 自評。"
+    },
+    "q-pp-im-mis-112-3": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "開放式申論題；現有 explanation 僅為非官方待審草稿，使用 rubric 自評。"
+    },
+    "q-pp-im-mis-112-4": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "開放式申論題；現有 explanation 僅為非官方待審草稿，使用 rubric 自評。"
+    },
+    "q-pp-im-mis-113-1": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "開放式申論題；現有 explanation 僅為非官方待審草稿，使用 rubric 自評。"
+    },
+    "q-pp-im-mis-113-2": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "開放式申論題；現有 explanation 僅為非官方待審草稿，使用 rubric 自評。"
+    },
+    "q-pp-im-mis-113-3": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "開放式申論題；現有 explanation 僅為非官方待審草稿，使用 rubric 自評。"
+    },
+    "q-pp-im-mis-113-4": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "開放式申論題；現有 explanation 僅為非官方待審草稿，使用 rubric 自評。"
+    },
+    "q-pp-im-mis-114-1": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "開放式申論題；現有 explanation 僅為非官方待審草稿，使用 rubric 自評。"
+    },
+    "q-pp-im-mis-114-2": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "開放式申論題；現有 explanation 僅為非官方待審草稿，使用 rubric 自評。"
+    },
+    "q-pp-im-mis-114-3": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "開放式申論題；現有 explanation 僅為非官方待審草稿，使用 rubric 自評。"
+    },
+    "q-pp-im-mis-115-1": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "開放式申論題；現有 explanation 僅為非官方待審草稿，使用 rubric 自評。"
+    },
+    "q-pp-im-mis-115-2": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "開放式申論題；現有 explanation 僅為非官方待審草稿，使用 rubric 自評。"
+    }
+  }
+}
