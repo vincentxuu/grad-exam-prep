@@ -46,7 +46,7 @@ function FlashcardsContent({ params }: Props) {
   const subjectLabel = Object.fromEntries(subjects.map((s) => [s.id, s.name.split('（')[0]]))
 
   const { reviewCard, getDueCards, getDueCount, getCardState } = useFlashcardStore()
-  const { voices, selectedVoiceURI, setVoice, speak, speakingId } = useSpeech()
+  const { voices, selectedVoiceURI, setVoice, speak, speakingId, providers, provider, setProvider } = useSpeech()
 
   const [subjectFilter, setSubjectFilter] = useQueryState('subject', 'all')
   const [mode, setMode] = useState<'browse' | 'review'>('browse')
@@ -119,7 +119,7 @@ function FlashcardsContent({ params }: Props) {
             {currentIdx + 1} / {reviewQueue.length}
           </span>
           <div className="flex items-center gap-2">
-            <VoiceSelect voices={voices} selectedVoiceURI={selectedVoiceURI} onSelect={setVoice} />
+            <VoiceSelect voices={voices} selectedVoiceURI={selectedVoiceURI} onSelect={setVoice} providers={providers} provider={provider} onProviderChange={setProvider} />
             <Button variant="ghost" size="sm" onClick={() => setMode('browse')}>
               結束複習
             </Button>
@@ -204,7 +204,7 @@ function FlashcardsContent({ params }: Props) {
           <Button onClick={startReview} disabled={dueCards.length === 0}>
             {dueCards.length > 0 ? `開始複習（${dueCards.length}）` : '暫無待複習卡'}
           </Button>
-          <VoiceSelect voices={voices} selectedVoiceURI={selectedVoiceURI} onSelect={setVoice} />
+          <VoiceSelect voices={voices} selectedVoiceURI={selectedVoiceURI} onSelect={setVoice} providers={providers} provider={provider} onProviderChange={setProvider} />
         </div>
       </div>
 
