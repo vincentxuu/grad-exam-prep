@@ -87,10 +87,21 @@ export const imItLearningCatalog = createLearningCatalog({
     practiceTitle: '最後用考古題驗證',
     practiceDescription: '本課連結的題目都已通過可重現的技術覆核，可逐題練習與判分。',
     practiceActionLabel: '開始本課考古題練習',
+    foundationPracticeTitle: '再到題庫找辨識線索',
+    foundationPracticeDescription:
+      '這個基礎主題在現有考古題中沒有可確認的直接題，所以不會為了湊數量而硬連題目。可回到完整題庫，練習辨識它與相鄰概念的關係。',
+    foundationPracticeActionLabel: '瀏覽資訊科技概論題庫',
     sourcesTitle: '參考來源',
   },
-  getPracticeHref: (lesson) =>
-    buildQuestionDrillHref('im', lesson.pastPaperRefs, `/im/subjects/im-it/lessons/${lesson.id}`),
+  getPracticeHref: (lesson) => {
+    if (lesson.pastPaperRefs.length === 0) return '/im/questions?subject=im-it'
+
+    return buildQuestionDrillHref(
+      'im',
+      lesson.pastPaperRefs,
+      `/im/subjects/im-it/lessons/${lesson.id}`
+    )
+  },
 })
 
 export function getImItLessons() {

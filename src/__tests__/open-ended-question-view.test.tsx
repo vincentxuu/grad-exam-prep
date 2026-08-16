@@ -48,7 +48,6 @@ describe('open-ended question view', () => {
       expect(screen.queryByRole('button', { name: label })).not.toBeInTheDocument()
     }
   })
-
   test('lets a read-only question continue instead of trapping the drill queue', () => {
     const question = getQuestionsByExam('im').find(
       (candidate) => candidate.id === 'q-pp-im-it-106-5'

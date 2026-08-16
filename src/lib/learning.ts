@@ -22,6 +22,7 @@ export interface LearningLesson {
   coveredSubtopicIds: string[]
   title: string
   summary: string
+  evidenceNote?: string
   estimatedMinutes: number
   minimumPastPaperRefs: number
   learningObjectives: string[]
@@ -115,6 +116,9 @@ export interface LearningLessonCopy {
   practiceTitle: string
   practiceDescription: string
   practiceActionLabel: string
+  foundationPracticeTitle?: string
+  foundationPracticeDescription?: string
+  foundationPracticeActionLabel?: string
   sourcesTitle: string
 }
 

@@ -4,9 +4,9 @@
   "status": "reviewed",
   "contentPolicy": "本站提供依教材與考古題整理的原創摘要；不是教材轉載，也不把技術覆核答案稱為官方答案。",
   "counts": {
-    "lessons": 20,
-    "coveredSubtopics": 28,
-    "coveredQuestions": 146
+    "lessons": 35,
+    "coveredSubtopics": 61,
+    "coveredQuestions": 209
   },
   "lessons": [
     {
@@ -1222,7 +1222,8 @@
           "QuickSort 遇到已排序輸入：檢查 pivot selection；每次選極端值才會一路切成 0 與 n-1。",
           "題目問 stable 或 binary search：Stable 只管 equal keys 的相對順序；binary search 先驗證排序與 random/indexed access 前提。"
         ]
-      }
+      },
+      "evidenceNote": "複雜度分析在現有 canonical metadata 中沒有 direct primary 考古題；本課的考古題直接支撐排序與搜尋，複雜度部分由 reviewed MIT 6.006 課程內容補足，不把相鄰題冒充直接出題證據。"
     },
     {
       "id": "lesson-im-it-ds-trees-heaps-01",
@@ -3100,6 +3101,1997 @@
         "q-pp-im-it-107-1",
         "q-pp-im-it-108-8",
         "q-pp-im-it-112-23"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "lesson-im-it-arch-logic-circuits-01",
+      "subtopicId": "im-it-arch-number-systems",
+      "coveredSubtopicIds": [
+        "im-it-arch-number-systems",
+        "im-it-arch-boolean-logic",
+        "im-it-arch-digital-circuits"
+      ],
+      "title": "進位、布林邏輯與數位電路：從位元到狀態",
+      "summary": "從二進位與十六進位轉換出發，用真值表與 De Morgan 定律化簡邏輯，再把 gates 組合為 adder、multiplexer 與具狀態的 flip-flop。本範圍為完整主題樹所需的基礎課，不宣稱是考古高頻。",
+      "evidenceNote": "進位與位元運算、布林代數、數位電路在 canonical metadata 皆為 0 題 direct primary refs；本課是 reviewed-source-backed foundational coverage，pastPaperRefs 保持空陣列，不以相鄰題冒充直接證據。",
+      "estimatedMinutes": 38,
+      "minimumPastPaperRefs": 0,
+      "learningObjectives": [
+        "在二進位、十進位與十六進位間轉換，並執行基本 bitwise operations",
+        "由真值表計算 Boolean expression，並套用 De Morgan 定律",
+        "區分 combinational circuit 與 sequential circuit",
+        "說明 adder、multiplexer、flip-flop 與 register 的核心功能"
+      ],
+      "learningScenario": {
+        "title": "舞台燈光控制台",
+        "hook": "一個舞台用開關編碼燈光模式：控制台把模式號碼寫成位元，透過邏輯門決定哪些燈亮，並用鎖存狀態記住上一個場景。",
+        "predict": "若兩個安全開關都為 1 才允許主燈亮，應用哪種邏輯？若還要記住上一次是否開啟，只靠同一個邏輯門夠嗎？",
+        "mapping": [
+          {
+            "everyday": "用 0 與 1 編碼舞台模式號碼",
+            "technical": "二進位位元與進位轉換"
+          },
+          {
+            "everyday": "兩個安全開關都通過才亮燈",
+            "technical": "AND 與 Boolean truth table"
+          },
+          {
+            "everyday": "從多組輸入挑選一組送到主燈",
+            "technical": "Multiplexer 依 select bits 選輸入"
+          },
+          {
+            "everyday": "控制台記住上一個場景",
+            "technical": "Flip-flop 儲存一個狀態位元"
+          },
+          {
+            "everyday": "多個狀態位元一起保留模式碼",
+            "technical": "Register 由多個 storage elements 組成"
+          }
+        ],
+        "boundary": "燈光場景只映射位元、邏輯選擇與狀態儲存；實際電路還有 propagation delay、fan-out、clock 與電氣特性。真值表可完整定義 Boolean function，但不自動等於已找到成本最低的實體電路。",
+        "examCues": [
+          "進位轉換先依位階展開；十六進位每一碼剛好對應 4 bits。",
+          "NOT(A AND B)=NOT A OR NOT B；De Morgan 會同時反轉運算子與 operands。",
+          "Combinational output 只看當下輸入；sequential circuit 還受先前狀態影響。",
+          "Adder 做加法，multiplexer 做選擇，flip-flop 儲存 1 bit，register 儲存多 bits。"
+        ]
+      },
+      "sections": [
+        {
+          "title": "進位是位階權重",
+          "body": "二進位每位權重是 2 的次方；十六進位以 0–9、A–F 表示 0–15，並可四位二進位一組直接轉換。",
+          "bullets": [
+            "101101₂=45₁₀",
+            "2D₁₆=0010 1101₂",
+            "AND 可清除位元，OR 可設定位元，XOR 可判斷不同"
+          ]
+        },
+        {
+          "title": "真值表與布林定律",
+          "body": "真值表列出所有輸入組合與對應輸出。化簡時保留功能等價，不是任意刪除變數。",
+          "bullets": [
+            "A AND 1=A",
+            "A OR 0=A",
+            "A XOR A=0",
+            "De Morgan 定律對否定一整組條件特別有用"
+          ]
+        },
+        {
+          "title": "組合電路做即時計算",
+          "body": "Half adder 產生 sum 與 carry；full adder 還處理 carry-in。Multiplexer 根據 select lines 從多個輸入中選一個。",
+          "bullets": [
+            "Sum 可用 XOR 表示",
+            "Carry 與 AND 有關",
+            "Multiplexer 不負責長期儲存狀態"
+          ]
+        },
+        {
+          "title": "時序電路加入狀態",
+          "body": "Flip-flop 在規定時機取樣並保留 1 bit；多個 flip-flops 可組成 register。Clocked design 必須考慮 setup、hold 與 propagation delay。",
+          "bullets": [
+            "Sequential output 取決於當前輸入與現有狀態",
+            "Register 與 main memory 層級不可混為同一概念"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "將 3A₁₆ 轉成二進位與十進位。",
+          "steps": [
+            "3 對應 0011，A 對應 1010。",
+            "二進位為 00111010。",
+            "十進位為 3×16+10=58。"
+          ],
+          "answer": "3A₁₆=00111010₂=58₁₀。"
+        },
+        {
+          "prompt": "計算 NOT(A AND B) 在 A=1、B=0 時的值，並用 De Morgan 驗證。",
+          "steps": [
+            "A AND B=0。",
+            "NOT 0=1。",
+            "NOT A OR NOT B=0 OR 1=1。"
+          ],
+          "answer": "兩種寫法均得 1，功能等價。"
+        }
+      ],
+      "commonPitfalls": [
+        "把十六進位 A 當作十進位 1",
+        "只反轉 De Morgan 的運算子卻沒否定 operands",
+        "把 multiplexer 當成記憶元件",
+        "認為 sequential circuit 輸出只看當前輸入"
+      ],
+      "sourceRefs": [
+        "src-brookshear-13e"
+      ],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "lesson-im-it-arch-io-performance-01",
+      "subtopicId": "im-it-arch-io-performance",
+      "coveredSubtopicIds": [
+        "im-it-arch-io-performance"
+      ],
+      "title": "I/O 與效能：從 polling、interrupt 到 DMA",
+      "summary": "比較 programmed I/O、interrupt-driven I/O 與 DMA 的 CPU 介入程度，連結 memory-mapped I/O、interrupt service routine、latency、throughput 與顯示器解析度。",
+      "estimatedMinutes": 30,
+      "minimumPastPaperRefs": 2,
+      "learningObjectives": [
+        "區分 polling、interrupt-driven I/O 與 DMA",
+        "說明 memory-mapped I/O 與 ISR 流程",
+        "區分 latency 與 throughput",
+        "區分 pixel resolution 與 printer dpi"
+      ],
+      "learningScenario": {
+        "title": "倉庫出貨中心",
+        "hook": "值班員可以不斷詢問每條輸送帶有沒有貨，也可讓輸送帶有貨時按鈴；大批貨物還可由搬運機直接送到儲位。",
+        "predict": "搬一大批連續資料時，讓 CPU 逐字搬運與讓 DMA controller 處理，哪個更能讓 CPU 同時做其他事？",
+        "mapping": [
+          {
+            "everyday": "值班員不斷詢問輸送帶",
+            "technical": "Polling/programmed I/O"
+          },
+          {
+            "everyday": "有貨時按鈴通知",
+            "technical": "Interrupt-driven I/O"
+          },
+          {
+            "everyday": "按鈴後執行指定處理流程",
+            "technical": "Interrupt service routine"
+          },
+          {
+            "everyday": "搬運機在設備與儲位間搬大批貨",
+            "technical": "DMA block transfer"
+          },
+          {
+            "everyday": "單箱等待時間與每小時出貨箱數",
+            "technical": "Latency 與 throughput"
+          }
+        ],
+        "boundary": "搬運機不表示 CPU 完全不參與 DMA；CPU 通常仍要設定 transfer，完成時也可能收到 interrupt。效能還取決於 bus、buffer、device 與 workload。",
+        "examCues": [
+          "Polling 是 CPU 主動查詢；interrupt 是 device 發訊號。",
+          "Vectored interrupt 可提供向量導向 ISR；polled interrupt 要辨識來源。",
+          "DMA 降低 CPU 逐字搬運參與，不是取代 memory。",
+          "Resolution 是像素排列；dpi 常描述列印點密度。"
+        ]
+      },
+      "sections": [
+        {
+          "title": "三種 I/O 控制方式",
+          "body": "Polling 簡單但可能浪費 CPU cycles；interrupt 讓 CPU 先做其他工作；DMA 適合大批資料搬運。",
+          "bullets": [
+            "Programmed I/O 常需 CPU 處理資料搬移",
+            "Interrupt 有 context-switch 成本",
+            "DMA controller 需與 CPU 協調 bus/memory"
+          ]
+        },
+        {
+          "title": "位址與中斷流程",
+          "body": "Memory-mapped I/O 把 device registers 映射到 address space。Interrupt 發生時 CPU 保存必要狀態、辨識來源、執行 ISR 後返回。",
+          "bullets": [
+            "32-bit byte address 在簡化模型下可定位 2^32 bytes",
+            "Device register 不等於 CPU general-purpose register"
+          ]
+        },
+        {
+          "title": "效能必須先定義指標",
+          "body": "Latency 是一次操作完成前等待；throughput 是單位時間完成量。提高 throughput 不保證每次 latency 也降低。",
+          "bullets": [
+            "Batching 可提高 throughput 卻增加個別等待",
+            "Buffering 可吸收短期速率差"
+          ]
+        },
+        {
+          "title": "顯示與列印指標不可混用",
+          "body": "Display resolution 通常以水平×垂直 pixels 描述畫面格數，例如 Full HD 1920×1080；printer resolution 常以 dpi 描述每英吋可放置的 dots。兩者都談細節密度，但量測對象與單位不同。",
+          "bullets": [
+            "Pixel 是顯示影像的離散 picture element",
+            "Dpi 常描述印表機輸出點密度",
+            "解析度數字不能單獨決定觀看品質"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "鍵盤偶爾有輸入，CPU 還有許多工作。Polling 與 interrupt 何者較合適？",
+          "steps": [
+            "輸入事件不連續。",
+            "Polling 會重複查無事件狀態。",
+            "Interrupt 讓 CPU 平時處理其他工作。"
+          ],
+          "answer": "通常 interrupt-driven I/O 較適合此種低頻事件。"
+        },
+        {
+          "prompt": "輸送 1 MiB 資料時為何考慮 DMA？",
+          "steps": [
+            "資料為大批連續 block。",
+            "CPU 逐字搬移會佔用許多指令。",
+            "DMA 完成後可再通知 CPU。"
+          ],
+          "answer": "DMA 可降低 CPU 搬移參與，但仍有設定與總線協調成本。"
+        }
+      ],
+      "commonPitfalls": [
+        "說 interrupt 永遠沒有成本",
+        "說 DMA 時 CPU 完全不參與",
+        "把 vectored 與 polled interrupt 對調",
+        "把 latency 與 throughput 當同一指標"
+      ],
+      "sourceRefs": [
+        "src-brookshear-13e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-110-6",
+        "q-pp-im-it-113-7"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "lesson-im-it-prog-control-functions-memory-01",
+      "subtopicId": "im-it-prog-syntax-types-control",
+      "coveredSubtopicIds": [
+        "im-it-prog-syntax-types-control",
+        "im-it-prog-functions-scope",
+        "im-it-prog-pointers-memory"
+      ],
+      "title": "程式執行基礎：型別、控制流程、函式與記憶體",
+      "summary": "從 type system 與 control flow 追蹤程式狀態，再用 function call、scope、recursion、stack、heap 與 pointer/reference 說明資料的可見範圍與生命週期。",
+      "evidenceNote": "指標與動態記憶體在 canonical metadata 為 0 題 direct primary refs；本節是 foundational coverage，引用的 refs 直接支撐型別、程式典範、執行特性與遞迴，不把它們當成指標題的直接證據。",
+      "estimatedMinutes": 40,
+      "minimumPastPaperRefs": 6,
+      "learningObjectives": [
+        "以型別與 control flow 追蹤程式",
+        "區分 lexical scope 與 object lifetime",
+        "識別 recursion 的 base case 與縮小問題",
+        "說明 pointer/reference、stack、heap 與 leak/dangling 風險"
+      ],
+      "learningScenario": {
+        "title": "圖書館借閱系統",
+        "hook": "借閱系統對每筆資料規定型別，依條件決定能否借書，把重複步驟封裝成函式，並以索引史記錄實際書籍的存放位置。",
+        "predict": "若索引卡還在，但它指向的書已被移除，再依索引取書會有什麼風險？",
+        "mapping": [
+          {
+            "everyday": "借閱人數是整數，書名是字串",
+            "technical": "Type 與 type checking"
+          },
+          {
+            "everyday": "有欠款就拒絕，否則進入借閱流程",
+            "technical": "Conditional control flow"
+          },
+          {
+            "everyday": "借閱步驟封裝成可重複的服務",
+            "technical": "Function、parameters 與 return value"
+          },
+          {
+            "everyday": "處理子分類時反覆套用相同步驟，到空分類停止",
+            "technical": "Recursion 與 base case"
+          },
+          {
+            "everyday": "索引卡保存書籍位置，不是書本身",
+            "technical": "Pointer/reference 與 referenced object"
+          }
+        ],
+        "boundary": "圖書索引不完全等於特定語言的 raw pointer；garbage-collected 與 manual-memory languages 的 ownership、lifetime 與錯誤模式不同。Python 為 dynamically typed 不代表它沒有 types。",
+        "examCues": [
+          "Static/dynamic typing 問的是型別檢查時機，不是有沒有 types。",
+          "Scope 是名稱在哪裡可見；lifetime 是 object 存在多久。",
+          "Recursion 必須有 base case 與向其靠近的小問題。",
+          "Dangling pointer 指向已失效物件；memory leak 是不再需要卻無法回收。"
+        ]
+      },
+      "sections": [
+        {
+          "title": "型別與控制流程",
+          "body": "Type system 對 values 與 expressions 分類並限制操作。If、loop、switch 改變執行順序；追蹤時要記錄每步狀態。",
+          "bullets": [
+            "Dynamic typing 仍有 runtime types",
+            "Cast 不保證資料不損失",
+            "Loop 要檢查初始、條件、更新"
+          ]
+        },
+        {
+          "title": "函式、scope 與 lifetime",
+          "body": "Function 建立輸入、局部狀態與輸出的邊界。Lexical scope 由程式文字結構決定名稱解析；object lifetime 可跨越某個 scope。",
+          "bullets": [
+            "Parameter passing 規則依語言而定",
+            "Local variable 通常只在 block/function 內可見"
+          ]
+        },
+        {
+          "title": "遞迴與 call stack",
+          "body": "Recursive call 會建立新的 activation record，保存 parameters、locals 與 return location。缺 base case 或無法收斂可導致 stack overflow。",
+          "bullets": [
+            "先找 base case",
+            "再驗證每步使問題變小"
+          ]
+        },
+        {
+          "title": "指標與動態記憶體",
+          "body": "Pointer/reference 可間接存取 object。Stack 常配合 calls 管理，heap 用於動態生命週期，但精確配置由 language/runtime 決定。",
+          "bullets": [
+            "Null 不指向有效 object",
+            "Use-after-free 與 leak 是不同錯誤",
+            "Ownership 可幫助明確誰負責釋放"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "遞迴 factorial(4) 如何展開與收斂？",
+          "steps": [
+            "factorial(1)=1 是 base case。",
+            "factorial(4)=4×factorial(3)。",
+            "逐步到 1 後回傳相乘。"
+          ],
+          "answer": "4×3×2×1=24；每步參數減 1 保證收斂。"
+        },
+        {
+          "prompt": "程式釋放 object 後仍保留 raw pointer，有何問題？",
+          "steps": [
+            "Pointer 值仍是舊位址。",
+            "Object lifetime 已結束。",
+            "再 dereference 屬 invalid access。"
+          ],
+          "answer": "形成 dangling pointer；應依語言使用 ownership、smart pointer 或安全生命週期機制。"
+        }
+      ],
+      "commonPitfalls": [
+        "說 dynamically typed 語言沒有 types",
+        "把 scope 與 lifetime 當同一件事",
+        "遞迴少了 base case",
+        "把 pointer 本身與它指向的 object 混淆",
+        "把 leak 與 dangling pointer 當同種錯誤"
+      ],
+      "sourceRefs": [
+        "src-oracle-java-language-basics",
+        "src-cpp-core-guidelines"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-109-3",
+        "q-pp-im-it-109-4",
+        "q-pp-im-it-110-11",
+        "q-pp-im-it-110-12",
+        "q-pp-im-it-110-13",
+        "q-pp-im-it-114-1"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "lesson-im-it-prog-runtime-quality-lifecycle-01",
+      "subtopicId": "im-it-prog-language-runtime",
+      "coveredSubtopicIds": [
+        "im-it-prog-language-runtime",
+        "im-it-prog-error-testing",
+        "im-it-prog-software-lifecycle"
+      ],
+      "title": "從原始碼到上線：編譯、測試與軟體生命週期",
+      "summary": "以 GCC 的 preprocessing、compilation、assembly、linking 階段為起點，連結 C++ error-handling 原則、可重複 verification 與 NIST SSDF 的安全軟體生命週期。",
+      "evidenceNote": "Language runtime 的 canonical direct ref 有題面與 answer-review mismatch，因此沒有安全 direct refs；錯誤處理與測試也為 0 題 direct primary refs，兩者皆為 reviewed-source-backed foundational coverage。Software lifecycle 則保留題面完整且 eligible 的 q-pp-im-it-106-23、q-pp-im-it-110-10，僅支撐 development-diagram／UML 辨識，不把 UML 內容歸因於 NIST SSDF。",
+      "estimatedMinutes": 36,
+      "minimumPastPaperRefs": 2,
+      "learningObjectives": [
+        "區分 preprocessing、compilation、assembly 與 linking",
+        "說明 exception、assertion 與 verification 的不同角色",
+        "辨識 testing、code review 與 analysis 提供的不同證據",
+        "說明 NIST SSDF 的 Prepare、Protect、Produce、Respond 四組實務"
+      ],
+      "learningScenario": {
+        "title": "餐廳新菜單上線",
+        "hook": "餐廳從需求討論、流程圖、分工製作到試菜與正式上菜，每一階段都有不同產物與檢查，不會把食材清單直接當成可上桌的餐點。",
+        "predict": "單獨試吃每道配料都沒問題，為什麼整套出餐流程還需要另外測試？",
+        "mapping": [
+          {
+            "everyday": "食材清單與製作指示轉成餐點",
+            "technical": "Source 經 preprocessing 與 compilation"
+          },
+          {
+            "everyday": "各工作站的成品最後組成整份套餐",
+            "technical": "Object files/libraries 由 linker 解析符號與組合"
+          },
+          {
+            "everyday": "食材缺貨時走備用流程",
+            "technical": "Exception handling 處理可預期異常"
+          },
+          {
+            "everyday": "單項試味、工作站串接測試、全流程試營運",
+            "technical": "多種 verification activities 提供互補證據"
+          },
+          {
+            "everyday": "準備規範、保護產物、安全製作並回應問題",
+            "technical": "NIST SSDF 的 Prepare、Protect、Produce、Respond"
+          }
+        ],
+        "boundary": "餐廳流程不映射特定 toolchain 的所有內部階段；GCC options 描述其驅動流程，不代表所有語言實作都相同。Verification 可增加 release 信心但不能證明程式完全無缺陷，SSDF 也不是單一工具清單。",
+        "examCues": [
+          "GCC -E 停在 preprocessing，-S 停在 compilation，-c 產生 object code 而不 linking。",
+          "Exception 處理可回復的 runtime failure；assertion 表達不應違反的程式內部假設。",
+          "Testing、code review 與 static analysis 提供不同證據；任一項通過都不等於零缺陷。",
+          "SSDF 四組實務是 Prepare、Protect、Produce、Respond；它們橫跨整個 secure SDLC。"
+        ]
+      },
+      "sections": [
+        {
+          "title": "GCC 驅動的四個主要階段",
+          "body": "GCC Overall Options 將流程區分為 preprocessing、compilation proper、assembly、linking；-E、-S、-c 可在不同階段停止。Linking 再組合 object files 與所需 libraries。",
+          "bullets": [
+            "-E 輸出 preprocessed source",
+            "-S 輸出 assembly",
+            "-c 產生 object file 而不執行 linking"
+          ]
+        },
+        {
+          "title": "錯誤處理不等於測試",
+          "body": "Exception 是執行期異常轉移機制；assertion 表達開發者假設；tests 是可重複驗證行為的額外程式。",
+          "bullets": [
+            "不要用 exception 隱藏所有錯誤",
+            "Assertion 不應取代必要的 user-input validation",
+            "Test 要有可觀察 expected result"
+          ]
+        },
+        {
+          "title": "Verification 需要多種互補證據",
+          "body": "Testing 執行程式觀察行為，code review 檢查設計與實作，automated analysis 尋找特定缺陷模式。NIST SSDF 要求依風險規劃 verification，而不是把單一測試結果視為 release 保證。",
+          "bullets": [
+            "Verification criteria 應在 release 前明確",
+            "工具結果仍需 triage false positives/negatives",
+            "發現的漏洞應回饋到開發實務"
+          ]
+        },
+        {
+          "title": "SSDF 把安全責任放進整個生命週期",
+          "body": "NIST SSDF 將實務分為 Prepare the Organization、Protect the Software、Produce Well-Secured Software、Respond to Vulnerabilities。重點是把安全活動整合進既有 SDLC，並保留可追溯證據與改善回饋。",
+          "bullets": [
+            "Prepare 建立角色、流程與環境",
+            "Protect 維護程式碼與產物完整性",
+            "Respond 追蹤、修補並防止漏洞重現"
+          ]
+        },
+        {
+          "title": "考古題辨識：system development diagrams",
+          "body": "本課只保留兩個由完整題面直接支持的辨識點：UML 是軟體工程的 general-purpose modeling language；class diagram 呈現類別結構，不是表示活動工期與專案進度的 Gantt chart。這兩點來自 past-paper stems，不歸因於 NIST SSDF，也不擴張成完整 UML 教程。",
+          "bullets": [
+            "UML 是 modeling language，不是 programming language",
+            "Class diagram 不等於 project schedule",
+            "Decision tree、ERD、flowchart 回答不同問題"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "兩個 object files 分別定義與呼叫 calculate()，誰負責解析符號？",
+          "steps": [
+            "Compiler/assembler 先產生 object files。",
+            "呼叫端留下 unresolved symbol。",
+            "Linker 尋找定義並連結位址。"
+          ],
+          "answer": "Linker 負責模組間符號解析與組合。"
+        },
+        {
+          "prompt": "測試全數通過，但 release 使用的第三方元件來源與版本無法追溯。可以只憑測試結果核准嗎？",
+          "steps": [
+            "測試只提供已執行情境的行為證據。",
+            "來源與版本不可追溯是 software integrity 與 vulnerability response 風險。",
+            "應補齊 provenance、風險評估與 release criteria 再決策。"
+          ],
+          "answer": "不應只憑測試核准；依 SSDF 還需保護與追蹤 software components，保留可回應漏洞的證據。"
+        }
+      ],
+      "commonPitfalls": [
+        "把 compiler、assembler 與 linker 當同一工具",
+        "把 GCC driver 的階段當成所有語言唯一 runtime 模型",
+        "用 assertion 取代使用者輸入驗證",
+        "單一 verification activity 通過就宣稱系統無缺陷",
+        "把 SSDF 當成只在 release 前執行一次的 checklist"
+      ],
+      "sourceRefs": [
+        "src-gcc-overall-options",
+        "src-cpp-core-guidelines",
+        "src-nist-ssdf-800-218"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-106-23",
+        "q-pp-im-it-110-10"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "lesson-im-it-ds-linear-hashing-b01",
+      "subtopicId": "im-it-ds-linear-structures",
+      "coveredSubtopicIds": [
+        "im-it-ds-linear-structures",
+        "im-it-ds-hashing"
+      ],
+      "title": "線性結構與雜湊：依操作需求選容器",
+      "summary": "以 stack、queue、array、linked list 與 hash table 的操作契約為核心，從存取順序、更新成本、碰撞處理與 load factor 判斷資料結構；不把平均 O(1) 誤寫成最壞保證。",
+      "estimatedMinutes": 38,
+      "minimumPastPaperRefs": 3,
+      "learningObjectives": [
+        "依 LIFO、FIFO、索引存取與中間插刪需求選擇線性結構",
+        "用 stack trace 判斷巢狀括號是否合法",
+        "說明 hash function、bucket、collision 與 load factor 的關係",
+        "比較 chaining 與 open addressing，並區分平均與最壞複雜度"
+      ],
+      "sections": [
+        {
+          "title": "先看操作契約，不看名稱猜答案",
+          "body": "Array 支援 O(1) 索引定位，但中間插刪常需搬移元素；linked list 已知節點位置時能以指標改接完成插刪，但搜尋與第 k 個元素通常要走訪。Stack 只在同一端 push/pop，遵守 LIFO；queue 從尾端 enqueue、前端 dequeue，遵守 FIFO。題目應先辨識需要保留的順序與主要操作。",
+          "bullets": [
+            "LIFO 對應最近加入者先取出",
+            "FIFO 對應最早加入者先服務",
+            "ADT 描述行為，不限定唯一底層實作",
+            "複雜度要說明是否已知位置與採用何種實作"
+          ]
+        },
+        {
+          "title": "Stack 讓最近尚未配對的符號先被檢查",
+          "body": "掃描括號時，左括號 push；右括號必須和 stack top 的左括號種類相符後 pop。若右括號到來時 stack 已空、種類不符，或掃描結束後 stack 非空，都代表不平衡。這正利用巢狀結構的最後開啟、最先關閉。",
+          "bullets": [
+            "不能只比較左右括號總數",
+            "中途 pop 空 stack 立即失敗",
+            "不同括號種類也要配對",
+            "掃描完成仍有元素表示尚未關閉"
+          ]
+        },
+        {
+          "title": "Hash table 用函數把 key 導向 bucket",
+          "body": "Hash function 把 key 映射到有限 bucket；不同 key 可能碰撞。好的分布可讓搜尋、插入、刪除平均接近 O(1)，但碰撞集中或惡意輸入時可能退化。Load factor α=n/m 描述 n 個項目相對於 m 個 bucket 的壓力，通常越高碰撞越頻繁。",
+          "bullets": [
+            "Hash table 實作 associative array 的 key-to-value mapping",
+            "O(1) 是合理假設下的平均成本",
+            "Rehash 會擴大表並重新映射既有 key",
+            "Hash function 必須對相同 key 穩定產生相同位置"
+          ]
+        },
+        {
+          "title": "碰撞策略決定後續搜尋路徑",
+          "body": "Chaining 在每個 bucket 掛一個串列或其他容器，碰撞項目留在同一 bucket；open addressing 則把所有項目留在表內，依 probing sequence 找空格。Linear probing 容易 primary clustering；double hashing 用第二個 hash 決定步長，步長需能走遍整張表。",
+          "bullets": [
+            "Chaining 可容許項目數超過 bucket 數",
+            "Open addressing 的刪除常需要 tombstone",
+            "Double hashing 仍不能消除所有碰撞",
+            "表大小與 probe step 互質有助覆蓋全部 slots"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "判斷字串 `([a+b]*c)` 是否括號平衡。",
+          "steps": [
+            "讀到 `(` push",
+            "讀到 `[` push",
+            "讀到 `]` 與 top `[` 配對後 pop",
+            "讀到 `)` 與 top `(` 配對後 pop",
+            "掃描結束 stack 為空"
+          ],
+          "answer": "括號平衡；配對次序符合 LIFO。"
+        },
+        {
+          "prompt": "8 個 buckets 已存 6 個 keys，求 load factor；若大量 key 落在同一 bucket，能否仍保證 O(1)？",
+          "steps": [
+            "α=n/m=6/8=0.75",
+            "平均效能仍取決於 hash 分布與碰撞策略",
+            "若全落同一 bucket，搜尋可能需檢查多個項目"
+          ],
+          "answer": "Load factor 為 0.75；不能由此保證最壞 O(1)，極端碰撞可退化到 O(n)。"
+        }
+      ],
+      "commonPitfalls": [
+        "把 queue 誤當成 LIFO",
+        "只數括號數量、不檢查巢狀順序",
+        "把 hash table 的平均 O(1) 寫成無條件最壞 O(1)",
+        "認為 collision 表示 hash function 失效",
+        "open addressing 刪除後直接清空 slot，破壞 probe chain"
+      ],
+      "sourceRefs": [
+        "src-mit-algorithms-6006"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-115-4",
+        "q-pp-im-it-110-22",
+        "q-pp-im-it-115-1"
+      ],
+      "reviewStatus": "reviewed",
+      "learningScenario": {
+        "title": "園遊會寄物與取餐系統",
+        "hook": "園遊會同時要處理寄物、取餐叫號、姓名查找與巢狀置物箱。若所有需求都硬塞進同一種容器，尖峰時段就會順序錯亂或找不到物品。",
+        "predict": "最新放入的置物盒必須先取出，但餐點必須依到單順序交付；兩處該用同一結構嗎？姓名查找又該沿用哪一個？",
+        "mapping": [
+          {
+            "everyday": "最後放上推車的箱子最先拿下",
+            "technical": "Stack 與 LIFO"
+          },
+          {
+            "everyday": "取餐單依到達順序叫號",
+            "technical": "Queue 與 FIFO"
+          },
+          {
+            "everyday": "依姓名算出寄物櫃區號",
+            "technical": "Hash function 與 bucket"
+          },
+          {
+            "everyday": "兩個姓名算到同一櫃區後改掛清單或找下一格",
+            "technical": "Chaining 與 open addressing"
+          },
+          {
+            "everyday": "櫃位越接近滿載，找空位越容易繞路",
+            "technical": "Load factor、collision 與 rehash"
+          }
+        ],
+        "boundary": "實體推車與櫃位只幫助理解存取規則；程式中的 stack、queue 與 hash table 可由 array 或 linked structure 實作。Hash table 的平均 O(1) 依賴合理分布與容量管理，不表示任何輸入都能常數時間完成。",
+        "examCues": [
+          "看到 balanced parentheses：找 LIFO、push 左括號、右括號配 top。",
+          "看到 first-come-first-served：優先考慮 queue；最近加入先處理則是 stack。",
+          "看到 associative array 或 key-to-value：辨識 hash function 與 bucket。",
+          "看到 average O(1)：同時檢查 collision、load factor 與最壞退化，別寫成絕對保證。"
+        ]
+      }
+    },
+    {
+      "id": "lesson-im-it-ds-graphs-design-b01",
+      "subtopicId": "im-it-ds-graphs",
+      "coveredSubtopicIds": [
+        "im-it-ds-graphs",
+        "im-it-ds-algorithm-design"
+      ],
+      "title": "圖演算法與設計策略：從相依關係到可證明步驟",
+      "summary": "用 BFS、DFS、topological sort、MST 與最短路徑建立圖問題辨識框架，再比較 greedy、divide-and-conquer 與 dynamic programming 的前提及正確性論證。",
+      "estimatedMinutes": 42,
+      "minimumPastPaperRefs": 1,
+      "evidenceNote": "im-it-ds-algorithm-design 在 canonical question metadata 中沒有 direct primary past-paper refs；im-it-ds-graphs 本課也只有 1 題內容完整且可直接使用的 topological-sort ref。112-26 題面破碎，已排除。其餘 graph 與 algorithm-design 內容是 reviewed MIT algorithms source 支撐的 foundational coverage，不宣稱歷屆高頻。",
+      "learningObjectives": [
+        "依目標選擇 BFS、DFS 或 topological sort",
+        "說明 spanning tree、MST 與 shortest path 的差異",
+        "區分 greedy、divide-and-conquer 與 dynamic programming",
+        "用 invariant、exchange argument 或 induction 描述正確性證據"
+      ],
+      "sections": [
+        {
+          "title": "Graph 把物件與關係分開",
+          "body": "Graph G=(V,E) 以 vertices 表示物件、edges 表示關係；邊可有方向與權重。BFS 逐層展開，適合無權圖最少邊數距離；DFS 沿一路深入後回溯，適合連通性、cycle 與結構探索。",
+          "bullets": [
+            "Directed edge 有方向",
+            "Weighted edge 帶成本",
+            "BFS 使用 queue",
+            "DFS 常用 stack 或 recursion"
+          ]
+        },
+        {
+          "title": "Topological sort 只屬於 DAG",
+          "body": "Topological order 讓每條 u→v 都滿足 u 出現在 v 前面。若有 directed cycle，環上每個工作都要求另一個先完成，無法形成線性順序。Kahn 方法反覆取 indegree 0 節點；DFS 方法依完成時間反向排列並偵測 back edge。",
+          "bullets": [
+            "不是所有 directed graph 都可排序",
+            "答案可能不唯一",
+            "若輸出節點少於 |V| 表示存在 cycle",
+            "不要求圖 fully connected"
+          ]
+        },
+        {
+          "title": "MST 與 shortest path 回答不同問題",
+          "body": "Spanning tree 連接全部 vertices 且無 cycle，n 個 vertices 有 n−1 條邊；MST 最小化整棵樹總權重。Shortest path 則最小化特定起終點路徑成本，不要求連接所有 vertices。Prim 依 cut property 安全加入跨 cut 的最輕邊。",
+          "bullets": [
+            "MST 需要 connected undirected graph",
+            "最短路徑樹不一定是 MST",
+            "權重相同時 MST 可能不唯一",
+            "Dijkstra 不適用負權邊"
+          ]
+        },
+        {
+          "title": "先辨認子問題關係再選設計策略",
+          "body": "Greedy 每步作局部安全選擇，需證明 greedy-choice property；divide-and-conquer 把問題拆成大致獨立子問題後合併；dynamic programming 適用 overlapping subproblems 與 optimal substructure，儲存狀態避免重算。",
+          "bullets": [
+            "看到最優問題不代表 greedy 一定正確",
+            "Memoization 是 top-down DP",
+            "Tabulation 是 bottom-up DP",
+            "Merge sort 是典型 divide-and-conquer"
+          ]
+        },
+        {
+          "title": "複雜度之外還要證明答案正確",
+          "body": "演算法答案至少說清楚 input、output、步驟、終止與 complexity。Loop invariant 可描述每輪前後維持的真命題；exchange argument 常證明 greedy 解可轉換成含某個 greedy choice 的最優解；induction 可沿輸入規模或 DP 狀態證明。",
+          "bullets": [
+            "測過範例不是 correctness proof",
+            "Invariant 要有初始化、維持、終止",
+            "Complexity 不等於 correctness",
+            "反例可推翻不成立的 greedy rule"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "課程相依 A→C、B→C、C→D，給一個 topological order。",
+          "steps": [
+            "A、B indegree 為 0，可先任選",
+            "取 A、B 後 C indegree 變 0",
+            "最後取 D"
+          ],
+          "answer": "A,B,C,D 或 B,A,C,D 均合法。"
+        },
+        {
+          "prompt": "找零問題硬幣 {1,3,4}、金額 6，永遠先取最大硬幣的 greedy 是否最佳？",
+          "steps": [
+            "Greedy 取 4+1+1，共 3 枚",
+            "另一解為 3+3，共 2 枚",
+            "出現反例，故此幣制下 greedy rule 不正確"
+          ],
+          "answer": "不正確；可用 DP 求每個金額的最少硬幣數。"
+        }
+      ],
+      "commonPitfalls": [
+        "在有 cycle 的 directed graph 上要求 topological order",
+        "把 BFS 與 DFS 的 queue/stack 對調",
+        "把 MST 當成任意兩點 shortest path",
+        "看到 optimal 就直接套 greedy",
+        "只分析 Big-O、不說明演算法為何正確"
+      ],
+      "sourceRefs": [
+        "src-mit-algorithms-6006"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-115-6"
+      ],
+      "reviewStatus": "reviewed",
+      "learningScenario": {
+        "title": "校園活動排程與網路佈線",
+        "hook": "學生會要排有先修關係的活動、找校園各點的最低總佈線成本，還要設計在尖峰前完成的演算法。三個問題都畫成圖，卻不能用同一個答案。",
+        "predict": "若活動相依圖出現 A 等 B、B 又等 A，排程表能否靠換順序解決？最低總佈線是否等於入口到禮堂的最短路？",
+        "mapping": [
+          {
+            "everyday": "活動必須在其前置工作完成後開始",
+            "technical": "DAG 與 topological order"
+          },
+          {
+            "everyday": "從入口逐層找最少轉乘站數",
+            "technical": "BFS 與無權 shortest path"
+          },
+          {
+            "everyday": "讓所有校園據點連通且總線材最少",
+            "technical": "Minimum spanning tree"
+          },
+          {
+            "everyday": "把大型活動拆成獨立小組後合併結果",
+            "technical": "Divide-and-conquer"
+          },
+          {
+            "everyday": "記錄重複子排程的最佳成本避免重算",
+            "technical": "Dynamic programming"
+          }
+        ],
+        "boundary": "活動比喻不能取代圖的方向、權重與演算法前提。MST 最小化全體連通成本，不保證任意兩點距離最短；topological order 也只保證相依順序，不代表資源或工期最佳。",
+        "examCues": [
+          "看到 prerequisite/order：先檢查 directed acyclic，cycle 使 topological sort 不存在。",
+          "看到 unweighted minimum edges：BFS；要深入探索 cycle/連通性常用 DFS。",
+          "看到 connect all vertices with minimum total weight：MST，不是 single-source shortest path。",
+          "看到 greedy/DP：要求局部選擇證明或 overlapping subproblems，並補 correctness 論證。"
+        ]
+      }
+    },
+    {
+      "id": "lesson-im-it-db-er-normalization-b01",
+      "subtopicId": "im-it-db-er-modeling",
+      "coveredSubtopicIds": [
+        "im-it-db-er-modeling",
+        "im-it-db-normalization"
+      ],
+      "title": "ER 建模與正規化：從需求語句到穩定資料表",
+      "summary": "先用 entity、attribute、relationship、cardinality 建立概念模型，再以 functional dependency、1NF、2NF、3NF 分解冗餘與更新異常。",
+      "estimatedMinutes": 40,
+      "minimumPastPaperRefs": 5,
+      "learningObjectives": [
+        "辨識 entity、attribute、relationship 與 cardinality",
+        "把 ER 關係映射到 relational schema",
+        "由 functional dependency 判斷 partial 與 transitive dependency",
+        "說明 1NF、2NF、3NF 的目標及 lossless 分解的重要性"
+      ],
+      "sections": [
+        {
+          "title": "ER model 是需求與資料表之間的概念橋梁",
+          "body": "Entity 是可獨立辨識的事物，attribute 描述其性質，relationship 表示 entities 間的關聯。傳統 ER 圖常用 rectangle 表 entity、oval 表 attribute、diamond 表 relationship；符號只是表達工具，真正要讀的是語意。",
+          "bullets": [
+            "Schema 描述資料庫邏輯結構",
+            "Key attribute 唯一辨識 entity",
+            "Weak entity 依賴 owner entity",
+            "Cardinality 描述 one-to-one、one-to-many、many-to-many"
+          ]
+        },
+        {
+          "title": "Cardinality 決定 foreign key 或關聯表位置",
+          "body": "一對多通常把一方的 primary key 放到多方作 foreign key；多對多需建立 junction relation，至少包含兩端 keys。若 relationship 自己有屬性，例如修課成績，應放在 junction relation。",
+          "bullets": [
+            "Foreign key 維護 referential integrity",
+            "Many-to-many 不能只在某一端放單一 foreign key",
+            "Optional participation 要考慮 null 或獨立 relation",
+            "Mapping 前先確認每一筆 relationship 的身份"
+          ]
+        },
+        {
+          "title": "Functional dependency 是正規化的判斷語言",
+          "body": "X→Y 表示兩筆 tuple 若 X 相同，Y 必須相同。Candidate key 能決定全部 attributes。Partial dependency 是 non-key attribute 只依賴 composite key 的一部分；transitive dependency 是 key 經另一 non-key attribute 間接決定第三者。",
+          "bullets": [
+            "FD 來自資料語意，不只看目前樣本巧合",
+            "Determinant 在箭頭左側",
+            "Superkey 可包含多餘 attributes",
+            "同一 relation 可能有多個 candidate keys"
+          ]
+        },
+        {
+          "title": "1NF 到 3NF 逐步移除不同異常來源",
+          "body": "1NF 要求每個 attribute value 在該 relational design 中為 atomic，不含 repeating group。2NF 在 1NF 上移除 non-prime attribute 對 candidate key 的 partial dependency。正式 3NF 判斷每個 non-trivial FD X→A：X 必須是 superkey，或 A 是 prime attribute；常見的『移除 non-key 間 transitive dependency』是便於入門的情境化口訣。",
+          "bullets": [
+            "單一欄位值是 atomic 是 1NF 核心",
+            "單一屬性 candidate key 不會有 partial dependency",
+            "3NF 不是表越少越好",
+            "分解要考慮 lossless join 與 dependency preservation"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "學生可選多門課，課程也有多名學生，且每次選課有 grade。如何映射？",
+          "steps": [
+            "建立 Student(student_id, ...)",
+            "建立 Course(course_id, ...)",
+            "many-to-many 另建 Enrollment(student_id, course_id, grade)",
+            "兩個 IDs 組成 key 並分別作 foreign keys"
+          ],
+          "answer": "以 Enrollment junction relation 表示選課 relationship，grade 屬於該 relationship。"
+        },
+        {
+          "prompt": "Enrollment(student_id, course_id, student_name, course_title, grade)，key=(student_id,course_id)。指出 partial dependencies。",
+          "steps": [
+            "student_id→student_name，只依賴 composite key 一部分",
+            "course_id→course_title，也只依賴一部分",
+            "grade 依賴完整選課組合"
+          ],
+          "answer": "拆成 Student、Course、Enrollment，可移除 student_name 與 course_title 的 partial dependencies。"
+        }
+      ],
+      "commonPitfalls": [
+        "把 diamond 說成 attribute",
+        "把 many-to-many 直接塞成單一 foreign key",
+        "從幾筆樣本猜 FD，而忽略業務規則",
+        "把 primary key 要求誤當成 1NF 唯一定義",
+        "認為正規化就是表越多越好",
+        "分解後未檢查 lossless join"
+      ],
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-jiege-database-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-110-24",
+        "q-pp-im-it-111-21",
+        "q-pp-im-it-114-16",
+        "q-pp-im-it-111-14",
+        "q-pp-im-it-114-13"
+      ],
+      "reviewStatus": "reviewed",
+      "learningScenario": {
+        "title": "社團報名系統重建",
+        "hook": "社團原本把社員、活動、幹部與報名紀錄塞進同一張試算表；活動改名要改數十格，刪掉最後一位報名者竟連活動資訊也消失。",
+        "predict": "若一位學生可報多場活動，而每場活動也有多人參加，能否只在 Student 放一個 activity_id 就完整表示？",
+        "mapping": [
+          {
+            "everyday": "學生、活動是可獨立辨識的名詞",
+            "technical": "Entities"
+          },
+          {
+            "everyday": "學生報名活動這件事",
+            "technical": "Relationship"
+          },
+          {
+            "everyday": "一位學生多場活動、每場活動多人",
+            "technical": "Many-to-many cardinality"
+          },
+          {
+            "everyday": "學號固定決定姓名",
+            "technical": "Functional dependency"
+          },
+          {
+            "everyday": "拆出 Student、Activity、Registration",
+            "technical": "Normalization 與 junction relation"
+          }
+        ],
+        "boundary": "ER 圖符號幫助溝通需求，但不能自動保證 schema 正確；正規化依賴真實 business rules。分解也不是越細越好，仍要兼顧 lossless join、dependency preservation 與查詢需求。",
+        "examCues": [
+          "看到 diamond：傳統 ER notation 表 relationship；attribute 通常是 oval。",
+          "看到 many-to-many 且 relationship 有屬性：建立 junction relation。",
+          "看到 2NF：找 composite key 的 partial dependency；單一 key 不會有此問題。",
+          "看到 3NF：找 non-key 到 non-key 的 transitive dependency，不要答成增加重複資料。"
+        ]
+      }
+    },
+    {
+      "id": "lesson-im-it-db-storage-indexing-b01",
+      "subtopicId": "im-it-db-storage-indexing",
+      "coveredSubtopicIds": [
+        "im-it-db-storage-indexing"
+      ],
+      "title": "資料庫儲存與索引：等值、範圍與分析查詢",
+      "summary": "從 page I/O 與資料排列理解 heap file、B+ tree、hash index、多維分析結構及 optimizer 選擇，避免把所有索引都當成無條件加速器。",
+      "estimatedMinutes": 32,
+      "minimumPastPaperRefs": 3,
+      "learningObjectives": [
+        "說明索引以額外空間與維護成本換取讀取效率",
+        "比較 B+ tree 與 hash index 的等值及範圍能力",
+        "辨識 data warehouse/OLAP 與多維分析需求",
+        "解釋 selectivity 與 query plan 為何影響索引使用"
+      ],
+      "sections": [
+        {
+          "title": "資料庫成本常由 page I/O 主導",
+          "body": "Records 儲存在 pages；heap file 不維持 key 順序，插入通常直接，但搜尋可能掃描多頁。Index 保存 search key 到 record/page 的導引，讓查詢少讀 pages，代價是額外空間與 INSERT/UPDATE/DELETE 維護。",
+          "bullets": [
+            "Index 不是資料本身的免費副本",
+            "Sequential scan 對大量結果可能更划算",
+            "更多 indexes 會增加寫入成本",
+            "Physical design 取決於 workload"
+          ]
+        },
+        {
+          "title": "B+ tree 保留排序，適合 range scan",
+          "body": "B+ tree 是高扇出的平衡搜尋樹，內部節點導引搜尋，葉節點依 key 排序並通常相連。等值查詢可沿 root-to-leaf，範圍查詢找到起點後沿葉節點順序掃描。",
+          "bullets": [
+            "所有資料 entries 位於葉層",
+            "樹高通常很低",
+            "葉節點排序支援 BETWEEN、<、>",
+            "平衡性讓搜尋成本穩定"
+          ]
+        },
+        {
+          "title": "Hash index 擅長 equality，會破壞順序",
+          "body": "Hash function 將相近 key 映射到可能完全不同 buckets，因此 `key = value` 可直接定位候選 bucket，但 `20 <= key <= 30` 沒有連續路徑可循。碰撞策略仍會影響等值查詢成本。",
+          "bullets": [
+            "Equality predicate 是 hash index 強項",
+            "Range predicate 通常不是",
+            "Hash collision 不等於查不到資料",
+            "Hash index 不保留 key ordering"
+          ]
+        },
+        {
+          "title": "OLAP 與 optimizer 看的是整體工作負載",
+          "body": "Data warehouse 常服務聚合、切片、鑽取等 OLAP 分析；多維資料庫或 cube 以 dimensions 與 measures 組織分析。Relational optimizer 會依符合比例、statistics、join cost 與預估 page I/O 選 scan 或 index，索引存在不代表一定使用。",
+          "bullets": [
+            "Highly selective predicate 通常只讓少量 rows 符合；用符合比例描述可避免 high/low selectivity 的教材歧義",
+            "Statistics 過期可能選錯 plan",
+            "Covering index 可減少回表",
+            "OLTP 與 OLAP 的 workload 不同"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "查詢 `age BETWEEN 20 AND 30`，B+ tree 與 hash index 何者較合適？",
+          "steps": [
+            "此條件需要 key order",
+            "B+ tree 找到 20 後沿葉節點掃到 30",
+            "Hash mapping 不保留 20 到 30 的連續關係"
+          ],
+          "answer": "通常選 B+ tree；hash index 較適合 `age = 25`。"
+        },
+        {
+          "prompt": "一個查詢會讀取全表 70% rows，optimizer 為何可能不用現有 index？",
+          "steps": [
+            "走 index 需讀大量 index entries",
+            "還可能對每筆回表造成隨機 I/O",
+            "Sequential scan 可能以較少且連續的 page I/O 完成"
+          ],
+          "answer": "索引不是必然較快；低選擇性的查詢可能以全表掃描成本更低。"
+        }
+      ],
+      "commonPitfalls": [
+        "認為建 index 永遠加速所有操作",
+        "說 hash index 能自然支援 range query",
+        "把 B+ tree 與 binary tree 的扇出混為一談",
+        "忽略寫入維護與額外空間",
+        "認為 optimizer 一定使用已存在的 index"
+      ],
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-jiege-database-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-107-6",
+        "q-pp-im-it-115-16",
+        "q-pp-im-it-115-18"
+      ],
+      "reviewStatus": "reviewed",
+      "learningScenario": {
+        "title": "圖書館找書與月度分析",
+        "hook": "館員既要讓讀者用 ISBN 立刻找到一本書，也要查出版年份區間，月底還要分析各館別、月份與類別的借閱量。單一目錄結構不一定同時最佳。",
+        "predict": "把 2020、2021、2022 經 hash 後放進不同櫃位，是否仍能從 2020 的櫃位一路掃到 2022？",
+        "mapping": [
+          {
+            "everyday": "書架上的實體批次",
+            "technical": "Database pages 與 page I/O"
+          },
+          {
+            "everyday": "依 ISBN 直接查櫃位",
+            "technical": "Equality lookup 與 hash index"
+          },
+          {
+            "everyday": "沿年份排序目錄查一段區間",
+            "technical": "B+ tree leaf range scan"
+          },
+          {
+            "everyday": "依月份、館別、類別切換報表",
+            "technical": "OLAP dimensions 與 measures"
+          },
+          {
+            "everyday": "人太多時乾脆順著整排巡一次",
+            "technical": "Optimizer 選 sequential scan"
+          }
+        ],
+        "boundary": "圖書館目錄只是索引直覺；實際 DBMS 還要考慮 buffer pool、clustered layout、statistics、concurrency 與 storage device。索引存在不代表 optimizer 必須使用。",
+        "examCues": [
+          "看到 range query：優先想到保留排序且葉節點相連的 B+ tree。",
+          "看到 hash 不適合 range：理由是破壞 ordering，不是單純 storage 較大。",
+          "看到 warehouse、OLAP、slice/dice：辨識 multidimensional analysis。",
+          "看到『有 index 為何沒用』：檢查 selectivity、回表與 page I/O 成本。"
+        ]
+      }
+    },
+    {
+      "id": "lesson-im-it-os-sync-deadlock-b01",
+      "subtopicId": "im-it-os-synchronization",
+      "coveredSubtopicIds": [
+        "im-it-os-synchronization",
+        "im-it-os-deadlocks"
+      ],
+      "title": "同步、互斥與死結：讓並行工作安全前進",
+      "summary": "從 race condition、critical section、mutex、semaphore 建立同步基本模型，再區分 deadlock、livelock、starvation 與 Banker's safety check。",
+      "estimatedMinutes": 38,
+      "minimumPastPaperRefs": 4,
+      "learningObjectives": [
+        "以 interleaving 說明 race condition",
+        "區分 mutual exclusion 與 broader synchronization",
+        "列出 deadlock 四個必要條件",
+        "區分 deadlock、livelock、starvation、busy waiting",
+        "說明 Banker's algorithm 檢查 safe state 的目的"
+      ],
+      "sections": [
+        {
+          "title": "Race condition 來自結果依賴不可控 interleaving",
+          "body": "多個 threads 對 shared state 執行 read-modify-write，若操作非 atomic，不同 interleaving 可能產生不同結果。Critical section 是存取共享資源、需要控制同時進入的程式區段。",
+          "bullets": [
+            "Race 不要求真的同時執行",
+            "單核心也可因 context switch 發生",
+            "Atomic operation 不會被觀察到中間狀態",
+            "先找 shared mutable state"
+          ]
+        },
+        {
+          "title": "Mutex 與 semaphore 解決的問題不完全相同",
+          "body": "Mutex 通常有 ownership，同一時間只讓一個執行單元進 critical section。Semaphore 是整數同步原語，以 atomic wait/P 與 signal/V 調整 permits；binary semaphore 可做互斥，counting semaphore 可限制同時使用某類資源的數量或表達事件順序。",
+          "bullets": [
+            "Wait 在無 permit 時阻塞或等待",
+            "Signal 釋放 permit／通知進度",
+            "鎖範圍過大降低 concurrency",
+            "同步設計不當仍可能 deadlock、starvation 或 livelock"
+          ]
+        },
+        {
+          "title": "Deadlock 四條件同時成立才可能形成",
+          "body": "Coffman conditions 為 mutual exclusion、hold and wait、no preemption、circular wait。破壞任一必要條件可預防 deadlock；avoidance 則在每次配置前檢查是否仍能保持 safe state。Deadlock 中工作彼此等待，沒有任何一個能前進。",
+          "bullets": [
+            "必要條件不是單獨充分條件",
+            "固定 lock ordering 可破壞 circular wait",
+            "一次申請全部資源可破壞 hold and wait",
+            "允許搶占只適合可安全復原的資源"
+          ]
+        },
+        {
+          "title": "Livelock、starvation 與 busy waiting 要分開",
+          "body": "Livelock 中工作持續改變狀態、互相回應但沒有 useful progress；starvation 是特定工作長期得不到資源；busy waiting 是等待期間持續消耗 CPU 檢查條件。它們都影響 liveness，但機制不同。",
+          "bullets": [
+            "Deadlock 通常 blocked 且形成等待循環",
+            "Livelock 活動中但不前進",
+            "Fairness 可降低 starvation",
+            "Spinlock 是有目的的短期 busy waiting"
+          ]
+        },
+        {
+          "title": "Banker's algorithm 問的是安全序列，不是當下是否 deadlock",
+          "body": "Banker's algorithm 在 tentative allocation 後，檢查 available resources 是否能依某個順序滿足所有 processes 的 remaining maximum needs。存在 safe sequence 才核准配置；unsafe state 不等於已 deadlock，而是無法保證未來避免 deadlock。",
+          "bullets": [
+            "需要知道 maximum claim",
+            "Safe state 保證存在完成順序",
+            "Unsafe 不代表現在已僵住",
+            "這是 avoidance，不是 detection"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "x=0，兩 threads 都執行 temp=x; temp=temp+1; x=temp。為何結果可能是 1？",
+          "steps": [
+            "T1 與 T2 都先讀到 0",
+            "兩者各自在 temp 算成 1",
+            "兩次寫回都寫 1",
+            "其中一次 increment 被覆蓋"
+          ],
+          "answer": "read-modify-write 非 atomic，發生 lost update race；應保護 critical section。"
+        },
+        {
+          "prompt": "P1 持有 A 等 B，P2 持有 B 等 A。辨識 deadlock 條件並給一種預防法。",
+          "steps": [
+            "A、B 互斥使用",
+            "兩者 hold and wait",
+            "資源不可強制搶占",
+            "等待形成 P1→B→P2→A→P1 cycle"
+          ],
+          "answer": "四條件皆成立；可規定所有 processes 一律先鎖 A 再鎖 B，破壞 circular wait。"
+        }
+      ],
+      "commonPitfalls": [
+        "把 mutual exclusion 與 synchronization 完全畫等號",
+        "認為用了 semaphore 就不可能 deadlock",
+        "把 livelock 說成 blocked 不動",
+        "把 unsafe state 直接說成已 deadlock",
+        "列出 Coffman conditions 卻說任何一條單獨就足夠"
+      ],
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-os-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-113-9",
+        "q-pp-im-it-114-10",
+        "q-pp-im-it-111-17",
+        "q-pp-im-it-114-8"
+      ],
+      "reviewStatus": "reviewed",
+      "learningScenario": {
+        "title": "共用廚房的兩組廚師",
+        "hook": "兩組廚師共用一把刀、一個爐台和有限烤盤。沒有規則時會重複改同一張訂單；鎖太多又可能各拿一件工具互等，或不斷互相禮讓卻沒人下鍋。",
+        "predict": "甲拿刀等爐、乙拿爐等刀；兩人都還在等待。這是一般排隊、starvation，還是 deadlock？若兩人不停互讓工具又立刻拿回呢？",
+        "mapping": [
+          {
+            "everyday": "兩人同時修改同一張訂單",
+            "technical": "Race condition"
+          },
+          {
+            "everyday": "同一時間只准一人使用刀",
+            "technical": "Mutex 與 critical section"
+          },
+          {
+            "everyday": "三個烤盤最多供三組使用",
+            "technical": "Counting semaphore"
+          },
+          {
+            "everyday": "各持一件工具並等待對方手上的工具",
+            "technical": "Circular wait 與 deadlock"
+          },
+          {
+            "everyday": "不停互讓但始終沒完成料理",
+            "technical": "Livelock"
+          }
+        ],
+        "boundary": "廚房工具能直觀看等待關係，但真實 synchronization 還涉及 memory ordering、atomic primitives、scheduler fairness 與 lock implementation。Semaphore 不一定具有 mutex ownership，unsafe state 也不等於當下已 deadlock。",
+        "examCues": [
+          "看到 shared read-modify-write 結果不穩：找 race condition 與 critical section。",
+          "看到 semaphore purpose：同步／控制 permits；binary 可互斥，counting 可管理多份資源。",
+          "看到 processes 持續回應卻無 useful work：livelock；被卡住互等才是 deadlock。",
+          "看到 Banker's algorithm：deadlock avoidance、safe-state check，不是 CPU scheduling 或 detection。"
+        ]
+      }
+    },
+    {
+      "id": "lesson-im-it-network-cloud-performance-01",
+      "subtopicId": "im-it-network-distributed-cloud",
+      "coveredSubtopicIds": [
+        "im-it-network-distributed-cloud",
+        "im-it-network-performance-reliability"
+      ],
+      "title": "雲端、Edge 與網路服務品質：把工作放在正確的位置",
+      "summary": "從 SaaS/PaaS 與 hybrid cloud 的服務責任切入，理解 edge computing 為何把處理移近資料來源，再用 bandwidth、latency、jitter、availability、streaming 與 VPN 判讀使用體驗。",
+      "estimatedMinutes": 34,
+      "minimumPastPaperRefs": 4,
+      "learningObjectives": [
+        "區分 SaaS、PaaS 與部署模型",
+        "解釋 edge 與 cloud 的互補關係",
+        "分辨 bandwidth、latency、jitter 與 availability",
+        "說明 streaming 與 VPN 解決的不同問題"
+      ],
+      "learningScenario": {
+        "title": "跨校直播成果展",
+        "hook": "學校要把成果展直播給外校：報名系統放雲端、現場攝影機先在校內處理、工作人員從家中安全連線，觀眾卻抱怨畫面卡頓。團隊必須分清楚「服務放哪裡」與「連線品質哪裡出問題」。",
+        "predict": "若現場上傳頻寬足夠，但封包到達時間忽快忽慢，你會先加大雲端硬碟，還是處理 jitter 與播放緩衝？",
+        "mapping": [
+          {
+            "everyday": "直接使用供應商託管的報名軟體",
+            "technical": "SaaS／on-demand software"
+          },
+          {
+            "everyday": "開發者把程式部署到受管 runtime，不管理底層主機",
+            "technical": "PaaS"
+          },
+          {
+            "everyday": "校內設備與公有雲共同提供服務",
+            "technical": "Hybrid cloud"
+          },
+          {
+            "everyday": "攝影機旁先辨識與壓縮再上傳",
+            "technical": "Edge computing 降低 latency 與回傳量"
+          },
+          {
+            "everyday": "遠端工作人員像在校內網路般安全存取",
+            "technical": "VPN 建立私有網路式連線"
+          }
+        ],
+        "boundary": "「雲」不是所有遠端服務的同義詞，edge 也不會取代 cloud。VPN 提供安全通道，不自動保證低 latency、高 bandwidth 或不中斷；直播是否順暢仍取決於端到端容量、延遲、jitter、loss 與 buffering。",
+        "examCues": [
+          "看到 vendor-hosted software：先辨認 SaaS/on-demand software。",
+          "看到 managed application runtime：辨認 PaaS，不是 IaaS。",
+          "看到自有機房加 AWS：選 hybrid cloud。",
+          "看到靠近資料來源、降低 latency：選 edge；看到邊收邊播：選 streaming。"
+        ]
+      },
+      "sections": [
+        {
+          "title": "服務模型看誰負責哪一層",
+          "body": "SaaS 讓使用者直接使用應用；PaaS 提供受管 application runtime；IaaS 提供較底層的 compute、storage 與 networking。題目應看責任邊界，不只看品牌。",
+          "bullets": [
+            "SaaS 使用者主要管理資料與使用設定",
+            "PaaS 開發者管理程式與資料",
+            "IaaS 使用者仍需管理 OS 與應用",
+            "On-demand 描述需要時透過網路取得服務"
+          ]
+        },
+        {
+          "title": "部署模型看資源由誰組合",
+          "body": "Public/private 描述雲環境的提供與使用方式；hybrid cloud 把私有環境與公有雲整合。使用兩個供應商不必然就是 hybrid，關鍵是私有與公有資源是否共同支援 workload。",
+          "bullets": [
+            "公司機房加 AWS 是典型 hybrid",
+            "Hybrid 需要 identity、network 與 data policy 協調",
+            "Cloud model 與 service model 是不同維度"
+          ]
+        },
+        {
+          "title": "Edge 把時間敏感處理往前移",
+          "body": "Edge computing 在靠近 sensor、device 或使用者的位置先處理資料，可降低往返 latency 與核心網路流量；大型訓練、長期儲存與跨站彙整仍常留在 cloud。",
+          "bullets": [
+            "Edge 適合即時反應與資料前處理",
+            "Cloud 適合集中治理與彈性規模",
+            "Edge 不等於單純增加 storage"
+          ]
+        },
+        {
+          "title": "效能與可靠度不能只看頻寬",
+          "body": "Bandwidth 是傳輸容量，latency 是往返等待，jitter 是延遲變動，availability 是可使用時間比例。Streaming 用 buffer 邊收邊播；VPN 則把遠端裝置安全連到私有網路語境。",
+          "bullets": [
+            "即時語音對 latency/jitter 特別敏感",
+            "高 bandwidth 不代表低 latency",
+            "Buffer 可吸收 jitter 但增加播放延遲",
+            "Digital divide 描述 ICT 存取與使用成果的不平等"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "團隊使用 Google App Engine 執行自行開發的報名程式，另保留校內資料庫。如何分類？",
+          "steps": [
+            "App Engine 提供受管 application platform，屬 PaaS。",
+            "校內資源與公有雲共同服務，部署面屬 hybrid cloud。"
+          ],
+          "answer": "Service model 是 PaaS；deployment model 是 hybrid cloud。兩者可同時成立。"
+        },
+        {
+          "prompt": "直播有足夠平均 bandwidth，卻因延遲忽高忽低而斷續。先處理什麼？",
+          "steps": [
+            "確認症狀是 packet arrival timing 變動。",
+            "這對應 jitter，不是 storage 容量。",
+            "以 jitter buffer、路徑/QoS 調整降低影響。"
+          ],
+          "answer": "先處理 jitter；buffer 可換取平順播放，但會增加 latency。"
+        }
+      ],
+      "commonPitfalls": [
+        "把 SaaS、PaaS 與 public/hybrid cloud 混成同一分類軸",
+        "以為 edge 完全取代 cloud",
+        "把 bandwidth 與 latency 當同義詞",
+        "以為 VPN 自動提升速度或可用性",
+        "把 streaming 誤解為必然 live broadcasting"
+      ],
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-network-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-109-5",
+        "q-pp-im-it-109-6",
+        "q-pp-im-it-110-28",
+        "q-pp-im-it-115-24",
+        "q-pp-im-it-106-9",
+        "q-pp-im-it-106-10",
+        "q-pp-im-it-107-13",
+        "q-pp-im-it-110-8"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "lesson-im-it-security-risk-access-governance-01",
+      "subtopicId": "im-it-security-principles-risk",
+      "coveredSubtopicIds": [
+        "im-it-security-principles-risk",
+        "im-it-security-auth-access",
+        "im-it-security-governance-privacy"
+      ],
+      "title": "從 CIA 到 Zero Trust：把資安目標、身分與治理串起來",
+      "summary": "先用 CIA 與 risk 語言定義要保護什麼，再分辨 identification、authentication、authorization、accountability，最後以 RBAC、SSO、Zero Trust、ISMS、ISO 27001 與 privacy 建立持續治理。",
+      "estimatedMinutes": 40,
+      "minimumPastPaperRefs": 5,
+      "learningObjectives": [
+        "正確展開 CIA 並連結控制措施",
+        "區分 threat、vulnerability 與 risk",
+        "區分 IAAA、RBAC、SSO 與 Zero Trust",
+        "說明 ISMS、ISO 27001、privacy 與 audit 的角色"
+      ],
+      "learningScenario": {
+        "title": "新進員工取得研究資料權限",
+        "hook": "研究中心讓新進員工使用資料平台：櫃台先確認他是誰，系統驗證憑證，再依角色開放資料；所有操作都留下紀錄，管理者定期檢查風險與法規。",
+        "predict": "員工已成功登入，是否就代表他可以下載所有研究資料？",
+        "mapping": [
+          {
+            "everyday": "報上姓名或帳號",
+            "technical": "Identification"
+          },
+          {
+            "everyday": "出示可驗證的卡片、密碼或第二因素",
+            "technical": "Authentication"
+          },
+          {
+            "everyday": "依研究角色決定可看的資料與可做的操作",
+            "technical": "Authorization／RBAC"
+          },
+          {
+            "everyday": "操作有日誌，之後能追查責任",
+            "technical": "Accountability／audit"
+          },
+          {
+            "everyday": "即使人在內網也逐次評估身分、裝置與情境",
+            "technical": "Zero Trust：never trust, always verify"
+          }
+        ],
+        "boundary": "登入成功只證明身分驗證通過，不等於擁有所有權限。Zero Trust 不是只用 biometric，也不是把網路完全斷開；ISO 27001/ISMS 提供管理系統要求，不能取代每項技術控制或保證零事故。",
+        "examCues": [
+          "CIA 的 A 是 Availability，不是 Accessibility。",
+          "問可做哪些操作：authorization；問能否追責：accountability。",
+          "Ticket-based mutual authentication：Kerberos；一次登入多服務：SSO。",
+          "看到政策、程序、風險管理框架：ISMS／ISO 27001；看到 EU 個資規則：GDPR。"
+        ]
+      },
+      "sections": [
+        {
+          "title": "CIA 是安全目標，不是產品清單",
+          "body": "Confidentiality 限制未授權揭露，Integrity 防止未授權修改，Availability 確保授權者需要時可使用。控制措施通常同時影響多個目標，應依 threat、vulnerability、likelihood 與 impact 評估 risk。",
+          "bullets": [
+            "Encryption 常支援 confidentiality",
+            "Hash/signature 可支援 integrity",
+            "Redundancy 與 recovery 支援 availability",
+            "Defense in depth 用多層控制降低單點失敗"
+          ]
+        },
+        {
+          "title": "IAAA 依序回答四個問題",
+          "body": "Identification 宣稱身分，authentication 驗證宣稱，authorization 決定權限，accountability 透過 logging/audit 讓行為可歸責。考題常故意把 authorization 寫成 accountability。",
+          "bullets": [
+            "密碼、token、生物特徵是 authentication factors",
+            "RBAC 把 permissions 配給 roles 再配給 users",
+            "Least privilege 只給完成工作所需最低權限"
+          ]
+        },
+        {
+          "title": "SSO、Kerberos 與密碼攻擊",
+          "body": "SSO 降低重複登入與 password fatigue，但 identity provider 成為重要依賴。Kerberos 以 tickets 支援不安全網路上的 mutual authentication。Dictionary attack 嘗試字典詞，不等同枚舉所有字元組合。",
+          "bullets": [
+            "SSO 不代表每個服務都用不同 identity",
+            "MFA 結合不同 factor categories",
+            "Rate limiting 與強密碼可降低猜測攻擊風險"
+          ]
+        },
+        {
+          "title": "治理把控制變成持續循環",
+          "body": "ISMS 將政策、程序、風險處理、監控與改善制度化；考題將 ISO/IEC 27001 連結到 ISMS requirements。NIST Privacy Framework 則把 privacy 視為組織風險管理問題，不是只靠 encryption 就能解決。",
+          "bullets": [
+            "Compliance 不等於 risk 歸零",
+            "Privacy risk 需要識別、評估、溝通與管理",
+            "GDPR 是 EU 個資保護規則；本課只保留這個考題識別層次",
+            "治理需要定期 review，不是一次性文件"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "使用者輸入帳號、以 MFA 登入、系統依 analyst role 開放報表並記錄下載。逐項分類。",
+          "steps": [
+            "帳號是 identification。",
+            "MFA 是 authentication。",
+            "Role permission 是 authorization/RBAC。",
+            "下載日誌支援 accountability。"
+          ],
+          "answer": "依序為 identification、authentication、authorization、accountability。"
+        },
+        {
+          "prompt": "勒索軟體可能使服務停擺；系統未離線備份。請以 risk 語言描述。",
+          "steps": [
+            "勒索軟體行為是 threat。",
+            "缺乏隔離備份是 vulnerability。",
+            "停擺影響 availability。",
+            "Likelihood 與 impact 組成需處理的 risk。"
+          ],
+          "answer": "以備份、分段、最小權限與演練形成 defense in depth，而非只裝單一工具。"
+        }
+      ],
+      "commonPitfalls": [
+        "把 CIA 的 A 寫成 accessibility",
+        "把 authentication 與 authorization 對調",
+        "把 accountability 當權限決策",
+        "以為 SSO 天然比多帳號安全而忽略集中風險",
+        "把合規證書當成不會發生事件的保證"
+      ],
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-mit-network-computer-security",
+        "src-nist-privacy-framework"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-107-20",
+        "q-pp-im-it-109-17",
+        "q-pp-im-it-110-21",
+        "q-pp-im-it-111-10",
+        "q-pp-im-it-113-14",
+        "q-pp-im-it-107-9",
+        "q-pp-im-it-107-12",
+        "q-pp-im-it-110-20",
+        "q-pp-im-it-113-15",
+        "q-pp-im-it-115-28",
+        "q-pp-im-it-107-23",
+        "q-pp-im-it-108-9",
+        "q-pp-im-it-109-16"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "lesson-im-it-security-attacks-network-defense-01",
+      "subtopicId": "im-it-security-network-defense",
+      "coveredSubtopicIds": [
+        "im-it-security-network-defense",
+        "im-it-security-application-attacks",
+        "im-it-security-malware-social"
+      ],
+      "title": "從入口到人心：網路、應用與社交攻擊的分層防禦",
+      "summary": "以攻擊發生的位置分類 MITM、DDoS、buffer overflow、SQL injection、malware、phishing 與 social engineering，再把 HTTPS/SSH、firewall、secure coding、patching 與使用者驗證放回適當防線。",
+      "estimatedMinutes": 38,
+      "minimumPastPaperRefs": 4,
+      "learningObjectives": [
+        "依攻擊面分類網路、應用、惡意程式與社交工程",
+        "說明 HTTPS、SSH、firewall 的保護邊界",
+        "區分 MITM、DDoS、buffer overflow 與 injection",
+        "用 defense in depth 配置預防、偵測與復原控制"
+      ],
+      "learningScenario": {
+        "title": "售票網站的攻防演練",
+        "hook": "售票網站同時遇到大量惡意流量、偽造客服信件、未驗證輸入與公共 Wi-Fi 攔截。只買一台防火牆無法處理所有問題，團隊得先辨識攻擊層次。",
+        "predict": "若流量已通過 HTTPS，伺服器把使用者輸入直接拼進 SQL，是否就安全？",
+        "mapping": [
+          {
+            "everyday": "入口警衛按規則放行或阻擋車輛",
+            "technical": "Firewall traffic filtering"
+          },
+          {
+            "everyday": "封條與身分證明保護運送中的包裹",
+            "technical": "TLS/HTTPS 的 confidentiality、integrity、server authentication"
+          },
+          {
+            "everyday": "成千上萬假客戶塞滿入口",
+            "technical": "DDoS 消耗 availability"
+          },
+          {
+            "everyday": "客服話術誘導員工交出通行碼",
+            "technical": "Social engineering／phishing"
+          },
+          {
+            "everyday": "表單文字被當成資料庫命令執行",
+            "technical": "Injection 與 input boundary 失守"
+          }
+        ],
+        "boundary": "防火牆看見的主要是流量與規則，不會自動修復應用程式記憶體錯誤、辨認所有釣魚話術或保證 encrypted endpoint 本身可信。HTTPS 保護傳輸，不等於網站程式、使用者裝置與資料庫都安全。",
+        "examCues": [
+          "攔截並冒充雙方：MITM。",
+          "大量來源耗盡服務：DDoS。",
+          "依預定規則控制進出流量：firewall；安全取代 Telnet/rsh：SSH。",
+          "操縱人洩漏資訊：social engineering；惡意 query：SQL injection；覆寫相鄰記憶體：buffer overflow。"
+        ]
+      },
+      "sections": [
+        {
+          "title": "先按攻擊面分類",
+          "body": "Network attacks 操弄路徑或流量，application attacks 利用程式與輸入處理缺陷，malware 在系統執行惡意功能，social engineering 則利用人的信任與決策。分類能避免用錯控制。",
+          "bullets": [
+            "MITM 攔截或冒充通信端點",
+            "DDoS 主要攻擊 availability",
+            "Phishing 是 social engineering 的常見載體",
+            "Zero-day 描述尚無修補或未知漏洞的利用窗口"
+          ]
+        },
+        {
+          "title": "安全通道各有用途",
+          "body": "HTTPS 通常以 TLS 保護 web 通信的 confidentiality、integrity 與 server authentication；SSH 為遠端 shell 提供安全通道。兩者都不能替代 endpoint hardening。",
+          "bullets": [
+            "TLS 不以提高 transfer speed 為主要目的",
+            "SSH 設計用來取代 Telnet/rlogin/rsh",
+            "Certificate 驗證失敗時不能忽略警告"
+          ]
+        },
+        {
+          "title": "邊界防禦與可用性",
+          "body": "Firewall 依規則監控與控制流量，但 DDoS 可能在到達單一防線前就耗盡 upstream capacity。Rate limiting、CDN/scrubbing、冗餘與事件應變需共同工作。",
+          "bullets": [
+            "Firewall 不是 antivirus",
+            "DDoS 常利用大量分散節點",
+            "Availability 控制需考慮容量與復原"
+          ]
+        },
+        {
+          "title": "Secure coding 與人的防線",
+          "body": "Buffer overflow 來自越界記憶體寫入；injection 來自把不可信輸入當指令。Bounds checking、memory-safe design、parameterized queries 與 least privilege 降低技術風險；通報流程與二次確認降低社交工程成功率。",
+          "bullets": [
+            "Parameterized query 分離 code 與 data",
+            "Patch management 縮短已知漏洞窗口",
+            "MFA 能降低憑證外洩影響但不消除 phishing",
+            "備份與復原控制 ransomware impact"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "攻擊者在咖啡店 Wi-Fi 攔截並改寫使用者與網站的交換。這是什麼？應先加什麼控制？",
+          "steps": [
+            "攔截且可能 impersonate 是 MITM。",
+            "正確驗證 certificate 的 HTTPS/TLS 保護通道。",
+            "仍需確保 endpoint 未被入侵。"
+          ],
+          "answer": "MITM；使用並正確驗證 TLS/HTTPS，且不能忽略憑證錯誤。"
+        },
+        {
+          "prompt": "登入表單把輸入直接拼進 SQL，同時收到偽造主管信要求提供 MFA code。兩者如何分類？",
+          "steps": [
+            "前者把 input 當 query code，是 SQL injection。",
+            "後者操縱人交付資訊，是 social engineering/phishing。",
+            "分別用 parameterized query 與 out-of-band verification 等控制。"
+          ],
+          "answer": "這是 application attack 與 social attack，需不同防線。"
+        }
+      ],
+      "commonPitfalls": [
+        "把 HTTPS 當成整個網站安全認證",
+        "把 firewall 當萬用惡意程式與應用漏洞修補器",
+        "把 MITM、DDoS 與 phishing 混為一談",
+        "以為 encryption 的主要目的是提高速度",
+        "只做 awareness training 而不改善技術與通報流程"
+      ],
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-mit-network-computer-security"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-107-10",
+        "q-pp-im-it-107-22",
+        "q-pp-im-it-108-14",
+        "q-pp-im-it-108-19",
+        "q-pp-im-it-111-11",
+        "q-pp-im-it-112-18",
+        "q-pp-im-it-108-18"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "lesson-im-it-security-blockchain-01",
+      "subtopicId": "im-it-security-blockchain",
+      "coveredSubtopicIds": [
+        "im-it-security-blockchain"
+      ],
+      "title": "Blockchain 與 Mining：可驗證帳本不是中央資料庫",
+      "summary": "以 NISTIR 8202 的 tamper-evident distributed ledger 定義，連結 transaction、block、hash linkage 與 consensus。考題把 mining 簡化為交易驗證，本課再區分 validating nodes 與 miners 在 Bitcoin-like proof-of-work 流程的角色。",
+      "estimatedMinutes": 28,
+      "minimumPastPaperRefs": 4,
+      "evidenceNote": "四題 eligible refs 直接支撐 mining 考題簡化與無中央權威的可驗證帳本；NISTIR 8202 提供 hash linkage、distributed consensus 與 proof-of-work 的技術邊界。",
+      "learningObjectives": [
+        "解釋鏈式雜湊如何使帳本篡改可被發現",
+        "說明 distributed ledger 與 consensus 的角色",
+        "區分 nodes 驗證與 miners 建立 proof-of-work candidate blocks",
+        "將考題的 validate-transactions 簡化放回正確協定邊界"
+      ],
+      "learningScenario": {
+        "title": "沒有總會計的共同帳本",
+        "hook": "多個社團共同記帳，沒有單一總會計。每頁帳本都附上前一頁的摘要，參與者依共同協定驗證內容；在 Bitcoin-like 系統中，節點不是按人頭多數決，而是驗證規則並依累積 proof of work 選擇 chain。",
+        "predict": "考題說 mining 用來驗證交易；在實際 Bitcoin-like 流程中，是否只有 miners 會驗證？miners 還多做了什麼？",
+        "mapping": [
+          {
+            "everyday": "每頁列出一批已檢查交易",
+            "technical": "Block containing validated transactions"
+          },
+          {
+            "everyday": "新頁附前頁不可任意替換的摘要",
+            "technical": "Hash linkage"
+          },
+          {
+            "everyday": "多人各持帳本副本",
+            "technical": "Distributed ledger"
+          },
+          {
+            "everyday": "每份帳本都依協定規則驗證，不以人頭多數決",
+            "technical": "Validating nodes enforce consensus rules"
+          },
+          {
+            "everyday": "提案者組成新頁並完成成本高的工作證明",
+            "technical": "Miners construct candidate blocks and perform proof of work"
+          }
+        ],
+        "boundary": "紙本帳本沒有呈現 fork、network delay、proof-of-work difficulty、key custody 或 smart contract。Bitcoin 不是一人一票；validating nodes 檢查交易與 blocks，miners 選擇交易、建立 candidate block 並做 proof of work。Tamper-evident 不表示物理上絕對不可改，也不表示所有 blockchain 都採 mining。",
+        "examCues": [
+          "考題問 mining 主要目的時選 validate transactions；技術上還要分清 nodes 驗證與 miners 建立 block/proof of work。",
+          "問無中央權威的可驗證交易紀錄：blockchain。",
+          "新幣可能是 incentive，不要倒果為因當成唯一目的。",
+          "看到 concurrency control、atomicity：不要誤套資料庫交易術語。"
+        ]
+      },
+      "sections": [
+        {
+          "title": "從 transaction 到 block",
+          "body": "使用者以 digital signature 等機制授權 transaction；validating nodes 檢查格式、簽章與可花費狀態。Miners 從候選交易建立 candidate block，但其他 nodes 仍會獨立驗證。",
+          "bullets": [
+            "Transaction validation 不等於 encryption",
+            "Signature 支援來源與完整性驗證",
+            "Block 是批次紀錄容器"
+          ]
+        },
+        {
+          "title": "Hash linkage 讓歷史可驗證",
+          "body": "Block header 連結前一 block 的 hash；改動舊內容會改變 hash 並破壞後續連結。分散節點可重算並檢查一致性。",
+          "bullets": [
+            "Hash 是摘要，不是可逆加密",
+            "Tamper-evident 不等於物理不可修改",
+            "Security 仍依共識與參與者假設"
+          ]
+        },
+        {
+          "title": "Consensus 取代單一管理者",
+          "body": "Distributed ledger 的節點依協定決定有效 transaction、block 與 chain。Bitcoin 用 proof of work 與累積工作量處理競爭 chain，不是以參與者人數投票。",
+          "bullets": [
+            "P2P 連線本身不等於 consensus",
+            "一般 distributed database 不必然提供相同 trust model",
+            "Consensus 處理共同狀態的接受規則"
+          ]
+        },
+        {
+          "title": "Mining 的目的與 incentive",
+          "body": "考題把 mining 的核心答案簡化為 validate transactions。協定層面上，所有 validating nodes 都可檢查交易與 blocks；miners 還會選擇候選交易、建立 candidate block 並執行 proof of work。Block reward/fees 是 incentive，不是唯一協定目的。",
+          "bullets": [
+            "Validate transactions 是反覆出現的核心答案",
+            "Minting reward 與 protocol purpose 要分開",
+            "Mining 不負責把 transaction 加密"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "有人把 mining 說成「壓縮並加密交易，再由中央管理員核准」。逐項判斷。",
+          "steps": [
+            "Mining 不是 compression 或 transaction encryption。",
+            "Validating nodes 依協定獨立檢查 transactions/blocks。",
+            "Miners 選擇交易、建立 candidate block 並做 proof of work。",
+            "Bitcoin 沒有中央發幣管理員。"
+          ],
+          "answer": "考題簡化為 validate transactions；完整說法必須另區分 node validation 與 miner block production/proof of work。"
+        },
+        {
+          "prompt": "一般 replicated database 與 blockchain 都有多份資料，為何不能視為同義詞？",
+          "steps": [
+            "Replication 描述副本與可用性。",
+            "Blockchain 還加入鏈式驗證與特定 trust/consensus model。",
+            "兩者的權限、效能與一致性目標可能不同。"
+          ],
+          "answer": "多副本只是共同特徵；信任模型、驗證結構與共識才是區分關鍵。"
+        }
+      ],
+      "commonPitfalls": [
+        "把 mining 的主要目的只寫成創造新幣",
+        "把 hash 當 encryption",
+        "認為 blockchain 記錄必然是真實世界真相",
+        "認為所有 blockchain 都使用 proof of work",
+        "把 distributed database、P2P 與 blockchain 視為同義詞"
+      ],
+      "sourceRefs": [
+        "src-nist-ir-8202-blockchain"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-107-18",
+        "q-pp-im-it-110-26",
+        "q-pp-im-it-112-24",
+        "q-pp-im-it-115-25"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "lesson-im-it-ai-neural-sequence-transformer-01",
+      "subtopicId": "im-it-ai-neural-networks",
+      "coveredSubtopicIds": [
+        "im-it-ai-neural-networks",
+        "im-it-ai-cnn-rnn-sequence",
+        "im-it-ai-transformers-attention"
+      ],
+      "title": "從神經網路到 Transformer：層級、序列與 Attention",
+      "summary": "以 layered representation 與 training 為底座，比較 CNN 的局部共享特性、RNN/LSTM 的序列狀態，再進入 Transformer self-attention 的 token 關聯。",
+      "estimatedMinutes": 36,
+      "minimumPastPaperRefs": 3,
+      "evidenceNote": "im-it-ai-cnn-rnn-sequence 目前沒有 direct primary past-paper refs，屬 foundational coverage；對應 cards 不掛考古 refs。",
+      "learningObjectives": [
+        "說明 deep neural network 的 layers 與 representations",
+        "區分 backpropagation 計算 gradients 與 optimizer 更新參數",
+        "比較 CNN 與 RNN/LSTM 的典型 inductive biases",
+        "解釋 self-attention 如何聚合 token 間資訊"
+      ],
+      "learningScenario": {
+        "title": "校園資料處理小組",
+        "hook": "學校要處理照片與長篇文字：影像小組反覆搜尋局部圖樣，紀錄員依序讀取並保留狀態，另一組直接比較全段文字中詞彙的關聯。",
+        "predict": "若任務需要直接建模長文中相隔很遠的 tokens，哪種 mechanism 最直接建立彼此關聯？",
+        "mapping": [
+          {
+            "everyday": "多層工作站逐步提取較抽象特徵",
+            "technical": "Deep neural network layered representations"
+          },
+          {
+            "everyday": "錯誤訊號從產出端往前計算每個參數的影響",
+            "technical": "Backpropagation computes gradients"
+          },
+          {
+            "everyday": "影像小組用共用檢視器掃描局部圖樣",
+            "technical": "CNN shared filters and local patterns"
+          },
+          {
+            "everyday": "紀錄員依序讀取並攜帶先前狀態",
+            "technical": "RNN/LSTM hidden state"
+          },
+          {
+            "everyday": "讀者比較每個詞與整段其他詞的關聯",
+            "technical": "Transformer self-attention"
+          }
+        ],
+        "boundary": "這些是常見 inductive biases，不是用途的絕對分類；CNN、RNN 與 Transformer 都能延伸到不同 modalities。Attention weights 不等於因果或完整可解釋性，Transformer 也不只有 attention。",
+        "examCues": [
+          "Deep 通常指多個 representation layers，不是資料量或 fan-in/out。",
+          "Backpropagation 計算 gradients，optimizer 依 gradients 更新 parameters。",
+          "局部 spatial patterns 常對應 CNN；依序更新狀態常對應 RNN/LSTM。",
+          "Self-attention 依內容加權聚合 tokens，可直接連結遠距關係。"
+        ]
+      },
+      "sections": [
+        {
+          "title": "Deep learning 的 deep 指層級表示",
+          "body": "Neural network 由參數化 units 與 layers 組成；training 依 loss 調整 weights。Deep 通常指多個 representation layers，而不是資料量、標籤數或單一 node 的 fan-in/fan-out。",
+          "bullets": [
+            "Forward pass 產生 prediction",
+            "Backpropagation 計算 gradient",
+            "Optimization 更新 parameters",
+            "AlphaGo 的關鍵技術包含 deep learning 與 search"
+          ]
+        },
+        {
+          "title": "CNN 與 RNN 處理不同結構偏好",
+          "body": "CNN 以共享 filters 擷取局部 pattern，典型用於 images；RNN 逐步更新 hidden state 來處理 sequence，LSTM/GRU 以 gating 改善長期依賴。這是常見 inductive bias，不是用途硬限制。",
+          "bullets": [
+            "CNN parameter sharing 支援位置重複 pattern",
+            "RNN state 依 sequence order 更新",
+            "Embedding 把離散 token 映成向量",
+            "本節目前沒有 direct primary refs"
+          ]
+        },
+        {
+          "title": "Transformer 用 self-attention 建立關聯",
+          "body": "Self-attention 讓每個 token 依內容對其他 tokens 分配權重，能直接建模遠距關係。Transformer 還包含 position information、feed-forward layers、residual connections 與 normalization，不能把整個架構縮成 attention 一項。",
+          "bullets": [
+            "Attention 比較 query、key 並聚合 value",
+            "距離不再依 recurrent steps 傳遞",
+            "Attention weight 不等於因果解釋",
+            "Transformer 還有 position information、feed-forward layers、residual connections 與 normalization"
+          ]
+        },
+        {
+          "title": "架構是 inductive bias，不是用途硬分類",
+          "body": "CNN 對局部共享 pattern、RNN 對序列狀態、self-attention 對 token 關聯各有典型偏好，但現代系統可混合架構並應依資料、任務、成本與評估結果選擇。",
+          "bullets": [
+            "CNN 也能處理 sequence",
+            "Transformer 也能處理 image/audio modalities",
+            "架構名稱不能代替實驗評估"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "把三項任務配對：辨識照片局部紋理、逐步處理感測序列、比較長文相隔很遠的詞。",
+          "steps": [
+            "局部 spatial patterns 對應 CNN。",
+            "依序更新狀態對應 RNN/LSTM。",
+            "直接衡量 token 關聯對應 Transformer self-attention。"
+          ],
+          "answer": "依序是 CNN、RNN/LSTM、Transformer；這是典型偏好而非絕對限制。"
+        },
+        {
+          "prompt": "一個 neural network 已用 backpropagation 算出每個 parameter 的 gradient。下一步誰負責實際改變參數？",
+          "steps": [
+            "Backpropagation 負責對 loss 求 gradient。",
+            "Optimizer 依學習率與更新規則使用 gradients。",
+            "新 parameters 再用於下一次 forward pass。"
+          ],
+          "answer": "Optimizer 負責依 gradients 更新 parameters；backpropagation 本身負責計算 gradients。"
+        }
+      ],
+      "commonPitfalls": [
+        "把 deep 誤解成資料多或 fan-in 大",
+        "把 backpropagation 與 optimizer 當同一步",
+        "把 CNN、RNN、Transformer 當成互斥用途分類",
+        "認為 self-attention 就是整個 Transformer",
+        "把 attention weights 當成完整因果解釋"
+      ],
+      "sourceRefs": [
+        "src-ntu-machine-learning-2021",
+        "src-stanford-cs224n"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-106-7",
+        "q-pp-im-it-108-15",
+        "q-pp-im-it-115-27"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "lesson-im-it-ai-generative-governance-01",
+      "subtopicId": "im-it-ai-generative-llm",
+      "coveredSubtopicIds": [
+        "im-it-ai-generative-llm",
+        "im-it-ai-ethics-governance"
+      ],
+      "title": "生成式 AI 與治理：從 GPT/RAG 題型到風險責任",
+      "summary": "先掌握考題直接要求的 GPT 展開與 RAG 定義，再以 NIST AI RMF 與 GenAI Profile 區分 confabulation、bias、privacy 與 accountability，不把檢索或流暢文字當成正確保證。",
+      "estimatedMinutes": 30,
+      "minimumPastPaperRefs": 2,
+      "evidenceNote": "im-it-ai-ethics-governance 沒有 direct primary past-paper refs，屬 foundational coverage；對應 cards 不掛考古 refs。RAG 只保留 q-pp-im-it-115-30 直接支持的「生成前查詢外部權威知識庫」層次。",
+      "learningObjectives": [
+        "正確展開 GPT",
+        "說明考題中 RAG 在生成前加入外部知識檢索",
+        "區分 confabulation 與系統性 bias",
+        "以 NIST AI RMF 理解風險治理與 accountability"
+      ],
+      "learningScenario": {
+        "title": "校園知識助手上線審查",
+        "hook": "學校的生成式助手會回答校規。團隊讓它回答前先查詢校規庫，但仍要檢查檢索到的版本、回答是否有根據，以及誰對高風險決定負責。",
+        "predict": "助手接上外部知識庫後，是否就能保證每次檢索、生成與決定都正確而公平？",
+        "mapping": [
+          {
+            "everyday": "助手在幾個字後根據 context 繼續寫下去",
+            "technical": "Generative language model produces likely continuations"
+          },
+          {
+            "everyday": "回答前先從校規庫找相關段落",
+            "technical": "RAG adds external retrieval before generation"
+          },
+          {
+            "everyday": "找到過期文件或根本沒根據卻寫得流暢",
+            "technical": "Retrieval failure or confabulation risk"
+          },
+          {
+            "everyday": "對某些群體持續產生不利偏差",
+            "technical": "Systematic bias and fairness risk"
+          },
+          {
+            "everyday": "指定負責人、留下記錄並允許人工介入",
+            "technical": "Governance, accountability and human oversight"
+          }
+        ],
+        "boundary": "RAG 在本課只指生成前檢索外部知識並放入 context，不表示修改模型參數，也不保證 retrieval、generation、fairness 或 privacy。NIST AI RMF 是自願性風險管理框架，不是自動認證或零風險保證。",
+        "examCues": [
+          "GPT 是 Generative Pre-trained Transformer。",
+          "RAG 在生成前參考外部知識庫，不是 pruning、隨機回答或純 RLHF。",
+          "流暢不等於有根據；confabulation 與 poor retrieval 是不同故障點。",
+          "AI 治理要連結情境、風險、監測、責任與人工介入。"
+        ]
+      },
+      "sections": [
+        {
+          "title": "GPT 與生成",
+          "body": "GPT 展開為 Generative Pre-trained Transformer。Language model 根據 context 生成後續 tokens；可讀性不能單獨證明 factual correctness。",
+          "bullets": [
+            "Generative 指生成輸出",
+            "Pre-trained 指先在大量資料學習",
+            "Transformer 是所採架構家族"
+          ]
+        },
+        {
+          "title": "RAG 只加入檢索 context",
+          "body": "考題中 RAG 指在生成前查詢模型訓練資料外的權威知識庫，再把相關內容放入 context。",
+          "bullets": [
+            "RAG 不是模型 pruning",
+            "RAG 不是只靠 RLHF 訓練",
+            "過期或不相關檢索結果仍會導致錯誤"
+          ]
+        },
+        {
+          "title": "生成式 AI 風險需分類",
+          "body": "NIST GenAI Profile 將 generative AI 放進風險管理。本課區分無根據內容、系統性偏差、privacy 與 security 風險，不用單一 accuracy 代替全部評估。",
+          "bullets": [
+            "Confabulation 是缺乏根據或錯誤內容",
+            "Bias 可在資料、模型或部署情境產生",
+            "Privacy 與 security 需獨立風險處理"
+          ]
+        },
+        {
+          "title": "治理是持續的風險責任",
+          "body": "NIST AI RMF 用於將 trustworthiness 考量納入 AI 設計、開發、使用與評估。高風險用途要有明確 owner、monitoring、audit trail、escalation 與 human oversight。",
+          "bullets": [
+            "Framework 不是自動合規證書",
+            "風險要依情境與影響評估",
+            "人工介入要有可執行流程，不是口號"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "題目問「生成前參考外部權威知識庫」是什麼？",
+          "steps": [
+            "先找 external retrieval。",
+            "檢索結果被放入 generation context。",
+            "不是 pruning 或純 RLHF。"
+          ],
+          "answer": "這是 Retrieval-Augmented Generation (RAG)。"
+        },
+        {
+          "prompt": "助手檢索到過期校規並生成流暢回答。要如何分層處理？",
+          "steps": [
+            "先標記 retrieval freshness 故障。",
+            "再檢查 generation 是否有根據。",
+            "以版本篩選、引用、監測與高風險人工介入降低影響。"
+          ],
+          "answer": "RAG 不能保證正確；要同時管理 retrieval、generation 與部署責任。"
+        }
+      ],
+      "commonPitfalls": [
+        "把 GPT 展開成其他詞組",
+        "把 RAG 誤當成修改模型參數",
+        "認為外部知識庫保證回答正確",
+        "把 confabulation 與 bias 當同一風險",
+        "把 AI RMF 當成自動合規或零風險保證"
+      ],
+      "sourceRefs": [
+        "src-stanford-cs224n",
+        "src-nist-ai-rmf-1",
+        "src-nist-ai-600-1-genai-profile"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-113-23",
+        "q-pp-im-it-115-30"
       ],
       "reviewStatus": "reviewed"
     }

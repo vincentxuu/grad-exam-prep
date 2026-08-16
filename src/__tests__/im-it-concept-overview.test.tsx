@@ -1,5 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import { ImItConceptOverview } from '@/components/exam/im-it-concept-overview'
+import { LearningConceptOverview } from '@/components/exam/learning-concept-overview'
+import { imItLearningCatalog } from '@/lib/im-it-learning'
 
 describe('IM-IT concept overview', () => {
   test('shows reviewed taxonomy and qualified practice coverage', () => {
@@ -27,15 +29,25 @@ describe('IM-IT concept overview', () => {
     expect(screen.getAllByText(/^\d+ 個子主題 · \d+ 題$/)).toHaveLength(9)
   })
 
-  test('links the twenty reviewed learning modules', () => {
+  test('links all thirty-five reviewed learning modules', () => {
     render(<ImItConceptOverview />)
 
     expect(screen.getByText('已上線學習模組')).toBeInTheDocument()
-    expect(screen.getByText('28 / 61')).toBeInTheDocument()
+    expect(screen.getByText('61 / 61')).toBeInTheDocument()
     const lessonLinks = screen.getAllByRole('link', { name: '開始學習' })
-    expect(lessonLinks).toHaveLength(20)
+    expect(lessonLinks).toHaveLength(35)
     expect(lessonLinks.map((link) => link.getAttribute('href'))).toContain(
       '/im/subjects/im-it/lessons/lesson-im-it-network-models-encapsulation'
+    )
+  })
+
+  test('renders the same IM-IT catalog through the shared overview', () => {
+    render(<LearningConceptOverview catalog={imItLearningCatalog} />)
+
+    expect(screen.getByText('分類已審核')).toBeInTheDocument()
+    expect(screen.getByText('已上線學習模組')).toBeInTheDocument()
+    expect(screen.getAllByRole('link', { name: '開始學習' })).toHaveLength(
+      imItLearningCatalog.lessons.length
     )
   })
 })

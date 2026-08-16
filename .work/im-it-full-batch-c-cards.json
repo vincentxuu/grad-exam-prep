@@ -1,0 +1,456 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "im-it",
+  "batch": "full-batch-c",
+  "status": "reviewed-fragment",
+  "totalCards": 28,
+  "cards": [
+    {
+      "id": "card-im-it-network-distributed-cloud-01",
+      "lessonId": "lesson-im-it-network-cloud-performance-01",
+      "subtopicId": "im-it-network-distributed-cloud",
+      "front": "SaaS 與 PaaS 的責任邊界差在哪裡？",
+      "back": "SaaS 直接提供可用應用；PaaS 提供受管 runtime，讓開發者部署自己的應用。",
+      "explanation": "判斷時看使用者管理的是「使用設定」還是「application code」。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-network-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-109-5",
+        "q-pp-im-it-109-6"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-network-distributed-cloud-02",
+      "lessonId": "lesson-im-it-network-cloud-performance-01",
+      "subtopicId": "im-it-network-distributed-cloud",
+      "front": "Hybrid cloud 與 edge computing 分別描述什麼？",
+      "back": "Hybrid 描述私有與公有環境的組合；edge 描述把處理移近資料來源或使用者。",
+      "explanation": "一個是 deployment model，一個是 computation placement，兩者可以同時使用。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-network-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-110-28",
+        "q-pp-im-it-115-24"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-network-performance-reliability-01",
+      "lessonId": "lesson-im-it-network-cloud-performance-01",
+      "subtopicId": "im-it-network-performance-reliability",
+      "front": "Bandwidth、latency、jitter 各代表什麼？",
+      "back": "Bandwidth 是容量，latency 是等待時間，jitter 是 latency 的變動。",
+      "explanation": "這是 reviewed network sources 支撐的基礎卡；現有考題只直接問 streaming，因此不掛考古 ref。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-network-course"
+      ],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-network-performance-reliability-02",
+      "lessonId": "lesson-im-it-network-cloud-performance-01",
+      "subtopicId": "im-it-network-performance-reliability",
+      "front": "VPN 與 streaming 解決的是同一問題嗎？",
+      "back": "不是。VPN 建立安全的私有網路式連線；streaming 讓媒體在持續接收時即可播放。",
+      "explanation": "VPN 不保證速度，streaming 也不等於安全通道。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-network-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-107-13",
+        "q-pp-im-it-110-8",
+        "q-pp-im-it-106-9"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-security-principles-risk-01",
+      "lessonId": "lesson-im-it-security-risk-access-governance-01",
+      "subtopicId": "im-it-security-principles-risk",
+      "front": "CIA triad 的三個目標是什麼？",
+      "back": "Confidentiality、Integrity、Availability。",
+      "explanation": "Availability 不是 Accessibility；CIA 是安全目標，不是機構名稱。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-mit-network-computer-security",
+        "src-nist-privacy-framework"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-109-17",
+        "q-pp-im-it-111-10"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-security-principles-risk-02",
+      "lessonId": "lesson-im-it-security-risk-access-governance-01",
+      "subtopicId": "im-it-security-principles-risk",
+      "front": "Threat、vulnerability 與 risk 如何串起來？",
+      "back": "Threat 可能利用 vulnerability 造成 impact；risk 綜合發生可能性與影響。",
+      "explanation": "Defense in depth 用多層控制降低單點失敗。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-mit-network-computer-security",
+        "src-nist-privacy-framework"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-113-14"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-security-auth-access-01",
+      "lessonId": "lesson-im-it-security-risk-access-governance-01",
+      "subtopicId": "im-it-security-auth-access",
+      "front": "Identification、authentication、authorization、accountability 如何區分？",
+      "back": "依序是宣稱身分、驗證身分、決定權限、讓行為可追責。",
+      "explanation": "題目說「允許哪些操作」是在問 authorization，不是 accountability。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-mit-network-computer-security",
+        "src-nist-privacy-framework"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-113-15"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-security-auth-access-02",
+      "lessonId": "lesson-im-it-security-risk-access-governance-01",
+      "subtopicId": "im-it-security-auth-access",
+      "front": "Zero Trust 的核心原則是什麼？",
+      "back": "Never trust, always verify；不因使用者或裝置位於內網就預設信任。",
+      "explanation": "它需要持續驗證與 least privilege，不是只用 biometric 或只靠 firewall。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-mit-network-computer-security",
+        "src-nist-privacy-framework"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-115-28"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-security-governance-privacy-01",
+      "lessonId": "lesson-im-it-security-risk-access-governance-01",
+      "subtopicId": "im-it-security-governance-privacy",
+      "front": "ISO/IEC 27001 與 ISMS 的關係是什麼？",
+      "back": "ISO/IEC 27001 提供建立、運作、監控與改善 ISMS 的 requirements。",
+      "explanation": "通過管理系統驗證不等於風險歸零。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-mit-network-computer-security",
+        "src-nist-privacy-framework"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-107-23",
+        "q-pp-im-it-109-16"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-security-governance-privacy-02",
+      "lessonId": "lesson-im-it-security-risk-access-governance-01",
+      "subtopicId": "im-it-security-governance-privacy",
+      "front": "NIST Privacy Framework 為何不把 privacy 只當成 encryption 問題？",
+      "back": "它把 privacy 視為組織需要識別與管理的風險，需納入產品、服務與企業治理。",
+      "explanation": "Encryption 可是控制，但不能單獨回答所有 privacy risk。本卡依 NIST Privacy Framework，不掛只識別 GDPR 名稱的考題。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-mit-network-computer-security",
+        "src-nist-privacy-framework"
+      ],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-security-network-defense-01",
+      "lessonId": "lesson-im-it-security-attacks-network-defense-01",
+      "subtopicId": "im-it-security-network-defense",
+      "front": "Firewall 的核心功能是什麼？",
+      "back": "依預定 security rules 監控並控制 incoming/outgoing network traffic。",
+      "explanation": "它不是 vulnerability scanner、antivirus 或所有攻擊的萬用修補。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-mit-network-computer-security"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-108-19"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-security-network-defense-02",
+      "lessonId": "lesson-im-it-security-attacks-network-defense-01",
+      "subtopicId": "im-it-security-network-defense",
+      "front": "MITM 與 DDoS 的主要差異是什麼？",
+      "back": "MITM 攔截或冒充通信雙方；DDoS 以大量分散流量耗盡服務 availability。",
+      "explanation": "兩者分別偏向通信信任/完整性與資源可用性。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-mit-network-computer-security"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-107-22",
+        "q-pp-im-it-111-11"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-security-application-attacks-01",
+      "lessonId": "lesson-im-it-security-attacks-network-defense-01",
+      "subtopicId": "im-it-security-application-attacks",
+      "front": "Buffer overflow 與 SQL injection 的失守邊界有何不同？",
+      "back": "Buffer overflow 是越界記憶體寫入；SQL injection 是不可信輸入被當成 query code。",
+      "explanation": "分別以 bounds/memory safety 與 parameterized queries 防護。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-mit-network-computer-security"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-112-18"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-security-application-attacks-02",
+      "lessonId": "lesson-im-it-security-attacks-network-defense-01",
+      "subtopicId": "im-it-security-application-attacks",
+      "front": "為何 HTTPS 不能防止 SQL injection？",
+      "back": "HTTPS 保護傳輸通道；SQL injection 發生在 server 將輸入解讀成命令的 application boundary。",
+      "explanation": "安全通道不會自動修正 endpoint code。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-mit-network-computer-security"
+      ],
+    "pastPaperRefs": [
+      "q-pp-im-it-112-18"
+    ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-security-malware-social-01",
+      "lessonId": "lesson-im-it-security-attacks-network-defense-01",
+      "subtopicId": "im-it-security-malware-social",
+      "front": "Social engineering 的核心是什麼？",
+      "back": "利用心理與信任，誘導人執行動作或洩漏機密。",
+      "explanation": "Phishing 是常見載體，但 social engineering 範圍更廣。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-mit-network-computer-security"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-108-18"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-security-malware-social-02",
+      "lessonId": "lesson-im-it-security-attacks-network-defense-01",
+      "subtopicId": "im-it-security-malware-social",
+      "front": "降低 ransomware impact 為何不能只靠 awareness training？",
+      "back": "還需要 patching、least privilege、segmentation、離線備份、偵測與復原演練。",
+      "explanation": "這是 reviewed security source 支撐的 defense-in-depth 補充；現有考題只直接問 social engineering，因此不掛考古 ref。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-mit-network-computer-security"
+      ],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-security-blockchain-01",
+      "lessonId": "lesson-im-it-security-blockchain-01",
+      "subtopicId": "im-it-security-blockchain",
+      "front": "考題與完整協定對 mining 的描述如何並存？",
+      "back": "考題簡化答案是 validate transactions；Bitcoin-like 協定中，nodes 驗證 transactions/blocks，miners 還建立 candidate blocks 並做 proof of work。",
+      "explanation": "新幣或 fees 是 incentive，不是唯一協定目的。",
+      "sourceRefs": [
+        "src-nist-ir-8202-blockchain"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-110-26",
+        "q-pp-im-it-112-24"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-security-blockchain-02",
+      "lessonId": "lesson-im-it-security-blockchain-01",
+      "subtopicId": "im-it-security-blockchain",
+      "front": "Blockchain 為何能提供無中央權威的可驗證紀錄？",
+      "back": "節點共享 tamper-evident distributed ledger，依密碼學連結與 consensus rules 檢查歷史與新 blocks。",
+      "explanation": "Tamper-evident 不代表資料物理上絕對不能改，也不保證輸入事實真實。",
+      "sourceRefs": [
+        "src-nist-ir-8202-blockchain"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-107-18",
+        "q-pp-im-it-115-25"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-ai-neural-networks-01",
+      "lessonId": "lesson-im-it-ai-neural-sequence-transformer-01",
+      "subtopicId": "im-it-ai-neural-networks",
+      "front": "Deep learning 的「deep」通常指什麼？",
+      "back": "指多個 representation/processing layers，不是資料量、tag 數或單一 node fan-in/fan-out。",
+      "explanation": "Layered representations 逐步把輸入轉成較抽象特徵。",
+      "sourceRefs": [
+        "src-ntu-machine-learning-2021",
+        "src-stanford-cs224n"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-108-15"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-ai-neural-networks-02",
+      "lessonId": "lesson-im-it-ai-neural-sequence-transformer-01",
+      "subtopicId": "im-it-ai-neural-networks",
+      "front": "Training neural network 時 backpropagation 與 optimizer 各做什麼？",
+      "back": "Backpropagation 計算 loss 對參數的 gradients；optimizer 依 gradients 更新參數。",
+      "explanation": "這是 reviewed ML/NLP sources 支撐的基礎卡；AlphaGo 題只識別 deep learning，因此不掛該題。",
+      "sourceRefs": [
+        "src-ntu-machine-learning-2021",
+        "src-stanford-cs224n"
+      ],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-ai-cnn-rnn-sequence-01",
+      "lessonId": "lesson-im-it-ai-neural-sequence-transformer-01",
+      "subtopicId": "im-it-ai-cnn-rnn-sequence",
+      "front": "CNN 的典型 inductive bias 是什麼？",
+      "back": "以共享 filters 擷取局部 pattern，常適合 spatial data 如 images。",
+      "explanation": "這是基礎補充；目前沒有 direct primary past-paper ref。",
+      "sourceRefs": [
+        "src-ntu-machine-learning-2021",
+        "src-stanford-cs224n"
+      ],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-ai-cnn-rnn-sequence-02",
+      "lessonId": "lesson-im-it-ai-neural-sequence-transformer-01",
+      "subtopicId": "im-it-ai-cnn-rnn-sequence",
+      "front": "RNN/LSTM 如何處理 sequence？",
+      "back": "依順序更新 hidden state；LSTM 以 gates 控制資訊保留與遺忘。",
+      "explanation": "這是基礎補充；目前沒有 direct primary past-paper ref。",
+      "sourceRefs": [
+        "src-ntu-machine-learning-2021",
+        "src-stanford-cs224n"
+      ],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-ai-transformers-attention-01",
+      "lessonId": "lesson-im-it-ai-neural-sequence-transformer-01",
+      "subtopicId": "im-it-ai-transformers-attention",
+      "front": "Self-attention 的主要功能是什麼？",
+      "back": "讓每個 token 依內容衡量序列中其他 tokens 的重要性並聚合資訊。",
+      "explanation": "它能直接連結遠距 token，但 attention weight 不等於因果解釋。",
+      "sourceRefs": [
+        "src-ntu-machine-learning-2021",
+        "src-stanford-cs224n"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-115-27"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-ai-transformers-attention-02",
+      "lessonId": "lesson-im-it-ai-neural-sequence-transformer-01",
+      "subtopicId": "im-it-ai-transformers-attention",
+      "front": "Transformer 是否只有 self-attention？",
+      "back": "不是；還包含 position information、feed-forward layers、residual connections 與 normalization 等。",
+      "explanation": "這是 reviewed CS224N 支撐的架構卡；self-attention 題未直接檢驗其他元件，因此不掛該題。",
+      "sourceRefs": [
+        "src-ntu-machine-learning-2021",
+        "src-stanford-cs224n"
+      ],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-ai-generative-llm-01",
+      "lessonId": "lesson-im-it-ai-generative-governance-01",
+      "subtopicId": "im-it-ai-generative-llm",
+      "front": "GPT 的全名是什麼？",
+      "back": "Generative Pre-trained Transformer。",
+      "explanation": "選項若都不是此完整名稱，應選 none of the above。",
+      "sourceRefs": [
+        "src-stanford-cs224n",
+        "src-nist-ai-rmf-1",
+        "src-nist-ai-600-1-genai-profile"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-113-23"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-ai-generative-llm-02",
+      "lessonId": "lesson-im-it-ai-generative-governance-01",
+      "subtopicId": "im-it-ai-generative-llm",
+      "front": "RAG 在生成前增加什麼步驟？",
+      "back": "先從外部 knowledge base 檢索相關內容，再把結果放入 generation context。",
+      "explanation": "RAG 不等於修改模型參數，也不保證檢索或生成正確。",
+      "sourceRefs": [
+        "src-stanford-cs224n",
+        "src-nist-ai-rmf-1",
+        "src-nist-ai-600-1-genai-profile"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-115-30"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-ai-ethics-governance-01",
+      "lessonId": "lesson-im-it-ai-generative-governance-01",
+      "subtopicId": "im-it-ai-ethics-governance",
+      "front": "Confabulation 與 bias 有何差異？",
+      "back": "Confabulation 是產生缺乏依據或錯誤內容；bias 是系統性地對某些模式或群體產生偏差。",
+      "explanation": "兩者可同時發生，但需不同 evaluation；目前沒有 direct primary ref。",
+      "sourceRefs": [
+        "src-stanford-cs224n",
+        "src-nist-ai-rmf-1",
+        "src-nist-ai-600-1-genai-profile"
+      ],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-ai-ethics-governance-02",
+      "lessonId": "lesson-im-it-ai-generative-governance-01",
+      "subtopicId": "im-it-ai-ethics-governance",
+      "front": "高風險 AI 為何需要 accountability？",
+      "back": "必須明確指定資料、模型、部署與決策的責任人，保留 audit trail、escalation 與人工介入。",
+      "explanation": "NIST AI RMF 與 GenAI Profile 提供風險管理邊界；本 subtopic 目前沒有 direct primary ref。",
+      "sourceRefs": [
+        "src-stanford-cs224n",
+        "src-nist-ai-rmf-1",
+        "src-nist-ai-600-1-genai-profile"
+      ],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    }
+  ]
+}

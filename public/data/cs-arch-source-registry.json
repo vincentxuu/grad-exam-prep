@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "cs-arch",
+  "status": "draft",
+  "policy": "來源僅列為候選技術 authority；lesson 在來源與答案完成第二次覆核前不得標示 reviewed。",
+  "sources": [
+    {
+      "id": "src-cs-arch-patterson-hennessy-2e",
+      "title": "Computer Organization and Design RISC-V Edition, 2nd Edition",
+      "author": "David A. Patterson and John L. Hennessy",
+      "publisher": "Morgan Kaufmann",
+      "type": "book",
+      "url": "https://www.elsevier.com/books/computer-organization-and-design-risc-v-edition/patterson/978-0-12-820331-6",
+      "scope": [
+        "five-stage-pipeline",
+        "pipeline-performance",
+        "data-hazards",
+        "forwarding",
+        "stalls"
+      ],
+      "usage": "candidate-conceptual-authority-and-worked-example-check",
+      "status": "candidate"
+    },
+    {
+      "id": "src-cs-arch-riscv-unprivileged",
+      "title": "The RISC-V Instruction Set Manual, Volume I: Unprivileged ISA",
+      "author": "RISC-V International",
+      "publisher": "RISC-V International",
+      "type": "official-specification",
+      "url": "https://docs.riscv.org/reference/isa/unpriv/unpriv-index.html",
+      "scope": [
+        "risc-v-instruction-semantics",
+        "registers",
+        "loads-stores"
+      ],
+      "usage": "candidate-instruction-semantics-check",
+      "status": "candidate"
+    },
+    {
+      "id": "src-cs-arch-past-papers-110-114",
+      "title": "台大資工所計算機結構與作業系統 110–114 年考古題",
+      "author": "國立臺灣大學研究所招生考試",
+      "type": "local-primary-source-bundle",
+      "paths": [
+        "public/papers/pp-cs-arch-110.pdf",
+        "public/papers/pp-cs-arch-111.pdf",
+        "public/papers/pp-cs-arch-112.pdf",
+        "public/papers/pp-cs-arch-113.pdf",
+        "public/papers/pp-cs-arch-114.pdf"
+      ],
+      "scope": [
+        "past-paper-question-face"
+      ],
+      "usage": "primary-question-text-and-layout-check; no official answer key bundled",
+      "status": "verified-question-source"
+    }
+  ]
+}

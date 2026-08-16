@@ -13,15 +13,15 @@ describe('IM-IT reviewed learning content', () => {
   )
   const metadata = new Map(metadataRaw.questions.map((question) => [question.questionId, question]))
 
-  test('publishes twenty reviewed lessons and 122 curated cards', () => {
+  test('publishes full reviewed coverage with 35 lessons and 191 curated cards', () => {
     expect(lessonsRaw.status).toBe('reviewed')
     expect(cardsRaw.status).toBe('reviewed')
-    expect(lessonsRaw.counts).toEqual({ lessons: 20, coveredSubtopics: 28, coveredQuestions: 146 })
-    expect(lessons).toHaveLength(20)
-    expect(cardsRaw.totalCards).toBe(122)
-    expect(cards).toHaveLength(122)
-    expect(new Set(lessons.map((lesson) => lesson.id)).size).toBe(20)
-    expect(new Set(cards.map((card) => card.id)).size).toBe(122)
+    expect(lessonsRaw.counts).toEqual({ lessons: 35, coveredSubtopics: 61, coveredQuestions: 209 })
+    expect(lessons).toHaveLength(35)
+    expect(cardsRaw.totalCards).toBe(191)
+    expect(cards).toHaveLength(191)
+    expect(new Set(lessons.map((lesson) => lesson.id)).size).toBe(35)
+    expect(new Set(cards.map((card) => card.id)).size).toBe(191)
   })
 
   test('keeps lesson structure, sources, and question references verifiable', () => {
@@ -30,8 +30,10 @@ describe('IM-IT reviewed learning content', () => {
       expect(subtopicIds.has(lesson.subtopicId)).toBe(true)
       expect(lesson.coveredSubtopicIds).toContain(lesson.subtopicId)
       expect(lesson.coveredSubtopicIds.every((id) => subtopicIds.has(id))).toBe(true)
-      expect(lesson.minimumPastPaperRefs).toBeGreaterThanOrEqual(4)
+      expect(Number.isInteger(lesson.minimumPastPaperRefs)).toBe(true)
+      expect(lesson.minimumPastPaperRefs).toBeGreaterThanOrEqual(0)
       expect(new Set(lesson.pastPaperRefs).size).toBeGreaterThanOrEqual(lesson.minimumPastPaperRefs)
+      if (lesson.pastPaperRefs.length === 0) expect(lesson.evidenceNote).toBeTruthy()
       expect(lesson.learningObjectives.length).toBeGreaterThanOrEqual(3)
       expect(lesson.sections.length).toBeGreaterThanOrEqual(4)
       expect(lesson.workedExamples.length).toBeGreaterThanOrEqual(2)
@@ -46,6 +48,24 @@ describe('IM-IT reviewed learning content', () => {
         expect(question?.answerConfidence.level).not.toBe('disputed')
       }
     }
+  })
+
+  test('covers every canonical subtopic exactly once with at least two cards', () => {
+    const coverage = new Map<string, number>()
+    const cardCounts = new Map<string, number>()
+
+    for (const lesson of lessons) {
+      for (const subtopicId of lesson.coveredSubtopicIds) {
+        coverage.set(subtopicId, (coverage.get(subtopicId) ?? 0) + 1)
+      }
+    }
+    for (const card of cards) {
+      cardCounts.set(card.subtopicId, (cardCounts.get(card.subtopicId) ?? 0) + 1)
+    }
+
+    expect(coverage.size).toBe(61)
+    expect([...coverage.values()].every((count) => count === 1)).toBe(true)
+    expect([...subtopicIds].every((id) => (cardCounts.get(id) ?? 0) >= 2)).toBe(true)
   })
 
   test('gives every lesson a bounded everyday scenario and exam cues', () => {
@@ -89,7 +109,26 @@ describe('IM-IT reviewed learning content', () => {
       expect(
         card.pastPaperRefs.every((questionId) => lesson?.pastPaperRefs.includes(questionId))
       ).toBe(true)
+      expect(
+        card.pastPaperRefs.every(
+          (questionId) => metadata.get(questionId)?.primarySubtopicId === card.subtopicId
+        )
+      ).toBe(true)
     }
+  })
+
+  test('keeps known malformed or mismatched questions outside learning evidence', () => {
+    const blocked = new Set([
+      'q-pp-im-it-112-3',
+      'q-pp-im-it-112-4',
+      'q-pp-im-it-112-19',
+      'q-pp-im-it-112-26',
+    ])
+
+    expect(lessons.flatMap((lesson) => lesson.pastPaperRefs).every((id) => !blocked.has(id))).toBe(
+      true
+    )
+    expect(cards.flatMap((card) => card.pastPaperRefs).every((id) => !blocked.has(id))).toBe(true)
   })
 
   test('publishes the grouped data-structure and AI lesson boundaries explicitly', () => {

@@ -17,6 +17,16 @@ interface Props {
 export function LearningLessonContent({ catalog, lesson, cards, sources }: Props) {
   const copy = catalog.lessonCopy
   const practiceHref = catalog.getPracticeHref(lesson)
+  const hasDirectPastPaperEvidence = lesson.pastPaperRefs.length > 0
+  const practiceTitle = hasDirectPastPaperEvidence
+    ? copy.practiceTitle
+    : (copy.foundationPracticeTitle ?? copy.practiceTitle)
+  const practiceDescription = hasDirectPastPaperEvidence
+    ? copy.practiceDescription
+    : (copy.foundationPracticeDescription ?? copy.practiceDescription)
+  const practiceActionLabel = hasDirectPastPaperEvidence
+    ? copy.practiceActionLabel
+    : (copy.foundationPracticeActionLabel ?? copy.practiceActionLabel)
 
   return (
     <article className="space-y-8">
@@ -31,6 +41,11 @@ export function LearningLessonContent({ catalog, lesson, cards, sources }: Props
         <h1 className="text-balance text-2xl font-bold">{lesson.title}</h1>
         <p className="text-pretty text-muted-foreground">{lesson.summary}</p>
         <p className="text-pretty text-xs text-muted-foreground">{copy.contentNotice}</p>
+        {lesson.evidenceNote ? (
+          <p className="rounded-lg border border-amber-300 bg-amber-50 px-4 py-3 text-pretty text-sm leading-6 text-amber-950 dark:border-amber-700 dark:bg-amber-950/30 dark:text-amber-100">
+            <span className="font-semibold">考古題證據邊界：</span> {lesson.evidenceNote}
+          </p>
+        ) : null}
       </header>
 
       <section className="rounded-lg border bg-muted/30 p-4">
@@ -207,13 +222,13 @@ export function LearningLessonContent({ catalog, lesson, cards, sources }: Props
       </section>
 
       <section className="space-y-3 rounded-lg border p-4">
-        <h2 className="text-balance text-lg font-semibold">{copy.practiceTitle}</h2>
-        <p className="text-pretty text-sm text-muted-foreground">{copy.practiceDescription}</p>
+        <h2 className="text-balance text-lg font-semibold">{practiceTitle}</h2>
+        <p className="text-pretty text-sm text-muted-foreground">{practiceDescription}</p>
         <Link
           href={practiceHref}
           className="inline-flex min-h-10 items-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
         >
-          {copy.practiceActionLabel}
+          {practiceActionLabel}
         </Link>
       </section>
 

@@ -77,4 +77,33 @@ describe('IM-IT lesson content', () => {
       imItLearningCatalog.getPracticeHref(lesson)
     )
   })
+  test('labels foundation-only practice without claiming a direct past-paper match', () => {
+    const lesson = getImItLesson('lesson-im-it-network-models-encapsulation')
+    expect(lesson).toBeDefined()
+    if (!lesson) return
+
+    const foundationLesson = {
+      ...lesson,
+      minimumPastPaperRefs: 0,
+      pastPaperRefs: [],
+      evidenceNote: '現有考古題沒有可確認的直接題。',
+    }
+
+    render(
+      <LearningLessonContent
+        catalog={imItLearningCatalog}
+        lesson={foundationLesson}
+        cards={getImItCardsForLesson(lesson.id)}
+        sources={getImItSources(lesson.sourceRefs)}
+      />
+    )
+
+    expect(screen.getByText(/考古題證據邊界/)).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: '再到題庫找辨識線索' })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: '瀏覽資訊科技概論題庫' })).toHaveAttribute(
+      'href',
+      '/im/questions?subject=im-it'
+    )
+    expect(screen.queryByText('開始本課考古題練習')).not.toBeInTheDocument()
+  })
 })

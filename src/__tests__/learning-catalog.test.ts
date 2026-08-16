@@ -41,4 +41,14 @@ describe('learning catalog', () => {
     expect(practiceUrl.searchParams.get('total')).toBe(String(lesson.pastPaperRefs.length))
     expect(practiceUrl.searchParams.get('returnTo')).toBe(`/im/subjects/im-it/lessons/${lesson.id}`)
   })
+
+  test('routes a foundation-only lesson to the subject question browser', () => {
+    const lesson = getImItLesson('lesson-im-it-network-models-encapsulation')
+    expect(lesson).toBeDefined()
+    if (!lesson) return
+
+    expect(imItLearningCatalog.getPracticeHref({ ...lesson, pastPaperRefs: [] })).toBe(
+      '/im/questions?subject=im-it'
+    )
+  })
 })

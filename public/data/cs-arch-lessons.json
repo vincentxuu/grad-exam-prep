@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "cs-arch",
+  "status": "draft",
+  "contentPolicy": "原創教學草稿；考古題只作 evidence boundary，答案非官方且未核准自動判分。",
+  "counts": {
+    "lessons": 1,
+    "coveredSubtopics": 3,
+    "coveredQuestions": 6
+  },
+  "lessons": [
+    {
+      "id": "lesson-cs-arch-pipeline-foundations-01",
+      "topicId": "cs-arch-pipeline",
+      "subtopicId": "cs-arch-pipeline-foundations",
+      "coveredSubtopicIds": [
+        "cs-arch-pipeline-foundations",
+        "cs-arch-pipeline-performance",
+        "cs-arch-pipeline-hazards-forwarding"
+      ],
+      "title": "五階段 Pipeline：從餐廳出餐線到 hazard timing table",
+      "summary": "以 IF、ID、EX、MEM、WB 五階段建立 throughput 與 latency 的分界，再用 RAW dependency、stall、NOP 與 forwarding 追蹤實際週期。內容為候選教學草稿；考古題答案均非官方且未開放自動判分。",
+      "estimatedMinutes": 42,
+      "learningObjectives": [
+        "區分單一 instruction latency、clock cycle time 與 steady-state throughput。",
+        "從 stage latency 找出 pipeline clock 的 bottleneck，並計算 resource utilization。",
+        "畫出五級管線 timing table，辨認 RAW data hazard 與 load-use hazard。",
+        "依 datapath 假設判斷何時需要 stall、NOP 或 forwarding。"
+      ],
+      "analogy": {
+        "title": "餐廳出餐線",
+        "mapping": [
+          {
+            "concept": "IF/ID/EX/MEM/WB",
+            "analogy": "接單、讀單、烹調、取料、交付五個工作站"
+          },
+          {
+            "concept": "pipeline clock",
+            "analogy": "整條線每次推進都得等最慢工作站完成"
+          },
+          {
+            "concept": "RAW hazard",
+            "analogy": "下一位廚師需要前一站尚未完成的半成品"
+          },
+          {
+            "concept": "forwarding",
+            "analogy": "半成品完成後直接交給需要的工作站，不繞回倉庫"
+          },
+          {
+            "concept": "stall/NOP",
+            "analogy": "缺料時空出一個節拍，讓相依工作稍後再進站"
+          }
+        ],
+        "boundary": "餐點不會精確呈現 register file 半週期寫讀、pipeline register、control signal encoding 或不同 instruction 使用不同 stages；計算仍必須回到題目明示的 datapath 與 timing assumptions。"
+      },
+      "sections": [
+        {
+          "title": "先分清 latency 與 throughput",
+          "body": "五級 pipeline 讓多條 instructions 同時位於不同 stages。單一 instruction 通常仍要跨越五個 stage slots；改善的是穩態下完成 instructions 的頻率。Clock cycle time 由最慢 stage 加上 pipeline-register overhead 決定，不能把所有 stage latency 相加當成 pipelined clock。",
+          "bullets": [
+            "Sequential latency 常看該 instruction 實際走過的 stage latency 總和。",
+            "Pipelined instruction latency 約為 stage 數乘 clock，但 throughput 在填滿後可接近每 cycle 一條。",
+            "題目未給 pipeline-register overhead 時才能採忽略值的簡化模型。"
+          ]
+        },
+        {
+          "title": "用 timing table 追蹤相依",
+          "body": "每列放一條 instruction、每欄放一個 cycle，依序填 IF、ID、EX、MEM、WB。若 consumer 在 ID/EX 需要的值尚未由 producer 產生，就標出 dependency edge，再依 forwarding 與 register-file timing 決定要不要停。",
+          "bullets": [
+            "RAW 是 consumer 讀取 producer 尚未完成的結果。",
+            "ALU result 與 load result 的可用時間不同，load-use 常需額外等待。",
+            "沒有 hazard detection 時，compiler/programmer 必須明示插入 NOP。"
+          ]
+        },
+        {
+          "title": "Forwarding 不是讓結果提早算好",
+          "body": "Forwarding 只是從較早的 pipeline register 把已產生的 result 送到 EX input，省去先寫回 register file 再讀出的等待。若 load data 到 MEM 結尾才產生，緊鄰 consumer 即使有 forwarding 也可能需要一個 bubble。",
+          "bullets": [
+            "先找 producer，再找 result 何時可用。",
+            "再找 consumer 在哪個 stage 真正需要 operand。",
+            "最後依 mux/control encoding 選 forwarding path；不要背離題目 datapath。"
+          ]
+        },
+        {
+          "title": "所有數字都依賴題目假設",
+          "body": "NOP 數、完成週期與 forwarding code 不是脫離機器模型的固定答案。同週期 register write/read 是否允許、branch 在哪一 stage resolved、memory 是否 single-port、pipeline register overhead 都會改變 timing。",
+          "bullets": [
+            "把 assumptions 寫在 timing table 上方。",
+            "題目沒說清楚且不同合理模型給不同答案時，標記 disputed。",
+            "非官方技術推導不得直接升級為 auto-grade key。"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "Stages 分別為 150、250、50、200、100 ps，忽略 pipeline-register overhead。Pipeline clock 是多少？",
+          "steps": [
+            "列出五個 stage latency。",
+            "Clock 必須容納最慢 stage。",
+            "最大值是 ID 的 250 ps。"
+          ],
+          "answer": "250 ps；不能把五段相加，也不能把 IF+MEM 相加。"
+        },
+        {
+          "prompt": "ADD x1,x2,x3 後立刻 SUB x4,x1,x5。這是哪種 hazard？",
+          "steps": [
+            "SUB 需要讀 x1。",
+            "x1 由前一條 ADD 寫入。",
+            "後讀依賴前寫，因此是 RAW。",
+            "若 ADD result 已在 EX/MEM，可依 datapath forwarding 到 SUB 的 EX input。"
+          ],
+          "answer": "RAW data hazard；是否 stall 取決於 forwarding path 與 result 可用時間。"
+        },
+        {
+          "prompt": "為何同一段程式在「同週期可先寫 WB 再讀 ID」與「必須下一週期才能讀」兩種模型下，NOP 數會不同？",
+          "steps": [
+            "前一模型允許 consumer 的 ID 與 producer 的 WB 同欄。",
+            "後一模型要求 consumer ID 移到下一欄。",
+            "每段 register dependency 可能因此多一個 bubble。"
+          ],
+          "answer": "Register-file timing 是排程前提；未明示時不能假定唯一 NOP 數。"
+        }
+      ],
+      "commonPitfalls": [
+        "把 pipelining 提高 throughput 說成一定縮短單一 instruction latency。",
+        "沒先確認同週期 register write/read 語意就直接套固定 NOP 數。",
+        "把 forwarding 誤解為任何 dependency 都不需要 stall，忽略 load-use。",
+        "只看題庫現有 answer 字母，沒有檢查 open/multiple-select 題型與解析矛盾。"
+      ],
+      "sourceRefs": [
+        "src-cs-arch-patterson-hennessy-2e",
+        "src-cs-arch-riscv-unprivileged"
+      ],
+      "pastPaperRefs": [
+        "q-pp-cs-arch-110-7",
+        "q-pp-cs-arch-111-5",
+        "q-pp-cs-arch-112-7",
+        "q-pp-cs-arch-113-2",
+        "q-pp-cs-arch-114-12",
+        "q-pp-cs-arch-114-13"
+      ],
+      "reviewStatus": "draft",
+      "publication": {
+        "publishEligible": false,
+        "blockers": [
+          "候選來源尚未完成 review",
+          "六題答案皆未核准 auto-grade",
+          "兩題仍 disputed"
+        ]
+      }
+    }
+  ]
+}
