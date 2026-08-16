@@ -1,0 +1,172 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "cs-arch",
+  "status": "draft",
+  "coverage": "pipeline_candidate_refs_only",
+  "officialAnswerKeyAvailable": false,
+  "reviewMethod": "Origin/main question-text hash lock plus one technical derivation pass; no answer is approved for grading.",
+  "totalQuestions": 6,
+  "counts": {
+    "candidateConfirmed": 3,
+    "disputed": 2,
+    "selfReviewOnly": 1
+  },
+  "autoGradeEligible": 0,
+  "questions": [
+    {
+      "questionId": "q-pp-cs-arch-110-7",
+      "status": "self_review_only",
+      "previousAnswer": "A",
+      "candidateAnswer": null,
+      "approvedAnswer": null,
+      "confidence": "unreviewed",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "題目是四小題的開放式計算題，answers.json 的單一 A 無法代表答案。",
+        "現有 explanation 可作推導草稿，但尚未逐項對照原卷圖與 datapath assumptions。"
+      ],
+      "sourceRefs": [
+        "src-cs-arch-past-papers-110-114",
+        "src-cs-arch-patterson-hennessy-2e",
+        "src-cs-arch-riscv-unprivileged"
+      ],
+      "unresolvedIssues": [
+        "開放式多小題沒有官方答案",
+        "含圖題尚待逐項 PDF 視覺覆核",
+        "現有 answer=A 是佔位值"
+      ],
+      "practiceEligible": false,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-cs-arch-111-5",
+      "status": "candidate_confirmed",
+      "previousAnswer": "E",
+      "candidateAnswer": "E",
+      "approvedAnswer": null,
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "題面明示 register 可在同一 cycle 寫回後讀取。",
+        "#3 等待 #2 的 x29，#4 再等待 #3 的 x17，依五級管線草算完成於 cycle 9 與 12。"
+      ],
+      "sourceRefs": [
+        "src-cs-arch-past-papers-110-114",
+        "src-cs-arch-patterson-hennessy-2e",
+        "src-cs-arch-riscv-unprivileged"
+      ],
+      "unresolvedIssues": [
+        "沒有官方答案 key",
+        "尚缺第二位獨立 reviewer"
+      ],
+      "practiceEligible": false,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-cs-arch-112-7",
+      "status": "disputed",
+      "previousAnswer": "E",
+      "candidateAnswer": null,
+      "approvedAnswer": null,
+      "confidence": "disputed",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "現有答案採 E=8，假設 consumer 的 ID 必須晚於 producer 的 WB。",
+        "若 register file 支援同週期先寫後讀，常見五級管線排程會得到 C=5。",
+        "題面未明示同週期 register write/read 語意，不能核准單一答案。"
+      ],
+      "sourceRefs": [
+        "src-cs-arch-past-papers-110-114",
+        "src-cs-arch-patterson-hennessy-2e",
+        "src-cs-arch-riscv-unprivileged"
+      ],
+      "unresolvedIssues": [
+        "register file timing assumption 未明示",
+        "現有解析與常見教科書假設產生不同答案",
+        "沒有官方答案 key"
+      ],
+      "practiceEligible": false,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-cs-arch-113-2",
+      "status": "candidate_confirmed",
+      "previousAnswer": "B",
+      "candidateAnswer": "B",
+      "approvedAnswer": null,
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "Load/Store 比例為 40%，無 stall 時 data memory utilization 為 40%。",
+        "其餘敘述需依各 instruction 實際 stage path 與 pipeline-register overhead 再做第二次覆核。"
+      ],
+      "sourceRefs": [
+        "src-cs-arch-past-papers-110-114",
+        "src-cs-arch-patterson-hennessy-2e",
+        "src-cs-arch-riscv-unprivileged"
+      ],
+      "unresolvedIssues": [
+        "題幹使用 is/are true，可能是複選契約",
+        "沒有官方答案 key",
+        "尚缺第二位獨立 reviewer"
+      ],
+      "practiceEligible": false,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-cs-arch-114-12",
+      "status": "disputed",
+      "previousAnswer": "D",
+      "candidateAnswer": null,
+      "approvedAnswer": null,
+      "confidence": "disputed",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "現有 explanation 選 D，但同時承認 C 的 5×250 ps=1250 ps 數值成立。",
+        "在未確認原卷作答格式與 latency 定義前，不應壓成單一選項。"
+      ],
+      "sourceRefs": [
+        "src-cs-arch-past-papers-110-114",
+        "src-cs-arch-patterson-hennessy-2e",
+        "src-cs-arch-riscv-unprivileged"
+      ],
+      "unresolvedIssues": [
+        "C 與 D 可能同時成立",
+        "原卷選擇規則未在抽取文字中明示",
+        "沒有官方答案 key"
+      ],
+      "practiceEligible": false,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-cs-arch-114-13",
+      "status": "candidate_confirmed",
+      "previousAnswer": "A",
+      "candidateAnswer": "A",
+      "approvedAnswer": null,
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "addi 先把 x3 設為 24；忽略 load delay slot 時，緊鄰 add 仍讀到舊值 24。",
+        "x4 因而得到 24+24=48，對應 A。"
+      ],
+      "sourceRefs": [
+        "src-cs-arch-past-papers-110-114",
+        "src-cs-arch-patterson-hennessy-2e",
+        "src-cs-arch-riscv-unprivileged"
+      ],
+      "unresolvedIssues": [
+        "沒有官方答案 key",
+        "尚缺第二位獨立 reviewer"
+      ],
+      "practiceEligible": false,
+      "autoGradeEligible": false
+    }
+  ]
+}

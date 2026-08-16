@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "im-it",
+  "batchId": "im-it-full-batch-a",
+  "status": "reviewed-fragment",
+  "sources": [
+    {
+      "id": "src-oracle-java-language-basics",
+      "title": "The Java Tutorials: Language Basics",
+      "author": "Oracle",
+      "publisher": "Oracle",
+      "type": "documentation",
+      "url": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/index.html",
+      "scope": ["java-language-basics", "variables", "operators", "expressions", "statements", "blocks", "control-flow"],
+      "usage": "terminology-and-concept-check",
+      "status": "reviewed",
+      "scopeBoundary": "只支撐 Java Language Basics 頁面涵蓋的語法、型別與控制流程概念；不支撐 Python dynamic typing、C++ memory management、toolchain、testing 或 SDLC。"
+    },
+    {
+      "id": "src-cpp-core-guidelines",
+      "title": "C++ Core Guidelines",
+      "author": "Bjarne Stroustrup, Herb Sutter, and contributors",
+      "publisher": "Standard C++ Foundation community",
+      "type": "official-guidance",
+      "url": "https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines",
+      "scope": ["c++-functions", "scope-and-lifetime", "pointers", "resource-management", "error-handling", "assertions"],
+      "usage": "conceptual-summary-and-safety-guidance",
+      "status": "reviewed",
+      "scopeBoundary": "只支撐 C++ functions、lifetime、pointer/resource safety 與 error-handling guidance；不視為 Java、Python、GCC toolchain 或 secure-SDLC 規範。"
+    },
+    {
+      "id": "src-gcc-overall-options",
+      "title": "GCC Online Documentation: Options Controlling the Kind of Output",
+      "author": "Free Software Foundation",
+      "publisher": "GNU Project",
+      "type": "documentation",
+      "url": "https://gcc.gnu.org/onlinedocs/gcc/Overall-Options.html",
+      "scope": ["gcc-driver", "preprocessing", "compilation", "assembly", "linking", "output-options"],
+      "usage": "toolchain-stage-reference",
+      "status": "reviewed",
+      "scopeBoundary": "只支撐 GCC driver 的主要處理階段與 -E/-S/-c semantics；不推廣為所有語言 runtime 模型，也不支撐 JIT、interpreters、testing 或 SDLC。"
+    },
+    {
+      "id": "src-nist-ssdf-800-218",
+      "title": "Secure Software Development Framework (SSDF) Version 1.1",
+      "author": "NIST",
+      "publisher": "National Institute of Standards and Technology",
+      "type": "official-guidance",
+      "url": "https://csrc.nist.gov/pubs/sp/800/218/final",
+      "scope": ["secure-software-development", "software-verification", "software-integrity", "vulnerability-response"],
+      "usage": "secure-sdlc-practice-framework",
+      "status": "reviewed",
+      "scopeBoundary": "只支撐 SSDF 的 Prepare、Protect、Produce、Respond practices 與風險導向 verification；不作為 UML、Git、CI/CD、特定 test taxonomy 或 compiler toolchain 的來源。"
+    }
+  ],
+  "note": "本 fragment 僅加入 Batch A 實際使用且 scope 已明確限制的官方 reviewed sources；canonical registry 合併前仍應依既有 source governance 複核。"
+}

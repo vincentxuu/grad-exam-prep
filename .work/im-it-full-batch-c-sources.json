@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "im-it",
+  "batch": "full-batch-c",
+  "status": "reviewed-fragment",
+  "totalSources": 5,
+  "reviewMethod": "Official source landing pages verified with stealth_fetch; entries remain a fragment until canonical merge.",
+  "sources": [
+    {
+      "id": "src-nist-ir-8202-blockchain",
+      "title": "NISTIR 8202: Blockchain Technology Overview",
+      "author": "Dylan Yaga, Peter Mell, Nik Roby, and Karen Scarfone",
+      "publisher": "National Institute of Standards and Technology",
+      "type": "official-guidance",
+      "url": "https://doi.org/10.6028/NIST.IR.8202",
+      "scope": [
+        "blockchain",
+        "distributed-ledger",
+        "consensus",
+        "proof-of-work",
+        "cryptographic-hash"
+      ],
+      "usage": "terminology-architecture-and-consensus-check",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-nist-ai-rmf-1",
+      "title": "Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+      "author": "National Institute of Standards and Technology",
+      "publisher": "National Institute of Standards and Technology",
+      "type": "official-guidance",
+      "url": "https://doi.org/10.6028/NIST.AI.100-1",
+      "scope": [
+        "artificial-intelligence",
+        "ai-governance",
+        "ai-risk-management",
+        "trustworthiness",
+        "accountability"
+      ],
+      "usage": "risk-governance-and-trustworthiness-check",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-stanford-cs224n",
+      "title": "CS224N: Natural Language Processing with Deep Learning",
+      "author": "Stanford NLP Group",
+      "publisher": "Stanford University",
+      "type": "course",
+      "url": "https://web.stanford.edu/class/cs224n/",
+      "scope": [
+        "neural-networks",
+        "natural-language-processing",
+        "sequence-models",
+        "transformers",
+        "large-language-models"
+      ],
+      "usage": "neural-sequence-transformer-and-llm-concept-check",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-nist-privacy-framework",
+      "title": "NIST Privacy Framework",
+      "author": "National Institute of Standards and Technology",
+      "publisher": "National Institute of Standards and Technology",
+      "type": "official-guidance",
+      "url": "https://www.nist.gov/privacy-framework",
+      "scope": [
+        "privacy",
+        "privacy-risk-management",
+        "governance",
+        "organizational-risk"
+      ],
+      "usage": "privacy-risk-and-governance-check",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-nist-ai-600-1-genai-profile",
+      "title": "Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile",
+      "author": "National Institute of Standards and Technology",
+      "publisher": "National Institute of Standards and Technology",
+      "type": "official-guidance",
+      "url": "https://doi.org/10.6028/NIST.AI.600-1",
+      "scope": [
+        "generative-ai",
+        "ai-risk-management",
+        "confabulation",
+        "privacy",
+        "accountability"
+      ],
+      "usage": "generative-ai-risk-and-governance-check",
+      "status": "reviewed"
+    }
+  ]
+}
