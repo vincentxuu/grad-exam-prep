@@ -10,14 +10,14 @@ const questions = questionsRaw.questions.filter((question) => question.subjectId
 const metadata = metadataRaw.questions
 
 describe('IM information technology concept master', () => {
-  test('uses the eight canonical subject topics and stable unique subtopics', () => {
+  test('uses the nine canonical subject topics and stable unique subtopics', () => {
     const subjectTopicIds = subject?.topics.map((topic) => topic.id) ?? []
     const masterTopicIds = conceptMasterRaw.topics.map((topic) => topic.id)
     const subtopics = conceptMasterRaw.topics.flatMap((topic) => topic.subtopics)
 
     expect(masterTopicIds).toEqual(subjectTopicIds)
     expect(conceptMasterRaw.canonicalTopicIds).toEqual(subjectTopicIds)
-    expect(subtopics).toHaveLength(58)
+    expect(subtopics).toHaveLength(61)
     expect(new Set(subtopics.map((subtopic) => subtopic.id)).size).toBe(subtopics.length)
     expect(
       conceptMasterRaw.topics.flatMap((topic) =>
@@ -26,6 +26,28 @@ describe('IM information technology concept master', () => {
         )
       )
     ).toEqual([])
+  })
+
+  test('keeps the reviewed batch-three taxonomy repairs in their correct domains', () => {
+    const byId = new Map(metadata.map((entry) => [entry.questionId, entry]))
+    const expected = {
+      'q-pp-im-it-108-21': 'im-it-ds-heaps-priority-queues',
+      'q-pp-im-it-109-22': 'im-it-ds-heaps-priority-queues',
+      'q-pp-im-it-110-15': 'im-it-ai-training-evaluation',
+      'q-pp-im-it-110-16': 'im-it-ai-training-evaluation',
+      'q-pp-im-it-106-8': 'im-it-trends-big-data-analytics',
+      'q-pp-im-it-108-10': 'im-it-trends-big-data-analytics',
+      'q-pp-im-it-106-6': 'im-it-trends-emerging-digital-applications',
+      'q-pp-im-it-112-23': 'im-it-trends-emerging-digital-applications',
+      'q-pp-im-it-107-18': 'im-it-security-blockchain',
+      'q-pp-im-it-107-22': 'im-it-security-network-defense',
+      'q-pp-im-it-108-17': 'im-it-security-malware-social',
+      'q-pp-im-it-110-20': 'im-it-security-auth-access',
+    }
+
+    for (const [questionId, subtopicId] of Object.entries(expected)) {
+      expect(byId.get(questionId)?.primarySubtopicId).toBe(subtopicId)
+    }
   })
 
   test('covers all 260 source questions exactly once', () => {

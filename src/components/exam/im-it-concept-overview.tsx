@@ -15,6 +15,11 @@ export function ImItConceptOverview() {
   const eligibleCount = questionMetadataRaw.answerReview.autoGradeEligible
   const disputedCount = questionMetadataRaw.answerReview.disputed
   const lessons = getImItLessons()
+  const totalSubtopicCount = conceptMasterRaw.topics.reduce(
+    (total, topic) => total + topic.subtopics.length,
+    0
+  )
+  const coveredSubtopicCount = new Set(lessons.flatMap((lesson) => lesson.coveredSubtopicIds)).size
 
   return (
     <div className="space-y-4">
@@ -22,7 +27,7 @@ export function ImItConceptOverview() {
         <div className="flex flex-wrap items-center gap-2">
           <Badge variant="secondary">分類已審核</Badge>
           <span className="text-sm tabular-nums text-muted-foreground">
-            {conceptMasterRaw.topics.length} 大主題 · 58 個子主題 ·{' '}
+            {conceptMasterRaw.topics.length} 大主題 · {totalSubtopicCount} 個子主題 ·{' '}
             {questionMetadataRaw.totalQuestions} 題
           </span>
         </div>
@@ -46,7 +51,10 @@ export function ImItConceptOverview() {
           <div className="flex flex-wrap items-center gap-2">
             <h3 className="text-balance font-semibold">已上線學習模組</h3>
             <Badge variant="outline">
-              <span className="tabular-nums">{lessons.length} / 58</span> 個子主題
+              <span className="tabular-nums">
+                {coveredSubtopicCount} / {totalSubtopicCount}
+              </span>{' '}
+              個子主題
             </Badge>
           </div>
           <p className="mt-1 text-pretty text-sm text-muted-foreground">

@@ -95,6 +95,12 @@
         "title": "AI/ML（近年必考趨勢）",
         "importance": 5,
         "subtopics": ["監督/非監督學習", "CNN/RNN/Transformer", "生成式AI原理", "LLM與ChatGPT", "AI應用倫理"]
+      },
+      {
+        "id": "im-it-trends",
+        "title": "資料分析與新興科技",
+        "importance": 2,
+        "subtopics": ["Big Data 與資料分析", "Fintech、數位平台與新興應用"]
       }
     ],
     "materials": [

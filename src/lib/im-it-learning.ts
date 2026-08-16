@@ -11,9 +11,11 @@ export interface ImItWorkedExample {
 export interface ImItLesson {
   id: string
   subtopicId: string
+  coveredSubtopicIds: string[]
   title: string
   summary: string
   estimatedMinutes: number
+  minimumPastPaperRefs: number
   learningObjectives: string[]
   sections: Array<{ title: string; body: string; bullets: string[] }>
   workedExamples: ImItWorkedExample[]
@@ -40,7 +42,7 @@ export interface ImItSource {
   title: string
   author: string
   publisher?: string
-  type: 'book' | 'course' | 'official-guidance'
+  type: 'book' | 'course' | 'documentation' | 'official-guidance'
   url: string
   scope: string[]
   usage: string

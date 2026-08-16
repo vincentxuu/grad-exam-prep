@@ -3,8 +3,100 @@
   "subjectId": "im-it",
   "status": "reviewed",
   "generationPolicy": "只由 reviewed lesson 衍生，保留 sourceRefs 與 pastPaperRefs。",
-  "totalCards": 62,
+  "totalCards": 92,
   "cards": [
+    {
+      "id": "card-im-it-ai-foundations-ml-evaluation-01",
+      "lessonId": "lesson-im-it-ai-foundations-ml-evaluation-01",
+      "subtopicId": "im-it-ai-foundations-search",
+      "front": "Turing test 真正評估的是什麼？",
+      "back": "評估機器的可觀察回應是否讓人類評估者難以把它與人類區分。",
+      "explanation": "它不直接檢查 consciousness，也不保證通過者具備所有領域的 general intelligence。CAPTCHA 則常把 human/machine discrimination 用於存取控制。",
+      "sourceRefs": [
+        "src-brookshear-13e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-108-12",
+        "q-pp-im-it-113-24"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-ai-foundations-ml-evaluation-02",
+      "lessonId": "lesson-im-it-ai-foundations-ml-evaluation-01",
+      "subtopicId": "im-it-ai-ml-paradigms",
+      "front": "Linear regression 通常屬於哪一種 learning paradigm？判斷依據是什麼？",
+      "back": "通常屬於 supervised learning，因為訓練 examples 同時提供 input features 與連續 target values。",
+      "explanation": "Supervised learning 的關鍵是有 target feedback；target 是連續數值時，linear regression 用來學習 input 到數值 output 的關係。",
+      "sourceRefs": [
+        "src-ntu-machine-learning-2021"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-110-14"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-ai-foundations-ml-evaluation-03",
+      "lessonId": "lesson-im-it-ai-foundations-ml-evaluation-01",
+      "subtopicId": "im-it-ai-ml-paradigms",
+      "front": "Linear regression 解決哪一類問題？",
+      "back": "以線性方程估計一個連續 dependent variable 與一個或多個 features 的關係，常用於連續數值預測。",
+      "explanation": "y-hat=b0+b1x 中 b0 是 intercept、b1 是 slope；linear 指模型對參數呈線性，不代表只能有一個 feature。",
+      "sourceRefs": [
+        "src-ntu-machine-learning-2021"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-110-14"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-ai-foundations-ml-evaluation-04",
+      "lessonId": "lesson-im-it-ai-foundations-ml-evaluation-01",
+      "subtopicId": "im-it-ai-training-evaluation",
+      "front": "Precision 與 recall 的分母分別是什麼？",
+      "back": "Precision 的分母是 TP+FP；recall 的分母是 TP+FN。",
+      "explanation": "Precision 問預測 positive 有多準；recall 問實際 positive 找回多少。FP 增加會壓低 precision，FN 增加會壓低 recall。",
+      "sourceRefs": [
+        "src-ntu-machine-learning-2021"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-110-15"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-ai-foundations-ml-evaluation-05",
+      "lessonId": "lesson-im-it-ai-foundations-ml-evaluation-01",
+      "subtopicId": "im-it-ai-training-evaluation",
+      "front": "Binary classification 的 accuracy 公式是什麼？",
+      "back": "Accuracy=(TP+TN)/(TP+FP+FN+TN)。",
+      "explanation": "它計算全部案例中預測正確的比例；類別不平衡時，即使完全忽略少數類別也可能得到高 accuracy。",
+      "sourceRefs": [
+        "src-ntu-machine-learning-2021"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-110-16"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-ai-foundations-ml-evaluation-06",
+      "lessonId": "lesson-im-it-ai-foundations-ml-evaluation-01",
+      "subtopicId": "im-it-ai-training-evaluation",
+      "front": "為何類別不平衡時不能只看 accuracy？",
+      "back": "模型即使幾乎都猜多數類別，也可能得到很高 accuracy，卻完全找不到少數類別；應依錯誤成本同時看 precision、recall 等指標。",
+      "explanation": "Accuracy 計算全部案例的正確比例，無法單獨顯示 false positive 與 false negative 的代價。Confusion matrix 能讓各類錯誤分開檢查。",
+      "sourceRefs": [
+        "src-ntu-machine-learning-2021"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-110-15",
+        "q-pp-im-it-110-16"
+      ],
+      "reviewStatus": "reviewed"
+    },
     {
       "id": "card-im-it-arch-cpu-organization-01",
       "lessonId": "lesson-im-it-arch-cpu-organization",
@@ -196,6 +288,103 @@
       "reviewStatus": "reviewed"
     },
     {
+      "id": "card-im-it-db-sql-querying-01",
+      "lessonId": "lesson-im-it-db-sql-querying",
+      "subtopicId": "im-it-db-sql-querying",
+      "front": "建立 Customers(CustomerID INT, CustomerName VARCHAR(255)) 的基本 SQL 是什麼？",
+      "back": "CREATE TABLE Customers (CustomerID INT, CustomerName VARCHAR(255));",
+      "explanation": "CREATE DATABASE 建立 database，不會用這個 column-definition 形式直接建立 table。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-jiege-database-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-109-18"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-db-sql-querying-02",
+      "lessonId": "lesson-im-it-db-sql-querying",
+      "subtopicId": "im-it-db-sql-querying",
+      "front": "為何混用 AND 與 OR 時應明確加括號？",
+      "back": "括號明示需求的 Boolean grouping，避免 OR 條件脫離其他限制，即使知道 AND 通常優先也更安全可讀。",
+      "explanation": "Taiwan 且城市二選一應寫 Country='Taiwan' AND (City='Taipei' OR City='Kaohsiung')。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-jiege-database-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-106-3"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-db-sql-querying-03",
+      "lessonId": "lesson-im-it-db-sql-querying",
+      "subtopicId": "im-it-db-sql-querying",
+      "front": "COUNT(*)、COUNT(column)、COUNT(DISTINCT column) 有何不同？",
+      "back": "COUNT(*) 數 rows；COUNT(column) 數非 NULL values；COUNT(DISTINCT column) 數不同的非 NULL values。",
+      "explanation": "是否忽略 NULL、是否去重，是三者最重要的差異。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-jiege-database-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-107-4"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-db-sql-querying-04",
+      "lessonId": "lesson-im-it-db-sql-querying",
+      "subtopicId": "im-it-db-sql-querying",
+      "front": "GROUP BY 與 HAVING 分別做什麼？",
+      "back": "GROUP BY 依 key 形成 groups；HAVING 依 aggregate 或 group-level 條件篩選形成後的 groups。",
+      "explanation": "Individual-row 條件通常放 WHERE，aggregate 結果條件放 HAVING。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-jiege-database-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-107-5",
+        "q-pp-im-it-114-12"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-db-sql-querying-05",
+      "lessonId": "lesson-im-it-db-sql-querying",
+      "subtopicId": "im-it-db-sql-querying",
+      "front": "SQL JOIN 的主要用途是什麼？",
+      "back": "依 related columns 組合兩個或更多 tables 的 rows 與 columns。",
+      "explanation": "JOIN 是查詢運算，不等於永久建立 table，也不會自動去除 duplicates。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-jiege-database-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-114-14"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-db-sql-querying-06",
+      "lessonId": "lesson-im-it-db-sql-querying",
+      "subtopicId": "im-it-db-sql-querying",
+      "front": "INNER JOIN 與 LEFT JOIN 對未配對 rows 的處理有何不同？",
+      "back": "INNER JOIN 只保留配對 rows；LEFT JOIN 保留左表全部 rows，右表未配對 columns 以 NULL 表示。",
+      "explanation": "選擇 join type 前，先問是否需要保留左側沒有關聯資料的 records。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-jiege-database-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-114-14"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
       "id": "card-im-it-db-transactions-01",
       "lessonId": "lesson-im-it-db-transactions-01",
       "subtopicId": "im-it-db-transactions",
@@ -291,6 +480,191 @@
         "q-pp-im-it-111-15",
         "q-pp-im-it-114-17",
         "q-pp-im-it-115-20"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-ds-complexity-sorting-searching-01",
+      "lessonId": "lesson-im-it-ds-complexity-sorting-searching-01",
+      "subtopicId": "im-it-ds-sorting-searching",
+      "front": "Big-O 與 worst case 是同一件事嗎？",
+      "back": "不是。Big-O 描述漸近上界；worst case 是固定 input size 下成本最大的輸入情況。可以對 best、average 或 worst-case function 分別給 Big-O。",
+      "explanation": "分析前要先定義 case，再對該成本函數給 O、Omega 或 Theta bound。",
+      "sourceRefs": [
+        "src-mit-algorithms-6006"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-114-5",
+        "q-pp-im-it-114-6",
+        "q-pp-im-it-115-2"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-ds-complexity-sorting-searching-02",
+      "lessonId": "lesson-im-it-ds-complexity-sorting-searching-01",
+      "subtopicId": "im-it-ds-sorting-searching",
+      "front": "Bubble Sort 的 worst-case 比較次數與複雜度為何？",
+      "back": "逆序等 worst-case 輸入約比較 (n-1)+(n-2)+…+1=n(n-1)/2 次，因此是 Theta(n²)。",
+      "explanation": "每輪把一個極值推到最終位置，未定位區間逐輪縮短。",
+      "sourceRefs": [
+        "src-mit-algorithms-6006"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-114-5"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-ds-complexity-sorting-searching-03",
+      "lessonId": "lesson-im-it-ds-complexity-sorting-searching-01",
+      "subtopicId": "im-it-ds-sorting-searching",
+      "front": "何時 Bubble Sort 的 best case 是 Theta(n)？",
+      "back": "實作有 swapped flag／提前停止，而且輸入已排序時；第一輪 n-1 次比較沒有交換即可結束。",
+      "explanation": "若固定執行所有輪次、沒有 early termination，已排序輸入仍可能是 Theta(n²)。",
+      "sourceRefs": [
+        "src-mit-algorithms-6006"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-114-6"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-ds-complexity-sorting-searching-04",
+      "lessonId": "lesson-im-it-ds-complexity-sorting-searching-01",
+      "subtopicId": "im-it-ds-sorting-searching",
+      "front": "QuickSort 何時會退化為 Theta(n²)？",
+      "back": "每次 partition 都極端不平衡，只切出大小 0 與 n-1 的子問題時。",
+      "explanation": "此時 T(n)=T(n-1)+Theta(n)。已排序輸入是否觸發退化，取決於 pivot strategy。",
+      "sourceRefs": [
+        "src-mit-algorithms-6006"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-115-2"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-ds-complexity-sorting-searching-05",
+      "lessonId": "lesson-im-it-ds-complexity-sorting-searching-01",
+      "subtopicId": "im-it-ds-sorting-searching",
+      "front": "Stable sort 保證什麼？",
+      "back": "排序 key 相等的 records 在輸出中維持原本的相對順序。",
+      "explanation": "穩定性不表示演算法不移動資料，也不直接代表時間複雜度較好。",
+      "sourceRefs": [
+        "src-mit-algorithms-6006"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-115-5"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-ds-complexity-sorting-searching-06",
+      "lessonId": "lesson-im-it-ds-complexity-sorting-searching-01",
+      "subtopicId": "im-it-ds-sorting-searching",
+      "front": "Insertion、Merge、Bubble、QuickSort 中，哪一個典型實作不保證 stable？",
+      "back": "QuickSort。典型 in-place partition 可能交換跨越 pivot 的 equal-key records。",
+      "explanation": "Insertion、stable merge 與只交換嚴格逆序相鄰元素的 Bubble Sort 可保留 equal-key 次序。",
+      "sourceRefs": [
+        "src-mit-algorithms-6006"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-115-5"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-ds-trees-heaps-01",
+      "lessonId": "lesson-im-it-ds-trees-heaps-01",
+      "subtopicId": "im-it-ds-trees-bst",
+      "front": "為何 distinct-key BST 的 inorder traversal 會產生遞增順序？",
+      "back": "Inorder 依 left subtree、node、right subtree；BST 又保證左側 keys 較小、右側 keys 較大。",
+      "explanation": "結論依賴 BST ordering，不適用於任意 binary tree 或 heap。",
+      "sourceRefs": [
+        "src-mit-algorithms-6006"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-114-4"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-ds-trees-heaps-02",
+      "lessonId": "lesson-im-it-ds-trees-heaps-01",
+      "subtopicId": "im-it-ds-trees-bst",
+      "front": "BST 與 binary heap 最核心的 ordering 差異是什麼？",
+      "back": "BST 提供左右子樹的全域搜尋順序；heap 只保證每個 parent 與 children 的局部優先順序。",
+      "explanation": "因此 BST 可依比較選擇搜尋方向，heap 則能快速取得 root priority、但不能快速找 arbitrary key。",
+      "sourceRefs": [
+        "src-mit-algorithms-6006"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-114-4"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-ds-trees-heaps-03",
+      "lessonId": "lesson-im-it-ds-trees-heaps-01",
+      "subtopicId": "im-it-ds-heaps-priority-queues",
+      "front": "Zero-based binary heap array 中，index i 的 parent 與 children indices 為何？",
+      "back": "Parent=floor((i-1)/2)；left=2i+1；right=2i+2，前提是對應 index 存在。",
+      "explanation": "Complete binary tree 的逐層左填形狀讓 array 不需保存 child pointers。",
+      "sourceRefs": [
+        "src-mit-algorithms-6006"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-114-3",
+        "q-pp-im-it-115-3"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-ds-trees-heaps-04",
+      "lessonId": "lesson-im-it-ds-trees-heaps-01",
+      "subtopicId": "im-it-ds-heaps-priority-queues",
+      "front": "Binary heap insert 的 worst-case time complexity 為何？",
+      "back": "O(log n)。新 key 先放 array 末端，再沿高度 O(log n) 的 parent chain sift-up。",
+      "explanation": "保持 complete shape 是 O(1) append；worst-case 成本來自最多走到 root 的 sift-up。",
+      "sourceRefs": [
+        "src-mit-algorithms-6006"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-112-27",
+        "q-pp-im-it-115-3"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-ds-trees-heaps-05",
+      "lessonId": "lesson-im-it-ds-trees-heaps-01",
+      "subtopicId": "im-it-ds-heaps-priority-queues",
+      "front": "在 min-heap 尋找 arbitrary key 的 worst-case complexity 為何？",
+      "back": "O(n)。Heap order 無法像 BST ordering 一樣決定唯一搜尋方向。",
+      "explanation": "Root minimum 可 O(1) 取得，但尋找任意指定值在最壞情況可能檢查所有 nodes。",
+      "sourceRefs": [
+        "src-mit-algorithms-6006"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-112-28"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-ds-trees-heaps-06",
+      "lessonId": "lesson-im-it-ds-trees-heaps-01",
+      "subtopicId": "im-it-ds-heaps-priority-queues",
+      "front": "為何 binary heap 適合實作 priority queue？",
+      "back": "Root 可 O(1) 查看最高優先值，insert 與 extract-min/max 可在 O(log n) 完成，且 array representation 緊密。",
+      "explanation": "Priority queue 是操作介面；binary heap 是兼顧插入與移除最高優先值的常見實作。",
+      "sourceRefs": [
+        "src-mit-algorithms-6006"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-114-3",
+        "q-pp-im-it-115-3"
       ],
       "reviewStatus": "reviewed"
     },
@@ -930,6 +1304,98 @@
       ],
       "pastPaperRefs": [
         "q-pp-im-it-115-29"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-prog-object-oriented-01",
+      "lessonId": "lesson-im-it-prog-object-oriented",
+      "subtopicId": "im-it-prog-object-oriented",
+      "front": "Encapsulation 的核心目的為何？",
+      "back": "把 state 與操作 state 的 behavior 放進受控邊界，讓外部透過能維持 invariant 的介面互動。",
+      "explanation": "Private fields 是常見手段，但真正目的不是單純隱藏，而是維護責任與有效狀態。",
+      "sourceRefs": [
+        "src-oracle-oop-concepts"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-106-21",
+        "q-pp-im-it-109-1"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-prog-object-oriented-02",
+      "lessonId": "lesson-im-it-prog-object-oriented",
+      "subtopicId": "im-it-prog-object-oriented",
+      "front": "Instance variable、class/static variable、local variable 如何區分？",
+      "back": "Instance variable 每個 object 各有一份；class/static variable 由 class 層級共享；local variable 只存在 method/block 執行範圍。",
+      "explanation": "Member variable 宣告在 class 內；宣告於 method body 的通常是 local variable。",
+      "sourceRefs": [
+        "src-oracle-oop-concepts"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-113-22"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-prog-object-oriented-03",
+      "lessonId": "lesson-im-it-prog-object-oriented",
+      "subtopicId": "im-it-prog-object-oriented",
+      "front": "Protected 是否在所有語言都代表『只有 class 與 subclasses 可存取』？",
+      "back": "不是；protected 的精確規則依語言而異，例如 Java 還包含 same-package access。",
+      "explanation": "考題若出現『sometimes same-package』通常是在描述 Java 類型的 protected semantics。",
+      "sourceRefs": [
+        "src-oracle-oop-concepts"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-109-2"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-prog-object-oriented-04",
+      "lessonId": "lesson-im-it-prog-object-oriented",
+      "subtopicId": "im-it-prog-object-oriented",
+      "front": "Subclass 是否一定能直接存取 superclass 的所有 members？",
+      "back": "不一定；private members、constructors 與語言規則都可能限制繼承或直接存取。",
+      "explanation": "Inheritance 建立 is-a 關係與可重用契約，不等於取消 access control。",
+      "sourceRefs": [
+        "src-oracle-oop-concepts"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-113-21"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-prog-object-oriented-05",
+      "lessonId": "lesson-im-it-prog-object-oriented",
+      "subtopicId": "im-it-prog-object-oriented",
+      "front": "Polymorphism 的主要價值是什麼？",
+      "back": "讓呼叫端透過共同 interface 使用不同 implementations，而不需知道每個 concrete class。",
+      "explanation": "Dynamic dispatch 會依 runtime object 選擇 override；這不同於只為 code reuse 而 inheritance。",
+      "sourceRefs": [
+        "src-oracle-oop-concepts"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-106-21",
+        "q-pp-im-it-114-2"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-prog-object-oriented-06",
+      "lessonId": "lesson-im-it-prog-object-oriented",
+      "subtopicId": "im-it-prog-object-oriented",
+      "front": "Multiple inheritance 是所有 OOP 語言的共同能力嗎？",
+      "back": "不是；Java class 不支援多重 class inheritance，但可實作多個 interfaces。",
+      "explanation": "Multiple inheritance 是語言設計選擇，不是 OOP 的必要條件。本課只主張來源可驗證的 Java 規則。",
+      "sourceRefs": [
+        "src-oracle-oop-concepts"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-113-21"
       ],
       "reviewStatus": "reviewed"
     },

@@ -1,14 +1,137 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "subjectId": "im-it",
   "status": "reviewed",
   "contentPolicy": "本站提供依教材與考古題整理的原創摘要；不是教材轉載，也不把技術覆核答案稱為官方答案。",
   "counts": {
-    "lessons": 10,
-    "coveredSubtopics": 10,
-    "coveredQuestions": 86
+    "lessons": 15,
+    "coveredSubtopics": 19,
+    "coveredQuestions": 112
   },
   "lessons": [
+    {
+      "id": "lesson-im-it-ai-foundations-ml-evaluation-01",
+      "subtopicId": "im-it-ai-ml-paradigms",
+      "coveredSubtopicIds": [
+        "im-it-ai-foundations-search",
+        "im-it-ai-ml-paradigms",
+        "im-it-ai-training-evaluation"
+      ],
+      "title": "AI 與機器學習基礎：從問題類型到模型評估",
+      "summary": "從 Turing test 與 AI 問題定義出發，區分 supervised、unsupervised 與 reinforcement learning，理解 linear regression 的預測形式，再以 confusion matrix 推導 precision、recall 與 accuracy。真題答案只有非官方技術覆核，Big Data 與 disputed 題不列入 refs。",
+      "estimatedMinutes": 36,
+      "minimumPastPaperRefs": 5,
+      "learningObjectives": [
+        "說明 Turing test 評估的是可觀察行為，而不是直接證明機器具有意識",
+        "依資料與回饋形式區分 supervised、unsupervised 與 reinforcement learning",
+        "解讀 linear regression 的輸入、輸出、係數與預測值",
+        "由 confusion matrix 計算 precision、recall 與 accuracy，並判斷指標限制"
+      ],
+      "sections": [
+        {
+          "title": "AI 問題先從可觀察目標開始",
+          "body": "Artificial intelligence 涵蓋讓機器執行感知、推理、搜尋、學習或決策等工作的技術。Turing test 以對話等可觀察行為，判斷評估者是否能把機器與人類區分；它不是意識、情感或全面智慧的直接證明。CAPTCHA 則把方向反過來，用容易由人完成、較難由自動程式完成的挑戰辨識使用者，但現代模型能力改變後，特定 CAPTCHA 不一定仍有效。",
+          "bullets": [
+            "Turing test 評估外在行為是否像人，不檢查內部實作方式",
+            "通過單一測試不代表具備 artificial general intelligence",
+            "CAPTCHA 是 human-versus-machine discrimination 的應用，不是訓練演算法",
+            "AI 問題還常以 state、action、goal 與 evaluation criterion 描述"
+          ]
+        },
+        {
+          "title": "從回饋形式區分學習典範",
+          "body": "Supervised learning 從帶有 target labels 的 examples 學習 input 到 output 的關係，常用於 classification 與 regression。Unsupervised learning 沒有指定正確 target，模型從資料尋找群組或結構。Reinforcement learning 中，agent 與 environment 互動，根據 reward 學習能累積長期報酬的 policy。題目要先看可用資料與回饋，不要只看演算法名稱。",
+          "bullets": [
+            "Classification 預測離散類別，例如 spam／not spam",
+            "Regression 預測連續數值，例如價格或需求量",
+            "Clustering 是常見 unsupervised task，不需要預先提供每筆資料的正確群組",
+            "Reinforcement learning 的 supervision 來自 reward signal，不是每一步的標準答案"
+          ]
+        },
+        {
+          "title": "Linear regression 把關係寫成可計算模型",
+          "body": "Linear regression 用線性方程描述 dependent variable 與一個或多個 features 的關係。單一 feature 時可寫成 y-hat=b0+b1x，其中 b0 是 intercept、b1 是 slope。訓練會選擇參數，使預測與觀測值的誤差在指定 loss 下盡量小。線性模型可用於預測與解釋關聯，但觀察到係數不等於證明因果。",
+          "bullets": [
+            "y-hat 是模型預測，不一定等於實際 y",
+            "Slope 表示其他條件固定時，x 增加一單位所對應的預測變化",
+            "多元 linear regression 仍對參數保持線性，不代表只能有一個 feature",
+            "Normal equation 是求參數的方法之一，不是另一種預測問題類型"
+          ]
+        },
+        {
+          "title": "訓練表現不等於泛化能力",
+          "body": "模型在 training data 上表現好，仍可能只記住訓練樣本而 overfit。常見流程把資料分成 training、validation 與 test sets：training 用來估計參數，validation 用來選模型或 hyperparameters，test 應留到最後評估泛化。Regularization、更多合適資料與控制模型複雜度可降低 overfitting 風險，但沒有任何單一技巧保證泛化。",
+          "bullets": [
+            "Test set 不應反覆拿來調參，否則會把測試資訊洩漏進模型選擇",
+            "Underfitting 表示模型連 training pattern 都無法充分學到",
+            "Data leakage 會讓離線評估過度樂觀",
+            "評估資料分布應盡量代表模型實際部署情境"
+          ]
+        },
+        {
+          "title": "用 Confusion Matrix 選對指標",
+          "body": "Binary classification 將結果分成 TP、FP、FN、TN。Precision=TP/(TP+FP)，回答「預測為 positive 的案例中有多少是真的」；Recall=TP/(TP+FN)，回答「所有實際 positive 中找到了多少」；Accuracy=(TP+TN)/(TP+FP+FN+TN)，衡量整體正確比例。當類別極度不平衡時，高 accuracy 可能掩蓋模型完全找不到少數類別，因此要依錯誤成本同時觀察 precision、recall 等指標。",
+          "bullets": [
+            "False positive 會降低 precision",
+            "False negative 會降低 recall",
+            "Accuracy 的分母是全部案例，分子是 TP+TN",
+            "沒有脫離情境永遠最好的單一 metric"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "將三個任務分類：①以已標註郵件訓練 spam classifier；②把沒有標籤的客戶依行為分群；③遊戲 agent 依勝負 reward 學習策略。",
+          "steps": [
+            "① 有 input 與正確 class label，屬 supervised classification。",
+            "② 沒有目標群組標籤，要求從資料找結構，屬 unsupervised clustering。",
+            "③ agent 透過 action、environment 與 reward 學習 policy，屬 reinforcement learning。"
+          ],
+          "answer": "① supervised learning；② unsupervised learning；③ reinforcement learning。判斷依據是提供的回饋形式，不是應用領域名稱。"
+        },
+        {
+          "prompt": "房價模型為 y-hat=100+15x，y-hat 單位為萬元，x 是坪數。當 x=20 時預測多少？Slope 15 如何解讀？",
+          "steps": [
+            "代入 x=20：y-hat=100+15×20。",
+            "15×20=300，因此預測為 400 萬元。",
+            "Slope 15 表示在此模型與其他條件假設下，坪數每增加 1 坪，預測房價增加 15 萬元。",
+            "這是模型中的關聯解讀，單靠 regression coefficient 不能證明增加坪數造成價格上升。"
+          ],
+          "answer": "預測 400 萬元；slope 表示每增加 1 坪，模型預測值增加 15 萬元。"
+        },
+        {
+          "prompt": "某 classifier 有 TP=40、FP=10、FN=20、TN=30。計算 precision、recall 與 accuracy。",
+          "steps": [
+            "Precision=TP/(TP+FP)=40/(40+10)=0.80。",
+            "Recall=TP/(TP+FN)=40/(40+20)=2/3，約 0.667。",
+            "Accuracy=(TP+TN)/(TP+FP+FN+TN)=(40+30)/100=0.70。",
+            "三個值回答不同問題，不能只因 precision 最高就宣稱模型整體最好。"
+          ],
+          "answer": "Precision=0.80，recall≈0.667，accuracy=0.70。"
+        }
+      ],
+      "commonPitfalls": [
+        "把 Turing test 當成能直接證明意識或 AGI 的測驗",
+        "以為 supervised learning 只做 classification，忽略 regression 也是 supervised task",
+        "把 clustering 與 classification 混淆；前者通常沒有預先提供 class labels",
+        "把 linear regression 的相關係數或 slope 直接解讀成因果關係",
+        "反覆用 test set 選模型，造成 evaluation leakage",
+        "把 precision 的分母寫成 TP+FN，與 recall 對調",
+        "在高度 class imbalance 的資料上只看 accuracy"
+      ],
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-ntu-machine-learning-2021"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-108-12",
+        "q-pp-im-it-113-24",
+        "q-pp-im-it-110-14",
+        "q-pp-im-it-110-15",
+        "q-pp-im-it-110-16"
+      ],
+      "reviewStatus": "reviewed"
+    },
     {
       "id": "lesson-im-it-arch-cpu-organization",
       "subtopicId": "im-it-arch-cpu-organization",
@@ -125,7 +248,11 @@
         "q-pp-im-it-113-8",
         "q-pp-im-it-115-10"
       ],
-      "reviewStatus": "reviewed"
+      "reviewStatus": "reviewed",
+      "coveredSubtopicIds": [
+        "im-it-arch-cpu-organization"
+      ],
+      "minimumPastPaperRefs": 6
     },
     {
       "id": "lesson-im-it-db-relational-model-01",
@@ -222,6 +349,132 @@
         "q-pp-im-it-110-23",
         "q-pp-im-it-112-21",
         "q-pp-im-it-114-18"
+      ],
+      "reviewStatus": "reviewed",
+      "coveredSubtopicIds": [
+        "im-it-db-relational-model"
+      ],
+      "minimumPastPaperRefs": 6
+    },
+    {
+      "id": "lesson-im-it-db-sql-querying",
+      "subtopicId": "im-it-db-sql-querying",
+      "coveredSubtopicIds": [
+        "im-it-db-sql-querying"
+      ],
+      "title": "SQL 查詢：從條件篩選到分組與 JOIN",
+      "summary": "以可重現的小型資料表練習 CREATE TABLE、SELECT、WHERE、COUNT、DISTINCT、GROUP BY、HAVING 與 JOIN。重點是依 SQL 的處理層次判斷條件放置位置，並用括號消除 AND/OR 的優先順序歧義。對應考古題答案均為非官方技術覆核。",
+      "estimatedMinutes": 36,
+      "minimumPastPaperRefs": 6,
+      "learningObjectives": [
+        "寫出基本 CREATE TABLE 與 SELECT-FROM-WHERE 語句。",
+        "使用括號正確組合 AND 與 OR 條件。",
+        "區分 COUNT、DISTINCT、GROUP BY 與 HAVING 的用途。",
+        "依 related columns 使用 JOIN 組合多個 tables。"
+      ],
+      "sections": [
+        {
+          "title": "Table Definition 與基本查詢骨架",
+          "body": "CREATE TABLE 建立 table schema，欄位定義放在括號內；CREATE DATABASE 建立的是 database，不會用同樣語法直接定義 Customers 的 columns。讀取資料則使用 SELECT 指定輸出 expressions、FROM 指定來源 tables，必要時以 WHERE 過濾 rows。",
+          "bullets": [
+            "CREATE TABLE Customers (CustomerID INT, CustomerName VARCHAR(255)); 是基本 DDL 形式。",
+            "SELECT * 代表選取目前來源中所有 columns，不等於不過濾 rows。",
+            "SQL keywords 常不區分大小寫，但字串 literal 與 identifier 規則依 DBMS 而異。",
+            "DDL 定義結構；SELECT 屬查詢，兩者目的不同。"
+          ]
+        },
+        {
+          "title": "WHERE、AND/OR 與括號",
+          "body": "WHERE 對分組前的 individual rows 套用條件。一般 SQL 中 AND 的優先順序高於 OR，但只靠記憶優先順序容易讓需求與語句不一致；把同一邏輯群組放進括號更清楚。要找 Country 為 Taiwan，且 City 是 Taipei 或 Kaohsiung，城市條件必須形成一組。",
+          "bullets": [
+            "正確邏輯是 Country='Taiwan' AND (City='Taipei' OR City='Kaohsiung')。",
+            "省略括號可能把其他 country 的 Kaohsiung rows 一併選入。",
+            "逗號不能取代 WHERE 中的 Boolean operators。",
+            "可用 IN ('Taipei','Kaohsiung') 表達同一組離散候選值。"
+          ]
+        },
+        {
+          "title": "Aggregate、DISTINCT、GROUP BY 與 HAVING",
+          "body": "Aggregate function 把多個 rows 彙整成統計值。COUNT(*) 計算 rows；COUNT(column) 忽略該 column 為 NULL 的 rows；COUNT(DISTINCT column) 計算不同且非 NULL 的 values。GROUP BY 先依 key 形成 groups，再對每組計算 aggregate；HAVING 則篩選 aggregate 後的 groups。",
+          "bullets": [
+            "計算不同國家數：COUNT(DISTINCT Country)。",
+            "計算每個國家的客戶數：GROUP BY Country 搭配 COUNT。",
+            "WHERE 在 grouping 前篩 rows；HAVING 在 grouping 後篩 groups。",
+            "SELECT 中未 aggregate 的 columns 通常必須出現在 GROUP BY。"
+          ]
+        },
+        {
+          "title": "JOIN 依關聯欄位組合資料",
+          "body": "JOIN 把兩個或更多 tables 的 rows 依 join condition 組合，讓查詢同時輸出不同 tables 的 columns。INNER JOIN 只保留符合條件的配對；LEFT JOIN 保留左表所有 rows，右表沒有配對時以 NULL 補足。JOIN 不等於永久建立新 table，也不自動移除 duplicates。",
+          "bullets": [
+            "常見條件是 foreign key 對應 referenced key，例如 Orders.CustomerID = Customers.CustomerID。",
+            "缺少或寫錯 join condition 可能產生 Cartesian product 或錯誤配對。",
+            "Table aliases 可縮短欄位引用並消除同名欄位歧義。",
+            "選 INNER 或 OUTER JOIN 取決於未配對 rows 是否仍需保留。"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "Customers 有 (Taiwan,Taipei)、(Taiwan,Tainan)、(Japan,Kaohsiung)、(Taiwan,Kaohsiung) 四列。請查出台灣且城市為 Taipei 或 Kaohsiung 的 rows。",
+          "steps": [
+            "先固定 Country='Taiwan'。",
+            "把兩個城市條件以 OR 組成同一群組。",
+            "用 AND 把 country 條件與城市群組連接。",
+            "逐列代入可得第 1 與第 4 列。"
+          ],
+          "answer": "SELECT * FROM Customers WHERE Country='Taiwan' AND (City='Taipei' OR City='Kaohsiung');"
+        },
+        {
+          "prompt": "Customers.Country 依序是 Taiwan、Taiwan、Japan、NULL、Japan。求不同非 NULL 國家數，並列出每國 row 數。",
+          "steps": [
+            "COUNT(DISTINCT Country) 忽略 NULL 並去重，得到 Taiwan、Japan。",
+            "不同非 NULL 國家數是 2。",
+            "以 Country GROUP BY 後，Taiwan 有 2、Japan 有 2；NULL 也可能形成一組，依查詢是否先排除 NULL 而定。",
+            "若只要非 NULL groups，可在 grouping 前加 WHERE Country IS NOT NULL。"
+          ],
+          "answer": "不同國家數：SELECT COUNT(DISTINCT Country) FROM Customers; 每國數量：SELECT Country, COUNT(*) FROM Customers WHERE Country IS NOT NULL GROUP BY Country;"
+        },
+        {
+          "prompt": "Customers(CustomerID, CustomerName) 有 (1,'Mei')、(2,'Bo')；Orders(OrderID, CustomerID) 有 (101,1)、(102,1)、(103,3)，且 Customers.CustomerID 唯一。請用 INNER JOIN 列出有合法 customer 配對的訂單與姓名。",
+          "steps": [
+            "Customers.CustomerID 是 customer 識別欄位。",
+            "Orders.CustomerID 是 join key。",
+            "101、102 的 CustomerID=1，可與 Mei 配對。",
+            "103 的 CustomerID=3 在 Customers 沒有配對，INNER JOIN 不輸出。"
+          ],
+          "answer": "SELECT o.OrderID, c.CustomerName FROM Orders AS o INNER JOIN Customers AS c ON o.CustomerID=c.CustomerID; 結果為 (101,'Mei')、(102,'Mei')。"
+        },
+        {
+          "prompt": "要找出客戶數至少 2 人的國家，條件應放 WHERE 還是 HAVING？",
+          "steps": [
+            "先依 Country GROUP BY。",
+            "每組以 COUNT(*) 得到客戶數。",
+            "『至少 2 人』依 aggregate 結果判斷，不是單一 row 屬性。",
+            "因此使用 HAVING COUNT(*) >= 2。"
+          ],
+          "answer": "SELECT Country, COUNT(*) FROM Customers GROUP BY Country HAVING COUNT(*) >= 2;"
+        }
+      ],
+      "commonPitfalls": [
+        "用 CREATE DATABASE 或不存在的 BUILD TABLE 代替 CREATE TABLE。",
+        "混用 AND/OR 卻不加括號，讓 city 條件脫離 country 限制。",
+        "把 COUNT(column) 當成一定等於 COUNT(*)，忽略 NULL。",
+        "用 WHERE 篩選 aggregate 結果；分組後條件應使用 HAVING。",
+        "SELECT 未 aggregate column 卻沒有放入 GROUP BY。",
+        "JOIN 遺漏 ON condition，意外產生 Cartesian product。"
+      ],
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-jiege-database-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-106-3",
+        "q-pp-im-it-107-4",
+        "q-pp-im-it-107-5",
+        "q-pp-im-it-109-18",
+        "q-pp-im-it-114-12",
+        "q-pp-im-it-114-14"
       ],
       "reviewStatus": "reviewed"
     },
@@ -322,6 +575,249 @@
         "q-pp-im-it-115-17",
         "q-pp-im-it-115-19",
         "q-pp-im-it-115-20"
+      ],
+      "reviewStatus": "reviewed",
+      "coveredSubtopicIds": [
+        "im-it-db-transactions"
+      ],
+      "minimumPastPaperRefs": 6
+    },
+    {
+      "id": "lesson-im-it-ds-complexity-sorting-searching-01",
+      "subtopicId": "im-it-ds-sorting-searching",
+      "coveredSubtopicIds": [
+        "im-it-ds-complexity-analysis",
+        "im-it-ds-sorting-searching"
+      ],
+      "title": "複雜度、排序與搜尋：從輸入形狀推導成本",
+      "summary": "以輸入規模與基本操作次數建立 Big-O、Omega、Theta，再用 Bubble Sort 與 QuickSort 分析 best/worst case、提前停止與穩定性，最後整理搜尋演算法成立所需的資料前提。對應考古題答案均為非官方技術覆核。",
+      "estimatedMinutes": 38,
+      "minimumPastPaperRefs": 4,
+      "learningObjectives": [
+        "區分 Big-O、Omega、Theta，以及 best/average/worst case 的不同問題。",
+        "由迴圈與比較次數推導 Bubble Sort 的 O(n) best case 與 O(n²) worst case。",
+        "說明 QuickSort 的 partition 結構，以及不平衡切分為何造成 O(n²)。",
+        "判斷排序穩定性，並說明 binary search 等搜尋方法的前置條件。"
+      ],
+      "sections": [
+        {
+          "title": "先定義 n、操作與 case",
+          "body": "複雜度分析先指定 input size n 與要計數的基本操作，再觀察 n 成長時成本的量級。Big-O 給漸近上界，Omega 給漸近下界，Theta 表示上下界同階。Best、average、worst case 則是在同一個 n 下，針對不同輸入集合或分布描述演算法行為；它們不是 O、Omega、Theta 的同義詞。",
+          "bullets": [
+            "忽略常數與低階項是為了比較成長率，不代表實際執行時間完全相同。",
+            "O(n²) 是上界敘述；若同時可證明 Omega(n²)，才能寫成 Theta(n²)。",
+            "Best/worst case 必須說明輸入形狀，例如已排序、逆序或 pivot 每次極端不平衡。",
+            "比較兩個演算法時，除了時間也要看額外空間、穩定性與輸入前提。"
+          ]
+        },
+        {
+          "title": "Bubble Sort：相鄰交換與提前停止",
+          "body": "Bubble Sort 反覆比較相鄰元素，若左值較大就交換，使未定位區間中的大值逐步移向右端。逆序輸入會產生約 n(n-1)/2 次比較與大量交換，因此 worst case 是 Theta(n²)。若實作記錄一整趟是否發生交換，已排序輸入只需掃描一次即可停止，best case 是 Theta(n)。",
+          "bullets": [
+            "沒有 swapped flag 的固定輪數版本，即使已排序也可能執行 Theta(n²)。",
+            "只在 left > right 時交換，可保留相等元素的相對順序，因此標準 Bubble Sort 是 stable。",
+            "每一趟結束後，至少一個極值進入最終位置。",
+            "題目若說『若尚未排序才繼續』，通常暗示存在提前停止檢查。"
+          ]
+        },
+        {
+          "title": "QuickSort：切分品質決定遞迴深度",
+          "body": "QuickSort 選擇 pivot，以 partition 將元素分到 pivot 兩側，再遞迴處理子陣列。若切分大致平衡，遞迴深度約 log n，每層總 partition 工作約 n，典型成本為 Theta(n log n)。若每次 pivot 都是最小或最大值，子問題只從 n 降到 n-1，總成本成為 Theta(n²)。",
+          "bullets": [
+            "已排序資料不必然讓所有 QuickSort 變慢；是否退化取決於 pivot/partition 策略。",
+            "Randomized pivot 或較穩健的 pivot selection 可降低反覆極端切分的機率，但不消除理論 worst case。",
+            "常見 in-place partition 會讓相等元素跨位置交換，因此 QuickSort 通常不 stable。",
+            "QuickSort 是 divide-and-conquer；partition 正確性與遞迴邊界同樣重要。"
+          ]
+        },
+        {
+          "title": "穩定性與搜尋前提",
+          "body": "Stable sort 保證 key 相同的 records 維持原相對順序，這在先後套用多個排序鍵時很重要。Insertion Sort、Merge Sort 與只交換嚴格逆序相鄰元素的 Bubble Sort 可實作為 stable；典型 in-place QuickSort 不保證。搜尋也依資料結構而異：線性搜尋不要求排序；binary search 需要可依 index 取得中點且資料已依同一比較規則排序。",
+          "bullets": [
+            "穩定性只約束 equal keys，不表示排序結果唯一或演算法一定較快。",
+            "Merge Sort 是否 stable 取決於 merge 遇到相等值時是否先取左側元素。",
+            "Binary search 每步排除約一半範圍，時間為 O(log n)，但前提不成立時答案不可靠。",
+            "字串搜尋的 input size 可能同時包含 text length 與 pattern length，分析前要先定義符號。"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "用 Bubble Sort 將逆序陣列 [5,4,3,2,1] 由小到大排序。若每輪縮短已定位尾端，總共做多少次相鄰比較？這支持什麼量級？",
+          "steps": [
+            "第一輪比較 4 次，將 5 推到最右端。",
+            "後續三輪分別比較 3、2、1 次。",
+            "總比較數為 4+3+2+1=10，也就是 n(n-1)/2 在 n=5 的值。",
+            "一般 n 的主導項是 n²/2，因此 worst case 為 Theta(n²)。"
+          ],
+          "answer": "共 10 次比較；一般化為 n(n-1)/2，所以是 Theta(n²)。"
+        },
+        {
+          "prompt": "最佳化 Bubble Sort 以 swapped flag 記錄一輪中是否交換。輸入 [1,2,3,4,5] 時會執行幾輪、幾次比較？",
+          "steps": [
+            "第一輪依序比較四組相鄰元素。",
+            "因陣列已排序，不會發生任何交換，swapped 保持 false。",
+            "演算法在第一輪後立即停止，不再執行剩餘輪次。"
+          ],
+          "answer": "執行 1 輪、4 次比較；一般 n 是 n-1 次比較，因此 best case 為 Theta(n)。"
+        },
+        {
+          "prompt": "QuickSort 每次選子陣列第一個元素為 pivot，輸入 [1,2,3,4,5]。請說明子問題大小與 worst-case 成本。",
+          "steps": [
+            "第一個 pivot=1 是最小值，切成大小 0 與 4。",
+            "下一層 pivot=2，再切成大小 0 與 3，之後依序為 2、1。",
+            "每層 partition 仍掃描當前子陣列，工作量近似 4+3+2+1。",
+            "一般化 recurrence 為 T(n)=T(n-1)+Theta(n)，解為 Theta(n²)。"
+          ],
+          "answer": "切分一路為 0 與 n-1，遞迴深度線性，總成本 Theta(n²)。這是指定 pivot 策略下的結果，不代表所有已排序輸入都必然退化。"
+        },
+        {
+          "prompt": "Records 為 [(2,A),(1,X),(2,B)]，只依第一欄由小到大排序。Stable sort 與可能的 unstable sort 結果有何差異？",
+          "steps": [
+            "兩筆 key=2 的原始順序是 A 在 B 前。",
+            "Stable sort 必須保留 equal-key records 的相對順序。",
+            "因此 stable 結果是 [(1,X),(2,A),(2,B)]。",
+            "Unstable sort 可能產生 [(1,X),(2,B),(2,A)]，雖然 key 仍已排序。"
+          ],
+          "answer": "Stable 結果必須維持 A 在 B 前；unstable 演算法不保證這個次序。"
+        }
+      ],
+      "commonPitfalls": [
+        "把 Big-O 當成精確等號，或把 worst case 直接當成 Big-O 的定義。",
+        "未確認 Bubble Sort 是否有提前停止，就一律宣稱 best case O(n)。",
+        "認為排序輸入一定讓 QuickSort O(n²)，忽略 pivot selection。",
+        "把 stable 誤解為不會改動資料；它只保證 equal-key records 的相對順序。",
+        "在未排序資料上直接使用 binary search。",
+        "只寫複雜度結論，沒有定義 n、基本操作與輸入 case。"
+      ],
+      "sourceRefs": [
+        "src-mit-algorithms-6006"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-114-5",
+        "q-pp-im-it-114-6",
+        "q-pp-im-it-115-2",
+        "q-pp-im-it-115-5"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "lesson-im-it-ds-trees-heaps-01",
+      "subtopicId": "im-it-ds-trees-bst",
+      "coveredSubtopicIds": [
+        "im-it-ds-trees-bst",
+        "im-it-ds-heaps-priority-queues"
+      ],
+      "title": "Trees、BST 與 Heaps：形狀約束與順序規則",
+      "summary": "先建立 tree、complete binary tree 與 array representation，再比較 BST 的全域搜尋順序和 heap 的局部 parent-child 順序，最後推導 traversal、priority queue、insert 與 arbitrary search 的複雜度。對應考古題答案均為非官方技術覆核。",
+      "estimatedMinutes": 40,
+      "minimumPastPaperRefs": 5,
+      "learningObjectives": [
+        "使用 root、parent、child、leaf、depth、height 與 complete binary tree 描述樹。",
+        "依 BST ordering 推導 inorder traversal 的排序結果。",
+        "區分 min/max heap property 與 BST property，並以 array index 找 parent/children。",
+        "分析 binary heap 的 insert、extract-priority 與 arbitrary search 成本。"
+      ],
+      "sections": [
+        {
+          "title": "Tree 形狀與 array mapping",
+          "body": "Tree 以 parent-child 關係表達階層；binary tree 的每個節點最多兩個 children。Complete binary tree 除最後一層外皆填滿，最後一層由左到右填入，因此能緊密存入 array。使用 zero-based index 時，非 root 節點 i>0 的 parent 是 floor((i-1)/2)，left child 是 2i+1，right child 是 2i+2。",
+          "bullets": [
+            "Root 沒有 parent，leaf 沒有 children。",
+            "Depth 是 root 到節點的邊數；height 是節點到最深 leaf 的最長邊數，使用前要確認課本 convention。",
+            "Complete 不等於 full：complete 強調逐層、由左到右填入。",
+            "Array mapping 很適合 complete tree；任意稀疏 binary tree 可能浪費大量空間。"
+          ]
+        },
+        {
+          "title": "BST 的全域 ordering 與 traversal",
+          "body": "Binary Search Tree 對每個節點維持搜尋順序：左子樹 keys 小於節點、右子樹 keys 大於節點；若允許 duplicates，必須另訂一致政策。Inorder traversal 依 left subtree、node、right subtree 走訪，因此對 distinct-key BST 會產生遞增序列。這個全域 ordering 讓搜尋能依比較結果排除一側子樹，但成本取決於 tree height。",
+          "bullets": [
+            "Inorder：left → node → right；preorder：node → left → right；postorder：left → right → node。",
+            "平衡 BST 的 search/insert 可為 O(log n)；嚴重偏斜時 worst case 可到 O(n)。",
+            "BST 不是 complete binary tree 的同義詞，形狀由插入順序與平衡策略決定。",
+            "Traversal 的 O(n) 表示每個節點通常恰好處理一次。"
+          ]
+        },
+        {
+          "title": "Heap 只保證 parent-child 順序",
+          "body": "Binary heap 同時要求 complete binary tree 形狀與 heap-order property。Min-heap 的 parent key 小於或等於 children，因此 root 是最小值；max-heap 則相反，root 是最大值。Heap 不保證左子樹所有值都小於右子樹，也不支援 BST 式二分搜尋。歷屆 Q112-27 題幹把 min-heap 不等號方向印反，但其 insertion 複雜度答案不受影響；課程採正確定義。",
+          "bullets": [
+            "Min-heap：parent ≤ children；max-heap：parent ≥ children。",
+            "Heap 的 siblings 與不同 branches 之間沒有完整排序。",
+            "Array 最後位置對應 complete tree 下一個可插入位置。",
+            "Priority queue 是 ADT；binary heap 是常見 implementation。"
+          ]
+        },
+        {
+          "title": "Sift 操作與複雜度",
+          "body": "Insert 先把新 key 放到 array 末端以維持 complete shape，再沿 parent chain sift-up，最多移動 tree height，所以 worst case O(log n)。刪除最高優先值時，取出 root、把最後元素移到 root，再 sift-down，亦為 O(log n)。取得 root 是 O(1)，但尋找任意指定 key 在 worst case 可能檢查全部 n 個節點，因 heap order 無法像 BST 那樣排除唯一方向。",
+          "bullets": [
+            "Insert 與 extract-min/max 的 O(log n) 來自 complete binary tree height。",
+            "Peek root 不修改結構，可在 O(1) 完成。",
+            "Arbitrary search worst case O(n)，不是看到 tree 就一律 O(log n)。",
+            "Increase-key 在 max-heap 通常 sift-up；decrease-key 在 min-heap 通常也 sift-up。"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "依序把 distinct keys 8、3、10、1、6 插入空 BST。請寫出 inorder traversal。",
+          "steps": [
+            "8 成為 root；3 放左側；10 放右側。",
+            "1 小於 8 且小於 3，成為 3 的 left child。",
+            "6 小於 8 但大於 3，成為 3 的 right child。",
+            "Inorder 依 left subtree、node、right subtree 走訪。"
+          ],
+          "answer": "Inorder 是 1、3、6、8、10，與 distinct keys 的遞增排序相同。"
+        },
+        {
+          "prompt": "Complete binary tree 以 zero-based array [90,70,60,40,50] 表示。Index 1 的 parent、left child、right child indices 與值為何？",
+          "steps": [
+            "Parent index=floor((1-1)/2)=0，值為 90。",
+            "Left child index=2×1+1=3，值為 40。",
+            "Right child index=2×1+2=4，值為 50。"
+          ],
+          "answer": "Parent 是 index 0/value 90；left 是 index 3/value 40；right 是 index 4/value 50。"
+        },
+        {
+          "prompt": "Max-heap array 為 [90,70,60,40,50]，插入 80。請追蹤 sift-up。",
+          "steps": [
+            "先把 80 放在末端 index 5，維持 complete shape。",
+            "Index 5 的 parent index 是 floor((5-1)/2)=2，parent value=60。",
+            "80>60，交換兩者，array 變成 [90,70,80,40,50,60]。",
+            "80 的新 parent 是 90，因 80≤90，停止。"
+          ],
+          "answer": "插入後 max-heap 為 [90,70,80,40,50,60]；sift-up 移動一層，worst case 最多 O(log n) 層。"
+        },
+        {
+          "prompt": "Min-heap 只保證 parent≤children。要確認一個很大的 target 是否存在，為何 worst case 不能像 BST 一樣只走一條 root-to-leaf path？",
+          "steps": [
+            "在 BST 中，target 與目前 key 的比較可選擇唯一的左或右搜尋方向。",
+            "在 min-heap 中，若 target 大於目前 key，target 仍可能出現在任一 child subtree。",
+            "不同 branches 沒有彼此排序，不能只因 target 較大就排除其中一側。",
+            "若 target 不存在且大於多數 keys，最壞情況可能檢查所有 n 個節點。"
+          ],
+          "answer": "Heap order 只提供局部 parent-child 關係，無法決定唯一搜尋方向；arbitrary search worst case 是 O(n)。"
+        }
+      ],
+      "commonPitfalls": [
+        "把 binary tree、complete binary tree、BST 與 heap 視為同義詞。",
+        "看到 tree 就假設所有操作 O(log n)，忽略樹高與 ordering property。",
+        "把 min-heap 寫成 parent≥children；正確是 parent≤children。",
+        "認為 heap 的 inorder traversal 也會排序；只有 BST ordering 支援這個結論。",
+        "把 priority queue 當成某一種固定樹；它是 ADT，可有多種 implementations。",
+        "用 BST 搜尋邏輯尋找 heap 中的 arbitrary key，錯誤地宣稱 O(log n)。"
+      ],
+      "sourceRefs": [
+        "src-mit-algorithms-6006"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-112-27",
+        "q-pp-im-it-112-28",
+        "q-pp-im-it-114-3",
+        "q-pp-im-it-114-4",
+        "q-pp-im-it-115-3"
       ],
       "reviewStatus": "reviewed"
     },
@@ -435,7 +931,11 @@
         "q-pp-im-it-113-13",
         "q-pp-im-it-114-23"
       ],
-      "reviewStatus": "reviewed"
+      "reviewStatus": "reviewed",
+      "coveredSubtopicIds": [
+        "im-it-network-application-protocols"
+      ],
+      "minimumPastPaperRefs": 6
     },
     {
       "id": "lesson-im-it-network-link-lan-01",
@@ -555,7 +1055,11 @@
         "q-pp-im-it-112-14",
         "q-pp-im-it-112-15"
       ],
-      "reviewStatus": "reviewed"
+      "reviewStatus": "reviewed",
+      "coveredSubtopicIds": [
+        "im-it-network-link-lan"
+      ],
+      "minimumPastPaperRefs": 6
     },
     {
       "id": "lesson-im-it-network-models-encapsulation",
@@ -663,7 +1167,11 @@
         "q-pp-im-it-110-7",
         "q-pp-im-it-111-1"
       ],
-      "reviewStatus": "reviewed"
+      "reviewStatus": "reviewed",
+      "coveredSubtopicIds": [
+        "im-it-network-models-encapsulation"
+      ],
+      "minimumPastPaperRefs": 6
     },
     {
       "id": "lesson-im-it-os-file-storage-io",
@@ -783,7 +1291,11 @@
         "q-pp-im-it-113-10",
         "q-pp-im-it-114-7"
       ],
-      "reviewStatus": "reviewed"
+      "reviewStatus": "reviewed",
+      "coveredSubtopicIds": [
+        "im-it-os-file-storage-io"
+      ],
+      "minimumPastPaperRefs": 6
     },
     {
       "id": "lesson-im-it-os-processes-threads",
@@ -912,7 +1424,11 @@
         "q-pp-im-it-113-3",
         "q-pp-im-it-115-9"
       ],
-      "reviewStatus": "reviewed"
+      "reviewStatus": "reviewed",
+      "coveredSubtopicIds": [
+        "im-it-os-processes-threads"
+      ],
+      "minimumPastPaperRefs": 6
     },
     {
       "id": "lesson-im-it-os-virtualization-containers-01",
@@ -1030,6 +1546,131 @@
         "q-pp-im-it-115-23",
         "q-pp-im-it-115-29"
       ],
+      "reviewStatus": "reviewed",
+      "coveredSubtopicIds": [
+        "im-it-os-virtualization-containers"
+      ],
+      "minimumPastPaperRefs": 6
+    },
+    {
+      "id": "lesson-im-it-prog-object-oriented",
+      "subtopicId": "im-it-prog-object-oriented",
+      "coveredSubtopicIds": [
+        "im-it-prog-object-oriented"
+      ],
+      "title": "物件導向：封裝、繼承與多型的責任邊界",
+      "summary": "以 class、object 與對外介面建立 OOP 基礎，區分 encapsulation、inheritance、polymorphism、instance/class variables 與 access control。存取控制與繼承細節以本課來源涵蓋的 Java 語意為準，避免把特定語言規則誤當成所有 OOP 語言的共同定律。對應考古題答案均為非官方技術覆核。",
+      "estimatedMinutes": 34,
+      "minimumPastPaperRefs": 6,
+      "learningObjectives": [
+        "說明 class、object、state、behavior 與 encapsulation 的關係。",
+        "區分 instance variable、class variable 與 local variable 的生命週期與共享範圍。",
+        "分析 inheritance、abstract class 與 access modifier 的語言相依規則。",
+        "使用共同介面與動態派發解釋 polymorphism。"
+      ],
+      "sections": [
+        {
+          "title": "Class、Object 與 Encapsulation",
+          "body": "Class 描述一類 objects 的 state 與 behavior；object 是該 class 的具體實例。Encapsulation 把資料與操作資料的方法組成一個單位，並以受控介面保護 invariant。它不是把所有欄位一律設成 private 就完成，而是讓外部只能透過能維持有效狀態的操作互動。",
+          "bullets": [
+            "State 常由 fields/member variables 表示，behavior 常由 methods/member functions 表示。",
+            "Public interface 說明外部可做什麼；implementation details 說明內部如何完成。",
+            "資料隱藏是 encapsulation 的常見手段，但目的在維護責任與 invariant。",
+            "Abstraction 強調保留重要特徵；encapsulation 強調把狀態與操作包在受控邊界內。"
+          ]
+        },
+        {
+          "title": "Instance、Class 與 Local Variables",
+          "body": "Instance variable 屬於特定 object，每個實例通常有自己的 copy；class/static variable 屬於 class 本身，通常由所有 instances 共用。Local variable 宣告在 method 或 block 內，只在該執行範圍有效。『member variable 必須宣告在 method body』把 member 與 local 的位置顛倒。",
+          "bullets": [
+            "兩個 objects 可有不同 instance state。",
+            "Class/static state 的更新會被所有透過同一 class state 的 instances 看見。",
+            "Member accessibility 受 language、modifier 與呼叫位置影響，不能一概說所有 methods 都能跨 class 存取。",
+            "Local variable 通常不屬於 object 的持久 state。"
+          ]
+        },
+        {
+          "title": "Inheritance、Abstract Class 與 Access Control",
+          "body": "Inheritance 建立 base/superclass 與 derived/subclass 關係，讓 subclass 重用或擴充既有介面與實作。Subclass 不保證能直接存取 superclass 的所有 members；private、constructor 與語言特定規則都可能限制可見性。Abstract class 用於提供不能直接完整實例化的共同概念，但可包含 concrete behavior。",
+          "bullets": [
+            "在 Java 中，protected 允許 same-package access，並在符合規格條件時供 subclass 存取。",
+            "Private member 的資料可能仍構成 object state，但 subclass 通常不能直接以名稱存取。",
+            "Java class 不支援多重 class inheritance，但可實作多個 interfaces；這是 Java 的語言規則，不是 OOP 的普遍定義。",
+            "優先確認 is-a 關係；只為重用程式碼而繼承常造成不合理耦合。"
+          ]
+        },
+        {
+          "title": "Polymorphism 是共同介面，不是單純複製程式碼",
+          "body": "Polymorphism 讓呼叫端透過共同 interface 操作不同 concrete implementations。當實際呼叫哪個 override 由 runtime object type 決定時，形成常見的 dynamic dispatch。Inheritance 可協助 code reuse，但 polymorphism 的主要價值是讓使用端依賴抽象契約，而非知道每一種具體 class。",
+          "bullets": [
+            "相同 method call 可由不同 object 執行不同實作。",
+            "Interface/base type 定義契約，concrete class 實作契約。",
+            "Code reuse 也可透過 composition、delegation 或 generic functions，不只 inheritance。",
+            "Overloading 與 overriding 都可能被稱為 polymorphism，但規則與 dispatch 時機不同。"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "BankAccount 必須禁止餘額變成負數。為何把 balance 設為 private，並只提供 deposit(amount) 與 withdraw(amount)，比公開 balance 更能維持 invariant？",
+          "steps": [
+            "先定義 invariant：balance 不得小於 0。",
+            "若 balance 公開，外部可直接寫入 -100，class 無法攔截。",
+            "deposit 可拒絕非正數；withdraw 可先檢查餘額是否足夠。",
+            "所有狀態改變經受控 methods，class 才能集中維護規則。"
+          ],
+          "answer": "Encapsulation 讓外部依賴受控介面而非直接改 state；private 本身是手段，真正價值是 methods 能維持 balance invariant。"
+        },
+        {
+          "prompt": "Counter class 的 instance variable value 初值為 0，class/static variable createdCount 初值為 0；constructor 每建立一個 instance 就執行 createdCount++。建立 A、B 後再將 A.value 加 1，三個值各是多少？",
+          "steps": [
+            "A 與 B 各有自己的 value copy。",
+            "只增加 A.value，不改變 B.value。",
+            "createdCount 屬於 class，每建立一個 instance 時共同累加。",
+            "建立 A、B 後，兩者觀察到的是同一份 createdCount=2。"
+          ],
+          "answer": "A.value 與 B.value 分離；createdCount 共用。操作後 A.value=1、B.value=0、createdCount=2。"
+        },
+        {
+          "prompt": "Shape 定義 area()，Circle 與 Rectangle 各自 override。函式 totalArea(shapes) 只呼叫每個元素的 area()，為何不需判斷具體 class？",
+          "steps": [
+            "Shape 提供共同 area() 契約。",
+            "Circle 與 Rectangle 各自實作計算公式。",
+            "集合以共同 base/interface type 保存 objects。",
+            "呼叫 area() 時由 dynamic dispatch 選擇實際 object 的 override。"
+          ],
+          "answer": "這是 subtype polymorphism：呼叫端依賴 Shape 契約，runtime 選出 Circle 或 Rectangle 的實作。"
+        },
+        {
+          "prompt": "某敘述說『protected 在所有 OOP 語言中都只允許目前 class 與 subclasses 存取』。如何判斷？",
+          "steps": [
+            "先辨認 access modifier 是 language-specific semantics。",
+            "許多語言確實讓 subclasses 存取 protected members。",
+            "Java protected 也允許 same-package access；其他語言的精確規則必須另查其規格。",
+            "因此含『所有語言』『只』的全稱敘述不成立。"
+          ],
+          "answer": "不能跨語言一概而論；protected 的精確可見性必須依目標語言規格判斷。"
+        }
+      ],
+      "commonPitfalls": [
+        "把 encapsulation 與 abstraction 當成完全相同概念。",
+        "把 member variable 說成必須宣告在 method body；那通常是 local variable。",
+        "認為 subclass 一定能直接存取 superclass 的所有 attributes 與 methods。",
+        "把 protected、private 或 multiple inheritance 的某一語言規則套到所有 OOP 語言。",
+        "把 polymorphism 的主要目的說成 multiple inheritance 或單純 code reuse。",
+        "只因兩個 classes 有共同程式碼就建立 inheritance，忽略 is-a 關係與 composition。"
+      ],
+      "sourceRefs": [
+        "src-oracle-oop-concepts"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-106-21",
+        "q-pp-im-it-109-1",
+        "q-pp-im-it-109-2",
+        "q-pp-im-it-113-21",
+        "q-pp-im-it-113-22",
+        "q-pp-im-it-114-2"
+      ],
       "reviewStatus": "reviewed"
     },
     {
@@ -1138,7 +1779,11 @@
         "q-pp-im-it-113-16",
         "q-pp-im-it-113-17"
       ],
-      "reviewStatus": "reviewed"
+      "reviewStatus": "reviewed",
+      "coveredSubtopicIds": [
+        "im-it-security-cryptography"
+      ],
+      "minimumPastPaperRefs": 6
     }
   ]
 }

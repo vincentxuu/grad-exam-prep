@@ -9,7 +9,8 @@
     "im-it-network",
     "im-it-os",
     "im-it-security",
-    "im-it-ai"
+    "im-it-ai",
+    "im-it-trends"
   ],
   "contentStatus": "taxonomy-reviewed-content-draft",
   "sourcePolicy": "主題樹只定義知識結構；教材內容須另附來源並通過審核後才可發布。",
@@ -822,6 +823,19 @@
             "audit"
           ],
           "status": "reviewed"
+        },
+        {
+          "id": "im-it-security-blockchain",
+          "topicId": "im-it-security",
+          "title": "區塊鏈與分散式帳本",
+          "keywords": [
+            "blockchain",
+            "Bitcoin",
+            "mining",
+            "distributed ledger",
+            "consensus"
+          ],
+          "status": "reviewed"
         }
       ]
     },
@@ -940,6 +954,58 @@
             "fairness",
             "hallucination",
             "accountability"
+          ],
+          "status": "reviewed"
+        }
+      ]
+    },
+    {
+      "id": "im-it-trends",
+      "title": "資料分析與新興科技",
+      "importance": 2,
+      "status": "reviewed",
+      "learningObjectives": [
+        {
+          "id": "im-it-trends-lo-1",
+          "statement": "辨識 Big Data 特性、資料分析用途與限制。"
+        },
+        {
+          "id": "im-it-trends-lo-2",
+          "statement": "比較新興數位服務、平台與應用情境。"
+        },
+        {
+          "id": "im-it-trends-lo-3",
+          "statement": "區分數位趨勢題與 AI、資安等相鄰領域概念。"
+        }
+      ],
+      "subtopics": [
+        {
+          "id": "im-it-trends-big-data-analytics",
+          "topicId": "im-it-trends",
+          "title": "Big Data 與資料分析",
+          "keywords": [
+            "volume",
+            "velocity",
+            "variety",
+            "veracity",
+            "value",
+            "analytics"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-trends-emerging-digital-applications",
+          "topicId": "im-it-trends",
+          "title": "新興科技與數位應用",
+          "keywords": [
+            "Fintech",
+            "crowdfunding",
+            "MOOC",
+            "smart speaker",
+            "autonomous vehicle",
+            "mobile payment",
+            "metaverse",
+            "digital twin"
           ],
           "status": "reviewed"
         }
