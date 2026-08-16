@@ -212,13 +212,13 @@ function ReadingPracticeContent({ params }: Props) {
                     onClick={() => selectAnswer(q.number, opt)}
                     className={`text-left rounded-md border px-3 py-2 text-sm transition-colors ${
                       isRevealed && isSelected && isCorrect
-                        ? 'border-green-500 bg-green-50 dark:bg-green-950'
+                        ? 'border-green-500 bg-green-50 text-green-900 dark:bg-green-900/30 dark:text-green-200'
                         : isRevealed && isSelected && !isCorrect
-                          ? 'border-red-500 bg-red-50 dark:bg-red-950'
+                          ? 'border-red-500 bg-red-50 text-red-900 dark:bg-red-900/30 dark:text-red-200'
                           : isRevealed && opt === correctAnswer
-                            ? 'border-green-500 bg-green-50 dark:bg-green-950'
+                            ? 'border-green-500 bg-green-50 text-green-900 dark:bg-green-900/30 dark:text-green-200'
                             : isRevealed
-                              ? 'opacity-60'
+                              ? 'opacity-50'
                               : 'hover:border-foreground/40 cursor-pointer'
                     }`}
                   >
