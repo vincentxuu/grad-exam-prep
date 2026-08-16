@@ -8,6 +8,11 @@ import type { Flashcard } from '@/types/content'
  *   3. `選出與「impede」意思最接近的詞。`  → impede
  */
 export function extractWord(prompt: string): string | null {
+  const directHeadword = prompt.trim()
+  if (/^[A-Za-z][A-Za-z0-9'\-]*(?:\s+[A-Za-z0-9'\-]+)*$/.test(directHeadword)) {
+    return directHeadword
+  }
+
   // 「word」 / "word" / “word” 引號包住的單字，可能有多個（如 imply vs infer）
   const quoted = [...prompt.matchAll(/[「"“]([A-Za-z][A-Za-z\s'-]*?)["」”]/g)].map((m) =>
     m[1].trim()

@@ -12,13 +12,13 @@ const MIN_EASE = 1.3
 const DEFAULT_EASE = 2.5
 const DAY_MS = 24 * 60 * 60 * 1000
 
-export function initialCardState(cardId: string): CardSRSState {
+export function initialCardState(cardId: string, now: number = Date.now()): CardSRSState {
   return {
     cardId,
     interval: 1,
     repetitions: 0,
     easeFactor: DEFAULT_EASE,
-    nextReview: Date.now(),
+    nextReview: now,
     lastReview: null,
   }
 }

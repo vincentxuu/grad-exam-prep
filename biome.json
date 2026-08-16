@@ -59,6 +59,8 @@
       "!**/node_modules",
       "!**/.next",
       "!**/.open-next",
+      "!**/.work",
+      "!**/tmp",
       "!**/dist",
       "!**/*.min.js",
       "!**/public/data",

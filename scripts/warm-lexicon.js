@@ -5,14 +5,14 @@
  * 用法：
  *   BASE_URL=https://<your-worker>.workers.dev \
  *   PASSPHRASE_HASH=<與 worker secret 相同的雜湊> \
- *   node scripts/warm-lexicon.js [--dry-run] [--limit N]
+ *   node scripts/warm-lexicon.js [--dry-run] [--limit N | --all]
  *
  * ── 為什麼不用 Batches API ────────────────────────────────────────────
  * 原本的計畫是用 Message Batches API（半價）。改成打已部署的
  * /api/lexicon，因為那樣就不必把 system prompt 與 JSON schema 複製一份
  * 到這支腳本裡 —— 複製出來的那份一定會跟 src/lib/lexicon/ 慢慢走鐘，
- * 而詞條品質正是這整個功能的重點。160 個字全額生成大約十幾塊美金，
- * 省下的一半不值得用 prompt 走鐘來換。
+ * 而詞條品質正是這整個功能的重點。完整必要字庫有數千筆，因此預設只處理
+ * 前 100 筆；明確傳入 --all 才會處理全部，避免意外產生大量費用。
  *
  * 順帶的好處：它直接暖的是線上那顆 D1，不是一個還要另外匯入的本地檔。
  */
@@ -26,7 +26,11 @@ const DRY_RUN = process.argv.includes('--dry-run')
 const CONCURRENCY = 3
 
 const limitFlag = process.argv.indexOf('--limit')
-const LIMIT = limitFlag >= 0 ? Number(process.argv[limitFlag + 1]) : Infinity
+const LIMIT = process.argv.includes('--all')
+  ? Infinity
+  : limitFlag >= 0
+    ? Number(process.argv[limitFlag + 1])
+    : 100
 
 /**
  * 與 src/lib/vocab.ts 的 extractWord 同一套規則。
@@ -53,7 +57,7 @@ function collectHeadwords() {
   const skipped = []
 
   for (const card of english) {
-    const word = extractWord(card.prompt)
+    const word = card.headword || extractWord(card.prompt)
     if (word) {
       words.add(word.toLowerCase())
     } else {

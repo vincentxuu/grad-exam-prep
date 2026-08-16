@@ -1,0 +1,1587 @@
+{
+  "metadata": {
+    "generatedAt": "2026-08-16",
+    "runtimeImEnglishCards": 4764,
+    "selectionRule": "answer lacks all four markers: POS, English definition, phonetic, and example",
+    "total": 101,
+    "counts": {
+      "alias": 10,
+      "exclude": 21,
+      "keep": 70
+    },
+    "schemaVersion": 1
+  },
+  "entries": [
+    {
+      "word": "being stuck",
+      "tier": "important",
+      "source": "english-exam",
+      "previousMeaning": "被困住",
+      "questionRefs": [
+        "q-pp-im-en-107-17"
+      ],
+      "contextEvidence": null,
+      "decision": "alias",
+      "canonicalWord": "stuck",
+      "reason": "動名詞片語，併入既有 stuck 詞條。"
+    },
+    {
+      "word": "deliberately disregards",
+      "tier": "important",
+      "source": "english-exam",
+      "previousMeaning": "故意忽視",
+      "questionRefs": [
+        "q-pp-im-en-115-19"
+      ],
+      "contextEvidence": null,
+      "decision": "alias",
+      "canonicalWord": "disregard",
+      "reason": "副詞加第三人稱動詞的組合，併入 disregard。"
+    },
+    {
+      "word": "despite that",
+      "tier": "important",
+      "source": "english-exam",
+      "previousMeaning": "儘管如此",
+      "questionRefs": [
+        "q-pp-im-en-106-13"
+      ],
+      "contextEvidence": null,
+      "decision": "exclude",
+      "reason": "來源題目的錯誤連接詞選項，不是獨立詞彙 headword。"
+    },
+    {
+      "word": "do i",
+      "tier": "important",
+      "source": "english-exam",
+      "previousMeaning": "我是否",
+      "questionRefs": [
+        "q-pp-im-en-108-18"
+      ],
+      "contextEvidence": null,
+      "decision": "exclude",
+      "reason": "倒裝題中的錯誤選項；正確形式為 did I。"
+    },
+    {
+      "word": "enough large",
+      "tier": "important",
+      "source": "english-exam",
+      "previousMeaning": "足夠大的",
+      "questionRefs": [
+        "q-pp-im-en-110-35"
+      ],
+      "contextEvidence": null,
+      "decision": "exclude",
+      "reason": "錯誤字序選項；正確形式為 large enough。"
+    },
+    {
+      "word": "even play",
+      "tier": "important",
+      "source": "english-exam",
+      "previousMeaning": "公平競爭",
+      "questionRefs": [
+        "q-pp-im-en-106-19"
+      ],
+      "contextEvidence": null,
+      "decision": "exclude",
+      "reason": "來源題目的錯誤選項，不是固定片語。"
+    },
+    {
+      "word": "have stuck",
+      "tier": "important",
+      "source": "english-exam",
+      "previousMeaning": "已困住",
+      "questionRefs": [
+        "q-pp-im-en-107-17"
+      ],
+      "contextEvidence": null,
+      "decision": "exclude",
+      "reason": "來源題目的錯誤時態選項，不是獨立 headword。"
+    },
+    {
+      "word": "interesting to",
+      "tier": "important",
+      "source": "english-exam",
+      "previousMeaning": "對…有趣",
+      "questionRefs": [
+        "q-pp-im-en-107-13"
+      ],
+      "contextEvidence": null,
+      "decision": "exclude",
+      "reason": "來源題目的錯誤搭配選項，且是可組合片段而非獨立詞條。"
+    },
+    {
+      "word": "large enough",
+      "tier": "important",
+      "source": "english-exam",
+      "previousMeaning": "足夠大的",
+      "questionRefs": [
+        "q-pp-cs-algo-110-4",
+        "q-pp-cs-arch-112-3",
+        "q-pp-cs-en-108-41",
+        "q-pp-im-en-110-35"
+      ],
+      "contextEvidence": null,
+      "decision": "keep",
+      "pos": "adjective phrase",
+      "traditionalChinese": "足夠大的",
+      "definition": "sufficiently large for a particular purpose",
+      "correctsPreviousMeaning": false
+    },
+    {
+      "word": "largely enough",
+      "tier": "important",
+      "source": "english-exam",
+      "previousMeaning": "足夠大程度地",
+      "questionRefs": [
+        "q-pp-im-en-110-35"
+      ],
+      "contextEvidence": null,
+      "decision": "exclude",
+      "reason": "來源題目的錯誤詞性與字序選項。"
+    },
+    {
+      "word": "no means",
+      "tier": "important",
+      "source": "english-exam",
+      "previousMeaning": "絕不",
+      "questionRefs": [
+        "q-pp-im-en-106-16"
+      ],
+      "contextEvidence": null,
+      "decision": "keep",
+      "pos": "noun phrase",
+      "traditionalChinese": "沒有方法；毫無辦法",
+      "definition": "no available way or method of doing something",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "not mean",
+      "tier": "important",
+      "source": "english-exam",
+      "previousMeaning": "並不意味著",
+      "questionRefs": [
+        "q-pp-cs-en-112-41",
+        "q-pp-im-en-106-16"
+      ],
+      "contextEvidence": null,
+      "decision": "alias",
+      "canonicalWord": "mean",
+      "reason": "否定助動結構，併入 mean。"
+    },
+    {
+      "word": "not means",
+      "tier": "important",
+      "source": "english-exam",
+      "previousMeaning": "不代表",
+      "questionRefs": [
+        "q-pp-im-en-106-16"
+      ],
+      "contextEvidence": null,
+      "decision": "exclude",
+      "reason": "來源題目的錯誤文法選項。"
+    },
+    {
+      "word": "openly challenges",
+      "tier": "important",
+      "source": "english-exam",
+      "previousMeaning": "公開挑戰",
+      "questionRefs": [
+        "q-pp-im-en-115-19"
+      ],
+      "contextEvidence": null,
+      "decision": "alias",
+      "canonicalWord": "challenge",
+      "reason": "副詞加第三人稱動詞的組合，併入 challenge。"
+    },
+    {
+      "word": "phased out",
+      "tier": "important",
+      "source": "english-exam",
+      "previousMeaning": "逐步淘汰",
+      "questionRefs": [
+        "q-pp-im-en-114-2"
+      ],
+      "contextEvidence": null,
+      "decision": "keep",
+      "pos": "phrasal verb",
+      "traditionalChinese": "逐步淘汰；逐漸停止使用",
+      "definition": "gradually discontinued or removed from use",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "regard of",
+      "tier": "important",
+      "source": "english-exam",
+      "previousMeaning": "關於",
+      "questionRefs": [
+        "q-pp-im-en-107-19"
+      ],
+      "contextEvidence": null,
+      "decision": "exclude",
+      "reason": "錯誤介系詞搭配；應使用 regarding、regardless 或 with regard to。"
+    },
+    {
+      "word": "selectively integrates",
+      "tier": "important",
+      "source": "english-exam",
+      "previousMeaning": "有選擇性地整合",
+      "questionRefs": [
+        "q-pp-im-en-115-19"
+      ],
+      "contextEvidence": null,
+      "decision": "alias",
+      "canonicalWord": "integrate",
+      "reason": "副詞加第三人稱動詞的組合，併入 integrate。"
+    },
+    {
+      "word": "showing gratitude",
+      "tier": "important",
+      "source": "english-exam",
+      "previousMeaning": "表示感激",
+      "questionRefs": [
+        "q-pp-im-en-106-46"
+      ],
+      "contextEvidence": null,
+      "decision": "keep",
+      "pos": "verb phrase",
+      "traditionalChinese": "表達感謝；表示感激",
+      "definition": "expressing thanks or appreciation",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "social outcast",
+      "tier": "important",
+      "source": "english-exam",
+      "previousMeaning": "社會邊緣人",
+      "questionRefs": [
+        "q-pp-im-en-106-44"
+      ],
+      "contextEvidence": null,
+      "decision": "keep",
+      "pos": "noun phrase",
+      "traditionalChinese": "被社會排斥的人；社會邊緣人",
+      "definition": "a person rejected or excluded by a social group",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "still others",
+      "tier": "important",
+      "source": "english-exam",
+      "previousMeaning": "還有其他人",
+      "questionRefs": [
+        "q-pp-im-en-110-17"
+      ],
+      "contextEvidence": null,
+      "decision": "keep",
+      "pos": "pronoun phrase",
+      "traditionalChinese": "還有其他人／事物",
+      "definition": "additional people or things beyond those already mentioned",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "superficially summarizes",
+      "tier": "important",
+      "source": "english-exam",
+      "previousMeaning": "膚淺地概述",
+      "questionRefs": [
+        "q-pp-im-en-115-19"
+      ],
+      "contextEvidence": null,
+      "decision": "alias",
+      "canonicalWord": "summarize",
+      "reason": "副詞加第三人稱動詞的組合，併入 summarize。"
+    },
+    {
+      "word": "that i",
+      "tier": "important",
+      "source": "english-exam",
+      "previousMeaning": "我所",
+      "questionRefs": [
+        "q-pp-im-en-106-46",
+        "q-pp-im-en-108-18",
+        "q-pp-im-en-113-18"
+      ],
+      "contextEvidence": null,
+      "decision": "exclude",
+      "reason": "倒裝題的錯誤選項與代名詞片段，不是獨立詞條。"
+    },
+    {
+      "word": "the others",
+      "tier": "important",
+      "source": "english-exam",
+      "previousMeaning": "其他人",
+      "questionRefs": [
+        "q-pp-im-en-110-17",
+        "q-pp-im-it-106-1",
+        "q-pp-im-it-106-2",
+        "q-pp-im-it-106-12",
+        "q-pp-im-it-107-22"
+      ],
+      "contextEvidence": null,
+      "decision": "keep",
+      "pos": "pronoun phrase",
+      "traditionalChinese": "其餘的人／事物",
+      "definition": "the remaining people or things in a known group",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "to which",
+      "tier": "important",
+      "source": "english-exam",
+      "previousMeaning": "對於此",
+      "questionRefs": [
+        "q-pp-cs-en-112-46",
+        "q-pp-im-en-110-15",
+        "q-pp-im-mis-107-2"
+      ],
+      "contextEvidence": null,
+      "decision": "keep",
+      "pos": "relative phrase",
+      "traditionalChinese": "對其；向其；與其（介系詞加關係代名詞）",
+      "definition": "a preposition plus relative pronoun linking a clause to an earlier noun",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "turned down",
+      "tier": "important",
+      "source": "english-exam",
+      "previousMeaning": "拒絕的",
+      "questionRefs": [
+        "q-pp-cs-en-114-16",
+        "q-pp-im-en-114-2"
+      ],
+      "contextEvidence": null,
+      "decision": "keep",
+      "pos": "phrasal verb",
+      "traditionalChinese": "拒絕；調低（turn down 的過去式／分詞）",
+      "definition": "rejected an offer or request, or reduced a level",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "what if",
+      "tier": "important",
+      "source": "english-exam",
+      "previousMeaning": "假如；萬一",
+      "questionRefs": [
+        "q-pp-im-en-110-19",
+        "q-pp-im-en-111-41"
+      ],
+      "contextEvidence": null,
+      "decision": "keep",
+      "pos": "conjunction phrase",
+      "traditionalChinese": "如果…會怎樣；假如",
+      "definition": "used to ask about a possible situation or consequence",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "which affect",
+      "tier": "important",
+      "source": "english-exam",
+      "previousMeaning": "影響…的",
+      "questionRefs": [
+        "q-pp-im-en-106-17"
+      ],
+      "contextEvidence": null,
+      "decision": "alias",
+      "canonicalWord": "affect",
+      "reason": "關係子句片段，併入核心動詞 affect。"
+    },
+    {
+      "word": "would have",
+      "tier": "important",
+      "source": "english-exam",
+      "previousMeaning": "本來會",
+      "questionRefs": [
+        "q-pp-cs-en-108-20",
+        "q-pp-cs-en-108-46",
+        "q-pp-cs-en-110-18",
+        "q-pp-cs-en-110-20",
+        "q-pp-cs-en-111-26"
+      ],
+      "contextEvidence": null,
+      "decision": "keep",
+      "pos": "modal auxiliary phrase",
+      "traditionalChinese": "本來會；原本可能已經",
+      "definition": "used to describe an unreal or conditional result in the past",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "back-of-the-napkin",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "previousMeaning": "粗略估計的",
+      "questionRefs": [
+        "q-pp-cs-en-110-46"
+      ],
+      "contextEvidence": "...y? Well, doing an extraordinarily crude back-of-the-napkin calculation, and sticking only to email and utterances in s...",
+      "decision": "keep",
+      "pos": "adjective",
+      "traditionalChinese": "粗略估算的；非正式快速推算的",
+      "definition": "rough and informal, based on a quick calculation",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "cross-disciplinary",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "previousMeaning": "跨學科的",
+      "questionRefs": [
+        "q-pp-im-en-115-48"
+      ],
+      "contextEvidence": "...er equality, law, and medicine attended cross-disciplinary meetings, adding that the draft amendment, first announced...",
+      "decision": "keep",
+      "pos": "adjective",
+      "traditionalChinese": "跨領域的；跨學科的",
+      "definition": "involving knowledge or methods from multiple disciplines",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "epigenetics",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "previousMeaning": "表觀遺傳學",
+      "questionRefs": [
+        "q-pp-im-en-113-9"
+      ],
+      "contextEvidence": "Epigenetics is the most monumental explanation to emerge in the social...",
+      "decision": "keep",
+      "pos": "noun",
+      "traditionalChinese": "表觀遺傳學",
+      "definition": "the study of heritable changes in gene activity that do not alter the DNA sequence",
+      "correctsPreviousMeaning": false
+    },
+    {
+      "word": "filet-o-fish",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "previousMeaning": "麥香魚",
+      "questionRefs": [
+        "q-pp-cs-en-108-46",
+        "q-pp-im-en-108-29"
+      ],
+      "contextEvidence": "...invitation — SAVOUREZ — printed on her Filet-O-Fish container. \"And I did.\" 29. (A) another (B) the other (C)...",
+      "decision": "exclude",
+      "reason": "McDonald’s 產品專名，不是一般考試詞彙。"
+    },
+    {
+      "word": "industry-level",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "previousMeaning": "產業階層",
+      "questionRefs": [
+        "q-pp-im-en-115-43",
+        "q-pp-im-mis-112-1"
+      ],
+      "contextEvidence": "...cient. (B) There is growing support for industry-level accountability enforced through government action. (C) Inve...",
+      "decision": "keep",
+      "pos": "adjective",
+      "traditionalChinese": "產業層級的；整體產業的",
+      "definition": "relating to an entire industry rather than one organization",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "mcdonald's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "previousMeaning": "na. 【企】麥當勞\\n[網路] 麥當勞公司；連鎖快餐店麥當勞；速食店麥當勞",
+      "questionRefs": [
+        "q-pp-cs-en-108-46",
+        "q-pp-im-en-108-29"
+      ],
+      "contextEvidence": "...ought delight, and she doesn't scoff at McDonald's: \"You can learn a thing or two about a city by observing th...",
+      "decision": "exclude",
+      "reason": "品牌名所有格，不是一般詞彙。"
+    },
+    {
+      "word": "real-world",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "previousMeaning": "現實世界的",
+      "questionRefs": [
+        "q-pp-cs-en-108-1",
+        "q-pp-cs-en-112-31",
+        "q-pp-im-en-114-20",
+        "q-pp-im-it-112-23"
+      ],
+      "contextEvidence": "...akes this course unique is its focus on real-world applications.",
+      "decision": "keep",
+      "pos": "adjective",
+      "traditionalChinese": "真實世界的；實務情境的",
+      "definition": "existing or occurring in actual practice rather than only in theory",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "int",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "[計] 整數, 中斷",
+      "questionRefs": [
+        "q-pp-cs-arch-108-7",
+        "q-pp-cs-arch-110-5",
+        "q-pp-cs-arch-110-6",
+        "q-pp-cs-arch-111-3",
+        "q-pp-cs-arch-111-6"
+      ],
+      "contextEvidence": "(3 Points) Which ONE of the following statements is correct? Please...",
+      "decision": "keep",
+      "pos": "technical noun / keyword",
+      "traditionalChinese": "整數型別；C／C++ 的 int 關鍵字",
+      "definition": "an integer data type and its keyword in languages such as C and C++",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "sql",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "[計] 結構化英語詢問語言",
+      "questionRefs": [
+        "q-pp-im-it-106-3",
+        "q-pp-im-it-107-4",
+        "q-pp-im-it-107-5",
+        "q-pp-im-it-107-22",
+        "q-pp-im-it-109-18"
+      ],
+      "contextEvidence": "Which SQL clause is used to filter groups of data after applying an a...",
+      "decision": "keep",
+      "pos": "noun / acronym",
+      "traditionalChinese": "SQL；結構化查詢語言",
+      "definition": "Structured Query Language, used to define, query, and manage relational data",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "multi",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "[計] 多",
+      "questionRefs": [
+        "q-pp-cs-arch-108-1",
+        "q-pp-cs-arch-108-6",
+        "q-pp-cs-arch-108-7",
+        "q-pp-cs-arch-111-19",
+        "q-pp-cs-en-114-46"
+      ],
+      "contextEvidence": "...ging from single-stall units with floor-to-ceiling doors to multi-stall layouts with enhanced privacy features. Many institut...",
+      "decision": "exclude",
+      "reason": "斷詞後留下的生產性字首 multi-，不是獨立 headword。"
+    },
+    {
+      "word": "sqrt",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "abbr. 開平方根（square root）",
+      "questionRefs": [
+        "q-pp-cs-algo-109-1",
+        "q-pp-cs-algo-109-3",
+        "q-pp-cs-algo-114-8",
+        "q-pp-cs-algo-114-9",
+        "q-pp-cs-algo-114-11"
+      ],
+      "contextEvidence": "...= (n/e)^n, f2(n) = 2^(8n), f3(n) = (n choose n/4), f4(n) = sqrt(2)^(sqrt(n)), f5(n) = (log n)^(log n) (A) f1(n), f2(n) (B)...",
+      "decision": "keep",
+      "pos": "technical noun / function",
+      "traditionalChinese": "平方根；平方根函式",
+      "definition": "a square-root operation or function in mathematical and programming notation",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "iot",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "abbr. 物聯網（Internet of Things）",
+      "questionRefs": [
+        "q-pp-im-it-107-22",
+        "q-pp-im-it-108-7",
+        "q-pp-im-it-109-20",
+        "q-pp-im-mis-111-2",
+        "q-pp-im-mis-112-2"
+      ],
+      "contextEvidence": "In the age of Internet of Things (IoT), the number of connected devices has grown rapidly in the...",
+      "decision": "keep",
+      "pos": "noun / acronym",
+      "traditionalChinese": "物聯網（Internet of Things）",
+      "definition": "a network of physical devices that collect and exchange data",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "pseudocode",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "[電] 假碼",
+      "questionRefs": [
+        "q-pp-cs-algo-108-9",
+        "q-pp-cs-algo-113-2",
+        "q-pp-cs-algo-113-4",
+        "q-pp-cs-algo-114-13",
+        "q-pp-im-it-107-25"
+      ],
+      "contextEvidence": "(5 points) Consider the (incomplete) pseudocode snippet SOLVE(). 1: function SOLVE(G = (V, E, w), s, t) 2:...",
+      "decision": "keep",
+      "pos": "noun",
+      "traditionalChinese": "虛擬碼；偽程式碼",
+      "definition": "an informal, language-independent description of an algorithm",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "recursively",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "[計] 遞迴地",
+      "questionRefs": [
+        "q-pp-cs-algo-109-2",
+        "q-pp-cs-algo-109-6",
+        "q-pp-cs-algo-110-3",
+        "q-pp-cs-algo-112-15",
+        "q-pp-cs-arch-112-13"
+      ],
+      "contextEvidence": "...ups of lists, with ⌈m/2⌉ and ⌊m/2⌋ lists, respectively. L4. Recursively call MergeTwoGroupLists for each of these two groups of lis...",
+      "decision": "keep",
+      "pos": "adverb",
+      "traditionalChinese": "遞迴地",
+      "definition": "by repeatedly applying a procedure to smaller instances of the same problem",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "subtree",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "[計] 子樹",
+      "questionRefs": [
+        "q-pp-cs-algo-109-5",
+        "q-pp-cs-algo-109-9",
+        "q-pp-cs-algo-113-5",
+        "q-pp-cs-algo-113-8",
+        "q-pp-cs-algo-113-9"
+      ],
+      "contextEvidence": "...ld of T.x, and T.L (resp. T.R) to be the left (resp. right) subtree of T.x. For any vertex x on a binary tree, we define x.l, x...",
+      "decision": "keep",
+      "pos": "noun",
+      "traditionalChinese": "子樹",
+      "definition": "a tree formed by a node and some or all of its descendants",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "adt",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "[計] 抽象資料型別, 現用磁碟表, 非同步資料收發機, 屬性分佈樹\\n             自動資料翻譯程式, 獨立資料傳送",
+      "questionRefs": [
+        "q-pp-im-it-109-21",
+        "q-pp-im-it-110-29",
+        "q-pp-im-it-111-25",
+        "q-pp-im-it-113-25",
+        "q-pp-im-it-114-25"
+      ],
+      "contextEvidence": "The following shows an array-based implementation of ADT Stack that stores non-duplicated integers. NOTE: The stack...",
+      "decision": "keep",
+      "pos": "noun / acronym",
+      "traditionalChinese": "抽象資料型別（Abstract Data Type）",
+      "definition": "a data type defined by its operations and behavior rather than its implementation",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "lgn",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "[醫][=lateral geniculate nucleus]外側膝狀體核",
+      "questionRefs": [
+        "q-pp-cs-algo-111-1",
+        "q-pp-cs-algo-111-2",
+        "q-pp-cs-algo-111-3",
+        "q-pp-cs-algo-111-4",
+        "q-pp-cs-algo-111-5"
+      ],
+      "contextEvidence": "...ng table of (A)-(E) choices when answering. (A) O(1) (B) O(lgn) (C) O(n) (D) O(nlgn) (E) O(n²) (3 points) Selection so...",
+      "decision": "exclude",
+      "reason": "複雜度記號 lg n 被壓平後的抽取雜訊，不是詞彙。"
+    },
+    {
+      "word": "udp",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "[計] 使用者資料包協議\\n[化] 尿苷二磷酸",
+      "questionRefs": [
+        "q-pp-im-it-106-19",
+        "q-pp-im-it-107-8",
+        "q-pp-im-it-108-4",
+        "q-pp-im-it-115-14"
+      ],
+      "contextEvidence": "Which of the following is a characteristic of UDP (User Datagram Protocol) compared to TCP? (A) It guarantees...",
+      "decision": "keep",
+      "pos": "noun / acronym",
+      "traditionalChinese": "使用者資料包協定（UDP）",
+      "definition": "a connectionless transport protocol that sends datagrams without delivery guarantees",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "alu",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "[計] 運算器, 非同步線路部件",
+      "questionRefs": [
+        "q-pp-cs-arch-110-7",
+        "q-pp-cs-arch-113-2",
+        "q-pp-cs-arch-114-12",
+        "q-pp-im-it-110-5"
+      ],
+      "contextEvidence": "...structions executed by the processor break down as follows: ALU: 45%; BEQ: 20%; LW: 20%; SW: 15% Choices: (A) The clock cy...",
+      "decision": "keep",
+      "pos": "noun / acronym",
+      "traditionalChinese": "算術邏輯單元（ALU）",
+      "definition": "the processor component that performs arithmetic and logical operations",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "bfs",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "abbr. 寬度優先搜尋（breadth first search）；油壓緩衝器開關",
+      "questionRefs": [
+        "q-pp-cs-algo-110-5",
+        "q-pp-cs-algo-112-4",
+        "q-pp-cs-algo-112-9",
+        "q-pp-cs-algo-113-8"
+      ],
+      "contextEvidence": "...C. We can compute l(v) by starting a breadth-first-search (BFS) from v, traversing all nodes of the subtree rooted at v, a...",
+      "decision": "keep",
+      "pos": "noun / acronym",
+      "traditionalChinese": "廣度優先搜尋（BFS）",
+      "definition": "a graph or tree traversal that explores nodes level by level",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "dns",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "[計] 分散式網路系統, 域名服務",
+      "questionRefs": [
+        "q-pp-im-it-108-4",
+        "q-pp-im-it-111-11",
+        "q-pp-im-it-113-12",
+        "q-pp-im-it-114-23"
+      ],
+      "contextEvidence": "What is the primary purpose of the Domain Name System (DNS)? (A) To assign IP addresses to devices on a network (B) To...",
+      "decision": "keep",
+      "pos": "noun / acronym",
+      "traditionalChinese": "網域名稱系統（DNS）",
+      "definition": "the distributed system that maps domain names to IP addresses and other records",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "osi",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "[計] 開放式系統互連, 開放式系統互連協議組, 開放式系統互連參考模型",
+      "questionRefs": [
+        "q-pp-im-it-106-20",
+        "q-pp-im-it-107-8",
+        "q-pp-im-it-111-1",
+        "q-pp-im-it-114-22"
+      ],
+      "contextEvidence": "...applications. (D) NAT operates at the Network layer of the OSI model. (E) all of the above are correct (choose this one on...",
+      "decision": "keep",
+      "pos": "noun / acronym",
+      "traditionalChinese": "開放系統互連模型（OSI 模型）",
+      "definition": "a seven-layer reference model for network communication",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "associativity",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "[計] 結合性",
+      "questionRefs": [
+        "q-pp-cs-arch-110-6",
+        "q-pp-cs-arch-112-5",
+        "q-pp-cs-arch-112-8"
+      ],
+      "contextEvidence": "...f the following method is most effective? (A) Increase the associativity of the cache. (B) Increase the memory bandwidth. (C) Enable...",
+      "decision": "keep",
+      "pos": "noun",
+      "traditionalChinese": "快取相聯度",
+      "definition": "the number of cache lines available in each cache set",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "avl",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "abbr. 批准的售主名單（Approved Vendor List）；自動車輛定位（Automatic Vehicle Location）",
+      "questionRefs": [
+        "q-pp-cs-algo-112-6",
+        "q-pp-cs-algo-113-5",
+        "q-pp-im-it-106-26"
+      ],
+      "contextEvidence": "...o a unified BST T with the nodes L U {x} U R. Be aware that AVL and Red-Black trees are specific types of BSTs. Given the c...",
+      "decision": "keep",
+      "pos": "noun / acronym",
+      "traditionalChinese": "AVL 樹；自平衡二元搜尋樹",
+      "definition": "a self-balancing binary search tree whose subtree heights differ by at most one",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "bmp",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "[計] 成批報文處理, 基準程式, 材料單據處理器, 生物醫學統計程式",
+      "questionRefs": [
+        "q-pp-im-it-108-1",
+        "q-pp-im-it-110-3"
+      ],
+      "contextEvidence": "...not a file format for storing images? (A) JPEG (B) PNG (C) BMP (D) TIFF (E) all the above are image file format (choose th...",
+      "decision": "keep",
+      "pos": "noun / acronym",
+      "traditionalChinese": "BMP 點陣圖影像格式",
+      "definition": "a raster image file format commonly identified by the .bmp extension",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "dfs",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "abbr. [計算機]分散式檔案系統（Distributed File System）；免稅消費（Duty Free Shopping）；[計算機]深度優先搜尋（depth first search）",
+      "questionRefs": [
+        "q-pp-cs-algo-112-4",
+        "q-pp-cs-algo-112-9",
+        "q-pp-cs-algo-113-8"
+      ],
+      "contextEvidence": "...n compute the levels for all nodes by a depth-first-search (DFS) starting from the root of T. That is, we can compute the l...",
+      "decision": "keep",
+      "pos": "noun / acronym",
+      "traditionalChinese": "深度優先搜尋（DFS）",
+      "definition": "a graph or tree traversal that explores one branch before backtracking",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "isa",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "[計] 指令系統體系結構, 工業標準結構",
+      "questionRefs": [
+        "q-pp-cs-arch-108-3",
+        "q-pp-cs-arch-112-8",
+        "q-pp-cs-arch-114-13"
+      ],
+      "contextEvidence": "...following code sequence runs on this processor (with RISC-V ISA). addi x3, x0, 0x18 //x0 is the zero register lw x3, 8(x3)...",
+      "decision": "keep",
+      "pos": "noun / acronym",
+      "traditionalChinese": "指令集架構（ISA）",
+      "definition": "the programmer-visible interface between software and a processor",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "jpeg",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "abbr. 聯合圖象專家組（Joint Photographic Experts Group）",
+      "questionRefs": [
+        "q-pp-im-it-108-1",
+        "q-pp-im-it-110-3"
+      ],
+      "contextEvidence": "...the following is not a file format for storing images? (A) JPEG (B) PNG (C) BMP (D) TIFF (E) all the above are image file f...",
+      "decision": "keep",
+      "pos": "noun / acronym",
+      "traditionalChinese": "JPEG 影像壓縮／檔案格式",
+      "definition": "a widely used lossy compression standard and format for digital images",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "knuth",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "[人名] 克努特",
+      "questionRefs": [
+        "q-pp-cs-algo-110-10",
+        "q-pp-cs-algo-111-11",
+        "q-pp-cs-algo-112-16"
+      ],
+      "contextEvidence": "...pseudo code function to compute the prefix function in the Knuth-Morris-Pratt (KMP) string matching algorithm is given below...",
+      "decision": "alias",
+      "canonicalWord": "kmp",
+      "reason": "人名只在 Knuth–Morris–Pratt 演算法中出現，併入既有 KMP 詞條。"
+    },
+    {
+      "word": "lru",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "最近最少使用演算法",
+      "questionRefs": [
+        "q-pp-cs-arch-110-8",
+        "q-pp-cs-arch-114-5",
+        "q-pp-cs-arch-114-14"
+      ],
+      "contextEvidence": "...ve the same referenced likelihood, the Least recently used (LRU) algorithm is used to break the tie. So, the total number o...",
+      "decision": "keep",
+      "pos": "noun / adjective / acronym",
+      "traditionalChinese": "最近最少使用（LRU）替換策略",
+      "definition": "a replacement policy that evicts the item used least recently",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "multithreading",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "[計] 多線索處理",
+      "questionRefs": [
+        "q-pp-cs-arch-109-1",
+        "q-pp-cs-arch-110-8",
+        "q-pp-cs-arch-112-5"
+      ],
+      "contextEvidence": "...refetch. (D) Make the processor pipeline deeper. (E) Enable multithreading.",
+      "decision": "keep",
+      "pos": "noun",
+      "traditionalChinese": "多執行緒處理",
+      "definition": "the concurrent execution of multiple threads within a process",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "nfc",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "abbr. 國家足球聯盟（National Football Conference）",
+      "questionRefs": [
+        "q-pp-im-it-106-24",
+        "q-pp-im-it-108-7"
+      ],
+      "contextEvidence": "...or tracking objects? (A) smart card (B) beacon (C) RFID (D) NFC (E) IoT.",
+      "decision": "keep",
+      "pos": "noun / acronym",
+      "traditionalChinese": "近場通訊（NFC）",
+      "definition": "a short-range wireless technology for communication between nearby devices",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "printf",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "[計] 列印函式",
+      "questionRefs": [
+        "q-pp-cs-arch-108-7",
+        "q-pp-cs-arch-110-5",
+        "q-pp-cs-arch-114-3"
+      ],
+      "contextEvidence": "...= fork(); if (pid == 0) { value += 10; printf(\"A = %d\\n\",value); return 0; } else if (pid...",
+      "decision": "keep",
+      "pos": "technical noun / function",
+      "traditionalChinese": "printf 格式化輸出函式",
+      "definition": "a C standard-library function that writes formatted output",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "rfid",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "abbr. 無線射頻識別（radio frequency identification devices）",
+      "questionRefs": [
+        "q-pp-im-it-106-24",
+        "q-pp-im-it-108-7"
+      ],
+      "contextEvidence": "...st used for tracking objects? (A) smart card (B) beacon (C) RFID (D) NFC (E) IoT.",
+      "decision": "keep",
+      "pos": "noun / acronym",
+      "traditionalChinese": "無線射頻識別（RFID）",
+      "definition": "a technology that identifies and tracks tagged objects using radio waves",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "superscalar",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "[計] 超標量結構",
+      "questionRefs": [
+        "q-pp-cs-arch-108-2",
+        "q-pp-cs-arch-108-4",
+        "q-pp-cs-arch-114-18"
+      ],
+      "contextEvidence": "...nization: It contains two cores, where each core implements superscalar processing with two functional units and can execute instru...",
+      "decision": "keep",
+      "pos": "adjective",
+      "traditionalChinese": "超純量的",
+      "definition": "able to issue or execute multiple instructions in one clock cycle",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "tlb",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "轉換後備緩衝區",
+      "questionRefs": [
+        "q-pp-cs-arch-108-4",
+        "q-pp-cs-arch-112-9",
+        "q-pp-cs-arch-114-4"
+      ],
+      "contextEvidence": "...thermore, Alex considers the translation look-aside buffer (TLB) hardware to implement the idea of the inverted page table....",
+      "decision": "keep",
+      "pos": "noun / acronym",
+      "traditionalChinese": "轉譯後備緩衝區（TLB）",
+      "definition": "a cache that stores recent virtual-to-physical address translations",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "txt",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "[計] 文字",
+      "questionRefs": [
+        "q-pp-cs-arch-114-6",
+        "q-pp-im-it-112-29"
+      ],
+      "contextEvidence": "...open-file table to create an entry. (C) When the file \"foo.txt\" does not exist in the file system, Operation ③ is called t...",
+      "decision": "keep",
+      "pos": "noun / file extension",
+      "traditionalChinese": "TXT 純文字檔格式",
+      "definition": "a filename extension commonly used for plain-text files",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "virtualization",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "[計] 虛擬化",
+      "questionRefs": [
+        "q-pp-cs-arch-112-9",
+        "q-pp-im-it-107-17",
+        "q-pp-im-it-111-5"
+      ],
+      "contextEvidence": "...architectures provide nested page tables (NPTs) to support virtualization. The MMU hardware performs two-stage memory translation. In...",
+      "decision": "keep",
+      "pos": "noun",
+      "traditionalChinese": "虛擬化",
+      "definition": "the creation of virtual versions of computing resources such as machines or storage",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "alex",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "[計] 開放網路檔案系統",
+      "questionRefs": [
+        "q-pp-cs-arch-114-4",
+        "q-pp-cs-arch-114-5"
+      ],
+      "contextEvidence": "...conventional approach with a single-level page table is X. Alex would like to consider an \"inverted page table\" to improve...",
+      "decision": "exclude",
+      "reason": "題目中的人名，ECDICT 義與來源無關。"
+    },
+    {
+      "word": "benchmarking",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "[計] 確定基準點, 標記",
+      "questionRefs": [
+        "q-pp-cs-arch-113-4",
+        "q-pp-cs-arch-113-7",
+        "q-pp-cs-arch-113-9"
+      ],
+      "contextEvidence": "...blem set and have some basic understanding about LLM system benchmarking, our next goal is to understand the workload to design a ch...",
+      "decision": "keep",
+      "pos": "noun",
+      "traditionalChinese": "基準測試；效能評測",
+      "definition": "the process of measuring and comparing system performance against a standard workload",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "bst",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "abbr. 英國夏令時（British Summer Time）",
+      "questionRefs": [
+        "q-pp-cs-algo-113-5",
+        "q-pp-im-it-114-4"
+      ],
+      "contextEvidence": "(10 points) A Binary Search Tree (abbreviated as BST) is a tree structure comprised of nodes that maintain a spe...",
+      "decision": "keep",
+      "pos": "noun / acronym",
+      "traditionalChinese": "二元搜尋樹（BST）",
+      "definition": "a binary tree whose keys are ordered to support efficient search and updates",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "cnn",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "abbr. 美國有線電視新聞網路（Cable News Network）",
+      "questionRefs": [
+        "q-pp-cs-arch-109-1",
+        "q-pp-cs-en-108-46",
+        "q-pp-im-en-115-31",
+        "q-pp-im-mis-108-3"
+      ],
+      "contextEvidence": "...the core building block of a Convolutional Neural Network (CNN), which is widely used in today's machine learning methods...",
+      "decision": "keep",
+      "pos": "noun / acronym",
+      "traditionalChinese": "卷積神經網路（CNN）",
+      "definition": "a neural network that uses convolutional layers, especially for grid-like data such as images",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "com",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "[計] 計算機輸出縮微膠片; 計算機輸出膠片縮微機",
+      "questionRefs": [
+        "q-pp-cs-en-111-36",
+        "q-pp-im-it-106-16"
+      ],
+      "contextEvidence": "...We would like to offer the opportunity to staff within the company. The responsibilities of the position include overseein...",
+      "decision": "exclude",
+      "reason": "從 .com 網域名稱抽出的字尾，不是此處的詞彙。"
+    },
+    {
+      "word": "convolutional",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "[計] 卷積的\\n[醫] 腦回的",
+      "questionRefs": [
+        "q-pp-cs-arch-109-1",
+        "q-pp-im-mis-108-3"
+      ],
+      "contextEvidence": "(50 points) The convolutional layer is the core building block of a Convolutional Neural...",
+      "decision": "keep",
+      "pos": "adjective",
+      "traditionalChinese": "卷積的",
+      "definition": "relating to the convolution operation used in signal processing and neural networks",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "datagram",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "[計] 資料包, 資料電報",
+      "questionRefs": [
+        "q-pp-im-it-111-8",
+        "q-pp-im-it-115-14"
+      ],
+      "contextEvidence": "Which of the following is a characteristic of UDP (User Datagram Protocol) compared to TCP? (A) It guarantees delivery of da...",
+      "decision": "keep",
+      "pos": "noun",
+      "traditionalChinese": "資料報；資料包",
+      "definition": "a self-contained packet sent independently through a packet-switched network",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "det",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "[機] 避蚊氨",
+      "questionRefs": [
+        "q-pp-cs-math-108-9",
+        "q-pp-cs-math-110-8"
+      ],
+      "contextEvidence": "(10%) Solve for t if det([[3−t, 2, 0, 0, 0], [1, 4−t, 0, 0, 0], [0, 0, 3−t, 1, 0], [...",
+      "decision": "alias",
+      "canonicalWord": "determinant",
+      "reason": "矩陣行列式函數記號，併入 determinant。"
+    },
+    {
+      "word": "dma",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "直接儲存器存取\\n[計] 資料管理協會, 直接儲存器存取通道",
+      "questionRefs": [
+        "q-pp-im-it-112-4"
+      ],
+      "contextEvidence": "...interrupt signal to the processor (C) Direct Memory Access (DMA) allows data to be transferred from I/O devices to memory d...",
+      "decision": "keep",
+      "pos": "noun / acronym",
+      "traditionalChinese": "直接記憶體存取（DMA）",
+      "definition": "a mechanism that transfers data between devices and memory with little CPU involvement",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "dmca",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "abbr. Digital Millennium Copyright Act （美國）數字千年版權法案",
+      "questionRefs": [
+        "q-pp-im-it-108-9"
+      ],
+      "contextEvidence": "...or Privacy Principles (B) Digital Millennium Copyright Act (DMCA) (C) Digital Transition Content Security Act (D) General Da...",
+      "decision": "keep",
+      "pos": "proper noun / acronym",
+      "traditionalChinese": "美國《數位千禧年著作權法》（DMCA）",
+      "definition": "the United States Digital Millennium Copyright Act governing digital copyright issues",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "esa",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "abbr. 歐洲航天局（European Space Agency）；美國生態學學會（Ecological Society of America）；美國工程師和科學家協會（Engineers and Scientists of America）；經濟穩定法案（Economic Stabilization Act）；就業標準署（Employment Standards Administration）",
+      "questionRefs": [
+        "q-pp-cs-en-113-47",
+        "q-pp-cs-en-113-48"
+      ],
+      "contextEvidence": "...mmers of hope: in the past year, the European Space Agency (ESA) took a step in that direction by issuing an open call for...",
+      "decision": "exclude",
+      "reason": "European Space Agency 的機構專名縮寫，不是一般資管詞彙。"
+    },
+    {
+      "word": "gpu",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "abbr. 地面動力裝置（ground power unit）",
+      "questionRefs": [
+        "q-pp-cs-arch-113-4",
+        "q-pp-cs-arch-113-9",
+        "q-pp-im-it-113-4"
+      ],
+      "contextEvidence": "...the parameters of GPT-3 can be placed on the memory of H100 GPU when most of the parameters are represented with FP8. (B) O...",
+      "decision": "keep",
+      "pos": "noun / acronym",
+      "traditionalChinese": "圖形處理器（GPU）",
+      "definition": "a processor optimized for highly parallel computation and graphics workloads",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "hypervisor",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "[電] 超級監督者",
+      "questionRefs": [
+        "q-pp-im-it-107-17",
+        "q-pp-im-it-111-6"
+      ],
+      "contextEvidence": "...aintainability, and high availability (D) a software called hypervisor sits between the VMs and the host and is responsible for al...",
+      "decision": "keep",
+      "pos": "noun",
+      "traditionalChinese": "虛擬機器監視器；虛擬化管理程式",
+      "definition": "software or firmware that creates and manages virtual machines",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "inorder",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "[計] 中根次序",
+      "questionRefs": [
+        "q-pp-im-it-106-25",
+        "q-pp-im-it-113-25",
+        "q-pp-im-it-114-4"
+      ],
+      "contextEvidence": "...e (BST)? (A) Preorder traversal (B) Postorder traversal (C) Inorder traversal (D) Level-order traversal (E) Reverse level-order...",
+      "decision": "keep",
+      "pos": "adjective / adverb",
+      "traditionalChinese": "中序的；以中序方式",
+      "definition": "visiting a binary-tree node between its left and right subtrees",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "ldap",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "abbr. 輕量級目錄訪問協議（Lightweight Directory Access Protocol）",
+      "questionRefs": [
+        "q-pp-im-it-108-13"
+      ],
+      "contextEvidence": "...Protocol (IDAP) (C) Lightweight Directory Access Protocol (LDAP) (D) Root Directory Access Protocol (RDAP) (E) none of the...",
+      "decision": "keep",
+      "pos": "noun / acronym",
+      "traditionalChinese": "輕量型目錄存取協定（LDAP）",
+      "definition": "a protocol for accessing and maintaining distributed directory services",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "ntu",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "[計] 網路端接裝置; 網路終端部件\\n[化] 傳質單元數",
+      "questionRefs": [
+        "q-pp-cs-en-113-37",
+        "q-pp-cs-en-113-39",
+        "q-pp-im-it-109-10",
+        "q-pp-im-it-113-12"
+      ],
+      "contextEvidence": "Passage A: Questions 37-39 National Taiwan University (NTU) students who face sexual harassment from supervisory teach...",
+      "decision": "exclude",
+      "reason": "National Taiwan University 的校名縮寫，不是一般詞彙。"
+    },
+    {
+      "word": "postorder",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "[計] 後根次序",
+      "questionRefs": [
+        "q-pp-cs-algo-110-5",
+        "q-pp-im-it-114-4"
+      ],
+      "contextEvidence": "...ull means there is no element in the slot. (a) What is its postorder traversal result? _____ (9) (A) a+d-bc* (B) a+b-cd+* (C...",
+      "decision": "keep",
+      "pos": "adjective / adverb",
+      "traditionalChinese": "後序的；以後序方式",
+      "definition": "visiting a binary-tree node after its child subtrees",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "prob",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "abbr. 可能性（等於probability）；可能的（probable）；大概（等於probably）；問題（等於problem）",
+      "questionRefs": [
+        "q-pp-cs-algo-112-3",
+        "q-pp-im-stat-114-4"
+      ],
+      "contextEvidence": "...table for the characters and their corresponding occurring probabilities. Please design a Huffman encoding tree and select...",
+      "decision": "alias",
+      "canonicalWord": "probability",
+      "reason": "表格與統計輸出的縮寫，併入 probability。"
+    },
+    {
+      "word": "revis",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "[醫]修改，校正，修訂",
+      "questionRefs": [
+        "q-pp-cs-en-111-41",
+        "q-pp-cs-en-111-45"
+      ],
+      "contextEvidence": "...and realize he's a someone and not a something,\" says Matt Revis, the company's vice president of product management. And wh...",
+      "decision": "exclude",
+      "reason": "Matt Revis 的姓氏，ECDICT 義與來源無關。"
+    },
+    {
+      "word": "rlogin",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "[計] 遠端登入程式",
+      "questionRefs": [
+        "q-pp-im-it-108-14"
+      ],
+      "contextEvidence": "...d for unsecured remote shell protocols such as the Berkeley rlogin and rsh? (A) Secure Shell (SSH) (B) Transport Layer Securit...",
+      "decision": "keep",
+      "pos": "technical noun / command",
+      "traditionalChinese": "rlogin 遠端登入協定／指令",
+      "definition": "a legacy Unix command and protocol for remote login",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "rsa",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "abbr. 南非共和國（Republic of South Africa）；英國皇家藝術學會（Royal Society of Arts）；無線電操作人員協會（Radio Service Men Association）；英國轉播事業協會（Relay Services Association of Great Britain）",
+      "questionRefs": [
+        "q-pp-im-it-107-21",
+        "q-pp-im-it-111-12",
+        "q-pp-im-it-113-16"
+      ],
+      "contextEvidence": "Which of the following is wrong? (A) RSA algorithm is an asymmetric cryptography algorithm (B) RSA i...",
+      "decision": "keep",
+      "pos": "noun / acronym",
+      "traditionalChinese": "RSA 非對稱式加密演算法",
+      "definition": "a public-key cryptosystem based on the difficulty of factoring large integers",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "schedulable",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "[計] 可排程的",
+      "questionRefs": [
+        "q-pp-cs-arch-112-16",
+        "q-pp-cs-arch-114-8"
+      ],
+      "contextEvidence": "...the completion of a process) of Pe is 20. (C) Process Pa is schedulable. (D) If we increase the burst time of Pz by X time units, t...",
+      "decision": "keep",
+      "pos": "adjective",
+      "traditionalChinese": "可排程的",
+      "definition": "able to meet the timing or resource constraints of a scheduling system",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "serializability",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "[計] 可序列性",
+      "questionRefs": [
+        "q-pp-cs-arch-109-2",
+        "q-pp-cs-arch-113-10"
+      ],
+      "contextEvidence": "...s. (G) (2 points) The two-phase locking protocol guarantees serializability and prevents deadlock.",
+      "decision": "keep",
+      "pos": "noun",
+      "traditionalChinese": "可序列化性",
+      "definition": "the property that concurrent transactions have an outcome equivalent to some serial order",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "smtp",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "[計] 簡易郵件傳遞協議",
+      "questionRefs": [
+        "q-pp-im-it-106-20",
+        "q-pp-im-it-111-2"
+      ],
+      "contextEvidence": "...tocol for email sending? (A) Simple Mail Transfer Protocol (SMTP) (B) Internet Message Access Protocol (IMAP) (C) Post Offic...",
+      "decision": "keep",
+      "pos": "noun / acronym",
+      "traditionalChinese": "簡易郵件傳輸協定（SMTP）",
+      "definition": "the application-layer protocol used to send and relay email",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "ssl",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "[計] 軟體說明語言, 源語句庫, 儲存結構語言, 系統模擬語言",
+      "questionRefs": [
+        "q-pp-im-it-108-14"
+      ],
+      "contextEvidence": "...B) Transport Layer Security (TLS) (C) Secure Sockets Layer (SSL) (D) Session Initiation Protocol (SIP) (E) none of the abov...",
+      "decision": "keep",
+      "pos": "noun / acronym",
+      "traditionalChinese": "安全通訊端層（SSL）",
+      "definition": "a legacy cryptographic protocol for securing network communication, superseded by TLS",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "stdio",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "abbr. 標準輸入輸出（standard input/ouput）",
+      "questionRefs": [
+        "q-pp-cs-arch-108-7",
+        "q-pp-cs-arch-114-3"
+      ],
+      "contextEvidence": "...of the following program. #include <sys/types.h> #include <stdio.h> #include <unistd.h> #include <sys/wait.h> int value = 1...",
+      "decision": "keep",
+      "pos": "technical noun / header",
+      "traditionalChinese": "標準輸入輸出；C 的 stdio 標頭",
+      "definition": "the C standard input/output library, commonly included through stdio.h",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "str",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "[計] 同步收發機",
+      "questionRefs": [
+        "q-pp-im-it-112-29"
+      ],
+      "contextEvidence": "...ing namespace std; #define NO_OF_CHARS 256 void PREPROCESS(string str, int size, int badchar[NO_OF_CHARS]) { int i;...",
+      "decision": "exclude",
+      "reason": "程式碼中的區域變數名稱，不是獨立詞彙。"
+    },
+    {
+      "word": "sys",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "[計] DOS外部命令:將系統檔案加入指定的磁碟",
+      "questionRefs": [
+        "q-pp-cs-arch-108-7",
+        "q-pp-cs-arch-110-5",
+        "q-pp-cs-arch-114-3"
+      ],
+      "contextEvidence": "...ription for the output of the following program. #include <sys/types.h> #include <stdio.h> #include <unistd.h> #include <s...",
+      "decision": "exclude",
+      "reason": "從標頭路徑與函式名稱抽出的程式片段，不是獨立詞彙。"
+    },
+    {
+      "word": "telnet",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "[計] 終端模擬協議, 遠端註冊",
+      "questionRefs": [
+        "q-pp-im-it-108-14"
+      ],
+      "contextEvidence": "...–server architecture, and was designed as a replacement for Telnet and for unsecured remote shell protocols such as the Berkel...",
+      "decision": "keep",
+      "pos": "technical noun / protocol",
+      "traditionalChinese": "Telnet 遠端終端協定",
+      "definition": "a legacy unencrypted protocol for remote terminal access",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "typedef",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "型別定義",
+      "questionRefs": [
+        "q-pp-cs-arch-113-12",
+        "q-pp-cs-arch-114-10"
+      ],
+      "contextEvidence": ".... extern struct np_struct; mov 0x120 (%rsi), %ecx typedef struct { add (%rsi), %ecx int fst; lea (...",
+      "decision": "keep",
+      "pos": "technical noun / keyword",
+      "traditionalChinese": "型別定義；C／C++ 的 typedef 關鍵字",
+      "definition": "a C and C++ keyword that creates an alias for an existing type",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "vpn",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "[計] 虛擬私人網路",
+      "questionRefs": [
+        "q-pp-im-it-110-8",
+        "q-pp-im-it-112-15"
+      ],
+      "contextEvidence": "...networks. This effectively creates ___. (A) virtual LAN (B) VPN (C) domains (D) subdomain (E) private LANs.",
+      "decision": "keep",
+      "pos": "noun / acronym",
+      "traditionalChinese": "虛擬私人網路（VPN）",
+      "definition": "an encrypted logical network connection built over another network",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "api",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "[計] 應用程式介面, 自動優先中斷\\n[經] 美國石油協會",
+      "questionRefs": [
+        "q-pp-cs-arch-114-9"
+      ],
+      "contextEvidence": "...e to have concurrency without parallelism. (C) The Pthreads API(s) can be used in multithreaded C programs for thread creat...",
+      "decision": "keep",
+      "pos": "noun / acronym",
+      "traditionalChinese": "應用程式介面（API）",
+      "definition": "a defined interface through which software components communicate",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "dhcp",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "[計] 動態主機配置協議",
+      "questionRefs": [
+        "q-pp-im-it-111-4"
+      ],
+      "contextEvidence": "...llowing is wrong about Dynamic Host Configuration Protocol (DHCP)? (A) it is used on Internet Protocol (IP) networks (B) it...",
+      "decision": "keep",
+      "pos": "noun / acronym",
+      "traditionalChinese": "動態主機設定協定（DHCP）",
+      "definition": "a network protocol that automatically assigns IP configuration to clients",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "erp",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "abbr. 企業資源計劃（Enterprise Resource Planning）；有效輻射功率（effective radiated power）",
+      "questionRefs": [
+        "q-pp-im-mis-113-2"
+      ],
+      "contextEvidence": "Enterprise agility, also known as organizational agility, refers t...",
+      "decision": "keep",
+      "pos": "noun / acronym",
+      "traditionalChinese": "企業資源規劃（ERP）系統",
+      "definition": "integrated software for managing an organization’s core business processes",
+      "correctsPreviousMeaning": true
+    },
+    {
+      "word": "maintainability",
+      "tier": "domain",
+      "source": "domain",
+      "previousMeaning": "[計] 可維修性; 可維護性\\n[化] 保養效能; 運轉的可靠性",
+      "questionRefs": [
+        "q-pp-im-it-111-6"
+      ],
+      "contextEvidence": "...other VMs (C) benefits of VMs include easy provisioning and maintainability, and high availability (D) a software called hypervisor sit...",
+      "decision": "keep",
+      "pos": "noun",
+      "traditionalChinese": "可維護性",
+      "definition": "the ease with which a system can be corrected, modified, or supported",
+      "correctsPreviousMeaning": true
+    }
+  ]
+}

@@ -1,0 +1,2475 @@
+{
+  "metadata": {
+    "description": "Human-reviewed exclusions, aliases, and corrections for IM required vocabulary",
+    "version": 1,
+    "reviewedUnmatchedWords": 118,
+    "reviewedIncompleteWords": 101,
+    "reviewedPhoneticOnlyWords": 24,
+    "excludedWords": 131,
+    "enrichedWords": 112,
+    "classificationCounts": {
+      "unmatched": {
+        "alias-to-canonical": 33,
+        "exclude-not-vocab": 62,
+        "keep-needs-override": 23
+      },
+      "incomplete": {
+        "alias": 10,
+        "exclude": 21,
+        "keep": 70
+      },
+      "phoneticOnly": {
+        "keep": 19,
+        "exclude": 3,
+        "alias": 2
+      }
+    }
+  },
+  "excluded": [
+    {
+      "word": "women's",
+      "category": "alias-to-canonical",
+      "reason": "Plural possessive form; do not create a separate headword.",
+      "canonicalWord": "woman",
+      "questionRefs": [
+        "q-pp-im-en-108-45",
+        "q-pp-im-en-108-46",
+        "q-pp-im-en-110-35",
+        "q-pp-im-en-115-45",
+        "q-pp-im-en-115-46"
+      ]
+    },
+    {
+      "word": "author's",
+      "category": "alias-to-canonical",
+      "reason": "Possessive form; do not create a separate headword.",
+      "canonicalWord": "author",
+      "questionRefs": [
+        "q-pp-cs-en-108-42",
+        "q-pp-cs-en-108-47",
+        "q-pp-cs-en-108-49",
+        "q-pp-cs-en-110-42",
+        "q-pp-cs-en-110-44"
+      ]
+    },
+    {
+      "word": "shakespeare's",
+      "category": "exclude-not-vocab",
+      "reason": "專有姓名所有格，不是單字卡 headword。",
+      "questionRefs": [
+        "q-pp-im-en-114-43",
+        "q-pp-im-en-114-44",
+        "q-pp-im-en-114-46"
+      ]
+    },
+    {
+      "word": "tarjei",
+      "category": "exclude-not-vocab",
+      "reason": "Given name in Tarjei Boe.",
+      "questionRefs": [
+        "q-pp-im-en-114-39",
+        "q-pp-im-en-114-40",
+        "q-pp-im-en-114-41"
+      ]
+    },
+    {
+      "word": "fox's",
+      "category": "alias-to-canonical",
+      "reason": "Possessive form; do not create a separate headword.",
+      "canonicalWord": "fox",
+      "questionRefs": [
+        "q-pp-im-en-114-33",
+        "q-pp-im-en-114-34"
+      ]
+    },
+    {
+      "word": "boe's",
+      "category": "exclude-not-vocab",
+      "reason": "人名所有格，不是單字卡 headword。",
+      "questionRefs": [
+        "q-pp-im-en-114-39",
+        "q-pp-im-en-114-40",
+        "q-pp-im-en-114-41"
+      ]
+    },
+    {
+      "word": "year's",
+      "category": "alias-to-canonical",
+      "reason": "Possessive form; do not create a separate headword.",
+      "canonicalWord": "year",
+      "questionRefs": [
+        "q-pp-cs-en-108-46",
+        "q-pp-im-en-106-41",
+        "q-pp-im-en-110-5"
+      ]
+    },
+    {
+      "word": "japan's",
+      "category": "exclude-not-vocab",
+      "reason": "國名所有格，不是單字卡 headword。",
+      "questionRefs": [
+        "q-pp-cs-en-115-35",
+        "q-pp-im-en-115-45"
+      ]
+    },
+    {
+      "word": "photo-secession",
+      "category": "exclude-not-vocab",
+      "reason": "Named art movement (Photo-Secession), not general vocabulary.",
+      "questionRefs": [
+        "q-pp-im-en-113-41",
+        "q-pp-im-en-113-44"
+      ]
+    },
+    {
+      "word": "sturgeon's",
+      "category": "exclude-not-vocab",
+      "reason": "人名所有格；若需教學應另建 Sturgeon’s Law 概念卡。",
+      "questionRefs": [
+        "q-pp-cs-en-110-46",
+        "q-pp-cs-en-110-47",
+        "q-pp-cs-en-110-49"
+      ]
+    },
+    {
+      "word": "telescope's",
+      "category": "alias-to-canonical",
+      "reason": "Possessive form; do not create a separate headword.",
+      "canonicalWord": "telescope",
+      "questionRefs": [
+        "q-pp-im-en-114-47",
+        "q-pp-im-en-114-49"
+      ]
+    },
+    {
+      "word": "unboxers",
+      "category": "alias-to-canonical",
+      "reason": "Regular plural of the retained headword unboxer.",
+      "canonicalWord": "unboxer",
+      "questionRefs": [
+        "q-pp-im-en-110-47",
+        "q-pp-im-en-110-48"
+      ]
+    },
+    {
+      "word": "universe's",
+      "category": "alias-to-canonical",
+      "reason": "Possessive form; do not create a separate headword.",
+      "canonicalWord": "universe",
+      "questionRefs": [
+        "q-pp-im-en-114-47",
+        "q-pp-im-en-114-48",
+        "q-pp-im-en-114-50"
+      ]
+    },
+    {
+      "word": "children's",
+      "category": "alias-to-canonical",
+      "reason": "Irregular plural possessive form; do not create a separate headword.",
+      "canonicalWord": "child",
+      "questionRefs": [
+        "q-pp-cs-en-113-47",
+        "q-pp-cs-en-113-50",
+        "q-pp-im-en-115-48"
+      ]
+    },
+    {
+      "word": "komiyama",
+      "category": "exclude-not-vocab",
+      "reason": "Surname in Yasuko Komiyama.",
+      "questionRefs": [
+        "q-pp-im-en-115-45"
+      ]
+    },
+    {
+      "word": "nature's",
+      "category": "alias-to-canonical",
+      "reason": "Possessive form; do not create a separate headword.",
+      "canonicalWord": "nature",
+      "questionRefs": [
+        "q-pp-im-en-114-33",
+        "q-pp-im-en-114-35"
+      ]
+    },
+    {
+      "word": "obi-wan",
+      "category": "exclude-not-vocab",
+      "reason": "Fictional character name.",
+      "questionRefs": [
+        "q-pp-im-en-106-33"
+      ]
+    },
+    {
+      "word": "ozempic",
+      "category": "exclude-not-vocab",
+      "reason": "Prescription-drug brand name.",
+      "questionRefs": [
+        "q-pp-im-en-115-36"
+      ]
+    },
+    {
+      "word": "rosenbloom",
+      "category": "exclude-not-vocab",
+      "reason": "Surname in Stephanie Rosenbloom.",
+      "questionRefs": [
+        "q-pp-im-en-108-29"
+      ]
+    },
+    {
+      "word": "thingnes",
+      "category": "exclude-not-vocab",
+      "reason": "Middle/family-name component in Johannes Thingnes Boe.",
+      "questionRefs": [
+        "q-pp-im-en-114-39",
+        "q-pp-im-en-114-40"
+      ]
+    },
+    {
+      "word": "world's",
+      "category": "alias-to-canonical",
+      "reason": "Possessive form; do not create a separate headword.",
+      "canonicalWord": "world",
+      "questionRefs": [
+        "q-pp-cs-en-109-41",
+        "q-pp-im-en-106-13",
+        "q-pp-im-en-110-26",
+        "q-pp-im-en-110-43",
+        "q-pp-im-en-111-46"
+      ]
+    },
+    {
+      "word": "australia's",
+      "category": "exclude-not-vocab",
+      "reason": "國名所有格，不是單字卡 headword。",
+      "questionRefs": [
+        "q-pp-im-en-109-10"
+      ]
+    },
+    {
+      "word": "badly-managed",
+      "category": "alias-to-canonical",
+      "reason": "去除非必要連字號；這是 manage 的過去分詞片語。",
+      "canonicalWord": "badly managed",
+      "questionRefs": [
+        "q-pp-im-en-109-33"
+      ]
+    },
+    {
+      "word": "bishopdale",
+      "category": "exclude-not-vocab",
+      "reason": "Place name in Christchurch.",
+      "questionRefs": [
+        "q-pp-im-en-110-21"
+      ]
+    },
+    {
+      "word": "conventionally-grown",
+      "category": "exclude-not-vocab",
+      "reason": "Transparent compositional modifier, not a standalone vocabulary headword.",
+      "questionRefs": [
+        "q-pp-im-en-109-43"
+      ]
+    },
+    {
+      "word": "government's",
+      "category": "alias-to-canonical",
+      "reason": "Possessive form; do not create a separate headword.",
+      "canonicalWord": "government",
+      "questionRefs": [
+        "q-pp-im-en-114-8"
+      ]
+    },
+    {
+      "word": "humanity's",
+      "category": "alias-to-canonical",
+      "reason": "Possessive form; do not create a separate headword.",
+      "canonicalWord": "humanity",
+      "questionRefs": [
+        "q-pp-im-en-111-21",
+        "q-pp-im-en-114-47"
+      ]
+    },
+    {
+      "word": "novelist's",
+      "category": "alias-to-canonical",
+      "reason": "Possessive form; do not create a separate headword.",
+      "canonicalWord": "novelist",
+      "questionRefs": [
+        "q-pp-im-en-115-30"
+      ]
+    },
+    {
+      "word": "smaller-screened",
+      "category": "exclude-not-vocab",
+      "reason": "Awkward compositional comparative modifier, not a standalone headword.",
+      "questionRefs": [
+        "q-pp-im-en-109-50"
+      ]
+    },
+    {
+      "word": "video-watching-time",
+      "category": "exclude-not-vocab",
+      "reason": "Tokenized noun phrase, not a lexical headword.",
+      "questionRefs": [
+        "q-pp-im-en-109-47"
+      ]
+    },
+    {
+      "word": "administration's",
+      "category": "alias-to-canonical",
+      "reason": "Possessive form; do not create a separate headword.",
+      "canonicalWord": "administration",
+      "questionRefs": [
+        "q-pp-im-en-115-48"
+      ]
+    },
+    {
+      "word": "alliance's",
+      "category": "alias-to-canonical",
+      "reason": "Possessive form; do not create a separate headword.",
+      "canonicalWord": "alliance",
+      "questionRefs": [
+        "q-pp-im-en-106-33"
+      ]
+    },
+    {
+      "word": "asfarviridae",
+      "category": "exclude-not-vocab",
+      "reason": "Virus-family taxonomic proper name; passage-specific nomenclature, not study vocabulary.",
+      "questionRefs": [
+        "q-pp-im-en-108-41"
+      ]
+    },
+    {
+      "word": "champs-elys",
+      "category": "exclude-not-vocab",
+      "reason": "Tokenizer truncated the accented proper place name.",
+      "questionRefs": [
+        "q-pp-im-en-108-29"
+      ]
+    },
+    {
+      "word": "character's",
+      "category": "alias-to-canonical",
+      "reason": "Possessive form; do not create a separate headword.",
+      "canonicalWord": "character",
+      "questionRefs": [
+        "q-pp-im-en-114-45"
+      ]
+    },
+    {
+      "word": "current-generation",
+      "category": "exclude-not-vocab",
+      "reason": "Transparent compositional modifier, not a standalone vocabulary headword.",
+      "questionRefs": [
+        "q-pp-im-en-108-45"
+      ]
+    },
+    {
+      "word": "donor-related",
+      "category": "exclude-not-vocab",
+      "reason": "Transparent compositional modifier, not a standalone vocabulary headword.",
+      "questionRefs": [
+        "q-pp-im-en-115-50"
+      ]
+    },
+    {
+      "word": "driven-results",
+      "category": "exclude-not-vocab",
+      "reason": "Incorrect word-order distractor from a multiple-choice item.",
+      "questionRefs": [
+        "q-pp-im-en-114-31"
+      ]
+    },
+    {
+      "word": "driving-results",
+      "category": "exclude-not-vocab",
+      "reason": "Incorrect distractor from a multiple-choice item.",
+      "questionRefs": [
+        "q-pp-im-en-114-31"
+      ]
+    },
+    {
+      "word": "estrogen-receptive",
+      "category": "exclude-not-vocab",
+      "reason": "Transparent domain modifier, not a standalone vocabulary headword.",
+      "questionRefs": [
+        "q-pp-im-en-108-45"
+      ]
+    },
+    {
+      "word": "ever-expending",
+      "category": "exclude-not-vocab",
+      "reason": "Incorrect lexical distractor; expending is not the intended word.",
+      "questionRefs": [
+        "q-pp-im-en-107-30"
+      ]
+    },
+    {
+      "word": "facebook's",
+      "category": "exclude-not-vocab",
+      "reason": "品牌名所有格，不是一般詞彙。",
+      "questionRefs": [
+        "q-pp-im-en-106-8"
+      ]
+    },
+    {
+      "word": "google-owned",
+      "category": "exclude-not-vocab",
+      "reason": "Compositional modifier containing a company proper name.",
+      "questionRefs": [
+        "q-pp-im-en-110-47"
+      ]
+    },
+    {
+      "word": "governor's",
+      "category": "alias-to-canonical",
+      "reason": "Possessive form; do not create a separate headword.",
+      "canonicalWord": "governor",
+      "questionRefs": [
+        "q-pp-im-en-110-39"
+      ]
+    },
+    {
+      "word": "grand-bornand",
+      "category": "exclude-not-vocab",
+      "reason": "Place name (Le Grand-Bornand).",
+      "questionRefs": [
+        "q-pp-im-en-114-39"
+      ]
+    },
+    {
+      "word": "industry's",
+      "category": "alias-to-canonical",
+      "reason": "Possessive form; do not create a separate headword.",
+      "canonicalWord": "industry",
+      "questionRefs": [
+        "q-pp-cs-en-109-49",
+        "q-pp-im-en-106-20"
+      ]
+    },
+    {
+      "word": "influencer's",
+      "category": "alias-to-canonical",
+      "reason": "Possessive form; do not create a separate headword.",
+      "canonicalWord": "influencer",
+      "questionRefs": [
+        "q-pp-im-en-110-15"
+      ]
+    },
+    {
+      "word": "life-related",
+      "category": "exclude-not-vocab",
+      "reason": "Transparent compositional modifier, not a standalone vocabulary headword.",
+      "questionRefs": [
+        "q-pp-im-en-114-47"
+      ]
+    },
+    {
+      "word": "lower-pitched",
+      "category": "alias-to-canonical",
+      "reason": "Comparative inflection of the canonical compound adjective low-pitched.",
+      "canonicalWord": "low-pitched",
+      "questionRefs": [
+        "q-pp-im-en-108-45"
+      ]
+    },
+    {
+      "word": "mobile-devices",
+      "category": "alias-to-canonical",
+      "reason": "Plural plus nonstandard hyphenation; normalize to the singular phrase.",
+      "canonicalWord": "mobile device",
+      "questionRefs": [
+        "q-pp-im-en-109-47"
+      ]
+    },
+    {
+      "word": "movement's",
+      "category": "alias-to-canonical",
+      "reason": "Possessive form; do not create a separate headword.",
+      "canonicalWord": "movement",
+      "questionRefs": [
+        "q-pp-im-en-106-27"
+      ]
+    },
+    {
+      "word": "nintendo's",
+      "category": "exclude-not-vocab",
+      "reason": "品牌名所有格，不是一般詞彙。",
+      "questionRefs": [
+        "q-pp-im-en-106-6"
+      ]
+    },
+    {
+      "word": "organization's",
+      "category": "alias-to-canonical",
+      "reason": "Possessive form; do not create a separate headword.",
+      "canonicalWord": "organization",
+      "questionRefs": [
+        "q-pp-im-en-110-12",
+        "q-pp-im-it-109-16",
+        "q-pp-im-mis-113-2"
+      ]
+    },
+    {
+      "word": "ozempic-like",
+      "category": "exclude-not-vocab",
+      "reason": "Compositional modifier based on a drug brand.",
+      "questionRefs": [
+        "q-pp-im-en-115-36"
+      ]
+    },
+    {
+      "word": "philosopher's",
+      "category": "alias-to-canonical",
+      "reason": "Possessive form; do not create a separate headword.",
+      "canonicalWord": "philosopher",
+      "questionRefs": [
+        "q-pp-im-en-115-4"
+      ]
+    },
+    {
+      "word": "photo-secessionists",
+      "category": "exclude-not-vocab",
+      "reason": "特定藝術運動成員的專名複數，不是一般詞彙。",
+      "questionRefs": [
+        "q-pp-im-en-113-41"
+      ]
+    },
+    {
+      "word": "planet-sized",
+      "category": "exclude-not-vocab",
+      "reason": "Transparent compositional modifier, not a standalone vocabulary headword.",
+      "questionRefs": [
+        "q-pp-im-en-106-33"
+      ]
+    },
+    {
+      "word": "plastic-wrapping",
+      "category": "alias-to-canonical",
+      "reason": "來源文章另有真實名詞片語 plastic wrapping；連字號形式來自錯誤選項。",
+      "canonicalWord": "plastic wrapping",
+      "questionRefs": [
+        "q-pp-im-en-110-21",
+        "q-pp-im-en-110-24"
+      ]
+    },
+    {
+      "word": "priestley's",
+      "category": "exclude-not-vocab",
+      "reason": "人名所有格，不是單字卡 headword。",
+      "questionRefs": [
+        "q-pp-im-en-110-43"
+      ]
+    },
+    {
+      "word": "reporter's",
+      "category": "alias-to-canonical",
+      "reason": "Possessive form; do not create a separate headword.",
+      "canonicalWord": "reporter",
+      "questionRefs": [
+        "q-pp-im-en-115-8"
+      ]
+    },
+    {
+      "word": "results-driving",
+      "category": "exclude-not-vocab",
+      "reason": "Incorrect distractor from a multiple-choice item.",
+      "questionRefs": [
+        "q-pp-im-en-114-31"
+      ]
+    },
+    {
+      "word": "seo-keyword",
+      "category": "exclude-not-vocab",
+      "reason": "Tokenized technical noun phrase; SEO and keyword should be separate canonical terms.",
+      "questionRefs": [
+        "q-pp-im-en-110-47"
+      ]
+    },
+    {
+      "word": "shortsleeved",
+      "category": "alias-to-canonical",
+      "reason": "Orthographic variant missing the standard hyphen.",
+      "canonicalWord": "short-sleeved",
+      "questionRefs": [
+        "q-pp-im-en-107-48"
+      ]
+    },
+    {
+      "word": "six-week-old",
+      "category": "exclude-not-vocab",
+      "reason": "Productive age modifier, not a standalone vocabulary headword.",
+      "questionRefs": [
+        "q-pp-im-en-107-41"
+      ]
+    },
+    {
+      "word": "snapchat's",
+      "category": "exclude-not-vocab",
+      "reason": "品牌名所有格，不是一般詞彙。",
+      "questionRefs": [
+        "q-pp-im-en-106-8"
+      ]
+    },
+    {
+      "word": "starch-bearing",
+      "category": "exclude-not-vocab",
+      "reason": "Transparent compositional modifier, not a standalone vocabulary headword.",
+      "questionRefs": [
+        "q-pp-im-en-113-21"
+      ]
+    },
+    {
+      "word": "strikes-you're-out",
+      "category": "exclude-not-vocab",
+      "reason": "Tokenizer fused a clause into a pseudo-headword.",
+      "questionRefs": [
+        "q-pp-im-en-106-21"
+      ]
+    },
+    {
+      "word": "sword-and-sandals",
+      "category": "alias-to-canonical",
+      "reason": "電影類型的標準單數複合形式。",
+      "canonicalWord": "sword-and-sandal",
+      "questionRefs": [
+        "q-pp-im-en-107-45"
+      ]
+    },
+    {
+      "word": "th-century",
+      "category": "exclude-not-vocab",
+      "reason": "Tokenizer dropped the numeric prefix from the source phrase.",
+      "questionRefs": [
+        "q-pp-cs-en-108-41",
+        "q-pp-cs-en-111-19",
+        "q-pp-cs-en-111-48",
+        "q-pp-im-en-107-45",
+        "q-pp-im-en-110-30"
+      ]
+    },
+    {
+      "word": "trust-worthy",
+      "category": "alias-to-canonical",
+      "reason": "Nonstandard split spelling of trustworthy.",
+      "canonicalWord": "trustworthy",
+      "questionRefs": [
+        "q-pp-im-en-108-41"
+      ]
+    },
+    {
+      "word": "urban-industrial",
+      "category": "exclude-not-vocab",
+      "reason": "Transparent compositional modifier, not a standalone vocabulary headword.",
+      "questionRefs": [
+        "q-pp-im-en-106-21"
+      ]
+    },
+    {
+      "word": "vocalbeauty",
+      "category": "exclude-not-vocab",
+      "reason": "Company/brand name in the question.",
+      "questionRefs": [
+        "q-pp-im-en-108-19"
+      ]
+    },
+    {
+      "word": "wrapped-plastic",
+      "category": "exclude-not-vocab",
+      "reason": "Incorrect word-order distractor in the source question.",
+      "questionRefs": [
+        "q-pp-im-en-110-24"
+      ]
+    },
+    {
+      "word": "wrapping-plastic",
+      "category": "exclude-not-vocab",
+      "reason": "Incorrect word-order/form distractor in the source question.",
+      "questionRefs": [
+        "q-pp-im-en-110-24"
+      ]
+    },
+    {
+      "word": "nlgn",
+      "category": "exclude-not-vocab",
+      "reason": "Complexity notation was flattened into a pseudo-word.",
+      "questionRefs": [
+        "q-pp-cs-algo-111-1",
+        "q-pp-cs-algo-111-2",
+        "q-pp-cs-algo-111-3",
+        "q-pp-cs-algo-111-4",
+        "q-pp-cs-algo-111-5"
+      ]
+    },
+    {
+      "word": "didn",
+      "category": "exclude-not-vocab",
+      "reason": "Tokenizer split a contraction at the apostrophe and lost the suffix.",
+      "questionRefs": [
+        "q-pp-cs-en-108-21",
+        "q-pp-cs-en-108-31",
+        "q-pp-cs-en-111-32",
+        "q-pp-cs-en-114-10",
+        "q-pp-im-en-110-41"
+      ]
+    },
+    {
+      "word": "itemcount",
+      "category": "exclude-not-vocab",
+      "reason": "Source-code identifier itemCount, not vocabulary.",
+      "questionRefs": [
+        "q-pp-im-it-108-21",
+        "q-pp-im-it-109-21",
+        "q-pp-im-it-109-22"
+      ]
+    },
+    {
+      "word": "jibo",
+      "category": "exclude-not-vocab",
+      "reason": "Named consumer robot/product.",
+      "questionRefs": [
+        "q-pp-cs-en-111-41",
+        "q-pp-cs-en-111-42",
+        "q-pp-cs-en-111-43",
+        "q-pp-cs-en-111-44"
+      ]
+    },
+    {
+      "word": "dijkstra",
+      "category": "alias-to-canonical",
+      "reason": "姓氏只應作為演算法名稱的一部分。",
+      "canonicalWord": "Dijkstra's algorithm",
+      "questionRefs": [
+        "q-pp-cs-algo-108-8",
+        "q-pp-cs-algo-111-18",
+        "q-pp-cs-algo-112-12"
+      ]
+    },
+    {
+      "word": "doesn",
+      "category": "exclude-not-vocab",
+      "reason": "Tokenizer split a contraction at the apostrophe and lost the suffix.",
+      "questionRefs": [
+        "q-pp-cs-en-113-47",
+        "q-pp-im-en-108-29",
+        "q-pp-im-en-109-43",
+        "q-pp-im-en-110-39",
+        "q-pp-im-en-112-15"
+      ]
+    },
+    {
+      "word": "logn",
+      "category": "exclude-not-vocab",
+      "reason": "Mathematical notation was flattened into a pseudo-word.",
+      "questionRefs": [
+        "q-pp-cs-algo-114-1",
+        "q-pp-cs-algo-114-9",
+        "q-pp-cs-algo-114-10"
+      ]
+    },
+    {
+      "word": "warshall",
+      "category": "alias-to-canonical",
+      "reason": "姓氏只應作為演算法名稱的一部分。",
+      "canonicalWord": "Floyd–Warshall algorithm",
+      "questionRefs": [
+        "q-pp-cs-algo-108-8",
+        "q-pp-cs-algo-111-20",
+        "q-pp-cs-algo-112-12"
+      ]
+    },
+    {
+      "word": "airbnb",
+      "category": "exclude-not-vocab",
+      "reason": "Company/brand name.",
+      "questionRefs": [
+        "q-pp-im-mis-106-2",
+        "q-pp-im-mis-110-1"
+      ]
+    },
+    {
+      "word": "badchar",
+      "category": "exclude-not-vocab",
+      "reason": "Source-code identifier badchar, not vocabulary.",
+      "questionRefs": [
+        "q-pp-im-it-112-29"
+      ]
+    },
+    {
+      "word": "couldn",
+      "category": "exclude-not-vocab",
+      "reason": "Tokenizer split a contraction at the apostrophe and lost the suffix.",
+      "questionRefs": [
+        "q-pp-cs-en-108-31",
+        "q-pp-cs-en-109-12",
+        "q-pp-im-en-114-41"
+      ]
+    },
+    {
+      "word": "dgx",
+      "category": "exclude-not-vocab",
+      "reason": "NVIDIA 產品家族專名；來源理解不需要獨立一般詞彙卡。",
+      "questionRefs": [
+        "q-pp-cs-arch-113-8",
+        "q-pp-cs-arch-113-9"
+      ]
+    },
+    {
+      "word": "endl",
+      "category": "exclude-not-vocab",
+      "reason": "C++ library manipulator identifier, not English vocabulary.",
+      "questionRefs": [
+        "q-pp-im-it-112-29"
+      ]
+    },
+    {
+      "word": "fdap",
+      "category": "exclude-not-vocab",
+      "reason": "Invented wrong-answer expansion “Free Directory Access Protocol,” not a real protocol.",
+      "questionRefs": [
+        "q-pp-im-it-108-13"
+      ]
+    },
+    {
+      "word": "hadn",
+      "category": "exclude-not-vocab",
+      "reason": "Tokenizer split a contraction at the apostrophe and lost the suffix.",
+      "questionRefs": [
+        "q-pp-cs-en-110-18",
+        "q-pp-cs-en-113-5",
+        "q-pp-im-en-107-31",
+        "q-pp-im-en-113-20"
+      ]
+    },
+    {
+      "word": "idap",
+      "category": "exclude-not-vocab",
+      "reason": "Invented wrong-answer expansion “Internet Directory Access Protocol,” not a real protocol.",
+      "questionRefs": [
+        "q-pp-im-it-108-13"
+      ]
+    },
+    {
+      "word": "newvalue",
+      "category": "exclude-not-vocab",
+      "reason": "Source-code identifier newValue, not vocabulary.",
+      "questionRefs": [
+        "q-pp-im-it-108-21"
+      ]
+    },
+    {
+      "word": "rdap",
+      "category": "exclude-not-vocab",
+      "reason": "來源把 RDAP 展開為虛構錯誤選項 Root Directory Access Protocol；不可改教另一個真實 RDAP 意義。",
+      "questionRefs": [
+        "q-pp-im-it-108-13"
+      ]
+    },
+    {
+      "word": "sembroski",
+      "category": "exclude-not-vocab",
+      "reason": "Surname in Chris Sembroski.",
+      "questionRefs": [
+        "q-pp-cs-en-113-47",
+        "q-pp-cs-en-113-50"
+      ]
+    },
+    {
+      "word": "stdc",
+      "category": "exclude-not-vocab",
+      "reason": "Tokenizer extracted a fragment from the C++ header path bits/stdc++.h.",
+      "questionRefs": [
+        "q-pp-im-it-112-29"
+      ]
+    },
+    {
+      "word": "subspaces",
+      "category": "alias-to-canonical",
+      "reason": "Regular plural of the mathematical term subspace.",
+      "canonicalWord": "subspace",
+      "questionRefs": [
+        "q-pp-cs-math-110-6",
+        "q-pp-cs-math-111-12"
+      ]
+    },
+    {
+      "word": "being stuck",
+      "category": "incomplete-alias",
+      "reason": "動名詞片語，併入既有 stuck 詞條。",
+      "canonicalWord": "stuck",
+      "questionRefs": [
+        "q-pp-im-en-107-17"
+      ]
+    },
+    {
+      "word": "deliberately disregards",
+      "category": "incomplete-alias",
+      "reason": "副詞加第三人稱動詞的組合，併入 disregard。",
+      "canonicalWord": "disregard",
+      "questionRefs": [
+        "q-pp-im-en-115-19"
+      ]
+    },
+    {
+      "word": "despite that",
+      "category": "incomplete-exclude",
+      "reason": "來源題目的錯誤連接詞選項，不是獨立詞彙 headword。",
+      "questionRefs": [
+        "q-pp-im-en-106-13"
+      ]
+    },
+    {
+      "word": "do i",
+      "category": "incomplete-exclude",
+      "reason": "倒裝題中的錯誤選項；正確形式為 did I。",
+      "questionRefs": [
+        "q-pp-im-en-108-18"
+      ]
+    },
+    {
+      "word": "enough large",
+      "category": "incomplete-exclude",
+      "reason": "錯誤字序選項；正確形式為 large enough。",
+      "questionRefs": [
+        "q-pp-im-en-110-35"
+      ]
+    },
+    {
+      "word": "even play",
+      "category": "incomplete-exclude",
+      "reason": "來源題目的錯誤選項，不是固定片語。",
+      "questionRefs": [
+        "q-pp-im-en-106-19"
+      ]
+    },
+    {
+      "word": "have stuck",
+      "category": "incomplete-exclude",
+      "reason": "來源題目的錯誤時態選項，不是獨立 headword。",
+      "questionRefs": [
+        "q-pp-im-en-107-17"
+      ]
+    },
+    {
+      "word": "interesting to",
+      "category": "incomplete-exclude",
+      "reason": "來源題目的錯誤搭配選項，且是可組合片段而非獨立詞條。",
+      "questionRefs": [
+        "q-pp-im-en-107-13"
+      ]
+    },
+    {
+      "word": "largely enough",
+      "category": "incomplete-exclude",
+      "reason": "來源題目的錯誤詞性與字序選項。",
+      "questionRefs": [
+        "q-pp-im-en-110-35"
+      ]
+    },
+    {
+      "word": "not mean",
+      "category": "incomplete-alias",
+      "reason": "否定助動結構，併入 mean。",
+      "canonicalWord": "mean",
+      "questionRefs": [
+        "q-pp-cs-en-112-41",
+        "q-pp-im-en-106-16"
+      ]
+    },
+    {
+      "word": "not means",
+      "category": "incomplete-exclude",
+      "reason": "來源題目的錯誤文法選項。",
+      "questionRefs": [
+        "q-pp-im-en-106-16"
+      ]
+    },
+    {
+      "word": "openly challenges",
+      "category": "incomplete-alias",
+      "reason": "副詞加第三人稱動詞的組合，併入 challenge。",
+      "canonicalWord": "challenge",
+      "questionRefs": [
+        "q-pp-im-en-115-19"
+      ]
+    },
+    {
+      "word": "regard of",
+      "category": "incomplete-exclude",
+      "reason": "錯誤介系詞搭配；應使用 regarding、regardless 或 with regard to。",
+      "questionRefs": [
+        "q-pp-im-en-107-19"
+      ]
+    },
+    {
+      "word": "selectively integrates",
+      "category": "incomplete-alias",
+      "reason": "副詞加第三人稱動詞的組合，併入 integrate。",
+      "canonicalWord": "integrate",
+      "questionRefs": [
+        "q-pp-im-en-115-19"
+      ]
+    },
+    {
+      "word": "superficially summarizes",
+      "category": "incomplete-alias",
+      "reason": "副詞加第三人稱動詞的組合，併入 summarize。",
+      "canonicalWord": "summarize",
+      "questionRefs": [
+        "q-pp-im-en-115-19"
+      ]
+    },
+    {
+      "word": "that i",
+      "category": "incomplete-exclude",
+      "reason": "倒裝題的錯誤選項與代名詞片段，不是獨立詞條。",
+      "questionRefs": [
+        "q-pp-im-en-106-46",
+        "q-pp-im-en-108-18",
+        "q-pp-im-en-113-18"
+      ]
+    },
+    {
+      "word": "which affect",
+      "category": "incomplete-alias",
+      "reason": "關係子句片段，併入核心動詞 affect。",
+      "canonicalWord": "affect",
+      "questionRefs": [
+        "q-pp-im-en-106-17"
+      ]
+    },
+    {
+      "word": "filet-o-fish",
+      "category": "incomplete-exclude",
+      "reason": "McDonald’s 產品專名，不是一般考試詞彙。",
+      "questionRefs": [
+        "q-pp-cs-en-108-46",
+        "q-pp-im-en-108-29"
+      ]
+    },
+    {
+      "word": "mcdonald's",
+      "category": "incomplete-exclude",
+      "reason": "品牌名所有格，不是一般詞彙。",
+      "questionRefs": [
+        "q-pp-cs-en-108-46",
+        "q-pp-im-en-108-29"
+      ]
+    },
+    {
+      "word": "multi",
+      "category": "incomplete-exclude",
+      "reason": "斷詞後留下的生產性字首 multi-，不是獨立 headword。",
+      "questionRefs": [
+        "q-pp-cs-arch-108-1",
+        "q-pp-cs-arch-108-6",
+        "q-pp-cs-arch-108-7",
+        "q-pp-cs-arch-111-19",
+        "q-pp-cs-en-114-46"
+      ]
+    },
+    {
+      "word": "lgn",
+      "category": "incomplete-exclude",
+      "reason": "複雜度記號 lg n 被壓平後的抽取雜訊，不是詞彙。",
+      "questionRefs": [
+        "q-pp-cs-algo-111-1",
+        "q-pp-cs-algo-111-2",
+        "q-pp-cs-algo-111-3",
+        "q-pp-cs-algo-111-4",
+        "q-pp-cs-algo-111-5"
+      ]
+    },
+    {
+      "word": "knuth",
+      "category": "incomplete-alias",
+      "reason": "人名只在 Knuth–Morris–Pratt 演算法中出現，併入既有 KMP 詞條。",
+      "canonicalWord": "kmp",
+      "questionRefs": [
+        "q-pp-cs-algo-110-10",
+        "q-pp-cs-algo-111-11",
+        "q-pp-cs-algo-112-16"
+      ]
+    },
+    {
+      "word": "alex",
+      "category": "incomplete-exclude",
+      "reason": "題目中的人名，ECDICT 義與來源無關。",
+      "questionRefs": [
+        "q-pp-cs-arch-114-4",
+        "q-pp-cs-arch-114-5"
+      ]
+    },
+    {
+      "word": "com",
+      "category": "incomplete-exclude",
+      "reason": "從 .com 網域名稱抽出的字尾，不是此處的詞彙。",
+      "questionRefs": [
+        "q-pp-cs-en-111-36",
+        "q-pp-im-it-106-16"
+      ]
+    },
+    {
+      "word": "det",
+      "category": "incomplete-alias",
+      "reason": "矩陣行列式函數記號，併入 determinant。",
+      "canonicalWord": "determinant",
+      "questionRefs": [
+        "q-pp-cs-math-108-9",
+        "q-pp-cs-math-110-8"
+      ]
+    },
+    {
+      "word": "esa",
+      "category": "incomplete-exclude",
+      "reason": "European Space Agency 的機構專名縮寫，不是一般資管詞彙。",
+      "questionRefs": [
+        "q-pp-cs-en-113-47",
+        "q-pp-cs-en-113-48"
+      ]
+    },
+    {
+      "word": "ntu",
+      "category": "incomplete-exclude",
+      "reason": "National Taiwan University 的校名縮寫，不是一般詞彙。",
+      "questionRefs": [
+        "q-pp-cs-en-113-37",
+        "q-pp-cs-en-113-39",
+        "q-pp-im-it-109-10",
+        "q-pp-im-it-113-12"
+      ]
+    },
+    {
+      "word": "prob",
+      "category": "incomplete-alias",
+      "reason": "表格與統計輸出的縮寫，併入 probability。",
+      "canonicalWord": "probability",
+      "questionRefs": [
+        "q-pp-cs-algo-112-3",
+        "q-pp-im-stat-114-4"
+      ]
+    },
+    {
+      "word": "revis",
+      "category": "incomplete-exclude",
+      "reason": "Matt Revis 的姓氏，ECDICT 義與來源無關。",
+      "questionRefs": [
+        "q-pp-cs-en-111-41",
+        "q-pp-cs-en-111-45"
+      ]
+    },
+    {
+      "word": "str",
+      "category": "incomplete-exclude",
+      "reason": "程式碼中的區域變數名稱，不是獨立詞彙。",
+      "questionRefs": [
+        "q-pp-im-it-112-29"
+      ]
+    },
+    {
+      "word": "sys",
+      "category": "incomplete-exclude",
+      "reason": "從標頭路徑與函式名稱抽出的程式片段，不是獨立詞彙。",
+      "questionRefs": [
+        "q-pp-cs-arch-108-7",
+        "q-pp-cs-arch-110-5",
+        "q-pp-cs-arch-114-3"
+      ]
+    },
+    {
+      "word": "uber",
+      "category": "incomplete-exclude",
+      "reason": "來源是共享經濟與第三方應用的 Uber 公司品牌，不是一般詞彙；原「乳房」義完全不符脈絡。"
+    },
+    {
+      "word": "san",
+      "category": "incomplete-exclude",
+      "reason": "來源兩次皆為 San Salvador／San Francisco 地名片段，並非 storage area network；排除抽取雜訊。"
+    },
+    {
+      "word": "subtrees",
+      "category": "incomplete-alias",
+      "reason": "複數形，併入既有單數詞條 subtree。",
+      "canonicalWord": "subtree"
+    },
+    {
+      "word": "val",
+      "category": "incomplete-alias",
+      "reason": "來源是程式碼參數名稱，為 value 的縮寫，併入既有 value 詞條。",
+      "canonicalWord": "value"
+    },
+    {
+      "word": "von",
+      "category": "incomplete-exclude",
+      "reason": "只出現在 Von Neumann architecture 人名片段中，應學完整術語而非獨立的 von；原義也不應把片段等同整個架構。"
+    }
+  ],
+  "aliases": {
+    "women's": {
+      "canonicalWord": "woman",
+      "reason": "Plural possessive form; do not create a separate headword."
+    },
+    "author's": {
+      "canonicalWord": "author",
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    "fox's": {
+      "canonicalWord": "fox",
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    "year's": {
+      "canonicalWord": "year",
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    "telescope's": {
+      "canonicalWord": "telescope",
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    "unboxers": {
+      "canonicalWord": "unboxer",
+      "reason": "Regular plural of the retained headword unboxer."
+    },
+    "universe's": {
+      "canonicalWord": "universe",
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    "children's": {
+      "canonicalWord": "child",
+      "reason": "Irregular plural possessive form; do not create a separate headword."
+    },
+    "nature's": {
+      "canonicalWord": "nature",
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    "world's": {
+      "canonicalWord": "world",
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    "badly-managed": {
+      "canonicalWord": "badly managed",
+      "reason": "去除非必要連字號；這是 manage 的過去分詞片語。"
+    },
+    "government's": {
+      "canonicalWord": "government",
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    "humanity's": {
+      "canonicalWord": "humanity",
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    "novelist's": {
+      "canonicalWord": "novelist",
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    "administration's": {
+      "canonicalWord": "administration",
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    "alliance's": {
+      "canonicalWord": "alliance",
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    "character's": {
+      "canonicalWord": "character",
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    "governor's": {
+      "canonicalWord": "governor",
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    "industry's": {
+      "canonicalWord": "industry",
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    "influencer's": {
+      "canonicalWord": "influencer",
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    "lower-pitched": {
+      "canonicalWord": "low-pitched",
+      "reason": "Comparative inflection of the canonical compound adjective low-pitched."
+    },
+    "mobile-devices": {
+      "canonicalWord": "mobile device",
+      "reason": "Plural plus nonstandard hyphenation; normalize to the singular phrase."
+    },
+    "movement's": {
+      "canonicalWord": "movement",
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    "organization's": {
+      "canonicalWord": "organization",
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    "philosopher's": {
+      "canonicalWord": "philosopher",
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    "plastic-wrapping": {
+      "canonicalWord": "plastic wrapping",
+      "reason": "來源文章另有真實名詞片語 plastic wrapping；連字號形式來自錯誤選項。"
+    },
+    "reporter's": {
+      "canonicalWord": "reporter",
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    "shortsleeved": {
+      "canonicalWord": "short-sleeved",
+      "reason": "Orthographic variant missing the standard hyphen."
+    },
+    "sword-and-sandals": {
+      "canonicalWord": "sword-and-sandal",
+      "reason": "電影類型的標準單數複合形式。"
+    },
+    "trust-worthy": {
+      "canonicalWord": "trustworthy",
+      "reason": "Nonstandard split spelling of trustworthy."
+    },
+    "dijkstra": {
+      "canonicalWord": "Dijkstra's algorithm",
+      "reason": "姓氏只應作為演算法名稱的一部分。"
+    },
+    "warshall": {
+      "canonicalWord": "Floyd–Warshall algorithm",
+      "reason": "姓氏只應作為演算法名稱的一部分。"
+    },
+    "subspaces": {
+      "canonicalWord": "subspace",
+      "reason": "Regular plural of the mathematical term subspace."
+    },
+    "being stuck": {
+      "canonicalWord": "stuck",
+      "disposition": "merge_into_existing_master_entry",
+      "reason": "動名詞片語，併入既有 stuck 詞條。"
+    },
+    "deliberately disregards": {
+      "canonicalWord": "disregard",
+      "disposition": "merge_into_existing_master_entry",
+      "reason": "副詞加第三人稱動詞的組合，併入 disregard。"
+    },
+    "not mean": {
+      "canonicalWord": "mean",
+      "disposition": "merge_into_existing_master_entry",
+      "reason": "否定助動結構，併入 mean。"
+    },
+    "openly challenges": {
+      "canonicalWord": "challenge",
+      "disposition": "merge_into_existing_master_entry",
+      "reason": "副詞加第三人稱動詞的組合，併入 challenge。"
+    },
+    "selectively integrates": {
+      "canonicalWord": "integrate",
+      "disposition": "merge_into_existing_master_entry",
+      "reason": "副詞加第三人稱動詞的組合，併入 integrate。"
+    },
+    "superficially summarizes": {
+      "canonicalWord": "summarize",
+      "disposition": "merge_into_existing_master_entry",
+      "reason": "副詞加第三人稱動詞的組合，併入 summarize。"
+    },
+    "which affect": {
+      "canonicalWord": "affect",
+      "disposition": "merge_into_existing_master_entry",
+      "reason": "關係子句片段，併入核心動詞 affect。"
+    },
+    "knuth": {
+      "canonicalWord": "kmp",
+      "disposition": "merge_into_existing_master_entry",
+      "reason": "人名只在 Knuth–Morris–Pratt 演算法中出現，併入既有 KMP 詞條。"
+    },
+    "det": {
+      "canonicalWord": "determinant",
+      "disposition": "merge_into_existing_master_entry",
+      "reason": "矩陣行列式函數記號，併入 determinant。"
+    },
+    "prob": {
+      "canonicalWord": "probability",
+      "disposition": "merge_into_existing_master_entry",
+      "reason": "表格與統計輸出的縮寫，併入 probability。"
+    },
+    "subtrees": {
+      "canonicalWord": "subtree",
+      "disposition": "merge_into_existing_master_entry",
+      "reason": "複數形，併入既有單數詞條 subtree。"
+    },
+    "val": {
+      "canonicalWord": "value",
+      "disposition": "merge_into_existing_master_entry",
+      "reason": "來源是程式碼參數名稱，為 value 的縮寫，併入既有 value 詞條。"
+    }
+  },
+  "overrides": {
+    "unboxer": {
+      "chinese": "開箱者；製作開箱內容的創作者",
+      "pos": "noun",
+      "reviewReason": "真實衍生名詞，來源文章多次使用。",
+      "questionRefs": [
+        "q-pp-im-en-110-47",
+        "q-pp-im-en-110-48"
+      ]
+    },
+    "season-long": {
+      "chinese": "貫穿整季的；持續整季的",
+      "pos": "adjective",
+      "reviewReason": "常見且語意固定的複合形容詞。",
+      "questionRefs": [
+        "q-pp-im-en-109-47"
+      ]
+    },
+    "waste-to-energy": {
+      "chinese": "廢棄物轉能源；廢棄物能源化的",
+      "pos": "noun/adjective",
+      "reviewReason": "環境工程與基礎建設的固定術語。",
+      "questionRefs": [
+        "q-pp-im-en-109-33"
+      ]
+    },
+    "ball-and-stick": {
+      "chinese": "使用球與棒的；球棒模型的",
+      "pos": "adjective",
+      "reviewReason": "來源中的運動類型複合形容詞，也用於科學模型。",
+      "questionRefs": [
+        "q-pp-im-en-106-21"
+      ]
+    },
+    "cinematographe": {
+      "chinese": "電影機；早期兼具攝影與放映功能的電影裝置",
+      "pos": "noun",
+      "headword": "Cinematographe",
+      "reviewReason": "來源指盧米埃兄弟的 Cinématographe；是可定義的歷史技術名詞。",
+      "questionRefs": [
+        "q-pp-im-en-110-30"
+      ]
+    },
+    "non-medical": {
+      "chinese": "非醫療的；非醫療用途的",
+      "pos": "adjective",
+      "reviewReason": "來源標題的核心對比詞，語意可直接判定。",
+      "questionRefs": [
+        "q-pp-im-en-115-36"
+      ]
+    },
+    "plastic-wrapped": {
+      "chinese": "以塑膠包裝的",
+      "pos": "adjective",
+      "reviewReason": "來源選擇題的正確複合形容詞，與錯誤倒裝選項可明確區分。",
+      "questionRefs": [
+        "q-pp-im-en-110-24"
+      ]
+    },
+    "rational-choice": {
+      "chinese": "理性選擇；理性選擇理論的",
+      "pos": "noun/adjective",
+      "headword": "rational choice",
+      "reviewReason": "固定學術概念；名詞通常寫 rational choice，置前修飾時可加連字號。",
+      "questionRefs": [
+        "q-pp-im-en-113-46"
+      ]
+    },
+    "results-driven": {
+      "chinese": "結果導向的；以成果為驅動的",
+      "pos": "adjective",
+      "reviewReason": "來源選擇題的正確複合形容詞。",
+      "questionRefs": [
+        "q-pp-im-en-114-31"
+      ]
+    },
+    "self-certification": {
+      "chinese": "自我認證；自行聲明符合規範",
+      "pos": "noun",
+      "reviewReason": "政策與法遵固定術語。",
+      "questionRefs": [
+        "q-pp-im-en-110-39"
+      ]
+    },
+    "video-editing": {
+      "chinese": "影片剪輯；影片編輯的",
+      "pos": "noun/adjective",
+      "headword": "video editing",
+      "reviewReason": "常見數位媒體技能名詞；一般名詞用 video editing。",
+      "questionRefs": [
+        "q-pp-im-en-110-47"
+      ]
+    },
+    "blockchain": {
+      "chinese": "區塊鏈",
+      "pos": "noun",
+      "reviewReason": "資訊管理與計算領域核心術語。",
+      "questionRefs": [
+        "q-pp-cs-arch-108-2",
+        "q-pp-im-it-107-19",
+        "q-pp-im-it-110-26",
+        "q-pp-im-it-111-23",
+        "q-pp-im-it-111-24"
+      ]
+    },
+    "bitcoin": {
+      "chinese": "比特幣",
+      "pos": "noun",
+      "headword": "Bitcoin",
+      "reviewReason": "已詞彙化的加密貨幣名稱。",
+      "questionRefs": [
+        "q-pp-cs-arch-108-2",
+        "q-pp-im-it-107-18",
+        "q-pp-im-it-107-19",
+        "q-pp-im-it-112-24"
+      ]
+    },
+    "datapath": {
+      "chinese": "資料路徑",
+      "pos": "noun",
+      "reviewReason": "計算機結構標準術語。",
+      "questionRefs": [
+        "q-pp-cs-arch-112-7",
+        "q-pp-cs-arch-113-2",
+        "q-pp-cs-arch-113-5",
+        "q-pp-cs-arch-113-6",
+        "q-pp-cs-arch-114-12"
+      ]
+    },
+    "nosql": {
+      "chinese": "NoSQL；非關聯式資料庫類型",
+      "pos": "noun/adjective",
+      "headword": "NoSQL",
+      "reviewReason": "資料庫標準分類術語。",
+      "questionRefs": [
+        "q-pp-im-it-112-20",
+        "q-pp-im-it-114-15",
+        "q-pp-im-it-115-26"
+      ]
+    },
+    "cryptocurrency": {
+      "chinese": "加密貨幣",
+      "pos": "noun",
+      "reviewReason": "資訊管理與金融科技標準術語。",
+      "questionRefs": [
+        "q-pp-cs-arch-108-2",
+        "q-pp-im-it-110-26"
+      ]
+    },
+    "etag": {
+      "chinese": "HTTP 實體標籤；快取驗證標籤",
+      "pos": "noun",
+      "headword": "ETag",
+      "reviewReason": "HTTP 快取驗證標準術語。",
+      "questionRefs": [
+        "q-pp-im-it-108-2"
+      ]
+    },
+    "heapify": {
+      "chinese": "堆積化；調整成堆積",
+      "pos": "verb/noun",
+      "reviewReason": "演算法標準操作名稱。",
+      "questionRefs": [
+        "q-pp-cs-algo-109-5",
+        "q-pp-cs-algo-111-3"
+      ]
+    },
+    "kmp": {
+      "chinese": "KMP（Knuth–Morris–Pratt）字串比對演算法",
+      "pos": "noun/adjective",
+      "headword": "KMP",
+      "reviewReason": "字串比對標準演算法縮寫。",
+      "questionRefs": [
+        "q-pp-cs-algo-110-10",
+        "q-pp-cs-algo-112-16"
+      ]
+    },
+    "metaverse": {
+      "chinese": "元宇宙",
+      "pos": "noun",
+      "reviewReason": "資訊科技常用概念。",
+      "questionRefs": [
+        "q-pp-im-it-111-23",
+        "q-pp-im-it-111-24"
+      ]
+    },
+    "mlperf": {
+      "chinese": "MLPerf 機器學習效能基準測試套件",
+      "pos": "noun",
+      "headword": "MLPerf",
+      "reviewReason": "產業標準基準測試名稱，來源題目直接要求理解。",
+      "questionRefs": [
+        "q-pp-cs-arch-113-4",
+        "q-pp-cs-arch-113-5",
+        "q-pp-cs-arch-113-6"
+      ]
+    },
+    "rsh": {
+      "chinese": "rsh 遠端殼層協定／指令",
+      "pos": "noun",
+      "reviewReason": "Unix 遠端殼層的真實協定與指令。",
+      "questionRefs": [
+        "q-pp-im-it-108-14"
+      ]
+    },
+    "sjf": {
+      "chinese": "SJF 最短工作優先排程（Shortest Job First）",
+      "pos": "noun/adjective",
+      "headword": "SJF",
+      "reviewReason": "作業系統標準排程演算法縮寫。",
+      "questionRefs": [
+        "q-pp-cs-arch-110-3",
+        "q-pp-im-it-115-11"
+      ]
+    },
+    "large enough": {
+      "chinese": "足夠大的",
+      "pos": "adjective phrase",
+      "definition": "sufficiently large for a particular purpose",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-cs-algo-110-4",
+        "q-pp-cs-arch-112-3",
+        "q-pp-cs-en-108-41",
+        "q-pp-im-en-110-35"
+      ]
+    },
+    "no means": {
+      "chinese": "沒有方法；毫無辦法",
+      "pos": "noun phrase",
+      "definition": "no available way or method of doing something",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-im-en-106-16"
+      ]
+    },
+    "phased out": {
+      "chinese": "逐步淘汰；逐漸停止使用",
+      "pos": "phrasal verb",
+      "definition": "gradually discontinued or removed from use",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-im-en-114-2"
+      ]
+    },
+    "showing gratitude": {
+      "chinese": "表達感謝；表示感激",
+      "pos": "verb phrase",
+      "definition": "expressing thanks or appreciation",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-im-en-106-46"
+      ]
+    },
+    "social outcast": {
+      "chinese": "被社會排斥的人；社會邊緣人",
+      "pos": "noun phrase",
+      "definition": "a person rejected or excluded by a social group",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-im-en-106-44"
+      ]
+    },
+    "still others": {
+      "chinese": "還有其他人／事物",
+      "pos": "pronoun phrase",
+      "definition": "additional people or things beyond those already mentioned",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-im-en-110-17"
+      ]
+    },
+    "the others": {
+      "chinese": "其餘的人／事物",
+      "pos": "pronoun phrase",
+      "definition": "the remaining people or things in a known group",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-im-en-110-17",
+        "q-pp-im-it-106-1",
+        "q-pp-im-it-106-2",
+        "q-pp-im-it-106-12",
+        "q-pp-im-it-107-22"
+      ]
+    },
+    "to which": {
+      "chinese": "對其；向其；與其（介系詞加關係代名詞）",
+      "pos": "relative phrase",
+      "definition": "a preposition plus relative pronoun linking a clause to an earlier noun",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-cs-en-112-46",
+        "q-pp-im-en-110-15",
+        "q-pp-im-mis-107-2"
+      ]
+    },
+    "turned down": {
+      "chinese": "拒絕；調低（turn down 的過去式／分詞）",
+      "pos": "phrasal verb",
+      "definition": "rejected an offer or request, or reduced a level",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-cs-en-114-16",
+        "q-pp-im-en-114-2"
+      ]
+    },
+    "what if": {
+      "chinese": "如果…會怎樣；假如",
+      "pos": "conjunction phrase",
+      "definition": "used to ask about a possible situation or consequence",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-im-en-110-19",
+        "q-pp-im-en-111-41"
+      ]
+    },
+    "would have": {
+      "chinese": "本來會；原本可能已經",
+      "pos": "modal auxiliary phrase",
+      "definition": "used to describe an unreal or conditional result in the past",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-cs-en-108-20",
+        "q-pp-cs-en-108-46",
+        "q-pp-cs-en-110-18",
+        "q-pp-cs-en-110-20",
+        "q-pp-cs-en-111-26"
+      ]
+    },
+    "back-of-the-napkin": {
+      "chinese": "粗略估算的；非正式快速推算的",
+      "pos": "adjective",
+      "definition": "rough and informal, based on a quick calculation",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-cs-en-110-46"
+      ]
+    },
+    "cross-disciplinary": {
+      "chinese": "跨領域的；跨學科的",
+      "pos": "adjective",
+      "definition": "involving knowledge or methods from multiple disciplines",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-im-en-115-48"
+      ]
+    },
+    "epigenetics": {
+      "chinese": "表觀遺傳學",
+      "pos": "noun",
+      "definition": "the study of heritable changes in gene activity that do not alter the DNA sequence",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-im-en-113-9"
+      ]
+    },
+    "industry-level": {
+      "chinese": "產業層級的；整體產業的",
+      "pos": "adjective",
+      "definition": "relating to an entire industry rather than one organization",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-im-en-115-43",
+        "q-pp-im-mis-112-1"
+      ]
+    },
+    "real-world": {
+      "chinese": "真實世界的；實務情境的",
+      "pos": "adjective",
+      "definition": "existing or occurring in actual practice rather than only in theory",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-cs-en-108-1",
+        "q-pp-cs-en-112-31",
+        "q-pp-im-en-114-20",
+        "q-pp-im-it-112-23"
+      ]
+    },
+    "int": {
+      "chinese": "整數型別；C／C++ 的 int 關鍵字",
+      "pos": "technical noun / keyword",
+      "definition": "an integer data type and its keyword in languages such as C and C++",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-cs-arch-108-7",
+        "q-pp-cs-arch-110-5",
+        "q-pp-cs-arch-110-6",
+        "q-pp-cs-arch-111-3",
+        "q-pp-cs-arch-111-6"
+      ]
+    },
+    "sql": {
+      "chinese": "SQL；結構化查詢語言",
+      "pos": "noun / acronym",
+      "definition": "Structured Query Language, used to define, query, and manage relational data",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-im-it-106-3",
+        "q-pp-im-it-107-4",
+        "q-pp-im-it-107-5",
+        "q-pp-im-it-107-22",
+        "q-pp-im-it-109-18"
+      ]
+    },
+    "sqrt": {
+      "chinese": "平方根；平方根函式",
+      "pos": "technical noun / function",
+      "definition": "a square-root operation or function in mathematical and programming notation",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-cs-algo-109-1",
+        "q-pp-cs-algo-109-3",
+        "q-pp-cs-algo-114-8",
+        "q-pp-cs-algo-114-9",
+        "q-pp-cs-algo-114-11"
+      ]
+    },
+    "iot": {
+      "chinese": "物聯網（Internet of Things）",
+      "pos": "noun / acronym",
+      "definition": "a network of physical devices that collect and exchange data",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-im-it-107-22",
+        "q-pp-im-it-108-7",
+        "q-pp-im-it-109-20",
+        "q-pp-im-mis-111-2",
+        "q-pp-im-mis-112-2"
+      ]
+    },
+    "pseudocode": {
+      "chinese": "虛擬碼；偽程式碼",
+      "pos": "noun",
+      "definition": "an informal, language-independent description of an algorithm",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-cs-algo-108-9",
+        "q-pp-cs-algo-113-2",
+        "q-pp-cs-algo-113-4",
+        "q-pp-cs-algo-114-13",
+        "q-pp-im-it-107-25"
+      ]
+    },
+    "recursively": {
+      "chinese": "遞迴地",
+      "pos": "adverb",
+      "definition": "by repeatedly applying a procedure to smaller instances of the same problem",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-cs-algo-109-2",
+        "q-pp-cs-algo-109-6",
+        "q-pp-cs-algo-110-3",
+        "q-pp-cs-algo-112-15",
+        "q-pp-cs-arch-112-13"
+      ]
+    },
+    "subtree": {
+      "chinese": "子樹",
+      "pos": "noun",
+      "definition": "a tree formed by a node and some or all of its descendants",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-cs-algo-109-5",
+        "q-pp-cs-algo-109-9",
+        "q-pp-cs-algo-113-5",
+        "q-pp-cs-algo-113-8",
+        "q-pp-cs-algo-113-9"
+      ]
+    },
+    "adt": {
+      "chinese": "抽象資料型別（Abstract Data Type）",
+      "pos": "noun / acronym",
+      "definition": "a data type defined by its operations and behavior rather than its implementation",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-im-it-109-21",
+        "q-pp-im-it-110-29",
+        "q-pp-im-it-111-25",
+        "q-pp-im-it-113-25",
+        "q-pp-im-it-114-25"
+      ]
+    },
+    "udp": {
+      "chinese": "使用者資料包協定（UDP）",
+      "pos": "noun / acronym",
+      "definition": "a connectionless transport protocol that sends datagrams without delivery guarantees",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-im-it-106-19",
+        "q-pp-im-it-107-8",
+        "q-pp-im-it-108-4",
+        "q-pp-im-it-115-14"
+      ]
+    },
+    "alu": {
+      "chinese": "算術邏輯單元（ALU）",
+      "pos": "noun / acronym",
+      "definition": "the processor component that performs arithmetic and logical operations",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-cs-arch-110-7",
+        "q-pp-cs-arch-113-2",
+        "q-pp-cs-arch-114-12",
+        "q-pp-im-it-110-5"
+      ]
+    },
+    "bfs": {
+      "chinese": "廣度優先搜尋（BFS）",
+      "pos": "noun / acronym",
+      "definition": "a graph or tree traversal that explores nodes level by level",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-cs-algo-110-5",
+        "q-pp-cs-algo-112-4",
+        "q-pp-cs-algo-112-9",
+        "q-pp-cs-algo-113-8"
+      ]
+    },
+    "dns": {
+      "chinese": "網域名稱系統（DNS）",
+      "pos": "noun / acronym",
+      "definition": "the distributed system that maps domain names to IP addresses and other records",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-im-it-108-4",
+        "q-pp-im-it-111-11",
+        "q-pp-im-it-113-12",
+        "q-pp-im-it-114-23"
+      ]
+    },
+    "osi": {
+      "chinese": "開放系統互連模型（OSI 模型）",
+      "pos": "noun / acronym",
+      "definition": "a seven-layer reference model for network communication",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-im-it-106-20",
+        "q-pp-im-it-107-8",
+        "q-pp-im-it-111-1",
+        "q-pp-im-it-114-22"
+      ]
+    },
+    "associativity": {
+      "chinese": "快取相聯度",
+      "pos": "noun",
+      "definition": "the number of cache lines available in each cache set",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-cs-arch-110-6",
+        "q-pp-cs-arch-112-5",
+        "q-pp-cs-arch-112-8"
+      ]
+    },
+    "avl": {
+      "chinese": "AVL 樹；自平衡二元搜尋樹",
+      "pos": "noun / acronym",
+      "definition": "a self-balancing binary search tree whose subtree heights differ by at most one",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-cs-algo-112-6",
+        "q-pp-cs-algo-113-5",
+        "q-pp-im-it-106-26"
+      ]
+    },
+    "bmp": {
+      "chinese": "BMP 點陣圖影像格式",
+      "pos": "noun / acronym",
+      "definition": "a raster image file format commonly identified by the .bmp extension",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-im-it-108-1",
+        "q-pp-im-it-110-3"
+      ]
+    },
+    "dfs": {
+      "chinese": "深度優先搜尋（DFS）",
+      "pos": "noun / acronym",
+      "definition": "a graph or tree traversal that explores one branch before backtracking",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-cs-algo-112-4",
+        "q-pp-cs-algo-112-9",
+        "q-pp-cs-algo-113-8"
+      ]
+    },
+    "isa": {
+      "chinese": "指令集架構（ISA）",
+      "pos": "noun / acronym",
+      "definition": "the programmer-visible interface between software and a processor",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-cs-arch-108-3",
+        "q-pp-cs-arch-112-8",
+        "q-pp-cs-arch-114-13"
+      ]
+    },
+    "jpeg": {
+      "chinese": "JPEG 影像壓縮／檔案格式",
+      "pos": "noun / acronym",
+      "definition": "a widely used lossy compression standard and format for digital images",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-im-it-108-1",
+        "q-pp-im-it-110-3"
+      ]
+    },
+    "lru": {
+      "chinese": "最近最少使用（LRU）替換策略",
+      "pos": "noun / adjective / acronym",
+      "definition": "a replacement policy that evicts the item used least recently",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-cs-arch-110-8",
+        "q-pp-cs-arch-114-5",
+        "q-pp-cs-arch-114-14"
+      ]
+    },
+    "multithreading": {
+      "chinese": "多執行緒處理",
+      "pos": "noun",
+      "definition": "the concurrent execution of multiple threads within a process",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-cs-arch-109-1",
+        "q-pp-cs-arch-110-8",
+        "q-pp-cs-arch-112-5"
+      ]
+    },
+    "nfc": {
+      "chinese": "近場通訊（NFC）",
+      "pos": "noun / acronym",
+      "definition": "a short-range wireless technology for communication between nearby devices",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-im-it-106-24",
+        "q-pp-im-it-108-7"
+      ]
+    },
+    "printf": {
+      "chinese": "printf 格式化輸出函式",
+      "pos": "technical noun / function",
+      "definition": "a C standard-library function that writes formatted output",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-cs-arch-108-7",
+        "q-pp-cs-arch-110-5",
+        "q-pp-cs-arch-114-3"
+      ]
+    },
+    "rfid": {
+      "chinese": "無線射頻識別（RFID）",
+      "pos": "noun / acronym",
+      "definition": "a technology that identifies and tracks tagged objects using radio waves",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-im-it-106-24",
+        "q-pp-im-it-108-7"
+      ]
+    },
+    "superscalar": {
+      "chinese": "超純量的",
+      "pos": "adjective",
+      "definition": "able to issue or execute multiple instructions in one clock cycle",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-cs-arch-108-2",
+        "q-pp-cs-arch-108-4",
+        "q-pp-cs-arch-114-18"
+      ]
+    },
+    "tlb": {
+      "chinese": "轉譯後備緩衝區（TLB）",
+      "pos": "noun / acronym",
+      "definition": "a cache that stores recent virtual-to-physical address translations",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-cs-arch-108-4",
+        "q-pp-cs-arch-112-9",
+        "q-pp-cs-arch-114-4"
+      ]
+    },
+    "txt": {
+      "chinese": "TXT 純文字檔格式",
+      "pos": "noun / file extension",
+      "definition": "a filename extension commonly used for plain-text files",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-cs-arch-114-6",
+        "q-pp-im-it-112-29"
+      ]
+    },
+    "virtualization": {
+      "chinese": "虛擬化",
+      "pos": "noun",
+      "definition": "the creation of virtual versions of computing resources such as machines or storage",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-cs-arch-112-9",
+        "q-pp-im-it-107-17",
+        "q-pp-im-it-111-5"
+      ]
+    },
+    "benchmarking": {
+      "chinese": "基準測試；效能評測",
+      "pos": "noun",
+      "definition": "the process of measuring and comparing system performance against a standard workload",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-cs-arch-113-4",
+        "q-pp-cs-arch-113-7",
+        "q-pp-cs-arch-113-9"
+      ]
+    },
+    "bst": {
+      "chinese": "二元搜尋樹（BST）",
+      "pos": "noun / acronym",
+      "definition": "a binary tree whose keys are ordered to support efficient search and updates",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-cs-algo-113-5",
+        "q-pp-im-it-114-4"
+      ]
+    },
+    "cnn": {
+      "chinese": "卷積神經網路（CNN）",
+      "pos": "noun / acronym",
+      "definition": "a neural network that uses convolutional layers, especially for grid-like data such as images",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-cs-arch-109-1",
+        "q-pp-cs-en-108-46",
+        "q-pp-im-en-115-31",
+        "q-pp-im-mis-108-3"
+      ]
+    },
+    "convolutional": {
+      "chinese": "卷積的",
+      "pos": "adjective",
+      "definition": "relating to the convolution operation used in signal processing and neural networks",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-cs-arch-109-1",
+        "q-pp-im-mis-108-3"
+      ]
+    },
+    "datagram": {
+      "chinese": "資料報；資料包",
+      "pos": "noun",
+      "definition": "a self-contained packet sent independently through a packet-switched network",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-im-it-111-8",
+        "q-pp-im-it-115-14"
+      ]
+    },
+    "dma": {
+      "chinese": "直接記憶體存取（DMA）",
+      "pos": "noun / acronym",
+      "definition": "a mechanism that transfers data between devices and memory with little CPU involvement",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-im-it-112-4"
+      ]
+    },
+    "dmca": {
+      "chinese": "美國《數位千禧年著作權法》（DMCA）",
+      "pos": "proper noun / acronym",
+      "definition": "the United States Digital Millennium Copyright Act governing digital copyright issues",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-im-it-108-9"
+      ]
+    },
+    "gpu": {
+      "chinese": "圖形處理器（GPU）",
+      "pos": "noun / acronym",
+      "definition": "a processor optimized for highly parallel computation and graphics workloads",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-cs-arch-113-4",
+        "q-pp-cs-arch-113-9",
+        "q-pp-im-it-113-4"
+      ]
+    },
+    "hypervisor": {
+      "chinese": "虛擬機器監視器；虛擬化管理程式",
+      "pos": "noun",
+      "definition": "software or firmware that creates and manages virtual machines",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-im-it-107-17",
+        "q-pp-im-it-111-6"
+      ]
+    },
+    "inorder": {
+      "chinese": "中序的；以中序方式",
+      "pos": "adjective / adverb",
+      "definition": "visiting a binary-tree node between its left and right subtrees",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-im-it-106-25",
+        "q-pp-im-it-113-25",
+        "q-pp-im-it-114-4"
+      ]
+    },
+    "ldap": {
+      "chinese": "輕量型目錄存取協定（LDAP）",
+      "pos": "noun / acronym",
+      "definition": "a protocol for accessing and maintaining distributed directory services",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-im-it-108-13"
+      ]
+    },
+    "postorder": {
+      "chinese": "後序的；以後序方式",
+      "pos": "adjective / adverb",
+      "definition": "visiting a binary-tree node after its child subtrees",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-cs-algo-110-5",
+        "q-pp-im-it-114-4"
+      ]
+    },
+    "rlogin": {
+      "chinese": "rlogin 遠端登入協定／指令",
+      "pos": "technical noun / command",
+      "definition": "a legacy Unix command and protocol for remote login",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-im-it-108-14"
+      ]
+    },
+    "rsa": {
+      "chinese": "RSA 非對稱式加密演算法",
+      "pos": "noun / acronym",
+      "definition": "a public-key cryptosystem based on the difficulty of factoring large integers",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-im-it-107-21",
+        "q-pp-im-it-111-12",
+        "q-pp-im-it-113-16"
+      ]
+    },
+    "schedulable": {
+      "chinese": "可排程的",
+      "pos": "adjective",
+      "definition": "able to meet the timing or resource constraints of a scheduling system",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-cs-arch-112-16",
+        "q-pp-cs-arch-114-8"
+      ]
+    },
+    "serializability": {
+      "chinese": "可序列化性",
+      "pos": "noun",
+      "definition": "the property that concurrent transactions have an outcome equivalent to some serial order",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-cs-arch-109-2",
+        "q-pp-cs-arch-113-10"
+      ]
+    },
+    "smtp": {
+      "chinese": "簡易郵件傳輸協定（SMTP）",
+      "pos": "noun / acronym",
+      "definition": "the application-layer protocol used to send and relay email",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-im-it-106-20",
+        "q-pp-im-it-111-2"
+      ]
+    },
+    "ssl": {
+      "chinese": "安全通訊端層（SSL）",
+      "pos": "noun / acronym",
+      "definition": "a legacy cryptographic protocol for securing network communication, superseded by TLS",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-im-it-108-14"
+      ]
+    },
+    "stdio": {
+      "chinese": "標準輸入輸出；C 的 stdio 標頭",
+      "pos": "technical noun / header",
+      "definition": "the C standard input/output library, commonly included through stdio.h",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-cs-arch-108-7",
+        "q-pp-cs-arch-114-3"
+      ]
+    },
+    "telnet": {
+      "chinese": "Telnet 遠端終端協定",
+      "pos": "technical noun / protocol",
+      "definition": "a legacy unencrypted protocol for remote terminal access",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-im-it-108-14"
+      ]
+    },
+    "typedef": {
+      "chinese": "型別定義；C／C++ 的 typedef 關鍵字",
+      "pos": "technical noun / keyword",
+      "definition": "a C and C++ keyword that creates an alias for an existing type",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-cs-arch-113-12",
+        "q-pp-cs-arch-114-10"
+      ]
+    },
+    "vpn": {
+      "chinese": "虛擬私人網路（VPN）",
+      "pos": "noun / acronym",
+      "definition": "an encrypted logical network connection built over another network",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-im-it-110-8",
+        "q-pp-im-it-112-15"
+      ]
+    },
+    "api": {
+      "chinese": "應用程式介面（API）",
+      "pos": "noun / acronym",
+      "definition": "a defined interface through which software components communicate",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-cs-arch-114-9"
+      ]
+    },
+    "dhcp": {
+      "chinese": "動態主機設定協定（DHCP）",
+      "pos": "noun / acronym",
+      "definition": "a network protocol that automatically assigns IP configuration to clients",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-im-it-111-4"
+      ]
+    },
+    "erp": {
+      "chinese": "企業資源規劃（ERP）系統",
+      "pos": "noun / acronym",
+      "definition": "integrated software for managing an organization’s core business processes",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-im-mis-113-2"
+      ]
+    },
+    "maintainability": {
+      "chinese": "可維護性",
+      "pos": "noun",
+      "definition": "the ease with which a system can be corrected, modified, or supported",
+      "reviewReason": "Reviewed for the information-management exam context.",
+      "questionRefs": [
+        "q-pp-im-it-111-6"
+      ]
+    },
+    "broken down": {
+      "chinese": "拆分成；分解成；故障的",
+      "pos": "phrasal verb / adjective",
+      "definition": "divided into smaller parts or no longer functioning",
+      "reviewReason": "Reviewed for the information-management exam context."
+    },
+    "interested in": {
+      "chinese": "對…感興趣",
+      "pos": "adjective phrase",
+      "definition": "wanting to know more about or take part in something",
+      "reviewReason": "Reviewed for the information-management exam context."
+    },
+    "worn out": {
+      "chinese": "精疲力竭的；磨損不能用的",
+      "pos": "adjective phrase",
+      "definition": "extremely tired, or damaged by long or heavy use",
+      "reviewReason": "Reviewed for the information-management exam context."
+    },
+    "single-cell": {
+      "chinese": "單細胞的；單一細胞層級的",
+      "pos": "adjective",
+      "definition": "involving, analyzing, or operating on individual cells",
+      "reviewReason": "Reviewed for the information-management exam context."
+    },
+    "videography": {
+      "chinese": "影片拍攝與製作；攝錄影",
+      "pos": "noun",
+      "definition": "the art or process of recording and producing video",
+      "reviewReason": "Reviewed for the information-management exam context."
+    },
+    "quicksort": {
+      "chinese": "快速排序法",
+      "pos": "noun",
+      "definition": "a divide-and-conquer sorting algorithm that partitions items around a pivot",
+      "reviewReason": "Reviewed for the information-management exam context."
+    },
+    "phishing": {
+      "chinese": "網路釣魚；網路詐騙",
+      "pos": "noun",
+      "definition": "a fraudulent attempt to obtain sensitive information by impersonating a trusted entity",
+      "reviewReason": "Reviewed for the information-management exam context."
+    },
+    "bool": {
+      "chinese": "布林型別；bool 關鍵字",
+      "pos": "technical noun / keyword",
+      "definition": "a Boolean data type or keyword whose values are true and false",
+      "reviewReason": "Reviewed for the information-management exam context."
+    },
+    "iso": {
+      "chinese": "國際標準化組織（ISO）",
+      "pos": "proper noun / abbreviation",
+      "definition": "the International Organization for Standardization, which develops international standards",
+      "reviewReason": "Reviewed for the information-management exam context."
+    },
+    "backoff": {
+      "chinese": "退避機制；延遲重試",
+      "pos": "technical noun",
+      "definition": "a strategy that delays a retry, often by progressively longer intervals, after contention or failure",
+      "reviewReason": "Reviewed for the information-management exam context."
+    },
+    "botnet": {
+      "chinese": "殭屍網路",
+      "pos": "noun",
+      "definition": "a network of compromised devices remotely controlled by an attacker",
+      "reviewReason": "Reviewed for the information-management exam context."
+    },
+    "hamiltonian": {
+      "chinese": "漢米爾頓的；具有漢米爾頓迴路的",
+      "pos": "adjective",
+      "definition": "describing a graph that contains a cycle visiting every vertex exactly once",
+      "reviewReason": "Reviewed for the information-management exam context."
+    },
+    "multivalued": {
+      "chinese": "多值的",
+      "pos": "adjective",
+      "definition": "able to have multiple values, especially in an attribute or database dependency",
+      "reviewReason": "Reviewed for the information-management exam context."
+    },
+    "nonsingular": {
+      "chinese": "非奇異的；可逆的",
+      "pos": "adjective",
+      "definition": "describing a square matrix that is invertible and has a nonzero determinant",
+      "reviewReason": "Reviewed for the information-management exam context."
+    },
+    "orthonormal": {
+      "chinese": "標準正交的；正交歸一的",
+      "pos": "adjective",
+      "definition": "mutually orthogonal and each having unit length",
+      "reviewReason": "Reviewed for the information-management exam context."
+    },
+    "pipelining": {
+      "chinese": "管線化；流水線處理",
+      "pos": "noun",
+      "definition": "a technique that overlaps successive processing stages to improve throughput",
+      "reviewReason": "Reviewed for the information-management exam context."
+    },
+    "preprocess": {
+      "chinese": "預先處理；前處理",
+      "pos": "verb",
+      "definition": "to process data or input before the main computation or analysis",
+      "reviewReason": "Reviewed for the information-management exam context."
+    },
+    "livelock": {
+      "chinese": "活鎖",
+      "pos": "noun",
+      "definition": "a state in which processes keep responding to one another but make no useful progress",
+      "reviewReason": "Reviewed for the information-management exam context."
+    },
+    "subnet": {
+      "chinese": "子網路",
+      "pos": "noun",
+      "definition": "a logical subdivision of an IP network",
+      "reviewReason": "Reviewed for the information-management exam context."
+    }
+  }
+}

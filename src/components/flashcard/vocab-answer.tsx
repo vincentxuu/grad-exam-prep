@@ -39,7 +39,11 @@ function parseVocabAnswer(answer: string): ParsedAnswer {
       result.example = line.replace(/^(例句：|【例句】)/, '').trim()
     } else if (line.startsWith('（') && result.example && !result.exampleChinese) {
       result.exampleChinese = line
-    } else if (line.startsWith('同義詞：') || line.startsWith('近義詞：') || line.startsWith('【近義詞】')) {
+    } else if (
+      line.startsWith('同義詞：') ||
+      line.startsWith('近義詞：') ||
+      line.startsWith('【近義詞】')
+    ) {
       result.synonyms = line.replace(/^(同義詞：|近義詞：|【近義詞】)/, '').trim()
     } else if (line.startsWith('反義詞：') || line.startsWith('【反義詞】')) {
       result.antonyms = line.replace(/^(反義詞：|【反義詞】)/, '').trim()
@@ -56,9 +60,7 @@ export function VocabAnswer({ cardId, answer, speak, speakingId }: VocabAnswerPr
   const hasStructure = parsed.chinese || parsed.example || parsed.synonyms || parsed.antonyms
 
   if (!hasStructure) {
-    return (
-      <div className="text-sm whitespace-pre-line leading-relaxed">{answer}</div>
-    )
+    return <div className="text-sm whitespace-pre-line leading-relaxed">{answer}</div>
   }
 
   return (
@@ -96,7 +98,9 @@ export function VocabAnswer({ cardId, answer, speak, speakingId }: VocabAnswerPr
           />
           <p>
             <span className="text-muted-foreground">同義詞：</span>
-            <span className="text-emerald-600 dark:text-emerald-400 font-medium">{parsed.synonyms}</span>
+            <span className="text-emerald-600 dark:text-emerald-400 font-medium">
+              {parsed.synonyms}
+            </span>
           </p>
         </div>
       )}
