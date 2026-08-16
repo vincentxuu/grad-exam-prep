@@ -1,0 +1,967 @@
+{
+  "generatedAt": "2026-08-16",
+  "questionTypesByYear": {
+    "106": {
+      "vocabulary": 44,
+      "other": 6
+    },
+    "107": {
+      "cloze": 2,
+      "vocabulary": 37,
+      "reading": 5,
+      "other": 6
+    },
+    "108": {
+      "vocabulary": 39,
+      "reading": 5,
+      "other": 6
+    },
+    "109": {
+      "vocabulary": 37,
+      "cloze": 1,
+      "reading": 7,
+      "other": 5
+    },
+    "110": {
+      "vocabulary": 39,
+      "reading": 7,
+      "other": 4
+    },
+    "111": {
+      "vocabulary": 42,
+      "cloze": 2,
+      "reading": 2,
+      "other": 4
+    },
+    "112": {
+      "vocabulary": 37,
+      "cloze": 1,
+      "reading": 7,
+      "other": 5
+    },
+    "113": {
+      "vocabulary": 40,
+      "reading": 5,
+      "other": 5
+    },
+    "114": {
+      "vocabulary": 24,
+      "other": 18,
+      "reading": 6,
+      "cloze": 2
+    },
+    "115": {
+      "vocabulary": 33,
+      "other": 12,
+      "reading": 5
+    }
+  },
+  "totalChoiceQuestions": 354,
+  "uniqueChoiceWords": 765,
+  "synonymPairs": [
+    {
+      "word1": "competitions",
+      "word2": "commutations",
+      "cooccurrences": 3
+    },
+    {
+      "word1": "competitions",
+      "word2": "complications",
+      "cooccurrences": 3
+    },
+    {
+      "word1": "deliberate",
+      "word2": "deceptive",
+      "cooccurrences": 2
+    },
+    {
+      "word1": "deliberate",
+      "word2": "deferential",
+      "cooccurrences": 2
+    },
+    {
+      "word1": "deliberate",
+      "word2": "detrimental",
+      "cooccurrences": 2
+    },
+    {
+      "word1": "reprimanded",
+      "word2": "deployed",
+      "cooccurrences": 2
+    },
+    {
+      "word1": "reprimanded",
+      "word2": "forfeited",
+      "cooccurrences": 2
+    },
+    {
+      "word1": "reprimanded",
+      "word2": "elucidated",
+      "cooccurrences": 2
+    },
+    {
+      "word1": "to be used",
+      "word2": "to being used",
+      "cooccurrences": 2
+    },
+    {
+      "word1": "to be used",
+      "word2": "to be using",
+      "cooccurrences": 2
+    },
+    {
+      "word1": "to be used",
+      "word2": "to be used",
+      "cooccurrences": 2
+    }
+  ],
+  "commonPhrases": [
+    {
+      "phrase": "refer to",
+      "frequency": 26,
+      "chinese": "指的是"
+    },
+    {
+      "phrase": "as well as",
+      "frequency": 9,
+      "chinese": "以及；和"
+    },
+    {
+      "phrase": "in order to",
+      "frequency": 6,
+      "chinese": "為了"
+    },
+    {
+      "phrase": "lead to",
+      "frequency": 6,
+      "chinese": "導致"
+    },
+    {
+      "phrase": "due to",
+      "frequency": 5,
+      "chinese": "由於"
+    },
+    {
+      "phrase": "in addition to",
+      "frequency": 3,
+      "chinese": "除…之外"
+    },
+    {
+      "phrase": "with respect to",
+      "frequency": 2,
+      "chinese": "關於；就…而言"
+    },
+    {
+      "phrase": "bring about",
+      "frequency": 2,
+      "chinese": "引起；導致"
+    },
+    {
+      "phrase": "contribute to",
+      "frequency": 2,
+      "chinese": "有助於；促成"
+    },
+    {
+      "phrase": "in spite of",
+      "frequency": 1,
+      "chinese": "儘管"
+    },
+    {
+      "phrase": "in terms of",
+      "frequency": 1,
+      "chinese": "就…而言"
+    },
+    {
+      "phrase": "as a result",
+      "frequency": 1,
+      "chinese": "因此；結果"
+    },
+    {
+      "phrase": "in contrast",
+      "frequency": 1,
+      "chinese": "相反地"
+    },
+    {
+      "phrase": "by means of",
+      "frequency": 1,
+      "chinese": "藉由"
+    },
+    {
+      "phrase": "look into",
+      "frequency": 1,
+      "chinese": "調查"
+    },
+    {
+      "phrase": "set up",
+      "frequency": 1,
+      "chinese": ""
+    },
+    {
+      "phrase": "figure out",
+      "frequency": 1,
+      "chinese": ""
+    },
+    {
+      "phrase": "depend on",
+      "frequency": 1,
+      "chinese": ""
+    },
+    {
+      "phrase": "apply to",
+      "frequency": 1,
+      "chinese": ""
+    }
+  ],
+  "difficultyDistribution": {
+    "totalUniqueChoiceWords": 765,
+    "basicOverlap": 19,
+    "advancedIndicators": 279
+  },
+  "polysemousWords": [
+    {
+      "word": "address",
+      "meanings": [
+        {
+          "pos": "n",
+          "zh": "地址"
+        },
+        {
+          "pos": "v",
+          "zh": "處理；解決"
+        },
+        {
+          "pos": "v",
+          "zh": "向…講話；演說"
+        }
+      ]
+    },
+    {
+      "word": "issue",
+      "meanings": [
+        {
+          "pos": "n",
+          "zh": "議題；問題"
+        },
+        {
+          "pos": "v",
+          "zh": "發行；發布"
+        },
+        {
+          "pos": "n",
+          "zh": "期刊期號"
+        }
+      ]
+    },
+    {
+      "word": "yield",
+      "meanings": [
+        {
+          "pos": "v",
+          "zh": "產出；帶來"
+        },
+        {
+          "pos": "v",
+          "zh": "讓步；屈服"
+        },
+        {
+          "pos": "n",
+          "zh": "收益；產量"
+        }
+      ]
+    },
+    {
+      "word": "decline",
+      "meanings": [
+        {
+          "pos": "v",
+          "zh": "下降；衰退"
+        },
+        {
+          "pos": "v",
+          "zh": "拒絕；婉拒"
+        }
+      ]
+    },
+    {
+      "word": "sound",
+      "meanings": [
+        {
+          "pos": "n",
+          "zh": "聲音"
+        },
+        {
+          "pos": "adj",
+          "zh": "合理的；健全的"
+        }
+      ]
+    },
+    {
+      "word": "fine",
+      "meanings": [
+        {
+          "pos": "adj",
+          "zh": "好的；精細的"
+        },
+        {
+          "pos": "n",
+          "zh": "罰款"
+        },
+        {
+          "pos": "v",
+          "zh": "處以罰款"
+        }
+      ]
+    },
+    {
+      "word": "conduct",
+      "meanings": [
+        {
+          "pos": "v",
+          "zh": "進行；實施"
+        },
+        {
+          "pos": "n",
+          "zh": "行為；舉止"
+        },
+        {
+          "pos": "v",
+          "zh": "指揮（樂團）"
+        }
+      ]
+    },
+    {
+      "word": "subject",
+      "meanings": [
+        {
+          "pos": "n",
+          "zh": "主題；科目"
+        },
+        {
+          "pos": "n",
+          "zh": "受試者"
+        },
+        {
+          "pos": "v",
+          "zh": "使遭受"
+        },
+        {
+          "pos": "adj",
+          "zh": "易受…影響的"
+        }
+      ]
+    },
+    {
+      "word": "objective",
+      "meanings": [
+        {
+          "pos": "n",
+          "zh": "目標"
+        },
+        {
+          "pos": "adj",
+          "zh": "客觀的"
+        }
+      ]
+    },
+    {
+      "word": "compound",
+      "meanings": [
+        {
+          "pos": "n",
+          "zh": "化合物；複合物"
+        },
+        {
+          "pos": "v",
+          "zh": "加重；使惡化"
+        },
+        {
+          "pos": "adj",
+          "zh": "複合的"
+        }
+      ]
+    },
+    {
+      "word": "abstract",
+      "meanings": [
+        {
+          "pos": "adj",
+          "zh": "抽象的"
+        },
+        {
+          "pos": "n",
+          "zh": "摘要"
+        }
+      ]
+    },
+    {
+      "word": "content",
+      "meanings": [
+        {
+          "pos": "n",
+          "zh": "內容"
+        },
+        {
+          "pos": "adj",
+          "zh": "滿足的"
+        }
+      ]
+    },
+    {
+      "word": "present",
+      "meanings": [
+        {
+          "pos": "v",
+          "zh": "呈現；提出"
+        },
+        {
+          "pos": "adj",
+          "zh": "目前的；在場的"
+        },
+        {
+          "pos": "n",
+          "zh": "禮物"
+        }
+      ]
+    },
+    {
+      "word": "project",
+      "meanings": [
+        {
+          "pos": "n",
+          "zh": "專案；計畫"
+        },
+        {
+          "pos": "v",
+          "zh": "預測；投射"
+        }
+      ]
+    },
+    {
+      "word": "minute",
+      "meanings": [
+        {
+          "pos": "n",
+          "zh": "分鐘"
+        },
+        {
+          "pos": "adj",
+          "zh": "微小的；細微的"
+        }
+      ]
+    },
+    {
+      "word": "novel",
+      "meanings": [
+        {
+          "pos": "n",
+          "zh": "小說"
+        },
+        {
+          "pos": "adj",
+          "zh": "新穎的；新奇的"
+        }
+      ]
+    },
+    {
+      "word": "deliberate",
+      "meanings": [
+        {
+          "pos": "adj",
+          "zh": "故意的；蓄意的"
+        },
+        {
+          "pos": "v",
+          "zh": "深思熟慮；商議"
+        }
+      ]
+    },
+    {
+      "word": "elaborate",
+      "meanings": [
+        {
+          "pos": "adj",
+          "zh": "精心的；詳盡的"
+        },
+        {
+          "pos": "v",
+          "zh": "詳述；闡述"
+        }
+      ]
+    },
+    {
+      "word": "moderate",
+      "meanings": [
+        {
+          "pos": "adj",
+          "zh": "適度的；溫和的"
+        },
+        {
+          "pos": "v",
+          "zh": "緩和；主持"
+        }
+      ]
+    },
+    {
+      "word": "articulate",
+      "meanings": [
+        {
+          "pos": "v",
+          "zh": "清楚表達"
+        },
+        {
+          "pos": "adj",
+          "zh": "口齒清晰的"
+        }
+      ]
+    },
+    {
+      "word": "attribute",
+      "meanings": [
+        {
+          "pos": "n",
+          "zh": "屬性；特質"
+        },
+        {
+          "pos": "v",
+          "zh": "歸因於"
+        }
+      ]
+    },
+    {
+      "word": "contract",
+      "meanings": [
+        {
+          "pos": "n",
+          "zh": "合約"
+        },
+        {
+          "pos": "v",
+          "zh": "收縮；感染（疾病）"
+        }
+      ]
+    },
+    {
+      "word": "exploit",
+      "meanings": [
+        {
+          "pos": "v",
+          "zh": "利用；開發"
+        },
+        {
+          "pos": "n",
+          "zh": "功績；英勇事蹟"
+        }
+      ]
+    },
+    {
+      "word": "intimate",
+      "meanings": [
+        {
+          "pos": "adj",
+          "zh": "親密的"
+        },
+        {
+          "pos": "v",
+          "zh": "暗示"
+        }
+      ]
+    },
+    {
+      "word": "principal",
+      "meanings": [
+        {
+          "pos": "adj",
+          "zh": "主要的"
+        },
+        {
+          "pos": "n",
+          "zh": "校長；本金"
+        }
+      ]
+    },
+    {
+      "word": "resort",
+      "meanings": [
+        {
+          "pos": "n",
+          "zh": "度假勝地；手段"
+        },
+        {
+          "pos": "v",
+          "zh": "訴諸；求助於"
+        }
+      ]
+    },
+    {
+      "word": "secure",
+      "meanings": [
+        {
+          "pos": "adj",
+          "zh": "安全的"
+        },
+        {
+          "pos": "v",
+          "zh": "獲得；確保"
+        }
+      ]
+    },
+    {
+      "word": "stable",
+      "meanings": [
+        {
+          "pos": "adj",
+          "zh": "穩定的"
+        },
+        {
+          "pos": "n",
+          "zh": "馬廄"
+        }
+      ]
+    },
+    {
+      "word": "volume",
+      "meanings": [
+        {
+          "pos": "n",
+          "zh": "音量"
+        },
+        {
+          "pos": "n",
+          "zh": "體積；容量"
+        },
+        {
+          "pos": "n",
+          "zh": "冊；卷"
+        }
+      ]
+    },
+    {
+      "word": "scale",
+      "meanings": [
+        {
+          "pos": "n",
+          "zh": "規模；比例"
+        },
+        {
+          "pos": "n",
+          "zh": "天平；磅秤"
+        },
+        {
+          "pos": "v",
+          "zh": "攀爬；擴展"
+        }
+      ]
+    },
+    {
+      "word": "draft",
+      "meanings": [
+        {
+          "pos": "n",
+          "zh": "草稿"
+        },
+        {
+          "pos": "n",
+          "zh": "匯票"
+        },
+        {
+          "pos": "v",
+          "zh": "起草；徵召"
+        }
+      ]
+    },
+    {
+      "word": "interest",
+      "meanings": [
+        {
+          "pos": "n",
+          "zh": "興趣"
+        },
+        {
+          "pos": "n",
+          "zh": "利息"
+        },
+        {
+          "pos": "n",
+          "zh": "利益；利害關係"
+        }
+      ]
+    },
+    {
+      "word": "figure",
+      "meanings": [
+        {
+          "pos": "n",
+          "zh": "數字；人物"
+        },
+        {
+          "pos": "v",
+          "zh": "認為；弄清楚"
+        }
+      ]
+    },
+    {
+      "word": "degree",
+      "meanings": [
+        {
+          "pos": "n",
+          "zh": "學位"
+        },
+        {
+          "pos": "n",
+          "zh": "程度"
+        },
+        {
+          "pos": "n",
+          "zh": "度（溫度/角度）"
+        }
+      ]
+    },
+    {
+      "word": "discipline",
+      "meanings": [
+        {
+          "pos": "n",
+          "zh": "紀律"
+        },
+        {
+          "pos": "n",
+          "zh": "學科；領域"
+        },
+        {
+          "pos": "v",
+          "zh": "懲罰；訓練"
+        }
+      ]
+    },
+    {
+      "word": "engage",
+      "meanings": [
+        {
+          "pos": "v",
+          "zh": "參與；從事"
+        },
+        {
+          "pos": "v",
+          "zh": "吸引（注意力）"
+        },
+        {
+          "pos": "v",
+          "zh": "訂婚"
+        }
+      ]
+    },
+    {
+      "word": "exercise",
+      "meanings": [
+        {
+          "pos": "n",
+          "zh": "運動；練習"
+        },
+        {
+          "pos": "v",
+          "zh": "行使（權利）"
+        }
+      ]
+    },
+    {
+      "word": "passage",
+      "meanings": [
+        {
+          "pos": "n",
+          "zh": "文章段落"
+        },
+        {
+          "pos": "n",
+          "zh": "通道；走廊"
+        },
+        {
+          "pos": "n",
+          "zh": "通過；經過"
+        }
+      ]
+    },
+    {
+      "word": "stock",
+      "meanings": [
+        {
+          "pos": "n",
+          "zh": "股票"
+        },
+        {
+          "pos": "n",
+          "zh": "庫存；存貨"
+        },
+        {
+          "pos": "adj",
+          "zh": "老套的"
+        }
+      ]
+    },
+    {
+      "word": "warrant",
+      "meanings": [
+        {
+          "pos": "n",
+          "zh": "搜索令；授權令"
+        },
+        {
+          "pos": "v",
+          "zh": "保證；使有正當理由"
+        }
+      ]
+    },
+    {
+      "word": "compromise",
+      "meanings": [
+        {
+          "pos": "n",
+          "zh": "妥協"
+        },
+        {
+          "pos": "v",
+          "zh": "危及；損害"
+        }
+      ]
+    },
+    {
+      "word": "resolution",
+      "meanings": [
+        {
+          "pos": "n",
+          "zh": "決議；決心"
+        },
+        {
+          "pos": "n",
+          "zh": "解析度"
+        },
+        {
+          "pos": "n",
+          "zh": "解決"
+        }
+      ]
+    },
+    {
+      "word": "practice",
+      "meanings": [
+        {
+          "pos": "n",
+          "zh": "練習；實踐"
+        },
+        {
+          "pos": "n",
+          "zh": "慣例；做法"
+        }
+      ]
+    },
+    {
+      "word": "peer",
+      "meanings": [
+        {
+          "pos": "n",
+          "zh": "同儕；同輩"
+        },
+        {
+          "pos": "v",
+          "zh": "凝視；窺視"
+        }
+      ]
+    },
+    {
+      "word": "spring",
+      "meanings": [
+        {
+          "pos": "n",
+          "zh": "春天"
+        },
+        {
+          "pos": "n",
+          "zh": "彈簧；泉水"
+        },
+        {
+          "pos": "v",
+          "zh": "跳起；湧現"
+        }
+      ]
+    },
+    {
+      "word": "pool",
+      "meanings": [
+        {
+          "pos": "n",
+          "zh": "游泳池；水塘"
+        },
+        {
+          "pos": "v",
+          "zh": "集中；匯集（資源）"
+        }
+      ]
+    },
+    {
+      "word": "reserve",
+      "meanings": [
+        {
+          "pos": "v",
+          "zh": "預約；保留"
+        },
+        {
+          "pos": "n",
+          "zh": "儲備；保護區"
+        }
+      ]
+    },
+    {
+      "word": "harbor",
+      "meanings": [
+        {
+          "pos": "n",
+          "zh": "港口"
+        },
+        {
+          "pos": "v",
+          "zh": "懷有（想法/感情）"
+        }
+      ]
+    },
+    {
+      "word": "relief",
+      "meanings": [
+        {
+          "pos": "n",
+          "zh": "緩解；鬆一口氣"
+        },
+        {
+          "pos": "n",
+          "zh": "救濟；援助"
+        }
+      ]
+    },
+    {
+      "word": "supplement",
+      "meanings": [
+        {
+          "pos": "n",
+          "zh": "補充品"
+        },
+        {
+          "pos": "v",
+          "zh": "補充；增補"
+        }
+      ]
+    },
+    {
+      "word": "suspend",
+      "meanings": [
+        {
+          "pos": "v",
+          "zh": "暫停；中止"
+        },
+        {
+          "pos": "v",
+          "zh": "懸掛"
+        }
+      ]
+    }
+  ],
+  "polysemousInExam": 5,
+  "polysemousTotal": 51
+}

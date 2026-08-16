@@ -1,0 +1,2138 @@
+[
+  {
+    "id": "fc-im-vocab-indifferent",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "The committee appeared _____ to the concerns raised by local residents.\n\n(A) immutable  (B) exclusive  (C) indifferent  (D) content",
+    "answer": "【答案】(C) indifferent\n【意思】漠不關心的\n【詞性】adj\n【例句】The committee appeared indifferent to the concerns raised by local residents.\n【近義詞】apathetic, unconcerned, detached\n【反義詞】passionate, concerned, enthusiastic"
+  },
+  {
+    "id": "fc-im-vocab-alternative",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "We need to find an _____ solution since the original plan failed.\n\n(A) independent  (B) flexible  (C) alternative  (D) immutable",
+    "answer": "【答案】(C) alternative\n【意思】替代的；備選方案\n【詞性】adj\n【例句】We need to find an alternative solution since the original plan failed.\n【近義詞】substitute, replacement, option"
+  },
+  {
+    "id": "fc-im-vocab-compliance",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "All departments must ensure _____ with the new data protection regulations.\n\n(A) reminiscence  (B) harbinger  (C) barrier  (D) compliance",
+    "answer": "【答案】(D) compliance\n【意思】遵從；合規\n【詞性】n\n【例句】All departments must ensure compliance with the new data protection regulations.\n【近義詞】adherence, conformity, obedience\n【反義詞】defiance, resistance, violation"
+  },
+  {
+    "id": "fc-im-vocab-resilience",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "The community showed remarkable _____ in recovering from the natural disaster.\n\n(A) ability  (B) intelligence  (C) population  (D) resilience",
+    "answer": "【答案】(D) resilience\n【意思】韌性；恢復力\n【詞性】n\n【例句】The community showed remarkable resilience in recovering from the natural disaster.\n【近義詞】tenacity, perseverance, endurance"
+  },
+  {
+    "id": "fc-im-vocab-revenue",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "The company reported a significant increase in quarterly _____.\n\n(A) regardless of  (B) revenue  (C) plans  (D) resource",
+    "answer": "【答案】(B) revenue\n【意思】營收\n【例句】The company reported a significant increase in quarterly revenue.\n【近義詞】income, earnings, proceeds"
+  },
+  {
+    "id": "fc-im-vocab-devastating",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "The earthquake had a _____ impact on the coastal communities.\n\n(A) internet  (B) instructions  (C) devastating  (D) practitioner",
+    "answer": "【答案】(C) devastating\n【意思】毀滅性的\n【詞性】v/adj\n【例句】The earthquake had a devastating impact on the coastal communities.\n【近義詞】destructive, ruinous, catastrophic\n【反義詞】beneficial, constructive, harmless"
+  },
+  {
+    "id": "fc-im-vocab-mitigate",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "Emergency measures were implemented to _____ the effects of the flood.\n\n(A) mitigate  (B) relegate  (C) equate  (D) initiate",
+    "answer": "【答案】(A) mitigate\n【意思】減輕；緩和\n【詞性】v\n【例句】Emergency measures were implemented to mitigate the effects of the flood.\n【近義詞】alleviate, ameliorate, palliate\n【反義詞】exacerbate, aggravate, worsen"
+  },
+  {
+    "id": "fc-im-vocab-deliberate",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "The attack was not accidental but a _____ act of sabotage.\n\n(A) identify  (B) clarify  (C) isolate  (D) deliberate",
+    "answer": "【答案】(D) deliberate\n【意思】故意的；深思熟慮的\n【詞性】v\n【例句】The attack was not accidental but a deliberate act of sabotage.\n【近義詞】intentional, calculated, premeditated\n【反義詞】accidental, unintentional, spontaneous"
+  },
+  {
+    "id": "fc-im-vocab-disapproving",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "Her _____ tone made it clear she disagreed with the proposed plan.\n\n(A) authentic  (B) initial  (C) equal  (D) disapproving",
+    "answer": "【答案】(D) disapproving\n【意思】不贊成的\n【詞性】v/adj\n【例句】Her disapproving tone made it clear she disagreed with the proposed plan.\n【近義詞】critical, censorious, reproachful"
+  },
+  {
+    "id": "fc-im-vocab-exacerbate",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "Rising temperatures will only _____ the ongoing water shortage crisis.\n\n(A) private  (B) exacerbate  (C) evaluate  (D) isolate",
+    "answer": "【答案】(B) exacerbate\n【意思】使惡化\n【詞性】v\n【例句】Rising temperatures will only exacerbate the ongoing water shortage crisis.\n【近義詞】aggravate, worsen, intensify\n【反義詞】alleviate, mitigate, ameliorate"
+  },
+  {
+    "id": "fc-im-vocab-injunction",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "The court issued an _____ preventing the company from selling the product.\n\n(A) priority  (B) influence  (C) portion  (D) injunction",
+    "answer": "【答案】(D) injunction\n【意思】禁令；命令\n【詞性】n\n【例句】The court issued an injunction preventing the company from selling the product.\n【近義詞】order, directive, mandate"
+  },
+  {
+    "id": "fc-im-vocab-innovative",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "The startup introduced an _____ approach to renewable energy storage.\n\n(A) orient  (B) deferential  (C) significant  (D) innovative",
+    "answer": "【答案】(D) innovative\n【意思】創新的\n【詞性】adj\n【例句】The startup introduced an innovative approach to renewable energy storage.\n【近義詞】novel, creative, groundbreaking\n【反義詞】conventional, traditional, outdated"
+  },
+  {
+    "id": "fc-im-vocab-reprimanded",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "The employee was severely _____ for violating the safety protocols.\n\n(A) study  (B) virus  (C) basic  (D) reprimanded",
+    "answer": "【答案】(D) reprimanded\n【意思】被訓斥的\n【詞性】v/adj\n【例句】The employee was severely reprimanded for violating the safety protocols.\n【近義詞】rebuked, admonished, censured"
+  },
+  {
+    "id": "fc-im-vocab-architecture",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "The system _____ was redesigned to improve scalability and reliability.\n\n(A) architecture  (B) down  (C) response  (D) systems",
+    "answer": "【答案】(A) architecture\n【意思】架構\n【例句】The system architecture was redesigned to improve scalability and reliability."
+  },
+  {
+    "id": "fc-im-vocab-complexity",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "The _____ of the algorithm increases exponentially with input size.\n\n(A) element  (B) implementation  (C) complexity  (D) balance",
+    "answer": "【答案】(C) complexity\n【意思】複雜度\n【詞性】n\n【例句】The complexity of the algorithm increases exponentially with input size."
+  },
+  {
+    "id": "fc-im-vocab-scheduling",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "Efficient task _____ is critical for optimizing processor utilization.\n\n(A) scheduling  (B) regulations  (C) customers  (D) clause",
+    "answer": "【答案】(A) scheduling\n【意思】排程\n【例句】Efficient task scheduling is critical for optimizing processor utilization."
+  },
+  {
+    "id": "fc-im-vocab-implementation",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "The _____ of the new policy required coordination across all departments.\n\n(A) probability  (B) performance  (C) university  (D) implementation",
+    "answer": "【答案】(D) implementation\n【意思】實作\n【詞性】n\n【例句】The implementation of the new policy required coordination across all departments."
+  },
+  {
+    "id": "fc-im-vocab-imaginative",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "The architect proposed an _____ design that blended modern and traditional elements.\n\n(A) tenacious  (B) detrimental  (C) potential  (D) imaginative",
+    "answer": "【答案】(D) imaginative\n【意思】富有想像力的\n【詞性】adj\n【例句】The architect proposed an imaginative design that blended modern and traditional elements."
+  },
+  {
+    "id": "fc-im-vocab-in-addition-to",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "_____ her research duties, she also teaches two undergraduate courses.\n\n(A) minimum  (B) occur  (C) matrix  (D) in addition to",
+    "answer": "【答案】(D) in addition to\n【意思】除…之外\n【詞性】phrase\n【例句】in addition to her research duties, she also teaches two undergraduate courses."
+  },
+  {
+    "id": "fc-im-vocab-susceptible",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "Elderly individuals are more _____ to respiratory infections during winter.\n\n(A) parsimonious  (B) conspicuous  (C) extensive  (D) susceptible",
+    "answer": "【答案】(D) susceptible\n【意思】易受影響的\n【詞性】adj\n【例句】Elderly individuals are more susceptible to respiratory infections during winter.\n【近義詞】vulnerable, prone, liable"
+  },
+  {
+    "id": "fc-im-vocab-circumspect",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "A _____ investor always researches thoroughly before committing funds.\n\n(A) phenomenon  (B) circumspect  (C) keys  (D) cycle",
+    "answer": "【答案】(B) circumspect\n【意思】謹慎的；慎重的\n【例句】A circumspect investor always researches thoroughly before committing funds.\n【近義詞】cautious, prudent, wary\n【反義詞】reckless, careless, impulsive"
+  },
+  {
+    "id": "fc-im-vocab-commemorate",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "The monument was built to _____ the heroes of the independence movement.\n\n(A) concise  (B) immigrate  (C) commemorate  (D) advocate",
+    "answer": "【答案】(C) commemorate\n【意思】紀念\n【詞性】v\n【例句】The monument was built to commemorate the heroes of the independence movement.\n【近義詞】honor, celebrate, memorialize"
+  },
+  {
+    "id": "fc-im-vocab-confiscate",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "Customs officers have the authority to _____ prohibited items at the border.\n\n(A) manipulate  (B) confiscate  (C) corrugate  (D) accurate",
+    "answer": "【答案】(B) confiscate\n【意思】沒收；充公\n【詞性】v\n【例句】Customs officers have the authority to confiscate prohibited items at the border.\n【近義詞】seize, impound, appropriate"
+  },
+  {
+    "id": "fc-im-vocab-conservative",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "The bank adopted a _____ approach to lending during the economic downturn.\n\n(A) fundamental  (B) abundant  (C) consequent  (D) conservative",
+    "answer": "【答案】(D) conservative\n【意思】保守的\n【詞性】adj\n【例句】The bank adopted a conservative approach to lending during the economic downturn."
+  },
+  {
+    "id": "fc-im-vocab-contaminate",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "Industrial waste continues to _____ the river water downstream.\n\n(A) fluctuate  (B) accelerate  (C) corroborate  (D) contaminate",
+    "answer": "【答案】(D) contaminate\n【意思】污染\n【詞性】v\n【例句】Industrial waste continues to contaminate the river water downstream.\n【近義詞】pollute, taint, defile\n【反義詞】purify, cleanse, decontaminate"
+  },
+  {
+    "id": "fc-im-vocab-corroborate",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "The witness testimony helped to _____ the evidence found at the scene.\n\n(A) corroborate  (B) advocate  (C) fluctuate  (D) allocate",
+    "answer": "【答案】(A) corroborate\n【意思】證實\n【詞性】v\n【例句】The witness testimony helped to corroborate the evidence found at the scene.\n【近義詞】confirm, verify, substantiate"
+  },
+  {
+    "id": "fc-im-vocab-deceptive",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "The advertisement was found to be _____ and was subsequently withdrawn.\n\n(A) transparent  (B) deceptive  (C) nonetheless  (D) technological",
+    "answer": "【答案】(B) deceptive\n【意思】欺騙的\n【詞性】adj\n【例句】The advertisement was found to be deceptive and was subsequently withdrawn.\n【近義詞】misleading, fraudulent, dishonest\n【反義詞】honest, truthful, transparent"
+  },
+  {
+    "id": "fc-im-vocab-deferential",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "The young diplomat maintained a _____ attitude toward the senior officials.\n\n(A) continuous  (B) significant  (C) traditional  (D) deferential",
+    "answer": "【答案】(D) deferential\n【意思】恭敬的\n【詞性】adj\n【例句】The young diplomat maintained a deferential attitude toward the senior officials.\n【近義詞】respectful, reverent, submissive"
+  },
+  {
+    "id": "fc-im-vocab-delineate",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "The contract clearly _____ the responsibilities of each party.\n\n(A) allocate  (B) manipulate  (C) intensify  (D) delineate",
+    "answer": "【答案】(D) delineate\n【意思】描繪；界定\n【詞性】v\n【例句】The contract clearly delineate the responsibilities of each party.\n【近義詞】outline, describe, depict"
+  },
+  {
+    "id": "fc-im-vocab-detrimental",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "Excessive screen time can be _____ to children's cognitive development.\n\n(A) nonetheless  (B) detrimental  (C) considerable  (D) conspicuous",
+    "answer": "【答案】(B) detrimental\n【意思】有害的\n【詞性】adj\n【例句】Excessive screen time can be detrimental to children's cognitive development.\n【近義詞】harmful, damaging, injurious\n【反義詞】beneficial, advantageous, helpful"
+  },
+  {
+    "id": "fc-im-vocab-disruption",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "The technological _____ caused by AI is reshaping entire industries.\n\n(A) proportion  (B) activity  (C) priority  (D) disruption",
+    "answer": "【答案】(D) disruption\n【意思】中斷；顛覆\n【詞性】n\n【例句】The technological disruption caused by AI is reshaping entire industries."
+  },
+  {
+    "id": "fc-im-vocab-elucidated",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "The professor _____ the complex theory with simple real-world examples.\n\n(A) terms  (B) elucidated  (C) language  (D) economic",
+    "answer": "【答案】(B) elucidated\n【意思】闡明的\n【詞性】v/adj\n【例句】The professor elucidated the complex theory with simple real-world examples.\n【近義詞】clarified, explained, illuminated"
+  },
+  {
+    "id": "fc-im-vocab-exclusive",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "The magazine published an _____ interview with the reclusive author.\n\n(A) flexible  (B) exclusive  (C) inherent  (D) detrimental",
+    "answer": "【答案】(B) exclusive\n【意思】獨家的；排他的\n【詞性】adj\n【例句】The magazine published an exclusive interview with the reclusive author.\n【近義詞】sole, restricted, limited\n【反義詞】inclusive, open, shared"
+  },
+  {
+    "id": "fc-im-vocab-inadequately",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "The building was _____ insulated, leading to high energy costs.\n\n(A) inadequately  (B) daily  (C) increasingly  (D) imply",
+    "answer": "【答案】(A) inadequately\n【意思】不充分地\n【詞性】adv\n【例句】The building was inadequately insulated, leading to high energy costs."
+  },
+  {
+    "id": "fc-im-vocab-mellow",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "The wine had a _____ flavor that improved with age.\n\n(A) mellow  (B) node  (C) binary  (D) execute",
+    "answer": "【答案】(A) mellow\n【意思】醇厚的；柔和的\n【例句】The wine had a mellow flavor that improved with age.\n【近義詞】gentle, soft, mild"
+  },
+  {
+    "id": "fc-im-vocab-pervasive",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "The influence of digital technology has become _____ in modern education.\n\n(A) conservative  (B) innovative  (C) pervasive  (D) passive",
+    "answer": "【答案】(C) pervasive\n【意思】普遍的\n【詞性】adj\n【例句】The influence of digital technology has become pervasive in modern education.\n【近義詞】widespread, prevalent, ubiquitous\n【反義詞】rare, uncommon, limited"
+  },
+  {
+    "id": "fc-im-vocab-reminiscence",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "The memoir is a _____ of the author's childhood in rural Taiwan.\n\n(A) disruption  (B) generation  (C) balance  (D) reminiscence",
+    "answer": "【答案】(D) reminiscence\n【意思】回憶；追憶\n【詞性】n\n【例句】The memoir is a reminiscence of the author's childhood in rural Taiwan."
+  },
+  {
+    "id": "fc-im-vocab-resolute",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "Despite public criticism, the leader remained _____ in her decision.\n\n(A) systems  (B) resolute  (C) applications  (D) algorithm",
+    "answer": "【答案】(B) resolute\n【意思】堅決的\n【例句】Despite public criticism, the leader remained resolute in her decision.\n【近義詞】determined, firm, unwavering\n【反義詞】hesitant, indecisive, wavering"
+  },
+  {
+    "id": "fc-im-vocab-substantiate",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "The researcher was unable to _____ his claims without additional data.\n\n(A) anticipate  (B) substantiate  (C) adequate  (D) delineate",
+    "answer": "【答案】(B) substantiate\n【意思】證實\n【詞性】v\n【例句】The researcher was unable to substantiate his claims without additional data.\n【近義詞】verify, confirm, prove"
+  },
+  {
+    "id": "fc-im-vocab-tenacious",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "Her _____ pursuit of justice eventually led to the reform of the law.\n\n(A) environmental  (B) predominant  (C) tenacious  (D) extravagant",
+    "answer": "【答案】(C) tenacious\n【意思】堅韌的\n【詞性】adj\n【例句】Her tenacious pursuit of justice eventually led to the reform of the law.\n【近義詞】persistent, determined, resolute"
+  },
+  {
+    "id": "fc-im-vocab-unprecedented",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "The global crisis created _____ challenges for international cooperation.\n\n(A) values  (B) unprecedented  (C) astronauts  (D) algorithm",
+    "answer": "【答案】(B) unprecedented\n【意思】史無前例的\n【詞性】v/adj\n【例句】The global crisis created unprecedented challenges for international cooperation.\n【近義詞】unparalleled, unheard-of, exceptional\n【反義詞】common, typical, ordinary"
+  },
+  {
+    "id": "fc-im-vocab-address-alt",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-polysemy",
+    "prompt": "The new policy aims to _____ the issue of income inequality.\n\n(A) negate  (B) address  (C) prohibit  (D) exacerbate",
+    "answer": "【答案】(B) address\n【意思】處理；解決（常見意思：地址）\n【詞性】v\n【一字多義】此字有多個常見意思，考試常考較不常見的用法\n【例句】The new policy aims to address the issue of income inequality."
+  },
+  {
+    "id": "fc-im-vocab-issue-alt",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-polysemy",
+    "prompt": "The government decided to _____ new guidelines for food safety.\n\n(A) issue  (B) accommodate  (C) conceive  (D) invoke",
+    "answer": "【答案】(A) issue\n【意思】發布；發行（常見意思：議題；問題）\n【詞性】v\n【一字多義】此字有多個常見意思，考試常考較不常見的用法\n【例句】The government decided to issue new guidelines for food safety."
+  },
+  {
+    "id": "fc-im-vocab-yield-alt",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-polysemy",
+    "prompt": "The negotiator refused to _____ to the opposing party's demands.\n\n(A) alleviate  (B) yield  (C) illuminate  (D) formulate",
+    "answer": "【答案】(B) yield\n【意思】讓步；屈服（常見意思：產量；收益）\n【詞性】v\n【一字多義】此字有多個常見意思，考試常考較不常見的用法\n【例句】The negotiator refused to yield to the opposing party's demands."
+  },
+  {
+    "id": "fc-im-vocab-decline-alt",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-polysemy",
+    "prompt": "She decided to politely _____ the invitation to the conference.\n\n(A) specify  (B) collaborate  (C) decline  (D) scrutinize",
+    "answer": "【答案】(C) decline\n【意思】拒絕；婉拒（常見意思：下降；衰退）\n【詞性】v\n【一字多義】此字有多個常見意思，考試常考較不常見的用法\n【例句】She decided to politely decline the invitation to the conference."
+  },
+  {
+    "id": "fc-im-vocab-sound-alt",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-polysemy",
+    "prompt": "The consultant provided _____ advice based on years of experience.\n\n(A) dominant  (B) compatible  (C) sound  (D) indigenous",
+    "answer": "【答案】(C) sound\n【意思】合理的；健全的（常見意思：聲音）\n【詞性】adj\n【一字多義】此字有多個常見意思，考試常考較不常見的用法\n【例句】The consultant provided sound advice based on years of experience."
+  },
+  {
+    "id": "fc-im-vocab-conduct-alt",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-polysemy",
+    "prompt": "The team plans to _____ a series of experiments next month.\n\n(A) conceive  (B) erode  (C) elaborate  (D) conduct",
+    "answer": "【答案】(D) conduct\n【意思】進行；實施（常見意思：行為；舉止）\n【詞性】v\n【一字多義】此字有多個常見意思，考試常考較不常見的用法\n【例句】The team plans to conduct a series of experiments next month."
+  },
+  {
+    "id": "fc-im-vocab-subject-alt",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-polysemy",
+    "prompt": "Workers in the factory were _____ to harsh conditions daily.\n\n(A) subject  (B) illuminate  (C) enumerate  (D) validate",
+    "answer": "【答案】(A) subject\n【意思】使遭受（常見意思：科目；主題）\n【詞性】v\n【一字多義】此字有多個常見意思，考試常考較不常見的用法\n【例句】Workers in the factory were subject to harsh conditions daily."
+  },
+  {
+    "id": "fc-im-vocab-objective-alt",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-polysemy",
+    "prompt": "A good journalist strives to remain _____ when reporting the news.\n\n(A) unprecedented  (B) profound  (C) excessive  (D) objective",
+    "answer": "【答案】(D) objective\n【意思】客觀的（常見意思：目標）\n【詞性】adj\n【一字多義】此字有多個常見意思，考試常考較不常見的用法\n【例句】A good journalist strives to remain objective when reporting the news."
+  },
+  {
+    "id": "fc-im-vocab-novel-alt",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-polysemy",
+    "prompt": "The researcher proposed a _____ method for detecting water contamination.\n\n(A) predominant  (B) tangible  (C) novel  (D) fundamental",
+    "answer": "【答案】(C) novel\n【意思】新穎的；新奇的（常見意思：小說）\n【詞性】adj\n【一字多義】此字有多個常見意思，考試常考較不常見的用法\n【例句】The researcher proposed a novel method for detecting water contamination."
+  },
+  {
+    "id": "fc-im-vocab-minute-alt",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-polysemy",
+    "prompt": "The scientist detected _____ traces of the chemical in the sample.\n\n(A) discrete  (B) plausible  (C) minute  (D) compelling",
+    "answer": "【答案】(C) minute\n【意思】微小的；細微的（常見意思：分鐘）\n【詞性】adj\n【一字多義】此字有多個常見意思，考試常考較不常見的用法\n【例句】The scientist detected minute traces of the chemical in the sample."
+  },
+  {
+    "id": "fc-im-vocab-deliberate-alt",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-polysemy",
+    "prompt": "The jury will _____ for several days before reaching a verdict.\n\n(A) deliberate  (B) reconcile  (C) withdraw  (D) integrate",
+    "answer": "【答案】(A) deliberate\n【意思】深思熟慮；商議（常見意思：故意的；蓄意的）\n【詞性】v\n【一字多義】此字有多個常見意思，考試常考較不常見的用法\n【例句】The jury will deliberate for several days before reaching a verdict."
+  },
+  {
+    "id": "fc-im-vocab-elaborate-alt",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-polysemy",
+    "prompt": "Could you please _____ on your proposal for the board?\n\n(A) modify  (B) collaborate  (C) clarify  (D) elaborate",
+    "answer": "【答案】(D) elaborate\n【意思】詳述；闡述（常見意思：精心的；詳盡的）\n【詞性】v\n【一字多義】此字有多個常見意思，考試常考較不常見的用法\n【例句】Could you please elaborate on your proposal for the board?"
+  },
+  {
+    "id": "fc-im-vocab-attribute-alt",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-polysemy",
+    "prompt": "Historians _____ the economic collapse to poor fiscal policy.\n\n(A) stimulate  (B) diminish  (C) reinforce  (D) attribute",
+    "answer": "【答案】(D) attribute\n【意思】歸因於（常見意思：屬性；特質）\n【詞性】v\n【一字多義】此字有多個常見意思，考試常考較不常見的用法\n【例句】Historians attribute the economic collapse to poor fiscal policy."
+  },
+  {
+    "id": "fc-im-vocab-exploit-alt",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-polysemy",
+    "prompt": "Some companies _____ natural resources without considering environmental impact.\n\n(A) obstruct  (B) violate  (C) articulate  (D) exploit",
+    "answer": "【答案】(D) exploit\n【意思】利用；開發（常見意思：功績；英勇事蹟）\n【詞性】v\n【一字多義】此字有多個常見意思，考試常考較不常見的用法\n【例句】Some companies exploit natural resources without considering environmental impact."
+  },
+  {
+    "id": "fc-im-vocab-compound-alt",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-polysemy",
+    "prompt": "High interest rates will _____ the existing economic problems.\n\n(A) exacerbate  (B) compound  (C) perceive  (D) substantiate",
+    "answer": "【答案】(B) compound\n【意思】加重；使惡化（常見意思：化合物；複合物）\n【詞性】v\n【一字多義】此字有多個常見意思，考試常考較不常見的用法\n【例句】High interest rates will compound the existing economic problems."
+  },
+  {
+    "id": "fc-im-vocab-content-alt",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-polysemy",
+    "prompt": "After years of struggle, she finally felt _____ with her career.\n\n(A) concurrent  (B) content  (C) comprehensive  (D) abundant",
+    "answer": "【答案】(B) content\n【意思】滿足的（常見意思：內容）\n【詞性】adj\n【一字多義】此字有多個常見意思，考試常考較不常見的用法\n【例句】After years of struggle, she finally felt content with her career."
+  },
+  {
+    "id": "fc-im-vocab-present-alt",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-polysemy",
+    "prompt": "The team will _____ their findings at the international conference.\n\n(A) facilitate  (B) proliferate  (C) exempt  (D) present",
+    "answer": "【答案】(D) present\n【意思】呈現；提出（常見意思：禮物）\n【詞性】v\n【一字多義】此字有多個常見意思，考試常考較不常見的用法\n【例句】The team will present their findings at the international conference."
+  },
+  {
+    "id": "fc-im-vocab-project-alt",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-polysemy",
+    "prompt": "Analysts _____ that revenue will increase by 15 percent next quarter.\n\n(A) mitigate  (B) confiscate  (C) project  (D) enhance",
+    "answer": "【答案】(C) project\n【意思】預測；投射（常見意思：專案；計畫）\n【詞性】v\n【一字多義】此字有多個常見意思，考試常考較不常見的用法\n【例句】Analysts project that revenue will increase by 15 percent next quarter."
+  },
+  {
+    "id": "fc-im-vocab-scale-alt",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-polysemy",
+    "prompt": "The mountaineers attempted to _____ the north face of the peak.\n\n(A) implement  (B) distort  (C) cultivate  (D) scale",
+    "answer": "【答案】(D) scale\n【意思】攀爬；擴展（常見意思：規模；比例）\n【詞性】v\n【一字多義】此字有多個常見意思，考試常考較不常見的用法\n【例句】The mountaineers attempted to scale the north face of the peak."
+  },
+  {
+    "id": "fc-im-vocab-contract-alt",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-polysemy",
+    "prompt": "Metal tends to _____ when exposed to extremely cold temperatures.\n\n(A) negate  (B) alleviate  (C) contract  (D) corroborate",
+    "answer": "【答案】(C) contract\n【意思】收縮（常見意思：合約）\n【詞性】v\n【一字多義】此字有多個常見意思，考試常考較不常見的用法\n【例句】Metal tends to contract when exposed to extremely cold temperatures."
+  },
+  {
+    "id": "fc-im-vocab-compromise-alt",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-polysemy",
+    "prompt": "Using weak passwords can _____ the security of your accounts.\n\n(A) discriminate  (B) compromise  (C) distort  (D) accommodate",
+    "answer": "【答案】(B) compromise\n【意思】危及；損害（常見意思：妥協）\n【詞性】v\n【一字多義】此字有多個常見意思，考試常考較不常見的用法\n【例句】Using weak passwords can compromise the security of your accounts."
+  },
+  {
+    "id": "fc-im-vocab-resolution-alt",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-polysemy",
+    "prompt": "The display offers a high _____ of 4K for crystal-clear images.\n\n(A) implication  (B) resolution  (C) proposition  (D) transparency",
+    "answer": "【答案】(B) resolution\n【意思】解析度（常見意思：決議；決心）\n【詞性】n\n【一字多義】此字有多個常見意思，考試常考較不常見的用法\n【例句】The display offers a high resolution of 4K for crystal-clear images."
+  },
+  {
+    "id": "fc-im-vocab-interest-alt",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-polysemy",
+    "prompt": "The bank charges 5% annual _____ on outstanding loan balances.\n\n(A) interest  (B) manifestation  (C) entity  (D) controversy",
+    "answer": "【答案】(A) interest\n【意思】利息（常見意思：興趣）\n【詞性】n\n【一字多義】此字有多個常見意思，考試常考較不常見的用法\n【例句】The bank charges 5% annual interest on outstanding loan balances."
+  },
+  {
+    "id": "fc-im-vocab-figure-alt",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-polysemy",
+    "prompt": "I cannot _____ out why the program keeps producing errors.\n\n(A) diminish  (B) accelerate  (C) figure  (D) endorse",
+    "answer": "【答案】(C) figure\n【意思】弄清楚（常見意思：人物；數字）\n【詞性】v\n【一字多義】此字有多個常見意思，考試常考較不常見的用法\n【例句】I cannot figure out why the program keeps producing errors."
+  },
+  {
+    "id": "fc-im-vocab-reserve-alt",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-polysemy",
+    "prompt": "You should _____ a table in advance for the restaurant.\n\n(A) enhance  (B) anticipate  (C) reserve  (D) illuminate",
+    "answer": "【答案】(C) reserve\n【意思】預約；保留（常見意思：保護區；儲備）\n【詞性】v\n【一字多義】此字有多個常見意思，考試常考較不常見的用法\n【例句】You should reserve a table in advance for the restaurant."
+  },
+  {
+    "id": "fc-im-vocab-secure-alt",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-polysemy",
+    "prompt": "The company managed to _____ a major contract with the government.\n\n(A) inhibit  (B) conceive  (C) secure  (D) eliminate",
+    "answer": "【答案】(C) secure\n【意思】獲得；確保（常見意思：安全的）\n【詞性】v\n【一字多義】此字有多個常見意思，考試常考較不常見的用法\n【例句】The company managed to secure a major contract with the government."
+  },
+  {
+    "id": "fc-im-vocab-peer-alt",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-polysemy",
+    "prompt": "She had to _____ through the fog to see the road ahead.\n\n(A) compile  (B) articulate  (C) peer  (D) replicate",
+    "answer": "【答案】(C) peer\n【意思】凝視；窺視（常見意思：同儕；同輩）\n【詞性】v\n【一字多義】此字有多個常見意思，考試常考較不常見的用法\n【例句】She had to peer through the fog to see the road ahead."
+  },
+  {
+    "id": "fc-im-vocab-pool-alt",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-polysemy",
+    "prompt": "Several startups decided to _____ their resources for the joint venture.\n\n(A) assess  (B) corroborate  (C) pool  (D) cease",
+    "answer": "【答案】(C) pool\n【意思】集中；匯集（資源）（常見意思：游泳池）\n【詞性】v\n【一字多義】此字有多個常見意思，考試常考較不常見的用法\n【例句】Several startups decided to pool their resources for the joint venture."
+  },
+  {
+    "id": "fc-im-vocab-draft-alt",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-polysemy",
+    "prompt": "The committee will _____ new regulations for online privacy.\n\n(A) compile  (B) incorporate  (C) draft  (D) cultivate",
+    "answer": "【答案】(C) draft\n【意思】起草（常見意思：草稿）\n【詞性】v\n【一字多義】此字有多個常見意思，考試常考較不常見的用法\n【例句】The committee will draft new regulations for online privacy."
+  },
+  {
+    "id": "fc-im-vocab-discipline-alt",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-polysemy",
+    "prompt": "The school may _____ students who repeatedly violate the code of conduct.\n\n(A) acknowledge  (B) discipline  (C) substantiate  (D) withhold",
+    "answer": "【答案】(B) discipline\n【意思】懲罰；處分（常見意思：學科；領域）\n【詞性】v\n【一字多義】此字有多個常見意思，考試常考較不常見的用法\n【例句】The school may discipline students who repeatedly violate the code of conduct."
+  },
+  {
+    "id": "fc-im-vocab-volume-alt",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-polysemy",
+    "prompt": "The sheer _____ of data generated daily poses storage challenges.\n\n(A) manifestation  (B) volume  (C) diversity  (D) expenditure",
+    "answer": "【答案】(B) volume\n【意思】體積；量（常見意思：音量）\n【詞性】n\n【一字多義】此字有多個常見意思，考試常考較不常見的用法\n【例句】The sheer volume of data generated daily poses storage challenges."
+  },
+  {
+    "id": "fc-im-phrase-refer-to",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-phrases",
+    "prompt": "The term \"big data\" _____ extremely large datasets that require advanced tools to analyze.\n\n(A) in addition to  (B) refer to  (C) in spite of  (D) in contrast",
+    "answer": "【答案】(B) refer to\n【意思】指的是；提及\n【詞性】片語\n【例句】The author refers to several studies in the introduction."
+  },
+  {
+    "id": "fc-im-phrase-as-well-as",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-phrases",
+    "prompt": "The scholarship covers tuition _____ living expenses for the entire program.\n\n(A) in terms of  (B) as well as  (C) in contrast  (D) in spite of",
+    "answer": "【答案】(B) as well as\n【意思】以及；和\n【詞性】片語\n【例句】The course teaches theory as well as practical skills."
+  },
+  {
+    "id": "fc-im-phrase-in-order-to",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-phrases",
+    "prompt": "The company restructured its departments _____ improve operational efficiency.\n\n(A) in spite of  (B) in order to  (C) result in  (D) as well as",
+    "answer": "【答案】(B) in order to\n【意思】為了\n【詞性】片語\n【例句】She took extra courses in order to graduate early."
+  },
+  {
+    "id": "fc-im-phrase-lead-to",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-phrases",
+    "prompt": "Poor communication between teams often _____ costly project delays.\n\n(A) in order to  (B) as well as  (C) in addition to  (D) lead to",
+    "answer": "【答案】(D) lead to\n【意思】導致\n【詞性】片語\n【例句】The policy change led to a significant increase in enrollment."
+  },
+  {
+    "id": "fc-im-phrase-due-to",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-phrases",
+    "prompt": "The flight was delayed _____ severe weather conditions across the region.\n\n(A) due to  (B) lead to  (C) refer to  (D) in order to",
+    "answer": "【答案】(A) due to\n【意思】由於\n【詞性】片語\n【例句】The event was canceled due to low registration numbers."
+  },
+  {
+    "id": "fc-im-phrase-in-addition-to",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-phrases",
+    "prompt": "_____ her teaching responsibilities, she also supervises graduate students.\n\n(A) in terms of  (B) as a result  (C) bring about  (D) in addition to",
+    "answer": "【答案】(D) in addition to\n【意思】除…之外（還有）\n【詞性】片語\n【例句】In addition to the main course, dessert is included."
+  },
+  {
+    "id": "fc-im-phrase-in-spite-of",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-phrases",
+    "prompt": "_____ numerous obstacles, the team successfully launched the product on time.\n\n(A) with respect to  (B) in spite of  (C) account for  (D) as well as",
+    "answer": "【答案】(B) in spite of\n【意思】儘管\n【詞性】片語\n【例句】In spite of the rain, the outdoor concert continued as planned."
+  },
+  {
+    "id": "fc-im-phrase-in-terms-of",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-phrases",
+    "prompt": "The new processor outperforms its predecessor _____ both speed and energy efficiency.\n\n(A) due to  (B) account for  (C) in contrast  (D) in terms of",
+    "answer": "【答案】(D) in terms of\n【意思】就…而言\n【詞性】片語\n【例句】In terms of cost, the second option is more affordable."
+  },
+  {
+    "id": "fc-im-phrase-as-a-result",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-phrases",
+    "prompt": "The company failed to innovate; _____, it lost market share to competitors.\n\n(A) due to  (B) as well as  (C) as a result  (D) in contrast",
+    "answer": "【答案】(C) as a result\n【意思】因此；結果\n【詞性】片語\n【例句】She studied diligently. As a result, she passed the exam with honors."
+  },
+  {
+    "id": "fc-im-phrase-in-contrast",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-phrases",
+    "prompt": "Urban schools have abundant resources. _____, rural schools often lack basic supplies.\n\n(A) refer to  (B) bring about  (C) in contrast  (D) in order to",
+    "answer": "【答案】(C) in contrast\n【意思】相反地；相比之下\n【詞性】片語\n【例句】The north is mountainous; in contrast, the south is flat."
+  },
+  {
+    "id": "fc-im-phrase-with-respect-to",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-phrases",
+    "prompt": "The committee has not yet made a decision _____ the proposed budget increase.\n\n(A) with respect to  (B) in order to  (C) in contrast  (D) result in",
+    "answer": "【答案】(A) with respect to\n【意思】關於；就…而言\n【詞性】片語\n【例句】With respect to your question, I will provide a detailed response."
+  },
+  {
+    "id": "fc-im-phrase-bring-about",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-phrases",
+    "prompt": "The new regulations are expected to _____ significant changes in the industry.\n\n(A) in terms of  (B) bring about  (C) as a result  (D) contribute to",
+    "answer": "【答案】(B) bring about\n【意思】引起；導致\n【詞性】片語\n【例句】Technology has brought about a revolution in communication."
+  },
+  {
+    "id": "fc-im-phrase-contribute-to",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-phrases",
+    "prompt": "Regular exercise and a balanced diet _____ overall physical and mental well-being.\n\n(A) as a result  (B) in contrast  (C) refer to  (D) contribute to",
+    "answer": "【答案】(D) contribute to\n【意思】有助於；促成\n【詞性】片語\n【例句】Several factors contributed to the company's success."
+  },
+  {
+    "id": "fc-im-phrase-account-for",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-phrases",
+    "prompt": "Online sales now _____ more than 60% of the company's total revenue.\n\n(A) result in  (B) in spite of  (C) account for  (D) bring about",
+    "answer": "【答案】(C) account for\n【意思】佔（比例）；解釋\n【詞性】片語\n【例句】How do you account for the discrepancy in the data?"
+  },
+  {
+    "id": "fc-im-phrase-result-in",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-phrases",
+    "prompt": "Failure to comply with safety regulations may _____ heavy fines or closure.\n\n(A) result in  (B) due to  (C) in contrast  (D) as well as",
+    "answer": "【答案】(A) result in\n【意思】導致；造成\n【詞性】片語\n【例句】The merger resulted in the creation of the largest bank in the region."
+  },
+  {
+    "id": "fc-im-vocab-internet",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "Wireless _____ has become so____ that many people notice it only when it d\n\n(A) attribute  (B) internet  (C) legitimate  (D) volatility",
+    "answer": "【答案】(B) internet"
+  },
+  {
+    "id": "fc-im-vocab-language",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "ve stance, the statement was written in _____ that was__, allowing for interpretive flexibility.\n\n(A) rigorous  (B) language  (C) incentive  (D) discrepancy",
+    "answer": "【答案】(B) language"
+  },
+  {
+    "id": "fc-im-vocab-product",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "ocus on specific goals, like increasing _____ visibility or achieving short-term revenue boosts. While s\n\n(A) product  (B) entity  (C) fluctuate  (D) withdraw",
+    "answer": "【答案】(A) product"
+  },
+  {
+    "id": "fc-im-vocab-resources",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "Faced with limited time and _____, the team adopted a(n)__ solution rather than an idealistic\n\n(A) resources  (B) scrutiny  (C) provisional  (D) catalyst",
+    "answer": "【答案】(A) resources"
+  },
+  {
+    "id": "fc-im-vocab-terms",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "Many modern scientific _____ __ from ancient Greek.\n\n(A) arbitrary  (B) terms  (C) anomaly  (D) accommodate",
+    "answer": "【答案】(B) terms"
+  },
+  {
+    "id": "fc-im-vocab-cycle",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "rmone fluctuations across the menstrual _____ are less evident. In some women, fluctuations may lead to c\n\n(A) validity  (B) disseminate  (C) cycle  (D) conceive",
+    "answer": "【答案】(C) cycle"
+  },
+  {
+    "id": "fc-im-vocab-management",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "ompliance, enabling facilities to adapt _____ methodologies to evolving technology, it said. All assiste\n\n(A) management  (B) abundance  (C) autonomy  (D) fluctuation",
+    "answer": "【答案】(A) management\n【詞性】n"
+  },
+  {
+    "id": "fc-im-vocab-positive",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "as, not all singular individuals make a _____ difference. The history of the 20th century would be far ha\n\n(A) predominant  (B) provisional  (C) positive  (D) detrimental",
+    "answer": "【答案】(C) positive\n【詞性】adj"
+  },
+  {
+    "id": "fc-im-vocab-services",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "n access to legal assisted reproductive _____. The proposed revisions are \"based on the fundamental princ\n\n(A) correlate  (B) hierarchy  (C) justify  (D) services",
+    "answer": "【答案】(D) services"
+  },
+  {
+    "id": "fc-im-vocab-execution",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "for the mission. However, the seamless _____ of these operations marked a triumph of collaboration and p\n\n(A) subsidy  (B) analogy  (C) execution  (D) obligation",
+    "answer": "【答案】(C) execution\n【詞性】n"
+  },
+  {
+    "id": "fc-im-vocab-physical",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "This habit can have notable __24__ both _____ and mental health. Skipping breakfast usually causes hunge\n\n(A) unprecedented  (B) inevitable  (C) volatile  (D) physical",
+    "answer": "【答案】(D) physical\n【詞性】adj"
+  },
+  {
+    "id": "fc-im-vocab-smaller",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "intaining performance while making them _____ and faster.\n\n(A) smaller  (B) paradigm  (C) analogy  (D) momentum",
+    "answer": "【答案】(A) smaller\n【詞性】n"
+  },
+  {
+    "id": "fc-im-vocab-ensure",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "and approved before proceeding to help _____ that children would grow up in a stable, safe environment\n\n(A) pursue  (B) discrete  (C) ensure  (D) persistent",
+    "answer": "【答案】(C) ensure\n【意思】確保"
+  },
+  {
+    "id": "fc-im-vocab-evidence",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "The _____ supporting the theory was__, relying on assumptions rather\n\n(A) trajectory  (B) constraint  (C) evidence  (D) stimulus",
+    "answer": "【答案】(C) evidence\n【詞性】n"
+  },
+  {
+    "id": "fc-im-vocab-increasing",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "high in the developed world and rapidly _____ in developing countries. However, recent scientific studies\n\n(A) simulate  (B) increasing  (C) allegation  (D) inevitable",
+    "answer": "【答案】(B) increasing\n【詞性】v/adj"
+  },
+  {
+    "id": "fc-im-vocab-types",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "m cell transplantation to treat certain _____ of cancer, have been known for a while, it has only been in\n\n(A) types  (B) terminate  (C) authentic  (D) stimulus",
+    "answer": "【答案】(A) types"
+  },
+  {
+    "id": "fc-im-vocab-digital",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "efer to the following passage. In this _____ age, the news we are being fed is only getting more __26__\n\n(A) trivial  (B) negligible  (C) legitimate  (D) digital",
+    "answer": "【答案】(D) digital\n【詞性】adj"
+  },
+  {
+    "id": "fc-im-vocab-comprehension",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "Part IV: Reading _____ - Passage A (Questions 41-44) (Adapted from \"Is Modern Food\n\n(A) comprehension  (B) equilibrium  (C) paradigm  (D) incentive",
+    "answer": "【答案】(A) comprehension\n【詞性】n"
+  },
+  {
+    "id": "fc-im-vocab-higher",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "ultra-processed food that you find are _____ in salt, fat and sugar. They are designed extremely tasty,\n\n(A) higher  (B) infrastructure  (C) methodology  (D) coherence",
+    "answer": "【答案】(A) higher\n【詞性】n"
+  },
+  {
+    "id": "fc-im-vocab-communication",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "and the devastating consequences of mis_____. The final, heart-wrenching scene, where Romeo and Juliet's\n\n(A) deviation  (B) obligation  (C) communication  (D) prohibition",
+    "answer": "【答案】(C) communication\n【詞性】n"
+  },
+  {
+    "id": "fc-im-vocab-complex",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "eech moved the audience and clarified a _____ issue with remarkable grace.\n\n(A) integral  (B) phenomenon  (C) complex  (D) attribute",
+    "answer": "【答案】(C) complex"
+  },
+  {
+    "id": "fc-im-vocab-contains",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "re it is sold. Besides, organic produce _____ fewer chemical pesticides which are widely used in conventi\n\n(A) confiscate  (B) contains  (C) obligation  (D) dominant",
+    "answer": "【答案】(B) contains"
+  },
+  {
+    "id": "fc-im-vocab-independent",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "facility and must be carried out by an _____, professional third party, Lin said, adding that the govern\n\n(A) compatible  (B) dominant  (C) explicit  (D) independent",
+    "answer": "【答案】(D) independent\n【詞性】adj"
+  },
+  {
+    "id": "fc-im-vocab-law",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "on children's rights, gender equality, _____, and medicine attended cross-disciplinary meetings, adding\n\n(A) transcend  (B) integrate  (C) ideology  (D) law",
+    "answer": "【答案】(D) law"
+  },
+  {
+    "id": "fc-im-vocab-movement",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "graphy as art, members of the Aesthetic _____ modeled their work on classical paintings, even copying the\n\n(A) equilibrium  (B) movement  (C) fluctuation  (D) controversy",
+    "answer": "【答案】(B) movement\n【詞性】n"
+  },
+  {
+    "id": "fc-im-vocab-operations",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "owever, the seamless execution of these _____ marked a triumph of collaboration and precision. Since its\n\n(A) compelling  (B) operations  (C) correlate  (D) intervention",
+    "answer": "【答案】(B) operations"
+  },
+  {
+    "id": "fc-im-vocab-popular",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "h day on Sina Weibo, the country's most _____ microblogging tool, and millions more on social networks in\n\n(A) redundancy  (B) integrate  (C) excessive  (D) popular",
+    "answer": "【答案】(D) popular"
+  },
+  {
+    "id": "fc-im-vocab-amount",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "untry would have to raise a significant _____ of tax __________.\n\n(A) amount  (B) phenomenon  (C) correlation  (D) discourse",
+    "answer": "【答案】(A) amount"
+  },
+  {
+    "id": "fc-im-vocab-applications",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "ourse unique is its focus on real-world _____\n\n(A) unprecedented  (B) versatile  (C) paramount  (D) applications",
+    "answer": "【答案】(D) applications"
+  },
+  {
+    "id": "fc-im-vocab-capacity",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "able to seat at 50% of approved indoor _____. Outdoor seating remains unchanged and those seats do not f\n\n(A) expenditure  (B) capacity  (C) stimulus  (D) erosion",
+    "answer": "【答案】(B) capacity\n【詞性】n"
+  },
+  {
+    "id": "fc-im-vocab-cultural",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "r adventurers. If Manchester wears its _____ achievements lightly, that is because it finds showiness, l\n\n(A) conventional  (B) deficient  (C) cultural  (D) plausible",
+    "answer": "【答案】(C) cultural\n【詞性】adj"
+  },
+  {
+    "id": "fc-im-vocab-linked",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "However, recent scientific studies have _____ eating UPF with serious health issues like diabetes, obesit\n\n(A) formulate  (B) linked  (C) versatile  (D) impose",
+    "answer": "【答案】(B) linked\n【詞性】v/adj"
+  },
+  {
+    "id": "fc-im-vocab-method",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "as discovered using the radial velocity _____, also known as Doppler spectroscopy. The radial velocity me\n\n(A) method  (B) compile  (C) feasible  (D) redundant",
+    "answer": "【答案】(A) method"
+  },
+  {
+    "id": "fc-im-vocab-processing",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "at source and use of specialized waste _____ facilities to separate recyclable materials has a key role\n\n(A) inhibit  (B) comprehensive  (C) spectrum  (D) processing",
+    "answer": "【答案】(D) processing\n【詞性】v/adj"
+  },
+  {
+    "id": "fc-im-vocab-significant",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "Tarjei Boe's triumph was particularly _____ as it secured his qualification for future championships, u\n\n(A) significant  (B) empirical  (C) versatile  (D) redundant",
+    "answer": "【答案】(A) significant\n【詞性】adj"
+  },
+  {
+    "id": "fc-im-vocab-society",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "leadership roles across all sectors of _____ held by women by 2020, but at the end of that year the time\n\n(A) prevalent  (B) society  (C) compatible  (D) coherent",
+    "answer": "【答案】(B) society"
+  },
+  {
+    "id": "fc-im-vocab-addition",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "k are richer in omega-3 fatty acids. In _____, organic food is often fresher because it doesn't contain p\n\n(A) trajectory  (B) intervention  (C) integrity  (D) addition",
+    "answer": "【答案】(D) addition\n【詞性】n"
+  },
+  {
+    "id": "fc-im-vocab-customers",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "Inexpensive monthly subscriptions give _____ access to libraries of thousands of TV shows and movies, av\n\n(A) stimulate  (B) customers  (C) infrastructure  (D) redundancy",
+    "answer": "【答案】(B) customers"
+  },
+  {
+    "id": "fc-im-vocab-implemented",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "If the university administration had _____ the new policy earlier, student dissatisfaction ____ allevi\n\n(A) consolidate  (B) implemented  (C) alleviate  (D) acknowledge",
+    "answer": "【答案】(B) implemented\n【詞性】v/adj"
+  },
+  {
+    "id": "fc-im-vocab-legal",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "he number of women elected has exceeded _____ limits.\n\n(A) rigorous  (B) susceptible  (C) legal  (D) essential",
+    "answer": "【答案】(C) legal\n【詞性】adj"
+  },
+  {
+    "id": "fc-im-vocab-national",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "tence after World War II. The country's _____ Party—led by the __31__ of European settlers known as Afrik\n\n(A) national  (B) essential  (C) ubiquitous  (D) preliminary",
+    "answer": "【答案】(A) national\n【詞性】adj"
+  },
+  {
+    "id": "fc-im-vocab-policy",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "administration had implemented the new _____ earlier, student dissatisfaction ____ alleviated to a large\n\n(A) policy  (B) replicate  (C) paradox  (D) phenomenon",
+    "answer": "【答案】(A) policy\n【意思】政策"
+  },
+  {
+    "id": "fc-im-vocab-population",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "nd culminating _33___ laws dividing the _____ by race, reserving the best public facilities for whites an\n\n(A) population  (B) discourse  (C) abundance  (D) hypothesis",
+    "answer": "【答案】(A) population\n【詞性】n"
+  },
+  {
+    "id": "fc-im-vocab-priority",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "argue that economic growth should take _____ over public health concerns\n\n(A) prevalence  (B) paradox  (C) momentum  (D) priority",
+    "answer": "【答案】(D) priority\n【詞性】n"
+  },
+  {
+    "id": "fc-im-vocab-soon",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "we look forward to seeing everyone very _____! As per the Governor's updated directives, we have self-ce\n\n(A) allegation  (B) analogy  (C) soon  (D) elaborate",
+    "answer": "【答案】(C) soon"
+  },
+  {
+    "id": "fc-im-vocab-virus",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "d its serious __________ to prevent the _____ spreading.\n\n(A) plausible  (B) virus  (C) suppress  (D) prevalence",
+    "answer": "【答案】(B) virus"
+  },
+  {
+    "id": "fc-im-vocab-algorithms",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "hey compete for our attention, so their _____ are primed to promote the content we are most likely to cli\n\n(A) algorithms  (B) obsolete  (C) concurrent  (D) indigenous",
+    "answer": "【答案】(A) algorithms"
+  },
+  {
+    "id": "fc-im-vocab-cost",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "t regularly. This was__38__ the monthly _____ of the medicine, which is almost $1,000 for those without i\n\n(A) fluctuation  (B) conceive  (C) comprehensive  (D) cost",
+    "answer": "【答案】(D) cost"
+  },
+  {
+    "id": "fc-im-vocab-focus",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "D) What makes this course unique is its _____ on real-world applications\n\n(A) preliminary  (B) threshold  (C) focus  (D) dominant",
+    "answer": "【答案】(C) focus"
+  },
+  {
+    "id": "fc-im-vocab-knowledge",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "iry; it symbolizes humanity's quest for _____. Its findings take us back to the universe's origins, chall\n\n(A) eliminate  (B) knowledge  (C) profound  (D) discourse",
+    "answer": "【答案】(B) knowledge"
+  },
+  {
+    "id": "fc-im-vocab-natural",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "mportant to reduce sugar intake, choose _____ options like those in fruits, and carefully read food label\n\n(A) detrimental  (B) profound  (C) negligible  (D) natural",
+    "answer": "【答案】(D) natural\n【詞性】adj"
+  },
+  {
+    "id": "fc-im-vocab-potential",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "bryos, the proposed amendments say. All _____ candidates for assisted reproduction must undergo assessmen\n\n(A) abundant  (B) implicit  (C) explicit  (D) potential",
+    "answer": "【答案】(D) potential\n【意思】潛在的\n【詞性】adj"
+  },
+  {
+    "id": "fc-im-vocab-safe",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "hat children would grow up in a stable, _____ environment. To balance privacy rights and the rights of c\n\n(A) implement  (B) arbitrary  (C) attribute  (D) safe",
+    "answer": "【答案】(D) safe"
+  },
+  {
+    "id": "fc-im-vocab-theory",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "The evidence supporting the _____ was__, relying on assumptions rather than solid data.\n\n(A) empirical  (B) theory  (C) constraint  (D) indigenous",
+    "answer": "【答案】(B) theory"
+  },
+  {
+    "id": "fc-im-vocab-weight",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "with type 2 diabetes, __37__ widely as _____-loss tools. In the United States, a survey of adults found\n\n(A) resilience  (B) weight  (C) abundance  (D) perpetuate",
+    "answer": "【答案】(B) weight"
+  },
+  {
+    "id": "fc-im-vocab-advantages",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "rganic food typically costs more, these _____ might convince you that it's worth the extra expense. 43\n\n(A) advantages  (B) acknowledge  (C) detrimental  (D) anticipate",
+    "answer": "【答案】(A) advantages"
+  },
+  {
+    "id": "fc-im-vocab-avoid",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "To _____ committing the institution to a definitive stance, the stat\n\n(A) elaborate  (B) contaminate  (C) avoid  (D) trajectory",
+    "answer": "【答案】(C) avoid"
+  },
+  {
+    "id": "fc-im-vocab-benefits",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "ost likely to click __(21) _ whether it _____ us as individuals or a community. People are more likely to\n\n(A) deficient  (B) integral  (C) benefits  (D) equilibrium",
+    "answer": "【答案】(C) benefits"
+  },
+  {
+    "id": "fc-im-vocab-environmental",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "rest fires have been __________ by some _____ researchers. Human activity is the main cause of these Amaz\n\n(A) provisional  (B) environmental  (C) susceptible  (D) volatile",
+    "answer": "【答案】(B) environmental\n【詞性】adj"
+  },
+  {
+    "id": "fc-im-vocab-factors",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "__(28)__ has hit their area. All these _____ can stall progress to provide quality education. 25.\n\n(A) legitimate  (B) justify  (C) inhibit  (D) factors",
+    "answer": "【答案】(D) factors"
+  },
+  {
+    "id": "fc-im-vocab-humans",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "er, despite the astonishing things that _____ are capable of doing, we remain unsure of our goals and we\n\n(A) allegation  (B) fluctuation  (C) humans  (D) initiate",
+    "answer": "【答案】(C) humans"
+  },
+  {
+    "id": "fc-im-vocab-levels",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "female representation in her cabinet to _____ comparable to Nordic countries, which hold the top spots in\n\n(A) assess  (B) levels  (C) restrain  (D) deficient",
+    "answer": "【答案】(B) levels"
+  },
+  {
+    "id": "fc-im-vocab-nature",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "es but low in satiety. Another study in _____ Communications (2019) highlighted how sugary diets disrupt\n\n(A) regulate  (B) substantial  (C) nature  (D) fluctuation",
+    "answer": "【答案】(C) nature"
+  },
+  {
+    "id": "fc-im-vocab-proposed",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "g can most reasonably be inferred about _____ solutions to the UPF problem in the UK?\n\n(A) proposed  (B) exacerbate  (C) indigenous  (D) erosion",
+    "answer": "【答案】(A) proposed\n【詞性】v/adj"
+  },
+  {
+    "id": "fc-im-vocab-reflects",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "s this a dagger which I see before me?” _____ his growing paranoia and guilt. The play warns of the destr\n\n(A) acknowledge  (B) reflects  (C) stimulate  (D) disparity",
+    "answer": "【答案】(B) reflects"
+  },
+  {
+    "id": "fc-im-vocab-resource",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "can also be a ___ of cyberbullying.\n\n(A) conceive  (B) marginal  (C) implication  (D) resource",
+    "answer": "【答案】(D) resource"
+  },
+  {
+    "id": "fc-im-vocab-success",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "Thingnes Boe overshadowed his brother's _____ with his own performance\n\n(A) violate  (B) accelerate  (C) success  (D) facilitate",
+    "answer": "【答案】(C) success"
+  },
+  {
+    "id": "fc-im-vocab-traditional",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "etime. Cyberbullying is different from '_____' bullying __(39)__ that it happens all the time. The __(40)\n\n(A) versatile  (B) traditional  (C) negligible  (D) discrete",
+    "answer": "【答案】(B) traditional\n【詞性】adj"
+  },
+  {
+    "id": "fc-im-vocab-widely",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "eat people with type 2 diabetes, __37__ _____ as weight-loss tools. In the United States, a survey of adu\n\n(A) subsequently  (B) deliberately  (C) fundamentally  (D) widely",
+    "answer": "【答案】(D) widely\n【詞性】adv"
+  },
+  {
+    "id": "fc-im-vocab-color",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "s its thick, fluffy coat, which changes _____ with the seasons. In winter, the fox's fur turns white, ble\n\n(A) color  (B) deficit  (C) anomaly  (D) rationale",
+    "answer": "【答案】(A) color\n【詞性】n"
+  },
+  {
+    "id": "fc-im-vocab-earlier",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "ity of data but in how effectively it________ findings into a unified argument.\n\n(A) paradigm  (B) earlier  (C) catalyst  (D) resilience",
+    "answer": "【答案】(B) earlier\n【詞性】n"
+  },
+  {
+    "id": "fc-im-vocab-earth",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "in one of the harshest environments on _____, the Arctic tundra. This remarkable creature has developed\n\n(A) controversy  (B) acknowledge  (C) earth  (D) ambiguity",
+    "answer": "【答案】(C) earth"
+  },
+  {
+    "id": "fc-im-vocab-economic",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "of the passage from health outcomes to _____ interests\n\n(A) erosion  (B) conspicuous  (C) provisional  (D) economic",
+    "answer": "【答案】(D) economic"
+  },
+  {
+    "id": "fc-im-vocab-efforts",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "ing evidence and expert opinion justify _____ to reduce UPF consumption.\n\n(A) spectrum  (B) efforts  (C) assess  (D) confiscate",
+    "answer": "【答案】(B) efforts"
+  },
+  {
+    "id": "fc-im-vocab-faster",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "infrastructure reforms have progressed _____ than political reforms.\n\n(A) faster  (B) spectrum  (C) discrepancy  (D) deficit",
+    "answer": "【答案】(A) faster\n【詞性】n"
+  },
+  {
+    "id": "fc-im-vocab-influence",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "s, and language continue to inspire and _____ literature, theater, and film. Take Romeo and Juliet, for\n\n(A) erosion  (B) momentum  (C) influence  (D) diversity",
+    "answer": "【答案】(C) influence\n【詞性】n"
+  },
+  {
+    "id": "fc-im-vocab-limited",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "Faced with _____ time and resources, the team adopted a(n)__ solution rather\n\n(A) erosion  (B) limited  (C) collaborate  (D) distort",
+    "answer": "【答案】(B) limited\n【詞性】v/adj"
+  },
+  {
+    "id": "fc-im-vocab-location",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "telescope's journey to its operational _____ was as extraordinary as its mission. Deployed nearly 1.5 mi\n\n(A) coherence  (B) adversity  (C) equilibrium  (D) location",
+    "answer": "【答案】(D) location\n【詞性】n"
+  },
+  {
+    "id": "fc-im-vocab-maintain",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "elp individuals make better choices and _____ their health. (Question 36) According to the article, why\n\n(A) implicit  (B) perpetuate  (C) maintain  (D) verify",
+    "answer": "【答案】(C) maintain"
+  },
+  {
+    "id": "fc-im-vocab-professor",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "Neither the _____ nor the students___ prepared for the unexpected power outag\n\n(A) methodology  (B) professor  (C) fluctuation  (D) expenditure",
+    "answer": "【答案】(B) professor\n【詞性】n"
+  },
+  {
+    "id": "fc-im-vocab-speed",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "athletes fiercely competing. Balancing _____ with shooting accuracy was crucial, as missed targets made\n\n(A) unprecedented  (B) speed  (C) regulate  (D) feasible",
+    "answer": "【答案】(B) speed\n【詞性】v/adj"
+  },
+  {
+    "id": "fc-im-vocab-student",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "had implemented the new policy earlier, _____ dissatisfaction ____ alleviated to a large extent.\n\n(A) integral  (B) adequate  (C) student  (D) intricate",
+    "answer": "【答案】(C) student\n【詞性】adj"
+  },
+  {
+    "id": "fc-im-vocab-unique",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "ras. (Question 47) What makes the JWST _____ compared to the Hubble Space Telescope?\n\n(A) deficit  (B) scrutinize  (C) autonomous  (D) unique",
+    "answer": "【答案】(D) unique"
+  },
+  {
+    "id": "fc-im-vocab-caused",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "on. Despite difficult track conditions _____ by heavy rain, Tarjei Boe remained composed and focused, ex\n\n(A) assess  (B) caused  (C) erode  (D) specify",
+    "answer": "【答案】(B) caused\n【詞性】v/adj"
+  },
+  {
+    "id": "fc-im-vocab-concerns",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "emic research with public health policy _____.\n\n(A) integral  (B) fluctuation  (C) concerns  (D) withdraw",
+    "answer": "【答案】(C) concerns"
+  },
+  {
+    "id": "fc-im-vocab-culture",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "mote accountability and foster a __31__ _____, ensuring employees align their efforts __32__ company obje\n\n(A) significant  (B) culture  (C) paramount  (D) analogy",
+    "answer": "【答案】(B) culture"
+  },
+  {
+    "id": "fc-im-vocab-exist",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "s views? a) Homo sapiens and animals co-_____ peacefully on earth. b) Animals _____ to serve humankind. c\n\n(A) discriminate  (B) confiscate  (C) perpetuate  (D) exist",
+    "answer": "【答案】(D) exist"
+  },
+  {
+    "id": "fc-im-vocab-lot",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "Middle-aged and elderly people spend a _____ of time watching shows online\n\n(A) provisional  (B) compliance  (C) lot  (D) indigenous",
+    "answer": "【答案】(C) lot"
+  },
+  {
+    "id": "fc-im-vocab-organization",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "athogens amongst us revealed a level of _____ and complexity that both enhanced and revolutionized our po\n\n(A) organization  (B) constraint  (C) intervention  (D) redundancy",
+    "answer": "【答案】(A) organization\n【詞性】n"
+  },
+  {
+    "id": "fc-im-vocab-party",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "er World War II. The country's National _____—led by the __31__ of European settlers known as Afrikaners—\n\n(A) party  (B) contradict  (C) perpetuate  (D) provisional",
+    "answer": "【答案】(A) party"
+  },
+  {
+    "id": "fc-im-vocab-properties",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "The JWST directly measures the physical _____ of dark energy\n\n(A) preliminary  (B) properties  (C) indigenous  (D) authentic",
+    "answer": "【答案】(B) properties"
+  },
+  {
+    "id": "fc-im-vocab-rapidly",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "already high in the developed world and _____ increasing in developing countries. However, recent scienti\n\n(A) rapidly  (B) intentionally  (C) inadvertently  (D) explicitly",
+    "answer": "【答案】(A) rapidly\n【詞性】adv"
+  },
+  {
+    "id": "fc-im-vocab-view",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "unveil mysteries that will redefine our _____ of the cosmos for future eras. (Question 47) What makes th\n\n(A) view  (B) prohibit  (C) integrity  (D) violate",
+    "answer": "【答案】(A) view"
+  },
+  {
+    "id": "fc-im-vocab-attention",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "body even though doctors typically pay _____ to only one of them: the facilitation of transport of gluco\n\n(A) redundancy  (B) prevalence  (C) attention  (D) prohibition",
+    "answer": "【答案】(C) attention\n【詞性】n"
+  },
+  {
+    "id": "fc-im-vocab-barriers",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "representation has eliminated practical _____ for women in politics\n\n(A) expenditure  (B) barriers  (C) intervention  (D) resilience",
+    "answer": "【答案】(B) barriers"
+  },
+  {
+    "id": "fc-im-vocab-basis",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "ty metrics that would be on a mandatory _____,\" said Sophie Lawrence, who leads a group of investors call\n\n(A) basis  (B) autonomy  (C) conceive  (D) attribute",
+    "answer": "【答案】(A) basis"
+  },
+  {
+    "id": "fc-im-vocab-daily",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "skipping it can help you make healthier _____ choices. (Question 23)\n\n(A) daily  (B) subsequently  (C) predominantly  (D) deliberately",
+    "answer": "【答案】(A) daily\n【詞性】adv"
+  },
+  {
+    "id": "fc-im-vocab-experiences",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "and the exploration of universal human _____.\n\n(A) experiences  (B) obsolete  (C) entity  (D) comprehensive",
+    "answer": "【答案】(A) experiences"
+  },
+  {
+    "id": "fc-im-vocab-gender",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "passage about government commitments to _____ equality?\n\n(A) incentive  (B) gender  (C) correlation  (D) paradigm",
+    "answer": "【答案】(B) gender\n【詞性】n"
+  },
+  {
+    "id": "fc-im-vocab-lower",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "73 women were elected into the 465-seat _____ House in October 2024, exceeding the previous high of 54 in\n\n(A) intervention  (B) lower  (C) stimulus  (D) adversity",
+    "answer": "【答案】(B) lower\n【詞性】n"
+  },
+  {
+    "id": "fc-im-vocab-members",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "order to establish photography as art, _____ of the Aesthetic Movement modeled their work on classical p\n\n(A) accelerate  (B) members  (C) deteriorate  (D) accommodate",
+    "answer": "【答案】(B) members"
+  },
+  {
+    "id": "fc-im-vocab-parents",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "egarding whether they would be adequate _____, they say. The assessment is a required procedure for hete\n\n(A) obligation  (B) negate  (C) contaminate  (D) parents",
+    "answer": "【答案】(D) parents"
+  },
+  {
+    "id": "fc-im-vocab-plans",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "To take the research further, the team _____ to ____ single-cell technology to investigate more tissues\n\n(A) plans  (B) detrimental  (C) marginal  (D) facilitate",
+    "answer": "【答案】(A) plans"
+  },
+  {
+    "id": "fc-im-vocab-reasons",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "There ____ several _____ for my decision.\n\n(A) reasons  (B) integrity  (C) controversy  (D) vulnerable",
+    "answer": "【答案】(A) reasons"
+  },
+  {
+    "id": "fc-im-vocab-relationship",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "ly answer the burning question of man's _____ with God.\n\n(A) equilibrium  (B) fundamental  (C) relationship  (D) substantial",
+    "answer": "【答案】(C) relationship"
+  },
+  {
+    "id": "fc-im-vocab-represents",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "(JWST), launched on December 25, 2021, _____ the pinnacle of human innovation. The telescope has reached\n\n(A) represents  (B) intricate  (C) anomaly  (D) prohibit",
+    "answer": "【答案】(A) represents"
+  },
+  {
+    "id": "fc-im-vocab-researchers",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "t its effects were negligible. To this, _____ argued that without stricter enforcement, the policy could\n\n(A) inevitable  (B) resilient  (C) researchers  (D) transcend",
+    "answer": "【答案】(C) researchers"
+  },
+  {
+    "id": "fc-im-vocab-action",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "ountability enforced through government _____.\n\n(A) threshold  (B) catalyst  (C) action  (D) autonomy",
+    "answer": "【答案】(C) action\n【詞性】n"
+  },
+  {
+    "id": "fc-im-vocab-activity",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "sumption is strongly linked to physical _____\n\n(A) activity  (B) equilibrium  (C) spectrum  (D) compliance",
+    "answer": "【答案】(A) activity\n【詞性】n"
+  },
+  {
+    "id": "fc-im-vocab-american",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "Netflix represents around 6% of current _____ TV viewing. That number is projected to rise to around 14%\n\n(A) significant  (B) american  (C) modify  (D) integral",
+    "answer": "【答案】(B) american"
+  },
+  {
+    "id": "fc-im-vocab-books",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "daily, or the equivalent of 36 million _____ every day. The entire U.S. Library of Congress, by comparis\n\n(A) profound  (B) books  (C) reinforce  (D) accommodate",
+    "answer": "【答案】(B) books"
+  },
+  {
+    "id": "fc-im-vocab-consequences",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "Aware of the political _____, the minister gave a(n) __ response to the reporter's quest\n\n(A) ambiguous  (B) diminish  (C) deteriorate  (D) consequences",
+    "answer": "【答案】(D) consequences"
+  },
+  {
+    "id": "fc-im-vocab-contrast",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "called straightforward photographs. In _____, the straightforward photographers produced images that wer\n\n(A) contradict  (B) endeavor  (C) controversy  (D) contrast",
+    "answer": "【答案】(D) contrast"
+  },
+  {
+    "id": "fc-im-vocab-creation",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "prefigured very early on, is a cultural _____, not a _____ of life as it is really lived. [Question 25 bl\n\n(A) entity  (B) creation  (C) premise  (D) constraint",
+    "answer": "【答案】(B) creation\n【詞性】n"
+  },
+  {
+    "id": "fc-im-vocab-european",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "arson and Tom Cohen, CNN) Though white _____s had long ruled in South Africa, the formal system of apart\n\n(A) substantial  (B) perceive  (C) spectrum  (D) european",
+    "answer": "【答案】(D) european"
+  },
+  {
+    "id": "fc-im-vocab-facebook",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "in the future,\" she wrote in a post on _____. Japan's parliament building was built in 1936, a decade b\n\n(A) facebook  (B) discrepancy  (C) controversy  (D) inevitable",
+    "answer": "【答案】(A) facebook"
+  },
+  {
+    "id": "fc-im-vocab-features",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "s Fahrenheit. One of the most striking _____ of the Arctic fox is its thick, fluffy coat, which changes\n\n(A) contaminate  (B) features  (C) terminate  (D) impose",
+    "answer": "【答案】(B) features"
+  },
+  {
+    "id": "fc-im-vocab-helps",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "ods like fruits instead of sugary items _____ lower health risks.\n\n(A) elaborate  (B) excessive  (C) obsolete  (D) helps",
+    "answer": "【答案】(D) helps"
+  },
+  {
+    "id": "fc-im-vocab-history",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "nt and how they live. For most of human _____ we had no way to explain this __33__, until Freud's discove\n\n(A) accommodate  (B) history  (C) intricate  (D) restrain",
+    "answer": "【答案】(B) history"
+  },
+  {
+    "id": "fc-im-vocab-investment",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "said Rebecca Tobi, senior business and _____ manager at the Food Foundation. Q41: Which statement best\n\n(A) ideology  (B) investment  (C) disparity  (D) fluctuation",
+    "answer": "【答案】(B) investment\n【詞性】n"
+  },
+  {
+    "id": "fc-im-vocab-occur",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "NA has been altered in ways that cannot _____ in nature, most commonly in order to be resistant to pestic\n\n(A) paramount  (B) invoke  (C) confiscate  (D) occur",
+    "answer": "【答案】(D) occur"
+  },
+  {
+    "id": "fc-im-vocab-regulations",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "vasive treatments, as well as enforcing _____ on the donation, preservation and use of sperm, oocytes and\n\n(A) clarify  (B) comprehensive  (C) discrete  (D) regulations",
+    "answer": "【答案】(D) regulations"
+  },
+  {
+    "id": "fc-im-vocab-response",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "consequences, the minister gave a(n) __ _____ to the reporter's question.\n\n(A) premise  (B) domain  (C) response  (D) obligation",
+    "answer": "【答案】(C) response"
+  },
+  {
+    "id": "fc-im-vocab-rights",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "dments, said that experts on children's _____, gender equality, law, and medicine attended cross-discipli\n\n(A) rights  (B) framework  (C) intricate  (D) threshold",
+    "answer": "【答案】(A) rights"
+  },
+  {
+    "id": "fc-im-vocab-spread",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "20s. It was confined to Africa until it _____ to Europe in the middle of the last century, and later to S\n\n(A) upheaval  (B) stimulus  (C) eliminate  (D) spread",
+    "answer": "【答案】(D) spread"
+  },
+  {
+    "id": "fc-im-vocab-technological",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "the entertainment industry. With recent _____ advancements in the entertainment industry, companies are f\n\n(A) significant  (B) versatile  (C) inevitable  (D) technological",
+    "answer": "【答案】(D) technological\n【詞性】adj"
+  },
+  {
+    "id": "fc-im-vocab-train",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": ") If you leave now, you might catch the _____ to Taichung.\n\n(A) volatility  (B) replicate  (C) train  (D) contaminate",
+    "answer": "【答案】(C) train"
+  },
+  {
+    "id": "fc-im-vocab-ability",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "e graduate student was confident in her _____ to__ the complex theories.\n\n(A) ability  (B) stimulus  (C) autonomy  (D) disparity",
+    "answer": "【答案】(A) ability\n【詞性】n"
+  },
+  {
+    "id": "fc-im-vocab-additional",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "r was unable to ____ his claims without _____ data.\n\n(A) abundant  (B) versatile  (C) inevitable  (D) additional",
+    "answer": "【答案】(D) additional\n【詞性】adj"
+  },
+  {
+    "id": "fc-im-vocab-balance",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "w up in a stable, safe environment. To _____ privacy rights and the rights of children, those who are bo\n\n(A) catalyst  (B) balance  (C) equilibrium  (D) magnitude",
+    "answer": "【答案】(B) balance\n【詞性】n"
+  },
+  {
+    "id": "fc-im-vocab-barrier",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "s, children living in poverty face many _____s to accessing an education. One of the cruelest _____s to\n\n(A) infrastructure  (B) barrier  (C) scrutiny  (D) framework",
+    "answer": "【答案】(B) barrier\n【詞性】n"
+  },
+  {
+    "id": "fc-im-vocab-basic",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "The _____ premise of this concept ____ in the realization that neithe\n\n(A) interrogate  (B) basic  (C) intricate  (D) profound",
+    "answer": "【答案】(B) basic"
+  },
+  {
+    "id": "fc-im-vocab-consistency",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "Sturla Holm Lægreid demonstrated their _____ and experience. Tarjei Boe's triumph was particularly signi\n\n(A) consistency  (B) regulate  (C) incorporate  (D) versatile",
+    "answer": "【答案】(A) consistency"
+  },
+  {
+    "id": "fc-im-vocab-filled",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "nt routine that will _____ the cravings _____ by cigarettes. [Question 32 blank]\n\n(A) deviation  (B) accommodate  (C) filled  (D) withdraw",
+    "answer": "【答案】(C) filled\n【詞性】v/adj"
+  },
+  {
+    "id": "fc-im-vocab-intended",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "ement, the policy could not achieve its _____ impact.\" Question: The primary purpose of the underlined s\n\n(A) ambiguous  (B) intended  (C) corroborate  (D) vulnerable",
+    "answer": "【答案】(B) intended\n【詞性】v/adj"
+  },
+  {
+    "id": "fc-im-vocab-longer",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "contain preservatives that make it last _____. Organic produce is often (but not always) produced on smal\n\n(A) infrastructure  (B) longer  (C) magnitude  (D) threshold",
+    "answer": "【答案】(B) longer\n【詞性】n"
+  },
+  {
+    "id": "fc-im-vocab-options",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "e government to act and offer healthier _____ to the population. The $128 billion British food and bevera\n\n(A) options  (B) discrete  (C) hypothesis  (D) preliminary",
+    "answer": "【答案】(A) options"
+  },
+  {
+    "id": "fc-im-vocab-progress",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "their area. All these factors can stall _____ to provide quality education. 25.\n\n(A) prohibit  (B) diversity  (C) progress  (D) arbitrary",
+    "answer": "【答案】(C) progress"
+  },
+  {
+    "id": "fc-im-vocab-routine",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "ssage continued] figure out a different _____ that will _____ the cravings filled by cigarettes. [Questio\n\n(A) routine  (B) transcend  (C) accelerate  (D) persistent",
+    "answer": "【答案】(A) routine"
+  },
+  {
+    "id": "fc-im-vocab-sensitive",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "terview, the person was questioned in a _____ manner about the circumstances of the experiences in an att\n\n(A) persistent  (B) optimal  (C) sensitive  (D) crucial",
+    "answer": "【答案】(C) sensitive\n【詞性】adj"
+  },
+  {
+    "id": "fc-im-vocab-series",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "1953, South African lawmakers passed a _____ of increasingly oppressive laws, beginning with prohibition\n\n(A) series  (B) detrimental  (C) negate  (D) dominant",
+    "answer": "【答案】(A) series"
+  },
+  {
+    "id": "fc-im-vocab-successful",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "heir wives. There are people who want a _____ career but continue to __31__ themselves at work. Aristotle\n\n(A) marginal  (B) provisional  (C) successful  (D) fundamental",
+    "answer": "【答案】(C) successful\n【詞性】adj"
+  },
+  {
+    "id": "fc-im-vocab-taipei",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "ced\" by Chia-yu Hou and Jake Chung, The _____ Times) Proposed amendments to the Assisted Reproduction Ac\n\n(A) taipei  (B) corroborate  (C) predominant  (D) viable",
+    "answer": "【答案】(A) taipei"
+  },
+  {
+    "id": "fc-im-vocab-target",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "The Japanese government earlier set a _____ of having 30% of leadership roles across all sectors of soc\n\n(A) disseminate  (B) target  (C) upheaval  (D) significant",
+    "answer": "【答案】(B) target"
+  },
+  {
+    "id": "fc-im-vocab-track",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "start to the season. Despite difficult _____ conditions caused by heavy rain, Tarjei Boe remained compos\n\n(A) transcend  (B) track  (C) replicate  (D) deteriorate",
+    "answer": "【答案】(B) track"
+  },
+  {
+    "id": "fc-im-vocab-traffic",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "g footage was uploaded to the site. The _____ is coming from all over the world, with an uptick in recent\n\n(A) innovative  (B) traffic  (C) upheaval  (D) prohibit",
+    "answer": "【答案】(B) traffic"
+  },
+  {
+    "id": "fc-im-vocab-writer",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "The translators disagreed about the _____'s intention because of ____ in the language used by the wri\n\n(A) subsidy  (B) controversy  (C) adversity  (D) writer",
+    "answer": "【答案】(D) writer\n【詞性】n"
+  },
+  {
+    "id": "fc-im-vocab-agreement",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "ies to inform patients and obtain their _____ for all surgeries or invasive treatments, as well as enforc\n\n(A) subsidy  (B) methodology  (C) transparency  (D) agreement",
+    "answer": "【答案】(D) agreement\n【詞性】n"
+  },
+  {
+    "id": "fc-im-vocab-constantly",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "y, we are accountable to no one. We are _____ wreaking havoc on our fellow animals and on the surrounding\n\n(A) predominantly  (B) consequently  (C) constantly  (D) subsequently",
+    "answer": "【答案】(C) constantly\n【詞性】adv"
+  },
+  {
+    "id": "fc-im-vocab-containing",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "nfected pigs or by ingestion of garbage _____ unprocessed infected pig meat or pork products. All process\n\n(A) containing  (B) momentum  (C) restrain  (D) facilitate",
+    "answer": "【答案】(A) containing\n【詞性】v/adj"
+  },
+  {
+    "id": "fc-im-vocab-continuous",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "[Cloze passage continued] ...the _____ story, where the whole of a person's life is prefigured ver\n\n(A) intrinsic  (B) empirical  (C) marginal  (D) continuous",
+    "answer": "【答案】(D) continuous\n【詞性】adj"
+  },
+  {
+    "id": "fc-im-vocab-decrease",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "rom the pancreas may encourage cells to _____ their __23__ to that hormone. By making fewer insulin recep\n\n(A) tentative  (B) integral  (C) disseminate  (D) decrease",
+    "answer": "【答案】(D) decrease"
+  },
+  {
+    "id": "fc-im-vocab-effectively",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "s not in originality of data but in how _____ it___earlier findings into a unified argument.\n\n(A) effectively  (B) transparently  (C) decisively  (D) ubiquitously",
+    "answer": "【答案】(A) effectively\n【詞性】adv"
+  },
+  {
+    "id": "fc-im-vocab-equality",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "about government commitments to gender _____?\n\n(A) equality  (B) paradox  (C) correlation  (D) entity",
+    "answer": "【答案】(A) equality\n【詞性】n"
+  },
+  {
+    "id": "fc-im-vocab-fewer",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "their __23__ to that hormone. By making _____ insulin receptors, they become insulin resistant. Insulin r\n\n(A) fewer  (B) compliance  (C) hierarchy  (D) deviation",
+    "answer": "【答案】(A) fewer\n【詞性】n"
+  },
+  {
+    "id": "fc-im-vocab-immediately",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "settlement, while the immigrants agreed _____ to the government's offer.\n\n(A) immediately  (B) predominantly  (C) empirically  (D) independently",
+    "answer": "【答案】(A) immediately\n【詞性】adv"
+  },
+  {
+    "id": "fc-im-vocab-importance",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "ooks Published Daily on Internet d) The _____ of Digital Literacy\n\n(A) importance  (B) implication  (C) ambiguity  (D) infrastructure",
+    "answer": "【答案】(A) importance\n【詞性】n"
+  },
+  {
+    "id": "fc-im-vocab-increasingly",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "th African lawmakers passed a series of _____ oppressive laws, beginning with prohibitions on blacks and\n\n(A) increasingly  (B) stringently  (C) inherently  (D) competently",
+    "answer": "【答案】(A) increasingly\n【詞性】adv"
+  },
+  {
+    "id": "fc-im-vocab-inequality",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "screaming in protest of gender ___.\n\n(A) inequality  (B) domain  (C) consensus  (D) erosion",
+    "answer": "【答案】(A) inequality\n【詞性】n"
+  },
+  {
+    "id": "fc-im-vocab-manufacturing",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "od and beverage industry is the largest _____ sector in the country, employing more than 400,000 people\n\n(A) compile  (B) redundant  (C) manufacturing  (D) controversy",
+    "answer": "【答案】(C) manufacturing\n【詞性】v/adj"
+  },
+  {
+    "id": "fc-im-vocab-phenomenon",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "e dead __31__ their fate isn't a recent _____. More than 750 years ago, in 1247, a handbook for coroners\n\n(A) catalyst  (B) phenomenon  (C) implement  (D) marginal",
+    "answer": "【答案】(B) phenomenon\n【意思】現象"
+  },
+  {
+    "id": "fc-im-vocab-prefer",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "table. Nice, but boring. So, while we'd _____ having nice neighbors with boring lives, 'boring' won't mak\n\n(A) equilibrium  (B) intervention  (C) discrepancy  (D) prefer",
+    "answer": "【答案】(D) prefer\n【詞性】n"
+  },
+  {
+    "id": "fc-im-vocab-widespread",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "assage. Like all hormones, insulin has _____ and varied __21__ in the body even though doctors typically\n\n(A) expenditure  (B) widespread  (C) coherence  (D) adversity",
+    "answer": "【答案】(B) widespread\n【意思】廣泛的"
+  },
+  {
+    "id": "fc-im-vocab-astronauts",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "s location required frequent repairs by _____.\n\n(A) endeavor  (B) astronauts  (C) precedent  (D) discrete",
+    "answer": "【答案】(B) astronauts"
+  },
+  {
+    "id": "fc-im-vocab-availability",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "or cause of this issue is the excessive _____ of processed foods, which often contain high levels of adde\n\n(A) correlation  (B) precedent  (C) availability  (D) scrutiny",
+    "answer": "【答案】(C) availability\n【詞性】n"
+  },
+  {
+    "id": "fc-im-vocab-characteristics",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "x) leads to the emergence of male vocal _____. Virilizing agents can cause permanent lowering of women's\n\n(A) integrity  (B) characteristics  (C) detrimental  (D) redundancy",
+    "answer": "【答案】(B) characteristics"
+  },
+  {
+    "id": "fc-im-vocab-generating",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "venience, they are also responsible for _____ huge amounts of packaging waste, most of ___ is plastic. (A\n\n(A) generating  (B) incorporate  (C) cultivate  (D) validity",
+    "answer": "【答案】(A) generating\n【詞性】v/adj"
+  },
+  {
+    "id": "fc-im-vocab-generation",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "a popular career choice for the younger _____\n\n(A) generation  (B) resilience  (C) methodology  (D) prevalence",
+    "answer": "【答案】(A) generation\n【詞性】n"
+  },
+  {
+    "id": "fc-im-vocab-innovation",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "ased regulation can sometimes encourage _____.\n\n(A) scrutiny  (B) validity  (C) innovation  (D) framework",
+    "answer": "【答案】(C) innovation\n【詞性】n"
+  },
+  {
+    "id": "fc-im-vocab-strategies",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "s preventive, diagnostic, and treatment _____ evolve from __25__ they resided 10, 50, or 100 years ago\n\n(A) explicit  (B) indigenous  (C) trivial  (D) strategies",
+    "answer": "【答案】(D) strategies"
+  },
+  {
+    "id": "fc-im-vocab-supporting",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "The evidence _____ the theory was__, relying on assumptions rather than solid\n\n(A) supporting  (B) coherence  (C) framework  (D) analogy",
+    "answer": "【答案】(A) supporting\n【詞性】v/adj"
+  },
+  {
+    "id": "fc-im-vocab-probability",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "Suffice to say, all of us are pawns of _____. Given enough time, enough drivers, enough __38__ problems\n\n(A) paradox  (B) upheaval  (C) catalyst  (D) probability",
+    "answer": "【答案】(D) probability\n【詞性】n"
+  },
+  {
+    "id": "fc-im-vocab-productivity",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "can negatively affect concentration and _____, particularly at school or work, as the brain needs fuel to\n\n(A) productivity  (B) correlation  (C) scrutiny  (D) prevalence",
+    "answer": "【答案】(A) productivity\n【詞性】n"
+  },
+  {
+    "id": "fc-im-vocab-regulatory",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "icensing and authorization, and enforce _____ compliance, enabling facilities to adapt management methodo\n\n(A) sustain  (B) regulatory  (C) facilitate  (D) fluctuation",
+    "answer": "【答案】(B) regulatory"
+  },
+  {
+    "id": "fc-im-vocab-responsible",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "bring people convenience, they are also _____ for generating huge amounts of packaging waste, most of ___\n\n(A) provisional  (B) intricate  (C) marginal  (D) responsible",
+    "answer": "【答案】(D) responsible\n【詞性】adj"
+  },
+  {
+    "id": "fc-im-vocab-university",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "If the _____ administration had implemented the new policy earlier, stud\n\n(A) university  (B) entity  (C) spectrum  (D) integrity",
+    "answer": "【答案】(A) university\n【詞性】n"
+  },
+  {
+    "id": "fc-im-vocab-vocabulary",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "Section I. _____ and Grammar. Please choose the word that best completes the\n\n(A) implement  (B) stringent  (C) stimulate  (D) vocabulary",
+    "answer": "【答案】(D) vocabulary"
+  },
+  {
+    "id": "fc-im-vocab-corrugate",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "___ the DNA damage theory of aging.\n\n(A) corrugate  (B) specify  (C) facilitate  (D) negate",
+    "answer": "【答案】(A) corrugate\n【意思】使起皺褶\n【詞性】v"
+  },
+  {
+    "id": "fc-im-vocab-exile",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "gnificant amount of tax __________.\n\n(A) interrogate  (B) exile  (C) implicit  (D) feasible",
+    "answer": "【答案】(B) exile\n【意思】流放；放逐"
+  },
+  {
+    "id": "fc-im-vocab-ominous",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-english-vocabulary",
+    "prompt": "_____ sign of more trouble to come.\n\n(A) preliminary  (B) integral  (C) provisional  (D) ominous",
+    "answer": "【答案】(D) ominous\n【意思】不祥的\n【詞性】adj"
+  }
+]

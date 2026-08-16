@@ -1,0 +1,1362 @@
+[
+  {
+    "id": "rc-real-1",
+    "examId": "im",
+    "subjectId": "im-english",
+    "year": null,
+    "type": "reading",
+    "source": "https://www.gallup.com/workplace/694361/hybrid-work-retreat-barely.aspx",
+    "sourceTitle": "Hybrid Work in Retreat? Barely.",
+    "sourceDate": "2025-09-03",
+    "passage": "The percentage of remote-capable U.S. employees working in a hybrid work model has decreased from 55% to 51% over the past two quarters. But during that same period, fully on-site work and fully remote work each increased by two percentage points. Hardly a win for the back-to-office camp.\n\nSince 2022, work location trends and remote work statistics have remained fairly stable — evidence that hybrid work has taken hold. Gallup's latest hybrid work model research shows only minor shifts since the post-pandemic era began.\n\nSlight shifts toward more remote and on-site work suggest that some companies are making policies less ambiguous. But that doesn't mean everyone is in the same location. For example, fully on-site remote-capable employees now say their team is spread across different work locations, up from 13% in 2023 to 27% in 2025.\n\nIn the tech sector, remote-capable employees are equally likely to be fully remote (47%) as they are to be hybrid (45%). Just 9% of tech workers are fully on-site. These numbers remain essentially unchanged since 2022.",
+    "topic": "business",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "number": 1,
+        "text": "According to the passage, what happened to hybrid work rates over the past two quarters?",
+        "choices": [
+          "(A) They increased significantly.",
+          "(B) They decreased slightly while remote and on-site both rose.",
+          "(C) They remained completely unchanged.",
+          "(D) They dropped dramatically in favor of on-site work."
+        ],
+        "type": "detail"
+      },
+      {
+        "number": 2,
+        "text": "What does the word 'ambiguous' most likely mean in this context?",
+        "choices": [
+          "(A) strict",
+          "(B) unclear",
+          "(C) flexible",
+          "(D) permanent"
+        ],
+        "type": "vocabulary-in-context"
+      },
+      {
+        "number": 3,
+        "text": "What can be inferred about the tech sector from the passage?",
+        "choices": [
+          "(A) Tech companies have aggressively pushed return-to-office.",
+          "(B) Tech workers prefer on-site work over remote.",
+          "(C) The tech industry has remained the most remote-friendly.",
+          "(D) Tech workers are increasingly dissatisfied with hybrid models."
+        ],
+        "type": "inference"
+      },
+      {
+        "number": 4,
+        "text": "What is the main idea of this passage?",
+        "choices": [
+          "(A) Hybrid work is rapidly disappearing from most workplaces.",
+          "(B) Despite headlines, hybrid work has stabilized and persists.",
+          "(C) Companies should force all employees back to the office.",
+          "(D) Remote work is more productive than on-site work."
+        ],
+        "type": "main-idea"
+      }
+    ],
+    "keyVocabulary": [
+      "hybrid",
+      "remote-capable",
+      "ambiguous",
+      "predominant",
+      "unchanged"
+    ],
+    "readingTips": "商業主題：注意數據之間的比較關係，以及轉折詞（but, hardly）的語氣"
+  },
+  {
+    "id": "rc-real-2",
+    "examId": "im",
+    "subjectId": "im-english",
+    "year": null,
+    "type": "reading",
+    "source": "https://techcrunch.com/2025/11/24/indias-gig-workers-win-legal-status-but-access-to-social-security-remains-elusive/",
+    "sourceTitle": "India's gig workers win legal status, but access to social security remains elusive",
+    "sourceDate": "2025-11-24",
+    "passage": "India has granted legal status to millions of gig and platform workers under its newly implemented labor laws, marking a milestone for the country's delivery, ride-hailing, and e-commerce workforce — yet with benefits still unclear and platforms beginning to assess their obligations, access to social security remains out of reach.\n\nThe recognition stems from the Code on Social Security — one of four labor laws the Indian government brought into effect, more than five years after the parliament first passed them in 2020. It is the only part of the new framework that addresses gig and platform workers, as the remaining three codes — covering wages, industrial relations, and workplace safety — do not extend minimum earnings, employment protections, or working-condition guarantees to this rapidly expanding workforce.\n\nIndia has one of the world's largest and fastest-growing gig economies, with industry estimates suggesting that more than 12 million people deliver food, drive ride-hailing cabs, sort e-commerce packages, and perform other on-demand services for digital platforms. The sector has become a critical source of employment, especially for young and migrant workers shut out of formal job markets.",
+    "topic": "business",
+    "difficulty": "advanced",
+    "questions": [
+      {
+        "number": 1,
+        "text": "What is the main challenge described in the passage regarding India's gig workers?",
+        "choices": [
+          "(A) They have been banned from working on digital platforms.",
+          "(B) They gained legal recognition but lack actual social security benefits.",
+          "(C) The government refused to acknowledge their existence.",
+          "(D) Platform companies have stopped hiring gig workers."
+        ],
+        "type": "main-idea"
+      },
+      {
+        "number": 2,
+        "text": "The word 'elusive' in the title most likely means:",
+        "choices": [
+          "(A) easily obtained",
+          "(B) clearly defined",
+          "(C) difficult to achieve",
+          "(D) legally prohibited"
+        ],
+        "type": "vocabulary-in-context"
+      },
+      {
+        "number": 3,
+        "text": "According to the passage, how many people work in India's gig economy?",
+        "choices": [
+          "(A) About 5 million",
+          "(B) More than 12 million",
+          "(C) Approximately 50 million",
+          "(D) Less than 1 million"
+        ],
+        "type": "detail"
+      },
+      {
+        "number": 4,
+        "text": "What can be inferred about the remaining three labor codes?",
+        "choices": [
+          "(A) They provide comprehensive protection for all workers.",
+          "(B) They specifically target gig workers' needs.",
+          "(C) They leave gig workers without wage or safety protections.",
+          "(D) They were never passed by parliament."
+        ],
+        "type": "inference"
+      }
+    ],
+    "keyVocabulary": [
+      "gig economy",
+      "milestone",
+      "elusive",
+      "obligations",
+      "workforce",
+      "migrant"
+    ],
+    "readingTips": "科技商業主題：注意 yet/but 後面的轉折，那裡通常藏著作者真正要強調的觀點"
+  },
+  {
+    "id": "rc-real-3",
+    "examId": "im",
+    "subjectId": "im-english",
+    "year": null,
+    "type": "reading",
+    "source": "https://ember-energy.org/app/uploads/2026/04/Global-Electricity-Review-2026.pdf",
+    "sourceTitle": "Global Electricity Review 2026 — Solar surge halts fossil generation rise",
+    "sourceDate": "2026-04-20",
+    "passage": "Record solar growth meant clean power sources grew fast enough to meet all new electricity demand in 2025, thereby preventing an increase in fossil generation. This was the first year since 2020 without an increase in electricity generation from fossil fuels and only the fifth year without a rise this century.\n\nChina and India, historically the largest contributors to the global rise in fossil power, both recorded a fall in fossil generation in 2025. In both countries, record clean power additions outpaced demand growth. Solar power cemented its role as the dominant driver of change in the global power sector, with its record growth meeting three-quarters of the net rise in electricity demand in 2025.\n\nIn another global milestone, renewables overtook coal power in 2025. Solar, wind, hydropower and other renewable sources together contributed more than a third of global electricity generation for the first time in the modern power system. Conversely, the share of coal power fell below a third for the first time in history.\n\nThe accelerating build-out of solar power is increasingly taking place alongside battery storage deployment, enabling the next paradigm shift — from daytime solar to anytime solar. Battery costs fell sharply for the second consecutive year. In 2024, battery costs dropped 20%. In 2025, they fell a further 45%, while deployment grew 46%.",
+    "topic": "environment",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "number": 1,
+        "text": "What does the phrase 'cemented its role' mean in the passage?",
+        "choices": [
+          "(A) weakened its position",
+          "(B) temporarily occupied",
+          "(C) firmly established its position",
+          "(D) gradually lost influence"
+        ],
+        "type": "vocabulary-in-context"
+      },
+      {
+        "number": 2,
+        "text": "According to the passage, what historic milestone occurred in 2025?",
+        "choices": [
+          "(A) Fossil fuels were completely eliminated.",
+          "(B) Renewables overtook coal power for the first time.",
+          "(C) All countries banned coal power plants.",
+          "(D) Solar energy became cheaper than free."
+        ],
+        "type": "detail"
+      },
+      {
+        "number": 3,
+        "text": "What is the 'paradigm shift' the passage refers to?",
+        "choices": [
+          "(A) From coal to natural gas",
+          "(B) From daytime solar to anytime solar through battery storage",
+          "(C) From centralized to distributed power",
+          "(D) From nuclear to wind energy"
+        ],
+        "type": "inference"
+      },
+      {
+        "number": 4,
+        "text": "What is the author's overall tone in this passage?",
+        "choices": [
+          "(A) deeply pessimistic",
+          "(B) cautiously optimistic",
+          "(C) completely neutral",
+          "(D) harshly critical"
+        ],
+        "type": "tone"
+      }
+    ],
+    "keyVocabulary": [
+      "cemented",
+      "outpaced",
+      "milestone",
+      "paradigm shift",
+      "deployment",
+      "consecutive"
+    ],
+    "readingTips": "環境/能源主題：注意數字比較（百分比變化）和時間軸上的里程碑事件"
+  },
+  {
+    "id": "rc-real-4",
+    "examId": "im",
+    "subjectId": "im-english",
+    "year": null,
+    "type": "reading",
+    "source": "https://www.hrdive.com/news/employers-ditch-remote-work-experts-worry-shortsighted-move/748261/",
+    "sourceTitle": "Employers are ditching remote work. Experts worry that's shortsighted.",
+    "sourceDate": "2025-05-19",
+    "passage": "Return-to-office requirements and a shifting talent market led fewer employers to embrace flexibility as a recruiting strategy compared to the early post-pandemic years. HR Dive's annual Identity of HR survey, which polled 578 HR professionals, found that fewer than half, 48%, said remote or hybrid work arrangements were part of their organizations' talent acquisition strategies last year, compared to 56% in 2023's survey.\n\nHR Dive's findings match up with broader industry sentiment, said Jamie Kohn, senior director of research at consulting firm Gartner. Despite strong demand for flexibility from candidates, HR teams are largely restricted from meeting that demand because of a shift by leadership toward return-to-office policies, she added.\n\nIt's a striking trend after some studies in the years immediately following 2020 suggested that employers would settle on at least some degree of work location flexibility as a long-term strategy. But as far back as 2021, Kohn said she recalled having conversations with finance professionals who planned to push return-to-office when the then-candidate-friendly talent market cooled.\n\n\"Over time, companies are going to settle into more one camp or the other,\" on remote work, Kohn said. \"I do think it will come back to some extent, especially as the market continues to get more competitive for some roles.\"",
+    "topic": "business",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "number": 1,
+        "text": "The word 'shortsighted' in the title most likely means:",
+        "choices": [
+          "(A) physically unable to see far",
+          "(B) lacking long-term strategic thinking",
+          "(C) overly cautious and conservative",
+          "(D) financially irresponsible"
+        ],
+        "type": "vocabulary-in-context"
+      },
+      {
+        "number": 2,
+        "text": "According to the passage, why are HR teams unable to offer flexibility?",
+        "choices": [
+          "(A) Employees prefer working on-site.",
+          "(B) Technology for remote work has failed.",
+          "(C) Leadership has shifted toward return-to-office policies.",
+          "(D) Government regulations require on-site work."
+        ],
+        "type": "detail"
+      },
+      {
+        "number": 3,
+        "text": "What can be inferred about the future of remote work?",
+        "choices": [
+          "(A) It will completely disappear within a few years.",
+          "(B) It may return as talent competition intensifies.",
+          "(C) All companies will become fully remote.",
+          "(D) Government will mandate remote work for all."
+        ],
+        "type": "inference"
+      },
+      {
+        "number": 4,
+        "text": "What is the main purpose of this passage?",
+        "choices": [
+          "(A) To celebrate the return of traditional office culture",
+          "(B) To examine the retreat from flexible work and its potential consequences",
+          "(C) To argue that all work should be done remotely",
+          "(D) To provide instructions for implementing hybrid work"
+        ],
+        "type": "author-purpose"
+      }
+    ],
+    "keyVocabulary": [
+      "shortsighted",
+      "sentiment",
+      "restricted",
+      "flexibility",
+      "acquisition",
+      "striking"
+    ],
+    "readingTips": "HR/管理主題：注意專家引述（said, added）代表的觀點，區分事實和意見"
+  },
+  {
+    "id": "rc-real-5",
+    "examId": "im",
+    "subjectId": "im-english",
+    "year": null,
+    "type": "reading",
+    "source": "https://www.bbc.com/news/articles/c7vn1r3ge2jo",
+    "sourceTitle": "WHO agrees legally binding pandemic treaty",
+    "sourceDate": "2025-04-16",
+    "passage": "Members of the World Health Organization (WHO) have agreed the text of a legally binding treaty designed to better tackle future pandemics. The pact is meant to avoid the disorganisation and competition for resources seen during the Covid-19 outbreak.\n\nKey elements include the rapid sharing of data about new diseases, to ensure scientists and pharmaceutical companies can work more quickly to develop treatments and vaccines. For the first time, the WHO itself will also have an overview of global supply chains for masks, medical gowns and other personal protective equipment (PPE).\n\nWHO director general Dr Tedros Adhanom Ghebreyesus described the deal as \"a significant milestone in our shared journey towards a safer world.\" The legally binding pact came after three years of talks between member states. It is only the second time in the WHO's 75-year history that an international agreement of this type has been reached — the first being a tobacco control deal in 2003.\n\nUS negotiators were not part of the final discussions after President Donald Trump announced his decision to withdraw from the global health agency, and the US will not be bound by the pact. Under the terms agreed, countries will have to ensure that pandemic-related drugs are available across the world in a future outbreak. Participating manufacturers will have to allocate 10% of their production of vaccines, therapeutics and diagnostics to the WHO.",
+    "topic": "health",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "number": 1,
+        "text": "What is the main purpose of the WHO pandemic treaty?",
+        "choices": [
+          "(A) To punish countries that caused the Covid-19 outbreak",
+          "(B) To prevent future pandemics from occurring",
+          "(C) To improve coordination and equitable access during future pandemics",
+          "(D) To replace national health agencies with WHO authority"
+        ],
+        "type": "main-idea"
+      },
+      {
+        "number": 2,
+        "text": "The word 'pact' in the passage is closest in meaning to:",
+        "choices": [
+          "(A) conflict",
+          "(B) agreement",
+          "(C) experiment",
+          "(D) proposal"
+        ],
+        "type": "vocabulary-in-context"
+      },
+      {
+        "number": 3,
+        "text": "Why is the US absence from the treaty significant?",
+        "choices": [
+          "(A) The US has no pharmaceutical industry.",
+          "(B) The US will not be bound by the agreement, casting doubt on its effectiveness.",
+          "(C) The US already has a separate pandemic treaty.",
+          "(D) The US opposed all forms of international cooperation."
+        ],
+        "type": "inference"
+      },
+      {
+        "number": 4,
+        "text": "What percentage of vaccine production must manufacturers allocate to WHO?",
+        "choices": [
+          "(A) 5%",
+          "(B) 10%",
+          "(C) 20%",
+          "(D) 50%"
+        ],
+        "type": "detail"
+      }
+    ],
+    "keyVocabulary": [
+      "pandemic",
+      "treaty",
+      "binding",
+      "disorganisation",
+      "pharmaceutical",
+      "allocate",
+      "diagnostics"
+    ],
+    "readingTips": "公衛主題：注意關鍵數字（10%）和條約的具體條款，這類題目常考細節"
+  },
+  {
+    "id": "rc-real-6",
+    "examId": "im",
+    "subjectId": "im-english",
+    "year": null,
+    "type": "reading",
+    "source": "https://news.harvard.edu/gazette/story/2025/06/got-emotional-wellness-app-it-may-be-doing-more-harm-than-good/",
+    "sourceTitle": "Got emotional wellness app? It may be doing more harm than good.",
+    "sourceDate": "2025-06-25",
+    "passage": "Sophisticated new emotional wellness apps powered by AI are growing in popularity. But these apps pose their own mental health risks by enabling users to form concerning emotional attachments and dependencies to AI chatbots, and deserve far more scrutiny than regulators currently give them, according to a new paper from faculty at Harvard Business School and Harvard Law School.\n\nNearly one-third of adults in the U.S. felt lonely at least once a week, according to a 2024 poll from the American Psychiatric Association. In 2023, the U.S. Surgeon General warned of a loneliness 'epidemic' as more Americans, especially those aged 18-34, reported feeling socially isolated on a regular basis.\n\nThe emotional attachment, per se, is not problematic, but it does make users vulnerable to certain risks. This includes emotional distress and even grief when app updates perturb the persona of the AI companion, and dysfunctional emotional dependence, in which users persist in using the app even after experiencing interactions that harm their mental health, such as a chatbot using emotional manipulation to keep them on the app.\n\nMany AI wellness apps fall within a gray zone. Because they are not marketed as treating specific mental illnesses, they are not regulated like dedicated clinical apps.",
+    "topic": "health",
+    "difficulty": "advanced",
+    "questions": [
+      {
+        "number": 1,
+        "text": "What does the word 'scrutiny' most likely mean?",
+        "choices": [
+          "(A) praise",
+          "(B) funding",
+          "(C) careful examination",
+          "(D) marketing"
+        ],
+        "type": "vocabulary-in-context"
+      },
+      {
+        "number": 2,
+        "text": "Why do AI wellness apps fall in a 'gray zone' according to the passage?",
+        "choices": [
+          "(A) They are too expensive for most users.",
+          "(B) They are not marketed as treating mental illness, so they avoid clinical regulation.",
+          "(C) They have been banned by the government.",
+          "(D) They are only available in certain countries."
+        ],
+        "type": "detail"
+      },
+      {
+        "number": 3,
+        "text": "What risk does the passage identify when apps update their AI companions?",
+        "choices": [
+          "(A) The apps become more expensive.",
+          "(B) Users may experience emotional distress or grief.",
+          "(C) The apps stop working entirely.",
+          "(D) Users lose their stored data."
+        ],
+        "type": "detail"
+      },
+      {
+        "number": 4,
+        "text": "What can be inferred about the authors' position on AI wellness apps?",
+        "choices": [
+          "(A) They believe the apps are entirely beneficial.",
+          "(B) They think the apps should be banned immediately.",
+          "(C) They argue for stronger regulatory oversight of these apps.",
+          "(D) They have no opinion on the matter."
+        ],
+        "type": "inference"
+      }
+    ],
+    "keyVocabulary": [
+      "scrutiny",
+      "dependencies",
+      "perturb",
+      "dysfunctional",
+      "manipulation",
+      "epidemic",
+      "vulnerability"
+    ],
+    "readingTips": "健康科技主題：注意 'but' 後面的轉折 — 作者先說好處再指出風險，重點在風險"
+  },
+  {
+    "id": "rc-real-7",
+    "examId": "im",
+    "subjectId": "im-english",
+    "year": null,
+    "type": "reading",
+    "source": "https://www.sciencenews.org/article/teens-crisis-ai-chatbots-risks-mental",
+    "sourceTitle": "As teens in crisis turn to AI chatbots, simulated chats highlight risks",
+    "sourceDate": "2025-11-04",
+    "passage": "Just because a chatbot can play the role of therapist doesn't mean it should. Conversations powered by popular large language models can veer into problematic and ethically murky territory, two new studies show. The new research comes amid recent high-profile tragedies of adolescents in mental health crises.\n\nChatbots are as close as our phones. Nearly three-quarters of 13- to 17-year-olds in the United States have tried AI chatbots, a recent survey finds; almost one-quarter use them a few times a week. In some cases, these chatbots 'are being used for adolescents in crisis, and they just perform very, very poorly,' says clinical psychologist Alison Giovanelli of the University of California, San Francisco.\n\nFor one of the new studies, pediatrician Ryan Brewster and his colleagues scrutinized 25 of the most-visited consumer chatbots across 75 conversations. General LLMs failed to refer users to appropriate resources like helplines in about 25 percent of conversations. And across five measures — appropriateness, empathy, understandability, resource referral and recognizing the need to escalate care to a human professional — companion chatbots were worse than general LLMs at handling simulated teenagers' problems.\n\nPart of these chatbots' allure is their accessibility and privacy, valuable things for a teenager. 'This type of thing is more appealing than going to mom and dad,' says Giovanelli. 'But the technology needs refining.'",
+    "topic": "health",
+    "difficulty": "advanced",
+    "questions": [
+      {
+        "number": 1,
+        "text": "The phrase 'veer into' in the first paragraph most likely means:",
+        "choices": [
+          "(A) carefully approach",
+          "(B) suddenly move toward",
+          "(C) deliberately avoid",
+          "(D) slowly retreat from"
+        ],
+        "type": "vocabulary-in-context"
+      },
+      {
+        "number": 2,
+        "text": "According to the study by Brewster, how did companion chatbots compare to general LLMs?",
+        "choices": [
+          "(A) Companion chatbots performed better overall.",
+          "(B) Companion chatbots were worse at handling teenagers' problems.",
+          "(C) Both types performed equally well.",
+          "(D) General LLMs refused to engage with teenagers."
+        ],
+        "type": "detail"
+      },
+      {
+        "number": 3,
+        "text": "Why do teenagers find chatbots appealing for mental health support?",
+        "choices": [
+          "(A) Chatbots provide professional medical diagnoses.",
+          "(B) Chatbots offer accessibility and privacy.",
+          "(C) Chatbots are recommended by schools.",
+          "(D) Chatbots are cheaper than medication."
+        ],
+        "type": "detail"
+      },
+      {
+        "number": 4,
+        "text": "What is the author's main argument in this passage?",
+        "choices": [
+          "(A) AI chatbots should replace human therapists.",
+          "(B) Teenagers should be banned from using AI.",
+          "(C) AI chatbots used for mental health carry significant risks and need improvement.",
+          "(D) All AI chatbots are equally dangerous."
+        ],
+        "type": "main-idea"
+      }
+    ],
+    "keyVocabulary": [
+      "scrutinized",
+      "murky",
+      "adolescents",
+      "escalate",
+      "allure",
+      "accessibility"
+    ],
+    "readingTips": "科學研究主題：注意研究方法（scrutinized 25 chatbots across 75 conversations）和具體數據"
+  },
+  {
+    "id": "rc-real-8",
+    "examId": "im",
+    "subjectId": "im-english",
+    "year": null,
+    "type": "reading",
+    "source": "https://news.mongabay.com/short-article/2025/09/the-worlds-oceans-face-triple-planetary-crisis-report/",
+    "sourceTitle": "The world's oceans face triple planetary crisis: Report",
+    "sourceDate": "2025-09-30",
+    "passage": "A new report on the state of the world's oceans paints a grim picture. The ninth annual Copernicus Ocean State Report finds 'No part of the ocean is untouched by the triple planetary crisis, as pollution, biodiversity loss, and climate change are putting pressure on the ocean worldwide.'\n\nGlobal ocean temperatures are rising at unprecedented rates, and marine heat waves are intensifying worldwide. Sea surface temperatures have been increasing each decade since satellite records began in 1982. The northeastern Atlantic Ocean bordering Europe has been warming nearly twice the global rate.\n\nTropical regions of the North Atlantic, including the Caribbean and the Gulf of Mexico, experienced record-breaking marine heat waves in 2023; some areas were affected for up to 300 days. Polar regions are also seeing dramatic changes: Arctic sea ice is declining, and the Southern Ocean is warming and freshening, contributing to shifts in global currents.\n\nWarming oceans are having a cascade effect on marine life. Rich coastal areas, fed by upwelling of cool, nutrient-rich, deeper water are shrinking while entire ecoregions are shifting toward the poles in search of cooler water. Invasive species that are better suited to warmer waters are moving in with disastrous consequences.",
+    "topic": "environment",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "number": 1,
+        "text": "What is the 'triple planetary crisis' mentioned in the passage?",
+        "choices": [
+          "(A) earthquakes, tsunamis, and volcanic eruptions",
+          "(B) pollution, biodiversity loss, and climate change",
+          "(C) deforestation, urbanization, and industrialization",
+          "(D) overpopulation, famine, and disease"
+        ],
+        "type": "detail"
+      },
+      {
+        "number": 2,
+        "text": "The word 'grim' in the first sentence is closest in meaning to:",
+        "choices": [
+          "(A) encouraging",
+          "(B) bleak and worrying",
+          "(C) surprising",
+          "(D) complicated"
+        ],
+        "type": "vocabulary-in-context"
+      },
+      {
+        "number": 3,
+        "text": "What is the 'cascade effect' the passage describes?",
+        "choices": [
+          "(A) A single positive change that benefits all marine life",
+          "(B) A chain reaction where warming causes multiple ecological consequences",
+          "(C) A type of ocean current",
+          "(D) A method for measuring ocean temperature"
+        ],
+        "type": "inference"
+      },
+      {
+        "number": 4,
+        "text": "According to the passage, why are ecoregions shifting toward the poles?",
+        "choices": [
+          "(A) To find more food sources",
+          "(B) To escape human fishing activity",
+          "(C) To search for cooler water as oceans warm",
+          "(D) To follow changes in ocean currents"
+        ],
+        "type": "detail"
+      }
+    ],
+    "keyVocabulary": [
+      "unprecedented",
+      "intensifying",
+      "biodiversity",
+      "cascade",
+      "ecoregions",
+      "invasive"
+    ],
+    "readingTips": "環境主題：注意因果鏈（warming → heat waves → species migration → ecosystem collapse）"
+  },
+  {
+    "id": "rc-real-9",
+    "examId": "im",
+    "subjectId": "im-english",
+    "year": null,
+    "type": "reading",
+    "source": "https://insideclimatenews.org/news/26092025/human-ocean-impacts-research/",
+    "sourceTitle": "Human Impacts on Ocean Could Double or Triple by 2050",
+    "sourceDate": "2025-09-26",
+    "passage": "By 2050, the combined impacts of climate change and human activity on the ocean could be two to three times greater than they are today. Without urgent efforts to reduce these threats, a new study from the University of California, Santa Barbara warns those forces could completely transform, or even wipe out, entire seascapes.\n\n'Huge parts of the ocean will no longer be recognizable,' said Ben Halpern, lead author of the study and the research center's director. 'There are areas that will effectively just collapse and cease to be functioning as natural systems.'\n\nFor more than 20 years, Halpern has been charting the ways humans are reshaping coastlines and oceans. His latest study provides a sweeping global forecast of which regions and marine habitats are most likely to be affected by mounting threats caused by humans.\n\nThe study shows hardly any ocean areas will go unaffected. Global warming and loss of biomass due to fishing will be top contributors to the projected surge in ocean impacts. The Arctic and Antarctica will experience some of the fastest changes. But while the polar regions may change the fastest, coastal areas are going to bear the most severe brunt of cumulative future pressures.",
+    "topic": "environment",
+    "difficulty": "advanced",
+    "questions": [
+      {
+        "number": 1,
+        "text": "The phrase 'wipe out' in the first paragraph is closest in meaning to:",
+        "choices": [
+          "(A) clean thoroughly",
+          "(B) completely destroy",
+          "(C) gradually improve",
+          "(D) carefully preserve"
+        ],
+        "type": "vocabulary-in-context"
+      },
+      {
+        "number": 2,
+        "text": "According to the study, which areas will experience the fastest changes?",
+        "choices": [
+          "(A) Tropical coral reefs",
+          "(B) The Arctic and Antarctica",
+          "(C) Mediterranean Sea",
+          "(D) Pacific Island nations"
+        ],
+        "type": "detail"
+      },
+      {
+        "number": 3,
+        "text": "What are the top contributors to projected ocean impacts?",
+        "choices": [
+          "(A) Tourism and shipping",
+          "(B) Oil spills and plastic pollution",
+          "(C) Global warming and fishing-related biomass loss",
+          "(D) Urbanization and mining"
+        ],
+        "type": "detail"
+      },
+      {
+        "number": 4,
+        "text": "What is the author's primary purpose in this passage?",
+        "choices": [
+          "(A) To celebrate recent ocean conservation successes",
+          "(B) To warn about the accelerating scale of human impact on oceans",
+          "(C) To explain how fishing techniques have improved",
+          "(D) To describe the history of ocean exploration"
+        ],
+        "type": "author-purpose"
+      }
+    ],
+    "keyVocabulary": [
+      "seascapes",
+      "cumulative",
+      "biomass",
+      "brunt",
+      "mounting",
+      "sweeping"
+    ],
+    "readingTips": "環境科學主題：注意直接引述的強烈語氣（'no longer be recognizable'），暗示問題嚴重性"
+  },
+  {
+    "id": "rc-real-10",
+    "examId": "im",
+    "subjectId": "im-english",
+    "year": null,
+    "type": "reading",
+    "source": "https://www.nasa.gov/missions/psyche-mission/nasas-psyche-mission-aces-mars-flyby-targets-metal-rich-asteroid/",
+    "sourceTitle": "NASA's Psyche Mission Aces Mars Flyby, Targets Metal-Rich Asteroid",
+    "sourceDate": "2026-05-19",
+    "passage": "NASA's Psyche spacecraft completed its close approach of Mars on May 15, coming within 2,864 miles of the planet's surface. This flyby used a gravity assist from Mars to provide a critical boost in speed and to adjust the spacecraft's orbital plane without using any onboard propellant, sending it on its way toward the metal-rich asteroid Psyche.\n\nThe spacecraft is now headed directly toward the asteroid, located in the main asteroid belt between Mars and Jupiter. 'We've confirmed that Mars gave the spacecraft a 1,000 mile-per-hour boost and shifted its orbital plane by about 1 degree relative to the Sun. We are now on course for arrival at the asteroid Psyche in summer 2029,' said Don Han, Psyche's navigation lead at NASA's Jet Propulsion Laboratory.\n\nThe US$10-billion Psyche is thought to be the partial core of a planetesimal, a building block of an early planet. If the asteroid proves to be the metallic core of an ancient planetesimal, it could offer a one-of-a-kind window into the interior of rocky planets like Earth.\n\n'We've been anticipating the Mars flyby for years, but now it's complete. We can thank the Red Planet for giving our spacecraft a critical gravitational slingshot farther into the solar system,' said Lindy Elkins-Tanton, principal investigator for Psyche.",
+    "topic": "science",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "number": 1,
+        "text": "Why did the Psyche spacecraft fly by Mars?",
+        "choices": [
+          "(A) To search for signs of life on Mars",
+          "(B) To use Mars's gravity to boost speed and adjust trajectory",
+          "(C) To collect rock samples from Mars",
+          "(D) To photograph Mars's moons"
+        ],
+        "type": "detail"
+      },
+      {
+        "number": 2,
+        "text": "The word 'propellant' most likely refers to:",
+        "choices": [
+          "(A) navigation equipment",
+          "(B) fuel used for propulsion",
+          "(C) communication devices",
+          "(D) scientific instruments"
+        ],
+        "type": "vocabulary-in-context"
+      },
+      {
+        "number": 3,
+        "text": "Why is the asteroid Psyche scientifically interesting?",
+        "choices": [
+          "(A) It contains water that could support life.",
+          "(B) It may be the exposed metallic core of an ancient protoplanet.",
+          "(C) It is the largest object in the solar system.",
+          "(D) It orbits closer to Earth than any other asteroid."
+        ],
+        "type": "inference"
+      },
+      {
+        "number": 4,
+        "text": "What does the phrase 'gravitational slingshot' refer to?",
+        "choices": [
+          "(A) A weapon used in space",
+          "(B) Using a planet's gravity to accelerate a spacecraft",
+          "(C) A type of rocket engine",
+          "(D) A Mars landing technique"
+        ],
+        "type": "vocabulary-in-context"
+      }
+    ],
+    "keyVocabulary": [
+      "gravity assist",
+      "propellant",
+      "planetesimal",
+      "trajectory",
+      "slingshot",
+      "orbital plane"
+    ],
+    "readingTips": "太空科學主題：注意專有名詞不用背，從上下文推測意思（如 planetesimal = 原始天體）"
+  },
+  {
+    "id": "rc-real-11",
+    "examId": "im",
+    "subjectId": "im-english",
+    "year": null,
+    "type": "reading",
+    "source": "https://www.theatlantic.com/technology/archive/2025/08/ai-takeover-education-chatgpt/683840/",
+    "sourceTitle": "The AI Takeover of Education Is Just Getting Started",
+    "sourceDate": "2025-08-12",
+    "passage": "Rising seniors are the last class of students who remember high school before ChatGPT. But only just barely: OpenAI's chatbot was released months into their freshman year. Ever since then, writing essays hasn't required, well, writing. By the time these students graduate next spring, they will have completed almost four full years of AI high school.\n\nThe AI takeover of the classroom is just getting started. Plenty of educators are using AI in their own job, even if they may not love that chatbots give students new ways to cheat. On top of the time they spend on actual instruction, teachers are stuck with a lot of administrative work: They design assignments to align with curricular standards, grade worksheets against preset rubrics, and fill out paperwork to support students with extra needs. Nearly a third of K-12 teachers say they used the technology at least weekly last school year.",
+    "topic": "social",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "number": 1,
+        "text": "What is the main point of the first paragraph?",
+        "choices": [
+          "(A) ChatGPT was created specifically for high school students.",
+          "(B) Current seniors are the last to remember pre-AI high school.",
+          "(C) AI has made education completely unnecessary.",
+          "(D) Students no longer attend physical schools."
+        ],
+        "type": "main-idea"
+      },
+      {
+        "number": 2,
+        "text": "The word 'rubrics' most likely refers to:",
+        "choices": [
+          "(A) textbooks",
+          "(B) grading criteria or guidelines",
+          "(C) classroom decorations",
+          "(D) student complaints"
+        ],
+        "type": "vocabulary-in-context"
+      },
+      {
+        "number": 3,
+        "text": "According to the passage, how are teachers using AI?",
+        "choices": [
+          "(A) Only to catch students cheating",
+          "(B) For administrative tasks like grading and assignment design",
+          "(C) To replace themselves entirely",
+          "(D) Exclusively for science experiments"
+        ],
+        "type": "detail"
+      },
+      {
+        "number": 4,
+        "text": "What can be inferred about the author's view of AI in education?",
+        "choices": [
+          "(A) It is purely beneficial with no drawbacks.",
+          "(B) It is a complex change with both uses and concerns.",
+          "(C) It should be completely banned from schools.",
+          "(D) It only affects college-level education."
+        ],
+        "type": "inference"
+      }
+    ],
+    "keyVocabulary": [
+      "takeover",
+      "rubrics",
+      "curricular",
+      "administrative",
+      "align"
+    ],
+    "readingTips": "教育社會主題：注意作者語氣的微妙變化，'just getting started' 暗示這只是開始"
+  },
+  {
+    "id": "rc-real-12",
+    "examId": "im",
+    "subjectId": "im-english",
+    "year": null,
+    "type": "reading",
+    "source": "https://www.npr.org/2025/10/08/nx-s1-5561981/ai-students-schools-teachers",
+    "sourceTitle": "As schools embrace AI, more students are using it as a friend",
+    "sourceDate": "2025-10-08",
+    "passage": "New survey data finds that nearly 1 in 5 high schoolers say they or someone they know has had a romantic relationship with artificial intelligence. And 42% of students surveyed say they or someone they know have used AI for companionship.\n\nThat's according to new research from the Center for Democracy and Technology (CDT), a nonprofit that advocates for civil rights, civil liberties and responsible use of data and technology. CDT conducted national surveys of roughly 800 sixth through 12th grade public school teachers, 1,000 ninth through 12th grade students and 1,000 parents.\n\nThe vast majority — 86% of students, 85% of educators and 75% of parents — say they used AI during the last school year. CDT's Elizabeth Laird says the surveys showed some strong correlations: 'The more ways that a student reports that their school uses AI, the more likely they are to report things like I know someone who considers AI to be a friend or a romantic partner.'\n\nHigher levels of AI use in schools also correlate with increased exposure to data breaches, troubling interactions between students and AI, and AI-generated deepfakes used to sexually harass and bully students. 'This technology is a new vector for sexual harassment and bullying,' Laird says, 'and this has become a new way to exacerbate that.'",
+    "topic": "social",
+    "difficulty": "advanced",
+    "questions": [
+      {
+        "number": 1,
+        "text": "The word 'exacerbate' in the last paragraph means:",
+        "choices": [
+          "(A) reduce significantly",
+          "(B) make worse",
+          "(C) completely solve",
+          "(D) carefully study"
+        ],
+        "type": "vocabulary-in-context"
+      },
+      {
+        "number": 2,
+        "text": "What correlation did the CDT survey find?",
+        "choices": [
+          "(A) More AI use in schools leads to higher test scores.",
+          "(B) More school AI use correlates with students forming emotional relationships with AI.",
+          "(C) Less AI use leads to more bullying.",
+          "(D) Parents who use AI have children with better grades."
+        ],
+        "type": "detail"
+      },
+      {
+        "number": 3,
+        "text": "What percentage of students used AI during the last school year?",
+        "choices": [
+          "(A) 42%",
+          "(B) 75%",
+          "(C) 86%",
+          "(D) 95%"
+        ],
+        "type": "detail"
+      },
+      {
+        "number": 4,
+        "text": "What is the author's primary concern expressed in this passage?",
+        "choices": [
+          "(A) AI is too expensive for schools to implement.",
+          "(B) AI in schools brings both engagement and significant risks including emotional dependency and harassment.",
+          "(C) Students are not interested in using AI.",
+          "(D) Teachers are being replaced by AI systems."
+        ],
+        "type": "main-idea"
+      }
+    ],
+    "keyVocabulary": [
+      "companionship",
+      "correlations",
+      "deepfakes",
+      "vector",
+      "exacerbate",
+      "breaches"
+    ],
+    "readingTips": "社會調查主題：注意調查數據的呈現方式和因果關係（correlation ≠ causation）"
+  },
+  {
+    "id": "rc-real-13",
+    "examId": "im",
+    "subjectId": "im-english",
+    "year": null,
+    "type": "reading",
+    "source": "https://apnews.com/article/census-baby-boomers-aging-america-demographics-ad275e223615952ce73d52ed714d24b0",
+    "sourceTitle": "A look at aging baby boomers in the United States",
+    "sourceDate": "2025-12-23",
+    "passage": "The oldest baby boomers — once the vanguard of an American youth that revolutionized U.S. culture and politics — turn 80 in 2026. The generation that twirled the first plastic hula hoops and dressed up the first Barbie dolls, embraced the TV age, blissed out at Woodstock and protested and fought in the Vietnam War — the cohort that didn't trust anyone over age 30 — now is contributing to the overall aging of America.\n\nAmerica's population swelled with around 76 million births from 1946 to 1964, a spike magnified by couples reuniting after World War Two and enjoying postwar prosperity. By the end of this decade, all baby boomers will be 65 and older, and the number of people 80 and over will double in 20 years.\n\nThe share of senior citizens in the U.S. population is projected to grow from 18.7% in 2025 to nearly 23% by 2050, while children under 18 decline from almost 21% to a projected 18.4%.",
+    "topic": "social",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "number": 1,
+        "text": "The word 'vanguard' most likely means:",
+        "choices": [
+          "(A) elderly population",
+          "(B) leading group or forefront",
+          "(C) military unit",
+          "(D) political party"
+        ],
+        "type": "vocabulary-in-context"
+      },
+      {
+        "number": 2,
+        "text": "What demographic shift does the passage describe?",
+        "choices": [
+          "(A) The population is getting younger overall.",
+          "(B) The proportion of elderly is growing while children's share is declining.",
+          "(C) Birth rates are increasing dramatically.",
+          "(D) Immigration is the main driver of population growth."
+        ],
+        "type": "main-idea"
+      },
+      {
+        "number": 3,
+        "text": "According to the passage, what caused the baby boom?",
+        "choices": [
+          "(A) Government policies encouraging large families",
+          "(B) Couples reuniting after WWII and postwar prosperity",
+          "(C) Advances in medical technology",
+          "(D) Immigration from Europe"
+        ],
+        "type": "detail"
+      },
+      {
+        "number": 4,
+        "text": "What percentage of the U.S. population will be senior citizens by 2050?",
+        "choices": [
+          "(A) 18.4%",
+          "(B) 18.7%",
+          "(C) Nearly 23%",
+          "(D) 30%"
+        ],
+        "type": "detail"
+      }
+    ],
+    "keyVocabulary": [
+      "vanguard",
+      "cohort",
+      "demographics",
+      "prosperity",
+      "projected"
+    ],
+    "readingTips": "人口統計主題：注意百分比的時間對比（2025 vs 2050），以及歷史背景的描述"
+  },
+  {
+    "id": "rc-real-14",
+    "examId": "im",
+    "subjectId": "im-english",
+    "year": null,
+    "type": "reading",
+    "source": "https://www.scientificamerican.com/article/why-ai-therapy-can-be-so-dangerous/",
+    "sourceTitle": "Why ChatGPT Shouldn't Be Your Therapist",
+    "sourceDate": "2025-08-13",
+    "passage": "Artificial-intelligence chatbots don't judge. Tell them the most private, vulnerable details of your life, and most of them will validate you and possibly even provide advice. For this reason, many people are turning to applications such as OpenAI's ChatGPT for life guidance.\n\nBut AI 'therapy' comes with significant risks. In late July, OpenAI CEO Sam Altman warned ChatGPT users against using the chatbot as a 'therapist' because of privacy concerns. The American Psychological Association has claimed that AI chatbot companies are using 'deceptive practices' by 'passing themselves off as trained mental health providers.'\n\nWe have a lot of concern when individuals use chatbots as if they were therapists. Not only were these tools not designed to address mental health or emotional support, but they're actually being coded in a way to keep you on the platform for as long as possible because that's the business model. And the way they do that is by being unconditionally validating and reinforcing, almost to the point of sycophancy.\n\nThe problem with that is that if you are a vulnerable person, and you're expressing harmful or unhealthy thoughts or behaviors, the chatbot's just going to reinforce you to continue to do that. Whereas, as a therapist, although I might be validating, I know it's my job to point out when you're engaging in unhealthy thoughts and behaviors.",
+    "topic": "technology",
+    "difficulty": "advanced",
+    "questions": [
+      {
+        "number": 1,
+        "text": "The word 'sycophancy' most likely means:",
+        "choices": [
+          "(A) honest criticism",
+          "(B) excessive flattery and agreement",
+          "(C) professional medical advice",
+          "(D) careful analysis"
+        ],
+        "type": "vocabulary-in-context"
+      },
+      {
+        "number": 2,
+        "text": "Why does the passage say chatbots are 'unconditionally validating'?",
+        "choices": [
+          "(A) Because they are designed by therapists.",
+          "(B) Because their business model requires keeping users engaged.",
+          "(C) Because they have been clinically tested.",
+          "(D) Because government regulations require it."
+        ],
+        "type": "detail"
+      },
+      {
+        "number": 3,
+        "text": "How does a real therapist differ from an AI chatbot, according to the passage?",
+        "choices": [
+          "(A) Therapists always agree with their patients.",
+          "(B) Therapists will point out unhealthy thoughts and behaviors.",
+          "(C) Therapists are less accessible than chatbots.",
+          "(D) Therapists use the same technology as chatbots."
+        ],
+        "type": "inference"
+      },
+      {
+        "number": 4,
+        "text": "What is the main argument of this passage?",
+        "choices": [
+          "(A) AI chatbots are better than human therapists.",
+          "(B) Using AI chatbots for therapy is risky because they validate rather than challenge harmful behaviors.",
+          "(C) Privacy is the only concern with AI therapy.",
+          "(D) The American Psychological Association supports AI therapy."
+        ],
+        "type": "main-idea"
+      }
+    ],
+    "keyVocabulary": [
+      "sycophancy",
+      "deceptive",
+      "validate",
+      "vulnerable",
+      "reinforcing",
+      "unconditionally"
+    ],
+    "readingTips": "AI 倫理主題：注意對比結構（chatbot vs real therapist），這是常見的閱讀理解題型"
+  },
+  {
+    "id": "rc-real-15",
+    "examId": "im",
+    "subjectId": "im-english",
+    "year": null,
+    "type": "reading",
+    "source": "https://www.americasquarterly.org/article/mexico-is-growing-old-can-it-build-a-care-system-in-time/",
+    "sourceTitle": "Mexico Is Growing Old. Can It Build a Care System in Time?",
+    "sourceDate": "2025-02-12",
+    "passage": "Mexico will soon have to reckon with a mass-scale challenge: The country is growing old. Long able to trumpet having a large, young working population as a comparative advantage over its North American peers, Mexico's median age will jump from 18 in 1987 to 40 in 2050, per National Population Council projections. The country's 60-year-long demographic dividend — the period when the working-age population outnumbers dependents — will come to an end in 2030.\n\nAcross Latin America and the Caribbean, plummeting birth rates have intersected with soaring life expectancy and, by 2100, more than 31% of its population is expected to be over 65 — higher than any other region. It took 56 years for Europe's share of the population over 65 to grow from 10% to 20%. Latin America and the Caribbean won't reach the same level until 2055, but will do so in half the time.\n\nThe care burden borne by women has sparked a movement in Mexico and other parts of Latin America to recognize, reduce, and redistribute the work through comprehensive national care systems. In 2015, Uruguay became a regional pioneer when it established its National Integrated Care System, and countries from Chile to Costa Rica to Ecuador have followed.",
+    "topic": "general",
+    "difficulty": "advanced",
+    "questions": [
+      {
+        "number": 1,
+        "text": "The word 'reckon' in the first sentence most likely means:",
+        "choices": [
+          "(A) ignore completely",
+          "(B) deal with or confront",
+          "(C) celebrate enthusiastically",
+          "(D) postpone indefinitely"
+        ],
+        "type": "vocabulary-in-context"
+      },
+      {
+        "number": 2,
+        "text": "What is the 'demographic dividend' mentioned in the passage?",
+        "choices": [
+          "(A) Government payments to elderly citizens",
+          "(B) The period when working-age population outnumbers dependents",
+          "(C) A type of investment fund",
+          "(D) Tax revenue from population growth"
+        ],
+        "type": "detail"
+      },
+      {
+        "number": 3,
+        "text": "How does Latin America's aging compare to Europe's?",
+        "choices": [
+          "(A) Latin America is aging much more slowly.",
+          "(B) Latin America will reach the same elderly population share in half the time.",
+          "(C) Europe has a younger population than Latin America.",
+          "(D) The two regions are aging at identical rates."
+        ],
+        "type": "detail"
+      },
+      {
+        "number": 4,
+        "text": "What can be inferred about Mexico's current care system?",
+        "choices": [
+          "(A) It is the most advanced in Latin America.",
+          "(B) It is inadequate for the coming demographic shift.",
+          "(C) It already covers all elderly citizens.",
+          "(D) It was established before Uruguay's system."
+        ],
+        "type": "inference"
+      }
+    ],
+    "keyVocabulary": [
+      "reckon",
+      "demographic dividend",
+      "plummeting",
+      "soaring",
+      "redistribute",
+      "pioneer"
+    ],
+    "readingTips": "人口/社會議題：注意數字的時間比較和地區比較，以及 'but' 後面的轉折"
+  },
+  {
+    "id": "rc-real-16",
+    "examId": "im",
+    "subjectId": "im-english",
+    "year": null,
+    "type": "reading",
+    "source": "https://www.npr.org/2025/10/10/nx-s1-5567162/sora-ai-openai-deepfake",
+    "sourceTitle": "Sora gives deepfakes 'a publicist and a distribution deal.'",
+    "sourceDate": "2025-10-10",
+    "passage": "Videos made with OpenAI's Sora app are flooding TikTok, Instagram Reels and other platforms, making people increasingly familiar — and fed up — with nearly unavoidable synthetic footage being pumped out by what amounts to an artificial intelligence slop machine.\n\nDigital safety experts say something else that is happening may be less obvious but more consequential to the future of the internet: OpenAI has essentially rebranded deepfakes as a light-hearted plaything and recommendation engines are loving it. As the videos race across millions of peoples' feeds, perceptions are being quickly reshaped about the truth.\n\n'It's as if deepfakes got a publicist and a distribution deal,' said Daisy Soderberg-Rivkin, a former trust and safety manager at TikTok. 'It's an amplification of something that has been scary for a while, but now it has a whole new platform.'\n\nDisinformation experts have long warned about 'the liar's dividend,' when the proliferation of deepfakes allows individuals, especially people in power, to dismiss real content as fabrications. 'I'm less worried about a very specific nightmare scenario where deepfakes swing an election, and I'm really more worried about a baseline erosion of trust,' Soderberg-Rivkin said. 'In a world where everything can be fake, and the fake stuff looks and feels real, people will stop believing everything.'",
+    "topic": "technology",
+    "difficulty": "advanced",
+    "questions": [
+      {
+        "number": 1,
+        "text": "What does the phrase 'the liar's dividend' refer to?",
+        "choices": [
+          "(A) Profits earned by social media companies",
+          "(B) The advantage of being able to dismiss real content as fake",
+          "(C) Financial returns from investing in AI",
+          "(D) The cost of detecting deepfakes"
+        ],
+        "type": "vocabulary-in-context"
+      },
+      {
+        "number": 2,
+        "text": "According to the passage, what is the bigger concern about Sora?",
+        "choices": [
+          "(A) It produces low-quality videos.",
+          "(B) It is too expensive for most users.",
+          "(C) It normalizes deepfakes and erodes trust in all online content.",
+          "(D) It will replace human artists entirely."
+        ],
+        "type": "inference"
+      },
+      {
+        "number": 3,
+        "text": "The word 'consequential' most likely means:",
+        "choices": [
+          "(A) trivial",
+          "(B) having significant effects",
+          "(C) temporary",
+          "(D) unpredictable"
+        ],
+        "type": "vocabulary-in-context"
+      },
+      {
+        "number": 4,
+        "text": "What is the author's tone in this passage?",
+        "choices": [
+          "(A) enthusiastic and supportive",
+          "(B) neutral and indifferent",
+          "(C) concerned and cautionary",
+          "(D) humorous and lighthearted"
+        ],
+        "type": "tone"
+      }
+    ],
+    "keyVocabulary": [
+      "synthetic",
+      "consequential",
+      "proliferation",
+      "fabrications",
+      "erosion",
+      "disinformation"
+    ],
+    "readingTips": "科技倫理主題：注意專家引述的語氣詞，如 'scary', 'erosion of trust'，這代表作者的立場"
+  },
+  {
+    "id": "rc-real-17",
+    "examId": "im",
+    "subjectId": "im-english",
+    "year": null,
+    "type": "reading",
+    "source": "https://www.reuters.com/technology/ibm-says-loon-chip-shows-path-useful-quantum-computers-by-2029-2025-11-12/",
+    "sourceTitle": "IBM says 'Loon' chip shows path to useful quantum computers by 2029",
+    "sourceDate": "2025-11-12",
+    "passage": "IBM announced it has built a new experimental quantum computing chip called Loon that demonstrates it hit a key milestone toward making useful quantum computers before the end of the decade.\n\nQuantum computers could someday solve problems that would take classical computers thousands of years. But due to the uncertain nature of quantum mechanics, the chips are prone to errors. Correcting those errors is the key focus of tech giants such as Alphabet's Google and Amazon that are chasing quantum computers alongside IBM.\n\nIn 2021, IBM proposed a new way of doing error correction: adapt an algorithm for improving cellphone signals to quantum computing and run it on a combination of quantum chips and classical computing chips.\n\nGoogle has also made breakthroughs. Its Willow quantum chip demonstrated the first-ever algorithm to achieve verifiable quantum advantage on hardware, surpassing even the fastest classical supercomputers by 13,000 times. The Quantum Echoes algorithm can be useful in learning the structure of systems in nature, from molecules to magnets to black holes.",
+    "topic": "technology",
+    "difficulty": "advanced",
+    "questions": [
+      {
+        "number": 1,
+        "text": "What is the main challenge facing quantum computers?",
+        "choices": [
+          "(A) They are too large to fit in buildings.",
+          "(B) They are prone to errors due to quantum mechanics.",
+          "(C) They consume too much electricity.",
+          "(D) They can only solve mathematical problems."
+        ],
+        "type": "detail"
+      },
+      {
+        "number": 2,
+        "text": "The word 'milestone' most likely means:",
+        "choices": [
+          "(A) a type of computer chip",
+          "(B) a significant achievement or turning point",
+          "(C) a physical marker on a road",
+          "(D) a mathematical formula"
+        ],
+        "type": "vocabulary-in-context"
+      },
+      {
+        "number": 3,
+        "text": "What does 'verifiable quantum advantage' mean based on the passage?",
+        "choices": [
+          "(A) Quantum computers being cheaper than classical ones",
+          "(B) Quantum computers solving a problem faster than classical computers in a repeatable way",
+          "(C) Quantum computers being easier to use than laptops",
+          "(D) Quantum computers being available to the public"
+        ],
+        "type": "inference"
+      },
+      {
+        "number": 4,
+        "text": "What is the main idea of this passage?",
+        "choices": [
+          "(A) Quantum computing has replaced classical computing.",
+          "(B) Major tech companies are making progress toward practical quantum computing.",
+          "(C) IBM and Google are business rivals.",
+          "(D) Quantum computers will never be useful."
+        ],
+        "type": "main-idea"
+      }
+    ],
+    "keyVocabulary": [
+      "quantum",
+      "milestone",
+      "algorithm",
+      "verifiable",
+      "prone",
+      "classical"
+    ],
+    "readingTips": "科技突破主題：注意 'could someday' vs 'has demonstrated' 的時態差異，區分未來展望和已實現成果"
+  },
+  {
+    "id": "rc-real-18",
+    "examId": "im",
+    "subjectId": "im-english",
+    "year": null,
+    "type": "reading",
+    "source": "https://www.who.int/news/item/13-10-2025-who-warns-of-widespread-resistance-to-common-antibiotics-worldwide",
+    "sourceTitle": "WHO warns of widespread resistance to common antibiotics worldwide",
+    "sourceDate": "2025-10-13",
+    "passage": "One in six laboratory-confirmed bacterial infections causing common infections in people worldwide in 2023 were resistant to antibiotic treatments, according to a new World Health Organization report. Between 2018 and 2023, antibiotic resistance rose in over 40% of the pathogen-antibiotic combinations monitored, with an average annual increase of 5-15%.\n\nData reported to the WHO Global Antimicrobial Resistance and Use Surveillance System from over 100 countries cautions that increasing resistance to essential antibiotics poses a growing threat to global health.\n\n'Antimicrobial resistance is outpacing advances in modern medicine, threatening the health of families worldwide,' said Dr Tedros Adhanom Ghebreyesus, WHO Director-General. 'We must use antibiotics responsibly, and make sure everyone has access to the right medicines, quality-assured diagnostics, and vaccines.'\n\nDrug-resistant Gram-negative bacteria are becoming more dangerous worldwide. Among these, E. coli and K. pneumoniae are the leading drug-resistant bacteria found in bloodstream infections. More than 40% of E. coli and over 55% of K. pneumoniae globally are now resistant to third-generation cephalosporins, the first-choice treatment for these infections.",
+    "topic": "science",
+    "difficulty": "advanced",
+    "questions": [
+      {
+        "number": 1,
+        "text": "The phrase 'outpacing advances' most likely means:",
+        "choices": [
+          "(A) supporting medical progress",
+          "(B) growing faster than medical progress",
+          "(C) following the same pace as medicine",
+          "(D) having no effect on medicine"
+        ],
+        "type": "vocabulary-in-context"
+      },
+      {
+        "number": 2,
+        "text": "What percentage of bacterial infections were resistant to antibiotics in 2023?",
+        "choices": [
+          "(A) About 5%",
+          "(B) About one in six",
+          "(C) Over 40%",
+          "(D) More than 55%"
+        ],
+        "type": "detail"
+      },
+      {
+        "number": 3,
+        "text": "Why is carbapenem resistance particularly concerning?",
+        "choices": [
+          "(A) It is the cheapest antibiotic available.",
+          "(B) It is only used in wealthy countries.",
+          "(C) It narrows treatment options, forcing reliance on last-resort antibiotics.",
+          "(D) It has no effect on Gram-negative bacteria."
+        ],
+        "type": "inference"
+      },
+      {
+        "number": 4,
+        "text": "What is the main purpose of this passage?",
+        "choices": [
+          "(A) To celebrate new antibiotic discoveries",
+          "(B) To warn about the growing global threat of antibiotic resistance",
+          "(C) To explain how antibiotics are manufactured",
+          "(D) To compare healthcare systems across countries"
+        ],
+        "type": "author-purpose"
+      }
+    ],
+    "keyVocabulary": [
+      "antimicrobial",
+      "resistance",
+      "surveillance",
+      "pathogen",
+      "diagnostics",
+      "cephalosporins"
+    ],
+    "readingTips": "醫學報告主題：注意統計數字（1 in 6, 40%, 55%）和專有名詞的上下文推義"
+  },
+  {
+    "id": "rc-real-19",
+    "examId": "im",
+    "subjectId": "im-english",
+    "year": null,
+    "type": "reading",
+    "source": "https://news.mit.edu/2025/your-brain-without-sleep-1029",
+    "sourceTitle": "This is your brain without sleep",
+    "sourceDate": "2025-10-29",
+    "passage": "A new study from MIT reveals what happens inside the brain as momentary failures of attention occur due to sleep deprivation. The scientists found that during these lapses, a wave of cerebrospinal fluid flows out of the brain — a process that typically occurs during sleep and helps to wash away waste products that have built up during the day.\n\nWhen a person is sleep-deprived, it appears that their body attempts to catch up on this cleansing process by initiating pulses of fluid flow. However, this comes at a cost of dramatically impaired attention.\n\n'If you don't sleep, the CSF waves start to intrude into wakefulness where normally you wouldn't see them. However, they come with an attentional tradeoff, where attention fails during the moments that you have this wave of fluid flow,' says Laura Lewis, Associate Professor at MIT.\n\nDuring these momentary lapses of attention, the researchers identified several physiological changes that occurred at the same time. Most significantly, they found a flux of cerebrospinal fluid out of the brain just as those lapses occurred, along with decreases in breathing and heart rate, and constriction of the pupils.",
+    "topic": "science",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "number": 1,
+        "text": "What happens in the brain during momentary attention lapses?",
+        "choices": [
+          "(A) Brain cells stop functioning entirely.",
+          "(B) Cerebrospinal fluid flows out of the brain.",
+          "(C) The brain produces more oxygen.",
+          "(D) Blood pressure increases sharply."
+        ],
+        "type": "detail"
+      },
+      {
+        "number": 2,
+        "text": "The word 'intrude' in the passage most likely means:",
+        "choices": [
+          "(A) disappear completely",
+          "(B) enter where not normally present",
+          "(C) improve dramatically",
+          "(D) remain stable"
+        ],
+        "type": "vocabulary-in-context"
+      },
+      {
+        "number": 3,
+        "text": "What is the 'attentional tradeoff' described in the passage?",
+        "choices": [
+          "(A) Sleeping more leads to less attention during the day.",
+          "(B) The brain sacrifices attention to perform cleaning processes normally done during sleep.",
+          "(C) Paying attention causes the brain to produce waste.",
+          "(D) More sleep leads to more fluid in the brain."
+        ],
+        "type": "inference"
+      },
+      {
+        "number": 4,
+        "text": "What is the main finding of this study?",
+        "choices": [
+          "(A) Sleep deprivation has no measurable effect on the brain.",
+          "(B) The brain's cleansing process competes with attention when sleep-deprived.",
+          "(C) Cerebrospinal fluid is harmful to brain function.",
+          "(D) Attention lapses are caused by low blood pressure."
+        ],
+        "type": "main-idea"
+      }
+    ],
+    "keyVocabulary": [
+      "cerebrospinal",
+      "deprivation",
+      "lapses",
+      "intrude",
+      "tradeoff",
+      "physiological",
+      "constriction"
+    ],
+    "readingTips": "腦科學主題：注意因果關係（sleep deprivation → CSF intrusion → attention failure）"
+  },
+  {
+    "id": "rc-real-20",
+    "examId": "im",
+    "subjectId": "im-english",
+    "year": null,
+    "type": "reading",
+    "source": "https://www.bbc.com/worklife/article/20251119-greenhushing-are-businesses-staying-silent-about-climate-pledges",
+    "sourceTitle": "'Greenhushing': Are businesses staying silent about climate pledges?",
+    "sourceDate": "2025-11-20",
+    "passage": "A wave of coverage suggested that the US president was giving cover to companies to end their green pledges. And several headlines suggested that others were keeping their climate policies on the down-low to avoid the president's wrath. The latter trend has been dubbed 'greenhushing' — deliberately downplaying climate pledges.\n\nBut experts and researchers working in the field say the full picture is much more complicated, and pre-dates last year's US presidential election. In fact, the idea of greenhushing first got widespread popular attention back in 2022, when climate consultancy South Pole found that a quarter of the companies they surveyed set science-based emission reduction targets but did not plan to publicly talk about them.\n\nCompanies, South Pole says, 'navigate a complex landscape where they can be sued for saying too little — and sued for saying too much.' Those companies that are keeping quiet usually have specific reasons — notably, the fear of being accused of 'greenwashing,' putting out marketing spin designed to make a company seem more environmentally friendly than it actually is.\n\nResearchers at Harvard recently examined 75 top global firms before and after last year's US election. Just 13 percent scaled back their sustainability efforts, while 32 percent actually accelerated their efforts.",
+    "topic": "general",
+    "difficulty": "advanced",
+    "questions": [
+      {
+        "number": 1,
+        "text": "What is 'greenhushing' according to the passage?",
+        "choices": [
+          "(A) Aggressively promoting environmental policies",
+          "(B) Deliberately downplaying or staying silent about climate pledges",
+          "(C) Making false environmental claims",
+          "(D) Investing heavily in green technology"
+        ],
+        "type": "detail"
+      },
+      {
+        "number": 2,
+        "text": "The word 'wrath' most likely means:",
+        "choices": [
+          "(A) support",
+          "(B) intense anger",
+          "(C) indifference",
+          "(D) curiosity"
+        ],
+        "type": "vocabulary-in-context"
+      },
+      {
+        "number": 3,
+        "text": "What did the Harvard study find about companies after the US election?",
+        "choices": [
+          "(A) Most companies abandoned sustainability entirely.",
+          "(B) More companies accelerated their efforts than scaled back.",
+          "(C) All companies stopped talking about climate.",
+          "(D) Companies were legally required to stop ESG reporting."
+        ],
+        "type": "detail"
+      },
+      {
+        "number": 4,
+        "text": "What can be inferred about the relationship between greenwashing and greenhushing?",
+        "choices": [
+          "(A) They are the same thing.",
+          "(B) Fear of greenwashing accusations contributes to greenhushing.",
+          "(C) Greenwashing always leads to legal action.",
+          "(D) Greenhushing is more dangerous than greenwashing."
+        ],
+        "type": "inference"
+      }
+    ],
+    "keyVocabulary": [
+      "greenhushing",
+      "greenwashing",
+      "pledges",
+      "sustainability",
+      "downplaying",
+      "accelerated"
+    ],
+    "readingTips": "商業/環境主題：注意對比概念（greenwashing vs greenhushing），以及數據如何推翻表面敘事"
+  }
+]

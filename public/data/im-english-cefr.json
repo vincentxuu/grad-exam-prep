@@ -1,0 +1,197 @@
+{
+  "generatedAt": "2026-08-16",
+  "totalExamWords": 2012,
+  "matchedWords": 331,
+  "unmatchedWords": 1681,
+  "cefrReferenceSize": 2643,
+  "distribution": {
+    "A1": {
+      "count": 8,
+      "percentage": 2.4
+    },
+    "A2": {
+      "count": 41,
+      "percentage": 12.4
+    },
+    "B1": {
+      "count": 149,
+      "percentage": 45.0
+    },
+    "B2": {
+      "count": 67,
+      "percentage": 20.2
+    },
+    "C1": {
+      "count": 37,
+      "percentage": 11.2
+    },
+    "C2": {
+      "count": 29,
+      "percentage": 8.8
+    }
+  },
+  "choiceWordsDistribution": {
+    "A1": {
+      "count": 0,
+      "percentage": 0.0
+    },
+    "A2": {
+      "count": 0,
+      "percentage": 0.0
+    },
+    "B1": {
+      "count": 6,
+      "percentage": 7.9
+    },
+    "B2": {
+      "count": 31,
+      "percentage": 40.8
+    },
+    "C1": {
+      "count": 21,
+      "percentage": 27.6
+    },
+    "C2": {
+      "count": 18,
+      "percentage": 23.7
+    }
+  },
+  "passageWordsDistribution": {
+    "A1": {
+      "count": 8,
+      "percentage": 3.1
+    },
+    "A2": {
+      "count": 41,
+      "percentage": 16.1
+    },
+    "B1": {
+      "count": 143,
+      "percentage": 56.1
+    },
+    "B2": {
+      "count": 36,
+      "percentage": 14.1
+    },
+    "C1": {
+      "count": 16,
+      "percentage": 6.3
+    },
+    "C2": {
+      "count": 11,
+      "percentage": 4.3
+    }
+  },
+  "medianLevel": "B1",
+  "modalLevel": "B1",
+  "verdict": "Median CEFR level: B1. Modal level: B1. C1+C2 words make up 51.3% of matched choice words. Matched 331 of 2012 exam words against CEFR reference.",
+  "c1c2Words": [
+    "ambivalent",
+    "avid",
+    "benevolent",
+    "circumspect",
+    "commemorate",
+    "compatible",
+    "condone",
+    "confiscate",
+    "conserve",
+    "conspicuous",
+    "corroborate",
+    "credulous",
+    "dearth",
+    "degradation",
+    "delineate",
+    "detrimental",
+    "disseminate",
+    "dormant",
+    "egregious",
+    "elicit",
+    "eloquent",
+    "exacerbate",
+    "extravagant",
+    "gratitude",
+    "grievance",
+    "harbinger",
+    "immutable",
+    "impassive",
+    "imperious",
+    "incongruous",
+    "indifferent",
+    "ingenuous",
+    "insipid",
+    "intermittent",
+    "irreversible",
+    "legitimate",
+    "leverage",
+    "litigation",
+    "mediocre",
+    "mitigate",
+    "mundane",
+    "negligible",
+    "paradox",
+    "paragon",
+    "parsimonious",
+    "pervasive",
+    "petulant",
+    "pragmatic",
+    "precocious",
+    "rampant",
+    "relegate",
+    "renaissance",
+    "scarcity",
+    "scrutinize",
+    "segregation",
+    "solicitation",
+    "solidarity",
+    "stringent",
+    "substantiate",
+    "superfluous",
+    "tenacious",
+    "tractable",
+    "ubiquitous",
+    "unilateral",
+    "unprecedented",
+    "verbose"
+  ],
+  "c1c2ChoiceWords": [
+    "ambivalent",
+    "avid",
+    "circumspect",
+    "commemorate",
+    "compatible",
+    "condone",
+    "confiscate",
+    "conspicuous",
+    "corroborate",
+    "credulous",
+    "degradation",
+    "delineate",
+    "detrimental",
+    "dormant",
+    "eloquent",
+    "exacerbate",
+    "extravagant",
+    "gratitude",
+    "grievance",
+    "harbinger",
+    "immutable",
+    "impassive",
+    "imperious",
+    "indifferent",
+    "ingenuous",
+    "intermittent",
+    "leverage",
+    "mediocre",
+    "mitigate",
+    "parsimonious",
+    "pervasive",
+    "rampant",
+    "relegate",
+    "substantiate",
+    "tenacious",
+    "ubiquitous",
+    "unilateral",
+    "unprecedented",
+    "verbose"
+  ]
+}
