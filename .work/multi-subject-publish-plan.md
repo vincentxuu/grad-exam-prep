@@ -10,4 +10,4 @@ Publish the completed IM-IT 61/61 learning branch through GitHub checks and the 
 - [x] Re-run content, paper-integrity, test, typecheck, and production-build validation.
 - [x] Push `agent/multi-subject-learning` and open a ready PR against `main`.
 - [x] Require successful GitHub checks before merging.
-- [ ] Confirm the post-merge Cloudflare deployment completes successfully.
+- [x] Confirm the post-merge Cloudflare deployment completes successfully (`31951382594`).
