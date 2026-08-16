@@ -1358,5 +1358,695 @@
       "accelerated"
     ],
     "readingTips": "商業/環境主題：注意對比概念（greenwashing vs greenhushing），以及數據如何推翻表面敘事"
+  },
+  {
+    "id": "rc-real-21",
+    "examId": "im",
+    "subjectId": "im-english",
+    "year": null,
+    "type": "reading",
+    "source": "https://science.nasa.gov/blogs/webb/2025/08/19/new-moon-discovered-orbiting-uranus-using-nasas-webb-telescope/",
+    "sourceTitle": "New Moon Discovered Orbiting Uranus Using NASA's Webb Telescope",
+    "sourceDate": "2025-08-19",
+    "passage": "Using NASA's James Webb Space Telescope, a team led by the Southwest Research Institute has identified a previously unknown moon orbiting Uranus, expanding the planet's known satellite family to 29. The detection was made during a Webb observation on February 2, 2025.\n\n\"This object was spotted in a series of 10 40-minute long-exposure images captured by the Near-Infrared Camera,\" said Maryame El Moutamid, a lead scientist in SwRI's Solar System Science and Exploration Division. \"It's a small moon but a significant discovery, which is something that even NASA's Voyager 2 spacecraft didn't see during its flyby nearly 40 years ago.\"\n\nThe newly discovered moon is estimated to be just six miles in diameter, assuming it has a similar reflectivity to Uranus' other small satellites. That tiny size likely rendered it invisible to Voyager 2 and other telescopes.\n\n\"No other planet has as many small inner moons as Uranus, and their complex inter-relationships with the rings hint at a chaotic history that blurs the boundary between a ring system and a system of moons,\" said Matthew Tiscareno of the SETI Institute. \"Moreover, the new moon is smaller and much fainter than the smallest of the previously known inner moons, making it likely that even more complexity remains to be discovered.\"",
+    "topic": "science",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "number": 1,
+        "text": "What does the word \"rendered\" most likely mean in the context of this passage?",
+        "choices": [
+          "(A) created",
+          "(B) made",
+          "(C) painted",
+          "(D) submitted"
+        ],
+        "type": "vocabulary-in-context"
+      },
+      {
+        "number": 2,
+        "text": "How was the new moon detected?",
+        "choices": [
+          "(A) By Voyager 2 during a flyby",
+          "(B) Through long-exposure infrared images from Webb",
+          "(C) By ground-based telescopes in Colorado",
+          "(D) Using radio signals from the SETI Institute"
+        ],
+        "type": "detail"
+      },
+      {
+        "number": 3,
+        "text": "Why was the moon not detected by Voyager 2?",
+        "choices": [
+          "(A) Voyager 2 never visited Uranus",
+          "(B) The moon was too small and faint",
+          "(C) The moon did not exist 40 years ago",
+          "(D) Voyager 2's instruments were broken"
+        ],
+        "type": "detail"
+      },
+      {
+        "number": 4,
+        "text": "What can be inferred about Uranus from this discovery?",
+        "choices": [
+          "(A) Its moon system is fully mapped and understood",
+          "(B) It likely has more undiscovered small moons",
+          "(C) Its rings are unrelated to its moons",
+          "(D) It is the least interesting planet for astronomers"
+        ],
+        "type": "inference"
+      }
+    ],
+    "keyVocabulary": [
+      "satellite",
+      "reflectivity",
+      "rendered",
+      "chaotic",
+      "complexity",
+      "infrared",
+      "flyby"
+    ],
+    "readingTips": "科學新聞：注意因果關係（為什麼之前沒發現？）和推論題（這個發現暗示什麼？）"
+  },
+  {
+    "id": "rc-real-22",
+    "examId": "im",
+    "subjectId": "im-english",
+    "year": null,
+    "type": "reading",
+    "source": "https://newsroom.clevelandclinic.org/2025/11/08/cleveland-clinic-first-in-human-trial-of-crispr-gene-editing-therapy-shown-to-safely-lower-cholesterol-and-triglycerides",
+    "sourceTitle": "Cleveland Clinic First-In-Human Trial of CRISPR Gene-Editing Therapy Shown to Safely Lower Cholesterol and Triglycerides",
+    "sourceDate": "2025-11-08",
+    "passage": "Results from a Cleveland Clinic Phase 1, first-in-human clinical trial showed that a one-time infusion of a gene-editing therapy using CRISPR-Cas9 safely reduced LDL cholesterol and triglycerides in people with lipid disorders resistant to current medications. The results were presented during a late-breaking science presentation at the American Heart Association's Scientific Sessions 2025 and were simultaneously published in The New England Journal of Medicine.\n\nIn the trial, which included 15 patients, both LDL cholesterol and triglyceride levels were substantially reduced within two weeks after treatment and stayed at low levels for at least 60 days, with additional follow-up ongoing. The treatment did not result in any serious adverse events related to the treatment during short-term follow-up.\n\n\"This treatment is still very early in development but if future trials continue to demonstrate safety and efficacy, the therapy has the potential to change the way we treat lipid disorders,\" said Cleveland Clinic cardiologist Luke Laffin. \"Rather than a once-daily pill or monthly injection, this therapy would potentially offer a one-time infusion that is safe and durable for patients with high cholesterol.\"\n\nCRISPR-Cas9 is a gene-editing technology that can be used to modify or correct specific regions of a person's DNA to treat serious diseases. This trial tested CTX310, which carries the CRISPR editing mechanism into the liver, where it switches off a gene called ANGPTL3 to lower LDL cholesterol and triglycerides.",
+    "topic": "science",
+    "difficulty": "advanced",
+    "questions": [
+      {
+        "number": 1,
+        "text": "What does \"efficacy\" mean in this context?",
+        "choices": [
+          "(A) cost-effectiveness",
+          "(B) ability to produce desired results",
+          "(C) popularity among patients",
+          "(D) speed of delivery"
+        ],
+        "type": "vocabulary-in-context"
+      },
+      {
+        "number": 2,
+        "text": "How does CTX310 work to lower cholesterol?",
+        "choices": [
+          "(A) It blocks cholesterol absorption in the stomach",
+          "(B) It edits a gene in the liver to switch off ANGPTL3",
+          "(C) It replaces damaged liver cells with healthy ones",
+          "(D) It increases the body's natural cholesterol breakdown"
+        ],
+        "type": "detail"
+      },
+      {
+        "number": 3,
+        "text": "What is the main advantage of this therapy over current treatments?",
+        "choices": [
+          "(A) It is cheaper than existing medications",
+          "(B) It requires only a one-time infusion instead of daily pills",
+          "(C) It has no side effects at all",
+          "(D) It works for all types of diseases"
+        ],
+        "type": "inference"
+      },
+      {
+        "number": 4,
+        "text": "What is the author's primary purpose in this passage?",
+        "choices": [
+          "(A) To argue against gene-editing technology",
+          "(B) To report preliminary results of a medical breakthrough",
+          "(C) To compare different cholesterol treatments",
+          "(D) To explain the history of CRISPR technology"
+        ],
+        "type": "author-purpose"
+      }
+    ],
+    "keyVocabulary": [
+      "infusion",
+      "efficacy",
+      "adverse",
+      "durable",
+      "lipid",
+      "triglycerides",
+      "cardiologist"
+    ],
+    "readingTips": "醫學研究報導：注意實驗數據（15人、60天）和限制條件（Phase 1、early in development）"
+  },
+  {
+    "id": "rc-real-23",
+    "examId": "im",
+    "subjectId": "im-english",
+    "year": null,
+    "type": "reading",
+    "source": "https://www.who.int/news/item/30-06-2025-social-connection-linked-to-improved-heath-and-reduced-risk-of-early-death",
+    "sourceTitle": "Social connection linked to improved health and reduced risk of early death",
+    "sourceDate": "2025-06-30",
+    "passage": "The World Health Organization Commission on Social Connection has released its global report revealing that 1 in 6 people worldwide is affected by loneliness, with significant impacts on health and well-being. Loneliness is linked to an estimated 100 deaths every hour — more than 871,000 deaths annually. Strong social connections can lead to better health and longer life, the report says.\n\nWHO defines social connection as the ways people relate to and interact with others. Loneliness is described as the painful feeling that arises from a gap between desired and actual social connections, while social isolation refers to the objective lack of sufficient social connections.\n\nLoneliness affects people of all ages, especially youth and people living in low- and middle-income countries. Between 17 and 21 percent of individuals aged 13 to 29 reported feeling lonely, with the highest rates among teenagers. About 24 percent of people in low-income countries reported feeling lonely — twice the rate in high-income countries.\n\nSocial connection can protect health across the lifespan. It can reduce inflammation, lower the risk of serious health problems, foster mental health, and prevent early death. In contrast, loneliness and social isolation increase the risk of stroke, heart disease, diabetes, cognitive decline, and premature death. People who are lonely are twice as likely to get depressed.",
+    "topic": "social",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "number": 1,
+        "text": "What is the difference between \"loneliness\" and \"social isolation\" as defined by WHO?",
+        "choices": [
+          "(A) They are the same thing",
+          "(B) Loneliness is a feeling; social isolation is an objective lack of connections",
+          "(C) Social isolation is more common than loneliness",
+          "(D) Loneliness only affects the elderly"
+        ],
+        "type": "detail"
+      },
+      {
+        "number": 2,
+        "text": "Which group experiences the highest rates of loneliness?",
+        "choices": [
+          "(A) Elderly people in high-income countries",
+          "(B) Working adults in urban areas",
+          "(C) Teenagers and youth in low-income countries",
+          "(D) Married couples in middle-income countries"
+        ],
+        "type": "detail"
+      },
+      {
+        "number": 3,
+        "text": "What does the word \"foster\" mean in the context of this passage?",
+        "choices": [
+          "(A) prevent",
+          "(B) damage",
+          "(C) promote and encourage",
+          "(D) measure accurately"
+        ],
+        "type": "vocabulary-in-context"
+      },
+      {
+        "number": 4,
+        "text": "What can be inferred about the relationship between income level and loneliness?",
+        "choices": [
+          "(A) Wealth eliminates loneliness entirely",
+          "(B) Poverty is associated with higher rates of loneliness",
+          "(C) High-income countries have more lonely people",
+          "(D) Income has no effect on social connection"
+        ],
+        "type": "inference"
+      }
+    ],
+    "keyVocabulary": [
+      "loneliness",
+      "inflammation",
+      "cognitive decline",
+      "premature",
+      "lifespan",
+      "foster",
+      "disparities"
+    ],
+    "readingTips": "WHO 報告：注意定義區分（loneliness vs social isolation）和數據比較（低收入 vs 高收入國家）"
+  },
+  {
+    "id": "rc-real-24",
+    "examId": "im",
+    "subjectId": "im-english",
+    "year": null,
+    "type": "reading",
+    "source": "https://www.nature.com/articles/d41586-025-02295-2",
+    "sourceTitle": "Biggest trial of four-day work week finds workers are happier and feel just as productive",
+    "sourceDate": "2025-07-21",
+    "passage": "Moving to a four-day work week without losing pay leaves employees happier, healthier and higher-performing, according to the largest study of such an intervention so far, encompassing six countries. The research showed that a six-month trial of working four days a week reduced burnout, increased job satisfaction and improved mental and physical health.\n\nThe study, published in Nature Human Behaviour, tracked 2,896 employees across 141 companies in six countries through a six-month trial of reduced hours with no reduction in pay. Workers who had a reduction of eight or more hours in their work week reported larger decreases in burnout and increases in job satisfaction and mental health, compared with employees at companies that stuck to a five-day schedule.\n\nStress levels fell, contrary to initial researcher concerns about compressing work into fewer days. Roughly 90 percent of participating companies chose to continue the four-day model after the trial.\n\nHowever, there are important caveats. Because companies signed up for the trial voluntarily, the results might overestimate the true effect of the four-day work week across a range of companies. And because all outcomes were self-reported, employees might have exaggerated the benefits in the hope of keeping their extra day off.",
+    "topic": "business",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "number": 1,
+        "text": "What does the word \"caveats\" mean in this passage?",
+        "choices": [
+          "(A) advantages",
+          "(B) warnings or limitations",
+          "(C) conclusions",
+          "(D) experiments"
+        ],
+        "type": "vocabulary-in-context"
+      },
+      {
+        "number": 2,
+        "text": "What was the main finding of the study?",
+        "choices": [
+          "(A) Workers were less productive on a four-day schedule",
+          "(B) Reduced hours improved wellbeing without harming productivity",
+          "(C) Most companies abandoned the four-day model",
+          "(D) Stress levels increased when work was compressed"
+        ],
+        "type": "main-idea"
+      },
+      {
+        "number": 3,
+        "text": "Why might the study's results be overly optimistic?",
+        "choices": [
+          "(A) The sample size was too small",
+          "(B) Companies volunteered, so they may have been predisposed to success",
+          "(C) The study lasted only one month",
+          "(D) Workers were paid less during the trial"
+        ],
+        "type": "detail"
+      },
+      {
+        "number": 4,
+        "text": "What can be inferred about the future of the four-day work week?",
+        "choices": [
+          "(A) It will be legally mandated in all six countries",
+          "(B) It is likely to be adopted more widely but with caution",
+          "(C) It will replace remote work entirely",
+          "(D) It is only suitable for technology companies"
+        ],
+        "type": "inference"
+      }
+    ],
+    "keyVocabulary": [
+      "burnout",
+      "intervention",
+      "caveats",
+      "self-reported",
+      "encompassing",
+      "compressed",
+      "voluntarily"
+    ],
+    "readingTips": "研究報導：注意研究限制（caveats）和自願偏差（voluntary selection bias）"
+  },
+  {
+    "id": "rc-real-25",
+    "examId": "im",
+    "subjectId": "im-english",
+    "year": null,
+    "type": "reading",
+    "source": "https://www.weforum.org/stories/2025/01/deepfakes-different-threat-than-expected/",
+    "sourceTitle": "Deepfakes proved a different threat than expected. Here's how to defend against them",
+    "sourceDate": "2025-01-10",
+    "passage": "What is the biggest threat from deepfakes? If you had asked people a year ago, many would have said their ability to disrupt global elections and create a misinformation apocalypse, but that's not what happened. During election cycles in 2024, we saw memes, propaganda and poor quality 'AI slop' — none of which turned the tide in any candidate's favour.\n\nA recent report from Meta confirms this, claiming that less than 1 percent of all fact-checked misinformation during the 2024 election cycles was AI content. Despite major elections across the globe completing without AI incidents, including the world's biggest election in India, experts continued warning about the dangers.\n\nMany overestimated the impact of deepfakes because they couldn't fathom how a highly convincing image or video wouldn't fool people. However, elections can be highly polarizing and deeply divisive. Information consumption and sharing under these circumstances tend to align with people's biases. In many cases, the truth itself doesn't change people's minds.\n\nAs the technology powering deepfakes has become both more capable and accessible, two immediate categories of harm emerge: harassment and social engineering. Deepfakes can be used to target individuals through non-consensual pornography, and attackers can use AI to clone voices for financial scams. In February 2024, a finance worker for a multinational firm in Hong Kong was tricked into paying 25 million dollars based on a Zoom meeting in which all participants, including the company's chief financial officer, were deepfakes.",
+    "topic": "technology",
+    "difficulty": "advanced",
+    "questions": [
+      {
+        "number": 1,
+        "text": "What does the word \"fathom\" mean in this context?",
+        "choices": [
+          "(A) measure the depth of water",
+          "(B) understand or comprehend",
+          "(C) create or design",
+          "(D) prevent from happening"
+        ],
+        "type": "vocabulary-in-context"
+      },
+      {
+        "number": 2,
+        "text": "According to the passage, why did deepfakes fail to disrupt elections?",
+        "choices": [
+          "(A) Deepfake technology was not advanced enough",
+          "(B) People's political biases make them resistant to changing their minds",
+          "(C) Governments banned all deepfake content",
+          "(D) Social media platforms blocked all AI-generated content"
+        ],
+        "type": "detail"
+      },
+      {
+        "number": 3,
+        "text": "What is the real threat from deepfakes according to the author?",
+        "choices": [
+          "(A) Election manipulation",
+          "(B) Environmental damage",
+          "(C) Harassment and financial scams",
+          "(D) Replacing human workers"
+        ],
+        "type": "main-idea"
+      },
+      {
+        "number": 4,
+        "text": "What can be inferred from the Hong Kong incident?",
+        "choices": [
+          "(A) Deepfakes are harmless in business settings",
+          "(B) Video calls are now completely unreliable for verification",
+          "(C) Sophisticated deepfakes can cause serious financial damage to organizations",
+          "(D) Only tech companies are vulnerable to deepfake attacks"
+        ],
+        "type": "inference"
+      }
+    ],
+    "keyVocabulary": [
+      "deepfakes",
+      "misinformation",
+      "polarizing",
+      "fathom",
+      "harassment",
+      "social engineering",
+      "non-consensual"
+    ],
+    "readingTips": "科技評論：注意作者如何反駁預期（expected vs actual），以及區分不同層次的威脅"
+  },
+  {
+    "id": "rc-real-26",
+    "examId": "im",
+    "subjectId": "im-english",
+    "year": null,
+    "type": "reading",
+    "source": "https://med.stanford.edu/news/insights/2025/01/microplastics-in-body-polluted-tiny-plastic-fragments.html",
+    "sourceTitle": "Microplastics and our health: What the science says",
+    "sourceDate": "2025-01-29",
+    "passage": "They're in the water we drink, the food we eat, the clothes we wear and the air we breathe. They've pervaded every ecosystem in the world, from coral reefs to Antarctic ice. And they've infiltrated the human body, lodging themselves in everything from brain tissue to reproductive organs.\n\nMicroplastics — plastic fragments up to 5 millimeters long — are inescapable. An estimated 10 to 40 million metric tons of these particles are released into the environment every year, and if current trends continue, that number could double by 2040. Most come from larger plastic items that break down over time, while some are added directly to products we use such as paint, cleansers and toothpastes.\n\n\"Plastic never goes away — it just breaks down into finer and finer particles,\" said Desiree LaBeaud, a pediatric infectious diseases physician at Stanford Medicine.\n\nStudies in animals and human cells suggest microplastics exposure could be linked to cancer, heart attacks, reproductive problems and a host of other harms. Yet few studies have directly examined the impact on human health. One of the first papers to directly examine the risks, published in The New England Journal of Medicine in March 2024, studied patients undergoing surgery to remove plaque from their arteries. More than two years after the procedure, those who had microplastics in their plaque had a higher risk of heart attack, stroke and death than those who didn't.",
+    "topic": "health",
+    "difficulty": "advanced",
+    "questions": [
+      {
+        "number": 1,
+        "text": "What does \"pervaded\" mean in this passage?",
+        "choices": [
+          "(A) cleaned thoroughly",
+          "(B) spread throughout",
+          "(C) destroyed completely",
+          "(D) studied carefully"
+        ],
+        "type": "vocabulary-in-context"
+      },
+      {
+        "number": 2,
+        "text": "What is the primary source of microplastics in the environment?",
+        "choices": [
+          "(A) Industrial chemicals released into rivers",
+          "(B) Larger plastic items breaking down over time",
+          "(C) Volcanic eruptions releasing particles",
+          "(D) Agricultural fertilizers"
+        ],
+        "type": "detail"
+      },
+      {
+        "number": 3,
+        "text": "Why is it difficult to prove microplastics are harmful to humans?",
+        "choices": [
+          "(A) Microplastics are too small to detect",
+          "(B) No animals have been affected by them",
+          "(C) Few studies have directly examined human health impacts",
+          "(D) The medical community denies any connection"
+        ],
+        "type": "detail"
+      },
+      {
+        "number": 4,
+        "text": "What is the tone of this passage?",
+        "choices": [
+          "(A) Optimistic and reassuring",
+          "(B) Alarmed but scientifically cautious",
+          "(C) Indifferent and neutral",
+          "(D) Humorous and lighthearted"
+        ],
+        "type": "tone"
+      }
+    ],
+    "keyVocabulary": [
+      "pervaded",
+      "infiltrated",
+      "inescapable",
+      "microplastics",
+      "metric tons",
+      "plaque",
+      "reproductive"
+    ],
+    "readingTips": "科學報導：注意「證據不足但有合理擔憂」的語氣，以及引用研究的方式"
+  },
+  {
+    "id": "rc-real-27",
+    "examId": "im",
+    "subjectId": "im-english",
+    "year": null,
+    "type": "reading",
+    "source": "https://planetwordmuseum.org/the-state-of-literacy-in-the-digital-age/",
+    "sourceTitle": "The State of Literacy in the Digital Age",
+    "sourceDate": "2025-10-13",
+    "passage": "Over the last decade, most countries in the industrialized world have seen steady declines in the reading performance of 15-year-olds, as evidenced by the tests of OECD's Program for International Student Assessment. Many have associated these learning losses with school closures during the pandemic, but in most countries this downward trend started way earlier, somewhere between 2012 and 2015. More recently, OECD's Survey of Adult Skills has exposed a similar downward trend in adult literacy.\n\nThere has been much speculation about the reasons for this downward trend, but one obvious factor is changes in our reading behaviors. A decade ago, many of us read more complex texts than we do today. We read books that required us to build mental representations of complex contexts, imagine and navigate the perspectives of different figures and characters, and synthesize nuanced arguments. Today we consume the bite-size marmalade of digestible answers spat out by ChatGPT and its many friends.\n\nResults from PISA suggest that the best predictor for literacy skills is the time students spend reading long pieces of text in paper format. Reading digital texts more frequently showed a negative association with reading skills. Students who had to read longer pieces of text for school achieved 31 PISA score points more in reading — the equivalent of an entire school year.\n\nThe most worrying finding is that the reading skills atrophying fastest are the higher-order literacy skills most crucial for success in our AI world, such as navigating ambiguity and distinguishing fact from fiction.",
+    "topic": "general",
+    "difficulty": "advanced",
+    "questions": [
+      {
+        "number": 1,
+        "text": "What does \"atrophying\" most likely mean?",
+        "choices": [
+          "(A) growing rapidly",
+          "(B) gradually weakening or declining",
+          "(C) becoming more sophisticated",
+          "(D) remaining stable"
+        ],
+        "type": "vocabulary-in-context"
+      },
+      {
+        "number": 2,
+        "text": "According to the passage, when did reading performance begin to decline?",
+        "choices": [
+          "(A) During the COVID-19 pandemic",
+          "(B) Between 2012 and 2015",
+          "(C) After the invention of ChatGPT",
+          "(D) In the early 2000s"
+        ],
+        "type": "detail"
+      },
+      {
+        "number": 3,
+        "text": "What does the author suggest is the best way to improve literacy?",
+        "choices": [
+          "(A) Using more digital reading tools",
+          "(B) Reading long texts in paper format",
+          "(C) Watching educational videos",
+          "(D) Taking more standardized tests"
+        ],
+        "type": "detail"
+      },
+      {
+        "number": 4,
+        "text": "What is the author's attitude toward AI tools like ChatGPT in relation to literacy?",
+        "choices": [
+          "(A) Enthusiastically supportive",
+          "(B) Completely neutral",
+          "(C) Critical, seeing them as contributing to decline",
+          "(D) Unaware of their existence"
+        ],
+        "type": "tone"
+      }
+    ],
+    "keyVocabulary": [
+      "atrophying",
+      "synthesize",
+      "nuanced",
+      "ambiguity",
+      "digestible",
+      "literacy",
+      "speculation"
+    ],
+    "readingTips": "教育評論：注意作者用比喻（bite-size marmalade）表達批評立場，以及數據論證（31分 = 一個學年）"
+  },
+  {
+    "id": "rc-real-28",
+    "examId": "im",
+    "subjectId": "im-english",
+    "year": null,
+    "type": "reading",
+    "source": "https://yaleclimateconnections.org/2025/02/electric-vehicle-adoption-is-stumbling-but-still-growing-amid-geopolitical-clashes/",
+    "sourceTitle": "Electric vehicle adoption is stumbling, but still growing amid geopolitical clashes",
+    "sourceDate": "2025-02-20",
+    "passage": "Global EV sales have surged as prices have fallen and countries have implemented policies like regulations and subsidies to encourage their adoption. In 2019, 2 million EVs and plug-in hybrids were sold, accounting for just 2.5 percent of global new car sales. In 2024 the number skyrocketed to over 17 million, accounting for more than one in five new passenger cars sold last year.\n\nBut last year's global EV sales growth was uneven. It came mostly in China, which sold 11 million EVs and plug-in hybrids — a 40 percent increase from the prior year, accounting for nearly two-thirds of all worldwide sales. Europe came in second with 3 million, but sales there declined 3 percent as some government incentives expired. North America accounted for 1.8 million, with only a modest 9 percent increase.\n\nThe International Council on Clean Transportation forecasts that global climate pollution from road transportation will peak this year and then begin to decline, thanks largely to the adoption of EVs. But the political climate in countries like the U.S. remains a potential stumbling block.\n\nStudies found that insufficient public charging infrastructure is a key barrier to more widespread EV adoption. Cost was also a top barrier. In China, where two-thirds of EVs are already cheaper than their internal combustion equivalents, EV sales are surging. In the U.S., although EV sticker prices remain somewhat elevated, fuel and maintenance costs for EVs are about 1,000 dollars per year lower than gasoline-fueled equivalents.",
+    "topic": "environment",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "number": 1,
+        "text": "What does \"stumbling block\" mean in this passage?",
+        "choices": [
+          "(A) a physical obstacle on a road",
+          "(B) something that prevents progress",
+          "(C) a type of building material",
+          "(D) a financial investment"
+        ],
+        "type": "vocabulary-in-context"
+      },
+      {
+        "number": 2,
+        "text": "Which region had the largest EV sales in 2024?",
+        "choices": [
+          "(A) North America",
+          "(B) Europe",
+          "(C) China",
+          "(D) Southeast Asia"
+        ],
+        "type": "detail"
+      },
+      {
+        "number": 3,
+        "text": "Why are EV sales growing faster in China than in the U.S.?",
+        "choices": [
+          "(A) Chinese consumers prefer electric cars aesthetically",
+          "(B) EVs in China are already cheaper than gas cars",
+          "(C) The U.S. has banned EV imports",
+          "(D) China has no gasoline cars available"
+        ],
+        "type": "inference"
+      },
+      {
+        "number": 4,
+        "text": "What is the main idea of this passage?",
+        "choices": [
+          "(A) EVs are too expensive to be practical",
+          "(B) Global EV adoption is growing but unevenly, with political and infrastructure challenges",
+          "(C) China will dominate all global industries by 2030",
+          "(D) Gasoline cars are becoming more popular again"
+        ],
+        "type": "main-idea"
+      }
+    ],
+    "keyVocabulary": [
+      "surged",
+      "subsidies",
+      "skyrocketed",
+      "incentives",
+      "infrastructure",
+      "combustion",
+      "equivalents"
+    ],
+    "readingTips": "數據型文章：注意各地區的比較數字，以及「成長但不均勻」這個核心論點"
+  },
+  {
+    "id": "rc-real-29",
+    "examId": "im",
+    "subjectId": "im-english",
+    "year": null,
+    "type": "reading",
+    "source": "https://news.mit.edu/2025/your-brain-without-sleep-1029",
+    "sourceTitle": "This is your brain without sleep",
+    "sourceDate": "2025-10-29",
+    "passage": "Nearly everyone has experienced it: After a night of poor sleep, you don't feel as alert as you should. Your brain might seem foggy, and your mind drifts off when you should be paying attention.\n\nA new study from MIT reveals what happens inside the brain as these momentary failures of attention occur. The scientists found that during these lapses, a wave of cerebrospinal fluid flows out of the brain — a process that typically occurs during sleep and helps to wash away waste products that have built up during the day. This flushing is believed to be necessary for maintaining a healthy, normally functioning brain.\n\nWhen a person is sleep-deprived, it appears that their body attempts to catch up on this cleansing process by initiating pulses of cerebrospinal fluid flow. However, this comes at a cost of dramatically impaired attention.\n\n\"If you don't sleep, the cerebrospinal fluid waves start to intrude into wakefulness where normally you wouldn't see them. However, they come with an attentional tradeoff, where attention fails during the moments that you have this wave of fluid flow,\" says Laura Lewis, Associate Professor at MIT.\n\nThe researchers also found several other physiological events linked to attentional lapses, including decreases in breathing and heart rate, along with constriction of the pupils, suggesting a tight coordination between brain and body-wide functions.",
+    "topic": "science",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "number": 1,
+        "text": "What does \"impaired\" mean in this context?",
+        "choices": [
+          "(A) improved",
+          "(B) damaged or weakened",
+          "(C) measured",
+          "(D) replaced"
+        ],
+        "type": "vocabulary-in-context"
+      },
+      {
+        "number": 2,
+        "text": "What happens in the brain during attention lapses caused by sleep deprivation?",
+        "choices": [
+          "(A) Brain cells die permanently",
+          "(B) Cerebrospinal fluid flows out as the brain attempts self-cleaning",
+          "(C) Blood pressure spikes dangerously",
+          "(D) New neural connections form rapidly"
+        ],
+        "type": "detail"
+      },
+      {
+        "number": 3,
+        "text": "Why does the brain initiate fluid flow during wakefulness?",
+        "choices": [
+          "(A) To prepare for falling asleep",
+          "(B) To compensate for cleaning that was missed during sleep",
+          "(C) To increase alertness",
+          "(D) To fight infections in the brain"
+        ],
+        "type": "inference"
+      },
+      {
+        "number": 4,
+        "text": "What is significant about the finding that pupils constrict during attention lapses?",
+        "choices": [
+          "(A) It proves that sleep deprivation causes blindness",
+          "(B) It suggests attention failures are body-wide events, not just brain events",
+          "(C) It shows that eye exercises can prevent sleep deprivation",
+          "(D) It indicates that the study's methods were flawed"
+        ],
+        "type": "inference"
+      }
+    ],
+    "keyVocabulary": [
+      "cerebrospinal",
+      "lapses",
+      "impaired",
+      "constriction",
+      "physiological",
+      "tradeoff",
+      "wakefulness"
+    ],
+    "readingTips": "腦科學研究：注意因果鏈（缺乏睡眠→大腦自我清潔→注意力下降）和身體連動反應"
+  },
+  {
+    "id": "rc-real-30",
+    "examId": "im",
+    "subjectId": "im-english",
+    "year": null,
+    "type": "reading",
+    "source": "https://www.bbc.com/worklife/article/20251119-greenhushing-and-greenwashing",
+    "sourceTitle": "Greenhushing: Why companies are going quiet on sustainability",
+    "sourceDate": "2025-11-19",
+    "passage": "A wave of coverage suggested that the US president was giving cover to companies wanting to abandon environmental commitments. But the reality is more nuanced. While some firms have scaled back their public sustainability messaging, many are quietly continuing their environmental efforts — a trend known as 'greenhushing.'\n\nGreenhushing refers to companies deliberately downplaying or staying silent about their environmental initiatives, even as they continue to pursue them. It is, in many ways, the opposite of greenwashing — where companies exaggerate their environmental credentials. Both practices, however, share a common problem: they undermine transparency and make it harder for consumers and investors to make informed decisions.\n\nExperts say several factors are driving the rise of greenhushing. In the United States, growing political polarization around climate change has made some companies wary of publicly associating themselves with environmental causes. Meanwhile, tightening regulations in Europe — including the EU's Corporate Sustainability Reporting Directive — have raised the stakes for making environmental claims, pushing some firms to say less rather than risk accusations of greenwashing.\n\nThe consequences of widespread greenhushing could be significant. When companies hide their sustainability efforts, it reduces the positive peer pressure that encourages others to act. It also makes it more difficult for consumers to reward genuinely responsible businesses with their purchasing decisions, and for investors to direct capital toward sustainable enterprises.",
+    "topic": "general",
+    "difficulty": "advanced",
+    "questions": [
+      {
+        "number": 1,
+        "text": "What does \"nuanced\" mean in this context?",
+        "choices": [
+          "(A) simple and straightforward",
+          "(B) completely false",
+          "(C) having subtle distinctions and complexity",
+          "(D) extremely controversial"
+        ],
+        "type": "vocabulary-in-context"
+      },
+      {
+        "number": 2,
+        "text": "How does greenhushing differ from greenwashing?",
+        "choices": [
+          "(A) Greenhushing involves exaggerating environmental efforts",
+          "(B) Greenwashing involves staying silent about sustainability",
+          "(C) Greenhushing means downplaying real efforts; greenwashing means exaggerating them",
+          "(D) They are the same thing with different names"
+        ],
+        "type": "detail"
+      },
+      {
+        "number": 3,
+        "text": "Why are some companies choosing to stay quiet about their environmental efforts?",
+        "choices": [
+          "(A) They have no environmental programs at all",
+          "(B) Political polarization and fear of regulatory scrutiny",
+          "(C) Environmental efforts are no longer profitable",
+          "(D) Consumers prefer companies that ignore sustainability"
+        ],
+        "type": "detail"
+      },
+      {
+        "number": 4,
+        "text": "What can be inferred about the author's view of greenhushing?",
+        "choices": [
+          "(A) It is a positive development for business",
+          "(B) It is harmful because it reduces transparency and peer pressure for action",
+          "(C) It is irrelevant to consumers",
+          "(D) It will solve the problem of greenwashing"
+        ],
+        "type": "inference"
+      }
+    ],
+    "keyVocabulary": [
+      "greenhushing",
+      "greenwashing",
+      "transparency",
+      "polarization",
+      "credentials",
+      "enterprises",
+      "nuanced"
+    ],
+    "readingTips": "商業/環境評論：注意新術語定義（greenhushing vs greenwashing）和因果推理（為什麼沉默是有害的）"
   }
 ]
