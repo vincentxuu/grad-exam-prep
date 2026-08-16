@@ -25,4 +25,16 @@ describe('IM-IT concept overview', () => {
     expect(screen.getByText('網路')).toBeInTheDocument()
     expect(screen.getAllByText(/^\d+ 個子主題 · \d+ 題$/)).toHaveLength(8)
   })
+
+  test('links only the first five reviewed learning modules', () => {
+    render(<ImItConceptOverview />)
+
+    expect(screen.getByText('第一批可學內容')).toBeInTheDocument()
+    expect(screen.getByText('5 / 58')).toBeInTheDocument()
+    const lessonLinks = screen.getAllByRole('link', { name: '開始學習' })
+    expect(lessonLinks).toHaveLength(5)
+    expect(lessonLinks.map((link) => link.getAttribute('href'))).toContain(
+      '/im/subjects/im-it/lessons/lesson-im-it-network-models-encapsulation'
+    )
+  })
 })

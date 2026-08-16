@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "im-it",
+  "policy": "本站內容是依來源整理的原創摘要，不轉載教材原文；真題來源與答案來源分開標記。",
+  "sources": [
+    {
+      "id": "src-brookshear-13e",
+      "title": "Computer Science: An Overview, 13th Edition",
+      "author": "J. Glenn Brookshear",
+      "type": "book",
+      "url": "https://www.tenlong.com.tw/products/9781292263427",
+      "scope": ["computer-architecture", "operating-systems", "networking", "databases"],
+      "usage": "conceptual-summary",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-nthu-network-course",
+      "title": "計算機網路",
+      "author": "黃能富",
+      "publisher": "清華大學開放式課程",
+      "type": "course",
+      "url": "https://www.youtube.com/playlist?list=PLS0SUwlYe8cxktXNovos9xleroaWyb-z5",
+      "scope": ["networking"],
+      "usage": "conceptual-summary",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-jiege-database-course",
+      "title": "資料庫課程",
+      "author": "陳士杰（杰哥數位教室）",
+      "type": "course",
+      "url": "https://www.youtube.com/playlist?list=PLpbuzGqDFzkhHPz11AeGrU7K8AKNqp0fj",
+      "scope": ["databases"],
+      "usage": "conceptual-summary",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-nthu-os-course",
+      "title": "作業系統",
+      "author": "周志遠",
+      "publisher": "清華大學開放式課程",
+      "type": "course",
+      "url": "https://www.youtube.com/playlist?list=PLS0SUwlYe8cxj8FCPRoPHAehIiN9Vo6VZ",
+      "scope": ["operating-systems"],
+      "usage": "conceptual-summary",
+      "status": "reviewed"
+    }
+  ]
+}

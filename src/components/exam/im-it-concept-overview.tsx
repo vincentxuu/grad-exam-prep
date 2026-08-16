@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Badge } from '@/components/ui/badge'
+import { getImItCardsForLesson, getImItLessons } from '@/lib/im-it-learning'
 import type { ImportanceRating } from '@/types/content'
 import conceptMasterRaw from '../../../public/data/im-it-concept-master.json'
 import questionMetadataRaw from '../../../public/data/im-it-question-metadata.json'
@@ -13,6 +14,7 @@ for (const question of questionMetadataRaw.questions) {
 export function ImItConceptOverview() {
   const eligibleCount = questionMetadataRaw.answerReview.autoGradeEligible
   const disputedCount = questionMetadataRaw.answerReview.disputed
+  const lessons = getImItLessons()
 
   return (
     <div className="space-y-4">
@@ -38,6 +40,44 @@ export function ImItConceptOverview() {
           瀏覽 260 題計概題庫
         </Link>
       </div>
+
+      <section className="space-y-3 rounded-lg border p-4">
+        <div>
+          <div className="flex flex-wrap items-center gap-2">
+            <h3 className="text-balance font-semibold">第一批可學內容</h3>
+            <Badge variant="outline">
+              <span className="tabular-nums">5 / 58</span> 個子主題
+            </Badge>
+          </div>
+          <p className="mt-1 text-pretty text-sm text-muted-foreground">
+            先從考古題出現頻率高的網路、資料庫與作業系統開始。每堂包含短講義、解題範例、概念卡與已覆核考古題。
+          </p>
+        </div>
+
+        <ul className="grid gap-3 sm:grid-cols-2">
+          {lessons.map((lesson) => {
+            const cardCount = getImItCardsForLesson(lesson.id).length
+            return (
+              <li key={lesson.id} className="flex flex-col rounded-lg border bg-card p-4">
+                <h4 className="text-balance text-sm font-semibold">{lesson.title}</h4>
+                <p className="mt-2 line-clamp-3 flex-1 text-pretty text-xs leading-5 text-muted-foreground">
+                  {lesson.summary}
+                </p>
+                <p className="mt-3 text-xs tabular-nums text-muted-foreground">
+                  約 {lesson.estimatedMinutes} 分鐘 · {cardCount} 張概念卡 ·{' '}
+                  {lesson.pastPaperRefs.length} 題
+                </p>
+                <Link
+                  href={`/im/subjects/im-it/lessons/${lesson.id}`}
+                  className="mt-3 inline-flex min-h-9 items-center justify-center rounded-md border bg-background px-3 text-sm font-medium hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                >
+                  開始學習
+                </Link>
+              </li>
+            )
+          })}
+        </ul>
+      </section>
 
       <ul className="space-y-2">
         {[...conceptMasterRaw.topics]

@@ -1,0 +1,560 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "im-it",
+  "status": "reviewed",
+  "contentPolicy": "本站提供依教材與考古題整理的原創摘要；不是教材轉載，也不把技術覆核答案稱為官方答案。",
+  "counts": {
+    "lessons": 5,
+    "coveredSubtopics": 5,
+    "coveredQuestions": 51
+  },
+  "lessons": [
+    {
+      "id": "lesson-im-it-db-relational-model-01",
+      "subtopicId": "im-it-db-relational-model",
+      "title": "關聯模型：從資料表讀懂鍵與限制",
+      "summary": "以 relation、tuple、attribute 為起點，建立主鍵、候選鍵、外鍵與參照完整性的判讀方法，並連結歷屆題常考的資料庫優勢與表格結構。",
+      "estimatedMinutes": 28,
+      "learningObjectives": [
+        "分辨 relation schema、relation instance、tuple、attribute 與 domain",
+        "從欄位限制判斷 superkey、candidate key、primary key 與 composite key",
+        "檢查 entity integrity、referential integrity 與常見欄位限制",
+        "用關聯模型解釋資料庫相對於一般檔案系統的優勢"
+      ],
+      "sections": [
+        {
+          "title": "一張表不只是試算表",
+          "body": "關聯模型把資料表示成 relations。表頭所描述的欄位名稱、型別與限制是 schema；某一時刻實際存在的資料列集合是 instance。每一列是 tuple，每一欄是 attribute，而 attribute 可接受的合法值集合稱為 domain。考題若問資料庫的 logical structure，通常是在問 schema，而不是存放 metadata 的 data dictionary。",
+          "bullets": [
+            "schema 描述結構，instance 描述某一時刻的內容",
+            "tuple 對應資料列，attribute 對應欄位",
+            "domain 同時限制資料型別與可接受的值域",
+            "關聯在數學上是 tuple 的集合，因此列的先後順序沒有語意"
+          ]
+        },
+        {
+          "title": "用最小性判斷各種鍵",
+          "body": "能唯一識別每一列的欄位集合是 superkey；若移除其中任何欄位就失去唯一性，才是 candidate key。設計者從候選鍵選一組作為 primary key，其餘可稱 alternate keys。當唯一識別必須同時依賴兩個以上欄位時，就是 composite key。解題時先驗證唯一性，再檢查最小性，不要只看到欄位名稱含 ID 就直接判為主鍵。",
+          "bullets": [
+            "每個 candidate key 都是 superkey，但 superkey 不一定最小",
+            "primary key 是被選中的 candidate key，不等於所有 UNIQUE 欄位",
+            "複合鍵常出現在 Enrollment、OrderItem 等關聯表",
+            "primary key 不可為 NULL，且每列必須唯一"
+          ]
+        },
+        {
+          "title": "外鍵維持跨表一致",
+          "body": "foreign key 是一組欄位，其值參照另一個關聯中的候選鍵，最常見是參照 primary key。參照完整性要求外鍵值要嘛能在被參照鍵中找到，要嘛在欄位允許時為 NULL。刪除被參照資料時，資料庫可設定 RESTRICT、CASCADE 或 SET NULL；這些是不同政策，不應把 CASCADE 當成外鍵的固定行為。",
+          "bullets": [
+            "同一張表可以有多組 foreign keys",
+            "外鍵可以是 composite，也可以參照同一張表",
+            "未加 NOT NULL 時，foreign key 通常可以是 NULL",
+            "外鍵的核心是限制合法關係，不是自動提升查詢速度"
+          ]
+        },
+        {
+          "title": "為什麼不用一堆檔案就好",
+          "body": "DBMS 將資料定義、限制與存取集中管理，可減少重複資料與更新不一致，並提供查詢、權限、並行控制及復原機制。所謂 data independence，是應用程式不必知道每筆資料在磁碟上的實體配置；它不是說應用程式完全不受 schema 變更影響。考題常把正確術語換成相似但不精確的句子，應回到資料定義與程式分離、有效率存取、完整性及降低冗餘這幾個核心。",
+          "bullets": [
+            "集中 constraints 可在多個應用程式之間維持一致規則",
+            "查詢最佳化讓使用者描述要什麼，而非逐筆指定怎麼找",
+            "減少 redundancy 也會降低 insert、update、delete anomalies",
+            "data independence 分為 logical 與 physical 兩個層次"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "有 Student(sid PRIMARY KEY, email UNIQUE NOT NULL, name)、Course(cid PRIMARY KEY, title) 與 Enrollment(sid REFERENCES Student(sid), cid REFERENCES Course(cid), grade, PRIMARY KEY (sid, cid))。已知 sid 與 cid 皆不可為 NULL。請找出候選鍵、主鍵與外鍵。",
+          "steps": [
+            "Student 中 sid 與 email 都能單獨唯一識別 tuple，所以兩者都是 candidate keys；選 sid 作 primary key，email 保留 UNIQUE。",
+            "Course 的 candidate key 與 primary key 都是 cid。",
+            "Enrollment 必須合併 sid 與 cid 才能唯一識別選課紀錄，所以 (sid, cid) 是 composite primary key。",
+            "Enrollment.sid 參照 Student.sid；Enrollment.cid 參照 Course.cid，兩者都是 foreign keys。"
+          ],
+          "answer": "Student：PK sid、alternate key email；Course：PK cid；Enrollment：PK (sid,cid)，並有兩個分別參照 Student 與 Course 的外鍵。"
+        },
+        {
+          "prompt": "Enrollment.sid 已宣告為參照 Student.sid 的 foreign key，grade 未宣告 NOT NULL。現在出現 (sid='S9', cid='DB01')，但 Student 沒有 S9；另一列的 grade 為 NULL。哪一筆必然違反關聯限制？",
+          "steps": [
+            "先檢查外鍵：S9 必須存在於 Student.sid，否則破壞 referential integrity。",
+            "再檢查 grade：一般 attribute 是否允許 NULL 取決於 schema，題目沒有給 NOT NULL。",
+            "不要把所有 NULL 都視為錯誤；primary key 與明示 NOT NULL 的欄位才必然禁止 NULL。"
+          ],
+          "answer": "S9 那筆必然違反參照完整性；grade=NULL 是否違規要看 grade 的欄位限制。"
+        }
+      ],
+      "commonPitfalls": [
+        "把任何能唯一識別資料的欄位集合都叫 candidate key，忘了 candidate key 還要具備最小性",
+        "認為 foreign key 一律不可為 NULL；是否可為 NULL 由欄位的 NOT NULL 限制決定",
+        "把 schema 與 data dictionary 混為一談：前者是邏輯結構，後者是描述結構的 metadata 集合",
+        "看到主鍵就假定只能有單一欄位，忽略 composite primary key"
+      ],
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-jiege-database-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-106-1",
+        "q-pp-im-it-106-2",
+        "q-pp-im-it-106-4",
+        "q-pp-im-it-107-2",
+        "q-pp-im-it-107-3",
+        "q-pp-im-it-109-19",
+        "q-pp-im-it-110-23",
+        "q-pp-im-it-112-21",
+        "q-pp-im-it-114-18"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "lesson-im-it-db-transactions-01",
+      "subtopicId": "im-it-db-transactions",
+      "title": "交易與復原：用 ACID 判斷並行風險",
+      "summary": "從交易邊界與 ACID 出發，判讀 lost update、dirty read、不可重複讀等並行異常，再以 lock、serializability、log 與 checkpoint 建立完整的復原觀念。",
+      "estimatedMinutes": 32,
+      "learningObjectives": [
+        "用具體操作解釋 Atomicity、Consistency、Isolation、Durability",
+        "從 interleaved schedule 辨識 lost update、dirty read 與 non-repeatable read",
+        "說明 shared/exclusive lock、two-phase locking 與 deadlock 的關係",
+        "依 write-ahead logging、UNDO/REDO 與 checkpoint 判斷故障後處理"
+      ],
+      "sections": [
+        {
+          "title": "交易是不可拆散的工作單位",
+          "body": "transaction 是一組必須共同成功或共同失敗的資料庫操作，通常從 BEGIN 到 COMMIT 或 ROLLBACK。把銀行轉帳拆成扣款與入帳兩步時，只完成其中一步就會破壞資料；交易邊界的目的就是讓 DBMS 有能力把兩步視為一個整體。交易不是單一 SQL 的同義詞，一個交易可以包含多個讀寫敘述。",
+          "bullets": [
+            "COMMIT 表示交易結果成為正式狀態",
+            "ROLLBACK 放棄尚未提交的修改",
+            "交易邊界應對應一個完整的業務不變量",
+            "資料庫 constraint 與應用程式檢查共同守護 consistency"
+          ]
+        },
+        {
+          "title": "ACID 四個字母各管一件事",
+          "body": "Atomicity 保證全做或全不做；Consistency 要求交易把資料庫從一個合法狀態帶到另一個合法狀態；Isolation 讓並行交易的可見結果等價於某個循序順序；Durability 保證已提交結果在故障後仍可恢復。Availability 不屬於 ACID，而 integrity 也不是 I 的展開。考題若只給縮寫，先寫出四個全名再判斷選項。",
+          "bullets": [
+            "Atomicity 常靠 log 與 UNDO 支援",
+            "Isolation 的強弱由 isolation level 與 concurrency control 決定",
+            "Durability 不代表每次更新都立刻把資料頁同步到磁碟",
+            "Consistency 不是 DBMS 單方面理解所有商業規則"
+          ]
+        },
+        {
+          "title": "並行執行為何會出錯",
+          "body": "兩個交易交錯執行形成 schedule。若其結果等價於某個 serial schedule，就具有 serializability。沒有適當控制時，可能讀到未提交資料形成 dirty read、同一列前後讀值不同形成 non-repeatable read，或兩個交易以舊值覆蓋彼此形成 lost update。serializable 是最強的常見隔離目標，但較強隔離通常也帶來更多等待或重試。",
+          "bullets": [
+            "serial schedule 完成一個交易後才執行下一個",
+            "serializable schedule 可以交錯，但結果必須等價於某個 serial order",
+            "dirty read 的來源是讀到之後可能 rollback 的值",
+            "lost update 常出現在 read-modify-write 缺乏保護時"
+          ]
+        },
+        {
+          "title": "鎖與日誌分別處理並行和故障",
+          "body": "shared lock 允許多個讀者共存，exclusive lock 排除其他讀寫者。two-phase locking 要求交易先進入只取得鎖的 growing phase，再進入只釋放鎖的 shrinking phase，可產生 conflict-serializable schedules，但仍可能 deadlock。故障復原則常採 write-ahead logging：資料頁寫回前，描述修改的 log 必須先持久化。checkpoint 縮短復原要掃描的範圍，但不等於可以無條件刪除所有舊 log。",
+          "bullets": [
+            "deadlock 是形成等待環，starvation 是某交易長期得不到資源",
+            "UNDO 撤回未提交交易，REDO 重播已提交但尚未落盤的修改",
+            "WAL 的核心順序是 log before data page",
+            "checkpoint 是復原起點，不是新的 ACID 屬性"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "帳戶 A=1000、B=500。交易 T 要從 A 轉 200 到 B；系統在 A 扣款後、B 入帳前故障。ACID 如何處理？",
+          "steps": [
+            "把扣 A 與加 B 放在同一 transaction，兩步共同維持總額不變的 consistency rule。",
+            "若 T 尚未 COMMIT，復原程序利用 log UNDO A 的扣款，滿足 atomicity。",
+            "若 COMMIT record 已持久化但資料頁尚未全寫回，復原程序 REDO 已提交修改，滿足 durability。",
+            "其他交易不應在 T 提交前看到只扣款未入帳的中間狀態，這是 isolation 的工作。"
+          ],
+          "answer": "未提交就完整 UNDO；已提交但資料頁未落盤就 REDO。任何情況都不應留下只扣 A、未加 B 的正式狀態。"
+        },
+        {
+          "prompt": "X 初值 100。T1 與 T2 都先讀 X；T1 寫入 110，T2 依自己先前讀到的 100 寫入 80。發生什麼問題？如何避免？",
+          "steps": [
+            "T1、T2 都以舊值 100 計算，T2 最後寫入會覆蓋 T1 的 +10。",
+            "最後 X=80，而不是依兩筆更新某一序列得到的 90，這是 lost update。",
+            "可在 read-modify-write 前取得 exclusive lock，讓另一交易等待。",
+            "也可使用具衝突檢測的 optimistic concurrency control，在提交時發現版本已改變並重試。"
+          ],
+          "answer": "這是 lost update；用適當的 exclusive lock、serializable isolation 或版本檢查重試，可確保結果等價於 T1/T2 的某個循序順序。"
+        }
+      ],
+      "commonPitfalls": [
+        "把 ACID 的 A 誤記為 Availability，或把 I 誤記為 Integrity",
+        "認為 isolation 就是交易完全不能並行；正確目標是並行結果具備指定的隔離保證",
+        "以為 two-phase locking 不會 deadlock；它可保證 conflict serializability，但仍可能形成等待環",
+        "把 checkpoint 當成完整備份，或認為 checkpoint 前的所有 log 都可立即刪除"
+      ],
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-jiege-database-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-107-7",
+        "q-pp-im-it-107-24",
+        "q-pp-im-it-110-25",
+        "q-pp-im-it-111-13",
+        "q-pp-im-it-111-15",
+        "q-pp-im-it-113-18",
+        "q-pp-im-it-114-17",
+        "q-pp-im-it-115-17",
+        "q-pp-im-it-115-19",
+        "q-pp-im-it-115-20"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "lesson-im-it-network-application-protocols",
+      "subtopicId": "im-it-network-application-protocols",
+      "title": "應用層協定：從網址、設定到郵件與代理",
+      "summary": "以『使用者要完成什麼任務』整理 DNS、DHCP、HTTP、Cookie、電子郵件、LDAP 與 proxy/CDN。重點是追蹤一次請求前後需要哪些服務，並分清名稱解析、參數配置、內容傳輸與狀態保存。",
+      "estimatedMinutes": 30,
+      "learningObjectives": [
+        "依任務辨識 DNS、DHCP、HTTP、SMTP、IMAP、POP3 與 LDAP。",
+        "追蹤瀏覽網站前的名稱解析與 HTTP 狀態管理流程。",
+        "比較 forward proxy、reverse proxy 與 CDN 的位置和服務對象。",
+        "用 client-server 角色判斷請求與回應的方向。"
+      ],
+      "sections": [
+        {
+          "title": "先問協定解決哪個問題",
+          "body": "應用層協定常一起出現在同一段網路流程，但各自負責不同任務。DNS 把名稱轉成位址，DHCP 配置主機連線所需參數，HTTP 傳送 Web 資源；若先把任務分開，選項再換句話說也不容易混淆。",
+          "bullets": [
+            "DNS：階層式名稱解析，將網域名稱查成 IP 等紀錄。",
+            "DHCP：讓新加入網路的主機取得 IP、subnet mask、default gateway 與 DNS server 等設定。",
+            "HTTP：Web client 與 server 交換 request/response；HTTPS 是 HTTP 透過 TLS 保護傳輸。",
+            "LDAP：查詢與管理階層式 directory，例如組織、人員與帳號資料。"
+          ]
+        },
+        {
+          "title": "HTTP 無狀態，Cookie 補上連續性",
+          "body": "HTTP 的每次 request 本身可獨立處理，伺服器不會只靠協定自動記得上一次互動。Cookie 可由伺服器透過 Set-Cookie 設定，也可在安全與作用域限制允許時由瀏覽器端程式管理；之後由瀏覽器依 Domain、Path 等規則附加到請求，常用來攜帶 session identifier 或偏好設定。",
+          "bullets": [
+            "Cookie 儲存在使用者端瀏覽器管理的空間，不等於瀏覽器 cache。",
+            "Cookie 常保存識別碼；真正的購物車或登入狀態可以留在伺服器 session。",
+            "Domain、Path、Expires/Max-Age、Secure、HttpOnly 與 SameSite 會限制 Cookie 的使用方式。",
+            "Cookie 能維持狀態，也帶來追蹤與隱私風險；『能使用』不代表『可無限制蒐集』。"
+          ]
+        },
+        {
+          "title": "郵件：送信與收信分工",
+          "body": "電子郵件不是靠單一協定完成。SMTP 負責提交與轉送郵件；IMAP、POP3 讓使用者讀取信件。考題常用『同步多裝置』或『下載到本機』提示 IMAP 與 POP3 的差異。",
+          "bullets": [
+            "SMTP：client 提交郵件給 mail server，mail servers 之間也用它轉送。",
+            "IMAP：以伺服器信箱為中心同步資料夾、已讀狀態與郵件，適合多裝置。",
+            "POP3：偏向把郵件下載到 client；是否保留伺服器副本可由設定決定。",
+            "Webmail 畫面通常以 HTTP/HTTPS 操作，但後端郵件遞送仍涉及郵件協定。"
+          ]
+        },
+        {
+          "title": "代理與 CDN：誰替誰取資料",
+          "body": "proxy 的核心是代替一方發出或接收請求。Forward proxy 代表 client 存取外部資源；reverse proxy 站在 server 前方接收外部請求。CDN 通常在靠近使用者的 edge 節點快取與回應內容，可視為大規模的反向代理與內容分送系統。",
+          "bullets": [
+            "Forward proxy 可做存取控制、隱藏 client 來源或集中快取，服務對象偏 client。",
+            "Reverse proxy 可做 TLS termination、load balancing、快取與保護 origin，服務對象偏 server。",
+            "CDN 命中快取時由 edge 回應；未命中時再向 origin 取回內容。",
+            "Proxy 與 firewall 都可能控管流量，但 proxy 代送應用請求，firewall 主要依規則允許或阻擋流量。"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "剛連上校園 Wi-Fi 的筆電尚無網路設定。使用者接著輸入 www.example.org。從取得設定到瀏覽器能發出 Web request，依序需要哪些服務？",
+          "steps": [
+            "先由 DHCP 取得 IP、subnet、gateway 與 DNS server 等參數。",
+            "瀏覽器或作業系統向 DNS 查詢 www.example.org 對應的 IP。",
+            "取得位址後建立傳輸連線，若為 HTTPS 還會進行 TLS 協商。",
+            "最後以 HTTP request 向 Web server 請求資源。"
+          ],
+          "answer": "核心順序是 DHCP 配置 → DNS 解析 → 傳輸/TLS 連線 → HTTP request/response。"
+        },
+        {
+          "prompt": "公司希望員工所有外部 Web request 先經內部伺服器做政策檢查；網站則希望在全球 edge 快取靜態圖片。兩種需求各應採何種角色？",
+          "steps": [
+            "員工端需要一個代表 clients 對外發出請求的節點。",
+            "這是 forward proxy，可集中做政策與存取控制。",
+            "網站端需要站在 origin 前方、靠近使用者回應內容的節點。",
+            "這是 CDN edge／reverse proxy 角色。"
+          ],
+          "answer": "員工外連使用 forward proxy；網站全球快取使用 CDN edge，角色上屬 reverse proxy。"
+        },
+        {
+          "prompt": "使用者從筆電寄信給同學，之後又希望在手機與筆電同步讀信狀態。寄送、郵件伺服器轉送與多裝置讀信各應使用什麼協定？",
+          "steps": [
+            "寄件軟體把郵件提交給寄件伺服器，使用 SMTP。",
+            "寄件伺服器查詢收件網域並把郵件 relay 給對方郵件伺服器，仍使用 SMTP。",
+            "使用者希望多裝置保留並同步伺服器上的信件與狀態，使用 IMAP。",
+            "POP3 偏向下載郵件，雖可保留副本，但不是多裝置狀態同步的首選。"
+          ],
+          "answer": "提交與 server-to-server relay 使用 SMTP；多裝置同步讀信使用 IMAP。"
+        }
+      ],
+      "commonPitfalls": [
+        "把 DNS 說成儲存網頁內容的 server；DNS 回答的是名稱相關紀錄，不是 HTML。",
+        "認為 Cookie 必定保存完整登入密碼；常見做法是保存不可直接等同密碼的 session identifier。",
+        "把 SMTP 當收信協定；使用者收信通常是 IMAP 或 POP3，SMTP 負責送出與轉送。",
+        "看到 proxy 就一律理解為隱藏使用者 IP；reverse proxy 主要隱藏並保護 origin。"
+      ],
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-network-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-108-2",
+        "q-pp-im-it-108-13",
+        "q-pp-im-it-109-9",
+        "q-pp-im-it-109-10",
+        "q-pp-im-it-110-18",
+        "q-pp-im-it-110-19",
+        "q-pp-im-it-111-2",
+        "q-pp-im-it-111-4",
+        "q-pp-im-it-113-11",
+        "q-pp-im-it-113-12",
+        "q-pp-im-it-113-13",
+        "q-pp-im-it-114-23"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "lesson-im-it-network-models-encapsulation",
+      "subtopicId": "im-it-network-models-encapsulation",
+      "title": "網路模型與封裝：從應用資料一路追到訊框",
+      "summary": "用 OSI 與 TCP/IP 兩套分層視角整理協定、設備與資料單位，並以封裝流程串起應用資料、segment、packet 與 frame。完成後能從題目中的關鍵詞定位層級，而不是只背七層口訣。",
+      "estimatedMinutes": 28,
+      "learningObjectives": [
+        "依功能區分 OSI 七層與 TCP/IP 模型的對應關係。",
+        "說明資料從送端到收端時的封裝與解封裝流程。",
+        "根據協定、位址或設備判斷其主要運作層級。",
+        "辨識 IPv4、IPv6、Ethernet 與 client-server 題型中的常見混淆。"
+      ],
+      "sections": [
+        {
+          "title": "分層不是背名稱，而是切責任",
+          "body": "網路模型把端到端通訊拆成彼此可替換的責任。上層關心應用語意，中間層處理端點傳輸與跨網路遞送，下層負責在單一鏈路上送出位元。答題時先問『這個敘述要解決哪一種責任』，通常比直接回想層號更穩定。",
+          "bullets": [
+            "OSI 第 7 至 5 層分別為應用、表達、會議；實務 TCP/IP 模型常把它們合併為應用層。",
+            "OSI 第 4 層傳輸層處理端點到端點的傳輸；TCP、UDP 與 port 屬於此層。",
+            "OSI 第 3 層網路層處理邏輯位址與跨網路路由；IP 與 router/gateway 題目常落在這裡。",
+            "OSI 第 2、1 層分別處理鏈路上的 frame/MAC 與實際訊號或位元傳送。"
+          ]
+        },
+        {
+          "title": "四種資料單位與封裝方向",
+          "body": "送端由上往下封裝：每層把上層內容視為 payload，再加入本層控制資訊。收端則由下往上檢查並移除標頭。考題若同時出現 port、IP、MAC，可沿封裝順序判斷它們分屬傳輸層、網路層與資料鏈結層。",
+          "bullets": [
+            "應用層產生 message/data。",
+            "傳輸層加入 TCP 或 UDP 標頭，形成 segment 或 datagram，port 用來識別端點上的應用。",
+            "網路層加入來源與目的 IP，形成 packet；IP 位址支援跨網路遞送。",
+            "資料鏈結層加入鏈路標頭與尾端檢查資訊，形成 frame；MAC 位址服務同一鏈路的傳送。"
+          ]
+        },
+        {
+          "title": "位址、設備與作用範圍",
+          "body": "不同識別資訊的有效範圍不同。MAC 通常服務當前鏈路，IP 用於端到端路由，port 則把抵達主機的資料交給正確程序。設備名稱也應從主要功能判斷，不要假設一台設備永遠只做一層。",
+          "bullets": [
+            "switch 主要依 MAC frame 在 LAN 內轉送；router 主要依 IP packet 連接不同網路。",
+            "gateway 是較廣義的跨網路或跨協定入口，題目若強調連接異質網路，通常不是單純 repeater。",
+            "IPv4 位址為 32 bits；IPv6 位址為 128 bits，因此理論位址組合為 2^128。",
+            "Ethernet 是 LAN 的主流技術家族；Bluetooth、RFID、NFC 則各自適合不同距離與識別情境。"
+          ]
+        },
+        {
+          "title": "用流程解模型題",
+          "body": "看到網路題先圈出協定、位址、設備與資料單位，再判斷題目問的是『哪一層』、『哪個範圍』或『哪種架構』。client-server 描述的是角色互動，不等同某一個 OSI 層；HTTP、郵件、網路列印與 RPC 都能採 client-server。",
+          "bullets": [
+            "SMTP 是應用層；TCP 是傳輸層；IP 是網路層。",
+            "『所有封包都走同一路徑』只適合有既定虛擬電路的描述，不是一般 datagram 的保證。",
+            "現代 switched Ethernet 與早期 shared Ethernet 的碰撞行為不同，作答要留意題目的歷史抽象。",
+            "遇到『以上皆正確』，必須逐一檢查層級與範圍，不能只驗證最熟的一項。"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "瀏覽器送出 HTTPS 請求時，題目依序提到目的 port、目的 IP、下一跳 MAC。請判斷三者主要層級與用途。",
+          "steps": [
+            "目的 port 用來把資料交給伺服器上的 HTTPS 服務，屬傳輸層識別。",
+            "目的 IP 用來在多個網路之間尋找目的主機，屬網路層邏輯位址。",
+            "下一跳 MAC 只負責目前鏈路上的 frame 交付，屬資料鏈結層；每經 router 可能改變。"
+          ],
+          "answer": "port → 傳輸層與程序；IP → 網路層與主機路由；MAC → 資料鏈結層與當前鏈路的下一跳。"
+        },
+        {
+          "prompt": "某題聲稱『IPv6 使用 128-bit 位址，所以最多有 128^2 個位址』。如何快速判斷？",
+          "steps": [
+            "一個 bit 只有 0、1 兩種狀態。",
+            "128 個彼此獨立的 bit 共有 2×2×…×2 種組合。",
+            "連乘 128 次等於 2^128，而不是 128^2。"
+          ],
+          "answer": "敘述錯誤；IPv6 理論位址空間是 2^128。"
+        },
+        {
+          "prompt": "一個 IP packet 經過 router 從校園 LAN 前往外部網站。哪些識別資訊通常維持端到端，哪些會在下一條鏈路重建？",
+          "steps": [
+            "目的 port 用來識別終點應用，正常轉送時維持不變。",
+            "來源與目的 IP 用於端到端路由；若沒有 NAT，位址通常維持不變，但 TTL 會逐跳遞減。",
+            "router 移除收到的 data-link frame，再為下一條鏈路建立新的 frame。",
+            "因此來源與目的 MAC 會改成下一條鏈路的送端介面與下一跳。"
+          ],
+          "answer": "transport ports 與端點 IP 通常維持；IP 的 TTL 等逐跳欄位會更新；data-link frame 與 MAC 位址每一跳重建。"
+        }
+      ],
+      "commonPitfalls": [
+        "把 TCP/IP 當成只有 TCP 與 IP 兩個協定；它其實是整套 Internet protocol suite 的慣用名稱。",
+        "把 MAC、IP、port 都稱為『裝置位址』，忽略三者識別範圍不同。",
+        "認為 IP packet 經每一跳都完全不變；資料鏈結 frame 會重建，部分 IP 欄位也可能更新。",
+        "把 client-server 架構硬套到單一 OSI 層；它描述的是應用角色關係。"
+      ],
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-network-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-106-18",
+        "q-pp-im-it-106-20",
+        "q-pp-im-it-107-8",
+        "q-pp-im-it-108-3",
+        "q-pp-im-it-108-4",
+        "q-pp-im-it-108-20",
+        "q-pp-im-it-109-11",
+        "q-pp-im-it-109-12",
+        "q-pp-im-it-110-7",
+        "q-pp-im-it-111-1"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "lesson-im-it-os-processes-threads",
+      "subtopicId": "im-it-os-processes-threads",
+      "title": "行程、執行緒與作業系統如何管理執行",
+      "summary": "從作業系統的資源管理角色出發，辨認 process 與 thread 的資源邊界，理解 user mode、kernel mode、IPC 與 context switch，並能排除考題中常見的混淆敘述。",
+      "estimatedMinutes": 32,
+      "learningObjectives": [
+        "說明作業系統在行程生命週期與資源管理中的責任。",
+        "比較 process 與 thread 的位址空間、執行狀態與溝通成本。",
+        "解釋 user mode、kernel mode 與 system call 的控制轉移。",
+        "依 context switch 的保存與恢復流程判斷系統成本。"
+      ],
+      "sections": [
+        {
+          "title": "作業系統是資源管理者",
+          "body": "應用程式不直接任意控制 CPU、記憶體與裝置。作業系統建立抽象介面，追蹤資源擁有者，並在多個工作之間執行保護與分配。考題若問作業系統的主要功能，通常要從資源、行程、記憶體、儲存、I/O 與安全管理來判斷。",
+          "bullets": [
+            "行程管理包含建立、終止、暫停、恢復與同步行程。",
+            "CPU scheduling 決定下一個可執行工作，但排程演算法細節屬另一子主題。",
+            "deadlock handling 與 IPC 也是作業系統協調多個行程的重要工作。",
+            "Android 使用 Linux kernel；Linux 是 Unix-like，但不能把整個 Unix 家族一概視為開源。"
+          ]
+        },
+        {
+          "title": "Process：正在執行的程式實例",
+          "body": "program 是靜態的指令與資料，process 則是程式的一次執行實例。作業系統為 process 維護 PID、位址空間與已開啟資源，並為其中每個 thread 維護 program counter、register state 與 stack。不同 process 原則上受記憶體保護而隔離，不會因為由同一 parent 建立就自動共享位址空間。",
+          "bullets": [
+            "同一個 program 可以同時產生多個彼此獨立的 processes。",
+            "每個 process 有自己的執行狀態與受保護的 virtual address space。",
+            "父子 processes 若要交換資料，需使用 pipe、message passing、socket 或明確設定的 shared memory。",
+            "multiprocessing 可利用多核心平行執行，提高 throughput，但也增加協調成本。"
+          ]
+        },
+        {
+          "title": "Thread：共享資源的執行路徑",
+          "body": "thread 是 process 內的一條執行路徑。一個 process 可有多個 threads，共享 code、heap 與多數 process 資源；每個 thread 仍需保有自己的 program counter、register state 與 stack，才能獨立前進。共享位址空間讓 threads 溝通較便宜，也同時帶來 race condition 的風險。",
+          "bullets": [
+            "thread 通常比 process 更 lightweight，建立與切換成本較低。",
+            "同一 process 的 threads 可直接讀寫共享資料，不代表讀寫天然安全。",
+            "每個 thread 的 stack 分離，否則函式呼叫與區域狀態會互相破壞。",
+            "process isolation 較強；thread sharing 較快，兩者是隔離與成本的取捨。"
+          ]
+        },
+        {
+          "title": "User mode、Kernel mode 與 System Call",
+          "body": "一般應用程式在 user mode 執行，不能直接存取 kernel 保留的位址或執行特權指令。需要檔案、網路或建立行程等服務時，程式透過 system call 進入 kernel，由核心驗證參數並執行受保護操作，完成後再回到 user mode。mode switch 是權限層級改變，不一定等同 scheduler 切換到另一個 process/thread；本文的 context switch 專指這種 execution entity 的切換。",
+          "bullets": [
+            "不同 processes 通常各有自己的 user virtual address space，而不是全部應用共用一個。",
+            "kernel code 在 kernel mode 執行，可管理硬體與受保護資源。",
+            "system call、interrupt 或 exception 都可能使 CPU 進入核心處理流程。",
+            "只有當執行主體也更換時，才需要完整的 process/thread context switch。"
+          ]
+        },
+        {
+          "title": "Context Switch 保存了什麼",
+          "body": "CPU 從一個 thread 或 process 改執行另一個時，作業系統必須保存目前執行狀態，並恢復下一個工作的狀態。最低限度包含 program counter、stack pointer 與必要 registers；process switch 還可能更換 address-space mapping。這段時間沒有直接推進使用者工作，因此是多工的必要成本。",
+          "bullets": [
+            "context switch 的核心定義是保存與恢復 execution state。",
+            "在 CPU cores 之間移動工作可能伴隨 switch，但不是定義本身。",
+            "單純從 user mode 進入 kernel mode，若仍執行同一工作，不必然是 context switch。",
+            "過度切換會增加 scheduler、cache 與 TLB 等額外成本。"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "某瀏覽器的兩個分頁由不同 processes 執行。因為它們有同一 parent，所以是否自然共享 memory、stack 與 program counter？",
+          "steps": [
+            "先辨認執行單位是兩個 processes，而非同一 process 的 threads。",
+            "process 有各自受保護的位址空間與執行狀態。",
+            "parent-child 關係不會取消隔離；共享資料必須使用 IPC 或明確 shared memory。"
+          ],
+          "answer": "不會。兩個 processes 各有自己的受保護位址空間；各 process 內的 threads 分別持有 stack、program counter 與 registers，只有透過明確 IPC 機制才交換資料。"
+        },
+        {
+          "prompt": "同一 process 中兩個 threads 同時修改購物車總額。共享 heap 是否代表不需要同步？",
+          "steps": [
+            "threads 確實共享 process 的 heap，因此都能看到同一筆資料。",
+            "讀取、計算、寫回可能由多個機器指令組成。",
+            "兩條執行路徑交錯時可能遺失更新，形成 race condition。"
+          ],
+          "answer": "不是。共享讓溝通便宜，但仍需 mutex、atomic operation 或其他同步方法保護複合更新。"
+        },
+        {
+          "prompt": "程式呼叫 read() 讀檔，CPU 進入 kernel mode，完成後回到同一 thread。這一定是 process/thread context switch 嗎？",
+          "steps": [
+            "read() 是 system call，必須進入 kernel mode。",
+            "mode switch 描述 privilege level 改變。",
+            "若核心沒有改排程到另一個 thread，執行主體仍相同，沒有完整保存／恢復另一個 execution context。"
+          ],
+          "answer": "不一定。這一定發生 mode switch，但只有 scheduler 實際換到另一個 thread/process 時才是 process/thread context switch。"
+        },
+        {
+          "prompt": "排程器準備把 CPU 從 P1 切換到 P2。請列出最關鍵的動作。",
+          "steps": [
+            "保存 P1 的 program counter、stack pointer 與 registers。",
+            "更新 P1 狀態並選定 P2。",
+            "必要時切換 address-space mapping。",
+            "恢復 P2 的 registers 與 program counter，讓 P2 從上次位置繼續。"
+          ],
+          "answer": "context switch 的核心是保存 P1 execution state、恢復 P2 execution state；process switch 可能再加上位址空間切換。"
+        }
+      ],
+      "commonPitfalls": [
+        "把 program 與 process 當成同義詞；前者是靜態內容，後者是執行實例。",
+        "誤以為同一 parent 建立的 processes 自動共享 stack、registers 與全部 memory。",
+        "只記得 threads 共享 memory，卻忘記每條 thread 有獨立 stack、program counter 與 registers。",
+        "把 lightweight 說成 process 的特性；一般而言 thread 才較 lightweight。",
+        "把 mode switch、system call 與 context switch 全部混為一談。",
+        "看到共享位址空間便認為不需同步，忽略 race condition。"
+      ],
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-os-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-106-22",
+        "q-pp-im-it-108-5",
+        "q-pp-im-it-108-6",
+        "q-pp-im-it-111-16",
+        "q-pp-im-it-112-6",
+        "q-pp-im-it-112-8",
+        "q-pp-im-it-112-10",
+        "q-pp-im-it-113-2",
+        "q-pp-im-it-113-3",
+        "q-pp-im-it-115-9"
+      ],
+      "reviewStatus": "reviewed"
+    }
+  ]
+}
