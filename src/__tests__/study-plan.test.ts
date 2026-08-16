@@ -43,6 +43,7 @@ function makeState(completedIds: string[]): StorageState {
     srsState: {},
     paperPractice: {},
     savedWords: [],
+    dailyLearning: {},
     preferences: { examId: 'im' },
   }
 }

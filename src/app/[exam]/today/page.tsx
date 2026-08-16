@@ -11,8 +11,12 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { type ReactNode, Suspense, use, useMemo } from 'react'
+import { type ReactNode, Suspense, use, useMemo, useState } from 'react'
 import { PageLoading } from '@/components/page-loading'
+import {
+  DailyReflectionForm,
+  TaskEvidenceForm,
+} from '@/components/study-plan/learning-evidence-forms'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { useQueryState } from '@/hooks/use-query-state'
@@ -20,9 +24,13 @@ import { EXAM_LABELS, getStudyPlan, getStudyPlans, getSubjectsByExam } from '@/l
 import { buildPhasesWithMeta, getExamDate, getPlanStartDate } from '@/lib/study-plan'
 import {
   countScheduledDueCards,
+  dailyLearningKey,
+  findLatestTaskEvidence,
   getCurrentPhase,
   getPlanMonth,
   getTodayFocusTasks,
+  isTaskEvidencePassing,
+  localDateKey,
   recommendedNewCardLimit,
 } from '@/lib/today-learning'
 import { useStudyPlanStore } from '@/store/study-plan'
@@ -55,11 +63,12 @@ function TodayContent({ params }: Props) {
   const examId = exam as ExamId
   const plans = getStudyPlans(examId)
   const defaultPlanId = plans[0]?.id ?? ''
-  const { state, completeTask, selectPlan } = useStudyPlanStore()
+  const { state, recordTaskEvidence, saveDailyReflection, selectPlan } = useStudyPlanStore()
   const preferredPlanId = state.preferences.selectedPlanIds?.[examId] ?? defaultPlanId
   const [planId, setPlanId] = useQueryState('plan', preferredPlanId)
   const plan = getStudyPlan(examId, planId)
   if (!plan) notFound()
+  const [openTaskId, setOpenTaskId] = useState<string | null>(null)
 
   const examDate = getExamDate()
   const fallbackStartDate = getPlanStartDate(examDate, plan.totalMonths)
@@ -73,9 +82,14 @@ function TodayContent({ params }: Props) {
   const phases = buildPhasesWithMeta(plan, state, planStartDate)
   const planMonth = getPlanMonth(planStartDate, today, plan.totalMonths)
   const currentPhase = getCurrentPhase(phases, planMonth)
-  const focusTasks = getTodayFocusTasks(currentPhase)
   const dueCount = countScheduledDueCards(state.srsState, today.getTime())
   const newCardLimit = recommendedNewCardLimit(dueCount)
+  const date = localDateKey(today)
+  const recordKey = dailyLearningKey(examId, plan.id, today)
+  const todayRecord = state.dailyLearning[recordKey]
+  const recordedToday = new Set(Object.keys(todayRecord?.taskEvidence ?? {}))
+  const focusTasks = getTodayFocusTasks(currentPhase, 2, recordedToday)
+  const identity = { date, examId, planId: plan.id }
   const subjectLabels = useMemo(
     () =>
       Object.fromEntries(getSubjectsByExam(examId).map((subject) => [subject.id, subject.name])),
@@ -143,34 +157,79 @@ function TodayContent({ params }: Props) {
           <LearningStep meta={STEP_META[1]}>
             {focusTasks.length > 0 ? (
               <div className="space-y-3">
-                {focusTasks.map((task) => (
-                  <label
-                    key={task.id}
-                    className="flex cursor-pointer gap-3 rounded-lg border bg-background p-3 transition-colors hover:bg-muted/40"
-                  >
-                    <input
-                      type="checkbox"
-                      checked={task.completed}
-                      onChange={(event) => completeTask(task.id, event.target.checked)}
-                      className="mt-0.5 h-4 w-4 shrink-0 rounded border-muted-foreground accent-primary"
-                    />
-                    <span className="min-w-0 space-y-1">
-                      <span className="block text-sm font-medium leading-5">
-                        {task.description}
-                      </span>
-                      {task.completionCriteria ? (
-                        <span className="block text-xs leading-5 text-muted-foreground">
-                          完成證據：{task.completionCriteria}
-                        </span>
+                {focusTasks.map((task) => {
+                  const latestEvidence = findLatestTaskEvidence(state.dailyLearning, task.id)
+                  const isOpen = openTaskId === task.id
+                  return (
+                    <div key={task.id} className="rounded-lg border bg-background p-3">
+                      <div className="flex items-start justify-between gap-3">
+                        <div className="min-w-0 space-y-1">
+                          <p className="text-sm font-medium leading-5">{task.description}</p>
+                          {task.completionCriteria ? (
+                            <p className="text-xs leading-5 text-muted-foreground">
+                              通過標準：{task.completionCriteria}
+                            </p>
+                          ) : null}
+                          <div className="flex flex-wrap items-center gap-2 pt-1">
+                            {task.subjectTag ? (
+                              <span className="text-xs text-muted-foreground">
+                                {subjectLabels[task.subjectTag] ?? task.subjectTag}
+                              </span>
+                            ) : null}
+                            {latestEvidence?.needsRetest ? (
+                              <Badge
+                                variant="outline"
+                                className="border-amber-500/50 text-amber-700 dark:text-amber-300"
+                              >
+                                待重測 · {latestEvidence.accuracy}% · {latestEvidence.retestAt}
+                              </Badge>
+                            ) : null}
+                            {latestEvidence && isTaskEvidencePassing(latestEvidence) ? (
+                              <Badge
+                                variant="outline"
+                                className="border-emerald-500/50 text-emerald-700 dark:text-emerald-300"
+                              >
+                                已通過 · {latestEvidence.accuracy}%
+                              </Badge>
+                            ) : null}
+                          </div>
+                        </div>
+                        <Button
+                          type="button"
+                          size="sm"
+                          variant={latestEvidence ? 'outline' : 'default'}
+                          onClick={() => setOpenTaskId(isOpen ? null : task.id)}
+                        >
+                          {isOpen ? '收起' : latestEvidence ? '更新成果' : '記錄成果'}
+                        </Button>
+                      </div>
+                      {isOpen ? (
+                        <TaskEvidenceForm
+                          taskId={task.id}
+                          existing={latestEvidence}
+                          today={today}
+                          onCancel={() => setOpenTaskId(null)}
+                          onSave={(evidence) => {
+                            const completeEvidence = {
+                              ...evidence,
+                              taskDescription: task.description,
+                              ...(task.completionCriteria
+                                ? { completionCriteria: task.completionCriteria }
+                                : {}),
+                            }
+                            const saved = recordTaskEvidence(
+                              identity,
+                              completeEvidence,
+                              isTaskEvidencePassing(completeEvidence)
+                            )
+                            if (saved) setOpenTaskId(null)
+                            return saved
+                          }}
+                        />
                       ) : null}
-                      {task.subjectTag ? (
-                        <span className="block text-xs text-muted-foreground">
-                          {subjectLabels[task.subjectTag] ?? task.subjectTag}
-                        </span>
-                      ) : null}
-                    </span>
-                  </label>
-                ))}
+                    </div>
+                  )
+                })}
               </div>
             ) : (
               <div className="rounded-lg border border-dashed p-4 text-sm text-muted-foreground">
@@ -211,11 +270,10 @@ function TodayContent({ params }: Props) {
           </LearningStep>
 
           <LearningStep meta={STEP_META[4]}>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>今天真正能不看資料說出的內容是什麼？</li>
-              <li>最值得留下的錯誤是什麼？</li>
-              <li>寫下一個明天開始時要先回答的問題。</li>
-            </ul>
+            <DailyReflectionForm
+              existing={todayRecord}
+              onSave={(values) => saveDailyReflection(identity, values)}
+            />
           </LearningStep>
         </ol>
 

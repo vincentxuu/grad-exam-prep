@@ -1,5 +1,41 @@
 import type { PhaseWithMeta, TaskWithMeta } from '@/lib/study-plan'
-import type { CardSRSState } from '@/types/storage'
+import type { ExamId } from '@/types/content'
+import type { CardSRSState, DailyLearningRecord, TaskLearningEvidence } from '@/types/storage'
+
+const EMPTY_TASK_IDS: ReadonlySet<string> = new Set()
+
+export function localDateKey(date: Date): string {
+  const year = date.getFullYear()
+  const month = String(date.getMonth() + 1).padStart(2, '0')
+  const day = String(date.getDate()).padStart(2, '0')
+  return `${year}-${month}-${day}`
+}
+
+export function dailyLearningKey(examId: ExamId, planId: string, date: Date): string {
+  return `${examId}:${planId}:${localDateKey(date)}`
+}
+
+export function isTaskEvidencePassing(evidence: TaskLearningEvidence): boolean {
+  return evidence.accuracy >= 80 && evidence.evidence.trim().length > 0 && !evidence.needsRetest
+}
+
+export function findLatestTaskEvidence(
+  records: Record<string, DailyLearningRecord>,
+  taskId: string
+): TaskLearningEvidence | undefined {
+  let latest: TaskLearningEvidence | undefined
+  for (const record of Object.values(records)) {
+    const evidence = record.taskEvidence[taskId]
+    if (evidence && (!latest || evidence.updatedAt > latest.updatedAt)) latest = evidence
+  }
+  return latest
+}
+
+export function defaultRetestDate(date: Date): string {
+  const result = new Date(date)
+  result.setDate(result.getDate() + 3)
+  return localDateKey(result)
+}
 
 export function getPlanMonth(planStartDate: Date, now: Date, totalMonths: number): number {
   const monthOffset =
@@ -20,9 +56,13 @@ export function getCurrentPhase(
   )
 }
 
-export function getTodayFocusTasks(phase: PhaseWithMeta | undefined, limit = 2): TaskWithMeta[] {
+export function getTodayFocusTasks(
+  phase: PhaseWithMeta | undefined,
+  limit = 2,
+  recordedToday: ReadonlySet<string> = EMPTY_TASK_IDS
+): TaskWithMeta[] {
   if (!phase) return []
-  return phase.tasks.filter((task) => !task.completed).slice(0, limit)
+  return phase.tasks.filter((task) => !task.completed || recordedToday.has(task.id)).slice(0, limit)
 }
 
 /**

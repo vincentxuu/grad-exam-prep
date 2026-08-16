@@ -1,13 +1,23 @@
 import { buildPhasesWithMeta } from '@/lib/study-plan'
 import {
   countScheduledDueCards,
+  dailyLearningKey,
+  defaultRetestDate,
+  findLatestTaskEvidence,
   getCurrentPhase,
   getPlanMonth,
   getTodayFocusTasks,
+  isTaskEvidencePassing,
+  localDateKey,
   recommendedNewCardLimit,
 } from '@/lib/today-learning'
 import type { StudyPlan } from '@/types/content'
-import type { CardSRSState, StorageState } from '@/types/storage'
+import type {
+  CardSRSState,
+  DailyLearningRecord,
+  StorageState,
+  TaskLearningEvidence,
+} from '@/types/storage'
 
 const plan: StudyPlan = {
   id: 'today-plan',
@@ -46,6 +56,7 @@ function state(completedTasks: Record<string, boolean> = {}): StorageState {
     srsState: {},
     paperPractice: {},
     savedWords: [],
+    dailyLearning: {},
     preferences: { examId: 'im' },
   }
 }
@@ -59,6 +70,30 @@ function srs(cardId: string, nextReview: number): CardSRSState {
     nextReview,
     lastReview: 1,
   }
+}
+
+function evidence(
+  taskId: string,
+  updatedAt: number,
+  overrides: Partial<TaskLearningEvidence> = {}
+): TaskLearningEvidence {
+  return {
+    taskId,
+    taskDescription: 'Task snapshot',
+    accuracy: 80,
+    evidence: 'Closed-book output',
+    needsRetest: false,
+    updatedAt,
+    ...overrides,
+  }
+}
+
+function daily(
+  date: string,
+  taskEvidence: Record<string, TaskLearningEvidence>,
+  updatedAt: number
+): DailyLearningRecord {
+  return { date, examId: 'im', planId: 'today-plan', taskEvidence, updatedAt }
 }
 
 describe('today learning selectors', () => {
@@ -85,6 +120,12 @@ describe('today learning selectors', () => {
     )
   })
 
+  it('keeps a task recorded today visible after it becomes completed', () => {
+    const phases = buildPhasesWithMeta(plan, state({ 'task-1': true }), start)
+    const focus = getTodayFocusTasks(getCurrentPhase(phases, 1), 2, new Set(['task-1']))
+    expect(focus.map((task) => task.id)).toEqual(['task-1', 'task-2'])
+  })
+
   it('counts only cards already scheduled and currently due', () => {
     const now = 10_000
     expect(
@@ -105,5 +146,32 @@ describe('today learning selectors', () => {
     expect(recommendedNewCardLimit(31)).toBe(10)
     expect(recommendedNewCardLimit(61)).toBe(5)
     expect(recommendedNewCardLimit(121)).toBe(0)
+  })
+
+  it('uses a local calendar key and keeps exams separate', () => {
+    const date = new Date(2026, 7, 16, 23, 59)
+    expect(localDateKey(date)).toBe('2026-08-16')
+    expect(dailyLearningKey('im', 'plan-a', date)).toBe('im:plan-a:2026-08-16')
+    expect(dailyLearningKey('cs', 'plan-a', date)).toBe('cs:plan-a:2026-08-16')
+    expect(defaultRetestDate(date)).toBe('2026-08-19')
+  })
+
+  it('only passes evidence at 80% with output and no retest', () => {
+    expect(isTaskEvidencePassing(evidence('task-1', 1))).toBe(true)
+    expect(isTaskEvidencePassing(evidence('task-1', 1, { accuracy: 79 }))).toBe(false)
+    expect(isTaskEvidencePassing(evidence('task-1', 1, { evidence: '  ' }))).toBe(false)
+    expect(isTaskEvidencePassing(evidence('task-1', 1, { needsRetest: true }))).toBe(false)
+  })
+
+  it('finds the newest evidence for a task across daily records', () => {
+    const records = {
+      'im:today-plan:2026-08-15': daily('2026-08-15', { 'task-1': evidence('task-1', 10) }, 10),
+      'im:today-plan:2026-08-16': daily(
+        '2026-08-16',
+        { 'task-1': evidence('task-1', 20, { accuracy: 90 }) },
+        20
+      ),
+    }
+    expect(findLatestTaskEvidence(records, 'task-1')?.accuracy).toBe(90)
   })
 })

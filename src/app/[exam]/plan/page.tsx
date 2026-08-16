@@ -1,5 +1,6 @@
 'use client'
 
+import { CheckCircle2, Circle } from 'lucide-react'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { Suspense, use, useState } from 'react'
@@ -29,7 +30,7 @@ export default function PlanPage({ params }: Props) {
 function PlanContent({ exam }: { exam: string }) {
   const plans = getStudyPlans(exam as ExamId)
   const defaultPlanId = plans[0]?.id ?? ''
-  const { state, completeTask, addCustomTask, removeCustomTask, selectPlan } = useStudyPlanStore()
+  const { state, addCustomTask, removeCustomTask, selectPlan } = useStudyPlanStore()
   const preferredPlanId = state.preferences.selectedPlanIds?.[exam as ExamId] ?? defaultPlanId
   const [planId, setPlanId] = useQueryState('plan', preferredPlanId)
   const plan = getStudyPlan(exam as ExamId, planId)
@@ -125,6 +126,17 @@ function PlanContent({ exam }: { exam: string }) {
         </div>
       </div>
 
+      <div className="rounded-lg border border-dashed px-4 py-3 text-xs leading-5 text-muted-foreground">
+        這裡只顯示長期進度。任務需到{' '}
+        <Link
+          href={`/${exam}/today?plan=${encodeURIComponent(plan.id)}`}
+          className="font-medium text-foreground underline underline-offset-2"
+        >
+          今日學習
+        </Link>{' '}
+        填寫自測結果與完成證據；達到 80% 且不需重測後才會完成。
+      </div>
+
       {/* Phases */}
       <div className="space-y-4">
         {phases.map((phase) => (
@@ -149,12 +161,16 @@ function PlanContent({ exam }: { exam: string }) {
             <ul className="divide-y">
               {phase.tasks.map((task) => (
                 <li key={task.id} className="flex items-start gap-3 px-4 py-2.5 text-sm group">
-                  <input
-                    type="checkbox"
-                    checked={task.completed}
-                    onChange={(e) => completeTask(task.id, e.target.checked)}
-                    className="mt-0.5 h-4 w-4 rounded border-muted-foreground cursor-pointer accent-primary"
-                  />
+                  <span
+                    className="mt-0.5 shrink-0"
+                    aria-label={task.completed ? '已完成' : '尚未完成'}
+                  >
+                    {task.completed ? (
+                      <CheckCircle2 className="h-4 w-4 text-primary" />
+                    ) : (
+                      <Circle className="h-4 w-4 text-muted-foreground" />
+                    )}
+                  </span>
                   <span
                     className={
                       task.completed ? 'line-through text-muted-foreground flex-1' : 'flex-1'

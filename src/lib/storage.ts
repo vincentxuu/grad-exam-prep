@@ -1,5 +1,13 @@
+import { mergeDailyLearningRecords, sanitizeDailyLearningRecords } from '@/lib/daily-learning'
 import { lexiconCardId, normalizeTerm } from '@/lib/lexicon/normalize'
-import type { CardSRSState, IStorage, SavedWord, StorageState } from '@/types/storage'
+import type {
+  CardSRSState,
+  DailyLearningIdentity,
+  DailyLearningRecord,
+  IStorage,
+  SavedWord,
+  StorageState,
+} from '@/types/storage'
 
 const STORAGE_KEY = 'grad-exam-prep-state'
 
@@ -10,6 +18,7 @@ function defaultState(): StorageState {
     srsState: {},
     paperPractice: {},
     savedWords: [],
+    dailyLearning: {},
     preferences: { examId: 'im' },
   }
 }
@@ -80,6 +89,7 @@ function sanitizeState(value: unknown): StorageState {
       ? (raw.paperPractice as StorageState['paperPractice'])
       : defaults.paperPractice,
     savedWords: normalizeSavedWords(raw.savedWords, srsState),
+    dailyLearning: sanitizeDailyLearningRecords(raw.dailyLearning),
     preferences: isRecord(raw.preferences)
       ? { ...defaults.preferences, ...(raw.preferences as Partial<StorageState['preferences']>) }
       : defaults.preferences,
@@ -97,13 +107,32 @@ function load(): StorageState {
   }
 }
 
-function save(state: StorageState): void {
-  if (typeof window === 'undefined') return
+function save(state: StorageState): boolean {
+  if (typeof window === 'undefined') return false
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(state))
+    return true
   } catch {
-    // storage quota exceeded — silent fail
+    return false
   }
+}
+
+function dailyLearningKey(identity: DailyLearningIdentity): string {
+  return `${identity.examId}:${identity.planId}:${identity.date}`
+}
+
+function dailyRecord(
+  state: StorageState,
+  identity: DailyLearningIdentity,
+  updatedAt: number
+): DailyLearningRecord {
+  return (
+    state.dailyLearning[dailyLearningKey(identity)] ?? {
+      ...identity,
+      taskEvidence: {},
+      updatedAt,
+    }
+  )
 }
 
 export const localStorageImpl: IStorage = {
@@ -207,6 +236,30 @@ export const localStorageImpl: IStorage = {
     return load().savedWords
   },
 
+  recordTaskEvidence(identity, evidence, completed) {
+    const state = load()
+    const key = dailyLearningKey(identity)
+    const record = dailyRecord(state, identity, evidence.updatedAt)
+    state.dailyLearning[key] = {
+      ...record,
+      ...identity,
+      taskEvidence: { ...record.taskEvidence, [evidence.taskId]: evidence },
+      updatedAt: evidence.updatedAt,
+    }
+    if (completed) state.completedTasks[evidence.taskId] = true
+    else delete state.completedTasks[evidence.taskId]
+    return save(state)
+  },
+
+  updateDailyLearningReflection(identity, reflection) {
+    const state = load()
+    const key = dailyLearningKey(identity)
+    const updatedAt = Date.now()
+    const record = dailyRecord(state, identity, updatedAt)
+    state.dailyLearning[key] = { ...record, ...identity, ...reflection, updatedAt }
+    return save(state)
+  },
+
   setPreferences(prefs) {
     const state = load()
     state.preferences = { ...state.preferences, ...prefs }
@@ -217,8 +270,11 @@ export const localStorageImpl: IStorage = {
     return JSON.stringify(load(), null, 2)
   },
 
-  importJSON(json) {
+  importJSON(json, options) {
     const parsed = sanitizeState(JSON.parse(json))
+    if (options?.mergeDailyLearning) {
+      parsed.dailyLearning = mergeDailyLearningRecords(load().dailyLearning, parsed.dailyLearning)
+    }
     save(parsed)
   },
 }

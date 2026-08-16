@@ -54,12 +54,50 @@ export interface SavedWord {
   note?: string
 }
 
+export type LearningOutputKind = 'whiteboard' | 'code' | 'explanation' | 'practice'
+
+export interface TaskLearningEvidence {
+  taskId: string
+  taskDescription: string
+  completionCriteria?: string
+  accuracy: number
+  evidence: string
+  needsRetest: boolean
+  retestAt?: string
+  updatedAt: number
+}
+
+export interface DailyLearningRecord {
+  date: string
+  examId: ExamId
+  planId: string
+  recallAccuracy?: number
+  outputKind?: LearningOutputKind
+  keyMistake?: string
+  tomorrowQuestion?: string
+  effectiveMinutes?: number
+  taskEvidence: Record<string, TaskLearningEvidence>
+  updatedAt: number
+}
+
+export interface DailyLearningIdentity {
+  date: string
+  examId: ExamId
+  planId: string
+}
+
+export type DailyLearningReflection = Pick<
+  DailyLearningRecord,
+  'recallAccuracy' | 'outputKind' | 'keyMistake' | 'tomorrowQuestion' | 'effectiveMinutes'
+>
+
 export interface StorageState {
   completedTasks: Record<string, boolean>
   customTasks: CustomTask[]
   srsState: Record<string, CardSRSState>
   paperPractice: Record<string, { practicedAt: number; notes?: string }>
   savedWords: SavedWord[]
+  dailyLearning: Record<string, DailyLearningRecord>
   preferences: UserPreferences
 }
 
@@ -81,7 +119,16 @@ export interface IStorage {
   /** 一併刪掉這張卡的 SRS 排程狀態，不留孤兒 */
   removeSavedWord(headword: string): void
   getSavedWords(): SavedWord[]
+  recordTaskEvidence(
+    identity: DailyLearningIdentity,
+    evidence: TaskLearningEvidence,
+    completed: boolean
+  ): boolean
+  updateDailyLearningReflection(
+    identity: DailyLearningIdentity,
+    reflection: DailyLearningReflection
+  ): boolean
   setPreferences(prefs: Partial<UserPreferences>): void
   exportJSON(): string
-  importJSON(json: string): void
+  importJSON(json: string, options?: { mergeDailyLearning?: boolean }): void
 }
