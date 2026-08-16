@@ -10,6 +10,7 @@ interface StudyPlanStore {
   addCustomTask: (task: Omit<CustomTask, 'id' | 'createdAt'>) => void
   updateCustomTask: (taskId: string, description: string) => void
   removeCustomTask: (taskId: string) => void
+  selectPlan: (examId: ExamId, planId: string) => void
   setExamId: (examId: ExamId) => void
 }
 
@@ -40,6 +41,14 @@ export const useStudyPlanStore = create<StudyPlanStore>((set) => ({
 
   removeCustomTask: (taskId) => {
     localStorageImpl.removeCustomTask(taskId)
+    set({ state: localStorageImpl.getState() })
+  },
+
+  selectPlan: (examId, planId) => {
+    const preferences = localStorageImpl.getState().preferences
+    localStorageImpl.setPreferences({
+      selectedPlanIds: { ...preferences.selectedPlanIds, [examId]: planId },
+    })
     set({ state: localStorageImpl.getState() })
   },
 

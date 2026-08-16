@@ -1,5 +1,4 @@
 import { localStorageImpl } from '@/lib/storage'
-import type { StorageState } from '@/types/storage'
 
 // Mock localStorage for tests
 const mockStorage: Record<string, string> = {}
@@ -99,6 +98,15 @@ describe('unauthenticated-stays-local behavior', () => {
   it('preferences default to im exam without auth', () => {
     const state = localStorageImpl.getState()
     expect(state.preferences.examId).toBe('im')
+  })
+
+  it('preserves the selected study plan across export and import', () => {
+    localStorageImpl.setPreferences({ selectedPlanIds: { im: 'im-nocram-6m' } })
+    const exported = localStorageImpl.exportJSON()
+    clearMockStorage()
+    localStorageImpl.importJSON(exported)
+
+    expect(localStorageImpl.getState().preferences.selectedPlanIds?.im).toBe('im-nocram-6m')
   })
 })
 

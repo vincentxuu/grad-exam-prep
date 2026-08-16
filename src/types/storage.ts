@@ -22,6 +22,8 @@ export interface CustomTask {
 export interface UserPreferences {
   examId: ExamId
   planStartDate?: string
+  /** 各考試最後選用的備考計畫，讓完整計畫與今日學習保持一致。 */
+  selectedPlanIds?: Partial<Record<ExamId, string>>
   /** 個人化例句的情境來源（興趣／工作）。未設定就不做個人化。 */
   persona?: PersonaProfile
 }

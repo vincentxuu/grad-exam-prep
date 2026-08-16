@@ -129,6 +129,13 @@ describe('多套計畫的選取', () => {
     expect(getStudyPlan('im', 'no-such-plan')?.id).toBe(getStudyPlans('im')[0].id)
   })
 
+  it('六個月學習法計畫的每項任務都有可觀察的完成證據', () => {
+    const learningPlan = getStudyPlan('im', 'im-nocram-6m')
+    const tasks = learningPlan?.phases.flatMap((phase) => phase.tasks) ?? []
+    expect(tasks.length).toBeGreaterThan(0)
+    expect(tasks.every((task) => Boolean(task.completionCriteria?.trim()))).toBe(true)
+  })
+
   it('任務 id 在所有計畫之間不重複——否則進度會互相污染', () => {
     const taskIds = studyPlans.flatMap((p) => p.phases.flatMap((ph) => ph.tasks.map((t) => t.id)))
     expect(new Set(taskIds).size).toBe(taskIds.length)

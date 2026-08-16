@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { Suspense, use, useState } from 'react'
 import { PageLoading } from '@/components/page-loading'
@@ -28,7 +29,9 @@ export default function PlanPage({ params }: Props) {
 function PlanContent({ exam }: { exam: string }) {
   const plans = getStudyPlans(exam as ExamId)
   const defaultPlanId = plans[0]?.id ?? ''
-  const [planId, setPlanId] = useQueryState('plan', defaultPlanId)
+  const { state, completeTask, addCustomTask, removeCustomTask, selectPlan } = useStudyPlanStore()
+  const preferredPlanId = state.preferences.selectedPlanIds?.[exam as ExamId] ?? defaultPlanId
+  const [planId, setPlanId] = useQueryState('plan', preferredPlanId)
   const plan = getStudyPlan(exam as ExamId, planId)
   if (!plan) notFound()
 
@@ -37,7 +40,6 @@ function PlanContent({ exam }: { exam: string }) {
     subjects.map((s) => [s.id, s.name])
   )
 
-  const { state, completeTask, addCustomTask, removeCustomTask } = useStudyPlanStore()
   const [addingPhase, setAddingPhase] = useState<string | null>(null)
   const [newTaskText, setNewTaskText] = useState('')
 
@@ -60,12 +62,19 @@ function PlanContent({ exam }: { exam: string }) {
   return (
     <div className="space-y-6 max-w-3xl">
       <div>
-        <h1 className="text-2xl font-bold">{EXAM_LABELS[exam as ExamId]} — 備考計畫</h1>
-        <p className="text-muted-foreground text-sm mt-1">
-          距考試約 {daysToExam} 天 · 目標考期：
-          {examDate.toLocaleDateString('zh-TW', { year: 'numeric', month: 'long' })} ·{' '}
-          {plan.totalMonths} 個月計畫
-        </p>
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+          <div>
+            <h1 className="text-2xl font-bold">{EXAM_LABELS[exam as ExamId]} — 備考計畫</h1>
+            <p className="text-muted-foreground text-sm mt-1">
+              距考試約 {daysToExam} 天 · 目標考期：
+              {examDate.toLocaleDateString('zh-TW', { year: 'numeric', month: 'long' })} ·{' '}
+              {plan.totalMonths} 個月計畫
+            </p>
+          </div>
+          <Button asChild>
+            <Link href={`/${exam}/today?plan=${encodeURIComponent(plan.id)}`}>今天怎麼讀</Link>
+          </Button>
+        </div>
       </div>
 
       {/* Plan switcher — 每套計畫的任務進度各自獨立 */}
@@ -77,7 +86,10 @@ function PlanContent({ exam }: { exam: string }) {
                 key={p.id}
                 size="sm"
                 variant={p.id === plan.id ? 'secondary' : 'outline'}
-                onClick={() => setPlanId(p.id)}
+                onClick={() => {
+                  setPlanId(p.id)
+                  selectPlan(exam as ExamId, p.id)
+                }}
               >
                 {p.name}
               </Button>
@@ -148,7 +160,12 @@ function PlanContent({ exam }: { exam: string }) {
                       task.completed ? 'line-through text-muted-foreground flex-1' : 'flex-1'
                     }
                   >
-                    {task.description}
+                    <span className="block">{task.description}</span>
+                    {task.completionCriteria && (
+                      <span className="mt-1 block text-xs leading-5 text-muted-foreground no-underline">
+                        完成證據：{task.completionCriteria}
+                      </span>
+                    )}
                   </span>
                   <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
                     {task.subjectTag && (
