@@ -13,15 +13,15 @@ describe('IM-IT reviewed learning content', () => {
   )
   const metadata = new Map(metadataRaw.questions.map((question) => [question.questionId, question]))
 
-  test('publishes fifteen reviewed lessons and 92 curated cards', () => {
+  test('publishes twenty reviewed lessons and 122 curated cards', () => {
     expect(lessonsRaw.status).toBe('reviewed')
     expect(cardsRaw.status).toBe('reviewed')
-    expect(lessonsRaw.counts).toEqual({ lessons: 15, coveredSubtopics: 19, coveredQuestions: 112 })
-    expect(lessons).toHaveLength(15)
-    expect(cardsRaw.totalCards).toBe(92)
-    expect(cards).toHaveLength(92)
-    expect(new Set(lessons.map((lesson) => lesson.id)).size).toBe(15)
-    expect(new Set(cards.map((card) => card.id)).size).toBe(92)
+    expect(lessonsRaw.counts).toEqual({ lessons: 20, coveredSubtopics: 28, coveredQuestions: 146 })
+    expect(lessons).toHaveLength(20)
+    expect(cardsRaw.totalCards).toBe(122)
+    expect(cards).toHaveLength(122)
+    expect(new Set(lessons.map((lesson) => lesson.id)).size).toBe(20)
+    expect(new Set(cards.map((card) => card.id)).size).toBe(122)
   })
 
   test('keeps lesson structure, sources, and question references verifiable', () => {
@@ -46,6 +46,34 @@ describe('IM-IT reviewed learning content', () => {
         expect(question?.answerConfidence.level).not.toBe('disputed')
       }
     }
+  })
+
+  test('gives every lesson a bounded everyday scenario and exam cues', () => {
+    const scenarioTitles = new Set<string>()
+
+    for (const lesson of lessons) {
+      expect(lesson.learningScenario).toBeDefined()
+      const scenario = lesson.learningScenario
+      if (!scenario) continue
+
+      expect(scenario.title.length).toBeGreaterThanOrEqual(4)
+      expect(scenario.hook.length).toBeGreaterThanOrEqual(12)
+      expect(scenario.predict.length).toBeGreaterThanOrEqual(12)
+      expect(scenario.mapping.length).toBeGreaterThanOrEqual(4)
+      expect(scenario.mapping.length).toBeLessThanOrEqual(5)
+      expect(scenario.boundary.length).toBeGreaterThanOrEqual(12)
+      expect(scenario.examCues).toHaveLength(4)
+      expect(scenarioTitles.has(scenario.title)).toBe(false)
+      scenarioTitles.add(scenario.title)
+
+      for (const mapping of scenario.mapping) {
+        expect(mapping.everyday.trim()).not.toBe('')
+        expect(mapping.technical.trim()).not.toBe('')
+        expect(mapping.everyday).not.toBe(mapping.technical)
+      }
+    }
+
+    expect(scenarioTitles.size).toBe(lessons.length)
   })
 
   test('keeps every card inside its reviewed lesson evidence boundary', () => {
@@ -77,6 +105,24 @@ describe('IM-IT reviewed learning content', () => {
       'im-it-ai-ml-paradigms',
       'im-it-ai-training-evaluation',
     ])
+  })
+
+  test('publishes batch-four grouped boundaries without broken or disputed refs', () => {
+    const dataLesson = lessons.find((lesson) => lesson.id === 'lesson-im-it-data-big-data-nosql-01')
+
+    expect(dataLesson?.coveredSubtopicIds).toEqual([
+      'im-it-trends-big-data-analytics',
+      'im-it-db-distributed-nosql',
+    ])
+    expect(dataLesson?.pastPaperRefs).toEqual([
+      'q-pp-im-it-108-10',
+      'q-pp-im-it-108-11',
+      'q-pp-im-it-114-15',
+      'q-pp-im-it-115-21',
+      'q-pp-im-it-115-26',
+    ])
+    expect(dataLesson?.pastPaperRefs).not.toContain('q-pp-im-it-112-20')
+    expect(dataLesson?.pastPaperRefs).not.toContain('q-pp-im-it-112-24')
   })
 
   test('keeps blockchain and mining questions out of the cryptography lesson', () => {

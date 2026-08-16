@@ -27,13 +27,13 @@ describe('IM-IT concept overview', () => {
     expect(screen.getAllByText(/^\d+ 個子主題 · \d+ 題$/)).toHaveLength(9)
   })
 
-  test('links the fifteen reviewed learning modules', () => {
+  test('links the twenty reviewed learning modules', () => {
     render(<ImItConceptOverview />)
 
     expect(screen.getByText('已上線學習模組')).toBeInTheDocument()
-    expect(screen.getByText('19 / 61')).toBeInTheDocument()
+    expect(screen.getByText('28 / 61')).toBeInTheDocument()
     const lessonLinks = screen.getAllByRole('link', { name: '開始學習' })
-    expect(lessonLinks).toHaveLength(15)
+    expect(lessonLinks).toHaveLength(20)
     expect(lessonLinks.map((link) => link.getAttribute('href'))).toContain(
       '/im/subjects/im-it/lessons/lesson-im-it-network-models-encapsulation'
     )

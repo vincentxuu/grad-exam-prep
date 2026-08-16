@@ -4,9 +4,9 @@
   "status": "reviewed",
   "contentPolicy": "本站提供依教材與考古題整理的原創摘要；不是教材轉載，也不把技術覆核答案稱為官方答案。",
   "counts": {
-    "lessons": 15,
-    "coveredSubtopics": 19,
-    "coveredQuestions": 112
+    "lessons": 20,
+    "coveredSubtopics": 28,
+    "coveredQuestions": 146
   },
   "lessons": [
     {
@@ -130,7 +130,41 @@
         "q-pp-im-it-110-15",
         "q-pp-im-it-110-16"
       ],
-      "reviewStatus": "reviewed"
+      "reviewStatus": "reviewed",
+      "learningScenario": {
+        "title": "園遊會的智慧助手試營運",
+        "hook": "學校想在園遊會啟用一個智慧助手：它要能回答訪客、把攤位資料分組、預估備料量，還要判斷哪些人需要服務台協助。與其先問它『到底聰不聰明』，籌備組先設計可觀察的任務、不同形式的回饋，以及最後一次不偷看的驗收。",
+        "predict": "助手在籌備資料上幾乎全對，但正式園遊會常判錯。你會繼續用同一批資料調整，還是保留一批從未參與訓練與調整、且接近正式情境的資料，最後才驗收？",
+        "mapping": [
+          {
+            "everyday": "訪客只透過對話窗口評估助手，無法查看它內部怎麼運作",
+            "technical": "Turing test 的可觀察行為"
+          },
+          {
+            "everyday": "拿附有『垃圾／回收』答案的照片教分類；另把沒有答案的攤位依消費型態自動分群；遊戲助手則依得分調整策略",
+            "technical": "Supervised、unsupervised、reinforcement learning"
+          },
+          {
+            "everyday": "籌備組用『固定基本量＋每增加一名預估訪客所增加的飲料杯數』估算需求",
+            "technical": "Linear regression 的 intercept、slope 與 prediction"
+          },
+          {
+            "everyday": "舊資料用來練習、另一批資料用來挑設定，封存資料只在最後驗收",
+            "technical": "Training、validation、test 與泛化"
+          },
+          {
+            "everyday": "服務台把『需要協助／不需協助』的預測與實際狀況交叉記成四格表",
+            "technical": "TP、FP、FN、TN 與 precision、recall、accuracy"
+          }
+        ],
+        "boundary": "這個園遊會只是把同一課的概念放進共同情境，不表示 Turing test、三種 learning paradigms、linear regression 與 confusion matrix 必須由同一個系統同時使用。『附答案練習』『分群』『得分』只映射回饋形式，不等於描述實際訓練演算法；四格表也只適用於此處的 binary classification。高 accuracy、通過對話測試或在封存資料表現良好，都不能單獨證明意識、因果關係或所有部署情境都可靠。",
+        "examCues": [
+          "題目問 Turing test 或 CAPTCHA：先抓 human-versus-machine 的可觀察行為；不要推論 consciousness 或 AGI。",
+          "題目要分 supervised／unsupervised／reinforcement：找 label、沒有 target、或 reward；不要只看應用名稱。",
+          "看到 y-hat=b0+b1x 或問 slope：代入計算 prediction；slope 是其他條件假設下 x 每增一單位的預測變化，不是因果證明。",
+          "看到 TP、FP、FN、TN：Precision 分母是 TP+FP，recall 分母是 TP+FN，accuracy 分子是 TP+TN；類別不平衡時別只看 accuracy。"
+        ]
+      }
     },
     {
       "id": "lesson-im-it-arch-cpu-organization",
@@ -252,7 +286,360 @@
       "coveredSubtopicIds": [
         "im-it-arch-cpu-organization"
       ],
-      "minimumPastPaperRefs": 6
+      "minimumPastPaperRefs": 6,
+      "learningScenario": {
+        "title": "自動分貨中心的一張張工作單",
+        "hook": "想像一座自動分貨中心：倉庫同時放著待處理包裹與機器看得懂的工作單，控制台依序取出工作單、判讀動作，再指揮掃描、計算或搬運站執行。若把多張工作單分散在不同站點重疊處理，整體出貨可能更快；但後一站若必須等待前一站剛產生的標籤，就不能假裝兩件事完全獨立。",
+        "predict": "把四個處理站都加倍，整座中心就一定能在一半時間完成同一批工作嗎？先找出必須依序完成的步驟，再判斷加速上限。",
+        "mapping": [
+          {
+            "everyday": "控制台依工作單選擇並協調下一個站點動作",
+            "technical": "CPU 的 control unit 依 instruction 協調 instruction cycle 與所需執行資源"
+          },
+          {
+            "everyday": "標示下一張待取工作單位置的號碼牌",
+            "technical": "program counter 保存下一條預計 fetch 的 instruction address"
+          },
+          {
+            "everyday": "中心只接受一套明定格式與動作名稱的工作單",
+            "technical": "ISA 是 software 可見的 hardware contract，定義 instructions、registers 與 addressing modes 等"
+          },
+          {
+            "everyday": "不同包裹同時位於讀單、貼標與裝車等不同站點",
+            "technical": "pipeline 讓多條 instructions 重疊位於不同執行階段，以提高 throughput"
+          },
+          {
+            "everyday": "後一張工作單必須等前一站剛算出的重量標籤",
+            "technical": "後一條 instruction 依賴尚未可用的 operand，形成 data hazard，需 forwarding 或 stall"
+          }
+        ],
+        "boundary": "分貨故事只能幫助追蹤角色與相依關係：真實 CPU 處理的是 encoded instructions 與 data，不是彼此獨立的實體包裹；pipeline throughput 不等於單條 instruction latency，clock frequency 也不等於每秒完成的 instructions。工作單繁簡更不能直接證明 RISC 或 CISC 哪一方一定較快；Amdahl's law 的上限仍取決於不可平行比例。",
+        "examCues": [
+          "開機後先初始化硬體並交棒：BIOS／UEFI 是 firmware，不要和 CMOS 設定區或 OS kernel 混為一談。",
+          "下一條指令位置、取出、判讀、執行：對應 program counter 與 fetch-decode-execute。",
+          "software 看得見的 instructions／registers 是 ISA；pipeline、cache、execution units 是 microarchitecture。",
+          "後一條指令等前一條結果是 data hazard；算多核心上限時，把不可平行比例放進 Amdahl's law 的 serial 部分。"
+        ]
+      }
+    },
+    {
+      "id": "lesson-im-it-arch-memory-data-representation-01",
+      "subtopicId": "im-it-arch-memory-hierarchy",
+      "coveredSubtopicIds": [
+        "im-it-arch-memory-hierarchy",
+        "im-it-arch-data-representation"
+      ],
+      "title": "記憶體階層與資料表示：從位元正確性到存取延遲",
+      "summary": "先用 bit、byte、parity 與常見媒體格式建立資料表示觀念，再比較 register、cache、RAM、ROM 與 secondary storage 的容量、速度和揮發性，最後以 locality 與 average memory access time 串起快取的作用。所引用考古題答案皆為非官方技術覆核；本課只納入可自動判分且與兩個子主題直接相關的題目。",
+      "estimatedMinutes": 34,
+      "minimumPastPaperRefs": 8,
+      "learningObjectives": [
+        "以 parity 規則判斷能偵測與不能偵測的位元錯誤",
+        "區分靜態影像、動態影像與其常見檔案格式",
+        "依容量、速度、成本與揮發性比較 register、cache、RAM、ROM、flash 與 SSD",
+        "利用 temporal locality、spatial locality 與命中率解釋 cache 如何降低平均存取時間"
+      ],
+      "learningScenario": {
+        "title": "值班員的桌面、抽屜與遠端倉庫",
+        "hook": "想像一位值班員處理一疊表單：眼前立刻要用的數字握在手上，近期反覆查的表單放桌面，較多資料收進抽屜，整批工作資料放在辦公區，長期保存的檔案才送往遠端倉庫。越靠近手邊通常拿得越快，但能放的東西越少；常重看同一張或接著看相鄰頁面時，把它們留在近處最有價值。",
+        "predict": "值班員剛查過表單第 20 頁，接著很可能再查第 20 頁或第 21 頁。哪些行為分別對應 temporal locality 與 spatial locality？為什麼把近期頁面留在桌面能降低平均取用時間？",
+        "mapping": [
+          {
+            "everyday": "值班員手上正拿著、立即參與計算的少量數字",
+            "technical": "CPU registers 保存執行單元目前直接使用的少量 operands 與結果"
+          },
+          {
+            "everyday": "桌面上容量很小、伸手就能拿到的近期表單",
+            "technical": "L1 cache 容量較小且通常比下層 cache 更快"
+          },
+          {
+            "everyday": "桌下抽屜可放更多表單，但拿取比桌面多一步",
+            "technical": "L2／L3 cache 通常容量較大、存取延遲也高於 L1"
+          },
+          {
+            "everyday": "辦公區內保存目前整批工作的資料架",
+            "technical": "DRAM 作為容量較大的 main memory，典型存取速度慢於 CPU caches"
+          },
+          {
+            "everyday": "遠端倉庫保存大量、短期內不一定使用的檔案",
+            "technical": "SSD 等 secondary storage 提供較大且 non-volatile 的持久儲存，典型延遲高於 DRAM"
+          }
+        ],
+        "boundary": "這個場景只對應典型的距離感、容量、延遲與 locality，不代表所有處理器都有固定相同的 cache 大小或層數。實體桌面與抽屜斷電後不會清空，但 registers、cache 與 DRAM 通常是 volatile；SSD 才對應持久儲存。Cache 由硬體以 blocks／lines 管理，不是使用者手動挑單張表單；parity、image formats 與 RAID 也必須回到各自定義，不能由桌面位置推論。",
+        "examCues": [
+          "Parity check 通過只表示未偵測到錯誤；奇數個 bit flips 可被偵測，偶數個可能漏過。",
+          "JPEG、PNG、GIF、BMP、TIFF 常見於靜態影像；MPEG 主要是影音編碼標準家族。",
+          "典型速度由快到慢先想 register、L1、L2／L3、DRAM、SSD；ROM、flash、SSD 是 non-volatile，DDR RAM 不是。",
+          "Cache 利用 temporal／spatial locality 降低 AMAT；簡化公式為 hit time + miss rate × miss penalty。"
+        ]
+      },
+      "sections": [
+        {
+          "title": "資料表示從 bit pattern 與解讀規則開始",
+          "body": "電腦儲存的是 bit pattern；相同位元串必須搭配編碼或格式規格，才知道它代表整數、文字、像素或指令。Byte 通常是 8 bits，但資料意義不是由位元本身自動決定。題目遇到 JPEG、PNG、GIF、BMP、TIFF 或 MPEG 時，要分清靜態 image format 與影音壓縮／容器語境，不要因名稱都與媒體有關便視為同一類。",
+          "bullets": [
+            "格式規格定義 bit pattern 的結構與解碼方式",
+            "JPEG、PNG、GIF、BMP、TIFF 常作為靜態影像格式辨識",
+            "MPEG 是影音編碼標準家族，考題若問靜態 image file format 通常不是答案",
+            "副檔名是線索，不等於內容一定符合該格式"
+          ]
+        },
+        {
+          "title": "Parity 能偵錯，但不能保證資料正確",
+          "body": "Even parity 讓資料位元加上 parity bit 後的 1 總數為偶數；odd parity 則為奇數。接收端若 parity 不符，可確定傳輸中至少發生了某種錯誤；若 parity 符合，只代表沒有偵測到錯誤。單一 parity bit 能偵測任何奇數個 bit flips，卻會漏掉偶數個 bit flips，因此不是 error correction，也不能證明資料絕對正確。",
+          "bullets": [
+            "先數完整 codeword 中 1 的個數，再套用 even 或 odd 規則",
+            "Parity mismatch 表示偵測到錯誤",
+            "Parity match 不代表一定沒有錯誤",
+            "Parity bit 通常只能偵錯，無法指出哪一位錯誤"
+          ]
+        },
+        {
+          "title": "記憶體階層是速度、容量與成本的折衷",
+          "body": "越靠近 CPU 的 register 與 L1 cache 通常越快、容量越小、每 bit 成本越高；往下經 L2／L3 cache、DRAM 到 SSD 或磁碟，容量通常增加而延遲也增加。這是概念上的典型趨勢，不應背成所有產品都具有固定容量。RAM、DDR RAM 與 SDRAM 通常是 volatile；ROM、flash 與 SSD 在斷電後仍保留資料，屬 non-volatile。多顆 secondary-storage devices 還可組成 RAID，以 striping、mirroring 或 parity 等方式追求容量、效能或故障容忍；RAID 本身不等於加密、存取控制或完整備份。",
+          "bullets": [
+            "Register 由指令直接使用，容量遠小於 cache",
+            "L1 通常比 L2 小且快；L2 通常較大且較慢",
+            "DRAM 作為主記憶體，斷電後內容消失",
+            "ROM、flash 與 SSD 是 non-volatile，但用途和可寫入方式不同",
+            "RAID 的 redundancy 可處理特定磁碟故障，但不直接提供 confidentiality，也不能取代備份"
+          ]
+        },
+        {
+          "title": "Cache 利用 locality 降低平均存取時間",
+          "body": "Cache 保留近期或鄰近使用的資料與指令。Temporal locality 表示最近用過的項目可能很快再用；spatial locality 表示鄰近位址可能接著被用。Cache hit 可用較短延遲取得資料，miss 則需往較慢層級查找並付出 miss penalty。簡化的 average memory access time 可寫成 hit time + miss rate × miss penalty。",
+          "bullets": [
+            "Hit rate 與 miss rate 相加為 1",
+            "較高 hit rate 通常可降低平均存取時間",
+            "Cache 不負責永久保存程式，也不是 CPU scheduler",
+            "虛擬位址轉換主要由 MMU、TLB 與 page table 機制處理，勿與一般 data cache 的核心角色混淆"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "使用 even parity 傳送資料 1011001。應加上的 parity bit 是多少？若接收成 10110010，能否判定沒有錯誤？",
+          "steps": [
+            "資料 1011001 含有 4 個 1，已是偶數。",
+            "為維持 even parity，parity bit 應為 0，形成 10110010。",
+            "接收端數到 4 個 1，parity check 通過。",
+            "但若傳輸途中恰有 2 個 bits 同時翻轉，1 的奇偶性仍可能不變。"
+          ],
+          "answer": "Parity bit 為 0；通過檢查只能說未偵測到錯誤，不能保證資料一定正確。"
+        },
+        {
+          "prompt": "將 register、L1 cache、L2 cache、DRAM、SSD 依典型存取速度由快到慢排列，並指出哪些通常在斷電後保留資料。",
+          "steps": [
+            "CPU register 最靠近執行單元，典型延遲最低。",
+            "L1 cache 通常比 L2 cache 小而快。",
+            "DRAM 比 cache 慢，但作為容量較大的主記憶體。",
+            "SSD 屬 secondary storage，典型延遲高於 DRAM。",
+            "Register、cache 與 DRAM 通常是 volatile；SSD 是 non-volatile。"
+          ],
+          "answer": "典型順序為 register → L1 → L2 → DRAM → SSD；其中 SSD 通常可在斷電後保留資料。"
+        },
+        {
+          "prompt": "某 cache 的 hit time 為 2 ns、miss rate 為 5%，miss penalty 為 80 ns。用簡化公式計算 average memory access time。",
+          "steps": [
+            "套用 AMAT = hit time + miss rate × miss penalty。",
+            "把 5% 寫成 0.05。",
+            "計算 2 + 0.05 × 80 = 2 + 4。"
+          ],
+          "answer": "Average memory access time 為 6 ns。"
+        }
+      ],
+      "commonPitfalls": [
+        "Parity 通過就宣稱資料絕對沒有錯誤",
+        "把 parity 當成可以定位並修正錯誤的 error-correcting code",
+        "把 MPEG 與所有靜態影像格式混為一談",
+        "把 RAM、DDR RAM 或 SDRAM 誤認為 non-volatile",
+        "背誦特定 cache 容量數字，忽略題目真正比較的是典型階層關係",
+        "把 cache 的核心功能誤寫成永久儲存或虛擬位址映射",
+        "把 RAID 的 fault tolerance 誤當成資料加密或完整備份"
+      ],
+      "sourceRefs": [
+        "src-brookshear-13e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-106-11",
+        "q-pp-im-it-108-1",
+        "q-pp-im-it-106-15",
+        "q-pp-im-it-110-3",
+        "q-pp-im-it-109-15",
+        "q-pp-im-it-110-4",
+        "q-pp-im-it-112-5",
+        "q-pp-im-it-115-7"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "lesson-im-it-data-big-data-nosql-01",
+      "subtopicId": "im-it-trends-big-data-analytics",
+      "coveredSubtopicIds": [
+        "im-it-trends-big-data-analytics",
+        "im-it-db-distributed-nosql"
+      ],
+      "title": "Big Data 與 NoSQL：從資料特性到水平擴充與 CAP",
+      "summary": "由 volume、velocity、variety、veracity 與分析用途判斷 Big Data 問題，再依資料存取形狀選擇 document、key-value、wide-column 或 graph model，最後區分 sharding、replication、horizontal scaling 與 CAP 取捨。對應考古題答案均為非官方技術覆核；disputed 或 OCR 破損題不列入 refs。",
+      "estimatedMinutes": 38,
+      "minimumPastPaperRefs": 5,
+      "learningObjectives": [
+        "解釋 Big Data 的 volume、velocity、variety、veracity 與可行分析用途。",
+        "依資料形狀與查詢需求比較四類常見 NoSQL data models。",
+        "區分 vertical/horizontal scaling、sharding 與 replication。",
+        "正確解釋 CAP 的 consistency、availability、partition tolerance 與 network partition 下的取捨。"
+      ],
+      "sections": [
+        {
+          "title": "Big Data 的 V 是問題特性，不是固定產品清單",
+          "body": "Big Data 指傳統資料管理方式難以有效處理的大型、複雜資料集合。Volume 描述資料量，velocity 描述產生與流入速度，variety 描述格式與來源多樣性，veracity 描述資料準確性與可信度。不同教材可能再加入 value 等 V，因此題目若未指定 3V、4V 或 5V framework，不應把 framework 差異當成唯一答案依據。",
+          "bullets": [
+            "Volume 大不只指檔案數量，也涉及儲存與平行處理需求。",
+            "Velocity 會影響 batch 或 stream processing 的選擇。",
+            "Variety 可包含 structured、semi-structured 與 unstructured data。",
+            "Veracity 不代表資料必須完美，而是分析時需處理 noise、missing values 與可信度。"
+          ]
+        },
+        {
+          "title": "分析用途跨領域，但仍需可驗證的問題與資料",
+          "body": "Big-data analytics 可支援 decision making、forecast/prediction、security vulnerability assessment 與 public governance；是否有效仍取決於資料品質、代表性、方法與驗證。資料量大本身不會自動產生價值，也不能把 correlation 直接當 causation。先寫清楚 decision target、可用 features、時間範圍與 evaluation criterion，才能判斷資料與方法是否適用。",
+          "bullets": [
+            "Decision making 把分析結果連結到可選行動。",
+            "Forecast 使用過去與目前資料估計未來，但需評估 distribution shift。",
+            "Vulnerability assessment 可從大量 logs/events 找異常或風險訊號。",
+            "Government governance 可分析公共服務需求，但需同時處理 privacy、bias 與 accountability。"
+          ]
+        },
+        {
+          "title": "NoSQL 依資料模型與 access pattern 選擇",
+          "body": "NoSQL 不是『完全不能使用 SQL』的單一產品類別，而是多種非關聯式資料管理方法的統稱。常見 models 包含 document、key-value、wide-column 與 graph。它們常提供較彈性的 schema，適合特定大規模或半結構化 workload，但不表示一定比 relational database 快、完全沒有 schema、不能建立 indexes 或不能支援 transactions。",
+          "bullets": [
+            "Document store 以 JSON-like documents 保存欄位、陣列與巢狀結構。",
+            "Key-value store 以 unique key 找 value，適合 session、cache 等直接 lookup。",
+            "Wide-column store 允許 rows 有不同或稀疏 columns，適合大規模分散資料。",
+            "Graph database 以 nodes 與 edges 表示高度連結關係，適合 traversal 與 relationship queries。"
+          ]
+        },
+        {
+          "title": "Horizontal scaling、sharding 與 replication 不同",
+          "body": "Vertical scaling 增強單一 server；horizontal scaling 增加 nodes，讓資料或負載分散。Sharding 依 shard key 把不同資料分區放到不同 shards，主要擴充分散的容量與吞吐；replication 則保存資料副本以支援 availability、讀取或故障復原。兩者可以同時使用，但複製同一資料不是 sharding，把資料切開也不自動產生備援。",
+          "bullets": [
+            "好的 shard key 應避免所有 writes 集中到單一 hot shard。",
+            "不含 shard key 的查詢可能需要 scatter/gather 到多個 shards。",
+            "Replication 會帶來 replica lag、failover 與一致性選擇。",
+            "Horizontal scaling 增加協調與維運複雜度，不是免費的無限擴充。"
+          ]
+        },
+        {
+          "title": "CAP 描述 network partition 發生時的保證取捨",
+          "body": "CAP 的 C 是 consistency：所有成功讀取看到符合單一一致視圖的資料；A 是 availability：每個送達未失效節點的請求都得到非錯誤回應；P 是 partition tolerance：節點間訊息遺失或延遲形成分區時系統仍運作。網路分區發生時，系統無法同時保證 C 與 A：可拒絕部分請求維持一致性，或持續回應但允許讀到較舊／分歧資料。CAP 不是日常狀況下任意『三選二』的效能口號。",
+          "bullets": [
+            "選 CP 表示 partition 時可能犧牲部分 availability 以避免不一致結果。",
+            "選 AP 表示 partition 時持續回應，但必須容許暫時不一致並在之後協調。",
+            "Partition tolerance 是分散式部署必須面對的故障條件，不等於資料分區 sharding。",
+            "CAP 不直接宣稱所有 NoSQL 都是 eventual consistency；具體保證依系統與設定而異。"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "某系統每秒接收 50,000 筆 IoT readings，來源包含數字、JSON 與影像 metadata，其中 3% readings 缺少校正資訊。分別指出最直接對應的 volume、velocity、variety、veracity 證據。",
+          "steps": [
+            "大量累積 readings 對應 volume。",
+            "每秒 50,000 筆的流入速率對應 velocity。",
+            "數字、JSON、影像 metadata 等不同格式對應 variety。",
+            "缺少校正資訊會影響可信度與品質，對應 veracity。"
+          ],
+          "answer": "Volume＝大量累積資料；velocity＝50,000 筆/秒；variety＝多種格式；veracity＝3% 缺校正資訊所造成的品質疑慮。"
+        },
+        {
+          "prompt": "為四個需求選 data model：①sessionId→session；②每位使用者有不同 optional profile fields；③查詢朋友的朋友；④每台設備每天產生稀疏且不同的 metrics columns。",
+          "steps": [
+            "① 是以唯一 key 直接取 value，選 key-value。",
+            "② 是欄位可變且含巢狀結構的實體，選 document。",
+            "③ 重點是 entities 間的 edges 與 traversal，選 graph。",
+            "④ 各 rows 的 columns 稀疏且可能不同，選 wide-column。"
+          ],
+          "answer": "① key-value；② document；③ graph；④ wide-column。這是依 access pattern 的配對，不代表其他模型絕對做不到。"
+        },
+        {
+          "prompt": "以 hash(userId) mod 3 分配 shard。userId 10、11、14 各落在哪個 shard？新增每筆資料的第二份副本後，這個動作是 sharding 還是 replication？",
+          "steps": [
+            "10 mod 3=1，因此 userId 10 到 shard 1。",
+            "11 mod 3=2，因此 userId 11 到 shard 2。",
+            "14 mod 3=2，因此 userId 14 也到 shard 2。",
+            "依 key 分散不同 records 是 sharding；保存第二份相同資料是 replication。"
+          ],
+          "answer": "10→shard 1，11→shard 2，14→shard 2；第二份副本屬 replication。"
+        },
+        {
+          "prompt": "兩個 replicas 因 network partition 無法互通。方案 X 暫停其中一側寫入，直到能確認最新版本；方案 Y 兩側都繼續接受 writes，稍後合併。CAP 下 X、Y 各偏向哪種取捨？",
+          "steps": [
+            "Partition 已發生，P 是必須處理的故障條件。",
+            "X 拒絕部分請求以避免兩側同時產生無法排序的更新，偏向維持 consistency。",
+            "X 因此犧牲 partition 期間部分 availability，屬 CP 取向。",
+            "Y 持續回應但容許暫時分歧，偏向 availability，屬 AP 取向。"
+          ],
+          "answer": "X 偏 CP；Y 偏 AP。AP 不代表永遠不一致，而是 partition 期間允許暫時分歧並需後續 reconciliation。"
+        }
+      ],
+      "commonPitfalls": [
+        "把不同 Big Data V frameworks 混成唯一不變定義，忽略題目是否指定版本。",
+        "認為資料量夠大就自然能產生正確決策，忽略品質、偏差與驗證。",
+        "把 NoSQL 解讀成完全沒有 schema、indexes 或 transactions。",
+        "看到 JSON 就一定選 document store，不先看實際 access pattern。",
+        "混淆 sharding 與 replication，或認為 horizontal scaling 沒有協調成本。",
+        "把 CAP 簡化為任何時候都能自由三選二，忽略 network partition 情境。",
+        "宣稱所有 NoSQL 都犧牲 consistency；實際保證取決於產品與設定。"
+      ],
+      "learningScenario": {
+        "title": "連鎖超商的即時營運平台",
+        "hook": "一間連鎖超商每秒收到大量門市交易、感測器 readings、JSON 商品資料與顧客回饋。團隊既想預測補貨，也要把不同資料模型分散到多台 servers；如果分店網路中斷，還得決定要暫停部分操作維持一致，或先持續服務、稍後再協調。這個平台把 Big Data 的資料特性、NoSQL 選型、sharding 與 CAP 放在同一條營運流程中。",
+        "predict": "兩個資料副本因 network partition 無法互通：方案甲暫停其中一側寫入以避免分歧，方案乙讓兩側繼續接受寫入、之後再合併。哪個偏 CP，哪個偏 AP？",
+        "mapping": [
+          {
+            "everyday": "大量資料持續高速湧入，格式包含交易表、JSON、文字與感測 readings，部分資料還缺校正資訊",
+            "technical": "Volume、velocity、variety、veracity 分別描述資料量、流速、多樣性與可信度；V framework 版本須依題目限定"
+          },
+          {
+            "everyday": "團隊用資料做補貨決策、需求預測、異常偵測與公共服務分析",
+            "technical": "Big-data analytics 可支援 decision making、forecast、vulnerability assessment 與 governance，但資料量不保證結論正確"
+          },
+          {
+            "everyday": "Session 依唯一 key 取值、商品資料有彈性欄位、社交關係要走訪、設備 metrics 欄位稀疏",
+            "technical": "依 access pattern 對應 key-value、document、graph、wide-column；NoSQL 不等於完全沒有 schema、index 或 transaction"
+          },
+          {
+            "everyday": "不同顧客資料依 userId 分到不同 servers，同一份重要資料再保存副本",
+            "technical": "Sharding 分散不同資料以水平擴充；replication 保存相同資料的 copies 以支援 availability、讀取或復原"
+          },
+          {
+            "everyday": "網路分區時，一側拒絕部分請求避免資料分歧，或兩側都回應並容許暫時不一致",
+            "technical": "Partition 下拒絕部分請求偏 CP；持續回應並稍後 reconciliation 偏 AP，CAP 不是平時任意三選二的效能口號"
+          }
+        ],
+        "boundary": "超商情境不表示資料一多就必須用 NoSQL，也不表示所有 NoSQL 都採 eventual consistency。資料模型應依 access pattern 與所需保證選擇；sharding、replication 與 partition tolerance 是不同概念。CAP 描述 network partition 下 consistency 與 availability 的保證取捨，不能用它直接推論平時 latency、transaction 能力或某產品一定較快。",
+        "examCues": [
+          "看到 Big Data 的 V：volume 是量、velocity 是速度、variety 是格式來源、veracity 是可信度；先確認題目採 3V、4V 或 5V。",
+          "看到 NoSQL model：直接 key lookup 想 key-value，彈性巢狀資料想 document，關係走訪想 graph，稀疏欄位想 wide-column。",
+          "看到 scale out、shard key、replica：增加 nodes 是 horizontal scaling；切不同資料是 sharding；保存副本是 replication。",
+          "看到 CAP：C/A/P 是 consistency、availability、partition tolerance；真正的 C/A 取捨發生在 partition 情境。"
+        ]
+      },
+      "sourceRefs": [
+        "src-ibm-big-data",
+        "src-mongodb-nosql-explained",
+        "src-mongodb-sharding",
+        "src-ibm-cap-theorem"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-108-10",
+        "q-pp-im-it-108-11",
+        "q-pp-im-it-114-15",
+        "q-pp-im-it-115-21",
+        "q-pp-im-it-115-26"
+      ],
+      "reviewStatus": "reviewed"
     },
     {
       "id": "lesson-im-it-db-relational-model-01",
@@ -354,7 +741,41 @@
       "coveredSubtopicIds": [
         "im-it-db-relational-model"
       ],
-      "minimumPastPaperRefs": 6
+      "minimumPastPaperRefs": 6,
+      "learningScenario": {
+        "title": "大學選課系統的三本名冊",
+        "hook": "教務處有學生、課程與選課三份名冊。學生編號能找到唯一學生，課號能找到唯一課程，而選課紀錄必須同時看學生編號與課號才知道是哪一次選課。若選課表寫了 S9，學生名冊卻沒有 S9，系統就留下了一筆找不到人的紀錄。",
+        "predict": "Enrollment 出現 (sid='S9', cid='DB01', grade=NULL)：Student 沒有 S9，而且 grade 沒有宣告 NOT NULL。哪一部分必然違反限制？",
+        "mapping": [
+          {
+            "everyday": "空白名冊先規定欄名、填寫格式與限制",
+            "technical": "relation schema 描述 attributes、domains 與 constraints"
+          },
+          {
+            "everyday": "今天名冊中實際填好的每一列資料",
+            "technical": "relation instance 是某一時刻的 tuples 集合"
+          },
+          {
+            "everyday": "從學號與 email 等唯一欄位中，正式選學號作主要識別",
+            "technical": "先找具唯一性與最小性的 candidate keys，再選一個作 primary key"
+          },
+          {
+            "everyday": "同一學生可修多門課，同一課也有多名學生，因此要用學號加課號識別選課紀錄",
+            "technical": "Enrollment 的 (sid, cid) 是 composite key"
+          },
+          {
+            "everyday": "選課名冊上的學號必須能回學生名冊找到本人",
+            "technical": "foreign key 與 referential integrity 限制跨 relation 的合法關係"
+          }
+        ],
+        "boundary": "紙本名冊容易讓人誤以為列的上下順序有意義，但 relation 在數學上是 tuples 的集合；欄名看起來像 ID 也不自動成為 key，仍要驗證唯一性與最小性。Foreign key 的作用是維持合法參照，不保證自動加速查詢；能否為 NULL、刪除時 CASCADE 或 RESTRICT，都取決於 schema 明定的政策。",
+        "examCues": [
+          "表的結構、欄位與限制是 schema；某一時刻實際資料是 instance。",
+          "能唯一識別只是 superkey；再滿足移除任何欄位就失去唯一性的最小性，才是 candidate key。",
+          "被選中的 candidate key 是 primary key，必須唯一且不可為 NULL；它也可能由多欄組成。",
+          "Foreign key 值必須找到被參照鍵，或在欄位允許時為 NULL；不要把所有 NULL 一律判錯。"
+        ]
+      }
     },
     {
       "id": "lesson-im-it-db-sql-querying",
@@ -476,7 +897,41 @@
         "q-pp-im-it-114-12",
         "q-pp-im-it-114-14"
       ],
-      "reviewStatus": "reviewed"
+      "reviewStatus": "reviewed",
+      "learningScenario": {
+        "title": "替活動主辦人整理報名名單",
+        "hook": "主辦人交給你 Customers 與 Orders 兩份表格，要求找出台灣的台北或高雄參加者、統計每個國家的人數，再把訂單配回姓名。你不需要逐列告訴資料庫怎麼翻資料，只要清楚描述要哪些欄位、哪些列、如何分組，以及兩張表用哪個欄位配對。",
+        "predict": "條件寫成 Country='Taiwan' AND City='Taipei' OR City='Kaohsiung'，日本的 Kaohsiung 紀錄會不會被選進來？你會如何加括號表達真正需求？",
+        "mapping": [
+          {
+            "everyday": "在整理需求上明列最後要抄出的欄位",
+            "technical": "SELECT 指定查詢輸出的 expressions"
+          },
+          {
+            "everyday": "逐筆檢查國家與城市，只留下符合條件的報名者",
+            "technical": "WHERE 在 grouping 前過濾 individual rows"
+          },
+          {
+            "everyday": "依國家把報名者分成不同疊，再計算每疊人數",
+            "technical": "GROUP BY 形成 groups，aggregate function 對每組彙整"
+          },
+          {
+            "everyday": "完成分疊後，只保留人數至少兩人的國家",
+            "technical": "HAVING 依 aggregate 結果篩選 groups"
+          },
+          {
+            "everyday": "用 CustomerID 把訂單名單配回客戶姓名",
+            "technical": "JOIN 依 join condition 組合不同 tables 的相關 rows"
+          }
+        ],
+        "boundary": "整理紙本名單只是邏輯提示，不代表 DBMS 真的依你朗讀的順序逐列搬紙；SQL 是 declarative，optimizer 可選不同執行方式。一般空白格也不能完整類比 SQL NULL 的語意；COUNT(column) 會忽略 NULL，而 JOIN 可能因一對多配對增加 rows，並不自動去除 duplicates。",
+        "examCues": [
+          "建立含 columns 的資料表用 CREATE TABLE，不是 CREATE DATABASE，也不是不存在的 BUILD TABLE。",
+          "AND 優先於 OR；遇到『A 且（B 或 C）』直接用括號，避免 C 脫離 A 的限制。",
+          "COUNT(*) 數 rows；COUNT(column) 忽略該欄 NULL；COUNT(DISTINCT column) 再去除重複值。",
+          "單列條件放 WHERE，aggregate 後的群組條件放 HAVING；跨表配對要寫正確 JOIN ... ON 條件。"
+        ]
+      }
     },
     {
       "id": "lesson-im-it-db-transactions-01",
@@ -733,7 +1188,41 @@
         "q-pp-im-it-115-2",
         "q-pp-im-it-115-5"
       ],
-      "reviewStatus": "reviewed"
+      "reviewStatus": "reviewed",
+      "learningScenario": {
+        "title": "圖書館閉館前的還書大整理",
+        "hook": "閉館前，館員要把 n 本還書依索書號排回推車。有人逐本比較相鄰書，有人挑一本當分界把書分到兩側；整理完後，讀者還想快速找到指定索書號。真正決定成本的，不只是『哪個方法聽起來快』，而是輸入原本的形狀、分界怎麼選，以及書是否已按同一規則排好。",
+        "predict": "推車上的書早已依索書號排好。相鄰比較法若每一趟都記錄是否交換，第一趟完全沒交換後應怎麼做？",
+        "mapping": [
+          {
+            "everyday": "還書數量是 n，館員把一次索書號比較或交換當成要計數的工作",
+            "technical": "Input size、基本操作與漸近界"
+          },
+          {
+            "everyday": "館員反覆比較相鄰兩本，順序相反就交換；一整趟沒交換便停止",
+            "technical": "Optimized Bubble Sort"
+          },
+          {
+            "everyday": "館員挑一本分界書，把較小與較大的書分到兩車後繼續處理",
+            "technical": "QuickSort partition 與 pivot quality"
+          },
+          {
+            "everyday": "兩本索書號相同的預約書貼有『先到 A』『後到 B』，整理後仍保留 A 在 B 前",
+            "technical": "Stable sort"
+          },
+          {
+            "everyday": "書確實按索書號排列後，館員每次查看中間一本並排除一半範圍",
+            "technical": "Binary search 的前置條件"
+          }
+        ],
+        "boundary": "搬書動作只是 comparison、swap、partition 與 indexing 的比喻，不代表現實館員的走路距離、推車容量或多人協作成本已納入。Bubble Sort 的線性 best case 只適用於有提前停止的版本；已排序資料是否讓 QuickSort 退化取決於 pivot／partition 策略；相同索書號的貼紙只說明 stability，不代表演算法一定 in-place。Binary search 也不是 sorting 方法。",
+        "examCues": [
+          "題目只寫 O(n²) 或問 best/worst case：先確認 n、基本操作、輸入形狀與實作版本；case 與 O/Omega/Theta 不是同義詞。",
+          "Bubble Sort 題目出現『已排序』『沒有交換就停止』：有 swapped flag 才能推出 best-case Theta(n)；固定輪數版本不能。",
+          "QuickSort 遇到已排序輸入：檢查 pivot selection；每次選極端值才會一路切成 0 與 n-1。",
+          "題目問 stable 或 binary search：Stable 只管 equal keys 的相對順序；binary search 先驗證排序與 random/indexed access 前提。"
+        ]
+      }
     },
     {
       "id": "lesson-im-it-ds-trees-heaps-01",
@@ -853,7 +1342,41 @@
         "q-pp-im-it-114-4",
         "q-pp-im-it-115-3"
       ],
-      "reviewStatus": "reviewed"
+      "reviewStatus": "reviewed",
+      "learningScenario": {
+        "title": "醫院資訊台的兩套名單",
+        "hook": "醫院同時維護兩種看似都是『樹』的名單：病歷索引用姓名大小關係決定往左或往右找；急診候診表則只要求最高優先者在最前面，方便下一位立即取出。外形相似不代表規則相同——能不能排除一整側、能不能快速找任意名字，取決於名單維持的是 BST 全域順序，還是 heap 的局部 parent-child 順序。",
+        "predict": "Min-heap 的 root 是最小值。現在要找一個很大的指定號碼，和 root 比較後能否像 BST 一樣只搜尋其中一個 child subtree？",
+        "mapping": [
+          {
+            "everyday": "院區、部門與服務站以一對多的上下層關係畫成組織圖",
+            "technical": "Tree 的 root、parent、child、leaf、depth、height"
+          },
+          {
+            "everyday": "急診候診位置逐層由左到右填滿，並依序編入緊密 array",
+            "technical": "Complete binary tree 與 array mapping"
+          },
+          {
+            "everyday": "病歷索引每到一個名字，就依比較結果只往左側較小區或右側較大區",
+            "technical": "BST ordering、search 與 inorder traversal"
+          },
+          {
+            "everyday": "急診表只保證每位 parent 的優先序不低於 children，最急者放在 root",
+            "technical": "Max-heap 與 priority queue"
+          },
+          {
+            "everyday": "新病人先放下一個空位，再沿 parent chain 上調；取走 root 後用最後一人補位並向下調整",
+            "technical": "Heap insert、extract 與 sift"
+          }
+        ],
+        "boundary": "真實急診優先序會重新評估且涉及臨床規範，本比喻只映射 priority queue 的資料結構操作，不能用 heap property 推導醫療決策。BST 名字比較也是假設存在一致 ordering；若插入使樹嚴重偏斜，search/insert 可退化成 O(n)。Complete、BST、heap 是不同約束，組織圖更不保證是 binary 或 complete tree。",
+        "examCues": [
+          "看到 complete binary tree 的 array index：Zero-based：parent=floor((i-1)/2)，left=2i+1，right=2i+2；root 沒有 parent。",
+          "題目問 BST inorder 或搜尋成本：Distinct-key inorder 產生遞增序列；平衡時 O(log n)，偏斜 worst case O(n)。",
+          "題目寫 min-heap／max-heap 不等號：Min：parent≤children；max：parent≥children。只保證局部順序。",
+          "題目問 heap insert、peek 或 arbitrary search：Insert/extract O(log n)，peek root O(1)，找任意 key worst case O(n)。"
+        ]
+      }
     },
     {
       "id": "lesson-im-it-network-application-protocols",
@@ -969,7 +1492,218 @@
       "coveredSubtopicIds": [
         "im-it-network-application-protocols"
       ],
-      "minimumPastPaperRefs": 6
+      "minimumPastPaperRefs": 6,
+      "learningScenario": {
+        "title": "第一次走進大型展覽館",
+        "hook": "你剛到一座陌生展覽館：先到報到處領取攤位號、出口路線與服務台電話，再查目錄找到攤位位置，向櫃台提出需求。櫃台給你一張取件牌，讓你稍後回來時能接續同一筆服務。這些步驟看起來都在『逛展』，但每個窗口解決的問題不同。",
+        "predict": "如果你只知道攤位名稱、還不知道它在哪裡，應先去查目錄，還是直接拿取件牌要求櫃台交貨？為什麼？",
+        "mapping": [
+          {
+            "everyday": "報到處發給新訪客攤位號、出口路線與服務台資訊",
+            "technical": "DHCP 配置 IP address、subnet mask、default gateway 與 DNS server"
+          },
+          {
+            "everyday": "依攤位名稱查展場目錄，取得攤位位置",
+            "technical": "DNS 將 domain name 查成 IP 等名稱紀錄"
+          },
+          {
+            "everyday": "訪客向服務櫃台提出一項需求，櫃台回覆結果",
+            "technical": "HTTP client request 與 server response"
+          },
+          {
+            "everyday": "訪客保存櫃台發的取件牌，回訪時主動出示以接續服務",
+            "technical": "Browser 保存 Cookie，之後依作用域規則附在 request；常攜帶 session identifier"
+          },
+          {
+            "everyday": "公司員工不直接去外場，而由公司跑腿窗口代表他們辦事",
+            "technical": "Forward proxy 代表 clients 對外發出 application requests"
+          }
+        ],
+        "boundary": "展場比喻只用來區分服務責任：真實 DHCP 與 DNS 有網路交換及作用範圍，Cookie 受 Domain、Path、Secure、HttpOnly、SameSite 等規則限制，也不等於完整 session 資料。Reverse proxy 是站在 server 前方接外部請求，不能與代表訪客的 forward proxy 對調；SMTP、IMAP、POP3、LDAP 與 CDN 仍須依原課定義判斷，不能硬塞成同一個展場窗口。",
+        "examCues": [
+          "新主機取得 IP、mask、gateway、DNS server：先想到 DHCP；名稱查位址：想到 DNS。",
+          "Web request/response：想到 HTTP；靠識別碼延續互動：檢查 Cookie 與 server-side session 的分工。",
+          "送出與 mail-server relay：想到 SMTP；多裝置信箱同步：想到 IMAP；偏下載：想到 POP3。",
+          "代表 client 對外：forward proxy；站在 origin 前接請求：reverse proxy；靠近使用者快取內容：CDN edge。"
+        ]
+      }
+    },
+    {
+      "id": "lesson-im-it-network-ip-routing-transport-01",
+      "subtopicId": "im-it-network-ip-addressing-routing",
+      "coveredSubtopicIds": [
+        "im-it-network-ip-addressing-routing",
+        "im-it-network-transport"
+      ],
+      "title": "IP 定址、路由與傳輸：封包如何找到路，資料如何抵達應用程式",
+      "summary": "從 CIDR 與 subnet mask 判斷目的地主機是否在同一子網路，接著比較 distance-vector 與 link-state routing，理解 IPv4 TTL 如何限制封包壽命；最後以 TCP、UDP、receive window 與 congestion window 串起端到端傳輸。所引用考古題答案皆為技術推導與人工覆核結果，並非官方答案。",
+      "estimatedMinutes": 40,
+      "minimumPastPaperRefs": 7,
+      "learningObjectives": [
+        "用 prefix length 或 subnet mask 分出 IPv4 位址的 network 與 host portions，並以 AND 運算求 network address",
+        "依 routing table 的 longest-prefix match 選擇 next hop，並說明 TTL 防止封包在 routing loop 中無限循環",
+        "比較 distance-vector 與 link-state routing 的資訊交換範圍、路由器已知狀態與代表協定",
+        "比較 TCP 與 UDP 的連線、資料邊界、可靠性、排序與 header overhead",
+        "區分 receiver window 的 flow control 與 congestion window 的 congestion control，判斷可送出的 outstanding data 上限"
+      ],
+      "learningScenario": {
+        "title": "一份文件如何穿過郵政轉運站",
+        "hook": "你把一份文件寄往外地：信封寫著最終地址，各轉運站依地址選下一站，並在『最多還能轉幾站』的計數上減 1。若文件必須完整且照順序抵達，你會選可編號、確認與補寄的服務；若是可容忍少量遺失、重視即時性的短訊息，則可能選不等待逐件確認的投遞方式。",
+        "predict": "兩條路線都能涵蓋目的地址時，轉運站應選範圍較廣還是地址前綴較具體的路線？若剩餘轉送計數為 1，下一站還能再把文件轉送一次嗎？即時語音又為何可能不想等待遺失資料補齊？",
+        "mapping": [
+          {
+            "everyday": "信封上的最終收件地址",
+            "technical": "IP destination address，用於跨網路 forwarding"
+          },
+          {
+            "everyday": "轉運站從所有涵蓋地址的路線中選最具體的區域路線",
+            "technical": "Router 對 forwarding table 執行 longest-prefix match"
+          },
+          {
+            "everyday": "每經一個轉運站就減 1 的剩餘轉送計數，歸零即停止轉送",
+            "technical": "IPv4 TTL 每次處理至少減 1，歸零丟棄以限制 routing loop"
+          },
+          {
+            "everyday": "把連續文件編序、取得確認，缺頁時補寄並按順序交付",
+            "technical": "TCP connection 提供 reliable、in-order byte stream，使用 sequence、ACK 與 retransmission"
+          },
+          {
+            "everyday": "每張短訊各自投遞，不承諾送達、去重或依寄出順序交付",
+            "technical": "UDP connectionless datagram service，不保證 delivery、duplicate protection 或 ordering"
+          }
+        ],
+        "boundary": "郵政故事只用來區分 forwarding、TTL 與 transport service。IP 本身不保證封包送達；TTL 在現代題型中常按 router processing/hop 理解，不是牆上時鐘或郵件日期。TCP 提供 byte stream，不保留應用程式每次 write 的文件／頁面邊界，也不能保證網路永不 loss；UDP 應用仍可自行加入 acknowledgment、重傳或安全機制。真實 route 還受 prefix、metric、policy 與狀態影響，TCP 可送資料也同時受 rwnd、cwnd、ACK、loss 與實作限制，不能從郵務速度直接推導網路效能。",
+        "examCues": [
+          "多條 route 同時匹配 destination：選最長、最具體的 prefix；/0 是最不具體的 default route。",
+          "防止 packet 在 routing loop 無限循環：想到 IPv4 TTL；逐次處理至少減 1，歸零丟棄。",
+          "Reliable、in-order、connection-oriented byte stream：TCP；不要誤稱它保留 application message boundaries。",
+          "Connectionless、8-byte header、datagram boundaries、無 delivery/order 保證：UDP；即時應用仍須自行處理 timing 與 loss。"
+        ]
+      },
+      "sections": [
+        {
+          "title": "CIDR 與 subnet mask：先判斷目的地在不在同一網路",
+          "body": "IPv4 位址共有 32 bits。CIDR 的 /n 表示前 n bits 是 network prefix，其餘 32-n bits 是 host portion；等價的 subnet mask 由前 n 個 1 與其後的 0 組成。把 IP address 與 mask 逐 bit AND，就得到 network address。主機比較自己與目的位址的 network address：相同時可在本地鏈路尋找目的主機，不同時通常把封包交給 default gateway。Subnet mask 的工作是劃分 network 與 host portions，不是指出 gateway、加密封包或決定 MTU。",
+          "bullets": [
+            "/24 對應 255.255.255.0；/26 對應 255.255.255.192",
+            "Network address = IP address AND subnet mask",
+            "同一 prefix 不代表應用程式一定可連線；防火牆、VLAN 與主機狀態仍可能阻擋通訊",
+            "在一般 IPv4 subnet 中，host bits 全 0 是 network address、全 1 是 directed broadcast address；特殊 prefix 另有規則"
+          ]
+        },
+        {
+          "title": "Forwarding、longest-prefix match 與 IPv4 TTL",
+          "body": "Router 收到 IPv4 datagram 後，依 destination address 查 forwarding table。若多個 prefix 都匹配，選最長、也就是最具體的 prefix；若沒有更具體項目，才使用 default route。每經過一個轉送 datagram 的 router，IPv4 TTL 都至少減 1；當 TTL 歸零，router 丟棄封包，通常回送 ICMP Time Exceeded。TTL 因此限制封包可經過的 hops，避免錯誤 route 形成 loop 時無限消耗網路資源。",
+          "bullets": [
+            "Route entry 通常包含 destination prefix、next hop／outgoing interface 與 metric",
+            "Longest-prefix match 看 prefix 長度，不是看 route 寫在表格的先後順序",
+            "0.0.0.0/0 可作 IPv4 default route，任何目的位址都能匹配，但最不具體",
+            "TTL 是 hop limit，不是封包建立時間戳記，也不負責 fragmentation reassembly ordering"
+          ]
+        },
+        {
+          "title": "Distance-vector 與 link-state：路由器如何學會路徑",
+          "body": "Distance-vector router 把自己目前到各目的地的 distance estimate 傳給直接鄰居，再利用鄰居提供的資訊更新路由；典型例子是 RIP。Link-state router 則散布自己的 link-state information，使同一 routing domain 內的路由器建立拓撲資料庫，再各自計算 shortest-path tree；OSPF 是 link-state protocol。兩者都能 adaptive 地回應拓撲變化，但交換的資訊、路由器掌握的網路視圖與收斂問題不同。",
+          "bullets": [
+            "Distance-vector：和鄰居交換距離資訊，不要求每台 router 先取得完整拓撲",
+            "Link-state：flood link-state advertisements，建立 topology database 後算 shortest paths",
+            "OSPF Version 2 是單一 autonomous system 內使用的 link-state routing protocol",
+            "Flooding 是 OSPF 散布 link-state information 的機制，不等於把 OSPF 分類成單純 flooding routing"
+          ]
+        },
+        {
+          "title": "Transport layer：TCP 與 UDP 把資料交給正確應用程式",
+          "body": "Transport protocol 使用 port numbers 在同一主機上 multiplex 與 demultiplex application flows。TCP 是 connection-oriented，向應用程式提供 reliable、in-order byte stream；它用 sequence numbers、acknowledgments、checksum 與 retransmission 處理遺失或錯誤，但不保留應用程式每次 write 的 message boundary。UDP 提供 datagram service，header 固定 8 bytes、機制較少，不保證 delivery、duplicate protection 或 ordering；應用程式若需要這些性質，必須自行設計或改用合適協定。",
+          "bullets": [
+            "TCP connection 以 endpoints 識別，建立連線時使用 three-way handshake",
+            "TCP 的 reliable byte stream 不代表每個應用訊息只會對應一個 TCP segment",
+            "UDP connectionless 且保留 datagram boundaries，但低 overhead 不等於永遠低 latency",
+            "選 TCP 或 UDP 要依可靠性、延遲、訊息模型及應用程式能否自行處理遺失來決定"
+          ]
+        },
+        {
+          "title": "TCP 的兩種窗口：flow control 不等於 congestion control",
+          "body": "Receiver advertised window（rwnd）由接收端通告，限制 sender 可送入接收窗口的資料範圍，以免壓垮 receiver buffer，這是 flow control。Congestion window（cwnd）是 sender 維護的新資料傳送限制，用來控制注入網路的資料量，這是 congestion control。在目前窗口固定、沒有因 cwnd 驟降而留下較大既有 flight 的簡化題型中，可送或維持的 outstanding data 上限可寫成 min(rwnd, cwnd)。若 loss 後 cwnd 突然縮小，已在途的 flight size 可能暫時大於新的 cwnd，此時 sender 不應再增加在途資料，而要等待 ACK 使 flight size 降低。Slow start 用 ACK 回饋逐步增加 cwnd，目的是探測未知的 network capacity；在常見的簡化題型中，每個 segment 都被 ACK 且無損失時，cwnd 約每 RTT 加倍，但實際初始窗口與成長會受標準、ACK 行為及實作影響。",
+          "bullets": [
+            "rwnd 保護 receiver；cwnd 保護 network，兩者控制的瓶頸不同",
+            "TCP header 的 Window field 通告接收端目前願意接受的資料範圍",
+            "窗口固定的簡化題型以 min(rwnd, cwnd) 限制可新增或維持的 outstanding data；cwnd 驟降後既有 flight 可暫時超過新 cwnd",
+            "Slow start 的 exponential growth 是常用近似；它不能保證完全避免 loss 或 retransmission"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "主機位址是 192.168.10.77/26。求 subnet mask、network address、broadcast address 與一般可用 host range，並判斷 192.168.10.120 與 192.168.10.130 是否在同一 subnet。",
+          "steps": [
+            "/26 的 mask 前 26 bits 為 1，因此是 255.255.255.192；最後一個 octet 的 block size 是 256-192=64。",
+            "最後一個 octet 的區段為 0–63、64–127、128–191、192–255；77 落在 64–127。",
+            "Network address 是 192.168.10.64，broadcast address 是 192.168.10.127。",
+            "一般可用 host range 排除 network 與 broadcast，為 192.168.10.65–192.168.10.126。",
+            "120 落在 64–127，因此同 subnet；130 落在 128–191，因此不同 subnet，通常交給 default gateway。"
+          ],
+          "answer": "Mask=255.255.255.192；network=192.168.10.64；broadcast=192.168.10.127；一般 hosts=.65–.126。位址 .120 同 subnet，.130 不同 subnet。"
+        },
+        {
+          "prompt": "Router 有四條 route：10.0.0.0/8→R1、10.20.0.0/16→R2、10.20.30.0/24→R3、0.0.0.0/0→R4。目的位址為 10.20.30.77，且抵達本 router 時 TTL=2。應選哪個 next hop？若之後還必須經過兩台 routers 才到目的端，封包會如何？",
+          "steps": [
+            "10.20.30.77 同時匹配 /8、/16、/24 與 /0。",
+            "最長匹配是 10.20.30.0/24，所以目前 router 選 R3，而不是第一條匹配 route。",
+            "目前 router 轉送前把 TTL 由 2 減為 1。",
+            "下一台 router 再轉送時 TTL 由 1 減為 0，必須丟棄封包；它通常送回 ICMP Time Exceeded，因此封包無法再經第三次 router forwarding 抵達目的端。"
+          ],
+          "answer": "使用 /24 的 R3。TTL 只能再支撐一次後續 router forwarding；下一台 router 將 TTL 減至 0 並丟棄，所以不能穿過所需的兩台後續 routers。"
+        },
+        {
+          "prompt": "協定甲只把目前的 destination-distance 資訊傳給直接鄰居；協定乙讓 routers 取得區域拓撲資料庫，再各自建立 shortest-path tree。判斷兩者類型，並指出 OSPF 屬於哪一種。",
+          "steps": [
+            "甲的交換對象是直接鄰居，內容是到各目的地的 distance estimate，符合 distance-vector。",
+            "乙先散布 link states 並建立拓撲圖，再計算 shortest-path tree，符合 link-state。",
+            "OSPF Version 2 規格明定它是 link-state protocol，因此屬於乙。",
+            "不要因 OSPF 使用 flooding 傳遞 advertisements，就把它誤判為 distance-vector 或單純 flooding routing。"
+          ],
+          "answer": "甲是 distance-vector；乙是 link-state；OSPF 屬於 link-state。"
+        },
+        {
+          "prompt": "某 TCP sender 目前 rwnd=12 MSS、cwnd=4 MSS，且沒有其他限制。最多可有多少尚未確認資料？若用簡化 slow-start 模型，起始 cwnd=1 MSS、每個 segment 都及時 ACK 且無 loss，三個 RTT 後 cwnd 約為多少？另說明即時語音若可容忍少量遺失，為何常考慮 UDP。",
+          "steps": [
+            "Outstanding data 上限是 min(rwnd,cwnd)=min(12,4)=4 MSS。",
+            "簡化 slow start 每 RTT 約加倍：起始 1 MSS，第一個 RTT 後 2 MSS。",
+            "第二個 RTT 後 4 MSS，第三個 RTT 後 8 MSS；這是題目明定 ACK 與無損失條件下的近似模型。",
+            "即時語音常重視延遲，且能容忍少量遺失；UDP 不需 TCP connection establishment、header 較小，也不強制 in-order retransmission。",
+            "UDP 本身不保證較快或可靠；應用程式仍需自行處理 timing、loss concealment 或安全。"
+          ],
+          "answer": "最多 4 MSS outstanding；簡化模型三個 RTT 後 cwnd≈8 MSS。可容忍少量遺失且重視延遲的即時語音常考慮 UDP，但必要的可靠性與時序機制須由應用層補足。"
+        }
+      ],
+      "commonPitfalls": [
+        "把 subnet mask 當成 default gateway；mask 只界定 network 與 host portions",
+        "看到多條 route 都匹配時選第一條，而不是 longest-prefix match",
+        "把 TTL 當 timestamp，或以為它負責 TCP segment ordering",
+        "把 OSPF 使用 flooding 的步驟誤解成 OSPF 不是 link-state protocol",
+        "以為 TCP 是 message-oriented；TCP 提供的是 byte stream，不保留 write boundaries",
+        "以為 UDP 完全沒有 checksum，或宣稱 UDP 必然比 TCP 快",
+        "混淆 rwnd 與 cwnd：前者是 receiver flow control，後者是 sender congestion control",
+        "把 slow start 的簡化倍增序列當成所有現代 TCP 實作在任何 ACK／loss 條件下的固定行為"
+      ],
+      "sourceRefs": [
+        "src-ietf-rfc4632-cidr",
+        "src-ietf-rfc791-ipv4",
+        "src-ietf-rfc2328-ospfv2",
+        "src-ietf-rfc9293-tcp",
+        "src-ietf-rfc768-udp",
+        "src-ietf-rfc5681-tcp-congestion"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-112-16",
+        "q-pp-im-it-114-19",
+        "q-pp-im-it-114-21",
+        "q-pp-im-it-115-13",
+        "q-pp-im-it-114-20",
+        "q-pp-im-it-115-14",
+        "q-pp-im-it-115-15"
+      ],
+      "reviewStatus": "reviewed"
     },
     {
       "id": "lesson-im-it-network-link-lan-01",
@@ -1093,7 +1827,41 @@
       "coveredSubtopicIds": [
         "im-it-network-link-lan"
       ],
-      "minimumPastPaperRefs": 6
+      "minimumPastPaperRefs": 6,
+      "learningScenario": {
+        "title": "物流包裹在園區內換轉運籃",
+        "hook": "一件要送到外地的包裹，內層寫著最終收件地址，但在目前物流園區內，還要放進貼有『下一個月台』標籤的轉運籃。分揀台只看這一段的月台標籤；若不知道下一站該送哪個月台，就先查園區的本地對照表。",
+        "predict": "目的主機在另一個 subnet 時，送端應查遠端主機的 MAC，還是 default gateway 的 MAC？到了下一個 router 後，原本的 MAC 標籤會不會繼續沿用？",
+        "mapping": [
+          {
+            "everyday": "包裹內層標示的最終收件地址",
+            "technical": "IP address，用於跨網路識別與遞送目的端"
+          },
+          {
+            "everyday": "目前園區轉運籃上的來源與下一站月台標籤",
+            "technical": "Ethernet frame 的 source/destination MAC，只服務當前鏈路"
+          },
+          {
+            "everyday": "本地收發室依下一站代號查到對應月台",
+            "technical": "ARP 在 IPv4 local broadcast domain 解析 next-hop IP 對應的 MAC"
+          },
+          {
+            "everyday": "分揀台記住包裹從哪個入口進來，之後把同一月台的貨送往正確出口",
+            "technical": "Switch 從 source MAC 學習 MAC-to-port mapping，再依 destination MAC forwarding"
+          },
+          {
+            "everyday": "同一條運輸走廊用不同顏色封條隔離兩個部門的貨，跨色轉送須經管理站",
+            "technical": "802.1Q trunk 承載多個 VLAN；VLAN 是分離的 broadcast domains，跨 VLAN 需 layer-3 routing"
+          }
+        ],
+        "boundary": "物流標籤不是實際封包格式，也無法完整呈現 broadcast、frame checksum、timing 或無線干擾。MAC 不保證全球永久唯一或不可偽造；VLAN 顏色只表示邏輯隔離，不代表 encryption 或 VPN。Shared half-duplex Ethernet 的 collision 與 CSMA/CD、Wi-Fi 的 CSMA/CA 仍要依媒體情境判斷，不能用『物流人員會協調』推論網路一定不碰撞。",
+        "examCues": [
+          "同 subnet 且缺 MAC：ARP 查目的主機；跨 subnet：ARP 查 default gateway 的 MAC。",
+          "Hub/shared half-duplex、碰撞後重傳：CSMA/CD 與 binary exponential backoff；switch/full-duplex 通常不使用。",
+          "無線媒體先等待並隨機 backoff、可搭 RTS/CTS：CSMA/CA；它降低而非保證消除碰撞。",
+          "同實體 switch 仍分開 broadcast domains：VLAN；trunk 可承載多 VLAN，跨 VLAN 需要 routing。"
+        ]
+      }
     },
     {
       "id": "lesson-im-it-network-models-encapsulation",
@@ -1205,7 +1973,41 @@
       "coveredSubtopicIds": [
         "im-it-network-models-encapsulation"
       ],
-      "minimumPastPaperRefs": 6
+      "minimumPastPaperRefs": 6,
+      "learningScenario": {
+        "title": "網購商品的多層包裝與轉運",
+        "hook": "商家先準備商品與訂單內容，再貼上收件部門編號，放進寫有最終地址的運輸箱，最後由當地物流站套上只適用這一段路的轉運標籤。每到一個轉運中心，外層的本地標籤會換掉，但箱內的最終目的資訊通常繼續往前。",
+        "predict": "包裹經過 router 換到下一條鏈路時，port、IP 與 MAC 中哪一種識別最像會被重建的『本地轉運標籤』？哪一些通常仍描述原本的端點？",
+        "mapping": [
+          {
+            "everyday": "商家真正要交付的商品與訂單內容",
+            "technical": "Application message/data"
+          },
+          {
+            "everyday": "標示收件單位或服務窗口的內層作業單",
+            "technical": "Transport segment/datagram 與 port，用來識別端點上的 application"
+          },
+          {
+            "everyday": "寫有來源與最終收件地址的運輸箱",
+            "technical": "IP packet 與 source/destination IP，用於跨網路 routing"
+          },
+          {
+            "everyday": "只適用目前一段路的物流轉運標籤與外籃",
+            "technical": "Data-link frame 與 source/destination MAC，用於當前鏈路 delivery"
+          },
+          {
+            "everyday": "轉運中心拆掉舊的本地外籃，為下一段路重新貼標",
+            "technical": "Router 移除 incoming frame、更新必要 IP 欄位，再建立 next-link frame"
+          }
+        ],
+        "boundary": "封裝不是實體盒子套盒子，而是各層把上層資料當 payload 並加入控制資訊；segment、packet、frame 的名稱也依協定與教材語境而異。Port 與端點 IP 只是『通常』維持，NAT 等中介功能可能改寫它們；IPv4 TTL 會逐跳更新。OSI/TCP-IP 是責任模型，一台真實設備也可能同時處理多層，不能由設備名稱斷言它只屬單一層。",
+        "examCues": [
+          "Port、TCP、UDP：傳輸層；IP 與跨網路 routing：網路層；MAC/frame：資料鏈結層。",
+          "送端由上往下加 headers、收端由下往上移除：encapsulation／decapsulation。",
+          "經 router 後 MAC/frame 重建，端點 IP 通常保留但 TTL 等逐跳欄位更新。",
+          "Client-server 是角色互動架構，不等同某個固定 OSI layer；先看題目問功能還是層級。"
+        ]
+      }
     },
     {
       "id": "lesson-im-it-os-file-storage-io",
@@ -1329,7 +2131,41 @@
       "coveredSubtopicIds": [
         "im-it-os-file-storage-io"
       ],
-      "minimumPastPaperRefs": 6
+      "minimumPastPaperRefs": 6,
+      "learningScenario": {
+        "title": "機場如何從旅客名字找到行李",
+        "hook": "機場不會把旅客名字直接刻在行李存放格上。櫃檯先用目錄找到行李紀錄，紀錄保存擁有者、大小與存放位置，再去正確區塊取出內容。行李輸送設備也不直接理解每個應用程式的請求，需要作業系統中的專用控制軟體把通用 I/O 要求轉成裝置操作。",
+        "predict": "如果兩張不同的領取單都指向同一筆行李紀錄，撕掉其中一張後，行李是否必然立刻被丟棄？",
+        "mapping": [
+          {
+            "everyday": "櫃檯目錄把旅客使用的名稱連到一筆行李紀錄",
+            "technical": "directory entry 將 filename 對應到檔案識別資訊／inode"
+          },
+          {
+            "everyday": "行李紀錄保存權限、大小、時間與存放格位置，但不是行李本身",
+            "technical": "inode 保存 metadata 與 data-block pointers，通常不保存 filename 或完整內容"
+          },
+          {
+            "everyday": "輸送帶操作員把櫃檯的通用要求轉成特定機器命令",
+            "technical": "device driver 將 OS 的通用 I/O requests 轉成裝置操作並協調 interrupts／data transfer"
+          },
+          {
+            "everyday": "輸送帶旁的小暫存區吸收送入與取走速度差",
+            "technical": "buffering 以 memory 暫存資料流，吸收 producer／consumer 的速度或單位差異"
+          },
+          {
+            "everyday": "一整車一整車的行李工作先排隊，再由單一裝卸口依序處理",
+            "technical": "spooling 保存可獨立排程的完整 jobs，讓慢速裝置稍後依 queue 服務"
+          }
+        ],
+        "boundary": "機場故事不代表所有 file systems 都使用 inode，也不能完整呈現 hard link、link count、開啟中的 references 與空間回收規則；driver 更不是有自主判斷的人。Buffer 與 spool 的實際位置與實作可不同。Executable 的 loader／dynamic linker 流程也沒有直接的行李角色，仍要回到映射 shared libraries、解析 symbols 與 relocations 的原課定義。",
+        "examCues": [
+          "Filename 通常在 directory entry；inode 放 metadata 與 data-block pointers；實際 bytes 在 data blocks。",
+          "把通用 OS I/O request 轉成特定裝置操作的是 device driver，不是一般 application 或 firmware 的同義詞。",
+          "平滑持續資料流的速度差先想到 buffering；讓 printer 等慢速裝置排完整 jobs 先想到 spooling。",
+          "啟動時尋找 shared library、映射 code、解析 symbols／relocations 是 dynamic linker；它不是 compiler 或 assembler。"
+        ]
+      }
     },
     {
       "id": "lesson-im-it-os-processes-threads",
@@ -1499,6 +2335,156 @@
       }
     },
     {
+      "id": "lesson-im-it-os-scheduling-memory-management-01",
+      "subtopicId": "im-it-os-cpu-scheduling",
+      "coveredSubtopicIds": [
+        "im-it-os-cpu-scheduling",
+        "im-it-os-memory-management"
+      ],
+      "title": "CPU 排程與虛擬記憶體：時間與空間的資源分配",
+      "summary": "以 ready queue、waiting time、throughput 與 fairness 比較 FCFS、SJF、Round Robin、Priority 和 MLFQ，再由 paging、page table、page fault、working set 與 thrashing 理解虛擬記憶體。所引用考古題答案皆為非官方技術覆核；爭議題與題面不完整題均不列入 refs。",
+      "estimatedMinutes": 38,
+      "minimumPastPaperRefs": 8,
+      "learningObjectives": [
+        "區分 CPU scheduling 的 utilization、throughput、waiting time、response time 與 fairness 目標",
+        "比較 FCFS、SJF、Round Robin、Priority 與 multilevel feedback queue 的選擇規則和風險",
+        "將 virtual page number 經 page table 映射成 physical frame number",
+        "說明 page fault、working set 與 thrashing 的因果關係"
+      ],
+      "learningScenario": {
+        "title": "診所同時安排看診順序與診間門牌",
+        "hook": "一間診所只有一位當班醫師與有限診間。櫃檯一方面要從候診名單決定下一位病人，另一方面要把掛號單上的邏輯門牌查表映射到實際診間。短診先看可能降低平均等待，固定時間輪流看能避免某位持續候診者永久被略過；若可用診間不足，工作人員反覆把病歷送進送出，反而沒時間真正看診。",
+        "predict": "三位病人同時到達，預估看診時間是 6、2、4 分鐘；若時間估計可靠，哪種順序會降低這三人的平均等待時間？若改成每人固定看 2 分鐘再輪到下一位，又對應哪種排程？",
+        "mapping": [
+          {
+            "everyday": "已報到並等待醫師服務的候診病人",
+            "technical": "ready queue 中等待 CPU 的 processes"
+          },
+          {
+            "everyday": "櫃檯依政策選出下一位進診間的病人",
+            "technical": "CPU scheduler 從 ready processes 選擇下一個執行者"
+          },
+          {
+            "everyday": "每位病人先取得固定 2 分鐘，看完一段就回隊尾輪候",
+            "technical": "Round Robin 讓 processes 依序取得固定 time quantum"
+          },
+          {
+            "everyday": "掛號單上的邏輯門牌由櫃檯目錄查到實際診間，門內位置編號保持不變",
+            "technical": "Page table 將 virtual page number 映射到 physical frame number，page offset 在轉換後不變"
+          },
+          {
+            "everyday": "診間不足時不斷搬入搬出目前需要的病歷，搬運時間多於實際看診",
+            "technical": "Active working sets 超過可用 frames 時，頻繁 page faults／paging 可能形成 thrashing"
+          }
+        ],
+        "boundary": "病人不是可任意暫停且無成本保存狀態的 process，實際 burst time 也通常不能事先精確知道；因此診所故事不能證明 SJF 在所有動態 workload 都最佳。掛號門牌只是 address translation 的提示：真正 paging 使用固定大小 pages／frames 與位元 offset，page fault 也可能是合法頁面尚未駐留，不等於走錯診間。Thrashing 特指 paging 壓倒有效執行，不是一般候診壅塞；MLFQ 的跨 queue 移動與 priority boost 仍須依正式政策理解。",
+        "examCues": [
+          "提高 utilization／throughput、降低 waiting／response time、兼顧 fairness 都是 scheduling 目標，彼此可能衝突。",
+          "Burst 已知等前提下 SJF 可最小化平均等待；Round Robin 依 time quantum 輪流，MLFQ 則允許 process 跨 queues 移動。",
+          "Virtual address 拆成 page number 與 offset；page table 把 page number 映射到 frame number，offset 保持不變。",
+          "合法 page 尚未在 memory 也會 page fault；頻繁換頁且 paging 多於有效執行才是 thrashing。"
+        ]
+      },
+      "sections": [
+        {
+          "title": "排程器在互相衝突的目標間取捨",
+          "body": "CPU scheduler 從 ready processes 中選擇下一個執行者。常見目標包含提高 CPU utilization 與 throughput、降低 waiting／turnaround／response time，以及公平分配 CPU。這些目標可能衝突：互動系統重視 response time，批次工作可能更在意 throughput；因此沒有脫離 workload 與政策假設、永遠最好的單一演算法。",
+          "bullets": [
+            "Waiting time 是 process 在 ready queue 等待的總時間",
+            "Turnaround time 是完成時間減到達時間",
+            "Response time 是到達後首次獲得回應的時間",
+            "Fairness 與 starvation avoidance 也是典型排程考量"
+          ]
+        },
+        {
+          "title": "用選擇規則辨認排程演算法",
+          "body": "FCFS 依到達順序，簡單但可能出現 convoy effect。若所有 CPU burst 已知，non-preemptive SJF 可最小化該組工作的平均等待時間，但長工作可能 starvation。Priority scheduling 也可能讓低優先序工作長期等候，可用 aging 緩解。Round Robin 讓 ready processes 依序取得 time quantum；只要工作持續留在 ready queue 且系統正常推進，便不會因新短工作或高優先序工作而永久被略過。",
+          "bullets": [
+            "Time quantum 太大時，Round Robin 趨近 FCFS",
+            "Time quantum 太小會增加 context-switch overhead",
+            "SJF 的理論優勢依賴已知或可準確預估 CPU burst",
+            "Aging 是逐步提高等待中 process 的 priority"
+          ]
+        },
+        {
+          "title": "MLFQ 以行為回饋調整優先序",
+          "body": "Multilevel feedback queue 使用多個不同優先序的 queues，process 可以依 CPU 使用行為與等待狀況在 queues 之間移動。常見設計讓新工作先進高優先序 queue；用完整個 quantum 的 CPU-bound 工作可能被降級，頻繁等待 I/O 的互動工作則較常留在高優先序。實際規則由系統政策決定，不能把 MLFQ 誤寫成所有工作終身固定在同一 queue。",
+          "bullets": [
+            "Feedback 的重點是 process 可跨 queue 移動",
+            "高優先序 queue 通常可搶占低優先序 queue",
+            "各 queue 可採不同 quantum 或排程規則",
+            "Periodic priority boost 可避免低層 queue starvation"
+          ]
+        },
+        {
+          "title": "Paging 用固定大小單位連接虛擬與實體記憶體",
+          "body": "Paging 把 virtual address space 切成固定大小 pages，把 physical memory 切成相同大小 frames。Virtual address 可拆成 virtual page number 與 offset；page table 將 page number 映射到 frame number，而 offset 保持不變。若目標 page 不在 memory，會觸發 page fault，由作業系統載入頁面。當配置的 frames 無法容納 active working sets，page faults 急升，系統可能把大部分時間花在 paging 而不是執行，形成 thrashing。",
+          "bullets": [
+            "4 KiB 是常見基本 page size，但架構也可能支援其他或 huge pages",
+            "Page table 的核心用途是 virtual-to-physical address mapping",
+            "Page fault 不等於程式錯誤；合法頁面可能只是尚未駐留",
+            "Thrashing 的症狀是頻繁換頁與有效 CPU 工作下降"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "三個 process 同時在時間 0 到達，CPU burst 分別為 P1=6、P2=2、P3=4。比較 non-preemptive FCFS（順序 P1,P2,P3）與 SJF 的平均等待時間。",
+          "steps": [
+            "FCFS 等待時間為 P1=0、P2=6、P3=8，平均 (0+6+8)/3=14/3。",
+            "SJF 順序為 P2、P3、P1。",
+            "SJF 等待時間為 P2=0、P3=2、P1=6，平均 (0+2+6)/3=8/3。",
+            "比較 8/3 < 14/3；本例符合 burst 已知且同時到達的前提。"
+          ],
+          "answer": "FCFS 平均等待時間為 14/3，SJF 為 8/3；在此明確前提下 SJF 較小。"
+        },
+        {
+          "prompt": "Round Robin 的 quantum=2，P1 與 P2 在時間 0 到達，CPU burst 分別為 5 與 3。忽略 context-switch cost，列出執行片段。",
+          "steps": [
+            "P1 先執行 2 單位，剩 3；ready queue 後方是 P2。",
+            "P2 執行 2 單位，剩 1；P1 回到前方。",
+            "P1 再執行 2 單位，剩 1。",
+            "P2 執行最後 1 單位完成，P1 再執行最後 1 單位完成。"
+          ],
+          "answer": "執行片段為 P1(0–2)、P2(2–4)、P1(4–6)、P2(6–7)、P1(7–8)。"
+        },
+        {
+          "prompt": "系統 page size=4 KiB；某 virtual address 的 page number=9、offset=100，page table 顯示 page 9 對應 frame 20。求 physical address；若 page 9 的 valid bit 為 0 又代表什麼？",
+          "steps": [
+            "4 KiB=4096 bytes，physical address = frame number × page size + offset。",
+            "代入得到 20×4096+100=81920+100。",
+            "Physical address 為 82020。",
+            "若 valid／present bit 為 0，這次合法存取通常觸發 page fault，由 OS 檢查並載入頁面；若位址本身非法，則會進一步形成存取錯誤。"
+          ],
+          "answer": "映射後 physical address=82020；page 不在 memory 時會觸發 page fault，而不是直接由 scheduler 解決。"
+        }
+      ],
+      "commonPitfalls": [
+        "宣稱某排程演算法在所有 workload 下都同時最佳化所有指標",
+        "忽略 SJF 最小平均等待時間依賴 burst 已知等前提",
+        "認為 Priority scheduling 與 SJF 天生不會 starvation",
+        "把 MLFQ 誤認為 process 永遠固定在單一 queue",
+        "把 page 與 frame 當成大小不同的單位",
+        "把 page table 誤當成儲存 PCB 或負責 CPU scheduling",
+        "把任何 page fault 都等同 thrashing 或非法記憶體存取"
+      ],
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-os-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-111-18",
+        "q-pp-im-it-111-19",
+        "q-pp-im-it-114-9",
+        "q-pp-im-it-115-11",
+        "q-pp-im-it-106-14",
+        "q-pp-im-it-112-7",
+        "q-pp-im-it-114-11",
+        "q-pp-im-it-115-12"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
       "id": "lesson-im-it-os-virtualization-containers-01",
       "subtopicId": "im-it-os-virtualization-containers",
       "title": "虛擬化、容器與 Serverless：分清隔離邊界",
@@ -1618,7 +2604,41 @@
       "coveredSubtopicIds": [
         "im-it-os-virtualization-containers"
       ],
-      "minimumPastPaperRefs": 6
+      "minimumPastPaperRefs": 6,
+      "learningScenario": {
+        "title": "共享辦公大樓裡的獨立公司",
+        "hook": "同一棟辦公大樓可以切成多個互相隔離的工作空間。某些公司租下包含自己完整設備的一整間套房，像擁有自己的作業環境；另一些團隊只帶應用與用品進共享辦公室，沿用大樓共同的核心設施。兩者都能隔開工作負載，但隔離邊界與額外成本並不相同。",
+        "predict": "一個舊系統必須使用與 host 不同的 kernel，只把它裝進一般 container 就能滿足需求嗎？還是需要有自己 guest OS 的 VM？",
+        "mapping": [
+          {
+            "everyday": "提供空間、電力與設備的整棟實體辦公大樓",
+            "technical": "host 提供 physical CPU、memory、storage 與 devices"
+          },
+          {
+            "everyday": "大樓管理者替各套房分配空間並避免互相占用",
+            "technical": "hypervisor 隔離並仲裁分配給 virtual machines 的 hardware resources"
+          },
+          {
+            "everyday": "擁有自己完整內部設施與管理規則的獨立套房",
+            "technical": "VM 看見 virtual hardware，通常包含自己的 guest OS 與 kernel"
+          },
+          {
+            "everyday": "多個團隊各有獨立房間，但共用大樓核心設施",
+            "technical": "containers 隔離 processes、filesystems 與 networks，但共享 host OS kernel"
+          },
+          {
+            "everyday": "臨時活動只預約使用時段，空間配置與收拾都交給場地方",
+            "technical": "serverless 由 provider 管理 provisioning、patching 與 scaling，常依實際呼叫與資源使用計量"
+          }
+        ],
+        "boundary": "辦公室的牆不能等同真實 security boundary：VM 通常有較強 kernel 隔離，但兩種方案都可能因漏洞或錯誤設定被攻擊，也都有 overhead 與 resource contention。多棟大樓組成的比喻也不會自動得到 cluster 的 replication、health check 與 failover；serverless 背後仍有實體機、VM 或 containers，並非真的沒有 servers。",
+        "examCues": [
+          "每個 instance 有自己的 guest OS／kernel、虛擬硬體：先想到 VM；多個 instances 共享 host kernel：先想到 containers。",
+          "分配並仲裁 VMs 的 CPU、memory 與 devices 是 hypervisor；Type 1 直接控制硬體，Type 2 位於 host OS 上。",
+          "Cluster 是多 nodes 協同以提升 capacity、performance 或 availability，不是 virtualization 的同義詞，也不自動提供 security。",
+          "Serverless 是 provider 隱藏 server management、常按使用量計費；仍要考慮 cold start、配額、外部狀態與下游瓶頸。"
+        ]
+      }
     },
     {
       "id": "lesson-im-it-prog-object-oriented",
@@ -1739,7 +2759,41 @@
         "q-pp-im-it-113-22",
         "q-pp-im-it-114-2"
       ],
-      "reviewStatus": "reviewed"
+      "reviewStatus": "reviewed",
+      "learningScenario": {
+        "title": "連鎖飲料店的點單系統",
+        "hook": "總公司要讓不同分店都能販售飲料，但不能讓任何收銀員直接把庫存或餘額改成非法值。每一杯飲料有自己的甜度與容量，所有杯子又共享品牌規則；結帳畫面只想呼叫同一個 prepare()，不想為紅茶、拿鐵逐一寫 if。這正好把 class、object、encapsulation、共享狀態與 polymorphism 放進同一個責任邊界。",
+        "predict": "系統規定庫存不能小於 0。你會讓任何程式直接修改 stock，還是只開放會檢查數量的 sell() 與 restock()？哪種方式較能守住規則？",
+        "mapping": [
+          {
+            "everyday": "『飲料』規格描述容量、甜度與 prepare()；今天做出的 A 杯、B 杯各有實際狀態",
+            "technical": "Class、object、state、behavior"
+          },
+          {
+            "everyday": "庫存只能透過 sell()、restock() 修改，methods 會拒絕負數或超賣",
+            "technical": "Encapsulation 與 invariant"
+          },
+          {
+            "everyday": "每杯的甜度各自保存；全店共用 createdCount；一次結帳中的 change 只在該 method 執行期間存在",
+            "technical": "Instance、class/static、local variables"
+          },
+          {
+            "everyday": "抽象 Drink 提供共同概念，Tea 與 Latte 擴充它；Java 系統再用 access modifiers 控制可見性",
+            "technical": "Inheritance、abstract class 與 access control"
+          },
+          {
+            "everyday": "收銀畫面持有 Drink 介面，只呼叫 prepare()；實際杯子是 Tea 或 Latte 時執行各自 override",
+            "technical": "Subtype polymorphism 與 dynamic dispatch"
+          }
+        ],
+        "boundary": "飲料配方只是 class/object 的比喻，不代表現實配方天然形成合理 inheritance；若只有程式碼相似而沒有 is-a 關係，composition 可能更合適。Access modifiers、protected 與 multiple inheritance 的精確語意必須依語言判斷，本課只把相關細節限於 Java。『共用品牌規則』只有在明確建模為 class/static state 時才對應共享變數，不能推論所有 objects 自動共享 fields。",
+        "examCues": [
+          "題目混用 class、object、state、behavior：Class 是描述；object 是 instance；fields 表 state，methods 表 behavior。",
+          "題目問 member、instance、static/class 或 local variable：Instance 每物件一份；static/class 由 class 共享；local 在 method/block scope，不是持久 object state。",
+          "看到 subclass 一定能存取所有 superclass members，或 protected 適用所有語言：否定全稱；private、constructor 與 protected 規則都需依目標語言，本課採 Java 語意。",
+          "題目問 polymorphism 的目的或執行哪個 override：共同 interface/base type 提供契約，runtime object type 透過 dynamic dispatch 選具體實作；不等於 multiple inheritance。"
+        ]
+      }
     },
     {
       "id": "lesson-im-it-security-cryptography-01",
@@ -1851,7 +2905,203 @@
       "coveredSubtopicIds": [
         "im-it-security-cryptography"
       ],
-      "minimumPastPaperRefs": 6
+      "minimumPastPaperRefs": 6,
+      "learningScenario": {
+        "title": "寄送一只上鎖的大行李箱",
+        "hook": "Alice 要把 500 MB 檔案交給 Bob。她不會用昂貴的身分驗證程序逐頁處理整箱內容，而是先用一把短期行李箱鑰匙快速鎖好大量資料，再用 Bob 可公開取得、但只有 Bob 能解開的機制保護這把短期鑰匙；同時附上可驗證是 Alice 所做的簽章。",
+        "predict": "若 Alice 只把檔案加密，Bob 是否就能確定寄件者一定是 Alice？若只附上一個任何人都能重算的 hash，又能否阻止攻擊者同時替換檔案與 hash？",
+        "mapping": [
+          {
+            "everyday": "Alice 與 Bob 用同一把短期行李箱鑰匙快速鎖、開大量內容",
+            "technical": "AES session key 與 symmetric authenticated encryption 處理 bulk data"
+          },
+          {
+            "everyday": "任何人都能使用 Bob 公開的投遞鎖，但只有 Bob 保管的鑰匙能取出內容",
+            "technical": "用 Bob 的 public-key mechanism 保護 session key，由 Bob 的 private key 解開"
+          },
+          {
+            "everyday": "對內容計算一個固定長度的指紋，內容一改指紋通常就不同",
+            "technical": "Cryptographic hash 用於 integrity evidence，但本身沒有秘密，不能單獨驗證寄件者"
+          },
+          {
+            "everyday": "Alice 加上只有她能製作、他人可核對的簽名封條",
+            "technical": "Alice private key 產生 digital signature，Alice public key 驗證來源與內容完整性"
+          },
+          {
+            "everyday": "可信證件中心在證件上簽章，證明某姓名確實對應某把公開驗證工具",
+            "technical": "CA-signed X.509 certificate 將 subject identity 綁到 public key；RA 可先核驗申請者"
+          }
+        ],
+        "boundary": "實體鎖沒有公開金鑰密碼學的數學性質，不能拿『同一把鎖』推導 RSA 的所有操作；現代 TLS 也不保證直接用 RSA 加密 session key，課程只主張以合適 public-key mechanism 建立或保護共享祕密。Encryption 主要保密，不自動提供 sender authentication；hash 沒有秘密，digital signature 才使用簽署者 private key。憑證不含 private key，CA 信任也可能來自 public、private 或預先配置的 trust store。",
+        "examCues": [
+          "大量資料、效率：AES 等 symmetric encryption；public/private key、RSA：asymmetric role，不直接處理任意大型資料。",
+          "固定長度單向摘要：hash；要驗證來源與防替換：找 MAC 或 digital signature，不能只靠裸 hash。",
+          "Subject、issuer、serial、public key：certificate；RA 核驗申請，CA 簽發與簽章，private key 不放進憑證。",
+          "HTTPS＝HTTP over TLS；一般網站驗 server，雙方都出示 client/server certificate 才是 mutual TLS。"
+        ]
+      }
+    },
+    {
+      "id": "lesson-im-it-trends-emerging-digital-applications-01",
+      "subtopicId": "im-it-trends-emerging-digital-applications",
+      "coveredSubtopicIds": [
+        "im-it-trends-emerging-digital-applications"
+      ],
+      "title": "新興科技與數位應用：從服務分類到感知與數位分身",
+      "summary": "以應用要解決的問題區分 Fintech、crowdfunding、MOOC 與 mobile payment，再拆解原始 voice-only smart speaker、自動駕駛與 digital twin 的輸入、處理與輸出。對應考古題答案均為非官方技術覆核；產品能力以題目所述年代與裝置範圍為準。",
+      "estimatedMinutes": 34,
+      "minimumPastPaperRefs": 6,
+      "learningObjectives": [
+        "依服務目的區分 Fintech、mobile payment、crowdfunding 與 MOOC。",
+        "以輸入、處理、輸出描述 voice-only smart speaker 的語音互動流程。",
+        "區分自動駕駛中的環境感知、定位與決策功能。",
+        "說明 digital twin 如何以實體狀態更新電子表示並支援監控、模擬與維護。"
+      ],
+      "sections": [
+        {
+          "title": "先辨識服務目的，再辨識使用的技術",
+          "body": "新興數位應用不等於單一底層技術。Fintech 是把數位技術應用於金融服務；mobile payment 是其中聚焦付款流程的一類服務。Crowdfunding 平台讓許多支持者共同資助專案，MOOC 則以網路大規模提供開放式課程。判題時先問服務解決什麼問題，不要因為都使用網站或手機就歸為同一類。",
+          "bullets": [
+            "Fintech 的範圍可包含支付、借貸、保險、投資與監理科技，不只 mobile payment。",
+            "Mobile payment 的核心是啟動、授權或完成付款，不是所有募集資金網站都屬於支付服務。",
+            "Crowdfunding 的核心是由群眾對專案提供資金；Kickstarter 是典型平台。",
+            "MOOC 是 Massive Open Online Course；Udacity、Coursera 與 edX 常作為此類線上學習平台的例子。"
+          ]
+        },
+        {
+          "title": "Voice-only smart speaker 的語音處理鏈",
+          "body": "原始 voice-only smart speaker 由 microphone 接收聲音，經 speech recognition 轉成可處理的文字或語意表示，再以 natural language processing 判斷意圖，執行查詢或裝置控制，最後可用 speech synthesis 回覆。若題目明確限定只有 microphone 與 speaker 的產品，image recognition 不在完成這條語音流程的必要技術中。",
+          "bullets": [
+            "Speech recognition 處理聲音到詞語或文字的轉換。",
+            "Natural language processing 用於理解使用者意圖與參數。",
+            "Speech synthesis 把系統回覆轉成可播放語音。",
+            "後來帶螢幕或 camera 的產品可能使用影像技術，不能把歷史題目的 voice-only 限定外推到所有新型裝置。"
+          ]
+        },
+        {
+          "title": "自動駕駛要分開看感知、定位與決策",
+          "body": "自動駕駛系統需要知道周遭有什麼、車輛位於何處，以及下一步如何控制。Camera/computer vision、radar 與 lidar 可提供周遭物體或距離等環境觀測；衛星導航主要提供位置與時間資訊。GPS 因此屬定位的重要輸入，但不是直接觀察附近行人、車輛輪廓或障礙物的感測器。",
+          "bullets": [
+            "Perception 將 sensor observations 轉成物體、車道或可通行空間等估計。",
+            "Localization 估計車輛在地圖或座標系中的位置，通常融合多種訊號。",
+            "Planning 根據目標、道路與障礙物選擇路徑或動作。",
+            "Control 把規劃結果轉成轉向、煞車與加速命令；任一感測來源都不應被當成整套自動駕駛。"
+          ]
+        },
+        {
+          "title": "Digital twin 是會隨實體狀態更新的電子表示",
+          "body": "Digital twin 是現實實體或系統的電子表示，可透過量測資料觀察其狀態與狀態轉換。它可支援 real-time monitoring、simulation、testing 與 maintenance，但不代表只建立一次且不再更新的 3D 圖，也不保證模擬結果必然正確；模型、感測資料與同步機制仍會帶來誤差。",
+          "bullets": [
+            "Physical entity 是被表示的設備、流程或系統。",
+            "Sensors/records 把實體狀態送入資料流程，更新 electronic representation。",
+            "Simulation 可比較不同操作條件，monitoring 可追蹤目前狀態。",
+            "Digital model 若沒有與實體狀態連結或更新，不一定符合課程所用的 digital twin 定義。"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "將下列服務分類：①以手機完成商店付款；②由 2,000 名支持者共同資助一項桌遊專案；③向大量網路學習者開放的大學課程；④用演算法改善貸款風險評估。",
+          "steps": [
+            "① 的核心是完成付款，屬 mobile payment，也可位於廣義 Fintech 範圍。",
+            "② 的資金來自許多專案支持者，屬 crowdfunding。",
+            "③ 是大規模、開放、線上課程，屬 MOOC。",
+            "④ 把數位技術應用於金融服務，屬 Fintech，但不是 mobile payment。"
+          ],
+          "answer": "① mobile payment（亦屬廣義 Fintech）；② crowdfunding；③ MOOC；④ Fintech。"
+        },
+        {
+          "prompt": "某原始 voice-only smart speaker 只有 microphone 與 speaker。使用者說『把客廳燈打開』後，系統需辨識語音、理解意圖、控制燈具並語音回覆。speech recognition、NLP、speech synthesis、image recognition 中，哪一項不是完成此流程的必要技術？",
+          "steps": [
+            "Microphone 收到的語音需由 speech recognition 轉成可處理內容。",
+            "NLP 判斷『打開』動作與『客廳燈』目標。",
+            "系統執行裝置控制，speech synthesis 可產生語音回覆。",
+            "題面沒有 camera 或影像輸入，image recognition 不在這條 voice-only 流程中。"
+          ],
+          "answer": "Image recognition。此結論只針對題面限定的原始 voice-only 裝置，不外推到帶 camera 的產品。"
+        },
+        {
+          "prompt": "自動駕駛車收到四項資料：camera frame、radar range、lidar point cloud、GPS coordinates。若問題是『哪一項主要提供全域定位，而非直接觀察附近物體』，應選哪一項？",
+          "steps": [
+            "Camera frame 可由 computer vision 辨識車道、車輛或行人。",
+            "Radar range 與 lidar point cloud 可提供周遭物體距離或幾何觀測。",
+            "GPS coordinates 描述車輛位置，屬 localization input。",
+            "因此在題面四項中，GPS 最符合『定位而非直接環境感知』。"
+          ],
+          "answer": "GPS coordinates；它提供定位資訊，周遭物體仍需其他 sensors/perception 方法觀察。"
+        },
+        {
+          "prompt": "工廠每分鐘把馬達溫度送到電子模型，模型顯示目前狀態，並模擬若轉速提高 10% 時的溫度。這是否符合 digital twin？若只有一張從不更新的 3D 圖呢？",
+          "steps": [
+            "電子模型代表一個真實馬達。",
+            "感測資料持續更新模型狀態，建立實體與電子表示的連結。",
+            "模型同時支援 monitoring 與 what-if simulation，因此符合本課 digital twin 特徵。",
+            "不更新的 3D 圖缺少狀態同步，只能稱為靜態 digital model，不能僅憑外觀認定為 twin。"
+          ],
+          "answer": "持續接收實體狀態並支援監控／模擬者符合 digital twin；從不更新的 3D 圖不符合本課定義。"
+        }
+      ],
+      "commonPitfalls": [
+        "把 Fintech 縮小成只有 mobile payment，或把所有手機服務都稱為 Fintech。",
+        "把 crowdfunding 平台誤當成一般 mobile payment provider。",
+        "看到 smart speaker 就一律說需要 image recognition，忽略題面的 voice-only 與年代限定。",
+        "把 GPS 當成能直接偵測附近障礙物形狀的環境感測器。",
+        "把任何 3D model 都稱為 digital twin，忽略實體狀態連結與更新。",
+        "把產品例子當成永遠不變的定義；品牌功能會隨版本與年代改變。"
+      ],
+      "learningScenario": {
+        "title": "逛一圈智慧城市體驗館",
+        "hook": "你走進一座智慧城市體驗館：入口用手機付款，創作者攤位邀請群眾資助新產品，學習區開放線上課程，語音導覽柱只靠麥克風與喇叭互動，戶外接駁車融合多種感測資訊，中央控制室則用會隨實體設備更新的模型監看整座館。看似都叫新科技，分類時仍要先看每一站解決的問題與資料流。",
+        "predict": "接駁車同時收到 camera、radar、lidar 與 GPS 資料；若題目問『哪一項主要提供全域定位，而不是直接觀察附近物體』，你會選哪一項？",
+        "mapping": [
+          {
+            "everyday": "入口用手機完成付款；創作者則向許多支持者募集專案資金",
+            "technical": "Mobile payment 是 Fintech 的支付應用；由群眾共同資助專案是 crowdfunding，應依服務目的區分"
+          },
+          {
+            "everyday": "學習區讓大量學習者透過網路參與開放式課程",
+            "technical": "MOOC 是 Massive Open Online Course；edX、Coursera、Udacity 是常見平台例子，不是 MOOC 定義本身"
+          },
+          {
+            "everyday": "Voice-only 導覽柱聽見問題、理解意圖，再用聲音回答",
+            "technical": "Microphone input → speech recognition → NLP/intent → action → speech synthesis；沒有影像輸入時 image recognition 不是必要步驟"
+          },
+          {
+            "everyday": "接駁車用 camera、radar、lidar 觀察附近物體，用 GPS 協助判斷所在位置",
+            "technical": "Perception 與 localization 是不同功能；GPS 主要提供定位資訊，不等於直接感知障礙物"
+          },
+          {
+            "everyday": "控制室的電子館舍會接收實體設備狀態，並用來監控與模擬",
+            "technical": "Digital twin 以會更新的 electronic representation 連結 real-world entity；不更新的 3D model 不必然是 twin"
+          }
+        ],
+        "boundary": "體驗館只是把多種應用放進同一場景，不表示 Fintech、MOOC、語音助手、自動駕駛與 digital twin 必須整合成同一系統。產品功能會隨年代與型號改變；voice-only 的 image-recognition 判斷只適用於題面限定，GPS 不直接感知附近物體也不代表它對自動駕駛不重要。Digital twin 仍受感測資料、同步與模型誤差限制。",
+        "examCues": [
+          "看到付款、募資或線上課程：先問服務目的；付款是 mobile payment，群眾資助專案是 crowdfunding，MOOC 是 massive open online course。",
+          "看到原始 voice-only smart speaker：沿 microphone、speech recognition、NLP、speech synthesis 檢查，別把後來的 camera 功能倒推回去。",
+          "看到 autonomous car 感知題：camera／radar／lidar 對應周遭觀測，GPS 主要對應 localization。",
+          "看到 monitoring、simulation、real-world counterpart：先想到 digital twin，並檢查是否有實體狀態連結與更新。"
+        ]
+      },
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-world-bank-fintech-future-finance",
+        "src-kickstarter-about",
+        "src-mooc-org-edx",
+        "src-futurelearn-what-is-a-mooc",
+        "src-amazon-alexa-voice-service",
+        "src-synopsys-autonomous-car",
+        "src-nist-ir-8356-digital-twin"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-106-6",
+        "q-pp-im-it-106-16",
+        "q-pp-im-it-106-17",
+        "q-pp-im-it-107-1",
+        "q-pp-im-it-108-8",
+        "q-pp-im-it-112-23"
+      ],
+      "reviewStatus": "reviewed"
     }
   ]
 }

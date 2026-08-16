@@ -1,3 +1,4 @@
+import answersRaw from '../../public/data/answers.json'
 import answerReviewRaw from '../../public/data/im-it-answer-review.json'
 import conceptMasterRaw from '../../public/data/im-it-concept-master.json'
 import practiceStatusRaw from '../../public/data/im-it-practice-status.json'
@@ -28,7 +29,7 @@ describe('IM information technology concept master', () => {
     ).toEqual([])
   })
 
-  test('keeps the reviewed batch-three taxonomy repairs in their correct domains', () => {
+  test('keeps reviewed taxonomy repairs in their correct domains', () => {
     const byId = new Map(metadata.map((entry) => [entry.questionId, entry]))
     const expected = {
       'q-pp-im-it-108-21': 'im-it-ds-heaps-priority-queues',
@@ -43,11 +44,26 @@ describe('IM information technology concept master', () => {
       'q-pp-im-it-107-22': 'im-it-security-network-defense',
       'q-pp-im-it-108-17': 'im-it-security-malware-social',
       'q-pp-im-it-110-20': 'im-it-security-auth-access',
+      'q-pp-im-it-113-5': 'im-it-os-memory-management',
+      'q-pp-im-it-111-24': 'im-it-security-blockchain',
+      'q-pp-im-it-112-24': 'im-it-security-blockchain',
+      'q-pp-im-it-115-25': 'im-it-security-blockchain',
     }
 
     for (const [questionId, subtopicId] of Object.entries(expected)) {
       expect(byId.get(questionId)?.primarySubtopicId).toBe(subtopicId)
     }
+  })
+
+  test('keeps repaired explanations aligned with their original questions', () => {
+    const parity = answersRaw.answers['q-pp-im-it-109-13'].explanation
+    const stack = answersRaw.answers['q-pp-im-it-113-5'].explanation
+
+    expect(parity).toMatch(/Parity bit|同位位元/)
+    expect(parity).not.toMatch(/LDAP|X\.500/)
+    expect(stack).toMatch(/stack memory|stack-frame/)
+    expect(stack).toMatch(/disputed|不可自動判分/)
+    expect(stack).not.toMatch(/L1 快取大小/)
   })
 
   test('covers all 260 source questions exactly once', () => {

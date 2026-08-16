@@ -4643,7 +4643,7 @@
     "q-pp-im-it-109-13": {
       "questionId": "q-pp-im-it-109-13",
       "answer": "C",
-      "explanation": "LDAP（Lightweight Directory Access Protocol，輕量目錄存取協定）是 X.500 標準的一部分，專門用於在網路上查詢組織、個人及其他資源（如檔案與設備）。LDAP 最初是 X.500 DAP（Directory Access Protocol）的輕量化版本，因此與 X.500 體系緊密相關。它廣泛應用於公共網際網路與企業內部網路的目錄服務，例如 Microsoft Active Directory 即以 LDAP 為基礎。選項 A（FDAP）、B（IDAP）、D（RDAP）均為虛構或不相關的協定，因此正確答案為 C。"
+      "explanation": "Parity bit（同位位元）是加入資料區塊的檢查位元，使整串資料中的 1-bit 總數符合偶同位或奇同位規則。接收端可重新計算同位來偵測部分傳輸錯誤；spin、recovery、detection 與 singularity 都不是這個定義的標準名稱。因此答案為 C。此答案為依原始題面與技術定義進行的非官方技術覆核。"
     },
     "q-pp-im-it-109-14": {
       "questionId": "q-pp-im-it-109-14",
@@ -5248,7 +5248,7 @@
     "q-pp-im-it-113-5": {
       "questionId": "q-pp-im-it-113-5",
       "answer": "C",
-      "explanation": "此題問哪個關於 CPU 快取的敘述是錯誤的。選項 (C) 宣稱現代 CPU 的 L1 快取大小「通常在數十到數百位元組」，這是錯誤的。實際上，現代 CPU 的 L1 快取大小通常為 32KB 到 256KB（每個核心），遠遠超過數百位元組的範圍。其他選項均正確：(A) CPU 暫存器的存取速度確實比 L1 快取更快；(B) CPU 暫存器的數量（通常 16 至 32 個通用暫存器，僅數十位元組）確實少於 L1 快取的容量；(D) L2 快取的大小（通常數 MB）確實遠大於 L1 快取。"
+      "explanation": "本題題幹詢問 operating-system stack memory，現有 CPU cache explanation 是從其他題目誤貼，兩者無關。本題依嚴格技術語意不具可靠唯一答案：選項 B 把每次 function call 的 stack-frame 配置一概歸給 operating system，但實際通常由 compiler 產生的 calling-convention code 或 runtime 調整 stack pointer；選項 A 也把 local variables 一概說成存於 stack，忽略 register allocation、static local variables 與 compiler optimization。因此保留既有答案欄位 C，但本題仍維持 disputed、不可自動判分；此解析不是官方答案，也不宣稱 C 是唯一正解。"
     },
     "q-pp-im-it-113-6": {
       "questionId": "q-pp-im-it-113-6",

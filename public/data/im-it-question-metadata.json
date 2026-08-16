@@ -4817,12 +4817,12 @@
     {
       "questionId": "q-pp-im-it-111-24",
       "paperId": "pp-im-it-111",
-      "topicId": "im-it-db",
-      "primarySubtopicId": "im-it-db-distributed-nosql",
+      "topicId": "im-it-security",
+      "primarySubtopicId": "im-it-security-blockchain",
       "questionType": "single_choice",
       "scoringMode": "automatic_candidate",
       "taxonomyConfidence": "medium",
-      "taxonomyRationale": "NFT 核心是區塊鏈上的唯一資料單位。",
+      "taxonomyRationale": "題目考 NFT 與 blockchain 上不可互換資料單位，不是 NoSQL data model；本題仍維持 disputed。",
       "answerSource": {
         "kind": "model_assisted_technical_derivation",
         "official": false,
@@ -5629,12 +5629,12 @@
     {
       "questionId": "q-pp-im-it-112-24",
       "paperId": "pp-im-it-112",
-      "topicId": "im-it-db",
-      "primarySubtopicId": "im-it-db-distributed-nosql",
+      "topicId": "im-it-security",
+      "primarySubtopicId": "im-it-security-blockchain",
       "questionType": "single_choice",
       "scoringMode": "automatic_candidate",
       "taxonomyConfidence": "medium",
-      "taxonomyRationale": "區塊鏈交易驗證可歸分散式資料系統。",
+      "taxonomyRationale": "題目考 Bitcoin mining 驗證交易，與先前 mining 題一致應歸區塊鏈。",
       "answerSource": {
         "kind": "model_assisted_technical_derivation",
         "official": false,
@@ -8223,12 +8223,12 @@
     {
       "questionId": "q-pp-im-it-115-25",
       "paperId": "pp-im-it-115",
-      "topicId": "im-it-db",
-      "primarySubtopicId": "im-it-db-distributed-nosql",
+      "topicId": "im-it-security",
+      "primarySubtopicId": "im-it-security-blockchain",
       "questionType": "single_choice",
       "scoringMode": "automatic_candidate",
       "taxonomyConfidence": "medium",
-      "taxonomyRationale": "不可竄改交易紀錄歸入分散式資料技術。",
+      "taxonomyRationale": "題目考無中央權威的不可變、可驗證交易帳本，直接對應 blockchain。",
       "answerSource": {
         "kind": "model_assisted_technical_derivation",
         "official": false,

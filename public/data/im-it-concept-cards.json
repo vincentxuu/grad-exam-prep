@@ -3,7 +3,7 @@
   "subjectId": "im-it",
   "status": "reviewed",
   "generationPolicy": "只由 reviewed lesson 衍生，保留 sourceRefs 與 pastPaperRefs。",
-  "totalCards": 92,
+  "totalCards": 122,
   "cards": [
     {
       "id": "card-im-it-ai-foundations-ml-evaluation-01",
@@ -186,6 +186,192 @@
       ],
       "pastPaperRefs": [
         "q-pp-im-it-113-8"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-arch-memory-data-representation-01",
+      "lessonId": "lesson-im-it-arch-memory-data-representation-01",
+      "subtopicId": "im-it-arch-data-representation",
+      "front": "Even parity 檢查通過，能否證明資料完全沒有錯？",
+      "back": "不能。它只表示沒有偵測到奇數個 bit flips；偶數個 bit flips 仍可能讓 parity 維持不變。",
+      "explanation": "單一 parity bit 能偵測任何奇數個位元翻轉，但不能定位錯誤，也可能漏掉偶數個位元翻轉。",
+      "sourceRefs": [
+        "src-brookshear-13e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-106-11"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-arch-memory-data-representation-02",
+      "lessonId": "lesson-im-it-arch-memory-data-representation-01",
+      "subtopicId": "im-it-arch-data-representation",
+      "front": "Parity bit 的直接用途是 error detection 還是 error correction？",
+      "back": "是 error detection；單一 parity bit 通常無法指出錯誤位置，因此不能自行修正。",
+      "explanation": "接收端可從奇偶規則不符判斷有錯，但缺乏足夠資訊判斷哪個 bit 應翻回。",
+      "sourceRefs": [
+        "src-brookshear-13e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-106-11"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-arch-memory-data-representation-03",
+      "lessonId": "lesson-im-it-arch-memory-data-representation-01",
+      "subtopicId": "im-it-arch-data-representation",
+      "front": "考題問靜態 image file format 時，JPEG、PNG、GIF、BMP、TIFF 與 MPEG 應如何區分？",
+      "back": "前五者常見於靜態影像；MPEG 是影音編碼標準家族，通常不是此類題目的靜態影像格式。",
+      "explanation": "仍應依題幹語境判斷；重點是媒體用途與格式規格，不是只看副檔名。",
+      "sourceRefs": [
+        "src-brookshear-13e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-108-1",
+        "q-pp-im-it-110-3"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-arch-memory-data-representation-04",
+      "lessonId": "lesson-im-it-arch-memory-data-representation-01",
+      "subtopicId": "im-it-arch-memory-hierarchy",
+      "front": "Register、L1、L2、DRAM、SSD 的典型速度階層為何？",
+      "back": "由快到慢通常是 register → L1 → L2 → DRAM → SSD；往下容量通常增加、每 bit 成本下降。",
+      "explanation": "這是典型階層關係，不代表每個產品都有固定相同的容量與延遲。",
+      "sourceRefs": [
+        "src-brookshear-13e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-112-5",
+        "q-pp-im-it-115-7"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-arch-memory-data-representation-05",
+      "lessonId": "lesson-im-it-arch-memory-data-representation-01",
+      "subtopicId": "im-it-arch-memory-hierarchy",
+      "front": "DDR RAM、ROM、flash 與 SSD 中，哪些通常是 non-volatile？",
+      "back": "ROM、flash 與 SSD 通常是 non-volatile；DDR RAM 是 volatile。",
+      "explanation": "Non-volatile 表示斷電後資料仍可保留，與裝置是否可快速讀寫是不同維度。",
+      "sourceRefs": [
+        "src-brookshear-13e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-109-15",
+        "q-pp-im-it-110-4"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-arch-memory-data-representation-06",
+      "lessonId": "lesson-im-it-arch-memory-data-representation-01",
+      "subtopicId": "im-it-arch-memory-hierarchy",
+      "front": "Cache 為何能降低 average memory access time？",
+      "back": "它利用 temporal 與 spatial locality，讓高比例存取在較快層級命中，避免每次都付出主記憶體延遲。",
+      "explanation": "簡化公式為 AMAT = hit time + miss rate × miss penalty；降低 miss rate 或 penalty 都可能改善平均值。",
+      "sourceRefs": [
+        "src-brookshear-13e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-112-5",
+        "q-pp-im-it-115-7"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-data-big-data-nosql-01",
+      "lessonId": "lesson-im-it-data-big-data-nosql-01",
+      "subtopicId": "im-it-trends-big-data-analytics",
+      "front": "Big Data 的 volume、velocity、variety、veracity 分別描述什麼？",
+      "back": "資料量、資料流入/處理速度、資料格式與來源多樣性、資料準確性與可信度。",
+      "explanation": "教材另可能加入 value；題目必須說明採用哪個 V framework，不能把版本差異硬當唯一答案。",
+      "sourceRefs": [
+        "src-ibm-big-data"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-108-10"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-data-big-data-nosql-02",
+      "lessonId": "lesson-im-it-data-big-data-nosql-01",
+      "subtopicId": "im-it-trends-big-data-analytics",
+      "front": "Big-data analytics 可支援哪些類型的應用？",
+      "back": "可支援 decision making、forecast/prediction、vulnerability assessment 與 government governance 等，但需驗證資料與方法。",
+      "explanation": "『可應用』不表示任何大型資料都能產生可靠結論；品質、代表性、privacy 與 evaluation 仍不可省略。",
+      "sourceRefs": [
+        "src-ibm-big-data"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-108-11"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-data-big-data-nosql-03",
+      "lessonId": "lesson-im-it-data-big-data-nosql-01",
+      "subtopicId": "im-it-db-distributed-nosql",
+      "front": "四類常見 NoSQL data models 是什麼？",
+      "back": "Document、key-value、wide-column 與 graph。",
+      "explanation": "應依 data shape 與 access pattern 選擇；NoSQL 不表示完全沒有 schema、indexes、queries 或 transactions。",
+      "sourceRefs": [
+        "src-mongodb-nosql-explained"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-114-15",
+        "q-pp-im-it-115-26"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-data-big-data-nosql-04",
+      "lessonId": "lesson-im-it-data-big-data-nosql-01",
+      "subtopicId": "im-it-db-distributed-nosql",
+      "front": "Horizontal scaling 與 vertical scaling 有何差異？",
+      "back": "Horizontal scaling 增加 nodes 並分散資料/負載；vertical scaling 提升單一 server 的 CPU、RAM 或 storage。",
+      "explanation": "NoSQL 常針對水平擴充設計，但新增 nodes 會增加 routing、coordination 與 operations 複雜度。",
+      "sourceRefs": [
+        "src-mongodb-sharding"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-114-15",
+        "q-pp-im-it-115-26"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-data-big-data-nosql-05",
+      "lessonId": "lesson-im-it-data-big-data-nosql-01",
+      "subtopicId": "im-it-db-distributed-nosql",
+      "front": "Sharding 與 replication 的目的有何差異？",
+      "back": "Sharding 把不同資料分散到 shards 以擴充容量/吞吐；replication 保存副本以支援 availability、讀取或復原。",
+      "explanation": "兩者可並用；資料分區不自動產生備援，建立副本也不等於把 dataset 切開。",
+      "sourceRefs": [
+        "src-mongodb-sharding"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-114-15"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-data-big-data-nosql-06",
+      "lessonId": "lesson-im-it-data-big-data-nosql-01",
+      "subtopicId": "im-it-db-distributed-nosql",
+      "front": "CAP 的 C、A、P 是什麼？真正的取捨情境為何？",
+      "back": "Consistency、availability、partition tolerance；network partition 發生時，無法同時保證 C 與 A。",
+      "explanation": "CP 可能拒絕部分請求以維持一致性；AP 持續回應但容許暫時分歧。CAP 不是所有時候任意『三選二』。",
+      "sourceRefs": [
+        "src-ibm-cap-theorem"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-115-21"
       ],
       "reviewStatus": "reviewed"
     },
@@ -771,6 +957,100 @@
       "reviewStatus": "reviewed"
     },
     {
+      "id": "card-im-it-network-ip-routing-transport-01",
+      "lessonId": "lesson-im-it-network-ip-routing-transport-01",
+      "subtopicId": "im-it-network-ip-addressing-routing",
+      "front": "CIDR 的 /n 與 subnet mask 如何界定 IPv4 network address？",
+      "back": "/n 表示前 n bits 是 network prefix；mask 的前 n bits 為 1。將 IP address 與 mask 做 bitwise AND，即得 network address。",
+      "explanation": "例如 /24 是 255.255.255.0。Mask 不負責指出 default gateway、加密或 MTU；它的核心用途是區分 network 與 host portions。",
+      "sourceRefs": [
+        "src-ietf-rfc4632-cidr"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-114-19"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-network-ip-routing-transport-02",
+      "lessonId": "lesson-im-it-network-ip-routing-transport-01",
+      "subtopicId": "im-it-network-ip-addressing-routing",
+      "front": "Router 面對多條匹配 route 時如何選擇？IPv4 TTL 的主要目的又是什麼？",
+      "back": "選 longest-prefix match；每次 router forwarding 都將 TTL 至少減 1，TTL 歸零就丟棄，防止封包在 routing loop 中無限循環。",
+      "explanation": "Default route /0 最不具體，只在沒有更長匹配時使用。TTL 是 hop limit，不是建立時間或封包排序欄位。",
+      "sourceRefs": [
+        "src-ietf-rfc791-ipv4",
+        "src-ietf-rfc4632-cidr"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-115-13"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-network-ip-routing-transport-03",
+      "lessonId": "lesson-im-it-network-ip-routing-transport-01",
+      "subtopicId": "im-it-network-ip-addressing-routing",
+      "front": "Distance-vector 與 link-state routing 的核心差異是什麼？OSPF 屬於哪一類？",
+      "back": "Distance-vector 與直接鄰居交換到目的地的距離資訊；link-state 散布鏈路狀態、建立拓撲資料庫後計算 shortest paths。OSPF 是 link-state。",
+      "explanation": "OSPF 會用 flooding 散布 link-state advertisements，這是傳遞狀態的機制；RFC 2328 明確把 OSPF 定義為 link-state routing protocol。",
+      "sourceRefs": [
+        "src-ietf-rfc2328-ospfv2"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-112-16",
+        "q-pp-im-it-114-21"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-network-ip-routing-transport-04",
+      "lessonId": "lesson-im-it-network-ip-routing-transport-01",
+      "subtopicId": "im-it-network-transport",
+      "front": "TCP 與 UDP 在服務模型與 overhead 上有何差異？",
+      "back": "TCP 是 connection-oriented 的 reliable、in-order byte stream；UDP 是 connectionless datagram service，header 為 8 bytes，不保證 delivery、duplicate protection 或 ordering。",
+      "explanation": "UDP 機制較少，但不代表任何應用都一定更快；應依可靠性、延遲與訊息邊界需求選擇。TCP 也不保留應用程式 write boundaries。",
+      "sourceRefs": [
+        "src-ietf-rfc9293-tcp",
+        "src-ietf-rfc768-udp"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-115-14"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-network-ip-routing-transport-05",
+      "lessonId": "lesson-im-it-network-ip-routing-transport-01",
+      "subtopicId": "im-it-network-transport",
+      "front": "TCP header 的 Window field 主要支援哪一種控制？",
+      "back": "它通告 receiver window（rwnd），限制 sender 未經進一步 ACK 可送出的資料範圍，避免接收端 buffer 被壓垮，屬於 flow control。",
+      "explanation": "真正可送的 outstanding data 還會受 sender 的 congestion window（cwnd）限制；簡化表示為不超過 min(rwnd,cwnd)。",
+      "sourceRefs": [
+        "src-ietf-rfc9293-tcp",
+        "src-ietf-rfc5681-tcp-congestion"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-114-20"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-network-ip-routing-transport-06",
+      "lessonId": "lesson-im-it-network-ip-routing-transport-01",
+      "subtopicId": "im-it-network-transport",
+      "front": "TCP slow start 的主要目的與常見簡化成長規則是什麼？",
+      "back": "目的在逐步探測未知的 network capacity；在每個 segment 都獲 ACK 且無損失的簡化模型下，cwnd 約每 RTT 加倍。",
+      "explanation": "cwnd 是 sender-side congestion-control limit。實際 initial window 與成長受標準、ACK 行為、loss 與實作影響，不能把 1、2、4、8 當成所有連線的固定序列。",
+      "sourceRefs": [
+        "src-ietf-rfc5681-tcp-congestion"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-115-15"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
       "id": "card-im-it-network-link-lan-01",
       "lessonId": "lesson-im-it-network-link-lan-01",
       "subtopicId": "im-it-network-link-lan",
@@ -1207,6 +1487,102 @@
       "reviewStatus": "reviewed"
     },
     {
+      "id": "card-im-it-os-scheduling-memory-management-01",
+      "lessonId": "lesson-im-it-os-scheduling-memory-management-01",
+      "subtopicId": "im-it-os-cpu-scheduling",
+      "front": "CPU scheduling 常見的最佳化目標有哪些？",
+      "back": "提高 utilization 與 throughput、降低 waiting／turnaround／response time，並兼顧 fairness 與避免 starvation。",
+      "explanation": "不同 workload 對指標權重不同，目標之間也可能互相衝突。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-os-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-111-18"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-os-scheduling-memory-management-02",
+      "lessonId": "lesson-im-it-os-scheduling-memory-management-01",
+      "subtopicId": "im-it-os-cpu-scheduling",
+      "front": "SJF 為何能降低平均等待時間，又有什麼限制？",
+      "back": "在工作 burst 已知等前提下，先執行短工作可最小化該組工作的平均等待時間；但 burst 難以精確預知，長工作也可能 starvation。",
+      "explanation": "不能把有條件的理論最佳性誤寫成所有動態 workload 下都無條件最佳。",
+      "sourceRefs": [
+        "src-nthu-os-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-111-19",
+        "q-pp-im-it-115-11"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-os-scheduling-memory-management-03",
+      "lessonId": "lesson-im-it-os-scheduling-memory-management-01",
+      "subtopicId": "im-it-os-cpu-scheduling",
+      "front": "MLFQ 與固定 multilevel queue 最重要的差異是什麼？",
+      "back": "MLFQ 允許 process 依行為與政策在不同優先序 queues 之間移動。",
+      "explanation": "使用完整 quantum 的工作常被降級；priority boost 等機制可降低低層工作 starvation。",
+      "sourceRefs": [
+        "src-nthu-os-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-114-9"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-os-scheduling-memory-management-04",
+      "lessonId": "lesson-im-it-os-scheduling-memory-management-01",
+      "subtopicId": "im-it-os-memory-management",
+      "front": "Paging 中 page、frame 與 page table 各扮演什麼角色？",
+      "back": "Page 是固定大小的虛擬位址區塊，frame 是同大小的實體記憶體區塊，page table 將 virtual page number 映射到 frame number。",
+      "explanation": "位址中的 offset 在映射前後保持不變；page 與 frame 必須同大小才能直接替換頁框。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-os-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-106-14",
+        "q-pp-im-it-112-7",
+        "q-pp-im-it-114-11"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-os-scheduling-memory-management-05",
+      "lessonId": "lesson-im-it-os-scheduling-memory-management-01",
+      "subtopicId": "im-it-os-memory-management",
+      "front": "Page fault 是否必然代表程式發生非法記憶體存取？",
+      "back": "不是。合法 virtual page 尚未駐留於 physical memory 時也會 page fault，OS 可將它載入後重啟指令。",
+      "explanation": "只有當位址或權限非法時，fault handler 才會把它當成存取錯誤，而不是正常 demand paging。",
+      "sourceRefs": [
+        "src-nthu-os-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-114-11",
+        "q-pp-im-it-115-12"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-os-scheduling-memory-management-06",
+      "lessonId": "lesson-im-it-os-scheduling-memory-management-01",
+      "subtopicId": "im-it-os-memory-management",
+      "front": "Virtual memory 發生 thrashing 時，系統在做什麼？",
+      "back": "系統花在 page faults 與換頁的時間多於有效執行，通常因 active working sets 超過可用 frames。",
+      "explanation": "頻繁 paging 會使 CPU utilization 與 throughput 下降；增加 multiprogramming degree 反而可能惡化。",
+      "sourceRefs": [
+        "src-nthu-os-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-115-12"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
       "id": "card-im-it-os-virtualization-containers-01",
       "lessonId": "lesson-im-it-os-virtualization-containers-01",
       "subtopicId": "im-it-os-virtualization-containers",
@@ -1498,6 +1874,102 @@
       "pastPaperRefs": [
         "q-pp-im-it-113-17",
         "q-pp-im-it-113-16"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-trends-emerging-digital-applications-01",
+      "lessonId": "lesson-im-it-trends-emerging-digital-applications-01",
+      "subtopicId": "im-it-trends-emerging-digital-applications",
+      "front": "Fintech、mobile payment 與 crowdfunding 如何區分？",
+      "back": "Fintech 是數位技術應用於金融服務的廣義類別；mobile payment 聚焦付款；crowdfunding 由群眾共同資助專案。",
+      "explanation": "Mobile payment 可是 Fintech 子類，但 crowdfunding 平台的主要服務目的不是替商店完成付款。",
+      "sourceRefs": [
+        "src-world-bank-fintech-future-finance",
+        "src-kickstarter-about"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-106-6",
+        "q-pp-im-it-106-16"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-trends-emerging-digital-applications-02",
+      "lessonId": "lesson-im-it-trends-emerging-digital-applications-01",
+      "subtopicId": "im-it-trends-emerging-digital-applications",
+      "front": "MOOC 的全名與核心形式是什麼？",
+      "back": "Massive Open Online Course；以網路向大量學習者提供開放式課程。",
+      "explanation": "Udacity、Coursera 與 edX 常作為 MOOC 平台例子；平台也可能同時提供不完全開放或付費的其他課程形式。",
+      "sourceRefs": [
+        "src-futurelearn-what-is-a-mooc",
+        "src-mooc-org-edx"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-106-17"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-trends-emerging-digital-applications-03",
+      "lessonId": "lesson-im-it-trends-emerging-digital-applications-01",
+      "subtopicId": "im-it-trends-emerging-digital-applications",
+      "front": "原始 voice-only smart speaker 的基本處理鏈是什麼？",
+      "back": "Microphone input → speech recognition → NLP/intent → service 或 device action → speech synthesis/output。",
+      "explanation": "若題面限定只有 microphone 與 speaker，image recognition 不是這條語音流程的必要技術；不能外推到後來帶 camera 的產品。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-amazon-alexa-voice-service"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-107-1"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-trends-emerging-digital-applications-04",
+      "lessonId": "lesson-im-it-trends-emerging-digital-applications-01",
+      "subtopicId": "im-it-trends-emerging-digital-applications",
+      "front": "自動駕駛中 GPS 與 lidar/radar/camera 的角色差異為何？",
+      "back": "GPS 主要提供定位；lidar、radar、camera 則提供周遭環境觀測，供 perception 使用。",
+      "explanation": "完整系統會融合來源；『GPS 不直接感知附近物體』不等於 GPS 對自動駕駛不重要。",
+      "sourceRefs": [
+        "src-synopsys-autonomous-car"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-108-8"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-trends-emerging-digital-applications-05",
+      "lessonId": "lesson-im-it-trends-emerging-digital-applications-01",
+      "subtopicId": "im-it-trends-emerging-digital-applications",
+      "front": "Digital twin 與不更新的 3D model 有何差異？",
+      "back": "Digital twin 以電子表示連結實體，能觀察實體狀態及狀態轉換；靜態 3D model 不一定有此同步關係。",
+      "explanation": "Digital twin 可支援 monitoring、simulation、testing 與 maintenance，但準確度仍受資料與模型限制。",
+      "sourceRefs": [
+        "src-nist-ir-8356-digital-twin"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-112-23"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-trends-emerging-digital-applications-06",
+      "lessonId": "lesson-im-it-trends-emerging-digital-applications-01",
+      "subtopicId": "im-it-trends-emerging-digital-applications",
+      "front": "判斷新興數位應用時，為何要先問『服務目的』？",
+      "back": "相同底層技術可支援不同服務；先辨認付款、募資、學習、感知或模擬等目的，才能正確分類。",
+      "explanation": "網站、手機、AI 都只是可能的 delivery/enabling technology，不能單獨決定應用類別。",
+      "sourceRefs": [
+        "src-world-bank-fintech-future-finance",
+        "src-nist-ir-8356-digital-twin"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-106-6",
+        "q-pp-im-it-112-23"
       ],
       "reviewStatus": "reviewed"
     }
