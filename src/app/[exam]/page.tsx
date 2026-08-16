@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { AdmissionsCard } from '@/components/exam/admissions-card'
+import { EnglishPracticeRoute } from '@/components/exam/english-practice-route'
 import { SubjectCard } from '@/components/exam/subject-card'
 import { EXAM_LABELS, getExam, getSubjectsByExam } from '@/lib/content'
 import type { ExamId } from '@/types/content'
@@ -28,6 +29,8 @@ export default async function ExamPage({ params }: Props) {
         <h1 className="text-2xl font-bold">{examData.name}</h1>
         <p className="text-muted-foreground text-sm mt-1">{examData.format.note}</p>
       </div>
+
+      {exam === 'im' && <EnglishPracticeRoute />}
 
       <div className="grid md:grid-cols-3 gap-6">
         <div className="md:col-span-2 space-y-4">
