@@ -26,7 +26,9 @@
       "publisher": "清華大學開放式課程",
       "type": "course",
       "url": "https://www.youtube.com/playlist?list=PLS0SUwlYe8cxktXNovos9xleroaWyb-z5",
-      "scope": ["networking"],
+      "scope": [
+        "networking"
+      ],
       "usage": "conceptual-summary",
       "status": "reviewed"
     },
@@ -36,7 +38,9 @@
       "author": "陳士杰（杰哥數位教室）",
       "type": "course",
       "url": "https://www.youtube.com/playlist?list=PLpbuzGqDFzkhHPz11AeGrU7K8AKNqp0fj",
-      "scope": ["databases"],
+      "scope": [
+        "databases"
+      ],
       "usage": "conceptual-summary",
       "status": "reviewed"
     },
@@ -47,7 +51,9 @@
       "publisher": "清華大學開放式課程",
       "type": "course",
       "url": "https://www.youtube.com/playlist?list=PLS0SUwlYe8cxj8FCPRoPHAehIiN9Vo6VZ",
-      "scope": ["operating-systems"],
+      "scope": [
+        "operating-systems"
+      ],
       "usage": "conceptual-summary",
       "status": "reviewed"
     },
@@ -58,7 +64,11 @@
       "publisher": "MIT OpenCourseWare",
       "type": "course",
       "url": "https://ocw.mit.edu/courses/6-857-network-and-computer-security-spring-2014/",
-      "scope": ["information-security", "cryptography", "network-security"],
+      "scope": [
+        "information-security",
+        "cryptography",
+        "network-security"
+      ],
       "usage": "conceptual-summary",
       "status": "reviewed"
     },
@@ -69,7 +79,10 @@
       "publisher": "NIST Computer Security Resource Center",
       "type": "official-guidance",
       "url": "https://csrc.nist.gov/projects/cryptographic-standards-and-guidelines",
-      "scope": ["information-security", "cryptography"],
+      "scope": [
+        "information-security",
+        "cryptography"
+      ],
       "usage": "terminology-and-standards-check",
       "status": "reviewed"
     },
@@ -80,7 +93,11 @@
       "publisher": "MIT OpenCourseWare",
       "type": "course",
       "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/",
-      "scope": ["algorithms", "data-structures", "complexity-analysis"],
+      "scope": [
+        "algorithms",
+        "data-structures",
+        "complexity-analysis"
+      ],
       "usage": "conceptual-summary-and-worked-examples",
       "status": "reviewed"
     },
@@ -91,7 +108,10 @@
       "publisher": "Oracle",
       "type": "documentation",
       "url": "https://docs.oracle.com/javase/tutorial/java/concepts/",
-      "scope": ["programming-languages", "object-oriented-programming"],
+      "scope": [
+        "programming-languages",
+        "object-oriented-programming"
+      ],
       "usage": "terminology-and-concept-check",
       "status": "reviewed"
     },
@@ -102,8 +122,283 @@
       "publisher": "國立臺灣大學",
       "type": "course",
       "url": "https://speech.ee.ntu.edu.tw/~hylee/ml/2021-spring.php",
-      "scope": ["artificial-intelligence", "machine-learning", "model-evaluation"],
+      "scope": [
+        "artificial-intelligence",
+        "machine-learning",
+        "model-evaluation"
+      ],
       "usage": "conceptual-summary-and-worked-examples",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-world-bank-fintech-future-finance",
+      "title": "Fintech and the Future of Finance",
+      "author": "World Bank Group",
+      "publisher": "World Bank Group",
+      "type": "official-guidance",
+      "url": "https://www.worldbank.org/en/publication/fintech-and-the-future-of-finance",
+      "scope": [
+        "emerging-digital-applications",
+        "fintech",
+        "digital-financial-services",
+        "payments",
+        "crowdfunding"
+      ],
+      "usage": "terminology-and-concept-check",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-kickstarter-about",
+      "title": "About Kickstarter",
+      "author": "Kickstarter",
+      "publisher": "Kickstarter, PBC",
+      "type": "documentation",
+      "url": "https://www.kickstarter.com/about",
+      "scope": [
+        "emerging-digital-applications",
+        "crowdfunding"
+      ],
+      "usage": "platform-example-check",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-mooc-org-edx",
+      "title": "MOOC.org / edX Course Platform",
+      "author": "edX",
+      "publisher": "edX LLC",
+      "type": "documentation",
+      "url": "https://www.mooc.org/",
+      "scope": [
+        "emerging-digital-applications",
+        "online-learning",
+        "mooc"
+      ],
+      "usage": "platform-example-check",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-futurelearn-what-is-a-mooc",
+      "title": "What is a MOOC?",
+      "author": "FutureLearn",
+      "publisher": "FutureLearn",
+      "type": "documentation",
+      "url": "https://www.futurelearn.com/info/blog/what-is-a-mooc",
+      "scope": [
+        "emerging-digital-applications",
+        "online-learning",
+        "mooc"
+      ],
+      "usage": "definition-and-terminology-check",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-amazon-alexa-voice-service",
+      "title": "Alexa Built-in Devices and Alexa Voice Service",
+      "author": "Amazon Developer",
+      "publisher": "Amazon",
+      "type": "documentation",
+      "url": "https://developer.amazon.com/en-US/alexa/alexa-voice-service",
+      "scope": [
+        "emerging-digital-applications",
+        "smart-speaker",
+        "voice-interface"
+      ],
+      "usage": "device-input-output-and-platform-check",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-synopsys-autonomous-car",
+      "title": "What is an Autonomous Car?",
+      "author": "Synopsys",
+      "publisher": "Synopsys",
+      "type": "documentation",
+      "url": "https://www.synopsys.com/automotive/what-is-autonomous-car.html",
+      "scope": [
+        "emerging-digital-applications",
+        "autonomous-vehicle",
+        "sensors",
+        "perception"
+      ],
+      "usage": "sensor-role-concept-check",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-nist-ir-8356-digital-twin",
+      "title": "Security and Trust Considerations for Digital Twin Technology",
+      "author": "Jeffrey Voas, Peter Mell, Phillip Laplante, Vartan Piroumian",
+      "publisher": "National Institute of Standards and Technology",
+      "type": "official-guidance",
+      "url": "https://csrc.nist.gov/pubs/ir/8356/final",
+      "scope": [
+        "emerging-digital-applications",
+        "digital-twin",
+        "monitoring",
+        "simulation"
+      ],
+      "usage": "definition-and-operational-use-check",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-ibm-big-data",
+      "title": "What is big data?",
+      "author": "IBM Think",
+      "publisher": "IBM",
+      "type": "documentation",
+      "url": "https://www.ibm.com/think/topics/big-data",
+      "scope": [
+        "big-data",
+        "big-data-analytics",
+        "data-quality",
+        "distributed-processing"
+      ],
+      "usage": "terminology-and-concept-check",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-mongodb-nosql-explained",
+      "title": "What is NoSQL?",
+      "author": "MongoDB",
+      "publisher": "MongoDB, Inc.",
+      "type": "documentation",
+      "url": "https://www.mongodb.com/resources/basics/databases/nosql-explained",
+      "scope": [
+        "databases",
+        "nosql",
+        "document-store",
+        "key-value",
+        "wide-column",
+        "graph"
+      ],
+      "usage": "data-model-and-terminology-check",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-mongodb-sharding",
+      "title": "Sharding",
+      "author": "MongoDB Documentation",
+      "publisher": "MongoDB, Inc.",
+      "type": "documentation",
+      "url": "https://www.mongodb.com/docs/manual/sharding/",
+      "scope": [
+        "databases",
+        "distributed-databases",
+        "sharding",
+        "horizontal-scaling",
+        "replication"
+      ],
+      "usage": "architecture-and-worked-example-check",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-ibm-cap-theorem",
+      "title": "What is the CAP theorem?",
+      "author": "IBM Think",
+      "publisher": "IBM",
+      "type": "documentation",
+      "url": "https://www.ibm.com/think/topics/cap-theorem",
+      "scope": [
+        "distributed-systems",
+        "distributed-databases",
+        "cap-theorem",
+        "network-partition"
+      ],
+      "usage": "terminology-and-tradeoff-check",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-ietf-rfc4632-cidr",
+      "title": "RFC 4632: Classless Inter-domain Routing (CIDR): The Internet Address Assignment and Aggregation Plan",
+      "author": "V. Fuller and T. Li",
+      "publisher": "RFC Editor / IETF",
+      "type": "documentation",
+      "url": "https://www.rfc-editor.org/rfc/rfc4632.html",
+      "scope": [
+        "networking",
+        "ipv4-addressing",
+        "cidr",
+        "routing-aggregation"
+      ],
+      "usage": "primary-specification",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-ietf-rfc791-ipv4",
+      "title": "RFC 791: Internet Protocol",
+      "author": "J. Postel",
+      "publisher": "RFC Editor",
+      "type": "documentation",
+      "url": "https://www.rfc-editor.org/rfc/rfc791.html",
+      "scope": [
+        "networking",
+        "ipv4",
+        "forwarding",
+        "time-to-live"
+      ],
+      "usage": "primary-specification",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-ietf-rfc2328-ospfv2",
+      "title": "RFC 2328: OSPF Version 2",
+      "author": "J. Moy",
+      "publisher": "RFC Editor / IETF",
+      "type": "documentation",
+      "url": "https://www.rfc-editor.org/rfc/rfc2328.html",
+      "scope": [
+        "networking",
+        "routing",
+        "link-state",
+        "ospf"
+      ],
+      "usage": "primary-specification",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-ietf-rfc9293-tcp",
+      "title": "RFC 9293: Transmission Control Protocol (TCP)",
+      "author": "W. Eddy (Ed.)",
+      "publisher": "RFC Editor / IETF",
+      "type": "documentation",
+      "url": "https://www.rfc-editor.org/rfc/rfc9293.html",
+      "scope": [
+        "networking",
+        "transport-layer",
+        "tcp",
+        "flow-control"
+      ],
+      "usage": "primary-specification",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-ietf-rfc768-udp",
+      "title": "RFC 768: User Datagram Protocol",
+      "author": "J. Postel",
+      "publisher": "RFC Editor",
+      "type": "documentation",
+      "url": "https://www.rfc-editor.org/rfc/rfc768.html",
+      "scope": [
+        "networking",
+        "transport-layer",
+        "udp"
+      ],
+      "usage": "primary-specification",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-ietf-rfc5681-tcp-congestion",
+      "title": "RFC 5681: TCP Congestion Control",
+      "author": "M. Allman, V. Paxson, and E. Blanton",
+      "publisher": "RFC Editor / IETF",
+      "type": "documentation",
+      "url": "https://www.rfc-editor.org/rfc/rfc5681.html",
+      "scope": [
+        "networking",
+        "transport-layer",
+        "tcp",
+        "congestion-control",
+        "slow-start"
+      ],
+      "usage": "primary-specification",
       "status": "reviewed"
     }
   ]

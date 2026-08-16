@@ -17,21 +17,6 @@ const dataDir = path.join(__dirname, '../public/data')
 const file = path.join(dataDir, 'past-papers.json')
 
 const FLAGS = {
-  'pp-im-en-109': {
-    contentStatus: 'suspect',
-    contentIssue:
-      '與 112 年英文卷有 32 題完全相同（題號也對得上），兩份之中必有一份裝了另一份的內容，尚未取得原始 PDF 判定是哪一份。',
-  },
-  'pp-im-en-111': {
-    contentStatus: 'suspect',
-    contentIssue:
-      '第 1–20、42–50 共 28 題與資工所 110 年英文(A) 相同 —— 那份已依原卷重建過，所以是這份裝錯了。第 21–40 題的克漏字文章也沒抽進來，只留下摘要式的佔位文字。',
-  },
-  'pp-im-en-112': {
-    contentStatus: 'suspect',
-    contentIssue:
-      '與 109 年英文卷有 32 題完全相同（題號也對得上），兩份之中必有一份裝了另一份的內容，尚未取得原始 PDF 判定是哪一份。',
-  },
   // pp-im-en-113 一度被列為存疑（第 11–40 題只有三個選項），後來確認那是誤判：
   // pp-cs-en-110 是照原卷重建的，它的 Structure 段同樣只有三個選項 —— 台大英文卷
   // 確實有三選項的段落，而 113 的選項數是乾淨的 10/30/10 分段，不是抽題掉字。

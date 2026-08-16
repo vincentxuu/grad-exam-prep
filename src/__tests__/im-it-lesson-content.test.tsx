@@ -56,7 +56,6 @@ describe('IM-IT lesson content', () => {
     expect(screen.getByText(/比喻到這裡為止/)).toBeInTheDocument()
     expect(screen.getByText(/同一個 process、共享 code 與 heap/)).toBeInTheDocument()
   })
-
   test('renders an IM-IT lesson through the shared lesson component', () => {
     const lesson = getImItLesson('lesson-im-it-network-models-encapsulation')
     expect(lesson).toBeDefined()

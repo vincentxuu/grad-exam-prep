@@ -1,0 +1,5176 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "im-it",
+  "officialAnswerKeyAvailable": false,
+  "reviewMethod": "逐題技術推導；所有初步更正與爭議題均經第二次獨立覆核，未收斂者再進行第三次裁決。",
+  "confidencePolicy": "本資料不是官方答案。單次可重現推導及多次一致推導均暫標 medium；爭議題退出判分。",
+  "totalQuestions": 246,
+  "counts": {
+    "confirmed": 182,
+    "corrected": 44,
+    "disputed": 20
+  },
+  "reviewDecisions": {
+    "confirmedAgainstReviewBaseline": 200,
+    "correctedAgainstReviewBaseline": 26,
+    "disputed": 20
+  },
+  "autoGradeEligible": 226,
+  "questions": [
+    {
+      "questionId": "q-pp-im-it-106-1",
+      "status": "confirmed",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "D",
+      "reviewedAnswer": "D",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "D separates student, enrollment/grade, instructor, and classroom facts while retaining stable identifiers and minimizing redundancy."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-106-2",
+      "status": "confirmed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "Because each course already identifies the course, Student_ID and Grade are the minimal nonredundant fields."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-106-3",
+      "status": "confirmed",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "A",
+      "reviewedAnswer": "A",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "A is the only syntactically valid SELECT with the required country condition and grouped city disjunction."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-106-4",
+      "status": "confirmed",
+      "previousAnswer": "E",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "E",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "A-D are standard relational-model statements, so the sentinel answer E applies."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-106-5",
+      "status": "disputed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": null,
+      "confidence": "disputed",
+      "reviewCount": 3,
+      "official": false,
+      "reasoning": [
+        "Whether primary-key identification is treated as part of 1NF or as a separate relational-model requirement varies by definition; C and E cannot be separated reliably.",
+        "1NF 的正式要求是每個欄位值原子化且不得有 repeating groups；primary key 並非 1NF 本身的必要條件，所以 C 的整句錯誤，現行 C 可確認。",
+        "嚴格關聯理論下，1NF 要求屬性值具原子性並排除 repeating groups，但不要求資料表必須宣告 designated primary key，因此 C 可判錯、與現有答案一致。然而不少實務教材把「每列可由 primary key 唯一識別」也列入 1NF 檢核規則；採該教材定義時 A、B、C、D 都成立，E 也會成為合理答案。A 的降低冗餘、B 的降低更新異常以改善完整性、D 的 normal-form 階層關係都沒有形成其他明確錯項。由於 C 與 E 取決於採用的 1NF 教材定義，無法保證唯一答案。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check",
+        "public/papers/pp-im-it-106.pdf 原卷題目與選項",
+        "獨立逐項技術推導；未採用第一輪 reasoning",
+        "無官方答案 key",
+        "public/papers/pp-im-it-106.pdf 第 1–2 頁原題與選項",
+        "public/data/questions.json 題面交叉核對",
+        "1NF 嚴格 relational definition 與常見教學檢核定義之獨立比較；無官方答案 key"
+      ],
+      "practiceEligible": false,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-it-106-6",
+      "status": "confirmed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "Fintech is the standard term for technology-enabled financial-service applications, processes, products, and business models."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-106-7",
+      "status": "confirmed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "AlphaGo centrally used deep neural networks together with tree search; C is the unique matching technique."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-106-8",
+      "status": "disputed",
+      "previousAnswer": "E",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": null,
+      "confidence": "disputed",
+      "reviewCount": 3,
+      "official": false,
+      "reasoning": [
+        "Big-data V frameworks differ: many include value, while the classic 3V formulation does not; the wording “widely regarded” does not uniquely separate D from E.",
+        "Volume、velocity、variety 與 value 都是常見 Big Data V-characteristics；A 至 D 均可成立，因此應選 E。",
+        "Volume、velocity、variety 是最早且一致接受的 big-data 3Vs。後續廣泛使用的 5V 模型把 value 納入特徵，依該模型「potentially high value」成立，答案應為 E；若題目限定原始 3V 模型，D 則是未列入的選項。題幹只說 widely regarded，沒有指定 3V、4V 或 5V 模型及年代，因此 D 與 E 都有合理的教材依據，其他 A–C 沒有爭議。不能唯一確認現有 E。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check",
+        "public/papers/pp-im-it-106.pdf 原卷題目與選項",
+        "獨立逐項技術推導；未採用第一輪 reasoning",
+        "無官方答案 key",
+        "public/papers/pp-im-it-106.pdf 第 2 頁原題與選項",
+        "public/data/questions.json 題面交叉核對",
+        "big-data 3V 與後續 5V taxonomy 的獨立定義比較；無官方答案 key"
+      ],
+      "practiceEligible": false,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-it-106-9",
+      "status": "confirmed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "Streaming is precisely continuous receipt and presentation while media is being delivered."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-106-10",
+      "status": "confirmed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "Digital divide is the established term for socioeconomic inequality in ICT access, use, and effects."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-106-11",
+      "status": "confirmed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "The even-parity word has an even number of ones, but parity cannot rule out an even number of bit errors; C overclaims certainty."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-106-12",
+      "status": "disputed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": null,
+      "confidence": "disputed",
+      "reviewCount": 2,
+      "official": false,
+      "reasoning": [
+        "No workload-independent ordering makes LRU universally better than LFU; “in general” leaves A versus C dependent on the reference model and workload.",
+        "A 是 LFU、C 近似 LRU；兩者表現取決於 workload，沒有一種 cache replacement policy 在一般情況必然優於其他策略，題幹不足以給唯一答案。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check",
+        "public/papers/pp-im-it-106.pdf 原卷題目與選項",
+        "獨立逐項技術推導；未採用第一輪 reasoning",
+        "無官方答案 key"
+      ],
+      "practiceEligible": false,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-it-106-13",
+      "status": "confirmed",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "A",
+      "reviewedAnswer": "A",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "BIOS is firmware that initializes hardware during boot."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-106-14",
+      "status": "confirmed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "Paging divides virtual address space into pages that are moved between memory and backing storage."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-106-15",
+      "status": "confirmed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "RAID targets capacity, performance, and/or fault tolerance, not confidentiality or access-control security."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-106-16",
+      "status": "confirmed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "Kickstarter is a crowdfunding platform."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-106-17",
+      "status": "confirmed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "Udacity, Coursera, and edX are commonly described as MOOC platforms."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-106-18",
+      "status": "confirmed",
+      "previousAnswer": "E",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "E",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "Under the conventional shared-Ethernet model used by the options, A-D are accepted descriptions and E is the intended sentinel."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-106-19",
+      "status": "disputed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": null,
+      "confidence": "disputed",
+      "reviewCount": 2,
+      "official": false,
+      "reasoning": [
+        "Ports are 16-bit values 0-65535, making C false; well-known ports are 0-1023, making D false as written, so the item has two wrong choices.",
+        "TCP/UDP port 的有效範圍為 0–65535，因此 C 錯；well-known ports 為 0–1023，而非 0–2048，因此 D 也錯，至少兩個答案。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check",
+        "public/papers/pp-im-it-106.pdf 原卷題目與選項",
+        "獨立逐項技術推導；未採用第一輪 reasoning",
+        "無官方答案 key"
+      ],
+      "practiceEligible": false,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-it-106-20",
+      "status": "confirmed",
+      "previousAnswer": "E",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "E",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "OSI layer 3/network, layer 5/session, SMTP/layer 7, and TCP/layer 4 are all correct."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-106-21",
+      "status": "confirmed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "Inheritance, not polymorphism, is the primary mechanism named for implementation reuse in this introductory framing."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-106-22",
+      "status": "confirmed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "Commercial proprietary Unix systems exist, so the entire Unix family is not open source."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-106-23",
+      "status": "confirmed",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "A",
+      "reviewedAnswer": "A",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "A describes a Gantt chart rather than a UML class diagram."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-106-24",
+      "status": "confirmed",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "D",
+      "reviewedAnswer": "D",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "Taiwan ETC uses dedicated short-range communication rather than LTE vehicle tracking."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-107-1",
+      "status": "confirmed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "The original voice-only smart-speaker products use speech recognition, NLP, synthesis, and device control, not image recognition."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        ".work/im-it-107-repair-report.md (PDF repair evidence)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-107-2",
+      "status": "confirmed",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "A",
+      "reviewedAnswer": "A",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "Relational databases, not object-oriented databases, are the most widely used database model."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        ".work/im-it-107-repair-report.md (PDF repair evidence)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-107-3",
+      "status": "confirmed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "A primary key identifies rows, not columns."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        ".work/im-it-107-repair-report.md (PDF repair evidence)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-107-4",
+      "status": "confirmed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "COUNT(DISTINCT country) uniquely counts distinct countries."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        ".work/im-it-107-repair-report.md (PDF repair evidence)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-107-5",
+      "status": "confirmed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "COUNT(id) with GROUP BY country computes customers per country."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        ".work/im-it-107-repair-report.md (PDF repair evidence)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-107-6",
+      "status": "confirmed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "Multidimensional databases are optimized for data warehousing and OLAP cube queries."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        ".work/im-it-107-repair-report.md (PDF repair evidence)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-107-7",
+      "status": "confirmed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "Reading data written by an uncommitted transaction is a dirty read."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        ".work/im-it-107-repair-report.md (PDF repair evidence)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-107-8",
+      "status": "confirmed",
+      "previousAnswer": "E",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "E",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "All four OSI statements are standard layer assignments, so E applies."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        ".work/im-it-107-repair-report.md (PDF repair evidence)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-107-9",
+      "status": "confirmed",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "A",
+      "reviewedAnswer": "A",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "Despite the PDF typo “Kerkeros,” the ticket-based authentication protocol described is Kerberos, option A."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        ".work/im-it-107-repair-report.md (PDF repair evidence)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-107-10",
+      "status": "corrected",
+      "previousAnswer": "E",
+      "reviewBaselineAnswer": "D",
+      "reviewedAnswer": "D",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "HTTPS/TLS addresses authentication, confidentiality, integrity, and MITM resistance; fault tolerance is outside its security goals."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        ".work/im-it-107-repair-report.md (PDF repair evidence)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-107-11",
+      "status": "corrected",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "A",
+      "reviewedAnswer": "E",
+      "confidence": "medium",
+      "reviewCount": 3,
+      "official": false,
+      "reasoning": [
+        "certificate serial number 可作為 CRL/OCSP revocation tracking 的識別值；issuer、subject public key 與 X.509 敘述也正確，因此 A 至 D 均正確，應選 E。",
+        "X.509 certificate serial number 由 issuer 指派並唯一識別該 issuer 簽發的憑證；CRL entry 與 OCSP request 都以 issuer/serial number 識別要查詢或撤銷的憑證，所以 A 所稱用來追蹤 revocation information 是合理敘述。Issuer 欄位指出簽發與簽章實體，certificate 包含 subject public key，X.509 也確實規範 public-key certificate 格式，因此 B、C、D 均正確。不存在另一個合理錯項，應由現有 A 更正為 E。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-107.pdf 原卷題目與選項",
+        "獨立逐項技術推導；未採用第一輪 reasoning",
+        "無官方答案 key",
+        "public/papers/pp-im-it-107.pdf 第 2 頁原題與選項",
+        "public/data/questions.json 題面交叉核對",
+        "X.509 certificate、CRL 與 OCSP serial-number semantics 的獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-107-12",
+      "status": "corrected",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "E",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "Password-fatigue reduction and Facebook/Google federated login are all valid SSO examples in the item’s framing."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        ".work/im-it-107-repair-report.md (PDF repair evidence)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-107-13",
+      "status": "confirmed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "A VPN makes communication over a shared/public network behave as access to a private network."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        ".work/im-it-107-repair-report.md (PDF repair evidence)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-107-14",
+      "status": "confirmed",
+      "previousAnswer": "E",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "E",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "MS-DOS is an operating system; HFS, NTFS, exFAT, and ext3 are file systems."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        ".work/im-it-107-repair-report.md (PDF repair evidence)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-107-15",
+      "status": "confirmed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "A device driver is hardware-dependent and OS-specific software mediating transparent device access."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        ".work/im-it-107-repair-report.md (PDF repair evidence)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-107-16",
+      "status": "confirmed",
+      "previousAnswer": "E",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "E",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "The listed introductory CISC/RISC characterizations and x86/ARM examples are all accepted, so E applies."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        ".work/im-it-107-repair-report.md (PDF repair evidence)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-107-17",
+      "status": "corrected",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "Creating virtual versions of compute, storage, and network resources is virtualization, option C in the verified PDF."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        ".work/im-it-107-repair-report.md (PDF repair evidence)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-107-18",
+      "status": "confirmed",
+      "previousAnswer": "E",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "E",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "A-D are standard high-level Bitcoin properties in the item’s historical framing, so E applies."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        ".work/im-it-107-repair-report.md (PDF repair evidence)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-107-19",
+      "status": "disputed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": null,
+      "confidence": "disputed",
+      "reviewCount": 2,
+      "official": false,
+      "reasoning": [
+        "B incorrectly describes Bitcoin as distributing partial block lists such that no peer needs the full chain, while C also incorrectly calls public pseudonymous transaction data anonymous and encrypted; the single-choice item has two defensible errors.",
+        "C 明確有問題：Bitcoin transactions 是公開且 pseudonymous，不是全部匿名並加密。B 也把 Bitcoin 的 replicated ledger 說成 blocks 可分散保存而無 peer 維護完整鏈；雖 SPV/pruned nodes 不保留全量資料，這仍不是 Bitcoin full-node ledger 的標準描述，因此 B/C 無法形成唯一答案。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        ".work/im-it-107-repair-report.md (PDF repair evidence)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check",
+        "public/papers/pp-im-it-107.pdf 原卷題目與選項",
+        "獨立逐項技術推導；未採用第一輪 reasoning",
+        "無官方答案 key"
+      ],
+      "practiceEligible": false,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-it-107-20",
+      "status": "confirmed",
+      "previousAnswer": "E",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "E",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "CIA expands to Confidentiality, Integrity, Availability; only E correctly identifies Availability."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        ".work/im-it-107-repair-report.md (PDF repair evidence)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-107-21",
+      "status": "confirmed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "RSA is asymmetric; DES, IDEA, Caesar, and AES are symmetric mechanisms."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        ".work/im-it-107-repair-report.md (PDF repair evidence)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-107-22",
+      "status": "confirmed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "Large populations of weak IoT devices make botnet-driven DDoS especially difficult to defend."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        ".work/im-it-107-repair-report.md (PDF repair evidence)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-107-23",
+      "status": "confirmed",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "D",
+      "reviewedAnswer": "D",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "ISO/IEC 27001 specifies requirements for an ISMS."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        ".work/im-it-107-repair-report.md (PDF repair evidence)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-107-24",
+      "status": "confirmed",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "D",
+      "reviewedAnswer": "D",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "ACID ends in Durability; the other expansions are wrong."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        ".work/im-it-107-repair-report.md (PDF repair evidence)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-108-1",
+      "status": "confirmed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "JPEG, GIF, and BMP are image formats; MPEG is principally a moving-image/audio coding family."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-108.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-108-2",
+      "status": "confirmed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "A browser cookie is website-supplied local state data."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-108.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-108-3",
+      "status": "confirmed",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "D",
+      "reviewedAnswer": "D",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "A 128-bit IPv6 address space contains 2^128 possible bit patterns."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-108.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-108-4",
+      "status": "confirmed",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "A",
+      "reviewedAnswer": "A",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "TCP/IP is the foundational Internet protocol suite among the choices."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-108.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-108-5",
+      "status": "confirmed",
+      "previousAnswer": "E",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "E",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "CPU scheduling, storage, memory, and I/O management are all operating-system tasks, so E applies."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-108.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-108-6",
+      "status": "confirmed",
+      "previousAnswer": "E",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "E",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "Linux is open source and Unix-like; Android uses the Linux kernel and AOSP is open source, so E applies."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-108.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-108-7",
+      "status": "confirmed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "RFID is the dedicated identification/tracking technology among these options."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-108.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-108-8",
+      "status": "confirmed",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "D",
+      "reviewedAnswer": "D",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "GPS provides localization rather than direct perception of surrounding objects; lidar, radar, and vision do the latter."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-108.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-108-9",
+      "status": "confirmed",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "D",
+      "reviewedAnswer": "D",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "The regulation described is the EU General Data Protection Regulation."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-108.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-108-10",
+      "status": "confirmed",
+      "previousAnswer": "E",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "E",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "Volume, velocity, variety, and veracity are all established big-data attributes in the 4V formulation."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-108.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-108-11",
+      "status": "confirmed",
+      "previousAnswer": "E",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "E",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "All four listed domains can apply big-data analysis, so E applies."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-108.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-108-12",
+      "status": "confirmed",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "A",
+      "reviewedAnswer": "A",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "CAPTCHA explicitly expands to a public Turing test distinguishing computers and humans."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-108.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-108-13",
+      "status": "confirmed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "LDAP is the lightweight directory-access protocol derived from the X.500 directory model."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-108.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-108-14",
+      "status": "confirmed",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "A",
+      "reviewedAnswer": "A",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "SSH was designed as the secure replacement for Telnet, rlogin, and rsh."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-108.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-108-15",
+      "status": "confirmed",
+      "previousAnswer": "E",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "E",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "“Deep” refers to network depth/layer count, which none of A-D names."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-108.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-108-16",
+      "status": "disputed",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "D",
+      "reviewedAnswer": null,
+      "confidence": "disputed",
+      "reviewCount": 2,
+      "official": false,
+      "reasoning": [
+        "Human labeling is common in supervised deep learning but not required in self-supervised or unsupervised learning; “usually” makes D versus E dependent on scope and era.",
+        "deep learning 可採 supervised、unsupervised 或 self-supervised training，D 不是普遍必要條件；但 D 使用「usually」而非「always」，在大量監督式應用中仍可成立，故 D 與全對的 E 取決於題目預設，無唯一答案。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-108.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check",
+        "public/papers/pp-im-it-108.pdf 原卷題目與選項",
+        "獨立逐項技術推導；未採用第一輪 reasoning",
+        "無官方答案 key"
+      ],
+      "practiceEligible": false,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-it-108-17",
+      "status": "disputed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": null,
+      "confidence": "disputed",
+      "reviewCount": 2,
+      "official": false,
+      "reasoning": [
+        "Viruses replicate by infecting hosts and can spread, while autonomous network propagation is the sharper worm distinction; the word “actively” does not uniquely force C rather than E.",
+        "virus 能複製與散播並非全錯，但「actively replicate themselves and spread to other computers」更精確描述 worm；題目未交代是否以自動跨主機散播區分 virus/worm，因此 C 與 E 存在定義歧義。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-108.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check",
+        "public/papers/pp-im-it-108.pdf 原卷題目與選項",
+        "獨立逐項技術推導；未採用第一輪 reasoning",
+        "無官方答案 key"
+      ],
+      "practiceEligible": false,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-it-108-18",
+      "status": "confirmed",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "D",
+      "reviewedAnswer": "D",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "Psychological manipulation of people is the definition of social engineering."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-108.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-108-19",
+      "status": "confirmed",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "D",
+      "reviewedAnswer": "D",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "A firewall filters incoming and outgoing traffic according to security rules."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-108.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-108-20",
+      "status": "confirmed",
+      "previousAnswer": "E",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "E",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "Network printing, RPC, email protocols, and HTTP all have standard client-server deployments, so E applies."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-108.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-109-1",
+      "status": "confirmed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "Hiding internal state behind object methods is encapsulation."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-109.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        ".work/im-it-109-110-113-replacements-report.md (PDF repair evidence)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-109-2",
+      "status": "corrected",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 2,
+      "official": false,
+      "reasoning": [
+        "Protected, not private, grants access to the defining class and subclasses (and package peers in Java).",
+        "protected 允許目前 class、subclasses，且部分語言也允許 same-package access，與題幹完全對應。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-109.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        ".work/im-it-109-110-113-replacements-report.md (PDF repair evidence)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check",
+        "public/papers/pp-im-it-109.pdf 原卷題目與選項",
+        "獨立逐項技術推導；未採用第一輪 reasoning",
+        "無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-109-3",
+      "status": "corrected",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "D",
+      "reviewedAnswer": "E",
+      "confidence": "medium",
+      "reviewCount": 2,
+      "official": false,
+      "reasoning": [
+        "Python supports functional, object-oriented, procedural, and imperative styles, so E is the only “none wrong” answer.",
+        "Python 支援 functional、object-oriented、procedural 與 imperative styles，A 至 D 均正確，因此選 E。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-109.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        ".work/im-it-109-110-113-replacements-report.md (PDF repair evidence)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check",
+        "public/papers/pp-im-it-109.pdf 原卷題目與選項",
+        "獨立逐項技術推導；未採用第一輪 reasoning",
+        "無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-109-4",
+      "status": "corrected",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "A",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 2,
+      "official": false,
+      "reasoning": [
+        "Python is dynamically typed, making B false; it is general-purpose, interpreted, and indentation-delimited.",
+        "Python 是 dynamically typed，不是 statically typed；其餘敘述描述一般 Python 特性。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-109.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        ".work/im-it-109-110-113-replacements-report.md (PDF repair evidence)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check",
+        "public/papers/pp-im-it-109.pdf 原卷題目與選項",
+        "獨立逐項技術推導；未採用第一輪 reasoning",
+        "無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-109-5",
+      "status": "corrected",
+      "previousAnswer": "E",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "A",
+      "confidence": "medium",
+      "reviewCount": 2,
+      "official": false,
+      "reasoning": [
+        "The model described is software delivered on demand over a vendor-managed cloud; among the provided options, A is the direct match.",
+        "由 vendor 在 cloud 管理並依需求透過 Internet 提供的軟體，選項中對應 on-demand software。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-109.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        ".work/im-it-109-110-113-replacements-report.md (PDF repair evidence)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check",
+        "public/papers/pp-im-it-109.pdf 原卷題目與選項",
+        "獨立逐項技術推導；未採用第一輪 reasoning",
+        "無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-109-6",
+      "status": "corrected",
+      "previousAnswer": "E",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "D",
+      "confidence": "medium",
+      "reviewCount": 2,
+      "official": false,
+      "reasoning": [
+        "Google App Engine is a canonical platform-as-a-service offering.",
+        "Google App Engine 提供受管 application runtime/platform，分類為 Platform-as-a-Service。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-109.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        ".work/im-it-109-110-113-replacements-report.md (PDF repair evidence)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check",
+        "public/papers/pp-im-it-109.pdf 原卷題目與選項",
+        "獨立逐項技術推導；未採用第一輪 reasoning",
+        "無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-109-7",
+      "status": "corrected",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "E",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "LINE Pay, Pi wallet, JKo/街口, and Taiwan Pay are payment services; 嘖嘖 is crowdfunding."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-109.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        ".work/im-it-109-110-113-replacements-report.md (PDF repair evidence)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-109-8",
+      "status": "confirmed",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "D",
+      "reviewedAnswer": "D",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "The expected peak-rate range for 5G in these choices is 1-10 Gbps."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-109.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        ".work/im-it-109-110-113-replacements-report.md (PDF repair evidence)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-109-9",
+      "status": "corrected",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "D",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 2,
+      "official": false,
+      "reasoning": [
+        "A server intermediating client requests to origin servers is a proxy.",
+        "代替 client 向 origin server 請求資源的 intermediary server 是 proxy。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-109.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        ".work/im-it-109-110-113-replacements-report.md (PDF repair evidence)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check",
+        "public/papers/pp-im-it-109.pdf 原卷題目與選項",
+        "獨立逐項技術推導；未採用第一輪 reasoning",
+        "無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-109-10",
+      "status": "confirmed",
+      "previousAnswer": "E",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "E",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "DNS performs name-to-address resolution, and no DNS server is listed, so E applies."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-109.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        ".work/im-it-109-110-113-replacements-report.md (PDF repair evidence)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-109-11",
+      "status": "corrected",
+      "previousAnswer": "E",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 2,
+      "official": false,
+      "reasoning": [
+        "IPv6 uses 128-bit, not 120-bit, addresses; B is the uniquely wrong statement.",
+        "IPv6 address space 是 128 bits，不是 120 bits，因此 B 錯。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-109.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        ".work/im-it-109-110-113-replacements-report.md (PDF repair evidence)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check",
+        "public/papers/pp-im-it-109.pdf 原卷題目與選項",
+        "獨立逐項技術推導；未採用第一輪 reasoning",
+        "無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-109-12",
+      "status": "confirmed",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "A",
+      "reviewedAnswer": "A",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "Ethernet is the dominant LAN technology among the listed choices."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-109.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        ".work/im-it-109-110-113-replacements-report.md (PDF repair evidence)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-109-13",
+      "status": "confirmed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "A parity bit makes the total number of one bits even or odd."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-109.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        ".work/im-it-109-110-113-replacements-report.md (PDF repair evidence)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-109-14",
+      "status": "confirmed",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "A",
+      "reviewedAnswer": "A",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "Bluetooth is not the usual high-bandwidth phone-to-VR-headset link; the other pairings are common Bluetooth uses."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-109.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        ".work/im-it-109-110-113-replacements-report.md (PDF repair evidence)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-109-15",
+      "status": "corrected",
+      "previousAnswer": "E",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 2,
+      "official": false,
+      "reasoning": [
+        "DDR4 RAM is volatile; SSD, ROM, and flash retain data without power.",
+        "DDR4 DRAM 是 volatile memory；SSD、ROM 與 flash 都可在斷電後保留資料。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-109.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        ".work/im-it-109-110-113-replacements-report.md (PDF repair evidence)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check",
+        "public/papers/pp-im-it-109.pdf 原卷題目與選項",
+        "獨立逐項技術推導；未採用第一輪 reasoning",
+        "無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-109-16",
+      "status": "confirmed",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "D",
+      "reviewedAnswer": "D",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "ISO 27001 is the ISMS specification among the choices."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-109.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        ".work/im-it-109-110-113-replacements-report.md (PDF repair evidence)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-109-17",
+      "status": "corrected",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "A",
+      "confidence": "medium",
+      "reviewCount": 2,
+      "official": false,
+      "reasoning": [
+        "The information-security CIA triad is Confidentiality, Integrity, and Availability.",
+        "CIA triad 的標準展開為 Confidentiality、Integrity、Availability。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-109.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        ".work/im-it-109-110-113-replacements-report.md (PDF repair evidence)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check",
+        "public/papers/pp-im-it-109.pdf 原卷題目與選項",
+        "獨立逐項技術推導；未採用第一輪 reasoning",
+        "無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-109-18",
+      "status": "corrected",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "D",
+      "reviewedAnswer": "A",
+      "confidence": "medium",
+      "reviewCount": 2,
+      "official": false,
+      "reasoning": [
+        "CREATE TABLE Customers (...) is the valid SQL table-creation statement.",
+        "標準 SQL 建表語法是 CREATE TABLE，欄位定義置於括號中，只有 A 合法。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-109.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        ".work/im-it-109-110-113-replacements-report.md (PDF repair evidence)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check",
+        "public/papers/pp-im-it-109.pdf 原卷題目與選項",
+        "獨立逐項技術推導；未採用第一輪 reasoning",
+        "無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-109-19",
+      "status": "confirmed",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "D",
+      "reviewedAnswer": "D",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "MariaDB was community-developed as a MySQL-compatible open-source fork after Oracle’s acquisition."
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-109.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        ".work/im-it-109-110-113-replacements-report.md (PDF repair evidence)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-109-20",
+      "status": "corrected",
+      "previousAnswer": "E",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "D",
+      "confidence": "medium",
+      "reviewCount": 2,
+      "official": false,
+      "reasoning": [
+        "Contemporary estimates commonly placed 2020 connected devices in the tens of billions, matching 10-50 billion.",
+        "2020 年全球 connected/IoT devices 的常見估計約為百億量級，落在 10–50 billion。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-109.pdf (original question face; no official answer key)",
+        ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+        ".work/im-it-109-110-113-replacements-report.md (PDF repair evidence)",
+        "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check",
+        "public/papers/pp-im-it-109.pdf 原卷題目與選項",
+        "獨立逐項技術推導；未採用第一輪 reasoning",
+        "無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-110-1",
+      "status": "confirmed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "現代個人電腦 CPU 時脈通常以 GHz 計；2–4 MHz 明顯不符，其餘規格在題目年代均合理。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-110.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-110-2",
+      "status": "disputed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": null,
+      "confidence": "disputed",
+      "reviewCount": 2,
+      "official": false,
+      "reasoning": [
+        ".bin 是泛用 binary 副檔名，但也確實常與 .cue 搭配表示 CD/DVD disc image；因此 B 不能被唯一判定為錯誤。",
+        ".py、.iso 與 .tar 的描述成立；.bin 雖是泛用二進位副檔名，但 raw CD/DVD images 也確實常以 BIN（通常搭配 CUE）表示。副檔名不具排他語義，因此無法由題面唯一判定 B 錯，B 與 E 取決於命題者是否把『是』誤讀為『只能是』。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-110.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key",
+        "public/papers/pp-im-it-110.pdf（原始題面；無官方答案）",
+        "public/data/questions.json（Q110-2 題幹與選項）",
+        "獨立依檔案格式與副檔名用途推導"
+      ],
+      "practiceEligible": false,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-it-110-3",
+      "status": "confirmed",
+      "previousAnswer": "E",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "E",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "JPEG、PNG、BMP、TIFF 全都是影像檔格式，因此 A–D 無一符合「not」。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-110.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-110-4",
+      "status": "confirmed",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "A",
+      "reviewedAnswer": "A",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "ROM 斷電後保留資料；RAM、DDR RAM、SDRAM 都是揮發性記憶體。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-110.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-110-5",
+      "status": "disputed",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "A",
+      "reviewedAnswer": null,
+      "confidence": "disputed",
+      "reviewCount": 2,
+      "official": false,
+      "reasoning": [
+        "抽象 stored-program 模型可說 CPU 從 main memory fetch instruction；現代實作則通常先經 cache。題目用「directly」但未指定抽象層級，A 與 E 的判斷不唯一。",
+        "在 stored-program／ISA 抽象中可說 CPU 從主記憶體 fetch instruction；在現代微架構中 instruction fetch 通常先命中 cache，cache miss 才經記憶體控制器取 RAM。題目未界定抽象層級，而『directly』正是歧義來源，因此不能穩定地在 A 與『A-D 都正確』的 E 間作唯一判定。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-110.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key",
+        "public/papers/pp-im-it-110.pdf（原始題面；無官方答案）",
+        "public/data/questions.json（Q110-5 題幹與選項）",
+        "獨立依 stored-program architecture 與現代 cache hierarchy 推導"
+      ],
+      "practiceEligible": false,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-it-110-6",
+      "status": "confirmed",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "A",
+      "reviewedAnswer": "A",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "螢幕的像素解析度以橫縱像素表示；dpi 是印刷輸出常用單位，FHD 與 UHD 的像素數也正確。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-110.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-110-7",
+      "status": "confirmed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "gateway 可在異質協定或架構的網路間轉換；bridge、switch、hub 不具此功能，router 通常轉送同協定網路。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-110.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-110-8",
+      "status": "confirmed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "題幹逐字描述 VPN 將私有網路延伸到公用網路的功能。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-110.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-110-9",
+      "status": "confirmed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "5G 的優勢是降低延遲，不是提高延遲；其他選項均為常見 5G 目標。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-110.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-110-10",
+      "status": "confirmed",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "D",
+      "reviewedAnswer": "D",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "UML 是用來視覺化系統設計的標準建模語言；其餘是程式語言或程式設計典範。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-110.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-110-11",
+      "status": "confirmed",
+      "previousAnswer": "E",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "E",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "A–D 分別是 assembly、pseudocode、interpreter、scripting language 的合理基本定義，沒有錯項。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-110.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-110-12",
+      "status": "confirmed",
+      "previousAnswer": "E",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "E",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "A、B 是命令式與函數式典範的定義；C++ 與 Python 都支援命令式程式設計。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-110.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-110-13",
+      "status": "confirmed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "對程式構造指派型別並驗證資料表示規則的正式名稱是 type system。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-110.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-110-14",
+      "status": "confirmed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "以線性方程擬合依變數與解釋變數關係的預測方法就是 linear regression。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-110.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-110-15",
+      "status": "confirmed",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "A",
+      "reviewedAnswer": "A",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "precision 定義為預測為正者中真正例的比例，即 TP/(TP+FP)。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-110.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-110-16",
+      "status": "confirmed",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "A",
+      "reviewedAnswer": "A",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "accuracy 是所有正確分類 TP+TN 除以全部樣本。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-110.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-110-17",
+      "status": "confirmed",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "A",
+      "reviewedAnswer": "A",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "數位憑證把身分與 public key 綁定並由 CA 簽章，不會證明私鑰或秘密金鑰的所有權。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-110.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-110-18",
+      "status": "confirmed",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "A",
+      "reviewedAnswer": "A",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "HTTP cookie 儲存在瀏覽器端；伺服器可利用 cookie 中的識別資訊維持 session、表單或驗證狀態。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-110.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-110-19",
+      "status": "confirmed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "CDN 將 cache/proxy edge servers 地理分散，使內容從接近使用者的位置提供。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-110.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-110-20",
+      "status": "confirmed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "逐一嘗試字典詞彙作為密碼是 dictionary attack；brute force 則枚舉可能字元組合。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-110.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-110-21",
+      "status": "confirmed",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "D",
+      "reviewedAnswer": "D",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "CIA triad 的 C、I、A 分別是 Confidentiality、Integrity、Availability。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-110.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-110-22",
+      "status": "confirmed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "實作 key-value associative array 的典型資料結構是 hash table，核心使用 hash function。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-110.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-110-23",
+      "status": "confirmed",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "A",
+      "reviewedAnswer": "A",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "效率、完整性、降低冗餘都是標準資料庫優勢；題面所寫的「data definition and the problem」不是標準優勢表述。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-110.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-110-24",
+      "status": "confirmed",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "A",
+      "reviewedAnswer": "A",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "database schema 定義資料庫的邏輯結構；data dictionary 則儲存描述結構的 metadata。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-110.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-110-25",
+      "status": "confirmed",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "D",
+      "reviewedAnswer": "D",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "ACID 的 A 是 Atomicity；其餘三項均不是 ACID 字首展開。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-110.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-110-26",
+      "status": "confirmed",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "D",
+      "reviewedAnswer": "D",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "挖礦透過共識機制驗證並收錄交易；鑄幣是部分系統給礦工的獎勵，不是題目所問的主要目的。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-110.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-110-27",
+      "status": "disputed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": null,
+      "confidence": "disputed",
+      "reviewCount": 2,
+      "official": false,
+      "reasoning": [
+        "Microsoft Azure 同時提供 IaaS、PaaS 與 SaaS；若採早期產品定位可選 PaaS，但題目沒有指定服務或年代，B 不是唯一可重現答案。",
+        "Azure 不是單一服務：Virtual Machines 是 IaaS，App Service 等是 PaaS，Microsoft 也透過 Azure 生態提供 SaaS。Azure 早期常被教材概括為 PaaS，但題目只寫 Microsoft Azure、沒有指定服務或採用早期分類，因此 A、B、C 都可描述其部分服務，B 不能視為唯一可重現答案。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-110.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key",
+        "public/papers/pp-im-it-110.pdf（原始題面；無官方答案）",
+        "public/data/questions.json（Q110-27 題幹與選項）",
+        "獨立依 IaaS/PaaS/SaaS 服務模型定義推導"
+      ],
+      "practiceEligible": false,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-it-110-28",
+      "status": "confirmed",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "D",
+      "reviewedAnswer": "D",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "同時使用公司本地基礎設施與 AWS 公有雲符合 hybrid cloud 的定義。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-110.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-111-1",
+      "status": "confirmed",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "A",
+      "reviewedAnswer": "A",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "OSI 模型只有七層，Application 是第七層；第八層不存在。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-111.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-111-2",
+      "status": "confirmed",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "A",
+      "reviewedAnswer": "A",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "SMTP 用於寄送及伺服器間轉送郵件；IMAP、POP、POP3 用於取信。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-111.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-111-3",
+      "status": "confirmed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "sliding window 允許確認前同時送出多個 frame，並以視窗與序號維持可靠有序傳輸。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-111.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-111-4",
+      "status": "confirmed",
+      "previousAnswer": "E",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "E",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "DHCP 用於 IP 網路且採 client-server，自動配置位址與參數，對移動到新網路的用戶亦有用。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-111.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-111-5",
+      "status": "confirmed",
+      "previousAnswer": "E",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "E",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "網路虛擬化可拆分或聚合實體網路；處理器虛擬化讓多個虛擬 CPU 與不同 guest OS 共存。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-111.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-111-6",
+      "status": "confirmed",
+      "previousAnswer": "E",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "E",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "A–D 都是 VM 與 hypervisor 的一般描述；易佈建、維護及支援高可用配置是常見效益。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-111.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-111-7",
+      "status": "confirmed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "IEEE 802 網段中配置給 NIC 的鏈路層識別碼是 MAC address。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-111.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-111-8",
+      "status": "disputed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": null,
+      "confidence": "disputed",
+      "reviewCount": 2,
+      "official": false,
+      "reasoning": [
+        "C 對 datagram routing 顯然錯，但 B 宣稱每個 datagram header 都包含整份檔案的封包總數與序號，也不是 IP datagram 的一般必要欄位，因此存在至少兩個錯項。",
+        "C 錯，因 datagram 各自路由，不保證同一路徑；B 也錯，IP datagram header 有來源與目的位址，但一般不含整份資料的封包總數與逐包 sequence number。IP fragmentation 的 identification/offset 也不是題述欄位組合，因此至少 B、C 兩項皆錯。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-111.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key",
+        "public/papers/pp-im-it-111.pdf（原始題面；無官方答案）",
+        ".work/im-it-pdf-audit-111-115.md（Q111 題文已逐頁核對）",
+        "獨立依 IP datagram 與 virtual-circuit routing 定義推導"
+      ],
+      "practiceEligible": false,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-it-111-9",
+      "status": "confirmed",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "A",
+      "reviewedAnswer": "A",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "先偵測通道 idle 並企圖避免碰撞，對應 CSMA/CA；CSMA/CD 是碰撞偵測。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-111.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-111-10",
+      "status": "confirmed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "CIA 的 A 是 Availability，不是 Accessibility。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-111.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-111-11",
+      "status": "confirmed",
+      "previousAnswer": "E",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "E",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "描述的是 man-in-the-middle attack，但 A–D 沒有該標準名稱，所以應選 none of the above。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-111.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-111-12",
+      "status": "confirmed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "一般 public-key encryption 的加密金鑰是公開金鑰；RSA 的其他三項敘述均合理。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-111.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-111-13",
+      "status": "confirmed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "ACID 的 I 是 Isolation，不是 Integrity。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-111.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-111-14",
+      "status": "confirmed",
+      "previousAnswer": "E",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "E",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "A–D 分別符合 1NF、2NF 與 3NF 消除遞移相依、減少冗餘的教材定義。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-111.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-111-15",
+      "status": "confirmed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "checkpoint 建立可恢復的持久化界線，使較早且已不再需要的交易日誌可被截斷或歸檔。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-111.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-111-16",
+      "status": "confirmed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "thread 才比 process 輕量；process 有隔離位址空間且可包含多個 threads。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-111.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-111-17",
+      "status": "confirmed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "持續回應對方狀態、一直活動卻沒有進展是 livelock，而不是 deadlock 或 starvation。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-111.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-111-18",
+      "status": "confirmed",
+      "previousAnswer": "E",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "E",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "提高利用率與 throughput、降低 waiting time、公平配置 CPU 都是排程的典型目標。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-111.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-111-19",
+      "status": "confirmed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "在一般有限就緒佇列與固定時間片假設下，Round Robin 讓每個 ready process 輪流取得 CPU，不會飢餓。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-111.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-111-20",
+      "status": "confirmed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "將印表工作先排入磁碟佇列、讓程式交付後繼續執行，是 spooling。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-111.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-111-21",
+      "status": "confirmed",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "D",
+      "reviewedAnswer": "D",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "ER 圖中 diamond 表示 relationship；attribute 使用 oval。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-111.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-111-22",
+      "status": "confirmed",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "D",
+      "reviewedAnswer": "D",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "執行期載入共享函式庫、處理 relocation 與符號跳轉的是 dynamic linker。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-111.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-111-23",
+      "status": "disputed",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "A",
+      "reviewedAnswer": null,
+      "confidence": "disputed",
+      "reviewCount": 2,
+      "official": false,
+      "reasoning": [
+        "A 的 2D 描述可判錯，但「blockchain 是 metaverse 的 key technology」不是定義必要條件，D 也屬可爭議主張，無法保證唯一答案。",
+        "A 將沉浸式 metaverse 願景寫成 2D，顯然可判錯；但 D 把 blockchain 稱為 metaverse 的 key technology 也是主張而非定義，許多 metaverse 實作不需要區塊鏈。區塊鏈可提供 token provenance，不代表它是 metaverse 必要或普遍的關鍵技術，所以題面無法保證只有 A 錯。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-111.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key",
+        "public/papers/pp-im-it-111.pdf（原始題面；無官方答案）",
+        ".work/im-it-pdf-audit-111-115.md（Q111 題文已逐頁核對）",
+        "獨立依 metaverse 技術定義與區塊鏈非必要性推導"
+      ],
+      "practiceEligible": false,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-it-111-24",
+      "status": "disputed",
+      "previousAnswer": "E",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": null,
+      "confidence": "disputed",
+      "reviewCount": 2,
+      "official": false,
+      "reasoning": [
+        "NFT 能證明鏈上 token 的控制權，但不必然證明所連結數位檔案的著作權或法律所有權；A 的 ownership 用語使 E 不是無爭議唯一答案。",
+        "B-D 在一般 NFT 描述下成立。A 的 NFT 可與檔案關聯也成立，但『show ownerships』若指鏈上 token 控制權則可接受，若指所連結檔案的著作權或法律所有權則不成立；NFT 本身不自動移轉這些權利。ownership 未限定對象，使 A 與 E 無法唯一區分。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-111.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key",
+        "public/papers/pp-im-it-111.pdf（原始題面；無官方答案）",
+        ".work/im-it-pdf-audit-111-115.md（Q111 題文已逐頁核對）",
+        "獨立區分 on-chain token control 與 underlying-file legal rights"
+      ],
+      "practiceEligible": false,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-it-112-1",
+      "status": "confirmed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "Von Neumann 架構讓資料與指令共用記憶體；分離記憶體是 Harvard 架構特徵。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-112.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-112-2",
+      "status": "corrected",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "D",
+      "reviewedAnswer": "D",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "CISC 通常具有較大、較複雜的指令集，不是比 RISC 更小。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-112.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-112-3",
+      "status": "corrected",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "E",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "在題目採用的 byte-addressable 基本模型下，32-bit 位址可定位 2^32 bytes；memory-mapped I/O 與 registers 的敘述也正確。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-112.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-112-4",
+      "status": "corrected",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "E",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "interrupt-driven I/O 與 DMA 的四項敘述均符合基本架構；DMA hardware 可降低 CPU 搬移資料的參與。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-112.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-112-5",
+      "status": "confirmed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "現代 L1 cache 容量以數十 KB 計，不是數十到數百 bytes。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-112.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-112-6",
+      "status": "confirmed",
+      "previousAnswer": "E",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "E",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "資源、行程、記憶體與安全管理全都是 OS 主要功能。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-112.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-112-7",
+      "status": "confirmed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "4 KiB 是 x86 等主流平台最常見的基本 page size。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-112.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-112-8",
+      "status": "confirmed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "一般每個 user process 有獨立虛擬位址空間，不是所有 user-mode applications 共用同一空間。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-112.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-112-9",
+      "status": "confirmed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "cluster 可提升運算能力與容錯，但不會因為組成叢集就自動防止資安攻擊。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-112.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-112-10",
+      "status": "confirmed",
+      "previousAnswer": "E",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "E",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "建立刪除、暫停恢復、同步與 deadlock handling 都屬 OS process management。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-112.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-112-11",
+      "status": "corrected",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "D",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 2,
+      "official": false,
+      "reasoning": [
+        "依作業系統教材的 file/storage management 責任，建立刪除檔案、disk scheduling、檔案操作 primitives 與備份至穩定儲存媒體都屬管理工作；「file integrity check」不是該標準責任清單，因此唯一可選的是 B，不是現有 D。",
+        "標準 OS file/storage management 責任包含建立刪除檔案、disk scheduling、提供檔案與目錄操作 primitives，以及把檔案備份到穩定儲存媒體；file integrity check 不在該典型責任清單。因此 B 是唯一符合『generally not the responsibility』的選項，現有 D 應更正為 B。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-112.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key",
+        "public/papers/pp-im-it-112.pdf（原始題面；無官方答案）",
+        ".work/im-it-pdf-audit-111-115.md（確認 PDF 的原始 A-E 選項及先前文字毀損）",
+        "獨立依作業系統 file-system 與 mass-storage management 標準責任推導"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-112-12",
+      "status": "corrected",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "D",
+      "reviewedAnswer": "D",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "單處理器透過 time slicing 與 context switching 讓多行程交錯執行。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-112.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-112-13",
+      "status": "disputed",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": null,
+      "confidence": "disputed",
+      "reviewCount": 2,
+      "official": false,
+      "reasoning": [
+        "C 在典型配置中錯，但 A 宣稱 code section 從位址 0 開始也不是現代 Unix 的普遍事實，null page、ASLR 與載入配置都可能使其不從 0 開始，存在多個錯項。",
+        "在教科書簡化的邏輯位址圖中，text 可畫在低位址 0、data 在其上、stack 位於高位址並動態增減，所以 C 是預期錯項；但題幹明指 Unix-like systems，實際行程常保留 null page、採 ASLR，code 不普遍從 address 0 開始，A 也不具普遍真值。缺少『simplified layout』限定使 A、C 均可判錯。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-112.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key",
+        "public/papers/pp-im-it-112.pdf（原始題面；無官方答案）",
+        ".work/im-it-pdf-audit-111-115.md（確認 PDF 原始 memory-layout 選項）",
+        "獨立比較教科書邏輯位址模型與實際 Unix virtual-address layout"
+      ],
+      "practiceEligible": false,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-it-112-14",
+      "status": "corrected",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "共享式 Ethernet 的 CSMA/CD 碰撞後使用 binary exponential backoff。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-112.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-112-15",
+      "status": "confirmed",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "A",
+      "reviewedAnswer": "A",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "IEEE 802.1Q frame tag 將單一實體 LAN 劃成多個邏輯 broadcast domains，即 VLAN。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-112.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-112-16",
+      "status": "confirmed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "週期性與直接鄰居交換路由距離資訊的是 distance-vector routing。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-112.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-112-17",
+      "status": "corrected",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "A",
+      "reviewedAnswer": "A",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "TCP 建連使用 three-way handshake；stream、sliding window、sequence number 三項均正確。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-112.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-112-18",
+      "status": "corrected",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "D",
+      "reviewedAnswer": "D",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "題面 D 的描述是 zero-day attack，不是 first-day attack。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-112.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-112-19",
+      "status": "corrected",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "E",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "assembler、linker、static/dynamic linking、lexical/syntax analysis 四項敘述均正確。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-112.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-112-20",
+      "status": "corrected",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "A",
+      "reviewedAnswer": "A",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "wide-column stores 通常允許稀疏或動態欄位，不能概括為固定預定欄數；B–D 是其資料模型的標準描述。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-112.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-112-21",
+      "status": "corrected",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "E",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "table、row、key、record、attribute 的四項敘述符合基本 relational model。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-112.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-112-22",
+      "status": "disputed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": null,
+      "confidence": "disputed",
+      "reviewCount": 2,
+      "official": false,
+      "reasoning": [
+        "C 的確錯，foreign key 可以為 NULL；但 A 忽略 composite primary key，B 又把 foreign key 可參照的 UNIQUE candidate key 限縮為 primary key，嚴格讀法下也不完全正確。",
+        "C 明確錯，未加 NOT NULL 的 foreign key 可以是 NULL；但 A 把 primary key 限縮成『specific column』，忽略 composite primary key，B 又把 foreign key 可參照的 candidate/UNIQUE key 限縮成另一表的 primary key，且忽略複合欄位。按嚴格關聯模型至少 A、B、C 都不完整或錯誤，不能單選 C。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-112.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key",
+        "public/papers/pp-im-it-112.pdf（原始題面；無官方答案）",
+        ".work/im-it-pdf-audit-111-115.md（確認 PDF 原始 primary/foreign-key 題）",
+        "獨立依 composite key、candidate key 與 nullable foreign key 約束推導"
+      ],
+      "practiceEligible": false,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-it-112-23",
+      "status": "confirmed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "實體物件的數位對應模型，用於模擬、監控及維護，稱為 digital twin。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-112.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-112-24",
+      "status": "confirmed",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "D",
+      "reviewedAnswer": "D",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "Bitcoin mining 的共識與區塊建立流程會驗證交易；其他選項不是其主要目的。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-112.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-112-25",
+      "status": "disputed",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": null,
+      "confidence": "disputed",
+      "reviewCount": 2,
+      "official": false,
+      "reasoning": [
+        "B 明確錯，k 個 children 應有 k-1 keys；但 D 未排除 root，而 internal root 不一定有 ceil(m/2) children，因此題面嚴格讀法有兩個錯項。",
+        "B 錯，含 k 個 children 的非葉節點有 k-1 個 separator keys；D 也少了 root 例外，order-m B-tree 的非 root internal node 才至少有 ceil(m/2) children，internal root 可只有 2 個。題面未排除 root，因此至少 B、D 皆錯。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-112.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key",
+        "public/papers/pp-im-it-112.pdf（原始題面；無官方答案）",
+        ".work/im-it-pdf-audit-111-115.md（確認 PDF 原始 B-tree A-E 選項）",
+        "獨立依 order-m B-tree 節點鍵數與 root exception 推導"
+      ],
+      "practiceEligible": false,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-it-112-26",
+      "status": "confirmed",
+      "previousAnswer": "E",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "E",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "既然 T 是 G 的 spanning tree 且 G 的所有邊都在 T，兩者邊集相同；加非樹邊會成環，且圖可有多棵 spanning trees。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-112.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-112-27",
+      "status": "corrected",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "binary heap 插入放在末端後沿父鏈 sift，最壞走樹高 O(log n)；題面不等號方向錯誤不改變此複雜度。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-112.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-112-28",
+      "status": "corrected",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "heap 只有親子偏序，搜尋任意值最壞需檢查所有節點，為 O(n)。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-112.pdf（題幹與選項）",
+        "public/data/questions.json 與 public/data/answers.json（現況交叉核對）",
+        "獨立技術推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-113-1",
+      "status": "corrected",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "E",
+      "confidence": "medium",
+      "reviewCount": 2,
+      "official": false,
+      "reasoning": [
+        "FAT32、exFAT、NTFS、APFS 都是實際廣泛使用的檔案系統，故應選 none-of-the-above 型的 E。",
+        "FAT32、exFAT、NTFS 與 APFS 都是實際且廣泛部署的檔案系統；A 至 D 無一符合 not popularly used，故唯一答案是 E。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-113.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key",
+        "public/papers/pp-im-it-113.pdf 題面",
+        "public/data/questions.json 題目交叉核對",
+        "獨立檔案系統概念推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-113-2",
+      "status": "corrected",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "D",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 2,
+      "official": false,
+      "reasoning": [
+        "不同 process 各自具有獨立位址空間、stack 與 program counter；B 把 process 誤述成 thread。",
+        "由同一 parent spawn 的不同 processes 通常仍各有獨立位址空間、stack 與 program counter；需要 shared memory 或 message passing 才能交換資料，因此 B 錯。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-113.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key",
+        "public/papers/pp-im-it-113.pdf 題面",
+        "public/data/questions.json 題目交叉核對",
+        "獨立行程模型推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-113-3",
+      "status": "confirmed",
+      "previousAnswer": "E",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "E",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "A 至 D 都是 thread 的一般正確性質，沒有錯誤選項。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-113.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-113-4",
+      "status": "corrected",
+      "previousAnswer": "E",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "A",
+      "confidence": "medium",
+      "reviewCount": 2,
+      "official": false,
+      "reasoning": [
+        "馮紐曼架構的四個功能組成是 processor、memory、input 與 output；A 最直接對應。",
+        "Von Neumann 架構的四個功能單元是 processor、memory、input、output；A 逐項對應，其他選項遺漏或混入 program counter、GPU、disk 等次層元件。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-113.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key",
+        "public/papers/pp-im-it-113.pdf 題面",
+        "public/data/questions.json 題目交叉核對",
+        "獨立電腦架構推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-113-5",
+      "status": "disputed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": null,
+      "confidence": "disputed",
+      "reviewCount": 2,
+      "official": false,
+      "reasoning": [
+        "B 把每次函式呼叫的 stack-frame 建立歸給作業系統；但 A 也把 local variable 一概說成存於 stack，忽略 register allocation／最佳化，因此不具唯一答案。",
+        "B 把每次 function call 的 stack-frame 配置歸給 OS，實際通常由編譯器產生的 calling convention/runtime 調整 stack pointer；但 A 也把所有 local variables 一概放在 stack，忽略 register allocation、static local 與最佳化。至少兩項按嚴格語意不成立，沒有唯一答案。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-113.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key",
+        "public/papers/pp-im-it-113.pdf 題面",
+        "public/data/questions.json 題目交叉核對",
+        "獨立 stack 與 calling-convention 推導；無官方答案 key"
+      ],
+      "practiceEligible": false,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-it-113-6",
+      "status": "disputed",
+      "previousAnswer": "E",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": null,
+      "confidence": "disputed",
+      "reviewCount": 2,
+      "official": false,
+      "reasoning": [
+        "題目把不同語言執行環境混在一起：C 要求程式員明確釋放，但 D 又描述 GC 自動回收；兩者不能同時作為普遍敘述。",
+        "C 只在手動管理記憶體的環境成立；D 則只在具有 garbage collector 的環境成立。題目未指定語言或 runtime，卻把兩種互斥生命週期模型都當成普遍敘述，因此無法由 E 或單一錯項得到跨環境唯一答案。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-113.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key",
+        "public/papers/pp-im-it-113.pdf 題面",
+        "public/data/questions.json 題目交叉核對",
+        "獨立 heap 生命週期推導；無官方答案 key"
+      ],
+      "practiceEligible": false,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-it-113-7",
+      "status": "corrected",
+      "previousAnswer": "E",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 2,
+      "official": false,
+      "reasoning": [
+        "polled interrupt 是 processor 主動輪詢裝置；由裝置直接導向 ISR 描述的是 vectored interrupt。",
+        "polled interrupt 由 processor 逐一詢問裝置以辨識來源；由裝置提供向量直接導向 ISR 是 vectored interrupt 的特徵，因此 C 錯。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-113.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key",
+        "public/papers/pp-im-it-113.pdf 題面",
+        "public/data/questions.json 題目交叉核對",
+        "獨立 interrupt model 推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-113-8",
+      "status": "corrected",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "A",
+      "confidence": "medium",
+      "reviewCount": 2,
+      "official": false,
+      "reasoning": [
+        "p 已定義為不可平行化比例，平行時間為 p+(1-p)/n，speedup 為其倒數。",
+        "p 已明定為不受增加 processors 影響的 serial fraction；正規化執行時間是 p+(1-p)/n，speedup 是其倒數，所以選 A。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-113.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key",
+        "public/papers/pp-im-it-113.pdf 題面與公式",
+        "public/data/questions.json 題目交叉核對",
+        "獨立 Amdahl law 代數推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-113-9",
+      "status": "corrected",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "E",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "互斥機制設計不當確實可能造成 starvation、deadlock 或 livelock，A 至 D 都正確。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-113.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-113-10",
+      "status": "corrected",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "A",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 2,
+      "official": false,
+      "reasoning": [
+        "把資料暫存在記憶體、等候程式或裝置使用的概念是 buffering。",
+        "將資料暫存於記憶體或其他儲存區，直到裝置或程式請求使用，正是 buffering；spooling 特指把工作排入周邊裝置佇列。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-113.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key",
+        "public/papers/pp-im-it-113.pdf 題面",
+        "public/data/questions.json 題目交叉核對",
+        "獨立 I/O storage 概念推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-113-11",
+      "status": "confirmed",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "A",
+      "reviewedAnswer": "A",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "cookie 儲存在 user agent；伺服器可保有對應 session state，但 cookie 本身不必同時存於 host website。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-113.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-113-12",
+      "status": "corrected",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "DNS 是階層式且分散式的命名系統，因此 centralized 敘述錯誤。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-113.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-113-13",
+      "status": "confirmed",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "D",
+      "reviewedAnswer": "D",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "D 所述代替 server 接收 client request 是 reverse proxy，不是 forward proxy。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-113.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-113-14",
+      "status": "corrected",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "E",
+      "confidence": "medium",
+      "reviewCount": 2,
+      "official": false,
+      "reasoning": [
+        "CIA 的 C/A 分別為 confidentiality/availability，ISMS 與 ISO 27000 敘述也正確。",
+        "CIA 的 C 與 A 分別是 confidentiality、availability；C 正確描述 ISMS，ISO/IEC 27000 系列也涵蓋資訊安全管理最佳實務。A 至 D 皆正確，故選 E。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-113.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key",
+        "public/papers/pp-im-it-113.pdf 題面",
+        "public/data/questions.json 題目交叉核對",
+        "獨立資訊安全術語推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-113-15",
+      "status": "corrected",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "D",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 2,
+      "official": false,
+      "reasoning": [
+        "決定可存取哪些資源與可執行哪些操作是 authorization；accountability 是行為可追責。",
+        "決定使用者可存取哪些資源及允許哪些操作是 authorization；accountability 是讓行為可歸責與稽核，因此 C 將兩者混淆。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-113.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key",
+        "public/papers/pp-im-it-113.pdf 題面",
+        "public/data/questions.json 題目交叉核對",
+        "獨立 access-control 概念推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-113-16",
+      "status": "confirmed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "簽發與簽署憑證是 certificate authority 的職責；registration authority 主要驗證申請者身分。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-113.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-113-17",
+      "status": "corrected",
+      "previousAnswer": "E",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 2,
+      "official": false,
+      "reasoning": [
+        "TLS 可使用自簽或私有 CA 憑證；建立 HTTPS 並不在協定上必然要求受信任第三方簽署。",
+        "HTTPS 是 HTTP over TLS，也能配置 mutual TLS；但 TLS 技術上可使用 self-signed certificate 或直接信任私有 CA，協定不強制由受信任第三方簽發 server certificate，因此 C 的 requires 過強。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-113.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key",
+        "public/papers/pp-im-it-113.pdf 題面",
+        "public/data/questions.json 題目交叉核對",
+        "獨立 TLS trust-model 推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-113-18",
+      "status": "corrected",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "A",
+      "confidence": "medium",
+      "reviewCount": 2,
+      "official": false,
+      "reasoning": [
+        "ACID 的 A 是 atomicity，不是 availability。",
+        "ACID 的 A 是 atomicity，不是 availability；C、I、D 的展開均正確，因此唯一錯項是 A。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-113.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key",
+        "public/papers/pp-im-it-113.pdf 題面",
+        "public/data/questions.json 題目交叉核對",
+        "獨立 transaction-property 推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-113-19",
+      "status": "confirmed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "functional dependency 描述一組 attribute 值如何決定另一組 attribute 值。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-113.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-113-20",
+      "status": "confirmed",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "A",
+      "reviewedAnswer": "A",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "第一正規化要求 attribute domain 為 atomic values，不以 relation 作為元素。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-113.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-113-21",
+      "status": "corrected",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "A",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 2,
+      "official": false,
+      "reasoning": [
+        "繼承不保證子類可存取或繼承「所有」屬性與方法，例如 private member；B 的全稱敘述錯誤。",
+        "繼承不保證 subclass 可繼承或存取 superclass 的所有 attributes 與 methods，例如 private members；B 的全稱敘述錯誤，其他三項是 OOP 基本定義。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-113.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key",
+        "public/papers/pp-im-it-113.pdf 題面",
+        "public/data/questions.json 題目交叉核對",
+        "獨立 OOP inheritance 推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-113-22",
+      "status": "corrected",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "A",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 2,
+      "official": false,
+      "reasoning": [
+        "member variable 宣告在 class body，而不是必須宣告在 method body。",
+        "member variable 宣告在 class body；在 method body 宣告的是 local variable。class variable 單份共享與 instance variable 每物件一份的敘述均正確，因此 B 是唯一錯項。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-113.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key",
+        "public/papers/pp-im-it-113.pdf 題面",
+        "public/data/questions.json 題目交叉核對",
+        "獨立 OOP variable-scope 推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-113-23",
+      "status": "confirmed",
+      "previousAnswer": "E",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "E",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "GPT 是 Generative Pre-trained Transformer，A 至 D 均非正確全名。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-113.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-113-24",
+      "status": "confirmed",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "D",
+      "reviewedAnswer": "D",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "評估機器是否呈現與人類難以區分之智能行為的是 Turing test。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-113.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-114-1",
+      "status": "confirmed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "recursion 以較小且同型的 subproblem 解原問題。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-114.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-114-2",
+      "status": "confirmed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "polymorphism 以共同介面承載不同實作。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-114.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-114-3",
+      "status": "confirmed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "binary heap 可在對數時間 insert 與 extract-extreme，適合 priority queue。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-114.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-114-4",
+      "status": "confirmed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "BST 的 inorder traversal 依 key 遞增輸出。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-114.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-114-5",
+      "status": "confirmed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "題述為 bubble sort，最壞比較次數為等差級數，時間為 O(N²)。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-114.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-114-6",
+      "status": "confirmed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "具 early-stop 的 bubble sort 對已排序輸入只需一次線性掃描。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-114.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-114-7",
+      "status": "confirmed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "inode 主要保存權限、時間戳、大小與 data-block pointer 等 metadata。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-114.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-114-8",
+      "status": "confirmed",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "A",
+      "reviewedAnswer": "A",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "Banker algorithm 在配置前檢查系統是否仍為 safe state，屬 deadlock avoidance。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-114.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-114-9",
+      "status": "confirmed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "MLFQ 會依 process 行為與優先權在 queues 間升降。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-114.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-114-10",
+      "status": "confirmed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "semaphore 的核心用途是並行同步，選項中 B 的 mutual exclusion 是其直接用途。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-114.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-114-11",
+      "status": "confirmed",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "A",
+      "reviewedAnswer": "A",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "page table 將 virtual page 映射至 physical frame。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-114.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-114-12",
+      "status": "confirmed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "HAVING 在 aggregate/grouping 後過濾群組。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-114.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-114-13",
+      "status": "confirmed",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "D",
+      "reviewedAnswer": "D",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "3NF 排除 non-key attribute 對 key 的 transitive dependency。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-114.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-114-14",
+      "status": "confirmed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "JOIN 依相關欄位組合多個 relations 的欄位與列。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-114.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-114-15",
+      "status": "confirmed",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "D",
+      "reviewedAnswer": "D",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "NoSQL 通常以水平擴展支援 distributed workloads；其餘選項皆為過度絕對敘述。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-114.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-114-16",
+      "status": "confirmed",
+      "previousAnswer": "E",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "E",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "ER 圖 diamond 代表 relationship，不是 A 至 D 的任何一項。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-114.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-114-17",
+      "status": "confirmed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "transaction log 記錄更新，供 crash recovery 的 undo/redo 使用。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-114.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-114-18",
+      "status": "confirmed",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "A",
+      "reviewedAnswer": "A",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "composite key 由多欄共同唯一識別一列。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-114.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-114-19",
+      "status": "confirmed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "subnet mask 分隔 IP address 的 network 與 host portions。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-114.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-114-20",
+      "status": "confirmed",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "A",
+      "reviewedAnswer": "A",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "TCP advertised window 表示 receiver 目前允許 sender 在未獲進一步 ACK 前送出的 byte 範圍。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-114.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-114-21",
+      "status": "confirmed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "OSPF 是 link-state protocol，使用 shortest-path-first 計算路由。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-114.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-114-22",
+      "status": "corrected",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "D",
+      "reviewedAnswer": "E",
+      "confidence": "medium",
+      "reviewCount": 2,
+      "official": false,
+      "reasoning": [
+        "A 至 C 正確，NAT 一般歸於 OSI network layer，因此 D 也非錯誤敘述。",
+        "NAT 可隱藏內部位址、節省 IPv4 位址，且會破壞部分 end-to-end connectivity；基本 NAT 改寫 IP header，通常歸在 OSI network layer。A 至 D 均成立，故選 E。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-114.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key",
+        "public/papers/pp-im-it-114.pdf 題面",
+        "public/data/questions.json 題目交叉核對",
+        "獨立 NAT 網路層推導；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-114-23",
+      "status": "confirmed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "DNS 的主要用途是把 domain name 解析成 IP address。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-114.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-114-24",
+      "status": "confirmed",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "A",
+      "reviewedAnswer": "A",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "SDN 將 control plane 與 data plane 分離；A 的 tightly integrated 與此相反。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-114.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-115-1",
+      "status": "confirmed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "hash table 在合理雜湊與負載下平均 insertion、deletion、search 均為 O(1)。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-115.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-115-2",
+      "status": "confirmed",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "D",
+      "reviewedAnswer": "D",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "Quicksort 若 pivot 持續造成極端不平衡 partition，遞迴成本為 O(n²)。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-115.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-115-3",
+      "status": "confirmed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "binary heap 插入後最多沿樹高 sift-up，為 O(log n)。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-115.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-115-4",
+      "status": "confirmed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "stack 的 LIFO 性質可逐層配對 opening/closing parentheses。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-115.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-115-5",
+      "status": "confirmed",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "D",
+      "reviewedAnswer": "D",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "標準 in-place Quicksort 不保證 equal keys 的相對順序。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-115.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-115-6",
+      "status": "confirmed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "topological ordering 存在的必要條件是 directed acyclic graph。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-115.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-115-7",
+      "status": "confirmed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "cache 利用 locality 降低 average memory access time。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-115.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-115-8",
+      "status": "disputed",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "D",
+      "reviewedAnswer": null,
+      "confidence": "disputed",
+      "reviewCount": 2,
+      "official": false,
+      "reasoning": [
+        "D 與 E 都可能造成 starvation：無 aging 的 priority scheduling 可餓死低優先權工作，SRTF 也可因短工作持續到達而餓死長工作。",
+        "priority scheduling without aging 可讓低優先權工作無限等待；SRTF 也可能在短工作持續抵達時讓長工作飢餓。因此 D 與 E 都符合 may cause starvation，題目沒有唯一答案。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-115.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key",
+        "public/papers/pp-im-it-115.pdf 題面",
+        "public/data/questions.json 題目交叉核對",
+        "獨立 CPU scheduling 反例推導；無官方答案 key"
+      ],
+      "practiceEligible": false,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-it-115-9",
+      "status": "confirmed",
+      "previousAnswer": "E",
+      "reviewBaselineAnswer": "E",
+      "reviewedAnswer": "E",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "context switch 保存目前 execution state 並載入另一 execution context。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-115.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-115-10",
+      "status": "confirmed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "尚未取得 producer result 的 operand dependency 造成 data hazard 與 stall。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-115.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-115-11",
+      "status": "confirmed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "已知 service times 時，SJF 最小化平均 waiting time。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-115.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-115-12",
+      "status": "confirmed",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "A",
+      "reviewedAnswer": "A",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "thrashing 是系統花在 page fault/paging 的時間多於有效執行。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-115.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-115-13",
+      "status": "confirmed",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "D",
+      "reviewedAnswer": "D",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "router 逐跳遞減 TTL，歸零即丟棄，可阻止 routing loop 無限循環。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-115.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-115-14",
+      "status": "confirmed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "UDP 無連線且 header 較小，不保證 delivery、ordering 或 flow control。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-115.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-115-15",
+      "status": "confirmed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "slow start 令 congestion window 指數成長以探測可用容量。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-115.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-115-16",
+      "status": "confirmed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "B+ tree 保留排序並支援從 lower bound 連續掃描 leaf nodes，適合 range query。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-115.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-115-17",
+      "status": "confirmed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "2PL 持鎖等待其他鎖，可能形成 circular wait 與 deadlock。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-115.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-115-18",
+      "status": "confirmed",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "A",
+      "reviewedAnswer": "A",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "hash function 打散 key ordering，無法自然支援相鄰 key range scan。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-115.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-115-19",
+      "status": "confirmed",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "D",
+      "reviewedAnswer": "D",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "WAL 要求對應 log record 先落到 stable storage，才可寫出 dirty data page。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-115.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-115-20",
+      "status": "confirmed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "提高 isolation 往往增加 blocking/serialization，降低 concurrency。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-115.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-115-21",
+      "status": "confirmed",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "D",
+      "reviewedAnswer": "D",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "CAP 三項是 consistency、availability、partition tolerance。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-115.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-115-22",
+      "status": "disputed",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "A",
+      "reviewedAnswer": null,
+      "confidence": "disputed",
+      "reviewCount": 2,
+      "official": false,
+      "reasoning": [
+        "正式 BCNF 條件只約束 non-trivial FD；A 省略 non-trivial，按字面會把 trivial FD 也錯誤要求 determinant 為 superkey。",
+        "BCNF 的正式條件是每個 non-trivial functional dependency X→Y 中 X 必須是 superkey。A 省略 non-trivial；按字面連 trivial dependency 也要求 X 為 superkey，並非 iff 定義。A 顯然是命題意圖，但嚴格題面不足以形成完全正確選項。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-115.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key",
+        "public/papers/pp-im-it-115.pdf 題面",
+        "public/data/questions.json 題目交叉核對",
+        "獨立 BCNF 定義推導；無官方答案 key"
+      ],
+      "practiceEligible": false,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-it-115-23",
+      "status": "confirmed",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "A",
+      "reviewedAnswer": "A",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "container 共用 host kernel，通常比完整 VM 有更低 virtualization overhead。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-115.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-115-24",
+      "status": "confirmed",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "D",
+      "reviewedAnswer": "D",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "edge computing 把運算移近資料來源以降低 latency 與回傳流量。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-115.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-115-25",
+      "status": "confirmed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "blockchain 以共識與鏈式驗證維持不可竄改、可驗證且無中央權威的交易紀錄。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-115.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-115-26",
+      "status": "confirmed",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "A",
+      "reviewedAnswer": "A",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "NoSQL 常以 flexible schema、partitioning 與 horizontal scaling 服務大規模 distributed workloads。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-115.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-115-27",
+      "status": "confirmed",
+      "previousAnswer": "B",
+      "reviewBaselineAnswer": "B",
+      "reviewedAnswer": "B",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "self-attention 令每個 token 依內容衡量序列中其他 tokens 的相關性，不受固定距離限制。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-115.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-115-28",
+      "status": "confirmed",
+      "previousAnswer": "A",
+      "reviewBaselineAnswer": "A",
+      "reviewedAnswer": "A",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "Zero Trust 的核心是持續驗證，不因位於內部網路就預設信任。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-115.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-115-29",
+      "status": "confirmed",
+      "previousAnswer": "C",
+      "reviewBaselineAnswer": "C",
+      "reviewedAnswer": "C",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "serverless 由 provider 管理基礎資源並按 execution/resource usage 計費，並非沒有實體 server。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-115.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-115-30",
+      "status": "confirmed",
+      "previousAnswer": "D",
+      "reviewBaselineAnswer": "D",
+      "reviewedAnswer": "D",
+      "confidence": "medium",
+      "reviewCount": 1,
+      "official": false,
+      "reasoning": [
+        "RAG 在生成前檢索外部知識並把結果納入模型 context。"
+      ],
+      "sourceBasis": [
+        "public/papers/pp-im-it-115.pdf 題目與選項",
+        "public/data/questions.json 題文（已由既有 PDF audit 核對）",
+        "逐項技術推導與排除；無官方答案 key"
+      ],
+      "practiceEligible": true,
+      "autoGradeEligible": true
+    }
+  ]
+}
