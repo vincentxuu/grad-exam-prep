@@ -3,6 +3,19 @@ import type { ExamId } from '@/types/content'
 import type { CardSRSState, DailyLearningRecord, TaskLearningEvidence } from '@/types/storage'
 
 const EMPTY_TASK_IDS: ReadonlySet<string> = new Set()
+const TAIPEI_CALENDAR = new Intl.DateTimeFormat('en-US', {
+  timeZone: 'Asia/Taipei',
+  year: 'numeric',
+  month: 'numeric',
+})
+
+function taipeiYearMonth(date: Date): { year: number; month: number } {
+  const parts = TAIPEI_CALENDAR.formatToParts(date)
+  const year = Number(parts.find((part) => part.type === 'year')?.value)
+  const month = Number(parts.find((part) => part.type === 'month')?.value)
+
+  return { year, month }
+}
 
 export function localDateKey(date: Date): string {
   const year = date.getFullYear()
@@ -38,10 +51,10 @@ export function defaultRetestDate(date: Date): string {
 }
 
 export function getPlanMonth(planStartDate: Date, now: Date, totalMonths: number): number {
+  const start = taipeiYearMonth(planStartDate)
+  const current = taipeiYearMonth(now)
   const monthOffset =
-    (now.getFullYear() - planStartDate.getFullYear()) * 12 +
-    now.getMonth() -
-    planStartDate.getMonth()
+    (current.year - start.year) * 12 + current.month - start.month
 
   return Math.min(totalMonths, Math.max(1, monthOffset + 1))
 }

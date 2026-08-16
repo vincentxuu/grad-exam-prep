@@ -11,4 +11,4 @@ Merge `origin/main` into `agent/nonenglish-flashcards` without dropping either t
 - [x] Resolve shared learning and question UI around the newest reusable architecture.
 - [x] Keep package/config additions from both branches.
 - [x] Run content validation, paper integrity, Jest (47 suites / 370 tests), typecheck, and production build (54 static pages).
-- [ ] Push the merge commit to `origin/agent/nonenglish-flashcards` and confirm PR #13 is no longer conflicting.
+- [x] Push the merge commit to `origin/agent/nonenglish-flashcards` and confirm PR #13 is no longer conflicting.
