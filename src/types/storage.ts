@@ -72,6 +72,8 @@ export interface IStorage {
   removeCustomTask(taskId: string): void
   updateSRSCard(cardId: string, state: CardSRSState): void
   getSRSCard(cardId: string): CardSRSState | null
+  /** Remove schedules for cards that no longer exist after a content migration. */
+  pruneSRSState(validCardIds: Iterable<string>): void
   setPaperPractice(paperId: string, data: { practicedAt: number; notes?: string } | null): void
   addSavedWord(word: SavedWord): void
   /** 一併刪掉這張卡的 SRS 排程狀態，不留孤兒 */

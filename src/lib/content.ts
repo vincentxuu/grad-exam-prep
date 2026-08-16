@@ -1,7 +1,6 @@
 import type {
   Exam,
   ExamId,
-  Flashcard,
   Guide,
   PastPaper,
   Question,
@@ -10,7 +9,6 @@ import type {
   Subject,
 } from '@/types/content'
 import examsRaw from '../../public/data/exams.json'
-import flashcardsRaw from '../../public/data/flashcards.json'
 import guidesRaw from '../../public/data/guides.json'
 import pastPapersRaw from '../../public/data/past-papers.json'
 import questionsRaw from '../../public/data/questions.json'
@@ -22,7 +20,6 @@ import subjectsImRaw from '../../public/data/subjects-im.json'
 export const exams = examsRaw as unknown as Exam[]
 export const subjects = [...subjectsImRaw, ...subjectsCsRaw] as unknown as Subject[]
 export const studyPlans = studyPlansRaw as unknown as StudyPlan[]
-export const flashcards = flashcardsRaw as unknown as Flashcard[]
 export const resources = resourcesRaw as unknown as Resource[]
 export const pastPapers = (pastPapersRaw as { papers: unknown[] }).papers
 export const questions = (questionsRaw as { questions: unknown[] }).questions as Question[]
@@ -66,10 +63,6 @@ export function getStudyPlan(examId: ExamId, planId?: string): StudyPlan | undef
     if (match) return match
   }
   return plans[0]
-}
-
-export function getFlashcardsBySubject(subjectId: string): Flashcard[] {
-  return flashcards.filter((f) => f.subjectId === subjectId)
 }
 
 /**

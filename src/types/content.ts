@@ -108,6 +108,10 @@ export interface Flashcard {
   topicId: string
   prompt: string
   answer: string
+  /** Direct-recall vocabulary cards use the headword alone as their front. */
+  kind?: 'vocabulary'
+  headword?: string
+  tier?: 'must_know' | 'important' | 'worth_studying' | 'domain'
   pastPaperRef?: string
 }
 

@@ -1,12 +1,12 @@
 import { render, screen } from '@testing-library/react'
 import { VocabAnswer } from '@/components/flashcard/vocab-answer'
-import type { Flashcard } from '@/types/content'
-import flashcardsRaw from '../../public/data/flashcards.json'
 
-const flashcards = flashcardsRaw as unknown as Flashcard[]
-
-// 使用者回報「看不到發音」時截圖的那張卡，拿來當回歸基準。
-const card = flashcards.find((c) => c.id === 'fc-im-english-019') as Flashcard
+// Component behavior should not depend on a generated card ID that can be retired.
+const card = {
+  id: 'fc-test-discrepancy',
+  answer:
+    '【意思】差異；不一致\n【例句】There was a significant discrepancy between the projected and actual revenue figures.\n（預測與實際營收數字之間存在顯著差異。）\n【近義詞】difference, inconsistency\n【反義詞】agreement, consistency',
+}
 
 describe('VocabAnswer（discrepancy 卡）', () => {
   beforeEach(() => {

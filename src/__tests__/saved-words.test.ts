@@ -55,6 +55,49 @@ describe('savedWords 儲存', () => {
     expect(saved[0].note).toBe('第二次')
   })
 
+  it('大小寫與彎引號差異仍是同一張卡', () => {
+    localStorageImpl.addSavedWord(word("Author's"))
+    localStorageImpl.addSavedWord({ ...word('AUTHOR’S'), note: '更新' })
+
+    const saved = localStorageImpl.getSavedWords()
+    expect(saved).toHaveLength(1)
+    expect(saved[0]).toMatchObject({ headword: "author's", cardId: 'lx-authors', note: '更新' })
+  })
+
+  it('讀取舊資料時會正規化、去重並搬移排程', () => {
+    mockStorage['grad-exam-prep-state'] = JSON.stringify({
+      savedWords: [
+        { ...word("Author's"), cardId: 'legacy-author', note: '舊筆記' },
+        { ...word('AUTHOR’S'), note: '新筆記' },
+      ],
+      srsState: {
+        'legacy-author': {
+          cardId: 'legacy-author',
+          interval: 6,
+          repetitions: 2,
+          easeFactor: 2.5,
+          nextReview: 123,
+          lastReview: 100,
+        },
+      },
+    })
+
+    expect(localStorageImpl.getSavedWords()).toEqual([
+      expect.objectContaining({ headword: "author's", cardId: 'lx-authors', note: '新筆記' }),
+    ])
+    expect(localStorageImpl.getSRSCard('lx-authors')).toMatchObject({
+      cardId: 'lx-authors',
+      interval: 6,
+    })
+  })
+
+  it('匯入 null 或畸形集合時會回復安全預設', () => {
+    localStorageImpl.importJSON(JSON.stringify({ savedWords: null, srsState: null }))
+    expect(localStorageImpl.getSavedWords()).toEqual([])
+    expect(localStorageImpl.getState().srsState).toEqual({})
+    expect(() => localStorageImpl.pruneSRSState([])).not.toThrow()
+  })
+
   it('刪除時一併清掉 SRS 狀態，不留孤兒', () => {
     const w = word('intercept')
     localStorageImpl.addSavedWord(w)
@@ -87,6 +130,23 @@ describe('savedWords 儲存', () => {
     expect(localStorageImpl.getSavedWords()).toEqual([])
     localStorageImpl.addSavedWord(word('intercept'))
     expect(localStorageImpl.getSavedWords()).toHaveLength(1)
+  })
+
+  it('內容移除後可清掉孤兒排程但保留有效卡', () => {
+    for (const cardId of ['still-here', 'retired']) {
+      localStorageImpl.updateSRSCard(cardId, {
+        cardId,
+        interval: 1,
+        repetitions: 0,
+        easeFactor: 2.5,
+        nextReview: Date.now(),
+        lastReview: null,
+      })
+    }
+
+    localStorageImpl.pruneSRSState(['still-here'])
+    expect(localStorageImpl.getSRSCard('still-here')).not.toBeNull()
+    expect(localStorageImpl.getSRSCard('retired')).toBeNull()
   })
 
   it('persona 存進 preferences，並隨 export/import 一起走', () => {

@@ -1,0 +1,1612 @@
+{
+  "metadata": {
+    "generatedAt": "2026-08-16",
+    "targetTiers": [
+      "must_know",
+      "important",
+      "worth_studying",
+      "domain"
+    ],
+    "ecdictAndMasterUnmatched": 118,
+    "counts": {
+      "a_real_necessary_vocab": 20,
+      "b_inflected_or_possessive_alias": 40,
+      "c_proper_noun_or_not_vocabulary": 38,
+      "d_malformed_extraction": 20
+    },
+    "policy": "Enrich category a. Resolve category b morphologically, retaining only non-proper canonical vocabulary. Exclude categories c and d."
+  },
+  "entries": [
+    {
+      "word": "women's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "b_inflected_or_possessive_alias",
+      "decision": "alias",
+      "canonicalWord": "woman",
+      "canonicalDisposition": "retain_or_enrich_canonical",
+      "questionRefs": [
+        "q-pp-im-en-108-45",
+        "q-pp-im-en-108-46",
+        "q-pp-im-en-110-35",
+        "q-pp-im-en-115-45",
+        "q-pp-im-en-115-46"
+      ],
+      "reason": "Plural possessive form; do not create a separate headword."
+    },
+    {
+      "word": "author's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "b_inflected_or_possessive_alias",
+      "decision": "alias",
+      "canonicalWord": "author",
+      "canonicalDisposition": "retain_or_enrich_canonical",
+      "questionRefs": [
+        "q-pp-cs-en-108-42",
+        "q-pp-cs-en-108-47",
+        "q-pp-cs-en-108-49",
+        "q-pp-cs-en-110-42",
+        "q-pp-cs-en-110-44"
+      ],
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    {
+      "word": "shakespeare's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "b_inflected_or_possessive_alias",
+      "decision": "alias",
+      "canonicalWord": "Shakespeare",
+      "canonicalDisposition": "exclude_proper_canonical",
+      "questionRefs": [
+        "q-pp-im-en-114-43",
+        "q-pp-im-en-114-44",
+        "q-pp-im-en-114-46"
+      ],
+      "reason": "Possessive proper-name form; alias for lookup but exclude the canonical proper name from vocabulary cards."
+    },
+    {
+      "word": "tarjei",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "c_proper_noun_or_not_vocabulary",
+      "decision": "exclude",
+      "canonicalWord": null,
+      "questionRefs": [
+        "q-pp-im-en-114-39",
+        "q-pp-im-en-114-40",
+        "q-pp-im-en-114-41"
+      ],
+      "reason": "Given name in Tarjei Boe."
+    },
+    {
+      "word": "fox's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "b_inflected_or_possessive_alias",
+      "decision": "alias",
+      "canonicalWord": "fox",
+      "canonicalDisposition": "retain_or_enrich_canonical",
+      "questionRefs": [
+        "q-pp-im-en-114-33",
+        "q-pp-im-en-114-34"
+      ],
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    {
+      "word": "boe's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "b_inflected_or_possessive_alias",
+      "decision": "alias",
+      "canonicalWord": "Boe",
+      "canonicalDisposition": "exclude_proper_canonical",
+      "questionRefs": [
+        "q-pp-im-en-114-39",
+        "q-pp-im-en-114-40",
+        "q-pp-im-en-114-41"
+      ],
+      "reason": "Possessive proper-name form; alias for lookup but exclude the canonical proper name from vocabulary cards."
+    },
+    {
+      "word": "year's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "b_inflected_or_possessive_alias",
+      "decision": "alias",
+      "canonicalWord": "year",
+      "canonicalDisposition": "retain_or_enrich_canonical",
+      "questionRefs": [
+        "q-pp-cs-en-108-46",
+        "q-pp-im-en-106-41",
+        "q-pp-im-en-110-5"
+      ],
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    {
+      "word": "japan's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "b_inflected_or_possessive_alias",
+      "decision": "alias",
+      "canonicalWord": "Japan",
+      "canonicalDisposition": "exclude_proper_canonical",
+      "questionRefs": [
+        "q-pp-cs-en-115-35",
+        "q-pp-im-en-115-45"
+      ],
+      "reason": "Possessive proper-name form; alias for lookup but exclude the canonical proper name from vocabulary cards."
+    },
+    {
+      "word": "photo-secession",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "c_proper_noun_or_not_vocabulary",
+      "decision": "exclude",
+      "canonicalWord": null,
+      "questionRefs": [
+        "q-pp-im-en-113-41",
+        "q-pp-im-en-113-44"
+      ],
+      "reason": "Named art movement (Photo-Secession), not general vocabulary."
+    },
+    {
+      "word": "sturgeon's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "b_inflected_or_possessive_alias",
+      "decision": "alias",
+      "canonicalWord": "Sturgeon",
+      "canonicalDisposition": "exclude_proper_canonical",
+      "questionRefs": [
+        "q-pp-cs-en-110-46",
+        "q-pp-cs-en-110-47",
+        "q-pp-cs-en-110-49"
+      ],
+      "reason": "Possessive proper-name form from Sturgeon’s Law; alias for lookup but exclude the canonical proper name from vocabulary cards."
+    },
+    {
+      "word": "telescope's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "b_inflected_or_possessive_alias",
+      "decision": "alias",
+      "canonicalWord": "telescope",
+      "canonicalDisposition": "retain_or_enrich_canonical",
+      "questionRefs": [
+        "q-pp-im-en-114-47",
+        "q-pp-im-en-114-49"
+      ],
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    {
+      "word": "unboxers",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "b_inflected_or_possessive_alias",
+      "decision": "alias",
+      "canonicalWord": "unboxer",
+      "canonicalDisposition": "retain_or_enrich_canonical",
+      "questionRefs": [
+        "q-pp-im-en-110-47",
+        "q-pp-im-en-110-48"
+      ],
+      "reason": "Regular plural of the retained headword unboxer."
+    },
+    {
+      "word": "universe's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "b_inflected_or_possessive_alias",
+      "decision": "alias",
+      "canonicalWord": "universe",
+      "canonicalDisposition": "retain_or_enrich_canonical",
+      "questionRefs": [
+        "q-pp-im-en-114-47",
+        "q-pp-im-en-114-48",
+        "q-pp-im-en-114-50"
+      ],
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    {
+      "word": "children's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "b_inflected_or_possessive_alias",
+      "decision": "alias",
+      "canonicalWord": "child",
+      "canonicalDisposition": "retain_or_enrich_canonical",
+      "questionRefs": [
+        "q-pp-cs-en-113-47",
+        "q-pp-cs-en-113-50",
+        "q-pp-im-en-115-48"
+      ],
+      "reason": "Irregular plural possessive form; do not create a separate headword."
+    },
+    {
+      "word": "komiyama",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "c_proper_noun_or_not_vocabulary",
+      "decision": "exclude",
+      "canonicalWord": null,
+      "questionRefs": [
+        "q-pp-im-en-115-45"
+      ],
+      "reason": "Surname in Yasuko Komiyama."
+    },
+    {
+      "word": "nature's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "b_inflected_or_possessive_alias",
+      "decision": "alias",
+      "canonicalWord": "nature",
+      "canonicalDisposition": "retain_or_enrich_canonical",
+      "questionRefs": [
+        "q-pp-im-en-114-33",
+        "q-pp-im-en-114-35"
+      ],
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    {
+      "word": "obi-wan",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "c_proper_noun_or_not_vocabulary",
+      "decision": "exclude",
+      "canonicalWord": null,
+      "questionRefs": [
+        "q-pp-im-en-106-33"
+      ],
+      "reason": "Fictional character name."
+    },
+    {
+      "word": "ozempic",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "c_proper_noun_or_not_vocabulary",
+      "decision": "exclude",
+      "canonicalWord": null,
+      "questionRefs": [
+        "q-pp-im-en-115-36"
+      ],
+      "reason": "Prescription-drug brand name."
+    },
+    {
+      "word": "rosenbloom",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "c_proper_noun_or_not_vocabulary",
+      "decision": "exclude",
+      "canonicalWord": null,
+      "questionRefs": [
+        "q-pp-im-en-108-29"
+      ],
+      "reason": "Surname in Stephanie Rosenbloom."
+    },
+    {
+      "word": "thingnes",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "c_proper_noun_or_not_vocabulary",
+      "decision": "exclude",
+      "canonicalWord": null,
+      "questionRefs": [
+        "q-pp-im-en-114-39",
+        "q-pp-im-en-114-40"
+      ],
+      "reason": "Middle/family-name component in Johannes Thingnes Boe."
+    },
+    {
+      "word": "unboxer",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "a_real_necessary_vocab",
+      "decision": "enrich",
+      "canonicalWord": "unboxer",
+      "suggestedPos": "noun",
+      "suggestedTranslation": "開箱者；製作開箱內容的創作者",
+      "questionRefs": [
+        "q-pp-im-en-110-47",
+        "q-pp-im-en-110-48"
+      ],
+      "reason": "A genuine derived occupation noun used repeatedly in an IM-English passage."
+    },
+    {
+      "word": "world's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "b_inflected_or_possessive_alias",
+      "decision": "alias",
+      "canonicalWord": "world",
+      "canonicalDisposition": "retain_or_enrich_canonical",
+      "questionRefs": [
+        "q-pp-cs-en-109-41",
+        "q-pp-im-en-106-13",
+        "q-pp-im-en-110-26",
+        "q-pp-im-en-110-43",
+        "q-pp-im-en-111-46"
+      ],
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    {
+      "word": "australia's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "b_inflected_or_possessive_alias",
+      "decision": "alias",
+      "canonicalWord": "Australia",
+      "canonicalDisposition": "exclude_proper_canonical",
+      "questionRefs": [
+        "q-pp-im-en-109-10"
+      ],
+      "reason": "Possessive proper-name form; alias for lookup but exclude the canonical proper name from vocabulary cards."
+    },
+    {
+      "word": "badly-managed",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "b_inflected_or_possessive_alias",
+      "decision": "alias",
+      "canonicalWord": "manage",
+      "canonicalDisposition": "retain_or_enrich_canonical",
+      "questionRefs": [
+        "q-pp-im-en-109-33"
+      ],
+      "reason": "Inflected participle inside a compositional modifier; review the lemma manage instead."
+    },
+    {
+      "word": "bishopdale",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "c_proper_noun_or_not_vocabulary",
+      "decision": "exclude",
+      "canonicalWord": null,
+      "questionRefs": [
+        "q-pp-im-en-110-21"
+      ],
+      "reason": "Place name in Christchurch."
+    },
+    {
+      "word": "conventionally-grown",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "c_proper_noun_or_not_vocabulary",
+      "decision": "exclude",
+      "canonicalWord": null,
+      "questionRefs": [
+        "q-pp-im-en-109-43"
+      ],
+      "reason": "Transparent compositional modifier, not a standalone vocabulary headword."
+    },
+    {
+      "word": "government's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "b_inflected_or_possessive_alias",
+      "decision": "alias",
+      "canonicalWord": "government",
+      "canonicalDisposition": "retain_or_enrich_canonical",
+      "questionRefs": [
+        "q-pp-im-en-114-8"
+      ],
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    {
+      "word": "humanity's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "b_inflected_or_possessive_alias",
+      "decision": "alias",
+      "canonicalWord": "humanity",
+      "canonicalDisposition": "retain_or_enrich_canonical",
+      "questionRefs": [
+        "q-pp-im-en-111-21",
+        "q-pp-im-en-114-47"
+      ],
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    {
+      "word": "novelist's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "b_inflected_or_possessive_alias",
+      "decision": "alias",
+      "canonicalWord": "novelist",
+      "canonicalDisposition": "retain_or_enrich_canonical",
+      "questionRefs": [
+        "q-pp-im-en-115-30"
+      ],
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    {
+      "word": "season-long",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "a_real_necessary_vocab",
+      "decision": "enrich",
+      "canonicalWord": "season-long",
+      "suggestedPos": "adjective",
+      "suggestedTranslation": "貫穿整季的；整季持續的",
+      "questionRefs": [
+        "q-pp-im-en-109-47"
+      ],
+      "reason": "A conventional and useful compound adjective."
+    },
+    {
+      "word": "smaller-screened",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "c_proper_noun_or_not_vocabulary",
+      "decision": "exclude",
+      "canonicalWord": null,
+      "questionRefs": [
+        "q-pp-im-en-109-50"
+      ],
+      "reason": "Awkward compositional comparative modifier, not a standalone headword."
+    },
+    {
+      "word": "video-watching-time",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "c_proper_noun_or_not_vocabulary",
+      "decision": "exclude",
+      "canonicalWord": null,
+      "questionRefs": [
+        "q-pp-im-en-109-47"
+      ],
+      "reason": "Tokenized noun phrase, not a lexical headword."
+    },
+    {
+      "word": "waste-to-energy",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "a_real_necessary_vocab",
+      "decision": "enrich",
+      "canonicalWord": "waste-to-energy",
+      "suggestedPos": "noun/adjective",
+      "suggestedTranslation": "廢棄物轉能源；廢棄物能源化的",
+      "questionRefs": [
+        "q-pp-im-en-109-33"
+      ],
+      "reason": "An established environmental and infrastructure term."
+    },
+    {
+      "word": "administration's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "b_inflected_or_possessive_alias",
+      "decision": "alias",
+      "canonicalWord": "administration",
+      "canonicalDisposition": "retain_or_enrich_canonical",
+      "questionRefs": [
+        "q-pp-im-en-115-48"
+      ],
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    {
+      "word": "alliance's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "b_inflected_or_possessive_alias",
+      "decision": "alias",
+      "canonicalWord": "alliance",
+      "canonicalDisposition": "retain_or_enrich_canonical",
+      "questionRefs": [
+        "q-pp-im-en-106-33"
+      ],
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    {
+      "word": "asfarviridae",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "c_proper_noun_or_not_vocabulary",
+      "decision": "exclude",
+      "canonicalWord": null,
+      "questionRefs": [
+        "q-pp-im-en-108-41"
+      ],
+      "reason": "Virus-family taxonomic proper name; passage-specific nomenclature, not study vocabulary."
+    },
+    {
+      "word": "ball-and-stick",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "a_real_necessary_vocab",
+      "decision": "enrich",
+      "canonicalWord": "ball-and-stick",
+      "suggestedPos": "adjective",
+      "suggestedTranslation": "球棒與球類型的；球棒—球模型的",
+      "questionRefs": [
+        "q-pp-im-en-106-21"
+      ],
+      "reason": "An established compound used for games and scientific models."
+    },
+    {
+      "word": "champs-elys",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "d_malformed_extraction",
+      "decision": "exclude",
+      "canonicalWord": "Champs-Élysées",
+      "questionRefs": [
+        "q-pp-im-en-108-29"
+      ],
+      "reason": "Tokenizer truncated the accented proper place name."
+    },
+    {
+      "word": "character's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "b_inflected_or_possessive_alias",
+      "decision": "alias",
+      "canonicalWord": "character",
+      "canonicalDisposition": "retain_or_enrich_canonical",
+      "questionRefs": [
+        "q-pp-im-en-114-45"
+      ],
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    {
+      "word": "cinematographe",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "c_proper_noun_or_not_vocabulary",
+      "decision": "exclude",
+      "canonicalWord": null,
+      "questionRefs": [
+        "q-pp-im-en-110-30"
+      ],
+      "reason": "Historical named apparatus/venue term in the passage, not general target vocabulary."
+    },
+    {
+      "word": "current-generation",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "c_proper_noun_or_not_vocabulary",
+      "decision": "exclude",
+      "canonicalWord": null,
+      "questionRefs": [
+        "q-pp-im-en-108-45"
+      ],
+      "reason": "Transparent compositional modifier, not a standalone vocabulary headword."
+    },
+    {
+      "word": "donor-related",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "c_proper_noun_or_not_vocabulary",
+      "decision": "exclude",
+      "canonicalWord": null,
+      "questionRefs": [
+        "q-pp-im-en-115-50"
+      ],
+      "reason": "Transparent compositional modifier, not a standalone vocabulary headword."
+    },
+    {
+      "word": "driven-results",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "d_malformed_extraction",
+      "decision": "exclude",
+      "canonicalWord": "results-driven",
+      "questionRefs": [
+        "q-pp-im-en-114-31"
+      ],
+      "reason": "Incorrect word-order distractor from a multiple-choice item."
+    },
+    {
+      "word": "driving-results",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "d_malformed_extraction",
+      "decision": "exclude",
+      "canonicalWord": "results-driven",
+      "questionRefs": [
+        "q-pp-im-en-114-31"
+      ],
+      "reason": "Incorrect distractor from a multiple-choice item."
+    },
+    {
+      "word": "estrogen-receptive",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "c_proper_noun_or_not_vocabulary",
+      "decision": "exclude",
+      "canonicalWord": null,
+      "questionRefs": [
+        "q-pp-im-en-108-45"
+      ],
+      "reason": "Transparent domain modifier, not a standalone vocabulary headword."
+    },
+    {
+      "word": "ever-expending",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "d_malformed_extraction",
+      "decision": "exclude",
+      "canonicalWord": "ever-expanding",
+      "questionRefs": [
+        "q-pp-im-en-107-30"
+      ],
+      "reason": "Incorrect lexical distractor; expending is not the intended word."
+    },
+    {
+      "word": "facebook's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "b_inflected_or_possessive_alias",
+      "decision": "alias",
+      "canonicalWord": "Facebook",
+      "canonicalDisposition": "exclude_proper_canonical",
+      "questionRefs": [
+        "q-pp-im-en-106-8"
+      ],
+      "reason": "Possessive brand-name form; alias for lookup but exclude the canonical brand from vocabulary cards."
+    },
+    {
+      "word": "google-owned",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "c_proper_noun_or_not_vocabulary",
+      "decision": "exclude",
+      "canonicalWord": null,
+      "questionRefs": [
+        "q-pp-im-en-110-47"
+      ],
+      "reason": "Compositional modifier containing a company proper name."
+    },
+    {
+      "word": "governor's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "b_inflected_or_possessive_alias",
+      "decision": "alias",
+      "canonicalWord": "governor",
+      "canonicalDisposition": "retain_or_enrich_canonical",
+      "questionRefs": [
+        "q-pp-im-en-110-39"
+      ],
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    {
+      "word": "grand-bornand",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "c_proper_noun_or_not_vocabulary",
+      "decision": "exclude",
+      "canonicalWord": null,
+      "questionRefs": [
+        "q-pp-im-en-114-39"
+      ],
+      "reason": "Place name (Le Grand-Bornand)."
+    },
+    {
+      "word": "industry's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "b_inflected_or_possessive_alias",
+      "decision": "alias",
+      "canonicalWord": "industry",
+      "canonicalDisposition": "retain_or_enrich_canonical",
+      "questionRefs": [
+        "q-pp-cs-en-109-49",
+        "q-pp-im-en-106-20"
+      ],
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    {
+      "word": "influencer's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "b_inflected_or_possessive_alias",
+      "decision": "alias",
+      "canonicalWord": "influencer",
+      "canonicalDisposition": "retain_or_enrich_canonical",
+      "questionRefs": [
+        "q-pp-im-en-110-15"
+      ],
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    {
+      "word": "life-related",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "c_proper_noun_or_not_vocabulary",
+      "decision": "exclude",
+      "canonicalWord": null,
+      "questionRefs": [
+        "q-pp-im-en-114-47"
+      ],
+      "reason": "Transparent compositional modifier, not a standalone vocabulary headword."
+    },
+    {
+      "word": "lower-pitched",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "b_inflected_or_possessive_alias",
+      "decision": "alias",
+      "canonicalWord": "low-pitched",
+      "canonicalDisposition": "retain_or_enrich_canonical",
+      "questionRefs": [
+        "q-pp-im-en-108-45"
+      ],
+      "reason": "Comparative inflection of the canonical compound adjective low-pitched."
+    },
+    {
+      "word": "mobile-devices",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "b_inflected_or_possessive_alias",
+      "decision": "alias",
+      "canonicalWord": "mobile device",
+      "canonicalDisposition": "retain_or_enrich_canonical",
+      "questionRefs": [
+        "q-pp-im-en-109-47"
+      ],
+      "reason": "Plural plus nonstandard hyphenation; normalize to the singular phrase."
+    },
+    {
+      "word": "movement's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "b_inflected_or_possessive_alias",
+      "decision": "alias",
+      "canonicalWord": "movement",
+      "canonicalDisposition": "retain_or_enrich_canonical",
+      "questionRefs": [
+        "q-pp-im-en-106-27"
+      ],
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    {
+      "word": "nintendo's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "b_inflected_or_possessive_alias",
+      "decision": "alias",
+      "canonicalWord": "Nintendo",
+      "canonicalDisposition": "exclude_proper_canonical",
+      "questionRefs": [
+        "q-pp-im-en-106-6"
+      ],
+      "reason": "Possessive brand-name form; alias for lookup but exclude the canonical brand from vocabulary cards."
+    },
+    {
+      "word": "non-medical",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "a_real_necessary_vocab",
+      "decision": "enrich",
+      "canonicalWord": "non-medical",
+      "suggestedPos": "adjective",
+      "suggestedTranslation": "非醫療的；非醫療用途的",
+      "questionRefs": [
+        "q-pp-im-en-115-36"
+      ],
+      "reason": "A productive but independently useful adjective central to the source passage."
+    },
+    {
+      "word": "organization's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "b_inflected_or_possessive_alias",
+      "decision": "alias",
+      "canonicalWord": "organization",
+      "canonicalDisposition": "retain_or_enrich_canonical",
+      "questionRefs": [
+        "q-pp-im-en-110-12",
+        "q-pp-im-it-109-16",
+        "q-pp-im-mis-113-2"
+      ],
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    {
+      "word": "ozempic-like",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "c_proper_noun_or_not_vocabulary",
+      "decision": "exclude",
+      "canonicalWord": null,
+      "questionRefs": [
+        "q-pp-im-en-115-36"
+      ],
+      "reason": "Compositional modifier based on a drug brand."
+    },
+    {
+      "word": "philosopher's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "b_inflected_or_possessive_alias",
+      "decision": "alias",
+      "canonicalWord": "philosopher",
+      "canonicalDisposition": "retain_or_enrich_canonical",
+      "questionRefs": [
+        "q-pp-im-en-115-4"
+      ],
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    {
+      "word": "photo-secessionists",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "b_inflected_or_possessive_alias",
+      "decision": "alias",
+      "canonicalWord": "Photo-Secessionist",
+      "canonicalDisposition": "exclude_proper_canonical",
+      "questionRefs": [
+        "q-pp-im-en-113-41"
+      ],
+      "reason": "Regular plural; the canonical form is a member of a named art movement."
+    },
+    {
+      "word": "planet-sized",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "c_proper_noun_or_not_vocabulary",
+      "decision": "exclude",
+      "canonicalWord": null,
+      "questionRefs": [
+        "q-pp-im-en-106-33"
+      ],
+      "reason": "Transparent compositional modifier, not a standalone vocabulary headword."
+    },
+    {
+      "word": "plastic-wrapped",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "b_inflected_or_possessive_alias",
+      "decision": "alias",
+      "canonicalWord": "wrap",
+      "canonicalDisposition": "retain_or_enrich_canonical",
+      "questionRefs": [
+        "q-pp-im-en-110-24"
+      ],
+      "reason": "Past participle used compositionally in “plastic-wrapped produce”; review wrap rather than a separate headword."
+    },
+    {
+      "word": "plastic-wrapping",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "d_malformed_extraction",
+      "decision": "exclude",
+      "canonicalWord": "plastic-wrapped",
+      "questionRefs": [
+        "q-pp-im-en-110-21",
+        "q-pp-im-en-110-24"
+      ],
+      "reason": "Incorrect distractor for “plastic-wrapped fresh produce.”"
+    },
+    {
+      "word": "priestley's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "b_inflected_or_possessive_alias",
+      "decision": "alias",
+      "canonicalWord": "Priestley",
+      "canonicalDisposition": "exclude_proper_canonical",
+      "questionRefs": [
+        "q-pp-im-en-110-43"
+      ],
+      "reason": "Possessive proper-name form; alias for lookup but exclude the canonical proper name from vocabulary cards."
+    },
+    {
+      "word": "rational-choice",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "a_real_necessary_vocab",
+      "decision": "enrich",
+      "canonicalWord": "rational choice",
+      "suggestedPos": "noun/adjective",
+      "suggestedTranslation": "理性選擇；理性選擇理論的",
+      "questionRefs": [
+        "q-pp-im-en-113-46"
+      ],
+      "reason": "An established academic concept; normalize display punctuation."
+    },
+    {
+      "word": "reporter's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "b_inflected_or_possessive_alias",
+      "decision": "alias",
+      "canonicalWord": "reporter",
+      "canonicalDisposition": "retain_or_enrich_canonical",
+      "questionRefs": [
+        "q-pp-im-en-115-8"
+      ],
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    {
+      "word": "results-driven",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "a_real_necessary_vocab",
+      "decision": "enrich",
+      "canonicalWord": "results-driven",
+      "suggestedPos": "adjective",
+      "suggestedTranslation": "結果導向的；以成果為驅動的",
+      "questionRefs": [
+        "q-pp-im-en-114-31"
+      ],
+      "reason": "An established business adjective and the grammatical answer among malformed distractors."
+    },
+    {
+      "word": "results-driving",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "d_malformed_extraction",
+      "decision": "exclude",
+      "canonicalWord": "results-driven",
+      "questionRefs": [
+        "q-pp-im-en-114-31"
+      ],
+      "reason": "Incorrect distractor from a multiple-choice item."
+    },
+    {
+      "word": "self-certification",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "a_real_necessary_vocab",
+      "decision": "enrich",
+      "canonicalWord": "self-certification",
+      "suggestedPos": "noun",
+      "suggestedTranslation": "自我認證；自行聲明符合規範",
+      "questionRefs": [
+        "q-pp-im-en-110-39"
+      ],
+      "reason": "An established policy and compliance term."
+    },
+    {
+      "word": "seo-keyword",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "c_proper_noun_or_not_vocabulary",
+      "decision": "exclude",
+      "canonicalWord": null,
+      "questionRefs": [
+        "q-pp-im-en-110-47"
+      ],
+      "reason": "Tokenized technical noun phrase; SEO and keyword should be separate canonical terms."
+    },
+    {
+      "word": "shortsleeved",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "b_inflected_or_possessive_alias",
+      "decision": "alias",
+      "canonicalWord": "short-sleeved",
+      "canonicalDisposition": "retain_or_enrich_canonical",
+      "questionRefs": [
+        "q-pp-im-en-107-48"
+      ],
+      "reason": "Orthographic variant missing the standard hyphen."
+    },
+    {
+      "word": "six-week-old",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "c_proper_noun_or_not_vocabulary",
+      "decision": "exclude",
+      "canonicalWord": null,
+      "questionRefs": [
+        "q-pp-im-en-107-41"
+      ],
+      "reason": "Productive age modifier, not a standalone vocabulary headword."
+    },
+    {
+      "word": "snapchat's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "b_inflected_or_possessive_alias",
+      "decision": "alias",
+      "canonicalWord": "Snapchat",
+      "canonicalDisposition": "exclude_proper_canonical",
+      "questionRefs": [
+        "q-pp-im-en-106-8"
+      ],
+      "reason": "Possessive brand-name form; alias for lookup but exclude the canonical brand from vocabulary cards."
+    },
+    {
+      "word": "starch-bearing",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "c_proper_noun_or_not_vocabulary",
+      "decision": "exclude",
+      "canonicalWord": null,
+      "questionRefs": [
+        "q-pp-im-en-113-21"
+      ],
+      "reason": "Transparent compositional modifier, not a standalone vocabulary headword."
+    },
+    {
+      "word": "strikes-you're-out",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "d_malformed_extraction",
+      "decision": "exclude",
+      "canonicalWord": "three strikes, you are out",
+      "questionRefs": [
+        "q-pp-im-en-106-21"
+      ],
+      "reason": "Tokenizer fused a clause into a pseudo-headword."
+    },
+    {
+      "word": "sword-and-sandals",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "c_proper_noun_or_not_vocabulary",
+      "decision": "exclude",
+      "canonicalWord": null,
+      "questionRefs": [
+        "q-pp-im-en-107-45"
+      ],
+      "reason": "Genre phrase tied to the passage; not a standalone lexical headword."
+    },
+    {
+      "word": "th-century",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "d_malformed_extraction",
+      "decision": "exclude",
+      "canonicalWord": "12th-century",
+      "questionRefs": [
+        "q-pp-cs-en-108-41",
+        "q-pp-cs-en-111-19",
+        "q-pp-cs-en-111-48",
+        "q-pp-im-en-107-45",
+        "q-pp-im-en-110-30"
+      ],
+      "reason": "Tokenizer dropped the numeric prefix from the source phrase."
+    },
+    {
+      "word": "trust-worthy",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "b_inflected_or_possessive_alias",
+      "decision": "alias",
+      "canonicalWord": "trustworthy",
+      "canonicalDisposition": "retain_or_enrich_canonical",
+      "questionRefs": [
+        "q-pp-im-en-108-41"
+      ],
+      "reason": "Nonstandard split spelling of trustworthy."
+    },
+    {
+      "word": "urban-industrial",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "c_proper_noun_or_not_vocabulary",
+      "decision": "exclude",
+      "canonicalWord": null,
+      "questionRefs": [
+        "q-pp-im-en-106-21"
+      ],
+      "reason": "Transparent compositional modifier, not a standalone vocabulary headword."
+    },
+    {
+      "word": "video-editing",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "a_real_necessary_vocab",
+      "decision": "enrich",
+      "canonicalWord": "video editing",
+      "suggestedPos": "noun/adjective",
+      "suggestedTranslation": "影片剪輯；影片編輯的",
+      "questionRefs": [
+        "q-pp-im-en-110-47"
+      ],
+      "reason": "A common digital-media skill term; normalize the unnecessary hyphen."
+    },
+    {
+      "word": "vocalbeauty",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "c_proper_noun_or_not_vocabulary",
+      "decision": "exclude",
+      "canonicalWord": null,
+      "questionRefs": [
+        "q-pp-im-en-108-19"
+      ],
+      "reason": "Company/brand name in the question."
+    },
+    {
+      "word": "wrapped-plastic",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "d_malformed_extraction",
+      "decision": "exclude",
+      "canonicalWord": "plastic-wrapped",
+      "questionRefs": [
+        "q-pp-im-en-110-24"
+      ],
+      "reason": "Incorrect word-order distractor in the source question."
+    },
+    {
+      "word": "wrapping-plastic",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "category": "d_malformed_extraction",
+      "decision": "exclude",
+      "canonicalWord": "plastic-wrapped",
+      "questionRefs": [
+        "q-pp-im-en-110-24"
+      ],
+      "reason": "Incorrect word-order/form distractor in the source question."
+    },
+    {
+      "word": "blockchain",
+      "tier": "domain",
+      "source": "domain",
+      "category": "a_real_necessary_vocab",
+      "decision": "enrich",
+      "canonicalWord": "blockchain",
+      "suggestedPos": "noun",
+      "suggestedTranslation": "區塊鏈",
+      "questionRefs": [
+        "q-pp-cs-arch-108-2",
+        "q-pp-im-it-107-19",
+        "q-pp-im-it-110-26",
+        "q-pp-im-it-111-23",
+        "q-pp-im-it-111-24"
+      ],
+      "reason": "A core information-management and computing term."
+    },
+    {
+      "word": "bitcoin",
+      "tier": "domain",
+      "source": "domain",
+      "category": "a_real_necessary_vocab",
+      "decision": "enrich",
+      "canonicalWord": "Bitcoin",
+      "suggestedPos": "noun",
+      "suggestedTranslation": "比特幣",
+      "questionRefs": [
+        "q-pp-cs-arch-108-2",
+        "q-pp-im-it-107-18",
+        "q-pp-im-it-107-19",
+        "q-pp-im-it-112-24"
+      ],
+      "reason": "A core cryptocurrency term despite originating as a product/network name."
+    },
+    {
+      "word": "datapath",
+      "tier": "domain",
+      "source": "domain",
+      "category": "a_real_necessary_vocab",
+      "decision": "enrich",
+      "canonicalWord": "datapath",
+      "suggestedPos": "noun",
+      "suggestedTranslation": "資料路徑",
+      "questionRefs": [
+        "q-pp-cs-arch-112-7",
+        "q-pp-cs-arch-113-2",
+        "q-pp-cs-arch-113-5",
+        "q-pp-cs-arch-113-6",
+        "q-pp-cs-arch-114-12"
+      ],
+      "reason": "A standard computer-architecture term."
+    },
+    {
+      "word": "nlgn",
+      "tier": "domain",
+      "source": "domain",
+      "category": "d_malformed_extraction",
+      "decision": "exclude",
+      "canonicalWord": "n log n",
+      "questionRefs": [
+        "q-pp-cs-algo-111-1",
+        "q-pp-cs-algo-111-2",
+        "q-pp-cs-algo-111-3",
+        "q-pp-cs-algo-111-4",
+        "q-pp-cs-algo-111-5"
+      ],
+      "reason": "Complexity notation was flattened into a pseudo-word."
+    },
+    {
+      "word": "didn",
+      "tier": "domain",
+      "source": "domain",
+      "category": "d_malformed_extraction",
+      "decision": "exclude",
+      "canonicalWord": "didn't",
+      "questionRefs": [
+        "q-pp-cs-en-108-21",
+        "q-pp-cs-en-108-31",
+        "q-pp-cs-en-111-32",
+        "q-pp-cs-en-114-10",
+        "q-pp-im-en-110-41"
+      ],
+      "reason": "Tokenizer split a contraction at the apostrophe and lost the suffix."
+    },
+    {
+      "word": "itemcount",
+      "tier": "domain",
+      "source": "domain",
+      "category": "c_proper_noun_or_not_vocabulary",
+      "decision": "exclude",
+      "canonicalWord": null,
+      "questionRefs": [
+        "q-pp-im-it-108-21",
+        "q-pp-im-it-109-21",
+        "q-pp-im-it-109-22"
+      ],
+      "reason": "Source-code identifier itemCount, not vocabulary."
+    },
+    {
+      "word": "jibo",
+      "tier": "domain",
+      "source": "domain",
+      "category": "c_proper_noun_or_not_vocabulary",
+      "decision": "exclude",
+      "canonicalWord": null,
+      "questionRefs": [
+        "q-pp-cs-en-111-41",
+        "q-pp-cs-en-111-42",
+        "q-pp-cs-en-111-43",
+        "q-pp-cs-en-111-44"
+      ],
+      "reason": "Named consumer robot/product."
+    },
+    {
+      "word": "dijkstra",
+      "tier": "domain",
+      "source": "domain",
+      "category": "c_proper_noun_or_not_vocabulary",
+      "decision": "exclude",
+      "canonicalWord": null,
+      "questionRefs": [
+        "q-pp-cs-algo-108-8",
+        "q-pp-cs-algo-111-18",
+        "q-pp-cs-algo-112-12"
+      ],
+      "reason": "Surname/eponym in Dijkstra’s algorithm; the learnable item is the algorithm name."
+    },
+    {
+      "word": "doesn",
+      "tier": "domain",
+      "source": "domain",
+      "category": "d_malformed_extraction",
+      "decision": "exclude",
+      "canonicalWord": "doesn't",
+      "questionRefs": [
+        "q-pp-cs-en-113-47",
+        "q-pp-im-en-108-29",
+        "q-pp-im-en-109-43",
+        "q-pp-im-en-110-39",
+        "q-pp-im-en-112-15"
+      ],
+      "reason": "Tokenizer split a contraction at the apostrophe and lost the suffix."
+    },
+    {
+      "word": "logn",
+      "tier": "domain",
+      "source": "domain",
+      "category": "d_malformed_extraction",
+      "decision": "exclude",
+      "canonicalWord": "log n",
+      "questionRefs": [
+        "q-pp-cs-algo-114-1",
+        "q-pp-cs-algo-114-9",
+        "q-pp-cs-algo-114-10"
+      ],
+      "reason": "Mathematical notation was flattened into a pseudo-word."
+    },
+    {
+      "word": "nosql",
+      "tier": "domain",
+      "source": "domain",
+      "category": "a_real_necessary_vocab",
+      "decision": "enrich",
+      "canonicalWord": "NoSQL",
+      "suggestedPos": "noun/adjective",
+      "suggestedTranslation": "NoSQL；非關聯式資料庫類型",
+      "questionRefs": [
+        "q-pp-im-it-112-20",
+        "q-pp-im-it-114-15",
+        "q-pp-im-it-115-26"
+      ],
+      "reason": "A standard database category."
+    },
+    {
+      "word": "warshall",
+      "tier": "domain",
+      "source": "domain",
+      "category": "c_proper_noun_or_not_vocabulary",
+      "decision": "exclude",
+      "canonicalWord": null,
+      "questionRefs": [
+        "q-pp-cs-algo-108-8",
+        "q-pp-cs-algo-111-20",
+        "q-pp-cs-algo-112-12"
+      ],
+      "reason": "Surname/eponym in Floyd–Warshall; the learnable item is the algorithm name."
+    },
+    {
+      "word": "airbnb",
+      "tier": "domain",
+      "source": "domain",
+      "category": "c_proper_noun_or_not_vocabulary",
+      "decision": "exclude",
+      "canonicalWord": null,
+      "questionRefs": [
+        "q-pp-im-mis-106-2",
+        "q-pp-im-mis-110-1"
+      ],
+      "reason": "Company/brand name."
+    },
+    {
+      "word": "badchar",
+      "tier": "domain",
+      "source": "domain",
+      "category": "c_proper_noun_or_not_vocabulary",
+      "decision": "exclude",
+      "canonicalWord": null,
+      "questionRefs": [
+        "q-pp-im-it-112-29"
+      ],
+      "reason": "Source-code identifier badchar, not vocabulary."
+    },
+    {
+      "word": "couldn",
+      "tier": "domain",
+      "source": "domain",
+      "category": "d_malformed_extraction",
+      "decision": "exclude",
+      "canonicalWord": "couldn't",
+      "questionRefs": [
+        "q-pp-cs-en-108-31",
+        "q-pp-cs-en-109-12",
+        "q-pp-im-en-114-41"
+      ],
+      "reason": "Tokenizer split a contraction at the apostrophe and lost the suffix."
+    },
+    {
+      "word": "cryptocurrency",
+      "tier": "domain",
+      "source": "domain",
+      "category": "a_real_necessary_vocab",
+      "decision": "enrich",
+      "canonicalWord": "cryptocurrency",
+      "suggestedPos": "noun",
+      "suggestedTranslation": "加密貨幣",
+      "questionRefs": [
+        "q-pp-cs-arch-108-2",
+        "q-pp-im-it-110-26"
+      ],
+      "reason": "A standard information-management and finance term."
+    },
+    {
+      "word": "dgx",
+      "tier": "domain",
+      "source": "domain",
+      "category": "c_proper_noun_or_not_vocabulary",
+      "decision": "exclude",
+      "canonicalWord": null,
+      "questionRefs": [
+        "q-pp-cs-arch-113-8",
+        "q-pp-cs-arch-113-9"
+      ],
+      "reason": "NVIDIA product-family name."
+    },
+    {
+      "word": "endl",
+      "tier": "domain",
+      "source": "domain",
+      "category": "c_proper_noun_or_not_vocabulary",
+      "decision": "exclude",
+      "canonicalWord": null,
+      "questionRefs": [
+        "q-pp-im-it-112-29"
+      ],
+      "reason": "C++ library manipulator identifier, not English vocabulary."
+    },
+    {
+      "word": "etag",
+      "tier": "domain",
+      "source": "domain",
+      "category": "a_real_necessary_vocab",
+      "decision": "enrich",
+      "canonicalWord": "ETag",
+      "suggestedPos": "noun",
+      "suggestedTranslation": "HTTP 實體標籤；快取驗證標籤",
+      "questionRefs": [
+        "q-pp-im-it-108-2"
+      ],
+      "reason": "A standard HTTP caching term."
+    },
+    {
+      "word": "fdap",
+      "tier": "domain",
+      "source": "domain",
+      "category": "d_malformed_extraction",
+      "decision": "exclude",
+      "canonicalWord": null,
+      "questionRefs": [
+        "q-pp-im-it-108-13"
+      ],
+      "reason": "Invented wrong-answer expansion “Free Directory Access Protocol,” not a real protocol."
+    },
+    {
+      "word": "hadn",
+      "tier": "domain",
+      "source": "domain",
+      "category": "d_malformed_extraction",
+      "decision": "exclude",
+      "canonicalWord": "hadn't",
+      "questionRefs": [
+        "q-pp-cs-en-110-18",
+        "q-pp-cs-en-113-5",
+        "q-pp-im-en-107-31",
+        "q-pp-im-en-113-20"
+      ],
+      "reason": "Tokenizer split a contraction at the apostrophe and lost the suffix."
+    },
+    {
+      "word": "heapify",
+      "tier": "domain",
+      "source": "domain",
+      "category": "a_real_necessary_vocab",
+      "decision": "enrich",
+      "canonicalWord": "heapify",
+      "suggestedPos": "verb/noun",
+      "suggestedTranslation": "堆積化；調整成堆積",
+      "questionRefs": [
+        "q-pp-cs-algo-109-5",
+        "q-pp-cs-algo-111-3"
+      ],
+      "reason": "A standard algorithm operation."
+    },
+    {
+      "word": "idap",
+      "tier": "domain",
+      "source": "domain",
+      "category": "d_malformed_extraction",
+      "decision": "exclude",
+      "canonicalWord": null,
+      "questionRefs": [
+        "q-pp-im-it-108-13"
+      ],
+      "reason": "Invented wrong-answer expansion “Internet Directory Access Protocol,” not a real protocol."
+    },
+    {
+      "word": "kmp",
+      "tier": "domain",
+      "source": "domain",
+      "category": "a_real_necessary_vocab",
+      "decision": "enrich",
+      "canonicalWord": "KMP",
+      "suggestedPos": "noun/adjective",
+      "suggestedTranslation": "Knuth–Morris–Pratt 字串比對演算法",
+      "questionRefs": [
+        "q-pp-cs-algo-110-10",
+        "q-pp-cs-algo-112-16"
+      ],
+      "reason": "A standard algorithm acronym."
+    },
+    {
+      "word": "metaverse",
+      "tier": "domain",
+      "source": "domain",
+      "category": "a_real_necessary_vocab",
+      "decision": "enrich",
+      "canonicalWord": "metaverse",
+      "suggestedPos": "noun",
+      "suggestedTranslation": "元宇宙",
+      "questionRefs": [
+        "q-pp-im-it-111-23",
+        "q-pp-im-it-111-24"
+      ],
+      "reason": "A current information-technology concept."
+    },
+    {
+      "word": "mlperf",
+      "tier": "domain",
+      "source": "domain",
+      "category": "c_proper_noun_or_not_vocabulary",
+      "decision": "exclude",
+      "canonicalWord": null,
+      "questionRefs": [
+        "q-pp-cs-arch-113-4",
+        "q-pp-cs-arch-113-5",
+        "q-pp-cs-arch-113-6"
+      ],
+      "reason": "Named benchmark suite."
+    },
+    {
+      "word": "newvalue",
+      "tier": "domain",
+      "source": "domain",
+      "category": "c_proper_noun_or_not_vocabulary",
+      "decision": "exclude",
+      "canonicalWord": null,
+      "questionRefs": [
+        "q-pp-im-it-108-21"
+      ],
+      "reason": "Source-code identifier newValue, not vocabulary."
+    },
+    {
+      "word": "rdap",
+      "tier": "domain",
+      "source": "domain",
+      "category": "d_malformed_extraction",
+      "decision": "exclude",
+      "canonicalWord": null,
+      "questionRefs": [
+        "q-pp-im-it-108-13"
+      ],
+      "reason": "In this question it expands to the invented distractor “Root Directory Access Protocol,” not the real Registration Data Access Protocol."
+    },
+    {
+      "word": "rsh",
+      "tier": "domain",
+      "source": "domain",
+      "category": "a_real_necessary_vocab",
+      "decision": "enrich",
+      "canonicalWord": "rsh",
+      "suggestedPos": "noun",
+      "suggestedTranslation": "遠端殼層（remote shell）協定／指令",
+      "questionRefs": [
+        "q-pp-im-it-108-14"
+      ],
+      "reason": "A real Unix remote-shell protocol and command."
+    },
+    {
+      "word": "sembroski",
+      "tier": "domain",
+      "source": "domain",
+      "category": "c_proper_noun_or_not_vocabulary",
+      "decision": "exclude",
+      "canonicalWord": null,
+      "questionRefs": [
+        "q-pp-cs-en-113-47",
+        "q-pp-cs-en-113-50"
+      ],
+      "reason": "Surname in Chris Sembroski."
+    },
+    {
+      "word": "sjf",
+      "tier": "domain",
+      "source": "domain",
+      "category": "a_real_necessary_vocab",
+      "decision": "enrich",
+      "canonicalWord": "SJF",
+      "suggestedPos": "noun/adjective",
+      "suggestedTranslation": "最短工作優先排程（Shortest Job First）",
+      "questionRefs": [
+        "q-pp-cs-arch-110-3",
+        "q-pp-im-it-115-11"
+      ],
+      "reason": "A standard operating-systems scheduling acronym."
+    },
+    {
+      "word": "stdc",
+      "tier": "domain",
+      "source": "domain",
+      "category": "d_malformed_extraction",
+      "decision": "exclude",
+      "canonicalWord": "stdc++.h",
+      "questionRefs": [
+        "q-pp-im-it-112-29"
+      ],
+      "reason": "Tokenizer extracted a fragment from the C++ header path bits/stdc++.h."
+    },
+    {
+      "word": "subspaces",
+      "tier": "domain",
+      "source": "domain",
+      "category": "b_inflected_or_possessive_alias",
+      "decision": "alias",
+      "canonicalWord": "subspace",
+      "canonicalDisposition": "retain_or_enrich_canonical",
+      "questionRefs": [
+        "q-pp-cs-math-110-6",
+        "q-pp-cs-math-111-12"
+      ],
+      "reason": "Regular plural of the mathematical term subspace."
+    }
+  ]
+}

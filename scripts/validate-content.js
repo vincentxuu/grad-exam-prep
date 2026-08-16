@@ -1,6 +1,12 @@
 #!/usr/bin/env node
 const fs = require('fs')
 const path = require('path')
+const {
+  DEFAULT_MAX_REPEATED_CLOZE_STEM,
+  findPlaceholderExampleCards,
+  groupRepeatedEnglishClozeStems,
+} = require('./lib/flashcard-quality')
+const { isRequiredVocabulary, slugifyVocabulary } = require('./lib/im-vocab-flashcards')
 
 const dataDir = path.join(__dirname, '../public/data')
 
@@ -19,6 +25,8 @@ const pastPapersData = loadJson('past-papers.json')
 const pastPapers = pastPapersData.papers
 const guides = loadJson('guides.json')
 const questions = loadJson('questions.json').questions
+const imVocabMaster = loadJson('ntu-im-vocab-master.json')
+const imVocabCuration = loadJson('im-vocab-curation.json')
 
 const errors = []
 const warnings = []
@@ -131,6 +139,61 @@ flashcards.forEach((fc) => {
     warn(`Flashcard ${fc.id} references unknown topicId: ${fc.topicId}`)
   }
 })
+
+const placeholderExampleCards = findPlaceholderExampleCards(flashcards)
+if (placeholderExampleCards.length > 0) {
+  err(
+    `${placeholderExampleCards.length} flashcards use a placeholder example (first: ${placeholderExampleCards[0].id})`
+  )
+}
+
+const repeatedEnglishClozeStems = groupRepeatedEnglishClozeStems(flashcards)
+repeatedEnglishClozeStems.forEach(({ subjectId, stem, cards }) => {
+  err(
+    `${subjectId} reuses an English cloze stem ${cards.length} times (max ${DEFAULT_MAX_REPEATED_CLOZE_STEM}): "${stem}"`
+  )
+})
+
+// IM English flashcards are a direct-recall vocabulary deck, never a disguised
+// question bank. The checked-in artifact must cover every curated target once.
+const excludedImWords = new Map(
+  (imVocabCuration.excluded ?? []).map((item) => [item.word, item.reason])
+)
+const requiredImWords = imVocabMaster.words.filter(isRequiredVocabulary)
+const selectedImWords = requiredImWords.filter((entry) => !excludedImWords.has(entry.word))
+const imEnglishCards = flashcards.filter((card) => card.subjectId === 'im-english')
+const imCardsById = new Map(imEnglishCards.map((card) => [card.id, card]))
+
+for (const item of imVocabCuration.excluded ?? []) {
+  if (!item.reason?.trim()) err(`Excluded IM vocabulary needs a reason: ${item.word}`)
+}
+if (imEnglishCards.length !== selectedImWords.length) {
+  err(
+    `IM vocabulary coverage mismatch: ${imEnglishCards.length} cards for ${selectedImWords.length} curated targets`
+  )
+}
+for (const entry of selectedImWords) {
+  const id = `fc-im-vocab-${slugifyVocabulary(entry.word)}`
+  const card = imCardsById.get(id)
+  if (!card) {
+    err(`Required IM vocabulary is not covered: ${entry.word} (${id})`)
+    continue
+  }
+  if (card.kind !== 'vocabulary' || !card.headword || card.prompt !== card.headword) {
+    err(`IM vocabulary ${card.id} must use its headword alone as the front`)
+  }
+  if (card.topicId !== 'im-en-vocab') err(`IM vocabulary ${card.id} has invalid topicId`)
+  if (card.tier !== entry.tier) err(`IM vocabulary ${card.id} has the wrong tier`)
+  if (!card.answer.includes('【意思】') || !card.answer.includes('【來源】')) {
+    err(`IM vocabulary ${card.id} is missing its explanation or provenance`)
+  }
+  if (!['【詞性】', '【英文解釋】', '【例句】'].some((marker) => card.answer.includes(marker))) {
+    err(`IM vocabulary ${card.id} has no substantive explanation beyond meaning/pronunciation`)
+  }
+  if (/_{3,}|\([A-Da-d]\)/.test(card.prompt)) {
+    err(`IM vocabulary ${card.id} contains question-bank syntax on its front`)
+  }
+}
 
 // Flashcard coverage gaps
 console.log('\n📇 Flashcard Coverage:')

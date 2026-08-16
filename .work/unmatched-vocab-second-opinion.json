@@ -1,0 +1,1577 @@
+{
+  "metadata": {
+    "generatedAt": "2026-08-16",
+    "scope": "118 core target-tier entries with neither master Chinese nor ECDICT definition/translation",
+    "sourceFiles": [
+      "public/data/ntu-im-vocab-master.json",
+      "public/data/im-vocab-lexicon.json",
+      "public/data/questions.json"
+    ],
+    "total": 118,
+    "counts": {
+      "alias-to-canonical": 33,
+      "exclude-not-vocab": 62,
+      "keep-needs-override": 23
+    },
+    "policy": "Keep only independently useful lexical or technical concepts; alias true inflections/orthographic variants; exclude proper names, malformed tokens, identifiers, transparent one-off compounds, and invented distractors."
+  },
+  "entries": [
+    {
+      "word": "women's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-108-45",
+        "q-pp-im-en-108-46",
+        "q-pp-im-en-110-35",
+        "q-pp-im-en-115-45",
+        "q-pp-im-en-115-46"
+      ],
+      "contextEvidence": "...0 female lawmakers petitioning for more women's toilets in the parliament building to match their growing r...",
+      "decision": "alias-to-canonical",
+      "canonicalWord": "woman",
+      "reason": "Plural possessive form; do not create a separate headword."
+    },
+    {
+      "word": "author's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-cs-en-108-42",
+        "q-pp-cs-en-108-47",
+        "q-pp-cs-en-108-49",
+        "q-pp-cs-en-110-42",
+        "q-pp-cs-en-110-44"
+      ],
+      "contextEvidence": "...'s work is imaginative (C) contrast the author's style with that of other novelists (D) summarize the main t...",
+      "decision": "alias-to-canonical",
+      "canonicalWord": "author",
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    {
+      "word": "shakespeare's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-114-43",
+        "q-pp-im-en-114-44",
+        "q-pp-im-en-114-46"
+      ],
+      "contextEvidence": "...efer to the following passage. William Shakespeare's works transcend time, offering insights into human nature a...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "專有姓名所有格，不是單字卡 headword。"
+    },
+    {
+      "word": "tarjei",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-114-39",
+        "q-pp-im-en-114-40",
+        "q-pp-im-en-114-41"
+      ],
+      "contextEvidence": "...e following passage. Norwegian veteran Tarjei Boe delivered an outstanding performance to win the 15 km M...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Given name in Tarjei Boe."
+    },
+    {
+      "word": "fox's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-114-33",
+        "q-pp-im-en-114-34"
+      ],
+      "contextEvidence": "...color with the seasons. In winter, the fox's fur turns white, blending seamlessly with the snow and prov...",
+      "decision": "alias-to-canonical",
+      "canonicalWord": "fox",
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    {
+      "word": "boe's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-114-39",
+        "q-pp-im-en-114-40",
+        "q-pp-im-en-114-41"
+      ],
+      "contextEvidence": "...heir consistency and experience. Tarjei Boe's triumph was particularly significant as it secured his qual...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "人名所有格，不是單字卡 headword。"
+    },
+    {
+      "word": "year's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-cs-en-108-46",
+        "q-pp-im-en-106-41",
+        "q-pp-im-en-110-5"
+      ],
+      "contextEvidence": "This year's election is indeed an ___, record-breaking one, as the outg...",
+      "decision": "alias-to-canonical",
+      "canonicalWord": "year",
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    {
+      "word": "japan's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-cs-en-115-35",
+        "q-pp-im-en-115-45"
+      ],
+      "contextEvidence": "...ilets in Parliament\" by Kelly Ng, BBC) Japan's Prime Minister Sanae Takaichi is among some 60 female lawma...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "國名所有格，不是單字卡 headword。"
+    },
+    {
+      "word": "photo-secession",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-113-41",
+        "q-pp-im-en-113-44"
+      ],
+      "contextEvidence": "...th century provided the impetus for the Photo-Secession Movement. Founded by Alfred Steiglitz in New York City in 1...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Named art movement (Photo-Secession), not general vocabulary."
+    },
+    {
+      "word": "sturgeon's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-cs-en-110-46",
+        "q-pp-cs-en-110-47",
+        "q-pp-cs-en-110-49"
+      ],
+      "contextEvidence": "...formulation that geeks now refer to as Sturgeon's Law. Anyone who's spent time slogging through the swamp of...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "人名所有格；若需教學應另建 Sturgeon’s Law 概念卡。"
+    },
+    {
+      "word": "telescope's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-114-47",
+        "q-pp-im-en-114-49"
+      ],
+      "contextEvidence": "...xies formed billions of years ago. The telescope's journey to its operational location was as extraordinary as...",
+      "decision": "alias-to-canonical",
+      "canonicalWord": "telescope",
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    {
+      "word": "unboxers",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-110-47",
+        "q-pp-im-en-110-48"
+      ],
+      "contextEvidence": "...t and more than just SEO-keyword spam. Unboxers look at Google Ad Words and YouTube search's auto suggest f...",
+      "decision": "alias-to-canonical",
+      "canonicalWord": "unboxer",
+      "reason": "Regular plural of the retained headword unboxer."
+    },
+    {
+      "word": "universe's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-114-47",
+        "q-pp-im-en-114-48",
+        "q-pp-im-en-114-50"
+      ],
+      "contextEvidence": "...ledge. Its findings take us back to the universe's origins, challenge our current understanding of the cosmos,...",
+      "decision": "alias-to-canonical",
+      "canonicalWord": "universe",
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    {
+      "word": "children's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-cs-en-113-47",
+        "q-pp-cs-en-113-50",
+        "q-pp-im-en-115-48"
+      ],
+      "contextEvidence": "...ed the amendments, said that experts on children's rights, gender equality, law, and medicine attended cross-d...",
+      "decision": "alias-to-canonical",
+      "canonicalWord": "child",
+      "reason": "Irregular plural possessive form; do not create a separate headword."
+    },
+    {
+      "word": "komiyama",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-115-45"
+      ],
+      "contextEvidence": "...n 2009. One opposition lawmaker, Yasuko Komiyama, said there were often \"long queues in front of the restroo...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Surname in Yasuko Komiyama."
+    },
+    {
+      "word": "nature's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-114-33",
+        "q-pp-im-en-114-35"
+      ],
+      "contextEvidence": "...itat. The Arctic fox is a testament to nature's ingenuity, showcasing how animals can evolve to survive in...",
+      "decision": "alias-to-canonical",
+      "canonicalWord": "nature",
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    {
+      "word": "obi-wan",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-106-33"
+      ],
+      "contextEvidence": "Nineteen years after his battle with Obi-Wan Kenobi, Darth Vader remained the Empire's tyrannical hand....",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Fictional character name."
+    },
+    {
+      "word": "ozempic",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-115-36"
+      ],
+      "contextEvidence": "...sage B (Questions 36-40) (Adapted from \"Ozempic or Wegovy Can Be a Godsend, But Their Non-Medical Use Is Al...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Prescription-drug brand name."
+    },
+    {
+      "word": "rosenbloom",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-108-29"
+      ],
+      "contextEvidence": "...sustenance. That's something Stephanie Rosenbloom __(30) in her evocative, observant new book, Alone Time: Fo...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Surname in Stephanie Rosenbloom."
+    },
+    {
+      "word": "thingnes",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-114-39",
+        "q-pp-im-en-114-40"
+      ],
+      "contextEvidence": "...showcased its dominance, with Johannes Thingnes Boe and other top athletes fiercely competing. Balancing sp...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Middle/family-name component in Johannes Thingnes Boe."
+    },
+    {
+      "word": "unboxer",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-110-47",
+        "q-pp-im-en-110-48"
+      ],
+      "contextEvidence": "...payment system is complicated, but one unboxer said he can make $2 to $4 for every 1,000 views. Older vide...",
+      "decision": "keep-needs-override",
+      "canonicalWord": "unboxer",
+      "pos": "noun",
+      "traditionalChinese": "開箱者；製作開箱內容的創作者",
+      "reason": "真實衍生名詞，來源文章多次使用。"
+    },
+    {
+      "word": "world's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-cs-en-109-41",
+        "q-pp-im-en-106-13",
+        "q-pp-im-en-110-26",
+        "q-pp-im-en-110-43",
+        "q-pp-im-en-111-46"
+      ],
+      "contextEvidence": "...singly safer home for 70 percent of the world's tigers. 26. (A) for (B) by (C) as (D) onto",
+      "decision": "alias-to-canonical",
+      "canonicalWord": "world",
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    {
+      "word": "australia's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-109-10"
+      ],
+      "contextEvidence": "Fires devastating Australia's east coast have arrived unusually early this year. It is on...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "國名所有格，不是單字卡 headword。"
+    },
+    {
+      "word": "badly-managed",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-109-33"
+      ],
+      "contextEvidence": "...s waste decomposes may cause pollution. Badly-managed landfill sites may attract vermin or cause litter. A priori...",
+      "decision": "alias-to-canonical",
+      "canonicalWord": "badly managed",
+      "reason": "去除非必要連字號；這是 manage 的過去分詞片語。"
+    },
+    {
+      "word": "bishopdale",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-110-21"
+      ],
+      "contextEvidence": "...pioneered by a New World supermarket in Bishopdale, Christchurch, and now, with up to nine stores on board, gi...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Place name in Christchurch."
+    },
+    {
+      "word": "conventionally-grown",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-109-43"
+      ],
+      "contextEvidence": "...ients, such as antioxidants, than their conventionally-grown counterparts. __(W)__ A 2016 European study also shows that...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Transparent compositional modifier, not a standalone vocabulary headword."
+    },
+    {
+      "word": "government's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-114-8"
+      ],
+      "contextEvidence": "...islanders responded reluctantly to the government's compromises on land settlement, while the immigrants agreed...",
+      "decision": "alias-to-canonical",
+      "canonicalWord": "government",
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    {
+      "word": "humanity's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-111-21",
+        "q-pp-im-en-114-47"
+      ],
+      "contextEvidence": "...nquiries about our cosmos. The JWST is humanity's most advanced observatory, designed to peer into the farthe...",
+      "decision": "alias-to-canonical",
+      "canonicalWord": "humanity",
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    {
+      "word": "novelist's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-115-30"
+      ],
+      "contextEvidence": "...e passage (B) provide evidence that the novelist's work is imaginative (C) contrast the author's style with th...",
+      "decision": "alias-to-canonical",
+      "canonicalWord": "novelist",
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    {
+      "word": "season-long",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-109-47"
+      ],
+      "contextEvidence": "...to binge-watchers. Todays' shows have a season-long narrative rather than single stories in each episode. On Ne...",
+      "decision": "keep-needs-override",
+      "canonicalWord": "season-long",
+      "pos": "adjective",
+      "traditionalChinese": "貫穿整季的；持續整季的",
+      "reason": "常見且語意固定的複合形容詞。"
+    },
+    {
+      "word": "smaller-screened",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-109-50"
+      ],
+      "contextEvidence": "...(C) Live streaming video viewers prefer smaller-screened phones. (D) Middle-aged and elderly people spend a lot of t...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Awkward compositional comparative modifier, not a standalone headword."
+    },
+    {
+      "word": "video-watching-time",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-109-47"
+      ],
+      "contextEvidence": "...le aged 18-34 spend 55 percent of their video-watching-time viewing content after it has aired on live television. Netf...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Tokenized noun phrase, not a lexical headword."
+    },
+    {
+      "word": "waste-to-energy",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-109-33"
+      ],
+      "contextEvidence": "...red landfill sites and/or investment in waste-to-energy facilities. 33.(A) hinges on (B) wears out (C) looks int...",
+      "decision": "keep-needs-override",
+      "canonicalWord": "waste-to-energy",
+      "pos": "noun/adjective",
+      "traditionalChinese": "廢棄物轉能源；廢棄物能源化的",
+      "reason": "環境工程與基礎建設的固定術語。"
+    },
+    {
+      "word": "administration's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-115-48"
+      ],
+      "contextEvidence": "...hsuan Lin, head of the Health Promotion Administration's (HPA) Women's and Children's Health Division. To avoid conf...",
+      "decision": "alias-to-canonical",
+      "canonicalWord": "administration",
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    {
+      "word": "alliance's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-106-33"
+      ],
+      "contextEvidence": "...mpire's tyrannical hand. Upon the Rebel Alliance's __33__ of schematics for the Empire's ultimate weapon, the...",
+      "decision": "alias-to-canonical",
+      "canonicalWord": "alliance",
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    {
+      "word": "asfarviridae",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-108-41"
+      ],
+      "contextEvidence": "...rican swine fever virus, a virus of the Asfarviridae family, which also infects ticks of the Ornithodoros genus....",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Virus-family taxonomic proper name; passage-specific nomenclature, not study vocabulary."
+    },
+    {
+      "word": "ball-and-stick",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-106-21"
+      ],
+      "contextEvidence": "...eball __21__ from a number of different ball-and-stick games originating in England. [Passage I Cloze] (A) devolve...",
+      "decision": "keep-needs-override",
+      "canonicalWord": "ball-and-stick",
+      "pos": "adjective",
+      "traditionalChinese": "使用球與棒的；球棒模型的",
+      "reason": "來源中的運動類型複合形容詞，也用於科學模型。"
+    },
+    {
+      "word": "champs-elys",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-108-29"
+      ],
+      "contextEvidence": "...e.\" When she turns up at the one on the Champs-Elysées, she notices the invitation — SAVOUREZ — printed on her...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Tokenizer truncated the accented proper place name."
+    },
+    {
+      "word": "character's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-114-45"
+      ],
+      "contextEvidence": "...D) Driven by external forces beyond the character's control.",
+      "decision": "alias-to-canonical",
+      "canonicalWord": "character",
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    {
+      "word": "cinematographe",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-110-30"
+      ],
+      "contextEvidence": "...age. The Lumiére Brothers opened their Cinematographe, at 14 Boulevard des Capucines in Paris, to 100 paying cust...",
+      "decision": "keep-needs-override",
+      "canonicalWord": "Cinematographe",
+      "pos": "noun",
+      "traditionalChinese": "電影機；早期兼具攝影與放映功能的電影裝置",
+      "reason": "來源指盧米埃兄弟的 Cinématographe；是可定義的歷史技術名詞。"
+    },
+    {
+      "word": "current-generation",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-108-45"
+      ],
+      "contextEvidence": "...y to occur with pill use. Studies using current-generation oral contraceptives have shown no effects of pill use on vo...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Transparent compositional modifier, not a standalone vocabulary headword."
+    },
+    {
+      "word": "donor-related",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-115-50"
+      ],
+      "contextEvidence": "...They are prohibited from accessing any donor-related information.",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Transparent compositional modifier, not a standalone vocabulary headword."
+    },
+    {
+      "word": "driven-results",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-114-31"
+      ],
+      "contextEvidence": "(A) driven-results (B) results-driven (C) results-driving (D) driving-resul...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Incorrect word-order distractor from a multiple-choice item."
+    },
+    {
+      "word": "driving-results",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-114-31"
+      ],
+      "contextEvidence": "...esults-driven (C) results-driving (D) driving-results",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Incorrect distractor from a multiple-choice item."
+    },
+    {
+      "word": "estrogen-receptive",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-108-45"
+      ],
+      "contextEvidence": "...folds, consistent with changes in other estrogen-receptive organs. However, the vocal significance of these changes ap...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Transparent domain modifier, not a standalone vocabulary headword."
+    },
+    {
+      "word": "ever-expending",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-107-30"
+      ],
+      "contextEvidence": "...ever-expanding (C) expended ever (D) ever-expending",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Incorrect lexical distractor; expending is not the intended word."
+    },
+    {
+      "word": "facebook's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-106-8"
+      ],
+      "contextEvidence": "...pchat's tactics for ____ users may make Facebook's look quaint. (A) hooking (B) hopping (C) hushing (D) huskin...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "品牌名所有格，不是一般詞彙。"
+    },
+    {
+      "word": "google-owned",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-110-47"
+      ],
+      "contextEvidence": "...he many peculiar genres on YouTube, the Google-owned video hosting site where viewers watch more than 6 billion...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Compositional modifier containing a company proper name."
+    },
+    {
+      "word": "governor's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-110-39"
+      ],
+      "contextEvidence": "...seeing everyone very soon! As per the Governor's updated directives, we have self-certified the restaurant i...",
+      "decision": "alias-to-canonical",
+      "canonicalWord": "governor",
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    {
+      "word": "grand-bornand",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-114-39"
+      ],
+      "contextEvidence": "...o win the 15 km Mass Start at Annecy Le Grand-Bornand, crossing the finish line at 37:20.8. This victory marks a...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Place name (Le Grand-Bornand)."
+    },
+    {
+      "word": "industry's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-cs-en-109-49",
+        "q-pp-im-en-106-20"
+      ],
+      "contextEvidence": "According to the fireworks industry's own estimates, by 4th of July fireworks ____ as were killed...",
+      "decision": "alias-to-canonical",
+      "canonicalWord": "industry",
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    {
+      "word": "influencer's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-110-15"
+      ],
+      "contextEvidence": "An Instagram influencer's account ___ has over 5 million followers was accused of spr...",
+      "decision": "alias-to-canonical",
+      "canonicalWord": "influencer",
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    {
+      "word": "life-related",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-114-47"
+      ],
+      "contextEvidence": "...By detecting water, methane, and other life-related molecules, Webb could identify potential candidates for hab...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Transparent compositional modifier, not a standalone vocabulary headword."
+    },
+    {
+      "word": "lower-pitched",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-108-45"
+      ],
+      "contextEvidence": "...eakly but significantly associated with lower-pitched voices. In female menopause, decreased levels of estrogen c...",
+      "decision": "alias-to-canonical",
+      "canonicalWord": "low-pitched",
+      "reason": "Comparative inflection of the canonical compound adjective low-pitched."
+    },
+    {
+      "word": "mobile-devices",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-109-47"
+      ],
+      "contextEvidence": "...vices. The popularity of streaming from mobile-devices reflects smartphones becoming larger, with more saturated s...",
+      "decision": "alias-to-canonical",
+      "canonicalWord": "mobile device",
+      "reason": "Plural plus nonstandard hyphenation; normalize to the singular phrase."
+    },
+    {
+      "word": "movement's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-106-27"
+      ],
+      "contextEvidence": "...to \"Make it new!\" was the __32__ of the movement's approach towards what it saw as the now obsolete culture of...",
+      "decision": "alias-to-canonical",
+      "canonicalWord": "movement",
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    {
+      "word": "nintendo's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-106-6"
+      ],
+      "contextEvidence": "...f the original NES, finally admits that Nintendo's success is built largely of echoes of ____ successes. (A) p...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "品牌名所有格，不是一般詞彙。"
+    },
+    {
+      "word": "non-medical",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-115-36"
+      ],
+      "contextEvidence": "...c or Wegovy Can Be a Godsend, But Their Non-Medical Use Is Alarming\" by Devi Sridhar, The Guardian) Since anti...",
+      "decision": "keep-needs-override",
+      "canonicalWord": "non-medical",
+      "pos": "adjective",
+      "traditionalChinese": "非醫療的；非醫療用途的",
+      "reason": "來源標題的核心對比詞，語意可直接判定。"
+    },
+    {
+      "word": "organization's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-110-12",
+        "q-pp-im-it-109-16",
+        "q-pp-im-mis-113-2"
+      ],
+      "contextEvidence": "...can also contribute to the World Health Organization's recommended minimum of 150 minutes per week for all adults....",
+      "decision": "alias-to-canonical",
+      "canonicalWord": "organization",
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    {
+      "word": "ozempic-like",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-115-36"
+      ],
+      "contextEvidence": "...or those without insurance. In the UK, Ozempic-like drugs have been prescribed on the NHS (free of cost) to peo...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Compositional modifier based on a drug brand."
+    },
+    {
+      "word": "philosopher's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-115-4"
+      ],
+      "contextEvidence": "The philosopher's early writings were so___ that even specialists struggled t...",
+      "decision": "alias-to-canonical",
+      "canonicalWord": "philosopher",
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    {
+      "word": "photo-secessionists",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-113-41"
+      ],
+      "contextEvidence": "...nt rejected reality for beauty, but the Photo-Secessionists embraced realism as even more beautiful. (Question 41) Whi...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "特定藝術運動成員的專名複數，不是一般詞彙。"
+    },
+    {
+      "word": "planet-sized",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-106-33"
+      ],
+      "contextEvidence": "...s for the Empire's ultimate weapon, the planet-sized Death Star, Vader led an attack on a __34__ Rebel vessel, s...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Transparent compositional modifier, not a standalone vocabulary headword."
+    },
+    {
+      "word": "plastic-wrapped",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-110-24"
+      ],
+      "contextEvidence": "...rapped-plastic (C) plastic-wrapping (D) plastic-wrapped",
+      "decision": "keep-needs-override",
+      "canonicalWord": "plastic-wrapped",
+      "pos": "adjective",
+      "traditionalChinese": "以塑膠包裝的",
+      "reason": "來源選擇題的正確複合形容詞，與錯誤倒裝選項可明確區分。"
+    },
+    {
+      "word": "plastic-wrapping",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-110-21",
+        "q-pp-im-en-110-24"
+      ],
+      "contextEvidence": "...rapping-plastic (B) wrapped-plastic (C) plastic-wrapping (D) plastic-wrapped",
+      "decision": "alias-to-canonical",
+      "canonicalWord": "plastic wrapping",
+      "reason": "來源文章另有真實名詞片語 plastic wrapping；連字號形式來自錯誤選項。"
+    },
+    {
+      "word": "priestley's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-110-43"
+      ],
+      "contextEvidence": "...drink. Over the next several decades, Priestley's carbonated water, also called soda, took on many different...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "人名所有格，不是單字卡 headword。"
+    },
+    {
+      "word": "rational-choice",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-113-46"
+      ],
+      "contextEvidence": "...aviors via evolutionary psychology, via rational-choice economics and/or by a combination of these two frameworks....",
+      "decision": "keep-needs-override",
+      "canonicalWord": "rational choice",
+      "pos": "noun/adjective",
+      "traditionalChinese": "理性選擇；理性選擇理論的",
+      "reason": "固定學術概念；名詞通常寫 rational choice，置前修飾時可加連字號。"
+    },
+    {
+      "word": "reporter's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-115-8"
+      ],
+      "contextEvidence": "...e minister gave a(n) __ response to the reporter's question. (A) impulsive (B) circumspect (C) candid (D) d...",
+      "decision": "alias-to-canonical",
+      "canonicalWord": "reporter",
+      "reason": "Possessive form; do not create a separate headword."
+    },
+    {
+      "word": "results-driven",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-114-31"
+      ],
+      "contextEvidence": "(A) driven-results (B) results-driven (C) results-driving (D) driving-results",
+      "decision": "keep-needs-override",
+      "canonicalWord": "results-driven",
+      "pos": "adjective",
+      "traditionalChinese": "結果導向的；以成果為驅動的",
+      "reason": "來源選擇題的正確複合形容詞。"
+    },
+    {
+      "word": "results-driving",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-114-31"
+      ],
+      "contextEvidence": "...driven-results (B) results-driven (C) results-driving (D) driving-results",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Incorrect distractor from a multiple-choice item."
+    },
+    {
+      "word": "self-certification",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-110-39"
+      ],
+      "contextEvidence": "...protocols for the dining industry. With self-certification, we are now able to seat at 50% of approved indoor capacity...",
+      "decision": "keep-needs-override",
+      "canonicalWord": "self-certification",
+      "pos": "noun",
+      "traditionalChinese": "自我認證；自行聲明符合規範",
+      "reason": "政策與法遵固定術語。"
+    },
+    {
+      "word": "seo-keyword",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-110-47"
+      ],
+      "contextEvidence": "...engaging, well shot and more than just SEO-keyword spam. Unboxers look at Google Ad Words and YouTube search'...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Tokenized technical noun phrase; SEO and keyword should be separate canonical terms."
+    },
+    {
+      "word": "shortsleeved",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-107-48"
+      ],
+      "contextEvidence": "..., girls with mottled thighs and boys in shortsleeved shirts drinking mojitos en plein-air—such are the city’s si...",
+      "decision": "alias-to-canonical",
+      "canonicalWord": "short-sleeved",
+      "reason": "Orthographic variant missing the standard hyphen."
+    },
+    {
+      "word": "six-week-old",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-107-41"
+      ],
+      "contextEvidence": "...nobody would ever hire to look after a six-week-old infant. Well, what else did I have in mind for my twilight...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Productive age modifier, not a standalone vocabulary headword."
+    },
+    {
+      "word": "snapchat's",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-106-8"
+      ],
+      "contextEvidence": "Snapchat's tactics for ____ users may make Facebook's look quaint. (A)...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "品牌名所有格，不是一般詞彙。"
+    },
+    {
+      "word": "starch-bearing",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-113-21"
+      ],
+      "contextEvidence": "...available to us following the __25__ of starch-bearing plants are the root cause of these calamities? (Question 2...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Transparent compositional modifier, not a standalone vocabulary headword."
+    },
+    {
+      "word": "strikes-you're-out",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-106-21"
+      ],
+      "contextEvidence": "...ld, with bases ninety feet apart, three strikes-you're-out, batter out on a caught ball, three outs per __23__, a nine...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Tokenizer fused a clause into a pseudo-headword."
+    },
+    {
+      "word": "sword-and-sandals",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-107-45"
+      ],
+      "contextEvidence": "...\" director Ridley Scott's return to the sword-and-sandals genre he revived with \"Gladiator,\" is nowhere near as enter...",
+      "decision": "alias-to-canonical",
+      "canonicalWord": "sword-and-sandal",
+      "reason": "電影類型的標準單數複合形式。"
+    },
+    {
+      "word": "th-century",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-cs-en-108-41",
+        "q-pp-cs-en-111-19",
+        "q-pp-cs-en-111-48",
+        "q-pp-im-en-107-45",
+        "q-pp-im-en-110-30"
+      ],
+      "contextEvidence": "...lacksmith who becomes the defender of 12th-century Jerusalem against religious fanatics of all stripes. The fa...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Tokenizer dropped the numeric prefix from the source phrase."
+    },
+    {
+      "word": "trust-worthy",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-108-41"
+      ],
+      "contextEvidence": "...ter or pigs, ensure that they come from trust-worthy farms that have carried out the necessary measures to prote...",
+      "decision": "alias-to-canonical",
+      "canonicalWord": "trustworthy",
+      "reason": "Nonstandard split spelling of trustworthy."
+    },
+    {
+      "word": "urban-industrial",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-106-21"
+      ],
+      "contextEvidence": "...ing the __25__ needs of an increasingly urban-industrial society. [Passage I Cloze] (A) institutional (B) constituti...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Transparent compositional modifier, not a standalone vocabulary headword."
+    },
+    {
+      "word": "video-editing",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-110-47"
+      ],
+      "contextEvidence": "...t films of user experience (D) provides video-editing service",
+      "decision": "keep-needs-override",
+      "canonicalWord": "video editing",
+      "pos": "noun/adjective",
+      "traditionalChinese": "影片剪輯；影片編輯的",
+      "reason": "常見數位媒體技能名詞；一般名詞用 video editing。"
+    },
+    {
+      "word": "vocalbeauty",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-108-19"
+      ],
+      "contextEvidence": "...come the top supplier in this industry, VocalBeauty expanded its distribution chain into Europe. (A) Strive (B)...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Company/brand name in the question."
+    },
+    {
+      "word": "wrapped-plastic",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-110-24"
+      ],
+      "contextEvidence": "24. (A) wrapping-plastic (B) wrapped-plastic (C) plastic-wrapping (D) plastic-wrapped",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Incorrect word-order distractor in the source question."
+    },
+    {
+      "word": "wrapping-plastic",
+      "tier": "worth_studying",
+      "source": "english-exam",
+      "questionRefs": [
+        "q-pp-im-en-110-24"
+      ],
+      "contextEvidence": "24. (A) wrapping-plastic (B) wrapped-plastic (C) plastic-wrapping (D) plastic-wrappe...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Incorrect word-order/form distractor in the source question."
+    },
+    {
+      "word": "blockchain",
+      "tier": "domain",
+      "source": "domain",
+      "questionRefs": [
+        "q-pp-cs-arch-108-2",
+        "q-pp-im-it-107-19",
+        "q-pp-im-it-110-26",
+        "q-pp-im-it-111-23",
+        "q-pp-im-it-111-24"
+      ],
+      "contextEvidence": "...n, which needs to access the fingerprint sensor hardware 2) Blockchain cryptocurrency mining, as in the recent HTC's blockchain ph...",
+      "decision": "keep-needs-override",
+      "canonicalWord": "blockchain",
+      "pos": "noun",
+      "traditionalChinese": "區塊鏈",
+      "reason": "資訊管理與計算領域核心術語。"
+    },
+    {
+      "word": "bitcoin",
+      "tier": "domain",
+      "source": "domain",
+      "questionRefs": [
+        "q-pp-cs-arch-108-2",
+        "q-pp-im-it-107-18",
+        "q-pp-im-it-107-19",
+        "q-pp-im-it-112-24"
+      ],
+      "contextEvidence": "...ning, as in the recent HTC's blockchain phone 3) Storing my bitcoin wallet's private key 4) Supporting Android keystore system...",
+      "decision": "keep-needs-override",
+      "canonicalWord": "Bitcoin",
+      "pos": "noun",
+      "traditionalChinese": "比特幣",
+      "reason": "已詞彙化的加密貨幣名稱。"
+    },
+    {
+      "word": "datapath",
+      "tier": "domain",
+      "source": "domain",
+      "questionRefs": [
+        "q-pp-cs-arch-112-7",
+        "q-pp-cs-arch-113-2",
+        "q-pp-cs-arch-113-5",
+        "q-pp-cs-arch-113-6",
+        "q-pp-cs-arch-114-12"
+      ],
+      "contextEvidence": "(6 points) Assume the individual stages of the datapath have the following latencies: IF: 150ps; ID: 250ps; EX: 50p...",
+      "decision": "keep-needs-override",
+      "canonicalWord": "datapath",
+      "pos": "noun",
+      "traditionalChinese": "資料路徑",
+      "reason": "計算機結構標準術語。"
+    },
+    {
+      "word": "nlgn",
+      "tier": "domain",
+      "source": "domain",
+      "questionRefs": [
+        "q-pp-cs-algo-111-1",
+        "q-pp-cs-algo-111-2",
+        "q-pp-cs-algo-111-3",
+        "q-pp-cs-algo-111-4",
+        "q-pp-cs-algo-111-5"
+      ],
+      "contextEvidence": "...oices when answering. (A) O(1) (B) O(lgn) (C) O(n) (D) O(nlgn) (E) O(n²) (3 points) Selection sort: expected time?",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Complexity notation was flattened into a pseudo-word."
+    },
+    {
+      "word": "didn",
+      "tier": "domain",
+      "source": "domain",
+      "questionRefs": [
+        "q-pp-cs-en-108-21",
+        "q-pp-cs-en-108-31",
+        "q-pp-cs-en-111-32",
+        "q-pp-cs-en-114-10",
+        "q-pp-im-en-110-41"
+      ],
+      "contextEvidence": "10. Her ___ demeanor often intimidated those who didn't know her well. (A) austere (B) gregarious (C) indulgent (...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Tokenizer split a contraction at the apostrophe and lost the suffix."
+    },
+    {
+      "word": "itemcount",
+      "tier": "domain",
+      "source": "domain",
+      "questionRefs": [
+        "q-pp-im-it-108-21",
+        "q-pp-im-it-109-21",
+        "q-pp-im-it-109-22"
+      ],
+      "contextEvidence": "...rraySize; // default 20 // number of list items int itemCount; // default 0 }; (a) (15 points) Write the List::remove(in...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Source-code identifier itemCount, not vocabulary."
+    },
+    {
+      "word": "jibo",
+      "tier": "domain",
+      "source": "domain",
+      "questionRefs": [
+        "q-pp-cs-en-111-41",
+        "q-pp-cs-en-111-42",
+        "q-pp-cs-en-111-43",
+        "q-pp-cs-en-111-44"
+      ],
+      "contextEvidence": "...fining expression is a light that turns on when you speak. Jibo is different. It's not just that he—and I use the term he h...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Named consumer robot/product."
+    },
+    {
+      "word": "dijkstra",
+      "tier": "domain",
+      "source": "domain",
+      "questionRefs": [
+        "q-pp-cs-algo-108-8",
+        "q-pp-cs-algo-111-18",
+        "q-pp-cs-algo-112-12"
+      ],
+      "contextEvidence": "...blem: Which of the following statements is/are correct? (A) Dijkstra's algorithm can be applied to any directed graph with no ne...",
+      "decision": "alias-to-canonical",
+      "canonicalWord": "Dijkstra's algorithm",
+      "reason": "姓氏只應作為演算法名稱的一部分。"
+    },
+    {
+      "word": "doesn",
+      "tier": "domain",
+      "source": "domain",
+      "questionRefs": [
+        "q-pp-cs-en-113-47",
+        "q-pp-im-en-108-29",
+        "q-pp-im-en-109-43",
+        "q-pp-im-en-110-39",
+        "q-pp-im-en-112-15"
+      ],
+      "contextEvidence": "...corps to space. But for most people, the word \"accessible\" doesn't just mean being able to go somewhere; something being \"ac...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Tokenizer split a contraction at the apostrophe and lost the suffix."
+    },
+    {
+      "word": "logn",
+      "tier": "domain",
+      "source": "domain",
+      "questionRefs": [
+        "q-pp-cs-algo-114-1",
+        "q-pp-cs-algo-114-9",
+        "q-pp-cs-algo-114-10"
+      ],
+      "contextEvidence": "...RandomizedPrint(A[:p]) RandomizedPrint(A[p:]) (A) !: O(logn), *: O(nlogn) (B) !: O(logn), *: O(n^2) (C) !: O(n), *: O(n...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Mathematical notation was flattened into a pseudo-word."
+    },
+    {
+      "word": "nosql",
+      "tier": "domain",
+      "source": "domain",
+      "questionRefs": [
+        "q-pp-im-it-112-20",
+        "q-pp-im-it-114-15",
+        "q-pp-im-it-115-26"
+      ],
+      "contextEvidence": "Why are NoSQL databases often preferred in large-scale distributed applic...",
+      "decision": "keep-needs-override",
+      "canonicalWord": "NoSQL",
+      "pos": "noun/adjective",
+      "traditionalChinese": "NoSQL；非關聯式資料庫類型",
+      "reason": "資料庫標準分類術語。"
+    },
+    {
+      "word": "warshall",
+      "tier": "domain",
+      "source": "domain",
+      "questionRefs": [
+        "q-pp-cs-algo-108-8",
+        "q-pp-cs-algo-111-20",
+        "q-pp-cs-algo-112-12"
+      ],
+      "contextEvidence": "...ure is likely to be used in Dijkstra's algorithm. (C) Floyd-Warshall algorithm can be applied to any directed graph with negativ...",
+      "decision": "alias-to-canonical",
+      "canonicalWord": "Floyd–Warshall algorithm",
+      "reason": "姓氏只應作為演算法名稱的一部分。"
+    },
+    {
+      "word": "airbnb",
+      "tier": "domain",
+      "source": "domain",
+      "questionRefs": [
+        "q-pp-im-mis-106-2",
+        "q-pp-im-mis-110-1"
+      ],
+      "contextEvidence": "...contrast, in a money-based sharing economy platform (e.g., Airbnb), users need to pay monetary fees that allow the owners of...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Company/brand name."
+    },
+    {
+      "word": "badchar",
+      "tier": "domain",
+      "source": "domain",
+      "questionRefs": [
+        "q-pp-im-it-112-29"
+      ],
+      "contextEvidence": "...NO_OF_CHARS 256 void PREPROCESS(string str, int size, int badchar[NO_OF_CHARS]) { int i; for (i = 0; i < NO_OF_CHARS;...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Source-code identifier badchar, not vocabulary."
+    },
+    {
+      "word": "couldn",
+      "tier": "domain",
+      "source": "domain",
+      "questionRefs": [
+        "q-pp-cs-en-108-31",
+        "q-pp-cs-en-109-12",
+        "q-pp-im-en-114-41"
+      ],
+      "contextEvidence": "12. Kevin couldn't put the ____ novel down until he had finished it. (A) com...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Tokenizer split a contraction at the apostrophe and lost the suffix."
+    },
+    {
+      "word": "cryptocurrency",
+      "tier": "domain",
+      "source": "domain",
+      "questionRefs": [
+        "q-pp-cs-arch-108-2",
+        "q-pp-im-it-110-26"
+      ],
+      "contextEvidence": "...eds to access the fingerprint sensor hardware 2) Blockchain cryptocurrency mining, as in the recent HTC's blockchain phone 3) Storing...",
+      "decision": "keep-needs-override",
+      "canonicalWord": "cryptocurrency",
+      "pos": "noun",
+      "traditionalChinese": "加密貨幣",
+      "reason": "資訊管理與金融科技標準術語。"
+    },
+    {
+      "word": "dgx",
+      "tier": "domain",
+      "source": "domain",
+      "questionRefs": [
+        "q-pp-cs-arch-113-8",
+        "q-pp-cs-arch-113-9"
+      ],
+      "contextEvidence": "...atest system architecture setups. NVIDIA recently announced DGXGI DGX GH200 as Supercomputer, that are able to this specifi...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "NVIDIA 產品家族專名；來源理解不需要獨立一般詞彙卡。"
+    },
+    {
+      "word": "endl",
+      "tier": "domain",
+      "source": "domain",
+      "questionRefs": [
+        "q-pp-im-it-112-29"
+      ],
+      "contextEvidence": "...{ cout << \"pattern occurs at \" << s << endl; s += (s + m < n) ? m - badchar[txt[s + m]] : 1...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "C++ library manipulator identifier, not English vocabulary."
+    },
+    {
+      "word": "etag",
+      "tier": "domain",
+      "source": "domain",
+      "questionRefs": [
+        "q-pp-im-it-108-2"
+      ],
+      "contextEvidence": "...to remember stateful information? (A) proxy (B) cookie (C) etag (D) http hash (E) cache.",
+      "decision": "keep-needs-override",
+      "canonicalWord": "ETag",
+      "pos": "noun",
+      "traditionalChinese": "HTTP 實體標籤；快取驗證標籤",
+      "reason": "HTTP 快取驗證標準術語。"
+    },
+    {
+      "word": "fdap",
+      "tier": "domain",
+      "source": "domain",
+      "questionRefs": [
+        "q-pp-im-it-108-13"
+      ],
+      "contextEvidence": "...n a corporate intranet? (A) Free Directory Access Protocol (FDAP) (B) Internet Directory Access Protocol (IDAP) (C) Lightwei...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Invented wrong-answer expansion “Free Directory Access Protocol,” not a real protocol."
+    },
+    {
+      "word": "hadn",
+      "tier": "domain",
+      "source": "domain",
+      "questionRefs": [
+        "q-pp-cs-en-110-18",
+        "q-pp-cs-en-113-5",
+        "q-pp-im-en-107-31",
+        "q-pp-im-en-113-20"
+      ],
+      "contextEvidence": "...blem-solving often yielded innovative solutions that others hadn't considered. (A) orthodox (B) avant-garde (C) conventional...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Tokenizer split a contraction at the apostrophe and lost the suffix."
+    },
+    {
+      "word": "heapify",
+      "tier": "domain",
+      "source": "domain",
+      "questionRefs": [
+        "q-pp-cs-algo-109-5",
+        "q-pp-cs-algo-111-3"
+      ],
+      "contextEvidence": "(3 points) MAX-HEAPIFY for a max-heap: expected time? (Use the same (A)-(E) choice...",
+      "decision": "keep-needs-override",
+      "canonicalWord": "heapify",
+      "pos": "verb/noun",
+      "traditionalChinese": "堆積化；調整成堆積",
+      "reason": "演算法標準操作名稱。"
+    },
+    {
+      "word": "idap",
+      "tier": "domain",
+      "source": "domain",
+      "questionRefs": [
+        "q-pp-im-it-108-13"
+      ],
+      "contextEvidence": "...ess Protocol (FDAP) (B) Internet Directory Access Protocol (IDAP) (C) Lightweight Directory Access Protocol (LDAP) (D) Root...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Invented wrong-answer expansion “Internet Directory Access Protocol,” not a real protocol."
+    },
+    {
+      "word": "kmp",
+      "tier": "domain",
+      "source": "domain",
+      "questionRefs": [
+        "q-pp-cs-algo-110-10",
+        "q-pp-cs-algo-112-16"
+      ],
+      "contextEvidence": "...n to compute the prefix function in the Knuth-Morris-Pratt (KMP) string matching algorithm is given below. Given a pattern...",
+      "decision": "keep-needs-override",
+      "canonicalWord": "KMP",
+      "pos": "noun/adjective",
+      "traditionalChinese": "KMP（Knuth–Morris–Pratt）字串比對演算法",
+      "reason": "字串比對標準演算法縮寫。"
+    },
+    {
+      "word": "metaverse",
+      "tier": "domain",
+      "source": "domain",
+      "questionRefs": [
+        "q-pp-im-it-111-23",
+        "q-pp-im-it-111-24"
+      ],
+      "contextEvidence": "Which of the following is wrong about \"metaverse\"? (A) it envisions a future of social connection in a 2D vi...",
+      "decision": "keep-needs-override",
+      "canonicalWord": "metaverse",
+      "pos": "noun",
+      "traditionalChinese": "元宇宙",
+      "reason": "資訊科技常用概念。"
+    },
+    {
+      "word": "mlperf",
+      "tier": "domain",
+      "source": "domain",
+      "questionRefs": [
+        "q-pp-cs-arch-113-4",
+        "q-pp-cs-arch-113-5",
+        "q-pp-cs-arch-113-6"
+      ],
+      "contextEvidence": "...anguage Models and Computer Architecture 5. [5 points] The MLPerf benchmark suite contains 9 benchmarks related to machine le...",
+      "decision": "keep-needs-override",
+      "canonicalWord": "MLPerf",
+      "pos": "noun",
+      "traditionalChinese": "MLPerf 機器學習效能基準測試套件",
+      "reason": "產業標準基準測試名稱，來源題目直接要求理解。"
+    },
+    {
+      "word": "newvalue",
+      "tier": "domain",
+      "source": "domain",
+      "questionRefs": [
+        "q-pp-im-it-108-21"
+      ],
+      "contextEvidence": "...turn -1 if there is nothing to delete bool insert(int newValue); // insert newValue into the heap // r...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Source-code identifier newValue, not vocabulary."
+    },
+    {
+      "word": "rdap",
+      "tier": "domain",
+      "source": "domain",
+      "questionRefs": [
+        "q-pp-im-it-108-13"
+      ],
+      "contextEvidence": "...Access Protocol (LDAP) (D) Root Directory Access Protocol (RDAP) (E) none of the above.",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "來源把 RDAP 展開為虛構錯誤選項 Root Directory Access Protocol；不可改教另一個真實 RDAP 意義。"
+    },
+    {
+      "word": "rsh",
+      "tier": "domain",
+      "source": "domain",
+      "questionRefs": [
+        "q-pp-im-it-108-14"
+      ],
+      "contextEvidence": "...ured remote shell protocols such as the Berkeley rlogin and rsh? (A) Secure Shell (SSH) (B) Transport Layer Security (TLS)...",
+      "decision": "keep-needs-override",
+      "canonicalWord": "rsh",
+      "pos": "noun",
+      "traditionalChinese": "rsh 遠端殼層協定／指令",
+      "reason": "Unix 遠端殼層的真實協定與指令。"
+    },
+    {
+      "word": "sembroski",
+      "tier": "domain",
+      "source": "domain",
+      "questionRefs": [
+        "q-pp-cs-en-113-47",
+        "q-pp-cs-en-113-50"
+      ],
+      "contextEvidence": "...ts, which effectively barred women from the job. Even Chris Sembroski, who received his seat on Inspiration4 as a gift from an un...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Surname in Chris Sembroski."
+    },
+    {
+      "word": "sjf",
+      "tier": "domain",
+      "source": "domain",
+      "questionRefs": [
+        "q-pp-cs-arch-110-3",
+        "q-pp-im-it-115-11"
+      ],
+      "contextEvidence": "...mpletion time of PID 5 process? (c) (2 pts) When preemptive SJF scheduling algorithm is used, what's the completion time of...",
+      "decision": "keep-needs-override",
+      "canonicalWord": "SJF",
+      "pos": "noun/adjective",
+      "traditionalChinese": "SJF 最短工作優先排程（Shortest Job First）",
+      "reason": "作業系統標準排程演算法縮寫。"
+    },
+    {
+      "word": "stdc",
+      "tier": "domain",
+      "source": "domain",
+      "questionRefs": [
+        "q-pp-im-it-112-29"
+      ],
+      "contextEvidence": "Consider the following C++ code. #include <bits/stdc++.h> using namespace std; #define NO_OF_CHARS 256 void PRE...",
+      "decision": "exclude-not-vocab",
+      "canonicalWord": null,
+      "reason": "Tokenizer extracted a fragment from the C++ header path bits/stdc++.h."
+    },
+    {
+      "word": "subspaces",
+      "tier": "domain",
+      "source": "domain",
+      "questionRefs": [
+        "q-pp-cs-math-110-6",
+        "q-pp-cs-math-111-12"
+      ],
+      "contextEvidence": "...1,3,α,2,1), (1,5,-6,6,3), (2,5,3,2,1), (2,7,-3,6,3)} be two subspaces of R^5. The dimension of U ∩ W is (A) 0 (B) 1 (C) 2 (D) 3 (...",
+      "decision": "alias-to-canonical",
+      "canonicalWord": "subspace",
+      "reason": "Regular plural of the mathematical term subspace."
+    }
+  ]
+}

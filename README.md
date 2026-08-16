@@ -139,7 +139,8 @@ npx wrangler d1 execute grad-exam-prep-db --remote --command \
 
 ### 預暖詞條快取
 
-第一次查一個字要等十幾秒生成。既有 160 張英文閃卡裡的高頻字可以先暖起來：
+第一次查一個字要等十幾秒生成。必要字庫有數千筆，預暖腳本預設只處理前
+100 筆；要擴大範圍時務必先用 dry-run 與 `--limit` 估算：
 
 ```bash
 # 先看會處理哪些字，不呼叫 API
@@ -149,10 +150,36 @@ node scripts/warm-lexicon.js --dry-run
 BASE_URL=https://<your-worker>.workers.dev \
 PASSPHRASE_HASH=<與 worker secret 相同的雜湊> \
 node scripts/warm-lexicon.js
+
+# 明確確認成本後才允許處理整份字庫
+node scripts/warm-lexicon.js --all
 ```
 
 腳本打的是已部署的 `/api/lexicon`，不是自己重寫一套生成邏輯 —— 這樣
 system prompt 與 schema 只有一份，不會走鐘。帶通關密語所以不受每日配額限制。
+
+### 必要字庫與閃卡生成
+
+`public/data/ntu-im-vocab-master.json` 是原始 master，閃卡只納入
+`must_know`、`important`、`worth_studying`、`domain` 四層。人工審核過的 alias、
+非詞彙與修正放在 `public/data/im-vocab-curation.json`；不要直接手改產出的
+IM 英文卡。
+
+```bash
+# 日常：重新生成並確認 checked-in artifact 沒有過期
+npm run generate:im-vocab
+npm run check:im-vocab
+npm run validate:content
+
+# 只有更新 ECDICT snapshot 時才需要；revision 必須固定並同步更新 notice
+python3 -m pip install -r scripts/requirements-im-vocab.txt
+python3 scripts/import-ecdict-im-vocab.py \
+  --ecdict /path/to/ECDICT/ecdict.csv \
+  --revision <git-commit-sha>
+```
+
+生成器會原子替換 `im-english` 的卡片，其他科目的卡不動。內容驗證會要求每個
+curated target 恰好一張、ID 唯一、正面只有 headword，並拒絕選擇題或填空語法。
 
 ### 換 LLM provider
 

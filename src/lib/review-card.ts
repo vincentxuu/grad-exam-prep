@@ -32,6 +32,7 @@ export function fromFlashcard(card: Flashcard, label?: string): ReviewCard {
     label: label ?? card.subjectId,
     render: 'flashcard',
     flashcard: card,
+    headword: card.headword,
   }
 }
 

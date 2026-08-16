@@ -1,0 +1,85 @@
+{
+  "generatedAt": "2026-08-16",
+  "overallStatus": "PASS",
+  "mechanicalStatus": "PASS",
+  "semanticExclusionStatus": "PASS",
+  "counts": {
+    "masterRequired": 4859,
+    "declaredExclusions": 131,
+    "declaredExpectedCards": 4728,
+    "actualImCards": 4728,
+    "independentRequiredAfterReversals": 4728,
+    "independentCoverage": 4728,
+    "independentCoveragePercent": 100,
+    "allCards": 5208
+  },
+  "declaredCoverage": {
+    "missing": [],
+    "extra": []
+  },
+  "independentCoverage": {
+    "missing": [],
+    "extra": []
+  },
+  "uniqueness": {
+    "duplicateCanonicalHeadwords": [],
+    "duplicateIds": []
+  },
+  "frontQuality": {
+    "violations": []
+  },
+  "backQuality": {
+    "requiredMinimum": "meaning + source + at least one of POS/English definition/example; phonetic alone does not count",
+    "allCardViolations": [],
+    "incompleteReviewKeepRequirement": "all 70 retained incomplete-review entries must have POS + English definition in review and generated card",
+    "incompleteReviewKeepViolations": [],
+    "phoneticOnlyReviewKeepRequirement": "all 19 retained phonetic-only-review entries must have POS + English definition in review and generated card",
+    "phoneticOnlyReviewKeepViolations": []
+  },
+  "cardShape": {
+    "idShapeViolations": [],
+    "structureViolations": [],
+    "tierMismatches": []
+  },
+  "exclusions": {
+    "reviewed": {
+      "unmatched": 118,
+      "incomplete": 101,
+      "phoneticOnly": 24,
+      "total": 243
+    },
+    "retainedAndEnriched": {
+      "unmatched": 23,
+      "incomplete": 70,
+      "phoneticOnly": 19,
+      "total": 112
+    },
+    "excluded": {
+      "unmatched": 95,
+      "incomplete": 31,
+      "phoneticOnly": 5,
+      "total": 131
+    },
+    "categoryCounts": {
+      "alias-to-canonical": 33,
+      "exclude-not-vocab": 62,
+      "incomplete-alias": 12,
+      "incomplete-exclude": 24
+    },
+    "problems": {
+      "duplicateWords": [],
+      "outsideRequired": [],
+      "missingReason": [],
+      "invalidCategory": [],
+      "missingQuestionEvidence": []
+    },
+    "reviewAlignmentProblems": {
+      "duplicateAcrossReviews": [],
+      "keepMissingOverride": [],
+      "keepStillExcluded": [],
+      "reviewedExclusionMissing": [],
+      "unexpectedOverride": []
+    },
+    "semanticConflicts": []
+  }
+}

@@ -10,17 +10,18 @@ import { LexiconReviewAnswer } from '@/components/lexicon/lexicon-review-answer'
 import { PageLoading } from '@/components/page-loading'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
 import { useQueryState } from '@/hooks/use-query-state'
 import { useSpeech } from '@/hooks/use-speech'
-import { EXAM_LABELS, flashcards, getSubjectsByExam } from '@/lib/content'
+import { FLASHCARD_EXAM_LABELS, getFlashcardSubjects } from '@/lib/flashcard-meta'
 import { fromFlashcard, fromSavedWord, type ReviewCard } from '@/lib/review-card'
 import type { RecallRating } from '@/lib/srs'
-import { daysUntilDue, RECALL_LABELS } from '@/lib/srs'
+import { daysUntilDue, initialCardState, RECALL_LABELS } from '@/lib/srs'
 import { localStorageImpl } from '@/lib/storage'
 import { extractWord, isVocabCard } from '@/lib/vocab'
-import { useFlashcardStore } from '@/store/flashcard'
+import { dueCardsFromState, dueCountFromState, useFlashcardStore } from '@/store/flashcard'
 import type { ExamId, Flashcard } from '@/types/content'
-import type { SavedWord } from '@/types/storage'
+import type { CardSRSState, SavedWord } from '@/types/storage'
 
 interface Props {
   params: Promise<{ exam: string }>
@@ -28,6 +29,15 @@ interface Props {
 
 /** 「我的單字」的篩選鍵，與科目 id 共用同一個 query param */
 const SAVED_FILTER = 'saved'
+const BROWSE_BATCH_SIZE = 60
+const REVIEW_BATCH_SIZE = 50
+
+const TIER_LABELS: Record<NonNullable<Flashcard['tier']>, string> = {
+  must_know: '必背',
+  important: '重要',
+  worth_studying: '值得學',
+  domain: '領域詞',
+}
 
 export default function FlashcardsPage(props: Props) {
   return (
@@ -39,27 +49,82 @@ export default function FlashcardsPage(props: Props) {
 
 function FlashcardsContent({ params }: Props) {
   const { exam } = use(params)
-  const subjects = getSubjectsByExam(exam as ExamId)
+  const subjects = useMemo(() => getFlashcardSubjects(exam as ExamId), [exam])
   if (!subjects.length) notFound()
 
-  const examCards = flashcards.filter((f) => f.examId === exam)
-  const subjectLabel = Object.fromEntries(subjects.map((s) => [s.id, s.name.split('（')[0]]))
+  const subjectLabel = useMemo(
+    () => Object.fromEntries(subjects.map((subject) => [subject.id, subject.name.split('（')[0]])),
+    [subjects]
+  )
 
-  const { reviewCard, getDueCards, getDueCount, getCardState } = useFlashcardStore()
-  const { voices, selectedVoiceURI, setVoice, speak, speakingId, providers, provider, setProvider } = useSpeech()
+  const { reviewCard } = useFlashcardStore()
+  const {
+    voices,
+    selectedVoiceURI,
+    setVoice,
+    speak,
+    speakingId,
+    providers,
+    provider,
+    setProvider,
+  } = useSpeech()
 
   const [subjectFilter, setSubjectFilter] = useQueryState('subject', 'all')
   const [mode, setMode] = useState<'browse' | 'review'>('browse')
   const [reviewQueue, setReviewQueue] = useState<ReviewCard[]>([])
   const [savedWords, setSavedWords] = useState<SavedWord[]>([])
+  const [examCards, setExamCards] = useState<Flashcard[]>([])
+  const [cardsLoading, setCardsLoading] = useState(true)
+  const [cardsError, setCardsError] = useState<string | null>(null)
   const [currentIdx, setCurrentIdx] = useState(0)
   const [revealed, setRevealed] = useState(false)
   const [expandedId, setExpandedId] = useState<string | null>(null)
+  const [search, setSearch] = useState('')
+  const [tierFilter, setTierFilter] = useState<Flashcard['tier'] | 'all'>('all')
+  const [visibleLimit, setVisibleLimit] = useState(BROWSE_BATCH_SIZE)
+  const [schedule, setSchedule] = useState<{
+    states: Record<string, CardSRSState>
+    now: number
+  }>({ states: {}, now: 0 })
 
   // localStorage 只能在 client 讀
   useEffect(() => {
-    setSavedWords(localStorageImpl.getSavedWords())
-  }, [])
+    const stored = localStorageImpl.getState()
+    const saved = stored.savedWords
+    setSavedWords(saved)
+    setSchedule({
+      states: stored.srsState,
+      now: Date.now(),
+    })
+
+    const controller = new AbortController()
+    setCardsLoading(true)
+    setCardsError(null)
+    fetch(`/api/flashcards?exam=${encodeURIComponent(exam)}`, { signal: controller.signal })
+      .then(async (response) => {
+        if (!response.ok) throw new Error(`HTTP ${response.status}`)
+        return response.json() as Promise<{ cards: Flashcard[]; allCardIds: string[] }>
+      })
+      .then(({ cards, allCardIds }) => {
+        const validIds = new Set([...allCardIds, ...saved.map((word) => word.cardId)])
+        localStorageImpl.pruneSRSState(validIds)
+        setSchedule((current) => ({
+          states: Object.fromEntries(
+            Object.entries(current.states).filter(([cardId]) => validIds.has(cardId))
+          ),
+          now: Date.now(),
+        }))
+        setExamCards(cards)
+        setCardsLoading(false)
+      })
+      .catch((error: unknown) => {
+        if (controller.signal.aborted) return
+        setCardsError(error instanceof Error ? error.message : '載入失敗')
+        setCardsLoading(false)
+      })
+
+    return () => controller.abort()
+  }, [exam])
 
   /** 靜態閃卡與查來的字，正規化成同一種卡後共用同一個 SRS 排程 */
   const allCards: ReviewCard[] = useMemo(
@@ -67,27 +132,68 @@ function FlashcardsContent({ params }: Props) {
       ...examCards.map((c) => fromFlashcard(c, subjectLabel[c.subjectId])),
       ...savedWords.map(fromSavedWord),
     ],
-    [exam, savedWords]
+    [examCards, savedWords, subjectLabel]
   )
 
-  const filteredCards = useMemo(() => {
+  const subjectScopedCards = useMemo(() => {
     if (subjectFilter === 'all') return allCards
-    if (subjectFilter === SAVED_FILTER) return allCards.filter((c) => c.source === 'lexicon')
-    return allCards.filter((c) => c.flashcard?.subjectId === subjectFilter)
+    if (subjectFilter === SAVED_FILTER) return allCards.filter((card) => card.source === 'lexicon')
+    return allCards.filter((card) => card.flashcard?.subjectId === subjectFilter)
   }, [allCards, subjectFilter])
 
-  const dueCards = getDueCards(filteredCards)
-  const dueCount = getDueCount(allCards)
+  const availableTiers = useMemo(
+    () =>
+      new Set(
+        subjectScopedCards.flatMap((card) => (card.flashcard?.tier ? [card.flashcard.tier] : []))
+      ),
+    [subjectScopedCards]
+  )
+  const canFilterTiers = availableTiers.size > 0
+
+  const filteredCards = useMemo(() => {
+    const normalizedSearch = search.trim().toLowerCase()
+    return subjectScopedCards.filter((card) => {
+      const tierMatches =
+        !canFilterTiers || tierFilter === 'all' || card.flashcard?.tier === tierFilter
+      const searchMatches =
+        !normalizedSearch ||
+        (card.headword ?? card.prompt).toLowerCase().includes(normalizedSearch) ||
+        card.flashcard?.answer.toLowerCase().includes(normalizedSearch)
+      return tierMatches && searchMatches
+    })
+  }, [canFilterTiers, search, subjectScopedCards, tierFilter])
+
+  useEffect(() => {
+    if (!canFilterTiers && tierFilter !== 'all') setTierFilter('all')
+  }, [canFilterTiers, tierFilter])
+
+  useEffect(() => {
+    setVisibleLimit(BROWSE_BATCH_SIZE)
+    setExpandedId(null)
+  }, [search, subjectFilter, tierFilter])
+
+  const dueCards = useMemo(
+    () => dueCardsFromState(filteredCards, schedule.states, schedule.now),
+    [filteredCards, schedule]
+  )
+  const dueCount = useMemo(
+    () => dueCountFromState(allCards, schedule.states, schedule.now),
+    [allCards, schedule]
+  )
 
   function startReview() {
-    setReviewQueue(getDueCards(filteredCards))
+    setReviewQueue(dueCards.slice(0, REVIEW_BATCH_SIZE))
     setCurrentIdx(0)
     setRevealed(false)
     setMode('review')
   }
 
   function handleRating(rating: RecallRating) {
-    reviewCard(reviewQueue[currentIdx], rating)
+    const updated = reviewCard(reviewQueue[currentIdx], rating)
+    setSchedule((current) => ({
+      states: { ...current.states, [updated.cardId]: updated },
+      now: Date.now(),
+    }))
     if (currentIdx + 1 < reviewQueue.length) {
       setCurrentIdx((i) => i + 1)
       setRevealed(false)
@@ -96,21 +202,34 @@ function FlashcardsContent({ params }: Props) {
     }
   }
 
-  const coverageBySubject = subjects.map((s) => {
-    const cards = allCards.filter((c) => c.flashcard?.subjectId === s.id)
-    return { subject: s, cardCount: cards.length, due: getDueCount(cards) }
-  })
+  const coverageBySubject = useMemo(
+    () =>
+      subjects.map((subject) => {
+        const cards = allCards.filter((card) => card.flashcard?.subjectId === subject.id)
+        return {
+          subject,
+          cardCount: cards.length,
+          due: dueCountFromState(cards, schedule.states, schedule.now),
+        }
+      }),
+    [allCards, schedule, subjects]
+  )
+
+  if (cardsLoading) return <PageLoading />
+  if (cardsError) {
+    return (
+      <div className="max-w-xl rounded-lg border p-6 text-sm">
+        <p className="font-medium">閃卡資料載入失敗</p>
+        <p className="mt-1 text-muted-foreground">{cardsError}，請重新整理頁面再試一次。</p>
+      </div>
+    )
+  }
 
   if (mode === 'review' && reviewQueue.length > 0) {
     const item = reviewQueue[currentIdx]
     const card = item.flashcard
     // lexicon 卡的正面就是那個字；content 卡沿用既有的抽字邏輯
-    const word =
-      item.source === 'lexicon'
-        ? (item.headword ?? null)
-        : card && isVocabCard(card)
-          ? extractWord(card.prompt)
-          : null
+    const word = item.headword ?? (card && isVocabCard(card) ? extractWord(card.prompt) : null)
 
     return (
       <div className="max-w-xl mx-auto space-y-6">
@@ -119,7 +238,14 @@ function FlashcardsContent({ params }: Props) {
             {currentIdx + 1} / {reviewQueue.length}
           </span>
           <div className="flex items-center gap-2">
-            <VoiceSelect voices={voices} selectedVoiceURI={selectedVoiceURI} onSelect={setVoice} providers={providers} provider={provider} onProviderChange={setProvider} />
+            <VoiceSelect
+              voices={voices}
+              selectedVoiceURI={selectedVoiceURI}
+              onSelect={setVoice}
+              providers={providers}
+              provider={provider}
+              onProviderChange={setProvider}
+            />
             <Button variant="ghost" size="sm" onClick={() => setMode('browse')}>
               結束複習
             </Button>
@@ -194,7 +320,9 @@ function FlashcardsContent({ params }: Props) {
       <div className="space-y-3">
         <div>
           <div className="flex items-center gap-2 flex-wrap">
-            <h1 className="text-2xl font-bold">{EXAM_LABELS[exam as ExamId]} — 閃卡練習</h1>
+            <h1 className="text-2xl font-bold">
+              {FLASHCARD_EXAM_LABELS[exam as ExamId]} — 閃卡練習
+            </h1>
             {dueCount > 0 && <Badge className="text-xs">{dueCount} 張待複習</Badge>}
           </div>
           <p className="text-muted-foreground text-sm mt-1">SM-2 間隔重複排程</p>
@@ -202,10 +330,51 @@ function FlashcardsContent({ params }: Props) {
 
         <div className="flex flex-wrap items-center gap-3">
           <Button onClick={startReview} disabled={dueCards.length === 0}>
-            {dueCards.length > 0 ? `開始複習（${dueCards.length}）` : '暫無待複習卡'}
+            {dueCards.length > 0
+              ? `開始複習（${Math.min(dueCards.length, REVIEW_BATCH_SIZE)} / ${dueCards.length}）`
+              : '暫無待複習卡'}
           </Button>
-          <VoiceSelect voices={voices} selectedVoiceURI={selectedVoiceURI} onSelect={setVoice} providers={providers} provider={provider} onProviderChange={setProvider} />
+          <VoiceSelect
+            voices={voices}
+            selectedVoiceURI={selectedVoiceURI}
+            onSelect={setVoice}
+            providers={providers}
+            provider={provider}
+            onProviderChange={setProvider}
+          />
         </div>
+      </div>
+
+      <div className="space-y-2">
+        <Input
+          value={search}
+          onChange={(event) => setSearch(event.target.value)}
+          placeholder="搜尋單字、片語或解釋…"
+          className="max-w-sm"
+        />
+        {canFilterTiers && (
+          <div className="flex flex-wrap gap-1">
+            <Button
+              size="sm"
+              variant={tierFilter === 'all' ? 'secondary' : 'outline'}
+              onClick={() => setTierFilter('all')}
+            >
+              全部分級
+            </Button>
+            {Object.entries(TIER_LABELS)
+              .filter(([tier]) => availableTiers.has(tier as NonNullable<Flashcard['tier']>))
+              .map(([tier, label]) => (
+                <Button
+                  key={tier}
+                  size="sm"
+                  variant={tierFilter === tier ? 'secondary' : 'outline'}
+                  onClick={() => setTierFilter(tier as NonNullable<Flashcard['tier']>)}
+                >
+                  {label}
+                </Button>
+              ))}
+          </div>
+        )}
       </div>
 
       {/* Subject filter */}
@@ -275,7 +444,22 @@ function FlashcardsContent({ params }: Props) {
         )}
         {filteredCards.length === 0 ? (
           <div className="text-center py-10 text-muted-foreground">
-            {subjectFilter === SAVED_FILTER ? (
+            {subjectScopedCards.length > 0 ? (
+              <>
+                <p>沒有符合目前搜尋或分級的卡片</p>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="mt-2"
+                  onClick={() => {
+                    setSearch('')
+                    setTierFilter('all')
+                  }}
+                >
+                  清除篩選
+                </Button>
+              </>
+            ) : subjectFilter === SAVED_FILTER ? (
               <>
                 <p>單字庫還是空的</p>
                 <p className="text-xs mt-1">在查詞或閱讀頁按「加入單字庫」，字就會排進這裡</p>
@@ -288,17 +472,31 @@ function FlashcardsContent({ params }: Props) {
             )}
           </div>
         ) : (
-          filteredCards.map((item) => (
-            <CardRow
-              key={item.id}
-              item={item}
-              days={daysUntilDue(getCardState(item.id))}
-              expanded={expandedId === item.id}
-              onToggle={() => setExpandedId(expandedId === item.id ? null : item.id)}
-              speak={speak}
-              speakingId={speakingId}
-            />
-          ))
+          filteredCards
+            .slice(0, visibleLimit)
+            .map((item) => (
+              <CardRow
+                key={item.id}
+                item={item}
+                days={daysUntilDue(
+                  schedule.states[item.id] ?? initialCardState(item.id, schedule.now),
+                  schedule.now
+                )}
+                expanded={expandedId === item.id}
+                onToggle={() => setExpandedId(expandedId === item.id ? null : item.id)}
+                speak={speak}
+                speakingId={speakingId}
+              />
+            ))
+        )}
+        {filteredCards.length > visibleLimit && (
+          <Button
+            variant="outline"
+            className="w-full"
+            onClick={() => setVisibleLimit((limit) => limit + BROWSE_BATCH_SIZE)}
+          >
+            載入更多（剩 {filteredCards.length - visibleLimit} 張）
+          </Button>
         )}
       </div>
     </div>
@@ -321,12 +519,7 @@ interface CardRowProps {
 function CardRow({ item, days, expanded, onToggle, speak, speakingId }: CardRowProps) {
   const card = item.flashcard
   const vocab = !!card && isVocabCard(card)
-  const word =
-    item.source === 'lexicon'
-      ? (item.headword ?? null)
-      : vocab && card
-        ? extractWord(card.prompt)
-        : null
+  const word = item.headword ?? (vocab && card ? extractWord(card.prompt) : null)
 
   return (
     <div className="rounded-lg border text-sm">
