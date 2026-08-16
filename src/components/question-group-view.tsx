@@ -12,6 +12,7 @@ import { Separator } from '@/components/ui/separator'
 import { useWordLookup } from '@/hooks/use-word-lookup'
 import { getAnswer } from '@/lib/answers'
 import { parseQuestion } from '@/lib/question-parser'
+import { getQuestionPracticePolicy } from '@/lib/question-practice-policy'
 import { getUserId } from '@/lib/user-id'
 import type { Question } from '@/types/content'
 import type { PracticeMode } from '@/types/practice'
@@ -22,6 +23,8 @@ interface Props {
   questions: Question[]
   parentNumber: number
   mode: string
+  completionHref?: string
+  nextHref?: string
   nextQuestionId?: string
 }
 
@@ -43,6 +46,8 @@ export function QuestionGroupView({
   questions,
   parentNumber,
   mode,
+  completionHref,
+  nextHref,
   nextQuestionId,
 }: Props) {
   const router = useRouter()
@@ -54,7 +59,10 @@ export function QuestionGroupView({
   const [revealed, setRevealed] = useState(false)
   const [submitting, setSubmitting] = useState(false)
 
-  const answeredCount = Object.keys(answers).length
+  const autoGradableQuestions = questions.filter(
+    (question) => getQuestionPracticePolicy(question).gradingMode === 'auto'
+  )
+  const answeredCount = autoGradableQuestions.filter((question) => answers[question.id]).length
 
   function selectAnswer(questionId: string, option: string) {
     if (revealed) return
@@ -66,7 +74,7 @@ export function QuestionGroupView({
     setSubmitting(true)
     const userId = getUserId()
     await Promise.all(
-      questions.map((q) => {
+      autoGradableQuestions.map((q) => {
         const answerData = getAnswer(q.id)
         const selected = answers[q.id]
         const result =
@@ -89,14 +97,18 @@ export function QuestionGroupView({
   }
 
   function handleNext() {
-    if (nextQuestionId) {
+    if (nextHref) {
+      router.push(nextHref)
+    } else if (nextQuestionId) {
       router.push(`/${exam}/questions/${nextQuestionId}?mode=${mode}`)
     } else {
-      router.push(`/${exam}/questions`)
+      router.push(completionHref ?? `/${exam}/questions`)
     }
   }
 
-  const correctCount = questions.filter((q) => {
+  const returnsToLesson = Boolean(completionHref)
+
+  const correctCount = autoGradableQuestions.filter((q) => {
     const answerData = getAnswer(q.id)
     return answers[q.id] && answerData && answers[q.id] === answerData.answer.toLowerCase()
   }).length
@@ -122,9 +134,9 @@ export function QuestionGroupView({
           variant="ghost"
           size="sm"
           className="ml-auto text-xs text-muted-foreground h-7"
-          onClick={() => router.push(`/${exam}/questions`)}
+          onClick={() => router.push(completionHref ?? `/${exam}/questions`)}
         >
-          ← 返回題庫
+          ← {returnsToLesson ? '返回課程' : '返回題庫'}
         </Button>
       </div>
 
@@ -171,15 +183,18 @@ export function QuestionGroupView({
           {questions.map((q) => {
             const parsed = parseQuestion(q.text)
             const answerData = getAnswer(q.id)
+            const practicePolicy = getQuestionPracticePolicy(q, answerData)
+            const canAutoGrade = practicePolicy.gradingMode === 'auto'
             const selected = answers[q.id]
-            const isCorrect = selected && answerData && selected === answerData.answer.toLowerCase()
+            const isCorrect =
+              canAutoGrade && selected && answerData && selected === answerData.answer.toLowerCase()
             const stem = getQuestionStem(q, parentNumber)
 
             return (
               <Card
                 key={q.id}
                 className={
-                  revealed
+                  revealed && canAutoGrade
                     ? isCorrect
                       ? 'border-[hsl(var(--success))]'
                       : 'border-destructive'
@@ -199,7 +214,7 @@ export function QuestionGroupView({
                     ) : (
                       <span className="text-sm text-muted-foreground flex-1">___</span>
                     )}
-                    {revealed && (
+                    {revealed && canAutoGrade && (
                       <span
                         className={`text-xs font-medium shrink-0 ${isCorrect ? 'text-[hsl(var(--success))]' : 'text-destructive'}`}
                       >
@@ -212,7 +227,7 @@ export function QuestionGroupView({
                   </div>
 
                   {/* Options */}
-                  {parsed.options ? (
+                  {canAutoGrade && parsed.options ? (
                     <div className="flex flex-wrap gap-1.5 pl-5">
                       {parsed.options.map((opt) => {
                         const isSelected = selected === opt.label
@@ -248,41 +263,20 @@ export function QuestionGroupView({
                         )
                       })}
                     </div>
-                  ) : (
-                    <div className="flex gap-1.5 pl-5">
-                      {['a', 'b', 'c', 'd', 'e'].map((opt) => {
-                        const isSelected = selected === opt
-                        const isAnswer = opt === answerData?.answer.toLowerCase()
-                        let className =
-                          'w-9 h-9 text-xs font-bold uppercase rounded-md border transition-colors '
-                        if (revealed) {
-                          if (isSelected && isAnswer)
-                            className +=
-                              'bg-[hsl(var(--success))] text-white border-[hsl(var(--success))]'
-                          else if (isSelected)
-                            className +=
-                              'bg-destructive text-destructive-foreground border-destructive'
-                          else if (isAnswer)
-                            className +=
-                              'border-[hsl(var(--success))] text-[hsl(var(--success))] bg-[hsl(var(--success)/0.1)]'
-                          else className += 'opacity-50'
-                        } else if (isSelected) {
-                          className += 'border-primary bg-primary/10 text-primary'
-                        } else {
-                          className += 'hover:bg-muted/50'
-                        }
-                        return (
-                          <button
-                            key={opt}
-                            disabled={revealed}
-                            onClick={() => selectAnswer(q.id, opt)}
-                            className={className}
-                          >
-                            {opt.toUpperCase()}
-                          </button>
-                        )
-                      })}
+                  ) : !revealed ? (
+                    <div className="ml-5 rounded-md border bg-muted/30 px-3 py-2">
+                      <p className="text-xs text-muted-foreground">
+                        {practicePolicy.gradingMode === 'self_review'
+                          ? '這是申論或開放題，請先自行作答，稍後依參考解析檢查。'
+                          : '這題目前僅供閱讀，不提供選項或自動計分。'}
+                      </p>
                     </div>
+                  ) : (
+                    <p className="pl-5 text-xs font-medium text-muted-foreground">
+                      {practicePolicy.gradingMode === 'self_review'
+                        ? '請依參考解析自行評估。'
+                        : '此題目前僅供閱讀，不提供自動計分。'}
+                    </p>
                   )}
 
                   {/* Explanation (after reveal) */}
@@ -302,24 +296,32 @@ export function QuestionGroupView({
           {/* Confirm / Results */}
           {!revealed ? (
             <Button
-              disabled={answeredCount < questions.length}
+              disabled={answeredCount < autoGradableQuestions.length}
               onClick={handleConfirm}
               className="w-full"
               size="lg"
             >
-              確認答案 ({answeredCount}/{questions.length})
+              {autoGradableQuestions.length > 0
+                ? `確認答案 (${answeredCount}/${autoGradableQuestions.length})`
+                : '查看參考解析'}
             </Button>
           ) : (
             <div className="space-y-3">
               <Card>
                 <CardContent className="py-3 px-4 text-center">
                   <p className="text-base font-semibold">
-                    答對 {correctCount}/{questions.length} 題
+                    {autoGradableQuestions.length > 0
+                      ? `答對 ${correctCount}/${autoGradableQuestions.length} 題`
+                      : '這組題目不使用自動計分'}
                   </p>
                 </CardContent>
               </Card>
               <Button onClick={handleNext} className="w-full" size="lg" disabled={submitting}>
-                {nextQuestionId ? '下一組 →' : '返回題庫'}
+                {nextHref || nextQuestionId
+                  ? '下一組 →'
+                  : returnsToLesson
+                    ? '返回課程'
+                    : '返回題庫'}
               </Button>
             </div>
           )}

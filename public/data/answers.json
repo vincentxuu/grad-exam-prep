@@ -4392,8 +4392,8 @@
     },
     "q-pp-im-it-107-11": {
       "questionId": "q-pp-im-it-107-11",
-      "answer": "A",
-      "explanation": "數位憑證中的「序號（Serial Number）」欄位的主要用途是唯一識別由某個憑證頒發機構（CA）所簽發的特定憑證，而非用於追蹤撤銷資訊。憑證的撤銷是透過憑證撤銷清單（CRL）或線上憑證狀態協定（OCSP）來管理的，序號只是在 CRL 中被引用以指明哪張憑證被撤銷，但本身並非「用來追蹤撤銷資訊」的欄位。其餘選項皆正確：(B) Issuer 欄位確實指定驗證並簽署憑證的實體；(C) 數位憑證至少需包含公開金鑰；(D) X.509 確為定義公開金鑰憑證格式的標準。因此選項 (A) 的描述有誤，是本題答案。"
+      "answer": "E",
+      "explanation": "答案經技術覆核後修正為 E（非官方答案）。certificate serial number 可作為 CRL/OCSP revocation tracking 的識別值；issuer、subject public key 與 X.509 敘述也正確，因此 A 至 D 均正確，應選 E。 二次覆核：X.509 certificate serial number 由 issuer 指派並唯一識別該 issuer 簽發的憑證；CRL entry 與 OCSP request 都以 issuer/serial number 識別要查詢或撤銷的憑證，所以 A 所稱用來追蹤 revocation information 是合理敘述。Issuer 欄位指出簽發與簽章實體，certificate 包含 subject public key，X.509 也確實規範 public-key certificate 格式，因此 B、C、D 均正確。不存在另一個合理錯項，應由現有 A 更正為 E。"
     },
     "q-pp-im-it-107-12": {
       "questionId": "q-pp-im-it-107-12",
@@ -4632,8 +4632,8 @@
     },
     "q-pp-im-it-109-11": {
       "questionId": "q-pp-im-it-109-11",
-      "answer": "E",
-      "explanation": "本題詢問哪一項「不是」大數據的應用。選項A的決策制定、選項B的預測與預報、選項C的弱點評估（資安風險分析）、選項D的政府治理，全部都是大數據的實際應用領域。大數據可協助企業與政府進行決策、透過機器學習模型進行預測、分析系統漏洞與資安威脅、以及優化公共政策與治理效能。因此，A至D皆為大數據的應用，選項E「以上皆可作為大數據的應用」為正確答案，代表沒有任何一項不是大數據的應用。"
+      "answer": "B",
+      "explanation": "答案經技術覆核後修正為 B（非官方答案）。IPv6 uses 128-bit, not 120-bit, addresses; B is the uniquely wrong statement. 二次覆核：IPv6 address space 是 128 bits，不是 120 bits，因此 B 錯。"
     },
     "q-pp-im-it-109-12": {
       "questionId": "q-pp-im-it-109-12",
@@ -4723,12 +4723,12 @@
     "q-pp-im-it-109-8": {
       "questionId": "q-pp-im-it-109-8",
       "answer": "D",
-      "explanation": "GPS（全球定位系統）主要用於提供車輛的地理位置與導航路徑，並非用來感知周遭環境的即時障礙物、行人或車道線。自動駕駛車輛感知環境的核心技術包括光達（Lidar）、雷達（Radar）和電腦視覺（Computer Vision），這三者能直接偵測車輛周圍的物體與距離。相較之下，GPS 無法提供車輛周遭環境的細部資訊，因此在環境感知方面鮮少使用。選項 D 的 GPS 是最不被用於感知車輛周遭環境的技術。"
+      "explanation": "本題採用入門教材常見的 gigabit-class 分級，5G 峰值常以約 1–10 Gbps 的量級描述，因此選 (D)。這是理論或理想條件下的速率範圍，不代表每位使用者的保證實測 throughput；實際速度會受頻譜、訊號、基地台負載與部署方式影響。此答案為技術覆核，並非官方答案。"
     },
     "q-pp-im-it-109-9": {
       "questionId": "q-pp-im-it-109-9",
-      "answer": "D",
-      "explanation": "本題考的是歐盟資料保護與隱私法規。一般資料保護規則（General Data Protection Regulation，GDPR）是歐盟於2016年通過、2018年5月正式生效的法規，適用於所有歐盟境內個人，取代了1995年的歐盟資料保護指令（EU Data Protection Directive）。選項(A) International Safe Harbor Privacy Principles 是美歐之間的隱私協議，已於2015年被廢止。選項(B) Digital Millennium Copyright Act (DMCA) 是美國的著作權法，與資料保護無關。選項(C) Digital Transition Content Security Act 為虛構法規名稱。因此正確答案為(D) General Data Protection Regulation。"
+      "answer": "B",
+      "explanation": "答案經技術覆核後修正為 B（非官方答案）。A server intermediating client requests to origin servers is a proxy. 二次覆核：代替 client 向 origin server 請求資源的 intermediary server 是 proxy。"
     },
     "q-pp-im-it-110-1": {
       "questionId": "q-pp-im-it-110-1",
@@ -4988,7 +4988,7 @@
     "q-pp-im-it-111-7": {
       "questionId": "q-pp-im-it-111-7",
       "answer": "C",
-      "explanation": "題目描述的是一種分配給網路介面控制器（NIC）的唯一識別碼，用於在網路段內作為網路位址進行通訊，並被大多數 IEEE 802 網路技術（包括乙太網路、Wi-Fi 和藍牙）所使用。這正是媒體存取控制位址（MAC address，媒體存取控制位址）的定義。MAC 位址通常由 48 位元組成，燒錄於網路介面卡的韌體中，具有全球唯一性。IP 位址（B）是網路層的邏輯位址，而非與硬體綁定的唯一識別碼；全球唯一識別碼（GUID，A）則是軟體層面的識別碼，非針對網路硬體介面。因此正確答案為 (C) media access control address。"
+      "explanation": "題目描述的是媒體存取控制位址（MAC address），因此答案為 (C)。常見 IEEE 802 MAC 位址長度為 48 bits（6 bytes），用於同一網路區段內的資料鏈結層通訊。廠商配置的 universally administered address 以組織識別碼降低重複，但 MAC 也可能是 locally administered、可由軟體改寫或 spoof，因此不應宣稱任何情況下都必然全球唯一。IP 位址則是網路層的邏輯位址。"
     },
     "q-pp-im-it-111-8": {
       "questionId": "q-pp-im-it-111-8",
@@ -5012,8 +5012,8 @@
     },
     "q-pp-im-it-112-11": {
       "questionId": "q-pp-im-it-112-11",
-      "answer": "D",
-      "explanation": "OS 會提供檔案建立刪除、完整性支援、磁碟排程與檔案/目錄操作原語；把檔案備份到永久媒體通常是備份工具或管理作業的責任，不是 OS 核心儲存管理職責，故選 (D)。"
+      "answer": "B",
+      "explanation": "答案經技術覆核後修正為 B（非官方答案）。依作業系統教材的 file/storage management 責任，建立刪除檔案、disk scheduling、檔案操作 primitives 與備份至穩定儲存媒體都屬管理工作；「file integrity check」不是該標準責任清單，因此唯一可選的是 B，不是現有 D。 二次覆核：標準 OS file/storage management 責任包含建立刪除檔案、disk scheduling、提供檔案與目錄操作 primitives，以及把檔案備份到穩定儲存媒體；file integrity check 不在該典型責任清單。因此 B 是唯一符合『generally not the responsibility』的選項，現有 D 應更正為 B。"
     },
     "q-pp-im-it-112-12": {
       "questionId": "q-pp-im-it-112-12",
@@ -5147,13 +5147,13 @@
     },
     "q-pp-im-it-113-1": {
       "questionId": "q-pp-im-it-113-1",
-      "answer": "C",
-      "explanation": "馮紐曼架構（Von Neumann Architecture）的核心特徵之一，就是程式指令與資料共用同一記憶體空間，這被稱為「儲存程式概念」（stored-program concept）。選項 (C) 說「資料與指令被分離到不同的記憶體」，這描述的是哈佛架構（Harvard Architecture），而非馮紐曼架構，因此是錯誤的敘述。選項 (A) 正確描述了馮紐曼架構的四個主要組成：CPU、記憶體、輸入與輸出。選項 (B) 正確說明記憶體是一個線性的儲存位置陣列，選項 (D) 也正確指出 CPU 包含控制單元（CU）與算術邏輯單元（ALU）。"
+      "answer": "E",
+      "explanation": "答案經技術覆核後修正為 E（非官方答案）。FAT32、exFAT、NTFS、APFS 都是實際廣泛使用的檔案系統，故應選 none-of-the-above 型的 E。 二次覆核：FAT32、exFAT、NTFS 與 APFS 都是實際且廣泛部署的檔案系統；A 至 D 無一符合 not popularly used，故唯一答案是 E。"
     },
     "q-pp-im-it-113-10": {
       "questionId": "q-pp-im-it-113-10",
-      "answer": "A",
-      "explanation": "CIA 三元組（CIA Triad）是資訊安全領域最基本的框架，其中 CIA 代表 Confidentiality（機密性）、Integrity（完整性）與 Availability（可用性）。機密性確保資訊只有授權的人才能存取；完整性確保資訊的正確性與不被未授權竄改；可用性確保授權使用者在需要時能夠存取資訊。此模型廣泛應用於組織制定資訊安全政策的依據，是資訊安全管理的核心基礎概念。選項 B、C、D 均為錯誤的展開，其中 C 的 Central Intelligence Agency 是美國中央情報局，與資訊安全框架無關。"
+      "answer": "C",
+      "explanation": "答案經技術覆核後修正為 C（非官方答案）。把資料暫存在記憶體、等候程式或裝置使用的概念是 buffering。 二次覆核：將資料暫存於記憶體或其他儲存區，直到裝置或程式請求使用，正是 buffering；spooling 特指把工作排入周邊裝置佇列。"
     },
     "q-pp-im-it-113-11": {
       "questionId": "q-pp-im-it-113-11",
@@ -5187,13 +5187,13 @@
     },
     "q-pp-im-it-113-17": {
       "questionId": "q-pp-im-it-113-17",
-      "answer": "E",
-      "explanation": "此題詢問關於生成樹（spanning tree）哪個敘述是錯誤的。選項(A)與(B)：若圖G的所有邊都是其生成樹T的邊，則G與T擁有相同的頂點集合與邊集合，因此G等同於T，且由於T是樹，G也是樹——(A)與(B)均正確。選項(C)：若T是G的生成樹，且e是G中不屬於T的邊，則將e加入T必然形成環（cycle），這是生成樹的基本性質——(C)正確。選項(D)：一個圖可以有多棵生成樹（例如含環的連通圖通常有多個生成樹）——(D)正確。由於(A)、(B)、(C)、(D)全部正確，故答案為(E)，表示以上皆正確（沒有任何錯誤敘述）。"
+      "answer": "C",
+      "explanation": "答案經技術覆核後修正為 C（非官方答案）。TLS 可使用自簽或私有 CA 憑證；建立 HTTPS 並不在協定上必然要求受信任第三方簽署。 二次覆核：HTTPS 是 HTTP over TLS，也能配置 mutual TLS；但 TLS 技術上可使用 self-signed certificate 或直接信任私有 CA，協定不強制由受信任第三方簽發 server certificate，因此 C 的 requires 過強。"
     },
     "q-pp-im-it-113-18": {
       "questionId": "q-pp-im-it-113-18",
-      "answer": "B",
-      "explanation": "在堆積（heap）中插入一個新鍵值時，首先將其放在完全二元樹的最後一個位置（O(1)），接著執行「上移（bubble up / sift up）」操作，不斷與父節點比較並交換，直到滿足堆積性質為止。由於完全二元樹的高度為 O(log n)，因此上移操作最多執行 O(log n) 次。故插入操作的時間複雜度為 O(log n)。"
+      "answer": "A",
+      "explanation": "答案經技術覆核後修正為 A（非官方答案）。ACID 的 A 是 atomicity，不是 availability。 二次覆核：ACID 的 A 是 atomicity，不是 availability；C、I、D 的展開均正確，因此唯一錯項是 A。"
     },
     "q-pp-im-it-113-19": {
       "questionId": "q-pp-im-it-113-19",
@@ -5202,8 +5202,8 @@
     },
     "q-pp-im-it-113-2": {
       "questionId": "q-pp-im-it-113-2",
-      "answer": "D",
-      "explanation": "CISC（複雜指令集電腦）的指令集比 RISC（精簡指令集電腦）更大、更複雜，而非更小，因此選項 (D) 的說法是錯誤的。RISC 的設計哲學正是「精簡」指令集，每條指令功能單純；CISC 則相反，擁有龐大且多樣化的指令集以支援複雜操作。選項 (A) 正確，因為 CISC 指令功能強大，完成相同工作所需的指令數量通常較少。選項 (B) 正確，CISC 的核心設計目標就是讓每條指令能完成更多工作。選項 (C) 正確，CISC 指令較複雜，通常需要多個時脈週期執行，而 RISC 指令通常可在單一週期內完成。"
+      "answer": "B",
+      "explanation": "答案經技術覆核後修正為 B（非官方答案）。不同 process 各自具有獨立位址空間、stack 與 program counter；B 把 process 誤述成 thread。 二次覆核：由同一 parent spawn 的不同 processes 通常仍各有獨立位址空間、stack 與 program counter；需要 shared memory 或 message passing 才能交換資料，因此 B 錯。"
     },
     "q-pp-im-it-113-20": {
       "questionId": "q-pp-im-it-113-20",
@@ -5227,8 +5227,8 @@
     },
     "q-pp-im-it-113-4": {
       "questionId": "q-pp-im-it-113-4",
-      "answer": "E",
-      "explanation": "選項 (A) 正確：中斷驅動 I/O 中，外部裝置會向處理器發出中斷，使其執行中斷服務常式。選項 (B) 正確：外部裝置透過觸發中斷訊號來中斷處理器，這是中斷機制的基本運作方式。選項 (C) 正確：直接記憶體存取（DMA）允許資料在 I/O 裝置與記憶體之間直接傳輸，無需處理器持續介入。選項 (D) 正確：DMA 控制器正是一種硬體裝置，使 I/O 裝置能夠直接存取記憶體，大幅減少處理器的參與。由於 (A)、(B)、(C)、(D) 四個選項均為正確敘述，因此答案為 (E)。"
+      "answer": "A",
+      "explanation": "答案經技術覆核後修正為 A（非官方答案）。馮紐曼架構的四個功能組成是 processor、memory、input 與 output；A 最直接對應。 二次覆核：Von Neumann 架構的四個功能單元是 processor、memory、input、output；A 逐項對應，其他選項遺漏或混入 program counter、GPU、disk 等次層元件。"
     },
     "q-pp-im-it-113-5": {
       "questionId": "q-pp-im-it-113-5",
@@ -5247,8 +5247,8 @@
     },
     "q-pp-im-it-113-8": {
       "questionId": "q-pp-im-it-113-8",
-      "answer": "B",
-      "explanation": "DDR4 是一種動態隨機存取記憶體（DRAM），屬於揮發性記憶體（volatile memory），斷電後資料即消失，因此它不是非揮發性記憶體。固態硬碟（SSD）使用快閃記憶體晶片儲存資料，屬於非揮發性儲存裝置。唯讀記憶體（ROM）和快閃記憶體（Flash memory）同樣屬於非揮發性記憶體，斷電後資料仍能保留。因此，四個選項中唯一不是非揮發性記憶體的是 DDR4，正確答案為 B。"
+      "answer": "A",
+      "explanation": "答案經技術覆核後修正為 A（非官方答案）。p 已定義為不可平行化比例，平行時間為 p+(1-p)/n，speedup 為其倒數。 二次覆核：p 已明定為不受增加 processors 影響的 serial fraction；正規化執行時間是 p+(1-p)/n，speedup 是其倒數，所以選 A。"
     },
     "q-pp-im-it-113-9": {
       "questionId": "q-pp-im-it-113-9",

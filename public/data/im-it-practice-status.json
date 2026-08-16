@@ -1,0 +1,1312 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "im-it",
+  "official": false,
+  "counts": {
+    "autoGradeEligible": 226,
+    "disputed": 20,
+    "selfReviewOnly": 14
+  },
+  "questions": {
+    "q-pp-im-it-106-1": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-106-2": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-106-3": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-106-4": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-106-5": {
+      "status": "disputed",
+      "autoGradeEligible": false,
+      "note": "答案存在爭議，保留瀏覽但不判分。"
+    },
+    "q-pp-im-it-106-6": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-106-7": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-106-8": {
+      "status": "disputed",
+      "autoGradeEligible": false,
+      "note": "答案存在爭議，保留瀏覽但不判分。"
+    },
+    "q-pp-im-it-106-9": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-106-10": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-106-11": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-106-12": {
+      "status": "disputed",
+      "autoGradeEligible": false,
+      "note": "答案存在爭議，保留瀏覽但不判分。"
+    },
+    "q-pp-im-it-106-13": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-106-14": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-106-15": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-106-16": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-106-17": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-106-18": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-106-19": {
+      "status": "disputed",
+      "autoGradeEligible": false,
+      "note": "答案存在爭議，保留瀏覽但不判分。"
+    },
+    "q-pp-im-it-106-20": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-106-21": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-106-22": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-106-23": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-106-24": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-106-25": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "程式或開放題使用自評，不採 A–E 自動判分。"
+    },
+    "q-pp-im-it-106-26": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "程式或開放題使用自評，不採 A–E 自動判分。"
+    },
+    "q-pp-im-it-107-1": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-107-2": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-107-3": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-107-4": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-107-5": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-107-6": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-107-7": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-107-8": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-107-9": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-107-10": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-107-11": {
+      "status": "corrected",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-107-12": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-107-13": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-107-14": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-107-15": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-107-16": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-107-17": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-107-18": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-107-19": {
+      "status": "disputed",
+      "autoGradeEligible": false,
+      "note": "答案存在爭議，保留瀏覽但不判分。"
+    },
+    "q-pp-im-it-107-20": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-107-21": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-107-22": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-107-23": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-107-24": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-107-25": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "程式或開放題使用自評，不採 A–E 自動判分。"
+    },
+    "q-pp-im-it-107-26": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "程式或開放題使用自評，不採 A–E 自動判分。"
+    },
+    "q-pp-im-it-108-1": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-108-2": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-108-3": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-108-4": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-108-5": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-108-6": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-108-7": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-108-8": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-108-9": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-108-10": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-108-11": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-108-12": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-108-13": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-108-14": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-108-15": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-108-16": {
+      "status": "disputed",
+      "autoGradeEligible": false,
+      "note": "答案存在爭議，保留瀏覽但不判分。"
+    },
+    "q-pp-im-it-108-17": {
+      "status": "disputed",
+      "autoGradeEligible": false,
+      "note": "答案存在爭議，保留瀏覽但不判分。"
+    },
+    "q-pp-im-it-108-18": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-108-19": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-108-20": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-108-21": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "程式或開放題使用自評，不採 A–E 自動判分。"
+    },
+    "q-pp-im-it-108-22": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "程式或開放題使用自評，不採 A–E 自動判分。"
+    },
+    "q-pp-im-it-109-1": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-109-2": {
+      "status": "corrected",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-109-3": {
+      "status": "corrected",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-109-4": {
+      "status": "corrected",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-109-5": {
+      "status": "corrected",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-109-6": {
+      "status": "corrected",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-109-7": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-109-8": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-109-9": {
+      "status": "corrected",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-109-10": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-109-11": {
+      "status": "corrected",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-109-12": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-109-13": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-109-14": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-109-15": {
+      "status": "corrected",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-109-16": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-109-17": {
+      "status": "corrected",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-109-18": {
+      "status": "corrected",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-109-19": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-109-20": {
+      "status": "corrected",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-109-21": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "程式或開放題使用自評，不採 A–E 自動判分。"
+    },
+    "q-pp-im-it-109-22": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "程式或開放題使用自評，不採 A–E 自動判分。"
+    },
+    "q-pp-im-it-110-1": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-110-2": {
+      "status": "disputed",
+      "autoGradeEligible": false,
+      "note": "答案存在爭議，保留瀏覽但不判分。"
+    },
+    "q-pp-im-it-110-3": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-110-4": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-110-5": {
+      "status": "disputed",
+      "autoGradeEligible": false,
+      "note": "答案存在爭議，保留瀏覽但不判分。"
+    },
+    "q-pp-im-it-110-6": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-110-7": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-110-8": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-110-9": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-110-10": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-110-11": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-110-12": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-110-13": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-110-14": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-110-15": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-110-16": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-110-17": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-110-18": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-110-19": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-110-20": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-110-21": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-110-22": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-110-23": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-110-24": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-110-25": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-110-26": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-110-27": {
+      "status": "disputed",
+      "autoGradeEligible": false,
+      "note": "答案存在爭議，保留瀏覽但不判分。"
+    },
+    "q-pp-im-it-110-28": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-110-29": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "程式或開放題使用自評，不採 A–E 自動判分。"
+    },
+    "q-pp-im-it-111-1": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-111-2": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-111-3": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-111-4": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-111-5": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-111-6": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-111-7": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-111-8": {
+      "status": "disputed",
+      "autoGradeEligible": false,
+      "note": "答案存在爭議，保留瀏覽但不判分。"
+    },
+    "q-pp-im-it-111-9": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-111-10": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-111-11": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-111-12": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-111-13": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-111-14": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-111-15": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-111-16": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-111-17": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-111-18": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-111-19": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-111-20": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-111-21": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-111-22": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-111-23": {
+      "status": "disputed",
+      "autoGradeEligible": false,
+      "note": "答案存在爭議，保留瀏覽但不判分。"
+    },
+    "q-pp-im-it-111-24": {
+      "status": "disputed",
+      "autoGradeEligible": false,
+      "note": "答案存在爭議，保留瀏覽但不判分。"
+    },
+    "q-pp-im-it-111-25": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "程式或開放題使用自評，不採 A–E 自動判分。"
+    },
+    "q-pp-im-it-112-1": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-112-2": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-112-3": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-112-4": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-112-5": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-112-6": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-112-7": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-112-8": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-112-9": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-112-10": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-112-11": {
+      "status": "corrected",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-112-12": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-112-13": {
+      "status": "disputed",
+      "autoGradeEligible": false,
+      "note": "答案存在爭議，保留瀏覽但不判分。"
+    },
+    "q-pp-im-it-112-14": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-112-15": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-112-16": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-112-17": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-112-18": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-112-19": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-112-20": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-112-21": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-112-22": {
+      "status": "disputed",
+      "autoGradeEligible": false,
+      "note": "答案存在爭議，保留瀏覽但不判分。"
+    },
+    "q-pp-im-it-112-23": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-112-24": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-112-25": {
+      "status": "disputed",
+      "autoGradeEligible": false,
+      "note": "答案存在爭議，保留瀏覽但不判分。"
+    },
+    "q-pp-im-it-112-26": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-112-27": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-112-28": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-112-29": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "程式或開放題使用自評，不採 A–E 自動判分。"
+    },
+    "q-pp-im-it-113-1": {
+      "status": "corrected",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-113-2": {
+      "status": "corrected",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-113-3": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-113-4": {
+      "status": "corrected",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-113-5": {
+      "status": "disputed",
+      "autoGradeEligible": false,
+      "note": "答案存在爭議，保留瀏覽但不判分。"
+    },
+    "q-pp-im-it-113-6": {
+      "status": "disputed",
+      "autoGradeEligible": false,
+      "note": "答案存在爭議，保留瀏覽但不判分。"
+    },
+    "q-pp-im-it-113-7": {
+      "status": "corrected",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-113-8": {
+      "status": "corrected",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-113-9": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-113-10": {
+      "status": "corrected",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-113-11": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-113-12": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-113-13": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-113-14": {
+      "status": "corrected",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-113-15": {
+      "status": "corrected",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-113-16": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-113-17": {
+      "status": "corrected",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-113-18": {
+      "status": "corrected",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-113-19": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-113-20": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-113-21": {
+      "status": "corrected",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-113-22": {
+      "status": "corrected",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-113-23": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-113-24": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-113-25": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "程式或開放題使用自評，不採 A–E 自動判分。"
+    },
+    "q-pp-im-it-114-1": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-114-2": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-114-3": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-114-4": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-114-5": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-114-6": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-114-7": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-114-8": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-114-9": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-114-10": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-114-11": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-114-12": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-114-13": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-114-14": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-114-15": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-114-16": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-114-17": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-114-18": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-114-19": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-114-20": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-114-21": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-114-22": {
+      "status": "corrected",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-114-23": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-114-24": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-114-25": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "程式或開放題使用自評，不採 A–E 自動判分。"
+    },
+    "q-pp-im-it-115-1": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-115-2": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-115-3": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-115-4": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-115-5": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-115-6": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-115-7": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-115-8": {
+      "status": "disputed",
+      "autoGradeEligible": false,
+      "note": "答案存在爭議，保留瀏覽但不判分。"
+    },
+    "q-pp-im-it-115-9": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-115-10": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-115-11": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-115-12": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-115-13": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-115-14": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-115-15": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-115-16": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-115-17": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-115-18": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-115-19": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-115-20": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-115-21": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-115-22": {
+      "status": "disputed",
+      "autoGradeEligible": false,
+      "note": "答案存在爭議，保留瀏覽但不判分。"
+    },
+    "q-pp-im-it-115-23": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-115-24": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-115-25": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-115-26": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-115-27": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-115-28": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-115-29": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-115-30": {
+      "status": "confirmed",
+      "autoGradeEligible": true,
+      "note": "答案已完成可重現的技術覆核；非官方答案。"
+    },
+    "q-pp-im-it-115-31": {
+      "status": "self_review_only",
+      "autoGradeEligible": false,
+      "note": "程式或開放題使用自評，不採 A–E 自動判分。"
+    }
+  }
+}

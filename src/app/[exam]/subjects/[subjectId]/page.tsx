@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import { LearningConceptOverview } from '@/components/exam/learning-concept-overview'
 import { TopicTree } from '@/components/exam/topic-tree'
 import { Badge } from '@/components/ui/badge'
 import { EXAM_LABELS, getExam, getSubject, subjects } from '@/lib/content'
+import { getLearningCatalog } from '@/lib/learning-catalog'
 import type { ExamId } from '@/types/content'
 
 interface Props {
@@ -20,6 +22,7 @@ export default async function SubjectPage({ params }: Props) {
   const { exam, subjectId } = await params
   const examData = getExam(exam as ExamId)
   const subject = getSubject(subjectId)
+  const learningCatalog = getLearningCatalog(exam, subjectId)
 
   if (!examData || !subject || subject.examId !== exam) notFound()
 
@@ -51,9 +54,13 @@ export default async function SubjectPage({ params }: Props) {
 
       <section className="space-y-3">
         <h2 className="text-lg font-semibold">主題樹（依重要度排序）</h2>
-        <div className="rounded-lg border p-4">
-          <TopicTree topics={subject.topics} />
-        </div>
+        {learningCatalog?.overview ? (
+          <LearningConceptOverview catalog={learningCatalog} />
+        ) : (
+          <div className="rounded-lg border p-4">
+            <TopicTree topics={subject.topics} />
+          </div>
+        )}
       </section>
 
       <section className="space-y-3">

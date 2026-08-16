@@ -1,0 +1,44 @@
+import {
+  getImItCardsForLesson,
+  getImItLesson,
+  getImItLessons,
+  getImItSources,
+  imItLearningCatalog,
+} from '@/lib/im-it-learning'
+import { getLearningCatalog, getLearningCatalogs } from '@/lib/learning-catalog'
+
+describe('learning catalog', () => {
+  test('resolves a subject catalog without changing the IM-IT public API', () => {
+    const catalog = getLearningCatalog('im', 'im-it')
+
+    expect(catalog).toBe(imItLearningCatalog)
+    expect(catalog?.lessons).toBe(getImItLessons())
+
+    const lesson = getImItLesson('lesson-im-it-network-models-encapsulation')
+    expect(lesson).toBeDefined()
+    if (!lesson || !catalog) return
+
+    expect(catalog.getLesson(lesson.id)).toBe(lesson)
+    expect(catalog.getCardsForLesson(lesson.id)).toEqual(getImItCardsForLesson(lesson.id))
+    expect(catalog.getSources(lesson.sourceRefs)).toEqual(getImItSources(lesson.sourceRefs))
+  })
+
+  test('keeps catalog lookup scoped by both exam and subject', () => {
+    expect(getLearningCatalog('im', 'missing-subject')).toBeUndefined()
+    expect(getLearningCatalog('cs', 'im-it')).toBeUndefined()
+    expect(getLearningCatalogs()).toEqual([imItLearningCatalog])
+  })
+
+  test('builds subject-relative lesson and practice routes', () => {
+    const lesson = getImItLesson('lesson-im-it-network-models-encapsulation')
+    expect(lesson).toBeDefined()
+    if (!lesson) return
+
+    expect(imItLearningCatalog.lessonBaseHref).toBe('/im/subjects/im-it/lessons')
+    const practiceUrl = new URL(imItLearningCatalog.getPracticeHref(lesson), 'http://localhost')
+    expect(practiceUrl.pathname).toBe(`/im/questions/${lesson.pastPaperRefs[0]}`)
+    expect(practiceUrl.searchParams.get('queue')?.split(',')).toEqual(lesson.pastPaperRefs.slice(1))
+    expect(practiceUrl.searchParams.get('total')).toBe(String(lesson.pastPaperRefs.length))
+    expect(practiceUrl.searchParams.get('returnTo')).toBe(`/im/subjects/im-it/lessons/${lesson.id}`)
+  })
+})

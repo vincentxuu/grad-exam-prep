@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "im-it",
+  "policy": "本站內容是依來源整理的原創摘要，不轉載教材原文；真題來源與答案來源分開標記。",
+  "sources": [
+    {
+      "id": "src-brookshear-13e",
+      "title": "Computer Science: An Overview, 13th Edition",
+      "author": "J. Glenn Brookshear",
+      "type": "book",
+      "url": "https://www.tenlong.com.tw/products/9781292263427",
+      "scope": [
+        "computer-architecture",
+        "operating-systems",
+        "networking",
+        "databases",
+        "artificial-intelligence"
+      ],
+      "usage": "conceptual-summary",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-nthu-network-course",
+      "title": "計算機網路",
+      "author": "黃能富",
+      "publisher": "清華大學開放式課程",
+      "type": "course",
+      "url": "https://www.youtube.com/playlist?list=PLS0SUwlYe8cxktXNovos9xleroaWyb-z5",
+      "scope": ["networking"],
+      "usage": "conceptual-summary",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-jiege-database-course",
+      "title": "資料庫課程",
+      "author": "陳士杰（杰哥數位教室）",
+      "type": "course",
+      "url": "https://www.youtube.com/playlist?list=PLpbuzGqDFzkhHPz11AeGrU7K8AKNqp0fj",
+      "scope": ["databases"],
+      "usage": "conceptual-summary",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-nthu-os-course",
+      "title": "作業系統",
+      "author": "周志遠",
+      "publisher": "清華大學開放式課程",
+      "type": "course",
+      "url": "https://www.youtube.com/playlist?list=PLS0SUwlYe8cxj8FCPRoPHAehIiN9Vo6VZ",
+      "scope": ["operating-systems"],
+      "usage": "conceptual-summary",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-mit-network-computer-security",
+      "title": "Network and Computer Security (6.857)",
+      "author": "Ron Rivest",
+      "publisher": "MIT OpenCourseWare",
+      "type": "course",
+      "url": "https://ocw.mit.edu/courses/6-857-network-and-computer-security-spring-2014/",
+      "scope": ["information-security", "cryptography", "network-security"],
+      "usage": "conceptual-summary",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-nist-cryptographic-standards",
+      "title": "Cryptographic Standards and Guidelines",
+      "author": "National Institute of Standards and Technology",
+      "publisher": "NIST Computer Security Resource Center",
+      "type": "official-guidance",
+      "url": "https://csrc.nist.gov/projects/cryptographic-standards-and-guidelines",
+      "scope": ["information-security", "cryptography"],
+      "usage": "terminology-and-standards-check",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-mit-algorithms-6006",
+      "title": "Introduction to Algorithms (6.006)",
+      "author": "Erik Demaine and Srini Devadas",
+      "publisher": "MIT OpenCourseWare",
+      "type": "course",
+      "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/",
+      "scope": ["algorithms", "data-structures", "complexity-analysis"],
+      "usage": "conceptual-summary-and-worked-examples",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-oracle-oop-concepts",
+      "title": "Object-Oriented Programming Concepts",
+      "author": "Oracle Java Tutorials",
+      "publisher": "Oracle",
+      "type": "documentation",
+      "url": "https://docs.oracle.com/javase/tutorial/java/concepts/",
+      "scope": ["programming-languages", "object-oriented-programming"],
+      "usage": "terminology-and-concept-check",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-ntu-machine-learning-2021",
+      "title": "Machine Learning 2021 Spring",
+      "author": "李宏毅",
+      "publisher": "國立臺灣大學",
+      "type": "course",
+      "url": "https://speech.ee.ntu.edu.tw/~hylee/ml/2021-spring.php",
+      "scope": ["artificial-intelligence", "machine-learning", "model-evaluation"],
+      "usage": "conceptual-summary-and-worked-examples",
+      "status": "reviewed"
+    }
+  ]
+}

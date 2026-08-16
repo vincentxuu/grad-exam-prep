@@ -1,0 +1,1039 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "im-it",
+  "status": "reviewed",
+  "generationPolicy": "只由 reviewed lesson 衍生，保留 sourceRefs 與 pastPaperRefs。",
+  "totalCards": 62,
+  "cards": [
+    {
+      "id": "card-im-it-arch-cpu-organization-01",
+      "lessonId": "lesson-im-it-arch-cpu-organization",
+      "subtopicId": "im-it-arch-cpu-organization",
+      "front": "Von Neumann stored-program 架構的四個功能單元是什麼？",
+      "back": "Processor、memory、input、output；在此模型中，指令與資料共用可定址記憶體。",
+      "explanation": "CPU 內再包含 control unit、ALU 與 registers；不要把次層元件誤列成四大功能單元。",
+      "sourceRefs": [
+        "src-brookshear-13e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-112-1",
+        "q-pp-im-it-113-4"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-arch-cpu-organization-02",
+      "lessonId": "lesson-im-it-arch-cpu-organization",
+      "subtopicId": "im-it-arch-cpu-organization",
+      "front": "BIOS/UEFI、設定儲存區與 OS kernel 的角色如何區分？",
+      "back": "BIOS/UEFI 是開機韌體，負責早期硬體初始化；設定儲存區保存配置；kernel 在後續接手並提供作業系統服務。",
+      "explanation": "三者位於不同啟動階段，不能因都參與開機就視為同一類軟體。",
+      "sourceRefs": [
+        "src-brookshear-13e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-106-13"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-arch-cpu-organization-03",
+      "lessonId": "lesson-im-it-arch-cpu-organization",
+      "subtopicId": "im-it-arch-cpu-organization",
+      "front": "為什麼現代 CPU 規格中的 3 MHz 很可能是單位錯誤？",
+      "back": "現代個人電腦 CPU 時脈通常以 GHz 表示；3 GHz 是 3000 MHz，與 3 MHz 相差 1000 倍。",
+      "explanation": "Clock rate 不是整體效能的唯一指標，但 MHz/GHz 的量級仍可用來排除明顯不合理的規格敘述。",
+      "sourceRefs": [
+        "src-brookshear-13e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-110-1"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-arch-cpu-organization-04",
+      "lessonId": "lesson-im-it-arch-cpu-organization",
+      "subtopicId": "im-it-arch-cpu-organization",
+      "front": "RISC 與 CISC 的典型設計取向有何差異？",
+      "back": "RISC 傾向規則、較簡單且利於 pipeline 的 instructions；CISC 傾向更多或較複雜的 instructions，以較少指令表達工作。",
+      "explanation": "這是取向而非絕對效能結論；實際效能還受 compiler、CPI 與 microarchitecture 影響。",
+      "sourceRefs": [
+        "src-brookshear-13e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-107-16",
+        "q-pp-im-it-112-2"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-arch-cpu-organization-05",
+      "lessonId": "lesson-im-it-arch-cpu-organization",
+      "subtopicId": "im-it-arch-cpu-organization",
+      "front": "什麼是 pipeline data hazard？",
+      "back": "後續指令需要的 operand 尚未由前一指令產生或變得可用，因而需要 forwarding、stall 或重新排程。",
+      "explanation": "典型例子是後一條 instruction 立即讀取前一條尚未寫回的 register。",
+      "sourceRefs": [
+        "src-brookshear-13e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-115-10"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-arch-cpu-organization-06",
+      "lessonId": "lesson-im-it-arch-cpu-organization",
+      "subtopicId": "im-it-arch-cpu-organization",
+      "front": "Amdahl's law 如何表示 n 個 processors 的理想 speedup？",
+      "back": "若不可平行比例為 p，speedup = 1 / (p + (1-p)/n)。",
+      "explanation": "即使 n 持續增加，不可平行部分 p 仍構成上限；n 趨近無限時 speedup 上限為 1/p。",
+      "sourceRefs": [
+        "src-brookshear-13e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-113-8"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-db-relational-model-01",
+      "lessonId": "lesson-im-it-db-relational-model-01",
+      "subtopicId": "im-it-db-relational-model",
+      "front": "relation schema 與 relation instance 有何差別？",
+      "back": "Schema 是欄位、domain 與限制所構成的邏輯結構；instance 是某一時刻實際存在的 tuples。",
+      "explanation": "Schema 通常較穩定，instance 會隨 INSERT、UPDATE、DELETE 改變。考題問 logical structure 時應答 schema。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-jiege-database-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-106-1",
+        "q-pp-im-it-112-21"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-db-relational-model-02",
+      "lessonId": "lesson-im-it-db-relational-model-01",
+      "subtopicId": "im-it-db-relational-model",
+      "front": "superkey 與 candidate key 的關鍵差異是什麼？",
+      "back": "兩者都能唯一識別 tuple；candidate key 還必須具有最小性，移除任何欄位後就不再唯一。",
+      "explanation": "含多餘欄位的唯一集合仍是 superkey，但不是 candidate key。Primary key 是設計者選定的一個 candidate key。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-jiege-database-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-106-2",
+        "q-pp-im-it-114-18"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-db-relational-model-03",
+      "lessonId": "lesson-im-it-db-relational-model-01",
+      "subtopicId": "im-it-db-relational-model",
+      "front": "foreign key 一定不能是 NULL 嗎？",
+      "back": "不一定。若欄位沒有 NOT NULL 限制，foreign key 通常可以是 NULL；非 NULL 值則必須對應被參照鍵。",
+      "explanation": "Foreign key 管的是參照完整性，不等於 NOT NULL。Primary key 才必然不可為 NULL。",
+      "sourceRefs": [
+        "src-jiege-database-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-106-4"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-db-relational-model-04",
+      "lessonId": "lesson-im-it-db-relational-model-01",
+      "subtopicId": "im-it-db-relational-model",
+      "front": "entity integrity 與 referential integrity 各限制什麼？",
+      "back": "Entity integrity 要求 primary key 唯一且非 NULL；referential integrity 要求外鍵值對應到被參照鍵，或在允許時為 NULL。",
+      "explanation": "前者確保本表每列可識別，後者確保跨表關係不指向不存在的資料。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-jiege-database-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-106-2",
+        "q-pp-im-it-107-3"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-db-relational-model-05",
+      "lessonId": "lesson-im-it-db-relational-model-01",
+      "subtopicId": "im-it-db-relational-model",
+      "front": "database schema 與 data dictionary 是同一件事嗎？",
+      "back": "不是。Schema 是資料庫的邏輯結構；data dictionary 是儲存 schema、欄位與限制等 metadata 的目錄。",
+      "explanation": "可以把 schema 想成設計規格，把 data dictionary 想成保存與查詢這份規格的系統表。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-jiege-database-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-110-23"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-db-relational-model-06",
+      "lessonId": "lesson-im-it-db-relational-model-01",
+      "subtopicId": "im-it-db-relational-model",
+      "front": "請列舉 DBMS 相較一般檔案系統的三項常見優勢。",
+      "back": "集中管理限制以維持完整性、減少冗餘與更新異常、提供有效率且具 data independence 的存取。",
+      "explanation": "另外還有權限、並行控制與故障復原；但 data independence 不代表 schema 可任意改動而不影響程式。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-jiege-database-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-110-23"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-db-transactions-01",
+      "lessonId": "lesson-im-it-db-transactions-01",
+      "subtopicId": "im-it-db-transactions",
+      "front": "ACID 四個字母分別代表什麼？",
+      "back": "Atomicity、Consistency、Isolation、Durability。",
+      "explanation": "常見陷阱是把 A 誤寫成 Availability、把 I 誤寫成 Integrity；這兩個都不屬於 ACID 的正式展開。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-jiege-database-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-110-25",
+        "q-pp-im-it-111-13",
+        "q-pp-im-it-113-18"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-db-transactions-02",
+      "lessonId": "lesson-im-it-db-transactions-01",
+      "subtopicId": "im-it-db-transactions",
+      "front": "Atomicity 與 Durability 在故障復原時如何區分？",
+      "back": "Atomicity 要撤回未提交交易的部分結果；Durability 要保住或重做已提交交易的結果。",
+      "explanation": "典型復原中，未提交交易需要 UNDO，已提交但資料頁尚未落盤的交易需要 REDO。",
+      "sourceRefs": [
+        "src-jiege-database-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-107-24",
+        "q-pp-im-it-114-17"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-db-transactions-03",
+      "lessonId": "lesson-im-it-db-transactions-01",
+      "subtopicId": "im-it-db-transactions",
+      "front": "serial schedule 與 serializable schedule 有何差異？",
+      "back": "Serial schedule 完全不交錯；serializable schedule 可以交錯，但結果必須等價於某個 serial order。",
+      "explanation": "隔離控制不一定禁止並行，而是讓並行結果保有可接受的循序語意。",
+      "sourceRefs": [
+        "src-jiege-database-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-107-7",
+        "q-pp-im-it-115-17"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-db-transactions-04",
+      "lessonId": "lesson-im-it-db-transactions-01",
+      "subtopicId": "im-it-db-transactions",
+      "front": "lost update 是怎麼發生的？",
+      "back": "兩個交易讀到同一舊值，各自計算後寫回；後寫者覆蓋先寫者的修改。",
+      "explanation": "可用 exclusive lock、serializable isolation，或 optimistic version check 阻止未察覺的覆蓋。",
+      "sourceRefs": [
+        "src-jiege-database-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-107-7"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-db-transactions-05",
+      "lessonId": "lesson-im-it-db-transactions-01",
+      "subtopicId": "im-it-db-transactions",
+      "front": "two-phase locking 為何仍可能 deadlock？",
+      "back": "2PL 限制取得與釋放鎖的階段，可保證 conflict serializability；但不同交易仍可能各持有一把鎖並互等對方的鎖。",
+      "explanation": "Serializability 與 deadlock freedom 是不同性質。Deadlock 需靠等待圖偵測、timeout、預防或 victim rollback 處理。",
+      "sourceRefs": [
+        "src-jiege-database-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-107-7",
+        "q-pp-im-it-115-20"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-db-transactions-06",
+      "lessonId": "lesson-im-it-db-transactions-01",
+      "subtopicId": "im-it-db-transactions",
+      "front": "Write-Ahead Logging 的最重要順序規則是什麼？",
+      "back": "修改過的資料頁寫入持久儲存前，描述該修改的 log record 必須先持久化。",
+      "explanation": "如此故障後才有足夠資訊做 UNDO 或 REDO。Checkpoint 只縮短復原範圍，不等於完整備份。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-jiege-database-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-111-15",
+        "q-pp-im-it-114-17",
+        "q-pp-im-it-115-20"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-network-application-protocols-01",
+      "lessonId": "lesson-im-it-network-application-protocols",
+      "subtopicId": "im-it-network-application-protocols",
+      "front": "DNS 與 DHCP 的任務有何不同？",
+      "back": "DNS 解析名稱與資源紀錄；DHCP 為主機自動配置 IP、subnet、gateway、DNS server 等網路參數。",
+      "explanation": "先有可用的網路設定，才方便向 DNS 發出名稱查詢。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-network-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-109-10",
+        "q-pp-im-it-111-4",
+        "q-pp-im-it-113-12"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-network-application-protocols-02",
+      "lessonId": "lesson-im-it-network-application-protocols",
+      "subtopicId": "im-it-network-application-protocols",
+      "front": "Cookie 與 browser cache 的目的有何不同？",
+      "back": "Cookie 攜帶網站狀態或識別資訊；cache 保存資源副本以減少重新傳輸、加快載入。",
+      "explanation": "兩者都可能位於使用者端，但 Cookie 重點是狀態，cache 重點是效能。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-network-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-108-2",
+        "q-pp-im-it-110-18",
+        "q-pp-im-it-113-11"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-network-application-protocols-03",
+      "lessonId": "lesson-im-it-network-application-protocols",
+      "subtopicId": "im-it-network-application-protocols",
+      "front": "SMTP、IMAP、POP3 分別用在哪裡？",
+      "back": "SMTP 用於提交與轉送郵件；IMAP 以伺服器為中心同步信箱；POP3 偏向下載郵件到 client。",
+      "explanation": "快速口訣：SMTP 送，IMAP 同步，POP3 下載。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-network-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-111-2"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-network-application-protocols-04",
+      "lessonId": "lesson-im-it-network-application-protocols",
+      "subtopicId": "im-it-network-application-protocols",
+      "front": "Forward proxy 與 reverse proxy 各代表哪一方？",
+      "back": "Forward proxy 代表 clients 對外取資源；reverse proxy 代表 servers 接收外部請求。",
+      "explanation": "判斷代理方向時，問『代理的是誰』：使用者端還是 origin server。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-network-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-109-9",
+        "q-pp-im-it-113-13"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-network-application-protocols-05",
+      "lessonId": "lesson-im-it-network-application-protocols",
+      "subtopicId": "im-it-network-application-protocols",
+      "front": "CDN edge 在 cache hit 與 miss 時各做什麼？",
+      "back": "Hit 時直接由 edge 回應；miss 時向 origin 取回內容，再依政策快取並回應。",
+      "explanation": "CDN 把可快取內容移近使用者，降低延遲與 origin 負載。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-network-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-110-19"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-network-application-protocols-06",
+      "lessonId": "lesson-im-it-network-application-protocols",
+      "subtopicId": "im-it-network-application-protocols",
+      "front": "LDAP 與 DNS 都能『查詢名稱』，差別在哪裡？",
+      "back": "DNS 查詢網域名稱相關紀錄；LDAP 查詢階層式 directory 中的組織、人員、帳號或資源屬性。",
+      "explanation": "DNS 核心是 Internet naming；LDAP 核心是通用目錄資訊與身分資料。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-network-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-108-13",
+        "q-pp-im-it-114-23"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-network-link-lan-01",
+      "lessonId": "lesson-im-it-network-link-lan-01",
+      "subtopicId": "im-it-network-link-lan",
+      "front": "同一 IPv4 LAN 中，IP、MAC 與 ARP 各做什麼？",
+      "back": "IP 識別網路層目的地；MAC 識別當前鏈路上的介面；ARP 把同鏈路下一跳 IPv4 位址解析成 MAC。",
+      "explanation": "若目的地不在本 subnet，ARP 查的是 default gateway 的 MAC，而非遠端主機的 MAC。IPv6 的對應功能由 Neighbor Discovery 提供。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-network-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-111-7"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-network-link-lan-02",
+      "lessonId": "lesson-im-it-network-link-lan-01",
+      "subtopicId": "im-it-network-link-lan",
+      "front": "Shared Ethernet 與 switched full-duplex Ethernet 的碰撞行為有何不同？",
+      "back": "Shared half-duplex Ethernet 的節點共用 collision domain，可能碰撞；switched full-duplex link 是 point-to-point，可同時收送，正常情況沒有共享媒體碰撞。",
+      "explanation": "CSMA/CD 與 exponential backoff 屬於傳統 shared/half-duplex Ethernet 情境，不應套用到一般 full-duplex switch port。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-network-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-112-14"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-network-link-lan-03",
+      "lessonId": "lesson-im-it-network-link-lan-01",
+      "subtopicId": "im-it-network-link-lan",
+      "front": "CSMA/CD 與 CSMA/CA 的核心差別是什麼？",
+      "back": "CSMA/CD 在 shared Ethernet 傳送時偵測碰撞；CSMA/CA 在 Wi-Fi 傳送前以感測、等待與隨機 backoff 降低碰撞機率。",
+      "explanation": "無線節點難以一邊傳送一邊可靠聽出碰撞，因此採 avoidance；RTS/CTS 可協助處理 hidden-node 等情境，但不是每次都使用。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-network-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-111-9",
+        "q-pp-im-it-112-14"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-network-link-lan-04",
+      "lessonId": "lesson-im-it-network-link-lan-01",
+      "subtopicId": "im-it-network-link-lan",
+      "front": "Sliding window 為何比每送一個 frame 就停等更有效率？",
+      "back": "它允許多個尚未確認的 frames 同時在途，減少等待 ACK 期間的鏈路閒置，並以 window、序號與重傳維持可靠有序傳送。",
+      "explanation": "Window 大小限制未確認資料量；收到 ACK 後視窗向前滑動。它解決可靠/流量控制，與媒體存取方法不是同一問題。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-network-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-111-3"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-network-link-lan-05",
+      "lessonId": "lesson-im-it-network-link-lan-01",
+      "subtopicId": "im-it-network-link-lan",
+      "front": "VLAN tag 如何讓同一套實體 switch 網路形成多個邏輯 LAN？",
+      "back": "IEEE 802.1Q tag 標示 frame 所屬 VLAN；switch 依 VLAN 分開轉送與 flooding，使各 VLAN 成為獨立 broadcast domain。",
+      "explanation": "Trunk 可承載多個 tagged VLAN；跨 VLAN 通訊仍需 router 或 layer-3 switch。VLAN 提供邏輯分段，不等同加密 VPN。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-network-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-112-15"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-network-link-lan-06",
+      "lessonId": "lesson-im-it-network-link-lan-01",
+      "subtopicId": "im-it-network-link-lan",
+      "front": "Wi-Fi、Bluetooth、NFC、RFID 與 5G 的主要作用範圍如何區分？",
+      "back": "Wi-Fi 是 WLAN 存取；Bluetooth 是短距離 PAN；NFC 是數公分近場互動；RFID 以 tag/reader 做識別追蹤且距離依系統而變；5G 是電信商的廣域 cellular access。",
+      "explanation": "不要只用『都是無線』分類。應先問需求是網路存取、個人裝置連線、貼近互動、物件識別，還是廣域行動連線；5G 峰值也不是個別使用者的保證 throughput。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-network-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-109-8",
+        "q-pp-im-it-110-9",
+        "q-pp-im-it-111-7"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-network-models-encapsulation-01",
+      "lessonId": "lesson-im-it-network-models-encapsulation",
+      "subtopicId": "im-it-network-models-encapsulation",
+      "front": "OSI 第 3、4 層各自主要解決什麼問題？",
+      "back": "第 3 層網路層負責 IP 定址與跨網路路由；第 4 層傳輸層負責端點到端點傳輸，並以 port 對應應用程序。",
+      "explanation": "判斷關鍵是作用範圍：IP 找到跨網路的主機，port 找到主機內的程序。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-network-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-106-20",
+        "q-pp-im-it-107-8",
+        "q-pp-im-it-111-1"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-network-models-encapsulation-02",
+      "lessonId": "lesson-im-it-network-models-encapsulation",
+      "subtopicId": "im-it-network-models-encapsulation",
+      "front": "送端封裝時，message、segment、packet、frame 的順序為何？",
+      "back": "message/data → segment（或 transport datagram）→ packet → frame。",
+      "explanation": "資料由應用層往下傳，每一層加入自己的控制資訊；收端反向解封裝。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-network-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-108-4",
+        "q-pp-im-it-111-1"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-network-models-encapsulation-03",
+      "lessonId": "lesson-im-it-network-models-encapsulation",
+      "subtopicId": "im-it-network-models-encapsulation",
+      "front": "MAC、IP、port 分別識別什麼？",
+      "back": "MAC 識別當前鏈路上的介面；IP 識別可路由的主機／介面；port 識別主機上的應用端點。",
+      "explanation": "三者分屬資料鏈結、網路、傳輸層，範圍從單一鏈路擴展到跨網路，再縮小到主機內程序。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-network-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-108-3",
+        "q-pp-im-it-109-11"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-network-models-encapsulation-04",
+      "lessonId": "lesson-im-it-network-models-encapsulation",
+      "subtopicId": "im-it-network-models-encapsulation",
+      "front": "IPv4 與 IPv6 的位址長度及理論位址數各是多少？",
+      "back": "IPv4：32 bits、2^32；IPv6：128 bits、2^128。",
+      "explanation": "n 個 bit 各有兩種狀態，因此組合數是 2^n。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-network-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-108-3",
+        "q-pp-im-it-109-11"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-network-models-encapsulation-05",
+      "lessonId": "lesson-im-it-network-models-encapsulation",
+      "subtopicId": "im-it-network-models-encapsulation",
+      "front": "Switch、router、gateway 的主要差異是什麼？",
+      "back": "Switch 主要在 LAN 內依 MAC 轉送 frame；router 依 IP 連接不同網路；gateway 是更廣義的跨網路或跨協定入口。",
+      "explanation": "實體設備可能兼具功能，考題通常依其主要轉送依據與連接範圍分類。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-network-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-109-12",
+        "q-pp-im-it-110-7"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-network-models-encapsulation-06",
+      "lessonId": "lesson-im-it-network-models-encapsulation",
+      "subtopicId": "im-it-network-models-encapsulation",
+      "front": "Client-server 是哪一個 OSI 層？",
+      "back": "它不是固定的一個 OSI 層，而是服務請求者與提供者之間的角色／架構關係。",
+      "explanation": "HTTP、郵件、RPC、網路列印都可採 client-server，但各自還會使用多層協定。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-network-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-108-20"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-os-file-storage-io-01",
+      "lessonId": "lesson-im-it-os-file-storage-io",
+      "subtopicId": "im-it-os-file-storage-io",
+      "front": "File system 與 operating system 有何差別？",
+      "back": "File system 是命名、metadata 與儲存配置的資料組織規則；operating system 是管理 CPU、memory、I/O 等資源的整體系統。",
+      "explanation": "NTFS、exFAT、APFS、ext3 是 file systems；MS-DOS 是 operating system。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-os-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-107-14",
+        "q-pp-im-it-113-1"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-os-file-storage-io-02",
+      "lessonId": "lesson-im-it-os-file-storage-io",
+      "subtopicId": "im-it-os-file-storage-io",
+      "front": "Unix-like file system 的 inode 主要保存什麼？",
+      "back": "檔案類型、權限、owner、size、timestamps，以及定位 data blocks 所需的資訊。",
+      "explanation": "檔名通常位於 directory entry；實際檔案 bytes 位於 data blocks。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-os-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-114-7"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-os-file-storage-io-03",
+      "lessonId": "lesson-im-it-os-file-storage-io",
+      "subtopicId": "im-it-os-file-storage-io",
+      "front": "Device driver 與 firmware 的角色如何區分？",
+      "back": "Driver 在 OS 軟體堆疊中把通用 I/O request 轉成裝置操作；firmware 通常在裝置或平台環境中直接控制較底層硬體。",
+      "explanation": "Driver 需符合裝置與 OS 介面，因此常同時具有 hardware-dependent 與 OS-specific 特性。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-os-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-107-15"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-os-file-storage-io-04",
+      "lessonId": "lesson-im-it-os-file-storage-io",
+      "subtopicId": "im-it-os-file-storage-io",
+      "front": "Buffering 與 spooling 的核心差異是什麼？",
+      "back": "Buffering 暫存進行中的資料流以吸收速度／單位差；spooling 將完整 jobs 排隊，交由慢速或獨占裝置稍後處理。",
+      "explanation": "音訊串流常用 buffer；列印工作 queue 是典型 spool。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-os-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-111-20",
+        "q-pp-im-it-113-10"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-os-file-storage-io-05",
+      "lessonId": "lesson-im-it-os-file-storage-io",
+      "subtopicId": "im-it-os-file-storage-io",
+      "front": "Dynamic linker 在 executable 啟動時做什麼？",
+      "back": "找到並映射所需 shared libraries，解析 symbols，並處理必要 relocations，使程式能呼叫 library code。",
+      "explanation": "它在 runtime 連結相依元件，不是 assembler 或 source-code generator。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-os-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-111-22"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-os-file-storage-io-06",
+      "lessonId": "lesson-im-it-os-file-storage-io",
+      "subtopicId": "im-it-os-file-storage-io",
+      "front": "哪些 storage-management 工作通常屬於 OS 核心責任？",
+      "back": "Files/directories 的建立刪除與操作 primitives、空間管理、disk scheduling，以及備份到 stable storage；file integrity check 不在典型責任清單。",
+      "explanation": "這是標準教材式的責任分類；實際系統仍可能由不同 utilities、services 或管理政策執行具體備份工作。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-os-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-112-11"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-os-processes-threads-01",
+      "lessonId": "lesson-im-it-os-processes-threads",
+      "subtopicId": "im-it-os-processes-threads",
+      "front": "program 與 process 有什麼差別？",
+      "back": "program 是靜態的指令與資料；process 是 program 的一次執行實例，具有執行狀態、位址空間與作業系統管理的資源。",
+      "explanation": "同一 program 可以同時啟動多個 processes，各自有不同 PID 與執行狀態。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-os-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-111-16",
+        "q-pp-im-it-113-2"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-os-processes-threads-02",
+      "lessonId": "lesson-im-it-os-processes-threads",
+      "subtopicId": "im-it-os-processes-threads",
+      "front": "同一 process 的 threads 共享與不共享哪些重要狀態？",
+      "back": "通常共享 code、heap 與開啟的 process resources；每個 thread 各有 stack、program counter 與 register state。",
+      "explanation": "共享降低溝通成本，獨立 execution state 則讓每條 thread 能在不同位置執行。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-os-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-111-16",
+        "q-pp-im-it-113-3"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-os-processes-threads-03",
+      "lessonId": "lesson-im-it-os-processes-threads",
+      "subtopicId": "im-it-os-processes-threads",
+      "front": "為什麼 threads 通常比 processes lightweight？",
+      "back": "threads 共用所屬 process 的位址空間與多數資源，建立、溝通與切換通常不需配置或更換完整 process context。",
+      "explanation": "較低成本不代表沒有成本，也不代表共享資料天然安全。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-os-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-111-16",
+        "q-pp-im-it-113-3"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-os-processes-threads-04",
+      "lessonId": "lesson-im-it-os-processes-threads",
+      "subtopicId": "im-it-os-processes-threads",
+      "front": "不同 processes 如何交換資料？",
+      "back": "透過作業系統提供或協調的 IPC，例如 pipe、message queue、socket，或明確建立的 shared memory。",
+      "explanation": "process isolation 是預設保護邊界；IPC 是有控制地跨越邊界。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-os-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-113-2",
+        "q-pp-im-it-112-10"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-os-processes-threads-05",
+      "lessonId": "lesson-im-it-os-processes-threads",
+      "subtopicId": "im-it-os-processes-threads",
+      "front": "user mode 與 kernel mode 的核心差異是什麼？",
+      "back": "user mode 權限受限，不能直接操作受保護硬體與 kernel memory；kernel mode 可執行特權操作並管理系統資源。",
+      "explanation": "應用程式以 system call 請求核心代為執行受保護服務。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-os-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-112-8",
+        "q-pp-im-it-108-5"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-os-processes-threads-06",
+      "lessonId": "lesson-im-it-os-processes-threads",
+      "subtopicId": "im-it-os-processes-threads",
+      "front": "system call 一定會造成 process/thread context switch 嗎？",
+      "back": "不一定。system call 一定涉及進入 kernel 的控制轉移，但若完成後仍回到同一 thread，可能只有 mode switch，沒有換 execution context。",
+      "explanation": "只有排程到另一個 thread/process 時，才需保存目前狀態並恢復另一個狀態。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-os-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-112-8",
+        "q-pp-im-it-115-9"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-os-processes-threads-07",
+      "lessonId": "lesson-im-it-os-processes-threads",
+      "subtopicId": "im-it-os-processes-threads",
+      "front": "context switch 的核心動作是什麼？",
+      "back": "保存目前 process/thread 的 execution state，並恢復下一個 process/thread 的 execution state。",
+      "explanation": "典型狀態包含 program counter、stack pointer 與 registers；process switch 可能還要更換位址空間。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-os-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-115-9",
+        "q-pp-im-it-111-16"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-os-processes-threads-08",
+      "lessonId": "lesson-im-it-os-processes-threads",
+      "subtopicId": "im-it-os-processes-threads",
+      "front": "作業系統在 process management 中通常負責哪些工作？",
+      "back": "建立與刪除、暫停與恢復、同步與溝通 processes，並協助處理 deadlock 與資源分配。",
+      "explanation": "題目若列出這些職責，通常都屬於作業系統的 process management 範圍。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-os-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-112-6",
+        "q-pp-im-it-112-10",
+        "q-pp-im-it-108-5"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-os-virtualization-containers-01",
+      "lessonId": "lesson-im-it-os-virtualization-containers-01",
+      "subtopicId": "im-it-os-virtualization-containers",
+      "front": "Virtualization 的核心概念是什麼？",
+      "back": "以軟體建立硬體平台、storage 或 network resources 的虛擬版本，讓實體資源能被抽象、分割或組合。",
+      "explanation": "VM 只是 virtualization 的一種；virtual storage 與 virtual network 也屬於相同抽象思路。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-os-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-107-17",
+        "q-pp-im-it-111-5"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-os-virtualization-containers-02",
+      "lessonId": "lesson-im-it-os-virtualization-containers-01",
+      "subtopicId": "im-it-os-virtualization-containers",
+      "front": "Hypervisor 在 VM 架構中負責什麼？",
+      "back": "建立並執行 VMs，將實體 CPU、memory、storage 與 devices 仲裁、映射給各 guest。",
+      "explanation": "Type 1 直接控制硬體；Type 2 位於 host OS 之上。兩者都讓 guest 看見 virtual hardware。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-os-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-111-6",
+        "q-pp-im-it-111-5"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-os-virtualization-containers-03",
+      "lessonId": "lesson-im-it-os-virtualization-containers-01",
+      "subtopicId": "im-it-os-virtualization-containers",
+      "front": "Container 為何通常比 VM 輕量？",
+      "back": "Containers 共享 host OS kernel，不必為每個 instance 啟動完整 guest OS，因此通常啟動較快、額外資源占用較少。",
+      "explanation": "共享 kernel 不代表零 overhead 或零風險；container 仍需要 isolation、resource limits 與安全設定。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-os-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-115-23",
+        "q-pp-im-it-111-6"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-os-virtualization-containers-04",
+      "lessonId": "lesson-im-it-os-virtualization-containers-01",
+      "subtopicId": "im-it-os-virtualization-containers",
+      "front": "需要在同一 host 執行不同 kernels 時，應優先考慮 VM 還是一般 container？",
+      "back": "VM。每個 VM 可執行自己的 guest OS 與 kernel；一般 container 依賴並共享 host kernel。",
+      "explanation": "Containers 可以部署在 VMs 裡，因此兩者可以組合，不是只能二選一。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-os-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-111-6",
+        "q-pp-im-it-115-23"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-os-virtualization-containers-05",
+      "lessonId": "lesson-im-it-os-virtualization-containers-01",
+      "subtopicId": "im-it-os-virtualization-containers",
+      "front": "Cluster 能提高 fault tolerance，是否也會自動防止 security attacks？",
+      "back": "不會。備援與 failover 改善 availability；漏洞、憑證外洩與錯誤設定仍需獨立安全控制。",
+      "explanation": "多節點甚至可能複製同一漏洞。Clustering、virtualization 與 security controls 解決的是不同問題。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-os-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-112-9",
+        "q-pp-im-it-111-5"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-os-virtualization-containers-06",
+      "lessonId": "lesson-im-it-os-virtualization-containers-01",
+      "subtopicId": "im-it-os-virtualization-containers",
+      "front": "Serverless computing 的 defining characteristic 是什麼？",
+      "back": "Cloud provider 動態管理執行資源與擴縮，使用者通常按實際執行所消耗的資源計費，而非自行預先配置固定 server capacity。",
+      "explanation": "背後仍有 servers；serverless 表示 infrastructure management 被平台抽象化，不表示容量、延遲或狀態限制消失。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-os-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-115-29"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-security-cryptography-01",
+      "lessonId": "lesson-im-it-security-cryptography-01",
+      "subtopicId": "im-it-security-cryptography",
+      "front": "AES 與 RSA 最核心的差別是什麼？",
+      "back": "AES 是使用共享秘密金鑰的對稱式加密；RSA 使用 public/private key pair，屬非對稱式密碼。",
+      "explanation": "大型資料通常用 AES 等對稱式演算法處理；公開金鑰機制常用來保護 session key 或產生／驗證簽章。",
+      "sourceRefs": [
+        "src-mit-network-computer-security",
+        "src-nist-cryptographic-standards"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-107-21",
+        "q-pp-im-it-111-12"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-security-cryptography-02",
+      "lessonId": "lesson-im-it-security-cryptography-01",
+      "subtopicId": "im-it-security-cryptography",
+      "front": "為什麼不直接用 RSA 加密大型檔案？",
+      "back": "RSA 運算成本高，且可安全處理的訊息長度受 modulus 與 padding 限制；實務用它保護短 session key，再以對稱加密處理資料。",
+      "explanation": "這種混合式設計結合公開金鑰的 key establishment 與對稱式加密的效率。",
+      "sourceRefs": [
+        "src-mit-network-computer-security",
+        "src-nist-cryptographic-standards"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-111-12",
+        "q-pp-im-it-107-21"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-security-cryptography-03",
+      "lessonId": "lesson-im-it-security-cryptography-01",
+      "subtopicId": "im-it-security-cryptography",
+      "front": "Digital certificate 主要把哪兩件事綁在一起？",
+      "back": "把 subject 的身分或名稱與其 public key 建立可驗證的綁定，並由 issuer 簽章。",
+      "explanation": "憑證不包含 subject private key；驗證者還要檢查信任鏈、名稱、有效期間與用途等條件。",
+      "sourceRefs": [
+        "src-mit-network-computer-security",
+        "src-nist-cryptographic-standards"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-110-17",
+        "q-pp-im-it-107-11"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-security-cryptography-04",
+      "lessonId": "lesson-im-it-security-cryptography-01",
+      "subtopicId": "im-it-security-cryptography",
+      "front": "PKI 中 CA 與 RA 的角色有何不同？",
+      "back": "RA 協助核驗與註冊申請者；CA 簽發並以私鑰簽署 digital certificate。",
+      "explanation": "實際組織可能合併職能，但概念題不能把 registration authority 說成必然負責簽發與簽章。",
+      "sourceRefs": [
+        "src-mit-network-computer-security",
+        "src-nist-cryptographic-standards"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-113-16",
+        "q-pp-im-it-107-11"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-security-cryptography-05",
+      "lessonId": "lesson-im-it-security-cryptography-01",
+      "subtopicId": "im-it-security-cryptography",
+      "front": "Certificate serial number 與撤銷有什麼關係？",
+      "back": "Serial number 在 issuer 範圍內唯一識別憑證；CRL 或 OCSP 可用 issuer 與 serial number 指定被撤銷或查詢的憑證。",
+      "explanation": "Serial number 的基本功能是唯一識別，不是把完整 revocation record 存在憑證裡。",
+      "sourceRefs": [
+        "src-mit-network-computer-security",
+        "src-nist-cryptographic-standards"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-107-11",
+        "q-pp-im-it-110-17"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-security-cryptography-06",
+      "lessonId": "lesson-im-it-security-cryptography-01",
+      "subtopicId": "im-it-security-cryptography",
+      "front": "HTTPS 是否在技術上必須使用公開第三方 CA 簽發的 server certificate？",
+      "back": "不必然。公開網站通常依賴受信 CA，但 TLS 也能使用 private CA 或由 client 預先信任的 self-signed certificate。",
+      "explanation": "關鍵是 client 能建立信任並驗證 server 持有對應 private key；mTLS 還會反向驗證 client certificate。",
+      "sourceRefs": [
+        "src-mit-network-computer-security",
+        "src-nist-cryptographic-standards"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-113-17",
+        "q-pp-im-it-113-16"
+      ],
+      "reviewStatus": "reviewed"
+    }
+  ]
+}
