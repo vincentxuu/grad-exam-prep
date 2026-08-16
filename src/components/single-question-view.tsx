@@ -14,6 +14,7 @@ import { useWordLookup } from '@/hooks/use-word-lookup'
 import { getAnswer } from '@/lib/answers'
 import { getPaperUrl } from '@/lib/content'
 import { getImItPracticeStatus } from '@/lib/im-it-practice-status'
+import { type DrillSearchParams, getDrillNavigation } from '@/lib/question-drill'
 import { getQuestionImages } from '@/lib/question-images'
 import { parseQuestion } from '@/lib/question-parser'
 import { getQuestionPracticePolicy } from '@/lib/question-practice-policy'
@@ -26,9 +27,16 @@ interface SingleQuestionViewProps {
   question: Question
   mode: string
   next?: string
+  drillSearchParams?: DrillSearchParams
 }
 
-export function SingleQuestionView({ exam, question, mode, next }: SingleQuestionViewProps) {
+export function SingleQuestionView({
+  exam,
+  question,
+  mode,
+  next,
+  drillSearchParams,
+}: SingleQuestionViewProps) {
   const router = useRouter()
   const parsed = parseQuestion(question.text)
   const answerData = getAnswer(question.id)
@@ -41,6 +49,8 @@ export function SingleQuestionView({ exam, question, mode, next }: SingleQuestio
   const canAutoGrade = practicePolicy.gradingMode === 'auto'
   const questionImages = question.hasImage ? getQuestionImages(question.id) : []
   const paperUrl = getPaperUrl(question.paperId)
+  const drillNavigation = getDrillNavigation(exam, drillSearchParams ?? { mode, next })
+  const returnsToLesson = drillNavigation.completionHref !== `/${exam}/questions`
 
   const [selected, setSelected] = useState<string | null>(null)
   const [revealed, setRevealed] = useState(false)
@@ -63,11 +73,7 @@ export function SingleQuestionView({ exam, question, mode, next }: SingleQuestio
       }),
     })
     setSubmitting(false)
-    if (next) {
-      router.push(`/${exam}/questions/${next}?mode=${mode}`)
-    } else {
-      router.push(`/${exam}/questions`)
-    }
+    router.push(drillNavigation.nextHref ?? drillNavigation.completionHref)
   }
 
   const isCorrect =
@@ -79,13 +85,18 @@ export function SingleQuestionView({ exam, question, mode, next }: SingleQuestio
         <Badge variant="outline">{question.year}年</Badge>
         <span className="text-xs text-muted-foreground">第 {question.number} 題</span>
         {question.points != null && <Badge variant="secondary">{question.points} 分</Badge>}
+        {drillNavigation.currentPosition && drillNavigation.totalQuestions ? (
+          <Badge variant="secondary">
+            本課 {drillNavigation.currentPosition}/{drillNavigation.totalQuestions}
+          </Badge>
+        ) : null}
         <Button
           variant="ghost"
           size="sm"
           className="ml-auto text-xs text-muted-foreground h-7"
-          onClick={() => router.push(`/${exam}/questions`)}
+          onClick={() => router.push(drillNavigation.completionHref)}
         >
-          ← 返回題庫
+          ← {returnsToLesson ? '返回課程' : '返回題庫'}
         </Button>
       </div>
 
@@ -297,6 +308,16 @@ export function SingleQuestionView({ exam, question, mode, next }: SingleQuestio
           </Button>
         </div>
       )}
+
+      {revealed && practicePolicy.gradingMode === 'read_only' ? (
+        <Button
+          className="w-full"
+          size="lg"
+          onClick={() => router.push(drillNavigation.nextHref ?? drillNavigation.completionHref)}
+        >
+          {drillNavigation.nextHref ? '下一題 →' : returnsToLesson ? '返回課程' : '返回題庫'}
+        </Button>
+      ) : null}
     </div>
   )
 }

@@ -13,16 +13,14 @@ function jsonResponse(body: unknown, ok = true, status = 200) {
 }
 
 describe('providerEndpoint', () => {
-  it('每一家都給得出 baseUrl', () => {
-    const env: LlmEnv = { CLOUDFLARE_ACCOUNT_ID: 'acct' }
-    for (const p of PROVIDER_CATALOG) {
-      expect(providerEndpoint(env, p.id).baseUrl).toMatch(/^https?:\/\//)
+  it('需要 REST 的每一家都給得出 baseUrl', () => {
+    for (const p of PROVIDER_CATALOG.filter((provider) => provider.id !== 'cloudflare')) {
+      expect(providerEndpoint({}, p.id).baseUrl).toMatch(/^https?:\/\//)
     }
   })
 
-  it('cloudflare 的路徑帶帳號', () => {
-    const { baseUrl } = providerEndpoint({ CLOUDFLARE_ACCOUNT_ID: 'abc123' }, 'cloudflare')
-    expect(baseUrl).toContain('/accounts/abc123/ai/v1')
+  it('cloudflare 明確拒絕 REST endpoint，避免繞過 binding', () => {
+    expect(() => providerEndpoint({}, 'cloudflare')).toThrow('AI binding')
   })
 
   it('ollama 吃得到自訂端點', () => {
@@ -94,5 +92,20 @@ describe('listModels', () => {
 
     expect(result.source).toBe('fallback')
     expect(result.note).toBe('boom')
+  })
+
+  it('cloudflare 直接從 binding 取得文字生成模型', async () => {
+    const models = jest.fn().mockResolvedValue([
+      { id: '@cf/z', task: { id: 'text-generation', name: 'Text Generation' } },
+      { id: '@cf/embed', task: { id: 'embeddings', name: 'Embeddings' } },
+      { id: '@cf/a', task: { id: 'text-generation', name: 'Text Generation' } },
+      { id: '@cf/a', task: { id: 'text-generation', name: 'Text Generation' } },
+    ])
+    const env = { AI: { models } as unknown as Ai }
+
+    const result = await listModels(env, 'cloudflare', FALLBACK)
+
+    expect(models).toHaveBeenCalledWith()
+    expect(result).toEqual({ models: ['@cf/a', '@cf/z'], source: 'live' })
   })
 })

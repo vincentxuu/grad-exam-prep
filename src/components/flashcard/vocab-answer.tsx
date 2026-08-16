@@ -55,6 +55,10 @@ function parseVocabAnswer(answer: string): ParsedAnswer {
   return result
 }
 
+export function hasVocabExample(answer: string): boolean {
+  return parseVocabAnswer(answer).example !== null
+}
+
 export function VocabAnswer({ cardId, answer, speak, speakingId }: VocabAnswerProps) {
   const parsed = parseVocabAnswer(answer)
   const hasStructure = parsed.chinese || parsed.example || parsed.synonyms || parsed.antonyms

@@ -1,6 +1,7 @@
 'use client'
 
 import { X } from 'lucide-react'
+import Link from 'next/link'
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -49,6 +50,13 @@ export function PersonaForm({ persona, onChange }: Props) {
         <h2 className="text-sm font-medium">個人化情境</h2>
         <p className="text-xs text-muted-foreground mt-0.5">
           例句會用你填的情境改寫，字才記得住。留白也能查，只是少了這一層。
+        </p>
+        <p className="text-xs text-amber-700 dark:text-amber-400 mt-1">
+          目前先儲存在這台裝置；換手機前請到{' '}
+          <Link href="/notes" className="underline underline-offset-2">
+            雲端同步
+          </Link>{' '}
+          上傳，再到新手機下載。
         </p>
       </div>
 

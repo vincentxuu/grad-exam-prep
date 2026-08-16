@@ -1,3 +1,4 @@
+import { toTaiwanTraditionalDeep } from '@/lib/llm/traditional-chinese'
 import type { LexiconEntry, PersonalBridge } from '@/types/lexicon'
 
 /**
@@ -29,7 +30,7 @@ export async function getEntry(db: Db, term: string): Promise<LexiconEntry | nul
     .bind(term)
     .first<{ data: string }>()
 
-  if (direct) return JSON.parse(direct.data) as LexiconEntry
+  if (direct) return toTaiwanTraditionalDeep(JSON.parse(direct.data) as LexiconEntry)
 
   const alias = await db
     .prepare('SELECT headword FROM lexicon_aliases WHERE alias = ?')
@@ -43,7 +44,7 @@ export async function getEntry(db: Db, term: string): Promise<LexiconEntry | nul
     .bind(alias.headword)
     .first<{ data: string }>()
 
-  return viaAlias ? (JSON.parse(viaAlias.data) as LexiconEntry) : null
+  return viaAlias ? toTaiwanTraditionalDeep(JSON.parse(viaAlias.data) as LexiconEntry) : null
 }
 
 /**
@@ -108,7 +109,7 @@ export async function getPersonal(
     .bind(headword, personaHash)
     .first<{ data: string }>()
 
-  return row ? (JSON.parse(row.data) as PersonalBridge) : null
+  return row ? toTaiwanTraditionalDeep(JSON.parse(row.data) as PersonalBridge) : null
 }
 
 export async function putPersonal(

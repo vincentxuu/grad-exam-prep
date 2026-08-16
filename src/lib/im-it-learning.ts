@@ -12,6 +12,7 @@ import {
   type LearningTopic,
   type LearningWorkedExample,
 } from './learning'
+import { buildQuestionDrillHref } from './question-drill'
 
 export type ImItWorkedExample = LearningWorkedExample
 export type ImItLearningScenario = LearningScenario
@@ -93,12 +94,13 @@ export const imItLearningCatalog = createLearningCatalog({
     sourcesTitle: '參考來源',
   },
   getPracticeHref: (lesson) => {
-    const [firstQuestion, secondQuestion] = lesson.pastPaperRefs
-    if (!firstQuestion) return '/im/questions?subject=im-it'
+    if (lesson.pastPaperRefs.length === 0) return '/im/questions?subject=im-it'
 
-    return secondQuestion
-      ? `/im/questions/${firstQuestion}?mode=drill&next=${secondQuestion}`
-      : `/im/questions/${firstQuestion}?mode=drill`
+    return buildQuestionDrillHref(
+      'im',
+      lesson.pastPaperRefs,
+      `/im/subjects/im-it/lessons/${lesson.id}`
+    )
   },
 })
 

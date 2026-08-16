@@ -4383,7 +4383,7 @@
     "q-pp-im-it-107-1": {
       "questionId": "q-pp-im-it-107-1",
       "answer": "B",
-      "explanation": "Amazon Echo 與 Google Home 是以語音為核心的智慧音箱，其主要技術包含：語音辨識（speech recognition）用於接收並轉換使用者的語音指令、自然語言處理（natural language processing）用於理解指令語意、語音合成（speech synthesis）用於以語音回應使用者，以及控制其他設備（control of more devices）實現智慧家居功能。然而，影像辨識（image recognition）需要攝影鏡頭作為輸入裝置，而這兩款智慧音箱並不具備視覺感測器，因此影像辨識並非其核心技術。故正確答案為 B。"
+      "explanation": "Amazon Echo 與 Google Home 是以語音為核心的智慧音箱，會使用語音辨識、自然語言處理、語音合成，也能控制室內裝置（control of room devices）。影像辨識需要視覺輸入，並非題述裝置的核心技術，因此答案為 (B)。"
     },
     "q-pp-im-it-107-10": {
       "questionId": "q-pp-im-it-107-10",
@@ -4433,7 +4433,7 @@
     "q-pp-im-it-107-19": {
       "questionId": "q-pp-im-it-107-19",
       "answer": "B",
-      "explanation": "選項 (B) 的說法是錯誤的。在比特幣的區塊鏈中，每個完整節點（full node）都必須維護完整的區塊鏈副本，而非僅保存部分區塊。區塊鏈的去中心化特性是指多個節點各自擁有完整的鏈，而非將鏈拆分分散給不同節點。選項 (A) 正確描述了區塊鏈是透過密碼學連結並保護的持續增長記錄列表；選項 (C) 雖然比特幣交易資料是公開可見而非加密的，但題目中選項 (B) 的錯誤更為明確且是核心概念；選項 (D) 正確描述了區塊鏈對已記錄資料的不可篡改性。"
+      "explanation": "依此題採用的單選答案，(B) 錯在聲稱區塊可分散到不同節點，因而任何節點都不必維護完整區塊清單；典型比特幣完整節點會保存並驗證完整區塊鏈。需注意原卷 (C) 的『交易皆保持匿名且加密』也不嚴謹：比特幣交易為假名制且交易資料公開可查，並非內容全部加密。此題原卷本身可能具有多個可爭議選項，答案沿用既有 (B)，但解析必須揭露歧義。"
     },
     "q-pp-im-it-107-2": {
       "questionId": "q-pp-im-it-107-2",
@@ -4443,7 +4443,7 @@
     "q-pp-im-it-107-20": {
       "questionId": "q-pp-im-it-107-20",
       "answer": "E",
-      "explanation": "資訊安全的 CIA 三元組分別代表機密性（Confidentiality）、完整性（Integrity）與可用性（Availability）。選項 A 錯誤，「C」代表的是 Confidentiality（機密性），而非 Control。選項 B 錯誤，「C」並非代表 Cryptography（密碼學）。選項 C 錯誤，「I」代表 Integrity（完整性），而非 Identification（識別）。選項 D 錯誤，「A」代表 Availability（可用性），而非 Anonymouse（匿名）。因此正確答案為 E，「A」代表 Availability（可用性）。"
+      "explanation": "CIA 三元組代表 Confidentiality（機密性）、Integrity（完整性）與 Availability（可用性）。因此只有 (E)『A refers to Availability』正確；原卷 (D) 的字樣是 Anonymous，而非題庫原先誤植的 Anonymouse。"
     },
     "q-pp-im-it-107-21": {
       "questionId": "q-pp-im-it-107-21",
@@ -4483,7 +4483,7 @@
     "q-pp-im-it-107-4": {
       "questionId": "q-pp-im-it-107-4",
       "answer": "C",
-      "explanation": "此題要求計算 Customers 表中「國家的數量」，即不重複的 country 欄位值的個數。SQL 中並不存在 NUMBER() 這個聚合函數，因此選項 A 和 D 語法錯誤。COUNT(ALL country) 會計算所有非 NULL 的 country 值（包含重複值），無法得到不同國家的數量，故選項 B 不正確。COUNT(DISTINCT *country) 語法錯誤，故選項 E 亦排除。COUNT(DISTINCT country) 會先去除重複值再計數，正確回傳不同國家的數量，因此答案為 C。"
+      "explanation": "題目要求計算 Customers 表中不重複國家的數量。COUNT(DISTINCT country) 會先去除重複的 country 值再計數，因此 (C) 正確。NUMBER() 不是標準 SQL 聚合函數，所以 (A)、(D)、(E) 不正確；COUNT(ALL country) 則會計算所有非 NULL 值而包含重複國家。"
     },
     "q-pp-im-it-107-5": {
       "questionId": "q-pp-im-it-107-5",
@@ -4687,13 +4687,13 @@
     },
     "q-pp-im-it-109-21": {
       "questionId": "q-pp-im-it-109-21",
-      "answer": "A",
-      "explanation": "本題為非選擇題（程式撰寫題），無標準選項，以下說明正確實作方式。delete() 函式應先檢查 itemCount 是否為 0，若是則回傳 -1；否則儲存根節點值後，將最後一個元素移至根節點，再對根節點執行向下調整（sift-down / percolate-down），與兩個子節點中較大者比較並交換，直到堆積性質恢復，最後回傳原根節點值。insert() 函式應先確認 itemCount 小於陣列大小上限（100），否則回傳 false；接著將新值插入 items[itemCount] 並遞增 itemCount，再對新節點執行向上調整（sift-up / percolate-up），與父節點比較若較大則交換，直到堆積性質恢復，最後回傳 true。由於本例為最大堆積（large values mean high priority），父節點值必須恆大於或等於子節點值，sift-down 與 sift-up 的比較方向均以「子節點是否大於父節點」作為交換條件。"
+      "answer": "N/A",
+      "explanation": "本題是 C++ 實作題。(a) remove(value, success) 可利用陣列已排序的條件搜尋 value；找不到時令 success=false。找到索引後，將其後元素逐一左移一格、itemCount--，並令 success=true。(b) doubleArraySize() 應配置容量為 2*arraySize 的新陣列，複製前 itemCount 個元素，delete[] 舊 p_items，再令 p_items 指向新陣列並更新 arraySize。若搜尋採二分搜尋，查找為 O(log n)，但刪除移動元素最壞仍為 O(n)；擴充複製為 O(n)。"
     },
     "q-pp-im-it-109-22": {
       "questionId": "q-pp-im-it-109-22",
-      "answer": "A",
-      "explanation": "本題為申論題，無單一選項答案，以下提供各小題解析。(a) Double hashing 的優點在於利用第二個雜湊函數決定探測步長，使不同鍵值的探測序列各不相同，大幅減少「群聚現象」（clustering），相較於線性探測（linear probing）或二次探測（quadratic probing），能更均勻地分散碰撞後的探測路徑，降低搜尋時間。(b) 若雜湊表大小 M 與探測步長 s 不互質（即 gcd(M, s) = d > 1），則探測序列只會覆蓋表中 M/d 個位置，而非全部 M 個位置，導致即使表中尚有空位也無法找到，造成無限迴圈或插入失敗。(c) 解決方法是確保雜湊表大小 M 為質數（prime number），如此任何 1 ≤ s < M 的步長都與 M 互質，保證探測序列能遍歷表中所有位置；或者將第二個雜湊函數設計為永不回傳 0 且其值與 M 互質。"
+      "answer": "N/A",
+      "explanation": "本題是 C++ 實作題。這是 large values mean high priority 的 max heap。先將 items[i] 設為 newPriorityValue；只要 i>0 且 items[i] 大於 items[(i-1)/2]，就交換目前節點與父節點，再把 i 更新為父節點索引。迴圈停止時 max-heap 性質恢復，時間複雜度為 O(log n)，額外空間為 O(1)。"
     },
     "q-pp-im-it-109-3": {
       "questionId": "q-pp-im-it-109-3",
@@ -4837,8 +4837,8 @@
     },
     "q-pp-im-it-110-29": {
       "questionId": "q-pp-im-it-110-29",
-      "answer": "A",
-      "explanation": "本題為問答題，分為(a)(b)兩部分，無選擇題選項。(a) 根據題目資料，root_index=0，free_index=6，陣列索引0為根節點Jane；索引8的leftchild_index=1代表其左子為Bob（索引1），Bob的rightchild_index=4為其右子；索引3為Alan，其rightchild_index=5指向Nancy（葉節點）；free nodes從索引6開始，以rightchild_index串接。因此樹結構為：Jane為根，其右子為索引8的節點，其左子（索引8的leftchild=1）為Bob，Bob的右子（索引4）為某節點，Alan（索引3）為另一分支，Alan的右子為Nancy（葉）。(b) removeAllLeaf()應先呼叫recurRemoveLeaf()做後序遞迴遍歷，當發現某節點的左右子皆為-1（即為葉節點）時，將該節點歸還到free list（設其rightchild_index=free_index，再令free_index指向它），並將其父節點中對應的leftchild_index或rightchild_index設為-1；若根節點本身即為葉節點，則需將root_index設為-1表示樹為空。"
+      "answer": "N/A",
+      "explanation": "本題是問答與 C++ 實作題。(a) root_index=0，所以 Jane 是根；Jane 的左子為 Bob(1)、右子為 Alan(3)；Bob 的右子為 Ellen(4)，Ellen 的左子為 Tom(2)；Alan 的右子為 Nancy(5)。free list 由 free_index=6 開始，依 rightchild_index 串成 6->7->8->9->...。(b) removeAllLeaf() 必須處理空樹與根本身是葉節點的情況，否則從根的左右子開始呼叫 recurRemoveLeaf(parent_id,node_id,left_or_right)。recurRemoveLeaf() 若遇到葉節點，先將父節點對應的 child index 設為 -1，再把該節點接回 free list；非葉節點則對原有左右子遞迴。要先保存左右 child index，且不能在刪除子葉後再把剛成為葉節點的父節點於同一輪刪除，才能只移除原本的所有 leaf nodes。"
     },
     "q-pp-im-it-110-3": {
       "questionId": "q-pp-im-it-110-3",
@@ -5003,12 +5003,12 @@
     "q-pp-im-it-112-1": {
       "questionId": "q-pp-im-it-112-1",
       "answer": "C",
-      "explanation": "Von Neumann 架構最核心的特點之一，就是程式指令與資料儲存在同一塊記憶體中，這被稱為「儲存程式概念」（stored-program concept）。選項 (C) 說「資料與指令儲存在不同的記憶體」，這描述的是 Harvard 架構，而非 Von Neumann 架構，因此是錯誤的敘述。選項 (A) 正確——Von Neumann 架構確實有 CPU、記憶體、輸入與輸出四個主要單元。選項 (B) 正確——記憶體在此架構中被視為線性的儲存位置陣列。選項 (D) 也正確——CPU 內部包含控制單元（Control Unit）與算術邏輯單元（ALU）。"
+      "explanation": "Von Neumann 架構採 stored-program concept，資料與指令共用同一記憶體；(C) 描述的是 Harvard 架構。其餘敘述皆為典型 Von Neumann 架構特徵。"
     },
     "q-pp-im-it-112-10": {
       "questionId": "q-pp-im-it-112-10",
       "answer": "E",
-      "explanation": "作業系統（OS）在行程管理方面負責多項核心工作。建立與刪除使用者行程（A）是OS的基本功能，OS透過系統呼叫來管理行程的生命週期。暫停與恢復行程（B）也是OS的責任，由排程器決定何時暫停或恢復行程執行。行程同步（C）由OS提供諸如號誌（semaphore）、互斥鎖（mutex）等機制來協調多個行程。死結處理（D）包含死結偵測、預防與解除，均屬OS的管理範疇。因此，上述四項皆為OS的責任，答案為（E）。"
+      "explanation": "作業系統的 process management 涵蓋建立與刪除 user/system processes、暫停與恢復行程、提供 process synchronization 機制，以及偵測、避免或處理 deadlock。因此 (A) 至 (D) 都是作業系統的一般責任，題目問哪一項不是時，應選表示全部皆屬其責任的 (E)。"
     },
     "q-pp-im-it-112-11": {
       "questionId": "q-pp-im-it-112-11",
@@ -5022,8 +5022,8 @@
     },
     "q-pp-im-it-112-13": {
       "questionId": "q-pp-im-it-112-13",
-      "answer": "A",
-      "explanation": "在 Unix/Linux 系統的標準行程記憶體佈局中，堆疊區段（stack）並不是緊接在資料區段（data section）的上方。正確的佈局由低位址到高位址依序為：程式碼區段（text）、資料區段（data/BSS）、堆積區段（heap，向高位址成長），以及位於高位址的堆疊區段（stack，向低位址成長）。堆疊與資料區段之間隔著堆積區段及可能的記憶體映射區域，因此選項 A 的描述是錯誤的。選項 B 與 D 描述堆疊可以動態增長與縮減，此為正確行為，堆疊會隨函式呼叫與返回而自動伸縮。"
+      "answer": "C",
+      "explanation": "典型 Unix 行程位址空間由低至高包含 text、data/BSS、heap、memory-mapped area 與高位址 stack；stack 不會緊接在 data section 上方，故 (C) 錯。"
     },
     "q-pp-im-it-112-14": {
       "questionId": "q-pp-im-it-112-14",
@@ -5033,12 +5033,12 @@
     "q-pp-im-it-112-15": {
       "questionId": "q-pp-im-it-112-15",
       "answer": "A",
-      "explanation": "虛擬區域網路（Virtual LAN，VLAN）是透過在同一實體網路基礎設施上，利用邏輯方式（如交換器的埠位設定或標籤技術 IEEE 802.1Q）將網路框架加以區隔，使不同群組的設備看起來分屬不同的獨立網路。題目描述「對網路框架套用邏輯規則，使跨越不同網路的流量看似在同一局域網內運作」，這正是 VLAN 的核心功能。VPN（選項B）是用於加密跨越公開網路的通訊通道，與此描述不符。VLAN 讓管理員無需更動實體佈線，即可靈活地將設備分組至邏輯上隔離的網段，提升安全性與網路管理效率。"
+      "explanation": "交換器可依 IEEE 802.1Q 在 Ethernet frame 加入 VLAN tag，將同一套實體交換網路劃分成不同的廣播網域。不同標籤的流量在邏輯上如同位於彼此分離的 LAN，這正是 Virtual LAN 的用途；VPN 則通常是在不受信任網路上建立加密通道，概念不同，因此選 (A)。"
     },
     "q-pp-im-it-112-16": {
       "questionId": "q-pp-im-it-112-16",
       "answer": "C",
-      "explanation": "題目問的是哪一種演算法是透過「定期與相鄰路由器交換資訊」來建立路由表。距離向量演算法（Distance-Vector，如 RIP）正是採用此方式：每台路由器只將自己的路由表傳給直接相連的鄰居，再由鄰居逐步更新，不需要掌握整個網路拓撲。相較之下，鏈路狀態演算法（Link-State，如 OSPF）則是將鏈路狀態資訊廣播給網路中所有路由器，而非僅限相鄰節點。因此，符合「定期與直接相鄰路由器交換資訊」描述的是距離向量演算法，答案為 (C) distance-vector。"
+      "explanation": "Distance-vector routing 由每台路由器週期性向直接鄰居交換距離/下一跳資訊並更新路由表，故選 (C)。Link-state 則向整個 routing domain flooding 鏈路狀態。"
     },
     "q-pp-im-it-112-17": {
       "questionId": "q-pp-im-it-112-17",
@@ -5073,27 +5073,27 @@
     "q-pp-im-it-112-22": {
       "questionId": "q-pp-im-it-112-22",
       "answer": "C",
-      "explanation": "題目詢問關於生成樹（spanning tree）哪個敘述是錯誤的。對於一個有 n 個頂點的連通圖，其生成樹恰好包含 n-1 條邊。若將任何一條不在生成樹中的邊加入，必然會形成恰好一個環（cycle）。一個圖只有唯一生成樹，若且唯若該圖本身就是一棵樹（即沒有多餘的邊）。選項 C 的敘述混淆了生成樹唯一性的充要條件，因此是錯誤的陳述。"
+      "explanation": "Foreign key 欄位在沒有 NOT NULL 約束時可以是 NULL；外鍵可參照另一表的 primary/unique key，同一表也可有多個 foreign keys，故 (C) 錯。"
     },
     "q-pp-im-it-112-23": {
       "questionId": "q-pp-im-it-112-23",
       "answer": "B",
-      "explanation": "「Digital Twin（數位孿生）」是指現實世界物件的數位對應體，用於模擬、整合、測試、監控與維護等用途，此概念廣泛應用於工業4.0與物聯網領域。Avatar指的是虛擬化身，代表使用者在數位環境中的形象，與此定義不符。Virtual Reality（虛擬實境）是一種沉浸式的數位體驗技術，並非特指現實物件的數位複製品。Cloud Agent是雲端代理程式的概念，也與題目描述的定義不相符，因此正確答案為B。"
+      "explanation": "Digital twin 是實體物件、設備或系統在數位環境中的對應模型，並可隨真實世界資料更新，用於 simulation、integration、testing、monitoring 與 maintenance。Avatar 側重使用者化身，virtual reality 是沉浸式環境，cloud object 也不是題述術語，因此選 (B)。"
     },
     "q-pp-im-it-112-24": {
       "questionId": "q-pp-im-it-112-24",
       "answer": "D",
-      "explanation": "在比特幣等區塊鏈技術中，「挖礦」的主要目的是驗證交易（validate transactions）。礦工收集待處理的交易，透過解決加密工作量證明（Proof-of-Work）難題來競爭提案新區塊，過程中同時驗證交易的合法性（例如檢查數位簽章與餘額）。此機制提供了去中心化的共識機制，讓網路中所有節點能就帳本狀態達成一致，而無需中央機構的介入。並行控制（concurrency control）與原子性（atomicity）屬於傳統資料庫的概念，並非挖礦的主要目的，因此答案為 D。"
+      "explanation": "Bitcoin mining 透過 proof-of-work 競爭建立區塊並驗證交易、形成共識；題目選項中最符合主要目的的是 (D) validate transaction。"
     },
     "q-pp-im-it-112-25": {
       "questionId": "q-pp-im-it-112-25",
-      "answer": "A",
-      "explanation": "此題詢問關於 spanning tree（展開樹）或 B-tree 性質中哪一項敘述是錯誤的。選項 (B) 正確描述了 B-tree 中「所有葉節點出現在同一層（all leaves appear on the same level）」的性質。選項 (A) 的敘述「it leaves appear on the same level」文法有誤，且語意不完整，無法正確描述樹的性質，因此為錯誤選項。選項 (C) 描述節點至少有 ⌈n/2⌉ 個子節點，這是 B-tree 的正確性質。選項 (D) 與 (B) 類似，描述葉節點在同一層，為正確性質。因此答案選 (A)，因為其敘述語意不清且錯誤。"
+      "answer": "B",
+      "explanation": "B-tree 的非葉節點若有 k 個 children，應有 k-1 個 keys，不是 k 個，因此 (B) 錯。其餘為題目採用的 B-tree 標準性質（最低子節點數的敘述通常不含 root 例外）。"
     },
     "q-pp-im-it-112-26": {
       "questionId": "q-pp-im-it-112-26",
       "answer": "E",
-      "explanation": "生成樹（Spanning Tree）是圖論中的重要概念，一棵圖 G 的生成樹 T 包含 G 的所有頂點，且為無環連通子圖。若圖 G 有 n 個頂點，則其生成樹恰好有 n-1 條邊。本題各選項（A 至 D）所描述的生成樹性質皆存在問題或描述不完整，因此選項 E「以上皆非正確答案」為正確選擇。當題目中 A 到 D 的敘述均無法明確成立時，應選擇 E 作為最終答案。"
+      "explanation": "若 G 的所有邊都也在其 spanning tree T 中，由於 T 的邊本來就是 G 的子集，兩者邊集相同，所以 G=T 且 G 為樹；向 T 加入非樹邊必產生 cycle；圖也可能有多棵 spanning trees。A-D 皆正確，故選 (E)。"
     },
     "q-pp-im-it-112-27": {
       "questionId": "q-pp-im-it-112-27",
@@ -5107,8 +5107,8 @@
     },
     "q-pp-im-it-112-29": {
       "questionId": "q-pp-im-it-112-29",
-      "answer": "A",
-      "explanation": "此程式實作 Boyer-Moore 字串搜尋演算法中的「壞字元啟發式（Bad Character Heuristic）」。PREPROCESS 函式建立壞字元表，記錄模式字串（pattern）中每個字元最後出現的位置索引，未出現者設為 -1。search 函式從右到左比對模式與文字，當發生不匹配時，依壞字元表計算向右移動的距離：移動量為 max(1, j - badchar[txt[s+j]])，確保至少前進一格。當完整匹配成立（j < 0）時，印出匹配位置，並根據下一個字元的壞字元值決定跳躍距離。此演算法平均時間複雜度優於暴力法，最差情況為 O(mn)，但在實務上對大字母集效能顯著提升。"
+      "answer": "(a) pattern occurs at 4; pattern occurs at 8. (b) O(mn). (c) O(n/m) for the search phase (plus O(m + 256) preprocessing).",
+      "explanation": "(a) txt 的索引 4-6 與 8-10 都是 ABC，所以程式依序輸出兩行：`pattern occurs at 4`、`pattern occurs at 8`。(b) 最壞情況每個 alignment 只移動 1，且最多比較 m 個字元，最多約 n-m+1 個 alignments，因此 search phase 為 O(mn)；PREPROCESS 另為 O(m + 256)，不改變最壞主項。(c) 最佳情況每次在最右字元立即 mismatch，且 bad-character shift 可一次前進 m，約檢查 n/m 個 alignments，因此 search phase 為 O(n/m)；若計入前處理，總計 O(m + 256 + n/m)。"
     },
     "q-pp-im-it-112-3": {
       "questionId": "q-pp-im-it-112-3",
@@ -5123,27 +5123,27 @@
     "q-pp-im-it-112-5": {
       "questionId": "q-pp-im-it-112-5",
       "answer": "C",
-      "explanation": "此題詢問關於 CPU 暫存器（registers）的敘述哪一項是錯誤的。選項 C 宣稱「L2 快取的大小小於 L1 快取」，這是錯誤的說法。實際上，L2 快取的容量通常遠大於 L1 快取，現代 CPU 的 L1 快取約為 32KB～512KB，而 L2 快取則通常為數 MB。選項 A 正確，因為 CPU 的暫存器數量（通常數十到數百個 bytes）確實小於 L1 快取的大小。選項 B 也正確，L2 快取確實比 L1 快取大得多，這是快取記憶體階層架構的基本特性。因此，錯誤的敘述是選項 C。"
+      "explanation": "現代 CPU 的 L1 cache 通常以數十 KB 計，而不是數十至數百 bytes，因此 (C) 錯。暫存器延遲通常低於 L1，容量也遠小於 L1；L2 通常大於 L1。"
     },
     "q-pp-im-it-112-6": {
       "questionId": "q-pp-im-it-112-6",
       "answer": "E",
-      "explanation": "本題詢問哪一項「不是」作業系統的主要功能。作業系統的核心職責涵蓋資源管理（Resource Management）、行程管理（Process Management）、記憶體管理（Memory Management）以及安全管理（Security Management）。這四項均為作業系統的重要基本功能，因此選項 A、B、C、D 所列舉的功能全部都是作業系統的主要功能。由於題目問的是「不是」主要功能的選項，但實際上每個選項都是，故正確答案為 (E)：以上皆為主要功能（即沒有任何一項「不是」主要功能）。"
+      "explanation": "作業系統負責協調處理器、儲存與周邊等資源，也管理行程生命週期、記憶體配置及存取安全。(A) Resource Management、(B) Process Management、(C) Memory Management、(D) Security Management 全都是主要功能，沒有一項符合題目的 not，故選 (E)。"
     },
     "q-pp-im-it-112-7": {
       "questionId": "q-pp-im-it-112-7",
       "answer": "C",
-      "explanation": "現代作業系統中，最常見的分頁大小為 4KB（4096 bytes）。x86 及 x86-64 架構的處理器預設使用 4KB 分頁，Linux、Windows 等主流作業系統也以 4KB 作為基本分頁單位。4KB 的大小在內部碎裂（internal fragmentation）與分頁表大小之間取得良好平衡，既不會因頁太大造成大量浪費，也不會因頁太小導致分頁表過於龐大。雖然現代系統也支援大分頁（如 2MB 或 1GB 的 huge pages），但 4KB 仍是最基本也最普遍的標準分頁大小。"
+      "explanation": "虛擬記憶體把位址空間與實體記憶體切成固定大小的 page/frame。在 x86、x86-64 與多數主流作業系統中，4KB 是最常見的基本 page size；系統雖可能另支援 large pages，但 128 bytes、512 bytes、128KB 與 512KB 都不是一般預設基本頁面大小，因此選 (C)。"
     },
     "q-pp-im-it-112-8": {
       "questionId": "q-pp-im-it-112-8",
       "answer": "B",
-      "explanation": "選項(B)說「在使用者模式下執行的應用程式共享同一個虛擬位址空間」是錯誤的。在現代作業系統中，每個行程（process）都擁有自己獨立的虛擬位址空間（virtual address space），彼此之間是相互隔離的，目的是保護各行程的記憶體不被其他行程干擾。選項(A)正確，使用者應用程式確實通常在使用者模式下執行。選項(C)正確，使用者模式的行程無法存取保留給作業系統的虛擬位址區段（核心空間）。選項(D)正確，作業系統的核心元件確實在核心模式（kernel mode）下執行，以獲得完整的硬體存取權限。"
+      "explanation": "每個行程通常有彼此隔離的虛擬位址空間，並非所有 user-mode 應用程式共享同一個空間，因此 (B) 錯。A、C、D 都是 user/kernel mode 的正確敘述。"
     },
     "q-pp-im-it-112-9": {
       "questionId": "q-pp-im-it-112-9",
       "answer": "C",
-      "explanation": "電腦叢集（cluster）的主要目的是提升運算效能、可用性與容錯能力，並非用來防禦安全攻擊。選項A正確，叢集中的節點通常是獨立的機器，透過高速區域網路互相連接。選項B正確，多台電腦協同運作可提升整體運算能力。選項D正確，當某節點故障時，其他節點可接管其工作，因此叢集能提升容錯性。選項C錯誤，叢集架構本身並不具備防止安全攻擊的功能，安全防護需靠防火牆、入侵偵測系統等其他機制來實現。"
+      "explanation": "電腦叢集通常由可獨立運作的節點透過高速區域網路連接，可分散工作以增加運算能力，也可藉由備援改善 fault tolerance；但把多台電腦組成 cluster 並不會自動防止惡意入侵或其他資安攻擊，仍需另外的安全控制。因此錯誤敘述是 (C)。"
     },
     "q-pp-im-it-113-1": {
       "questionId": "q-pp-im-it-113-1",
@@ -5198,7 +5198,7 @@
     "q-pp-im-it-113-19": {
       "questionId": "q-pp-im-it-113-19",
       "answer": "C",
-      "explanation": "Min heap 只保證父節點的值不大於子節點，根節點為最小值，但對於任意元素並無額外的排序性質可以利用。因此，要在 min heap 中搜尋一個任意元素，最壞情況下必須逐一檢查所有 n 個節點。這與二元搜尋樹不同，min heap 無法在 O(log n) 時間內定位任意元素。所以在 n 個節點的 min heap 中搜尋任意元素的時間複雜度為 O(n)。"
+      "explanation": "Functional dependency 描述一個屬性或屬性集合如何決定另一個屬性，是關聯式資料庫正規化與維持資料品質的重要約束，因此答案為 (C) functional dependency。"
     },
     "q-pp-im-it-113-2": {
       "questionId": "q-pp-im-it-113-2",
@@ -5219,21 +5219,6 @@
       "questionId": "q-pp-im-it-113-22",
       "answer": "B",
       "explanation": "答案經技術覆核後修正為 B（非官方答案）。member variable 宣告在 class body，而不是必須宣告在 method body。 二次覆核：member variable 宣告在 class body；在 method body 宣告的是 local variable。class variable 單份共享與 instance variable 每物件一份的敘述均正確，因此 B 是唯一錯項。 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
-    },
-    "q-pp-im-it-113-23": {
-      "questionId": "q-pp-im-it-113-23",
-      "answer": "E",
-      "explanation": "GPT 的完整名稱是 Generative Pre-trained Transformer（生成式預訓練 Transformer）。選項 (A) Generative Proficiency in Text、(B) Grasping the Paradigm of Texts、(C) Generative Prowess in Text 與 (D) Generative Pathfinding Transformer 都不是正確名稱，因此應選 (E) none of the above。三個組成詞分別指出模型可生成內容（Generative）、先在大量資料上預訓練（Pre-trained），以及採用 Transformer 架構。"
-    },
-    "q-pp-im-it-113-24": {
-      "questionId": "q-pp-im-it-113-24",
-      "answer": "D",
-      "explanation": "Turing test（圖靈測試）用來評估機器在對話互動中所呈現的行為，是否能讓人類評審無法可靠區分它與人類，因此正確答案為 (D)。AGI 指具有廣泛任務能力的通用人工智慧；Turing complete 描述計算系統能否模擬通用計算；Chinese room argument 則是質疑符號處理是否等同真正理解的思想實驗，三者都不是題目所問的評估方法。"
-    },
-    "q-pp-im-it-113-25": {
-      "questionId": "q-pp-im-it-113-25",
-      "answer": "N/A",
-      "explanation": "本題是開放式 C++ 實作題，沒有選項答案。(a) 插入時先配置並初始化新節點，再從 rootPtr 依 employeeID 比較向左或向右走，直到找到空子指標後接上新節點；空樹則直接把新節點設為根。以下寫法需引入 <new>：\n\nint BinarySearchTree::InsertNewEmployee(int newID, string newName, int newAge) {\n  TreeNode *node = new (std::nothrow) TreeNode;\n  if (node == NULL) return 0;\n  node->employeeID = newID;\n  node->employeeName = newName;\n  node->age = newAge;\n  node->leftChildPtr = node->rightChildPtr = NULL;\n  if (rootPtr == NULL) { rootPtr = node; return 1; }\n  TreeNode *current = rootPtr;\n  TreeNode *parent = NULL;\n  while (current != NULL) {\n    parent = current;\n    current = (newID < current->employeeID) ? current->leftChildPtr : current->rightChildPtr;\n  }\n  if (newID < parent->employeeID) parent->leftChildPtr = node;\n  else parent->rightChildPtr = node;\n  return 1;\n}\n\n(b) 中序走訪依「左子樹、節點、右子樹」順序輸出，對 BST 即為 employeeID 遞增順序：\n\nvoid BinarySearchTree::ListAllEmployee() { inorder(rootPtr); }\n\nvoid BinarySearchTree::inorder(TreeNode *treePtr) {\n  if (treePtr == NULL) return;\n  inorder(treePtr->leftChildPtr);\n  cout << \"(\" << treePtr->employeeID << \", \" << treePtr->employeeName << \", \" << treePtr->age << \")\" << endl;\n  inorder(treePtr->rightChildPtr);\n}\n\n插入平均時間為 O(h)，其中 h 是樹高；未平衡 BST 最壞可退化為 O(n)。中序走訪會拜訪每個節點一次，時間為 O(n)，遞迴額外空間為 O(h)。"
     },
     "q-pp-im-it-113-3": {
       "questionId": "q-pp-im-it-113-3",
@@ -5552,38 +5537,66 @@
     },
     "q-pp-im-mis-106-1": {
       "questionId": "q-pp-im-mis-106-1",
-      "answer": "A",
-      "explanation": "此題為問答題，無選擇題選項。(1) 差異化策略的IS/IT應用範例：①企業可利用CRM系統（顧客關係管理系統）蒐集並分析顧客行為與偏好，提供個人化服務與推薦，使顧客感受到與眾不同的體驗，如Amazon的推薦引擎；②企業可透過ERP整合供應鏈與生產資訊，搭配IoT感測器即時監控產品品質，確保高品質產品一致性，如Apple透過精密的供應鏈管理系統保持產品品質差異化。(2) 針對採用差異化策略的企業，IT策略與管理建議：企業應將IT投資集中在能強化獨特價值主張的系統上，例如客製化平台、數據分析與AI能力；應建立靈活的IT架構（如微服務、雲端平台），以快速回應市場變化並持續創新；IT治理上需強調IT與業務策略的高度對齊（IT-Business Alignment），確保資訊系統真正支持差異化優勢而非僅降低成本；同時須保護核心IT資產與數據資產，避免競爭者模仿，並持續投入研發以維持技術領先。"
+      "answer": "N/A",
+      "explanation": "此題為問答題，無選擇題選項。(1) 差異化策略的IS/IT應用範例：①企業可利用CRM系統（顧客關係管理系統）蒐集並分析顧客行為與偏好，提供個人化服務與推薦，使顧客感受到與眾不同的體驗，如Amazon的推薦引擎；②企業可透過ERP整合供應鏈與生產資訊，搭配IoT感測器即時監控產品品質，確保高品質產品一致性，如Apple透過精密的供應鏈管理系統保持產品品質差異化。(2) 針對採用差異化策略的企業，IT策略與管理建議：企業應將IT投資集中在能強化獨特價值主張的系統上，例如客製化平台、數據分析與AI能力；應建立靈活的IT架構（如微服務、雲端平台），以快速回應市場變化並持續創新；IT治理上需強調IT與業務策略的高度對齊（IT-Business Alignment），確保資訊系統真正支持差異化優勢而非僅降低成本；同時須保護核心IT資產與數據資產，避免競爭者模仿，並持續投入研發以維持技術領先。",
+      "evidencePages": [
+        1
+      ],
+      "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
     },
     "q-pp-im-mis-106-2": {
       "questionId": "q-pp-im-mis-106-2",
-      "answer": "A",
-      "explanation": "本題為論述題，無標準選項，以下提供參考答案。共享經濟的主要挑戰包括：(1) 信任與安全問題：陌生人之間交易缺乏信任基礎，存在詐欺、人身安全或財產損失風險；(2) 監管與法律問題：現行法規多針對傳統產業設計，共享經濟的服務提供者（如 Uber 司機、Airbnb 房東）常處於法律灰色地帶；(3) 品質不一致問題：服務品質因個人提供者而異，缺乏標準化機制難以保障消費者體驗；(4) 保險與責任歸屬問題：發生意外時，責任歸屬於平台、提供者或使用者不明確。針對信任問題，可開發一套基於區塊鏈的去中心化評價與身分驗證系統：將每位用戶的交易紀錄、評價與身分資訊儲存於不可竄改的區塊鏈上，並結合政府數位身分（eID）驗證真實身份，使雙方在交易前即可查閱對方的完整信用歷史，有效降低資訊不對稱、提升交易安全性與信任度。"
+      "answer": "N/A",
+      "explanation": "本題為論述題，無標準選項，以下提供參考答案。共享經濟的主要挑戰包括：(1) 信任與安全問題：陌生人之間交易缺乏信任基礎，存在詐欺、人身安全或財產損失風險；(2) 監管與法律問題：現行法規多針對傳統產業設計，共享經濟的服務提供者（如 Uber 司機、Airbnb 房東）常處於法律灰色地帶；(3) 品質不一致問題：服務品質因個人提供者而異，缺乏標準化機制難以保障消費者體驗；(4) 保險與責任歸屬問題：發生意外時，責任歸屬於平台、提供者或使用者不明確。針對信任問題，可開發一套基於區塊鏈的去中心化評價與身分驗證系統：將每位用戶的交易紀錄、評價與身分資訊儲存於不可竄改的區塊鏈上，並結合政府數位身分（eID）驗證真實身份，使雙方在交易前即可查閱對方的完整信用歷史，有效降低資訊不對稱、提升交易安全性與信任度。",
+      "evidencePages": [
+        1
+      ],
+      "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
     },
     "q-pp-im-mis-106-3": {
       "questionId": "q-pp-im-mis-106-3",
-      "answer": "A",
-      "explanation": "本題為問答題，無選項，以下為各小題解答摘要。(1) 開放原始碼軟體（OSS）是指原始碼公開、任何人均可自由使用、修改與散布的軟體，通常由社群共同維護與開發。(2) GPL授權的核心條款包含：必須公開修改後的原始碼（Copyleft原則）、衍生作品必須同樣採用GPL授權、散布時必須附上原始碼或提供取得方式，確保軟體的自由性得以延續。(3) 當開發者希望允許商業公司將程式碼納入閉源專有軟體中使用，或希望吸引更多企業採用而不強制要求公開衍生作品原始碼時，應選擇Apache License而非GPL，因為Apache License屬於寬鬆型授權（permissive license），不具有Copyleft的「傳染性」要求。(4) 企業參與OSS開發的策略優勢包括：可影響軟體發展方向以符合自身需求、透過社群貢獻建立品牌聲譽與技術影響力、降低對單一供應商的依賴（vendor lock-in）、以及藉由社群力量加速創新並分攤開發與維護成本。"
+      "answer": "N/A",
+      "explanation": "本題為問答題，無選項，以下為各小題解答摘要。(1) 開放原始碼軟體（OSS）是指原始碼公開、任何人均可自由使用、修改與散布的軟體，通常由社群共同維護與開發。(2) GPL授權的核心條款包含：必須公開修改後的原始碼（Copyleft原則）、衍生作品必須同樣採用GPL授權、散布時必須附上原始碼或提供取得方式，確保軟體的自由性得以延續。(3) 當開發者希望允許商業公司將程式碼納入閉源專有軟體中使用，或希望吸引更多企業採用而不強制要求公開衍生作品原始碼時，應選擇Apache License而非GPL，因為Apache License屬於寬鬆型授權（permissive license），不具有Copyleft的「傳染性」要求。(4) 企業參與OSS開發的策略優勢包括：可影響軟體發展方向以符合自身需求、透過社群貢獻建立品牌聲譽與技術影響力、降低對單一供應商的依賴（vendor lock-in）、以及藉由社群力量加速創新並分攤開發與維護成本。",
+      "evidencePages": [
+        1
+      ],
+      "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
     },
     "q-pp-im-mis-106-4": {
       "questionId": "q-pp-im-mis-106-4",
-      "answer": "A",
-      "explanation": "此題為開放式問答題，無選擇題選項。(1) ACID特性方面：關聯式資料庫嚴格遵守ACID，確保每筆交易的原子性、一致性、隔離性與持久性；NoSQL資料庫通常採用BASE模型（Basically Available, Soft state, Eventually consistent），為了高可用性與水平擴展而放寬一致性要求。Schema方面：關聯式資料庫採用固定schema，資料結構須預先定義；NoSQL則為schema-less或schema-flexible，允許儲存非結構化或半結構化資料。可擴展性方面：關聯式資料庫主要採垂直擴展（scale-up），NoSQL設計上支援水平擴展（scale-out），更容易應對大規模分散式環境。(2) 應選關聯式資料庫的情境：銀行帳戶轉帳系統。此類應用對資料一致性與交易完整性要求極高，任何一筆轉帳都必須保證原子性，不容許部分失敗，ACID特性是必要條件。(3) 應選NoSQL資料庫的情境：社群媒體的動態消息（news feed）系統。此類應用需儲存大量非結構化內容（文字、圖片、標籤等）且讀寫量極大，採用NoSQL（如文件型資料庫MongoDB）可靈活應對多樣化資料結構，並透過水平擴展輕鬆支撐億級用戶的高併發需求。"
+      "answer": "N/A",
+      "explanation": "此題為開放式問答題，無選擇題選項。(1) ACID特性方面：關聯式資料庫嚴格遵守ACID，確保每筆交易的原子性、一致性、隔離性與持久性；NoSQL資料庫通常採用BASE模型（Basically Available, Soft state, Eventually consistent），為了高可用性與水平擴展而放寬一致性要求。Schema方面：關聯式資料庫採用固定schema，資料結構須預先定義；NoSQL則為schema-less或schema-flexible，允許儲存非結構化或半結構化資料。可擴展性方面：關聯式資料庫主要採垂直擴展（scale-up），NoSQL設計上支援水平擴展（scale-out），更容易應對大規模分散式環境。(2) 應選關聯式資料庫的情境：銀行帳戶轉帳系統。此類應用對資料一致性與交易完整性要求極高，任何一筆轉帳都必須保證原子性，不容許部分失敗，ACID特性是必要條件。(3) 應選NoSQL資料庫的情境：社群媒體的動態消息（news feed）系統。此類應用需儲存大量非結構化內容（文字、圖片、標籤等）且讀寫量極大，採用NoSQL（如文件型資料庫MongoDB）可靈活應對多樣化資料結構，並透過水平擴展輕鬆支撐億級用戶的高併發需求。",
+      "evidencePages": [
+        1
+      ],
+      "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
     },
     "q-pp-im-mis-107-1": {
       "questionId": "q-pp-im-mis-107-1",
-      "answer": "A",
-      "explanation": "本題為申論題，無選項，以下為完整解析。編碼化策略（Codification Strategy）適合提供標準化、重複性高之產品或服務的企業，例如大型顧問公司（如 McKinsey 處理例行性專案）或軟體開發公司，因為這類企業的知識可被系統化提取並儲存於知識庫中，讓其他員工重複利用，達到規模經濟的效果。連結化策略（Connectivity/Personalization Strategy）則適合提供高度客製化、創新性或複雜問題解決的企業，例如策略顧問公司（如 Bain 處理獨特策略問題）或研發型企業，因為這類企業的知識具有高度隱性（tacit knowledge）且難以文字化，需透過建立專家目錄讓員工直接與領域專家互動，才能有效傳遞與運用知識。兩種策略的選擇核心在於知識的可編碼性與業務的重複性：當知識可明確化且服務可標準化時採編碼化策略；當知識高度隱性且服務高度客製化時採連結化策略。"
+      "answer": "N/A",
+      "explanation": "本題為申論題，無選項，以下為完整解析。編碼化策略（Codification Strategy）適合提供標準化、重複性高之產品或服務的企業，例如大型顧問公司（如 McKinsey 處理例行性專案）或軟體開發公司，因為這類企業的知識可被系統化提取並儲存於知識庫中，讓其他員工重複利用，達到規模經濟的效果。連結化策略（Connectivity/Personalization Strategy）則適合提供高度客製化、創新性或複雜問題解決的企業，例如策略顧問公司（如 Bain 處理獨特策略問題）或研發型企業，因為這類企業的知識具有高度隱性（tacit knowledge）且難以文字化，需透過建立專家目錄讓員工直接與領域專家互動，才能有效傳遞與運用知識。兩種策略的選擇核心在於知識的可編碼性與業務的重複性：當知識可明確化且服務可標準化時採編碼化策略；當知識高度隱性且服務高度客製化時採連結化策略。",
+      "evidencePages": [
+        1
+      ],
+      "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
     },
     "q-pp-im-mis-107-2": {
       "questionId": "q-pp-im-mis-107-2",
-      "answer": "A",
-      "explanation": "本題為申論題，無選項，以下提供標準答題方向。(1) 高環境豐裕性（High Munificence）下的IT策略：企業面對資源充裕、成長機會豐富的環境，應採取進攻性IT策略，積極投資資訊系統以擴大市場份額與競爭優勢。建議聚焦於建置策略性資訊系統（SIS），如ERP、CRM，以整合資源、提升效率，並透過大數據分析挖掘新商機，同時投入IT基礎設施以支援業務快速擴張。(2) 高環境動態性（High Dynamism）下的IT策略：企業面對需求波動大、客戶偏好快速變化的環境，應採取敏捷性IT策略，強調系統的彈性與適應能力。建議導入模組化、雲端化的IT架構，以便快速調整與部署；善用商業智慧（BI）與即時分析工具，強化對市場變化的感知與反應能力；並建立IT治理機制，確保資訊系統能夠支援組織快速決策與動態調整。"
+      "answer": "N/A",
+      "explanation": "本題為申論題，無選項，以下提供標準答題方向。(1) 高環境豐裕性（High Munificence）下的IT策略：企業面對資源充裕、成長機會豐富的環境，應採取進攻性IT策略，積極投資資訊系統以擴大市場份額與競爭優勢。建議聚焦於建置策略性資訊系統（SIS），如ERP、CRM，以整合資源、提升效率，並透過大數據分析挖掘新商機，同時投入IT基礎設施以支援業務快速擴張。(2) 高環境動態性（High Dynamism）下的IT策略：企業面對需求波動大、客戶偏好快速變化的環境，應採取敏捷性IT策略，強調系統的彈性與適應能力。建議導入模組化、雲端化的IT架構，以便快速調整與部署；善用商業智慧（BI）與即時分析工具，強化對市場變化的感知與反應能力；並建立IT治理機制，確保資訊系統能夠支援組織快速決策與動態調整。",
+      "evidencePages": [
+        1
+      ],
+      "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
     },
     "q-pp-im-mis-107-3": {
       "questionId": "q-pp-im-mis-107-3",
-      "answer": "A",
-      "explanation": "本題為問答題，並無選項，以下為完整解答內容。機構取得軟體系統的潛在來源主要有以下幾種：(1) 自行開發（In-house Development）：需要具備完整的軟體開發團隊，包含系統分析師、程式設計師與測試人員，適合需求高度客製化、現有市場產品無法滿足業務需求的情境。(2) 委外開發（Outsourcing / Custom Development）：內部僅需少數專案管理人員與需求分析師來協調外部廠商，適合機構缺乏開發人力但有充足預算、且對系統有特定功能需求的情況。(3) 購買套裝軟體（Commercial Off-the-Shelf, COTS）：內部需要系統管理員與少數 IT 人員負責安裝、設定與維護，適合需求與市場標準功能相符、希望快速導入並降低開發風險的機構。(4) 開源軟體（Open Source Software）：需要具備技術能力的開發人員以進行客製化與維護，適合預算有限但擁有技術能力、且願意接受社群支援模式的機構。(5) 雲端服務／SaaS（Software as a Service）：內部幾乎不需要 IT 開發人力，僅需業務人員與少量 IT 管理人員，適合希望降低基礎建設成本、快速部署且接受訂閱制收費的機構。"
+      "answer": "N/A",
+      "explanation": "本題為問答題，並無選項，以下為完整解答內容。機構取得軟體系統的潛在來源主要有以下幾種：(1) 自行開發（In-house Development）：需要具備完整的軟體開發團隊，包含系統分析師、程式設計師與測試人員，適合需求高度客製化、現有市場產品無法滿足業務需求的情境。(2) 委外開發（Outsourcing / Custom Development）：內部僅需少數專案管理人員與需求分析師來協調外部廠商，適合機構缺乏開發人力但有充足預算、且對系統有特定功能需求的情況。(3) 購買套裝軟體（Commercial Off-the-Shelf, COTS）：內部需要系統管理員與少數 IT 人員負責安裝、設定與維護，適合需求與市場標準功能相符、希望快速導入並降低開發風險的機構。(4) 開源軟體（Open Source Software）：需要具備技術能力的開發人員以進行客製化與維護，適合預算有限但擁有技術能力、且願意接受社群支援模式的機構。(5) 雲端服務／SaaS（Software as a Service）：內部幾乎不需要 IT 開發人力，僅需業務人員與少量 IT 管理人員，適合希望降低基礎建設成本、快速部署且接受訂閱制收費的機構。",
+      "evidencePages": [
+        1
+      ],
+      "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
     },
     "q-pp-im-mis-107-4": {
       "questionId": "q-pp-im-mis-107-4",
@@ -5607,8 +5620,13 @@
     },
     "q-pp-im-mis-108-4": {
       "questionId": "q-pp-im-mis-108-4",
-      "answer": "A",
-      "explanation": "(a) 定義(1)對應公平概念，是因為它要求演算法對所有職業群體都具備相同的校準性（calibration）：若模型預測某組人有z的違約機率，則該組中確實違約的比例應接近z，代表模型對每個群體都同樣誠實、不偏袒任何一方。(b) 定義(2)要求在未來真正違約的人（正例）中，不同職業群體所獲得的平均風險分數相同，確保同樣「危險」的人在不同群體中受到一致的對待，避免某個群體的違約者被系統性地低估或高估風險。(c) 定義(3)要求在未來不會違約的人（負例）中，不同職業群體所獲得的平均風險分數相同，確保同樣「安全」的人不因職業不同而被賦予不同的風險評分，防止對無辜群體造成不公平的高風險標記。(d) 定義(1)最為合理，因為校準性（calibration）是最根本的公平要求，它保證模型輸出的機率對每個群體都具有實際意義，而定義(2)和(3)若同時滿足則在數學上往往與定義(1)矛盾（即不可能三者同時成立，除非基率相同），且校準性更能確保決策的一致性與可解釋性。(e) 台泰銀行應採取以下措施：首先確認模型在各職業群體的校準性，若發現偏差則針對各群體分別重新校準；其次蒐集具代表性的訓練資料，確保各職業群體樣本充足；並定期監控模型在不同群體的表現，建立公平性審查機制；最後應透明揭露模型決策依據，並提供申訴管道供客戶質疑不公平評分。"
+      "answer": "N/A",
+      "explanation": "(a) 定義(1)對應公平概念，是因為它要求演算法對所有職業群體都具備相同的校準性（calibration）：若模型預測某組人有z的違約機率，則該組中確實違約的比例應接近z，代表模型對每個群體都同樣誠實、不偏袒任何一方。(b) 定義(2)要求在未來真正違約的人（正例）中，不同職業群體所獲得的平均風險分數相同，確保同樣「危險」的人在不同群體中受到一致的對待，避免某個群體的違約者被系統性地低估或高估風險。(c) 定義(3)要求在未來不會違約的人（負例）中，不同職業群體所獲得的平均風險分數相同，確保同樣「安全」的人不因職業不同而被賦予不同的風險評分，防止對無辜群體造成不公平的高風險標記。(d) 定義(1)最為合理，因為校準性（calibration）是最根本的公平要求，它保證模型輸出的機率對每個群體都具有實際意義，而定義(2)和(3)若同時滿足則在數學上往往與定義(1)矛盾（即不可能三者同時成立，除非基率相同），且校準性更能確保決策的一致性與可解釋性。(e) 台泰銀行應採取以下措施：首先確認模型在各職業群體的校準性，若發現偏差則針對各群體分別重新校準；其次蒐集具代表性的訓練資料，確保各職業群體樣本充足；並定期監控模型在不同群體的表現，建立公平性審查機制；最後應透明揭露模型決策依據，並提供申訴管道供客戶質疑不公平評分。",
+      "evidencePages": [
+        1,
+        2
+      ],
+      "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
     },
     "q-pp-im-mis-109-1": {
       "questionId": "q-pp-im-mis-109-1",
@@ -5617,43 +5635,76 @@
     },
     "q-pp-im-mis-109-2": {
       "questionId": "q-pp-im-mis-109-2",
-      "answer": "A",
-      "explanation": "本題為申論題，無選項，以A作為代表性標記。(a) 組織性互補資產包含：去中心化的決策架構（允許員工自主決策以快速回應變化）、精實且彈性的業務流程（能配合IT系統進行流程再造）、以及強調學習與創新的組織文化（鼓勵知識分享與持續改善）。(b) 當企業採取創新策略時，組織性互補資產最為重要，因為創新需要彈性的組織結構與支持冒險的文化，去中心化決策能加速創新循環，而精實流程則能讓IT投資迅速轉化為競爭優勢。(c) 當IT投資涉及企業不熟悉的新興技術時，管理性互補資產最為關鍵，因為管理者需具備足夠的IT知識與技能來評估、導入並監督新技術的部署，缺乏這類管理能力將導致技術無法被有效利用，進而降低IT投資的回報。"
+      "answer": "N/A",
+      "explanation": "本題為申論題，無選項，以A作為代表性標記。(a) 組織性互補資產包含：去中心化的決策架構（允許員工自主決策以快速回應變化）、精實且彈性的業務流程（能配合IT系統進行流程再造）、以及強調學習與創新的組織文化（鼓勵知識分享與持續改善）。(b) 當企業採取創新策略時，組織性互補資產最為重要，因為創新需要彈性的組織結構與支持冒險的文化，去中心化決策能加速創新循環，而精實流程則能讓IT投資迅速轉化為競爭優勢。(c) 當IT投資涉及企業不熟悉的新興技術時，管理性互補資產最為關鍵，因為管理者需具備足夠的IT知識與技能來評估、導入並監督新技術的部署，缺乏這類管理能力將導致技術無法被有效利用，進而降低IT投資的回報。",
+      "evidencePages": [
+        1
+      ],
+      "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
     },
     "q-pp-im-mis-109-3": {
       "questionId": "q-pp-im-mis-109-3",
-      "answer": "A",
-      "explanation": "本題為申論題，選項（一）對應A：給消費者免運費或低運費，藉此累積大量消費者，再向餐廳抽取較高佣金。在三邊平台中，消費者是需求端的核心，消費者數量直接決定平台對餐廳的議價能力，因此以「補貼消費者、向餐廳收費」的交叉補貼模式最符合網路效應的邏輯。餐廳為了觸及更多消費者願意接受較高抽成，平台可從每筆訂單中獲取穩定且可觀的佣金收入，整體利潤最大化潛力最高。相較之下，選項（二）補貼餐廳雖能增加餐廳多樣性，但消費者對餐廳多樣性的敏感度低於對運費的敏感度，且向消費者收費會降低訂單量，不利於平台規模擴張。因此，選項（一）透過補貼價格彈性高的消費者端，並從價格彈性較低的餐廳端獲利，是最能最大化平台預期利潤的定價策略。"
+      "answer": "N/A",
+      "explanation": "本題為申論題，選項（一）對應A：給消費者免運費或低運費，藉此累積大量消費者，再向餐廳抽取較高佣金。在三邊平台中，消費者是需求端的核心，消費者數量直接決定平台對餐廳的議價能力，因此以「補貼消費者、向餐廳收費」的交叉補貼模式最符合網路效應的邏輯。餐廳為了觸及更多消費者願意接受較高抽成，平台可從每筆訂單中獲取穩定且可觀的佣金收入，整體利潤最大化潛力最高。相較之下，選項（二）補貼餐廳雖能增加餐廳多樣性，但消費者對餐廳多樣性的敏感度低於對運費的敏感度，且向消費者收費會降低訂單量，不利於平台規模擴張。因此，選項（一）透過補貼價格彈性高的消費者端，並從價格彈性較低的餐廳端獲利，是最能最大化平台預期利潤的定價策略。",
+      "evidencePages": [
+        2
+      ],
+      "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
     },
     "q-pp-im-mis-109-4": {
       "questionId": "q-pp-im-mis-109-4",
-      "answer": "A",
-      "explanation": "本題為開放式申論題，無標準選項，故以 A 作為佔位符。建議的需求估計方法可採用「試營運結合感測器資料分析」的混合策略：首先在候選站點附近部署低成本 IoT 感測器（如人流計數器、手機藍牙/Wi-Fi 探針），收集行人流量與駐留時間，作為潛在需求的代理指標。其次，可參考類似地理條件已有站點的歷史租借數據，利用迴歸或機器學習模型，以土地使用類型、人口密度、大眾運輸距離等特徵預測新站點需求。此外，可在目標區域發放小規模問卷或透過 App 推播調查，評估民眾的使用意願，成本低且可獲取主觀偏好資料。最後，可在少數候選站點進行短期試營運（例如 3 個月），以實際租借量修正模型預測值，再決定全面佈建優先順序，兼顧技術可行性與成本合理性。"
+      "answer": "N/A",
+      "explanation": "本題為開放式申論題，無標準選項，故以 A 作為佔位符。建議的需求估計方法可採用「試營運結合感測器資料分析」的混合策略：首先在候選站點附近部署低成本 IoT 感測器（如人流計數器、手機藍牙/Wi-Fi 探針），收集行人流量與駐留時間，作為潛在需求的代理指標。其次，可參考類似地理條件已有站點的歷史租借數據，利用迴歸或機器學習模型，以土地使用類型、人口密度、大眾運輸距離等特徵預測新站點需求。此外，可在目標區域發放小規模問卷或透過 App 推播調查，評估民眾的使用意願，成本低且可獲取主觀偏好資料。最後，可在少數候選站點進行短期試營運（例如 3 個月），以實際租借量修正模型預測值，再決定全面佈建優先順序，兼顧技術可行性與成本合理性。",
+      "evidencePages": [
+        2
+      ],
+      "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
     },
     "q-pp-im-mis-110-1": {
       "questionId": "q-pp-im-mis-110-1",
-      "answer": "A",
-      "explanation": "此題為申論題，無單一選項答案。針對(a)部分，從非貨幣制轉為貨幣制時，需新增或強化的業務流程包括：訂價與費率管理流程（決定如何向用戶收費）、金流與支付處理流程（整合第三方支付或金融機構）、財務對帳與稅務申報流程，以及爭議與退款處理流程。針對(b)部分的IT策略建議，平台需導入安全的支付閘道系統（如PCI DSS合規）、強化資料加密與隱私保護機制、建置財務報表與分析系統以監控收益，並考慮採用雲端擴展架構以因應貨幣化後用戶成長的需求。整體而言，IT策略應從支援社群信任為主，轉型為兼顧交易安全與財務管理的複合型資訊架構。"
+      "answer": "N/A",
+      "explanation": "此題為申論題，無單一選項答案。針對(a)部分，從非貨幣制轉為貨幣制時，需新增或強化的業務流程包括：訂價與費率管理流程（決定如何向用戶收費）、金流與支付處理流程（整合第三方支付或金融機構）、財務對帳與稅務申報流程，以及爭議與退款處理流程。針對(b)部分的IT策略建議，平台需導入安全的支付閘道系統（如PCI DSS合規）、強化資料加密與隱私保護機制、建置財務報表與分析系統以監控收益，並考慮採用雲端擴展架構以因應貨幣化後用戶成長的需求。整體而言，IT策略應從支援社群信任為主，轉型為兼顧交易安全與財務管理的複合型資訊架構。",
+      "evidencePages": [
+        1
+      ],
+      "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
     },
     "q-pp-im-mis-110-2": {
       "questionId": "q-pp-im-mis-110-2",
-      "answer": "A",
-      "explanation": "(a) 在數位市場中，消費者與供應商之間的資訊不對稱將會被降低。透過網際網路，消費者可以輕易搜尋並比較多家供應商的價格、品質與評價，使得原本供應商掌握的資訊優勢大幅縮小；這種現象稱為「資訊透明化」。對企業的商業影響包括：價格競爭更加激烈（因消費者可即時比價）、品牌忠誠度可能降低、供應商必須更注重服務品質與差異化策略，而非僅依賴資訊優勢來獲利。(b) 在數位市場中，轉換成本較傳統市場更高的產品/服務特性包括：需要大量個人化設定或資料積累的服務（如雲端儲存平台、訂閱制軟體），因為用戶已在平台上建立大量資料與習慣，轉換需付出高昂的遷移成本；以及具有強烈網路外部性的產品（如社群媒體），用戶越多價值越高，離開意味著失去整個社交網絡。反之，轉換成本較傳統市場更低的產品/服務特性包括：標準化且易於數位化的商品（如電子書、音樂下載），消費者只需點擊即可切換至其他平台；以及實體搜尋成本高但網路搜尋成本低的商品（如家電、書籍），在數位市場中消費者可以極低成本找到並比較不同供應商，大幅降低轉換障礙。"
+      "answer": "N/A",
+      "explanation": "(a) 在數位市場中，消費者與供應商之間的資訊不對稱將會被降低。透過網際網路，消費者可以輕易搜尋並比較多家供應商的價格、品質與評價，使得原本供應商掌握的資訊優勢大幅縮小；這種現象稱為「資訊透明化」。對企業的商業影響包括：價格競爭更加激烈（因消費者可即時比價）、品牌忠誠度可能降低、供應商必須更注重服務品質與差異化策略，而非僅依賴資訊優勢來獲利。(b) 在數位市場中，轉換成本較傳統市場更高的產品/服務特性包括：需要大量個人化設定或資料積累的服務（如雲端儲存平台、訂閱制軟體），因為用戶已在平台上建立大量資料與習慣，轉換需付出高昂的遷移成本；以及具有強烈網路外部性的產品（如社群媒體），用戶越多價值越高，離開意味著失去整個社交網絡。反之，轉換成本較傳統市場更低的產品/服務特性包括：標準化且易於數位化的商品（如電子書、音樂下載），消費者只需點擊即可切換至其他平台；以及實體搜尋成本高但網路搜尋成本低的商品（如家電、書籍），在數位市場中消費者可以極低成本找到並比較不同供應商，大幅降低轉換障礙。",
+      "evidencePages": [
+        1
+      ],
+      "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
     },
     "q-pp-im-mis-110-3": {
       "questionId": "q-pp-im-mis-110-3",
-      "answer": "A",
-      "explanation": "本題為申論題，考查 Scrum 敏捷開發方法的核心概念。(a) Scrum Master 負責確保團隊遵循 Scrum 流程、排除障礙並促進溝通；Product Owner 負責定義產品需求、管理 Product Backlog 並代表利害關係人設定優先順序；Team 是由跨職能成員組成的自組織開發團隊，負責在每個 Sprint 中完成承諾的工作項目。(b) 每日站立會議（Daily Scrum）每天固定時間舉行，時間控制在 15 分鐘以內，每位成員回答三個問題：昨天完成了什麼、今天計畫做什麼、有什麼障礙需要排除。(c) Sprint Backlog 是從 Product Backlog 中挑選出當前 Sprint 要完成的工作項目清單，由團隊在 Sprint Planning 會議中建立，並在 Sprint 進行中由團隊自行管理與更新。(d) Burn Down Chart 是追蹤 Sprint 剩餘工作量的圖表，X 軸為時間（Sprint 天數），Y 軸為剩餘工作量（Story Points 或小時），理想線為直線下降至零，實際線反映每日進度，若實際線高於理想線表示進度落後。"
+      "answer": "N/A",
+      "explanation": "本題為申論題，考查 Scrum 敏捷開發方法的核心概念。(a) Scrum Master 負責確保團隊遵循 Scrum 流程、排除障礙並促進溝通；Product Owner 負責定義產品需求、管理 Product Backlog 並代表利害關係人設定優先順序；Team 是由跨職能成員組成的自組織開發團隊，負責在每個 Sprint 中完成承諾的工作項目。(b) 每日站立會議（Daily Scrum）每天固定時間舉行，時間控制在 15 分鐘以內，每位成員回答三個問題：昨天完成了什麼、今天計畫做什麼、有什麼障礙需要排除。(c) Sprint Backlog 是從 Product Backlog 中挑選出當前 Sprint 要完成的工作項目清單，由團隊在 Sprint Planning 會議中建立，並在 Sprint 進行中由團隊自行管理與更新。(d) Burn Down Chart 是追蹤 Sprint 剩餘工作量的圖表，X 軸為時間（Sprint 天數），Y 軸為剩餘工作量（Story Points 或小時），理想線為直線下降至零，實際線反映每日進度，若實際線高於理想線表示進度落後。",
+      "evidencePages": [
+        2
+      ],
+      "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
     },
     "q-pp-im-mis-110-4": {
       "questionId": "q-pp-im-mis-110-4",
-      "answer": "A",
-      "explanation": "本題為申論題，無單一選項答案，以下為各子題重點說明。(a) 除電子收費資料外，可補充的資料包括：天氣預報資料（雨天/連假前後）、社群媒體與行事曆（連假出遊意願）、加油站/服務區人流資料、高鐵與航空訂票率（替代運具使用率）、歷年同節日車流量歷史資料等。(b) 可透過部署路側 IoT 感測器、整合氣象 API、爬取社群媒體與訂票平台資料、以及在服務區安裝人流感測器，配合雲端資料平台進行即時收集與整合。(c) 將多源資料輸入機器學習模型（如 LSTM、隨機森林），可學習節日、天氣、歷史車流的複合影響，對未來 1–7 天各路段壅塞機率進行預測，並透過動態路徑規劃提供用路人建議。(d) 主要 Actor 包括：用路人、交通管理人員、系統管理員、氣象資料提供者；主要 Use Case 包括：查詢壅塞預測、接收路況通知、管理感測器資料、更新路況模型、產生交通報告。(e) Use Case Diagram 應以系統邊界框住上述 Use Case，並以線條連結各 Actor 與其對應的 Use Case，例如用路人連結「查詢壅塞預測」與「接收路況通知」，交通管理人員連結「管理感測器資料」與「產生交通報告」。"
+      "answer": "N/A",
+      "explanation": "本題為申論題，無單一選項答案，以下為各子題重點說明。(a) 除電子收費資料外，可補充的資料包括：天氣預報資料（雨天/連假前後）、社群媒體與行事曆（連假出遊意願）、加油站/服務區人流資料、高鐵與航空訂票率（替代運具使用率）、歷年同節日車流量歷史資料等。(b) 可透過部署路側 IoT 感測器、整合氣象 API、爬取社群媒體與訂票平台資料、以及在服務區安裝人流感測器，配合雲端資料平台進行即時收集與整合。(c) 將多源資料輸入機器學習模型（如 LSTM、隨機森林），可學習節日、天氣、歷史車流的複合影響，對未來 1–7 天各路段壅塞機率進行預測，並透過動態路徑規劃提供用路人建議。(d) 主要 Actor 包括：用路人、交通管理人員、系統管理員、氣象資料提供者；主要 Use Case 包括：查詢壅塞預測、接收路況通知、管理感測器資料、更新路況模型、產生交通報告。(e) Use Case Diagram 應以系統邊界框住上述 Use Case，並以線條連結各 Actor 與其對應的 Use Case，例如用路人連結「查詢壅塞預測」與「接收路況通知」，交通管理人員連結「管理感測器資料」與「產生交通報告」。",
+      "evidencePages": [
+        2
+      ],
+      "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
     },
     "q-pp-im-mis-111-1": {
       "questionId": "q-pp-im-mis-111-1",
-      "answer": "A",
-      "explanation": "本題為申論題，無選項，以下為各小題解析。(a) 資本預算方法的四項主要缺點：第一，忽略無形效益（如提升顧客滿意度、組織學習等）；第二，以短期財務指標衡量，無法反映長期策略價值；第三，難以量化資訊系統投資帶來的競爭優勢；第四，回收期法等方法未考慮資金時間價值，且對現金流量的預估本身即存在不確定性。(b) 採取成本領導策略的企業應優先投資「例行性專案（Routine Projects）」類別，因為這類專案風險低且效益穩定，有助於降低營運成本、提升流程效率，符合成本領導策略強調控制成本與規模經濟的核心目標；同時也可適度投入「謹慎審視（Cautiously Examine）」類高效益專案，以在可控風險下追求顯著的成本節省效果。(c) 資訊密集型產業（如金融業）的資料量龐大、業務流程高度依賴資訊系統，因此高風險高效益的IT專案一旦成功，便能帶來顯著的差異化競爭優勢；加上此類產業的競爭者也積極導入創新科技，若不投資高效益專案則可能喪失市場地位，故需承擔較高風險以維持競爭力。"
+      "answer": "N/A",
+      "explanation": "本題為申論題，無選項，以下為各小題解析。(a) 資本預算方法的四項主要缺點：第一，忽略無形效益（如提升顧客滿意度、組織學習等）；第二，以短期財務指標衡量，無法反映長期策略價值；第三，難以量化資訊系統投資帶來的競爭優勢；第四，回收期法等方法未考慮資金時間價值，且對現金流量的預估本身即存在不確定性。(b) 採取成本領導策略的企業應優先投資「例行性專案（Routine Projects）」類別，因為這類專案風險低且效益穩定，有助於降低營運成本、提升流程效率，符合成本領導策略強調控制成本與規模經濟的核心目標；同時也可適度投入「謹慎審視（Cautiously Examine）」類高效益專案，以在可控風險下追求顯著的成本節省效果。(c) 資訊密集型產業（如金融業）的資料量龐大、業務流程高度依賴資訊系統，因此高風險高效益的IT專案一旦成功，便能帶來顯著的差異化競爭優勢；加上此類產業的競爭者也積極導入創新科技，若不投資高效益專案則可能喪失市場地位，故需承擔較高風險以維持競爭力。",
+      "evidencePages": [
+        1,
+        2
+      ],
+      "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
     },
     "q-pp-im-mis-111-2": {
       "questionId": "q-pp-im-mis-111-2",
@@ -5662,18 +5713,30 @@
     },
     "q-pp-im-mis-111-3": {
       "questionId": "q-pp-im-mis-111-3",
-      "answer": "A",
-      "explanation": "此題為問答題，要求比較 SDLC 各階段的測試類型。單元測試（Unit Testing）在編碼階段進行，由開發人員負責，目的是驗證個別模組或函式的邏輯正確性，執行環境為開發機器或 CI 環境，範圍最小且執行最快。整合測試（Integration Testing）在多個模組合併後進行，由開發人員或測試工程師負責，目的是確認模組間介面與資料流的正確性，執行於測試環境，範圍涵蓋模組間的互動。使用者驗收測試（User Acceptance Testing, UAT）在系統接近上線前進行，由客戶或終端使用者負責，目的是確認系統符合業務需求與合約規格，通常在模擬正式環境或 staging 環境中執行。易用性測試（Usability Testing）可在原型或系統完成後進行，由使用者體驗（UX）研究人員主導並邀請真實使用者參與，目的是評估系統的易學性、效率與使用者滿意度，著重於人機互動品質而非功能正確性。"
+      "answer": "N/A",
+      "explanation": "此題為問答題，要求比較 SDLC 各階段的測試類型。單元測試（Unit Testing）在編碼階段進行，由開發人員負責，目的是驗證個別模組或函式的邏輯正確性，執行環境為開發機器或 CI 環境，範圍最小且執行最快。整合測試（Integration Testing）在多個模組合併後進行，由開發人員或測試工程師負責，目的是確認模組間介面與資料流的正確性，執行於測試環境，範圍涵蓋模組間的互動。使用者驗收測試（User Acceptance Testing, UAT）在系統接近上線前進行，由客戶或終端使用者負責，目的是確認系統符合業務需求與合約規格，通常在模擬正式環境或 staging 環境中執行。易用性測試（Usability Testing）可在原型或系統完成後進行，由使用者體驗（UX）研究人員主導並邀請真實使用者參與，目的是評估系統的易學性、效率與使用者滿意度，著重於人機互動品質而非功能正確性。",
+      "evidencePages": [
+        2
+      ],
+      "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
     },
     "q-pp-im-mis-111-4": {
       "questionId": "q-pp-im-mis-111-4",
-      "answer": "A",
-      "explanation": "(a) 以使用者為中心的設計（User-Centered Design, UCD）是一種將使用者的需求、目標與限制置於設計流程核心的設計哲學與方法論。其原則包括：在設計各階段積極了解使用者需求（早期且持續地關注使用者）、透過迭代設計與評估反覆改進（原型測試→回饋→修正的循環）、讓使用者直接參與設計過程（參與式設計），以及跨領域團隊協作確保多角度考量。(b) 常見的使用者體驗與介面設計啟發原則（Heuristics）至少四項如下：一、系統狀態可見性（Visibility of System Status）：系統應隨時透過適當回饋讓使用者知道目前發生了什麼，例如進度條或載入動畫。二、系統與真實世界的匹配（Match Between System and the Real World）：系統應使用使用者熟悉的語言、詞彙與概念，而非以系統內部術語呈現。三、使用者的控制權與自由度（User Control and Freedom）：使用者常誤觸操作，系統應提供明顯的「復原」與「重做」功能，讓使用者可自由離開不想要的狀態。四、一致性與標準（Consistency and Standards）：同一系統中相同操作應有相同結果，遵循平台慣例，避免讓使用者猜測不同詞彙或動作是否代表同一件事。五、錯誤預防（Error Prevention）：比好的錯誤訊息更重要的是從設計上防止問題發生，例如刪除前的確認對話框或自動檢查輸入格式。"
+      "answer": "N/A",
+      "explanation": "(a) 以使用者為中心的設計（User-Centered Design, UCD）是一種將使用者的需求、目標與限制置於設計流程核心的設計哲學與方法論。其原則包括：在設計各階段積極了解使用者需求（早期且持續地關注使用者）、透過迭代設計與評估反覆改進（原型測試→回饋→修正的循環）、讓使用者直接參與設計過程（參與式設計），以及跨領域團隊協作確保多角度考量。(b) 常見的使用者體驗與介面設計啟發原則（Heuristics）至少四項如下：一、系統狀態可見性（Visibility of System Status）：系統應隨時透過適當回饋讓使用者知道目前發生了什麼，例如進度條或載入動畫。二、系統與真實世界的匹配（Match Between System and the Real World）：系統應使用使用者熟悉的語言、詞彙與概念，而非以系統內部術語呈現。三、使用者的控制權與自由度（User Control and Freedom）：使用者常誤觸操作，系統應提供明顯的「復原」與「重做」功能，讓使用者可自由離開不想要的狀態。四、一致性與標準（Consistency and Standards）：同一系統中相同操作應有相同結果，遵循平台慣例，避免讓使用者猜測不同詞彙或動作是否代表同一件事。五、錯誤預防（Error Prevention）：比好的錯誤訊息更重要的是從設計上防止問題發生，例如刪除前的確認對話框或自動檢查輸入格式。",
+      "evidencePages": [
+        2
+      ],
+      "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
     },
     "q-pp-im-mis-112-1": {
       "questionId": "q-pp-im-mis-112-1",
-      "answer": "A",
-      "explanation": "本題為問答題，無單選答案。(a) 拉式供應鏈（Pull-based）是依據實際顧客需求來驅動生產與補貨，需求訊號由下游往上游傳遞，代表性系統為豐田的看板（Kanban）制度；推式供應鏈（Push-based）則依據需求預測提前生產與備料，產品在未收到實際訂單前便被推送至各通路。(b) 拉式的優點在於降低存貨風險、減少過剩產能與牛鞭效應（Bullwhip Effect）；推式的優點在於可享規模經濟、提前備料以應對大量或季節性需求，並縮短顧客等待時間。(c) 企業選擇供應鏈模式時，應考量公司層面（產品種類多樣性、前置時間長短、預測準確度）、產業層面（產品生命週期、競爭強度、供應商集中度）及總體環境層面（市場需求波動性、法規環境、全球化程度），多數企業實務上採用混合式（Push-Pull）策略以兼顧效率與彈性。"
+      "answer": "N/A",
+      "explanation": "本題為問答題，無單選答案。(a) 拉式供應鏈（Pull-based）是依據實際顧客需求來驅動生產與補貨，需求訊號由下游往上游傳遞，代表性系統為豐田的看板（Kanban）制度；推式供應鏈（Push-based）則依據需求預測提前生產與備料，產品在未收到實際訂單前便被推送至各通路。(b) 拉式的優點在於降低存貨風險、減少過剩產能與牛鞭效應（Bullwhip Effect）；推式的優點在於可享規模經濟、提前備料以應對大量或季節性需求，並縮短顧客等待時間。(c) 企業選擇供應鏈模式時，應考量公司層面（產品種類多樣性、前置時間長短、預測準確度）、產業層面（產品生命週期、競爭強度、供應商集中度）及總體環境層面（市場需求波動性、法規環境、全球化程度），多數企業實務上採用混合式（Push-Pull）策略以兼顧效率與彈性。",
+      "evidencePages": [
+        1
+      ],
+      "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
     },
     "q-pp-im-mis-112-2": {
       "questionId": "q-pp-im-mis-112-2",
@@ -5682,8 +5745,12 @@
     },
     "q-pp-im-mis-112-3": {
       "questionId": "q-pp-im-mis-112-3",
-      "answer": "A",
-      "explanation": "本題為申論題，詢問已部署深度學習模型的維護步驟與影響因素。維護步驟通常包含：(1) 監控模型效能（monitoring），持續追蹤預測準確率、資料分佈等指標；(2) 偵測模型退化（model drift detection），包括資料漂移（data drift）與概念漂移（concept drift）；(3) 重新訓練（retraining）或微調（fine-tuning），使用新資料更新模型參數；(4) 版本管理與 A/B 測試，確保新模型上線後效能優於舊版本；(5) 回滾機制（rollback），當新模型表現不佳時可快速切換回穩定版本。影響模型維護的因素包括：輸入資料分佈的變化（如使用者行為改變）、標籤資料取得的難易度、運算資源成本、模型可解釋性需求，以及業務目標的演進。以題目中的虛擬試妝工具為例，季節流行趨勢改變會造成概念漂移，需定期以新妝容資料重新訓練模型；手寫表單辨識系統則需應對不同用戶筆跡風格的變化，維護挑戰在於持續收集具代表性的多樣化訓練樣本。"
+      "answer": "N/A",
+      "explanation": "本題為申論題，詢問已部署深度學習模型的維護步驟與影響因素。維護步驟通常包含：(1) 監控模型效能（monitoring），持續追蹤預測準確率、資料分佈等指標；(2) 偵測模型退化（model drift detection），包括資料漂移（data drift）與概念漂移（concept drift）；(3) 重新訓練（retraining）或微調（fine-tuning），使用新資料更新模型參數；(4) 版本管理與 A/B 測試，確保新模型上線後效能優於舊版本；(5) 回滾機制（rollback），當新模型表現不佳時可快速切換回穩定版本。影響模型維護的因素包括：輸入資料分佈的變化（如使用者行為改變）、標籤資料取得的難易度、運算資源成本、模型可解釋性需求，以及業務目標的演進。以題目中的虛擬試妝工具為例，季節流行趨勢改變會造成概念漂移，需定期以新妝容資料重新訓練模型；手寫表單辨識系統則需應對不同用戶筆跡風格的變化，維護挑戰在於持續收集具代表性的多樣化訓練樣本。",
+      "evidencePages": [
+        1
+      ],
+      "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
     },
     "q-pp-im-mis-112-4": {
       "questionId": "q-pp-im-mis-112-4",
@@ -5692,73 +5759,129 @@
     },
     "q-pp-im-mis-113-1": {
       "questionId": "q-pp-im-mis-113-1",
-      "answer": "A",
-      "explanation": "(a) 社群偵測（Community Detection）是在網路（graph）中找出具有高度內部連結、低度外部連結的節點群組的技術。在社群媒體分析中，一個應用案例是偵測 Twitter 或 Facebook 上具有相似興趣或互動頻繁的使用者群體，例如識別特定話題的意見領袖社群或假訊息傳播群組，從而進行精準行銷或輿情監控。(b) 評估社群偵測方法的效果可使用模組度（Modularity, Q值）作為無監督指標，Q值介於-1到1之間，數值愈高代表社群內部連結愈密集、社群間連結愈稀疏。若有已知的真實社群標籤（ground truth），則可使用標準化互信息（Normalized Mutual Information, NMI）或調整蘭德指數（Adjusted Rand Index, ARI）來衡量演算法輸出與真實社群的吻合程度。評估流程上，先在具有已知社群結構的基準資料集（如 Karate Club、LFR benchmark graph）上執行演算法，再計算上述指標，並與其他方法（如 Louvain、DBSCAN、Spectral Clustering）進行比較，以全面評估方法的準確性與穩定性。"
+      "answer": "N/A",
+      "explanation": "(a) 社群偵測（Community Detection）是在網路（graph）中找出具有高度內部連結、低度外部連結的節點群組的技術。在社群媒體分析中，一個應用案例是偵測 Twitter 或 Facebook 上具有相似興趣或互動頻繁的使用者群體，例如識別特定話題的意見領袖社群或假訊息傳播群組，從而進行精準行銷或輿情監控。(b) 評估社群偵測方法的效果可使用模組度（Modularity, Q值）作為無監督指標，Q值介於-1到1之間，數值愈高代表社群內部連結愈密集、社群間連結愈稀疏。若有已知的真實社群標籤（ground truth），則可使用標準化互信息（Normalized Mutual Information, NMI）或調整蘭德指數（Adjusted Rand Index, ARI）來衡量演算法輸出與真實社群的吻合程度。評估流程上，先在具有已知社群結構的基準資料集（如 Karate Club、LFR benchmark graph）上執行演算法，再計算上述指標，並與其他方法（如 Louvain、DBSCAN、Spectral Clustering）進行比較，以全面評估方法的準確性與穩定性。",
+      "evidencePages": [
+        1
+      ],
+      "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
     },
     "q-pp-im-mis-113-2": {
       "questionId": "q-pp-im-mis-113-2",
-      "answer": "B",
-      "explanation": "此題為申論題，共三小題，無選項設計，故以最具代表性的核心論點（第(c)小題）作為答案依據。在相同條件下，採用自建資訊系統的公司B（Company B）會比導入ERP系統的公司A（Company A）擁有更高的企業敏捷性。ERP系統雖整合了各業務流程，但其高度標準化與模組耦合的特性，使得企業難以快速修改系統以因應外部環境變化，客製化成本高且週期長。相對地，自建系統雖初期建置成本較高，但企業擁有完整的系統控制權，可依需求快速調整、擴充或重構特定模組，反應速度更快。因此，自建系統在面對動態商業環境時，能提供更高的彈性與適應能力，從而支援更強的企業敏捷性。"
+      "answer": "N/A",
+      "explanation": "此題為申論題，共三小題，無選項設計，故以最具代表性的核心論點（第(c)小題）作為答案依據。在相同條件下，採用自建資訊系統的公司B（Company B）會比導入ERP系統的公司A（Company A）擁有更高的企業敏捷性。ERP系統雖整合了各業務流程，但其高度標準化與模組耦合的特性，使得企業難以快速修改系統以因應外部環境變化，客製化成本高且週期長。相對地，自建系統雖初期建置成本較高，但企業擁有完整的系統控制權，可依需求快速調整、擴充或重構特定模組，反應速度更快。因此，自建系統在面對動態商業環境時，能提供更高的彈性與適應能力，從而支援更強的企業敏捷性。",
+      "evidencePages": [
+        1
+      ],
+      "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
     },
     "q-pp-im-mis-113-3": {
       "questionId": "q-pp-im-mis-113-3",
-      "answer": "A",
-      "explanation": "本題為問答題，無選項，以下提供完整解析。(a) 對話式AI在銀行客服中心的效益：可全天24小時不間斷服務、大幅降低人力成本、縮短客戶等待時間、提升一致性服務品質；績效評估指標包括首次解決率（First Call Resolution Rate）、客戶滿意度（CSAT）、平均處理時間（AHT）、轉接人工客服比率及自動化解決率等。(b) 挑戰與解決方案：主要挑戰包括自然語言理解準確度不足（尤其是方言或專業術語）、資安與隱私疑慮、客戶接受度低以及系統整合複雜度高；對應解法為持續訓練語言模型並導入領域特定語料、採用端對端加密與符合法規的資料處理流程、設計順暢的人機切換機制以提升信任感，以及採用API中介層降低後端系統整合難度。"
+      "answer": "N/A",
+      "explanation": "本題為問答題，無選項，以下提供完整解析。(a) 對話式AI在銀行客服中心的效益：可全天24小時不間斷服務、大幅降低人力成本、縮短客戶等待時間、提升一致性服務品質；績效評估指標包括首次解決率（First Call Resolution Rate）、客戶滿意度（CSAT）、平均處理時間（AHT）、轉接人工客服比率及自動化解決率等。(b) 挑戰與解決方案：主要挑戰包括自然語言理解準確度不足（尤其是方言或專業術語）、資安與隱私疑慮、客戶接受度低以及系統整合複雜度高；對應解法為持續訓練語言模型並導入領域特定語料、採用端對端加密與符合法規的資料處理流程、設計順暢的人機切換機制以提升信任感，以及採用API中介層降低後端系統整合難度。",
+      "evidencePages": [
+        1
+      ],
+      "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
     },
     "q-pp-im-mis-113-4": {
       "questionId": "q-pp-im-mis-113-4",
-      "answer": "A",
-      "explanation": "本題為申論題，無標準選項，以下提供參考解答。(a) ESG 三個面向：Environmental（環境）指企業對自然環境的影響，如碳排放、能源使用與廢棄物管理；Social（社會）指企業與員工、供應鏈、社區的互動關係，如勞工權益與多元包容；Governance（治理）指企業的管理架構與透明度，如董事會組成、反腐機制與股東權益保護。(b) IT 投資會正向影響企業 ESG 績效。在環境面，IT 系統（如智慧能源管理、供應鏈透明化平台）可降低碳排放與資源浪費；在社會面，數位化工具可改善員工安全監控與勞工管理，並提升客戶資料保護；在治理面，ERP、區塊鏈與資料分析工具能強化財務透明度與合規管理，降低舞弊風險。因此，雖然 IT 投資對財務績效的影響在文獻中結果不一，但對 ESG 整體表現的提升效果有較一致的理論支持。"
+      "answer": "N/A",
+      "explanation": "本題為申論題，無標準選項，以下提供參考解答。(a) ESG 三個面向：Environmental（環境）指企業對自然環境的影響，如碳排放、能源使用與廢棄物管理；Social（社會）指企業與員工、供應鏈、社區的互動關係，如勞工權益與多元包容；Governance（治理）指企業的管理架構與透明度，如董事會組成、反腐機制與股東權益保護。(b) IT 投資會正向影響企業 ESG 績效。在環境面，IT 系統（如智慧能源管理、供應鏈透明化平台）可降低碳排放與資源浪費；在社會面，數位化工具可改善員工安全監控與勞工管理，並提升客戶資料保護；在治理面，ERP、區塊鏈與資料分析工具能強化財務透明度與合規管理，降低舞弊風險。因此，雖然 IT 投資對財務績效的影響在文獻中結果不一，但對 ESG 整體表現的提升效果有較一致的理論支持。",
+      "evidencePages": [
+        2
+      ],
+      "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
     },
     "q-pp-im-mis-114-1": {
       "questionId": "q-pp-im-mis-114-1",
-      "answer": "A",
-      "explanation": "本題為問答題，無標準選項。第A題：大型企業可藉由直播平台打造品牌旗艦直播間，結合大數據精準投放廣告並邀請知名網紅合作，例如美妝品牌進行限量新品發布直播；中小企業則可利用低成本的社群平台直播（如Facebook Live、Instagram Live）快速建立與粉絲的直接溝通管道，以個人化服務和即時互動彌補品牌知名度不足的劣勢。第B題：人工智慧可應用於即時商品推薦、觀眾情緒分析與個人化內容呈現，大幅提升轉換率；虛擬實境（VR）技術則可打造沉浸式購物體驗，讓消費者在直播中「試穿」或「試用」商品，突破實體限制並降低退貨率，進一步提升直播電商的商業價值。"
+      "answer": "N/A",
+      "explanation": "本題為問答題，無標準選項。第A題：大型企業可藉由直播平台打造品牌旗艦直播間，結合大數據精準投放廣告並邀請知名網紅合作，例如美妝品牌進行限量新品發布直播；中小企業則可利用低成本的社群平台直播（如Facebook Live、Instagram Live）快速建立與粉絲的直接溝通管道，以個人化服務和即時互動彌補品牌知名度不足的劣勢。第B題：人工智慧可應用於即時商品推薦、觀眾情緒分析與個人化內容呈現，大幅提升轉換率；虛擬實境（VR）技術則可打造沉浸式購物體驗，讓消費者在直播中「試穿」或「試用」商品，突破實體限制並降低退貨率，進一步提升直播電商的商業價值。",
+      "evidencePages": [
+        1
+      ],
+      "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
     },
     "q-pp-im-mis-114-2": {
       "questionId": "q-pp-im-mis-114-2",
-      "answer": "A",
-      "explanation": "此題為申論題，探討為何相同的資訊科技（IT）投資在不同企業間會產生不同的績效結果。Part A 的關鍵因素包括：互補性資產（如組織文化、流程再造、人力資本）、管理能力與IT治理品質、企業IT吸收能力（absorptive capacity），以及產業競爭結構差異。Part B 可引用資源基礎理論（Resource-Based View）說明IT本身易被模仿，但與企業獨特能力結合後才能創造持久競爭優勢；亦可以IT生產力悖論（IT Productivity Paradox）為例，說明短期投資與長期績效之間的落差。Brynjolfsson 與 Hitt 的研究指出，IT投資的效益高度依賴組織變革與互補性投資，缺乏配套的企業即使投入相同金額也難以獲得相同回報。因此，IT投資的差異化結果本質上反映了企業在組織能力與策略執行上的根本差異。"
+      "answer": "N/A",
+      "explanation": "此題為申論題，探討為何相同的資訊科技（IT）投資在不同企業間會產生不同的績效結果。Part A 的關鍵因素包括：互補性資產（如組織文化、流程再造、人力資本）、管理能力與IT治理品質、企業IT吸收能力（absorptive capacity），以及產業競爭結構差異。Part B 可引用資源基礎理論（Resource-Based View）說明IT本身易被模仿，但與企業獨特能力結合後才能創造持久競爭優勢；亦可以IT生產力悖論（IT Productivity Paradox）為例，說明短期投資與長期績效之間的落差。Brynjolfsson 與 Hitt 的研究指出，IT投資的效益高度依賴組織變革與互補性投資，缺乏配套的企業即使投入相同金額也難以獲得相同回報。因此，IT投資的差異化結果本質上反映了企業在組織能力與策略執行上的根本差異。",
+      "evidencePages": [
+        1
+      ],
+      "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
     },
     "q-pp-im-mis-114-3": {
       "questionId": "q-pp-im-mis-114-3",
-      "answer": "A",
-      "explanation": "User Story 是敏捷開發中常用的需求描述工具，格式通常為「作為一個＜角色＞，我想要＜功能＞，以便＜目的＞」，著重於使用者價值與商業目標，語言簡短易懂，適合與非技術利害關係人溝通。Use Case 則源自物件導向分析（UML），描述系統與外部執行者之間的互動流程，包含主要流程、替代流程與例外流程，結構較為正式且詳細。兩者最大差異在於：User Story 聚焦於「為什麼」和「目標」，Use Case 聚焦於「如何」和「互動步驟」；User Story 適合需求發現與溝通階段，Use Case 適合需求規格化與系統設計階段。此外，User Story 通常較小且可獨立開發，Use Case 則涵蓋完整的業務場景與多種情境分支。兩者可互補使用：先以 User Story 收集高層次需求，再以 Use Case 細化複雜互動流程。"
+      "answer": "N/A",
+      "explanation": "User Story 是敏捷開發中常用的需求描述工具，格式通常為「作為一個＜角色＞，我想要＜功能＞，以便＜目的＞」，著重於使用者價值與商業目標，語言簡短易懂，適合與非技術利害關係人溝通。Use Case 則源自物件導向分析（UML），描述系統與外部執行者之間的互動流程，包含主要流程、替代流程與例外流程，結構較為正式且詳細。兩者最大差異在於：User Story 聚焦於「為什麼」和「目標」，Use Case 聚焦於「如何」和「互動步驟」；User Story 適合需求發現與溝通階段，Use Case 適合需求規格化與系統設計階段。此外，User Story 通常較小且可獨立開發，Use Case 則涵蓋完整的業務場景與多種情境分支。兩者可互補使用：先以 User Story 收集高層次需求，再以 Use Case 細化複雜互動流程。",
+      "evidencePages": [
+        1
+      ],
+      "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
     },
     "q-pp-im-mis-115-1": {
       "questionId": "q-pp-im-mis-115-1",
-      "answer": "A",
-      "explanation": "本題為申論題，無標準選項，以下提供解析內容。根據RAND Corporation與IBM等機構研究，AI專案失敗率高達70-80%，三大關鍵原因如下：一、FOMO驅動的盲目跟風（缺乏明確目標）：組織因害怕落後競爭對手而倉促導入AI，未釐清具體業務問題與可衡量的成功指標，導致專案缺乏方向；二、資料品質與治理不足：AI模型的效能高度依賴資料，但許多組織在未建立完善資料基礎設施（資料清理、標註、治理機制）的情況下就貿然啟動專案，造成「垃圾進、垃圾出」的困境；三、人才缺口與變革管理失敗：組織缺乏具備AI專業知識的人才，同時忽略員工對技術變革的抗拒，未能有效推動組織文化轉型。改善策略（針對第一項）：建議採用「AI機會評估框架」，在啟動任何AI專案前，要求提出明確的業務痛點、量化KPI、ROI估算及資料可用性評估報告，以確保投資決策基於實際需求而非市場FOMO壓力。"
+      "answer": "N/A",
+      "explanation": "本題為申論題，無標準選項，以下提供解析內容。根據RAND Corporation與IBM等機構研究，AI專案失敗率高達70-80%，三大關鍵原因如下：一、FOMO驅動的盲目跟風（缺乏明確目標）：組織因害怕落後競爭對手而倉促導入AI，未釐清具體業務問題與可衡量的成功指標，導致專案缺乏方向；二、資料品質與治理不足：AI模型的效能高度依賴資料，但許多組織在未建立完善資料基礎設施（資料清理、標註、治理機制）的情況下就貿然啟動專案，造成「垃圾進、垃圾出」的困境；三、人才缺口與變革管理失敗：組織缺乏具備AI專業知識的人才，同時忽略員工對技術變革的抗拒，未能有效推動組織文化轉型。改善策略（針對第一項）：建議採用「AI機會評估框架」，在啟動任何AI專案前，要求提出明確的業務痛點、量化KPI、ROI估算及資料可用性評估報告，以確保投資決策基於實際需求而非市場FOMO壓力。",
+      "evidencePages": [
+        1
+      ],
+      "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
     },
     "q-pp-im-mis-115-2": {
       "questionId": "q-pp-im-mis-115-2",
-      "answer": "A",
-      "explanation": "此題為申論題，包含三個子題（A、B、C），各佔10分，無單一選擇題答案。子題A分析蘋果採用外部AI模型（Google Gemini）如何維持競爭優勢：蘋果的核心競爭力在於生態系鎖定與卓越的使用者體驗，透過整合Gemini可快速補強AI能力缺口，同時將底層技術商品化，讓自身專注於介面設計與隱私保護等差異化層面。子題B探討共競（co-opetition）關係：Google同時是iOS生態夥伴與Android平台競爭者，蘋果面臨技術依賴風險（如API政策變動、資料外洩），但也可縮短開發時程並降低研發成本，需以合約機制管控風險。子題C分析隱私競爭優勢的維持：蘋果應採用「裝置端推論優先、最小化資料傳輸」的架構設計，並透過透明的隱私標籤與使用者溝通，確保Gemini整合不損及「Privacy by Design」的品牌定位。"
+      "answer": "N/A",
+      "explanation": "此題為申論題，包含三個子題（A、B、C），各佔10分，無單一選擇題答案。子題A分析蘋果採用外部AI模型（Google Gemini）如何維持競爭優勢：蘋果的核心競爭力在於生態系鎖定與卓越的使用者體驗，透過整合Gemini可快速補強AI能力缺口，同時將底層技術商品化，讓自身專注於介面設計與隱私保護等差異化層面。子題B探討共競（co-opetition）關係：Google同時是iOS生態夥伴與Android平台競爭者，蘋果面臨技術依賴風險（如API政策變動、資料外洩），但也可縮短開發時程並降低研發成本，需以合約機制管控風險。子題C分析隱私競爭優勢的維持：蘋果應採用「裝置端推論優先、最小化資料傳輸」的架構設計，並透過透明的隱私標籤與使用者溝通，確保Gemini整合不損及「Privacy by Design」的品牌定位。",
+      "evidencePages": [
+        1
+      ],
+      "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
     },
     "q-pp-im-stat-114-4": {
       "questionId": "q-pp-im-stat-114-4",
-      "answer": "A",
-      "explanation": "本題為多元線性迴歸的計算與假設檢定題，無選項，以A代表完整解答。(1) 調整後R²公式為 Adj R² = 1 − (1 − R²)×(n−1)/(n−k−1)，代入 n=440、k=3、R²=0.170，得 Adj R² = 1 − 0.830×(439/436) ≈ 0.1643。(2) 殘差自由度 Df Residuals = n − k − 1 = 440 − 3 − 1 = 436；截距的 t 值 = 係數/標準誤 = 7.1943/1.092 ≈ 6.59。(3) 對所有自變數係數是否聯合為零進行F檢定：F統計量為29.80，對應p值為1.52×10⁻¹⁷，遠小於顯著水準0.05，故拒絕虛無假設H₀，結論為至少一個自變數（房屋大小、兒童數、在家成人數）對垃圾量有顯著影響。"
+      "answer": "N/A",
+      "explanation": "本題為多元線性迴歸的計算與假設檢定題，沒有選項。(1) 調整後 R² = 1 - (1 - R²)(n-1)/(n-k-1)，代入 n=440、k=3、R²=0.170，得到 1 - 0.830×439/436 ≈ 0.1643。(2) 殘差自由度為 n-k-1=436；截距的 t 值為 7.1943/1.092 ≈ 6.59。(3) H₀ 為三個斜率係數同時等於零。卷面給定 F=29.80、p=1.52×10⁻¹⁷；p<0.05，故拒絕 H₀，至少一個自變數的係數不為零。",
+      "evidencePages": [
+        2
+      ],
+      "reason": "Open-ended question; a letter answer is not applicable."
     },
     "q-pp-im-stat-114-5": {
       "questionId": "q-pp-im-stat-114-5",
-      "answer": "A",
-      "explanation": "本題為論述/計算題，並無選項可選，以下提供兩小題的解答說明。(1) 無偏性證明：由於 T 為 5 的倍數，g(i) = 1 + (i mod 5) 在每一個週期（i=1~5）的值依序為 2, 3, 4, 5, 1，總和為 15，故 Σg(i) = (T/5)·15 = 3T。因此 E[m] = (1/T)·Σg(i)·E[Yᵢ] = (1/T)·3T·μ = 3μ，此結果顯示 m 並非 μ 的無偏估計量，除非題目中有額外的正規化條件；若題意要求 m 為無偏估計量，則可能係數應調整為 (1/3T) 或 g(i) 另有定義。(2) 變異數計算：假設原始定義，Var(m) = (1/T²)·Σ[g(i)]²·σ²，在 T/5 個週期內 Σ[g(i)]² = (T/5)·(1²+2²+3²+4²+5²) = (T/5)·55 = 11T，故 Var(m) = (1/T²)·11T·σ² = 11σ²/T。"
+      "answer": "N/A",
+      "explanation": "本題為證明與計算題，沒有選項。因 T 為 5 的倍數，g(i)=1+(i mod 5) 每五項依序為 2、3、4、5、1，所以 Σg(i)=3T、Σg(i)²=11T。(1) E[m]=[Σg(i)E(Yᵢ)]/[Σg(i)]=μ，因此 m 是 μ 的不偏估計量。(2) 樣本獨立且各自變異數為 σ²，故 Var(m)=[Σg(i)²σ²]/[Σg(i)]²=(11Tσ²)/(3T)²=11σ²/(9T)。",
+      "evidencePages": [
+        3
+      ],
+      "reason": "The current solution uses the mistranscribed denominator T, incorrectly concludes the estimator is biased, and gives variance 11σ²/T instead of 11σ²/(9T)."
     },
     "q-pp-im-stat-115-3": {
       "questionId": "q-pp-im-stat-115-3",
-      "answer": "A",
-      "explanation": "此題為計算題，(A)(B)(C) 為子題而非選項。(A) 求正規化常數 c：列出六個點的函數值後加總，c·(1/2+0+1/2+1/2+1/2+1/3)=c·7/3=1，故 c=3/7。(B) 令 Y₁=X₁+X₂、Y₂=X₁-X₂，逐一對應六個點得到聯合 PMF：P(Y₁=-1,Y₂=-1)=3/14、P(Y₁=0,Y₂=0)=0、P(Y₁=1,Y₂=1)=3/14、P(Y₁=0,Y₂=-2)=3/14、P(Y₁=1,Y₂=-1)=3/14、P(Y₁=2,Y₂=0)=1/7。(C) Y₁ 的邊際 PMF 為 P(Y₁=-1)=3/14、P(Y₁=0)=3/14、P(Y₁=1)=3/7、P(Y₁=2)=1/7，總和驗算為 1，結果正確。"
+      "answer": "N/A",
+      "explanation": "本題為三小題的機率計算題，(A)(B)(C) 是子題而非選項。(A) 在六個支撐點，分子權重分別為：(-1,0):2、(-1,1):2、(0,0):0、(0,1):2、(1,0):2、(1,1):4，總和為 12，因此 c=12。(B) 變換後的聯合 PMF 為 P(Y₁=-1,Y₂=-1)=1/6、P(0,-2)=1/6、P(0,0)=0、P(1,-1)=1/6、P(1,1)=1/6、P(2,0)=1/3，其餘為 0。(C) Y₁ 的邊際 PMF 為 P(Y₁=-1)=1/6、P(Y₁=0)=1/6、P(Y₁=1)=1/3、P(Y₁=2)=1/3，其餘為 0。",
+      "evidencePages": [
+        2
+      ],
+      "reason": "The current solution answers a different, incorrectly transcribed PMF and therefore has the wrong c and probabilities."
     },
     "q-pp-im-stat-115-4": {
       "questionId": "q-pp-im-stat-115-4",
-      "answer": "A",
-      "explanation": "(A) 三個估計量 m₁、m₂、m₃ 皆為 μ 的不偏估計量：E[m₁]=μ；E[m₂]=(μ+αμ)/(1+α)=μ（對任意 α>0 成立）；E[m₃]=(μ+2μ+βμ)/(3+β)=μ（對任意 β>0 成立）。(B) Var(m₂)=σ²(1+α²)/(1+α)²，對 α 微分並令其為零，解得 2α−2=0，故 α=1 時變異數最小，此時 m₂=(Y₁+Y₂)/2 為最有效。(C) Var(m₃)=σ²(5+β²)/(3+β)²，對 β 微分並令其為零，解得 6β−10=0，故 β=5/3 時變異數最小，此時各觀測值的權重與其係數平方和最小化。"
+      "answer": "N/A",
+      "explanation": "本題為三小題的估計量計算題，沒有選項。(A) m₁、m₂、m₃ 的權重和都為 1，因此三者對所有 α>0、β>0 都是不偏估計量。(B) Var(m₂)=σ²(1+α²)/(1+α)²，微分或利用等權重最小化可得 α=1。(C) Var(m₃)=σ²(5+β²)/(3+β)²，微分後令 6β-10=0，得到 β=5/3。",
+      "evidencePages": [
+        2
+      ],
+      "reason": "Open-ended question; a letter answer is not applicable."
     },
     "q-pp-im-stat-115-5": {
       "questionId": "q-pp-im-stat-115-5",
-      "answer": "C",
-      "explanation": "本題使用卡方獨立性檢定，虛無假設 H₀ 為「購買高級寶藏的機率與玩家等級無關」。自由度為 (2-1)(3-1)=2，根據題目給定的臨界值 χ²₀.₀₅,₂ = 5.99。計算各格的期望次數：E(購買,新手)=40、E(購買,中級)=56、E(購買,資深)=64、E(未購買,新手)=10、E(未購買,中級)=14、E(未購買,資深)=16。卡方統計量 χ² = (45-40)²/40 + (50-56)²/56 + (65-64)²/64 + (5-10)²/10 + (20-14)²/14 + (15-16)²/16 ≈ 0.625 + 0.643 + 0.016 + 2.500 + 2.571 + 0.063 ≈ 6.42。由於 6.42 > 5.99，在顯著水準 5% 下拒絕虛無假設，結論為購買高級寶藏的機率與玩家的累積有效遊戲時間（等級）並不獨立，兩者存在顯著關聯。"
+      "answer": "N/A",
+      "explanation": "本題為卡方獨立性檢定，沒有選項。H₀ 為購買高級寶藏與玩家等級獨立，自由度 (2-1)(3-1)=2。依列、欄合計得到期望次數：購買列為 40、56、64；未購買列為 10、14、16。卡方統計量為 25/40+36/56+1/64+25/10+36/14+1/16 ≈ 6.42。卷面給定 5% 臨界值 χ²₀.₀₅,₂=5.99；6.42>5.99，故在 5% 顯著水準拒絕 H₀，購買行為與累積有效遊戲時間分類存在顯著關聯。",
+      "evidencePages": [
+        2
+      ],
+      "reason": "Open-ended question; a letter answer is not applicable."
     },
     "q-pp-cs-en-114-23": {
       "questionId": "q-pp-cs-en-114-23",
@@ -7374,6 +7497,21 @@
       "questionId": "q-pp-cs-en-115-50",
       "answer": "C",
       "explanation": "on shaky ground 意為「立足不穩、根基薄弱」，句尾 raising doubts about whether it can withstand judicial review 說明不穩的正是法律上的正當性，(C) 精準對應。(A) 獲得支持與「不穩」相反。(B) 錯在該法案還只是 proposed，尚未 enacted。(D) 的 structurally sound 同樣與 shaky 矛盾。故選 (C)。"
+    },
+    "q-pp-im-it-113-23": {
+      "questionId": "q-pp-im-it-113-23",
+      "answer": "E",
+      "explanation": "GPT 的完整名稱是 Generative Pre-trained Transformer（生成式預訓練 Transformer）。選項 (A) Generative Proficiency in Text、(B) Grasping the Paradigm of Texts、(C) Generative Prowess in Text 與 (D) Generative Pathfinding Transformer 都不是正確名稱，因此應選 (E) none of the above。三個組成詞分別指出模型可生成內容（Generative）、先在大量資料上預訓練（Pre-trained），以及採用 Transformer 架構。"
+    },
+    "q-pp-im-it-113-24": {
+      "questionId": "q-pp-im-it-113-24",
+      "answer": "D",
+      "explanation": "Turing test（圖靈測試）用來評估機器在對話互動中所呈現的行為，是否能讓人類評審無法可靠區分它與人類，因此正確答案為 (D)。AGI 指具有廣泛任務能力的通用人工智慧；Turing complete 描述計算系統能否模擬通用計算；Chinese room argument 則是質疑符號處理是否等同真正理解的思想實驗，三者都不是題目所問的評估方法。"
+    },
+    "q-pp-im-it-113-25": {
+      "questionId": "q-pp-im-it-113-25",
+      "answer": "N/A",
+      "explanation": "本題是開放式 C++ 實作題，沒有選項答案。(a) 插入時先配置並初始化新節點，再從 rootPtr 依 employeeID 比較向左或向右走，直到找到空子指標後接上新節點；空樹則直接把新節點設為根。以下寫法需引入 <new>：\n\nint BinarySearchTree::InsertNewEmployee(int newID, string newName, int newAge) {\n  TreeNode *node = new (std::nothrow) TreeNode;\n  if (node == NULL) return 0;\n  node->employeeID = newID;\n  node->employeeName = newName;\n  node->age = newAge;\n  node->leftChildPtr = node->rightChildPtr = NULL;\n  if (rootPtr == NULL) { rootPtr = node; return 1; }\n  TreeNode *current = rootPtr;\n  TreeNode *parent = NULL;\n  while (current != NULL) {\n    parent = current;\n    current = (newID < current->employeeID) ? current->leftChildPtr : current->rightChildPtr;\n  }\n  if (newID < parent->employeeID) parent->leftChildPtr = node;\n  else parent->rightChildPtr = node;\n  return 1;\n}\n\n(b) 中序走訪依「左子樹、節點、右子樹」順序輸出，對 BST 即為 employeeID 遞增順序：\n\nvoid BinarySearchTree::ListAllEmployee() { inorder(rootPtr); }\n\nvoid BinarySearchTree::inorder(TreeNode *treePtr) {\n  if (treePtr == NULL) return;\n  inorder(treePtr->leftChildPtr);\n  cout << \"(\" << treePtr->employeeID << \", \" << treePtr->employeeName << \", \" << treePtr->age << \")\" << endl;\n  inorder(treePtr->rightChildPtr);\n}\n\n插入平均時間為 O(h)，其中 h 是樹高；未平衡 BST 最壞可退化為 O(n)。中序走訪會拜訪每個節點一次，時間為 O(n)，遞迴額外空間為 O(h)。"
     }
   }
 }

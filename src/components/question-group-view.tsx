@@ -23,6 +23,8 @@ interface Props {
   questions: Question[]
   parentNumber: number
   mode: string
+  completionHref?: string
+  nextHref?: string
   nextQuestionId?: string
 }
 
@@ -44,6 +46,8 @@ export function QuestionGroupView({
   questions,
   parentNumber,
   mode,
+  completionHref,
+  nextHref,
   nextQuestionId,
 }: Props) {
   const router = useRouter()
@@ -93,12 +97,16 @@ export function QuestionGroupView({
   }
 
   function handleNext() {
-    if (nextQuestionId) {
+    if (nextHref) {
+      router.push(nextHref)
+    } else if (nextQuestionId) {
       router.push(`/${exam}/questions/${nextQuestionId}?mode=${mode}`)
     } else {
-      router.push(`/${exam}/questions`)
+      router.push(completionHref ?? `/${exam}/questions`)
     }
   }
+
+  const returnsToLesson = Boolean(completionHref)
 
   const correctCount = autoGradableQuestions.filter((q) => {
     const answerData = getAnswer(q.id)
@@ -126,9 +134,9 @@ export function QuestionGroupView({
           variant="ghost"
           size="sm"
           className="ml-auto text-xs text-muted-foreground h-7"
-          onClick={() => router.push(`/${exam}/questions`)}
+          onClick={() => router.push(completionHref ?? `/${exam}/questions`)}
         >
-          ← 返回題庫
+          ← {returnsToLesson ? '返回課程' : '返回題庫'}
         </Button>
       </div>
 
@@ -309,7 +317,11 @@ export function QuestionGroupView({
                 </CardContent>
               </Card>
               <Button onClick={handleNext} className="w-full" size="lg" disabled={submitting}>
-                {nextQuestionId ? '下一組 →' : '返回題庫'}
+                {nextHref || nextQuestionId
+                  ? '下一組 →'
+                  : returnsToLesson
+                    ? '返回課程'
+                    : '返回題庫'}
               </Button>
             </div>
           )}

@@ -1,5 +1,5 @@
 import { localStorageImpl } from '@/lib/storage'
-import type { StorageState } from '@/types/storage'
+import type { TaskLearningEvidence } from '@/types/storage'
 
 // Mock localStorage for tests
 const mockStorage: Record<string, string> = {}
@@ -20,6 +20,25 @@ Object.defineProperty(global, 'localStorage', {
 
 function clearMockStorage() {
   for (const key of Object.keys(mockStorage)) delete mockStorage[key]
+}
+
+const learningIdentity = {
+  date: '2026-08-16',
+  examId: 'im' as const,
+  planId: 'im-nocram-6m',
+}
+
+function learningEvidence(overrides: Partial<TaskLearningEvidence> = {}): TaskLearningEvidence {
+  return {
+    taskId: 'im6-1-1',
+    taskDescription: '掃過近三年考古題',
+    completionCriteria: '列出重複考點',
+    accuracy: 85,
+    evidence: '閉卷列出 12 個考點',
+    needsRetest: false,
+    updatedAt: 100,
+    ...overrides,
+  }
 }
 
 beforeEach(clearMockStorage)
@@ -85,7 +104,86 @@ describe('local→cloud migration: export/import preserves state', () => {
     expect(state.completedTasks['t1']).toBe(true)
     expect(state.customTasks).toEqual([])
     expect(state.srsState).toEqual({})
+    expect(state.dailyLearning).toEqual({})
     expect(state.preferences).toBeDefined()
+  })
+
+  it('records task evidence and completion atomically', () => {
+    expect(localStorageImpl.recordTaskEvidence(learningIdentity, learningEvidence(), true)).toBe(
+      true
+    )
+
+    const state = localStorageImpl.getState()
+    expect(state.completedTasks['im6-1-1']).toBe(true)
+    expect(state.dailyLearning['im:im-nocram-6m:2026-08-16'].taskEvidence['im6-1-1'].accuracy).toBe(
+      85
+    )
+  })
+
+  it('keeps a failed task incomplete and preserves evidence when reflection is saved', () => {
+    localStorageImpl.setCompletedTask('im6-1-1', true)
+    localStorageImpl.recordTaskEvidence(
+      learningIdentity,
+      learningEvidence({ accuracy: 60, needsRetest: true, retestAt: '2026-08-19' }),
+      false
+    )
+    localStorageImpl.updateDailyLearningReflection(learningIdentity, {
+      recallAccuracy: 70,
+      outputKind: 'whiteboard',
+      tomorrowQuestion: 'Paging 解決什麼問題？',
+    })
+
+    const state = localStorageImpl.getState()
+    expect(state.completedTasks['im6-1-1']).toBeUndefined()
+    expect(state.dailyLearning['im:im-nocram-6m:2026-08-16'].taskEvidence['im6-1-1'].accuracy).toBe(
+      60
+    )
+    expect(state.dailyLearning['im:im-nocram-6m:2026-08-16'].tomorrowQuestion).toContain('Paging')
+  })
+
+  it('sanitizes malformed daily learning data during import', () => {
+    localStorageImpl.importJSON(
+      JSON.stringify({
+        dailyLearning: {
+          broken: {},
+          'im:im-nocram-6m:2026-08-16': {
+            ...learningIdentity,
+            taskEvidence: { broken: { taskId: 'broken' } },
+            updatedAt: 100,
+          },
+        },
+      })
+    )
+
+    const state = localStorageImpl.getState()
+    expect(state.dailyLearning.broken).toBeUndefined()
+    expect(state.dailyLearning['im:im-nocram-6m:2026-08-16'].taskEvidence).toEqual({})
+  })
+
+  it('keeps newer local daily records when downloading an older cloud snapshot', () => {
+    localStorageImpl.updateDailyLearningReflection(learningIdentity, {
+      recallAccuracy: 95,
+      outputKind: 'practice',
+      tomorrowQuestion: '本機較新的問題',
+    })
+    const localRecord = localStorageImpl.getState().dailyLearning['im:im-nocram-6m:2026-08-16']
+
+    localStorageImpl.importJSON(
+      JSON.stringify({
+        dailyLearning: {
+          'im:im-nocram-6m:2026-08-16': {
+            ...localRecord,
+            recallAccuracy: 40,
+            updatedAt: localRecord.updatedAt - 1,
+          },
+        },
+      }),
+      { mergeDailyLearning: true }
+    )
+
+    expect(
+      localStorageImpl.getState().dailyLearning['im:im-nocram-6m:2026-08-16'].recallAccuracy
+    ).toBe(95)
   })
 })
 
@@ -99,6 +197,15 @@ describe('unauthenticated-stays-local behavior', () => {
   it('preferences default to im exam without auth', () => {
     const state = localStorageImpl.getState()
     expect(state.preferences.examId).toBe('im')
+  })
+
+  it('preserves the selected study plan across export and import', () => {
+    localStorageImpl.setPreferences({ selectedPlanIds: { im: 'im-nocram-6m' } })
+    const exported = localStorageImpl.exportJSON()
+    clearMockStorage()
+    localStorageImpl.importJSON(exported)
+
+    expect(localStorageImpl.getState().preferences.selectedPlanIds?.im).toBe('im-nocram-6m')
   })
 })
 

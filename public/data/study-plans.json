@@ -165,13 +165,54 @@
         "subjectTags": ["im-it"],
         "note": "沒有補習班幫你篩範圍時，考古題就是唯一的範圍表。這個月的重點是先看懂台大在考什麼，再開始讀",
         "tasks": [
-          { "id": "im6-1-1", "description": "掃過台大近 3 年資訊科技概論考古題（只看不寫），列出重複出現的主題", "subjectTag": "im-it" },
-          { "id": "im6-1-2", "description": "掃過台大近 3 年資訊管理導論與統計學考古題，確認統計實際佔分", "subjectTag": "im-mis" },
-          { "id": "im6-1-3", "description": "建立兩份筆記：重點比較表（如 CISC/RISC、VM/Container）與錯題本", "subjectTag": null },
-          { "id": "im6-1-4", "description": "看完于天立《計算機概論》台大開放式課程 21 講", "subjectTag": "im-it" },
-          { "id": "im6-1-5", "description": "借到 Brookshear《Computer Science: An Overview》並讀完前四章", "subjectTag": "im-it" },
-          { "id": "im6-1-6", "description": "看完周志遠《作業系統》清大 OCW 前半（到記憶體管理）", "subjectTag": "im-it" },
-          { "id": "im6-1-7", "description": "確認手寫程式語言為 C++，並把編譯環境架好", "subjectTag": "im-it" }
+          {
+            "id": "im6-1-0",
+            "description": "用 2–3 天建立主動回想、間隔複習與錯題重測的個人執行規則",
+            "subjectTag": null,
+            "completionCriteria": "連續 3 天完成「先回想、再學習、關書輸出、排入複習」循環，並寫下適合自己的每日版本"
+          },
+          {
+            "id": "im6-1-1",
+            "description": "掃過台大近 3 年資訊科技概論考古題（只看不寫），列出重複出現的主題",
+            "subjectTag": "im-it",
+            "completionCriteria": "整理 10–15 個重複考點，並逐項標記為會、模糊或不會"
+          },
+          {
+            "id": "im6-1-2",
+            "description": "掃過台大近 3 年資訊管理導論與統計學考古題，確認統計實際佔分",
+            "subjectTag": "im-mis",
+            "completionCriteria": "不看考卷也能說出兩科主要題型、近年配分與三個優先準備主題"
+          },
+          {
+            "id": "im6-1-3",
+            "description": "建立兩份筆記：重點比較表（如 CISC/RISC、VM/Container）與錯題本",
+            "subjectTag": null,
+            "completionCriteria": "比較表能在關閉後口述差異；錯題本包含原本想法、正確規則、觸發線索與重測日"
+          },
+          {
+            "id": "im6-1-4",
+            "description": "看完于天立《計算機概論》台大開放式課程 21 講",
+            "subjectTag": "im-it",
+            "completionCriteria": "每講留下 3 個閉卷問題，隔日抽測正確率達 80%"
+          },
+          {
+            "id": "im6-1-5",
+            "description": "借到 Brookshear《Computer Science: An Overview》並讀完前四章",
+            "subjectTag": "im-it",
+            "completionCriteria": "每章用一張白紙重建架構，並完成 5 題無提示自測"
+          },
+          {
+            "id": "im6-1-6",
+            "description": "看完周志遠《作業系統》清大 OCW 前半（到記憶體管理）",
+            "subjectTag": "im-it",
+            "completionCriteria": "能不看資料解釋 process、scheduling、memory 與 paging 的問題、流程及代價"
+          },
+          {
+            "id": "im6-1-7",
+            "description": "確認手寫程式語言為 C++，並把編譯環境架好",
+            "subjectTag": "im-it",
+            "completionCriteria": "能從空白檔案寫出、編譯並執行一個含輸入輸出的 C++ 程式"
+          }
         ]
       },
       {
@@ -182,12 +223,42 @@
         "subjectTags": ["im-it", "im-english"],
         "note": "台大手寫程式題近年可達 40 分，是最能拉開差距的地方。C++ 用出題系所的大一必修課準備",
         "tasks": [
-          { "id": "im6-2-1", "description": "孔令傑《程式設計（C++）》看到指標與物件導向", "subjectTag": "im-it" },
-          { "id": "im6-2-2", "description": "每天默寫一段程式碼：stack、queue、各 sorting，不看講義", "subjectTag": "im-it" },
-          { "id": "im6-2-3", "description": "看完周志遠《作業系統》OCW 後半（檔案系統、死結）", "subjectTag": "im-it" },
-          { "id": "im6-2-4", "description": "黃能富《計算機網路》OCW 看到無線區域網路結束", "subjectTag": "im-it" },
-          { "id": "im6-2-5", "description": "杰哥《資料結構》完成 Array、Stack、Queue、Tree 章節", "subjectTag": "im-it" },
-          { "id": "im6-2-6", "description": "開始每天讀一篇英文科技新聞並記生字（同時餵 MIS 時事庫）", "subjectTag": "im-english" }
+          {
+            "id": "im6-2-1",
+            "description": "孔令傑《程式設計（C++）》看到指標與物件導向",
+            "subjectTag": "im-it",
+            "completionCriteria": "能不看講義寫出指標、class 與基本動態記憶體範例，並口頭 trace 執行結果"
+          },
+          {
+            "id": "im6-2-2",
+            "description": "每天默寫一段程式碼：stack、queue、各 sorting，不看講義",
+            "subjectTag": "im-it",
+            "completionCriteria": "每種結構或排序至少連續兩次默寫成功，能 trace 一組輸入並說出複雜度"
+          },
+          {
+            "id": "im6-2-3",
+            "description": "看完周志遠《作業系統》OCW 後半（檔案系統、死結）",
+            "subjectTag": "im-it",
+            "completionCriteria": "能以問題、機制、流程、代價解釋 file system 與 deadlock，並答對章節自測 80%"
+          },
+          {
+            "id": "im6-2-4",
+            "description": "黃能富《計算機網路》OCW 看到無線區域網路結束",
+            "subjectTag": "im-it",
+            "completionCriteria": "能白紙重建網路分層，並比較 TCP/UDP、switch/router 與主要應用層協定"
+          },
+          {
+            "id": "im6-2-5",
+            "description": "杰哥《資料結構》完成 Array、Stack、Queue、Tree 章節",
+            "subjectTag": "im-it",
+            "completionCriteria": "每章能畫出操作前後狀態、說明不變條件與複雜度，並完成至少 3 題混合題"
+          },
+          {
+            "id": "im6-2-6",
+            "description": "開始每天讀一篇英文科技新聞並記生字（同時餵 MIS 時事庫）",
+            "subjectTag": "im-english",
+            "completionCriteria": "連續 7 天完成閱讀；每篇關閉原文後口述摘要，只留下影響理解或高頻的生字"
+          }
         ]
       },
       {
@@ -198,13 +269,48 @@
         "subjectTags": ["im-it", "im-mis"],
         "note": "資結是手寫題的來源，程式碼要練到能默寫；MIS 這個月只求讀完一遍並開始累積案例",
         "tasks": [
-          { "id": "im6-3-1", "description": "杰哥《資料結構》完成 Heap、Hash、Graph、Sorting 章節", "subjectTag": "im-it" },
-          { "id": "im6-3-2", "description": "蔡明志《資料結構：使用C++》把常考結構的程式碼練到能默寫", "subjectTag": "im-it" },
-          { "id": "im6-3-3", "description": "Laudon《管理資訊系統》讀完一遍，每章末題目先在腦中作答", "subjectTag": "im-mis" },
-          { "id": "im6-3-4", "description": "建立 MIS 案例庫，先收 10 個案例並標注可套用的理論", "subjectTag": "im-mis" },
-          { "id": "im6-3-5", "description": "李宏毅生成式 AI 課程看完，整理 LLM、Transformer 名詞卡", "subjectTag": "im-it" },
-          { "id": "im6-3-6", "description": "資料庫讀到正規化與 SQL 為止，刷 LeetCode SQL 50 的 easy 題", "subjectTag": "im-it" },
-          { "id": "im6-3-7", "description": "每讀完一章就找題目自測，確認不是只有看過", "subjectTag": null }
+          {
+            "id": "im6-3-1",
+            "description": "杰哥《資料結構》完成 Heap、Hash、Graph、Sorting 章節",
+            "subjectTag": "im-it",
+            "completionCriteria": "四個主題各完成一次白紙重建、程式默寫或無提示題，混合抽測達 80%"
+          },
+          {
+            "id": "im6-3-2",
+            "description": "蔡明志《資料結構：使用C++》把常考結構的程式碼練到能默寫",
+            "subjectTag": "im-it",
+            "completionCriteria": "常考結構核心操作能在限時內默寫，並以測資 trace 與複雜度檢查正確性"
+          },
+          {
+            "id": "im6-3-3",
+            "description": "Laudon《管理資訊系統》讀完一遍，每章末題目先在腦中作答",
+            "subjectTag": "im-mis",
+            "completionCriteria": "每章留下 3 個可申論問題，能不看書以定義、機制、案例與限制回答"
+          },
+          {
+            "id": "im6-3-4",
+            "description": "建立 MIS 案例庫，先收 10 個案例並標注可套用的理論",
+            "subjectTag": "im-mis",
+            "completionCriteria": "10 個案例各能對應至少 2 個理論，隨機抽 3 個可在 2 分鐘內說明連結"
+          },
+          {
+            "id": "im6-3-5",
+            "description": "李宏毅生成式 AI 課程看完，整理 LLM、Transformer 名詞卡",
+            "subjectTag": "im-it",
+            "completionCriteria": "能白紙畫出 Transformer 與 LLM 基本關係，名詞卡隔日抽測達 80%"
+          },
+          {
+            "id": "im6-3-6",
+            "description": "資料庫讀到正規化與 SQL 為止，刷 LeetCode SQL 50 的 easy 題",
+            "subjectTag": "im-it",
+            "completionCriteria": "能判斷基本正規化問題，並在不查語法下完成 10 題代表性 SQL 題"
+          },
+          {
+            "id": "im6-3-7",
+            "description": "每讀完一章就找題目自測，確認不是只有看過",
+            "subjectTag": null,
+            "completionCriteria": "所有本月章節都有至少一次無提示測驗；低於 80% 的章節已定位缺口並排定重測"
+          }
         ]
       },
       {
@@ -215,13 +321,48 @@
         "subjectTags": ["im-stat", "im-it", "im-mis"],
         "note": "統計自 114 學年度起併入資訊管理導論卷、約佔 50 分。這個月開始寫整份、計時的考古題",
         "tasks": [
-          { "id": "im6-4-1", "description": "唐麗英《統計學(一) 基礎統計》16 講看完", "subjectTag": "im-stat" },
-          { "id": "im6-4-2", "description": "唐麗英《統計學(二) 進階統計》13 講看完（假設檢定、ANOVA、迴歸）", "subjectTag": "im-stat" },
-          { "id": "im6-4-3", "description": "Lind《商用統計學》挑章節練習題，補強不偏估計量與機率", "subjectTag": "im-stat" },
-          { "id": "im6-4-4", "description": "每週寫一份「整份、計時」的台大考古題", "subjectTag": null },
-          { "id": "im6-4-5", "description": "每份考古題訂正後，把錯題與觀念寫進錯題本", "subjectTag": null },
-          { "id": "im6-4-6", "description": "補齊新科技名詞：IoT、區塊鏈、雲端、邊緣運算、大數據", "subjectTag": "im-it" },
-          { "id": "im6-4-7", "description": "每週寫一篇 MIS 時事申論，用列點與表格作答", "subjectTag": "im-mis" }
+          {
+            "id": "im6-4-1",
+            "description": "唐麗英《統計學(一) 基礎統計》16 講看完",
+            "subjectTag": "im-stat",
+            "completionCriteria": "每單元能判斷該用哪個公式，並完成一次不看範例的混合計算測驗"
+          },
+          {
+            "id": "im6-4-2",
+            "description": "唐麗英《統計學(二) 進階統計》13 講看完（假設檢定、ANOVA、迴歸）",
+            "subjectTag": "im-stat",
+            "completionCriteria": "能依題意選擇檢定方法、完成計算並用文字正確解讀結論"
+          },
+          {
+            "id": "im6-4-3",
+            "description": "Lind《商用統計學》挑章節練習題，補強不偏估計量與機率",
+            "subjectTag": "im-stat",
+            "completionCriteria": "完成至少 20 題混合題，並將選錯模型、計算與解讀錯誤分開統計"
+          },
+          {
+            "id": "im6-4-4",
+            "description": "每週寫一份「整份、計時」的台大考古題",
+            "subjectTag": null,
+            "completionCriteria": "本月完成 4 次正式計時，保留各區耗時、未完成題與分數紀錄"
+          },
+          {
+            "id": "im6-4-5",
+            "description": "每份考古題訂正後，把錯題與觀念寫進錯題本",
+            "subjectTag": null,
+            "completionCriteria": "每份在 48 小時內訂正，錯題於 7 天後不看答案重做達 80%"
+          },
+          {
+            "id": "im6-4-6",
+            "description": "補齊新科技名詞：IoT、區塊鏈、雲端、邊緣運算、大數據",
+            "subjectTag": "im-it",
+            "completionCriteria": "每個主題能說明用途、核心機制、限制與一個實際案例，混合抽測達 80%"
+          },
+          {
+            "id": "im6-4-7",
+            "description": "每週寫一篇 MIS 時事申論，用列點與表格作答",
+            "subjectTag": "im-mis",
+            "completionCriteria": "完成 4 篇限時作答，每篇都有定義、分析、案例、限制或建議"
+          }
         ]
       },
       {
@@ -232,12 +373,42 @@
         "subjectTags": ["im-it", "im-mis", "im-english"],
         "note": "用錯題本反推弱章節，而不是從頭重讀。這個月要開始練「為什麼需要這個機制」的說明能力",
         "tasks": [
-          { "id": "im6-5-1", "description": "用錯題本反推弱章節，回頭重讀教科書對應段落", "subjectTag": null },
-          { "id": "im6-5-2", "description": "資安整理成一頁：對稱/非對稱加密、PKI、雜湊、常見攻擊手法", "subjectTag": "im-it" },
-          { "id": "im6-5-3", "description": "網路與資料庫二輪，練到能解釋每個機制存在的原因", "subjectTag": "im-it" },
-          { "id": "im6-5-4", "description": "台大考古題累積寫滿 3 年份並全部訂正", "subjectTag": null },
-          { "id": "im6-5-5", "description": "英文考古題每週一份，累積字彙表（托福/GRE 等級）", "subjectTag": "im-english" },
-          { "id": "im6-5-6", "description": "MIS 申論改為計時作答，練整卷的時間分配", "subjectTag": "im-mis" }
+          {
+            "id": "im6-5-1",
+            "description": "用錯題本反推弱章節，回頭重讀教科書對應段落",
+            "subjectTag": null,
+            "completionCriteria": "依錯題頻率與重測率選出兩個主要弱點，只補相關段落並在 7 天後重測"
+          },
+          {
+            "id": "im6-5-2",
+            "description": "資安整理成一頁：對稱/非對稱加密、PKI、雜湊、常見攻擊手法",
+            "subjectTag": "im-it",
+            "completionCriteria": "不看整理頁也能比較各機制用途、提供的安全性與典型失敗情境"
+          },
+          {
+            "id": "im6-5-3",
+            "description": "網路與資料庫二輪，練到能解釋每個機制存在的原因",
+            "subjectTag": "im-it",
+            "completionCriteria": "隨機抽 10 個機制，能回答問題、流程、代價與替代方案，正確率達 80%"
+          },
+          {
+            "id": "im6-5-4",
+            "description": "台大考古題累積寫滿 3 年份並全部訂正",
+            "subjectTag": null,
+            "completionCriteria": "3 份皆有計時紀錄、完整訂正與隔週錯題重做結果"
+          },
+          {
+            "id": "im6-5-5",
+            "description": "英文考古題每週一份，累積字彙表（托福/GRE 等級）",
+            "subjectTag": "im-english",
+            "completionCriteria": "完成 4 份計時練習；生字可在新上下文辨認，而非只記中文翻譯"
+          },
+          {
+            "id": "im6-5-6",
+            "description": "MIS 申論改為計時作答，練整卷的時間分配",
+            "subjectTag": "im-mis",
+            "completionCriteria": "完成至少 3 次整卷或等量計時，能在限制內保留完整作答架構"
+          }
         ]
       },
       {
@@ -248,13 +419,48 @@
         "subjectTags": ["im-it", "im-stat"],
         "note": "口試在筆試後只有一週準備時間，所以二階資料要在這個月先寫完，不要等放榜",
         "tasks": [
-          { "id": "im6-6-1", "description": "台大考古題刷滿 10 年份，或把寫過的重寫第二次", "subjectTag": null },
-          { "id": "im6-6-2", "description": "政大／成大考古題各寫 3–6 年當補充題庫", "subjectTag": null },
-          { "id": "im6-6-3", "description": "每天默寫一次常考排序與樹的程式碼維持手感", "subjectTag": "im-it" },
-          { "id": "im6-6-4", "description": "統計與微積分維持手感，為口試數學關做準備", "subjectTag": "im-stat" },
-          { "id": "im6-6-5", "description": "準備口試四關擬答：生涯、資管、數學、技術", "subjectTag": null },
-          { "id": "im6-6-6", "description": "先寫好個人資料表、自傳與研究計畫，不等放榜", "subjectTag": null },
-          { "id": "im6-6-7", "description": "考前一週只複習錯題本與重點筆記，不開新進度", "subjectTag": null }
+          {
+            "id": "im6-6-1",
+            "description": "台大考古題刷滿 10 年份，或把寫過的重寫第二次",
+            "subjectTag": null,
+            "completionCriteria": "每份都有正式計時與訂正；重寫題能說出上次錯因，不只記住答案"
+          },
+          {
+            "id": "im6-6-2",
+            "description": "政大／成大考古題各寫 3–6 年當補充題庫",
+            "subjectTag": null,
+            "completionCriteria": "至少各完成 3 年，並整理與台大不同的題型及新增弱點"
+          },
+          {
+            "id": "im6-6-3",
+            "description": "每天默寫一次常考排序與樹的程式碼維持手感",
+            "subjectTag": "im-it",
+            "completionCriteria": "每次限時默寫後以測資 trace；連續錯誤的結構隔日優先重測"
+          },
+          {
+            "id": "im6-6-4",
+            "description": "統計與微積分維持手感，為口試數學關做準備",
+            "subjectTag": "im-stat",
+            "completionCriteria": "每週至少 2 次混合計算，能口頭說明公式選擇與結論"
+          },
+          {
+            "id": "im6-6-5",
+            "description": "準備口試四關擬答：生涯、資管、數學、技術",
+            "subjectTag": null,
+            "completionCriteria": "四關各完成一輪無稿模擬，能在時間內回答並記錄追問缺口"
+          },
+          {
+            "id": "im6-6-6",
+            "description": "先寫好個人資料表、自傳與研究計畫，不等放榜",
+            "subjectTag": null,
+            "completionCriteria": "三份文件都有可提交版本，並經一次內容與錯字檢查"
+          },
+          {
+            "id": "im6-6-7",
+            "description": "考前一週只複習錯題本與重點筆記，不開新進度",
+            "subjectTag": null,
+            "completionCriteria": "排定每日既有資料複習範圍，所有新教材與低優先內容已停止"
+          }
         ]
       }
     ]

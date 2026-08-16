@@ -1,5 +1,7 @@
 'use client'
 
+import { CheckCircle2, Circle } from 'lucide-react'
+import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { Suspense, use, useState } from 'react'
 import { PageLoading } from '@/components/page-loading'
@@ -28,7 +30,9 @@ export default function PlanPage({ params }: Props) {
 function PlanContent({ exam }: { exam: string }) {
   const plans = getStudyPlans(exam as ExamId)
   const defaultPlanId = plans[0]?.id ?? ''
-  const [planId, setPlanId] = useQueryState('plan', defaultPlanId)
+  const { state, addCustomTask, removeCustomTask, selectPlan } = useStudyPlanStore()
+  const preferredPlanId = state.preferences.selectedPlanIds?.[exam as ExamId] ?? defaultPlanId
+  const [planId, setPlanId] = useQueryState('plan', preferredPlanId)
   const plan = getStudyPlan(exam as ExamId, planId)
   if (!plan) notFound()
 
@@ -37,7 +41,6 @@ function PlanContent({ exam }: { exam: string }) {
     subjects.map((s) => [s.id, s.name])
   )
 
-  const { state, completeTask, addCustomTask, removeCustomTask } = useStudyPlanStore()
   const [addingPhase, setAddingPhase] = useState<string | null>(null)
   const [newTaskText, setNewTaskText] = useState('')
 
@@ -60,12 +63,19 @@ function PlanContent({ exam }: { exam: string }) {
   return (
     <div className="space-y-6 max-w-3xl">
       <div>
-        <h1 className="text-2xl font-bold">{EXAM_LABELS[exam as ExamId]} — 備考計畫</h1>
-        <p className="text-muted-foreground text-sm mt-1">
-          距考試約 {daysToExam} 天 · 目標考期：
-          {examDate.toLocaleDateString('zh-TW', { year: 'numeric', month: 'long' })} ·{' '}
-          {plan.totalMonths} 個月計畫
-        </p>
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+          <div>
+            <h1 className="text-2xl font-bold">{EXAM_LABELS[exam as ExamId]} — 備考計畫</h1>
+            <p className="text-muted-foreground text-sm mt-1">
+              距考試約 {daysToExam} 天 · 目標考期：
+              {examDate.toLocaleDateString('zh-TW', { year: 'numeric', month: 'long' })} ·{' '}
+              {plan.totalMonths} 個月計畫
+            </p>
+          </div>
+          <Button asChild>
+            <Link href={`/${exam}/today?plan=${encodeURIComponent(plan.id)}`}>今天怎麼讀</Link>
+          </Button>
+        </div>
       </div>
 
       {/* Plan switcher — 每套計畫的任務進度各自獨立 */}
@@ -77,7 +87,10 @@ function PlanContent({ exam }: { exam: string }) {
                 key={p.id}
                 size="sm"
                 variant={p.id === plan.id ? 'secondary' : 'outline'}
-                onClick={() => setPlanId(p.id)}
+                onClick={() => {
+                  setPlanId(p.id)
+                  selectPlan(exam as ExamId, p.id)
+                }}
               >
                 {p.name}
               </Button>
@@ -113,6 +126,17 @@ function PlanContent({ exam }: { exam: string }) {
         </div>
       </div>
 
+      <div className="rounded-lg border border-dashed px-4 py-3 text-xs leading-5 text-muted-foreground">
+        這裡只顯示長期進度。任務需到{' '}
+        <Link
+          href={`/${exam}/today?plan=${encodeURIComponent(plan.id)}`}
+          className="font-medium text-foreground underline underline-offset-2"
+        >
+          今日學習
+        </Link>{' '}
+        填寫自測結果與完成證據；達到 80% 且不需重測後才會完成。
+      </div>
+
       {/* Phases */}
       <div className="space-y-4">
         {phases.map((phase) => (
@@ -137,18 +161,27 @@ function PlanContent({ exam }: { exam: string }) {
             <ul className="divide-y">
               {phase.tasks.map((task) => (
                 <li key={task.id} className="flex items-start gap-3 px-4 py-2.5 text-sm group">
-                  <input
-                    type="checkbox"
-                    checked={task.completed}
-                    onChange={(e) => completeTask(task.id, e.target.checked)}
-                    className="mt-0.5 h-4 w-4 rounded border-muted-foreground cursor-pointer accent-primary"
-                  />
+                  <span
+                    className="mt-0.5 shrink-0"
+                    aria-label={task.completed ? '已完成' : '尚未完成'}
+                  >
+                    {task.completed ? (
+                      <CheckCircle2 className="h-4 w-4 text-primary" />
+                    ) : (
+                      <Circle className="h-4 w-4 text-muted-foreground" />
+                    )}
+                  </span>
                   <span
                     className={
                       task.completed ? 'line-through text-muted-foreground flex-1' : 'flex-1'
                     }
                   >
-                    {task.description}
+                    <span className="block">{task.description}</span>
+                    {task.completionCriteria && (
+                      <span className="mt-1 block text-xs leading-5 text-muted-foreground no-underline">
+                        完成證據：{task.completionCriteria}
+                      </span>
+                    )}
                   </span>
                   <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
                     {task.subjectTag && (

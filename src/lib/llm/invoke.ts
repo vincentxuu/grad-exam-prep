@@ -11,6 +11,12 @@ import {
   resolveRoute,
   routeLabel,
 } from './model'
+import {
+  plainMessageText,
+  toTaiwanTraditional,
+  toTaiwanTraditionalDeep,
+  toTaiwanTraditionalStream,
+} from './traditional-chinese'
 
 export type LlmResult<T> =
   | { ok: true; data: T; route: string }
@@ -44,19 +50,7 @@ function extractJson(text: string): unknown {
 }
 
 function messageText(content: unknown): string {
-  if (typeof content === 'string') return content
-  if (Array.isArray(content)) {
-    return content
-      .map((part) =>
-        typeof part === 'string'
-          ? part
-          : part && typeof part === 'object' && 'text' in part
-            ? String((part as { text: unknown }).text)
-            : ''
-      )
-      .join('')
-  }
-  return ''
+  return toTaiwanTraditional(plainMessageText(content))
 }
 
 interface StructuredOptions<T> {
@@ -76,7 +70,10 @@ async function tryRoute<T>(route: ModelRoute, opts: StructuredOptions<T>): Promi
     return {
       ok: false,
       reason: 'no-credentials',
-      message: `${route.provider} 的 API key 尚未設定`,
+      message:
+        route.provider === 'cloudflare'
+          ? 'cloudflare 的 AI binding 尚未設定'
+          : `${route.provider} 的 API key 尚未設定`,
     }
   }
 
@@ -85,8 +82,14 @@ async function tryRoute<T>(route: ModelRoute, opts: StructuredOptions<T>): Promi
   // 先走 provider 原生的結構化輸出
   try {
     const structured = model.withStructuredOutput(schema)
-    const data = await structured.invoke([new SystemMessage(system), new HumanMessage(user)])
-    return { ok: true, data: data as T, route: routeLabel(route) }
+    const data = toTaiwanTraditionalDeep(
+      await structured.invoke([new SystemMessage(system), new HumanMessage(user)])
+    )
+    const parsed = schema.safeParse(data)
+    if (!parsed.success) {
+      return { ok: false, reason: 'invalid', message: '回應不符合預期結構' }
+    }
+    return { ok: true, data: parsed.data, route: routeLabel(route) }
   } catch {
     // 有些模型／端點不支援 function calling，退回手動解析
   }
@@ -141,7 +144,7 @@ export function streamText(opts: StreamOptions) {
     maxTokens: opts.maxTokens,
     streaming: true,
   })
-  return model.stream([new SystemMessage(opts.system), ...opts.messages])
+  return toTaiwanTraditionalStream(model.stream([new SystemMessage(opts.system), ...opts.messages]))
 }
 
 export interface PingResult {
@@ -198,6 +201,7 @@ export async function pingRoute(
 }
 
 function missingCredentialHint(provider: string): string {
+  if (provider === 'cloudflare') return 'AI binding'
   const keys = providerInfo(provider)?.envKeys ?? []
   return keys.length ? keys.join(' 與 ') : 'API key'
 }

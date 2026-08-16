@@ -35,9 +35,11 @@ describe('learning catalog', () => {
     if (!lesson) return
 
     expect(imItLearningCatalog.lessonBaseHref).toBe('/im/subjects/im-it/lessons')
-    expect(imItLearningCatalog.getPracticeHref(lesson)).toBe(
-      `/im/questions/${lesson.pastPaperRefs[0]}?mode=drill&next=${lesson.pastPaperRefs[1]}`
-    )
+    const practiceUrl = new URL(imItLearningCatalog.getPracticeHref(lesson), 'http://localhost')
+    expect(practiceUrl.pathname).toBe(`/im/questions/${lesson.pastPaperRefs[0]}`)
+    expect(practiceUrl.searchParams.get('queue')?.split(',')).toEqual(lesson.pastPaperRefs.slice(1))
+    expect(practiceUrl.searchParams.get('total')).toBe(String(lesson.pastPaperRefs.length))
+    expect(practiceUrl.searchParams.get('returnTo')).toBe(`/im/subjects/im-it/lessons/${lesson.id}`)
   })
 
   test('routes a foundation-only lesson to the subject question browser', () => {

@@ -1,6 +1,6 @@
-import { render, screen } from '@testing-library/react'
+import { fireEvent, render, screen } from '@testing-library/react'
+import { SingleQuestionView } from '@/components/question/drill-page'
 import { QuestionGroupView } from '@/components/question-group-view'
-import { SingleQuestionView } from '@/components/single-question-view'
 import { getQuestionsByExam } from '@/lib/content'
 
 const push = jest.fn()
@@ -47,5 +47,16 @@ describe('open-ended question view', () => {
     for (const label of ['A', 'B', 'C', 'D', 'E']) {
       expect(screen.queryByRole('button', { name: label })).not.toBeInTheDocument()
     }
+  })
+  test('lets a read-only question continue instead of trapping the drill queue', () => {
+    const question = getQuestionsByExam('im').find(
+      (candidate) => candidate.id === 'q-pp-im-it-106-5'
+    )
+    expect(question).toBeDefined()
+
+    render(<SingleQuestionView exam="im" question={question!} mode="drill" />)
+    fireEvent.click(screen.getByRole('button', { name: '查看可用資訊' }))
+
+    expect(screen.getByRole('button', { name: '返回題庫' })).toBeEnabled()
   })
 })

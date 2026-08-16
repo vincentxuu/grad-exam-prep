@@ -17,7 +17,7 @@ interface ModelsResponse {
  * 列出這家目前有哪些 model。
  *
  * 現撈而不是寫死清單 —— 寫死的清單過期得很快，而且過期的方式最惱人：
- * 選單裡有、選了打不通。各家的 OpenAI 相容端點都吃 `GET /models`。
+ * 選單裡有、選了打不通。Cloudflare 從 binding 讀，其餘讀 models API。
  *
  * 撈不到就退回 `catalog.ts` 的範例 model（至少有一個能填），並把原因帶
  * 回去給 UI 說明，不要假裝是完整清單。
@@ -29,12 +29,32 @@ export async function listModels(
   fetchImpl: typeof fetch = fetch
 ): Promise<ModelListResult> {
   if (!hasCredentials(env, { provider, model: '', fallback: false })) {
-    return { models: fallback, source: 'fallback', note: 'API key 尚未設定，無法查詢' }
+    return {
+      models: fallback,
+      source: 'fallback',
+      note:
+        provider === 'cloudflare' ? 'AI binding 尚未設定，無法查詢' : 'API key 尚未設定，無法查詢',
+    }
   }
 
-  const { baseUrl, apiKey } = providerEndpoint(env, provider)
-
   try {
+    if (provider === 'cloudflare') {
+      const models = await env.AI?.models()
+      const ids = (models ?? [])
+        .filter((model) => {
+          const task = `${model.task?.id ?? ''} ${model.task?.name ?? ''}`.toLowerCase()
+          return task.includes('text-generation') || task.includes('text generation')
+        })
+        .map((model) => model.id)
+        .filter(Boolean)
+
+      if (!ids.length) {
+        return { models: fallback, source: 'fallback', note: 'provider 沒有回傳文字生成 model' }
+      }
+      return { models: dedupeSorted(ids), source: 'live' }
+    }
+
+    const { baseUrl, apiKey } = providerEndpoint(env, provider)
     const res = await fetchImpl(`${baseUrl}/models`, {
       headers: { Authorization: `Bearer ${apiKey}` },
     })
