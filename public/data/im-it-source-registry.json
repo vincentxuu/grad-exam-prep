@@ -44,6 +44,28 @@
       "scope": ["operating-systems"],
       "usage": "conceptual-summary",
       "status": "reviewed"
+    },
+    {
+      "id": "src-mit-network-computer-security",
+      "title": "Network and Computer Security (6.857)",
+      "author": "Ron Rivest",
+      "publisher": "MIT OpenCourseWare",
+      "type": "course",
+      "url": "https://ocw.mit.edu/courses/6-857-network-and-computer-security-spring-2014/",
+      "scope": ["information-security", "cryptography", "network-security"],
+      "usage": "conceptual-summary",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-nist-cryptographic-standards",
+      "title": "Cryptographic Standards and Guidelines",
+      "author": "National Institute of Standards and Technology",
+      "publisher": "NIST Computer Security Resource Center",
+      "type": "official-guidance",
+      "url": "https://csrc.nist.gov/projects/cryptographic-standards-and-guidelines",
+      "scope": ["information-security", "cryptography"],
+      "usage": "terminology-and-standards-check",
+      "status": "reviewed"
     }
   ]
 }

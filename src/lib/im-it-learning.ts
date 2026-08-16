@@ -40,7 +40,7 @@ export interface ImItSource {
   title: string
   author: string
   publisher?: string
-  type: 'book' | 'course'
+  type: 'book' | 'course' | 'official-guidance'
   url: string
   scope: string[]
   usage: string

@@ -44,13 +44,13 @@ export function ImItConceptOverview() {
       <section className="space-y-3 rounded-lg border p-4">
         <div>
           <div className="flex flex-wrap items-center gap-2">
-            <h3 className="text-balance font-semibold">第一批可學內容</h3>
+            <h3 className="text-balance font-semibold">已上線學習模組</h3>
             <Badge variant="outline">
-              <span className="tabular-nums">5 / 58</span> 個子主題
+              <span className="tabular-nums">{lessons.length} / 58</span> 個子主題
             </Badge>
           </div>
           <p className="mt-1 text-pretty text-sm text-muted-foreground">
-            先從考古題出現頻率高的網路、資料庫與作業系統開始。每堂包含短講義、解題範例、概念卡與已覆核考古題。
+            從考古題出現頻率高、且內容已完成獨立複查的主題開始。每堂包含短講義、解題範例、概念卡與已覆核考古題。
           </p>
         </div>
 

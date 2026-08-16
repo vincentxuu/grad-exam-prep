@@ -13,16 +13,16 @@ describe('IM-IT reviewed learning content', () => {
   )
   const metadata = new Map(metadataRaw.questions.map((question) => [question.questionId, question]))
 
-  test('publishes the first five lessons and 32 curated cards', () => {
+  test('publishes ten reviewed lessons and 62 curated cards', () => {
     expect(lessonsRaw.status).toBe('reviewed')
     expect(cardsRaw.status).toBe('reviewed')
-    expect(lessonsRaw.counts).toEqual({ lessons: 5, coveredSubtopics: 5, coveredQuestions: 51 })
-    expect(lessons).toHaveLength(5)
-    expect(cardsRaw.totalCards).toBe(32)
-    expect(cards).toHaveLength(32)
-    expect(new Set(lessons.map((lesson) => lesson.id)).size).toBe(5)
-    expect(new Set(lessons.map((lesson) => lesson.subtopicId)).size).toBe(5)
-    expect(new Set(cards.map((card) => card.id)).size).toBe(32)
+    expect(lessonsRaw.counts).toEqual({ lessons: 10, coveredSubtopics: 10, coveredQuestions: 86 })
+    expect(lessons).toHaveLength(10)
+    expect(cardsRaw.totalCards).toBe(62)
+    expect(cards).toHaveLength(62)
+    expect(new Set(lessons.map((lesson) => lesson.id)).size).toBe(10)
+    expect(new Set(lessons.map((lesson) => lesson.subtopicId)).size).toBe(10)
+    expect(new Set(cards.map((card) => card.id)).size).toBe(62)
   })
 
   test('keeps lesson structure, sources, and question references verifiable', () => {
@@ -59,5 +59,15 @@ describe('IM-IT reviewed learning content', () => {
         card.pastPaperRefs.every((questionId) => lesson?.pastPaperRefs.includes(questionId))
       ).toBe(true)
     }
+  })
+
+  test('keeps blockchain and mining questions out of the cryptography lesson', () => {
+    const cryptography = lessons.find(
+      (lesson) => lesson.subtopicId === 'im-it-security-cryptography'
+    )
+
+    expect(cryptography?.pastPaperRefs).toHaveLength(6)
+    expect(cryptography?.pastPaperRefs).not.toContain('q-pp-im-it-107-18')
+    expect(cryptography?.pastPaperRefs).not.toContain('q-pp-im-it-110-26')
   })
 })

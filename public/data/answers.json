@@ -4723,7 +4723,7 @@
     "q-pp-im-it-109-8": {
       "questionId": "q-pp-im-it-109-8",
       "answer": "D",
-      "explanation": "GPS（全球定位系統）主要用於提供車輛的地理位置與導航路徑，並非用來感知周遭環境的即時障礙物、行人或車道線。自動駕駛車輛感知環境的核心技術包括光達（Lidar）、雷達（Radar）和電腦視覺（Computer Vision），這三者能直接偵測車輛周圍的物體與距離。相較之下，GPS 無法提供車輛周遭環境的細部資訊，因此在環境感知方面鮮少使用。選項 D 的 GPS 是最不被用於感知車輛周遭環境的技術。"
+      "explanation": "本題採用入門教材常見的 gigabit-class 分級，5G 峰值常以約 1–10 Gbps 的量級描述，因此選 (D)。這是理論或理想條件下的速率範圍，不代表每位使用者的保證實測 throughput；實際速度會受頻譜、訊號、基地台負載與部署方式影響。此答案為技術覆核，並非官方答案。"
     },
     "q-pp-im-it-109-9": {
       "questionId": "q-pp-im-it-109-9",
@@ -4988,7 +4988,7 @@
     "q-pp-im-it-111-7": {
       "questionId": "q-pp-im-it-111-7",
       "answer": "C",
-      "explanation": "題目描述的是一種分配給網路介面控制器（NIC）的唯一識別碼，用於在網路段內作為網路位址進行通訊，並被大多數 IEEE 802 網路技術（包括乙太網路、Wi-Fi 和藍牙）所使用。這正是媒體存取控制位址（MAC address，媒體存取控制位址）的定義。MAC 位址通常由 48 位元組成，燒錄於網路介面卡的韌體中，具有全球唯一性。IP 位址（B）是網路層的邏輯位址，而非與硬體綁定的唯一識別碼；全球唯一識別碼（GUID，A）則是軟體層面的識別碼，非針對網路硬體介面。因此正確答案為 (C) media access control address。"
+      "explanation": "題目描述的是媒體存取控制位址（MAC address），因此答案為 (C)。常見 IEEE 802 MAC 位址長度為 48 bits（6 bytes），用於同一網路區段內的資料鏈結層通訊。廠商配置的 universally administered address 以組織識別碼降低重複，但 MAC 也可能是 locally administered、可由軟體改寫或 spoof，因此不應宣稱任何情況下都必然全球唯一。IP 位址則是網路層的邏輯位址。"
     },
     "q-pp-im-it-111-8": {
       "questionId": "q-pp-im-it-111-8",

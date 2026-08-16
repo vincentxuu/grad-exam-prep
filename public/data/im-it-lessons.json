@@ -4,11 +4,129 @@
   "status": "reviewed",
   "contentPolicy": "本站提供依教材與考古題整理的原創摘要；不是教材轉載，也不把技術覆核答案稱為官方答案。",
   "counts": {
-    "lessons": 5,
-    "coveredSubtopics": 5,
-    "coveredQuestions": 51
+    "lessons": 10,
+    "coveredSubtopics": 10,
+    "coveredQuestions": 86
   },
   "lessons": [
+    {
+      "id": "lesson-im-it-arch-cpu-organization",
+      "subtopicId": "im-it-arch-cpu-organization",
+      "title": "CPU 與指令架構：從開機到管線執行",
+      "summary": "以 stored-program 架構為起點，串起 CPU 組成、instruction cycle、ISA、RISC/CISC、pipeline hazard 與平行加速上限。重點是分清抽象層級，避免把韌體、作業系統、指令集與微架構混在一起。對應考古題答案均為非官方技術覆核。",
+      "estimatedMinutes": 36,
+      "learningObjectives": [
+        "說明 Von Neumann stored-program 架構的主要功能單元與 CPU 內部角色。",
+        "依 fetch、decode、execute、write-back 流程追蹤一條指令的執行。",
+        "比較 RISC 與 CISC 的設計取向，而不把名稱誤解為絕對效能排名。",
+        "判斷 pipeline hazard，並用 Amdahl's law 計算平行化加速上限。"
+      ],
+      "sections": [
+        {
+          "title": "Stored-program 與開機邊界",
+          "body": "Von Neumann 架構把 processor、memory、input、output 視為四個功能單元，指令與資料位於同一可定址記憶體模型。電源開啟後，CPU 需要先從預定位置開始執行韌體；傳統 PC 以 BIOS、現代系統常以 UEFI 完成硬體初始化並把控制權交給後續 boot loader。這個階段不同於作業系統 kernel 已經開始提供完整服務。",
+          "bullets": [
+            "CPU 主要包含 control unit、ALU 與 registers；memory 保存待執行指令與資料。",
+            "program counter 保存下一條預計取出的指令位置。",
+            "BIOS/UEFI 是 firmware；CMOS/非揮發設定儲存區保存部分設定，不是執行初始化流程的韌體名稱。",
+            "Von Neumann 與 Harvard 的核心差別之一，是指令與資料的記憶體／通路是否在架構模型上分離。"
+          ]
+        },
+        {
+          "title": "Instruction cycle 與時脈",
+          "body": "在簡化模型中，CPU 重複 fetch、decode、execute，再把結果寫回 register 或 memory。時脈提供狀態更新節奏，但 GHz 只表示每秒 clock cycles 的量級，不等於每秒完成相同數量的程式指令。每指令週期數、同時在途的指令、cache miss 與 branch 行為都會影響實際效能。",
+          "bullets": [
+            "fetch 依 program counter 取得 instruction，並準備下一個位址。",
+            "decode 判讀 opcode、operands 與所需執行資源。",
+            "execute 可能使用 ALU、存取 memory、改變控制流程或執行 I/O 相關操作。",
+            "MHz 是每秒百萬 cycles，GHz 是每秒十億 cycles；不能把單位差一千倍的規格視為近似。"
+          ]
+        },
+        {
+          "title": "ISA、RISC 與 CISC",
+          "body": "Instruction Set Architecture 是 software 可見的硬體契約，包含 instructions、registers、data types、addressing modes 與 exception 等。RISC 傾向較規則、較簡單且便於 pipeline 的 instructions；CISC 傾向提供更多或更複雜的 instructions，可能用較少的 assembly instructions 表達工作。這是設計取向，不代表所有實作都符合簡單二分。",
+          "bullets": [
+            "x86 通常歸為 CISC，ARM 通常歸為 RISC，但現代內部實作可能把 instructions 轉成較細的 operations。",
+            "較少的動態 instruction count 不必然代表較少 cycles 或較短執行時間。",
+            "RISC/CISC 比較應同時看 instruction complexity、encoding、compiler 與 microarchitecture。",
+            "ISA 是可見契約；pipeline depth、cache 與 execution units 屬 microarchitecture 實作。"
+          ]
+        },
+        {
+          "title": "Pipeline hazard 與平行加速上限",
+          "body": "Pipeline 讓多條 instructions 處於不同階段，以提升 throughput。若後一條指令需要前一條尚未產生的 operand，就形成 data hazard；硬體可用 forwarding、stall 或重新排程處理。即使增加 processors，程式中不可平行部分仍限制整體 speedup，這可由 Amdahl's law 量化。",
+          "bullets": [
+            "data hazard 來自資料相依；control hazard 常由 branch 的下一個 PC 尚未確定造成。",
+            "stall 插入等待週期，會降低 pipeline 的有效 throughput。",
+            "branch prediction hit 與 cache hit 通常減少等待，不是最直接造成 stall 的事件。",
+            "若不可平行比例為 p、processors 為 n，理想 speedup 為 1 / (p + (1-p)/n)。"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "簡化 CPU 依序執行 LOAD R1,[100]、ADD R3,R1,R2、STORE [104],R3。請追蹤每條指令的主要工作。",
+          "steps": [
+            "LOAD 經 fetch/decode 後讀取位址 100，將值寫入 R1。",
+            "ADD 讀取 R1 與 R2，交由 ALU 相加，再把結果寫入 R3。",
+            "STORE 讀取 R3，將結果寫到記憶體位址 104。",
+            "program counter 在每次順序 fetch 後前進；若沒有 branch，不需改成非連續目標。"
+          ],
+          "answer": "三條指令分別完成 memory-to-register、register arithmetic、register-to-memory；control unit 協調流程，ALU 執行加法。"
+        },
+        {
+          "prompt": "在五階段 pipeline 中，I1: ADD R1,R2,R3 緊接 I2: SUB R4,R1,R5。為何 I2 可能等待？",
+          "steps": [
+            "I2 的來源 operand 包含 R1。",
+            "R1 是 I1 計算後才產生的結果。",
+            "若 I2 需要 R1 時，I1 尚未把結果送到可用位置，就形成 RAW data hazard。",
+            "有 forwarding 時可提早轉送結果；否則控制邏輯需插入 stall。"
+          ],
+          "answer": "I2 依賴 I1 尚未完成的 R1，形成 read-after-write data hazard；以 forwarding 或 stall 解決。"
+        },
+        {
+          "prompt": "某程式有 20% 執行時間無法平行，其餘 80% 可平均分給 4 個 processors。理想 speedup 是多少？",
+          "steps": [
+            "設定不可平行比例 p=0.2，processor 數 n=4。",
+            "平行後正規化時間為 p+(1-p)/n。",
+            "代入得到 0.2+0.8/4=0.4。",
+            "speedup 是原時間 1 除以新時間 0.4。"
+          ],
+          "answer": "理想 speedup 為 1/0.4=2.5 倍；不是 4 倍，因為 20% serial fraction 仍存在。"
+        },
+        {
+          "prompt": "規格表把現代 CPU clock 寫成 3 MHz。若原意是 3 GHz，兩者相差多少？",
+          "steps": [
+            "1 MHz 等於 10^6 Hz。",
+            "1 GHz 等於 10^9 Hz。",
+            "3 GHz / 3 MHz = 10^9 / 10^6。"
+          ],
+          "answer": "相差 1000 倍；3 GHz 是每秒 30 億 cycles，3 MHz 是每秒 300 萬 cycles。"
+        }
+      ],
+      "commonPitfalls": [
+        "把 BIOS/UEFI、CMOS 設定儲存區、boot loader 與 OS kernel 當成同一層。",
+        "認為 Von Neumann 架構把指令與資料放在不同記憶體；那更接近 Harvard 模型。",
+        "用 clock frequency 單獨判定整體程式效能，忽略 CPI、cache 與 pipeline。",
+        "把 RISC 解讀成一定比 CISC 快，或把 instruction count 直接當 execution time。",
+        "把 data hazard 與 branch prediction hit、cache hit 混淆。",
+        "套 Amdahl's law 時把 p 誤當可平行比例，導致公式兩部分對調。"
+      ],
+      "sourceRefs": [
+        "src-brookshear-13e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-106-13",
+        "q-pp-im-it-107-16",
+        "q-pp-im-it-110-1",
+        "q-pp-im-it-112-1",
+        "q-pp-im-it-112-2",
+        "q-pp-im-it-113-4",
+        "q-pp-im-it-113-8",
+        "q-pp-im-it-115-10"
+      ],
+      "reviewStatus": "reviewed"
+    },
     {
       "id": "lesson-im-it-db-relational-model-01",
       "subtopicId": "im-it-db-relational-model",
@@ -320,6 +438,126 @@
       "reviewStatus": "reviewed"
     },
     {
+      "id": "lesson-im-it-network-link-lan-01",
+      "subtopicId": "im-it-network-link-lan",
+      "title": "資料鏈結層與 LAN：從 MAC、Ethernet 到 VLAN 與無線存取",
+      "summary": "從一個 frame 如何在區域網路內送達開始，建立 MAC、ARP、shared/switched Ethernet、碰撞控制與 VLAN 的完整脈絡，再比較 Wi-Fi、Bluetooth、NFC、RFID 與 5G 的作用距離和用途。歷屆題 refs 用於定位原始題面；其答案另經人工技術覆核，均非官方答案。",
+      "estimatedMinutes": 34,
+      "learningObjectives": [
+        "說明 Ethernet frame、MAC address 與 ARP 在同一 IPv4 LAN 內的分工。",
+        "比較 shared half-duplex Ethernet 與 switched full-duplex Ethernet 的碰撞行為。",
+        "用 CSMA/CD、binary exponential backoff、CSMA/CA 與 sliding window 判斷媒體存取或可靠傳送情境。",
+        "區分 VLAN 與 Wi-Fi、Bluetooth、NFC、RFID、5G 的作用範圍及主要用途。"
+      ],
+      "sections": [
+        {
+          "title": "Frame、MAC 與 ARP：先找到同一鏈路上的下一跳",
+          "body": "資料鏈結層負責在一段鏈路上傳送 frame。Ethernet frame 內的來源與目的 MAC address 用來識別該鏈路上的網路介面；IP address 則供網路層做跨網路遞送。當 IPv4 主機知道下一跳 IP、卻不知道對應的 MAC 時，會用 ARP 在本地 broadcast domain 查詢。若目的主機不在同一 subnet，ARP 查的是 default gateway 的 MAC，而不是遠端主機的 MAC。",
+          "bullets": [
+            "MAC address 是資料鏈結層識別資訊；IP address 是可路由的網路層邏輯位址。",
+            "ARP 解析 IPv4 的同鏈路下一跳 IP 與 MAC 對應；IPv6 使用 Neighbor Discovery，不使用 ARP。",
+            "Router 每經過一跳會解開舊 frame，再用下一段鏈路的 MAC 資訊建立新 frame；端到端目的 IP 通常保持不變。",
+            "交換器會從收到 frame 的來源 MAC 學習『MAC → port』，再依目的 MAC 決定轉送、flood 或過濾。"
+          ]
+        },
+        {
+          "title": "Shared 與 Switched Ethernet 不能混為一談",
+          "body": "早期以 coaxial cable 或 hub 連接的 shared Ethernet，所有節點共享同一 collision domain，常以 half-duplex 運作；CSMA/CD 在傳送時偵測碰撞，碰撞後使用 binary exponential backoff 隨機等待再重傳。現代 switched Ethernet 通常每個 switch port 是獨立 collision domain，端點與 switch 採 full-duplex 時不會發生共享媒體碰撞，因此不需要在該鏈路執行 CSMA/CD。",
+          "bullets": [
+            "Carrier sense 只表示傳送前先聽；collision detection 是傳送期間偵測有無碰撞。",
+            "Binary exponential backoff 會隨連續碰撞次數擴大隨機等待範圍，降低再次同時重傳的機率。",
+            "Hub 只重送位元，所有連接埠共享頻寬與 collision domain；switch 依 MAC table 選擇輸出 port。",
+            "『Ethernet 一定使用 CSMA/CD』只適合 shared/half-duplex 情境，不適合一般現代 full-duplex switched LAN。"
+          ]
+        },
+        {
+          "title": "可靠傳送、Wi-Fi 存取與 VLAN",
+          "body": "Sliding window 允許傳送端在等待 acknowledgment 前保留多個尚未確認的 frame，提高鏈路利用率；window、sequence number 與重傳規則共同維持可靠與有序傳送。無線節點難以在傳送時可靠偵測碰撞，所以 Wi-Fi 使用 CSMA/CA，先感測媒體並以等待、隨機 backoff，必要時搭配 RTS/CTS 來降低碰撞機率。VLAN 則是交換式 LAN 的邏輯切割：IEEE 802.1Q tag 讓同一套實體交換設備承載多個彼此隔離的 broadcast domains。",
+          "bullets": [
+            "Sliding window 是流量與可靠傳送機制；CSMA/CA 是共享無線媒體的存取機制，兩者解決的問題不同。",
+            "CSMA/CA 是 collision avoidance，不代表能保證碰撞永遠不發生。",
+            "Access port 通常承載單一 VLAN；trunk link 可用 802.1Q tags 承載多個 VLAN。",
+            "不同 VLAN 間若要通訊，需要第 3 層 routing；VLAN 本身不是跨 Internet 的加密 VPN。"
+          ]
+        },
+        {
+          "title": "無線技術依範圍與任務選擇",
+          "body": "Wi-Fi、Bluetooth、NFC、RFID 與 5G 都使用無線電，但不是可互換的同類答案。Wi-Fi 主要提供建築物或熱點範圍的 WLAN；Bluetooth 主要是短距離個人裝置連線；NFC 強調刻意靠近、通常在數公分內的近場互動，可包含 passive tag 或 card emulation；RFID 的核心是用 tag 與 reader 識別或追蹤物件，距離依頻段與主被動設計而異；5G 是電信業者提供的廣域 cellular access，目標包括較高資料率、較低延遲與大量裝置連線。",
+          "bullets": [
+            "Wi-Fi：WLAN 網路存取，常經 access point 連到有線 LAN。",
+            "Bluetooth：短距離 PAN，例如耳機、鍵鼠與穿戴裝置；不等同 Wi-Fi LAN。",
+            "NFC：極近距離 tap 情境；RFID：識別/追蹤，讀取距離可從近距離到數公尺以上，不能一律說等同 NFC。",
+            "5G 是 cellular WAN/access，不是 Ethernet VLAN 或 Wi-Fi 的別名；理論峰值也不等於每位使用者隨時可得的實測速度。"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "主機 A 與 B 在同一 IPv4 subnet。A 已知 B 的 IP，但 ARP cache 沒有 B。A 要送一個 IP packet 給 B，鏈路上會先發生什麼？",
+          "steps": [
+            "A 先判斷 B 的 IP 位於同一 subnet，因此下一跳就是 B。",
+            "A 以 broadcast Ethernet frame 送出 ARP request，詢問誰持有 B 的 IP。",
+            "B 回覆自己的 MAC address，A 將對應暫存於 ARP cache。",
+            "A 建立目的 MAC 為 B、payload 為原 IP packet 的 Ethernet frame，switch 再依 MAC table 轉送。"
+          ],
+          "answer": "先用 ARP 取得 B 的 MAC，再以 B 的 MAC 封裝 Ethernet frame。若 B 在遠端 subnet，A 會改查 default gateway 的 MAC。"
+        },
+        {
+          "prompt": "四台電腦先接在同一個 half-duplex hub，之後改接 switch 並使用 full-duplex。碰撞與 CSMA/CD 的需求如何改變？",
+          "steps": [
+            "Hub 會把收到的訊號送往其他 ports，四台主機共享同一 collision domain。",
+            "兩台同時傳送可能碰撞，shared Ethernet 需偵測碰撞並以 exponential backoff 重傳。",
+            "換成 switch 後，每個 port 成為獨立 point-to-point link。",
+            "在 full-duplex switch link 上可同時收送，沒有共享媒體碰撞，因此不執行 CSMA/CD。"
+          ],
+          "answer": "Hub/shared half-duplex 環境會碰撞並使用 CSMA/CD；switch/full-duplex 將 collision domains 分開，正常情況不需 CSMA/CD。"
+        },
+        {
+          "prompt": "同一台 switch 上，財務部 ports 屬 VLAN 10、研發部 ports 屬 VLAN 20。兩部門都能連到同一條 trunk，但財務主機無法直接以第 2 層連到研發主機。為什麼？",
+          "steps": [
+            "802.1Q trunk 可同時承載 VLAN 10 與 20 的 tagged frames。",
+            "Switch 會把不同 VLAN 視為不同的邏輯 broadcast domains。",
+            "VLAN 10 的 broadcast 不會被一般第 2 層轉送到 VLAN 20。",
+            "若兩個 VLAN 要互通，需經 router 或 layer-3 switch 執行 inter-VLAN routing。"
+          ],
+          "answer": "Trunk 共用實體鏈路不代表 VLAN 合併；tag 仍維持邏輯隔離，跨 VLAN 需要第 3 層 routing。"
+        },
+        {
+          "prompt": "請為四個情境選主要技術：校園無線上網、手機連耳機、感應卡貼近讀卡機、倉庫批次辨識商品標籤。",
+          "steps": [
+            "校園無線上網需要 WLAN 與 access points，選 Wi-Fi。",
+            "手機與耳機是短距離個人裝置連線，選 Bluetooth。",
+            "貼近讀卡機、數公分互動，選 NFC。",
+            "倉庫辨識大量物件 tags，選 RFID；實際頻段與 tag 類型依距離需求決定。"
+          ],
+          "answer": "依序為 Wi-Fi、Bluetooth、NFC、RFID。若需求是電信商廣域行動連線，才考慮 5G cellular access。"
+        }
+      ],
+      "commonPitfalls": [
+        "把 MAC 當成可跨 Internet 路由的端到端位址；MAC frame 只服務當前鏈路，router 會重建下一跳 frame。",
+        "認為 ARP 能查任意遠端主機的 MAC；跨 subnet 時，送端 ARP 查的是 default gateway。",
+        "把所有 Ethernet 都說成會碰撞並使用 CSMA/CD；現代 full-duplex switched Ethernet 沒有共享 collision。",
+        "把 CSMA/CA 當成碰撞偵測；它是在無線媒體上降低碰撞機率，並非傳送時的 collision detection。",
+        "把 VLAN 當 VPN；VLAN 是 LAN 內的邏輯 broadcast-domain 分割，VPN 通常強調跨不可信網路的隧道與保護。",
+        "用單一固定距離描述 RFID，或把 NFC、RFID 視為完全相同；RFID 的距離高度依頻段、tag 與 reader 設計而異。",
+        "把 5G 峰值速率當成每個使用者的保證實測速度；實際 throughput 受頻譜、訊號、負載與部署影響。"
+      ],
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-network-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-109-8",
+        "q-pp-im-it-110-9",
+        "q-pp-im-it-111-3",
+        "q-pp-im-it-111-7",
+        "q-pp-im-it-111-9",
+        "q-pp-im-it-112-14",
+        "q-pp-im-it-112-15"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
       "id": "lesson-im-it-network-models-encapsulation",
       "subtopicId": "im-it-network-models-encapsulation",
       "title": "網路模型與封裝：從應用資料一路追到訊框",
@@ -424,6 +662,126 @@
         "q-pp-im-it-109-12",
         "q-pp-im-it-110-7",
         "q-pp-im-it-111-1"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "lesson-im-it-os-file-storage-io",
+      "subtopicId": "im-it-os-file-storage-io",
+      "title": "檔案、儲存與 I/O：從 inode 到 buffering",
+      "summary": "從作業系統提供的 file abstraction 出發，理解 directory、inode、device driver、buffering、spooling 與 dynamic linking 的角色。完成後能判斷資料放在哪裡、誰負責控制裝置，以及慢速 I/O 如何與程式執行解耦。對應考古題答案均為非官方技術覆核。",
+      "estimatedMinutes": 34,
+      "learningObjectives": [
+        "說明 file system 如何以 directory entry、metadata 與 data blocks 組織檔案。",
+        "區分 device driver、firmware 與一般 application 的責任。",
+        "比較 buffering 與 spooling 的資料流與適用情境。",
+        "追蹤 executable 啟動時 loader 與 dynamic linker 使用持久儲存和 RAM 的流程。"
+      ],
+      "sections": [
+        {
+          "title": "File abstraction 與常見 file systems",
+          "body": "作業系統把持久儲存裝置抽象成 files 與 directories，讓應用程式透過一致介面讀寫，不必直接操作磁碟區塊。FAT32、exFAT、NTFS、APFS、HFS 與 ext3 都是 file system 或其家族成員；MS-DOS 則是 operating system 名稱，不能只因名稱含 Disk 就視為 file system。",
+          "bullets": [
+            "file system 定義命名、metadata、空間配置與存取規則。",
+            "directory 建立名稱到檔案識別資訊的對應，不等於保存全部檔案內容。",
+            "不同 file systems 支援的權限、journal、容量與平台相容性不同。",
+            "『常見』會隨平台改變；作答應先辨認候選項是否確實是 file system。"
+          ]
+        },
+        {
+          "title": "inode、metadata 與 data blocks",
+          "body": "在 Unix-like file systems 中，inode 保存檔案類型、權限、owner、size、timestamps 與指向 data blocks 的資訊；檔名通常位於 directory entry。inode 不直接等同檔案內容，也不保存一般意義下的檔名。讀取路徑時，系統逐層查 directory entries，找到對應 inode，再定位資料區塊。",
+          "bullets": [
+            "metadata 描述檔案；data blocks 保存實際 bytes。",
+            "多個 hard links 可讓不同 directory entries 指向同一 inode。",
+            "刪除一個名稱不一定立刻刪除內容，仍取決於 link count 與開啟參照。",
+            "inode 是 Unix-like 設計概念，不應硬套成所有 file systems 的相同內部結構。"
+          ]
+        },
+        {
+          "title": "Device driver 與 storage management 責任",
+          "body": "Device driver 是與特定裝置及作業系統介面相配合的軟體，將核心的通用 I/O requests 轉成裝置可執行的操作。Firmware 通常在裝置或主機板環境中執行；driver 則在 OS 軟體堆疊中協調裝置。標準教材常把 files/directories primitives、空間管理、disk scheduling 與備份到穩定儲存媒體列為 storage management 工作；相較之下，file integrity check 不在該典型責任清單。",
+          "bullets": [
+            "application 呼叫系統提供的 I/O API，不需知道裝置暫存器細節。",
+            "driver 處理裝置命令、interrupt 與資料傳輸協調。",
+            "disk scheduling 決定等待中的 storage requests 如何服務。",
+            "備份到 stable storage 可列入 OS storage management；不要與 file integrity check 混淆。"
+          ]
+        },
+        {
+          "title": "Buffering、spooling 與載入共享程式庫",
+          "body": "Buffering 以記憶體中的暫存區吸收 producer/consumer 速度或資料單位差異；spooling 則把完整 jobs 排入持久或較大的 queue，讓慢速且通常一次服務一個工作的裝置依序處理。Executable 啟動時，loader 建立 process image；若使用 shared libraries，dynamic linker 會映射或載入需要的 library code、處理 relocations 與 symbols。",
+          "bullets": [
+            "streaming read/write 常以 buffers 減少小量 I/O 次數與速度落差。",
+            "printer spool 讓 application 提交 job 後繼續執行，printer 再依 queue 處理。",
+            "buffer 通常服務正在進行的資料流；spool 通常保存可獨立排程的完整 jobs。",
+            "dynamic linker 在 runtime 解析 shared-library dependencies；它不是 assembler，也不是產生 source code 的工具。"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "路徑 /home/mei/report.txt 已存在。請用 inode 模型說明系統如何找到檔案內容。",
+          "steps": [
+            "從 root directory 的 entry 找到 home 對應的檔案系統識別資訊。",
+            "依序查 home 與 mei directories 的 entries。",
+            "由 report.txt 的 directory entry 取得對應 inode。",
+            "讀取 inode 的權限、size 與 data-block pointers，再從 blocks 取得內容。"
+          ],
+          "answer": "directory entries 負責名稱解析，inode 提供 metadata 與資料區塊位置，實際內容位於 data blocks。"
+        },
+        {
+          "prompt": "音訊播放程式先讀入一小段資料再持續播放；列印程式把 200 頁工作交出後立刻返回。兩者分別較像 buffering 還是 spooling？",
+          "steps": [
+            "音訊是持續資料流，需要暫存一段資料吸收讀取與播放速度差。",
+            "這符合 buffering。",
+            "列印工作可作為完整 job 排隊，由單一慢速裝置稍後處理。",
+            "這符合 spooling。"
+          ],
+          "answer": "音訊使用 buffering；列印工作使用 spooling。前者平滑資料流，後者排程完整 jobs。"
+        },
+        {
+          "prompt": "程式啟動時宣告缺少 libcalc.so。請從 persistent storage 到執行前說明 dynamic linker 原本應做的事。",
+          "steps": [
+            "loader 先建立 executable 的 process image。",
+            "dynamic linker 讀取 executable 記錄的 shared-library dependencies。",
+            "它尋找 libcalc.so，將必要 pages 映射或載入 RAM。",
+            "接著解析 symbols、處理必要 relocations；找不到 library 時啟動失敗。"
+          ],
+          "answer": "dynamic linker 必須找到並映射 shared library，再完成 symbol resolution/relocation；缺少 library 使相依關係無法滿足。"
+        },
+        {
+          "prompt": "兩個 hard links，/a/report 與 /b/archive，指向同一 inode。刪除 /a/report 後資料是否必然立即消失？",
+          "steps": [
+            "兩個 directory entries 指向同一 inode。",
+            "刪除 /a/report 只移除其中一個名稱並降低 link count。",
+            "/b/archive 仍指向同一 inode。",
+            "只要仍有 link 或開啟參照，檔案內容通常不會被回收。"
+          ],
+          "answer": "不會必然立即消失；/b/archive 仍可存取同一 inode 與資料，直到 links 與相關開啟參照都釋放。"
+        }
+      ],
+      "commonPitfalls": [
+        "看到名稱含 Disk 就把 MS-DOS 當成 file system；它是 operating system。",
+        "把 inode 說成保存檔名或完整檔案內容；檔名通常在 directory entry，內容在 data blocks。",
+        "把 firmware 與 device driver 混為一談，忽略 driver 與 OS 介面的角色。",
+        "把所有 temporary storage 都叫 spooling；一般資料流暫存較接近 buffering。",
+        "把 file integrity check 當成標準 OS storage-management 責任清單項目；典型清單反而包含備份到 stable storage。",
+        "把 dynamic linker 誤認為 compiler、assembler 或一般 code generator。"
+      ],
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-os-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-107-14",
+        "q-pp-im-it-107-15",
+        "q-pp-im-it-111-20",
+        "q-pp-im-it-111-22",
+        "q-pp-im-it-112-11",
+        "q-pp-im-it-113-1",
+        "q-pp-im-it-113-10",
+        "q-pp-im-it-114-7"
       ],
       "reviewStatus": "reviewed"
     },
@@ -553,6 +911,232 @@
         "q-pp-im-it-113-2",
         "q-pp-im-it-113-3",
         "q-pp-im-it-115-9"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "lesson-im-it-os-virtualization-containers-01",
+      "subtopicId": "im-it-os-virtualization-containers",
+      "title": "虛擬化、容器與 Serverless：分清隔離邊界",
+      "summary": "從 hypervisor 與 virtual machine 出發，比較 container 的共享 kernel 模型，再辨認 cluster、network virtualization 與 serverless 各自解決的問題。對應考古題答案均為非官方技術覆核。",
+      "estimatedMinutes": 32,
+      "learningObjectives": [
+        "說明 virtualization、hypervisor、host 與 guest OS 的關係",
+        "比較 virtual machine 與 container 的隔離邊界、啟動成本及相依條件",
+        "區分 virtualization 與 clustering，並判斷兩者對可用性和資安的影響",
+        "解釋 serverless 的資源管理與計費抽象，而不誤解為沒有伺服器"
+      ],
+      "sections": [
+        {
+          "title": "Virtualization 把實體資源變成邏輯資源",
+          "body": "Virtualization 是以軟體建立硬體平台、儲存或網路資源的虛擬版本。系統虛擬化中，hypervisor 將 CPU、memory、storage 與 devices 配置給多個 virtual machines。每個 VM 看見自己的 virtual hardware，並可執行自己的 guest OS。Type 1 hypervisor 直接控制硬體；Type 2 hypervisor 執行在 host OS 上，但兩者核心工作都是隔離並仲裁資源。",
+          "bullets": [
+            "Host 是提供實體資源的一方，guest 是 VM 內執行的作業系統與工作負載",
+            "CPU virtualization 讓多個 virtual CPUs 分享實體處理器時間",
+            "Network virtualization 可把一個實體網路切成多個邏輯網路，也可建立跨實體網路的 overlay",
+            "Virtualization 不只等於 VM；storage 與 network 也能虛擬化"
+          ]
+        },
+        {
+          "title": "VM 與 Container 的隔離層不同",
+          "body": "VM 虛擬化硬體邊界，每個 VM 通常包含完整 guest OS 與 kernel；container 則由 host OS kernel 提供 process、filesystem、network 等隔離機制，container image 主要帶應用程式與 user-space dependencies。因為不必為每個 instance 啟動一套 guest kernel，container 通常啟動更快、額外記憶體占用較低。代價是它依賴 host kernel 提供的介面，隔離邊界也不同於硬體 VM。",
+          "bullets": [
+            "多個 containers 可以共享同一 host kernel，但擁有隔離的 namespaces 與受限資源",
+            "VM 可在同一硬體上執行不同 guest operating systems",
+            "Container 較輕量不代表零 overhead，也不代表沒有 resource contention",
+            "VM 通常提供較強的 kernel 隔離；實際安全仍依設定與漏洞狀況"
+          ]
+        },
+        {
+          "title": "Cluster 與 Virtualization 不是同義詞",
+          "body": "Computer cluster 把多個可獨立運作的 nodes 透過網路協同，目標可能是提高 computing power、擴充容量或改善 fault tolerance；virtualization 則在資源之上建立抽象與隔離。一個 cluster 可由實體機或 VMs 組成，單一主機也能在沒有 cluster 的情況下執行多個 VMs。增加節點與備援能改善可用性，但不會自動修補漏洞、阻止入侵或取代 access control。",
+          "bullets": [
+            "Cluster 關注多節點協同，VM 關注單一工作負載看到的虛擬硬體邊界",
+            "Fault tolerance 需要 replication、health checks 與 failover，不能只靠節點數量",
+            "高效能 cluster 可平行處理工作，但仍受通訊與不可平行部分限制",
+            "Clustering 不是 security control；錯誤設定也可能在所有節點複製"
+          ]
+        },
+        {
+          "title": "Serverless 仍然有 Server",
+          "body": "Serverless computing 把 server provisioning、OS patching、instance scaling 等基礎設施管理交給 cloud provider。開發者部署 function 或其他受管理工作負載，平台依事件動態配置執行資源，常按呼叫次數、執行時間與實際資源使用量計費。實體與虛擬 servers 仍存在，只是被平台抽象化。Serverless 適合事件驅動與間歇性工作，但仍需考慮 cold start、執行時間限制、外部狀態與 provider-specific interfaces。",
+          "bullets": [
+            "Serverless 的 server 由 provider 管理，不是物理上消失",
+            "通常不需預先購買固定 instance capacity，但仍可能有最低費用或配額",
+            "自動擴縮不保證無限容量，也不消除 downstream bottlenecks",
+            "Function instance 通常視為短暫執行環境，持久狀態應放在外部服務"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "一台 host 有 16 GB RAM。三個應用各需 1 GB；若每個 VM 的 guest OS 另需 2 GB，而三個 containers 共用 host kernel、不另計 guest OS，兩種方案的工作負載與 guest OS 記憶體需求各是多少？",
+          "steps": [
+            "VM 方案每個 instance 需要 1 GB app + 2 GB guest OS，共 3 GB。",
+            "三個 VMs 合計 3 × 3 GB = 9 GB。",
+            "Container 方案只計三個應用的 3 × 1 GB = 3 GB，因題目明定共享 host kernel 且不另計 guest OS。",
+            "兩者仍會有未列出的 runtime、page cache 與管理 overhead，不能把 3 GB 當成真實系統總占用。"
+          ],
+          "answer": "依題目簡化條件，VM 方案 9 GB，container 方案增量 3 GB；差額 6 GB 來自三套 guest OS。"
+        },
+        {
+          "prompt": "團隊要在 Linux host 上同時跑兩個 Linux Web apps，要求秒級擴縮；另有一個必須使用不同 kernel 的舊系統。應選 containers 還是 VMs？",
+          "steps": [
+            "兩個 Linux apps 可使用 host kernel，且重視快速啟動與密度，適合 containers。",
+            "舊系統要求不同 kernel，不能只靠共享 host kernel 的一般 container 提供。",
+            "為舊系統建立 VM，讓它擁有自己的 guest OS 與 kernel。",
+            "兩種技術可以混用：containers 也能部署在 VMs 之上。"
+          ],
+          "answer": "兩個 Linux Web apps 用 containers；需要不同 kernel 的舊系統用 VM。VM 與 container 不是互斥部署選項。"
+        },
+        {
+          "prompt": "公司把同一服務部署到三個 cluster nodes，任一節點失效就由其他節點接手。這是否同時保證服務不會被攻擊？",
+          "steps": [
+            "多節點與 failover 主要改善 availability，讓單點故障不立即中斷服務。",
+            "攻擊者仍可能利用共用軟體漏洞、外洩憑證或錯誤設定入侵所有節點。",
+            "若惡意流量耗盡共享依賴或控制平面，單純增加 nodes 也不一定有效。",
+            "仍需 patching、authentication、network controls、monitoring 與 incident response。"
+          ],
+          "answer": "不保證。Cluster 能改善故障容忍與可用性，但不是自動的資安防護。"
+        },
+        {
+          "prompt": "某 function 每次配置 0.5 GB、執行 0.2 秒，一天執行 10,000 次。若平台按 GB-second 計費，先不計免費額與其他費用，總用量是多少？這是否代表沒有 servers？",
+          "steps": [
+            "每次使用量是 0.5 GB × 0.2 s = 0.1 GB-second。",
+            "10,000 次合計 0.1 × 10,000 = 1,000 GB-seconds。",
+            "按實際 execution resource 計量符合 serverless 的常見抽象。",
+            "平台背後仍以實體機、VM 或 containers 執行，只是 provisioning 由 provider 管理。"
+          ],
+          "answer": "總用量為 1,000 GB-seconds；serverless 仍有 servers，只是開發者不直接配置與維護它們。"
+        }
+      ],
+      "commonPitfalls": [
+        "把 virtualization 只理解成 virtual machine，忽略 storage 與 network virtualization",
+        "認為 containers 各自包含完整 guest kernel；一般 containers 共享 host OS kernel",
+        "把較低 overhead 誤解為零資源競爭、零啟動成本或保證即時效能",
+        "把 cluster 與 VM 當成同一層技術；cluster 是多節點協同，VM 是資源抽象與隔離",
+        "認為 clustering 能自動阻止 security attacks；高可用與安全是不同目標",
+        "把 serverless 解讀成沒有 server，或以為 provider 自動擴縮就不再有配額、冷啟動與狀態限制"
+      ],
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-os-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-107-17",
+        "q-pp-im-it-111-5",
+        "q-pp-im-it-111-6",
+        "q-pp-im-it-112-9",
+        "q-pp-im-it-115-23",
+        "q-pp-im-it-115-29"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "lesson-im-it-security-cryptography-01",
+      "subtopicId": "im-it-security-cryptography",
+      "title": "密碼學、PKI 與 TLS：從金鑰到可信連線",
+      "summary": "先分清對稱加密、公開金鑰、雜湊與數位簽章的用途，再以憑證、CA／RA 與 TLS 串起網站身分驗證、機密性及完整性。對應考古題答案均為非官方技術覆核。",
+      "estimatedMinutes": 34,
+      "learningObjectives": [
+        "依安全需求選擇對稱加密、非對稱加密、雜湊或數位簽章",
+        "說明 RSA 與 AES 的角色差異，以及混合式加密為何同時使用兩者",
+        "判讀 X.509 憑證的重要欄位及 CA、RA、subject 的責任",
+        "解釋 TLS 如何建立 HTTPS 連線，以及 server authentication 與 mutual TLS 的差異"
+      ],
+      "sections": [
+        {
+          "title": "先從安全目標選工具",
+          "body": "密碼學工具解決的問題不同。加密把明文轉成只有持有適當金鑰者能還原的密文，主要保護 confidentiality；cryptographic hash 把任意長度輸入映成固定長度摘要，常用來檢查 integrity，但不能靠摘要還原原文；digital signature 由私鑰產生、由公鑰驗證，用來驗證訊息來源及內容未被竄改。單獨加密不自動證明寄件者身分，單獨雜湊也無法阻止攻擊者同時替換資料與摘要。",
+          "bullets": [
+            "Confidentiality：避免未授權者讀懂資料，典型工具是 encryption",
+            "Integrity：偵測內容是否改變，可用帶金鑰的 MAC 或 digital signature",
+            "Authentication：確認通訊對象或訊息來源，需要金鑰與可信身分綁定",
+            "Hash 是單向摘要；encoding 與 compression 都不是 encryption"
+          ]
+        },
+        {
+          "title": "對稱、非對稱與混合式加密",
+          "body": "對稱加密由雙方共用同一把秘密金鑰，AES 是現代常見標準；DES 金鑰空間過小，已不適合保護新系統。非對稱密碼使用一對相關的 public/private keys，RSA 是代表性演算法。用接收者公鑰加密時，對應私鑰才能解密；用簽署者私鑰產生簽章時，公鑰可驗證。非對稱運算成本較高且有資料長度與 padding 限制，因此實務通常用它建立或保護短小的 session key，再用對稱演算法處理大量資料。",
+          "bullets": [
+            "AES、DES、IDEA 與 Caesar cipher 都是對稱式；RSA 是非對稱式",
+            "公開金鑰可以公開，private key 必須由持有者保護",
+            "RSA 安全性與大整數分解困難相關，但安全實作仍依賴正確 padding 與金鑰長度",
+            "不要直接用 textbook RSA 加密任意大型使用者資料"
+          ]
+        },
+        {
+          "title": "憑證把身分綁到公鑰",
+          "body": "只有一把 public key，尚不能知道它屬於誰。X.509 digital certificate 以結構化欄位記錄 subject、subject public key、issuer、有效期間、serial number 等資訊，並由 issuer 簽章。CA 負責簽發與簽署憑證；RA 可協助驗證申請者身分與核准申請，但通常不負責簽發憑證。Serial number 在同一 issuer 範圍內識別憑證，CRL 或 OCSP 等撤銷機制也會利用 issuer 與 serial number 定位憑證。",
+          "bullets": [
+            "Certificate 證明的是身分與 public key 的受信綁定，不會公開 private key",
+            "Issuer 欄位指出簽發者；subject 欄位指出憑證所描述的實體",
+            "RA 驗證／註冊，CA 簽發／簽章，兩者角色不可互換",
+            "憑證有效期內仍可能被撤銷，因此只看日期不一定足夠"
+          ]
+        },
+        {
+          "title": "TLS 如何讓 HTTP 變成 HTTPS",
+          "body": "HTTPS 是在 TLS 保護通道上傳送 HTTP。握手期間，雙方協商參數、建立共享祕密，client 驗證 server 提供的憑證與其持有私鑰的證明；之後通常用高效率的對稱式 authenticated encryption 保護應用資料。公開網站多使用受 client trust store 信任的 CA 憑證，但 TLS 協定本身也能搭配私有 CA 或預先信任的 self-signed certificate。若 server 也要求 client 出示並證明持有 client certificate，則形成 mutual TLS。",
+          "bullets": [
+            "TLS 同時保護機密性、完整性，並通常驗證 server 身分",
+            "憑證內有 public key；private key 留在持有者端，不隨憑證傳送",
+            "受信第三方 CA 是公開 Web PKI 的部署慣例，不是建立 TLS 密文通道的唯一方式",
+            "mTLS 是雙向憑證驗證，不等同一般網站的密碼登入"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "系統要傳送 500 MB 備份檔；Bob 已透過可信憑證取得 Alice 的 public key，Alice 也已取得 Bob 的 public key。可用 AES、RSA 與 digital signature，應如何組合，才能讓 Bob 確認檔案來自 Alice？",
+          "steps": [
+            "隨機產生一把短期 AES session key，用 AES authenticated encryption 加密大型備份檔。",
+            "用接收者 Bob 的 public key 保護 session key，使只有 Bob 的 private key 能取得它。",
+            "Alice 對必要的檔案 metadata 與密文摘要產生 digital signature。",
+            "Bob 解開 session key、驗證 Alice 的 signature，再解密並檢查 authenticated-encryption tag。"
+          ],
+          "answer": "大型資料用 AES；session key 由 Bob 的公開金鑰機制保護；Alice 的數位簽章提供來源與完整性驗證。不要直接用 RSA 處理整個 500 MB 檔案。"
+        },
+        {
+          "prompt": "某憑證顯示 Subject=shop.example、Issuer=Example CA、Serial=42，申請者身分由 Example RA 核對。誰簽章？撤銷清單如何指出這張憑證？",
+          "steps": [
+            "RA 的工作是核對與註冊申請資訊，不因參與核對就成為憑證簽章者。",
+            "Issuer=Example CA 表示 CA 簽發並以其私鑰簽署憑證。",
+            "Serial=42 只需在 Example CA 的簽發範圍內唯一。",
+            "撤銷資料以 issuer 與 serial number 的組合定位該憑證。"
+          ],
+          "answer": "Example CA 簽章；Example RA 負責身分核對。撤銷機制以 Example CA 所簽發、serial number 42 的憑證為目標。"
+        },
+        {
+          "prompt": "內部測試站使用 self-signed certificate，管理員已把該憑證安全地安裝到所有測試裝置的 trust store；憑證的 SAN/hostname、有效期與 key usage 都符合該站。這能建立 TLS 嗎？是否等同公開網站的第三方 CA 模式？",
+          "steps": [
+            "TLS 需要 client 能建立信任路徑或直接信任 server certificate，不必然要求公開第三方 CA。",
+            "裝置預先安全安裝該 self-signed certificate 後，可把它當作 trust anchor。",
+            "握手仍需 server 證明持有對應 private key，並建立 session keys。",
+            "未預先安裝信任的外部使用者不會自然信任此憑證，所以它不等同公開 Web PKI。"
+          ],
+          "answer": "可以建立且驗證 TLS，但信任來自管理員的預先配置，不是公開第三方 CA。未配置該 trust anchor 的 client 應拒絕或警告。"
+        }
+      ],
+      "commonPitfalls": [
+        "把 RSA、AES 都當成可互換的大量資料加密工具，忽略非對稱運算成本與訊息長度限制",
+        "認為 digital certificate 內含 private key；憑證公開的是 public key 與身分資訊",
+        "把 RA 說成負責簽發與簽章憑證；一般角色分工是 RA 核驗、CA 簽發",
+        "把 hash 當成可解密的加密，或以為沒有祕密金鑰的 hash 就能驗證傳送者身分",
+        "認為 HTTPS 技術上只能使用公開第三方 CA，忽略 private CA 與預先信任模式",
+        "只檢查憑證有效日期，忽略 hostname、chain、key usage 與 revocation 等驗證條件"
+      ],
+      "sourceRefs": [
+        "src-mit-network-computer-security",
+        "src-nist-cryptographic-standards"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-107-11",
+        "q-pp-im-it-107-21",
+        "q-pp-im-it-110-17",
+        "q-pp-im-it-111-12",
+        "q-pp-im-it-113-16",
+        "q-pp-im-it-113-17"
       ],
       "reviewStatus": "reviewed"
     }

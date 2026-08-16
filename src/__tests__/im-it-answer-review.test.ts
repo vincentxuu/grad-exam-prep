@@ -49,4 +49,11 @@ describe('IM-IT answer review', () => {
     expect(answerReviewRaw.officialAnswerKeyAvailable).toBe(false)
     expect(answerReviewRaw.questions.filter((question) => question.official)).toEqual([])
   })
+
+  test('keeps LAN explanations attached to the correct questions and units', () => {
+    expect(answers['q-pp-im-it-109-8'].explanation).toContain('1–10 Gbps')
+    expect(answers['q-pp-im-it-109-8'].explanation).not.toContain('GPS')
+    expect(answers['q-pp-im-it-111-7'].explanation).toContain('48 bits（6 bytes）')
+    expect(answers['q-pp-im-it-111-7'].explanation).toContain('locally administered')
+  })
 })
