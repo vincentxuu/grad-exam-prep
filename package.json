@@ -16,6 +16,8 @@
     "test:watch": "jest --watch",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
     "validate:content": "node scripts/validate-content.js",
+    "archive:im-nonenglish-flashcards": "node scripts/archive-im-nonenglish-flashcards.js --write",
+    "check:im-nonenglish-flashcards": "node scripts/archive-im-nonenglish-flashcards.js",
     "generate:im-vocab": "node scripts/generate-im-vocab-flashcards.js --write",
     "check:im-vocab": "node scripts/generate-im-vocab-flashcards.js",
     "check:papers": "node scripts/check-paper-integrity.js"
