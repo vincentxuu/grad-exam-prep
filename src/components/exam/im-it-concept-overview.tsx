@@ -1,0 +1,88 @@
+import Link from 'next/link'
+import conceptMasterRaw from '../../../public/data/im-it-concept-master.json'
+import questionMetadataRaw from '../../../public/data/im-it-question-metadata.json'
+import { Badge } from '@/components/ui/badge'
+import type { ImportanceRating } from '@/types/content'
+import { ImportanceStars } from './importance-stars'
+
+const questionCounts = new Map<string, number>()
+for (const question of questionMetadataRaw.questions) {
+  questionCounts.set(question.topicId, (questionCounts.get(question.topicId) ?? 0) + 1)
+}
+
+export function ImItConceptOverview() {
+  return (
+    <div className="space-y-4">
+      <div className="rounded-lg border bg-muted/30 p-4">
+        <div className="flex flex-wrap items-center gap-2">
+          <Badge variant="secondary">分類已審核</Badge>
+          <span className="text-sm tabular-nums text-muted-foreground">
+            {conceptMasterRaw.topics.length} 大主題 · 58 個子主題 ·{' '}
+            {questionMetadataRaw.totalQuestions} 題
+          </span>
+        </div>
+        <p className="mt-2 text-pretty text-sm text-muted-foreground">
+          題目已完成主題分類；答案目前仍是未附官方來源的參考解析，因此先開放瀏覽，尚不列入正式練習、自動判分或模擬考成績。
+        </p>
+        <Link
+          href="/im/questions?subject=im-it"
+          className="mt-3 inline-flex min-h-9 items-center rounded-md border bg-background px-3 text-sm font-medium hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+        >
+          瀏覽 260 題計概題庫
+        </Link>
+      </div>
+
+      <ul className="space-y-2">
+        {[...conceptMasterRaw.topics]
+          .sort((a, b) => b.importance - a.importance)
+          .map((topic) => (
+            <li key={topic.id}>
+              <details className="group rounded-lg border bg-card">
+                <summary className="flex min-h-12 cursor-pointer list-none items-center gap-3 px-4 py-3 marker:content-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-ring">
+                  <span aria-hidden="true" className="text-muted-foreground group-open:rotate-90">
+                    ›
+                  </span>
+                  <span className="min-w-0 flex-1">
+                    <span className="block text-balance text-sm font-medium">{topic.title}</span>
+                    <span className="mt-0.5 block text-xs tabular-nums text-muted-foreground">
+                      {topic.subtopics.length} 個子主題 · {questionCounts.get(topic.id) ?? 0} 題
+                    </span>
+                  </span>
+                  <ImportanceStars
+                    rating={topic.importance as ImportanceRating}
+                    className="shrink-0"
+                  />
+                </summary>
+
+                <div className="border-t px-4 py-3">
+                  <p className="text-xs font-medium text-muted-foreground">學習目標</p>
+                  <ul className="mt-2 space-y-1">
+                    {topic.learningObjectives.map((objective) => (
+                      <li key={objective.id} className="flex gap-2 text-pretty text-sm">
+                        <span aria-hidden="true" className="text-muted-foreground">
+                          ·
+                        </span>
+                        {objective.statement}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <p className="mt-4 text-xs font-medium text-muted-foreground">子主題</p>
+                  <ul className="mt-2 grid gap-2 sm:grid-cols-2">
+                    {topic.subtopics.map((subtopic) => (
+                      <li key={subtopic.id} className="rounded-md bg-muted/50 px-3 py-2">
+                        <p className="text-sm font-medium">{subtopic.title}</p>
+                        <p className="mt-0.5 line-clamp-2 text-xs text-muted-foreground">
+                          {subtopic.keywords.join(' · ')}
+                        </p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </details>
+            </li>
+          ))}
+      </ul>
+    </div>
+  )
+}

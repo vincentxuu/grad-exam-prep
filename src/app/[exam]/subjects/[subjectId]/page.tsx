@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import { ImItConceptOverview } from '@/components/exam/im-it-concept-overview'
 import { TopicTree } from '@/components/exam/topic-tree'
 import { Badge } from '@/components/ui/badge'
 import { EXAM_LABELS, getExam, getSubject, subjects } from '@/lib/content'
@@ -51,9 +52,13 @@ export default async function SubjectPage({ params }: Props) {
 
       <section className="space-y-3">
         <h2 className="text-lg font-semibold">主題樹（依重要度排序）</h2>
-        <div className="rounded-lg border p-4">
-          <TopicTree topics={subject.topics} />
-        </div>
+        {subject.id === 'im-it' ? (
+          <ImItConceptOverview />
+        ) : (
+          <div className="rounded-lg border p-4">
+            <TopicTree topics={subject.topics} />
+          </div>
+        )}
       </section>
 
       <section className="space-y-3">

@@ -1,0 +1,949 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "im-it",
+  "canonicalTopicIds": [
+    "im-it-arch",
+    "im-it-prog",
+    "im-it-ds",
+    "im-it-db",
+    "im-it-network",
+    "im-it-os",
+    "im-it-security",
+    "im-it-ai"
+  ],
+  "contentStatus": "taxonomy-reviewed-content-draft",
+  "sourcePolicy": "主題樹只定義知識結構；教材內容須另附來源並通過審核後才可發布。",
+  "publicationGates": {
+    "conceptLesson": [
+      "definition",
+      "keyPoints",
+      "commonPitfalls",
+      "sourceRefs",
+      "content review"
+    ],
+    "flashcard": [
+      "published concept reference",
+      "source reference",
+      "human review"
+    ],
+    "practice": [
+      "answer confidence medium or higher",
+      "reviewed explanation or rubric"
+    ],
+    "fullMock": [
+      "complete paper",
+      "answer confidence high",
+      "open-score separated from objective score"
+    ]
+  },
+  "topics": [
+    {
+      "id": "im-it-arch",
+      "title": "電腦架構基礎",
+      "importance": 2,
+      "status": "reviewed",
+      "learningObjectives": [
+        {
+          "id": "im-it-arch-lo-1",
+          "statement": "轉換並判斷數值與資料表示法。"
+        },
+        {
+          "id": "im-it-arch-lo-2",
+          "statement": "解釋 CPU、記憶體、I/O 與儲存階層如何協作。"
+        },
+        {
+          "id": "im-it-arch-lo-3",
+          "statement": "比較架構與效能取捨。"
+        }
+      ],
+      "subtopics": [
+        {
+          "id": "im-it-arch-number-systems",
+          "topicId": "im-it-arch",
+          "title": "進位與位元運算",
+          "keywords": [
+            "binary",
+            "hexadecimal",
+            "base conversion",
+            "bitwise"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-arch-data-representation",
+          "topicId": "im-it-arch",
+          "title": "資料表示法",
+          "keywords": [
+            "two's complement",
+            "overflow",
+            "IEEE 754",
+            "ASCII",
+            "Unicode"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-arch-boolean-logic",
+          "topicId": "im-it-arch",
+          "title": "布林代數",
+          "keywords": [
+            "Boolean algebra",
+            "truth table",
+            "De Morgan",
+            "Karnaugh map"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-arch-digital-circuits",
+          "topicId": "im-it-arch",
+          "title": "數位電路",
+          "keywords": [
+            "gate",
+            "adder",
+            "multiplexer",
+            "flip-flop",
+            "register"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-arch-cpu-organization",
+          "topicId": "im-it-arch",
+          "title": "CPU 與指令架構",
+          "keywords": [
+            "instruction cycle",
+            "ISA",
+            "ALU",
+            "pipeline",
+            "hazard"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-arch-memory-hierarchy",
+          "topicId": "im-it-arch",
+          "title": "記憶體與儲存階層",
+          "keywords": [
+            "cache",
+            "locality",
+            "RAM",
+            "ROM",
+            "SSD"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-arch-io-performance",
+          "topicId": "im-it-arch",
+          "title": "輸入輸出與效能",
+          "keywords": [
+            "interrupt",
+            "polling",
+            "DMA",
+            "latency",
+            "throughput"
+          ],
+          "status": "reviewed"
+        }
+      ]
+    },
+    {
+      "id": "im-it-prog",
+      "title": "程式語言概念",
+      "importance": 3,
+      "status": "reviewed",
+      "learningObjectives": [
+        {
+          "id": "im-it-prog-lo-1",
+          "statement": "閱讀程式並追蹤控制流程與狀態。"
+        },
+        {
+          "id": "im-it-prog-lo-2",
+          "statement": "運用函式、記憶體與物件導向概念。"
+        },
+        {
+          "id": "im-it-prog-lo-3",
+          "statement": "解釋編譯、測試與軟體生命週期。"
+        }
+      ],
+      "subtopics": [
+        {
+          "id": "im-it-prog-syntax-types-control",
+          "topicId": "im-it-prog",
+          "title": "語法、型別與控制流程",
+          "keywords": [
+            "type",
+            "cast",
+            "operator",
+            "loop",
+            "switch"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-prog-functions-scope",
+          "topicId": "im-it-prog",
+          "title": "函式、作用域與遞迴",
+          "keywords": [
+            "function",
+            "scope",
+            "lifetime",
+            "recursion"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-prog-pointers-memory",
+          "topicId": "im-it-prog",
+          "title": "指標與動態記憶體",
+          "keywords": [
+            "pointer",
+            "reference",
+            "heap",
+            "stack",
+            "memory leak"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-prog-object-oriented",
+          "topicId": "im-it-prog",
+          "title": "物件導向程式設計",
+          "keywords": [
+            "class",
+            "encapsulation",
+            "inheritance",
+            "polymorphism"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-prog-language-runtime",
+          "topicId": "im-it-prog",
+          "title": "編譯與執行環境",
+          "keywords": [
+            "compiler",
+            "interpreter",
+            "linker",
+            "bytecode",
+            "runtime"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-prog-error-testing",
+          "topicId": "im-it-prog",
+          "title": "錯誤處理與測試",
+          "keywords": [
+            "exception",
+            "assertion",
+            "unit test",
+            "debugging"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-prog-software-lifecycle",
+          "topicId": "im-it-prog",
+          "title": "軟體生命週期",
+          "keywords": [
+            "SDLC",
+            "requirement",
+            "UML",
+            "Git",
+            "CI/CD"
+          ],
+          "status": "reviewed"
+        }
+      ]
+    },
+    {
+      "id": "im-it-ds",
+      "title": "資料結構",
+      "importance": 5,
+      "status": "reviewed",
+      "learningObjectives": [
+        {
+          "id": "im-it-ds-lo-1",
+          "statement": "依操作需求選擇資料結構。"
+        },
+        {
+          "id": "im-it-ds-lo-2",
+          "statement": "追蹤常見結構與演算法。"
+        },
+        {
+          "id": "im-it-ds-lo-3",
+          "statement": "分析時間與空間複雜度。"
+        }
+      ],
+      "subtopics": [
+        {
+          "id": "im-it-ds-complexity-analysis",
+          "topicId": "im-it-ds",
+          "title": "複雜度分析",
+          "keywords": [
+            "Big O",
+            "Theta",
+            "Omega",
+            "amortized",
+            "recurrence"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-ds-linear-structures",
+          "topicId": "im-it-ds",
+          "title": "線性資料結構",
+          "keywords": [
+            "array",
+            "linked list",
+            "stack",
+            "queue",
+            "deque"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-ds-trees-bst",
+          "topicId": "im-it-ds",
+          "title": "樹與二元搜尋樹",
+          "keywords": [
+            "tree",
+            "BST",
+            "inorder",
+            "AVL",
+            "height"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-ds-heaps-priority-queues",
+          "topicId": "im-it-ds",
+          "title": "堆積與優先佇列",
+          "keywords": [
+            "heap",
+            "priority queue",
+            "heapify"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-ds-hashing",
+          "topicId": "im-it-ds",
+          "title": "雜湊",
+          "keywords": [
+            "hash table",
+            "load factor",
+            "chaining",
+            "probing"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-ds-graphs",
+          "topicId": "im-it-ds",
+          "title": "圖論與圖演算法",
+          "keywords": [
+            "graph",
+            "BFS",
+            "DFS",
+            "MST",
+            "Dijkstra"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-ds-sorting-searching",
+          "topicId": "im-it-ds",
+          "title": "排序與搜尋",
+          "keywords": [
+            "quicksort",
+            "mergesort",
+            "stability",
+            "binary search",
+            "string matching"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-ds-algorithm-design",
+          "topicId": "im-it-ds",
+          "title": "演算法設計",
+          "keywords": [
+            "greedy",
+            "divide and conquer",
+            "dynamic programming",
+            "correctness"
+          ],
+          "status": "reviewed"
+        }
+      ]
+    },
+    {
+      "id": "im-it-db",
+      "title": "資料庫",
+      "importance": 4,
+      "status": "reviewed",
+      "learningObjectives": [
+        {
+          "id": "im-it-db-lo-1",
+          "statement": "建立關聯與 ER 模型。"
+        },
+        {
+          "id": "im-it-db-lo-2",
+          "statement": "撰寫並推導 SQL。"
+        },
+        {
+          "id": "im-it-db-lo-3",
+          "statement": "分析正規化、交易與索引。"
+        }
+      ],
+      "subtopics": [
+        {
+          "id": "im-it-db-relational-model",
+          "topicId": "im-it-db",
+          "title": "關聯模型",
+          "keywords": [
+            "relation",
+            "tuple",
+            "primary key",
+            "foreign key",
+            "constraint"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-db-er-modeling",
+          "topicId": "im-it-db",
+          "title": "ER 建模",
+          "keywords": [
+            "entity",
+            "relationship",
+            "cardinality",
+            "weak entity"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-db-sql-querying",
+          "topicId": "im-it-db",
+          "title": "SQL 查詢",
+          "keywords": [
+            "SELECT",
+            "JOIN",
+            "GROUP BY",
+            "HAVING",
+            "subquery"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-db-normalization",
+          "topicId": "im-it-db",
+          "title": "正規化",
+          "keywords": [
+            "functional dependency",
+            "1NF",
+            "2NF",
+            "3NF",
+            "BCNF"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-db-transactions",
+          "topicId": "im-it-db",
+          "title": "交易與復原",
+          "keywords": [
+            "ACID",
+            "serializability",
+            "lock",
+            "log",
+            "recovery"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-db-storage-indexing",
+          "topicId": "im-it-db",
+          "title": "資料庫儲存與索引",
+          "keywords": [
+            "index",
+            "B+ tree",
+            "clustered",
+            "query plan"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-db-distributed-nosql",
+          "topicId": "im-it-db",
+          "title": "分散式資料庫與 NoSQL",
+          "keywords": [
+            "replication",
+            "sharding",
+            "CAP",
+            "NoSQL",
+            "blockchain"
+          ],
+          "status": "reviewed"
+        }
+      ]
+    },
+    {
+      "id": "im-it-network",
+      "title": "網路",
+      "importance": 4,
+      "status": "reviewed",
+      "learningObjectives": [
+        {
+          "id": "im-it-network-lo-1",
+          "statement": "定位網路協定與設備層級。"
+        },
+        {
+          "id": "im-it-network-lo-2",
+          "statement": "追蹤端到端請求流程。"
+        },
+        {
+          "id": "im-it-network-lo-3",
+          "statement": "比較網路與雲端架構取捨。"
+        }
+      ],
+      "subtopics": [
+        {
+          "id": "im-it-network-models-encapsulation",
+          "topicId": "im-it-network",
+          "title": "網路模型與封裝",
+          "keywords": [
+            "OSI",
+            "TCP/IP",
+            "layer",
+            "packet",
+            "frame"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-network-link-lan",
+          "topicId": "im-it-network",
+          "title": "資料鏈結層與區域網路",
+          "keywords": [
+            "Ethernet",
+            "MAC",
+            "switch",
+            "VLAN",
+            "wireless"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-network-ip-addressing-routing",
+          "topicId": "im-it-network",
+          "title": "IP 定址與路由",
+          "keywords": [
+            "IPv4",
+            "IPv6",
+            "subnet",
+            "router",
+            "NAT"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-network-transport",
+          "topicId": "im-it-network",
+          "title": "傳輸層",
+          "keywords": [
+            "TCP",
+            "UDP",
+            "port",
+            "congestion",
+            "flow control"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-network-application-protocols",
+          "topicId": "im-it-network",
+          "title": "應用層協定",
+          "keywords": [
+            "HTTP",
+            "HTTPS",
+            "DNS",
+            "DHCP",
+            "SMTP"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-network-distributed-cloud",
+          "topicId": "im-it-network",
+          "title": "分散式與雲端服務",
+          "keywords": [
+            "cloud",
+            "IaaS",
+            "PaaS",
+            "SaaS",
+            "CDN",
+            "edge"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-network-performance-reliability",
+          "topicId": "im-it-network",
+          "title": "網路效能與可靠度",
+          "keywords": [
+            "bandwidth",
+            "latency",
+            "jitter",
+            "availability",
+            "QoS"
+          ],
+          "status": "reviewed"
+        }
+      ]
+    },
+    {
+      "id": "im-it-os",
+      "title": "作業系統",
+      "importance": 4,
+      "status": "reviewed",
+      "learningObjectives": [
+        {
+          "id": "im-it-os-lo-1",
+          "statement": "分析行程、同步與排程。"
+        },
+        {
+          "id": "im-it-os-lo-2",
+          "statement": "追蹤記憶體與檔案管理。"
+        },
+        {
+          "id": "im-it-os-lo-3",
+          "statement": "解釋虛擬化資源隔離。"
+        }
+      ],
+      "subtopics": [
+        {
+          "id": "im-it-os-processes-threads",
+          "topicId": "im-it-os",
+          "title": "行程與執行緒",
+          "keywords": [
+            "process",
+            "thread",
+            "PCB",
+            "context switch",
+            "system call"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-os-cpu-scheduling",
+          "topicId": "im-it-os",
+          "title": "CPU 排程",
+          "keywords": [
+            "FCFS",
+            "SJF",
+            "priority",
+            "round robin"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-os-synchronization",
+          "topicId": "im-it-os",
+          "title": "同步與互斥",
+          "keywords": [
+            "race condition",
+            "mutex",
+            "semaphore",
+            "critical section"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-os-deadlocks",
+          "topicId": "im-it-os",
+          "title": "死結",
+          "keywords": [
+            "deadlock",
+            "Coffman",
+            "Banker's algorithm",
+            "liveness"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-os-memory-management",
+          "topicId": "im-it-os",
+          "title": "記憶體管理",
+          "keywords": [
+            "paging",
+            "segmentation",
+            "virtual memory",
+            "page fault"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-os-file-storage-io",
+          "topicId": "im-it-os",
+          "title": "檔案、儲存與 I/O",
+          "keywords": [
+            "file system",
+            "inode",
+            "disk",
+            "buffering",
+            "spooling"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-os-virtualization-containers",
+          "topicId": "im-it-os",
+          "title": "虛擬化與容器",
+          "keywords": [
+            "virtualization",
+            "hypervisor",
+            "VM",
+            "container",
+            "serverless"
+          ],
+          "status": "reviewed"
+        }
+      ]
+    },
+    {
+      "id": "im-it-security",
+      "title": "資安",
+      "importance": 3,
+      "status": "reviewed",
+      "learningObjectives": [
+        {
+          "id": "im-it-security-lo-1",
+          "statement": "以風險模型分析資安情境。"
+        },
+        {
+          "id": "im-it-security-lo-2",
+          "statement": "選擇密碼學與存取控制機制。"
+        },
+        {
+          "id": "im-it-security-lo-3",
+          "statement": "辨認攻擊、防禦與治理措施。"
+        }
+      ],
+      "subtopics": [
+        {
+          "id": "im-it-security-principles-risk",
+          "topicId": "im-it-security",
+          "title": "資安原則與風險",
+          "keywords": [
+            "CIA",
+            "threat",
+            "vulnerability",
+            "risk",
+            "defense in depth"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-security-cryptography",
+          "topicId": "im-it-security",
+          "title": "密碼學",
+          "keywords": [
+            "AES",
+            "RSA",
+            "hash",
+            "signature",
+            "PKI",
+            "TLS"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-security-auth-access",
+          "topicId": "im-it-security",
+          "title": "身分驗證與存取控制",
+          "keywords": [
+            "MFA",
+            "password",
+            "RBAC",
+            "least privilege",
+            "zero trust"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-security-network-defense",
+          "topicId": "im-it-security",
+          "title": "網路防禦",
+          "keywords": [
+            "firewall",
+            "IDS",
+            "IPS",
+            "VPN",
+            "DDoS"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-security-application-attacks",
+          "topicId": "im-it-security",
+          "title": "應用程式攻擊",
+          "keywords": [
+            "SQL injection",
+            "XSS",
+            "CSRF",
+            "session hijacking"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-security-malware-social",
+          "topicId": "im-it-security",
+          "title": "惡意程式與社交工程",
+          "keywords": [
+            "virus",
+            "worm",
+            "ransomware",
+            "phishing"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-security-governance-privacy",
+          "topicId": "im-it-security",
+          "title": "治理與隱私",
+          "keywords": [
+            "ISMS",
+            "incident response",
+            "privacy",
+            "audit"
+          ],
+          "status": "reviewed"
+        }
+      ]
+    },
+    {
+      "id": "im-it-ai",
+      "title": "AI/ML（近年必考趨勢）",
+      "importance": 5,
+      "status": "reviewed",
+      "learningObjectives": [
+        {
+          "id": "im-it-ai-lo-1",
+          "statement": "區分機器學習典範。"
+        },
+        {
+          "id": "im-it-ai-lo-2",
+          "statement": "解釋模型、神經網路與 Transformer。"
+        },
+        {
+          "id": "im-it-ai-lo-3",
+          "statement": "評估生成式 AI 的限制與治理。"
+        }
+      ],
+      "subtopics": [
+        {
+          "id": "im-it-ai-foundations-search",
+          "topicId": "im-it-ai",
+          "title": "AI 基礎與搜尋",
+          "keywords": [
+            "agent",
+            "state space",
+            "heuristic",
+            "A*",
+            "Turing test"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-ai-ml-paradigms",
+          "topicId": "im-it-ai",
+          "title": "機器學習典範",
+          "keywords": [
+            "classification",
+            "regression",
+            "clustering",
+            "reinforcement learning"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-ai-training-evaluation",
+          "topicId": "im-it-ai",
+          "title": "訓練與評估",
+          "keywords": [
+            "overfitting",
+            "regularization",
+            "precision",
+            "recall"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-ai-neural-networks",
+          "topicId": "im-it-ai",
+          "title": "神經網路",
+          "keywords": [
+            "perceptron",
+            "gradient descent",
+            "backpropagation"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-ai-cnn-rnn-sequence",
+          "topicId": "im-it-ai",
+          "title": "CNN、RNN 與序列模型",
+          "keywords": [
+            "CNN",
+            "convolution",
+            "RNN",
+            "LSTM",
+            "embedding"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-ai-transformers-attention",
+          "topicId": "im-it-ai",
+          "title": "Transformer 與注意力",
+          "keywords": [
+            "self-attention",
+            "Transformer",
+            "encoder",
+            "decoder"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-ai-generative-llm",
+          "topicId": "im-it-ai",
+          "title": "生成式 AI 與 LLM",
+          "keywords": [
+            "generative AI",
+            "LLM",
+            "prompt",
+            "fine-tuning",
+            "RAG"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-it-ai-ethics-governance",
+          "topicId": "im-it-ai",
+          "title": "AI 倫理與治理",
+          "keywords": [
+            "bias",
+            "fairness",
+            "hallucination",
+            "accountability"
+          ],
+          "status": "reviewed"
+        }
+      ]
+    }
+  ]
+}
