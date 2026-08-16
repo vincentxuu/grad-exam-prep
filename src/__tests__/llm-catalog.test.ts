@@ -33,8 +33,7 @@ describe('PROVIDER_CATALOG', () => {
       OPENAI_API_KEY: 'k',
       OPENROUTER_API_KEY: 'k',
       CEREBRAS_API_KEY: 'k',
-      CLOUDFLARE_API_TOKEN: 'k',
-      CLOUDFLARE_ACCOUNT_ID: 'acct',
+      AI: {} as Ai,
     }
     for (const p of PROVIDER_CATALOG) {
       expect(
@@ -68,12 +67,11 @@ describe('pingRoute', () => {
     expect(result.ms).toBe(0)
   })
 
-  it('cloudflare 只給一半也算沒設定，訊息要指出兩個都要', async () => {
-    const result = await pingRoute({ CLOUDFLARE_API_TOKEN: 't' }, route('cloudflare'))
+  it('cloudflare 沒有 AI binding 時會說明缺少 binding', async () => {
+    const result = await pingRoute({}, route('cloudflare'))
 
     expect(result.ok).toBe(false)
-    expect(result.error).toContain('CLOUDFLARE_API_TOKEN')
-    expect(result.error).toContain('CLOUDFLARE_ACCOUNT_ID')
+    expect(result.error).toContain('AI binding')
   })
 
   it('回傳的 route 標記看得出測的是哪一組', async () => {

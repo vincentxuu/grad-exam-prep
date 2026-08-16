@@ -211,12 +211,9 @@ describe('hasCredentials', () => {
     expect(hasCredentials({}, route('ollama'))).toBe(true)
   })
 
-  it('cloudflare 要 token 也要 account id —— 端點路徑帶帳號，少一個就打不出去', () => {
-    expect(hasCredentials({ CLOUDFLARE_API_TOKEN: 't' }, route('cloudflare'))).toBe(false)
-    expect(hasCredentials({ CLOUDFLARE_ACCOUNT_ID: 'a' }, route('cloudflare'))).toBe(false)
-    expect(
-      hasCredentials({ CLOUDFLARE_API_TOKEN: 't', CLOUDFLARE_ACCOUNT_ID: 'a' }, route('cloudflare'))
-    ).toBe(true)
+  it('cloudflare 直接檢查 Workers AI binding，不需要 token', () => {
+    expect(hasCredentials({}, route('cloudflare'))).toBe(false)
+    expect(hasCredentials({ AI: {} as Ai }, route('cloudflare'))).toBe(true)
   })
 })
 

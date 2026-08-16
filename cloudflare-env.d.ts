@@ -7,9 +7,9 @@ interface CloudflareEnv {
   PASSPHRASE_HASH: string
 
   // ── LLM provider 路由（做法沿用 vincentxuu/quidproquo）──────────────
-  /** groq | google | openai | cloudflare | openrouter | cerebras | ollama，預設 groq */
+  /** groq | google | openai | cloudflare | openrouter | cerebras | ollama，預設 cloudflare */
   LLM_PROVIDER?: string
-  /** 預設 llama-3.3-70b-versatile */
+  /** 預設 @cf/meta/llama-3.3-70b-instruct-fp8-fast */
   LLM_MODEL?: string
   /** 主 provider 失敗時退到這家，未設定就不退 */
   LLM_FALLBACK_PROVIDER?: string
@@ -22,11 +22,6 @@ interface CloudflareEnv {
   OPENROUTER_API_KEY?: string
   CEREBRAS_API_KEY?: string
   OLLAMA_API_BASE?: string
-
-  /** Workers AI：token 要有 Account > Workers AI > Read 權限 */
-  CLOUDFLARE_API_TOKEN?: string
-  /** Workers AI 端點路徑帶帳號，不機密，放 wrangler.json 的 vars 就好 */
-  CLOUDFLARE_ACCOUNT_ID?: string
 
   /** 每人每日查詞生成上限，預設 60。 */
   LEXICON_DAILY_QUOTA?: string

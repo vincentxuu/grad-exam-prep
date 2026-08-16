@@ -144,6 +144,20 @@ describe('getEntry / putEntry', () => {
     const { db } = fakeDb()
     expect(await getEntry(db, 'nonexistent')).toBeNull()
   })
+
+  it('讀取舊快取時也會把簡體內容正規化成臺灣繁體', async () => {
+    const { db, entries } = fakeDb()
+    entries.set('software', {
+      kind: 'word',
+      model: 'legacy',
+      data: JSON.stringify({
+        ...entry('software'),
+        senses: [{ pos: 'noun', zh: '软件与数据库', en: 'software and databases' }],
+      }),
+    })
+
+    expect((await getEntry(db, 'software'))?.senses[0].zh).toBe('軟體與資料庫')
+  })
 })
 
 describe('個人化橋接', () => {

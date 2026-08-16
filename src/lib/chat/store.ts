@@ -1,4 +1,5 @@
 import type { Db } from '@/lib/lexicon/store'
+import { toTaiwanTraditional, toTaiwanTraditionalDeep } from '@/lib/llm/traditional-chinese'
 import type { ChatMessage, ChatSession, Correction } from '@/types/chat'
 import { MAX_SESSION_MESSAGES } from '@/types/chat'
 
@@ -74,7 +75,7 @@ export async function getMessages(db: Db, sessionId: string): Promise<ChatMessag
   return (rows.results ?? []).map((r) => ({
     id: r.id,
     role: r.role,
-    content: r.content,
+    content: r.role === 'assistant' ? toTaiwanTraditional(r.content) : r.content,
     usedWords: r.used_words ? (JSON.parse(r.used_words) as string[]) : undefined,
     createdAt: r.created_at,
   }))
@@ -141,5 +142,5 @@ export async function getCorrections(db: Db, sessionId: string): Promise<Correct
     .bind(sessionId)
     .all<{ data: string }>()
 
-  return (rows.results ?? []).map((r) => JSON.parse(r.data) as Correction)
+  return (rows.results ?? []).map((r) => toTaiwanTraditionalDeep(JSON.parse(r.data) as Correction))
 }
