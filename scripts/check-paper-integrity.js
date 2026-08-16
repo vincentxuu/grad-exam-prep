@@ -36,11 +36,15 @@ const INSTRUCTION_RE =
 const MIN_COMPARE_LENGTH = 60
 
 function fingerprint(text) {
-  return text
-    .replace(INSTRUCTION_RE, '')
-    .replace(/[^a-zA-Z]/g, '')
-    .toLowerCase()
-    .slice(0, 100)
+  return (
+    text
+      .replace(INSTRUCTION_RE, '')
+      // Compare the whole normalized question. The old fingerprint kept only the first
+      // 100 letters, so questions that shared a template collided even when their
+      // recurrence signs, coefficients, or actual requested operations differed.
+      .replace(/[^a-zA-Z0-9+\-=^]/g, '')
+      .toLowerCase()
+  )
 }
 
 const byFingerprint = new Map()

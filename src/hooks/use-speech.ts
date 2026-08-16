@@ -149,7 +149,11 @@ export function useSpeech() {
     synthRef.current?.cancel()
     abortRef.current?.abort()
     if (audioRef.current) {
+      audioRef.current.onended = null
+      audioRef.current.onerror = null
       audioRef.current.pause()
+      audioRef.current.removeAttribute('src')
+      audioRef.current.load()
       audioRef.current = null
     }
     setSpeakingId(null)
@@ -187,15 +191,18 @@ export function useSpeech() {
           const url = URL.createObjectURL(blob)
           const audio = new Audio(url)
           audioRef.current = audio
-          audio.onended = () => {
+
+          const cleanup = () => {
+            audio.onended = null
+            audio.onerror = null
+            audioRef.current = null
             setSpeakingId(null)
             URL.revokeObjectURL(url)
           }
-          audio.onerror = () => {
-            setSpeakingId(null)
-            URL.revokeObjectURL(url)
-          }
-          audio.play()
+          audio.onended = cleanup
+          audio.onerror = cleanup
+
+          audio.play().catch(cleanup)
         })
         .catch((err) => {
           console.error('[TTS speak]', err)
