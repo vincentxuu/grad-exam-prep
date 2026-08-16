@@ -1,0 +1,3413 @@
+{
+  "schemaVersion": 1,
+  "contentStatus": "reviewed",
+  "review": {
+    "reviewedBy": "Codex beginner-content audit",
+    "reviewedAt": "2026-08-16",
+    "scope": "逐堂挑選第一次閱讀必需的術語；白話定義、生活例子與易混淆邊界均對照原課內容。"
+  },
+  "totalTerms": 190,
+  "terms": [
+    {
+      "id": "im-it-glossary-acid",
+      "label": "ACID 交易特性",
+      "aliases": [
+        "ACID",
+        "atomicity",
+        "consistency",
+        "isolation",
+        "durability"
+      ],
+      "plainDefinition": "交易要做到全有全無、維持規則、彼此適度隔離，完成後結果可保存。",
+      "everydayExample": "銀行轉帳不能只扣款不入帳，且完成後不能因當機消失。",
+      "confusionNote": "ACID 的 consistency 是符合資料規則，不等同分散式系統 CAP 的 consistency。",
+      "lessonIds": [
+        "lesson-im-it-db-transactions-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-ai-risk-governance",
+      "label": "生成式 AI 風險治理",
+      "aliases": [
+        "AI RMF",
+        "bias",
+        "privacy",
+        "accountability",
+        "GenAI Profile"
+      ],
+      "plainDefinition": "用明確責任與持續風險流程，管理生成錯誤、偏誤、隱私與使用影響。",
+      "everydayExample": "像出版社不因文章流暢就直接刊登，仍要查證、審稿、標示責任並處理更正。",
+      "confusionNote": "加上 RAG 或人工抽查能降低部分風險，但都不能保證輸出永遠正確。",
+      "lessonIds": [
+        "lesson-im-it-ai-generative-governance-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-algorithm-strategies",
+      "label": "演算法設計策略",
+      "aliases": [
+        "greedy",
+        "divide-and-conquer",
+        "dynamic programming",
+        "invariant"
+      ],
+      "plainDefinition": "Greedy 每步選眼前最佳，分治拆成獨立子題，動態規劃重用重疊子題答案。",
+      "everydayExample": "像每次拿最大硬幣、分組各自整理、把算過的小問題寫在備忘錄。",
+      "confusionNote": "看到最佳化問題不能直接套 greedy；必須證明局部選擇能導向全域答案。",
+      "lessonIds": [
+        "lesson-im-it-ds-graphs-design-b01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-amdahls-law",
+      "label": "阿姆達爾定律",
+      "aliases": [
+        "Amdahl's law",
+        "speedup"
+      ],
+      "plainDefinition": "用不能平行化的部分，估算整體加速的最高上限。",
+      "everydayExample": "十道工序只有八道能多人一起做，剩下兩道仍會限制總完工速度。",
+      "confusionNote": "增加處理器不會讓含有固定串行部分的工作無限加速。",
+      "lessonIds": [
+        "lesson-im-it-arch-cpu-organization"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-arp",
+      "label": "ARP 位址解析",
+      "aliases": [
+        "ARP",
+        "Address Resolution Protocol"
+      ],
+      "plainDefinition": "在同一個 IPv4 區域網路中，查出某個 IP 位址對應的 MAC 位址。",
+      "everydayExample": "像知道社區住址後，再查這一棟內實際要按哪個門鈴。",
+      "confusionNote": "ARP 不是 DNS，也不負責跨路由器尋找完整路徑。",
+      "lessonIds": [
+        "lesson-im-it-network-link-lan-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-attack-vectors",
+      "label": "注入與社交工程攻擊",
+      "aliases": [
+        "SQL injection",
+        "XSS",
+        "phishing",
+        "social engineering",
+        "網路釣魚",
+        "跨站腳本"
+      ],
+      "plainDefinition": "注入攻擊把惡意輸入當程式執行；社交工程則利用人的信任取得資料或操作。",
+      "everydayExample": "偽造客服訊息騙密碼是 phishing；把惡意腳本塞進留言欄可能形成 XSS。",
+      "confusionNote": "防火牆無法單獨擋下所有應用輸入與人為受騙問題。",
+      "lessonIds": [
+        "lesson-im-it-security-attacks-network-defense-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-attention-transformer",
+      "label": "注意力機制與 Transformer",
+      "aliases": [
+        "attention",
+        "self-attention",
+        "Transformer",
+        "注意力機制"
+      ],
+      "plainDefinition": "attention 讓模型依當下任務衡量不同內容的重要性，Transformer 以此處理序列關係。",
+      "everydayExample": "讀代名詞「他」時，回頭特別注意前文可能指的是誰。",
+      "confusionNote": "attention 不是模型具有人的專注或理解；Transformer 也不只用於文字。",
+      "lessonIds": [
+        "lesson-im-it-ai-neural-sequence-transformer-01",
+        "lesson-im-it-ai-generative-governance-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-backprop-optimizer",
+      "label": "反向傳播與最佳化器",
+      "aliases": [
+        "backpropagation",
+        "gradient",
+        "optimizer"
+      ],
+      "plainDefinition": "Backpropagation 計算各參數對誤差的影響，optimizer 再依這些 gradients 更新參數。",
+      "everydayExample": "像先查出每個旋鈕對成品偏差的影響，再決定各旋鈕要轉多少。",
+      "confusionNote": "Backpropagation 計算梯度；真正套用更新規則的是 optimizer，兩者角色不同。",
+      "lessonIds": [
+        "lesson-im-it-ai-neural-sequence-transformer-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-big-data-5v",
+      "label": "大數據 5V",
+      "aliases": [
+        "Big Data",
+        "volume",
+        "velocity",
+        "variety",
+        "veracity",
+        "value"
+      ],
+      "plainDefinition": "用資料量、速度、種類、可信度與價值等面向描述超出一般處理方式的資料問題。",
+      "everydayExample": "外送平台同時收到大量、快速、格式不同且品質不一的訂單與定位資料。",
+      "confusionNote": "資料很多只是其中一個面向；Big Data 不是任何大型檔案的同義詞。",
+      "lessonIds": [
+        "lesson-im-it-data-big-data-nosql-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-big-o",
+      "label": "大 O 複雜度",
+      "aliases": [
+        "Big O",
+        "time complexity",
+        "O(n)",
+        "時間複雜度"
+      ],
+      "plainDefinition": "描述輸入變大時，演算法所需時間或空間的成長速度。",
+      "everydayExample": "排 10 人與排 1 萬人時，工作量增加多快比小規模快幾秒更重要。",
+      "confusionNote": "Big O 不是精確秒數，也不能忽略資料規模與常數成本。",
+      "lessonIds": [
+        "lesson-im-it-ds-complexity-sorting-searching-01",
+        "lesson-im-it-ds-trees-heaps-01",
+        "lesson-im-it-ds-linear-hashing-b01",
+        "lesson-im-it-ds-graphs-design-b01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-binary-search",
+      "label": "二分搜尋",
+      "aliases": [
+        "binary search",
+        "二元搜尋"
+      ],
+      "plainDefinition": "在已排序資料中反覆排除一半範圍來找目標。",
+      "everydayExample": "猜 1 到 100 的數字，每次猜中間並問較大或較小。",
+      "confusionNote": "資料若未排序，不能直接套二分搜尋得到正確結果。",
+      "lessonIds": [
+        "lesson-im-it-ds-complexity-sorting-searching-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-block-transaction",
+      "label": "交易、區塊與雜湊鏈結",
+      "aliases": [
+        "transaction",
+        "block",
+        "hash linkage",
+        "tamper-evident"
+      ],
+      "plainDefinition": "多筆交易被整理進區塊，區塊再用前一區塊的 hash 串接，使事後修改容易被發現。",
+      "everydayExample": "像每頁帳本都印上前一頁內容的防偽指紋，改舊頁會讓後續對不上。",
+      "confusionNote": "Tamper-evident 是可察覺竄改，不代表資料物理上絕對無法修改。",
+      "lessonIds": [
+        "lesson-im-it-security-blockchain-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-blockchain-consensus",
+      "label": "區塊鏈共識與挖礦",
+      "aliases": [
+        "blockchain",
+        "distributed ledger",
+        "consensus",
+        "mining",
+        "proof of work",
+        "分散式帳本"
+      ],
+      "plainDefinition": "多個節點依共識規則確認帳本順序；挖礦是部分區塊鏈取得提案權與保護歷史的方法。",
+      "everydayExample": "像多本同步帳簿要先依共同規則確認哪筆交易先記。",
+      "confusionNote": "區塊鏈不等於比一般資料庫更快，挖礦也不是所有區塊鏈都需要。",
+      "lessonIds": [
+        "lesson-im-it-security-blockchain-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-boolean-logic",
+      "label": "布林邏輯",
+      "aliases": [
+        "Boolean logic",
+        "AND",
+        "OR",
+        "NOT"
+      ],
+      "plainDefinition": "只用真與假來組合條件與決策的邏輯系統。",
+      "everydayExample": "門禁規則可以是「有卡 AND 密碼正確」才開門。",
+      "confusionNote": "AND、OR 是邏輯關係，不等同日常語言中模糊的「和／或」。",
+      "lessonIds": [
+        "lesson-im-it-db-sql-querying",
+        "lesson-im-it-arch-logic-circuits-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-bst",
+      "label": "二元搜尋樹",
+      "aliases": [
+        "BST",
+        "Binary Search Tree",
+        "二叉搜尋樹"
+      ],
+      "plainDefinition": "每個節點左側較小、右側較大的樹狀結構。",
+      "everydayExample": "像按姓氏順序分流：較前往左、較後往右。",
+      "confusionNote": "BST 不一定平衡；歪斜時搜尋可能退化成線性時間。",
+      "lessonIds": [
+        "lesson-im-it-ds-trees-heaps-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-buffering",
+      "label": "緩衝",
+      "aliases": [
+        "buffer",
+        "buffering",
+        "I/O buffer"
+      ],
+      "plainDefinition": "先把速度不一致的資料暫放一區，再分批處理或傳送。",
+      "everydayExample": "像外送員先把多張訂單集中，再一次送往同一區域。",
+      "confusionNote": "buffer 重點是平滑資料流；cache 重點是重複使用以加速。",
+      "lessonIds": [
+        "lesson-im-it-os-file-storage-io",
+        "lesson-im-it-arch-io-performance-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-build-pipeline",
+      "label": "程式建置流程",
+      "aliases": [
+        "preprocessing",
+        "compilation",
+        "assembly",
+        "linking",
+        "GCC"
+      ],
+      "plainDefinition": "原始碼依序經前置處理、編譯成組合語言、組譯成機器碼，再連結成可執行程式。",
+      "everydayExample": "像先展開備料清單、翻成廚房指令、各站做好半成品，最後組成完整套餐。",
+      "confusionNote": "Compilation 常被口語用來泛稱整個流程，但嚴格分階段時 linking 不屬於狹義 compilation。",
+      "lessonIds": [
+        "lesson-im-it-prog-runtime-quality-lifecycle-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-cache",
+      "label": "快取",
+      "aliases": [
+        "cache",
+        "cache hit",
+        "cache miss"
+      ],
+      "plainDefinition": "把近期常用資料放在更近、更快的位置，減少每次都去慢速來源取得。",
+      "everydayExample": "像把常用調味料放手邊，而不是每次走去倉庫拿。",
+      "confusionNote": "快取不是永久資料庫；miss 也不代表資料不存在。",
+      "lessonIds": [
+        "lesson-im-it-arch-memory-data-representation-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-cia-zero-trust",
+      "label": "CIA 與零信任",
+      "aliases": [
+        "CIA triad",
+        "confidentiality",
+        "integrity",
+        "availability",
+        "Zero Trust",
+        "零信任"
+      ],
+      "plainDefinition": "CIA 是機密性、完整性、可用性三個資安目標；零信任要求每次存取都持續驗證。",
+      "everydayExample": "進辦公室不只看一次大門證件，進機房還要再驗身分與權限。",
+      "confusionNote": "Zero Trust 不是完全不信任任何人，也不是買一套產品就完成。",
+      "lessonIds": [
+        "lesson-im-it-security-risk-access-governance-01",
+        "lesson-im-it-security-attacks-network-defense-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-cloud-service-models",
+      "label": "雲端服務與部署模型",
+      "aliases": [
+        "SaaS",
+        "PaaS",
+        "IaaS",
+        "hybrid cloud"
+      ],
+      "plainDefinition": "SaaS 提供完成的軟體，PaaS 提供開發執行平台；hybrid cloud 結合不同部署環境。",
+      "everydayExample": "租用現成辦公軟體像 SaaS，租一間備妥設備的廚房來開發服務像 PaaS。",
+      "confusionNote": "服務模型描述責任分工，部署模型描述放在哪類環境，兩者不是同一分類軸。",
+      "lessonIds": [
+        "lesson-im-it-network-cloud-performance-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-cnn-rnn-lstm",
+      "label": "CNN、RNN 與 LSTM",
+      "aliases": [
+        "CNN",
+        "convolutional neural network",
+        "RNN",
+        "LSTM"
+      ],
+      "plainDefinition": "CNN 擅長利用局部與共享模式；RNN/LSTM 以序列狀態處理前後次序資訊。",
+      "everydayExample": "CNN 像在照片各處找同一種圖案，RNN/LSTM 像讀句子時保留前文線索。",
+      "confusionNote": "這是典型設計偏好，不代表 CNN 只能看圖片或 RNN 一定最適合所有序列。",
+      "lessonIds": [
+        "lesson-im-it-ai-neural-sequence-transformer-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-combinational-sequential",
+      "label": "組合與循序電路",
+      "aliases": [
+        "combinational circuit",
+        "sequential circuit"
+      ],
+      "plainDefinition": "組合電路只看當下輸入；循序電路還會受先前保存的狀態影響。",
+      "everydayExample": "自動門感應器像只看當下輸入，電梯控制則必須記得目前樓層。",
+      "confusionNote": "有多個邏輯閘不代表就是循序電路；是否保存狀態才是關鍵。",
+      "lessonIds": [
+        "lesson-im-it-arch-logic-circuits-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-complete-binary-tree",
+      "label": "完全二元樹",
+      "aliases": [
+        "complete binary tree",
+        "array representation"
+      ],
+      "plainDefinition": "除最後一層外都填滿，最後一層從左到右連續填入的二元樹。",
+      "everydayExample": "像電影院座位逐排、每排由左到右坐滿，最後一排可以未滿。",
+      "confusionNote": "Complete 不等於每個節點都有零或兩個孩子；那是 full binary tree 的概念。",
+      "lessonIds": [
+        "lesson-im-it-ds-trees-heaps-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-confusion-matrix",
+      "label": "混淆矩陣",
+      "aliases": [
+        "confusion matrix",
+        "TP",
+        "FP",
+        "FN",
+        "TN",
+        "precision",
+        "recall",
+        "accuracy"
+      ],
+      "plainDefinition": "把二元分類的預測與真實結果交叉整理成四格，再由四格計算評估指標。",
+      "everydayExample": "像把警報分成真的有火、誤報、漏報與正確未報四種結果。",
+      "confusionNote": "Precision、recall 與 accuracy 回答不同問題，不能互相代換。",
+      "lessonIds": [
+        "lesson-im-it-ai-foundations-ml-evaluation-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-container",
+      "label": "容器",
+      "aliases": [
+        "container",
+        "Docker container",
+        "容器化"
+      ],
+      "plainDefinition": "把應用程式與相依環境封裝起來，但通常共享主機作業系統核心。",
+      "everydayExample": "像便當盒分開裝菜，仍共用同一台冰箱與廚房。",
+      "confusionNote": "容器不是完整虛擬機，隔離邊界與共享核心要另外評估。",
+      "lessonIds": [
+        "lesson-im-it-os-virtualization-containers-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-context-switch",
+      "label": "上下文切換",
+      "aliases": [
+        "context switch",
+        "情境切換"
+      ],
+      "plainDefinition": "系統保存目前工作的執行狀態，再載入另一項工作的狀態。",
+      "everydayExample": "像客服先記下 A 客戶談到哪，再打開 B 客戶紀錄接著處理。",
+      "confusionNote": "切換本身有成本，頻繁切換不會免費增加效能。",
+      "lessonIds": [
+        "lesson-im-it-os-processes-threads",
+        "lesson-im-it-os-scheduling-memory-management-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-csma",
+      "label": "共享媒體存取",
+      "aliases": [
+        "CSMA/CD",
+        "CSMA/CA",
+        "collision",
+        "binary exponential backoff"
+      ],
+      "plainDefinition": "多台裝置共用傳輸媒體時，先偵聽再傳送，並依有線或無線環境處理碰撞風險。",
+      "everydayExample": "像多人共用對講機，先聽有沒有人說話，撞話後各自等一段時間再試。",
+      "confusionNote": "交換式全雙工 Ethernet 通常不靠 CSMA/CD；Wi-Fi 主要採避免碰撞的 CSMA/CA。",
+      "lessonIds": [
+        "lesson-im-it-network-link-lan-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-database-index",
+      "label": "資料庫索引",
+      "aliases": [
+        "index",
+        "B-tree",
+        "B+ tree",
+        "hash index",
+        "索引"
+      ],
+      "plainDefinition": "建立額外查找結構，讓資料庫不必每次掃完整張表。",
+      "everydayExample": "像書末索引讓你直接找到頁碼，不必從第一頁翻起。",
+      "confusionNote": "索引會占空間並增加寫入維護成本，不是每個欄位都建越多越好。",
+      "lessonIds": [
+        "lesson-im-it-db-storage-indexing-b01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-database-locking",
+      "label": "資料庫鎖定與兩階段鎖定",
+      "aliases": [
+        "shared lock",
+        "exclusive lock",
+        "two-phase locking",
+        "2PL"
+      ],
+      "plainDefinition": "讀取可使用 shared lock，修改需使用 exclusive lock；2PL 以先取得、後釋放的兩階段約束交易排程。",
+      "everydayExample": "像多人可同時看同一本公告，但有人要改內容時必須先取得獨占編輯權。",
+      "confusionNote": "2PL 有助於 serializability，但仍可能發生 deadlock，也不是資料復原機制。",
+      "lessonIds": [
+        "lesson-im-it-db-transactions-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-deadlock",
+      "label": "死結",
+      "aliases": [
+        "deadlock",
+        "死鎖"
+      ],
+      "plainDefinition": "多個工作各自占著資源又互等對方釋放，因而永遠無法前進。",
+      "everydayExample": "兩台車在窄巷互不退讓，彼此都卡住。",
+      "confusionNote": "等待很久不一定是死結；死結有形成環狀等待等特定條件。",
+      "lessonIds": [
+        "lesson-im-it-db-transactions-01",
+        "lesson-im-it-os-sync-deadlock-b01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-defense-in-depth",
+      "label": "縱深防禦",
+      "aliases": [
+        "defense in depth",
+        "firewall",
+        "patching",
+        "secure coding"
+      ],
+      "plainDefinition": "在不同層放置預防、偵測與復原控制，使單一防線失效時仍有其他保護。",
+      "everydayExample": "像住家同時有社區門禁、門鎖、警報器與財物備份。",
+      "confusionNote": "多裝工具不等於縱深防禦；控制必須對應不同風險並有人維護。",
+      "lessonIds": [
+        "lesson-im-it-security-attacks-network-defense-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-device-driver",
+      "label": "裝置驅動程式",
+      "aliases": [
+        "device driver",
+        "firmware"
+      ],
+      "plainDefinition": "作業系統透過 driver 控制硬體；firmware 則是運行在裝置內部的低階程式。",
+      "everydayExample": "像作業系統請翻譯員下達命令，而家電內建控制板自己執行裝置細節。",
+      "confusionNote": "Driver 與 firmware 所在位置和責任不同，也不是一般應用程式。",
+      "lessonIds": [
+        "lesson-im-it-os-file-storage-io"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-dhcp",
+      "label": "DHCP 網路設定",
+      "aliases": [
+        "DHCP",
+        "Dynamic Host Configuration Protocol"
+      ],
+      "plainDefinition": "讓裝置加入網路時自動取得 IP 位址、閘道與 DNS 等設定。",
+      "everydayExample": "像入住飯店時櫃台自動分配房號並告知出口與服務電話。",
+      "confusionNote": "DHCP 分配網路參數；DNS 才負責把網域名稱查成位址。",
+      "lessonIds": [
+        "lesson-im-it-network-application-protocols"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-digital-services",
+      "label": "Fintech 與數位服務",
+      "aliases": [
+        "Fintech",
+        "mobile payment",
+        "crowdfunding",
+        "MOOC"
+      ],
+      "plainDefinition": "Fintech 是用科技改善金融服務；行動支付、群眾募資與線上開放課程則各有不同目的。",
+      "everydayExample": "手機付款是支付工具，群眾募資是向多人募集資金，MOOC 是大規模線上課程。",
+      "confusionNote": "這些名詞不能因為都在網路上運作就視為同一類服務。",
+      "lessonIds": [
+        "lesson-im-it-trends-emerging-digital-applications-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-digital-twin",
+      "label": "數位分身",
+      "aliases": [
+        "digital twin"
+      ],
+      "plainDefinition": "用持續更新的資料，讓電子模型反映某個實體設備或流程的目前狀態。",
+      "everydayExample": "工廠把機器溫度與震動同步到虛擬模型，先模擬何時需要維修。",
+      "confusionNote": "它不是一張靜態 3D 圖；關鍵是和實體狀態有資料連結。",
+      "lessonIds": [
+        "lesson-im-it-trends-emerging-digital-applications-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-dma",
+      "label": "直接記憶體存取",
+      "aliases": [
+        "DMA",
+        "Direct Memory Access"
+      ],
+      "plainDefinition": "讓裝置能成批搬資料到記憶體，CPU 不必逐筆親自搬運。",
+      "everydayExample": "像請物流車整批送貨，主管只負責下單與收完成通知。",
+      "confusionNote": "DMA 不是完全不用 CPU；CPU 仍要設定傳輸並處理完成事件。",
+      "lessonIds": [
+        "lesson-im-it-arch-io-performance-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-dns",
+      "label": "網域名稱系統",
+      "aliases": [
+        "DNS",
+        "Domain Name System",
+        "網域解析"
+      ],
+      "plainDefinition": "把人類易讀的網域名稱查成電腦用來連線的 IP 位址等紀錄。",
+      "everydayExample": "像通訊錄把聯絡人姓名查成電話號碼。",
+      "confusionNote": "DNS 不是替封包選路，也不是網站內容本身。",
+      "lessonIds": [
+        "lesson-im-it-network-application-protocols"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-dynamic-dispatch",
+      "label": "動態派發",
+      "aliases": [
+        "dynamic dispatch",
+        "polymorphism",
+        "interface"
+      ],
+      "plainDefinition": "程式透過共同介面呼叫方法，執行時再依實際物件選擇對應版本。",
+      "everydayExample": "同一個『付款』按鈕，刷卡與行動支付各自執行不同流程。",
+      "confusionNote": "多型不只是同名函式；核心是可透過共同型別使用不同實作。",
+      "lessonIds": [
+        "lesson-im-it-prog-object-oriented"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-dynamic-linking",
+      "label": "動態連結",
+      "aliases": [
+        "dynamic linking",
+        "dynamic linker",
+        "loader",
+        "shared library"
+      ],
+      "plainDefinition": "程式啟動或執行時，再把需要的共享程式庫載入並接到程式上。",
+      "everydayExample": "像活動開始時才從共用器材室領取大家都會用的麥克風。",
+      "confusionNote": "動態連結不是每次都重新編譯原始碼，且缺少相容程式庫仍可能啟動失敗。",
+      "lessonIds": [
+        "lesson-im-it-os-file-storage-io",
+        "lesson-im-it-prog-runtime-quality-lifecycle-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-edge-computing",
+      "label": "邊緣運算",
+      "aliases": [
+        "edge computing",
+        "edge",
+        "fog computing",
+        "邊緣計算"
+      ],
+      "plainDefinition": "把部分計算放到靠近資料產生處的位置，以降低等待與回傳量。",
+      "everydayExample": "工廠攝影機先在現場判斷異常，不必每張影像都送遠端雲端。",
+      "confusionNote": "edge 不是完全取代 cloud，常是兩者分工。",
+      "lessonIds": [
+        "lesson-im-it-network-cloud-performance-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-email-protocols",
+      "label": "電子郵件協定",
+      "aliases": [
+        "SMTP",
+        "IMAP",
+        "POP3"
+      ],
+      "plainDefinition": "SMTP 主要負責寄送郵件，IMAP 與 POP3 則用於讀取或下載信件。",
+      "everydayExample": "像郵局收寄用一套流程，收件人到信箱查看或領走又是另一套流程。",
+      "confusionNote": "SMTP 不是用來同步收件匣；IMAP 與 POP3 的保存方式也不同。",
+      "lessonIds": [
+        "lesson-im-it-network-application-protocols"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-encryption-keys",
+      "label": "加密與金鑰",
+      "aliases": [
+        "encryption",
+        "symmetric key",
+        "asymmetric key",
+        "public key",
+        "private key",
+        "對稱式",
+        "非對稱式"
+      ],
+      "plainDefinition": "加密用金鑰把明文轉成未授權者難以讀懂的密文；對稱式共用密鑰，非對稱式使用公私鑰對。",
+      "everydayExample": "對稱式像雙方共用一把房門鑰匙，非對稱式像任何人可投信但只有收件人能開信箱。",
+      "confusionNote": "公鑰可以公開不代表私鑰也能公開；加密也不自動證明發送者身分。",
+      "lessonIds": [
+        "lesson-im-it-security-cryptography-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-er-cardinality",
+      "label": "關係基數",
+      "aliases": [
+        "cardinality",
+        "one-to-many",
+        "many-to-many",
+        "1:N",
+        "M:N"
+      ],
+      "plainDefinition": "描述兩類實體之間能互相對應幾筆資料。",
+      "everydayExample": "一位會員可有多張訂單，是一對多關係。",
+      "confusionNote": "cardinality 在資料建模與查詢最佳化中可能有不同語境，要看上下文。",
+      "lessonIds": [
+        "lesson-im-it-db-er-normalization-b01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-flow-congestion-control",
+      "label": "流量控制與壅塞控制",
+      "aliases": [
+        "receive window",
+        "flow control",
+        "congestion window",
+        "congestion control"
+      ],
+      "plainDefinition": "流量控制避免送太快淹沒接收端；壅塞控制避免送太多造成網路塞車。",
+      "everydayExample": "前者像顧客桌面放不下更多菜，後者像整條送餐通道已擁擠。",
+      "confusionNote": "Receive window 看接收端能力，congestion window 看網路狀況，不能混為同一個視窗。",
+      "lessonIds": [
+        "lesson-im-it-network-ip-routing-transport-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-functional-dependency",
+      "label": "函數相依",
+      "aliases": [
+        "functional dependency",
+        "partial dependency",
+        "transitive dependency"
+      ],
+      "plainDefinition": "若欄位 X 的值能唯一決定欄位 Y，就寫成 X 決定 Y，並用來判斷表格冗餘。",
+      "everydayExample": "知道學號就能查到學生姓名，表示學號決定姓名。",
+      "confusionNote": "資料剛好沒有重複不等於存在函數相依；相依來自業務規則。",
+      "lessonIds": [
+        "lesson-im-it-db-er-normalization-b01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-graph-path-tree",
+      "label": "拓樸排序、最短路徑與生成樹",
+      "aliases": [
+        "topological sort",
+        "shortest path",
+        "spanning tree",
+        "MST"
+      ],
+      "plainDefinition": "拓樸排序安排相依先後；最短路徑找兩點間最低成本；最小生成樹用最低總成本連通所有點。",
+      "everydayExample": "排課先後、導航最快路線與最低成本鋪設全區網路，是三種不同問題。",
+      "confusionNote": "MST 不保證任意兩點間的路徑都是最短路徑。",
+      "lessonIds": [
+        "lesson-im-it-ds-graphs-design-b01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-graph-traversal",
+      "label": "圖的走訪",
+      "aliases": [
+        "BFS",
+        "DFS",
+        "breadth-first search",
+        "depth-first search",
+        "廣度優先",
+        "深度優先"
+      ],
+      "plainDefinition": "BFS 逐層探索，DFS 則沿一條路深入後再回頭。",
+      "everydayExample": "找最近的朋友關係像 BFS，探索迷宮一條路到底像 DFS。",
+      "confusionNote": "兩者走訪順序不同，適用問題與記憶體成本也不同。",
+      "lessonIds": [
+        "lesson-im-it-ds-graphs-design-b01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-hallucination",
+      "label": "AI 幻覺",
+      "aliases": [
+        "hallucination",
+        "confabulation",
+        "生成錯誤"
+      ],
+      "plainDefinition": "生成模型說出語句通順但沒有可靠根據或事實錯誤的內容。",
+      "everydayExample": "像同學忘記資料卻講得很肯定，甚至編出不存在的書名。",
+      "confusionNote": "幻覺不是模型真的看見東西，也不能只靠更有自信的語氣判斷。",
+      "lessonIds": [
+        "lesson-im-it-ai-generative-governance-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-hash-collision",
+      "label": "雜湊碰撞",
+      "aliases": [
+        "hash collision",
+        "collision",
+        "雜湊衝突"
+      ],
+      "plainDefinition": "不同輸入經雜湊後落到同一位置，需要額外規則分開保存。",
+      "everydayExample": "兩位同姓客人被分到同一取餐代號，櫃台還要用其他資訊辨認。",
+      "confusionNote": "碰撞是有限位置下的正常可能，不等於雜湊函式壞掉或被攻擊。",
+      "lessonIds": [
+        "lesson-im-it-ds-linear-hashing-b01",
+        "lesson-im-it-db-storage-indexing-b01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-hash-signature",
+      "label": "雜湊與數位簽章",
+      "aliases": [
+        "hash",
+        "digest",
+        "digital signature",
+        "雜湊",
+        "數位簽章"
+      ],
+      "plainDefinition": "雜湊產生資料摘要；數位簽章用私鑰簽摘要，供他人驗證來源與完整性。",
+      "everydayExample": "像先做文件指紋，再由本人蓋上只有他能使用的印章。",
+      "confusionNote": "雜湊不是加密，簽章也不是把手寫簽名貼進檔案。",
+      "lessonIds": [
+        "lesson-im-it-security-cryptography-01",
+        "lesson-im-it-security-blockchain-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-heap-data-structure",
+      "label": "堆積資料結構",
+      "aliases": [
+        "heap",
+        "binary heap",
+        "priority queue",
+        "優先佇列"
+      ],
+      "plainDefinition": "維持父節點比子節點更大或更小，方便快速取出最高優先項目。",
+      "everydayExample": "急診先處理最危急病患，而不是最早到的人。",
+      "confusionNote": "heap 只保證父子順序，不代表整棵樹已完整排序。",
+      "lessonIds": [
+        "lesson-im-it-ds-trees-heaps-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-http-cookie",
+      "label": "HTTP 與 Cookie",
+      "aliases": [
+        "HTTP",
+        "Cookie",
+        "web session"
+      ],
+      "plainDefinition": "HTTP 負責網頁請求與回應；Cookie 讓瀏覽器在後續請求帶回一小段狀態資料。",
+      "everydayExample": "像每次到櫃台都出示同一張號碼牌，服務員才能接續上次流程。",
+      "confusionNote": "Cookie 不是存在伺服器裡的完整 session，也不會自動保證內容安全。",
+      "lessonIds": [
+        "lesson-im-it-network-application-protocols"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-hybrid-encryption",
+      "label": "混合式加密",
+      "aliases": [
+        "hybrid encryption",
+        "RSA",
+        "AES"
+      ],
+      "plainDefinition": "用公開金鑰方式安全交換短金鑰，再用速度較快的對稱金鑰加密大量資料。",
+      "everydayExample": "像用防拆保險箱寄送房門鑰匙，之後用房門鑰匙快速進出。",
+      "confusionNote": "實務上通常不直接用 RSA 加密整段大量連線內容。",
+      "lessonIds": [
+        "lesson-im-it-security-cryptography-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-hypervisor",
+      "label": "虛擬機監控器",
+      "aliases": [
+        "hypervisor",
+        "VMM"
+      ],
+      "plainDefinition": "在硬體與虛擬機之間分配 CPU、記憶體與裝置的管理層。",
+      "everydayExample": "像大樓管理員把整棟資源分給不同住戶使用。",
+      "confusionNote": "hypervisor 不是虛擬機裡的作業系統，也不是容器引擎。",
+      "lessonIds": [
+        "lesson-im-it-os-virtualization-containers-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-iaaa-rbac-sso",
+      "label": "身分驗證與權限管理",
+      "aliases": [
+        "identification",
+        "authentication",
+        "authorization",
+        "accountability",
+        "RBAC",
+        "SSO"
+      ],
+      "plainDefinition": "先表明是誰、證明身分、判斷能做什麼，並留下可追查紀錄；RBAC 依角色授權，SSO 減少重複登入。",
+      "everydayExample": "員工報名字、刷識別證、依職務開門，門禁再記錄誰何時進入。",
+      "confusionNote": "Authentication 證明身分，不代表已獲得所有操作權限。",
+      "lessonIds": [
+        "lesson-im-it-security-risk-access-governance-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-inode",
+      "label": "inode",
+      "aliases": [
+        "index node",
+        "索引節點"
+      ],
+      "plainDefinition": "Unix 類檔案系統用來保存檔案屬性與資料位置的紀錄。",
+      "everydayExample": "像圖書館書目卡記錄書在哪個書架，但書名標籤可另行管理。",
+      "confusionNote": "inode 通常不直接保存檔名；檔名由目錄項目連到 inode。",
+      "lessonIds": [
+        "lesson-im-it-os-file-storage-io"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-integrity-constraints",
+      "label": "資料完整性限制",
+      "aliases": [
+        "entity integrity",
+        "referential integrity",
+        "constraint"
+      ],
+      "plainDefinition": "用規則防止資料缺少必要識別或指向不存在的紀錄。",
+      "everydayExample": "訂單不能沒有訂單編號，也不能填一個根本不存在的會員編號。",
+      "confusionNote": "限制是在寫入時維護資料可信度，不等於事後報表驗證。",
+      "lessonIds": [
+        "lesson-im-it-db-relational-model-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-interrupt",
+      "label": "中斷",
+      "aliases": [
+        "interrupt",
+        "IRQ"
+      ],
+      "plainDefinition": "裝置主動通知 CPU 有事件，使 CPU 暫停原工作並先處理該事件。",
+      "everydayExample": "像店員工作時聽到門鈴，先去接待新客再回來繼續。",
+      "confusionNote": "中斷不是把程式永遠停止，而是可保存現場後再恢復。",
+      "lessonIds": [
+        "lesson-im-it-arch-io-performance-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-ip-addressing-routing",
+      "label": "IP 定址與路由",
+      "aliases": [
+        "IP address",
+        "subnet mask",
+        "CIDR",
+        "router",
+        "default gateway",
+        "子網路",
+        "路由"
+      ],
+      "plainDefinition": "定址判斷裝置與網段，路由則選擇封包跨網路前往目的地的下一步。",
+      "everydayExample": "地址告訴包裹要去哪，轉運站規則決定下一車送往哪裡。",
+      "confusionNote": "subnet mask 不是另一個主機地址；default gateway 也不是所有封包的最終目的地。",
+      "lessonIds": [
+        "lesson-im-it-network-ip-routing-transport-01",
+        "lesson-im-it-network-link-lan-01",
+        "lesson-im-it-network-models-encapsulation"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-ipc",
+      "label": "行程間通訊",
+      "aliases": [
+        "IPC",
+        "inter-process communication",
+        "shared memory",
+        "message passing"
+      ],
+      "plainDefinition": "不同 process 透過訊息、管道或明確共享記憶體交換資料。",
+      "everydayExample": "像不同店面透過電話傳話，或共同使用一塊有規則管理的公告板。",
+      "confusionNote": "不同 process 預設不共用整個位址空間；共享記憶體也仍需同步。",
+      "lessonIds": [
+        "lesson-im-it-os-processes-threads"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-isa",
+      "label": "指令集架構",
+      "aliases": [
+        "ISA",
+        "Instruction Set Architecture"
+      ],
+      "plainDefinition": "軟體與 CPU 之間約定好的命令清單與操作規則。",
+      "everydayExample": "像餐廳菜單規定客人能點哪些菜，但不規定廚房內部怎麼煮。",
+      "confusionNote": "ISA 不是某一顆 CPU 的內部電路設計；後者叫微架構。",
+      "lessonIds": [
+        "lesson-im-it-arch-cpu-organization"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-isms-privacy-audit",
+      "label": "ISMS、隱私與稽核",
+      "aliases": [
+        "ISMS",
+        "ISO 27001",
+        "privacy",
+        "audit"
+      ],
+      "plainDefinition": "ISMS 用持續管理流程控制資安風險；ISO 27001 提供要求，privacy 關注個人資料，audit 檢查制度與證據。",
+      "everydayExample": "像餐廳不只貼衛生規則，還要定期執行、留紀錄並接受檢查。",
+      "confusionNote": "通過稽核不是永久安全保證，也不代表所有個資使用都自然合法。",
+      "lessonIds": [
+        "lesson-im-it-security-risk-access-governance-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-isolation-level",
+      "label": "隔離等級",
+      "aliases": [
+        "isolation level",
+        "dirty read",
+        "non-repeatable read",
+        "serializable"
+      ],
+      "plainDefinition": "資料庫用不同強度限制並行交易彼此看見未完成變更的程度。",
+      "everydayExample": "兩位售票員同時賣最後一張票，需要規則避免重複售出。",
+      "confusionNote": "隔離越強通常成本越高；不是所有系統都一律用最高等級。",
+      "lessonIds": [
+        "lesson-im-it-db-transactions-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-jitter-availability",
+      "label": "抖動與可用性",
+      "aliases": [
+        "jitter",
+        "availability",
+        "QoS"
+      ],
+      "plainDefinition": "Jitter 是延遲忽快忽慢；availability 是服務在需要時可正常使用的比例。",
+      "everydayExample": "視訊每隔幾秒忽然卡一下是抖動，網站整天能否連上則是可用性。",
+      "confusionNote": "平均延遲低仍可能有高 jitter；availability 也不是傳輸速度。",
+      "lessonIds": [
+        "lesson-im-it-network-cloud-performance-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-latency-throughput",
+      "label": "延遲與吞吐量",
+      "aliases": [
+        "latency",
+        "throughput",
+        "bandwidth",
+        "延遲",
+        "吞吐量"
+      ],
+      "plainDefinition": "延遲是單次等多久，吞吐量是單位時間能處理多少資料。",
+      "everydayExample": "水龍頭打開多久出水像延遲，每分鐘流多少水像吞吐量。",
+      "confusionNote": "高頻寬不保證低延遲，兩項指標不能互相代替。",
+      "lessonIds": [
+        "lesson-im-it-arch-io-performance-01",
+        "lesson-im-it-network-cloud-performance-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-linear-regression",
+      "label": "線性迴歸",
+      "aliases": [
+        "linear regression",
+        "intercept",
+        "slope"
+      ],
+      "plainDefinition": "用一條線性的計算式，描述輸入改變時預測值如何跟著改變。",
+      "everydayExample": "用「基本車資＋每公里費用」預估計程車費。",
+      "confusionNote": "係數表示模型中的預測關係，不能單憑它斷定因果。",
+      "lessonIds": [
+        "lesson-im-it-ai-foundations-ml-evaluation-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-linear-structures",
+      "label": "Stack、Queue 與 Linked List",
+      "aliases": [
+        "stack",
+        "queue",
+        "linked list",
+        "LIFO",
+        "FIFO"
+      ],
+      "plainDefinition": "Stack 後進先出，queue 先進先出，linked list 則用節點連結保存順序。",
+      "everydayExample": "疊盤子像 stack，排隊買票像 queue，尋寶線索逐張指向下一張像 linked list。",
+      "confusionNote": "資料結構的選擇要看操作需求；linked list 也不是所有插入都一定 O(1)。",
+      "lessonIds": [
+        "lesson-im-it-ds-linear-hashing-b01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-llm-token",
+      "label": "大型語言模型與 token",
+      "aliases": [
+        "LLM",
+        "Large Language Model",
+        "token",
+        "GPT",
+        "大型語言模型"
+      ],
+      "plainDefinition": "LLM 從大量 token 序列學習下一個 token 的機率，token 是模型切分文字的基本單位。",
+      "everydayExample": "像根據前文玩的超大型接龍，但每一步選的是文字片段而非必然完整單字。",
+      "confusionNote": "token 不等於一個中文字或一個英文單字；流暢輸出也不保證事實正確。",
+      "lessonIds": [
+        "lesson-im-it-ai-neural-sequence-transformer-01",
+        "lesson-im-it-ai-generative-governance-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-load-factor",
+      "label": "負載因子",
+      "aliases": [
+        "load factor",
+        "bucket",
+        "chaining",
+        "open addressing"
+      ],
+      "plainDefinition": "雜湊表中資料筆數相對於儲存槽數量的比例，會影響碰撞與操作成本。",
+      "everydayExample": "像停車場越接近停滿，找到空位通常越困難。",
+      "confusionNote": "平均 O(1) 需要合理雜湊與負載控制，不是任何情況的最壞保證。",
+      "lessonIds": [
+        "lesson-im-it-ds-linear-hashing-b01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-mac-vlan",
+      "label": "MAC 位址與 VLAN",
+      "aliases": [
+        "MAC address",
+        "Ethernet",
+        "VLAN",
+        "LAN",
+        "虛擬區域網路"
+      ],
+      "plainDefinition": "MAC 用於區域網路鏈結層識別介面，VLAN 則把同一實體網路邏輯分區。",
+      "everydayExample": "同一辦公室裡用不同門禁區隔部門，即使共用建築與線路。",
+      "confusionNote": "MAC 不是跨網際網路的全球路由地址；VLAN 也不是 VPN。",
+      "lessonIds": [
+        "lesson-im-it-network-link-lan-01",
+        "lesson-im-it-network-models-encapsulation"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-memory-hierarchy-locality",
+      "label": "記憶體階層與局部性",
+      "aliases": [
+        "memory hierarchy",
+        "temporal locality",
+        "spatial locality",
+        "locality"
+      ],
+      "plainDefinition": "把少量快速儲存與大量較慢儲存分層，並利用程式常重複或鄰近存取資料的特性。",
+      "everydayExample": "像把常用文具放桌面、偶爾用的放抽屜、很少用的收進倉庫。",
+      "confusionNote": "快取有效依賴存取局部性，不代表每次都比直接取資料更快。",
+      "lessonIds": [
+        "lesson-im-it-arch-memory-data-representation-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-mutex-semaphore",
+      "label": "互斥鎖與號誌",
+      "aliases": [
+        "mutex",
+        "lock",
+        "semaphore",
+        "互斥鎖",
+        "信號量"
+      ],
+      "plainDefinition": "互斥鎖限制同一時間只有一人進入；號誌則用計數控制可同時使用的名額。",
+      "everydayExample": "廁所鑰匙像 mutex，三格停車位的剩餘名額像 semaphore。",
+      "confusionNote": "semaphore 不一定只允許一人，mutex 也不等同所有同步方法。",
+      "lessonIds": [
+        "lesson-im-it-os-sync-deadlock-b01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-mux-flipflop",
+      "label": "多工器與正反器",
+      "aliases": [
+        "multiplexer",
+        "MUX",
+        "flip-flop",
+        "adder"
+      ],
+      "plainDefinition": "Adder 做二進位加法，MUX 從多個輸入選一個，flip-flop 則保存一個位元狀態。",
+      "everydayExample": "像計算機負責相加、轉接器選一條訊號、開關記住開或關。",
+      "confusionNote": "MUX 本身不負責長期儲存，flip-flop 也不是一般軟體變數。",
+      "lessonIds": [
+        "lesson-im-it-arch-logic-circuits-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-network-attacks",
+      "label": "MITM、DDoS 與緩衝區溢位",
+      "aliases": [
+        "MITM",
+        "man-in-the-middle",
+        "DDoS",
+        "buffer overflow",
+        "malware"
+      ],
+      "plainDefinition": "MITM 偷聽或篡改兩方通訊，DDoS 用大量流量耗盡服務，buffer overflow 則越界寫入記憶體。",
+      "everydayExample": "像中間人拆信改內容、群眾塞爆店門口，以及把水倒到溢出相鄰容器。",
+      "confusionNote": "三者攻擊位置不同，不能只靠同一種防線處理。",
+      "lessonIds": [
+        "lesson-im-it-security-attacks-network-defense-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-network-encapsulation",
+      "label": "網路封裝",
+      "aliases": [
+        "encapsulation",
+        "header",
+        "payload",
+        "封包封裝"
+      ],
+      "plainDefinition": "資料往下經過網路各層時，每層加上自己需要的控制資訊。",
+      "everydayExample": "像商品先裝盒、貼地址，再裝進物流袋，每層有自己的標籤。",
+      "confusionNote": "這個 encapsulation 是網路分層，不是物件導向的資料隱藏。",
+      "lessonIds": [
+        "lesson-im-it-network-ip-routing-transport-01",
+        "lesson-im-it-network-link-lan-01",
+        "lesson-im-it-network-models-encapsulation"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-neural-network",
+      "label": "神經網路",
+      "aliases": [
+        "neural network",
+        "layer",
+        "weight",
+        "activation function",
+        "神經網路"
+      ],
+      "plainDefinition": "由多層可調參數的計算單元組成，透過資料調整權重來近似複雜關係。",
+      "everydayExample": "像一排排篩選站，各站把前一站訊息重新加權後再傳下去。",
+      "confusionNote": "名稱來自生物啟發，但不是大腦的完整複製品。",
+      "lessonIds": [
+        "lesson-im-it-ai-neural-sequence-transformer-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-normalization",
+      "label": "資料庫正規化",
+      "aliases": [
+        "normalization",
+        "1NF",
+        "2NF",
+        "3NF",
+        "BCNF"
+      ],
+      "plainDefinition": "依資料相依性拆表，減少重複與新增、修改、刪除異常。",
+      "everydayExample": "把客戶地址從每張訂單抽成會員資料，避免改地址要改很多次。",
+      "confusionNote": "正規化不是表越多越好，分析效能需求可能採有理由的反正規化。",
+      "lessonIds": [
+        "lesson-im-it-db-er-normalization-b01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-nosql-cap",
+      "label": "NoSQL 與 CAP",
+      "aliases": [
+        "NoSQL",
+        "CAP theorem",
+        "consistency",
+        "availability",
+        "partition tolerance"
+      ],
+      "plainDefinition": "NoSQL 是多種非關聯式資料模型；CAP 說網路分割時，分散式系統無法同時保證強一致與每次都有回應。",
+      "everydayExample": "多家分店斷線時，要選擇暫停部分服務或先接受可能不同步的訂單。",
+      "confusionNote": "CAP 不是平常任選兩項的產品標籤，也不是 ACID 的直接反義詞。",
+      "lessonIds": [
+        "lesson-im-it-data-big-data-nosql-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-nosql-models",
+      "label": "NoSQL 資料模型",
+      "aliases": [
+        "document store",
+        "key-value",
+        "wide-column",
+        "graph database"
+      ],
+      "plainDefinition": "依資料形狀與查詢方式，選擇文件、鍵值、寬欄或圖等非關聯式模型。",
+      "everydayExample": "通訊錄像文件、置物櫃像鍵值、好友關係網則像圖資料庫。",
+      "confusionNote": "NoSQL 不是完全不能有結構，也不是永遠比關聯式資料庫快。",
+      "lessonIds": [
+        "lesson-im-it-data-big-data-nosql-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-number-systems-bitwise",
+      "label": "進位與位元運算",
+      "aliases": [
+        "binary",
+        "hexadecimal",
+        "bitwise operation",
+        "二進位",
+        "十六進位"
+      ],
+      "plainDefinition": "二進位用 0、1 表示數值，十六進位用 0 到 F 縮寫位元；位元運算則逐位套用 AND、OR、NOT 等規則。",
+      "everydayExample": "像四個電燈開關可用 0101 記錄狀態，也可縮寫成十六進位的 5。",
+      "confusionNote": "進位轉換只改寫法，不改數值；位元 AND 也不同於一般算術乘法。",
+      "lessonIds": [
+        "lesson-im-it-arch-logic-circuits-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-oop-pillars",
+      "label": "物件導向三大特性",
+      "aliases": [
+        "OOP",
+        "encapsulation",
+        "inheritance",
+        "polymorphism",
+        "封裝",
+        "繼承",
+        "多型"
+      ],
+      "plainDefinition": "用封裝隱藏內部、繼承重用關係、多型讓同一介面有不同實作。",
+      "everydayExample": "各種付款工具都用「付款」按鈕，但信用卡與轉帳各自執行不同流程。",
+      "confusionNote": "三者是設計工具，不是使用 class 就自然得到好設計。",
+      "lessonIds": [
+        "lesson-im-it-prog-object-oriented"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-oop-state-scope",
+      "label": "物件狀態與變數範圍",
+      "aliases": [
+        "instance variable",
+        "class variable",
+        "local variable",
+        "scope"
+      ],
+      "plainDefinition": "Instance variable 屬於個別物件，class variable 由類別共享，local variable 只在局部程式區塊可見。",
+      "everydayExample": "像每位會員各有餘額、全店共享稅率、收銀員當次計算有暫存小計。",
+      "confusionNote": "共享範圍與生命週期依語言規則而定，不要把 local variable 當物件永久狀態。",
+      "lessonIds": [
+        "lesson-im-it-prog-object-oriented"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-osi-tcpip",
+      "label": "OSI 與 TCP/IP 分層",
+      "aliases": [
+        "OSI model",
+        "TCP/IP model",
+        "layer",
+        "segment",
+        "packet",
+        "frame"
+      ],
+      "plainDefinition": "把網路功能分層，讓每一層處理特定工作並向相鄰層提供服務。",
+      "everydayExample": "像寄包裹依序經歷包裝、寫地址、運輸與末端配送，每層只處理自己的任務。",
+      "confusionNote": "OSI 與 TCP/IP 的層數和合併方式不同，不要硬把每一層一對一。",
+      "lessonIds": [
+        "lesson-im-it-network-models-encapsulation"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-overfitting-evaluation",
+      "label": "過度擬合與模型評估",
+      "aliases": [
+        "overfitting",
+        "training set",
+        "validation set",
+        "test set",
+        "precision",
+        "recall"
+      ],
+      "plainDefinition": "過度擬合是模型太會記訓練資料卻不會應付新資料，需用未參與訓練的資料與合適指標檢查。",
+      "everydayExample": "背熟題庫答案卻遇到改寫題就不會，是過度擬合的生活版。",
+      "confusionNote": "訓練分數高不等於模型好；accuracy 也不適合所有不平衡問題。",
+      "lessonIds": [
+        "lesson-im-it-ai-foundations-ml-evaluation-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-page-table",
+      "label": "頁表",
+      "aliases": [
+        "page table",
+        "virtual page",
+        "physical frame"
+      ],
+      "plainDefinition": "記錄虛擬頁面目前對應到哪個實體記憶體頁框。",
+      "everydayExample": "像公寓信箱號碼對照住戶目前實際房號的查詢表。",
+      "confusionNote": "Page table 做位址映射，不等於存放檔案內容本身。",
+      "lessonIds": [
+        "lesson-im-it-os-scheduling-memory-management-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-parity",
+      "label": "同位元檢查",
+      "aliases": [
+        "parity",
+        "parity bit",
+        "同位檢查"
+      ],
+      "plainDefinition": "多加一個位元，讓 1 的總數符合奇數或偶數規則，以偵測部分傳輸錯誤。",
+      "everydayExample": "像出貨時要求箱內件數一定為偶數，數量變奇數就知道可能少了一件。",
+      "confusionNote": "一般 parity 能發現奇數個位元翻轉，但可能漏掉偶數個位元同時翻轉。",
+      "lessonIds": [
+        "lesson-im-it-arch-memory-data-representation-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-perception-localization",
+      "label": "環境感知與定位",
+      "aliases": [
+        "perception",
+        "localization",
+        "autonomous driving",
+        "sensor fusion"
+      ],
+      "plainDefinition": "感知辨認周遭物體與狀況；定位判斷自己在地圖或環境中的位置。",
+      "everydayExample": "像騎車時先看見前方行人，再確認自己位於哪條車道。",
+      "confusionNote": "看見物體、知道自己在哪裡與決定下一步，是不同功能。",
+      "lessonIds": [
+        "lesson-im-it-trends-emerging-digital-applications-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-pipeline-hazard",
+      "label": "管線冒險",
+      "aliases": [
+        "pipeline hazard",
+        "hazard",
+        "data hazard",
+        "control hazard"
+      ],
+      "plainDefinition": "多條指令重疊執行時，因資料或下一步尚未確定而必須等待的情況。",
+      "everydayExample": "像洗車線上前車還沒沖完，後車不能立刻進入下一站。",
+      "confusionNote": "pipeline 不是多顆 CPU；hazard 也不一定是程式錯誤。",
+      "lessonIds": [
+        "lesson-im-it-arch-cpu-organization"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-pki-tls",
+      "label": "PKI 與 TLS",
+      "aliases": [
+        "PKI",
+        "certificate",
+        "CA",
+        "TLS",
+        "HTTPS",
+        "憑證"
+      ],
+      "plainDefinition": "PKI 用憑證與信任機構綁定身分和公鑰，TLS 再利用它建立受保護連線。",
+      "everydayExample": "CA 像核發證件的機關，TLS 像雙方查驗證件後建立安全通道。",
+      "confusionNote": "HTTPS 不代表網站內容一定可信，只代表連線對象與傳輸受到特定保護。",
+      "lessonIds": [
+        "lesson-im-it-security-cryptography-01",
+        "lesson-im-it-security-attacks-network-defense-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-polling-memory-mapped-io",
+      "label": "輪詢與記憶體映射 I/O",
+      "aliases": [
+        "polling",
+        "programmed I/O",
+        "memory-mapped I/O",
+        "ISR"
+      ],
+      "plainDefinition": "Polling 讓 CPU 反覆查裝置狀態；memory-mapped I/O 則用類似記憶體位址的方式存取裝置暫存器。",
+      "everydayExample": "輪詢像不停問外送到了沒；中斷則像外送員到門口再按鈴通知。",
+      "confusionNote": "Memory-mapped I/O 的位址指向裝置控制介面，不是一般 RAM 資料。",
+      "lessonIds": [
+        "lesson-im-it-arch-io-performance-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-process-thread",
+      "label": "行程與執行緒",
+      "aliases": [
+        "process",
+        "thread",
+        "行程",
+        "執行緒"
+      ],
+      "plainDefinition": "行程是有獨立資源的執行容器，執行緒是容器內可被排程的工作路線。",
+      "everydayExample": "一間餐廳像一個行程，裡面的多位廚師像多條執行緒。",
+      "confusionNote": "共享同一行程資源不代表執行緒彼此不會衝突。",
+      "lessonIds": [
+        "lesson-im-it-os-processes-threads",
+        "lesson-im-it-os-sync-deadlock-b01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-proxy-cdn",
+      "label": "Proxy 與 CDN",
+      "aliases": [
+        "forward proxy",
+        "reverse proxy",
+        "CDN",
+        "Content Delivery Network"
+      ],
+      "plainDefinition": "Proxy 代表一方轉送請求；CDN 用分散節點把內容送到更靠近使用者的位置。",
+      "everydayExample": "代購替客人出面像 forward proxy，餐廳接單窗口像 reverse proxy，各地倉庫像 CDN。",
+      "confusionNote": "Forward proxy 代表用戶端，reverse proxy 代表伺服器端；CDN 也不只是一台快取主機。",
+      "lessonIds": [
+        "lesson-im-it-network-application-protocols"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-query-optimizer-selectivity",
+      "label": "選擇率與查詢最佳化器",
+      "aliases": [
+        "selectivity",
+        "query optimizer",
+        "query plan"
+      ],
+      "plainDefinition": "選擇率描述條件能縮小多少資料；最佳化器估算不同執行方式成本後選擇 query plan。",
+      "everydayExample": "找唯一訂單編號比找『今年訂單』縮得更小，較可能適合精準索引。",
+      "confusionNote": "有索引不代表一定使用；掃描大量資料時全表掃描可能更便宜。",
+      "lessonIds": [
+        "lesson-im-it-db-storage-indexing-b01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-quicksort-partition",
+      "label": "快速排序的分割",
+      "aliases": [
+        "QuickSort",
+        "partition",
+        "pivot"
+      ],
+      "plainDefinition": "選一個基準值，把較小與較大的元素分到兩側，再遞迴處理。",
+      "everydayExample": "像選一位身高作基準，矮的站左邊、高的站右邊，再各自重排。",
+      "confusionNote": "若每次分割極不平均，QuickSort 最壞可能退化為 O(n²)。",
+      "lessonIds": [
+        "lesson-im-it-ds-complexity-sorting-searching-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-race-condition",
+      "label": "競爭條件",
+      "aliases": [
+        "race condition",
+        "data race"
+      ],
+      "plainDefinition": "多個工作同時碰同一資料，結果因執行先後不同而不穩定。",
+      "everydayExample": "兩位店員同時修改同一張庫存表，最後數字可能覆蓋彼此。",
+      "confusionNote": "多執行緒不必然有 race；關鍵是共享狀態且缺乏正確協調。",
+      "lessonIds": [
+        "lesson-im-it-os-sync-deadlock-b01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-rag",
+      "label": "檢索增強生成",
+      "aliases": [
+        "RAG",
+        "Retrieval-Augmented Generation",
+        "retrieval",
+        "檢索增強生成"
+      ],
+      "plainDefinition": "先從外部資料找相關內容，再把找到的內容交給生成模型回答。",
+      "everydayExample": "像先翻課本找頁碼，再根據那些段落整理答案。",
+      "confusionNote": "RAG 不會自動保證正確；檢索錯、資料舊或模型誤讀仍會出錯。",
+      "lessonIds": [
+        "lesson-im-it-ai-generative-governance-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-register",
+      "label": "暫存器",
+      "aliases": [
+        "register",
+        "CPU register"
+      ],
+      "plainDefinition": "CPU 內極小但極快、用來暫放眼前資料與狀態的儲存位置。",
+      "everydayExample": "像廚師手邊的小碟子，只放當下馬上要用的材料。",
+      "confusionNote": "不是一般記憶體，也不是硬碟；容量小得多但速度快。",
+      "lessonIds": [
+        "lesson-im-it-arch-cpu-organization",
+        "lesson-im-it-arch-memory-data-representation-01",
+        "lesson-im-it-arch-logic-circuits-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-reinforcement-learning",
+      "label": "強化學習",
+      "aliases": [
+        "reinforcement learning",
+        "agent",
+        "environment",
+        "reward",
+        "policy"
+      ],
+      "plainDefinition": "讓 agent 在環境中嘗試 action，根據 reward 學習能累積長期報酬的策略。",
+      "everydayExample": "像練習遊戲時不逐步給標準答案，而依最後得分調整下一次玩法。",
+      "confusionNote": "Reward 是行動後的回饋，不等於每一步都有正確 label，也不代表只追求眼前得分。",
+      "lessonIds": [
+        "lesson-im-it-ai-foundations-ml-evaluation-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-relational-keys",
+      "label": "主鍵與外鍵",
+      "aliases": [
+        "primary key",
+        "foreign key",
+        "PK",
+        "FK",
+        "主鍵",
+        "外來鍵"
+      ],
+      "plainDefinition": "主鍵唯一識別本表資料，外鍵則指向另一表的主鍵來建立關係。",
+      "everydayExample": "身分證字號辨認一個人，訂單上的會員編號則連回會員資料。",
+      "confusionNote": "外鍵不一定唯一；它的重點是參照完整性，不是替資料排序。",
+      "lessonIds": [
+        "lesson-im-it-db-relational-model-01",
+        "lesson-im-it-db-er-normalization-b01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-relational-model",
+      "label": "關聯模型",
+      "aliases": [
+        "relation",
+        "tuple",
+        "attribute",
+        "domain",
+        "schema"
+      ],
+      "plainDefinition": "用資料表表示關係；列是 tuple、欄是 attribute，schema 則規定表的結構。",
+      "everydayExample": "像班級名冊：每位學生是一列，姓名與學號是欄位。",
+      "confusionNote": "relation 在理論上不是單純有順序的試算表；列的先後通常沒有語意。",
+      "lessonIds": [
+        "lesson-im-it-db-relational-model-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-routing-table",
+      "label": "路由表與最長前綴",
+      "aliases": [
+        "routing table",
+        "longest-prefix match",
+        "next hop",
+        "TTL"
+      ],
+      "plainDefinition": "路由器依目的位址選最具體的匹配規則與下一站；TTL 限制封包可經過的轉送次數。",
+      "everydayExample": "像郵務分流優先採用最精確的區域規則，且包裹附有限次轉寄標記。",
+      "confusionNote": "TTL 不是傳輸時間計時器；longest prefix 指最具體的網路範圍。",
+      "lessonIds": [
+        "lesson-im-it-network-ip-routing-transport-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-scheduler",
+      "label": "排程器",
+      "aliases": [
+        "scheduler",
+        "CPU scheduler",
+        "排程演算法"
+      ],
+      "plainDefinition": "作業系統決定哪個可執行工作何時取得 CPU 的機制。",
+      "everydayExample": "像診所叫號，依規則安排下一位看診者。",
+      "confusionNote": "排程器不是工作自己決定何時執行，也不保證每個工作立刻執行。",
+      "lessonIds": [
+        "lesson-im-it-os-processes-threads",
+        "lesson-im-it-os-scheduling-memory-management-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-scope-recursion-reference",
+      "label": "作用域、遞迴與參照",
+      "aliases": [
+        "lexical scope",
+        "recursion",
+        "base case",
+        "pointer",
+        "reference"
+      ],
+      "plainDefinition": "Scope 決定名稱在哪裡可見；recursion 讓函式呼叫自己並靠 base case 停止；pointer/reference 指向其他資料。",
+      "everydayExample": "像在一層層盒子裡找東西，每層記住返回位置，找到最小盒便停止往下。",
+      "confusionNote": "遞迴若沒有可達的 base case 會一直呼叫；指標存在也不代表目標物仍有效。",
+      "lessonIds": [
+        "lesson-im-it-prog-control-functions-memory-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-serverless",
+      "label": "無伺服器運算",
+      "aliases": [
+        "serverless",
+        "FaaS",
+        "Function as a Service"
+      ],
+      "plainDefinition": "雲端平台代管伺服器與擴縮，使用者專注部署函式並依使用量付費。",
+      "everydayExample": "像叫車時只管目的地，不必買車、保養或排司機班表。",
+      "confusionNote": "serverless 背後仍有伺服器，只是營運責任轉交平台。",
+      "lessonIds": [
+        "lesson-im-it-os-virtualization-containers-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-sharding-replication",
+      "label": "分片與複寫",
+      "aliases": [
+        "sharding",
+        "replication",
+        "horizontal scaling"
+      ],
+      "plainDefinition": "分片把不同資料分到多台機器；複寫則把同一份資料保留多個副本。",
+      "everydayExample": "分片像把不同區域訂單交給不同分店，複寫像每間分店都有同一份備用菜單。",
+      "confusionNote": "分片主要分散容量與負載；複寫主要增加讀取能力或可用性，兩者不是同一件事。",
+      "lessonIds": [
+        "lesson-im-it-data-big-data-nosql-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-sorting-stability",
+      "label": "排序穩定性",
+      "aliases": [
+        "stable sort",
+        "sorting stability"
+      ],
+      "plainDefinition": "排序鍵相同的資料，排序後仍保持原本先後次序，就稱為穩定。",
+      "everydayExample": "先按報名時間排好，再依組別做穩定排序，同組內仍保留報名先後。",
+      "confusionNote": "穩定性描述相同鍵的相對順序，不等於排序結果一定正確或速度較快。",
+      "lessonIds": [
+        "lesson-im-it-ds-complexity-sorting-searching-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-spooling",
+      "label": "排隊式輸出",
+      "aliases": [
+        "spooling",
+        "print spooler"
+      ],
+      "plainDefinition": "先把多個輸出工作存入佇列，再由慢速或獨占裝置依序處理。",
+      "everydayExample": "多人送印時先進列印佇列，印表機一次完成一份。",
+      "confusionNote": "Spooling 管理整份工作排隊；buffering 通常平衡資料傳輸速度，兩者不完全相同。",
+      "lessonIds": [
+        "lesson-im-it-os-file-storage-io"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-sql-aggregation",
+      "label": "分組彙總",
+      "aliases": [
+        "GROUP BY",
+        "aggregate",
+        "aggregation",
+        "SUM",
+        "COUNT"
+      ],
+      "plainDefinition": "先按類別分組，再對每組計算總和、筆數或平均。",
+      "everydayExample": "把每日訂單按門市分組後，計算各門市總營業額。",
+      "confusionNote": "WHERE 篩原始列，HAVING 通常篩分組後的結果，兩者層次不同。",
+      "lessonIds": [
+        "lesson-im-it-db-sql-querying"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-sql-filter-having",
+      "label": "WHERE 與 HAVING",
+      "aliases": [
+        "WHERE",
+        "HAVING",
+        "SELECT"
+      ],
+      "plainDefinition": "WHERE 在分組前篩選資料列；HAVING 在分組彙總後篩選群組。",
+      "everydayExample": "先挑出台北訂單像 WHERE，再只保留總額超過一萬元的店家像 HAVING。",
+      "confusionNote": "沒有分組語境時不要因為條件含 COUNT 就隨意把 WHERE 與 HAVING 交換。",
+      "lessonIds": [
+        "lesson-im-it-db-sql-querying"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-sql-join",
+      "label": "資料表連接",
+      "aliases": [
+        "JOIN",
+        "INNER JOIN",
+        "LEFT JOIN",
+        "表格連接"
+      ],
+      "plainDefinition": "依共同欄位把多張表中相關的列組合起來查詢。",
+      "everydayExample": "用會員編號把訂單表與會員姓名表拼成完整清單。",
+      "confusionNote": "JOIN 不等於把兩表全部排列組合；連接條件會決定配對。",
+      "lessonIds": [
+        "lesson-im-it-db-sql-querying"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-ssdf",
+      "label": "安全軟體開發框架",
+      "aliases": [
+        "NIST SSDF",
+        "Secure Software Development Framework"
+      ],
+      "plainDefinition": "NIST 將安全開發整理成準備、保護、產出安全軟體與回應弱點等實務。",
+      "everydayExample": "像餐廳不只出餐前檢查，還要訓練人員、保護食材來源並建立問題召回流程。",
+      "confusionNote": "SSDF 是組織實務框架，不是一套特定程式語言或單一測試工具。",
+      "lessonIds": [
+        "lesson-im-it-prog-runtime-quality-lifecycle-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-stack-heap-memory",
+      "label": "堆疊與堆積記憶體",
+      "aliases": [
+        "stack",
+        "heap",
+        "call stack",
+        "堆疊",
+        "堆積"
+      ],
+      "plainDefinition": "stack 常隨函式呼叫自動進出，heap 則放生命週期較彈性的動態資料。",
+      "everydayExample": "stack 像依序疊盤子，heap 像倉庫中另行申請與歸還空間。",
+      "confusionNote": "這裡的 heap 是記憶體區域，不是資料結構中的 heap。",
+      "lessonIds": [
+        "lesson-im-it-prog-control-functions-memory-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-stored-program",
+      "label": "儲存程式架構",
+      "aliases": [
+        "stored-program",
+        "Von Neumann architecture",
+        "馮紐曼架構"
+      ],
+      "plainDefinition": "把程式指令和資料都放進記憶體，讓 CPU 依序取出並執行。",
+      "everydayExample": "像把食譜步驟和食材清單都放在同一本工作手冊裡，廚師逐項讀取。",
+      "confusionNote": "它是電腦的基本組織觀念，不代表所有硬體都只有一條資料通道。",
+      "lessonIds": [
+        "lesson-im-it-arch-cpu-organization"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-streaming-vpn",
+      "label": "串流與 VPN",
+      "aliases": [
+        "streaming",
+        "VPN",
+        "Virtual Private Network"
+      ],
+      "plainDefinition": "Streaming 邊接收邊播放資料；VPN 在公共網路上建立受保護的連線通道。",
+      "everydayExample": "一邊送餐一邊吃像串流，穿過公共道路的封閉接駁車道像 VPN。",
+      "confusionNote": "VPN 不會自動讓網路更快；streaming 也不代表檔案完全不下載。",
+      "lessonIds": [
+        "lesson-im-it-network-cloud-performance-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-supervised-learning",
+      "label": "監督式與非監督式學習",
+      "aliases": [
+        "supervised learning",
+        "unsupervised learning",
+        "label",
+        "監督式學習",
+        "非監督式學習"
+      ],
+      "plainDefinition": "監督式學習從有答案標籤的例子學預測，非監督式學習則從無標籤資料找結構。",
+      "everydayExample": "用已標垃圾郵件訓練分類器是監督式；自動把客群分群是非監督式。",
+      "confusionNote": "監督式不是有人每一步盯著模型，非監督式也不是完全沒有目標。",
+      "lessonIds": [
+        "lesson-im-it-ai-foundations-ml-evaluation-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-sync-liveness",
+      "label": "同步與活性問題",
+      "aliases": [
+        "critical section",
+        "livelock",
+        "starvation",
+        "busy waiting",
+        "Banker's algorithm"
+      ],
+      "plainDefinition": "同步保護共享區域；活性問題則包含大家互讓卻沒進展、某人長期拿不到資源或持續空轉等待。",
+      "everydayExample": "像多人同時過窄門可能撞上、一直互相禮讓，或總有人被插隊。",
+      "confusionNote": "Livelock 仍在動但沒進展；starvation 是特定工作長期得不到機會，和 deadlock 不同。",
+      "lessonIds": [
+        "lesson-im-it-os-sync-deadlock-b01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-system-call-modes",
+      "label": "系統呼叫與執行模式",
+      "aliases": [
+        "system call",
+        "user mode",
+        "kernel mode"
+      ],
+      "plainDefinition": "一般程式用 system call 請核心代辦需要較高權限的工作。",
+      "everydayExample": "像住戶不能直接進機房，只能請管理員代為操作。",
+      "confusionNote": "切到 kernel mode 不等於換成另一個行程，也不是應用程式永久取得最高權限。",
+      "lessonIds": [
+        "lesson-im-it-os-processes-threads"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-tcp-udp-port",
+      "label": "TCP、UDP 與連接埠",
+      "aliases": [
+        "TCP",
+        "UDP",
+        "port",
+        "transport protocol",
+        "連接埠"
+      ],
+      "plainDefinition": "TCP 提供可靠有序的資料流，UDP 提供較精簡的資料報；port 用來找到主機上的應用程式。",
+      "everydayExample": "IP 像大樓地址，port 像房號；TCP 像掛號信，UDP 像快速投遞。",
+      "confusionNote": "port 不是實體插孔；UDP 也不是必然比 TCP 好或永遠不可靠。",
+      "lessonIds": [
+        "lesson-im-it-network-ip-routing-transport-01",
+        "lesson-im-it-network-models-encapsulation"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-threat-vulnerability-risk",
+      "label": "威脅、弱點與風險",
+      "aliases": [
+        "threat",
+        "vulnerability",
+        "risk"
+      ],
+      "plainDefinition": "Threat 是可能造成傷害的來源，vulnerability 是可被利用的弱點，risk 則綜合發生可能與影響。",
+      "everydayExample": "小偷是威脅，沒鎖的窗是弱點，被偷造成的機率與損失構成風險。",
+      "confusionNote": "三者不是同義詞；沒有可利用弱點或影響時，風險判斷也會不同。",
+      "lessonIds": [
+        "lesson-im-it-security-risk-access-governance-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-transaction-anomalies",
+      "label": "交易並行異常",
+      "aliases": [
+        "lost update",
+        "dirty read",
+        "non-repeatable read"
+      ],
+      "plainDefinition": "多筆交易交錯執行時，可能覆蓋更新、讀到未提交資料，或同一筆資料前後讀到不同值。",
+      "everydayExample": "兩位店員同時修改最後一件庫存，後存檔的人可能蓋掉前一人的結果。",
+      "confusionNote": "異常來自操作交錯與隔離不足，不是所有同時執行都一定出錯。",
+      "lessonIds": [
+        "lesson-im-it-db-transactions-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-tree-terms",
+      "label": "樹的節點與走訪",
+      "aliases": [
+        "root",
+        "parent",
+        "child",
+        "leaf",
+        "inorder traversal",
+        "height"
+      ],
+      "plainDefinition": "用根、父子、葉節點與高度描述樹，並依指定順序拜訪所有節點。",
+      "everydayExample": "像家族樹從祖先根節點往下分支，走訪則是規定查看每位成員的次序。",
+      "confusionNote": "樹的 height 與節點的 depth 方向不同，且走訪順序不一定產生排序結果。",
+      "lessonIds": [
+        "lesson-im-it-ds-trees-heaps-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-turing-test",
+      "label": "圖靈測試",
+      "aliases": [
+        "Turing test"
+      ],
+      "plainDefinition": "只看機器表現出的對話行為，測試人是否能把它和真人區分。",
+      "everydayExample": "像只隔著客服聊天室判斷對面是真人還是機器人。",
+      "confusionNote": "通過測試不等於證明機器有意識，也不代表所有事情都做得好。",
+      "lessonIds": [
+        "lesson-im-it-ai-foundations-ml-evaluation-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-types-control-flow",
+      "label": "型別與控制流程",
+      "aliases": [
+        "type system",
+        "control flow",
+        "if",
+        "loop",
+        "switch"
+      ],
+      "plainDefinition": "Type system 限制資料能做哪些操作；control flow 決定程式下一步執行哪一段。",
+      "everydayExample": "像表單欄位限制日期不能填姓名，而路口號誌決定車流下一步往哪走。",
+      "confusionNote": "型別描述資料與操作規則，控制流程描述執行順序，兩者不是同一件事。",
+      "lessonIds": [
+        "lesson-im-it-prog-control-functions-memory-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-verification-testing",
+      "label": "驗證、測試與程式審查",
+      "aliases": [
+        "verification",
+        "testing",
+        "code review",
+        "static analysis",
+        "assertion",
+        "exception"
+      ],
+      "plainDefinition": "測試執行案例、程式審查由人檢視、靜態分析不執行程式就找問題；它們提供不同證據。",
+      "everydayExample": "像新店開幕前分別試營運、請同事看流程、用清單自動檢查規則。",
+      "confusionNote": "測試通過只能證明測過的情境，不能保證程式沒有其他錯誤。",
+      "lessonIds": [
+        "lesson-im-it-prog-runtime-quality-lifecycle-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-virtual-memory",
+      "label": "虛擬記憶體",
+      "aliases": [
+        "virtual memory",
+        "page",
+        "page fault",
+        "分頁"
+      ],
+      "plainDefinition": "把程式看到的位址空間映射到實體記憶體，必要時再從儲存裝置載入頁面。",
+      "everydayExample": "像書桌只放正在看的資料，其餘文件先收在櫃子，需要時再拿出來。",
+      "confusionNote": "虛擬記憶體不是單純把硬碟當 RAM；page fault 也不一定是程式故障。",
+      "lessonIds": [
+        "lesson-im-it-os-scheduling-memory-management-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-virtualization-cluster",
+      "label": "虛擬化與叢集",
+      "aliases": [
+        "virtualization",
+        "virtual machine",
+        "cluster",
+        "guest OS",
+        "host"
+      ],
+      "plainDefinition": "虛擬化在一台實體機切出隔離環境；叢集則讓多台機器協同提供服務。",
+      "everydayExample": "前者像一棟樓切成多間套房，後者像多家分店互相支援。",
+      "confusionNote": "虛擬化不會自動帶來高可用，叢集也不等於把一台主機切成多台。",
+      "lessonIds": [
+        "lesson-im-it-os-virtualization-containers-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-voice-interface",
+      "label": "語音互動流程",
+      "aliases": [
+        "voice-only smart speaker",
+        "speech recognition",
+        "intent",
+        "speech synthesis"
+      ],
+      "plainDefinition": "裝置先收音與辨識語句，再判斷意圖、執行服務，最後用合成語音回答。",
+      "everydayExample": "像對語音助理說『設七點鬧鐘』，它聽懂、建立鬧鐘後再口頭確認。",
+      "confusionNote": "只靠語音的裝置沒有螢幕視覺輸出；能辨識語音也不等於理解所有語意。",
+      "lessonIds": [
+        "lesson-im-it-trends-emerging-digital-applications-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-wal-checkpoint",
+      "label": "預寫式日誌與檢查點",
+      "aliases": [
+        "write-ahead logging",
+        "WAL",
+        "UNDO",
+        "REDO",
+        "checkpoint"
+      ],
+      "plainDefinition": "資料頁寫回前先記錄日誌，故障後再依日誌撤銷或重做；檢查點縮短復原範圍。",
+      "everydayExample": "像修改帳本前先寫操作紀錄，停電後可按紀錄還原或補做。",
+      "confusionNote": "Checkpoint 不是備份，也不代表它之前的所有日誌都能無條件刪除。",
+      "lessonIds": [
+        "lesson-im-it-db-transactions-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-warehouse-olap",
+      "label": "資料倉儲與 OLAP",
+      "aliases": [
+        "data warehouse",
+        "OLAP",
+        "multidimensional analysis"
+      ],
+      "plainDefinition": "資料倉儲整合歷史資料供分析；OLAP 從時間、地區、商品等多個維度快速彙總比較。",
+      "everydayExample": "像主管用同一批銷售歷史，切換查看各月份、城市與品類。",
+      "confusionNote": "OLAP 偏分析查詢，不等同處理日常逐筆訂單的 OLTP。",
+      "lessonIds": [
+        "lesson-im-it-db-storage-indexing-b01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-it-glossary-working-set-thrashing",
+      "label": "工作集合與顛簸",
+      "aliases": [
+        "working set",
+        "thrashing"
+      ],
+      "plainDefinition": "Working set 是程式近期常用的頁面；若實體記憶體容不下，系統可能頻繁換頁而幾乎做不了正事。",
+      "everydayExample": "像桌面太小，做一道菜就不停把同一批工具搬進搬出櫃子。",
+      "confusionNote": "Thrashing 不是 CPU 計算太慢，而是 page fault 與換頁活動過多。",
+      "lessonIds": [
+        "lesson-im-it-os-scheduling-memory-management-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-it"
+    },
+    {
+      "id": "im-mis-glossary-it-business-alignment",
+      "label": "IT 與商業策略對齊",
+      "aliases": [
+        "IT-business alignment",
+        "strategy alignment"
+      ],
+      "plainDefinition": "資訊科技投資要直接支持公司想服務誰、提供什麼價值及如何競爭。",
+      "everydayExample": "餐廳主打快速出餐，才優先投資點餐與廚房排程。",
+      "confusionNote": "不是 IT 部門照單買設備，也不是所有部門都用同一套工具。",
+      "lessonIds": [
+        "lesson-im-mis-strategy-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-mis"
+    },
+    {
+      "id": "im-mis-glossary-complementary-assets",
+      "label": "互補性資產",
+      "aliases": [
+        "complementary assets"
+      ],
+      "plainDefinition": "技術要搭配流程、人員技能、管理支持與資料品質才可能產生價值。",
+      "everydayExample": "買好咖啡機還要有會操作的人、配方與保養制度。",
+      "confusionNote": "不是額外的硬體配件。",
+      "lessonIds": [
+        "lesson-im-mis-strategy-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-mis"
+    },
+    {
+      "id": "im-mis-glossary-it-portfolio",
+      "label": "IT 投資組合",
+      "aliases": [
+        "IT portfolio"
+      ],
+      "plainDefinition": "像分配理財資產一樣，把 IT 預算分散在維運、成長、法遵與實驗項目。",
+      "everydayExample": "家庭預算同時留給修水管、節能設備和新家電試用。",
+      "confusionNote": "不是把所有專案列成一張清單；重點是整體風險與效益配置。",
+      "lessonIds": [
+        "lesson-im-mis-strategy-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-mis"
+    },
+    {
+      "id": "im-mis-glossary-enterprise-agility",
+      "label": "企業敏捷性",
+      "aliases": [
+        "enterprise agility",
+        "agility"
+      ],
+      "plainDefinition": "組織察覺環境變化後，能快速重新配置流程、資料與資源。",
+      "everydayExample": "菜價暴漲時，餐廳能迅速換菜單與供應商。",
+      "confusionNote": "不是單純做事快，也不等於使用 Scrum。",
+      "lessonIds": [
+        "lesson-im-mis-strategy-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-mis"
+    },
+    {
+      "id": "im-mis-glossary-multi-sided-platform",
+      "label": "多邊平台",
+      "aliases": [
+        "multi-sided platform",
+        "two-sided market"
+      ],
+      "plainDefinition": "同時讓兩種以上彼此需要的使用者群在同一套規則下互動。",
+      "everydayExample": "外送平台連結顧客、餐廳與外送員。",
+      "confusionNote": "不是只要有很多使用者就算平台。",
+      "lessonIds": [
+        "lesson-im-mis-platforms-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-mis"
+    },
+    {
+      "id": "im-mis-glossary-network-effect",
+      "label": "網路效應",
+      "aliases": [
+        "network effect",
+        "same-side effect",
+        "cross-side effect"
+      ],
+      "plainDefinition": "使用者人數改變時，同側或另一側使用者得到的價值也跟著改變。",
+      "everydayExample": "外送平台餐廳增加，會讓顧客更想加入。",
+      "confusionNote": "人多不必然是正向；壅塞、詐騙也可能讓價值下降。",
+      "lessonIds": [
+        "lesson-im-mis-platforms-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-mis"
+    },
+    {
+      "id": "im-mis-glossary-cross-subsidy",
+      "label": "交叉補貼",
+      "aliases": [
+        "cross-subsidy",
+        "platform pricing"
+      ],
+      "plainDefinition": "平台讓一側少付或免費，靠另一側付費來支持整體成長。",
+      "everydayExample": "信用卡給持卡人回饋，向商家收手續費。",
+      "confusionNote": "免費不是沒有成本，也不一定能永久維持。",
+      "lessonIds": [
+        "lesson-im-mis-platforms-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-mis"
+    },
+    {
+      "id": "im-mis-glossary-platform-governance",
+      "label": "平台治理",
+      "aliases": [
+        "platform governance"
+      ],
+      "plainDefinition": "平台用審核、排序、收費、申訴與處分規則管理參與者行為。",
+      "everydayExample": "電商查核假貨、處理退貨並停權詐騙賣家。",
+      "confusionNote": "不是政府監管，也不只是寫使用條款。",
+      "lessonIds": [
+        "lesson-im-mis-platforms-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-mis"
+    },
+    {
+      "id": "im-mis-glossary-codification",
+      "label": "知識編碼化",
+      "aliases": [
+        "codification"
+      ],
+      "plainDefinition": "把可說清楚、可重複使用的經驗整理成文件、規則或資料庫。",
+      "everydayExample": "把常見客訴的處理步驟寫成手冊。",
+      "confusionNote": "不是把所有人的經驗硬塞進表格。",
+      "lessonIds": [
+        "lesson-im-mis-enterprise-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-mis"
+    },
+    {
+      "id": "im-mis-glossary-tacit-knowledge",
+      "label": "內隱知識",
+      "aliases": [
+        "tacit knowledge"
+      ],
+      "plainDefinition": "很難完整寫下、常需靠實作與互動才能學會的經驗。",
+      "everydayExample": "老師傅憑聲音判斷機器異常。",
+      "confusionNote": "不代表絕對不能記錄；可透過示範、案例逐步外顯。",
+      "lessonIds": [
+        "lesson-im-mis-enterprise-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-mis"
+    },
+    {
+      "id": "im-mis-glossary-erp",
+      "label": "企業資源規劃系統",
+      "aliases": [
+        "ERP",
+        "Enterprise Resource Planning"
+      ],
+      "plainDefinition": "用共享資料串起財務、採購、庫存、生產等跨部門流程的企業系統。",
+      "everydayExample": "訂單成立後，庫存與會計資料一起更新。",
+      "confusionNote": "ERP 不是單純會計軟體，也不保證導入後流程自然變好。",
+      "lessonIds": [
+        "lesson-im-mis-enterprise-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-mis"
+    },
+    {
+      "id": "im-mis-glossary-push-pull-supply-chain",
+      "label": "推式／拉式供應鏈",
+      "aliases": [
+        "push supply chain",
+        "pull supply chain"
+      ],
+      "plainDefinition": "推式依預測先做貨；拉式等實際需求出現再觸發補貨或生產。",
+      "everydayExample": "麵包店早上先烤是推式，接單後才做客製蛋糕是拉式。",
+      "confusionNote": "不是好壞二選一，多數企業混合使用。",
+      "lessonIds": [
+        "lesson-im-mis-enterprise-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-mis"
+    },
+    {
+      "id": "im-mis-glossary-ml-use-case",
+      "label": "機器學習使用情境",
+      "aliases": [
+        "ML use case",
+        "AI use case"
+      ],
+      "plainDefinition": "明確說明模型要幫誰做哪個決策，以及錯了會造成什麼影響。",
+      "everydayExample": "預測明天備多少便當，而不是籠統說導入 AI。",
+      "confusionNote": "模型功能不是完整 use case；還要有人、流程與結果。",
+      "lessonIds": [
+        "lesson-im-mis-data-ai-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-mis"
+    },
+    {
+      "id": "im-mis-glossary-data-leakage",
+      "label": "資料洩漏",
+      "aliases": [
+        "data leakage",
+        "leakage control"
+      ],
+      "plainDefinition": "訓練時偷看到實際部署時不可能取得的答案或未來資訊。",
+      "everydayExample": "用是否已退貨去預測下單當下會不會退貨。",
+      "confusionNote": "不只是個資外洩；這裡指模型評估被答案或未來資訊污染。",
+      "lessonIds": [
+        "lesson-im-mis-data-ai-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-mis"
+    },
+    {
+      "id": "im-mis-glossary-data-concept-drift",
+      "label": "資料漂移／概念漂移",
+      "aliases": [
+        "data drift",
+        "concept drift"
+      ],
+      "plainDefinition": "前者是輸入資料分布改變；後者是輸入與正確答案的關係改變。",
+      "everydayExample": "顧客年齡層改變是資料漂移；同樣購物行為不再代表會續訂是概念漂移。",
+      "confusionNote": "兩者可分別發生，資料漂移不必然讓模型失效。",
+      "lessonIds": [
+        "lesson-im-mis-data-ai-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-mis"
+    },
+    {
+      "id": "im-mis-glossary-ai-trustworthiness",
+      "label": "AI 可信賴性",
+      "aliases": [
+        "trustworthiness",
+        "trustworthy AI"
+      ],
+      "plainDefinition": "AI 在準確、安全、公平、隱私、透明與可問責等面向值得依賴的程度。",
+      "everydayExample": "貸款模型除了準確，還要能申訴、保護資料並監測歧視。",
+      "confusionNote": "不等於使用者主觀相信品牌，也不是單一分數。",
+      "lessonIds": [
+        "lesson-im-mis-data-ai-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-mis"
+    },
+    {
+      "id": "im-mis-glossary-build-buy-outsource-saas",
+      "label": "自建／採購／委外／訂閱服務",
+      "aliases": [
+        "build",
+        "buy",
+        "outsource",
+        "SaaS"
+      ],
+      "plainDefinition": "分別是自己開發、買現成軟體、請外部廠商執行，以及按期訂閱雲端軟體。",
+      "everydayExample": "自己煮、買調理包、請外燴、訂月費餐盒。",
+      "confusionNote": "委外只轉移執行，不會把需求與治理責任一起丟掉。",
+      "lessonIds": [
+        "lesson-im-mis-development-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-mis"
+    },
+    {
+      "id": "im-mis-glossary-scrum",
+      "label": "Scrum",
+      "aliases": [
+        "Scrum framework"
+      ],
+      "plainDefinition": "用短週期、透明檢查與調整來處理複雜工作的敏捷框架。",
+      "everydayExample": "每兩週完成可試用的小改版，再依回饋調整。",
+      "confusionNote": "不是一套固定瀑布流程，也不是每天站會的別名。",
+      "lessonIds": [
+        "lesson-im-mis-development-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-mis"
+    },
+    {
+      "id": "im-mis-glossary-testing-levels",
+      "label": "單元／整合／系統／使用者驗收測試",
+      "aliases": [
+        "unit testing",
+        "integration testing",
+        "system testing",
+        "UAT"
+      ],
+      "plainDefinition": "依序檢查小零件、零件介面、整套系統，以及業務是否願意接受。",
+      "everydayExample": "先測水龍頭、再測整段水管、再測全屋供水，最後由屋主驗收。",
+      "confusionNote": "全部技術測試通過仍可能做錯需求。",
+      "lessonIds": [
+        "lesson-im-mis-development-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-mis"
+    },
+    {
+      "id": "im-mis-glossary-ux",
+      "label": "使用者體驗",
+      "aliases": [
+        "UX",
+        "User Experience"
+      ],
+      "plainDefinition": "人在使用產品前、中、後的整體感受與完成目標的容易程度。",
+      "everydayExample": "網路購票是否找得到班次、看得懂價格並順利付款。",
+      "confusionNote": "不只是畫面漂亮。",
+      "lessonIds": [
+        "lesson-im-mis-development-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-mis"
+    },
+    {
+      "id": "im-mis-glossary-relational-schema",
+      "label": "關聯式資料庫綱要",
+      "aliases": [
+        "relational schema"
+      ],
+      "plainDefinition": "用資料表、欄位、關係與規則定義資料如何組織。",
+      "everydayExample": "圖書、讀者、借閱各是一張表，靠編號連接。",
+      "confusionNote": "schema 是結構規則，不是資料內容本身。",
+      "lessonIds": [
+        "lesson-im-mis-data-architecture-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-mis"
+    },
+    {
+      "id": "im-mis-glossary-sql-join",
+      "label": "SQL 資料表連接",
+      "aliases": [
+        "SQL JOIN",
+        "JOIN"
+      ],
+      "plainDefinition": "依共同欄位把不同資料表中相關的資料組合起來查詢。",
+      "everydayExample": "用訂單的顧客編號找出顧客姓名。",
+      "confusionNote": "漏掉連接條件會把每列任意配對，產生笛卡兒積。",
+      "lessonIds": [
+        "lesson-im-mis-data-architecture-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-mis"
+    },
+    {
+      "id": "im-mis-glossary-nosql-acid",
+      "label": "NoSQL 與 ACID",
+      "aliases": [
+        "NoSQL",
+        "ACID"
+      ],
+      "plainDefinition": "NoSQL 是不只使用關聯表的一類資料庫；ACID 是讓一組資料操作維持可靠的交易特性。",
+      "everydayExample": "商品規格可用文件保存，但付款扣庫存仍可能需要全做或全不做。",
+      "confusionNote": "NoSQL 不是沒有結構，也不是一律不支援 ACID。",
+      "lessonIds": [
+        "lesson-im-mis-data-architecture-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-mis"
+    },
+    {
+      "id": "im-mis-glossary-horizontal-vertical-scaling",
+      "label": "水平／垂直擴展",
+      "aliases": [
+        "horizontal scaling",
+        "vertical scaling",
+        "horizontal scale",
+        "vertical scale"
+      ],
+      "plainDefinition": "水平是增加更多機器分工；垂直是把單台機器升級得更強。",
+      "everydayExample": "多開收銀櫃台，或換一位速度更快的收銀員。",
+      "confusionNote": "水平擴展不會自動變簡單，會增加分割與協調成本。",
+      "lessonIds": [
+        "lesson-im-mis-data-architecture-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-mis"
+    },
+    {
+      "id": "im-mis-glossary-data-minimization-purpose-limitation",
+      "label": "資料最小化／目的限制",
+      "aliases": [
+        "data minimization",
+        "purpose limitation"
+      ],
+      "plainDefinition": "只收完成明確目的所需的最少資料，且不任意拿去做原先未說明的用途。",
+      "everydayExample": "門禁只需確認住戶資格，不必保存每次臉部影像。",
+      "confusionNote": "取得同意也不代表可以無限蒐集。",
+      "lessonIds": [
+        "lesson-im-mis-governance-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-mis"
+    },
+    {
+      "id": "im-mis-glossary-transparency-accountability-redress",
+      "label": "透明、問責與救濟",
+      "aliases": [
+        "transparency",
+        "accountability",
+        "redress"
+      ],
+      "plainDefinition": "讓人知道系統怎麼影響自己、有人對結果負責，受害時有申訴與補救管道。",
+      "everydayExample": "信用被誤判時能看懂原因、找得到負責單位並要求更正。",
+      "confusionNote": "只貼隱私政策不等於透明，也不等於已可問責。",
+      "lessonIds": [
+        "lesson-im-mis-governance-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-mis"
+    },
+    {
+      "id": "im-mis-glossary-esg",
+      "label": "環境、社會與治理",
+      "aliases": [
+        "ESG",
+        "Environmental Social Governance"
+      ],
+      "plainDefinition": "從環境影響、社會權益與組織治理三面向評估企業風險與責任。",
+      "everydayExample": "評估資料中心耗電、演算法歧視與董事會監督。",
+      "confusionNote": "ESG 不是單一分數，也不保證投資 IT 必然有正面效果。",
+      "lessonIds": [
+        "lesson-im-mis-governance-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-mis"
+    },
+    {
+      "id": "im-mis-glossary-privacy-by-design",
+      "label": "隱私融入設計",
+      "aliases": [
+        "privacy by design"
+      ],
+      "plainDefinition": "從需求和架構一開始就減少資料與風險，而非上線後才補隱私聲明。",
+      "everydayExample": "設計門禁時就只存雜湊識別碼並設定自動刪除。",
+      "confusionNote": "不是一個產品認證或最後加密就完成。",
+      "lessonIds": [
+        "lesson-im-mis-governance-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-mis"
+    },
+    {
+      "id": "im-mis-glossary-self-review-rubric",
+      "label": "逐項自評標準",
+      "aliases": [
+        "rubric",
+        "評分規準"
+      ],
+      "plainDefinition": "把好答案拆成一條條可以自行確認的要點，幫你檢查論證是否完整。",
+      "everydayExample": "像交報告前用清單確認有定義、理由、例子和限制。",
+      "confusionNote": "它不是官方標準答案，也不代表勾選後就取得正式分數。",
+      "lessonIds": [
+        "lesson-im-mis-strategy-01",
+        "lesson-im-mis-platforms-01",
+        "lesson-im-mis-enterprise-01",
+        "lesson-im-mis-data-ai-01",
+        "lesson-im-mis-development-01",
+        "lesson-im-mis-data-architecture-01",
+        "lesson-im-mis-governance-01"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-mis"
+    },
+    {
+      "id": "im-stat-term-expected-value",
+      "label": "期望值",
+      "aliases": [
+        "expected value",
+        "expectation",
+        "E(X)",
+        "μ",
+        "mu"
+      ],
+      "plainDefinition": "期望值是把每個可能結果乘上其機率後加總的長期平均；E(X) 讀作「X 的期望值」，μ 讀作「mu／繆」，常用來代表母體平均。",
+      "everydayExample": "一張彩券有不同獎金與中獎機率，把每種獎金乘上機率再相加，就是每買一張長期平均可拿回的金額。",
+      "confusionNote": "期望值不一定是實際可能出現的結果，也不是只做一次就一定會拿到的數字。",
+      "lessonIds": [
+        "lesson-im-stat-prereq-expectation-variance"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-stat"
+    },
+    {
+      "id": "im-stat-term-variance",
+      "label": "變異數",
+      "aliases": [
+        "variance",
+        "Var(X)",
+        "σ²",
+        "sigma squared"
+      ],
+      "plainDefinition": "變異數把每個值離平均的距離平方後取平均，用來表示資料有多分散；Var(X) 讀作「X 的變異數」，σ² 讀作「sigma 平方」。",
+      "everydayExample": "兩班平均都考 70 分，但一班都在 65 至 75 分，另一班從 30 到 100 分，後一班的變異數較大。",
+      "confusionNote": "變異數的單位會被平方，因此不能直接把它當成原資料的典型差距。",
+      "lessonIds": [
+        "lesson-im-stat-prereq-expectation-variance"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-stat"
+    },
+    {
+      "id": "im-stat-term-standard-deviation",
+      "label": "標準差",
+      "aliases": [
+        "standard deviation",
+        "SD",
+        "σ",
+        "sigma",
+        "sqrt(Var(X))"
+      ],
+      "plainDefinition": "標準差是變異數開根號後的分散程度；σ 讀作「sigma」，與原資料使用相同單位。",
+      "everydayExample": "體重的標準差若是 3 公斤，可以直覺理解成讀值通常在平均附近相差幾公斤。",
+      "confusionNote": "標準差不是變異數本身，σ 與 σ² 分別代表標準差與變異數。",
+      "lessonIds": [
+        "lesson-im-stat-prereq-expectation-variance"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-stat"
+    },
+    {
+      "id": "im-stat-term-covariance",
+      "label": "共變異數",
+      "aliases": [
+        "covariance",
+        "Cov(X,Y)",
+        "cov"
+      ],
+      "plainDefinition": "共變異數描述兩個變數是否傾向一起高或一起低；Cov(X,Y) 讀作「X 與 Y 的共變異數」。",
+      "everydayExample": "天氣越熱時冷飲銷量通常越高，溫度與冷飲銷量會呈現正的共變異數。",
+      "confusionNote": "共變異數為 0 不一定代表兩變數完全獨立，而且數值大小會受單位影響。",
+      "lessonIds": [
+        "lesson-im-stat-prereq-expectation-variance"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-stat"
+    },
+    {
+      "id": "im-stat-term-iid",
+      "label": "獨立同分布",
+      "aliases": [
+        "iid",
+        "i.i.d.",
+        "independent and identically distributed"
+      ],
+      "plainDefinition": "獨立同分布表示每筆觀察彼此不影響，且都由同一套機率規則產生；iid 逐字母讀作「i-i-d」。",
+      "everydayExample": "每次都把公平硬幣重新拋一次，前一次結果不影響下一次，而且每次正面機率都相同。",
+      "confusionNote": "只要分布相同不代表獨立，只要獨立也不代表每筆資料的分布相同。",
+      "lessonIds": [
+        "lesson-im-stat-prereq-expectation-variance"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-stat"
+    },
+    {
+      "id": "im-stat-term-null-alternative-hypotheses",
+      "label": "虛無假設與對立假設",
+      "aliases": [
+        "null hypothesis",
+        "alternative hypothesis",
+        "H0",
+        "H₀",
+        "H1",
+        "H₁"
+      ],
+      "plainDefinition": "H₀ 讀作「H 零」，是檢定暫時保留的基準說法；H₁ 讀作「H 一」，是資料足夠反對 H₀ 時所支持的方向。",
+      "everydayExample": "煙霧警報器先以「沒有火災」為 H₀，只有感測訊號夠異常才改採「可能有火災」的 H₁。",
+      "confusionNote": "未拒絕 H₀ 只代表證據不夠，不等於已經證明 H₀ 正確。",
+      "lessonIds": [
+        "lesson-im-stat-prereq-hypothesis-workflow"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-stat"
+    },
+    {
+      "id": "im-stat-term-test-statistic-reference-distribution",
+      "label": "檢定統計量與參考分配",
+      "aliases": [
+        "test statistic",
+        "reference distribution",
+        "sampling distribution"
+      ],
+      "plainDefinition": "檢定統計量把樣本證據濃縮成一個數字，參考分配則告訴我們在 H₀ 成立時這個數字通常會落在哪裡。",
+      "everydayExample": "警報器把溫度與煙霧濃度濃縮成警戒分數，再拿正常環境下的分數範圍作比較。",
+      "confusionNote": "不同資料型態與假設條件要用不同統計量和分配，不能看到數字大就一律判為顯著。",
+      "lessonIds": [
+        "lesson-im-stat-prereq-hypothesis-workflow"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-stat"
+    },
+    {
+      "id": "im-stat-term-significance-level",
+      "label": "顯著水準",
+      "aliases": [
+        "significance level",
+        "α",
+        "alpha",
+        "α=0.05"
+      ],
+      "plainDefinition": "顯著水準 α 讀作「alpha」，是分析前設定的拒絕門檻，例如 α=0.05 表示願意承擔至多約 5% 的第一類錯誤風險。",
+      "everydayExample": "煙霧警報器把門檻調得越嚴格，越不容易誤報，但也可能更容易漏掉真正異常。",
+      "confusionNote": "α 不是 H₀ 為真的機率，也不該看完 p 值後才為了得到想要的結論而更改。",
+      "lessonIds": [
+        "lesson-im-stat-prereq-hypothesis-workflow"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-stat"
+    },
+    {
+      "id": "im-stat-term-p-value",
+      "label": "p 值",
+      "aliases": [
+        "p-value",
+        "p value",
+        "p"
+      ],
+      "plainDefinition": "p 值是在 H₀ 成立的前提下，得到目前這麼極端或更極端資料的機率；p 讀作英文字母「p」。",
+      "everydayExample": "若正常廚房幾乎不會出現目前這麼高的煙霧讀值，p 值就會很小。",
+      "confusionNote": "p 值不是 H₀ 為真的機率、不是結果由偶然造成的機率，也不表示效果大小。",
+      "lessonIds": [
+        "lesson-im-stat-prereq-hypothesis-workflow"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-stat"
+    },
+    {
+      "id": "im-stat-term-statistical-significance",
+      "label": "統計顯著與未拒絕",
+      "aliases": [
+        "statistical significance",
+        "reject H0",
+        "fail to reject H0",
+        "p<α"
+      ],
+      "plainDefinition": "當 p<α（讀作「p 小於 alpha」）時稱結果達統計顯著並拒絕 H₀，否則只能說未能拒絕 H₀。",
+      "everydayExample": "警報響起代表訊號越過預設門檻，但仍要由人確認是否真的起火及原因為何。",
+      "confusionNote": "統計顯著不等於效果很大、實務上重要或已證明因果；未顯著也不等於兩者完全沒有差異。",
+      "lessonIds": [
+        "lesson-im-stat-prereq-hypothesis-workflow"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-stat"
+    },
+    {
+      "id": "im-stat-term-joint-pmf",
+      "label": "聯合機率質量函數",
+      "aliases": [
+        "joint PMF",
+        "joint probability mass function",
+        "p(X=x,Y=y)"
+      ],
+      "plainDefinition": "聯合 PMF 列出兩個離散變數每一組可能配對的機率；PMF 逐字母讀作「P-M-F」，p(X=x,Y=y) 讀作「X 等於 x 且 Y 等於 y 的機率」。",
+      "everydayExample": "同時記錄擲兩顆骰子的點數，表格每一格就是某一對點數一起出現的機率。",
+      "confusionNote": "聯合 PMF 用於可逐項列舉的離散結果；連續資料要談密度，單一點的機率通常為 0。",
+      "lessonIds": [
+        "lesson-im-stat-pmf-transformations"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-stat"
+    },
+    {
+      "id": "im-stat-term-support",
+      "label": "可能值集合",
+      "aliases": [
+        "support",
+        "sample support",
+        "possible-value set"
+      ],
+      "plainDefinition": "support 是隨機變數真正可能取到且需要納入計算的所有值或座標集合。",
+      "everydayExample": "一顆六面骰子的 support 是 1 到 6，不包含 0 或 7。",
+      "confusionNote": "support 不是目前樣本中剛好看見的值，而是模型允許出現的完整可能範圍。",
+      "lessonIds": [
+        "lesson-im-stat-pmf-transformations"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-stat"
+    },
+    {
+      "id": "im-stat-term-normalizing-constant",
+      "label": "正規化常數",
+      "aliases": [
+        "normalizing constant",
+        "normalization constant",
+        "c",
+        "1/c"
+      ],
+      "plainDefinition": "正規化常數是把原始權重換成總和為 1 的機率所需的縮放數；c 讀作英文字母「c」，題目可能用除以 c 或乘上 c，須依公式判讀。",
+      "everydayExample": "籃子裡各色票共有 12 張，每色張數除以 12 後才是抽到該色的機率。",
+      "confusionNote": "若權重總和為 12，以「權重/c」表示時 c=12，以「c×權重」表示時則 c=1/12，不能只背固定答案。",
+      "lessonIds": [
+        "lesson-im-stat-pmf-transformations"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-stat"
+    },
+    {
+      "id": "im-stat-term-mapping-preimage",
+      "label": "映射、像點與原像",
+      "aliases": [
+        "mapping",
+        "image",
+        "preimage",
+        "transformation",
+        "Y=g(X)"
+      ],
+      "plainDefinition": "映射是依規則把舊值換成新值，像點是換完後的位置，原像則是所有會被換到該位置的舊值；Y=g(X) 讀作「Y 等於 g 作用在 X」。",
+      "everydayExample": "把不同郵遞區號分到同一行政區時，行政區是像點，所有屬於它的郵遞區號是原像。",
+      "confusionNote": "多個舊值可映到同一新值，此時新值的機率要把所有原像機率相加。",
+      "lessonIds": [
+        "lesson-im-stat-pmf-transformations"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-stat"
+    },
+    {
+      "id": "im-stat-term-marginal-pmf",
+      "label": "邊際機率質量函數",
+      "aliases": [
+        "marginal PMF",
+        "marginal distribution",
+        "marginalization",
+        "邊際化",
+        "Σy p(x,y)"
+      ],
+      "plainDefinition": "邊際 PMF 是只關心其中一個變數時，把另一個變數所有可能值的聯合機率加總；Σy p(x,y) 讀作「對所有 y，把 p(x,y) 加總」。",
+      "everydayExample": "表格同時記錄時段與商品，若只想知道各商品總銷量，就把每個商品跨所有時段的格子加起來。",
+      "confusionNote": "加總時要固定想保留的變數並消去另一維，方向弄反會得到不同邊際分配。",
+      "lessonIds": [
+        "lesson-im-stat-pmf-transformations"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-stat"
+    },
+    {
+      "id": "im-stat-term-estimator-observation",
+      "label": "觀察值與估計量",
+      "aliases": [
+        "observation",
+        "sample",
+        "estimator",
+        "Yi",
+        "Yᵢ",
+        "m"
+      ],
+      "plainDefinition": "Yᵢ 讀作「Y 下標 i」，表示第 i 筆有隨機性的觀察；估計量則是把多筆觀察依規則合成、用來猜未知母體數值的公式。",
+      "everydayExample": "每支溫度計讀值是觀察，把多支讀值平均後得到的數字是估計真實溫度的估計量。",
+      "confusionNote": "估計量是抽樣前的計算規則，代入實際資料後得到的單一數字才叫估計值。",
+      "lessonIds": [
+        "lesson-im-stat-unbiased-efficient-estimators"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-stat"
+    },
+    {
+      "id": "im-stat-term-unbiased-estimator",
+      "label": "不偏估計量",
+      "aliases": [
+        "unbiased estimator",
+        "unbiasedness",
+        "E(m)=μ"
+      ],
+      "plainDefinition": "若重複抽樣時估計量的長期平均等於真正參數，就稱不偏；E(m)=μ 讀作「m 的期望值等於 mu」。",
+      "everydayExample": "一支秤有時高估、有時低估，但長期平均恰好等於真實重量，可視為不偏。",
+      "confusionNote": "不偏不代表每次都準，也不代表它比其他估計量波動更小。",
+      "lessonIds": [
+        "lesson-im-stat-unbiased-efficient-estimators"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-stat"
+    },
+    {
+      "id": "im-stat-term-estimator-weights",
+      "label": "估計權重",
+      "aliases": [
+        "weights",
+        "wi",
+        "wᵢ",
+        "Σwi=1",
+        "weighted mean"
+      ],
+      "plainDefinition": "wᵢ 讀作「w 下標 i」，表示第 i 筆資料占多大比重；Σwᵢ=1 讀作「所有 w 下標 i 的總和等於一」，在各觀察同平均時可讓加權平均維持不偏。",
+      "everydayExample": "綜合三支溫度計時給可靠儀器較高權重，但所有採信比例加起來仍是 100%。",
+      "confusionNote": "權重和為 1 只處理中心是否偏移，不保證變異數最小，也不保證權重都必須相同。",
+      "lessonIds": [
+        "lesson-im-stat-unbiased-efficient-estimators"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-stat"
+    },
+    {
+      "id": "im-stat-term-estimator-variance-efficiency",
+      "label": "估計量變異數與效率",
+      "aliases": [
+        "estimator variance",
+        "efficiency",
+        "minimum variance",
+        "Var(m)=σ²Σwi²"
+      ],
+      "plainDefinition": "估計量變異數衡量答案在重複抽樣間有多晃，在同樣不偏的候選中變異數較小者稱較有效率；Var(m)=σ²Σwᵢ² 讀作「m 的變異數等於 sigma 平方乘權重平方和」。",
+      "everydayExample": "兩種溫度合併法都不會長期高估，但每次結果較穩定的那一種效率較高。",
+      "confusionNote": "只有在比較條件一致時才能只靠變異數談效率；資料相關或每筆誤差不同時公式也會改變。",
+      "lessonIds": [
+        "lesson-im-stat-unbiased-efficient-estimators"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-stat"
+    },
+    {
+      "id": "im-stat-term-optimization-cauchy",
+      "label": "最小化、微分與柯西不等式",
+      "aliases": [
+        "minimize",
+        "optimization",
+        "derivative",
+        "Cauchy",
+        "Cauchy–Schwarz inequality",
+        "α"
+      ],
+      "plainDefinition": "最小化是在限制下找讓變異數最小的權重，可用微分找谷底或用柯西不等式比較下界；α 讀作「alpha」，在此只是可調權重參數。",
+      "everydayExample": "調整兩支溫度計的採信比例，尋找合成讀數晃動最小的位置。",
+      "confusionNote": "這裡的 α 是權重參數，不是假設檢定的顯著水準；兩者符號相同但角色不同。",
+      "lessonIds": [
+        "lesson-im-stat-unbiased-efficient-estimators"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-stat"
+    },
+    {
+      "id": "im-stat-term-multiple-regression",
+      "label": "多元線性迴歸",
+      "aliases": [
+        "multiple regression",
+        "multiple linear regression",
+        "多元迴歸",
+        "outcome",
+        "predictor",
+        "intercept",
+        "slope"
+      ],
+      "plainDefinition": "多元線性迴歸用一個截距與多個斜率，描述多個預測變數和一個結果變數之間的線性關係。",
+      "everydayExample": "同時用家庭人數、收入與居住面積來預測每週垃圾量。",
+      "confusionNote": "迴歸找的是在模型與資料條件下的關聯，單靠係數顯著不能證明某變數造成結果。",
+      "lessonIds": [
+        "lesson-im-stat-regression-dashboard"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-stat"
+    },
+    {
+      "id": "im-stat-term-coefficient-standard-error-t",
+      "label": "迴歸係數、標準誤與 t 值",
+      "aliases": [
+        "coefficient",
+        "coef",
+        "standard error",
+        "std err",
+        "SE",
+        "t-statistic",
+        "t=coef/SE"
+      ],
+      "plainDefinition": "係數是估計的影響方向與大小，標準誤 SE 是係數的不確定程度，t=coef/SE 讀作「t 等於係數除以標準誤」，表示效果相對噪音有多大。",
+      "everydayExample": "若收入係數是 7 而標準誤約 1，表示估計效果相對其不確定程度算大。",
+      "confusionNote": "t 值不是 p 值，係數大也不必然顯著，還要看標準誤與參考分配。",
+      "lessonIds": [
+        "lesson-im-stat-regression-dashboard"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-stat"
+    },
+    {
+      "id": "im-stat-term-residual-degrees-freedom",
+      "label": "殘差與殘差自由度",
+      "aliases": [
+        "residual",
+        "error",
+        "Df Residuals",
+        "residual degrees of freedom",
+        "df=n-k-1"
+      ],
+      "plainDefinition": "殘差是實際值減模型預測值，殘差自由度是扣掉估計參數後仍可用來估計誤差的獨立資訊量；df=n-k-1 讀作「自由度等於樣本數 n 減斜率數 k 再減一」。",
+      "everydayExample": "440 戶資料估計 3 個斜率加 1 個截距後，剩下 436 份殘差自由度。",
+      "confusionNote": "Df Model 通常是模型斜率數，不是殘差自由度；公式中的減一通常來自截距。",
+      "lessonIds": [
+        "lesson-im-stat-regression-dashboard"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-stat"
+    },
+    {
+      "id": "im-stat-term-r-squared-adjusted",
+      "label": "決定係數與調整後決定係數",
+      "aliases": [
+        "R²",
+        "R-squared",
+        "coefficient of determination",
+        "adjusted R²",
+        "Adj. R-squared"
+      ],
+      "plainDefinition": "R² 讀作「R 平方」，表示模型解釋結果變動的比例；adjusted R² 讀作「調整後 R 平方」，會對加入過多預測變數扣分。",
+      "everydayExample": "垃圾量模型的 R²=.17，可白話理解為樣本中約 17% 的垃圾量差異被模型解釋。",
+      "confusionNote": "R² 高不等於模型有因果性或預測一定準，adjusted R² 也不是所有模型品質的唯一標準。",
+      "lessonIds": [
+        "lesson-im-stat-regression-dashboard"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-stat"
+    },
+    {
+      "id": "im-stat-term-joint-f-test",
+      "label": "整體 F 檢定",
+      "aliases": [
+        "F-test",
+        "joint F-test",
+        "F-statistic",
+        "Prob(F-statistic)"
+      ],
+      "plainDefinition": "整體 F 檢定把所有斜率同時為 0 當作 H₀，檢查整組預測變數是否共同提供解釋力；F 讀作英文字母「F」。",
+      "everydayExample": "不是逐一問每個旋鈕，而是一次問儀表板上的所有旋鈕合起來是否比完全不用更有用。",
+      "confusionNote": "F 檢定顯著只表示至少一個斜率可能非零，不會告訴你是哪一個，也不等於每一個都顯著。",
+      "lessonIds": [
+        "lesson-im-stat-regression-dashboard"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-stat"
+    },
+    {
+      "id": "im-stat-term-categorical-contingency-table",
+      "label": "類別變數與列聯表",
+      "aliases": [
+        "categorical variable",
+        "contingency table",
+        "cross-tabulation",
+        "r×c table"
+      ],
+      "plainDefinition": "類別變數把人或物分組，列聯表則用列與欄記錄兩個類別變數各種組合的人數；r×c 讀作「r 乘 c 的表」。",
+      "everydayExample": "用列表示早中晚時段、欄表示飲料種類，每格填入購買人數就是一張列聯表。",
+      "confusionNote": "格子應放計數而非連續測量值；列聯表呈現關聯，不會自動說明原因。",
+      "lessonIds": [
+        "lesson-im-stat-chi-square-independence"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-stat"
+    },
+    {
+      "id": "im-stat-term-observed-expected-count",
+      "label": "觀察次數與期望次數",
+      "aliases": [
+        "observed count",
+        "expected count",
+        "O",
+        "E",
+        "row total×column total/grand total"
+      ],
+      "plainDefinition": "O 讀作「觀察次數」，是實際每格人數；E 讀作「期望次數」，是在兩變數獨立時由列合計乘欄合計再除總合計算出的每格預期人數。",
+      "everydayExample": "實際晚間買咖啡有 30 人是 O，若時段與飲料無關時按整體比例應有 22 人則是 E。",
+      "confusionNote": "這裡的 E 是期望次數，不是前面 E(X) 的期望值運算符；卡方公式的分母必須用 E。",
+      "lessonIds": [
+        "lesson-im-stat-chi-square-independence"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-stat"
+    },
+    {
+      "id": "im-stat-term-pearson-chi-square",
+      "label": "皮爾森卡方統計量",
+      "aliases": [
+        "Pearson chi-square",
+        "χ²",
+        "chi-square statistic",
+        "Σ(O-E)²/E"
+      ],
+      "plainDefinition": "χ² 讀作「chi-square／卡方」，把每格觀察與期望的差平方後除以期望再全部加總，即 Σ(O-E)²/E 讀作「所有格的 O 減 E 平方除以 E 之和」。",
+      "everydayExample": "若多個時段與飲料格子的實際人數都明顯偏離獨立時預期人數，χ² 就會變大。",
+      "confusionNote": "χ² 不會是負數，數值大小要搭配自由度或 p 值判斷，不能用固定門檻套所有表格。",
+      "lessonIds": [
+        "lesson-im-stat-chi-square-independence"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-stat"
+    },
+    {
+      "id": "im-stat-term-chi-square-df",
+      "label": "卡方檢定自由度",
+      "aliases": [
+        "degrees of freedom",
+        "df",
+        "df=(r-1)(c-1)"
+      ],
+      "plainDefinition": "自由度 df 讀作「d-f」，表示固定列欄合計後還能獨立變動的格子資訊量；df=(r-1)(c-1) 讀作「r 減一乘 c 減一」。",
+      "everydayExample": "2×3 列聯表的自由度是 (2-1)(3-1)=2。",
+      "confusionNote": "自由度不是格子總數 rc，也不是樣本數；列欄合計帶來的限制必須扣除。",
+      "lessonIds": [
+        "lesson-im-stat-chi-square-independence"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-stat"
+    },
+    {
+      "id": "im-stat-term-critical-value-independence",
+      "label": "臨界值與獨立性結論",
+      "aliases": [
+        "critical value",
+        "臨界值",
+        "independence test",
+        "獨立性",
+        "reject independence",
+        "association",
+        "causation"
+      ],
+      "plainDefinition": "臨界值是在指定 α 與自由度下的拒絕界線，若 χ² 超過它就拒絕「兩類別變數獨立」的 H₀，只能說資料顯示有關聯。",
+      "everydayExample": "χ²=6.42 高於 df=2、α=.05 的臨界值 5.99，表示時段與商品選擇的分布不像完全無關。",
+      "confusionNote": "拒絕獨立不代表一個變數造成另一個；樣本不獨立、期望次數太小或抽樣偏誤也可能讓結論失真。",
+      "lessonIds": [
+        "lesson-im-stat-chi-square-independence"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-stat"
+    },
+    {
+      "id": "im-stat-term-self-review-rubric",
+      "label": "逐項自評標準",
+      "aliases": [
+        "rubric",
+        "評分規準"
+      ],
+      "interfaceTerm": true,
+      "plainDefinition": "把完整推導拆成可以逐步核對的要點，幫你找到漏掉的條件或計算步驟。",
+      "everydayExample": "像算完帳後依序檢查金額、單位、公式與最後結論。",
+      "confusionNote": "它不是官方配分，也不會把合理但不同的推導方式判成錯誤。",
+      "lessonIds": [
+        "lesson-im-stat-prereq-expectation-variance",
+        "lesson-im-stat-prereq-hypothesis-workflow",
+        "lesson-im-stat-pmf-transformations",
+        "lesson-im-stat-unbiased-efficient-estimators",
+        "lesson-im-stat-regression-dashboard",
+        "lesson-im-stat-chi-square-independence"
+      ],
+      "reviewStatus": "reviewed",
+      "subjectId": "im-stat"
+    }
+  ]
+}

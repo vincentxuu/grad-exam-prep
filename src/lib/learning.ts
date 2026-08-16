@@ -47,6 +47,18 @@ export interface LearningConceptCard {
   reviewStatus: 'reviewed'
 }
 
+export interface LearningBeginnerGlossaryTerm {
+  id: string
+  subjectId: string
+  label: string
+  aliases: string[]
+  plainDefinition: string
+  everydayExample: string
+  confusionNote: string
+  lessonIds: string[]
+  reviewStatus: 'reviewed'
+}
+
 export interface LearningSource {
   id: string
   title: string
@@ -131,6 +143,7 @@ export interface LearningCatalogInput {
   lessons: LearningLesson[]
   cards: LearningConceptCard[]
   sources: LearningSource[]
+  beginnerGlossary?: LearningBeginnerGlossaryTerm[]
   overview?: LearningOverviewConfig
   lessonCopy: LearningLessonCopy
   getPracticeHref: (lesson: LearningLesson) => string
@@ -141,6 +154,7 @@ export interface LearningCatalog extends LearningCatalogInput {
   getLesson: (lessonId: string) => LearningLesson | undefined
   getCardsForLesson: (lessonId: string) => LearningConceptCard[]
   getSources: (sourceIds: string[]) => LearningSource[]
+  getBeginnerGlossaryForLesson: (lessonId: string) => LearningBeginnerGlossaryTerm[]
 }
 
 export function createLearningCatalog(input: LearningCatalogInput): LearningCatalog {
@@ -155,5 +169,7 @@ export function createLearningCatalog(input: LearningCatalogInput): LearningCata
       const ids = new Set(sourceIds)
       return input.sources.filter((source) => ids.has(source.id))
     },
+    getBeginnerGlossaryForLesson: (lessonId) =>
+      (input.beginnerGlossary ?? []).filter((term) => term.lessonIds.includes(lessonId)),
   }
 }

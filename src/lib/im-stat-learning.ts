@@ -3,6 +3,7 @@ import conceptMasterRaw from '../../public/data/im-stat-concept-master.json'
 import lessonsRaw from '../../public/data/im-stat-lessons.json'
 import questionMetadataRaw from '../../public/data/im-stat-question-metadata.json'
 import sourcesRaw from '../../public/data/im-stat-source-registry.json'
+import { getBeginnerGlossaryForSubject } from './beginner-glossary'
 import {
   createLearningCatalog,
   type LearningConceptCard,
@@ -31,6 +32,7 @@ export const imStatLearningCatalog = createLearningCatalog({
   lessons,
   cards,
   sources,
+  beginnerGlossary: getBeginnerGlossaryForSubject('im-stat'),
   overview: {
     topics,
     totalQuestions: questionMetadataRaw.totalQuestions,
@@ -44,7 +46,7 @@ export const imStatLearningCatalog = createLearningCatalog({
       eligibleSuffix: '可自動判分；',
       disputedPrefix: '另有',
       disputedSuffix:
-        '題具爭議。現有 5 題均為申論或計算題，答案非官方，只提供逐步解析與 rubric 自評，不列入完整模擬考成績。',
+        '題具爭議。現有 5 題均為申論或計算題，答案非官方，只提供逐步解析與逐項自評標準，不列入完整模擬考成績。',
       browseLabel: '瀏覽 5 題統計題庫',
       moduleTitle: '已上線學習模組',
       moduleDescription:
@@ -62,7 +64,7 @@ export const imStatLearningCatalog = createLearningCatalog({
     cardUnit: '張概念卡',
     pastPaperUnit: '題對應考古題',
     contentNotice:
-      '題面來自台大官方試卷；解答與 rubric 為本站技術覆核的非官方內容，申論與推導一律採自評。',
+      '題面來自台大官方試卷；解答與逐項自評標準（rubric）為本站技術覆核的非官方內容，申論與推導一律採自評。',
     objectivesTitle: '先抓住這幾件事',
     scenarioEyebrow: '先想像這個場景',
     scenarioPrompt: '先別急著套公式，花十秒想一想：',
@@ -79,7 +81,7 @@ export const imStatLearningCatalog = createLearningCatalog({
     cardsDescription: '先口述定義、條件與下一步，再展開答案；公式不是取代條件檢查的捷徑。',
     practiceTitle: '最後用考古題自評',
     practiceDescription:
-      '請先在紙上完成推導，再依非官方解析與逐項 rubric 檢查；本流程不產生虛假的 A–E 分數。',
+      '請先在紙上完成推導，再依非官方解析與逐項自評標準檢查；本流程不產生虛假的 A–E 分數。',
     practiceActionLabel: '開始本課考古題自評',
     foundationPracticeTitle: '先完成必要先備',
     foundationPracticeDescription:

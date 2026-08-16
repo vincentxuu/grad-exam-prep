@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { LearningBeginnerGlossary } from '@/components/exam/learning-beginner-glossary'
 import { Badge } from '@/components/ui/badge'
 import type {
   LearningCatalog,
@@ -16,6 +17,7 @@ interface Props {
 
 export function LearningLessonContent({ catalog, lesson, cards, sources }: Props) {
   const copy = catalog.lessonCopy
+  const beginnerGlossary = catalog.getBeginnerGlossaryForLesson(lesson.id)
   const practiceHref = catalog.getPracticeHref(lesson)
   const hasDirectPastPaperEvidence = lesson.pastPaperRefs.length > 0
   const practiceTitle = hasDirectPastPaperEvidence
@@ -39,7 +41,6 @@ export function LearningLessonContent({ catalog, lesson, cards, sources }: Props
           </span>
         </div>
         <h1 className="text-balance text-2xl font-bold">{lesson.title}</h1>
-        <p className="text-pretty text-muted-foreground">{lesson.summary}</p>
         <p className="text-pretty text-xs text-muted-foreground">{copy.contentNotice}</p>
         {lesson.evidenceNote ? (
           <p className="rounded-lg border border-amber-300 bg-amber-50 px-4 py-3 text-pretty text-sm leading-6 text-amber-950 dark:border-amber-700 dark:bg-amber-950/30 dark:text-amber-100">
@@ -48,7 +49,10 @@ export function LearningLessonContent({ catalog, lesson, cards, sources }: Props
         ) : null}
       </header>
 
+      <LearningBeginnerGlossary terms={beginnerGlossary} />
+
       <section className="rounded-lg border bg-muted/30 p-4">
+        <p className="mb-4 text-pretty text-sm leading-6 text-muted-foreground">{lesson.summary}</p>
         <h2 className="text-balance text-lg font-semibold">{copy.objectivesTitle}</h2>
         <ul className="mt-3 space-y-2">
           {lesson.learningObjectives.map((objective) => (
