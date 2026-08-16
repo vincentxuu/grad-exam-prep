@@ -22,4 +22,9 @@
 - [x] 48/48 lessons（共覆蓋 96 子主題）皆有 3–6 個閉合且不重複的 glossary refs。
 - [x] glossary aliases、lesson refs 與正文術語通過 validators／tests。
 - [x] 既有 content、paper integrity、Jest、typecheck、build 無回歸。
-- [ ] PR Checks、main 合併、Cloudflare deploy 與 production 抽查完成。
+- [x] PR Checks、main 合併、Cloudflare deploy 與 production 抽查完成。
+
+## Completion evidence
+
+- PR #17 merged as `5f5b21a`；GitHub Checks 與 Cloudflare deployment run `31956671413` 成功。
+- Production 已抽查 IM-IT、IM-MIS、IM-STAT 代表課程，三頁皆在摘要前呈現「這堂先懂這些詞」、生活例子與易混淆提醒。
