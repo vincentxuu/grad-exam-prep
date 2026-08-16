@@ -1,0 +1,377 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "im-stat",
+  "status": "reviewed",
+  "totalCards": 22,
+  "generationPolicy": "只由 reviewed lessons 產生；prerequisite cards 不偽掛考古題。",
+  "cards": [
+    {
+      "id": "card-im-stat-expectation-linearity",
+      "lessonId": "lesson-im-stat-prereq-expectation-variance",
+      "subtopicId": "im-stat-probability-expectation-variance",
+      "front": "E(aX+b) 等於？",
+      "back": "aE(X)+b",
+      "explanation": "期望值具線性性，不需要獨立。",
+      "sourceRefs": [
+        "src-im-stat-openintro",
+        "src-im-stat-psu-414"
+      ],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-stat-variance-scale",
+      "lessonId": "lesson-im-stat-prereq-expectation-variance",
+      "subtopicId": "im-stat-probability-expectation-variance",
+      "front": "Var(aX) 等於？",
+      "back": "a²Var(X)",
+      "explanation": "變異數使用倍率平方。",
+      "sourceRefs": [
+        "src-im-stat-openintro",
+        "src-im-stat-psu-414"
+      ],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-stat-pmf-normalize",
+      "lessonId": "lesson-im-stat-pmf-transformations",
+      "subtopicId": "im-stat-probability-joint-pmf",
+      "front": "未正規化權重如何變成 PMF？",
+      "back": "每個權重除以權重總和",
+      "explanation": "最後總機率必須為 1。",
+      "sourceRefs": [
+        "src-im-stat-ntu-115-pdf",
+        "src-im-stat-openintro",
+        "src-im-stat-psu-414"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-stat-115-3"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-stat-pmf-marginal",
+      "lessonId": "lesson-im-stat-pmf-transformations",
+      "subtopicId": "im-stat-probability-joint-pmf",
+      "front": "由 joint PMF 求 Y1 marginal？",
+      "back": "固定 Y1，對所有 Y2 加總",
+      "explanation": "加總方向由要保留的變數決定。",
+      "sourceRefs": [
+        "src-im-stat-ntu-115-pdf",
+        "src-im-stat-openintro",
+        "src-im-stat-psu-414"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-stat-115-3"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-stat-transform-preimage",
+      "lessonId": "lesson-im-stat-pmf-transformations",
+      "subtopicId": "im-stat-probability-transformations",
+      "front": "多個舊點映到同一新點時？",
+      "back": "把所有 preimage 的機率相加",
+      "explanation": "不能只保留其中一點。",
+      "sourceRefs": [
+        "src-im-stat-ntu-115-pdf",
+        "src-im-stat-openintro",
+        "src-im-stat-psu-414"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-stat-115-3"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-stat-transform-check",
+      "lessonId": "lesson-im-stat-pmf-transformations",
+      "subtopicId": "im-stat-probability-transformations",
+      "front": "離散轉換完成後最基本檢查？",
+      "back": "新 support 的機率總和為 1",
+      "explanation": "也要確認沒有遺漏舊 support。",
+      "sourceRefs": [
+        "src-im-stat-ntu-115-pdf",
+        "src-im-stat-openintro",
+        "src-im-stat-psu-414"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-stat-115-3"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-stat-unbiased-weights",
+      "lessonId": "lesson-im-stat-unbiased-efficient-estimators",
+      "subtopicId": "im-stat-estimation-unbiasedness",
+      "front": "iid 平均數 μ 的線性估計量何時不偏？",
+      "back": "權重和等於 1",
+      "explanation": "E(ΣwiYi)=μΣwi。",
+      "sourceRefs": [
+        "src-im-stat-ntu-114-pdf",
+        "src-im-stat-ntu-115-pdf",
+        "src-im-stat-psu-415"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-stat-114-5",
+        "q-pp-im-stat-115-4"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-stat-unbiased-not-efficient",
+      "lessonId": "lesson-im-stat-unbiased-efficient-estimators",
+      "subtopicId": "im-stat-estimation-unbiasedness",
+      "front": "不偏是否保證最小變異數？",
+      "back": "不保證",
+      "explanation": "不偏只約束中心，不約束波動。",
+      "sourceRefs": [
+        "src-im-stat-ntu-114-pdf",
+        "src-im-stat-ntu-115-pdf",
+        "src-im-stat-psu-415"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-stat-114-5",
+        "q-pp-im-stat-115-4"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-stat-weighted-variance",
+      "lessonId": "lesson-im-stat-unbiased-efficient-estimators",
+      "subtopicId": "im-stat-estimation-variance",
+      "front": "獨立同變異 Yi 的加權和變異數？",
+      "back": "σ²Σwi²",
+      "explanation": "獨立使 covariance 項為 0。",
+      "sourceRefs": [
+        "src-im-stat-ntu-114-pdf",
+        "src-im-stat-ntu-115-pdf",
+        "src-im-stat-psu-415"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-stat-114-5",
+        "q-pp-im-stat-115-4"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-stat-periodic-weights",
+      "lessonId": "lesson-im-stat-unbiased-efficient-estimators",
+      "subtopicId": "im-stat-estimation-variance",
+      "front": "114-5 的 g 循環為 2,3,4,5,1，Σg²？",
+      "back": "11T",
+      "explanation": "每五項平方和 55，共 T/5 組。",
+      "sourceRefs": [
+        "src-im-stat-ntu-114-pdf",
+        "src-im-stat-ntu-115-pdf",
+        "src-im-stat-psu-415"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-stat-114-5",
+        "q-pp-im-stat-115-4"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-stat-equal-weight",
+      "lessonId": "lesson-im-stat-unbiased-efficient-estimators",
+      "subtopicId": "im-stat-estimation-efficiency",
+      "front": "iid 等變異且權重和固定時，何者通常最穩？",
+      "back": "等權重平均",
+      "explanation": "平方和在等權重時最小。",
+      "sourceRefs": [
+        "src-im-stat-ntu-114-pdf",
+        "src-im-stat-ntu-115-pdf",
+        "src-im-stat-psu-415"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-stat-114-5",
+        "q-pp-im-stat-115-4"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-stat-correlated-weight",
+      "lessonId": "lesson-im-stat-unbiased-efficient-estimators",
+      "subtopicId": "im-stat-estimation-efficiency",
+      "front": "觀測彼此相關時，變異數還能只加 wi²σ² 嗎？",
+      "back": "不能，需加入 covariance",
+      "explanation": "這是溫度計比喻的邊界。",
+      "sourceRefs": [
+        "src-im-stat-ntu-114-pdf",
+        "src-im-stat-ntu-115-pdf",
+        "src-im-stat-psu-415"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-stat-114-5",
+        "q-pp-im-stat-115-4"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-stat-hypothesis-decision",
+      "lessonId": "lesson-im-stat-prereq-hypothesis-workflow",
+      "subtopicId": "im-stat-inference-hypothesis-workflow",
+      "front": "p<α 時的決策？",
+      "back": "拒絕 H0",
+      "explanation": "代表資料與 H0 不相容程度達門檻。",
+      "sourceRefs": [
+        "src-im-stat-openintro",
+        "src-im-stat-nist-handbook"
+      ],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-stat-hypothesis-fail",
+      "lessonId": "lesson-im-stat-prereq-hypothesis-workflow",
+      "subtopicId": "im-stat-inference-hypothesis-workflow",
+      "front": "p≥α 能說 H0 已證明嗎？",
+      "back": "不能，只能說未能拒絕 H0",
+      "explanation": "檢定不是證明機制。",
+      "sourceRefs": [
+        "src-im-stat-openintro",
+        "src-im-stat-nist-handbook"
+      ],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-stat-regression-df",
+      "lessonId": "lesson-im-stat-regression-dashboard",
+      "subtopicId": "im-stat-regression-multiple",
+      "front": "含截距、k 個斜率的殘差自由度？",
+      "back": "n-k-1",
+      "explanation": "扣掉 k 個斜率和 1 個截距。",
+      "sourceRefs": [
+        "src-im-stat-ntu-114-pdf",
+        "src-im-stat-openintro",
+        "src-im-stat-nist-handbook"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-stat-114-4"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-stat-adjusted-r2",
+      "lessonId": "lesson-im-stat-regression-dashboard",
+      "subtopicId": "im-stat-regression-multiple",
+      "front": "Adjusted R² 的用途？",
+      "back": "對加入更多變數施加複雜度懲罰",
+      "explanation": "不能只靠增加變數保證上升。",
+      "sourceRefs": [
+        "src-im-stat-ntu-114-pdf",
+        "src-im-stat-openintro",
+        "src-im-stat-nist-handbook"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-stat-114-4"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-stat-coefficient-t",
+      "lessonId": "lesson-im-stat-regression-dashboard",
+      "subtopicId": "im-stat-regression-t-f-tests",
+      "front": "係數 t 值如何算？",
+      "back": "coef / standard error",
+      "explanation": "檢查單一係數相對於 0。",
+      "sourceRefs": [
+        "src-im-stat-ntu-114-pdf",
+        "src-im-stat-openintro",
+        "src-im-stat-nist-handbook"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-stat-114-4"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-stat-joint-f",
+      "lessonId": "lesson-im-stat-regression-dashboard",
+      "subtopicId": "im-stat-regression-t-f-tests",
+      "front": "聯合 F 檢定的 H0？",
+      "back": "所有斜率係數同時為 0",
+      "explanation": "與單一係數 t 檢定不同。",
+      "sourceRefs": [
+        "src-im-stat-ntu-114-pdf",
+        "src-im-stat-openintro",
+        "src-im-stat-nist-handbook"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-stat-114-4"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-stat-expected-count",
+      "lessonId": "lesson-im-stat-chi-square-independence",
+      "subtopicId": "im-stat-categorical-contingency",
+      "front": "獨立性下某格期望次數？",
+      "back": "列合計×欄合計÷總數",
+      "explanation": "算完應恢復原列欄合計。",
+      "sourceRefs": [
+        "src-im-stat-ntu-115-pdf",
+        "src-im-stat-openintro",
+        "src-im-stat-nist-handbook"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-stat-115-5"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-stat-contingency-input",
+      "lessonId": "lesson-im-stat-chi-square-independence",
+      "subtopicId": "im-stat-categorical-contingency",
+      "front": "卡方獨立性檢定使用比例還是計數？",
+      "back": "以列聯表計數為輸入",
+      "explanation": "期望次數也是 count。",
+      "sourceRefs": [
+        "src-im-stat-ntu-115-pdf",
+        "src-im-stat-openintro",
+        "src-im-stat-nist-handbook"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-stat-115-5"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-stat-chi-square-stat",
+      "lessonId": "lesson-im-stat-chi-square-independence",
+      "subtopicId": "im-stat-categorical-chi-square",
+      "front": "Pearson χ² 統計量？",
+      "back": "Σ(O-E)²/E",
+      "explanation": "每格差距依期望次數標準化。",
+      "sourceRefs": [
+        "src-im-stat-ntu-115-pdf",
+        "src-im-stat-openintro",
+        "src-im-stat-nist-handbook"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-stat-115-5"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-stat-chi-square-df",
+      "lessonId": "lesson-im-stat-chi-square-independence",
+      "subtopicId": "im-stat-categorical-chi-square",
+      "front": "r×c 列聯表自由度？",
+      "back": "(r-1)(c-1)",
+      "explanation": "不是 rc。",
+      "sourceRefs": [
+        "src-im-stat-ntu-115-pdf",
+        "src-im-stat-openintro",
+        "src-im-stat-nist-handbook"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-stat-115-5"
+      ],
+      "reviewStatus": "reviewed"
+    }
+  ]
+}

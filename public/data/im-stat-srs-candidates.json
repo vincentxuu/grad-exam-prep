@@ -1,0 +1,312 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "im-stat",
+  "status": "curated_candidates",
+  "publishedToGlobalDeck": false,
+  "policy": "候選卡尚未寫入 flashcards.json；需經 product integration 與 migration review 後才能啟用。",
+  "totalCandidates": 18,
+  "candidates": [
+    {
+      "id": "srs-candidate-card-im-stat-expectation-linearity",
+      "conceptCardId": "card-im-stat-expectation-linearity",
+      "subtopicId": "im-stat-probability-expectation-variance",
+      "prompt": "E(aX+b) 等於？",
+      "answer": "aE(X)+b",
+      "sourceRefs": [
+        "src-im-stat-openintro",
+        "src-im-stat-psu-414"
+      ],
+      "pastPaperRefs": [],
+      "status": "reviewed_candidate",
+      "schedulingProfile": "concept-recall"
+    },
+    {
+      "id": "srs-candidate-card-im-stat-variance-scale",
+      "conceptCardId": "card-im-stat-variance-scale",
+      "subtopicId": "im-stat-probability-expectation-variance",
+      "prompt": "Var(aX) 等於？",
+      "answer": "a²Var(X)",
+      "sourceRefs": [
+        "src-im-stat-openintro",
+        "src-im-stat-psu-414"
+      ],
+      "pastPaperRefs": [],
+      "status": "reviewed_candidate",
+      "schedulingProfile": "concept-recall"
+    },
+    {
+      "id": "srs-candidate-card-im-stat-pmf-normalize",
+      "conceptCardId": "card-im-stat-pmf-normalize",
+      "subtopicId": "im-stat-probability-joint-pmf",
+      "prompt": "未正規化權重如何變成 PMF？",
+      "answer": "每個權重除以權重總和",
+      "sourceRefs": [
+        "src-im-stat-ntu-115-pdf",
+        "src-im-stat-openintro",
+        "src-im-stat-psu-414"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-stat-115-3"
+      ],
+      "status": "reviewed_candidate",
+      "schedulingProfile": "concept-recall"
+    },
+    {
+      "id": "srs-candidate-card-im-stat-pmf-marginal",
+      "conceptCardId": "card-im-stat-pmf-marginal",
+      "subtopicId": "im-stat-probability-joint-pmf",
+      "prompt": "由 joint PMF 求 Y1 marginal？",
+      "answer": "固定 Y1，對所有 Y2 加總",
+      "sourceRefs": [
+        "src-im-stat-ntu-115-pdf",
+        "src-im-stat-openintro",
+        "src-im-stat-psu-414"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-stat-115-3"
+      ],
+      "status": "reviewed_candidate",
+      "schedulingProfile": "concept-recall"
+    },
+    {
+      "id": "srs-candidate-card-im-stat-transform-preimage",
+      "conceptCardId": "card-im-stat-transform-preimage",
+      "subtopicId": "im-stat-probability-transformations",
+      "prompt": "多個舊點映到同一新點時？",
+      "answer": "把所有 preimage 的機率相加",
+      "sourceRefs": [
+        "src-im-stat-ntu-115-pdf",
+        "src-im-stat-openintro",
+        "src-im-stat-psu-414"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-stat-115-3"
+      ],
+      "status": "reviewed_candidate",
+      "schedulingProfile": "concept-recall"
+    },
+    {
+      "id": "srs-candidate-card-im-stat-unbiased-weights",
+      "conceptCardId": "card-im-stat-unbiased-weights",
+      "subtopicId": "im-stat-estimation-unbiasedness",
+      "prompt": "iid 平均數 μ 的線性估計量何時不偏？",
+      "answer": "權重和等於 1",
+      "sourceRefs": [
+        "src-im-stat-ntu-114-pdf",
+        "src-im-stat-ntu-115-pdf",
+        "src-im-stat-psu-415"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-stat-114-5",
+        "q-pp-im-stat-115-4"
+      ],
+      "status": "reviewed_candidate",
+      "schedulingProfile": "concept-recall"
+    },
+    {
+      "id": "srs-candidate-card-im-stat-unbiased-not-efficient",
+      "conceptCardId": "card-im-stat-unbiased-not-efficient",
+      "subtopicId": "im-stat-estimation-unbiasedness",
+      "prompt": "不偏是否保證最小變異數？",
+      "answer": "不保證",
+      "sourceRefs": [
+        "src-im-stat-ntu-114-pdf",
+        "src-im-stat-ntu-115-pdf",
+        "src-im-stat-psu-415"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-stat-114-5",
+        "q-pp-im-stat-115-4"
+      ],
+      "status": "reviewed_candidate",
+      "schedulingProfile": "concept-recall"
+    },
+    {
+      "id": "srs-candidate-card-im-stat-weighted-variance",
+      "conceptCardId": "card-im-stat-weighted-variance",
+      "subtopicId": "im-stat-estimation-variance",
+      "prompt": "獨立同變異 Yi 的加權和變異數？",
+      "answer": "σ²Σwi²",
+      "sourceRefs": [
+        "src-im-stat-ntu-114-pdf",
+        "src-im-stat-ntu-115-pdf",
+        "src-im-stat-psu-415"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-stat-114-5",
+        "q-pp-im-stat-115-4"
+      ],
+      "status": "reviewed_candidate",
+      "schedulingProfile": "concept-recall"
+    },
+    {
+      "id": "srs-candidate-card-im-stat-periodic-weights",
+      "conceptCardId": "card-im-stat-periodic-weights",
+      "subtopicId": "im-stat-estimation-variance",
+      "prompt": "114-5 的 g 循環為 2,3,4,5,1，Σg²？",
+      "answer": "11T",
+      "sourceRefs": [
+        "src-im-stat-ntu-114-pdf",
+        "src-im-stat-ntu-115-pdf",
+        "src-im-stat-psu-415"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-stat-114-5",
+        "q-pp-im-stat-115-4"
+      ],
+      "status": "reviewed_candidate",
+      "schedulingProfile": "concept-recall"
+    },
+    {
+      "id": "srs-candidate-card-im-stat-equal-weight",
+      "conceptCardId": "card-im-stat-equal-weight",
+      "subtopicId": "im-stat-estimation-efficiency",
+      "prompt": "iid 等變異且權重和固定時，何者通常最穩？",
+      "answer": "等權重平均",
+      "sourceRefs": [
+        "src-im-stat-ntu-114-pdf",
+        "src-im-stat-ntu-115-pdf",
+        "src-im-stat-psu-415"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-stat-114-5",
+        "q-pp-im-stat-115-4"
+      ],
+      "status": "reviewed_candidate",
+      "schedulingProfile": "concept-recall"
+    },
+    {
+      "id": "srs-candidate-card-im-stat-hypothesis-decision",
+      "conceptCardId": "card-im-stat-hypothesis-decision",
+      "subtopicId": "im-stat-inference-hypothesis-workflow",
+      "prompt": "p<α 時的決策？",
+      "answer": "拒絕 H0",
+      "sourceRefs": [
+        "src-im-stat-openintro",
+        "src-im-stat-nist-handbook"
+      ],
+      "pastPaperRefs": [],
+      "status": "reviewed_candidate",
+      "schedulingProfile": "concept-recall"
+    },
+    {
+      "id": "srs-candidate-card-im-stat-regression-df",
+      "conceptCardId": "card-im-stat-regression-df",
+      "subtopicId": "im-stat-regression-multiple",
+      "prompt": "含截距、k 個斜率的殘差自由度？",
+      "answer": "n-k-1",
+      "sourceRefs": [
+        "src-im-stat-ntu-114-pdf",
+        "src-im-stat-openintro",
+        "src-im-stat-nist-handbook"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-stat-114-4"
+      ],
+      "status": "reviewed_candidate",
+      "schedulingProfile": "concept-recall"
+    },
+    {
+      "id": "srs-candidate-card-im-stat-adjusted-r2",
+      "conceptCardId": "card-im-stat-adjusted-r2",
+      "subtopicId": "im-stat-regression-multiple",
+      "prompt": "Adjusted R² 的用途？",
+      "answer": "對加入更多變數施加複雜度懲罰",
+      "sourceRefs": [
+        "src-im-stat-ntu-114-pdf",
+        "src-im-stat-openintro",
+        "src-im-stat-nist-handbook"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-stat-114-4"
+      ],
+      "status": "reviewed_candidate",
+      "schedulingProfile": "concept-recall"
+    },
+    {
+      "id": "srs-candidate-card-im-stat-coefficient-t",
+      "conceptCardId": "card-im-stat-coefficient-t",
+      "subtopicId": "im-stat-regression-t-f-tests",
+      "prompt": "係數 t 值如何算？",
+      "answer": "coef / standard error",
+      "sourceRefs": [
+        "src-im-stat-ntu-114-pdf",
+        "src-im-stat-openintro",
+        "src-im-stat-nist-handbook"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-stat-114-4"
+      ],
+      "status": "reviewed_candidate",
+      "schedulingProfile": "concept-recall"
+    },
+    {
+      "id": "srs-candidate-card-im-stat-joint-f",
+      "conceptCardId": "card-im-stat-joint-f",
+      "subtopicId": "im-stat-regression-t-f-tests",
+      "prompt": "聯合 F 檢定的 H0？",
+      "answer": "所有斜率係數同時為 0",
+      "sourceRefs": [
+        "src-im-stat-ntu-114-pdf",
+        "src-im-stat-openintro",
+        "src-im-stat-nist-handbook"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-stat-114-4"
+      ],
+      "status": "reviewed_candidate",
+      "schedulingProfile": "concept-recall"
+    },
+    {
+      "id": "srs-candidate-card-im-stat-expected-count",
+      "conceptCardId": "card-im-stat-expected-count",
+      "subtopicId": "im-stat-categorical-contingency",
+      "prompt": "獨立性下某格期望次數？",
+      "answer": "列合計×欄合計÷總數",
+      "sourceRefs": [
+        "src-im-stat-ntu-115-pdf",
+        "src-im-stat-openintro",
+        "src-im-stat-nist-handbook"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-stat-115-5"
+      ],
+      "status": "reviewed_candidate",
+      "schedulingProfile": "concept-recall"
+    },
+    {
+      "id": "srs-candidate-card-im-stat-chi-square-stat",
+      "conceptCardId": "card-im-stat-chi-square-stat",
+      "subtopicId": "im-stat-categorical-chi-square",
+      "prompt": "Pearson χ² 統計量？",
+      "answer": "Σ(O-E)²/E",
+      "sourceRefs": [
+        "src-im-stat-ntu-115-pdf",
+        "src-im-stat-openintro",
+        "src-im-stat-nist-handbook"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-stat-115-5"
+      ],
+      "status": "reviewed_candidate",
+      "schedulingProfile": "concept-recall"
+    },
+    {
+      "id": "srs-candidate-card-im-stat-chi-square-df",
+      "conceptCardId": "card-im-stat-chi-square-df",
+      "subtopicId": "im-stat-categorical-chi-square",
+      "prompt": "r×c 列聯表自由度？",
+      "answer": "(r-1)(c-1)",
+      "sourceRefs": [
+        "src-im-stat-ntu-115-pdf",
+        "src-im-stat-openintro",
+        "src-im-stat-nist-handbook"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-stat-115-5"
+      ],
+      "status": "reviewed_candidate",
+      "schedulingProfile": "concept-recall"
+    }
+  ]
+}

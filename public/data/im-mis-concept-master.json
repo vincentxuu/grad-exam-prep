@@ -1,0 +1,441 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "im-mis",
+  "contentStatus": "reviewed",
+  "sourcePolicy": "技術與管理主張需有 reviewed source；考古題只證明出題範圍，不是官方答案來源。",
+  "canonicalTopicIds": [
+    "im-mis-strategy",
+    "im-mis-platforms",
+    "im-mis-enterprise",
+    "im-mis-data-ai",
+    "im-mis-development",
+    "im-mis-data-architecture",
+    "im-mis-governance"
+  ],
+  "publicationGates": [
+    "question metadata closure",
+    "self-review rubric for every question",
+    "no auto grading",
+    "reviewed source closure"
+  ],
+  "topics": [
+    {
+      "id": "im-mis-strategy",
+      "title": "IT 策略、價值與組織能力",
+      "importance": 5,
+      "status": "reviewed",
+      "learningObjectives": [
+        {
+          "id": "im-mis-strategy-lo-1",
+          "statement": "用理論連結 IT 投資與企業績效"
+        },
+        {
+          "id": "im-mis-strategy-lo-2",
+          "statement": "比較環境、能力與投資組合的取捨"
+        },
+        {
+          "id": "im-mis-strategy-lo-3",
+          "statement": "以條件式論證提出策略建議"
+        }
+      ],
+      "subtopics": [
+        {
+          "id": "im-mis-strategy-alignment-differentiation",
+          "topicId": "im-mis-strategy",
+          "title": "IT-business alignment 與差異化",
+          "keywords": [
+            "alignment",
+            "differentiation",
+            "competitive strategy"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-mis-strategy-investment-value",
+          "topicId": "im-mis-strategy",
+          "title": "IT 投資、互補性資產與價值",
+          "keywords": [
+            "investment",
+            "complementary assets",
+            "portfolio"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-mis-strategy-agility-environment",
+          "topicId": "im-mis-strategy",
+          "title": "環境不確定性與企業敏捷",
+          "keywords": [
+            "agility",
+            "dynamism",
+            "munificence"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-mis-strategy-organization-economics",
+          "topicId": "im-mis-strategy",
+          "title": "IT 與組織邊界",
+          "keywords": [
+            "transaction cost",
+            "agency",
+            "production function"
+          ],
+          "status": "reviewed"
+        }
+      ]
+    },
+    {
+      "id": "im-mis-platforms",
+      "title": "數位平台與電子商務",
+      "importance": 5,
+      "status": "reviewed",
+      "learningObjectives": [
+        {
+          "id": "im-mis-platforms-lo-1",
+          "statement": "辨識平台各側與價值交換"
+        },
+        {
+          "id": "im-mis-platforms-lo-2",
+          "statement": "分析網路效應、補貼與治理"
+        },
+        {
+          "id": "im-mis-platforms-lo-3",
+          "statement": "把技術功能連回商業價值"
+        }
+      ],
+      "subtopics": [
+        {
+          "id": "im-mis-platforms-sharing-economy",
+          "topicId": "im-mis-platforms",
+          "title": "共享經濟與信任機制",
+          "keywords": [
+            "sharing economy",
+            "trust",
+            "governance"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-mis-platforms-multisided-pricing",
+          "topicId": "im-mis-platforms",
+          "title": "多邊平台、網路效應與定價",
+          "keywords": [
+            "multi-sided platform",
+            "cross-subsidy",
+            "network effect"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-mis-platforms-digital-markets-commerce",
+          "topicId": "im-mis-platforms",
+          "title": "數位市場與直播商務",
+          "keywords": [
+            "digital market",
+            "switching cost",
+            "live commerce"
+          ],
+          "status": "reviewed"
+        }
+      ]
+    },
+    {
+      "id": "im-mis-enterprise",
+      "title": "企業系統、流程與知識",
+      "importance": 4,
+      "status": "reviewed",
+      "learningObjectives": [
+        {
+          "id": "im-mis-enterprise-lo-1",
+          "statement": "比較知識管理策略"
+        },
+        {
+          "id": "im-mis-enterprise-lo-2",
+          "statement": "解釋企業流程與系統整合"
+        },
+        {
+          "id": "im-mis-enterprise-lo-3",
+          "statement": "分析供應鏈資訊流與需求訊號"
+        }
+      ],
+      "subtopics": [
+        {
+          "id": "im-mis-enterprise-knowledge-management",
+          "topicId": "im-mis-enterprise",
+          "title": "知識編碼與人際連結",
+          "keywords": [
+            "codification",
+            "personalization",
+            "knowledge network"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-mis-enterprise-enterprise-processes",
+          "topicId": "im-mis-enterprise",
+          "title": "企業系統與流程整合",
+          "keywords": [
+            "ERP",
+            "process integration",
+            "BPR"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-mis-enterprise-supply-chain",
+          "topicId": "im-mis-enterprise",
+          "title": "推式與拉式供應鏈",
+          "keywords": [
+            "push",
+            "pull",
+            "SCM"
+          ],
+          "status": "reviewed"
+        }
+      ]
+    },
+    {
+      "id": "im-mis-data-ai",
+      "title": "資料、分析與負責任 AI",
+      "importance": 5,
+      "status": "reviewed",
+      "learningObjectives": [
+        {
+          "id": "im-mis-data-ai-lo-1",
+          "statement": "描述資料與模型生命週期"
+        },
+        {
+          "id": "im-mis-data-ai-lo-2",
+          "statement": "選擇合適的評估方法"
+        },
+        {
+          "id": "im-mis-data-ai-lo-3",
+          "statement": "分析 AI 專案的治理與維運風險"
+        }
+      ],
+      "subtopics": [
+        {
+          "id": "im-mis-data-ai-data-lifecycle",
+          "topicId": "im-mis-data-ai",
+          "title": "資料生命週期與分析可行性",
+          "keywords": [
+            "data lifecycle",
+            "data quality",
+            "feasibility"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-mis-data-ai-model-evaluation-fairness",
+          "topicId": "im-mis-data-ai",
+          "title": "模型評估、公平與漂移",
+          "keywords": [
+            "evaluation",
+            "fairness",
+            "drift"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-mis-data-ai-analytics-forecasting",
+          "topicId": "im-mis-data-ai",
+          "title": "預測、社群分析與決策",
+          "keywords": [
+            "forecasting",
+            "community detection",
+            "analytics"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-mis-data-ai-ai-operations-governance",
+          "topicId": "im-mis-data-ai",
+          "title": "AI 維運、導入與治理",
+          "keywords": [
+            "MLOps",
+            "conversational AI",
+            "AI governance"
+          ],
+          "status": "reviewed"
+        }
+      ]
+    },
+    {
+      "id": "im-mis-development",
+      "title": "系統取得、敏捷交付與 UX",
+      "importance": 5,
+      "status": "reviewed",
+      "learningObjectives": [
+        {
+          "id": "im-mis-development-lo-1",
+          "statement": "比較 build、buy、outsource 與 SaaS"
+        },
+        {
+          "id": "im-mis-development-lo-2",
+          "statement": "解釋敏捷角色與產出物"
+        },
+        {
+          "id": "im-mis-development-lo-3",
+          "statement": "用測試、需求與 UX 降低交付風險"
+        }
+      ],
+      "subtopics": [
+        {
+          "id": "im-mis-development-acquisition-estimation",
+          "topicId": "im-mis-development",
+          "title": "系統取得與成本估算",
+          "keywords": [
+            "build vs buy",
+            "COCOMO",
+            "function point"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-mis-development-agile-delivery",
+          "topicId": "im-mis-development",
+          "title": "Scrum 與敏捷交付",
+          "keywords": [
+            "Scrum",
+            "Sprint",
+            "backlog"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-mis-development-testing-quality",
+          "topicId": "im-mis-development",
+          "title": "測試層級與品質風險",
+          "keywords": [
+            "unit test",
+            "integration test",
+            "UAT"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-mis-development-requirements-ux",
+          "topicId": "im-mis-development",
+          "title": "需求表達與使用者體驗",
+          "keywords": [
+            "user story",
+            "use case",
+            "UCD"
+          ],
+          "status": "reviewed"
+        }
+      ]
+    },
+    {
+      "id": "im-mis-data-architecture",
+      "title": "資料架構與數位基礎設施",
+      "importance": 4,
+      "status": "reviewed",
+      "learningObjectives": [
+        {
+          "id": "im-mis-data-architecture-lo-1",
+          "statement": "比較關聯式與 NoSQL 的取捨"
+        },
+        {
+          "id": "im-mis-data-architecture-lo-2",
+          "statement": "撰寫可驗證的 SQL 查詢"
+        },
+        {
+          "id": "im-mis-data-architecture-lo-3",
+          "statement": "分析開源授權與技術 sourcing"
+        }
+      ],
+      "subtopics": [
+        {
+          "id": "im-mis-data-architecture-relational-nosql",
+          "topicId": "im-mis-data-architecture",
+          "title": "關聯式資料庫與 NoSQL",
+          "keywords": [
+            "ACID",
+            "NoSQL",
+            "scalability"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-mis-data-architecture-sql-schema",
+          "topicId": "im-mis-data-architecture",
+          "title": "SQL、schema 與查詢",
+          "keywords": [
+            "SQL",
+            "join",
+            "group by"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-mis-data-architecture-oss-licensing",
+          "topicId": "im-mis-data-architecture",
+          "title": "開源軟體、授權與 sourcing",
+          "keywords": [
+            "GPL",
+            "Apache License",
+            "open source"
+          ],
+          "status": "reviewed"
+        }
+      ]
+    },
+    {
+      "id": "im-mis-governance",
+      "title": "數位治理、隱私與永續",
+      "importance": 5,
+      "status": "reviewed",
+      "learningObjectives": [
+        {
+          "id": "im-mis-governance-lo-1",
+          "statement": "辨識隱私與責任風險"
+        },
+        {
+          "id": "im-mis-governance-lo-2",
+          "statement": "把 ESG 主張連到可驗證機制"
+        },
+        {
+          "id": "im-mis-governance-lo-3",
+          "statement": "分析供應商依賴、信任與治理控制"
+        }
+      ],
+      "subtopics": [
+        {
+          "id": "im-mis-governance-privacy-security",
+          "topicId": "im-mis-governance",
+          "title": "IoT、資料與隱私風險",
+          "keywords": [
+            "privacy",
+            "IoT",
+            "security"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-mis-governance-esg-accountability",
+          "topicId": "im-mis-governance",
+          "title": "ESG、揭露與問責",
+          "keywords": [
+            "ESG",
+            "sustainability",
+            "accountability"
+          ],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-mis-governance-vendor-ai-governance",
+          "topicId": "im-mis-governance",
+          "title": "AI 供應商、共競與信任治理",
+          "keywords": [
+            "vendor risk",
+            "co-opetition",
+            "privacy by design"
+          ],
+          "status": "reviewed"
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 import { getAnswer } from '@/lib/answers'
-import { getImItPracticeStatus } from '@/lib/im-it-practice-status'
 import { parseQuestion } from '@/lib/question-parser'
+import { getQuestionReview } from '@/lib/question-review'
 import type { Question } from '@/types/content'
 import type { Answer } from '@/types/practice'
 
@@ -49,8 +49,7 @@ export function getQuestionPracticePolicy(
   )
   const responseType: QuestionResponseType = hasMatchingChoice ? 'multiple_choice' : 'open_ended'
 
-  const reviewStatus =
-    question.subjectId === 'im-it' ? getImItPracticeStatus(question.id) : undefined
+  const reviewStatus = getQuestionReview(question.id)
 
   let gradingMode: QuestionGradingMode
   if (reviewStatus?.status === 'disputed') {

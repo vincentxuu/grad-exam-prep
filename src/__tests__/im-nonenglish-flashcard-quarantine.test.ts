@@ -17,14 +17,23 @@ const subjectCounts = {
   'im-stat': 50,
 } as const
 
-describe('non-English IM flashcard quarantine', () => {
-  test('keeps legacy cards out of the production flashcard artifact', () => {
-    const quarantinedSubjects = new Set(Object.keys(subjectCounts))
-    const leaked = (flashcards as ContentItem[]).filter((card) =>
-      quarantinedSubjects.has(card.subjectId)
-    )
+const curatedCounts = {
+  'im-mis': 48,
+  'im-stat': 18,
+} as const
 
-    expect(leaked).toEqual([])
+describe('non-English IM flashcard quarantine', () => {
+  test('keeps IM-IT quarantined and publishes only rebuilt MIS/STAT decks', () => {
+    const cards = flashcards as ContentItem[]
+
+    expect(cards.filter((card) => card.subjectId === 'im-it')).toEqual([])
+    for (const [subjectId, count] of Object.entries(curatedCounts)) {
+      const subjectCards = cards.filter((card) => card.subjectId === subjectId)
+      expect(subjectCards).toHaveLength(count)
+      expect(subjectCards.every((card) => card.answer?.includes('【來源】'))).toBe(true)
+    }
+    expect(cards.some((card) => card.id === 'fc-im-mis-001')).toBe(false)
+    expect(cards.some((card) => card.id === 'fc-im-stat-001')).toBe(false)
   })
 
   test('preserves every removed card in the non-public archive', () => {

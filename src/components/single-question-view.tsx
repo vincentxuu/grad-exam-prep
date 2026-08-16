@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import { LookupSheet } from '@/components/lexicon/lookup-sheet'
 import { PaperContentWarning } from '@/components/paper-content-warning'
+import { QuestionSelfReviewRubric } from '@/components/question-self-review-rubric'
 import { QuestionText } from '@/components/question-text'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -13,11 +14,11 @@ import { Separator } from '@/components/ui/separator'
 import { useWordLookup } from '@/hooks/use-word-lookup'
 import { getAnswer } from '@/lib/answers'
 import { getPaperUrl } from '@/lib/content'
-import { getImItPracticeStatus } from '@/lib/im-it-practice-status'
 import { type DrillSearchParams, getDrillNavigation } from '@/lib/question-drill'
 import { getQuestionImages } from '@/lib/question-images'
 import { parseQuestion } from '@/lib/question-parser'
 import { getQuestionPracticePolicy } from '@/lib/question-practice-policy'
+import { getQuestionReview } from '@/lib/question-review'
 import { getUserId } from '@/lib/user-id'
 import type { Question } from '@/types/content'
 import type { PracticeMode } from '@/types/practice'
@@ -40,10 +41,12 @@ export function SingleQuestionView({
   const router = useRouter()
   const parsed = parseQuestion(question.text)
   const answerData = getAnswer(question.id)
-  const reviewStatus =
-    question.subjectId === 'im-it' ? getImItPracticeStatus(question.id) : undefined
+  const reviewStatus = getQuestionReview(question.id)
   const isDisputed = reviewStatus?.status === 'disputed'
   const practicePolicy = getQuestionPracticePolicy(question, answerData)
+  const referenceExplanation =
+    reviewStatus?.referenceExplanation ??
+    (reviewStatus?.allowLegacyExplanation === false ? undefined : answerData?.explanation)
   const isSelfReview = practicePolicy.gradingMode === 'self_review'
   const isReadOnly = practicePolicy.gradingMode === 'read_only'
   const canAutoGrade = practicePolicy.gradingMode === 'auto'
@@ -274,14 +277,24 @@ export function SingleQuestionView({
               </p>
             )}
 
-            {answerData?.explanation && !isDisputed && (
+            {referenceExplanation && !isDisputed && (
               <>
                 <Separator />
-                <p className="text-sm text-foreground leading-relaxed">{answerData.explanation}</p>
+                <p className="text-sm text-foreground leading-relaxed">{referenceExplanation}</p>
               </>
             )}
 
-            {!answerData && !isDisputed && (
+            {!referenceExplanation && !isDisputed && reviewStatus?.rubricItems.length ? (
+              <p className="text-pretty text-sm text-muted-foreground">
+                現有舊詳解尚未完成技術審核，因此不在此顯示；請依下方已覆核的作答 rubric 自評。
+              </p>
+            ) : null}
+
+            {!isDisputed && isSelfReview ? (
+              <QuestionSelfReviewRubric items={reviewStatus?.rubricItems ?? []} />
+            ) : null}
+
+            {!answerData && !isDisputed && reviewStatus?.rubricItems.length === 0 && (
               <p className="text-sm text-muted-foreground">此題尚無解析</p>
             )}
           </CardContent>

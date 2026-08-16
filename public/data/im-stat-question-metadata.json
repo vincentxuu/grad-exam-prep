@@ -1,0 +1,306 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "im-stat",
+  "status": "reviewed",
+  "examScope": {
+    "applicableYears": [
+      114,
+      115
+    ],
+    "notApplicableYears": [
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113
+    ],
+    "notApplicableReason": "106–113 學年度資訊管理學研究所招生筆試未設獨立統計考科；官方索引與各年完整 MIS 卷均無統計題，因此不是缺卷。",
+    "firstAppearance": "114 學年度統計題首次出現在資訊管理導論合科卷；115 學年度官方科名改為資訊管理導論與統計學。"
+  },
+  "totalQuestions": 5,
+  "questionPolicy": "只收錄 114–115 官方 PDF 的五題統計大題；106–113 明示不適用且不得合成題目。",
+  "questions": [
+    {
+      "questionId": "q-pp-im-stat-114-4",
+      "paperId": "pp-im-stat-114",
+      "year": 114,
+      "questionNumber": 4,
+      "originQuestionTextSha256": "ae4d119cdc07ed3657ba0cecf9f28ac25a3a9176c788ebf33d78159df4b878ee",
+      "evidencePages": [
+        2
+      ],
+      "responseType": "open_ended",
+      "gradingMode": "self_review",
+      "topicId": "im-stat-regression",
+      "primarySubtopicId": "im-stat-regression-multiple",
+      "conceptIds": [
+        "im-stat-regression-multiple",
+        "im-stat-regression-t-f-tests"
+      ],
+      "rubricItems": [
+        {
+          "id": "adjusted-r2",
+          "label": "Adjusted R2",
+          "criteria": [
+            "寫出 adjusted R² 公式並代入 n=440、k=3、R²=0.170，得到約 0.1643。"
+          ],
+          "points": 5
+        },
+        {
+          "id": "df-and-t",
+          "label": "Df And T",
+          "criteria": [
+            "算出殘差自由度 436，並以 7.1943/1.092 得截距 t≈6.59。"
+          ],
+          "points": 4
+        },
+        {
+          "id": "joint-f-test",
+          "label": "Joint F Test",
+          "criteria": [
+            "正確寫出 H0/H1，以 p=1.52×10^-17<0.05 拒絕 H0，且不宣稱因果。"
+          ],
+          "points": 6
+        }
+      ],
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false
+      },
+      "blockers": [
+        "非官方解答",
+        "申論題須依步驟 rubric 自評，不可用單一字母答案判分"
+      ]
+    },
+    {
+      "questionId": "q-pp-im-stat-114-5",
+      "paperId": "pp-im-stat-114",
+      "year": 114,
+      "questionNumber": 5,
+      "originQuestionTextSha256": "c6a05decf09dc1241094b48f718e5f75e86005e6af65b3328b879d4a023f4c54",
+      "evidencePages": [
+        3
+      ],
+      "responseType": "open_ended",
+      "gradingMode": "self_review",
+      "topicId": "im-stat-estimation",
+      "primarySubtopicId": "im-stat-estimation-unbiasedness",
+      "conceptIds": [
+        "im-stat-estimation-unbiasedness",
+        "im-stat-estimation-variance"
+      ],
+      "rubricItems": [
+        {
+          "id": "weight-sums",
+          "label": "Weight Sums",
+          "criteria": [
+            "利用 T 為 5 的倍數，算出 Σg(i)=3T、Σg(i)^2=11T。"
+          ],
+          "points": 6
+        },
+        {
+          "id": "unbiased",
+          "label": "Unbiased",
+          "criteria": [
+            "由期望值線性性證明 E[m]=μ。"
+          ],
+          "points": 6
+        },
+        {
+          "id": "variance",
+          "label": "Variance",
+          "criteria": [
+            "利用獨立性得到 Var(m)=11σ²/(9T)。"
+          ],
+          "points": 8
+        }
+      ],
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false
+      },
+      "blockers": [
+        "非官方解答",
+        "申論題須依步驟 rubric 自評，不可用單一字母答案判分"
+      ]
+    },
+    {
+      "questionId": "q-pp-im-stat-115-3",
+      "paperId": "pp-im-stat-115",
+      "year": 115,
+      "questionNumber": 3,
+      "originQuestionTextSha256": "db3f0ee574559da7cf8972c75da34abfb8efcaaa37aa561eb43722cf94e51d0f",
+      "evidencePages": [
+        2
+      ],
+      "responseType": "open_ended",
+      "gradingMode": "self_review",
+      "topicId": "im-stat-probability",
+      "primarySubtopicId": "im-stat-probability-joint-pmf",
+      "conceptIds": [
+        "im-stat-probability-joint-pmf",
+        "im-stat-probability-transformations"
+      ],
+      "rubricItems": [
+        {
+          "id": "normalization",
+          "label": "Normalization",
+          "criteria": [
+            "列出六個 support 點的權重並以總和 12 得 c=12。"
+          ],
+          "points": 5
+        },
+        {
+          "id": "transform",
+          "label": "Transform",
+          "criteria": [
+            "逐點映射到 (Y1,Y2)，合併重複像點，機率總和維持 1。"
+          ],
+          "points": 5
+        },
+        {
+          "id": "marginal",
+          "label": "Marginal",
+          "criteria": [
+            "對 Y2 加總，得到 Y1 的 -1、0、1、2 邊際機率。"
+          ],
+          "points": 5
+        }
+      ],
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false
+      },
+      "blockers": [
+        "非官方解答",
+        "申論題須依步驟 rubric 自評，不可用單一字母答案判分"
+      ]
+    },
+    {
+      "questionId": "q-pp-im-stat-115-4",
+      "paperId": "pp-im-stat-115",
+      "year": 115,
+      "questionNumber": 4,
+      "originQuestionTextSha256": "78264a0e038d282a1c870ede223e3d2a95631a0229a40b55ec1853c9a214713e",
+      "evidencePages": [
+        2
+      ],
+      "responseType": "open_ended",
+      "gradingMode": "self_review",
+      "topicId": "im-stat-estimation",
+      "primarySubtopicId": "im-stat-estimation-unbiasedness",
+      "conceptIds": [
+        "im-stat-estimation-unbiasedness",
+        "im-stat-estimation-variance",
+        "im-stat-estimation-efficiency"
+      ],
+      "rubricItems": [
+        {
+          "id": "unbiased",
+          "label": "Unbiased",
+          "criteria": [
+            "檢查三個估計量權重和皆為 1，因此皆不偏。"
+          ],
+          "points": 10
+        },
+        {
+          "id": "alpha",
+          "label": "Alpha",
+          "criteria": [
+            "建立 Var(m2)=σ²(1+α²)/(1+α)² 並得 α=1。"
+          ],
+          "points": 5
+        },
+        {
+          "id": "beta",
+          "label": "Beta",
+          "criteria": [
+            "建立 Var(m3)=σ²(5+β²)/(3+β)² 並得 β=5/3。"
+          ],
+          "points": 5
+        }
+      ],
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false
+      },
+      "blockers": [
+        "非官方解答",
+        "申論題須依步驟 rubric 自評，不可用單一字母答案判分"
+      ]
+    },
+    {
+      "questionId": "q-pp-im-stat-115-5",
+      "paperId": "pp-im-stat-115",
+      "year": 115,
+      "questionNumber": 5,
+      "originQuestionTextSha256": "7dc44356718f0d2c99ec300fb1ca2d6bd20ca86bdc018a7f6e4ea16a8977f6ef",
+      "evidencePages": [
+        2
+      ],
+      "responseType": "open_ended",
+      "gradingMode": "self_review",
+      "topicId": "im-stat-categorical",
+      "primarySubtopicId": "im-stat-categorical-contingency",
+      "conceptIds": [
+        "im-stat-categorical-contingency",
+        "im-stat-categorical-chi-square"
+      ],
+      "rubricItems": [
+        {
+          "id": "hypotheses",
+          "label": "Hypotheses",
+          "criteria": [
+            "H0 為購買與玩家等級獨立，H1 為不獨立。"
+          ],
+          "points": 3
+        },
+        {
+          "id": "expected",
+          "label": "Expected",
+          "criteria": [
+            "依 row total×column total/grand total 得六格期望次數。"
+          ],
+          "points": 4
+        },
+        {
+          "id": "statistic",
+          "label": "Statistic",
+          "criteria": [
+            "算出 χ²≈6.42、df=2。"
+          ],
+          "points": 5
+        },
+        {
+          "id": "decision",
+          "label": "Decision",
+          "criteria": [
+            "以 6.42>5.99 拒絕 H0，只陳述關聯、不推論因果。"
+          ],
+          "points": 3
+        }
+      ],
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false
+      },
+      "blockers": [
+        "非官方解答",
+        "申論題須依步驟 rubric 自評，不可用單一字母答案判分"
+      ]
+    }
+  ]
+}

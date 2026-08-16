@@ -20,6 +20,8 @@
     "check:im-nonenglish-flashcards": "node scripts/archive-im-nonenglish-flashcards.js",
     "generate:im-vocab": "node scripts/generate-im-vocab-flashcards.js --write",
     "check:im-vocab": "node scripts/generate-im-vocab-flashcards.js",
+    "generate:im-learning": "node scripts/build-im-mis-learning-artifacts.mjs --write && node scripts/build-im-stat-learning-artifacts.mjs --write && node scripts/sync-im-learning-subjects.mjs && node scripts/publish-im-curated-srs.mjs",
+    "check:im-learning": "node scripts/build-im-mis-learning-artifacts.mjs --check && node scripts/build-im-stat-learning-artifacts.mjs --check && node scripts/validate-im-mis-learning-artifacts.mjs && node scripts/validate-im-stat-learning-artifacts.mjs && node scripts/sync-im-learning-subjects.mjs --check && node scripts/publish-im-curated-srs.mjs --check",
     "check:papers": "node scripts/check-paper-integrity.js"
   },
   "dependencies": {

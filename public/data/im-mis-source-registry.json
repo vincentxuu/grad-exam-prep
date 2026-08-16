@@ -1,0 +1,208 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "im-mis",
+  "policy": "本站內容是依來源整理的原創摘要；時事案例與穩定理論分開，所有考古題解答均非官方。",
+  "sources": [
+    {
+      "id": "src-im-mis-laudon-17e",
+      "title": "Management Information Systems: Managing the Digital Firm, 17th Edition",
+      "author": "Kenneth C. Laudon; Jane P. Laudon",
+      "publisher": "Pearson",
+      "type": "book",
+      "url": "https://www.pearson.com/en-us/subject-catalog/p/management-information-systems-managing-the-digital-firm/P200000006204",
+      "scope": [
+        "strategy",
+        "platforms",
+        "enterprise systems",
+        "systems development"
+      ],
+      "usage": "用於 MIS 核心理論、企業系統、平台與 IT 投資的定義層。",
+      "status": "reviewed",
+      "review": {
+        "reviewedAt": "2026-08-16",
+        "reviewedBy": "independent-technical-review-2026-08-16",
+        "method": "核對來源類型、涵蓋範圍與本站實際引用用途；未把來源範圍外的主張視為已覆核。"
+      }
+    },
+    {
+      "id": "src-im-mis-scrum-guide-2020",
+      "title": "The Scrum Guide (2020)",
+      "author": "Ken Schwaber; Jeff Sutherland",
+      "publisher": "Scrum Guides",
+      "type": "official-guidance",
+      "url": "https://scrumguides.org/scrum-guide.html",
+      "scope": [
+        "Scrum roles",
+        "events",
+        "artifacts"
+      ],
+      "usage": "用於 Scrum 定義、accountabilities、events 與 artifacts；不支撐一般專案估算。",
+      "status": "reviewed",
+      "review": {
+        "reviewedAt": "2026-08-16",
+        "reviewedBy": "independent-technical-review-2026-08-16",
+        "method": "核對來源類型、涵蓋範圍與本站實際引用用途；未把來源範圍外的主張視為已覆核。"
+      }
+    },
+    {
+      "id": "src-im-mis-nist-ai-rmf",
+      "title": "Artificial Intelligence Risk Management Framework 1.0",
+      "author": "NIST",
+      "publisher": "NIST",
+      "type": "official-guidance",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "scope": [
+        "AI governance",
+        "trustworthiness",
+        "risk management"
+      ],
+      "usage": "用於 AI 系統設計、使用與評估的風險治理；不作特定模型績效保證。",
+      "status": "reviewed",
+      "review": {
+        "reviewedAt": "2026-08-16",
+        "reviewedBy": "independent-technical-review-2026-08-16",
+        "method": "核對來源類型、涵蓋範圍與本站實際引用用途；未把來源範圍外的主張視為已覆核。"
+      }
+    },
+    {
+      "id": "src-im-mis-nist-privacy-framework",
+      "title": "NIST Privacy Framework",
+      "author": "NIST",
+      "publisher": "NIST",
+      "type": "official-guidance",
+      "url": "https://www.nist.gov/privacy-framework",
+      "scope": [
+        "privacy risk",
+        "enterprise risk management"
+      ],
+      "usage": "用於 IoT、資料與供應商情境的 privacy risk 識別與管理。",
+      "status": "reviewed",
+      "review": {
+        "reviewedAt": "2026-08-16",
+        "reviewedBy": "independent-technical-review-2026-08-16",
+        "method": "核對來源類型、涵蓋範圍與本站實際引用用途；未把來源範圍外的主張視為已覆核。"
+      }
+    },
+    {
+      "id": "src-im-mis-apache-license-2",
+      "title": "Apache License, Version 2.0",
+      "author": "Apache Software Foundation",
+      "publisher": "Apache Software Foundation",
+      "type": "official-guidance",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "scope": [
+        "open-source licensing",
+        "patent grant",
+        "redistribution"
+      ],
+      "usage": "用於 Apache-2.0 條款與 permissive licensing；不概括所有 OSS 授權。",
+      "status": "reviewed",
+      "review": {
+        "reviewedAt": "2026-08-16",
+        "reviewedBy": "independent-technical-review-2026-08-16",
+        "method": "核對來源類型、涵蓋範圍與本站實際引用用途；未把來源範圍外的主張視為已覆核。"
+      }
+    },
+    {
+      "id": "src-im-mis-gpl-3",
+      "title": "GNU General Public License, version 3",
+      "author": "Free Software Foundation",
+      "publisher": "GNU Project",
+      "type": "official-guidance",
+      "url": "https://www.gnu.org/licenses/gpl-3.0.html",
+      "scope": [
+        "copyleft",
+        "source distribution",
+        "license obligations"
+      ],
+      "usage": "用於 GPLv3 copyleft 與散布義務；題目若未指定版本需在答案中揭露假設。",
+      "status": "reviewed",
+      "review": {
+        "reviewedAt": "2026-08-16",
+        "reviewedBy": "independent-technical-review-2026-08-16",
+        "method": "核對來源類型、涵蓋範圍與本站實際引用用途；未把來源範圍外的主張視為已覆核。"
+      }
+    },
+    {
+      "id": "src-im-mis-postgresql-sql",
+      "title": "PostgreSQL Documentation: The SQL Language",
+      "author": "PostgreSQL Global Development Group",
+      "publisher": "PostgreSQL",
+      "type": "documentation",
+      "url": "https://www.postgresql.org/docs/current/tutorial-sql.html",
+      "scope": [
+        "SQL",
+        "join",
+        "aggregate",
+        "grouping"
+      ],
+      "usage": "用於 SQL join、aggregate、GROUP BY 與查詢語意。",
+      "status": "reviewed",
+      "review": {
+        "reviewedAt": "2026-08-16",
+        "reviewedBy": "independent-technical-review-2026-08-16",
+        "method": "核對來源類型、涵蓋範圍與本站實際引用用途；未把來源範圍外的主張視為已覆核。"
+      }
+    },
+    {
+      "id": "src-im-mis-ifrs-sustainability",
+      "title": "IFRS Sustainability Disclosure Standards Navigator",
+      "author": "International Sustainability Standards Board",
+      "publisher": "IFRS Foundation",
+      "type": "official-guidance",
+      "url": "https://www.ifrs.org/issued-standards/ifrs-sustainability-standards-navigator/",
+      "scope": [
+        "sustainability disclosure",
+        "governance",
+        "climate"
+      ],
+      "usage": "用於永續相關風險與揭露的治理邊界；不把 ESG 簡化成單一分數。",
+      "status": "reviewed",
+      "review": {
+        "reviewedAt": "2026-08-16",
+        "reviewedBy": "independent-technical-review-2026-08-16",
+        "method": "核對來源類型、涵蓋範圍與本站實際引用用途；未把來源範圍外的主張視為已覆核。"
+      }
+    },
+    {
+      "id": "src-im-mis-nielsen-heuristics",
+      "title": "10 Usability Heuristics for User Interface Design",
+      "author": "Jakob Nielsen",
+      "publisher": "Nielsen Norman Group",
+      "type": "documentation",
+      "url": "https://www.nngroup.com/articles/ten-usability-heuristics/",
+      "scope": [
+        "usability",
+        "UI evaluation",
+        "feedback"
+      ],
+      "usage": "用於 UI heuristic evaluation；不取代使用者研究與 accessibility testing。",
+      "status": "reviewed",
+      "review": {
+        "reviewedAt": "2026-08-16",
+        "reviewedBy": "independent-technical-review-2026-08-16",
+        "method": "核對來源類型、涵蓋範圍與本站實際引用用途；未把來源範圍外的主張視為已覆核。"
+      }
+    },
+    {
+      "id": "src-im-mis-google-ml-rules",
+      "title": "Rules of Machine Learning: Best Practices for ML Engineering",
+      "author": "Martin Zinkevich",
+      "publisher": "Google for Developers",
+      "type": "documentation",
+      "url": "https://developers.google.com/machine-learning/guides/rules-of-ml",
+      "scope": [
+        "ML lifecycle",
+        "monitoring",
+        "deployment"
+      ],
+      "usage": "用於 ML 專案目標、資料管線、部署與監控的工程實務。",
+      "status": "reviewed",
+      "review": {
+        "reviewedAt": "2026-08-16",
+        "reviewedBy": "independent-technical-review-2026-08-16",
+        "method": "核對來源類型、涵蓋範圍與本站實際引用用途；未把來源範圍外的主張視為已覆核。"
+      }
+    }
+  ]
+}

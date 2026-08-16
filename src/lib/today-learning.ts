@@ -53,8 +53,7 @@ export function defaultRetestDate(date: Date): string {
 export function getPlanMonth(planStartDate: Date, now: Date, totalMonths: number): number {
   const start = taipeiYearMonth(planStartDate)
   const current = taipeiYearMonth(now)
-  const monthOffset =
-    (current.year - start.year) * 12 + current.month - start.month
+  const monthOffset = (current.year - start.year) * 12 + current.month - start.month
 
   return Math.min(totalMonths, Math.max(1, monthOffset + 1))
 }
@@ -90,4 +89,11 @@ export function recommendedNewCardLimit(dueCount: number): number {
   if (dueCount > 60) return 5
   if (dueCount > 30) return 10
   return 20
+}
+
+export function getTaskLearningHref(
+  examId: ExamId,
+  subjectTag?: string | null
+): string | undefined {
+  return subjectTag ? `/${examId}/subjects/${subjectTag}` : undefined
 }

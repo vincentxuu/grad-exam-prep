@@ -5,6 +5,8 @@ import {
   getImItSources,
   imItLearningCatalog,
 } from '@/lib/im-it-learning'
+import { imMisLearningCatalog } from '@/lib/im-mis-learning'
+import { imStatLearningCatalog } from '@/lib/im-stat-learning'
 import { getLearningCatalog, getLearningCatalogs } from '@/lib/learning-catalog'
 
 describe('learning catalog', () => {
@@ -26,7 +28,20 @@ describe('learning catalog', () => {
   test('keeps catalog lookup scoped by both exam and subject', () => {
     expect(getLearningCatalog('im', 'missing-subject')).toBeUndefined()
     expect(getLearningCatalog('cs', 'im-it')).toBeUndefined()
-    expect(getLearningCatalogs()).toEqual([imItLearningCatalog])
+    expect(getLearningCatalogs()).toEqual([
+      imItLearningCatalog,
+      imMisLearningCatalog,
+      imStatLearningCatalog,
+    ])
+  })
+
+  test.each([
+    ['im-mis', imMisLearningCatalog, 7],
+    ['im-stat', imStatLearningCatalog, 6],
+  ] as const)('registers the %s catalog and its reviewed lessons', (subjectId, catalog, count) => {
+    expect(getLearningCatalog('im', subjectId)).toBe(catalog)
+    expect(catalog.lessons).toHaveLength(count)
+    expect(catalog.lessons.every((lesson) => lesson.reviewStatus === 'reviewed')).toBe(true)
   })
 
   test('builds subject-relative lesson and practice routes', () => {

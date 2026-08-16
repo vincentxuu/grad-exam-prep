@@ -1,0 +1,917 @@
+{
+  "schemaVersion": 2,
+  "subjectId": "im-mis",
+  "status": "reviewed",
+  "contentPolicy": "原創 MIS 申論學習摘要；past-paper refs 為題面範圍證據，rubric 為非官方自評工具。",
+  "counts": {
+    "lessons": 7,
+    "coveredSubtopics": 24,
+    "coveredQuestions": 37
+  },
+  "lessons": [
+    {
+      "id": "lesson-im-mis-strategy-01",
+      "subtopicId": "im-mis-strategy-alignment-differentiation",
+      "coveredSubtopicIds": [
+        "im-mis-strategy-alignment-differentiation",
+        "im-mis-strategy-investment-value",
+        "im-mis-strategy-agility-environment",
+        "im-mis-strategy-organization-economics"
+      ],
+      "title": "IT 策略、價值與組織能力",
+      "summary": "以 9 題已核對題面為範圍證據，建立「定義→機制→條件與權衡→案例」的申論骨架。所有答案與 rubric 均為非官方自評材料，不提供單一標準論點或自動計分。",
+      "estimatedMinutes": 42,
+      "minimumPastPaperRefs": 9,
+      "learningObjectives": [
+        "用理論連結 IT 投資與企業績效",
+        "比較環境、能力與投資組合的取捨",
+        "以條件式論證提出策略建議"
+      ],
+      "learningScenario": {
+        "title": "家庭年度改造投資組合",
+        "hook": "有限預算要分給節能、維修與智慧化；同一套設備在不同家庭可能產生不同成果。",
+        "predict": "如果兩個組織買了同一套技術，結果會必然相同嗎？先列出至少兩個會改變結果的條件，再往下對照。",
+        "mapping": [
+          {
+            "everyday": "家人先說清楚要省電、改善安全或提升便利",
+            "technical": "IT-business alignment：投資要對準可衡量的策略目標"
+          },
+          {
+            "everyday": "同一台設備需要施工、使用習慣與維護能力",
+            "technical": "Complementary assets：流程、技能與治理共同決定 IT value"
+          },
+          {
+            "everyday": "把預算分成必要維修、成長投資與實驗項目",
+            "technical": "IT portfolio 依 benefit、risk 與 option value 組合"
+          },
+          {
+            "everyday": "環境快速變化時保留模組化與替換空間",
+            "technical": "Enterprise agility 與環境 dynamism 下的彈性能力"
+          }
+        ],
+        "boundary": "生活情境只協助排列角色、機制與權衡，不能取代理論定義、產業條件、資料證據或申論中的反方與限制。不同合理立場只要假設清楚、推論一致並有來源，都可由 rubric 自評。",
+        "examCues": [
+          "先界定題目名詞與分析單位。",
+          "再寫出因果機制，不只列工具名稱。",
+          "補上適用條件、風險與替代方案。",
+          "最後用題目案例驗證，並指出比喻或主張的限制。"
+        ]
+      },
+      "sections": [
+        {
+          "title": "策略對齊不是列一張採購單",
+          "body": "差異化、成本、創新等策略先定義目標客群與價值主張，再問資訊品質、流程速度或互動體驗如何支持它。",
+          "bullets": [
+            "IT 本身通常可被模仿",
+            "要寫出 capability 與 business outcome 的中介機制",
+            "KPI 必須能對應策略目標"
+          ]
+        },
+        {
+          "title": "IT value 依賴互補性資產",
+          "body": "相同系統在不同企業產生不同績效，常因流程再設計、管理承諾、資料品質、人員技能與吸收能力不同。",
+          "bullets": [
+            "不要把採購支出直接等同績效",
+            "短期導入成本與長期能力要分開",
+            "用 adoption、usage 與 process metric 追蹤"
+          ]
+        },
+        {
+          "title": "投資組合要同時看效益與風險",
+          "body": "NPV 等財務工具有助比較現金流，但策略平台、法遵、學習 option 與相依關係可能無法被單一數字完整表達。",
+          "bullets": [
+            "明列 tangible 與 intangible benefits",
+            "比較 dependency、uncertainty 與 downside",
+            "設定 stage gate 與停止條件"
+          ]
+        },
+        {
+          "title": "環境與組織邊界會改變答案",
+          "body": "IT 可降低市場交易成本，也可降低企業內部協調成本；究竟外包、擴張或縮小，要比較資產專屬性、監督成本與環境動態。",
+          "bullets": [
+            "交易成本與代理成本不是同義詞",
+            "高 dynamism 偏重感知與快速重組",
+            "結論應寫成條件句"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "如何回答「IT 策略、價值與組織能力」的比較題？",
+          "steps": [
+            "定義比較軸與分析單位。",
+            "各寫一條作用機制。",
+            "加入至少兩項條件或風險。",
+            "用案例與指標驗證。"
+          ],
+          "answer": "可接受的答案不只一種；關鍵是條件透明、概念正確、推論可追蹤，並能說明限制。"
+        },
+        {
+          "prompt": "題目要求提出建議時，如何避免只列 buzzwords？",
+          "steps": [
+            "先指出要改善的問題。",
+            "說明建議如何改變流程、資訊或激勵。",
+            "指定責任人與衡量方式。",
+            "補上失敗訊號與替代方案。"
+          ],
+          "answer": "建議應包含 action、mechanism、metric 與 risk，而不是只寫「導入 AI／雲端／平台」。"
+        }
+      ],
+      "commonPitfalls": [
+        "把工具名稱當成因果解釋",
+        "沒有說明分析層級與前提",
+        "只寫單一立場，不處理權衡",
+        "把非官方參考解析當唯一標準答案",
+        "引用時事卻沒有日期與來源邊界"
+      ],
+      "sourceRefs": [
+        "src-im-mis-laudon-17e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-106-1",
+        "q-pp-im-mis-107-2",
+        "q-pp-im-mis-108-1",
+        "q-pp-im-mis-109-1",
+        "q-pp-im-mis-109-2",
+        "q-pp-im-mis-111-1",
+        "q-pp-im-mis-112-2",
+        "q-pp-im-mis-113-2",
+        "q-pp-im-mis-114-2"
+      ],
+      "reviewStatus": "reviewed",
+      "evidenceNote": "考古題只證明此範圍曾出現；題面均為申論或開放題，答案非官方，課程練習採 rubric self-review，絕不進自動計分或完整模擬考。"
+    },
+    {
+      "id": "lesson-im-mis-platforms-01",
+      "subtopicId": "im-mis-platforms-sharing-economy",
+      "coveredSubtopicIds": [
+        "im-mis-platforms-sharing-economy",
+        "im-mis-platforms-multisided-pricing",
+        "im-mis-platforms-digital-markets-commerce"
+      ],
+      "title": "數位平台與電子商務",
+      "summary": "以 5 題已核對題面為範圍證據，建立「定義→機制→條件與權衡→案例」的申論骨架。所有答案與 rubric 均為非官方自評材料，不提供單一標準論點或自動計分。",
+      "estimatedMinutes": 42,
+      "minimumPastPaperRefs": 5,
+      "learningObjectives": [
+        "辨識平台各側與價值交換",
+        "分析網路效應、補貼與治理",
+        "把技術功能連回商業價值"
+      ],
+      "learningScenario": {
+        "title": "夜市主辦方的三邊市場",
+        "hook": "主辦方同時服務攤商、顧客與外送員，一側的加入會改變其他側的價值。",
+        "predict": "如果兩個組織買了同一套技術，結果會必然相同嗎？先列出至少兩個會改變結果的條件，再往下對照。",
+        "mapping": [
+          {
+            "everyday": "夜市同時服務攤商、顧客與外送員",
+            "technical": "Multi-sided platform 連結彼此相依的 participant groups"
+          },
+          {
+            "everyday": "顧客愈多，攤商加入的價值可能愈高",
+            "technical": "Cross-side network effect"
+          },
+          {
+            "everyday": "主辦方讓顧客免費、向攤商收服務費",
+            "technical": "Cross-subsidy 與 platform pricing"
+          },
+          {
+            "everyday": "評價、申訴與身分驗證維持交易信任",
+            "technical": "Platform governance 降低資訊不對稱與安全風險"
+          }
+        ],
+        "boundary": "生活情境只協助排列角色、機制與權衡，不能取代理論定義、產業條件、資料證據或申論中的反方與限制。不同合理立場只要假設清楚、推論一致並有來源，都可由 rubric 自評。",
+        "examCues": [
+          "先界定題目名詞與分析單位。",
+          "再寫出因果機制，不只列工具名稱。",
+          "補上適用條件、風險與替代方案。",
+          "最後用題目案例驗證，並指出比喻或主張的限制。"
+        ]
+      },
+      "sections": [
+        {
+          "title": "先畫出平台各側與交換內容",
+          "body": "平台不是單一買賣雙方。答題先列出每一側提供與取得的價值，再辨識誰對誰產生 network effect。",
+          "bullets": [
+            "區分 same-side 與 cross-side effect",
+            "使用者數多不必然等於高品質",
+            "標示資料、金流與責任流"
+          ]
+        },
+        {
+          "title": "定價取決於彈性與成長策略",
+          "body": "平台可能補貼價格敏感、能吸引另一側或品質關鍵的一側，再從其他側變現；補貼不是永遠免費。",
+          "bullets": [
+            "比較 price elasticity",
+            "注意 multi-homing 與 switching cost",
+            "交叉補貼要有可持續收入來源"
+          ]
+        },
+        {
+          "title": "數位市場降低部分成本也創造新摩擦",
+          "body": "搜尋、複製與配對成本可下降，但資訊不對稱、排序偏誤、假評價、隱私與 winner-take-most 風險仍需治理。",
+          "bullets": [
+            "透明度不等於資訊完全",
+            "演算法推薦會影響曝光分配",
+            "治理規則本身也會改變誘因"
+          ]
+        },
+        {
+          "title": "新技術要回到轉換機制",
+          "body": "直播、AI 推薦或 VR 只有在降低不確定性、改善互動或縮短決策流程時才形成商業價值。",
+          "bullets": [
+            "不要只列技術名詞",
+            "同時評估誤導、退貨與隱私",
+            "以 conversion、retention、complaint 等指標驗證"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "如何回答「數位平台與電子商務」的比較題？",
+          "steps": [
+            "定義比較軸與分析單位。",
+            "各寫一條作用機制。",
+            "加入至少兩項條件或風險。",
+            "用案例與指標驗證。"
+          ],
+          "answer": "可接受的答案不只一種；關鍵是條件透明、概念正確、推論可追蹤，並能說明限制。"
+        },
+        {
+          "prompt": "題目要求提出建議時，如何避免只列 buzzwords？",
+          "steps": [
+            "先指出要改善的問題。",
+            "說明建議如何改變流程、資訊或激勵。",
+            "指定責任人與衡量方式。",
+            "補上失敗訊號與替代方案。"
+          ],
+          "answer": "建議應包含 action、mechanism、metric 與 risk，而不是只寫「導入 AI／雲端／平台」。"
+        }
+      ],
+      "commonPitfalls": [
+        "把工具名稱當成因果解釋",
+        "沒有說明分析層級與前提",
+        "只寫單一立場，不處理權衡",
+        "把非官方參考解析當唯一標準答案",
+        "引用時事卻沒有日期與來源邊界"
+      ],
+      "sourceRefs": [
+        "src-im-mis-laudon-17e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-106-2",
+        "q-pp-im-mis-109-3",
+        "q-pp-im-mis-110-1",
+        "q-pp-im-mis-110-2",
+        "q-pp-im-mis-114-1"
+      ],
+      "reviewStatus": "reviewed",
+      "evidenceNote": "考古題只證明此範圍曾出現；題面均為申論或開放題，答案非官方，課程練習採 rubric self-review，絕不進自動計分或完整模擬考。"
+    },
+    {
+      "id": "lesson-im-mis-enterprise-01",
+      "subtopicId": "im-mis-enterprise-knowledge-management",
+      "coveredSubtopicIds": [
+        "im-mis-enterprise-knowledge-management",
+        "im-mis-enterprise-enterprise-processes",
+        "im-mis-enterprise-supply-chain"
+      ],
+      "title": "企業系統、流程與知識",
+      "summary": "以 2 題已核對題面為範圍證據，建立「定義→機制→條件與權衡→案例」的申論骨架。所有答案與 rubric 均為非官方自評材料，不提供單一標準論點或自動計分。",
+      "estimatedMinutes": 42,
+      "minimumPastPaperRefs": 2,
+      "learningObjectives": [
+        "比較知識管理策略",
+        "解釋企業流程與系統整合",
+        "分析供應鏈資訊流與需求訊號"
+      ],
+      "learningScenario": {
+        "title": "連鎖餐廳的中央廚房與知識網",
+        "hook": "標準配方適合存進手冊，特殊客訴則需要快速找到真正處理過的人。",
+        "predict": "如果兩個組織買了同一套技術，結果會必然相同嗎？先列出至少兩個會改變結果的條件，再往下對照。",
+        "mapping": [
+          {
+            "everyday": "標準配方寫進所有分店共用手冊",
+            "technical": "Codification 將可表達知識放入 repository 重用"
+          },
+          {
+            "everyday": "特殊客訴查專家名錄並直接討論",
+            "technical": "Personalization/connectivity 傳遞 tacit knowledge"
+          },
+          {
+            "everyday": "中央系統共用訂單、庫存與財務資料",
+            "technical": "ERP 與 process integration"
+          },
+          {
+            "everyday": "依實際訂單補貨，而非只靠預測先做",
+            "technical": "Pull supply chain 以 demand signal 驅動"
+          }
+        ],
+        "boundary": "生活情境只協助排列角色、機制與權衡，不能取代理論定義、產業條件、資料證據或申論中的反方與限制。不同合理立場只要假設清楚、推論一致並有來源，都可由 rubric 自評。",
+        "examCues": [
+          "先界定題目名詞與分析單位。",
+          "再寫出因果機制，不只列工具名稱。",
+          "補上適用條件、風險與替代方案。",
+          "最後用題目案例驗證，並指出比喻或主張的限制。"
+        ]
+      },
+      "sections": [
+        {
+          "title": "知識策略依可編碼性與工作型態選擇",
+          "body": "重複、標準化問題適合 codification；高度客製、脈絡依賴的問題需要 expert network 與互動。",
+          "bullets": [
+            "Tacit knowledge 不代表完全不能記錄",
+            "Repository 仍需版本與品質治理",
+            "兩種策略可以互補"
+          ]
+        },
+        {
+          "title": "企業系統整合資料也標準化流程",
+          "body": "ERP 以共享資料與跨部門流程降低重複輸入和資訊延遲，但導入也可能帶來僵化、轉換成本與 fit-gap。",
+          "bullets": [
+            "整合不等於所有流程相同",
+            "先辨識 master data 與責任 owner",
+            "客製化會增加升級成本"
+          ]
+        },
+        {
+          "title": "流程改造不能只把紙本搬上線",
+          "body": "BPR 重新檢查活動、責任與資訊流；若舊流程不合理，單純 automation 只會更快地複製浪費。",
+          "bullets": [
+            "區分 automation 與 transformation",
+            "檢查 handoff 與等待",
+            "搭配 change management"
+          ]
+        },
+        {
+          "title": "Push 與 pull 是需求訊號的取捨",
+          "body": "Push 依預測提前生產，pull 依實際需求觸發；產品前置期、波動、缺貨成本與資訊共享決定組合。",
+          "bullets": [
+            "不是所有產業都能純 pull",
+            "延遲與 batch 會放大 bullwhip effect",
+            "比較 inventory 與 service level"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "如何回答「企業系統、流程與知識」的比較題？",
+          "steps": [
+            "定義比較軸與分析單位。",
+            "各寫一條作用機制。",
+            "加入至少兩項條件或風險。",
+            "用案例與指標驗證。"
+          ],
+          "answer": "可接受的答案不只一種；關鍵是條件透明、概念正確、推論可追蹤，並能說明限制。"
+        },
+        {
+          "prompt": "題目要求提出建議時，如何避免只列 buzzwords？",
+          "steps": [
+            "先指出要改善的問題。",
+            "說明建議如何改變流程、資訊或激勵。",
+            "指定責任人與衡量方式。",
+            "補上失敗訊號與替代方案。"
+          ],
+          "answer": "建議應包含 action、mechanism、metric 與 risk，而不是只寫「導入 AI／雲端／平台」。"
+        }
+      ],
+      "commonPitfalls": [
+        "把工具名稱當成因果解釋",
+        "沒有說明分析層級與前提",
+        "只寫單一立場，不處理權衡",
+        "把非官方參考解析當唯一標準答案",
+        "引用時事卻沒有日期與來源邊界"
+      ],
+      "sourceRefs": [
+        "src-im-mis-laudon-17e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-107-1",
+        "q-pp-im-mis-112-1"
+      ],
+      "reviewStatus": "reviewed",
+      "evidenceNote": "考古題只證明此範圍曾出現；題面均為申論或開放題，答案非官方，課程練習採 rubric self-review，絕不進自動計分或完整模擬考。"
+    },
+    {
+      "id": "lesson-im-mis-data-ai-01",
+      "subtopicId": "im-mis-data-ai-data-lifecycle",
+      "coveredSubtopicIds": [
+        "im-mis-data-ai-data-lifecycle",
+        "im-mis-data-ai-model-evaluation-fairness",
+        "im-mis-data-ai-analytics-forecasting",
+        "im-mis-data-ai-ai-operations-governance"
+      ],
+      "title": "資料、分析與負責任 AI",
+      "summary": "以 9 題已核對題面為範圍證據，建立「定義→機制→條件與權衡→案例」的申論骨架。所有答案與 rubric 均為非官方自評材料，不提供單一標準論點或自動計分。",
+      "estimatedMinutes": 42,
+      "minimumPastPaperRefs": 9,
+      "learningObjectives": [
+        "描述資料與模型生命週期",
+        "選擇合適的評估方法",
+        "分析 AI 專案的治理與維運風險"
+      ],
+      "learningScenario": {
+        "title": "餐廳從備料到持續改菜單",
+        "hook": "資料像食材，需要驗收、加工、試吃、上線監控，環境改變後還要重新檢查。",
+        "predict": "如果兩個組織買了同一套技術，結果會必然相同嗎？先列出至少兩個會改變結果的條件，再往下對照。",
+        "mapping": [
+          {
+            "everyday": "採買前先確認菜單與顧客需求",
+            "technical": "先定義 ML use case、decision 與 success metric"
+          },
+          {
+            "everyday": "食材驗收、清洗與標示來源",
+            "technical": "Data quality、label provenance 與 governance"
+          },
+          {
+            "everyday": "試菜分成調整配方與最後驗收",
+            "technical": "Validation/test separation 與 leakage control"
+          },
+          {
+            "everyday": "開店後監看退餐、客群與季節變化",
+            "technical": "Production monitoring、data/concept drift 與 retraining"
+          }
+        ],
+        "boundary": "生活情境只協助排列角色、機制與權衡，不能取代理論定義、產業條件、資料證據或申論中的反方與限制。不同合理立場只要假設清楚、推論一致並有來源，都可由 rubric 自評。",
+        "examCues": [
+          "先界定題目名詞與分析單位。",
+          "再寫出因果機制，不只列工具名稱。",
+          "補上適用條件、風險與替代方案。",
+          "最後用題目案例驗證，並指出比喻或主張的限制。"
+        ]
+      },
+      "sections": [
+        {
+          "title": "資料生命週期從決策問題開始",
+          "body": "收集大量資料前要先界定模型輸出會支持哪個決策、錯誤成本與可用回饋，否則容易得到無法部署的高分模型。",
+          "bullets": [
+            "定義 unit of analysis",
+            "記錄資料來源與 consent",
+            "先建立簡單 baseline"
+          ]
+        },
+        {
+          "title": "評估指標要符合任務與風險",
+          "body": "分類、預測與社群偵測需要不同指標；離線表現、穩定性、公平與業務結果也不能用單一 accuracy 取代。",
+          "bullets": [
+            "保留真正未參與調整的 test set",
+            "檢查 subgroup performance",
+            "無 ground truth 時揭露 proxy 限制"
+          ]
+        },
+        {
+          "title": "部署後模型仍是持續運作的系統",
+          "body": "監控輸入分布、預測品質、延遲、人工轉接與異常，設定 retrain、rollback 與 version control。",
+          "bullets": [
+            "Data drift 不必然造成 concept drift",
+            "新模型需 shadow/A-B evaluation",
+            "保留 audit trail"
+          ]
+        },
+        {
+          "title": "AI 治理連結責任與控制",
+          "body": "FOMO、供應商依賴與模糊 KPI 常讓專案失敗；NIST AI RMF 的風險管理可協助把 trustworthiness 放進設計、使用與評估。",
+          "bullets": [
+            "先列 use-case owner",
+            "辨識 harmed stakeholders",
+            "設定 human escalation 與退出機制"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "如何回答「資料、分析與負責任 AI」的比較題？",
+          "steps": [
+            "定義比較軸與分析單位。",
+            "各寫一條作用機制。",
+            "加入至少兩項條件或風險。",
+            "用案例與指標驗證。"
+          ],
+          "answer": "可接受的答案不只一種；關鍵是條件透明、概念正確、推論可追蹤，並能說明限制。"
+        },
+        {
+          "prompt": "題目要求提出建議時，如何避免只列 buzzwords？",
+          "steps": [
+            "先指出要改善的問題。",
+            "說明建議如何改變流程、資訊或激勵。",
+            "指定責任人與衡量方式。",
+            "補上失敗訊號與替代方案。"
+          ],
+          "answer": "建議應包含 action、mechanism、metric 與 risk，而不是只寫「導入 AI／雲端／平台」。"
+        }
+      ],
+      "commonPitfalls": [
+        "把工具名稱當成因果解釋",
+        "沒有說明分析層級與前提",
+        "只寫單一立場，不處理權衡",
+        "把非官方參考解析當唯一標準答案",
+        "引用時事卻沒有日期與來源邊界"
+      ],
+      "sourceRefs": [
+        "src-im-mis-google-ml-rules",
+        "src-im-mis-nist-privacy-framework",
+        "src-im-mis-nist-ai-rmf",
+        "src-im-mis-laudon-17e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-108-2",
+        "q-pp-im-mis-108-3",
+        "q-pp-im-mis-108-4",
+        "q-pp-im-mis-109-4",
+        "q-pp-im-mis-110-4",
+        "q-pp-im-mis-112-3",
+        "q-pp-im-mis-113-1",
+        "q-pp-im-mis-113-3",
+        "q-pp-im-mis-115-1"
+      ],
+      "reviewStatus": "reviewed",
+      "evidenceNote": "考古題只證明此範圍曾出現；題面均為申論或開放題，答案非官方，課程練習採 rubric self-review，絕不進自動計分或完整模擬考。"
+    },
+    {
+      "id": "lesson-im-mis-development-01",
+      "subtopicId": "im-mis-development-acquisition-estimation",
+      "coveredSubtopicIds": [
+        "im-mis-development-acquisition-estimation",
+        "im-mis-development-agile-delivery",
+        "im-mis-development-testing-quality",
+        "im-mis-development-requirements-ux"
+      ],
+      "title": "系統取得、敏捷交付與 UX",
+      "summary": "以 6 題已核對題面為範圍證據，建立「定義→機制→條件與權衡→案例」的申論骨架。所有答案與 rubric 均為非官方自評材料，不提供單一標準論點或自動計分。",
+      "estimatedMinutes": 42,
+      "minimumPastPaperRefs": 6,
+      "learningObjectives": [
+        "比較 build、buy、outsource 與 SaaS",
+        "解釋敏捷角色與產出物",
+        "用測試、需求與 UX 降低交付風險"
+      ],
+      "learningScenario": {
+        "title": "餐廳裝修與試營運",
+        "hook": "自建、採購或委外各有責任邊界；開幕前要逐層測試設備、動線與顧客體驗。",
+        "predict": "如果兩個組織買了同一套技術，結果會必然相同嗎？先列出至少兩個會改變結果的條件，再往下對照。",
+        "mapping": [
+          {
+            "everyday": "決定自行施工、買套裝或委託承包商",
+            "technical": "Build/buy/outsource/SaaS sourcing decision"
+          },
+          {
+            "everyday": "本週施工清單與每天同步阻礙",
+            "technical": "Sprint Backlog 與 Daily Scrum"
+          },
+          {
+            "everyday": "先測單一設備，再測整體動線與店主驗收",
+            "technical": "Unit、integration、system/UAT testing"
+          },
+          {
+            "everyday": "顧客試走、觀察迷路與等待點",
+            "technical": "User-centered design 與 usability evaluation"
+          }
+        ],
+        "boundary": "生活情境只協助排列角色、機制與權衡，不能取代理論定義、產業條件、資料證據或申論中的反方與限制。不同合理立場只要假設清楚、推論一致並有來源，都可由 rubric 自評。",
+        "examCues": [
+          "先界定題目名詞與分析單位。",
+          "再寫出因果機制，不只列工具名稱。",
+          "補上適用條件、風險與替代方案。",
+          "最後用題目案例驗證，並指出比喻或主張的限制。"
+        ]
+      },
+      "sections": [
+        {
+          "title": "系統取得先比較策略與內部能力",
+          "body": "自行開發提供控制與客製，套裝/SaaS 加快導入，委外轉移部分執行但不轉移需求、風險與治理責任。",
+          "bullets": [
+            "比較 strategic uniqueness",
+            "估算 lifecycle cost",
+            "保留 vendor exit plan"
+          ]
+        },
+        {
+          "title": "Scrum 是經驗式框架，不是職稱清單",
+          "body": "Product Owner 對價值排序負責，Scrum Master 協助框架有效運作，Developers 對可用 Increment 負責；events 支援 inspection/adaptation。",
+          "bullets": [
+            "Daily Scrum 不是主管點名",
+            "Sprint Backlog 由 Developers 管理",
+            "Done 必須有品質定義"
+          ]
+        },
+        {
+          "title": "測試層級回答不同風險",
+          "body": "Unit 看局部行為，integration 看介面，system 看端到端，UAT 看業務可接受性，usability 看使用者完成任務的困難。",
+          "bullets": [
+            "測試通過不代表需求正確",
+            "自動化適合重複 regression",
+            "缺陷成本與 feedback timing 有關"
+          ]
+        },
+        {
+          "title": "需求與估算隨資訊增加而細化",
+          "body": "User story 強調角色、目標與價值；use case 詳述 actor 與互動流程。早期可用 T-shirt sizing，資訊較完整後再用功能點或模型。",
+          "bullets": [
+            "估算不是承諾",
+            "列出 uncertainty range",
+            "保留 acceptance criteria 與例外流程"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "如何回答「系統取得、敏捷交付與 UX」的比較題？",
+          "steps": [
+            "定義比較軸與分析單位。",
+            "各寫一條作用機制。",
+            "加入至少兩項條件或風險。",
+            "用案例與指標驗證。"
+          ],
+          "answer": "可接受的答案不只一種；關鍵是條件透明、概念正確、推論可追蹤，並能說明限制。"
+        },
+        {
+          "prompt": "題目要求提出建議時，如何避免只列 buzzwords？",
+          "steps": [
+            "先指出要改善的問題。",
+            "說明建議如何改變流程、資訊或激勵。",
+            "指定責任人與衡量方式。",
+            "補上失敗訊號與替代方案。"
+          ],
+          "answer": "建議應包含 action、mechanism、metric 與 risk，而不是只寫「導入 AI／雲端／平台」。"
+        }
+      ],
+      "commonPitfalls": [
+        "把工具名稱當成因果解釋",
+        "沒有說明分析層級與前提",
+        "只寫單一立場，不處理權衡",
+        "把非官方參考解析當唯一標準答案",
+        "引用時事卻沒有日期與來源邊界"
+      ],
+      "sourceRefs": [
+        "src-im-mis-laudon-17e",
+        "src-im-mis-scrum-guide-2020",
+        "src-im-mis-nielsen-heuristics"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-107-3",
+        "q-pp-im-mis-110-3",
+        "q-pp-im-mis-111-3",
+        "q-pp-im-mis-111-4",
+        "q-pp-im-mis-112-4",
+        "q-pp-im-mis-114-3"
+      ],
+      "reviewStatus": "reviewed",
+      "evidenceNote": "考古題只證明此範圍曾出現；題面均為申論或開放題，答案非官方，課程練習採 rubric self-review，絕不進自動計分或完整模擬考。"
+    },
+    {
+      "id": "lesson-im-mis-data-architecture-01",
+      "subtopicId": "im-mis-data-architecture-relational-nosql",
+      "coveredSubtopicIds": [
+        "im-mis-data-architecture-relational-nosql",
+        "im-mis-data-architecture-sql-schema",
+        "im-mis-data-architecture-oss-licensing"
+      ],
+      "title": "資料架構與數位基礎設施",
+      "summary": "以 3 題已核對題面為範圍證據，建立「定義→機制→條件與權衡→案例」的申論骨架。所有答案與 rubric 均為非官方自評材料，不提供單一標準論點或自動計分。",
+      "estimatedMinutes": 42,
+      "minimumPastPaperRefs": 3,
+      "learningObjectives": [
+        "比較關聯式與 NoSQL 的取捨",
+        "撰寫可驗證的 SQL 查詢",
+        "分析開源授權與技術 sourcing"
+      ],
+      "learningScenario": {
+        "title": "圖書館的目錄、書架與借閱規則",
+        "hook": "固定欄位便於一致查詢，彈性收藏便於擴充，但仍需說清一致性與授權義務。",
+        "predict": "如果兩個組織買了同一套技術，結果會必然相同嗎？先列出至少兩個會改變結果的條件，再往下對照。",
+        "mapping": [
+          {
+            "everyday": "借閱資料使用固定欄位與關聯規則",
+            "technical": "Relational schema、keys 與 integrity constraints"
+          },
+          {
+            "everyday": "用目錄連接書籍、館藏與分館",
+            "technical": "SQL JOIN 沿 foreign-key relationships 組合資料"
+          },
+          {
+            "everyday": "先分館統計再篩選至少兩冊",
+            "technical": "GROUP BY、aggregate 與 HAVING"
+          },
+          {
+            "everyday": "採用共享工具前先讀散布與修改條款",
+            "technical": "OSS license obligations 與 sourcing governance"
+          }
+        ],
+        "boundary": "生活情境只協助排列角色、機制與權衡，不能取代理論定義、產業條件、資料證據或申論中的反方與限制。不同合理立場只要假設清楚、推論一致並有來源，都可由 rubric 自評。",
+        "examCues": [
+          "先界定題目名詞與分析單位。",
+          "再寫出因果機制，不只列工具名稱。",
+          "補上適用條件、風險與替代方案。",
+          "最後用題目案例驗證，並指出比喻或主張的限制。"
+        ]
+      },
+      "sections": [
+        {
+          "title": "關聯式與 NoSQL 不是一致性有無的二分法",
+          "body": "選擇要看資料模型、transaction boundary、query pattern、scale、availability 與一致性要求；不同 NoSQL 系統也有不同保證。",
+          "bullets": [
+            "避免宣稱 NoSQL 一律不支援 ACID",
+            "Schema flexibility 仍需 validation",
+            "先寫出 workload 與 failure assumptions"
+          ]
+        },
+        {
+          "title": "SQL 從關係與粒度開始",
+          "body": "先決定輸出每列代表什麼，再沿 PK/FK JOIN；aggregate 前確認 grouping grain，row filter 用 WHERE，group filter 用 HAVING。",
+          "bullets": [
+            "JOIN 條件漏寫會產生 Cartesian product",
+            "非 aggregate 欄位需符合 grouping 規則",
+            "ORDER BY 明示方向"
+          ]
+        },
+        {
+          "title": "可擴展性同時有技術與治理成本",
+          "body": "Horizontal scale 會引入 partition、replication、consistency 與 operation complexity；vertical scale 也有容量與單點限制。",
+          "bullets": [
+            "比較讀寫比例與 hotspot",
+            "納入 backup/restore",
+            "評估團隊操作能力"
+          ]
+        },
+        {
+          "title": "開源不等於沒有義務",
+          "body": "GPL 與 Apache-2.0 的散布、notice、source 與 patent 條款不同；回答前要說明版本、使用方式與是否散布。",
+          "bullets": [
+            "不要用「傳染性」取代精確條款",
+            "SaaS/內部使用與 distribution 要分開",
+            "法律判斷需由合格專業人士確認"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "如何回答「資料架構與數位基礎設施」的比較題？",
+          "steps": [
+            "定義比較軸與分析單位。",
+            "各寫一條作用機制。",
+            "加入至少兩項條件或風險。",
+            "用案例與指標驗證。"
+          ],
+          "answer": "可接受的答案不只一種；關鍵是條件透明、概念正確、推論可追蹤，並能說明限制。"
+        },
+        {
+          "prompt": "題目要求提出建議時，如何避免只列 buzzwords？",
+          "steps": [
+            "先指出要改善的問題。",
+            "說明建議如何改變流程、資訊或激勵。",
+            "指定責任人與衡量方式。",
+            "補上失敗訊號與替代方案。"
+          ],
+          "answer": "建議應包含 action、mechanism、metric 與 risk，而不是只寫「導入 AI／雲端／平台」。"
+        }
+      ],
+      "commonPitfalls": [
+        "把工具名稱當成因果解釋",
+        "沒有說明分析層級與前提",
+        "只寫單一立場，不處理權衡",
+        "把非官方參考解析當唯一標準答案",
+        "引用時事卻沒有日期與來源邊界"
+      ],
+      "sourceRefs": [
+        "src-im-mis-laudon-17e",
+        "src-im-mis-postgresql-sql",
+        "src-im-mis-apache-license-2",
+        "src-im-mis-gpl-3"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-106-3",
+        "q-pp-im-mis-106-4",
+        "q-pp-im-mis-107-4"
+      ],
+      "reviewStatus": "reviewed",
+      "evidenceNote": "考古題只證明此範圍曾出現；題面均為申論或開放題，答案非官方，課程練習採 rubric self-review，絕不進自動計分或完整模擬考。"
+    },
+    {
+      "id": "lesson-im-mis-governance-01",
+      "subtopicId": "im-mis-governance-privacy-security",
+      "coveredSubtopicIds": [
+        "im-mis-governance-privacy-security",
+        "im-mis-governance-esg-accountability",
+        "im-mis-governance-vendor-ai-governance"
+      ],
+      "title": "數位治理、隱私與永續",
+      "summary": "以 3 題已核對題面為範圍證據，建立「定義→機制→條件與權衡→案例」的申論骨架。所有答案與 rubric 均為非官方自評材料，不提供單一標準論點或自動計分。",
+      "estimatedMinutes": 42,
+      "minimumPastPaperRefs": 3,
+      "learningObjectives": [
+        "辨識隱私與責任風險",
+        "把 ESG 主張連到可驗證機制",
+        "分析供應商依賴、信任與治理控制"
+      ],
+      "learningScenario": {
+        "title": "社區智慧門禁的責任會議",
+        "hook": "便利功能牽涉住戶資料、供應商依賴、能源與問責，不能只看技術能不能做。",
+        "predict": "如果兩個組織買了同一套技術，結果會必然相同嗎？先列出至少兩個會改變結果的條件，再往下對照。",
+        "mapping": [
+          {
+            "everyday": "門禁只蒐集完成目的所需的最少資料",
+            "technical": "Data minimization 與 purpose limitation"
+          },
+          {
+            "everyday": "住戶知道誰能看資料並可申訴",
+            "technical": "Transparency、accountability 與 redress"
+          },
+          {
+            "everyday": "供應商故障時仍有切換與資料取回方案",
+            "technical": "Third-party dependency、portability 與 exit control"
+          },
+          {
+            "everyday": "定期揭露能源、事件與改善措施",
+            "technical": "Sustainability disclosure 與 governance oversight"
+          }
+        ],
+        "boundary": "生活情境只協助排列角色、機制與權衡，不能取代理論定義、產業條件、資料證據或申論中的反方與限制。不同合理立場只要假設清楚、推論一致並有來源，都可由 rubric 自評。",
+        "examCues": [
+          "先界定題目名詞與分析單位。",
+          "再寫出因果機制，不只列工具名稱。",
+          "補上適用條件、風險與替代方案。",
+          "最後用題目案例驗證，並指出比喻或主張的限制。"
+        ]
+      },
+      "sections": [
+        {
+          "title": "Privacy 是組織風險管理問題",
+          "body": "IoT 感測器可持續蒐集位置、行為與環境資料；治理要處理目的、最小化、保存、存取、分享與個人權利。",
+          "bullets": [
+            "Consent 不一定足以處理所有 power imbalance",
+            "辨識 inference 與 secondary use",
+            "設定 retention/deletion controls"
+          ]
+        },
+        {
+          "title": "ESG 要從口號落到治理與揭露",
+          "body": "Environmental、Social、Governance 各自包含不同 impact、risk 與 oversight；IT 可改善量測與透明，也可能增加能源、監控與 exclusion 風險。",
+          "bullets": [
+            "說明 metric boundary",
+            "避免把 IT 投資必然寫成正向",
+            "揭露方法、假設與責任人"
+          ]
+        },
+        {
+          "title": "供應商策略同時有速度與依賴",
+          "body": "外部 foundation model 可縮短 time-to-market，但帶來 roadmap、成本、資料、可攜性與競爭者依賴。",
+          "bullets": [
+            "合約不是唯一控制",
+            "需要 architecture isolation 與 fallback",
+            "監控 vendor/model changes"
+          ]
+        },
+        {
+          "title": "Trustworthiness 需要全生命週期控制",
+          "body": "Privacy by design、human escalation、audit log、incident response 與透明溝通共同維持信任；不能只靠品牌聲明。",
+          "bullets": [
+            "對高風險決策提高人工覆核",
+            "把受影響者納入評估",
+            "定期重估風險與退出條件"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "如何回答「數位治理、隱私與永續」的比較題？",
+          "steps": [
+            "定義比較軸與分析單位。",
+            "各寫一條作用機制。",
+            "加入至少兩項條件或風險。",
+            "用案例與指標驗證。"
+          ],
+          "answer": "可接受的答案不只一種；關鍵是條件透明、概念正確、推論可追蹤，並能說明限制。"
+        },
+        {
+          "prompt": "題目要求提出建議時，如何避免只列 buzzwords？",
+          "steps": [
+            "先指出要改善的問題。",
+            "說明建議如何改變流程、資訊或激勵。",
+            "指定責任人與衡量方式。",
+            "補上失敗訊號與替代方案。"
+          ],
+          "answer": "建議應包含 action、mechanism、metric 與 risk，而不是只寫「導入 AI／雲端／平台」。"
+        }
+      ],
+      "commonPitfalls": [
+        "把工具名稱當成因果解釋",
+        "沒有說明分析層級與前提",
+        "只寫單一立場，不處理權衡",
+        "把非官方參考解析當唯一標準答案",
+        "引用時事卻沒有日期與來源邊界"
+      ],
+      "sourceRefs": [
+        "src-im-mis-nist-privacy-framework",
+        "src-im-mis-ifrs-sustainability",
+        "src-im-mis-nist-ai-rmf"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-111-2",
+        "q-pp-im-mis-113-4",
+        "q-pp-im-mis-115-2"
+      ],
+      "reviewStatus": "reviewed",
+      "evidenceNote": "考古題只證明此範圍曾出現；題面均為申論或開放題，答案非官方，課程練習採 rubric self-review，絕不進自動計分或完整模擬考。"
+    }
+  ]
+}

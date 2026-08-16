@@ -15,13 +15,14 @@ interface FlashcardResponse {
 }
 
 describe('GET /api/flashcards quarantine behavior', () => {
-  test('does not serve quarantined IM subjects for practice', async () => {
+  test('serves rebuilt MIS/STAT decks while keeping IM-IT quarantined', async () => {
     const response = GET(new NextRequest('http://localhost/api/flashcards?exam=im'))
     const body = (await response.json()) as FlashcardResponse
-    const blocked = new Set(['im-it', 'im-mis', 'im-stat'])
 
     expect(response.status).toBe(200)
-    expect(body.cards.some((card) => blocked.has(card.subjectId))).toBe(false)
+    expect(body.cards.some((card) => card.subjectId === 'im-it')).toBe(false)
+    expect(body.cards.filter((card) => card.subjectId === 'im-mis')).toHaveLength(48)
+    expect(body.cards.filter((card) => card.subjectId === 'im-stat')).toHaveLength(18)
   })
 
   test('retains archived IDs so SRS cleanup does not erase existing history', async () => {
@@ -32,6 +33,8 @@ describe('GET /api/flashcards quarantine behavior', () => {
     expect(body.allCardIds).toContain('fc-im-it-001')
     expect(body.allCardIds).toContain('fc-im-mis-001')
     expect(body.allCardIds).toContain('fc-im-stat-001')
+    expect(body.allCardIds).toContain('fc-im-mis-strategy-alignment-differentiation-definition')
+    expect(body.allCardIds).toContain('fc-im-stat-expectation-linearity')
     expect(new Set(body.allCardIds).size).toBe(body.allCardIds.length)
   })
 
