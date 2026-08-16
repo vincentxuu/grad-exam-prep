@@ -62,7 +62,8 @@ export async function GET(request: NextRequest) {
       cached: { entry: true, personal: false },
     }
     return NextResponse.json(body)
-  } catch {
+  } catch (err) {
+    console.error('[lexicon GET]', err)
     return NextResponse.json({ error: '伺服器錯誤' }, { status: 500 })
   }
 }
@@ -87,7 +88,8 @@ export async function POST(request: NextRequest) {
   let env: Env
   try {
     env = await getEnv()
-  } catch {
+  } catch (err) {
+    console.error('[lexicon POST getEnv]', err)
     return NextResponse.json({ error: '伺服器錯誤' }, { status: 500 })
   }
 
@@ -161,6 +163,7 @@ export async function POST(request: NextRequest) {
         { status: 429 }
       )
     }
+    console.error('[lexicon POST]', err)
     return NextResponse.json({ error: '伺服器錯誤' }, { status: 500 })
   }
 }
