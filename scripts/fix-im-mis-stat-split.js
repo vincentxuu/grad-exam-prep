@@ -5,8 +5,8 @@
 // 修正方式：
 //   1. 114/115 年的題目帶有卷內 section 標記（[統計學] / [Section: 統計 (Statistics)]），
 //      依標記把題目留在正確的科目，刪掉錯置的那一份，並把標記從題目內文移除。
-//   2. 106–113 年抽出來的題目全是 MIS（配分加總已達 100），統計卷應為另一份未收錄的 PDF，
-//      因此 im-stat 的複本整批刪除，past-papers 的來源標記一併更正為未上架。
+//   2. 106–113 年尚未設統計筆試科目，抽出的題目全是 MIS（配分加總已達 100），
+//      因此 im-stat 的複本整批刪除，past-papers 的來源標記一併更正為不適用。
 //   3. answers.json / question-images.json 中指向被刪題目的項目一併清除。
 
 const fs = require('node:fs')
@@ -121,10 +121,10 @@ const nextPapersText = papersText
     if (statYearsWithQuestions.has(paper.year)) {
       paper.note = '與資訊管理導論合併為同一份考卷'
     } else {
-      // 該年度的合科 PDF 內只有 MIS 題目，統計卷另有其卷但尚未取得
+      // 106–113 年官方索引沒有統計筆試科目，不存在可另外取得的統計卷
       paper.url = null
       paper.verified = false
-      paper.note = '統計卷 PDF 尚未取得（該年度資管導論卷內未含統計題）'
+      paper.note = '該年度招生筆試尚未設統計考科，因此沒有統計題卷（統計自 114 學年度起納入）'
     }
     return line.slice(0, start) + inlineJson(paper) + trailing
   })

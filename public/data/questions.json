@@ -17368,7 +17368,10 @@
       "text": "Competitive strategies that firms can employ to deal with competitive forces include cost leadership strategy, differentiation strategy, innovation strategy, etc.\n(1) Please give two examples to explain how firms can use information systems (IS) or information technologies (IT) to support the differentiation strategy. (10%)\n(2) For firms that adopt the differentiation strategy, what recommendations will you suggest to the firms about their IT strategy and management? (15%)",
       "points": 25,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "1",
+        "2"
+      ]
     },
     {
       "id": "q-pp-im-mis-106-2",
@@ -17380,7 +17383,10 @@
       "text": "Sharing economy refers to \"peer-to-peer-based activities of obtaining, giving, or sharing the access to goods and services, coordinated through community-based online services.\" Uber and AirBnB represent two famous examples of the sharing economy.\n(1) What are the major challenges for the sharing economy? (12%)\n(2) Please select one challenge that you just answer in (1) and describe (or develop) an information system/technology solution to address this challenge. (13%)",
       "points": 25,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "1",
+        "2"
+      ]
     },
     {
       "id": "q-pp-im-mis-106-3",
@@ -17392,7 +17398,12 @@
       "text": "The rise of Android platform signals the business value and strategic importance of open source software (OSS). While OSS can greatly reduce system development barrier, its license restricts the use of OSS software, and is an important consideration when adopting OSS in system development. Answer the following questions regarding OSS.\n(1) What is open source software? (5%)\n(2) About 85% of open source software adopts the General Public License (GPL). What are the key terms of a GPL license? (7%)\n(3) Apache License is also quite popular in open source community. Explain the reason when the Apache License should be selected over the GPL license for an open source project. (7%)\n(4) What are the strategic advantages for a business to be involved in open source software development projects? (6%)",
       "points": 25,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
     },
     {
       "id": "q-pp-im-mis-106-4",
@@ -17404,7 +17415,11 @@
       "text": "In addition to relational database, we have witness the raise of the so called No-SQL database. Answer the following questions regarding the No-SQL database.\n(1) How are relational database and No-SQL database different in terms of the ACID (Atomicity, Consistency, Isolation, Durability) properties, schema, and scalability? (11%)\n(2) Provide one scenario when a relational database should be selected over a No-SQL database. You should provide the underlying reasoning for the choice. (7%)\n(3) Provide one scenario when a No-SQL database should be selected over a relational database. You should provide the underlying reasoning for the choice. (7%)",
       "points": 25,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "1",
+        "2",
+        "3"
+      ]
     },
     {
       "id": "q-pp-im-mis-107-1",
@@ -17428,7 +17443,10 @@
       "text": "Environmental uncertainty of a firm refers to the degree of uncertainty of the firm's business (external) environment. In the literature, environmental uncertainty can be classified into two major dimensions: environmental munificence (環境豐裕性) and environmental dynamism (環境動態性). Environmental munificence refers to the degree to which a business environment provides firms with critical resources for their operations. For example, in a highly munificent environment, abundant resources and greater growth opportunities are available to firms. On the other hand, environmental dynamism denotes the extent to which firms face the unpredictability and volatility of changes in their business environments. For instance, a dynamic environment is characterized by fluctuations in product demand or changes in customer preferences.\n\n(1) For firms that operate in a highly munificent environment, what recommendations will you suggest to the firms about their IT (information technology) strategy? (15%)\n\n(2) For firms that operate in a highly dynamic environment, what recommendations will you suggest to the firms about their IT (information technology) strategy? (15%)",
       "points": 30,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "1",
+        "2"
+      ]
     },
     {
       "id": "q-pp-im-mis-107-3",
@@ -17449,10 +17467,14 @@
       "subjectId": "im-mis",
       "year": 107,
       "number": 4,
-      "text": "A private library in Taipei maintains a relational database that keeps the basic information of books. We are going to focus on the following tables: Book, Book_Author, Book_Copy, Library_Branch, Publisher. Below is a list of the columns in these tables. Underscored columns are the primary key of a table.\n\n• Book (BookId, Title, PublisherId)\n• Book_Copy (BookId, CopyId, BranchId)\n• Library_Branch (BranchId, Name, Address)\n• Publisher (PublisherId, Name, Address, Phone)\n\nThese tables have the following foreign key relations:\n\n• BookId in Book_Copy references BookId in Book.\n• BranchId in Book_Copy references BranchId in Library_Branch.\n• PublisherId in Book references PublisherId in Publisher.\n\nPlease answer the following questions:\n\n(1) Write down the SQL command that lists the Book Title, Branch Name, and Branch Address that owns books with the title \"Twilight.\" (8%)\n\n(2) Write down the SQL command that lists the BranchId, Branch Name, and the count of copies for books with the title \"Fire and Fury.\" The output should be ordered so that branches with the most copies are listed first. (9%)\n\n(3) Write down the SQL command that lists the BranchId and Branch Name of Library Branches that owns at least two copies for books with the title \"Only the Rain.\" The output should be ordered so that branches with the most copies are listed first. (8%)",
+      "text": "A private library in Taipei maintains a relational database that keeps the basic information of books. We are going to focus on the following tables: Book, Book_Author, Book_Copy, Library_Branch, Publisher. Below is a list of the columns in these tables. Underlined columns in the source PDF are the primary key of a table; they are marked [PK] below.\n\n• Book (BookId [PK], Title, PublisherId)\n• Book_Copy (BookId [PK], CopyId [PK], BranchId)\n• Library_Branch (BranchId [PK], Name, Address)\n• Publisher (PublisherId [PK], Name, Address, Phone)\n\nThese tables have the following foreign key relations:\n\n• BookId in Book_Copy references BookId in Book.\n• BranchId in Book_Copy references BranchId in Library_Branch.\n• PublisherId in Book references PublisherId in Publisher.\n\nPlease answer the following questions:\n\n(1) Write down the SQL command that lists the Book Title, Branch Name, and Branch Address that owns books with the title \"Twilight.\" (8%)\n\n(2) Write down the SQL command that lists the BranchId, Branch Name, and the count of copies for books with the title \"Fire and Fury.\" The output should be ordered so that branches with the most copies are listed first. (9%)\n\n(3) Write down the SQL command that lists the BranchId and Branch Name of Library Branches that owns at least two copies for books with the title \"Only the Rain.\" The output should be ordered so that branches with the most copies are listed first. (8%)",
       "points": 25,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "1",
+        "2",
+        "3"
+      ]
     },
     {
       "id": "q-pp-im-mis-108-1",
@@ -17476,7 +17498,10 @@
       "text": "In the era of machine learning (such as deep learning), data is the king. Large volumes of data are needed for model training purposes. To build machine learning models for business use, firms need to effectively collect, organize, store, and use data (e.g., process-, customer-, employee-related data, etc.) in order to harvest the values of machine learning.\n\n(a) Throughout the lifecycle of data (including data collection, organization, storing, and use) for machine learning, firms face many important managerial issues (decisions) concerning the management of these data. An example of such managerial issues (decisions) is: the firm needs to decide beforehand \"what data should and can be collected.\" Please identify four additional managerial issues (decisions) concerning the management of data for machine learning. Please also explain why each of the additional managerial issues (decisions) that you just identified is important. (20%)\n\n(b) For the example decision given in (a) (i.e., the decision on what data should and can be collected), is a centralized or decentralized decision-making structure more appropriate? For a centralized decision-making, we mean that decisions are directed to the top of the organization (i.e., the executive level); for a decentralized decision-making, decision rights are given to a lower organizational level (e.g., business units). Please provide a detailed explanation to justify your answer. (10%)",
       "points": 30,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "a",
+        "b"
+      ]
     },
     {
       "id": "q-pp-im-mis-108-3",
@@ -17488,7 +17513,12 @@
       "text": "Minho joined a group in a large IT company that develops customized data analytics solutions for their customers. In his first project, his colleagues collected several hundred thousands of data points and developed a model that can predict whether customers will purchase a product in their next session. The developer claimed that the prediction accuracy is 92% using the standard ten-fold cross-validation. Answer the following questions.\n\n(a) What is the definition of prediction accuracy? In additional to prediction accuracy, what are other useful performance measures that can help us evaluate the prediction performance? (6%)\n\n(b) Is an accuracy of 92% good or bad? How do we obtain a meaningful evaluation of this performance level? (7%)\n\n(c) The developer used the convolutional neural network (CNN) to learn the prediction model. He believes that this is the state-of-the-art approach and no other approach can perform better. Do you agree with him? Why? (6%)\n\n(d) How can we improve the prediction performance if the customer is not satisfied with the performance? (6%)",
       "points": 25,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ]
     },
     {
       "id": "q-pp-im-mis-108-4",
@@ -17500,7 +17530,13 @@
       "text": "The use of Artificial Intelligence (AI) to assign individuals into classes has stimulated concerns. One major issue is about the fairness of an automated classification algorithm. Consider a fictitious case that the Taitai Bank developed a predictive model for predicting future loan default. The higher score indicates that the individual has a higher probability of defaulting a loan. Taitai Bank has a policy of being fair to all its customers. Their main concern is that the risk score should be fair to customers in different occupations. Internal discussions reveal three definitions of fairness. To simplify our discussion, a \"positive case\" means that the individual will default in the future and a \"negative case\" means that the individual will not default in the future. The three different definitions of fairness are:\n\n(1) The risk score should be well-calibrated across different occupational groups: if the algorithm identifies a set of people as having a probability of z of constituting positive cases, then approximately a z fraction of this set should indeed be positive instances. This conditional should hold when applied separately in each group.\n\n(2) The average score received by people constituting positive instances should be the same in each occupational group.\n\n(3) The average score received by people constituting negative instances should be the same in each occupational group.\n\nAnswer the following questions.\n\n(a) Why does definition (1) corresponds to notions of fairness? (5%)\n\n(b) Why does definition (2) corresponds to notions of fairness? (5%)\n\n(c) Why does definition (3) corresponds to notions of fairness? (5%)\n\n(d) Which of the definitions (1), (2), or (3) is more reasonable? Why? (5%)\n\n(e) What should Taitai Bank do to ensure that their risk score is fair? (5%)",
       "points": 25,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ]
     },
     {
       "id": "q-pp-im-mis-109-1",
@@ -17512,7 +17548,10 @@
       "text": "In economics, the Cobb-Douglas production function is widely used to represent the relationship between the amounts of two or more inputs a firm uses and the amount of output produced by those inputs. The most standard form of the Cobb-Douglas production function for firm i is defined as follows:\n\nQ = A x L^α x C^β\n\nwhere Q = total production of firm i, L = labor input of firm i, C = capital input (e.g., the sum of machinery, equipment, and buildings) of firm i, A = total factor productivity, and α and β are the output elasticities of labor and capital, respectively.\n\n(a) Assume that firm i implements transaction processing systems to automate or facilitate daily routine transactions of the firm and allows staff and operational managers to monitor the status of business operations. Please describe how transaction processing systems can affect the Cobb-Douglas production function to improve the total production of firm i (i.e., to increase Q). (12%)\n\n(b) Assume that firm i plans to initiate a big data analytics project. Please describe how a big data analytics technology can additionally affect the Cobb-Douglas production function to further improve the output of firm i. (12%)",
       "points": 24,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "a",
+        "b"
+      ]
     },
     {
       "id": "q-pp-im-mis-109-2",
@@ -17524,7 +17563,11 @@
       "text": "Investing in information technology (IT) or information systems does not guarantee good returns. Prior research studies have indicated that firms generally receive superior returns from their IT investments if these IT investments are accompanied by investments in complementary assets. In contrast, if firms fail to make these complementary investments, the firms will receive less or no returns on their IT investments. According to the literature, complementary assets can be classified into three types: organizational assets, managerial assets, and social assets.\n\n(a) Please list and describe three different organizational assets. (9%)\n\n(b) When a firm pursues an innovation strategy, which type(s) of complementary assets (organizational assets, managerial assets, or social assets) is more important for improving the returns on the firm's IT investments? Please provide detailed explanations to justify your answer. (9%)\n\n(c) When a firm's IT investment involves an emerging IT and the firm is not familiar with this particular IT, which type(s) of complementary investments (organizational assets, managerial assets, or social assets) is more important for improving the return on this specific IT investment? Please provide detailed explanations to justify your answer. (8%)",
       "points": 26,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "a",
+        "b",
+        "c"
+      ]
     },
     {
       "id": "q-pp-im-mis-109-3",
@@ -17560,7 +17603,10 @@
       "text": "Sharing economy platforms for physical assets and goods can be classified into two types: non-money-based and money-based. An example of non-money-based sharing economy platforms is Peerby, a peer-to-peer lending site for household items and appliances where users do not need to pay monetary fees for using household items and appliances borrowed from their owners. In contrast, in a money-based sharing economy platform (e.g., Airbnb), users need to pay monetary fees that allow the owners of the shared asset or goods to cover their costs and even generate additional incomes.\n\nWhen a non-money-based sharing economy platform decides to change to money-based, this movement essentially changes the business model of this sharing economy platform.\n(a) Please identify what business processes need to be substantially revised/enhanced or what new business processes need to be developed, when a sharing economy platform plans to move from non-money-based to money-based. (13%)\n(b) The movement from non-money-based to money-based should also trigger discussions of whether the IT strategy of the platform needs to be adjusted. What recommendations will you suggest to the sharing economy platform about its IT strategy when the sharing economy platform plans to move from non-money-based to money-based? (13%)",
       "points": 26,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "a",
+        "b"
+      ]
     },
     {
       "id": "q-pp-im-mis-110-2",
@@ -17572,7 +17618,10 @@
       "text": "One of the key concepts of electronic commerce is digital markets. That is, electronic commerce establishes digital markets in which consumers (can be businesses) transact with their suppliers online.\n(a) In a digital market, will information asymmetry between consumers and suppliers be reduced or intensified? What are the business implications of such change of information asymmetry (either reduction or intensifying) in digital markets? (12%)\n(b) Some research studies indicate that \"in a digital market, the switching cost (i.e., the cost of switching from one supplier to another supplier) of consumers can either be increased or be decreased, depending on the nature of the product or service being sold.\" Please identify the characteristics of products/services that will have higher consumers' switching costs in the digital markets than in the traditional markets. Please also identify the characteristics of products/services whose consumers' switching costs will decrease when these products/services are sold in digital markets. (12%)",
       "points": 24,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "a",
+        "b"
+      ]
     },
     {
       "id": "q-pp-im-mis-110-3",
@@ -17584,7 +17633,12 @@
       "text": "Scrum 是一種敏捷軟體開發方法。支持者認為這個開發方法可以在快速變化的環境中產出高商業價值的軟體系統。請回答下列問題：\n(a) Scrum 方法包含三個主要角色: Scrum Master、Product Owner、Team。說明這三個角色的主要職責與工作。(7%)\n(b) 說明 Scrum 中每日站立會議的執行方式。(6%)\n(c) 什麼是 Sprint Backlog? Sprint Backlog 如何建立與管理? (6%)\n(d) 什麼是 Burn Down Chart? Burn Down Chart 如何建立與管理? 提供一個典型的 Burn Down Chart 的圖像。(6%)",
       "points": 25,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ]
     },
     {
       "id": "q-pp-im-mis-110-4",
@@ -17596,7 +17650,13 @@
       "text": "高速公路的塞車問題數十年來持續困擾用路人。這個問題並沒有因為高速公路電子道路收費系統所提供的大數據而獲得解決。因此我們需要更先進的、更有效的方式來預測與舒緩高速公路在重大節日的塞車問題。請回答以下問題：\n(a) 除了現有的資訊系統(如電子收費系統)的資料之外，還有什麼樣的資料可以幫助我們預測未來一至七天高速公路的塞車狀態? (5%)\n(b) 如何透過資訊系統的建置與佈署以收集這類的資料? (5%)\n(c) 新收集的資料如何幫助我們預測未來一至七天的塞車狀態? (5%)\n(d) 這個系統的主要 Actor 與 Use Case 有哪些? (5%)\n(e) 繪製這個系統的 Use Case Diagram。(5%)",
       "points": 25,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ]
     },
     {
       "id": "q-pp-im-mis-111-1",
@@ -17605,10 +17665,14 @@
       "subjectId": "im-mis",
       "year": 111,
       "number": 1,
-      "text": "Please answer the following questions related to IT project investment.\n\n(a) To evaluate whether to invest in an IT project or select among competing IT investment projects, firms often employ capital budgeting methods to support this investment decision making. Common capital budgeting methods include payback method, return on investment (ROI), cost-benefit ratio, etc. While popular, capital budgeting methods have several shortcomings. Please identify at least four shortcomings of capital budgeting methods. (8%)\n\nWhen a firm has multiple IT projects (either current or potential), the firm can employ the portfolio analysis method to evaluate the appropriateness of the portfolio of IT projects or to decide what types of IT projects to invest in the future. The portfolio analysis approach first assesses each IT project along the following two dimensions: potential benefits to firm and project risk of the IT project. Accordingly, as the following figure illustrates, each IT project can be classified into one of the following categories: avoid, cautiously examine, routine projects, or identify and develop. For example, if an IT project is with low-benefit but high-risk (i.e., in the \"avoid\" category), this IT project should be totally avoided.\n\n(b) When a firm pursues a cost-leadership strategy, which category (or categories) of IT projects should the firm invest more? Please provide detailed explanations to justify your answer. (9%)\n\n(c) Some studies suggest that \"if a firm is in information-intensive industries (e.g., finance), the firm should have more high-risk, high-benefit IT projects (i.e., the 'cautiously examine' category). Why should firms in information-intensive industries have more high-risk, high-benefit IT projects? (9%)",
+      "text": "Please answer the following questions related to IT project investment.\n\n(a) To evaluate whether to invest in an IT project or select among competing IT investment projects, firms often employ capital budgeting methods to support this investment decision making. Common capital budgeting methods include payback method, return on investment (ROI), cost-benefit ratio, etc. While popular, capital budgeting methods have several shortcomings. Please identify at least four shortcomings of capital budgeting methods. (8%)\n\nWhen a firm has multiple IT projects (either current or potential), the firm can employ the portfolio analysis method to evaluate the appropriateness of the portfolio of IT projects or to decide what types of IT projects to invest in the future. The portfolio analysis approach first assesses each IT project along the following two dimensions: potential benefits to firm and project risk of the IT project. Accordingly, as the following figure illustrates, each IT project can be classified into one of the following categories: avoid, cautiously examine, routine projects, or identify and develop. For example, if an IT project is with low-benefit but high-risk (i.e., in the \"avoid\" category), this IT project should be totally avoided.\n\nBesides evaluating individual IT projects, this benefit-risk classification of IT projects allows CIOs (or CEOs) to determine the optimal mix of IT investments for their firms. The optimal mix of IT investments is affected by the firm's competitive strategies, the characteristics of the industry to which the firm belongs, and so on.\n\n(b) When a firm pursues a cost-leadership strategy, which category (or categories) of IT projects should the firm invest more? Please provide detailed explanations to justify your answer. (9%)\n\n(c) Some studies suggest that \"if a firm is in information-intensive industries (e.g., finance), the firm should have more high-risk, high-benefit IT projects (i.e., the 'cautiously examine' category). Why should firms in information-intensive industries have more high-risk, high-benefit IT projects? (9%)",
       "points": 26,
       "hasImage": true,
-      "subQuestions": []
+      "subQuestions": [
+        "a",
+        "b",
+        "c"
+      ]
     },
     {
       "id": "q-pp-im-mis-111-2",
@@ -17620,7 +17684,10 @@
       "text": "Please answer the following questions related to Internet of Things (IoT).\n\n(a) What are the information privacy issues of IoT? Why these issues are important? Please give two examples from different application domains (e.g., smart manufacturing, smart city, smart home, smart vehicle, etc.) to illustrate information privacy threat (risk). (12%)\n\n(b) What are object safety and security issues in IoT? Why these issues are important? Please give two examples from different application domains (e.g., smart manufacturing, smart city, smart home, smart vehicle, etc.) to illustrate object safety and security threat (risk). (12%)",
       "points": 24,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "a",
+        "b"
+      ]
     },
     {
       "id": "q-pp-im-mis-111-3",
@@ -17644,7 +17711,10 @@
       "text": "User interface (UI) design is critical for a successful and easy-to-use application. To achieve this goal, the development team should adopt the so-called user-centered design and follow the general user experience and user interface design heuristics.\n\n(a) What is user-centered design? What are the principles for a user-centered design process? (10%)\n\n(b) List and explain at least four well-known user experience and user interface design heuristics. (15%)",
       "points": 25,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "a",
+        "b"
+      ]
     },
     {
       "id": "q-pp-im-mis-112-1",
@@ -17656,7 +17726,11 @@
       "text": "Pull-based and push-based supply chain models are two supply chain strategies commonly adopted by companies.\n(a) What is the pull-based supply chain model? What is the push-based supply chain model? (8 points)\n(b) What are the advantages of the pull-based supply chain model? What are the advantages of the push-based supply chain model? (8 points)\n(c) When a company decides which supply chain model to adopt, what factors need to be considered by the focal company? Please list and explain some company-specific, industry-level, and business-environment-level factors that should be considered when deciding the best supply chain model for a company (10 points)",
       "points": 26,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "a",
+        "b",
+        "c"
+      ]
     },
     {
       "id": "q-pp-im-mis-112-2",
@@ -17668,7 +17742,11 @@
       "text": "Assume that a leading bicycle-manufacturing company is currently evaluating two IT investment projects. The first IT investment project (called Mfc-BDA) is to develop a manufacturing big data analytics system for improving the manufacturing productivity and reduce defects in the manufacturing process. The second IT investment project (called Bike-IoT) is to explore the use of Internet of Things (IoT) technology to record riders' riding habits and monitor bikes' status (e.g., tire pressure) so that riding experiences and safety of riders can be enhanced.\n\nClearly, these two IT investments, like any other IT investment projects, will involve firm-specific, competition, and market risks. Please answer the following questions.\n\n(a) Please list two potential markets risks that the Mfc-BDA project is likely to face. Please explain what these two market risks are and why they will undermine the benefit of the Mfc-BDA project to this bicycle manufacturing company. (8 points)\n(b) What are the competition risks that the Bike-IoT project may be exposed to? How this bicycle manufacturing company should do in order to minimize these competition risks? (8 points)\n(c) Which type of risks (firm-specific risks, competition risks, or market risks) is more critical to the Mfc-BDA project? In other words, which type of risks should the focal company attempt to control so as to improve the likelihood that this IT investment project will succeed? (8 points)",
       "points": 24,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "a",
+        "b",
+        "c"
+      ]
     },
     {
       "id": "q-pp-im-mis-112-3",
@@ -17692,7 +17770,10 @@
       "text": "Estimating the costs of a software system is essential for a meaningful plan. Popular methods include function point analysis, COCOMO II, expert judgment, planning poker, and T-shirt sizing. Please answer the following questions.\n(a) Briefly explain these approaches (10 points)\n(b) Compare the optimal timing and usage of these approaches in terms of the Systems Development Process Model. (15 points)",
       "points": 25,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "a",
+        "b"
+      ]
     },
     {
       "id": "q-pp-im-mis-113-1",
@@ -17704,7 +17785,10 @@
       "text": "Community detection is an important technique for social media analytics. Please answer the following questions related to community detection.\n(a) What is community detection? Please provide a social media analytics application that employs community detection methods. (10 points)\n(b) How to evaluate the effectiveness of a community detection method? Please be specific about the evaluation metrics and the evaluation procedure that can be employed. (12 points)",
       "points": 22,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "a",
+        "b"
+      ]
     },
     {
       "id": "q-pp-im-mis-113-2",
@@ -17716,7 +17800,11 @@
       "text": "Enterprise agility, also known as organizational agility, refers to an organization's ability to quickly detect, adapt, and respond to changes in unstable business environments. Previous research indicates that firms exhibiting higher levels of agility often achieve greater firm performance.\n(a) Please provide an example of enterprise agility of a B2B firm. Please provide an example of enterprise agility of a B2C firm. Note that the examples you provide need not be real cases; they only serve as illustrations of what enterprise agility is. (10 points)\n(b) Can ITs (information technologies) be employed to help a firm improve its enterprise agility? If your answer is 'yes', please develop an example to show how ITs can help a firm improve its enterprise agility. If your answer is 'no', please offer a thorough explanation to justify your answer. (10 points)\n(c) Imagine the following two scenarios: Company A adopts and implements an enterprise resource planning (ERP) system, while Company B opts to develop its own information systems to support various business processes (such as financial, accounting, manufacturing and production, sales and marketing). We further assume that all other factors are identical for both companies. Do you consider that Company A will have higher enterprise agility than Company B, or vice versa? Please provide a detailed explanation to justify your answer. (8 points)",
       "points": 28,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "a",
+        "b",
+        "c"
+      ]
     },
     {
       "id": "q-pp-im-mis-113-3",
@@ -17728,7 +17816,10 @@
       "text": "According to a study by Precedence Research, the global conversational AI market is projected to grow from USD 10.08 billion in 2022 to approximately USD 86.42 billion by 2032. Conversational AI is increasingly becoming critical in the banking sector, transforming how banks interact with their customers.\n(a) Discuss the benefits of conversational AI for a bank's call center. How can the performance of conversational AI in the call center be assessed? (16 points)\n(b) Identify the challenges presented by the conversational AI and suggest potential solutions to address these challenges. (16 points)",
       "points": 32,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "a",
+        "b"
+      ]
     },
     {
       "id": "q-pp-im-mis-113-4",
@@ -17740,7 +17831,10 @@
       "text": "Environmental, Social, and Corporate Governance (ESG) is increasingly gaining recognition as a crucial framework for assessing the long-term sustainability of companies.\n(a) Describe the three dimensions of ESG. (6 points)\n(b) Previous research has shown mixed results regarding the effect of IT investment on a firm's financial outcomes. In your opinion, does IT investment influence a firm's ESG performance? If you believe it does not, please explain why. If you think it does, provide your rationale. (12 points)",
       "points": 18,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "a",
+        "b"
+      ]
     },
     {
       "id": "q-pp-im-mis-114-1",
@@ -17752,7 +17846,10 @@
       "text": "Live streaming platforms have become a crucial driver of modern e-commerce, offering real-time interaction and immersive shopping experiences that help businesses enhance brand influence and boost sales.\n\nA. How can businesses of different sizes leverage live streaming platforms to enhance their competitiveness? Provide examples to illustrate your answer. (10%)\n\nB. How can emerging technologies (e.g., artificial intelligence or virtual reality) further enhance the commercial value of live streaming platforms? (10%)",
       "points": 20,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "A",
+        "B"
+      ]
     },
     {
       "id": "q-pp-im-mis-114-2",
@@ -17764,7 +17861,10 @@
       "text": "Information technology (IT) has emerged as a pivotal driver of modern business operations, delivering numerous benefits such as increased efficiency, improved decision-making, and enhanced innovation. Consequently, firms across various industries continually invest in IT to secure a competitive edge. However, identical IT investments can result in varying impacts on organizational performance from one firm to another.\n\nA. Discuss the factors that contribute to these differences. (15%)\n\nB. Use examples or theoretical frameworks to explain why similar IT investments may produce divergent outcomes in terms of productivity, profitability, or competitive positioning. (15%)",
       "points": 30,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "A",
+        "B"
+      ]
     },
     {
       "id": "q-pp-im-mis-114-3",
@@ -17800,7 +17900,11 @@
       "text": "Apple has officially announced a multi-year partnership to integrate Google's Gemini AI model into its Siri voice assistant. According to a joint statement, Apple concluded that Google's technology offers the most robust foundation for its \"Apple Foundation Models,\" enabling a new generation of generative AI experiences for users. The partnership is intended to accelerate Apple's AI roadmap, which encountered setbacks and delays following its initial teaser at the 2024 Worldwide Developers Conference (WWDC). Analysts note that while reliance on an external partner underscores Apple's difficulties in developing a competitive in-house model, the agreement represents a strategic necessity. By leveraging Google's cloud computing and AI infrastructure, Apple aims to alleviate investor concerns about its perceived lag in the AI arms race and to stimulate iPhone demand through enhanced device capabilities.\n\nBased on the case study, please address the following questions:\n\n(A). Apple's traditional sources of competitive advantage reside in ecosystem lock-in and superior user experience. Analyze how Apple's decision to adopt an external AI model (Google Gemini), rather than relying exclusively on in-house development, may help preserve or even strengthen its competitive position in the mobile device market. (10%)\n\n(B). Google functions simultaneously as a critical technology partner within Apple's iOS ecosystem and as the leader of the rival Android platform. Discuss the strategic risks (e.g., technological dependency) and potential benefits (e.g., reduced development time) associated with this co-opetitive relationship. (10%)\n\n(C). Apple has historically positioned user privacy as a core source of sustained competitive advantage. Given Google's data-driven business model, analyze how Apple should design its product architecture and/or communication strategy to ensure that its competitive advantage based on user trust is not undermined by this partnership. (10%)",
       "points": 30,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "A",
+        "B",
+        "C"
+      ]
     },
     {
       "id": "q-pp-im-stat-114-4",
@@ -17812,7 +17916,11 @@
       "text": "Amy analyzes the factors that determine how much garbage a family produces per week. Factors including the size of the house, the number of children, and the number of adults who are usually home during the day are considered. Below is the report produced by a regression routine. Answer the following questions. You should provide reasoning and justifications for your solution.\n\nOLS Regression Results:\nDep. Variable: Garbage | R-squared: 0.170\nModel: OLS | Adj. R-squared: [UNK1]\nMethod: Least Squares | F-statistic: 29.80\nNo. Observations: 440 | Prob (F-statistic): 1.52e-17\nDf Residuals: [UNK2] | Log-Likelihood: -1194.7\nDf Model: 3 | AIC: 2397. | BIC: 2414.\n\nCoefficients:\nIntercept: coef=7.1943, std err=1.092, t=[UNK3], P>|t|=0.000\nQ(\"House Size\"): coef=0.0019, std err=0.001, P>|t|=0.001, [0.025]=0.001, [0.975]=0.003\nChildren: coef=1.1028, std err=0.141, P>|t|=0.000, [0.025]=0.826, [0.975]=1.379\nAdults: coef=1.0425, std err=0.233, P>|t|=0.000, [0.025]=0.585, [0.975]=1.500\n\nOmnibus: 0.193 | Durbin-Watson: 1.963\nProb(Omnibus): 0.908 | Jarque-Bera (JB): 0.272\nSkew: 0.044 | Prob(JB): 0.873\nKurtosis: 2.916 | Cond. No.: 1.14e+04\n\n(1) Compute the value of adjusted R-squared (UNK1) based on available information. (5%)\n\n(2) Compute the residual degree of freedom (UNK2) and the t-value of the Intercept (UNK3) based on available information. (4%)\n\n(3) Conduct the following hypothesis test (using 95% significance level):\nH0: Coefficients of all independent variables are jointly zero.\nH1: At least one independent variable has a non-zero coefficient. (6%)",
       "points": 15,
       "hasImage": true,
-      "subQuestions": []
+      "subQuestions": [
+        "1",
+        "2",
+        "3"
+      ]
     },
     {
       "id": "q-pp-im-stat-114-5",
@@ -17821,10 +17929,13 @@
       "subjectId": "im-stat",
       "year": 114,
       "number": 5,
-      "text": "Let Y₁, Y₂, ..., Yₜ be an identical and independent sample from population Z with mean μ and variance σ². T is a multiple of 5. Define estimator m as:\n\nm = (1/T) Σ g(i) · Yᵢ\n\nwhere g(i) = 1 + (i mod 5) and mod is the modular operator.\n\n(1) Prove that m is an unbiased estimator for μ. (10%)\n\n(2) What is the variance of m? (10%)",
+      "text": "Let Y₁, Y₂, ..., Yₜ be an identical and independent sample from population Ω with mean μ and variance σ². T is a multiple of 5. Define estimator m as:\n\nm = [Σᵀᵢ₌₁ g(i)Yᵢ] / [Σᵀᵢ₌₁ g(i)],\n\nwhere g(i) = 1 + (i mod 5) and mod is the modular operator.\n\n(1) Prove that m is an unbiased estimator for μ. (10%)\n\n(2) What is the variance of m? (10%)",
       "points": 20,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "1",
+        "2"
+      ]
     },
     {
       "id": "q-pp-im-stat-115-3",
@@ -17833,10 +17944,14 @@
       "subjectId": "im-stat",
       "year": 115,
       "number": 3,
-      "text": "Let X₁ and X₂ have the joint probability mass function\n\nf(x₁, x₂) = c(|x₁| + |x₂| + |x₁ + x₂|) / (1+|x₁|)(1+|x₂|)(1+|x₁+x₂|),  x₁ ∈ {-1, 0, 1}, x₂ ∈ {0, 1}\n             0,  otherwise\n\n(A). Determine the normalizing constant c. (5%)\n(B). Find the joint probability mass function of Y₁ = X₁ + X₂ and Y₂ = X₁ - X₂. (5%)\n(C). Find the marginal probability mass function of Y₁. (5%)",
+      "text": "Let X₁ and X₂ have the joint probability mass function\n\nf(x₁, x₂) = { (|x₁| + |x₂| + |x₁ + x₂|) / c,  x₁ ∈ {-1, 0, 1}, x₂ ∈ {0, 1};  0, otherwise. }\n\n(A) Determine the normalizing constant c. (5%)\n(B) Find the joint probability mass function of Y₁ = X₁ + X₂ and Y₂ = X₁ - X₂. (5%)\n(C) Find the marginal probability mass function of Y₁. (5%)",
       "points": 15,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "A",
+        "B",
+        "C"
+      ]
     },
     {
       "id": "q-pp-im-stat-115-4",
@@ -17848,7 +17963,11 @@
       "text": "Let Y₁, Y₂, and Y₃ be an independent and identically distributed random sample from a distribution with mean μ and variance σ² < ∞. Consider the following estimators for μ:\n\nm₁ = Y₁,  m₂ = (Y₁ + αY₂) / (1 + α),  m₃ = (Y₁ + 2Y₂ + βY₃) / (1 + 2 + β),  where α > 0 and β > 0.\n\n(A). Determine which of the estimators m₁, m₂, and m₃ are unbiased for μ? (10%)\n(B). Find the value of α that minimize Var(m₂). (5%)\n(C). Find the value of β that minimize Var(m₃). (5%)",
       "points": 20,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "A",
+        "B",
+        "C"
+      ]
     },
     {
       "id": "q-pp-im-stat-115-5",
