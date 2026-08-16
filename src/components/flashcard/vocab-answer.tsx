@@ -64,11 +64,11 @@ export function VocabAnswer({ cardId, answer, speak, speakingId }: VocabAnswerPr
   return (
     <div className="space-y-3 text-sm leading-relaxed">
       {parsed.chinese && (
-        <p className="font-medium">{parsed.chinese}</p>
+        <p className="font-semibold text-base text-foreground">{parsed.chinese}</p>
       )}
 
       {parsed.example && (
-        <div className="rounded-md bg-blue-50 dark:bg-blue-950/30 p-3 space-y-1">
+        <div className="rounded-md border bg-muted/40 p-3 space-y-1">
           <div className="flex items-start gap-1">
             <SpeakButton
               text={parsed.example}
@@ -77,7 +77,7 @@ export function VocabAnswer({ cardId, answer, speak, speakingId }: VocabAnswerPr
               speakingId={speakingId}
               label="播放例句"
             />
-            <p className="text-blue-900 dark:text-blue-100 italic">{parsed.example}</p>
+            <p className="text-foreground/90 italic">{parsed.example}</p>
           </div>
           {parsed.exampleChinese && (
             <p className="text-xs text-muted-foreground ml-7">{parsed.exampleChinese}</p>
@@ -96,7 +96,7 @@ export function VocabAnswer({ cardId, answer, speak, speakingId }: VocabAnswerPr
           />
           <p>
             <span className="text-muted-foreground">同義詞：</span>
-            <span className="text-green-700 dark:text-green-400">{parsed.synonyms}</span>
+            <span className="text-emerald-600 dark:text-emerald-400 font-medium">{parsed.synonyms}</span>
           </p>
         </div>
       )}
@@ -112,7 +112,7 @@ export function VocabAnswer({ cardId, answer, speak, speakingId }: VocabAnswerPr
           />
           <p>
             <span className="text-muted-foreground">反義詞：</span>
-            <span className="text-red-700 dark:text-red-400">{parsed.antonyms}</span>
+            <span className="text-rose-600 dark:text-rose-400 font-medium">{parsed.antonyms}</span>
           </p>
         </div>
       )}
