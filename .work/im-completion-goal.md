@@ -36,5 +36,13 @@
 
 - [x] MIS／STAT 專用 validators 與 cross-file closure 全過。
 - [x] `validate:content`、paper integrity、Jest、typecheck、production build 全過。
-- [ ] Ready PR Checks 成功並合併至 `main`。
-- [ ] Cloudflare deploy 成功，production 實頁完成抽查。
+- [x] Ready PR Checks 成功並合併至 `main`。
+- [x] Cloudflare deploy 成功，production 實頁完成抽查。
+
+## Completion evidence
+
+- PR: `#16`，squash merge `0672c975dd5b20efc12c36540179b00833f48e71`
+- Checks: GitHub `Typecheck, test & content integrity` 成功
+- Deploy: GitHub run `31954921113` 成功，Cloudflare version `ca97ee58-bb2a-4cec-a16c-8973e593d6ff`
+- Production: `https://grad-exam-prep.vincent-xu-work.workers.dev`
+- Smoke test: MIS 7 堂／24 子主題、STAT 6 堂／11 子主題；API 提供 48 張 MIS 與 18 張 STAT curated cards，IM-IT legacy deck 仍隔離
