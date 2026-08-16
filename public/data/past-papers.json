@@ -132,8 +132,6 @@
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/112/2023-9.pdf",
       "source": "ntu_library",
       "verified": true,
-      "contentStatus": "suspect",
-      "contentIssue": "與 109 年英文卷有 32 題完全相同（題號也對得上），兩份之中必有一份裝了另一份的內容，尚未取得原始 PDF 判定是哪一份。",
       "localPath": "/papers/pp-im-en-112.pdf"
     },
     {
@@ -174,8 +172,6 @@
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/111/111-9.pdf",
       "source": "ntu_library",
       "verified": true,
-      "contentStatus": "suspect",
-      "contentIssue": "第 1–20、42–50 共 28 題與資工所 110 年英文(A) 相同 —— 那份已依原卷重建過，所以是這份裝錯了。第 21–40 題的克漏字文章也沒抽進來，只留下摘要式的佔位文字。",
       "localPath": "/papers/pp-im-en-111.pdf"
     },
     {
@@ -256,8 +252,6 @@
       "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/109/9_graduate-109.pdf",
       "source": "ntu_library",
       "verified": true,
-      "contentStatus": "suspect",
-      "contentIssue": "與 112 年英文卷有 32 題完全相同（題號也對得上），兩份之中必有一份裝了另一份的內容，尚未取得原始 PDF 判定是哪一份。",
       "localPath": "/papers/pp-im-en-109.pdf"
     },
     {

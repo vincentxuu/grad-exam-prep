@@ -8,15 +8,13 @@ import {
 } from '@/lib/content'
 import type { PastPaper } from '@/types/content'
 
-// 這批考卷的題目文字是壞的，但壞得完全看不出來：題數齊、每題有答案、每題有詳解。
-// 這些測試釘住「不可信的卷子不會被當成真題拿去計分」這條線 —— 它是靠資料標記
-// 撐起來的，資料一改就會失效，所以要有東西守著。
+// 內容標記是資料驅動的；即使目前所有已知英文卷都修復，這些測試仍守住未來再次
+// 標記考卷時的整卷排除行為。
 const papers = pastPapers as unknown as PastPaper[]
 
 describe('考卷內容可信度標記', () => {
   it('標記過的卷子都真的存在，而且帶著給使用者看的理由', () => {
     const flagged = papers.filter((p) => p.contentStatus)
-    expect(flagged.length).toBeGreaterThan(0)
     for (const paper of flagged) {
       expect(['incomplete', 'suspect']).toContain(paper.contentStatus)
       expect(paper.contentIssue?.length ?? 0).toBeGreaterThan(10)
@@ -43,11 +41,10 @@ describe('考卷內容可信度標記', () => {
     expect(getPaperContentIssue('pp-im-en-115')).toBeUndefined()
   })
 
-  it('106 已修復，109／111／112 內容仍存疑', () => {
-    expect(isPaperUnreliable('pp-im-en-106')).toBe(false)
-    expect(getPaperContentIssue('pp-im-en-106')).toBeUndefined()
-    for (const id of ['pp-im-en-109', 'pp-im-en-111', 'pp-im-en-112']) {
-      expect(getPaperContentIssue(id)?.contentStatus).toBe('suspect')
+  it('106、109、111、112 的已知問題都已修復', () => {
+    for (const id of ['pp-im-en-106', 'pp-im-en-109', 'pp-im-en-111', 'pp-im-en-112']) {
+      expect(isPaperUnreliable(id)).toBe(false)
+      expect(getPaperContentIssue(id)).toBeUndefined()
     }
   })
 
