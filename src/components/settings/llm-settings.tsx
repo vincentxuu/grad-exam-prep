@@ -214,22 +214,34 @@ export function LlmSettings() {
                 }`}
               >
                 {p.label}
-                {/* key 沒設好的先標出來，省得選了才發現打不通 */}
-                {!ready && <span className="ml-1.5 opacity-60">·未設 key</span>}
+                {/* 連線能力沒設好的先標出來，省得選了才發現打不通 */}
+                {!ready && (
+                  <span className="ml-1.5 opacity-60">
+                    ·未設{p.id === 'cloudflare' ? ' binding' : ' key'}
+                  </span>
+                )}
               </button>
             )
           })}
         </div>
 
         <p className="text-muted-foreground text-xs">
-          不選就沿用環境變數，兩邊都沒有才用預設的 Groq。
+          不選就沿用環境變數，兩邊都沒有才用預設的 Cloudflare Workers AI。
           {selected?.note && ` ${selected.note}`}
         </p>
 
         {form.provider && credentialsOk === false && (
           <p className="text-destructive text-sm">
-            這家還沒設定 {selected?.envKeys.join(' 與 ')}。要先 <code>wrangler secret put</code>{' '}
-            再重新部署，存了也打不通。
+            {form.provider === 'cloudflare' ? (
+              <>
+                這個環境沒有設定 Workers AI 的 <code>AI</code> binding，存了也打不通。
+              </>
+            ) : (
+              <>
+                這家還沒設定 {selected?.envKeys.join(' 與 ')}。要先 <code>wrangler secret put</code>{' '}
+                再重新部署，存了也打不通。
+              </>
+            )}
           </p>
         )}
 
@@ -371,9 +383,9 @@ export function LlmSettings() {
       {status && <p className="text-sm">{status}</p>}
 
       <p className="text-muted-foreground text-xs leading-relaxed">
-        API key 不在這裡設定，也讀不出來 —— D1 存明文,key 留在加密的 wrangler secret。
-        這頁只改「洩漏了也不痛」的東西。換一家的順序是:先 <code>wrangler secret put</code>{' '}
-        並重新部署，再回來這裡切換。
+        Cloudflare 直接使用部署設定裡的 AI binding。其他 provider 的 API key
+        不在這裡設定，也讀不出來 —— D1 存明文，key 留在加密的 wrangler
+        secret。這頁只改「洩漏了也不痛」的東西。
       </p>
     </div>
   )

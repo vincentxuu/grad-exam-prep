@@ -197,8 +197,16 @@ for (const entry of selectedImWords) {
 
 // Flashcard coverage gaps
 console.log('\n📇 Flashcard Coverage:')
+const quarantinedFlashcardSubjects = new Set(['im-it', 'im-mis', 'im-stat'])
 subjects.forEach((subj) => {
   const count = flashcards.filter((fc) => fc.subjectId === subj.id).length
+  if (quarantinedFlashcardSubjects.has(subj.id)) {
+    if (count > 0) {
+      err(`${subj.name} has ${count} production cards while its legacy deck is quarantined`)
+    }
+    console.log(`  ⏸️  ${subj.name}: 0 cards (legacy deck quarantined; curated rebuild pending)`)
+    return
+  }
   const status = count >= 3 ? '✅' : count > 0 ? '⚠️ ' : '❌'
   console.log(`  ${status} ${subj.name}: ${count} cards ${count < 3 ? '(target: 3+)' : ''}`)
 })

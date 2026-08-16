@@ -43,16 +43,18 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 | --- | --- |
 | `CLOUDFLARE_API_TOKEN` | 具 Workers 部署權限的 API token |
 
-`account_id` 已經寫在 `wrangler.json`，不必另外設 `CLOUDFLARE_ACCOUNT_ID`。
+`account_id` 與 Workers AI 的 `AI` binding 已經寫在 `wrangler.json`。站內預設模型不需要
+另外建立推論用的 Cloudflare API token；上面的 repository secret 只供 GitHub Actions 部署。
 
 ### 設定 API key
 
-**本機開發**：複製範本後填值，`npm run dev` 會自動讀（`next.config.mjs` 有呼叫
+**本機開發**：預設直接使用 Cloudflare Workers AI binding。若要改用外部 provider，
+複製範本後填入該 provider 的 key；`npm run dev` 會自動讀（`next.config.mjs` 有呼叫
 `initOpenNextCloudflareForDev()`）。
 
 ```bash
 cp .dev.vars.example .dev.vars
-# 編輯 .dev.vars，填入 GROQ_API_KEY
+# 只有改用 Groq、Gemini 等外部 provider 時才需要填 key
 npm run dev
 ```
 
@@ -66,7 +68,7 @@ npx wrangler secret put GROQ_API_KEY      # 貼上 key，不會顯示在畫面�
 npx wrangler secret list                  # 確認寫進去了
 ```
 
-取得 key：[Groq Console](https://console.groq.com/keys)（預設，有免費額度）、
+取得 key：[Groq Console](https://console.groq.com/keys)、
 [Google AI Studio](https://aistudio.google.com/apikey)（Gemini）、
 [OpenAI](https://platform.openai.com/api-keys)。
 
@@ -78,13 +80,13 @@ npx wrangler secret list                  # 確認寫進去了
 平常從 **`/settings/llm`** 改就好（header 上有連結），要通關密語，手機也能用：
 
 - 選 provider，**model 從下拉選單挑** —— 清單是跟 provider 現撈的
-  （`GET {baseURL}/models`），不是寫死的。撈不到會標明並退回內建範例，
+  （Cloudflare 用 binding，其他家用 models API），不是寫死的。撈不到會標明並退回內建範例，
   也隨時可以切成手打
 - **「測試連線」**打一次最小的真呼叫，回報通不通、幾毫秒、模型回了什麼
 - **「試用對話」**可以直接跟選好的 model 聊兩句 —— 通了不代表好用，中文
   說明順不順、糾錯準不準得真的講過才知道。不留紀錄、不計配額
 - 上面兩個測的都是表單上**還沒存**的那一組，先確認再存
-- key 沒設好的 provider 會標「未設 key」，選了會直接說缺哪個環境變數
+- 外部 provider 的 key 沒設好會標「未設 key」；Cloudflare 則檢查 `AI` binding
 - 上方常駐顯示目前真正生效的 route（三層疊完的結果）
 
 需要腳本化時 SQL 也還在：
@@ -101,16 +103,17 @@ npx wrangler d1 execute grad-exam-prep-db --remote --command \
 
 **API key 不要寫進這張表，設定頁也不收 key。** D1 存的是明文，拿得到資料庫
 的人都看得到；`wrangler secret` 是加密存放而且讀不回來。表裡只放「洩漏了
-也不痛」的東西，`GET /api/llm-config` 對每家 key 只回布林值，不回內容。
+也不痛」的東西，`GET /api/llm-config` 對每家的連線能力只回布林值，不回 key 內容。
 
 優先序是 **D1 表 → 環境變數 → 程式預設**，欄位各自獨立 —— 表裡
-`model` 留 NULL 就沿用 `LLM_MODEL`，兩個都沒有才用 `llama-3.3-70b-versatile`。
+`model` 留 NULL 就沿用 `LLM_MODEL`，兩個都沒有才用
+`@cf/meta/llama-3.3-70b-instruct-fp8-fast`。
 表還沒建（migration 沒跑）時整張表當作空的，功能照常走環境變數。
 
 | 欄位 | 對應環境變數 | 預設 |
 | --- | --- | --- |
-| `provider` | `LLM_PROVIDER` | `groq` |
-| `model` | `LLM_MODEL` | `llama-3.3-70b-versatile` |
+| `provider` | `LLM_PROVIDER` | `cloudflare` |
+| `model` | `LLM_MODEL` | `@cf/meta/llama-3.3-70b-instruct-fp8-fast` |
 | `fallback_provider` | `LLM_FALLBACK_PROVIDER` | 無（不退） |
 | `fallback_model` | `LLM_FALLBACK_MODEL` | 無 |
 | `lexicon_quota` | `LEXICON_DAILY_QUOTA` | 60 |
@@ -125,13 +128,13 @@ npx wrangler d1 execute grad-exam-prep-db --remote --command \
 
 | 名稱 | 必要 | 用途 |
 | --- | --- | --- |
-| `GROQ_API_KEY` | 預設 provider 必要 | 預設走 Groq。**沒設定時 `POST /api/lexicon` 回 503**；`GET`（只讀快取）不受影響。 |
-| `LLM_PROVIDER` | 否 | `groq`（預設）/ `google` / `openai` / `cloudflare` / `openrouter` / `cerebras` / `ollama`。可用表覆蓋。 |
-| `LLM_MODEL` | 否 | 預設 `llama-3.3-70b-versatile`。可用表覆蓋。 |
+| `AI` binding | 預設 provider 必要 | `wrangler.json` 已設定；Cloudflare 推論直接走 binding，不需要 API key。 |
+| `GROQ_API_KEY` | 用 Groq 時 | |
+| `LLM_PROVIDER` | 否 | `cloudflare`（預設）/ `groq` / `google` / `openai` / `openrouter` / `cerebras` / `ollama`。可用表覆蓋。 |
+| `LLM_MODEL` | 否 | 預設 `@cf/meta/llama-3.3-70b-instruct-fp8-fast`。可用表覆蓋。 |
 | `LLM_FALLBACK_PROVIDER`／`LLM_FALLBACK_MODEL` | 否 | 主 provider 失敗時退到這家。未設定就不退。可用表覆蓋。 |
 | `GOOGLE_API_KEY`／`GEMINI_API_KEY` | 用 Gemini 時 | |
 | `OPENAI_API_KEY`／`OPENROUTER_API_KEY`／`CEREBRAS_API_KEY` | 用該家時 | |
-| `CLOUDFLARE_API_TOKEN`＋`CLOUDFLARE_ACCOUNT_ID` | 用 Workers AI 時 | **兩個都要**。account id 不機密。 |
 | `OLLAMA_API_BASE` | 用 Ollama 時 | 預設 `http://localhost:11434/v1` |
 | `LEXICON_DAILY_QUOTA` | 否 | 每人每日生成次數上限，預設 60。快取命中不計入。可用表覆蓋。 |
 | `CHAT_DAILY_QUOTA` | 否 | 每人每日對話訊息上限，預設 40。**與查詞額度分開計** —— 對話貴得多。可用表覆蓋。 |
@@ -196,33 +199,35 @@ npm run deploy                            # 2. 部署（secret 綁在 worker 上
 先改設定再給 key 的話，中間那段時間 provider 指向一家沒有 key 的服務，
 查詞會回 503。設定頁會先擋下來提醒，但腳本化的時候沒有人擋。
 
-程式碼只有 `src/lib/llm/model.ts` 知道 provider 的差異；其餘一律不受影響。
-`cloudflare` / `openrouter` / `cerebras` / `ollama` 都走 OpenAI 相容端點，只是換 baseURL。
+程式碼由 `src/lib/llm/model.ts` 統一路由 provider。Cloudflare 透過一層薄轉接直接呼叫
+`env.AI.run(...)`；`openrouter` / `cerebras` / `ollama` 才走 OpenAI 相容端點。
 
 **寫錯的 provider 不會報錯。** 不在清單裡的值（打錯字、寫了沒支援的一家）
-會被當成沒設定，安靜地退到 env 再退到 groq。改完最好查一個沒查過的字確認。
+會被當成沒設定，安靜地退到 env 再退到 Cloudflare。改完最好查一個沒查過的字確認。
 
 #### 用 Cloudflare Workers AI
 
-站台本來就在 Workers 上，模型可以走同一個帳號。端點是 OpenAI 相容的，
-路徑帶帳號，所以 token 之外還要 account id：
-
-```bash
-npx wrangler secret put CLOUDFLARE_API_TOKEN   # 需 Account > Workers AI > Read 權限
-```
-
-account id 不機密（`wrangler.json` 裡本來就有），放 `vars` 就好：
+站台本來就在 Workers 上，因此預設直接使用 `wrangler.json` 的 Workers AI binding：
 
 ```jsonc
 {
-  "vars": { "CLOUDFLARE_ACCOUNT_ID": "1ff43f0d4c3ad3bd98ce5ab767546a68" }
+  "ai": { "binding": "AI" }
 }
 ```
 
-部署後到 `/settings/llm` 切過去。model 要帶 `@cf/` 前綴（例如
+程式透過 `env.AI.run(...)` 推論、透過 `env.AI.models()` 取得模型清單，不需要
+推論用 API token。model 要帶 `@cf/` 前綴（例如
 `@cf/meta/llama-3.3-70b-instruct-fp8-fast`），可用清單見 Cloudflare 的
-Workers AI models 頁。兩個環境變數少一個就算沒設定好，設定頁會標成
-「未設 key」，直接呼叫 `POST /api/lexicon` 則回 503。
+Workers AI models 頁。若某個執行環境沒有 `AI` binding，設定頁會標成
+「未設 binding」，直接呼叫 `POST /api/lexicon` 則回 503。
+
+#### AI 輸出簡轉繁
+
+所有 provider 的 AI 輸出都會在共用 LLM 邊界經過 `opencc-js`，使用
+`cn → twp` 轉成臺灣繁體與慣用詞，例如「软件／鼠标／数据库」會變成
+「軟體／滑鼠／資料庫」。結構化資料會遞迴轉換字串值；對話串流會先緩衝到
+詞組安全邊界，避免模型把「软」和「件」拆成不同 chunk 時漏轉。舊的查詞快取
+與舊 AI 對話內容也會在讀取時正規化，不必直接改寫 D1 歷史資料。
 
 **手動部署**（本機）：
 

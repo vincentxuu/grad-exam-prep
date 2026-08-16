@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "authority": "NTU original examination PDFs visually audited page by page; statistics was introduced in the combined paper in year 114.",
+  "notApplicableStatisticsYears": [106, 107, 108, 109, 110, 111, 112, 113],
+  "papers": {
+    "im-mis": {
+      "106": { "questionCount": 4, "points": 100, "pdfSha256": "8fa51bffff2c955afedacc11f4dea89fac81a8079737ab893038b3628d71e50a", "questionsSha256": "c8d2b26126d745a89d996b8b692d3cfb4636f55be7b512f12d02610ecc9fee81" },
+      "107": { "questionCount": 4, "points": 100, "pdfSha256": "71d93b960e960b7af2e02ae5cf38384b86950bcf5b0b1f0946e35952f8486932", "questionsSha256": "99adcd9d8ca2d773b0400df15fec8ac37ee7241a1352a006bf4189e55d768248" },
+      "108": { "questionCount": 4, "points": 100, "pdfSha256": "d2c616cbfc4f235a305fdf40b5038770f0395e0fac071b822914a2d18b9adb00", "questionsSha256": "0a8256525d62f9b89f04938ae0af76bc882215cc7ed9e8ab08cd51d7c5620144" },
+      "109": { "questionCount": 4, "points": 100, "pdfSha256": "152fb126bf833afc11f139580911f08997d3991b81acd7c3013da6d9103a5f5d", "questionsSha256": "35d4eacb2e69906d7d2f563a1b87fb76b50de1445cf61e096fa928d0a71b9d51" },
+      "110": { "questionCount": 4, "points": 100, "pdfSha256": "79d0ab55bb3696ef88fb136ce2cb588a168d3c556b5ea397a1b97b19191e95de", "questionsSha256": "9df14c045c94ae4103e52c327ed148e8cd508a15e9a42fda73a9ec6905bb196a" },
+      "111": { "questionCount": 4, "points": 100, "pdfSha256": "cd5a0902bab9bf5020f1917eb9b14d1673e84edc13cf189eab7004205b187640", "questionsSha256": "65c2a3044878f29fdd0d8780a2b2bd2910cf3a8964a98ae480900f85adbdf7d7" },
+      "112": { "questionCount": 4, "points": 100, "pdfSha256": "9e406fa3ff0fdfecf830eb3b8fb4daee25d6fa31369e76c8c390354867120fe3", "questionsSha256": "fa0057b5c43abb895122dc0a6faf55285eef61de986617b94e905d40ac803ce6" },
+      "113": { "questionCount": 4, "points": 100, "pdfSha256": "0ac2d9a76e9a07fe053cb365a423f0e1a89ff641f1b23764e0e2191437331cd5", "questionsSha256": "3d1900349dbb28f0c474ca57f6f41ae0d3ddc4287478a6b3885f7e8d4bd0dabb" },
+      "114": { "questionCount": 3, "points": 65, "pdfSha256": "bb31e0ec75ff9ca84715465de5f4cf2746bbac9e2eadf6ae9c9c7be9bb618a34", "questionsSha256": "6361134fac74560ebd126dc87118594e8c518432fa8ab09a6186e38282650fca" },
+      "115": { "questionCount": 2, "points": 50, "pdfSha256": "07ac6f84ecf5ca77c6338b5d7705d9e5c5915118f0a037946ebccda674476479", "questionsSha256": "742eac2a1ea53f160089f65151fc7a436bed569d6a2b5b7b100b92b5af5a29c1" }
+    },
+    "im-stat": {
+      "114": { "questionCount": 2, "points": 35, "pdfSha256": "bb31e0ec75ff9ca84715465de5f4cf2746bbac9e2eadf6ae9c9c7be9bb618a34", "questionsSha256": "884ce792e3c6a89a186d6da8104c932eb78d4416b92674f4df8be1f127a477f4" },
+      "115": { "questionCount": 3, "points": 50, "pdfSha256": "07ac6f84ecf5ca77c6338b5d7705d9e5c5915118f0a037946ebccda674476479", "questionsSha256": "fccb5b6498eb49bd99a663316e701c7e3e8b236c21fff1bbd90a37b79633a930" }
+    }
+  }
+}

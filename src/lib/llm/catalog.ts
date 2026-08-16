@@ -17,7 +17,7 @@ export type ModelProvider =
 export interface ProviderInfo {
   id: ModelProvider
   label: string
-  /** 這家要設定的環境變數。多個代表全部都要（Workers AI 就是這種）。 */
+  /** 這家要設定的環境變數。空陣列代表不需要 API key。 */
   envKeys: string[]
   /** 填在 model 欄位的範例，也當作 UI 的 placeholder。 */
   sampleModel: string
@@ -38,7 +38,7 @@ export const PROVIDER_CATALOG: ProviderInfo[] = [
     envKeys: ['GROQ_API_KEY'],
     sampleModel: 'llama-3.3-70b-versatile',
     fallbackModels: ['llama-3.3-70b-versatile', 'llama-3.1-8b-instant'],
-    note: '預設。有免費額度，速度快。',
+    note: '有免費額度，速度快。',
   },
   {
     id: 'google',
@@ -58,10 +58,10 @@ export const PROVIDER_CATALOG: ProviderInfo[] = [
   {
     id: 'cloudflare',
     label: 'Cloudflare Workers AI',
-    envKeys: ['CLOUDFLARE_API_TOKEN', 'CLOUDFLARE_ACCOUNT_ID'],
+    envKeys: [],
     sampleModel: '@cf/meta/llama-3.3-70b-instruct-fp8-fast',
     fallbackModels: ['@cf/meta/llama-3.3-70b-instruct-fp8-fast', '@cf/openai/gpt-oss-120b'],
-    note: '跟站台同一個帳號。端點路徑帶帳號，所以兩個都要設。',
+    note: '預設。直接使用站台的 AI binding，不需要另外設定 API key。',
   },
   {
     id: 'openrouter',

@@ -16,10 +16,18 @@ function parseOptionLine(line: string): { label: string; text: string } | null {
   return { label: m[1].toLowerCase(), text: m[2].trim() }
 }
 
-function parseInlineOptions(line: string): { label: string; text: string }[] | null {
+interface ParsedInlineOptions {
+  optionStart: number
+  options: { label: string; text: string }[]
+}
+
+function parseInlineOptions(line: string): ParsedInlineOptions | null {
   const matches = [...line.matchAll(/\(([A-Ea-e])\)\s+(.*?)(?=\s+\([A-Ea-e]\)|$)/g)]
   if (matches.length < 2) return null
-  return matches.map((m) => ({ label: m[1].toLowerCase(), text: m[2].trim() }))
+  return {
+    optionStart: matches[0].index ?? 0,
+    options: matches.map((m) => ({ label: m[1].toLowerCase(), text: m[2].trim() })),
+  }
 }
 
 export function parseQuestion(text: string): ParsedQuestion {
@@ -55,10 +63,10 @@ export function parseQuestion(text: string): ParsedQuestion {
 
   // Fallback: try inline option parsing — e.g. "(A) word (B) word (C) word (D) word"
   for (let i = lines.length - 1; i >= 0; i--) {
-    const inlineOpts = parseInlineOptions(lines[i])
-    if (inlineOpts) {
-      const stem = lines.slice(0, i).join('\n').trim()
-      return { stem, options: inlineOpts }
+    const inline = parseInlineOptions(lines[i])
+    if (inline) {
+      const stem = [...lines.slice(0, i), lines[i].slice(0, inline.optionStart)].join('\n').trim()
+      return { stem, options: inline.options }
     }
   }
 

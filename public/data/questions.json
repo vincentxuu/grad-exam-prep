@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "totalQuestions": 1472,
+  "totalQuestions": 1475,
   "questions": [
     {
       "id": "q-pp-cs-algo-108-1",
@@ -14518,7 +14518,7 @@
       "subjectId": "im-it",
       "year": 107,
       "number": 1,
-      "text": "Which of the following technology is not used in Amazon Echo or Google Home? (A) speech recognition (B) image recognition (C) natural language processing (D) control of more devices (E) speech synthesis",
+      "text": "Which of the following technology is not used in Amazon Echo or Google Home? (A) speech recognition (B) image recognition (C) natural language processing (D) control of room devices (E) speech synthesis.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -14530,7 +14530,7 @@
       "subjectId": "im-it",
       "year": 107,
       "number": 2,
-      "text": "Which of the following is wrong about object-oriented databases? (A) object-oriented databases are the most widely used database model today (B) object database store objects rather than data such as integers, strings or real numbers (C) objects basically consist of attributes and methods (D) objects contain both executable code and data (E) all of the above are correct (choose this only if none of the above can be chosen).",
+      "text": "Which of the following is wrong about object-oriented databases? (A) object-oriented databases are the most widely used database model today (B) object databases store objects rather than data such as integers, strings or real numbers (C) objects basically consist of attributes and methods (D) objects contain both executable code and data (E) all of the above are correct (choose this only if none of the above can be chosen).",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -14554,7 +14554,7 @@
       "subjectId": "im-it",
       "year": 107,
       "number": 4,
-      "text": "Which of the following SQL command returns the number of countries of the records in the \"Customers\" table (see Table 1)?\n\n(A) SELECT NUMBER (*) FROM Customers;\n(B) SELECT COUNT (ALL country) FROM Customers;\n(C) SELECT COUNT (DISTINCT country) FROM Customers;\n(D) SELECT NUMBER (ALL country) FROM Customers;\n(E) SELECT COUNT (DISTINCT * country) FROM Customers;",
+      "text": "Which of the following SQL commands returns the number of countries of the records in the \"Customers\" table (see Table 1)?\n\n(A) SELECT NUMBER (*) FROM Customers;\n(B) SELECT COUNT (ALL country) FROM Customers;\n(C) SELECT COUNT (DISTINCT country) FROM Customers;\n(D) SELECT NUMBER (ALL country) FROM Customers;\n(E) SELECT NUMBER (DISTINCT * country) FROM Customers;",
       "points": 2.5,
       "hasImage": true,
       "subQuestions": []
@@ -14566,7 +14566,7 @@
       "subjectId": "im-it",
       "year": 107,
       "number": 5,
-      "text": "Which of the following SQL commands list the number of customers in each country from the \"Customers\" table (see Table 1)?\n\n(A) SELECT NUMBER (id), country FROM Customers GROUP BY country;\n(B) SELECT NUMBER (id), country FROM Customers ORDER BY country;\n(C) SELECT COUNT (id), country FROM Customers GROUP BY country;\n(D) SELECT COUNT (id), country FROM Customers ASSEMBLY BY country;\n(E) none of the above.",
+      "text": "Which of the following SQL commands lists the number of customers in each country from the \"Customers\" table (see Table 1)?\n\n(A) SELECT NUMBER (id), country FROM Customers GROUP BY country;\n(B) SELECT NUMBER (id), country FROM Customers ORDER BY country;\n(C) SELECT COUNT (id), country FROM Customers GROUP BY country;\n(D) SELECT COUNT (id), country FROM Customers ASSEMBLY BY country;\n(E) none of the above.",
       "points": 2.5,
       "hasImage": true,
       "subQuestions": []
@@ -14578,7 +14578,7 @@
       "subjectId": "im-it",
       "year": 107,
       "number": 6,
-      "text": "Which of the following types of databases has been optimized for data warehousing and OLAP (online analytical processing) for complex analytical and ad hoc queries with a rapid execution time? (A) object-oriented databases (B) multi-dimensional databases (C) crossed relational databases (D) relational object-oriented databases (E) distributed databases.",
+      "text": "Which of the following types of databases has been optimized for data warehousing and OLAP (online analytical processing) for complex analytical and ad hoc queries with a rapid execution time? (A) object-oriented databases (B) multidimensional databases (C) crossed relational databases (D) relational object-oriented databases (E) distributed databases.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -14614,7 +14614,7 @@
       "subjectId": "im-it",
       "year": 107,
       "number": 9,
-      "text": "Which of the following is a computer network authentication protocol that works on the basis of tickets to allow nodes communicating over a non-secure network to prove their identity to one another in a secure manner? (A) Kerberos (B) Dynamic Host Configuration Protocol (C) Secure Remote Password protocol (SRP) (D) Internet Key Exchange (E) none of the above.",
+      "text": "Which of the following is a computer network authentication protocol that works on the basis of tickets to allow nodes communicating over a non-secure network to prove their identity to one another in a secure manner? (A) Kerkeros (B) Dynamic Host Configuration Protocol (C) Secure Remote Password protocol (SRP) (D) Internet Key Exchange (E) none of the above.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -14626,7 +14626,7 @@
       "subjectId": "im-it",
       "year": 107,
       "number": 10,
-      "text": "Which of the following is relatively not a main concern of the HTTPS protocol? (A) authentication of the accessed website (B) protection of communication privacy (C) performance of transfer speed (D) data integrity (E) fault tolerance (F) protection of tampering of the communication.",
+      "text": "Which of the following is relatively not a main concern of the HTTPS protocol? (A) authentication of the accessed website (B) protection of communication privacy (C) protection of man-in-the-middle attacks (D) fault tolerance (E) protection of tampering of the communication.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -14638,7 +14638,7 @@
       "subjectId": "im-it",
       "year": 107,
       "number": 11,
-      "text": "Which of the following about digital certificate is wrong? (A) the \"Serial Number\" field is a digital certificate is used to track revocation information (B) the \"Issuer\" field specifies the entity that verified the information and signed the certificate (C) at the minimum, a digital certificate contains the public key (D) X.509 is a standard that defines the format of public key certificates (E) all of the above are correct (choose this only if none of the above can be chosen).",
+      "text": "Which of the following about digital certificate is wrong? (A) the \"Serial Number\" field in a digital certificate is used to track revocation information (B) the \"Issuer\" field specifies the entity that verified the information and signed the certificate (C) it needs to contain the certificate owner's public key (D) X.509 is a standard that defines the format of public key certificates (E) all of the above are correct (choose this only if none of the above can be chosen).",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -14650,7 +14650,7 @@
       "subjectId": "im-it",
       "year": 107,
       "number": 12,
-      "text": "Which of the following about Single Sign-On (SSO) is wrong? (A) it reduces password fatigue from different user name and password combinations (B) it reduces time spent re-entering passwords for the same identity (C) log-in with Facebook account is an example of SSO (D) log-in to different account is an example of SSO (E) all of the above are correct (choose this only if none of the above can be chosen).",
+      "text": "Which of the following about Single Sign-On (SSO) is wrong? (A) it reduces password fatigue from different user name and password combinations (B) it reduces time spent re-entering passwords for the same identity (C) log-in with Facebook account is an example of SSO (D) log-in with Google account is an example of SSO (E) all of the above are correct (choose this only if none of the above can be chosen).",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -14662,7 +14662,7 @@
       "subjectId": "im-it",
       "year": 107,
       "number": 13,
-      "text": "Which of the following enables users to access network applications across secure networks as if their computing devices were directly connected to the private network? (A) Transport Layer Security (B) Secure Sockets Layer (C) Virtual Private Network (D) Network Address Translation (E) none of the above.",
+      "text": "Which of the following enables users to send and receive data across shared or public networks as if their computing devices were directly connected to the private network? (A) Transport Layer Security (B) Secure Sockets Layer (C) Virtual Private Network (D) Network Address Translation (E) none of the above.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -14686,7 +14686,7 @@
       "subjectId": "im-it",
       "year": 107,
       "number": 15,
-      "text": "Which of the following best describes a specialized hardware-dependent computer program which is also operating system specific that enables another program to interact transparently with a hardware device? (A) firmware (B) device driver (C) application programming interface (D) hardware platform interface (E) software platform user environment interface.",
+      "text": "Which of the following best describes a specialized hardware-dependent computer program which is also operating system specific that enables another program to interact transparently with a hardware device? (A) firmware (B) device driver (C) application programming interface (D) hardware platform interface (E) intelligent platform management interface.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -14698,7 +14698,7 @@
       "subjectId": "im-it",
       "year": 107,
       "number": 16,
-      "text": "Which of the following is wrong? (A) the primary goal of CISC (Complex Instruction Set Computer) architecture is to complete a task in as few lines of assembly code as possible (B) the RISC (Reduced Instruction Set Computer) architecture is designed to execute computer tasks with the simplest instructions in the shortest amount of time possible (C) Intel x86 architecture is typically considered as a CISC approach (D) ARM architecture is typically considered as a RISC approach (E) all of the above are correct (choose this only if none of the above can be chosen).",
+      "text": "Which of the following is wrong? (A) the primary goal of CISC (Complex Instruction Set Computer) approach is to complete a task in as few lines of assembly code as possible (B) the RISC (Reduced Instruction Set Computer) approach is designed to execute computing tasks with the simplest instructions in the shortest amount of time possible (C) Intel x86 architecture is typically considered as a CISC approach (D) ARM architecture is typically considered as a RISC approach (E) all of the above are correct (choose this only if none of the above can be chosen).",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -14710,7 +14710,7 @@
       "subjectId": "im-it",
       "year": 107,
       "number": 17,
-      "text": "Which of the following refers to the act of creating a virtual version of something, including virtual computer hardware platforms, storage devices, and computer network resources? (A) virtual reality (B) augmented reality (C) hypervisor (D) virtualization (E) none of the above.",
+      "text": "Which of the following refers to the act of creating a virtual version of something, including virtual computer hardware platforms, storage devices, and computer network resources? (A) virtual reality (B) augmented reality (C) virtualization (D) hypervisor (E) none of the above.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -14734,7 +14734,7 @@
       "subjectId": "im-it",
       "year": 107,
       "number": 19,
-      "text": "Which of the following about the Blockchain technology used in Bitcoin is wrong? (A) it is a continuously growing list of records, called \"blocks\" that are linked and secured using cryptography (B) the blocks in a chain can be distributed to different peers so that no peer is required to maintain the complete list of the blocks in the chain (C) all transactions and records in each block are typically encrypted (D) blockchains are inherently resistant to modification of the data that have been recorded into them (E) all of the above are correct (choose this only if none of the above can be chosen).",
+      "text": "Which of the following about the Blockchain technology used in Bitcoin is wrong? (A) it is a continuously growing list of \"blocks\" recording transaction history of the Bitcoin system (B) the blocks in a blockchain can be distributed to different peers so that no peer is required to maintain the complete list of the blocks in the system (C) all transactions in the blocks are kept anonymous and encrypted (D) blockchains are inherently resistant to modification of the data that have been recorded into blocks (E) all of the above are correct (choose this only if none of the above can be chosen).",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -14746,7 +14746,7 @@
       "subjectId": "im-it",
       "year": 107,
       "number": 20,
-      "text": "Which of the following is correct about the CIA Triad of Information security model? (A) \"C\" refers to Control (B) \"C\" refers to Cryptography (C) \"I\" refers to Identification (D) \"A\" refers to Anonymouse (E) \"A\" refers to Availability.",
+      "text": "Which of the following is correct about the CIA Triad of information security model? (A) \"C\" refers to Control (B) \"C\" refers to Cryptography (C) \"I\" refers to Identification (D) \"A\" refers to Anonymous (E) \"A\" refers to Availability.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -15173,7 +15173,7 @@
       "subjectId": "im-it",
       "year": 109,
       "number": 7,
-      "text": "Which of the following is generally not characterized as a mobile payment service? (A) LINE Pay (B) Pi 錢包 (C) 街口 (D) 台灣 Pay (E) 嗶嗶.",
+      "text": "Which of the following is generally not characterized as a mobile payment service? (A) LINE Pay (B) Pi 錢包 (C) 街口 (D) 台灣 Pay (E) 嘖嘖.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -15269,7 +15269,7 @@
       "subjectId": "im-it",
       "year": 109,
       "number": 15,
-      "text": "Which if the following is not a non-volatile memory/storage? (A) Solid-state drive (SSD) (B) DDR4 (C) read-only memory (ROM) (D) Flash memory (E) all of the above are non-volatile.",
+      "text": "Which of the following is not a non-volatile memory/storage? (A) Solid-state drive (SSD) (B) DDR4 (C) read-only memory (ROM) (D) Flash memory (E) all of the above are non-volatile.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -15718,10 +15718,21 @@
       "subjectId": "im-it",
       "year": 110,
       "number": 29,
-      "text": "The following C++ code fragment shows the class definition of an array-based implementation of ADT Binary Tree that stores a list of person names.\n\nconst int MAX_NODES = 100;\n\nclass TreeNode\n{\npublic:\nprivate:\n    string name;                   // node data — person name\n    int leftchild_index;        // index to left child, -1 if no left child\n    int rightchild_index;       // index to right child, -1 if no right child\n    friend class BinaryTree;\n};\n\nclass BinaryTree\n{\npublic:\n    void removeAllLeaf();\nprotected:\n    void recurRemoveLeaf(int parent_id, int node_id, int left_or_right);\n    // parent_id: parent node id\n    // node_id: visited node id\n    // left_or_right: 0 if node_id is the left child of parent_id; 1 otherwise.\nprivate:\n    TreeNode tree[MAX_NODES]; // array of tree nodes\n    int root_index;                     // index of root, -1 if the tree is empty\n    int free_index;                    // index to the first free node\n    // free nodes are chained by rightchild_index\n};\n\n(a) (10 points) Show the tree structure given the following data content.\n\nroot_index: 0\nfree_index: 6\n\ntree:\n     name    leftchild_index  rightchild_index\n0    Jane         ?                 ?\n1    Bob         -1                4\n3    Alan        -1                5\n4    ?\n5    Nancy       -1               -1\n6    ?\n7    ?           -1\n8    ?            1\n\n(b) (20 points) Write the BinaryTree::removeAllLeaf() that removes ALL leaf nodes from a binary tree. Note that you also need to implement the protected function BinaryTree::recurRemoveLeaf() called by removeAllLeaf() that recursively traverses the tree to delete all the leaf nodes.",
+      "text": "The following C++ code fragment shows the class definition of an array-based implementation of ADT Binary Tree that stores a list of person names.\n\nconst int MAX_NODES = 100;\n\nclass TreeNode\n{\npublic:\n    ...\nprivate:\n    ...\n    string name;              // node data — person name\n    int leftchild_index;      // index to left child, -1 if no left child\n    int rightchild_index;     // index to right child, -1 if no right child\n    friend class BinaryTree;\n};\n\nclass BinaryTree\n{\npublic:\n    ...\n    void removeAllLeaf();\nprotected:\n    void recurRemoveLeaf(int parent_id, int node_id, int left_or_right);\n    // parent_id: parent node id\n    // node_id: visited node id\n    // left_or_right: 0 if node_id is the left child of parent_id; 1 otherwise.\nprivate:\n    ...\n    TreeNode tree[MAX_NODES]; // array of tree nodes\n    int root_index;           // index of root, -1 if the tree is empty\n    int free_index;           // index to the first free node\n                              // free nodes are chained by rightchild_index\n};\n\nroot_index: 0\nfree_index: 6\n\ntree:\nindex  name   leftchild_index  rightchild_index\n0      Jane    1                3\n1      Bob    -1                4\n2      Tom    -1               -1\n3      Alan   -1                5\n4      Ellen   2               -1\n5      Nancy  -1               -1\n6      ?      -1                7\n7      ?      -1                8\n8      ?      -1                9\n...    ...    ...              ...",
       "points": 30,
       "hasImage": true,
-      "subQuestions": []
+      "subQuestions": [
+        {
+          "label": "(a)",
+          "text": "(10 points) Show the tree structure given the data content above.",
+          "points": 10
+        },
+        {
+          "label": "(b)",
+          "text": "(20 points) Write the BinaryTree::removeAllLeaf() that removes ALL leaf nodes from a binary tree. Note that you also need to implement the protected function BinaryTree::recurRemoveLeaf() called by removeAllLeaf() that recursively traverses the tree to delete all the leaf nodes.",
+          "points": 20
+        }
+      ]
     },
     {
       "id": "q-pp-im-it-111-1",
@@ -16030,7 +16041,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 1,
-      "text": "Which of the following is wrong about Von Neumann architecture? (A) It has four main units: CPU, memory, input, and output (B) memory is simply a linear array of storage locations (C) data and instructions are stored in different memory (D) it has a control unit and an arithmetic/logic unit (choose this one only if none of the above can be chosen)",
+      "text": "Which of the following is wrong about Von Neumann architecture? (A) it has four main units: CPU, memory, input, and output (B) memory is simply a linear array of storage locations (C) data and instructions are separated into different memory (D) a central processing unit has a control unit and an arithmetic/logic unit (E) all the above are correct (choose this one only if none of the above can be chosen).",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16042,7 +16053,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 2,
-      "text": "Which of the following is wrong about process architecture? (A) In general, program approaches will feed force opcodes to execute instructions that are defined in a RISC approach (B) the CISC approach typically has fewer instructions than that compiled in RISC architecture (C) the set is a CISC approach is typically smaller in instruction number than the one in RISC approach (D) all the above are correct (choose this one only if none of the above can be chosen)",
+      "text": "Which of the following is wrong about process architecture? (A) in general, program compiled in CISC architecture has fewer instructions than that compiled in RISC architecture (B) the CISC approach tries to make each instruction more powerful (C) in general, instructions in a CISC approach will need more clock cycles to execute than in a RISC approach (D) in general, the instruction set in a CISC approach is typically smaller than the instruction set in a RISC approach (E) all the above are correct (choose this one only if none of the above can be chosen).",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16054,7 +16065,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 3,
-      "text": "Which of the following is wrong about computer memory? (A) In a microprocessor with 32-bit address buses, devices and memory devices can access at most 2^32 bytes of memory (B) the internal data storage of a processor is known as its access I/O devices and memory devices (C) the internal data storage of a processor is known as its registers (D) all the above are correct (choose this one only if none of the above can be chosen)",
+      "text": "Which of the following is wrong about computer architecture? (A) A processor with 32-bit address buses can access at most 2^32 bytes of memory (B) in memory-mapped I/O, I/O devices use the same address space as memory devices (C) in memory-mapped I/O, the same instructions are used to access I/O devices and memory devices (D) the internal data storage of a processor is known as its registers (E) all the above are correct (choose this one only if none of the above can be chosen).",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16066,7 +16077,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 4,
-      "text": "Which of the following is wrong about Input/Output in a computer system? (A) is a technique where a hardware device is needed to allow I/O devices to continuously access memory with less participation of the processor (B) Direct Memory Access (DMA) allows data to be transferred from I/O devices to memory without the external device interrupt the processor (C) a hardware device interrupts the processor by triggering an interrupt signal to Direct Memory Access (DMA) allows data to be transferred to memory (D) all the above are correct (choose this one only if none of the above can be chosen)",
+      "text": "Which of the following is wrong about Input/Output in a computer system? (A) in interrupt-driven I/O, an external device interrupts the processor to execute an interrupt service routine (B) an external device interrupts the processor by triggering an interrupt signal to the processor (C) Direct Memory Access (DMA) allows data to be transferred from I/O devices to memory directly without the continuous involvement of the processor (D) a hardware device is needed to allow I/O devices to directly access memory with less participation of the processor (E) all the above are correct (choose this one only if none of the above can be chosen).",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16078,7 +16089,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 5,
-      "text": "Which of the following is wrong about registers in CPU? (A) the number of registers in CPU is smaller than the size of L1 cache (B) the size of L2 cache is typically much bigger than L1 cache (C) the size of L2 cache is smaller than the size of L1 cache in CPU (D) current CPUs typically provides dozens to hundreds bytes (choose this one only if none of the above can be chosen)",
+      "text": "Which of the following is wrong about CPU cache? (A) register in CPU is usually faster than L1 cache (B) number of registers in CPU is smaller than the size of L1 cache (C) the size of L1 cache in current CPUs typically ranges in dozens to hundreds bytes (D) the size of L2 cache is typically much bigger than L1 cache (E) all the above are correct (choose this one only if none of the above can be chosen).",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16090,7 +16101,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 6,
-      "text": "Which of the following is NOT a major functionality of operating systems? (A) Resource Management (B) Process Management (C) Memory Management (D) Security Management (E) all the above are major functionalities.",
+      "text": "Which of the following is not a major functionality of operating systems? (A) Resource Management (B) Process Management (C) Memory Management (D) Security Management (E) all the above are major functionalities.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16102,7 +16113,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 7,
-      "text": "Operating systems divide virtual and physical memory into fixed-sized chunks called pages. Which of the following page size is currently most common than the other? (A) 128 byte (B) 512 bytes (C) 4KB (D) 12KB (E) 512KB.",
+      "text": "Operating systems divide virtual and physical memory into fixed-sized chunks called pages. Which of the following page size is currently most common than the others? (A) 128 bytes (B) 512 bytes (C) 4KB (D) 128KB (E) 512KB.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16114,7 +16125,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 8,
-      "text": "Which of the following is wrong about operating systems? (A) user applications usually run in user-mode (B) applications running in user-mode shares a virtual address space (C) process running in user-mode can't access virtual addresses that are reserved for the operating system (D) core operating system components run in kernel mode (E) all the above are correct (choose this one only if none of the above can be chosen).",
+      "text": "Which of the following is wrong for applications running in an operating system? (A) user applications usually run in user-mode (B) applications running in user-mode shares a virtual address space (C) a process running in user mode can't access virtual addresses that are reserved for the operating system (D) core operating system components run in kernel mode (E) all the above are correct (choose this one only if none of the above can be chosen).",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16126,7 +16137,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 9,
-      "text": "Which of the following is wrong about computer cluster? (A) nodes in a cluster are typically independent and connected by a high-speed LAN (B) clustering computers can increase computing power (C) clustering computers can prevent security attacks (D) clustering computers can improve fault tolerance (E) all the above are correct (choose this one only if none of the above can be chosen).",
+      "text": "Which of the following is wrong about computer clusters? (A) nodes in a cluster are typically independent and connected by a high-speed LAN (B) clustering computers can increase computing power (C) clustering computers can prevent security attacks (D) clustering computers can improve fault tolerance (E) all the above are correct (choose this one only if none of the above can be chosen).",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16150,7 +16161,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 11,
-      "text": "With regard to storage management, which of the following is generally not the responsibility of operating systems? (A) creating and deleting files and directories (B) disk scheduling (C) backing up files onto stable permanent storage media (D) supporting primitives for manipulating files and directories.",
+      "text": "With regard to storage management, which of the following is generally not the responsibility of operating systems? (A) creating and deleting files (B) file integrity check (C) disk scheduling (D) backing up files onto stable permanent storage media (E) supporting primitives for manipulating files and directories.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16162,7 +16173,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 12,
-      "text": "A uniprocessor system achieves multiprogramming by ___. (A) CPU scheduling (B) dynamic allocation (C) manipulating files and directories.",
+      "text": "A uniprocessor system achieves multiprogramming by _____ in CPU scheduling. (A) dynamic allocation (B) process rotating (C) pipelining (D) time slicing (E) none of the above.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16174,7 +16185,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 13,
-      "text": "When a process is running in Unix/Linux system, which of the following is wrong about memory layout? (A) the stack section starts immediately above the data section (B) the stack section can grow and shrink dynamically with process life cycle (C) the data section (D) the stack section can grow and shrink dynamically during process life cycle (E) all the above are correct (choose this one only if none of the above can be chosen).",
+      "text": "When a process is running in Unix-like systems, which of the following is wrong about its memory layout? (A) the code section starts at location 0 (B) the data section starts immediately above code section (C) the stack section starts immediately above the data section (D) the stack section can grow and shrink dynamically during process life cycle (E) all the above are correct (choose this one only if none of the above can be chosen).",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16186,7 +16197,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 14,
-      "text": "Which of the following is wrong about the Collision Avoidance (CA) algorithm? (A) Cache-Sense to Robin. (B) Exponential Backoff (C) Collision Avoidance (D) Request to Send/Clear to Send (RTS/CTS) (E) Round to Robin.",
+      "text": "In Ethernet, which of the following algorithm is used to resolve collision? (A) Carrier Sense (B) Exponential Backoff (C) Collision Avoidance (D) Request to Send/Clear to Send (RTS/CTS) (E) Round Robin.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16198,7 +16209,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 15,
-      "text": "We can apply logic to network frames and handling those at a local area network to create the appearance and functionality of network traffic that spans separate networks. This effectively creates ___. (A) virtual LAN (B) VPN (C) domains (D) subdomain (E) private LANs.",
+      "text": "We can apply tags to network frames and handling these tags in a local area network to create the appearance and functionality of network traffic that is physically on a single network but acts as if it is split between separate networks. This effectively creates ______ (A) virtual LANs (B) VPN (C) domains (D) subdomains (E) private LANs.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16210,7 +16221,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 16,
-      "text": "In router-table construction, which of the following is not using the following algorithms but instead routers build up their routing tables by periodically exchanging information with their immediately neighboring? (A) adaptive routing (B) link-state (C) distance-vector (D) incremental update (E) none of the above.",
+      "text": "In router-table construction, which of the following algorithms let routers build up their routing tables by periodically exchanging information with their immediately neighboring? (A) adaptive (B) link-state (C) distance-vector (D) incremental update (E) none of the above.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16222,7 +16233,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 17,
-      "text": "Which of the following is wrong about TCP? (A) TCP uses a sliding window for flow control (B) TCP uses a connection (C) TCP is stream-oriented (D) TCP uses sliding window for free control (E) all the above can be chosen.",
+      "text": "Which of the following is wrong about TCP? (A) it uses 2-way handshake to establish a connection (B) TCP is stream-oriented (C) TCP uses sliding window for flow control (D) TCP uses sequence numbers to ensure the correct order of delivery (E) all the above are correct (choose this one only if none of the above can be chosen).",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16234,7 +16245,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 18,
-      "text": "Which of the following is wrong about buffer overflow attack? (A) in a buffer overflow attack, an attacker sends messages between two parties, and then steals and manipulates data between them (B) a buffer overflow attack typically overflows the buffer and overwrites subsequent portions of memory, typically containing the stack-frame pointers (C) In SQL injection, an attacker inputs malicious code into a server using some query language, forcing the server to deliver protected information (D) in none of them (E) all the above are correct (choose this one only if none of the above can be chosen).",
+      "text": "Which of the following is wrong about security attacks? (A) In Man-in-the-Middle attack, an attacker intercepts messages between two parties, and then steals and manipulates data between them (B) In buffer overflow attack, the attacker crafts an oversized input string which, when read by the server and stored in memory, overflows the buffer and overwrites subsequent portions of memory, typically containing the stack-frame pointers. (C) In SQL Injections, an attacker inserts malicious code into a server using server query language, forcing the server to deliver protected information (D) In First-day attack, an attacker exploits a network vulnerability before a patch is released and/or implemented. (E) all the above are correct (choose this one only if none of the above can be chosen).",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16246,7 +16257,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 19,
-      "text": "Which of the following is wrong about relational databases? (A) a primary key is used to identify each record in a table (B) a foreign key is used to link two related tables by referring to the fields in this one which is the specific foreign key (C) both row (D) a foreign key doesn't need to refer to the fields which show NULL value (choose this one only if none of the above can be chosen).",
+      "text": "Which of the following is wrong about program compilation? (A) assembler takes as input the assembly code and translates it into relocatable machine code (B) it is the linker's job to make sure all cross-file dependencies are resolved properly (C) programs can be linked either statically or dynamically (D) lexical and syntax analysis is done at compiling stage (E) all the above are correct (choose this one only if none of the above can be chosen).",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16258,7 +16269,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 20,
-      "text": "Which of the following is wrong about NoSQL database? (A) a column-oriented database organizes data in columns (B) document stores use an internal data model (i.e., XML, JSON) to associate arrays so that their data data model (C) document stores use documents (i.e., XML, JSON) to associate arrays so that their data how efficient data is maintained (D) graph stores use an arbitrary element to a min heap of n nodes can be done in (E) none of the above are correct (choose this one only if none of the above can be chosen).",
+      "text": "Which of the following is wrong about NoSQL databases? (A) in column-oriented structure, data is stored in cells grouped in a pre-defined number of columns (B) key-value stores use an associative array as their data mode (C) document stores use documents (e.g., XML, YAML, JSON) to hold and encode data in standard formats (D) graph databases represent data on a graph that shows how different sets of data relate to each other (E) all the above are correct (choose this one only if none of the above can be chosen).",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16270,7 +16281,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 21,
-      "text": "Which of the following is wrong about relational databases? (A) data are organized into two-dimensional tables and rows (B) a foreign key is used to link two related tables by referring to the fields in this one (C) both row (D) a foreign key doesn't need to refer to (E) none of the above can be chosen.",
+      "text": "Which of the following is wrong about relational databases? (A) data are organized into tables of columns and rows (B) a unique key is used to identify each row (C) each row represents a data record (D) columns correspond to attributes of records (E) all the above are correct (choose this one only if none of the above can be chosen).",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16282,7 +16293,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 22,
-      "text": "Which of the following is wrong about spanning trees? (A) If all the edges of a graph are edges of a spanning tree T of G, then adding it to T (B) if it is a graph this one only (C) a graph this one only if none of the above are correct (choose this one only if none of the above can be chosen).",
+      "text": "Which of the following is wrong about relational databases? (A) a primary key is used to ensure data in the specific column is unique (B) a foreign key refers to the field in a table which is the primary key of another table (C) foreign key does not allow NULL value (D) more than one foreign key are allowed in a table (E) all the above are correct (choose this one only if none of the above can be chosen).",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16294,7 +16305,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 23,
-      "text": "The term ___ has been coined to represent a digital counterpart of a real-world object for use such as simulation, integration, testing, monitoring, and maintenance. (A) avatar (B) digital twin (C) virtual reality (D) cloud agent (E) none of the above.",
+      "text": "The term ______ has been coined to represent a digital counterpart of a real-world object for use such as simulation, integration, testing, monitoring, and maintenance. (A) avatar (B) digital twin (C) virtual reality (D) cloud object (E) none of the above.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16306,7 +16317,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 24,
-      "text": "In blockchain technology like that used in Bitcoin, the process 'mining' is defined mainly to: (A) enforce concurrency control of transactions (B) ensure atomicity (C) distribute (D) validate transactions (E) none of the above.",
+      "text": "In blockchain technology like that used in Bitcoin, the process \"mining\" is designed mainly to (A) enforce concurrency control of transactions (B) ensure atomicity (C) distribute transaction (D) validate transaction (E) none of the above.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16318,7 +16329,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 25,
-      "text": "Which of the following is wrong about spanning trees? (A) it leaves appear on the same level (B) all leaves appear on the same level (C) a node has at least f(n/2) children (D) it leaves appear on the same level (E) every internal node.",
+      "text": "Which of the following is wrong about B-tree? (A) B-tree is self-balancing (B) A non-leaf node with k children contains k keys (C) a B-tree of order m has at most m children (D) every internal node has at least ceil(m/2) children (E) all leaves appear on the same level.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16330,7 +16341,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 26,
-      "text": "Which of the following is wrong about spanning trees? (A) If all the edges of a graph are edges of a spanning tree T of G (B) if it is not T (C) a spanning tree T of G is devoted to T (D) if it is and all the edges of a graph are edges of a spanning tree (E) none of the above are correct (choose this one only if none of the above can be chosen).",
+      "text": "Which of the following is wrong about spanning trees? (A) if all of the edges of a graph G are also edges of a spanning tree T of G, then G is a tree (B) if all of the edges of a graph G are also edges of a spanning tree T of G, then G is identical to T (C) if T is a spanning tree of G, and e is an edge of G that is not in T, then adding e to T will create a cycle (D) a graph may have more than one spanning trees (E) all the above are correct (choose this one only if none of the above can be chosen).",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16342,7 +16353,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 27,
-      "text": "Heapification of a given array is complete when there is a min heap of n nodes. (A) O(1) (B) O(log n) (C) O(n log n) (D) O(n) (E) O(n^2).",
+      "text": "Recall that a min heap is a complete binary tree such that the key stored in each node is greater than or equal to the keys in the node's children. Then, the time complexity for inserting a key into a min heap of n nodes can be done in (A) O(1) (B) O(log n) (C) O(n) (D) O(n log n) (E) none of the above.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16354,7 +16365,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 28,
-      "text": "The time complexity for finding an arbitrary element in a min heap of n nodes can be done in greater than or equal to the keys of the keys in the nodes children. Then a min heap of n nodes can be done in (A) O(1) (B) O(log n) (C) O(n log n) (D) O(n) (E) O(n^2) (F) none of the above.",
+      "text": "The time complexity for finding an arbitrary element in a min heap of n nodes can be done in (A) O(1) (B) O(log n) (C) O(n) (D) O(n log n) (E) none of the above.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16366,10 +16377,14 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 29,
-      "text": "二、問答題，共30分。Consider the following C++ code.\n\n#include <bits/stdc++.h>\nusing namespace std;\n# define NO_OF_CHARS 256\n\nvoid PREPROCESS(string str, int size, int badchar[NO_OF_CHARS])\n{\n    int i;\n    for (i = 0; i < NO_OF_CHARS; i++)\n        badchar[i] = -1;\n    for (i = 0; i < size; i++)\n        badchar[(int) str[i]] = i;\n}\n\nvoid search(string txt, string pat, string badchar)\n{\n    int m = pat.size();\n    int n = txt.size();\n    int badchar[NO_OF_CHARS];\n    PREPROCESS(pat, m, badchar);\n    int s = 0;\n    while (s <= (n - m))\n    {\n        int j = m - 1;\n        while (j >= 0 && pat[j] == txt[s + j])\n            j--;\n        if (j < 0)\n        {\n            cout << \"pattern occurs at \" << s << endl;\n            s += (s + m < n) ? m-badchar[txt[s + m]] : 1;\n        }\n        else\n            s += max(1, j - badchar[txt[s + j]]);\n    }\n}",
+      "text": "二、問答題，共 30 分。\n※ 本大題 [(a)、(b)、(c) 3 小題] 請於試卷內之「非選擇題作答區」標明題號依序作答。\n\nConsider the following C++ code.\n\n#include <bits/stdc++.h>\nusing namespace std;\n# define NO_OF_CHARS 256\n\nvoid PREPROCESS(string str, int size, int badchar[NO_OF_CHARS])\n{\n    int i;\n    for (i = 0; i < NO_OF_CHARS; i++)\n        badchar[i] = -1;\n    for (i = 0; i < size; i++)\n        badchar[(int) str[i]] = i;\n}\n\nvoid search(string txt, string pat)\n{\n    int m = pat.size();\n    int n = txt.size();\n    int badchar[NO_OF_CHARS];\n\n    PREPROCESS(pat, m, badchar);\n    int s = 0;\n    while (s <= (n - m))\n    {\n        int j = m - 1;\n        while (j >= 0 && pat[j] == txt[s + j])\n            j--;\n        if (j < 0)\n        {\n            cout << \"pattern occurs at \" << s << endl;\n            s += (s + m < n) ? m-badchar[txt[s + m]] : 1;\n        }\n        else\n            s += max(1, j - badchar[txt[s + j]]);\n    }\n}",
       "points": 30,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "(a) (15 points) When given the two strings txt = \"ABAAABCDABC\" and pat = \"ABC\", what is the output of search(txt, pat)?",
+        "(b) (8 points) If the lengths of txt and pat are n and m respectively, what is the worst case time complexity of search(txt, pat)? Briefly explain your answer.",
+        "(c) (7 points) Continue from above. What is the best case time complexity of search(txt, pat)? Briefly explain your answer."
+      ]
     },
     {
       "id": "q-pp-im-it-113-1",
@@ -16474,7 +16489,7 @@
       "subjectId": "im-it",
       "year": 113,
       "number": 9,
-      "text": "Which of the following is wrong about mutual exclusion in operating system? (A) mutual exclusion is used to ensure that a shared resource can be accessed by only one process at a time (B) if not designed properly, a mutual exclusion mechanism may result in deadlock (C) if not designed properly, a mutual exclusion mechanism may result in starvation (D) if not designed properly, a mutual exclusion mechanism may result in livelock (E) all the above are correct (choose this one only if none of the above can be chosen).",
+      "text": "Which of the following is wrong about mutual exclusion in operating system? (A) mutual exclusion is used to ensure that a shared resource can be accessed by only one process at a time (B) if not designed properly, a mutual exclusion mechanism may result in starvation (C) if not designed properly, a mutual exclusion mechanism may result in deadlock (D) if not designed properly, a mutual exclusion mechanism may result in livelock (E) all of the above are correct (choose this one only if none of the above can be chosen).",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16510,7 +16525,7 @@
       "subjectId": "im-it",
       "year": 113,
       "number": 12,
-      "text": "Which of the following is wrong about Domain Name System (DNS)? (A) DNS is a hierarchical naming system (B) DNS is a centralized naming system (C) DNS translates human readable names (for example, www.im.ntu.edu.tw) to machine readable IP addresses (D) .tw is a top-level domain (E) all the above are correct (choose this one only if none of the above can be chosen).",
+      "text": "Which of the following is wrong about Domain Name System (DNS)? (A) DNS is a hierarchical naming system (B) DNS is a centralized naming system (C) DNS translates human readable names (for example, www.im.ntu.tw) to machine readable IP addresses (D) .tw is a top-level domain (E) all the above are correct (choose this one only if none of the above can be chosen).",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16594,7 +16609,7 @@
       "subjectId": "im-it",
       "year": 113,
       "number": 19,
-      "text": "______ is a constraint that determines the relation of one attribute to another in a DBMS, and thus helps to maintain the quality of data in the database. (A) inclusion dependency (B) column dependency (C) functional dependency (D) join (E) none of the above.",
+      "text": "___ is a constraint that determines the relation of one attribute to another in a DBMS, and thus helps to maintain the quality of data in the database. (A) inclusion dependency (B) column dependency (C) functional dependency (D) join dependency (E) none of the above.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -17353,7 +17368,10 @@
       "text": "Competitive strategies that firms can employ to deal with competitive forces include cost leadership strategy, differentiation strategy, innovation strategy, etc.\n(1) Please give two examples to explain how firms can use information systems (IS) or information technologies (IT) to support the differentiation strategy. (10%)\n(2) For firms that adopt the differentiation strategy, what recommendations will you suggest to the firms about their IT strategy and management? (15%)",
       "points": 25,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "1",
+        "2"
+      ]
     },
     {
       "id": "q-pp-im-mis-106-2",
@@ -17365,7 +17383,10 @@
       "text": "Sharing economy refers to \"peer-to-peer-based activities of obtaining, giving, or sharing the access to goods and services, coordinated through community-based online services.\" Uber and AirBnB represent two famous examples of the sharing economy.\n(1) What are the major challenges for the sharing economy? (12%)\n(2) Please select one challenge that you just answer in (1) and describe (or develop) an information system/technology solution to address this challenge. (13%)",
       "points": 25,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "1",
+        "2"
+      ]
     },
     {
       "id": "q-pp-im-mis-106-3",
@@ -17377,7 +17398,12 @@
       "text": "The rise of Android platform signals the business value and strategic importance of open source software (OSS). While OSS can greatly reduce system development barrier, its license restricts the use of OSS software, and is an important consideration when adopting OSS in system development. Answer the following questions regarding OSS.\n(1) What is open source software? (5%)\n(2) About 85% of open source software adopts the General Public License (GPL). What are the key terms of a GPL license? (7%)\n(3) Apache License is also quite popular in open source community. Explain the reason when the Apache License should be selected over the GPL license for an open source project. (7%)\n(4) What are the strategic advantages for a business to be involved in open source software development projects? (6%)",
       "points": 25,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
     },
     {
       "id": "q-pp-im-mis-106-4",
@@ -17389,7 +17415,11 @@
       "text": "In addition to relational database, we have witness the raise of the so called No-SQL database. Answer the following questions regarding the No-SQL database.\n(1) How are relational database and No-SQL database different in terms of the ACID (Atomicity, Consistency, Isolation, Durability) properties, schema, and scalability? (11%)\n(2) Provide one scenario when a relational database should be selected over a No-SQL database. You should provide the underlying reasoning for the choice. (7%)\n(3) Provide one scenario when a No-SQL database should be selected over a relational database. You should provide the underlying reasoning for the choice. (7%)",
       "points": 25,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "1",
+        "2",
+        "3"
+      ]
     },
     {
       "id": "q-pp-im-mis-107-1",
@@ -17413,7 +17443,10 @@
       "text": "Environmental uncertainty of a firm refers to the degree of uncertainty of the firm's business (external) environment. In the literature, environmental uncertainty can be classified into two major dimensions: environmental munificence (環境豐裕性) and environmental dynamism (環境動態性). Environmental munificence refers to the degree to which a business environment provides firms with critical resources for their operations. For example, in a highly munificent environment, abundant resources and greater growth opportunities are available to firms. On the other hand, environmental dynamism denotes the extent to which firms face the unpredictability and volatility of changes in their business environments. For instance, a dynamic environment is characterized by fluctuations in product demand or changes in customer preferences.\n\n(1) For firms that operate in a highly munificent environment, what recommendations will you suggest to the firms about their IT (information technology) strategy? (15%)\n\n(2) For firms that operate in a highly dynamic environment, what recommendations will you suggest to the firms about their IT (information technology) strategy? (15%)",
       "points": 30,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "1",
+        "2"
+      ]
     },
     {
       "id": "q-pp-im-mis-107-3",
@@ -17434,10 +17467,14 @@
       "subjectId": "im-mis",
       "year": 107,
       "number": 4,
-      "text": "A private library in Taipei maintains a relational database that keeps the basic information of books. We are going to focus on the following tables: Book, Book_Author, Book_Copy, Library_Branch, Publisher. Below is a list of the columns in these tables. Underscored columns are the primary key of a table.\n\n• Book (BookId, Title, PublisherId)\n• Book_Copy (BookId, CopyId, BranchId)\n• Library_Branch (BranchId, Name, Address)\n• Publisher (PublisherId, Name, Address, Phone)\n\nThese tables have the following foreign key relations:\n\n• BookId in Book_Copy references BookId in Book.\n• BranchId in Book_Copy references BranchId in Library_Branch.\n• PublisherId in Book references PublisherId in Publisher.\n\nPlease answer the following questions:\n\n(1) Write down the SQL command that lists the Book Title, Branch Name, and Branch Address that owns books with the title \"Twilight.\" (8%)\n\n(2) Write down the SQL command that lists the BranchId, Branch Name, and the count of copies for books with the title \"Fire and Fury.\" The output should be ordered so that branches with the most copies are listed first. (9%)\n\n(3) Write down the SQL command that lists the BranchId and Branch Name of Library Branches that owns at least two copies for books with the title \"Only the Rain.\" The output should be ordered so that branches with the most copies are listed first. (8%)",
+      "text": "A private library in Taipei maintains a relational database that keeps the basic information of books. We are going to focus on the following tables: Book, Book_Author, Book_Copy, Library_Branch, Publisher. Below is a list of the columns in these tables. Underlined columns in the source PDF are the primary key of a table; they are marked [PK] below.\n\n• Book (BookId [PK], Title, PublisherId)\n• Book_Copy (BookId [PK], CopyId [PK], BranchId)\n• Library_Branch (BranchId [PK], Name, Address)\n• Publisher (PublisherId [PK], Name, Address, Phone)\n\nThese tables have the following foreign key relations:\n\n• BookId in Book_Copy references BookId in Book.\n• BranchId in Book_Copy references BranchId in Library_Branch.\n• PublisherId in Book references PublisherId in Publisher.\n\nPlease answer the following questions:\n\n(1) Write down the SQL command that lists the Book Title, Branch Name, and Branch Address that owns books with the title \"Twilight.\" (8%)\n\n(2) Write down the SQL command that lists the BranchId, Branch Name, and the count of copies for books with the title \"Fire and Fury.\" The output should be ordered so that branches with the most copies are listed first. (9%)\n\n(3) Write down the SQL command that lists the BranchId and Branch Name of Library Branches that owns at least two copies for books with the title \"Only the Rain.\" The output should be ordered so that branches with the most copies are listed first. (8%)",
       "points": 25,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "1",
+        "2",
+        "3"
+      ]
     },
     {
       "id": "q-pp-im-mis-108-1",
@@ -17461,7 +17498,10 @@
       "text": "In the era of machine learning (such as deep learning), data is the king. Large volumes of data are needed for model training purposes. To build machine learning models for business use, firms need to effectively collect, organize, store, and use data (e.g., process-, customer-, employee-related data, etc.) in order to harvest the values of machine learning.\n\n(a) Throughout the lifecycle of data (including data collection, organization, storing, and use) for machine learning, firms face many important managerial issues (decisions) concerning the management of these data. An example of such managerial issues (decisions) is: the firm needs to decide beforehand \"what data should and can be collected.\" Please identify four additional managerial issues (decisions) concerning the management of data for machine learning. Please also explain why each of the additional managerial issues (decisions) that you just identified is important. (20%)\n\n(b) For the example decision given in (a) (i.e., the decision on what data should and can be collected), is a centralized or decentralized decision-making structure more appropriate? For a centralized decision-making, we mean that decisions are directed to the top of the organization (i.e., the executive level); for a decentralized decision-making, decision rights are given to a lower organizational level (e.g., business units). Please provide a detailed explanation to justify your answer. (10%)",
       "points": 30,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "a",
+        "b"
+      ]
     },
     {
       "id": "q-pp-im-mis-108-3",
@@ -17473,7 +17513,12 @@
       "text": "Minho joined a group in a large IT company that develops customized data analytics solutions for their customers. In his first project, his colleagues collected several hundred thousands of data points and developed a model that can predict whether customers will purchase a product in their next session. The developer claimed that the prediction accuracy is 92% using the standard ten-fold cross-validation. Answer the following questions.\n\n(a) What is the definition of prediction accuracy? In additional to prediction accuracy, what are other useful performance measures that can help us evaluate the prediction performance? (6%)\n\n(b) Is an accuracy of 92% good or bad? How do we obtain a meaningful evaluation of this performance level? (7%)\n\n(c) The developer used the convolutional neural network (CNN) to learn the prediction model. He believes that this is the state-of-the-art approach and no other approach can perform better. Do you agree with him? Why? (6%)\n\n(d) How can we improve the prediction performance if the customer is not satisfied with the performance? (6%)",
       "points": 25,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ]
     },
     {
       "id": "q-pp-im-mis-108-4",
@@ -17485,7 +17530,13 @@
       "text": "The use of Artificial Intelligence (AI) to assign individuals into classes has stimulated concerns. One major issue is about the fairness of an automated classification algorithm. Consider a fictitious case that the Taitai Bank developed a predictive model for predicting future loan default. The higher score indicates that the individual has a higher probability of defaulting a loan. Taitai Bank has a policy of being fair to all its customers. Their main concern is that the risk score should be fair to customers in different occupations. Internal discussions reveal three definitions of fairness. To simplify our discussion, a \"positive case\" means that the individual will default in the future and a \"negative case\" means that the individual will not default in the future. The three different definitions of fairness are:\n\n(1) The risk score should be well-calibrated across different occupational groups: if the algorithm identifies a set of people as having a probability of z of constituting positive cases, then approximately a z fraction of this set should indeed be positive instances. This conditional should hold when applied separately in each group.\n\n(2) The average score received by people constituting positive instances should be the same in each occupational group.\n\n(3) The average score received by people constituting negative instances should be the same in each occupational group.\n\nAnswer the following questions.\n\n(a) Why does definition (1) corresponds to notions of fairness? (5%)\n\n(b) Why does definition (2) corresponds to notions of fairness? (5%)\n\n(c) Why does definition (3) corresponds to notions of fairness? (5%)\n\n(d) Which of the definitions (1), (2), or (3) is more reasonable? Why? (5%)\n\n(e) What should Taitai Bank do to ensure that their risk score is fair? (5%)",
       "points": 25,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ]
     },
     {
       "id": "q-pp-im-mis-109-1",
@@ -17497,7 +17548,10 @@
       "text": "In economics, the Cobb-Douglas production function is widely used to represent the relationship between the amounts of two or more inputs a firm uses and the amount of output produced by those inputs. The most standard form of the Cobb-Douglas production function for firm i is defined as follows:\n\nQ = A x L^α x C^β\n\nwhere Q = total production of firm i, L = labor input of firm i, C = capital input (e.g., the sum of machinery, equipment, and buildings) of firm i, A = total factor productivity, and α and β are the output elasticities of labor and capital, respectively.\n\n(a) Assume that firm i implements transaction processing systems to automate or facilitate daily routine transactions of the firm and allows staff and operational managers to monitor the status of business operations. Please describe how transaction processing systems can affect the Cobb-Douglas production function to improve the total production of firm i (i.e., to increase Q). (12%)\n\n(b) Assume that firm i plans to initiate a big data analytics project. Please describe how a big data analytics technology can additionally affect the Cobb-Douglas production function to further improve the output of firm i. (12%)",
       "points": 24,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "a",
+        "b"
+      ]
     },
     {
       "id": "q-pp-im-mis-109-2",
@@ -17509,7 +17563,11 @@
       "text": "Investing in information technology (IT) or information systems does not guarantee good returns. Prior research studies have indicated that firms generally receive superior returns from their IT investments if these IT investments are accompanied by investments in complementary assets. In contrast, if firms fail to make these complementary investments, the firms will receive less or no returns on their IT investments. According to the literature, complementary assets can be classified into three types: organizational assets, managerial assets, and social assets.\n\n(a) Please list and describe three different organizational assets. (9%)\n\n(b) When a firm pursues an innovation strategy, which type(s) of complementary assets (organizational assets, managerial assets, or social assets) is more important for improving the returns on the firm's IT investments? Please provide detailed explanations to justify your answer. (9%)\n\n(c) When a firm's IT investment involves an emerging IT and the firm is not familiar with this particular IT, which type(s) of complementary investments (organizational assets, managerial assets, or social assets) is more important for improving the return on this specific IT investment? Please provide detailed explanations to justify your answer. (8%)",
       "points": 26,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "a",
+        "b",
+        "c"
+      ]
     },
     {
       "id": "q-pp-im-mis-109-3",
@@ -17545,7 +17603,10 @@
       "text": "Sharing economy platforms for physical assets and goods can be classified into two types: non-money-based and money-based. An example of non-money-based sharing economy platforms is Peerby, a peer-to-peer lending site for household items and appliances where users do not need to pay monetary fees for using household items and appliances borrowed from their owners. In contrast, in a money-based sharing economy platform (e.g., Airbnb), users need to pay monetary fees that allow the owners of the shared asset or goods to cover their costs and even generate additional incomes.\n\nWhen a non-money-based sharing economy platform decides to change to money-based, this movement essentially changes the business model of this sharing economy platform.\n(a) Please identify what business processes need to be substantially revised/enhanced or what new business processes need to be developed, when a sharing economy platform plans to move from non-money-based to money-based. (13%)\n(b) The movement from non-money-based to money-based should also trigger discussions of whether the IT strategy of the platform needs to be adjusted. What recommendations will you suggest to the sharing economy platform about its IT strategy when the sharing economy platform plans to move from non-money-based to money-based? (13%)",
       "points": 26,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "a",
+        "b"
+      ]
     },
     {
       "id": "q-pp-im-mis-110-2",
@@ -17557,7 +17618,10 @@
       "text": "One of the key concepts of electronic commerce is digital markets. That is, electronic commerce establishes digital markets in which consumers (can be businesses) transact with their suppliers online.\n(a) In a digital market, will information asymmetry between consumers and suppliers be reduced or intensified? What are the business implications of such change of information asymmetry (either reduction or intensifying) in digital markets? (12%)\n(b) Some research studies indicate that \"in a digital market, the switching cost (i.e., the cost of switching from one supplier to another supplier) of consumers can either be increased or be decreased, depending on the nature of the product or service being sold.\" Please identify the characteristics of products/services that will have higher consumers' switching costs in the digital markets than in the traditional markets. Please also identify the characteristics of products/services whose consumers' switching costs will decrease when these products/services are sold in digital markets. (12%)",
       "points": 24,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "a",
+        "b"
+      ]
     },
     {
       "id": "q-pp-im-mis-110-3",
@@ -17569,7 +17633,12 @@
       "text": "Scrum 是一種敏捷軟體開發方法。支持者認為這個開發方法可以在快速變化的環境中產出高商業價值的軟體系統。請回答下列問題：\n(a) Scrum 方法包含三個主要角色: Scrum Master、Product Owner、Team。說明這三個角色的主要職責與工作。(7%)\n(b) 說明 Scrum 中每日站立會議的執行方式。(6%)\n(c) 什麼是 Sprint Backlog? Sprint Backlog 如何建立與管理? (6%)\n(d) 什麼是 Burn Down Chart? Burn Down Chart 如何建立與管理? 提供一個典型的 Burn Down Chart 的圖像。(6%)",
       "points": 25,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ]
     },
     {
       "id": "q-pp-im-mis-110-4",
@@ -17581,7 +17650,13 @@
       "text": "高速公路的塞車問題數十年來持續困擾用路人。這個問題並沒有因為高速公路電子道路收費系統所提供的大數據而獲得解決。因此我們需要更先進的、更有效的方式來預測與舒緩高速公路在重大節日的塞車問題。請回答以下問題：\n(a) 除了現有的資訊系統(如電子收費系統)的資料之外，還有什麼樣的資料可以幫助我們預測未來一至七天高速公路的塞車狀態? (5%)\n(b) 如何透過資訊系統的建置與佈署以收集這類的資料? (5%)\n(c) 新收集的資料如何幫助我們預測未來一至七天的塞車狀態? (5%)\n(d) 這個系統的主要 Actor 與 Use Case 有哪些? (5%)\n(e) 繪製這個系統的 Use Case Diagram。(5%)",
       "points": 25,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ]
     },
     {
       "id": "q-pp-im-mis-111-1",
@@ -17590,10 +17665,14 @@
       "subjectId": "im-mis",
       "year": 111,
       "number": 1,
-      "text": "Please answer the following questions related to IT project investment.\n\n(a) To evaluate whether to invest in an IT project or select among competing IT investment projects, firms often employ capital budgeting methods to support this investment decision making. Common capital budgeting methods include payback method, return on investment (ROI), cost-benefit ratio, etc. While popular, capital budgeting methods have several shortcomings. Please identify at least four shortcomings of capital budgeting methods. (8%)\n\nWhen a firm has multiple IT projects (either current or potential), the firm can employ the portfolio analysis method to evaluate the appropriateness of the portfolio of IT projects or to decide what types of IT projects to invest in the future. The portfolio analysis approach first assesses each IT project along the following two dimensions: potential benefits to firm and project risk of the IT project. Accordingly, as the following figure illustrates, each IT project can be classified into one of the following categories: avoid, cautiously examine, routine projects, or identify and develop. For example, if an IT project is with low-benefit but high-risk (i.e., in the \"avoid\" category), this IT project should be totally avoided.\n\n(b) When a firm pursues a cost-leadership strategy, which category (or categories) of IT projects should the firm invest more? Please provide detailed explanations to justify your answer. (9%)\n\n(c) Some studies suggest that \"if a firm is in information-intensive industries (e.g., finance), the firm should have more high-risk, high-benefit IT projects (i.e., the 'cautiously examine' category). Why should firms in information-intensive industries have more high-risk, high-benefit IT projects? (9%)",
+      "text": "Please answer the following questions related to IT project investment.\n\n(a) To evaluate whether to invest in an IT project or select among competing IT investment projects, firms often employ capital budgeting methods to support this investment decision making. Common capital budgeting methods include payback method, return on investment (ROI), cost-benefit ratio, etc. While popular, capital budgeting methods have several shortcomings. Please identify at least four shortcomings of capital budgeting methods. (8%)\n\nWhen a firm has multiple IT projects (either current or potential), the firm can employ the portfolio analysis method to evaluate the appropriateness of the portfolio of IT projects or to decide what types of IT projects to invest in the future. The portfolio analysis approach first assesses each IT project along the following two dimensions: potential benefits to firm and project risk of the IT project. Accordingly, as the following figure illustrates, each IT project can be classified into one of the following categories: avoid, cautiously examine, routine projects, or identify and develop. For example, if an IT project is with low-benefit but high-risk (i.e., in the \"avoid\" category), this IT project should be totally avoided.\n\nBesides evaluating individual IT projects, this benefit-risk classification of IT projects allows CIOs (or CEOs) to determine the optimal mix of IT investments for their firms. The optimal mix of IT investments is affected by the firm's competitive strategies, the characteristics of the industry to which the firm belongs, and so on.\n\n(b) When a firm pursues a cost-leadership strategy, which category (or categories) of IT projects should the firm invest more? Please provide detailed explanations to justify your answer. (9%)\n\n(c) Some studies suggest that \"if a firm is in information-intensive industries (e.g., finance), the firm should have more high-risk, high-benefit IT projects (i.e., the 'cautiously examine' category). Why should firms in information-intensive industries have more high-risk, high-benefit IT projects? (9%)",
       "points": 26,
       "hasImage": true,
-      "subQuestions": []
+      "subQuestions": [
+        "a",
+        "b",
+        "c"
+      ]
     },
     {
       "id": "q-pp-im-mis-111-2",
@@ -17605,7 +17684,10 @@
       "text": "Please answer the following questions related to Internet of Things (IoT).\n\n(a) What are the information privacy issues of IoT? Why these issues are important? Please give two examples from different application domains (e.g., smart manufacturing, smart city, smart home, smart vehicle, etc.) to illustrate information privacy threat (risk). (12%)\n\n(b) What are object safety and security issues in IoT? Why these issues are important? Please give two examples from different application domains (e.g., smart manufacturing, smart city, smart home, smart vehicle, etc.) to illustrate object safety and security threat (risk). (12%)",
       "points": 24,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "a",
+        "b"
+      ]
     },
     {
       "id": "q-pp-im-mis-111-3",
@@ -17629,7 +17711,10 @@
       "text": "User interface (UI) design is critical for a successful and easy-to-use application. To achieve this goal, the development team should adopt the so-called user-centered design and follow the general user experience and user interface design heuristics.\n\n(a) What is user-centered design? What are the principles for a user-centered design process? (10%)\n\n(b) List and explain at least four well-known user experience and user interface design heuristics. (15%)",
       "points": 25,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "a",
+        "b"
+      ]
     },
     {
       "id": "q-pp-im-mis-112-1",
@@ -17641,7 +17726,11 @@
       "text": "Pull-based and push-based supply chain models are two supply chain strategies commonly adopted by companies.\n(a) What is the pull-based supply chain model? What is the push-based supply chain model? (8 points)\n(b) What are the advantages of the pull-based supply chain model? What are the advantages of the push-based supply chain model? (8 points)\n(c) When a company decides which supply chain model to adopt, what factors need to be considered by the focal company? Please list and explain some company-specific, industry-level, and business-environment-level factors that should be considered when deciding the best supply chain model for a company (10 points)",
       "points": 26,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "a",
+        "b",
+        "c"
+      ]
     },
     {
       "id": "q-pp-im-mis-112-2",
@@ -17653,7 +17742,11 @@
       "text": "Assume that a leading bicycle-manufacturing company is currently evaluating two IT investment projects. The first IT investment project (called Mfc-BDA) is to develop a manufacturing big data analytics system for improving the manufacturing productivity and reduce defects in the manufacturing process. The second IT investment project (called Bike-IoT) is to explore the use of Internet of Things (IoT) technology to record riders' riding habits and monitor bikes' status (e.g., tire pressure) so that riding experiences and safety of riders can be enhanced.\n\nClearly, these two IT investments, like any other IT investment projects, will involve firm-specific, competition, and market risks. Please answer the following questions.\n\n(a) Please list two potential markets risks that the Mfc-BDA project is likely to face. Please explain what these two market risks are and why they will undermine the benefit of the Mfc-BDA project to this bicycle manufacturing company. (8 points)\n(b) What are the competition risks that the Bike-IoT project may be exposed to? How this bicycle manufacturing company should do in order to minimize these competition risks? (8 points)\n(c) Which type of risks (firm-specific risks, competition risks, or market risks) is more critical to the Mfc-BDA project? In other words, which type of risks should the focal company attempt to control so as to improve the likelihood that this IT investment project will succeed? (8 points)",
       "points": 24,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "a",
+        "b",
+        "c"
+      ]
     },
     {
       "id": "q-pp-im-mis-112-3",
@@ -17677,7 +17770,10 @@
       "text": "Estimating the costs of a software system is essential for a meaningful plan. Popular methods include function point analysis, COCOMO II, expert judgment, planning poker, and T-shirt sizing. Please answer the following questions.\n(a) Briefly explain these approaches (10 points)\n(b) Compare the optimal timing and usage of these approaches in terms of the Systems Development Process Model. (15 points)",
       "points": 25,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "a",
+        "b"
+      ]
     },
     {
       "id": "q-pp-im-mis-113-1",
@@ -17689,7 +17785,10 @@
       "text": "Community detection is an important technique for social media analytics. Please answer the following questions related to community detection.\n(a) What is community detection? Please provide a social media analytics application that employs community detection methods. (10 points)\n(b) How to evaluate the effectiveness of a community detection method? Please be specific about the evaluation metrics and the evaluation procedure that can be employed. (12 points)",
       "points": 22,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "a",
+        "b"
+      ]
     },
     {
       "id": "q-pp-im-mis-113-2",
@@ -17701,7 +17800,11 @@
       "text": "Enterprise agility, also known as organizational agility, refers to an organization's ability to quickly detect, adapt, and respond to changes in unstable business environments. Previous research indicates that firms exhibiting higher levels of agility often achieve greater firm performance.\n(a) Please provide an example of enterprise agility of a B2B firm. Please provide an example of enterprise agility of a B2C firm. Note that the examples you provide need not be real cases; they only serve as illustrations of what enterprise agility is. (10 points)\n(b) Can ITs (information technologies) be employed to help a firm improve its enterprise agility? If your answer is 'yes', please develop an example to show how ITs can help a firm improve its enterprise agility. If your answer is 'no', please offer a thorough explanation to justify your answer. (10 points)\n(c) Imagine the following two scenarios: Company A adopts and implements an enterprise resource planning (ERP) system, while Company B opts to develop its own information systems to support various business processes (such as financial, accounting, manufacturing and production, sales and marketing). We further assume that all other factors are identical for both companies. Do you consider that Company A will have higher enterprise agility than Company B, or vice versa? Please provide a detailed explanation to justify your answer. (8 points)",
       "points": 28,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "a",
+        "b",
+        "c"
+      ]
     },
     {
       "id": "q-pp-im-mis-113-3",
@@ -17713,7 +17816,10 @@
       "text": "According to a study by Precedence Research, the global conversational AI market is projected to grow from USD 10.08 billion in 2022 to approximately USD 86.42 billion by 2032. Conversational AI is increasingly becoming critical in the banking sector, transforming how banks interact with their customers.\n(a) Discuss the benefits of conversational AI for a bank's call center. How can the performance of conversational AI in the call center be assessed? (16 points)\n(b) Identify the challenges presented by the conversational AI and suggest potential solutions to address these challenges. (16 points)",
       "points": 32,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "a",
+        "b"
+      ]
     },
     {
       "id": "q-pp-im-mis-113-4",
@@ -17725,7 +17831,10 @@
       "text": "Environmental, Social, and Corporate Governance (ESG) is increasingly gaining recognition as a crucial framework for assessing the long-term sustainability of companies.\n(a) Describe the three dimensions of ESG. (6 points)\n(b) Previous research has shown mixed results regarding the effect of IT investment on a firm's financial outcomes. In your opinion, does IT investment influence a firm's ESG performance? If you believe it does not, please explain why. If you think it does, provide your rationale. (12 points)",
       "points": 18,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "a",
+        "b"
+      ]
     },
     {
       "id": "q-pp-im-mis-114-1",
@@ -17737,7 +17846,10 @@
       "text": "Live streaming platforms have become a crucial driver of modern e-commerce, offering real-time interaction and immersive shopping experiences that help businesses enhance brand influence and boost sales.\n\nA. How can businesses of different sizes leverage live streaming platforms to enhance their competitiveness? Provide examples to illustrate your answer. (10%)\n\nB. How can emerging technologies (e.g., artificial intelligence or virtual reality) further enhance the commercial value of live streaming platforms? (10%)",
       "points": 20,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "A",
+        "B"
+      ]
     },
     {
       "id": "q-pp-im-mis-114-2",
@@ -17749,7 +17861,10 @@
       "text": "Information technology (IT) has emerged as a pivotal driver of modern business operations, delivering numerous benefits such as increased efficiency, improved decision-making, and enhanced innovation. Consequently, firms across various industries continually invest in IT to secure a competitive edge. However, identical IT investments can result in varying impacts on organizational performance from one firm to another.\n\nA. Discuss the factors that contribute to these differences. (15%)\n\nB. Use examples or theoretical frameworks to explain why similar IT investments may produce divergent outcomes in terms of productivity, profitability, or competitive positioning. (15%)",
       "points": 30,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "A",
+        "B"
+      ]
     },
     {
       "id": "q-pp-im-mis-114-3",
@@ -17785,7 +17900,11 @@
       "text": "Apple has officially announced a multi-year partnership to integrate Google's Gemini AI model into its Siri voice assistant. According to a joint statement, Apple concluded that Google's technology offers the most robust foundation for its \"Apple Foundation Models,\" enabling a new generation of generative AI experiences for users. The partnership is intended to accelerate Apple's AI roadmap, which encountered setbacks and delays following its initial teaser at the 2024 Worldwide Developers Conference (WWDC). Analysts note that while reliance on an external partner underscores Apple's difficulties in developing a competitive in-house model, the agreement represents a strategic necessity. By leveraging Google's cloud computing and AI infrastructure, Apple aims to alleviate investor concerns about its perceived lag in the AI arms race and to stimulate iPhone demand through enhanced device capabilities.\n\nBased on the case study, please address the following questions:\n\n(A). Apple's traditional sources of competitive advantage reside in ecosystem lock-in and superior user experience. Analyze how Apple's decision to adopt an external AI model (Google Gemini), rather than relying exclusively on in-house development, may help preserve or even strengthen its competitive position in the mobile device market. (10%)\n\n(B). Google functions simultaneously as a critical technology partner within Apple's iOS ecosystem and as the leader of the rival Android platform. Discuss the strategic risks (e.g., technological dependency) and potential benefits (e.g., reduced development time) associated with this co-opetitive relationship. (10%)\n\n(C). Apple has historically positioned user privacy as a core source of sustained competitive advantage. Given Google's data-driven business model, analyze how Apple should design its product architecture and/or communication strategy to ensure that its competitive advantage based on user trust is not undermined by this partnership. (10%)",
       "points": 30,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "A",
+        "B",
+        "C"
+      ]
     },
     {
       "id": "q-pp-im-stat-114-4",
@@ -17797,7 +17916,11 @@
       "text": "Amy analyzes the factors that determine how much garbage a family produces per week. Factors including the size of the house, the number of children, and the number of adults who are usually home during the day are considered. Below is the report produced by a regression routine. Answer the following questions. You should provide reasoning and justifications for your solution.\n\nOLS Regression Results:\nDep. Variable: Garbage | R-squared: 0.170\nModel: OLS | Adj. R-squared: [UNK1]\nMethod: Least Squares | F-statistic: 29.80\nNo. Observations: 440 | Prob (F-statistic): 1.52e-17\nDf Residuals: [UNK2] | Log-Likelihood: -1194.7\nDf Model: 3 | AIC: 2397. | BIC: 2414.\n\nCoefficients:\nIntercept: coef=7.1943, std err=1.092, t=[UNK3], P>|t|=0.000\nQ(\"House Size\"): coef=0.0019, std err=0.001, P>|t|=0.001, [0.025]=0.001, [0.975]=0.003\nChildren: coef=1.1028, std err=0.141, P>|t|=0.000, [0.025]=0.826, [0.975]=1.379\nAdults: coef=1.0425, std err=0.233, P>|t|=0.000, [0.025]=0.585, [0.975]=1.500\n\nOmnibus: 0.193 | Durbin-Watson: 1.963\nProb(Omnibus): 0.908 | Jarque-Bera (JB): 0.272\nSkew: 0.044 | Prob(JB): 0.873\nKurtosis: 2.916 | Cond. No.: 1.14e+04\n\n(1) Compute the value of adjusted R-squared (UNK1) based on available information. (5%)\n\n(2) Compute the residual degree of freedom (UNK2) and the t-value of the Intercept (UNK3) based on available information. (4%)\n\n(3) Conduct the following hypothesis test (using 95% significance level):\nH0: Coefficients of all independent variables are jointly zero.\nH1: At least one independent variable has a non-zero coefficient. (6%)",
       "points": 15,
       "hasImage": true,
-      "subQuestions": []
+      "subQuestions": [
+        "1",
+        "2",
+        "3"
+      ]
     },
     {
       "id": "q-pp-im-stat-114-5",
@@ -17806,10 +17929,13 @@
       "subjectId": "im-stat",
       "year": 114,
       "number": 5,
-      "text": "Let Y₁, Y₂, ..., Yₜ be an identical and independent sample from population Z with mean μ and variance σ². T is a multiple of 5. Define estimator m as:\n\nm = (1/T) Σ g(i) · Yᵢ\n\nwhere g(i) = 1 + (i mod 5) and mod is the modular operator.\n\n(1) Prove that m is an unbiased estimator for μ. (10%)\n\n(2) What is the variance of m? (10%)",
+      "text": "Let Y₁, Y₂, ..., Yₜ be an identical and independent sample from population Ω with mean μ and variance σ². T is a multiple of 5. Define estimator m as:\n\nm = [Σᵀᵢ₌₁ g(i)Yᵢ] / [Σᵀᵢ₌₁ g(i)],\n\nwhere g(i) = 1 + (i mod 5) and mod is the modular operator.\n\n(1) Prove that m is an unbiased estimator for μ. (10%)\n\n(2) What is the variance of m? (10%)",
       "points": 20,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "1",
+        "2"
+      ]
     },
     {
       "id": "q-pp-im-stat-115-3",
@@ -17818,10 +17944,14 @@
       "subjectId": "im-stat",
       "year": 115,
       "number": 3,
-      "text": "Let X₁ and X₂ have the joint probability mass function\n\nf(x₁, x₂) = c(|x₁| + |x₂| + |x₁ + x₂|) / (1+|x₁|)(1+|x₂|)(1+|x₁+x₂|),  x₁ ∈ {-1, 0, 1}, x₂ ∈ {0, 1}\n             0,  otherwise\n\n(A). Determine the normalizing constant c. (5%)\n(B). Find the joint probability mass function of Y₁ = X₁ + X₂ and Y₂ = X₁ - X₂. (5%)\n(C). Find the marginal probability mass function of Y₁. (5%)",
+      "text": "Let X₁ and X₂ have the joint probability mass function\n\nf(x₁, x₂) = { (|x₁| + |x₂| + |x₁ + x₂|) / c,  x₁ ∈ {-1, 0, 1}, x₂ ∈ {0, 1};  0, otherwise. }\n\n(A) Determine the normalizing constant c. (5%)\n(B) Find the joint probability mass function of Y₁ = X₁ + X₂ and Y₂ = X₁ - X₂. (5%)\n(C) Find the marginal probability mass function of Y₁. (5%)",
       "points": 15,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "A",
+        "B",
+        "C"
+      ]
     },
     {
       "id": "q-pp-im-stat-115-4",
@@ -17833,7 +17963,11 @@
       "text": "Let Y₁, Y₂, and Y₃ be an independent and identically distributed random sample from a distribution with mean μ and variance σ² < ∞. Consider the following estimators for μ:\n\nm₁ = Y₁,  m₂ = (Y₁ + αY₂) / (1 + α),  m₃ = (Y₁ + 2Y₂ + βY₃) / (1 + 2 + β),  where α > 0 and β > 0.\n\n(A). Determine which of the estimators m₁, m₂, and m₃ are unbiased for μ? (10%)\n(B). Find the value of α that minimize Var(m₂). (5%)\n(C). Find the value of β that minimize Var(m₃). (5%)",
       "points": 20,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "A",
+        "B",
+        "C"
+      ]
     },
     {
       "id": "q-pp-im-stat-115-5",

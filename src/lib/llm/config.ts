@@ -4,8 +4,9 @@ import type { Db } from '@/lib/lexicon/store'
  * 執行期 LLM 設定。
  *
  * 對應 quidproquo 的 `RagRuntimeConfig` —— provider 與 model 從設定來，
- * API key 從 env 來。分開的好處是換模型不用重新部署，而 key 仍然留在
- * 加密的 wrangler secret 裡，不會變成 D1 裡的明文。
+ * 外部 provider 的 API key 從 env 來，Cloudflare 則使用 AI binding。分開的
+ * 好處是換模型不用重新部署，而 key 仍然留在加密的 wrangler secret 裡，
+ * 不會變成 D1 裡的明文。
  *
  * 全部欄位都可以是 undefined，代表「沿用 env 或程式預設」。
  */

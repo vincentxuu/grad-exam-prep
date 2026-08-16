@@ -1,6 +1,12 @@
 import { render, screen } from '@testing-library/react'
 import { ImItLessonContent } from '@/components/exam/im-it-lesson-content'
-import { getImItCardsForLesson, getImItLesson, getImItSources } from '@/lib/im-it-learning'
+import { LearningLessonContent } from '@/components/exam/learning-lesson-content'
+import {
+  getImItCardsForLesson,
+  getImItLesson,
+  getImItSources,
+  imItLearningCatalog,
+} from '@/lib/im-it-learning'
 
 describe('IM-IT lesson content', () => {
   test('renders a complete reviewed lesson and its practice route', () => {
@@ -24,7 +30,7 @@ describe('IM-IT lesson content', () => {
     expect(screen.getAllByRole('group')).toHaveLength(6)
     expect(screen.getByRole('link', { name: '開始本課考古題練習' })).toHaveAttribute(
       'href',
-      `/im/questions/${lesson.pastPaperRefs[0]}?mode=drill&next=${lesson.pastPaperRefs[1]}`
+      imItLearningCatalog.getPracticeHref(lesson)
     )
     expect(screen.getByText(/不是官方答案/)).toBeInTheDocument()
   })
@@ -49,5 +55,26 @@ describe('IM-IT lesson content', () => {
     expect(screen.getByRole('columnheader', { name: '技術概念' })).toBeInTheDocument()
     expect(screen.getByText(/比喻到這裡為止/)).toBeInTheDocument()
     expect(screen.getByText(/同一個 process、共享 code 與 heap/)).toBeInTheDocument()
+  })
+  test('renders an IM-IT lesson through the shared lesson component', () => {
+    const lesson = getImItLesson('lesson-im-it-network-models-encapsulation')
+    expect(lesson).toBeDefined()
+    if (!lesson) return
+
+    render(
+      <LearningLessonContent
+        catalog={imItLearningCatalog}
+        lesson={lesson}
+        cards={getImItCardsForLesson(lesson.id)}
+        sources={getImItSources(lesson.sourceRefs)}
+      />
+    )
+
+    expect(screen.getByRole('heading', { level: 1, name: lesson.title })).toBeInTheDocument()
+    expect(screen.getByText('內容已複查')).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: '開始本課考古題練習' })).toHaveAttribute(
+      'href',
+      imItLearningCatalog.getPracticeHref(lesson)
+    )
   })
 })

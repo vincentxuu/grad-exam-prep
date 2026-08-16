@@ -73,6 +73,8 @@ export interface StudyTask {
   id: string
   description: string
   subjectTag?: string
+  /** 可觀察的完成證據，避免只用「看完」判定學會。 */
+  completionCriteria?: string
 }
 
 export interface StudyPhase {

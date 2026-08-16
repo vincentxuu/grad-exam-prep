@@ -11,6 +11,7 @@ const staticItems = [
 ]
 
 const examItems = [
+  { key: 'today', label: '今日學習' },
   { key: 'plan', label: '備考計畫' },
   { key: 'flashcards', label: '閃卡練習' },
   { key: 'lookup', label: '查詞' },

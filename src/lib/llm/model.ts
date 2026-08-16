@@ -3,20 +3,21 @@ import { ChatGoogleGenerativeAI } from '@langchain/google-genai'
 import { ChatGroq } from '@langchain/groq'
 import { ChatOpenAI } from '@langchain/openai'
 import { asProvider, type ModelProvider } from './catalog'
+import { ChatCloudflareWorkersAI } from './cloudflare-workers-ai'
 import type { LlmRuntimeConfig } from './config'
 
 /**
  * LLM provider 路由，做法沿用 quidproquo（vincentxuu/quidproquo 的
- * `src/lib/rag/model.ts`）：用 LangChain 當抽象層，預設 Groq，並支援
+ * `src/lib/rag/model.ts`）：用 LangChain 當抽象層，預設 Workers AI，並支援
  * 失敗時退到另一家。
  *
  * 設定來源分兩層，優先序由高到低：
  *   1. D1 的 `llm_config`（`LlmRuntimeConfig`）—— 改完不用重新部署
  *   2. env 變數 —— 部署期設定
- *   3. 程式預設 groq / llama-3.3-70b-versatile
+ *   3. 程式預設 cloudflare / @cf/meta/llama-3.3-70b-instruct-fp8-fast
  *
- * **API key 只從 env 讀，不進設定表** —— wrangler secret 是加密存放且讀不
- * 回來，D1 是明文。
+ * **外部 provider 的 API key 只從 env 讀，不進設定表**；Cloudflare 直接用
+ * binding。wrangler secret 是加密存放且讀不回來，D1 是明文。
  *
  * env 從 Workers 的 `env` 物件讀，不用 `process.env` —— Workers 上
  * `process.env` 拿不到 secret。
@@ -31,6 +32,8 @@ export interface ModelRoute {
 }
 
 export interface LlmEnv {
+  /** Cloudflare Workers AI binding（wrangler.json 的 `ai.binding`）。 */
+  AI?: Ai
   LLM_PROVIDER?: string
   LLM_MODEL?: string
   LLM_FALLBACK_PROVIDER?: string
@@ -43,15 +46,10 @@ export interface LlmEnv {
   OPENROUTER_API_KEY?: string
   CEREBRAS_API_KEY?: string
   OLLAMA_API_BASE?: string
-
-  /** Workers AI。token 要有 Account > Workers AI > Read 權限。 */
-  CLOUDFLARE_API_TOKEN?: string
-  /** Workers AI 的端點帶帳號，所以 token 之外還要這個。不機密。 */
-  CLOUDFLARE_ACCOUNT_ID?: string
 }
 
-export const DEFAULT_PROVIDER: ModelProvider = 'groq'
-export const DEFAULT_MODEL = 'llama-3.3-70b-versatile'
+export const DEFAULT_PROVIDER: ModelProvider = 'cloudflare'
+export const DEFAULT_MODEL = '@cf/meta/llama-3.3-70b-instruct-fp8-fast'
 
 export function resolveRoute(env: LlmEnv, config?: LlmRuntimeConfig): ModelRoute {
   return {
@@ -72,7 +70,7 @@ export function resolveFallbackRoute(env: LlmEnv, config?: LlmRuntimeConfig): Mo
   }
 }
 
-/** 這條 route 需要的 key 有沒有設定。 */
+/** 這條 route 需要的 key 或 binding 有沒有設定。 */
 export function hasCredentials(env: LlmEnv, route: ModelRoute): boolean {
   switch (route.provider) {
     case 'groq':
@@ -82,8 +80,7 @@ export function hasCredentials(env: LlmEnv, route: ModelRoute): boolean {
     case 'openai':
       return !!env.OPENAI_API_KEY
     case 'cloudflare':
-      // 端點路徑帶帳號，少一個就打不出去 —— 兩個都要才算設定好
-      return !!(env.CLOUDFLARE_API_TOKEN && env.CLOUDFLARE_ACCOUNT_ID)
+      return !!env.AI
     case 'openrouter':
       return !!env.OPENROUTER_API_KEY
     case 'cerebras':
@@ -110,7 +107,7 @@ export interface CreateModelOptions {
  * 各家的 OpenAI 相容端點與該用哪把 key。
  *
  * 抽出來是因為列出可用 model（`models.ts`）要打同一個 baseURL 的
- * `/models`。寫兩份遲早會有一份忘了改 —— 尤其 Cloudflare 那條路徑帶帳號。
+ * `/models`。Cloudflare 是例外：它直接用 Workers AI binding，不走 REST。
  *
  * groq 與 google 有自己的 SDK，`createModel` 不吃這裡的 baseURL，但它們
  * 一樣有相容端點可以列 model，所以也放進來。
@@ -130,10 +127,7 @@ export function providerEndpoint(
     case 'openai':
       return { baseUrl: 'https://api.openai.com/v1', apiKey: env.OPENAI_API_KEY }
     case 'cloudflare':
-      return {
-        baseUrl: `https://api.cloudflare.com/client/v4/accounts/${env.CLOUDFLARE_ACCOUNT_ID}/ai/v1`,
-        apiKey: env.CLOUDFLARE_API_TOKEN,
-      }
+      throw new Error('Cloudflare Workers AI 使用 AI binding，沒有 REST endpoint')
     case 'openrouter':
       return { baseUrl: 'https://openrouter.ai/api/v1', apiKey: env.OPENROUTER_API_KEY }
     case 'cerebras':
@@ -154,7 +148,7 @@ export function createModel(
   const maxTokens = opts.maxTokens ?? 4000
   const { maxRetries } = opts
 
-  // groq 與 google 走各自的 SDK，其餘一律 OpenAI 相容端點
+  // Cloudflare 走 Workers binding；groq/google 走各自 SDK，其餘走相容端點
   switch (route.provider) {
     case 'groq':
       return new ChatGroq(route.model, { apiKey: env.GROQ_API_KEY, maxTokens, maxRetries })
@@ -165,6 +159,10 @@ export function createModel(
         maxOutputTokens: maxTokens,
         maxRetries,
       })
+
+    case 'cloudflare':
+      if (!env.AI) throw new Error('Cloudflare Workers AI binding 尚未設定')
+      return new ChatCloudflareWorkersAI({ ai: env.AI, model: route.model, maxTokens })
 
     default: {
       const { baseUrl, apiKey } = providerEndpoint(env, route.provider)

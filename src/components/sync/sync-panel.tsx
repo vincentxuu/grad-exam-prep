@@ -65,7 +65,7 @@ export function SyncPanel({ onAuthChange }: SyncPanelProps) {
         setStatus('雲端無資料，請先上傳')
         return
       }
-      localStorageImpl.importJSON(JSON.stringify(cloudState))
+      localStorageImpl.importJSON(JSON.stringify(cloudState), { mergeDailyLearning: true })
       setStatus('✓ 已從雲端載入')
       window.location.reload()
     } catch {

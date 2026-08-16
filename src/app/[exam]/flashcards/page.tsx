@@ -3,8 +3,9 @@
 import { ChevronRight } from 'lucide-react'
 import { notFound } from 'next/navigation'
 import { Suspense, use, useEffect, useMemo, useState } from 'react'
+import { FlashcardExampleSupport } from '@/components/flashcard/example-support'
 import { SpeakButton } from '@/components/flashcard/speak-button'
-import { VocabAnswer } from '@/components/flashcard/vocab-answer'
+import { hasVocabExample, VocabAnswer } from '@/components/flashcard/vocab-answer'
 import { VoiceSelect } from '@/components/flashcard/voice-select'
 import { LexiconReviewAnswer } from '@/components/lexicon/lexicon-review-answer'
 import { PageLoading } from '@/components/page-loading'
@@ -21,6 +22,7 @@ import { localStorageImpl } from '@/lib/storage'
 import { extractWord, isVocabCard } from '@/lib/vocab'
 import { dueCardsFromState, dueCountFromState, useFlashcardStore } from '@/store/flashcard'
 import type { ExamId, Flashcard } from '@/types/content'
+import type { PersonaProfile } from '@/types/lexicon'
 import type { CardSRSState, SavedWord } from '@/types/storage'
 
 interface Props {
@@ -73,6 +75,7 @@ function FlashcardsContent({ params }: Props) {
   const [mode, setMode] = useState<'browse' | 'review'>('browse')
   const [reviewQueue, setReviewQueue] = useState<ReviewCard[]>([])
   const [savedWords, setSavedWords] = useState<SavedWord[]>([])
+  const [persona, setPersona] = useState<PersonaProfile | undefined>()
   const [examCards, setExamCards] = useState<Flashcard[]>([])
   const [cardsLoading, setCardsLoading] = useState(true)
   const [cardsError, setCardsError] = useState<string | null>(null)
@@ -92,6 +95,7 @@ function FlashcardsContent({ params }: Props) {
     const stored = localStorageImpl.getState()
     const saved = stored.savedWords
     setSavedWords(saved)
+    setPersona(stored.preferences.persona)
     setSchedule({
       states: stored.srsState,
       now: Date.now(),
@@ -297,6 +301,18 @@ function FlashcardsContent({ params }: Props) {
               {card?.pastPaperRef && (
                 <p className="text-xs text-muted-foreground">→ 參見：{card.pastPaperRef}</p>
               )}
+              {word && (
+                <FlashcardExampleSupport
+                  headword={word}
+                  hasEmbeddedExample={
+                    item.source === 'lexicon' || !!(card && hasVocabExample(card.answer))
+                  }
+                  persona={persona}
+                  setupHref={`/${exam}/lookup`}
+                  speak={speak}
+                  speakingId={speakingId}
+                />
+              )}
               <div className="grid grid-cols-3 gap-2">
                 {([0, 1, 2] as RecallRating[]).map((r) => (
                   <Button
@@ -478,6 +494,8 @@ function FlashcardsContent({ params }: Props) {
               <CardRow
                 key={item.id}
                 item={item}
+                persona={persona}
+                setupHref={`/${exam}/lookup`}
                 days={daysUntilDue(
                   schedule.states[item.id] ?? initialCardState(item.id, schedule.now),
                   schedule.now
@@ -505,6 +523,8 @@ function FlashcardsContent({ params }: Props) {
 
 interface CardRowProps {
   item: ReviewCard
+  persona?: PersonaProfile
+  setupHref: string
   days: number
   expanded: boolean
   onToggle: () => void
@@ -516,7 +536,16 @@ interface CardRowProps {
  * 瀏覽模式的單張卡片。點開就能看答案 —— 例句與發音不必等到 SRS 排程到期
  * 才進得了複習模式。
  */
-function CardRow({ item, days, expanded, onToggle, speak, speakingId }: CardRowProps) {
+function CardRow({
+  item,
+  persona,
+  setupHref,
+  days,
+  expanded,
+  onToggle,
+  speak,
+  speakingId,
+}: CardRowProps) {
   const card = item.flashcard
   const vocab = !!card && isVocabCard(card)
   const word = item.headword ?? (vocab && card ? extractWord(card.prompt) : null)
@@ -577,6 +606,18 @@ function CardRow({ item, days, expanded, onToggle, speak, speakingId }: CardRowP
           </div>
           {card?.pastPaperRef && (
             <p className="text-xs text-muted-foreground">→ 參見：{card.pastPaperRef}</p>
+          )}
+          {word && (
+            <FlashcardExampleSupport
+              headword={word}
+              hasEmbeddedExample={
+                item.source === 'lexicon' || !!(card && hasVocabExample(card.answer))
+              }
+              persona={persona}
+              setupHref={setupHref}
+              speak={speak}
+              speakingId={speakingId}
+            />
           )}
         </div>
       )}
