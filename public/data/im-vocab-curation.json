@@ -6,7 +6,7 @@
     "reviewedIncompleteWords": 101,
     "reviewedPhoneticOnlyWords": 24,
     "excludedWords": 131,
-    "enrichedWords": 112,
+    "enrichedWords": 115,
     "classificationCounts": {
       "unmatched": {
         "alias-to-canonical": 33,
@@ -2470,6 +2470,48 @@
       "pos": "noun",
       "definition": "a logical subdivision of an IP network",
       "reviewReason": "Reviewed for the information-management exam context."
+    },
+    "press release": {
+      "chinese": "新聞稿；新聞發布稿",
+      "pos": "n",
+      "example": {
+        "en": "I've gotten it to write songs, stories, press releases, guitar tabs, interviews, essays, technical manuals.",
+        "paperId": "pp-im-en-111",
+        "year": 111,
+        "number": 26
+      },
+      "reviewReason": "以 lemma 收錄補回文章中的屈折詞形或複數固定片語。",
+      "questionRefs": [
+        "q-pp-im-en-111-26"
+      ]
+    },
+    "undercut": {
+      "chinese": "削弱；降低……的效力",
+      "pos": "v",
+      "example": {
+        "en": "In fact, one common trait of many US presidents __(33)__ the capacity to launch self-deprecating jokes—a move that often undercuts any similar jokes lobbed at them.",
+        "paperId": "pp-im-en-111",
+        "year": 111,
+        "number": 31
+      },
+      "reviewReason": "以 lemma 收錄補回文章中的屈折詞形或複數固定片語。",
+      "questionRefs": [
+        "q-pp-im-en-111-31"
+      ]
+    },
+    "lob": {
+      "chinese": "拋擲；（言語）丟向、攻擊",
+      "pos": "v",
+      "example": {
+        "en": "In fact, one common trait of many US presidents __(33)__ the capacity to launch self-deprecating jokes—a move that often undercuts any similar jokes lobbed at them.",
+        "paperId": "pp-im-en-111",
+        "year": 111,
+        "number": 31
+      },
+      "reviewReason": "以 lemma 收錄補回文章中的屈折詞形或複數固定片語。",
+      "questionRefs": [
+        "q-pp-im-en-111-31"
+      ]
     }
   }
 }

@@ -50,4 +50,32 @@ describe('checked-in IM vocabulary artifact', () => {
       ).toBe(true)
     }
   })
+
+  test('covers vocabulary restored with the 111-year passages using canonical headwords', () => {
+    const restoredHeadwords = [
+      'prompt',
+      'plausibly',
+      'press release',
+      'frightening',
+      'hilarious',
+      'self-deprecating',
+      'undercut',
+      'lob',
+      'launch',
+    ]
+    const cards = (flashcards as ArtifactCard[]).filter((card) => card.subjectId === 'im-english')
+    const byHeadword = new Map(cards.map((card) => [card.headword, card]))
+
+    for (const headword of restoredHeadwords) {
+      const card = byHeadword.get(headword)
+      expect(card).toBeDefined()
+      expect(card?.tier).toBe('worth_studying')
+      expect(card?.answer).toContain('【例句】')
+      expect(card?.answer).toContain('111')
+    }
+
+    expect(byHeadword.has('undercuts')).toBe(false)
+    expect(byHeadword.has('lobbed')).toBe(false)
+    expect(byHeadword.has('press releases')).toBe(false)
+  })
 })

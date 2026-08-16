@@ -7149,7 +7149,7 @@
     "headword": "presidents",
     "tier": "important",
     "prompt": "presidents",
-    "answer": "【意思】總統；校長；董事長\n【詞性】noun\n【音標】/p'rezɪdənts/\n【英文解釋】n. an executive officer of a firm or corporation\\nn. the person who holds the office of head of state of the United States government\\nn. the chief executive of a republic\n【例句】In fact, one common trait of many US presidents __(33)__ the capacity to laugh at themselves.\n【來源】台大資管所必要字庫 · important · english-exam · 115",
+    "answer": "【意思】總統；校長；董事長\n【詞性】noun\n【音標】/p'rezɪdənts/\n【英文解釋】n. an executive officer of a firm or corporation\\nn. the person who holds the office of head of state of the United States government\\nn. the chief executive of a republic\n【例句】In fact, one common trait of many US presidents __(33)__ the capacity to launch self-deprecating jokes—a move that often undercuts any similar jokes lobbed at them.\n【來源】台大資管所必要字庫 · important · english-exam · 115",
     "pastPaperRef": "pp-im-en-111 Q31"
   },
   {
@@ -35220,7 +35220,8 @@
     "headword": "technical",
     "tier": "domain",
     "prompt": "technical",
-    "answer": "【意思】a. 技術上的, 專門的, 工業的, 嚴格根據法律的\\n[化] 技巧\n【詞性】noun、adjective\n【音標】/'teknikl/\n【英文解釋】n. a pickup truck with a gun mounted on it\\na. of or relating to technique or proficiency in a practical skill\\na. characterizing or showing skill in or specialized knowledge of applied arts and sciences\\na. of or relating to a practical subject that is organized according to scientific principles\n【來源】台大資管所必要字庫 · domain · domain"
+    "answer": "【意思】a. 技術上的, 專門的, 工業的, 嚴格根據法律的\\n[化] 技巧\n【詞性】noun、adjective\n【音標】/'teknikl/\n【英文解釋】n. a pickup truck with a gun mounted on it\\na. of or relating to technique or proficiency in a practical skill\\na. characterizing or showing skill in or specialized knowledge of applied arts and sciences\\na. of or relating to a practical subject that is organized according to scientific principles\n【例句】I've gotten it to write songs, stories, press releases, guitar tabs, interviews, essays, technical manuals.\n【來源】台大資管所必要字庫 · domain · domain",
+    "pastPaperRef": "pp-im-en-111 Q26"
   },
   {
     "id": "fc-im-vocab-technique",
@@ -42468,7 +42469,8 @@
     "headword": "coherent",
     "tier": "domain",
     "prompt": "coherent",
-    "answer": "【意思】a. 互相耦合的, 清晰的, 明瞭的，凝聚性的, 連貫的\n【詞性】adjective\n【音標】/kәu'hiәrәnt/\n【英文解釋】a. marked by an orderly, logical, and aesthetically consistent relation of parts\\ns. capable of thinking and expressing yourself in a clear and consistent manner\\na. (physics) of waves having a constant phase relation\\ns. sticking together\n【來源】台大資管所必要字庫 · domain · domain"
+    "answer": "【意思】a. 互相耦合的, 清晰的, 明瞭的，凝聚性的, 連貫的\n【詞性】adjective\n【音標】/kәu'hiәrәnt/\n【英文解釋】a. marked by an orderly, logical, and aesthetically consistent relation of parts\\ns. capable of thinking and expressing yourself in a clear and consistent manner\\na. (physics) of waves having a constant phase relation\\ns. sticking together\n【例句】\"It's far more coherent than any AI language system I've ever tried.\n【來源】台大資管所必要字庫 · domain · domain",
+    "pastPaperRef": "pp-im-en-111 Q26"
   },
   {
     "id": "fc-im-vocab-college",
@@ -45438,7 +45440,8 @@
     "headword": "press",
     "tier": "domain",
     "prompt": "press",
-    "answer": "【意思】n. 壓, 撳, 按, 人群, 印刷機, 壓力, 出版社, 記者, 報刊, 新聞輿論, 緊迫\\nvt. 壓, 壓榨, 緊抱, 逼迫, 推進, 強迫徵募, 催逼\\nvi. 壓, 重壓, 催促, 擁擠, 奮力前進, 受壓\n【詞性】noun\n【音標】/pres/\n【英文解釋】n. the print media responsible for gathering and publishing news in the form of newspapers or magazines\\nn. a machine used for printing\\nn. clamp to prevent wooden rackets from warping when not in use\\nn. any machine that exerts pressure to form or shape or cut materials or extract liquids or compress solids\n【來源】台大資管所必要字庫 · domain · domain"
+    "answer": "【意思】n. 壓, 撳, 按, 人群, 印刷機, 壓力, 出版社, 記者, 報刊, 新聞輿論, 緊迫\\nvt. 壓, 壓榨, 緊抱, 逼迫, 推進, 強迫徵募, 催逼\\nvi. 壓, 重壓, 催促, 擁擠, 奮力前進, 受壓\n【詞性】noun\n【音標】/pres/\n【英文解釋】n. the print media responsible for gathering and publishing news in the form of newspapers or magazines\\nn. a machine used for printing\\nn. clamp to prevent wooden rackets from warping when not in use\\nn. any machine that exerts pressure to form or shape or cut materials or extract liquids or compress solids\n【例句】I've gotten it to write songs, stories, press releases, guitar tabs, interviews, essays, technical manuals.\n【來源】台大資管所必要字庫 · domain · domain",
+    "pastPaperRef": "pp-im-en-111 Q26"
   },
   {
     "id": "fc-im-vocab-principles",
@@ -52345,10 +52348,10 @@
     "topicId": "im-en-vocab",
     "kind": "vocabulary",
     "headword": "launch",
-    "tier": "domain",
+    "tier": "worth_studying",
     "prompt": "launch",
-    "answer": "【意思】n. 下水, 汽艇, 發射\\nvt. 使下水, 發射, 發動\\nvi. 起飛, 下水, 投入, 開始\n【詞性】noun\n【音標】/lɒ:ntʃ/\n【英文解釋】n. a motorboat with an open deck or a half deck\\nv. propel with force\\nv. launch for the first time; launch on a maiden voyage\\nv. get going; give impetus to\n【例句】Disney is set to launch its own streaming app in 2018.\n【來源】台大資管所必要字庫 · domain · domain",
-    "pastPaperRef": "pp-im-en-109 Q47"
+    "answer": "【意思】發起；推出；發射\n【詞性】v、n\n【音標】/lɒ:ntʃ/\n【英文解釋】n. a motorboat with an open deck or a half deck\\nv. propel with force\\nv. launch for the first time; launch on a maiden voyage\\nv. get going; give impetus to\n【例句】In fact, one common trait of many US presidents __(33)__ the capacity to launch self-deprecating jokes—a move that often undercuts any similar jokes lobbed at them.\n【來源】台大資管所必要字庫 · worth_studying · both · 111",
+    "pastPaperRef": "pp-im-en-111 Q31"
   },
   {
     "id": "fc-im-vocab-laws",
@@ -58100,5 +58103,101 @@
     "tier": "domain",
     "prompt": "verification",
     "answer": "【意思】n. 證實, 查證, 證明屬實\\n[計] 驗證\n【詞性】noun\n【音標】/.verifi'keiʃәn/\n【英文解釋】n. (law) an affidavit attached to a statement confirming the truth of that statement\n【來源】台大資管所必要字庫 · domain · domain"
+  },
+  {
+    "id": "fc-im-vocab-hilarious",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-en-vocab",
+    "kind": "vocabulary",
+    "headword": "hilarious",
+    "tier": "worth_studying",
+    "prompt": "hilarious",
+    "answer": "【意思】非常好笑的；滑稽的\n【詞性】adj\n【例句】It's hilarious and frightening.\n【來源】台大資管所必要字庫 · worth_studying · both · 111",
+    "pastPaperRef": "pp-im-en-111 Q26"
+  },
+  {
+    "id": "fc-im-vocab-prompt",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-en-vocab",
+    "kind": "vocabulary",
+    "headword": "prompt",
+    "tier": "worth_studying",
+    "prompt": "prompt",
+    "answer": "【意思】提示詞；提示\n【詞性】n、v\n【例句】All you have to do is write a prompt and it'll add text it thinks would plausibly follow.\n【來源】台大資管所必要字庫 · worth_studying · english-exam · 111",
+    "pastPaperRef": "pp-im-en-111 Q26"
+  },
+  {
+    "id": "fc-im-vocab-plausibly",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-en-vocab",
+    "kind": "vocabulary",
+    "headword": "plausibly",
+    "tier": "worth_studying",
+    "prompt": "plausibly",
+    "answer": "【意思】似乎合理地；可信地\n【詞性】adv\n【例句】All you have to do is write a prompt and it'll add text it thinks would plausibly follow.\n【來源】台大資管所必要字庫 · worth_studying · english-exam · 111",
+    "pastPaperRef": "pp-im-en-111 Q26"
+  },
+  {
+    "id": "fc-im-vocab-press-release",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-en-vocab",
+    "kind": "vocabulary",
+    "headword": "press release",
+    "tier": "worth_studying",
+    "prompt": "press release",
+    "answer": "【意思】新聞稿；新聞發布稿\n【詞性】n\n【例句】I've gotten it to write songs, stories, press releases, guitar tabs, interviews, essays, technical manuals.\n【來源】台大資管所必要字庫 · worth_studying · english-exam · 111",
+    "pastPaperRef": "pp-im-en-111 Q26"
+  },
+  {
+    "id": "fc-im-vocab-frightening",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-en-vocab",
+    "kind": "vocabulary",
+    "headword": "frightening",
+    "tier": "worth_studying",
+    "prompt": "frightening",
+    "answer": "【意思】令人害怕的；嚇人的\n【詞性】adj\n【例句】It's hilarious and frightening.\n【來源】台大資管所必要字庫 · worth_studying · english-exam · 111",
+    "pastPaperRef": "pp-im-en-111 Q26"
+  },
+  {
+    "id": "fc-im-vocab-self-deprecating",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-en-vocab",
+    "kind": "vocabulary",
+    "headword": "self-deprecating",
+    "tier": "worth_studying",
+    "prompt": "self-deprecating",
+    "answer": "【意思】自嘲的；自我貶抑的\n【詞性】adj\n【例句】In fact, one common trait of many US presidents __(33)__ the capacity to launch self-deprecating jokes—a move that often undercuts any similar jokes lobbed at them.\n【來源】台大資管所必要字庫 · worth_studying · english-exam · 111",
+    "pastPaperRef": "pp-im-en-111 Q31"
+  },
+  {
+    "id": "fc-im-vocab-undercut",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-en-vocab",
+    "kind": "vocabulary",
+    "headword": "undercut",
+    "tier": "worth_studying",
+    "prompt": "undercut",
+    "answer": "【意思】削弱；降低……的效力\n【詞性】v\n【例句】In fact, one common trait of many US presidents __(33)__ the capacity to launch self-deprecating jokes—a move that often undercuts any similar jokes lobbed at them.\n【來源】台大資管所必要字庫 · worth_studying · english-exam · 111",
+    "pastPaperRef": "pp-im-en-111 Q31"
+  },
+  {
+    "id": "fc-im-vocab-lob",
+    "examId": "im",
+    "subjectId": "im-english",
+    "topicId": "im-en-vocab",
+    "kind": "vocabulary",
+    "headword": "lob",
+    "tier": "worth_studying",
+    "prompt": "lob",
+    "answer": "【意思】拋擲；（言語）丟向、攻擊\n【詞性】v\n【例句】In fact, one common trait of many US presidents __(33)__ the capacity to launch self-deprecating jokes—a move that often undercuts any similar jokes lobbed at them.\n【來源】台大資管所必要字庫 · worth_studying · english-exam · 111",
+    "pastPaperRef": "pp-im-en-111 Q31"
   }
 ]
