@@ -11,4 +11,4 @@ Stack the resolved `agent/nonenglish-flashcards` branch underneath `agent/multi-
 - [x] Preserve all regression tests from both branches and add single-question queue navigation coverage.
 - [x] Validate 35 lessons, 191 cards, and 61/61 subtopic coverage.
 - [x] Run content validation, paper integrity, Jest (49 suites / 381 tests), typecheck, and production build (69 static pages, exit 0).
-- [ ] Push the stacked merge commit to `origin/agent/multi-subject-learning`.
+- [x] Push the stacked merge commit to `origin/agent/multi-subject-learning`.

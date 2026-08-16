@@ -106,6 +106,12 @@ describe('today learning selectors', () => {
     expect(getPlanMonth(start, new Date('2027-02-01T00:00:00+08:00'), 3)).toBe(3)
   })
 
+  it('uses Taipei calendar boundaries regardless of the runtime timezone', () => {
+    const utcStart = new Date('2026-07-31T16:00:00.000Z')
+    expect(getPlanMonth(utcStart, new Date('2026-08-31T15:59:59.999Z'), 3)).toBe(1)
+    expect(getPlanMonth(utcStart, new Date('2026-08-31T16:00:00.000Z'), 3)).toBe(2)
+  })
+
   it('selects the active phase and only the first two unfinished tasks', () => {
     const phases = buildPhasesWithMeta(plan, state({ 'task-1': true }), start)
     const phase = getCurrentPhase(phases, 1)
