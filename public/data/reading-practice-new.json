@@ -21,7 +21,8 @@
           "(C) They remained completely unchanged.",
           "(D) They dropped dramatically in favor of on-site work."
         ],
-        "type": "detail"
+        "type": "detail",
+        "correctAnswer": "B"
       },
       {
         "number": 2,
@@ -32,7 +33,8 @@
           "(C) flexible",
           "(D) permanent"
         ],
-        "type": "vocabulary-in-context"
+        "type": "vocabulary-in-context",
+        "correctAnswer": "B"
       },
       {
         "number": 3,
@@ -43,7 +45,8 @@
           "(C) The tech industry has remained the most remote-friendly.",
           "(D) Tech workers are increasingly dissatisfied with hybrid models."
         ],
-        "type": "inference"
+        "type": "inference",
+        "correctAnswer": "C"
       },
       {
         "number": 4,
@@ -54,7 +57,8 @@
           "(C) Companies should force all employees back to the office.",
           "(D) Remote work is more productive than on-site work."
         ],
-        "type": "main-idea"
+        "type": "main-idea",
+        "correctAnswer": "B"
       }
     ],
     "keyVocabulary": [
@@ -88,7 +92,8 @@
           "(C) The government refused to acknowledge their existence.",
           "(D) Platform companies have stopped hiring gig workers."
         ],
-        "type": "main-idea"
+        "type": "main-idea",
+        "correctAnswer": "B"
       },
       {
         "number": 2,
@@ -99,7 +104,8 @@
           "(C) difficult to achieve",
           "(D) legally prohibited"
         ],
-        "type": "vocabulary-in-context"
+        "type": "vocabulary-in-context",
+        "correctAnswer": "C"
       },
       {
         "number": 3,
@@ -110,7 +116,8 @@
           "(C) Approximately 50 million",
           "(D) Less than 1 million"
         ],
-        "type": "detail"
+        "type": "detail",
+        "correctAnswer": "B"
       },
       {
         "number": 4,
@@ -121,7 +128,8 @@
           "(C) They leave gig workers without wage or safety protections.",
           "(D) They were never passed by parliament."
         ],
-        "type": "inference"
+        "type": "inference",
+        "correctAnswer": "C"
       }
     ],
     "keyVocabulary": [
@@ -156,7 +164,8 @@
           "(C) firmly established its position",
           "(D) gradually lost influence"
         ],
-        "type": "vocabulary-in-context"
+        "type": "vocabulary-in-context",
+        "correctAnswer": "C"
       },
       {
         "number": 2,
@@ -167,7 +176,8 @@
           "(C) All countries banned coal power plants.",
           "(D) Solar energy became cheaper than free."
         ],
-        "type": "detail"
+        "type": "detail",
+        "correctAnswer": "B"
       },
       {
         "number": 3,
@@ -178,7 +188,8 @@
           "(C) From centralized to distributed power",
           "(D) From nuclear to wind energy"
         ],
-        "type": "inference"
+        "type": "inference",
+        "correctAnswer": "B"
       },
       {
         "number": 4,
@@ -189,7 +200,8 @@
           "(C) completely neutral",
           "(D) harshly critical"
         ],
-        "type": "tone"
+        "type": "tone",
+        "correctAnswer": "B"
       }
     ],
     "keyVocabulary": [
@@ -224,7 +236,8 @@
           "(C) overly cautious and conservative",
           "(D) financially irresponsible"
         ],
-        "type": "vocabulary-in-context"
+        "type": "vocabulary-in-context",
+        "correctAnswer": "B"
       },
       {
         "number": 2,
@@ -235,7 +248,8 @@
           "(C) Leadership has shifted toward return-to-office policies.",
           "(D) Government regulations require on-site work."
         ],
-        "type": "detail"
+        "type": "detail",
+        "correctAnswer": "C"
       },
       {
         "number": 3,
@@ -246,7 +260,8 @@
           "(C) All companies will become fully remote.",
           "(D) Government will mandate remote work for all."
         ],
-        "type": "inference"
+        "type": "inference",
+        "correctAnswer": "B"
       },
       {
         "number": 4,
@@ -257,7 +272,8 @@
           "(C) To argue that all work should be done remotely",
           "(D) To provide instructions for implementing hybrid work"
         ],
-        "type": "author-purpose"
+        "type": "author-purpose",
+        "correctAnswer": "B"
       }
     ],
     "keyVocabulary": [
@@ -292,7 +308,8 @@
           "(C) To improve coordination and equitable access during future pandemics",
           "(D) To replace national health agencies with WHO authority"
         ],
-        "type": "main-idea"
+        "type": "main-idea",
+        "correctAnswer": "C"
       },
       {
         "number": 2,
@@ -303,7 +320,8 @@
           "(C) experiment",
           "(D) proposal"
         ],
-        "type": "vocabulary-in-context"
+        "type": "vocabulary-in-context",
+        "correctAnswer": "B"
       },
       {
         "number": 3,
@@ -314,7 +332,8 @@
           "(C) The US already has a separate pandemic treaty.",
           "(D) The US opposed all forms of international cooperation."
         ],
-        "type": "inference"
+        "type": "inference",
+        "correctAnswer": "B"
       },
       {
         "number": 4,
@@ -325,7 +344,8 @@
           "(C) 20%",
           "(D) 50%"
         ],
-        "type": "detail"
+        "type": "detail",
+        "correctAnswer": "B"
       }
     ],
     "keyVocabulary": [
@@ -361,7 +381,8 @@
           "(C) careful examination",
           "(D) marketing"
         ],
-        "type": "vocabulary-in-context"
+        "type": "vocabulary-in-context",
+        "correctAnswer": "C"
       },
       {
         "number": 2,
@@ -372,7 +393,8 @@
           "(C) They have been banned by the government.",
           "(D) They are only available in certain countries."
         ],
-        "type": "detail"
+        "type": "detail",
+        "correctAnswer": "B"
       },
       {
         "number": 3,
@@ -383,7 +405,8 @@
           "(C) The apps stop working entirely.",
           "(D) Users lose their stored data."
         ],
-        "type": "detail"
+        "type": "detail",
+        "correctAnswer": "B"
       },
       {
         "number": 4,
@@ -394,7 +417,8 @@
           "(C) They argue for stronger regulatory oversight of these apps.",
           "(D) They have no opinion on the matter."
         ],
-        "type": "inference"
+        "type": "inference",
+        "correctAnswer": "C"
       }
     ],
     "keyVocabulary": [
@@ -430,7 +454,8 @@
           "(C) deliberately avoid",
           "(D) slowly retreat from"
         ],
-        "type": "vocabulary-in-context"
+        "type": "vocabulary-in-context",
+        "correctAnswer": "B"
       },
       {
         "number": 2,
@@ -441,7 +466,8 @@
           "(C) Both types performed equally well.",
           "(D) General LLMs refused to engage with teenagers."
         ],
-        "type": "detail"
+        "type": "detail",
+        "correctAnswer": "B"
       },
       {
         "number": 3,
@@ -452,7 +478,8 @@
           "(C) Chatbots are recommended by schools.",
           "(D) Chatbots are cheaper than medication."
         ],
-        "type": "detail"
+        "type": "detail",
+        "correctAnswer": "B"
       },
       {
         "number": 4,
@@ -463,7 +490,8 @@
           "(C) AI chatbots used for mental health carry significant risks and need improvement.",
           "(D) All AI chatbots are equally dangerous."
         ],
-        "type": "main-idea"
+        "type": "main-idea",
+        "correctAnswer": "C"
       }
     ],
     "keyVocabulary": [
@@ -498,7 +526,8 @@
           "(C) deforestation, urbanization, and industrialization",
           "(D) overpopulation, famine, and disease"
         ],
-        "type": "detail"
+        "type": "detail",
+        "correctAnswer": "B"
       },
       {
         "number": 2,
@@ -509,7 +538,8 @@
           "(C) surprising",
           "(D) complicated"
         ],
-        "type": "vocabulary-in-context"
+        "type": "vocabulary-in-context",
+        "correctAnswer": "B"
       },
       {
         "number": 3,
@@ -520,7 +550,8 @@
           "(C) A type of ocean current",
           "(D) A method for measuring ocean temperature"
         ],
-        "type": "inference"
+        "type": "inference",
+        "correctAnswer": "B"
       },
       {
         "number": 4,
@@ -531,7 +562,8 @@
           "(C) To search for cooler water as oceans warm",
           "(D) To follow changes in ocean currents"
         ],
-        "type": "detail"
+        "type": "detail",
+        "correctAnswer": "C"
       }
     ],
     "keyVocabulary": [
@@ -566,7 +598,8 @@
           "(C) gradually improve",
           "(D) carefully preserve"
         ],
-        "type": "vocabulary-in-context"
+        "type": "vocabulary-in-context",
+        "correctAnswer": "B"
       },
       {
         "number": 2,
@@ -577,7 +610,8 @@
           "(C) Mediterranean Sea",
           "(D) Pacific Island nations"
         ],
-        "type": "detail"
+        "type": "detail",
+        "correctAnswer": "B"
       },
       {
         "number": 3,
@@ -588,7 +622,8 @@
           "(C) Global warming and fishing-related biomass loss",
           "(D) Urbanization and mining"
         ],
-        "type": "detail"
+        "type": "detail",
+        "correctAnswer": "C"
       },
       {
         "number": 4,
@@ -599,7 +634,8 @@
           "(C) To explain how fishing techniques have improved",
           "(D) To describe the history of ocean exploration"
         ],
-        "type": "author-purpose"
+        "type": "author-purpose",
+        "correctAnswer": "B"
       }
     ],
     "keyVocabulary": [
@@ -634,7 +670,8 @@
           "(C) To collect rock samples from Mars",
           "(D) To photograph Mars's moons"
         ],
-        "type": "detail"
+        "type": "detail",
+        "correctAnswer": "B"
       },
       {
         "number": 2,
@@ -645,7 +682,8 @@
           "(C) communication devices",
           "(D) scientific instruments"
         ],
-        "type": "vocabulary-in-context"
+        "type": "vocabulary-in-context",
+        "correctAnswer": "B"
       },
       {
         "number": 3,
@@ -656,7 +694,8 @@
           "(C) It is the largest object in the solar system.",
           "(D) It orbits closer to Earth than any other asteroid."
         ],
-        "type": "inference"
+        "type": "inference",
+        "correctAnswer": "B"
       },
       {
         "number": 4,
@@ -667,7 +706,8 @@
           "(C) A type of rocket engine",
           "(D) A Mars landing technique"
         ],
-        "type": "vocabulary-in-context"
+        "type": "vocabulary-in-context",
+        "correctAnswer": "B"
       }
     ],
     "keyVocabulary": [
@@ -702,7 +742,8 @@
           "(C) AI has made education completely unnecessary.",
           "(D) Students no longer attend physical schools."
         ],
-        "type": "main-idea"
+        "type": "main-idea",
+        "correctAnswer": "B"
       },
       {
         "number": 2,
@@ -713,7 +754,8 @@
           "(C) classroom decorations",
           "(D) student complaints"
         ],
-        "type": "vocabulary-in-context"
+        "type": "vocabulary-in-context",
+        "correctAnswer": "B"
       },
       {
         "number": 3,
@@ -724,7 +766,8 @@
           "(C) To replace themselves entirely",
           "(D) Exclusively for science experiments"
         ],
-        "type": "detail"
+        "type": "detail",
+        "correctAnswer": "B"
       },
       {
         "number": 4,
@@ -735,7 +778,8 @@
           "(C) It should be completely banned from schools.",
           "(D) It only affects college-level education."
         ],
-        "type": "inference"
+        "type": "inference",
+        "correctAnswer": "B"
       }
     ],
     "keyVocabulary": [
@@ -769,7 +813,8 @@
           "(C) completely solve",
           "(D) carefully study"
         ],
-        "type": "vocabulary-in-context"
+        "type": "vocabulary-in-context",
+        "correctAnswer": "B"
       },
       {
         "number": 2,
@@ -780,7 +825,8 @@
           "(C) Less AI use leads to more bullying.",
           "(D) Parents who use AI have children with better grades."
         ],
-        "type": "detail"
+        "type": "detail",
+        "correctAnswer": "B"
       },
       {
         "number": 3,
@@ -791,7 +837,8 @@
           "(C) 86%",
           "(D) 95%"
         ],
-        "type": "detail"
+        "type": "detail",
+        "correctAnswer": "C"
       },
       {
         "number": 4,
@@ -802,7 +849,8 @@
           "(C) Students are not interested in using AI.",
           "(D) Teachers are being replaced by AI systems."
         ],
-        "type": "main-idea"
+        "type": "main-idea",
+        "correctAnswer": "B"
       }
     ],
     "keyVocabulary": [
@@ -837,7 +885,8 @@
           "(C) military unit",
           "(D) political party"
         ],
-        "type": "vocabulary-in-context"
+        "type": "vocabulary-in-context",
+        "correctAnswer": "B"
       },
       {
         "number": 2,
@@ -848,7 +897,8 @@
           "(C) Birth rates are increasing dramatically.",
           "(D) Immigration is the main driver of population growth."
         ],
-        "type": "main-idea"
+        "type": "main-idea",
+        "correctAnswer": "B"
       },
       {
         "number": 3,
@@ -859,7 +909,8 @@
           "(C) Advances in medical technology",
           "(D) Immigration from Europe"
         ],
-        "type": "detail"
+        "type": "detail",
+        "correctAnswer": "B"
       },
       {
         "number": 4,
@@ -870,7 +921,8 @@
           "(C) Nearly 23%",
           "(D) 30%"
         ],
-        "type": "detail"
+        "type": "detail",
+        "correctAnswer": "C"
       }
     ],
     "keyVocabulary": [
@@ -904,7 +956,8 @@
           "(C) professional medical advice",
           "(D) careful analysis"
         ],
-        "type": "vocabulary-in-context"
+        "type": "vocabulary-in-context",
+        "correctAnswer": "B"
       },
       {
         "number": 2,
@@ -915,7 +968,8 @@
           "(C) Because they have been clinically tested.",
           "(D) Because government regulations require it."
         ],
-        "type": "detail"
+        "type": "detail",
+        "correctAnswer": "B"
       },
       {
         "number": 3,
@@ -926,7 +980,8 @@
           "(C) Therapists are less accessible than chatbots.",
           "(D) Therapists use the same technology as chatbots."
         ],
-        "type": "inference"
+        "type": "inference",
+        "correctAnswer": "B"
       },
       {
         "number": 4,
@@ -937,7 +992,8 @@
           "(C) Privacy is the only concern with AI therapy.",
           "(D) The American Psychological Association supports AI therapy."
         ],
-        "type": "main-idea"
+        "type": "main-idea",
+        "correctAnswer": "B"
       }
     ],
     "keyVocabulary": [
@@ -972,7 +1028,8 @@
           "(C) celebrate enthusiastically",
           "(D) postpone indefinitely"
         ],
-        "type": "vocabulary-in-context"
+        "type": "vocabulary-in-context",
+        "correctAnswer": "B"
       },
       {
         "number": 2,
@@ -983,7 +1040,8 @@
           "(C) A type of investment fund",
           "(D) Tax revenue from population growth"
         ],
-        "type": "detail"
+        "type": "detail",
+        "correctAnswer": "B"
       },
       {
         "number": 3,
@@ -994,7 +1052,8 @@
           "(C) Europe has a younger population than Latin America.",
           "(D) The two regions are aging at identical rates."
         ],
-        "type": "detail"
+        "type": "detail",
+        "correctAnswer": "B"
       },
       {
         "number": 4,
@@ -1005,7 +1064,8 @@
           "(C) It already covers all elderly citizens.",
           "(D) It was established before Uruguay's system."
         ],
-        "type": "inference"
+        "type": "inference",
+        "correctAnswer": "B"
       }
     ],
     "keyVocabulary": [
@@ -1040,7 +1100,8 @@
           "(C) Financial returns from investing in AI",
           "(D) The cost of detecting deepfakes"
         ],
-        "type": "vocabulary-in-context"
+        "type": "vocabulary-in-context",
+        "correctAnswer": "B"
       },
       {
         "number": 2,
@@ -1051,7 +1112,8 @@
           "(C) It normalizes deepfakes and erodes trust in all online content.",
           "(D) It will replace human artists entirely."
         ],
-        "type": "inference"
+        "type": "inference",
+        "correctAnswer": "C"
       },
       {
         "number": 3,
@@ -1062,7 +1124,8 @@
           "(C) temporary",
           "(D) unpredictable"
         ],
-        "type": "vocabulary-in-context"
+        "type": "vocabulary-in-context",
+        "correctAnswer": "B"
       },
       {
         "number": 4,
@@ -1073,7 +1136,8 @@
           "(C) concerned and cautionary",
           "(D) humorous and lighthearted"
         ],
-        "type": "tone"
+        "type": "tone",
+        "correctAnswer": "C"
       }
     ],
     "keyVocabulary": [
@@ -1108,7 +1172,8 @@
           "(C) They consume too much electricity.",
           "(D) They can only solve mathematical problems."
         ],
-        "type": "detail"
+        "type": "detail",
+        "correctAnswer": "B"
       },
       {
         "number": 2,
@@ -1119,7 +1184,8 @@
           "(C) a physical marker on a road",
           "(D) a mathematical formula"
         ],
-        "type": "vocabulary-in-context"
+        "type": "vocabulary-in-context",
+        "correctAnswer": "B"
       },
       {
         "number": 3,
@@ -1130,7 +1196,8 @@
           "(C) Quantum computers being easier to use than laptops",
           "(D) Quantum computers being available to the public"
         ],
-        "type": "inference"
+        "type": "inference",
+        "correctAnswer": "B"
       },
       {
         "number": 4,
@@ -1141,7 +1208,8 @@
           "(C) IBM and Google are business rivals.",
           "(D) Quantum computers will never be useful."
         ],
-        "type": "main-idea"
+        "type": "main-idea",
+        "correctAnswer": "B"
       }
     ],
     "keyVocabulary": [
@@ -1176,7 +1244,8 @@
           "(C) following the same pace as medicine",
           "(D) having no effect on medicine"
         ],
-        "type": "vocabulary-in-context"
+        "type": "vocabulary-in-context",
+        "correctAnswer": "B"
       },
       {
         "number": 2,
@@ -1187,7 +1256,8 @@
           "(C) Over 40%",
           "(D) More than 55%"
         ],
-        "type": "detail"
+        "type": "detail",
+        "correctAnswer": "B"
       },
       {
         "number": 3,
@@ -1198,7 +1268,8 @@
           "(C) It narrows treatment options, forcing reliance on last-resort antibiotics.",
           "(D) It has no effect on Gram-negative bacteria."
         ],
-        "type": "inference"
+        "type": "inference",
+        "correctAnswer": "C"
       },
       {
         "number": 4,
@@ -1209,7 +1280,8 @@
           "(C) To explain how antibiotics are manufactured",
           "(D) To compare healthcare systems across countries"
         ],
-        "type": "author-purpose"
+        "type": "author-purpose",
+        "correctAnswer": "B"
       }
     ],
     "keyVocabulary": [
@@ -1244,7 +1316,8 @@
           "(C) The brain produces more oxygen.",
           "(D) Blood pressure increases sharply."
         ],
-        "type": "detail"
+        "type": "detail",
+        "correctAnswer": "B"
       },
       {
         "number": 2,
@@ -1255,7 +1328,8 @@
           "(C) improve dramatically",
           "(D) remain stable"
         ],
-        "type": "vocabulary-in-context"
+        "type": "vocabulary-in-context",
+        "correctAnswer": "B"
       },
       {
         "number": 3,
@@ -1266,7 +1340,8 @@
           "(C) Paying attention causes the brain to produce waste.",
           "(D) More sleep leads to more fluid in the brain."
         ],
-        "type": "inference"
+        "type": "inference",
+        "correctAnswer": "B"
       },
       {
         "number": 4,
@@ -1277,7 +1352,8 @@
           "(C) Cerebrospinal fluid is harmful to brain function.",
           "(D) Attention lapses are caused by low blood pressure."
         ],
-        "type": "main-idea"
+        "type": "main-idea",
+        "correctAnswer": "B"
       }
     ],
     "keyVocabulary": [
@@ -1313,7 +1389,8 @@
           "(C) Making false environmental claims",
           "(D) Investing heavily in green technology"
         ],
-        "type": "detail"
+        "type": "detail",
+        "correctAnswer": "B"
       },
       {
         "number": 2,
@@ -1324,7 +1401,8 @@
           "(C) indifference",
           "(D) curiosity"
         ],
-        "type": "vocabulary-in-context"
+        "type": "vocabulary-in-context",
+        "correctAnswer": "B"
       },
       {
         "number": 3,
@@ -1335,7 +1413,8 @@
           "(C) All companies stopped talking about climate.",
           "(D) Companies were legally required to stop ESG reporting."
         ],
-        "type": "detail"
+        "type": "detail",
+        "correctAnswer": "B"
       },
       {
         "number": 4,
@@ -1346,7 +1425,8 @@
           "(C) Greenwashing always leads to legal action.",
           "(D) Greenhushing is more dangerous than greenwashing."
         ],
-        "type": "inference"
+        "type": "inference",
+        "correctAnswer": "B"
       }
     ],
     "keyVocabulary": [
@@ -1381,7 +1461,8 @@
           "(C) painted",
           "(D) submitted"
         ],
-        "type": "vocabulary-in-context"
+        "type": "vocabulary-in-context",
+        "correctAnswer": "B"
       },
       {
         "number": 2,
@@ -1392,7 +1473,8 @@
           "(C) By ground-based telescopes in Colorado",
           "(D) Using radio signals from the SETI Institute"
         ],
-        "type": "detail"
+        "type": "detail",
+        "correctAnswer": "B"
       },
       {
         "number": 3,
@@ -1403,7 +1485,8 @@
           "(C) The moon did not exist 40 years ago",
           "(D) Voyager 2's instruments were broken"
         ],
-        "type": "detail"
+        "type": "detail",
+        "correctAnswer": "B"
       },
       {
         "number": 4,
@@ -1414,7 +1497,8 @@
           "(C) Its rings are unrelated to its moons",
           "(D) It is the least interesting planet for astronomers"
         ],
-        "type": "inference"
+        "type": "inference",
+        "correctAnswer": "B"
       }
     ],
     "keyVocabulary": [
@@ -1450,7 +1534,8 @@
           "(C) popularity among patients",
           "(D) speed of delivery"
         ],
-        "type": "vocabulary-in-context"
+        "type": "vocabulary-in-context",
+        "correctAnswer": "B"
       },
       {
         "number": 2,
@@ -1461,7 +1546,8 @@
           "(C) It replaces damaged liver cells with healthy ones",
           "(D) It increases the body's natural cholesterol breakdown"
         ],
-        "type": "detail"
+        "type": "detail",
+        "correctAnswer": "B"
       },
       {
         "number": 3,
@@ -1472,7 +1558,8 @@
           "(C) It has no side effects at all",
           "(D) It works for all types of diseases"
         ],
-        "type": "inference"
+        "type": "inference",
+        "correctAnswer": "B"
       },
       {
         "number": 4,
@@ -1483,7 +1570,8 @@
           "(C) To compare different cholesterol treatments",
           "(D) To explain the history of CRISPR technology"
         ],
-        "type": "author-purpose"
+        "type": "author-purpose",
+        "correctAnswer": "B"
       }
     ],
     "keyVocabulary": [
@@ -1519,7 +1607,8 @@
           "(C) Social isolation is more common than loneliness",
           "(D) Loneliness only affects the elderly"
         ],
-        "type": "detail"
+        "type": "detail",
+        "correctAnswer": "B"
       },
       {
         "number": 2,
@@ -1530,7 +1619,8 @@
           "(C) Teenagers and youth in low-income countries",
           "(D) Married couples in middle-income countries"
         ],
-        "type": "detail"
+        "type": "detail",
+        "correctAnswer": "C"
       },
       {
         "number": 3,
@@ -1541,7 +1631,8 @@
           "(C) promote and encourage",
           "(D) measure accurately"
         ],
-        "type": "vocabulary-in-context"
+        "type": "vocabulary-in-context",
+        "correctAnswer": "C"
       },
       {
         "number": 4,
@@ -1552,7 +1643,8 @@
           "(C) High-income countries have more lonely people",
           "(D) Income has no effect on social connection"
         ],
-        "type": "inference"
+        "type": "inference",
+        "correctAnswer": "B"
       }
     ],
     "keyVocabulary": [
@@ -1588,7 +1680,8 @@
           "(C) conclusions",
           "(D) experiments"
         ],
-        "type": "vocabulary-in-context"
+        "type": "vocabulary-in-context",
+        "correctAnswer": "B"
       },
       {
         "number": 2,
@@ -1599,7 +1692,8 @@
           "(C) Most companies abandoned the four-day model",
           "(D) Stress levels increased when work was compressed"
         ],
-        "type": "main-idea"
+        "type": "main-idea",
+        "correctAnswer": "B"
       },
       {
         "number": 3,
@@ -1610,7 +1704,8 @@
           "(C) The study lasted only one month",
           "(D) Workers were paid less during the trial"
         ],
-        "type": "detail"
+        "type": "detail",
+        "correctAnswer": "B"
       },
       {
         "number": 4,
@@ -1621,7 +1716,8 @@
           "(C) It will replace remote work entirely",
           "(D) It is only suitable for technology companies"
         ],
-        "type": "inference"
+        "type": "inference",
+        "correctAnswer": "B"
       }
     ],
     "keyVocabulary": [
@@ -1657,7 +1753,8 @@
           "(C) create or design",
           "(D) prevent from happening"
         ],
-        "type": "vocabulary-in-context"
+        "type": "vocabulary-in-context",
+        "correctAnswer": "B"
       },
       {
         "number": 2,
@@ -1668,7 +1765,8 @@
           "(C) Governments banned all deepfake content",
           "(D) Social media platforms blocked all AI-generated content"
         ],
-        "type": "detail"
+        "type": "detail",
+        "correctAnswer": "B"
       },
       {
         "number": 3,
@@ -1679,7 +1777,8 @@
           "(C) Harassment and financial scams",
           "(D) Replacing human workers"
         ],
-        "type": "main-idea"
+        "type": "main-idea",
+        "correctAnswer": "C"
       },
       {
         "number": 4,
@@ -1690,7 +1789,8 @@
           "(C) Sophisticated deepfakes can cause serious financial damage to organizations",
           "(D) Only tech companies are vulnerable to deepfake attacks"
         ],
-        "type": "inference"
+        "type": "inference",
+        "correctAnswer": "C"
       }
     ],
     "keyVocabulary": [
@@ -1726,7 +1826,8 @@
           "(C) destroyed completely",
           "(D) studied carefully"
         ],
-        "type": "vocabulary-in-context"
+        "type": "vocabulary-in-context",
+        "correctAnswer": "B"
       },
       {
         "number": 2,
@@ -1737,7 +1838,8 @@
           "(C) Volcanic eruptions releasing particles",
           "(D) Agricultural fertilizers"
         ],
-        "type": "detail"
+        "type": "detail",
+        "correctAnswer": "B"
       },
       {
         "number": 3,
@@ -1748,7 +1850,8 @@
           "(C) Few studies have directly examined human health impacts",
           "(D) The medical community denies any connection"
         ],
-        "type": "detail"
+        "type": "detail",
+        "correctAnswer": "C"
       },
       {
         "number": 4,
@@ -1759,7 +1862,8 @@
           "(C) Indifferent and neutral",
           "(D) Humorous and lighthearted"
         ],
-        "type": "tone"
+        "type": "tone",
+        "correctAnswer": "B"
       }
     ],
     "keyVocabulary": [
@@ -1795,7 +1899,8 @@
           "(C) becoming more sophisticated",
           "(D) remaining stable"
         ],
-        "type": "vocabulary-in-context"
+        "type": "vocabulary-in-context",
+        "correctAnswer": "B"
       },
       {
         "number": 2,
@@ -1806,7 +1911,8 @@
           "(C) After the invention of ChatGPT",
           "(D) In the early 2000s"
         ],
-        "type": "detail"
+        "type": "detail",
+        "correctAnswer": "B"
       },
       {
         "number": 3,
@@ -1817,7 +1923,8 @@
           "(C) Watching educational videos",
           "(D) Taking more standardized tests"
         ],
-        "type": "detail"
+        "type": "detail",
+        "correctAnswer": "B"
       },
       {
         "number": 4,
@@ -1828,7 +1935,8 @@
           "(C) Critical, seeing them as contributing to decline",
           "(D) Unaware of their existence"
         ],
-        "type": "tone"
+        "type": "tone",
+        "correctAnswer": "C"
       }
     ],
     "keyVocabulary": [
@@ -1864,7 +1972,8 @@
           "(C) a type of building material",
           "(D) a financial investment"
         ],
-        "type": "vocabulary-in-context"
+        "type": "vocabulary-in-context",
+        "correctAnswer": "B"
       },
       {
         "number": 2,
@@ -1875,7 +1984,8 @@
           "(C) China",
           "(D) Southeast Asia"
         ],
-        "type": "detail"
+        "type": "detail",
+        "correctAnswer": "C"
       },
       {
         "number": 3,
@@ -1886,7 +1996,8 @@
           "(C) The U.S. has banned EV imports",
           "(D) China has no gasoline cars available"
         ],
-        "type": "inference"
+        "type": "inference",
+        "correctAnswer": "B"
       },
       {
         "number": 4,
@@ -1897,7 +2008,8 @@
           "(C) China will dominate all global industries by 2030",
           "(D) Gasoline cars are becoming more popular again"
         ],
-        "type": "main-idea"
+        "type": "main-idea",
+        "correctAnswer": "B"
       }
     ],
     "keyVocabulary": [
@@ -1933,7 +2045,8 @@
           "(C) measured",
           "(D) replaced"
         ],
-        "type": "vocabulary-in-context"
+        "type": "vocabulary-in-context",
+        "correctAnswer": "B"
       },
       {
         "number": 2,
@@ -1944,7 +2057,8 @@
           "(C) Blood pressure spikes dangerously",
           "(D) New neural connections form rapidly"
         ],
-        "type": "detail"
+        "type": "detail",
+        "correctAnswer": "B"
       },
       {
         "number": 3,
@@ -1955,7 +2069,8 @@
           "(C) To increase alertness",
           "(D) To fight infections in the brain"
         ],
-        "type": "inference"
+        "type": "inference",
+        "correctAnswer": "B"
       },
       {
         "number": 4,
@@ -1966,7 +2081,8 @@
           "(C) It shows that eye exercises can prevent sleep deprivation",
           "(D) It indicates that the study's methods were flawed"
         ],
-        "type": "inference"
+        "type": "inference",
+        "correctAnswer": "B"
       }
     ],
     "keyVocabulary": [
@@ -2002,7 +2118,8 @@
           "(C) having subtle distinctions and complexity",
           "(D) extremely controversial"
         ],
-        "type": "vocabulary-in-context"
+        "type": "vocabulary-in-context",
+        "correctAnswer": "C"
       },
       {
         "number": 2,
@@ -2013,7 +2130,8 @@
           "(C) Greenhushing means downplaying real efforts; greenwashing means exaggerating them",
           "(D) They are the same thing with different names"
         ],
-        "type": "detail"
+        "type": "detail",
+        "correctAnswer": "C"
       },
       {
         "number": 3,
@@ -2024,7 +2142,8 @@
           "(C) Environmental efforts are no longer profitable",
           "(D) Consumers prefer companies that ignore sustainability"
         ],
-        "type": "detail"
+        "type": "detail",
+        "correctAnswer": "B"
       },
       {
         "number": 4,
@@ -2035,7 +2154,8 @@
           "(C) It is irrelevant to consumers",
           "(D) It will solve the problem of greenwashing"
         ],
-        "type": "inference"
+        "type": "inference",
+        "correctAnswer": "B"
       }
     ],
     "keyVocabulary": [
