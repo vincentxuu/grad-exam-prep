@@ -8,6 +8,18 @@ export interface ImItWorkedExample {
   answer: string
 }
 
+export interface ImItLearningScenario {
+  title: string
+  hook: string
+  predict: string
+  mapping: Array<{
+    everyday: string
+    technical: string
+  }>
+  boundary: string
+  examCues: string[]
+}
+
 export interface ImItLesson {
   id: string
   subtopicId: string
@@ -17,6 +29,7 @@ export interface ImItLesson {
   estimatedMinutes: number
   minimumPastPaperRefs: number
   learningObjectives: string[]
+  learningScenario?: ImItLearningScenario
   sections: Array<{ title: string; body: string; bullets: string[] }>
   workedExamples: ImItWorkedExample[]
   commonPitfalls: string[]

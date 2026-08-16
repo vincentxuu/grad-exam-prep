@@ -32,7 +32,7 @@ export function ImItLessonContent({ lesson, cards, sources }: Props) {
       </header>
 
       <section className="rounded-lg border bg-muted/30 p-4">
-        <h2 className="text-balance text-lg font-semibold">完成後你會</h2>
+        <h2 className="text-balance text-lg font-semibold">先抓住這幾件事</h2>
         <ul className="mt-3 space-y-2">
           {lesson.learningObjectives.map((objective) => (
             <li key={objective} className="flex gap-2 text-pretty text-sm">
@@ -44,6 +44,70 @@ export function ImItLessonContent({ lesson, cards, sources }: Props) {
           ))}
         </ul>
       </section>
+
+      {lesson.learningScenario ? (
+        <section className="space-y-5" aria-labelledby="learning-scenario-title">
+          <div className="rounded-xl border border-sky-200 bg-sky-50/70 p-5 dark:border-sky-900 dark:bg-sky-950/20">
+            <p className="text-xs font-semibold tracking-wide text-sky-700 dark:text-sky-300">
+              先想像這個場景
+            </p>
+            <h2 id="learning-scenario-title" className="mt-2 text-balance text-xl font-semibold">
+              {lesson.learningScenario.title}
+            </h2>
+            <p className="mt-3 text-pretty text-sm leading-7">{lesson.learningScenario.hook}</p>
+            <div className="mt-4 border-l-2 border-sky-400 pl-4">
+              <p className="text-xs text-muted-foreground">先別急著往下看，花十秒想一想：</p>
+              <p className="mt-1 text-pretty font-medium leading-7">
+                {lesson.learningScenario.predict}
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-base font-semibold">把故事換成電腦語言</h3>
+            <div className="mt-3 overflow-hidden rounded-lg border">
+              <div className="grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] gap-3 bg-muted/50 px-4 py-2 text-xs font-medium text-muted-foreground">
+                <span>生活中的角色</span>
+                <span aria-hidden="true">→</span>
+                <span>技術概念</span>
+              </div>
+              {lesson.learningScenario.mapping.map((item) => (
+                <div
+                  key={`${item.everyday}-${item.technical}`}
+                  className="grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-start gap-3 border-t px-4 py-3 text-sm leading-6"
+                >
+                  <span className="text-pretty">{item.everyday}</span>
+                  <span aria-hidden="true" className="text-muted-foreground">
+                    →
+                  </span>
+                  <span className="text-pretty font-medium">{item.technical}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <aside className="rounded-lg border border-amber-200 bg-amber-50/60 px-4 py-3 text-sm leading-6 dark:border-amber-900 dark:bg-amber-950/20">
+            <span className="font-semibold">比喻到這裡為止：</span>{' '}
+            <span className="text-pretty text-muted-foreground">
+              {lesson.learningScenario.boundary}
+            </span>
+          </aside>
+
+          <div>
+            <h3 className="text-base font-semibold">題目出現這些字，先想到</h3>
+            <ul className="mt-2 space-y-2">
+              {lesson.learningScenario.examCues.map((cue) => (
+                <li key={cue} className="flex gap-2 text-pretty text-sm leading-6">
+                  <span aria-hidden="true" className="text-primary">
+                    →
+                  </span>
+                  {cue}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      ) : null}
 
       <div className="space-y-6">
         {lesson.sections.map((section, index) => (
@@ -68,7 +132,7 @@ export function ImItLessonContent({ lesson, cards, sources }: Props) {
       </div>
 
       <section className="space-y-3">
-        <h2 className="text-balance text-lg font-semibold">帶你解題</h2>
+        <h2 className="text-balance text-lg font-semibold">一起拆題目</h2>
         <div className="space-y-3">
           {lesson.workedExamples.map((example, index) => (
             <div key={example.prompt} className="rounded-lg border p-4">
@@ -83,7 +147,7 @@ export function ImItLessonContent({ lesson, cards, sources }: Props) {
                 ))}
               </ol>
               <p className="mt-3 rounded-md bg-muted px-3 py-2 text-pretty text-sm">
-                <span className="font-medium">答案：</span>
+                <span className="font-medium">所以答案是：</span>
                 {example.answer}
               </p>
             </div>
@@ -92,7 +156,7 @@ export function ImItLessonContent({ lesson, cards, sources }: Props) {
       </section>
 
       <section className="space-y-3">
-        <h2 className="text-balance text-lg font-semibold">常見陷阱</h2>
+        <h2 className="text-balance text-lg font-semibold">這裡最容易選錯</h2>
         <ul className="space-y-2 rounded-lg border border-amber-200 bg-amber-50/50 p-4 dark:border-amber-900 dark:bg-amber-950/20">
           {lesson.commonPitfalls.map((pitfall) => (
             <li key={pitfall} className="flex gap-2 text-pretty text-sm leading-6">
@@ -105,9 +169,9 @@ export function ImItLessonContent({ lesson, cards, sources }: Props) {
 
       <section className="space-y-3">
         <div>
-          <h2 className="text-balance text-lg font-semibold">概念卡自我檢查</h2>
+          <h2 className="text-balance text-lg font-semibold">換你快速判斷</h2>
           <p className="mt-1 text-pretty text-sm text-muted-foreground">
-            先在心中作答，再展開答案。這些卡片不會混入舊版非英文閃卡排程。
+            先在心中作答，再展開答案。答不出來時，回頭找本課的對照關係。
           </p>
         </div>
         <div className="space-y-2">
@@ -130,7 +194,7 @@ export function ImItLessonContent({ lesson, cards, sources }: Props) {
       </section>
 
       <section className="space-y-3 rounded-lg border p-4">
-        <h2 className="text-balance text-lg font-semibold">接著用考古題驗證</h2>
+        <h2 className="text-balance text-lg font-semibold">最後用考古題驗證</h2>
         <p className="text-pretty text-sm text-muted-foreground">
           本課連結的題目都已通過可重現的技術覆核，可逐題練習與判分。
         </p>
