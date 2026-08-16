@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "subjectId": "im-it",
+  "authority": "NTU original examination PDFs; question text was visually audited against every page for years 106-115.",
+  "papers": {
+    "106": { "questionCount": 26, "pdfSha256": "d3a2b9e1f1d833843a0ffdaa3321a23518f5d1724a660517089ac5754f37f916", "questionsSha256": "5fc0aa9965afeee2b7dcbca6fdbc3f692dcc5a55a179aa3dc7d9ea5ec965bad7" },
+    "107": { "questionCount": 26, "pdfSha256": "2a3a69e2979c0518dcf87b9ec24b866a12c6477273fe4075320d22904688755b", "questionsSha256": "a26fd3e3e349c7486e76c60c3f8b661ecaa2008660ecf3d4a1b1f4fb9ea3034a" },
+    "108": { "questionCount": 22, "pdfSha256": "a6d7c5d6cde50602dd815263de8a24b457626b11650fa7d826c65989f061cf1e", "questionsSha256": "4af7a35bf9dcc1b5c3a4e82a8290013279fa0da7331e3c58f4649c5280d27f04" },
+    "109": { "questionCount": 22, "pdfSha256": "949d19104356347e1a2d2c4dc029231196654f7e4ba536a698cf36a692aad83b", "questionsSha256": "aa0655ada6c554fce58892763e352b1e3d7877fb24f920722f9455e25f0f2aa8" },
+    "110": { "questionCount": 29, "pdfSha256": "0b332dd4be97003053cd35af7647bbd2130740d0dd2eaded76f07e35f13b516f", "questionsSha256": "bc3998a4c5e002d115ff2903a582d9e3241d623a9b17937eea6640632613cab9" },
+    "111": { "questionCount": 25, "pdfSha256": "eefe191618fe9882897c940a30b9d9955bc718a0bc5e34095a7c754ee0f62753", "questionsSha256": "b1461c4d0a366625ec11a858fd7ad5b1558b9766235e96c8a0ec0610849cbf24" },
+    "112": { "questionCount": 29, "pdfSha256": "f2b2a2b15eb63fe4304cc32bac5839aa6a4bb714761402bc91f61e8a52687040", "questionsSha256": "bc5ec3d22bf31f6d260e4b155852024ee33a955141c5040315dcf365d064513c" },
+    "113": { "questionCount": 25, "pdfSha256": "05b3948e371e217913a4b56ccc273a25413367522771784679af8eecc23a0b53", "questionsSha256": "9ae5eb73487985a161fae4458b4161b6ea5c751393472b1a9df4d480b689e7a6" },
+    "114": { "questionCount": 25, "pdfSha256": "3c06ad09b6a7c82b97de051da94aa70a3e220a7d342c882678a47c2da392e177", "questionsSha256": "df36795f6b90a68d913293347fd2d98b85379e071e0b6f4635ccf26b28e96dda" },
+    "115": { "questionCount": 31, "pdfSha256": "ebc2cbc2da686a09688cd75cee98c64df49cc5d1e81e0f07e98f30f9b2ab9e5d", "questionsSha256": "b30b4144add68faa5fd4e6ebe8344c6857512bcca114091d04d3079b2809e3c2" }
+  }
+}

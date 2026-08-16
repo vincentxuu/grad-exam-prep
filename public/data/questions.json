@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "totalQuestions": 1472,
+  "totalQuestions": 1475,
   "questions": [
     {
       "id": "q-pp-cs-algo-108-1",
@@ -14518,7 +14518,7 @@
       "subjectId": "im-it",
       "year": 107,
       "number": 1,
-      "text": "Which of the following technology is not used in Amazon Echo or Google Home? (A) speech recognition (B) image recognition (C) natural language processing (D) control of more devices (E) speech synthesis",
+      "text": "Which of the following technology is not used in Amazon Echo or Google Home? (A) speech recognition (B) image recognition (C) natural language processing (D) control of room devices (E) speech synthesis.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -14530,7 +14530,7 @@
       "subjectId": "im-it",
       "year": 107,
       "number": 2,
-      "text": "Which of the following is wrong about object-oriented databases? (A) object-oriented databases are the most widely used database model today (B) object database store objects rather than data such as integers, strings or real numbers (C) objects basically consist of attributes and methods (D) objects contain both executable code and data (E) all of the above are correct (choose this only if none of the above can be chosen).",
+      "text": "Which of the following is wrong about object-oriented databases? (A) object-oriented databases are the most widely used database model today (B) object databases store objects rather than data such as integers, strings or real numbers (C) objects basically consist of attributes and methods (D) objects contain both executable code and data (E) all of the above are correct (choose this only if none of the above can be chosen).",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -14554,7 +14554,7 @@
       "subjectId": "im-it",
       "year": 107,
       "number": 4,
-      "text": "Which of the following SQL command returns the number of countries of the records in the \"Customers\" table (see Table 1)?\n\n(A) SELECT NUMBER (*) FROM Customers;\n(B) SELECT COUNT (ALL country) FROM Customers;\n(C) SELECT COUNT (DISTINCT country) FROM Customers;\n(D) SELECT NUMBER (ALL country) FROM Customers;\n(E) SELECT COUNT (DISTINCT * country) FROM Customers;",
+      "text": "Which of the following SQL commands returns the number of countries of the records in the \"Customers\" table (see Table 1)?\n\n(A) SELECT NUMBER (*) FROM Customers;\n(B) SELECT COUNT (ALL country) FROM Customers;\n(C) SELECT COUNT (DISTINCT country) FROM Customers;\n(D) SELECT NUMBER (ALL country) FROM Customers;\n(E) SELECT NUMBER (DISTINCT * country) FROM Customers;",
       "points": 2.5,
       "hasImage": true,
       "subQuestions": []
@@ -14566,7 +14566,7 @@
       "subjectId": "im-it",
       "year": 107,
       "number": 5,
-      "text": "Which of the following SQL commands list the number of customers in each country from the \"Customers\" table (see Table 1)?\n\n(A) SELECT NUMBER (id), country FROM Customers GROUP BY country;\n(B) SELECT NUMBER (id), country FROM Customers ORDER BY country;\n(C) SELECT COUNT (id), country FROM Customers GROUP BY country;\n(D) SELECT COUNT (id), country FROM Customers ASSEMBLY BY country;\n(E) none of the above.",
+      "text": "Which of the following SQL commands lists the number of customers in each country from the \"Customers\" table (see Table 1)?\n\n(A) SELECT NUMBER (id), country FROM Customers GROUP BY country;\n(B) SELECT NUMBER (id), country FROM Customers ORDER BY country;\n(C) SELECT COUNT (id), country FROM Customers GROUP BY country;\n(D) SELECT COUNT (id), country FROM Customers ASSEMBLY BY country;\n(E) none of the above.",
       "points": 2.5,
       "hasImage": true,
       "subQuestions": []
@@ -14578,7 +14578,7 @@
       "subjectId": "im-it",
       "year": 107,
       "number": 6,
-      "text": "Which of the following types of databases has been optimized for data warehousing and OLAP (online analytical processing) for complex analytical and ad hoc queries with a rapid execution time? (A) object-oriented databases (B) multi-dimensional databases (C) crossed relational databases (D) relational object-oriented databases (E) distributed databases.",
+      "text": "Which of the following types of databases has been optimized for data warehousing and OLAP (online analytical processing) for complex analytical and ad hoc queries with a rapid execution time? (A) object-oriented databases (B) multidimensional databases (C) crossed relational databases (D) relational object-oriented databases (E) distributed databases.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -14614,7 +14614,7 @@
       "subjectId": "im-it",
       "year": 107,
       "number": 9,
-      "text": "Which of the following is a computer network authentication protocol that works on the basis of tickets to allow nodes communicating over a non-secure network to prove their identity to one another in a secure manner? (A) Kerberos (B) Dynamic Host Configuration Protocol (C) Secure Remote Password protocol (SRP) (D) Internet Key Exchange (E) none of the above.",
+      "text": "Which of the following is a computer network authentication protocol that works on the basis of tickets to allow nodes communicating over a non-secure network to prove their identity to one another in a secure manner? (A) Kerkeros (B) Dynamic Host Configuration Protocol (C) Secure Remote Password protocol (SRP) (D) Internet Key Exchange (E) none of the above.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -14626,7 +14626,7 @@
       "subjectId": "im-it",
       "year": 107,
       "number": 10,
-      "text": "Which of the following is relatively not a main concern of the HTTPS protocol? (A) authentication of the accessed website (B) protection of communication privacy (C) performance of transfer speed (D) data integrity (E) fault tolerance (F) protection of tampering of the communication.",
+      "text": "Which of the following is relatively not a main concern of the HTTPS protocol? (A) authentication of the accessed website (B) protection of communication privacy (C) protection of man-in-the-middle attacks (D) fault tolerance (E) protection of tampering of the communication.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -14638,7 +14638,7 @@
       "subjectId": "im-it",
       "year": 107,
       "number": 11,
-      "text": "Which of the following about digital certificate is wrong? (A) the \"Serial Number\" field is a digital certificate is used to track revocation information (B) the \"Issuer\" field specifies the entity that verified the information and signed the certificate (C) at the minimum, a digital certificate contains the public key (D) X.509 is a standard that defines the format of public key certificates (E) all of the above are correct (choose this only if none of the above can be chosen).",
+      "text": "Which of the following about digital certificate is wrong? (A) the \"Serial Number\" field in a digital certificate is used to track revocation information (B) the \"Issuer\" field specifies the entity that verified the information and signed the certificate (C) it needs to contain the certificate owner's public key (D) X.509 is a standard that defines the format of public key certificates (E) all of the above are correct (choose this only if none of the above can be chosen).",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -14650,7 +14650,7 @@
       "subjectId": "im-it",
       "year": 107,
       "number": 12,
-      "text": "Which of the following about Single Sign-On (SSO) is wrong? (A) it reduces password fatigue from different user name and password combinations (B) it reduces time spent re-entering passwords for the same identity (C) log-in with Facebook account is an example of SSO (D) log-in to different account is an example of SSO (E) all of the above are correct (choose this only if none of the above can be chosen).",
+      "text": "Which of the following about Single Sign-On (SSO) is wrong? (A) it reduces password fatigue from different user name and password combinations (B) it reduces time spent re-entering passwords for the same identity (C) log-in with Facebook account is an example of SSO (D) log-in with Google account is an example of SSO (E) all of the above are correct (choose this only if none of the above can be chosen).",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -14662,7 +14662,7 @@
       "subjectId": "im-it",
       "year": 107,
       "number": 13,
-      "text": "Which of the following enables users to access network applications across secure networks as if their computing devices were directly connected to the private network? (A) Transport Layer Security (B) Secure Sockets Layer (C) Virtual Private Network (D) Network Address Translation (E) none of the above.",
+      "text": "Which of the following enables users to send and receive data across shared or public networks as if their computing devices were directly connected to the private network? (A) Transport Layer Security (B) Secure Sockets Layer (C) Virtual Private Network (D) Network Address Translation (E) none of the above.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -14686,7 +14686,7 @@
       "subjectId": "im-it",
       "year": 107,
       "number": 15,
-      "text": "Which of the following best describes a specialized hardware-dependent computer program which is also operating system specific that enables another program to interact transparently with a hardware device? (A) firmware (B) device driver (C) application programming interface (D) hardware platform interface (E) software platform user environment interface.",
+      "text": "Which of the following best describes a specialized hardware-dependent computer program which is also operating system specific that enables another program to interact transparently with a hardware device? (A) firmware (B) device driver (C) application programming interface (D) hardware platform interface (E) intelligent platform management interface.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -14698,7 +14698,7 @@
       "subjectId": "im-it",
       "year": 107,
       "number": 16,
-      "text": "Which of the following is wrong? (A) the primary goal of CISC (Complex Instruction Set Computer) architecture is to complete a task in as few lines of assembly code as possible (B) the RISC (Reduced Instruction Set Computer) architecture is designed to execute computer tasks with the simplest instructions in the shortest amount of time possible (C) Intel x86 architecture is typically considered as a CISC approach (D) ARM architecture is typically considered as a RISC approach (E) all of the above are correct (choose this only if none of the above can be chosen).",
+      "text": "Which of the following is wrong? (A) the primary goal of CISC (Complex Instruction Set Computer) approach is to complete a task in as few lines of assembly code as possible (B) the RISC (Reduced Instruction Set Computer) approach is designed to execute computing tasks with the simplest instructions in the shortest amount of time possible (C) Intel x86 architecture is typically considered as a CISC approach (D) ARM architecture is typically considered as a RISC approach (E) all of the above are correct (choose this only if none of the above can be chosen).",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -14710,7 +14710,7 @@
       "subjectId": "im-it",
       "year": 107,
       "number": 17,
-      "text": "Which of the following refers to the act of creating a virtual version of something, including virtual computer hardware platforms, storage devices, and computer network resources? (A) virtual reality (B) augmented reality (C) hypervisor (D) virtualization (E) none of the above.",
+      "text": "Which of the following refers to the act of creating a virtual version of something, including virtual computer hardware platforms, storage devices, and computer network resources? (A) virtual reality (B) augmented reality (C) virtualization (D) hypervisor (E) none of the above.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -14734,7 +14734,7 @@
       "subjectId": "im-it",
       "year": 107,
       "number": 19,
-      "text": "Which of the following about the Blockchain technology used in Bitcoin is wrong? (A) it is a continuously growing list of records, called \"blocks\" that are linked and secured using cryptography (B) the blocks in a chain can be distributed to different peers so that no peer is required to maintain the complete list of the blocks in the chain (C) all transactions and records in each block are typically encrypted (D) blockchains are inherently resistant to modification of the data that have been recorded into them (E) all of the above are correct (choose this only if none of the above can be chosen).",
+      "text": "Which of the following about the Blockchain technology used in Bitcoin is wrong? (A) it is a continuously growing list of \"blocks\" recording transaction history of the Bitcoin system (B) the blocks in a blockchain can be distributed to different peers so that no peer is required to maintain the complete list of the blocks in the system (C) all transactions in the blocks are kept anonymous and encrypted (D) blockchains are inherently resistant to modification of the data that have been recorded into blocks (E) all of the above are correct (choose this only if none of the above can be chosen).",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -14746,7 +14746,7 @@
       "subjectId": "im-it",
       "year": 107,
       "number": 20,
-      "text": "Which of the following is correct about the CIA Triad of Information security model? (A) \"C\" refers to Control (B) \"C\" refers to Cryptography (C) \"I\" refers to Identification (D) \"A\" refers to Anonymouse (E) \"A\" refers to Availability.",
+      "text": "Which of the following is correct about the CIA Triad of information security model? (A) \"C\" refers to Control (B) \"C\" refers to Cryptography (C) \"I\" refers to Identification (D) \"A\" refers to Anonymous (E) \"A\" refers to Availability.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -15173,7 +15173,7 @@
       "subjectId": "im-it",
       "year": 109,
       "number": 7,
-      "text": "Which of the following is generally not characterized as a mobile payment service? (A) LINE Pay (B) Pi 錢包 (C) 街口 (D) 台灣 Pay (E) 嗶嗶.",
+      "text": "Which of the following is generally not characterized as a mobile payment service? (A) LINE Pay (B) Pi 錢包 (C) 街口 (D) 台灣 Pay (E) 嘖嘖.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -15269,7 +15269,7 @@
       "subjectId": "im-it",
       "year": 109,
       "number": 15,
-      "text": "Which if the following is not a non-volatile memory/storage? (A) Solid-state drive (SSD) (B) DDR4 (C) read-only memory (ROM) (D) Flash memory (E) all of the above are non-volatile.",
+      "text": "Which of the following is not a non-volatile memory/storage? (A) Solid-state drive (SSD) (B) DDR4 (C) read-only memory (ROM) (D) Flash memory (E) all of the above are non-volatile.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -15718,10 +15718,21 @@
       "subjectId": "im-it",
       "year": 110,
       "number": 29,
-      "text": "The following C++ code fragment shows the class definition of an array-based implementation of ADT Binary Tree that stores a list of person names.\n\nconst int MAX_NODES = 100;\n\nclass TreeNode\n{\npublic:\nprivate:\n    string name;                   // node data — person name\n    int leftchild_index;        // index to left child, -1 if no left child\n    int rightchild_index;       // index to right child, -1 if no right child\n    friend class BinaryTree;\n};\n\nclass BinaryTree\n{\npublic:\n    void removeAllLeaf();\nprotected:\n    void recurRemoveLeaf(int parent_id, int node_id, int left_or_right);\n    // parent_id: parent node id\n    // node_id: visited node id\n    // left_or_right: 0 if node_id is the left child of parent_id; 1 otherwise.\nprivate:\n    TreeNode tree[MAX_NODES]; // array of tree nodes\n    int root_index;                     // index of root, -1 if the tree is empty\n    int free_index;                    // index to the first free node\n    // free nodes are chained by rightchild_index\n};\n\n(a) (10 points) Show the tree structure given the following data content.\n\nroot_index: 0\nfree_index: 6\n\ntree:\n     name    leftchild_index  rightchild_index\n0    Jane         ?                 ?\n1    Bob         -1                4\n3    Alan        -1                5\n4    ?\n5    Nancy       -1               -1\n6    ?\n7    ?           -1\n8    ?            1\n\n(b) (20 points) Write the BinaryTree::removeAllLeaf() that removes ALL leaf nodes from a binary tree. Note that you also need to implement the protected function BinaryTree::recurRemoveLeaf() called by removeAllLeaf() that recursively traverses the tree to delete all the leaf nodes.",
+      "text": "The following C++ code fragment shows the class definition of an array-based implementation of ADT Binary Tree that stores a list of person names.\n\nconst int MAX_NODES = 100;\n\nclass TreeNode\n{\npublic:\n    ...\nprivate:\n    ...\n    string name;              // node data — person name\n    int leftchild_index;      // index to left child, -1 if no left child\n    int rightchild_index;     // index to right child, -1 if no right child\n    friend class BinaryTree;\n};\n\nclass BinaryTree\n{\npublic:\n    ...\n    void removeAllLeaf();\nprotected:\n    void recurRemoveLeaf(int parent_id, int node_id, int left_or_right);\n    // parent_id: parent node id\n    // node_id: visited node id\n    // left_or_right: 0 if node_id is the left child of parent_id; 1 otherwise.\nprivate:\n    ...\n    TreeNode tree[MAX_NODES]; // array of tree nodes\n    int root_index;           // index of root, -1 if the tree is empty\n    int free_index;           // index to the first free node\n                              // free nodes are chained by rightchild_index\n};\n\nroot_index: 0\nfree_index: 6\n\ntree:\nindex  name   leftchild_index  rightchild_index\n0      Jane    1                3\n1      Bob    -1                4\n2      Tom    -1               -1\n3      Alan   -1                5\n4      Ellen   2               -1\n5      Nancy  -1               -1\n6      ?      -1                7\n7      ?      -1                8\n8      ?      -1                9\n...    ...    ...              ...",
       "points": 30,
       "hasImage": true,
-      "subQuestions": []
+      "subQuestions": [
+        {
+          "label": "(a)",
+          "text": "(10 points) Show the tree structure given the data content above.",
+          "points": 10
+        },
+        {
+          "label": "(b)",
+          "text": "(20 points) Write the BinaryTree::removeAllLeaf() that removes ALL leaf nodes from a binary tree. Note that you also need to implement the protected function BinaryTree::recurRemoveLeaf() called by removeAllLeaf() that recursively traverses the tree to delete all the leaf nodes.",
+          "points": 20
+        }
+      ]
     },
     {
       "id": "q-pp-im-it-111-1",
@@ -16030,7 +16041,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 1,
-      "text": "Which of the following is wrong about Von Neumann architecture? (A) It has four main units: CPU, memory, input, and output (B) memory is simply a linear array of storage locations (C) data and instructions are stored in different memory (D) it has a control unit and an arithmetic/logic unit (choose this one only if none of the above can be chosen)",
+      "text": "Which of the following is wrong about Von Neumann architecture? (A) it has four main units: CPU, memory, input, and output (B) memory is simply a linear array of storage locations (C) data and instructions are separated into different memory (D) a central processing unit has a control unit and an arithmetic/logic unit (E) all the above are correct (choose this one only if none of the above can be chosen).",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16042,7 +16053,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 2,
-      "text": "Which of the following is wrong about process architecture? (A) In general, program approaches will feed force opcodes to execute instructions that are defined in a RISC approach (B) the CISC approach typically has fewer instructions than that compiled in RISC architecture (C) the set is a CISC approach is typically smaller in instruction number than the one in RISC approach (D) all the above are correct (choose this one only if none of the above can be chosen)",
+      "text": "Which of the following is wrong about process architecture? (A) in general, program compiled in CISC architecture has fewer instructions than that compiled in RISC architecture (B) the CISC approach tries to make each instruction more powerful (C) in general, instructions in a CISC approach will need more clock cycles to execute than in a RISC approach (D) in general, the instruction set in a CISC approach is typically smaller than the instruction set in a RISC approach (E) all the above are correct (choose this one only if none of the above can be chosen).",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16054,7 +16065,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 3,
-      "text": "Which of the following is wrong about computer memory? (A) In a microprocessor with 32-bit address buses, devices and memory devices can access at most 2^32 bytes of memory (B) the internal data storage of a processor is known as its access I/O devices and memory devices (C) the internal data storage of a processor is known as its registers (D) all the above are correct (choose this one only if none of the above can be chosen)",
+      "text": "Which of the following is wrong about computer architecture? (A) A processor with 32-bit address buses can access at most 2^32 bytes of memory (B) in memory-mapped I/O, I/O devices use the same address space as memory devices (C) in memory-mapped I/O, the same instructions are used to access I/O devices and memory devices (D) the internal data storage of a processor is known as its registers (E) all the above are correct (choose this one only if none of the above can be chosen).",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16066,7 +16077,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 4,
-      "text": "Which of the following is wrong about Input/Output in a computer system? (A) is a technique where a hardware device is needed to allow I/O devices to continuously access memory with less participation of the processor (B) Direct Memory Access (DMA) allows data to be transferred from I/O devices to memory without the external device interrupt the processor (C) a hardware device interrupts the processor by triggering an interrupt signal to Direct Memory Access (DMA) allows data to be transferred to memory (D) all the above are correct (choose this one only if none of the above can be chosen)",
+      "text": "Which of the following is wrong about Input/Output in a computer system? (A) in interrupt-driven I/O, an external device interrupts the processor to execute an interrupt service routine (B) an external device interrupts the processor by triggering an interrupt signal to the processor (C) Direct Memory Access (DMA) allows data to be transferred from I/O devices to memory directly without the continuous involvement of the processor (D) a hardware device is needed to allow I/O devices to directly access memory with less participation of the processor (E) all the above are correct (choose this one only if none of the above can be chosen).",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16078,7 +16089,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 5,
-      "text": "Which of the following is wrong about registers in CPU? (A) the number of registers in CPU is smaller than the size of L1 cache (B) the size of L2 cache is typically much bigger than L1 cache (C) the size of L2 cache is smaller than the size of L1 cache in CPU (D) current CPUs typically provides dozens to hundreds bytes (choose this one only if none of the above can be chosen)",
+      "text": "Which of the following is wrong about CPU cache? (A) register in CPU is usually faster than L1 cache (B) number of registers in CPU is smaller than the size of L1 cache (C) the size of L1 cache in current CPUs typically ranges in dozens to hundreds bytes (D) the size of L2 cache is typically much bigger than L1 cache (E) all the above are correct (choose this one only if none of the above can be chosen).",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16090,7 +16101,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 6,
-      "text": "Which of the following is NOT a major functionality of operating systems? (A) Resource Management (B) Process Management (C) Memory Management (D) Security Management (E) all the above are major functionalities.",
+      "text": "Which of the following is not a major functionality of operating systems? (A) Resource Management (B) Process Management (C) Memory Management (D) Security Management (E) all the above are major functionalities.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16102,7 +16113,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 7,
-      "text": "Operating systems divide virtual and physical memory into fixed-sized chunks called pages. Which of the following page size is currently most common than the other? (A) 128 byte (B) 512 bytes (C) 4KB (D) 12KB (E) 512KB.",
+      "text": "Operating systems divide virtual and physical memory into fixed-sized chunks called pages. Which of the following page size is currently most common than the others? (A) 128 bytes (B) 512 bytes (C) 4KB (D) 128KB (E) 512KB.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16114,7 +16125,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 8,
-      "text": "Which of the following is wrong about operating systems? (A) user applications usually run in user-mode (B) applications running in user-mode shares a virtual address space (C) process running in user-mode can't access virtual addresses that are reserved for the operating system (D) core operating system components run in kernel mode (E) all the above are correct (choose this one only if none of the above can be chosen).",
+      "text": "Which of the following is wrong for applications running in an operating system? (A) user applications usually run in user-mode (B) applications running in user-mode shares a virtual address space (C) a process running in user mode can't access virtual addresses that are reserved for the operating system (D) core operating system components run in kernel mode (E) all the above are correct (choose this one only if none of the above can be chosen).",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16126,7 +16137,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 9,
-      "text": "Which of the following is wrong about computer cluster? (A) nodes in a cluster are typically independent and connected by a high-speed LAN (B) clustering computers can increase computing power (C) clustering computers can prevent security attacks (D) clustering computers can improve fault tolerance (E) all the above are correct (choose this one only if none of the above can be chosen).",
+      "text": "Which of the following is wrong about computer clusters? (A) nodes in a cluster are typically independent and connected by a high-speed LAN (B) clustering computers can increase computing power (C) clustering computers can prevent security attacks (D) clustering computers can improve fault tolerance (E) all the above are correct (choose this one only if none of the above can be chosen).",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16150,7 +16161,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 11,
-      "text": "With regard to storage management, which of the following is generally not the responsibility of operating systems? (A) creating and deleting files and directories (B) disk scheduling (C) backing up files onto stable permanent storage media (D) supporting primitives for manipulating files and directories.",
+      "text": "With regard to storage management, which of the following is generally not the responsibility of operating systems? (A) creating and deleting files (B) file integrity check (C) disk scheduling (D) backing up files onto stable permanent storage media (E) supporting primitives for manipulating files and directories.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16162,7 +16173,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 12,
-      "text": "A uniprocessor system achieves multiprogramming by ___. (A) CPU scheduling (B) dynamic allocation (C) manipulating files and directories.",
+      "text": "A uniprocessor system achieves multiprogramming by _____ in CPU scheduling. (A) dynamic allocation (B) process rotating (C) pipelining (D) time slicing (E) none of the above.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16174,7 +16185,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 13,
-      "text": "When a process is running in Unix/Linux system, which of the following is wrong about memory layout? (A) the stack section starts immediately above the data section (B) the stack section can grow and shrink dynamically with process life cycle (C) the data section (D) the stack section can grow and shrink dynamically during process life cycle (E) all the above are correct (choose this one only if none of the above can be chosen).",
+      "text": "When a process is running in Unix-like systems, which of the following is wrong about its memory layout? (A) the code section starts at location 0 (B) the data section starts immediately above code section (C) the stack section starts immediately above the data section (D) the stack section can grow and shrink dynamically during process life cycle (E) all the above are correct (choose this one only if none of the above can be chosen).",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16186,7 +16197,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 14,
-      "text": "Which of the following is wrong about the Collision Avoidance (CA) algorithm? (A) Cache-Sense to Robin. (B) Exponential Backoff (C) Collision Avoidance (D) Request to Send/Clear to Send (RTS/CTS) (E) Round to Robin.",
+      "text": "In Ethernet, which of the following algorithm is used to resolve collision? (A) Carrier Sense (B) Exponential Backoff (C) Collision Avoidance (D) Request to Send/Clear to Send (RTS/CTS) (E) Round Robin.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16198,7 +16209,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 15,
-      "text": "We can apply logic to network frames and handling those at a local area network to create the appearance and functionality of network traffic that spans separate networks. This effectively creates ___. (A) virtual LAN (B) VPN (C) domains (D) subdomain (E) private LANs.",
+      "text": "We can apply tags to network frames and handling these tags in a local area network to create the appearance and functionality of network traffic that is physically on a single network but acts as if it is split between separate networks. This effectively creates ______ (A) virtual LANs (B) VPN (C) domains (D) subdomains (E) private LANs.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16210,7 +16221,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 16,
-      "text": "In router-table construction, which of the following is not using the following algorithms but instead routers build up their routing tables by periodically exchanging information with their immediately neighboring? (A) adaptive routing (B) link-state (C) distance-vector (D) incremental update (E) none of the above.",
+      "text": "In router-table construction, which of the following algorithms let routers build up their routing tables by periodically exchanging information with their immediately neighboring? (A) adaptive (B) link-state (C) distance-vector (D) incremental update (E) none of the above.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16222,7 +16233,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 17,
-      "text": "Which of the following is wrong about TCP? (A) TCP uses a sliding window for flow control (B) TCP uses a connection (C) TCP is stream-oriented (D) TCP uses sliding window for free control (E) all the above can be chosen.",
+      "text": "Which of the following is wrong about TCP? (A) it uses 2-way handshake to establish a connection (B) TCP is stream-oriented (C) TCP uses sliding window for flow control (D) TCP uses sequence numbers to ensure the correct order of delivery (E) all the above are correct (choose this one only if none of the above can be chosen).",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16234,7 +16245,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 18,
-      "text": "Which of the following is wrong about buffer overflow attack? (A) in a buffer overflow attack, an attacker sends messages between two parties, and then steals and manipulates data between them (B) a buffer overflow attack typically overflows the buffer and overwrites subsequent portions of memory, typically containing the stack-frame pointers (C) In SQL injection, an attacker inputs malicious code into a server using some query language, forcing the server to deliver protected information (D) in none of them (E) all the above are correct (choose this one only if none of the above can be chosen).",
+      "text": "Which of the following is wrong about security attacks? (A) In Man-in-the-Middle attack, an attacker intercepts messages between two parties, and then steals and manipulates data between them (B) In buffer overflow attack, the attacker crafts an oversized input string which, when read by the server and stored in memory, overflows the buffer and overwrites subsequent portions of memory, typically containing the stack-frame pointers. (C) In SQL Injections, an attacker inserts malicious code into a server using server query language, forcing the server to deliver protected information (D) In First-day attack, an attacker exploits a network vulnerability before a patch is released and/or implemented. (E) all the above are correct (choose this one only if none of the above can be chosen).",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16246,7 +16257,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 19,
-      "text": "Which of the following is wrong about relational databases? (A) a primary key is used to identify each record in a table (B) a foreign key is used to link two related tables by referring to the fields in this one which is the specific foreign key (C) both row (D) a foreign key doesn't need to refer to the fields which show NULL value (choose this one only if none of the above can be chosen).",
+      "text": "Which of the following is wrong about program compilation? (A) assembler takes as input the assembly code and translates it into relocatable machine code (B) it is the linker's job to make sure all cross-file dependencies are resolved properly (C) programs can be linked either statically or dynamically (D) lexical and syntax analysis is done at compiling stage (E) all the above are correct (choose this one only if none of the above can be chosen).",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16258,7 +16269,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 20,
-      "text": "Which of the following is wrong about NoSQL database? (A) a column-oriented database organizes data in columns (B) document stores use an internal data model (i.e., XML, JSON) to associate arrays so that their data data model (C) document stores use documents (i.e., XML, JSON) to associate arrays so that their data how efficient data is maintained (D) graph stores use an arbitrary element to a min heap of n nodes can be done in (E) none of the above are correct (choose this one only if none of the above can be chosen).",
+      "text": "Which of the following is wrong about NoSQL databases? (A) in column-oriented structure, data is stored in cells grouped in a pre-defined number of columns (B) key-value stores use an associative array as their data mode (C) document stores use documents (e.g., XML, YAML, JSON) to hold and encode data in standard formats (D) graph databases represent data on a graph that shows how different sets of data relate to each other (E) all the above are correct (choose this one only if none of the above can be chosen).",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16270,7 +16281,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 21,
-      "text": "Which of the following is wrong about relational databases? (A) data are organized into two-dimensional tables and rows (B) a foreign key is used to link two related tables by referring to the fields in this one (C) both row (D) a foreign key doesn't need to refer to (E) none of the above can be chosen.",
+      "text": "Which of the following is wrong about relational databases? (A) data are organized into tables of columns and rows (B) a unique key is used to identify each row (C) each row represents a data record (D) columns correspond to attributes of records (E) all the above are correct (choose this one only if none of the above can be chosen).",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16282,7 +16293,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 22,
-      "text": "Which of the following is wrong about spanning trees? (A) If all the edges of a graph are edges of a spanning tree T of G, then adding it to T (B) if it is a graph this one only (C) a graph this one only if none of the above are correct (choose this one only if none of the above can be chosen).",
+      "text": "Which of the following is wrong about relational databases? (A) a primary key is used to ensure data in the specific column is unique (B) a foreign key refers to the field in a table which is the primary key of another table (C) foreign key does not allow NULL value (D) more than one foreign key are allowed in a table (E) all the above are correct (choose this one only if none of the above can be chosen).",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16294,7 +16305,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 23,
-      "text": "The term ___ has been coined to represent a digital counterpart of a real-world object for use such as simulation, integration, testing, monitoring, and maintenance. (A) avatar (B) digital twin (C) virtual reality (D) cloud agent (E) none of the above.",
+      "text": "The term ______ has been coined to represent a digital counterpart of a real-world object for use such as simulation, integration, testing, monitoring, and maintenance. (A) avatar (B) digital twin (C) virtual reality (D) cloud object (E) none of the above.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16306,7 +16317,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 24,
-      "text": "In blockchain technology like that used in Bitcoin, the process 'mining' is defined mainly to: (A) enforce concurrency control of transactions (B) ensure atomicity (C) distribute (D) validate transactions (E) none of the above.",
+      "text": "In blockchain technology like that used in Bitcoin, the process \"mining\" is designed mainly to (A) enforce concurrency control of transactions (B) ensure atomicity (C) distribute transaction (D) validate transaction (E) none of the above.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16318,7 +16329,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 25,
-      "text": "Which of the following is wrong about spanning trees? (A) it leaves appear on the same level (B) all leaves appear on the same level (C) a node has at least f(n/2) children (D) it leaves appear on the same level (E) every internal node.",
+      "text": "Which of the following is wrong about B-tree? (A) B-tree is self-balancing (B) A non-leaf node with k children contains k keys (C) a B-tree of order m has at most m children (D) every internal node has at least ceil(m/2) children (E) all leaves appear on the same level.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16330,7 +16341,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 26,
-      "text": "Which of the following is wrong about spanning trees? (A) If all the edges of a graph are edges of a spanning tree T of G (B) if it is not T (C) a spanning tree T of G is devoted to T (D) if it is and all the edges of a graph are edges of a spanning tree (E) none of the above are correct (choose this one only if none of the above can be chosen).",
+      "text": "Which of the following is wrong about spanning trees? (A) if all of the edges of a graph G are also edges of a spanning tree T of G, then G is a tree (B) if all of the edges of a graph G are also edges of a spanning tree T of G, then G is identical to T (C) if T is a spanning tree of G, and e is an edge of G that is not in T, then adding e to T will create a cycle (D) a graph may have more than one spanning trees (E) all the above are correct (choose this one only if none of the above can be chosen).",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16342,7 +16353,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 27,
-      "text": "Heapification of a given array is complete when there is a min heap of n nodes. (A) O(1) (B) O(log n) (C) O(n log n) (D) O(n) (E) O(n^2).",
+      "text": "Recall that a min heap is a complete binary tree such that the key stored in each node is greater than or equal to the keys in the node's children. Then, the time complexity for inserting a key into a min heap of n nodes can be done in (A) O(1) (B) O(log n) (C) O(n) (D) O(n log n) (E) none of the above.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16354,7 +16365,7 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 28,
-      "text": "The time complexity for finding an arbitrary element in a min heap of n nodes can be done in greater than or equal to the keys of the keys in the nodes children. Then a min heap of n nodes can be done in (A) O(1) (B) O(log n) (C) O(n log n) (D) O(n) (E) O(n^2) (F) none of the above.",
+      "text": "The time complexity for finding an arbitrary element in a min heap of n nodes can be done in (A) O(1) (B) O(log n) (C) O(n) (D) O(n log n) (E) none of the above.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16366,10 +16377,14 @@
       "subjectId": "im-it",
       "year": 112,
       "number": 29,
-      "text": "二、問答題，共30分。Consider the following C++ code.\n\n#include <bits/stdc++.h>\nusing namespace std;\n# define NO_OF_CHARS 256\n\nvoid PREPROCESS(string str, int size, int badchar[NO_OF_CHARS])\n{\n    int i;\n    for (i = 0; i < NO_OF_CHARS; i++)\n        badchar[i] = -1;\n    for (i = 0; i < size; i++)\n        badchar[(int) str[i]] = i;\n}\n\nvoid search(string txt, string pat, string badchar)\n{\n    int m = pat.size();\n    int n = txt.size();\n    int badchar[NO_OF_CHARS];\n    PREPROCESS(pat, m, badchar);\n    int s = 0;\n    while (s <= (n - m))\n    {\n        int j = m - 1;\n        while (j >= 0 && pat[j] == txt[s + j])\n            j--;\n        if (j < 0)\n        {\n            cout << \"pattern occurs at \" << s << endl;\n            s += (s + m < n) ? m-badchar[txt[s + m]] : 1;\n        }\n        else\n            s += max(1, j - badchar[txt[s + j]]);\n    }\n}",
+      "text": "二、問答題，共 30 分。\n※ 本大題 [(a)、(b)、(c) 3 小題] 請於試卷內之「非選擇題作答區」標明題號依序作答。\n\nConsider the following C++ code.\n\n#include <bits/stdc++.h>\nusing namespace std;\n# define NO_OF_CHARS 256\n\nvoid PREPROCESS(string str, int size, int badchar[NO_OF_CHARS])\n{\n    int i;\n    for (i = 0; i < NO_OF_CHARS; i++)\n        badchar[i] = -1;\n    for (i = 0; i < size; i++)\n        badchar[(int) str[i]] = i;\n}\n\nvoid search(string txt, string pat)\n{\n    int m = pat.size();\n    int n = txt.size();\n    int badchar[NO_OF_CHARS];\n\n    PREPROCESS(pat, m, badchar);\n    int s = 0;\n    while (s <= (n - m))\n    {\n        int j = m - 1;\n        while (j >= 0 && pat[j] == txt[s + j])\n            j--;\n        if (j < 0)\n        {\n            cout << \"pattern occurs at \" << s << endl;\n            s += (s + m < n) ? m-badchar[txt[s + m]] : 1;\n        }\n        else\n            s += max(1, j - badchar[txt[s + j]]);\n    }\n}",
       "points": 30,
       "hasImage": false,
-      "subQuestions": []
+      "subQuestions": [
+        "(a) (15 points) When given the two strings txt = \"ABAAABCDABC\" and pat = \"ABC\", what is the output of search(txt, pat)?",
+        "(b) (8 points) If the lengths of txt and pat are n and m respectively, what is the worst case time complexity of search(txt, pat)? Briefly explain your answer.",
+        "(c) (7 points) Continue from above. What is the best case time complexity of search(txt, pat)? Briefly explain your answer."
+      ]
     },
     {
       "id": "q-pp-im-it-113-1",
@@ -16474,7 +16489,7 @@
       "subjectId": "im-it",
       "year": 113,
       "number": 9,
-      "text": "Which of the following is wrong about mutual exclusion in operating system? (A) mutual exclusion is used to ensure that a shared resource can be accessed by only one process at a time (B) if not designed properly, a mutual exclusion mechanism may result in deadlock (C) if not designed properly, a mutual exclusion mechanism may result in starvation (D) if not designed properly, a mutual exclusion mechanism may result in livelock (E) all the above are correct (choose this one only if none of the above can be chosen).",
+      "text": "Which of the following is wrong about mutual exclusion in operating system? (A) mutual exclusion is used to ensure that a shared resource can be accessed by only one process at a time (B) if not designed properly, a mutual exclusion mechanism may result in starvation (C) if not designed properly, a mutual exclusion mechanism may result in deadlock (D) if not designed properly, a mutual exclusion mechanism may result in livelock (E) all of the above are correct (choose this one only if none of the above can be chosen).",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16510,7 +16525,7 @@
       "subjectId": "im-it",
       "year": 113,
       "number": 12,
-      "text": "Which of the following is wrong about Domain Name System (DNS)? (A) DNS is a hierarchical naming system (B) DNS is a centralized naming system (C) DNS translates human readable names (for example, www.im.ntu.edu.tw) to machine readable IP addresses (D) .tw is a top-level domain (E) all the above are correct (choose this one only if none of the above can be chosen).",
+      "text": "Which of the following is wrong about Domain Name System (DNS)? (A) DNS is a hierarchical naming system (B) DNS is a centralized naming system (C) DNS translates human readable names (for example, www.im.ntu.tw) to machine readable IP addresses (D) .tw is a top-level domain (E) all the above are correct (choose this one only if none of the above can be chosen).",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []
@@ -16594,7 +16609,7 @@
       "subjectId": "im-it",
       "year": 113,
       "number": 19,
-      "text": "______ is a constraint that determines the relation of one attribute to another in a DBMS, and thus helps to maintain the quality of data in the database. (A) inclusion dependency (B) column dependency (C) functional dependency (D) join (E) none of the above.",
+      "text": "___ is a constraint that determines the relation of one attribute to another in a DBMS, and thus helps to maintain the quality of data in the database. (A) inclusion dependency (B) column dependency (C) functional dependency (D) join dependency (E) none of the above.",
       "points": 2.5,
       "hasImage": false,
       "subQuestions": []

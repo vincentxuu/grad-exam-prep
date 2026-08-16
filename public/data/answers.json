@@ -4383,12 +4383,12 @@
     "q-pp-im-it-107-1": {
       "questionId": "q-pp-im-it-107-1",
       "answer": "B",
-      "explanation": "Amazon Echo 與 Google Home 是以語音為核心的智慧音箱，其主要技術包含：語音辨識（speech recognition）用於接收並轉換使用者的語音指令、自然語言處理（natural language processing）用於理解指令語意、語音合成（speech synthesis）用於以語音回應使用者，以及控制其他設備（control of more devices）實現智慧家居功能。然而，影像辨識（image recognition）需要攝影鏡頭作為輸入裝置，而這兩款智慧音箱並不具備視覺感測器，因此影像辨識並非其核心技術。故正確答案為 B。"
+      "explanation": "Amazon Echo 與 Google Home 是以語音為核心的智慧音箱，會使用語音辨識、自然語言處理、語音合成，也能控制室內裝置（control of room devices）。影像辨識需要視覺輸入，並非題述裝置的核心技術，因此答案為 (B)。"
     },
     "q-pp-im-it-107-10": {
       "questionId": "q-pp-im-it-107-10",
-      "answer": "E",
-      "explanation": "HTTPS（超文字傳輸安全協定）的核心目標在於三個安全層面：網站身份驗證（authentication）、通訊隱私保護（privacy）以及資料完整性（data integrity）與防竄改（tamper protection）。容錯性（fault tolerance）是指系統在部分故障時仍能正常運作的能力，屬於系統可靠性與高可用性架構的範疇，與 HTTPS 的安全協定設計完全無關。HTTPS 雖然因為加密運算會略微影響傳輸速度（選項 C），但效能本來就不是其設計目標，然而容錯性（選項 E）更明確地與 HTTPS 協定的任何功能毫無關聯。因此，在所有選項中，容錯性（E）是 HTTPS 協定「相對最不關注」的議題。"
+      "answer": "D",
+      "explanation": "HTTPS 透過 TLS 提供伺服器身分驗證、通訊機密性與完整性，因而也可防範中間人攻擊與通訊遭竄改。容錯性（fault tolerance）屬於系統可靠性與可用性設計，不是 HTTPS 協定的主要關注，因此原卷答案為 (D)。"
     },
     "q-pp-im-it-107-11": {
       "questionId": "q-pp-im-it-107-11",
@@ -4397,8 +4397,8 @@
     },
     "q-pp-im-it-107-12": {
       "questionId": "q-pp-im-it-107-12",
-      "answer": "D",
-      "explanation": "單一登入（SSO）的核心概念是使用者只需一組身分憑證，即可存取多個不同的系統或服務，而非登入不同的帳號。選項(A)正確，SSO確實能減少記憶多組帳號密碼的疲勞感。選項(B)正確，SSO減少了重複輸入密碼的時間。選項(C)正確，使用Facebook帳號登入第三方網站是聯合身分驗證（Federated Identity）的一種實作，屬於SSO的典型範例。選項(D)錯誤，「登入不同帳號」與SSO的定義相悖——SSO強調的是以單一身分認證跨越多個服務，而非使用多個不同帳號登入。"
+      "answer": "E",
+      "explanation": "SSO 可減少使用者管理多組帳號密碼的負擔與重複輸入密碼的時間；使用 Facebook 或 Google 帳號登入第三方服務都是聯合身分驗證／SSO 的常見例子。因此 (A) 至 (D) 皆正確，題目問錯誤敘述時應選 (E)。"
     },
     "q-pp-im-it-107-13": {
       "questionId": "q-pp-im-it-107-13",
@@ -4422,8 +4422,8 @@
     },
     "q-pp-im-it-107-17": {
       "questionId": "q-pp-im-it-107-17",
-      "answer": "D",
-      "explanation": "虛擬化（Virtualization）是指建立某樣事物之虛擬版本的行為，包含虛擬電腦硬體平台、儲存裝置及電腦網路資源等。虛擬實境（Virtual Reality）是指沉浸式的虛擬環境體驗，與硬體虛擬化無關。擴增實境（Augmented Reality）則是將虛擬資訊疊加於真實世界之上，同樣不符合題意。Hypervisor 是實現虛擬化的監控軟體，是虛擬化的工具而非虛擬化行為本身的名稱。因此正確答案為 (D) virtualization。"
+      "answer": "C",
+      "explanation": "建立電腦硬體平台、儲存裝置與網路資源之虛擬版本的行為稱為虛擬化（virtualization），所以原卷答案為 (C)。Hypervisor 是實作與管理虛擬化的軟體層，不是該行為本身。"
     },
     "q-pp-im-it-107-18": {
       "questionId": "q-pp-im-it-107-18",
@@ -4433,7 +4433,7 @@
     "q-pp-im-it-107-19": {
       "questionId": "q-pp-im-it-107-19",
       "answer": "B",
-      "explanation": "選項 (B) 的說法是錯誤的。在比特幣的區塊鏈中，每個完整節點（full node）都必須維護完整的區塊鏈副本，而非僅保存部分區塊。區塊鏈的去中心化特性是指多個節點各自擁有完整的鏈，而非將鏈拆分分散給不同節點。選項 (A) 正確描述了區塊鏈是透過密碼學連結並保護的持續增長記錄列表；選項 (C) 雖然比特幣交易資料是公開可見而非加密的，但題目中選項 (B) 的錯誤更為明確且是核心概念；選項 (D) 正確描述了區塊鏈對已記錄資料的不可篡改性。"
+      "explanation": "依此題採用的單選答案，(B) 錯在聲稱區塊可分散到不同節點，因而任何節點都不必維護完整區塊清單；典型比特幣完整節點會保存並驗證完整區塊鏈。需注意原卷 (C) 的『交易皆保持匿名且加密』也不嚴謹：比特幣交易為假名制且交易資料公開可查，並非內容全部加密。此題原卷本身可能具有多個可爭議選項，答案沿用既有 (B)，但解析必須揭露歧義。"
     },
     "q-pp-im-it-107-2": {
       "questionId": "q-pp-im-it-107-2",
@@ -4443,7 +4443,7 @@
     "q-pp-im-it-107-20": {
       "questionId": "q-pp-im-it-107-20",
       "answer": "E",
-      "explanation": "資訊安全的 CIA 三元組分別代表機密性（Confidentiality）、完整性（Integrity）與可用性（Availability）。選項 A 錯誤，「C」代表的是 Confidentiality（機密性），而非 Control。選項 B 錯誤，「C」並非代表 Cryptography（密碼學）。選項 C 錯誤，「I」代表 Integrity（完整性），而非 Identification（識別）。選項 D 錯誤，「A」代表 Availability（可用性），而非 Anonymouse（匿名）。因此正確答案為 E，「A」代表 Availability（可用性）。"
+      "explanation": "CIA 三元組代表 Confidentiality（機密性）、Integrity（完整性）與 Availability（可用性）。因此只有 (E)『A refers to Availability』正確；原卷 (D) 的字樣是 Anonymous，而非題庫原先誤植的 Anonymouse。"
     },
     "q-pp-im-it-107-21": {
       "questionId": "q-pp-im-it-107-21",
@@ -4483,7 +4483,7 @@
     "q-pp-im-it-107-4": {
       "questionId": "q-pp-im-it-107-4",
       "answer": "C",
-      "explanation": "此題要求計算 Customers 表中「國家的數量」，即不重複的 country 欄位值的個數。SQL 中並不存在 NUMBER() 這個聚合函數，因此選項 A 和 D 語法錯誤。COUNT(ALL country) 會計算所有非 NULL 的 country 值（包含重複值），無法得到不同國家的數量，故選項 B 不正確。COUNT(DISTINCT *country) 語法錯誤，故選項 E 亦排除。COUNT(DISTINCT country) 會先去除重複值再計數，正確回傳不同國家的數量，因此答案為 C。"
+      "explanation": "題目要求計算 Customers 表中不重複國家的數量。COUNT(DISTINCT country) 會先去除重複的 country 值再計數，因此 (C) 正確。NUMBER() 不是標準 SQL 聚合函數，所以 (A)、(D)、(E) 不正確；COUNT(ALL country) 則會計算所有非 NULL 值而包含重複國家。"
     },
     "q-pp-im-it-107-5": {
       "questionId": "q-pp-im-it-107-5",
@@ -4687,13 +4687,13 @@
     },
     "q-pp-im-it-109-21": {
       "questionId": "q-pp-im-it-109-21",
-      "answer": "A",
-      "explanation": "本題為非選擇題（程式撰寫題），無標準選項，以下說明正確實作方式。delete() 函式應先檢查 itemCount 是否為 0，若是則回傳 -1；否則儲存根節點值後，將最後一個元素移至根節點，再對根節點執行向下調整（sift-down / percolate-down），與兩個子節點中較大者比較並交換，直到堆積性質恢復，最後回傳原根節點值。insert() 函式應先確認 itemCount 小於陣列大小上限（100），否則回傳 false；接著將新值插入 items[itemCount] 並遞增 itemCount，再對新節點執行向上調整（sift-up / percolate-up），與父節點比較若較大則交換，直到堆積性質恢復，最後回傳 true。由於本例為最大堆積（large values mean high priority），父節點值必須恆大於或等於子節點值，sift-down 與 sift-up 的比較方向均以「子節點是否大於父節點」作為交換條件。"
+      "answer": "N/A",
+      "explanation": "本題是 C++ 實作題。(a) remove(value, success) 可利用陣列已排序的條件搜尋 value；找不到時令 success=false。找到索引後，將其後元素逐一左移一格、itemCount--，並令 success=true。(b) doubleArraySize() 應配置容量為 2*arraySize 的新陣列，複製前 itemCount 個元素，delete[] 舊 p_items，再令 p_items 指向新陣列並更新 arraySize。若搜尋採二分搜尋，查找為 O(log n)，但刪除移動元素最壞仍為 O(n)；擴充複製為 O(n)。"
     },
     "q-pp-im-it-109-22": {
       "questionId": "q-pp-im-it-109-22",
-      "answer": "A",
-      "explanation": "本題為申論題，無單一選項答案，以下提供各小題解析。(a) Double hashing 的優點在於利用第二個雜湊函數決定探測步長，使不同鍵值的探測序列各不相同，大幅減少「群聚現象」（clustering），相較於線性探測（linear probing）或二次探測（quadratic probing），能更均勻地分散碰撞後的探測路徑，降低搜尋時間。(b) 若雜湊表大小 M 與探測步長 s 不互質（即 gcd(M, s) = d > 1），則探測序列只會覆蓋表中 M/d 個位置，而非全部 M 個位置，導致即使表中尚有空位也無法找到，造成無限迴圈或插入失敗。(c) 解決方法是確保雜湊表大小 M 為質數（prime number），如此任何 1 ≤ s < M 的步長都與 M 互質，保證探測序列能遍歷表中所有位置；或者將第二個雜湊函數設計為永不回傳 0 且其值與 M 互質。"
+      "answer": "N/A",
+      "explanation": "本題是 C++ 實作題。這是 large values mean high priority 的 max heap。先將 items[i] 設為 newPriorityValue；只要 i>0 且 items[i] 大於 items[(i-1)/2]，就交換目前節點與父節點，再把 i 更新為父節點索引。迴圈停止時 max-heap 性質恢復，時間複雜度為 O(log n)，額外空間為 O(1)。"
     },
     "q-pp-im-it-109-3": {
       "questionId": "q-pp-im-it-109-3",
@@ -4717,8 +4717,8 @@
     },
     "q-pp-im-it-109-7": {
       "questionId": "q-pp-im-it-109-7",
-      "answer": "C",
-      "explanation": "RFID（無線射頻識別）是最適合用於追蹤物件的技術，廣泛應用於供應鏈管理、零售庫存、圖書館書籍管理與資產追蹤等場景。RFID 不需要視線接觸即可讀取標籤，且被動式標籤成本低廉、可大量部署。智慧卡（Smart Card）主要用於身份識別與存取控制；NFC 通訊距離極短（約4公分），適合感應付款而非追蹤；Beacon 雖可用於室內定位，但其應用場景與準確度不及 RFID。IoT 是廣義的生態系統概念，本身並非一種具體的追蹤技術。"
+      "answer": "E",
+      "explanation": "LINE Pay、Pi 錢包、街口與台灣 Pay 都提供以手機完成付款或轉帳的行動支付服務。嘖嘖的核心功能則是讓提案者募集群眾資金，屬於群眾募資平台，並不是題目所問的行動支付服務，因此答案為 (E) 嘖嘖。"
     },
     "q-pp-im-it-109-8": {
       "questionId": "q-pp-im-it-109-8",
@@ -4837,8 +4837,8 @@
     },
     "q-pp-im-it-110-29": {
       "questionId": "q-pp-im-it-110-29",
-      "answer": "A",
-      "explanation": "本題為問答題，分為(a)(b)兩部分，無選擇題選項。(a) 根據題目資料，root_index=0，free_index=6，陣列索引0為根節點Jane；索引8的leftchild_index=1代表其左子為Bob（索引1），Bob的rightchild_index=4為其右子；索引3為Alan，其rightchild_index=5指向Nancy（葉節點）；free nodes從索引6開始，以rightchild_index串接。因此樹結構為：Jane為根，其右子為索引8的節點，其左子（索引8的leftchild=1）為Bob，Bob的右子（索引4）為某節點，Alan（索引3）為另一分支，Alan的右子為Nancy（葉）。(b) removeAllLeaf()應先呼叫recurRemoveLeaf()做後序遞迴遍歷，當發現某節點的左右子皆為-1（即為葉節點）時，將該節點歸還到free list（設其rightchild_index=free_index，再令free_index指向它），並將其父節點中對應的leftchild_index或rightchild_index設為-1；若根節點本身即為葉節點，則需將root_index設為-1表示樹為空。"
+      "answer": "N/A",
+      "explanation": "本題是問答與 C++ 實作題。(a) root_index=0，所以 Jane 是根；Jane 的左子為 Bob(1)、右子為 Alan(3)；Bob 的右子為 Ellen(4)，Ellen 的左子為 Tom(2)；Alan 的右子為 Nancy(5)。free list 由 free_index=6 開始，依 rightchild_index 串成 6->7->8->9->...。(b) removeAllLeaf() 必須處理空樹與根本身是葉節點的情況，否則從根的左右子開始呼叫 recurRemoveLeaf(parent_id,node_id,left_or_right)。recurRemoveLeaf() 若遇到葉節點，先將父節點對應的 child index 設為 -1，再把該節點接回 free list；非葉節點則對原有左右子遞迴。要先保存左右 child index，且不能在刪除子葉後再把剛成為葉節點的父節點於同一輪刪除，才能只移除原本的所有 leaf nodes。"
     },
     "q-pp-im-it-110-3": {
       "questionId": "q-pp-im-it-110-3",
@@ -5003,147 +5003,147 @@
     "q-pp-im-it-112-1": {
       "questionId": "q-pp-im-it-112-1",
       "answer": "C",
-      "explanation": "Von Neumann 架構最核心的特點之一，就是程式指令與資料儲存在同一塊記憶體中，這被稱為「儲存程式概念」（stored-program concept）。選項 (C) 說「資料與指令儲存在不同的記憶體」，這描述的是 Harvard 架構，而非 Von Neumann 架構，因此是錯誤的敘述。選項 (A) 正確——Von Neumann 架構確實有 CPU、記憶體、輸入與輸出四個主要單元。選項 (B) 正確——記憶體在此架構中被視為線性的儲存位置陣列。選項 (D) 也正確——CPU 內部包含控制單元（Control Unit）與算術邏輯單元（ALU）。"
+      "explanation": "Von Neumann 架構採 stored-program concept，資料與指令共用同一記憶體；(C) 描述的是 Harvard 架構。其餘敘述皆為典型 Von Neumann 架構特徵。"
     },
     "q-pp-im-it-112-10": {
       "questionId": "q-pp-im-it-112-10",
       "answer": "E",
-      "explanation": "作業系統（OS）在行程管理方面負責多項核心工作。建立與刪除使用者行程（A）是OS的基本功能，OS透過系統呼叫來管理行程的生命週期。暫停與恢復行程（B）也是OS的責任，由排程器決定何時暫停或恢復行程執行。行程同步（C）由OS提供諸如號誌（semaphore）、互斥鎖（mutex）等機制來協調多個行程。死結處理（D）包含死結偵測、預防與解除，均屬OS的管理範疇。因此，上述四項皆為OS的責任，答案為（E）。"
+      "explanation": "作業系統的 process management 涵蓋建立與刪除 user/system processes、暫停與恢復行程、提供 process synchronization 機制，以及偵測、避免或處理 deadlock。因此 (A) 至 (D) 都是作業系統的一般責任，題目問哪一項不是時，應選表示全部皆屬其責任的 (E)。"
     },
     "q-pp-im-it-112-11": {
       "questionId": "q-pp-im-it-112-11",
-      "answer": "C",
-      "explanation": "作業系統在儲存管理方面的職責包括：建立與刪除檔案及目錄、磁碟排程（disk scheduling）、以及提供操作檔案與目錄的基本原語（primitives）。然而，將檔案備份至穩定的永久儲存媒介（如磁帶、外部硬碟）通常不是作業系統的責任，而是由使用者、應用程式或專門的備份軟體來負責執行。作業系統提供儲存機制與介面，但不主動執行備份任務。因此，選項 C 是一般情況下作業系統不負責的工作。"
+      "answer": "D",
+      "explanation": "OS 會提供檔案建立刪除、完整性支援、磁碟排程與檔案/目錄操作原語；把檔案備份到永久媒體通常是備份工具或管理作業的責任，不是 OS 核心儲存管理職責，故選 (D)。"
     },
     "q-pp-im-it-112-12": {
       "questionId": "q-pp-im-it-112-12",
-      "answer": "A",
-      "explanation": "單處理器系統只有一顆CPU，無法真正同時執行多個程式，因此需要透過CPU排程（CPU scheduling）來實現多元程式設計（multiprogramming）。CPU排程讓作業系統在多個行程之間快速切換CPU的使用權，從而製造出並行執行的假象。選項B的動態配置（dynamic allocation）屬於記憶體管理概念，與多元程式設計的實現機制無直接關係。選項C的檔案與目錄操作屬於檔案系統功能，同樣與多元程式設計無關。因此，正確答案為A，CPU排程是單處理器系統實現多元程式設計的核心機制。"
+      "answer": "D",
+      "explanation": "單處理器在任一瞬間只能執行一個行程，但排程器可把 CPU 時間切成短小的 time slices，在多個 ready processes 之間快速切換，使多個程式看似並行並維持 CPU 使用率。這種 CPU scheduling 方法是 time slicing，不是 dynamic allocation、process rotating 或指令 pipelining，因此選 (D)。"
     },
     "q-pp-im-it-112-13": {
       "questionId": "q-pp-im-it-112-13",
-      "answer": "A",
-      "explanation": "在 Unix/Linux 系統的標準行程記憶體佈局中，堆疊區段（stack）並不是緊接在資料區段（data section）的上方。正確的佈局由低位址到高位址依序為：程式碼區段（text）、資料區段（data/BSS）、堆積區段（heap，向高位址成長），以及位於高位址的堆疊區段（stack，向低位址成長）。堆疊與資料區段之間隔著堆積區段及可能的記憶體映射區域，因此選項 A 的描述是錯誤的。選項 B 與 D 描述堆疊可以動態增長與縮減，此為正確行為，堆疊會隨函式呼叫與返回而自動伸縮。"
+      "answer": "C",
+      "explanation": "典型 Unix 行程位址空間由低至高包含 text、data/BSS、heap、memory-mapped area 與高位址 stack；stack 不會緊接在 data section 上方，故 (C) 錯。"
     },
     "q-pp-im-it-112-14": {
       "questionId": "q-pp-im-it-112-14",
-      "answer": "A",
-      "explanation": "CSMA/CA（載波感測多重存取/碰撞避免）的標準技術包括：指數退避（Exponential Backoff）、RTS/CTS（Request to Send/Clear to Send）機制，以及碰撞避免（Collision Avoidance）本身的概念。「Cache-Sense to Robin」（選項A）是完全虛構、不存在的術語，在任何網路協定標準中均無此定義，因此是錯誤的描述。選項E的「Round to Robin」雖然表述有誤（正確應為 Round Robin），但 Round Robin 本身是排程演算法，並非碰撞避免機制，然而選項A的「Cache-Sense to Robin」更是毫無意義的組合詞，為最明顯的錯誤答案。"
+      "answer": "B",
+      "explanation": "傳統共享式 Ethernet 的 CSMA/CD 在偵測到碰撞後使用 binary exponential backoff 決定重傳等待時間，因此答案是 (B)。RTS/CTS 與 collision avoidance 主要屬無線網路機制。"
     },
     "q-pp-im-it-112-15": {
       "questionId": "q-pp-im-it-112-15",
       "answer": "A",
-      "explanation": "虛擬區域網路（Virtual LAN，VLAN）是透過在同一實體網路基礎設施上，利用邏輯方式（如交換器的埠位設定或標籤技術 IEEE 802.1Q）將網路框架加以區隔，使不同群組的設備看起來分屬不同的獨立網路。題目描述「對網路框架套用邏輯規則，使跨越不同網路的流量看似在同一局域網內運作」，這正是 VLAN 的核心功能。VPN（選項B）是用於加密跨越公開網路的通訊通道，與此描述不符。VLAN 讓管理員無需更動實體佈線，即可靈活地將設備分組至邏輯上隔離的網段，提升安全性與網路管理效率。"
+      "explanation": "交換器可依 IEEE 802.1Q 在 Ethernet frame 加入 VLAN tag，將同一套實體交換網路劃分成不同的廣播網域。不同標籤的流量在邏輯上如同位於彼此分離的 LAN，這正是 Virtual LAN 的用途；VPN 則通常是在不受信任網路上建立加密通道，概念不同，因此選 (A)。"
     },
     "q-pp-im-it-112-16": {
       "questionId": "q-pp-im-it-112-16",
       "answer": "C",
-      "explanation": "題目問的是哪一種演算法是透過「定期與相鄰路由器交換資訊」來建立路由表。距離向量演算法（Distance-Vector，如 RIP）正是採用此方式：每台路由器只將自己的路由表傳給直接相連的鄰居，再由鄰居逐步更新，不需要掌握整個網路拓撲。相較之下，鏈路狀態演算法（Link-State，如 OSPF）則是將鏈路狀態資訊廣播給網路中所有路由器，而非僅限相鄰節點。因此，符合「定期與直接相鄰路由器交換資訊」描述的是距離向量演算法，答案為 (C) distance-vector。"
+      "explanation": "Distance-vector routing 由每台路由器週期性向直接鄰居交換距離/下一跳資訊並更新路由表，故選 (C)。Link-state 則向整個 routing domain flooding 鏈路狀態。"
     },
     "q-pp-im-it-112-17": {
       "questionId": "q-pp-im-it-112-17",
-      "answer": "D",
-      "explanation": "TCP 確實使用滑動視窗（sliding window）機制，但該機制的目的是「流量控制」（flow control），而非「free control」。選項 D 將 sliding window 的功能描述為 free control，這是錯誤的說法，並非任何標準 TCP 術語。選項 A 正確描述 TCP 使用滑動視窗進行流量控制；選項 B 正確，TCP 是連線導向（connection-oriented）協定，通訊前需建立三向交握；選項 C 正確，TCP 以位元組串流（byte stream）方式傳輸資料。因此，唯一錯誤的敘述是選項 D。"
+      "answer": "A",
+      "explanation": "TCP 建立連線使用 three-way handshake，不是 two-way handshake，因此 (A) 錯。stream-oriented、sliding-window flow control 與 sequence-number ordering 均正確。"
     },
     "q-pp-im-it-112-18": {
       "questionId": "q-pp-im-it-112-18",
-      "answer": "A",
-      "explanation": "選項 (A) 所描述的「攻擊者介入兩方通訊之間，竊取並篡改資料」是中間人攻擊（Man-in-the-Middle Attack）的定義，而非緩衝區溢位攻擊（Buffer Overflow Attack）。選項 (B) 正確描述了緩衝區溢位攻擊的原理：攻擊者讓輸入資料超出緩衝區大小，進而覆蓋記憶體中相鄰的區域（如堆疊框架指標）。選項 (C) 正確描述了 SQL 注入攻擊：攻擊者透過查詢語言輸入惡意程式碼，迫使伺服器回傳受保護的資料。因此選項 (A) 對緩衝區溢位的描述是錯誤的，故答案為 (A)。"
+      "answer": "D",
+      "explanation": "「在修補程式發布或部署前利用未知弱點」通常稱為 zero-day attack，而不是 first-day attack，因此 (D) 錯；A-C 分別正確描述 MITM、buffer overflow 與 SQL injection。"
     },
     "q-pp-im-it-112-19": {
       "questionId": "q-pp-im-it-112-19",
-      "answer": "B",
-      "explanation": "外鍵（foreign key）的定義是指向另一張表（被參考表）的主鍵或唯一鍵欄位，而非指向「本表」自身的欄位。選項(B)描述外鍵「referring to the fields in this one」（指向本表欄位），此說法有誤，正確應為指向另一張相關表的欄位。選項(A)正確描述主鍵用於唯一識別每筆記錄，選項(C)通常描述關聯式資料庫同時支援列（row/tuple）與欄（column/attribute）的概念，皆為正確敘述。選項(D)為「以上皆非」的替代選項，只在其他選項皆正確時才選，但此處(B)已明顯有誤，故答案為(B)。"
+      "answer": "E",
+      "explanation": "Assembler 產生 relocatable machine code；linker 解決跨檔案符號；可採 static/dynamic linking；lexical 與 syntax analysis 皆在編譯階段。A-D 皆正確，故選 (E)。"
     },
     "q-pp-im-it-112-2": {
       "questionId": "q-pp-im-it-112-2",
-      "answer": "B",
-      "explanation": "此題詢問關於處理器架構（CISC vs RISC）何者敘述有誤。CISC（Complex Instruction Set Computing，複雜指令集）顧名思義擁有數量龐大且功能複雜的指令集，而 RISC（Reduced Instruction Set Computing，精簡指令集）的設計哲學則是使用較少但執行效率高的簡單指令。選項 (B) 聲稱「CISC 架構編譯後的指令數通常比 RISC 少」，這是錯誤的——事實上 CISC 指令集的指令種類遠多於 RISC。選項 (C) 與 (B) 表達相同的錯誤概念，即 CISC 的指令數量比 RISC 少，同樣與事實相反。然而本題要求選出「有誤」的單一選項，而 (B) 直接且明確地陳述了 CISC 指令數少於 RISC 的錯誤觀念，為最佳答案。"
+      "answer": "D",
+      "explanation": "CISC 指令功能通常較複雜，完成相同工作時程式的動態指令數可能少於 RISC，單一指令也常需較多時脈；但 CISC 的指令集通常比 RISC 大，不是更小，因此 (D) 錯。"
     },
     "q-pp-im-it-112-20": {
       "questionId": "q-pp-im-it-112-20",
-      "answer": "D",
-      "explanation": "圖形資料庫（Graph Store）是一種 NoSQL 資料庫，專門以節點（node）和邊（edge）來儲存資料及關係，與資料結構中的「最小堆積（min heap）」完全無關。選項 D 將圖形資料庫與堆積（heap）資料結構混為一談，描述的是向含 n 個節點的最小堆積插入元素的操作，這與圖形資料庫的定義和用途完全不符。選項 A 正確描述了欄式資料庫以欄為單位儲存資料，選項 B 和 C 雖然敘述有些混亂，但核心概念——文件型資料庫使用 XML 或 JSON 格式——是正確的。因此，唯一錯誤的描述是選項 D。"
+      "answer": "A",
+      "explanation": "Wide-column/column-family NoSQL 通常允許稀疏、動態欄位，並非固定「預先定義數量的 columns」；B-D 是 key-value、document 與 graph store 的合理描述，故選 (A)。"
     },
     "q-pp-im-it-112-21": {
       "questionId": "q-pp-im-it-112-21",
-      "answer": "D",
-      "explanation": "關聯式資料庫中，外鍵（foreign key）的定義是必須參照（refer to）另一個資料表中的主鍵（primary key）或唯一鍵（unique key），這是關聯式資料庫確保參照完整性（referential integrity）的核心機制。選項(D)聲稱外鍵不需要參照某個欄位，此說法違反了關聯式資料庫的基本定義，因此是錯誤的敘述。選項(A)正確描述了關聯式資料庫以二維表格（rows and columns）組織資料的特性。選項(B)正確說明外鍵用於連結兩個相關資料表的功能。因此，題目中描述錯誤的是選項(D)。"
+      "answer": "E",
+      "explanation": "關聯式資料庫以 rows/columns 組成 tables，key 唯一識別 row，row 表示 record，column 表示 attribute；A-D 皆正確，故選 (E)。"
     },
     "q-pp-im-it-112-22": {
       "questionId": "q-pp-im-it-112-22",
       "answer": "C",
-      "explanation": "題目詢問關於生成樹（spanning tree）哪個敘述是錯誤的。對於一個有 n 個頂點的連通圖，其生成樹恰好包含 n-1 條邊。若將任何一條不在生成樹中的邊加入，必然會形成恰好一個環（cycle）。一個圖只有唯一生成樹，若且唯若該圖本身就是一棵樹（即沒有多餘的邊）。選項 C 的敘述混淆了生成樹唯一性的充要條件，因此是錯誤的陳述。"
+      "explanation": "Foreign key 欄位在沒有 NOT NULL 約束時可以是 NULL；外鍵可參照另一表的 primary/unique key，同一表也可有多個 foreign keys，故 (C) 錯。"
     },
     "q-pp-im-it-112-23": {
       "questionId": "q-pp-im-it-112-23",
       "answer": "B",
-      "explanation": "「Digital Twin（數位孿生）」是指現實世界物件的數位對應體，用於模擬、整合、測試、監控與維護等用途，此概念廣泛應用於工業4.0與物聯網領域。Avatar指的是虛擬化身，代表使用者在數位環境中的形象，與此定義不符。Virtual Reality（虛擬實境）是一種沉浸式的數位體驗技術，並非特指現實物件的數位複製品。Cloud Agent是雲端代理程式的概念，也與題目描述的定義不相符，因此正確答案為B。"
+      "explanation": "Digital twin 是實體物件、設備或系統在數位環境中的對應模型，並可隨真實世界資料更新，用於 simulation、integration、testing、monitoring 與 maintenance。Avatar 側重使用者化身，virtual reality 是沉浸式環境，cloud object 也不是題述術語，因此選 (B)。"
     },
     "q-pp-im-it-112-24": {
       "questionId": "q-pp-im-it-112-24",
       "answer": "D",
-      "explanation": "在比特幣等區塊鏈技術中，「挖礦」的主要目的是驗證交易（validate transactions）。礦工收集待處理的交易，透過解決加密工作量證明（Proof-of-Work）難題來競爭提案新區塊，過程中同時驗證交易的合法性（例如檢查數位簽章與餘額）。此機制提供了去中心化的共識機制，讓網路中所有節點能就帳本狀態達成一致，而無需中央機構的介入。並行控制（concurrency control）與原子性（atomicity）屬於傳統資料庫的概念，並非挖礦的主要目的，因此答案為 D。"
+      "explanation": "Bitcoin mining 透過 proof-of-work 競爭建立區塊並驗證交易、形成共識；題目選項中最符合主要目的的是 (D) validate transaction。"
     },
     "q-pp-im-it-112-25": {
       "questionId": "q-pp-im-it-112-25",
-      "answer": "A",
-      "explanation": "此題詢問關於 spanning tree（展開樹）或 B-tree 性質中哪一項敘述是錯誤的。選項 (B) 正確描述了 B-tree 中「所有葉節點出現在同一層（all leaves appear on the same level）」的性質。選項 (A) 的敘述「it leaves appear on the same level」文法有誤，且語意不完整，無法正確描述樹的性質，因此為錯誤選項。選項 (C) 描述節點至少有 ⌈n/2⌉ 個子節點，這是 B-tree 的正確性質。選項 (D) 與 (B) 類似，描述葉節點在同一層，為正確性質。因此答案選 (A)，因為其敘述語意不清且錯誤。"
+      "answer": "B",
+      "explanation": "B-tree 的非葉節點若有 k 個 children，應有 k-1 個 keys，不是 k 個，因此 (B) 錯。其餘為題目採用的 B-tree 標準性質（最低子節點數的敘述通常不含 root 例外）。"
     },
     "q-pp-im-it-112-26": {
       "questionId": "q-pp-im-it-112-26",
       "answer": "E",
-      "explanation": "生成樹（Spanning Tree）是圖論中的重要概念，一棵圖 G 的生成樹 T 包含 G 的所有頂點，且為無環連通子圖。若圖 G 有 n 個頂點，則其生成樹恰好有 n-1 條邊。本題各選項（A 至 D）所描述的生成樹性質皆存在問題或描述不完整，因此選項 E「以上皆非正確答案」為正確選擇。當題目中 A 到 D 的敘述均無法明確成立時，應選擇 E 作為最終答案。"
+      "explanation": "若 G 的所有邊都也在其 spanning tree T 中，由於 T 的邊本來就是 G 的子集，兩者邊集相同，所以 G=T 且 G 為樹；向 T 加入非樹邊必產生 cycle；圖也可能有多棵 spanning trees。A-D 皆正確，故選 (E)。"
     },
     "q-pp-im-it-112-27": {
       "questionId": "q-pp-im-it-112-27",
-      "answer": "D",
-      "explanation": "將一個有 n 個元素的陣列建構成最小堆積（min-heap）的過程稱為 Heapification，其時間複雜度為 O(n)。標準做法是從最後一個非葉節點（索引 n/2 - 1）開始，向上逐一執行 sift-down（下移）操作。雖然每次 sift-down 最差需要 O(log n)，但由於樹底層節點數量多且下移距離短、頂層節點下移距離長但數量少，對所有層的操作加總後，其總時間複雜度可以透過等比級數求和證明為 O(n)，而非直覺上的 O(n log n)。因此正確答案為 D，即 O(n)。"
+      "answer": "B",
+      "explanation": "Binary heap 插入先放在完全二元樹末端，再沿父鏈 sift up；樹高為 O(log n)，故最壞時間為 O(log n)，選 (B)。題幹把 min-heap 的不等號方向印反，但不影響插入的漸近複雜度。"
     },
     "q-pp-im-it-112-28": {
       "questionId": "q-pp-im-it-112-28",
-      "answer": "D",
-      "explanation": "在 Min Heap 中，唯一被保證的性質是每個節點的鍵值小於或等於其子節點的鍵值，但兄弟節點之間或不同子樹之間並無排序關係。因此，若要在 Min Heap 中尋找一個任意元素（非最小值），無法利用堆的結構來縮小搜尋範圍。在最壞情況下，必須逐一檢查所有 n 個節點，故時間複雜度為 O(n)。這與二元搜尋樹不同，二元搜尋樹因為有左小右大的性質，可以在 O(log n) 內找到任意元素；而 Min Heap 缺乏此特性，搜尋任意元素只能線性掃描。"
+      "answer": "C",
+      "explanation": "Min heap 只保證每個父節點的鍵值不大於其子節點，兄弟節點及不同子樹之間沒有完整排序。除了根節點最小值可在 O(1) 取得外，搜尋任意指定元素時不能像 binary search tree 一樣依比較結果排除整個子樹；最壞情況必須檢查全部 n 個節點，所以時間複雜度為 O(n)，選 (C)。"
     },
     "q-pp-im-it-112-29": {
       "questionId": "q-pp-im-it-112-29",
-      "answer": "A",
-      "explanation": "此程式實作 Boyer-Moore 字串搜尋演算法中的「壞字元啟發式（Bad Character Heuristic）」。PREPROCESS 函式建立壞字元表，記錄模式字串（pattern）中每個字元最後出現的位置索引，未出現者設為 -1。search 函式從右到左比對模式與文字，當發生不匹配時，依壞字元表計算向右移動的距離：移動量為 max(1, j - badchar[txt[s+j]])，確保至少前進一格。當完整匹配成立（j < 0）時，印出匹配位置，並根據下一個字元的壞字元值決定跳躍距離。此演算法平均時間複雜度優於暴力法，最差情況為 O(mn)，但在實務上對大字母集效能顯著提升。"
+      "answer": "(a) pattern occurs at 4; pattern occurs at 8. (b) O(mn). (c) O(n/m) for the search phase (plus O(m + 256) preprocessing).",
+      "explanation": "(a) txt 的索引 4-6 與 8-10 都是 ABC，所以程式依序輸出兩行：`pattern occurs at 4`、`pattern occurs at 8`。(b) 最壞情況每個 alignment 只移動 1，且最多比較 m 個字元，最多約 n-m+1 個 alignments，因此 search phase 為 O(mn)；PREPROCESS 另為 O(m + 256)，不改變最壞主項。(c) 最佳情況每次在最右字元立即 mismatch，且 bad-character shift 可一次前進 m，約檢查 n/m 個 alignments，因此 search phase 為 O(n/m)；若計入前處理，總計 O(m + 256 + n/m)。"
     },
     "q-pp-im-it-112-3": {
       "questionId": "q-pp-im-it-112-3",
-      "answer": "B",
-      "explanation": "選項(A)正確：具有32位元位址匯流排的微處理器，最多可定址 2^32 個記憶體位置（即約4GB）。選項(C)正確：處理器內部的資料儲存單元稱為暫存器（registers），這是基本的計算機組織概念。選項(B)錯誤：它將「處理器內部資料儲存」描述為「存取I/O裝置和記憶體裝置」，這在定義上是錯誤的，處理器內部資料儲存應稱為暫存器（registers），而非I/O存取機制。因此，選項(B)是描述錯誤的敘述，為本題答案。"
+      "answer": "E",
+      "explanation": "32 位元位址匯流排在 byte-addressable 系統可表示 2^32 個位址；memory-mapped I/O 與記憶體共用位址空間及存取指令；處理器內部儲存稱為 registers。A-D 皆正確，故選 (E)。"
     },
     "q-pp-im-it-112-4": {
       "questionId": "q-pp-im-it-112-4",
-      "answer": "C",
-      "explanation": "在 DMA（直接記憶體存取）架構中，I/O 裝置並非透過向處理器發出中斷訊號來啟動資料傳輸。正確的運作方式是：I/O 裝置向 DMA 控制器發出 DMA 請求（DMA Request），由 DMA 控制器直接與記憶體溝通並完成資料傳輸，整個過程不需要處理器參與。只有在 DMA 傳輸完成後，DMA 控制器才會向處理器發出中斷訊號以通知傳輸結束。因此選項 (C) 描述「硬體裝置透過觸發中斷訊號給 DMA 來中斷處理器」的說法是錯誤的，混淆了 DMA 請求與中斷的概念。選項 (A) 和 (B) 的描述皆正確，DMA 確實減少了處理器的參與，並允許資料在不干擾處理器的情況下傳輸至記憶體。"
+      "answer": "E",
+      "explanation": "中斷驅動 I/O 由外部裝置送出中斷訊號，使 CPU 暫停目前工作並執行 interrupt service routine；DMA 則透過專用硬體讓裝置與記憶體直接傳輸，減少 CPU 持續搬移資料的負擔。因此 (A) 至 (D) 都是正確描述，題目問錯誤者時應選代表皆正確的 (E)。"
     },
     "q-pp-im-it-112-5": {
       "questionId": "q-pp-im-it-112-5",
       "answer": "C",
-      "explanation": "此題詢問關於 CPU 暫存器（registers）的敘述哪一項是錯誤的。選項 C 宣稱「L2 快取的大小小於 L1 快取」，這是錯誤的說法。實際上，L2 快取的容量通常遠大於 L1 快取，現代 CPU 的 L1 快取約為 32KB～512KB，而 L2 快取則通常為數 MB。選項 A 正確，因為 CPU 的暫存器數量（通常數十到數百個 bytes）確實小於 L1 快取的大小。選項 B 也正確，L2 快取確實比 L1 快取大得多，這是快取記憶體階層架構的基本特性。因此，錯誤的敘述是選項 C。"
+      "explanation": "現代 CPU 的 L1 cache 通常以數十 KB 計，而不是數十至數百 bytes，因此 (C) 錯。暫存器延遲通常低於 L1，容量也遠小於 L1；L2 通常大於 L1。"
     },
     "q-pp-im-it-112-6": {
       "questionId": "q-pp-im-it-112-6",
       "answer": "E",
-      "explanation": "本題詢問哪一項「不是」作業系統的主要功能。作業系統的核心職責涵蓋資源管理（Resource Management）、行程管理（Process Management）、記憶體管理（Memory Management）以及安全管理（Security Management）。這四項均為作業系統的重要基本功能，因此選項 A、B、C、D 所列舉的功能全部都是作業系統的主要功能。由於題目問的是「不是」主要功能的選項，但實際上每個選項都是，故正確答案為 (E)：以上皆為主要功能（即沒有任何一項「不是」主要功能）。"
+      "explanation": "作業系統負責協調處理器、儲存與周邊等資源，也管理行程生命週期、記憶體配置及存取安全。(A) Resource Management、(B) Process Management、(C) Memory Management、(D) Security Management 全都是主要功能，沒有一項符合題目的 not，故選 (E)。"
     },
     "q-pp-im-it-112-7": {
       "questionId": "q-pp-im-it-112-7",
       "answer": "C",
-      "explanation": "現代作業系統中，最常見的分頁大小為 4KB（4096 bytes）。x86 及 x86-64 架構的處理器預設使用 4KB 分頁，Linux、Windows 等主流作業系統也以 4KB 作為基本分頁單位。4KB 的大小在內部碎裂（internal fragmentation）與分頁表大小之間取得良好平衡，既不會因頁太大造成大量浪費，也不會因頁太小導致分頁表過於龐大。雖然現代系統也支援大分頁（如 2MB 或 1GB 的 huge pages），但 4KB 仍是最基本也最普遍的標準分頁大小。"
+      "explanation": "虛擬記憶體把位址空間與實體記憶體切成固定大小的 page/frame。在 x86、x86-64 與多數主流作業系統中，4KB 是最常見的基本 page size；系統雖可能另支援 large pages，但 128 bytes、512 bytes、128KB 與 512KB 都不是一般預設基本頁面大小，因此選 (C)。"
     },
     "q-pp-im-it-112-8": {
       "questionId": "q-pp-im-it-112-8",
       "answer": "B",
-      "explanation": "選項(B)說「在使用者模式下執行的應用程式共享同一個虛擬位址空間」是錯誤的。在現代作業系統中，每個行程（process）都擁有自己獨立的虛擬位址空間（virtual address space），彼此之間是相互隔離的，目的是保護各行程的記憶體不被其他行程干擾。選項(A)正確，使用者應用程式確實通常在使用者模式下執行。選項(C)正確，使用者模式的行程無法存取保留給作業系統的虛擬位址區段（核心空間）。選項(D)正確，作業系統的核心元件確實在核心模式（kernel mode）下執行，以獲得完整的硬體存取權限。"
+      "explanation": "每個行程通常有彼此隔離的虛擬位址空間，並非所有 user-mode 應用程式共享同一個空間，因此 (B) 錯。A、C、D 都是 user/kernel mode 的正確敘述。"
     },
     "q-pp-im-it-112-9": {
       "questionId": "q-pp-im-it-112-9",
       "answer": "C",
-      "explanation": "電腦叢集（cluster）的主要目的是提升運算效能、可用性與容錯能力，並非用來防禦安全攻擊。選項A正確，叢集中的節點通常是獨立的機器，透過高速區域網路互相連接。選項B正確，多台電腦協同運作可提升整體運算能力。選項D正確，當某節點故障時，其他節點可接管其工作，因此叢集能提升容錯性。選項C錯誤，叢集架構本身並不具備防止安全攻擊的功能，安全防護需靠防火牆、入侵偵測系統等其他機制來實現。"
+      "explanation": "電腦叢集通常由可獨立運作的節點透過高速區域網路連接，可分散工作以增加運算能力，也可藉由備援改善 fault tolerance；但把多台電腦組成 cluster 並不會自動防止惡意入侵或其他資安攻擊，仍需另外的安全控制。因此錯誤敘述是 (C)。"
     },
     "q-pp-im-it-113-1": {
       "questionId": "q-pp-im-it-113-1",
@@ -5162,8 +5162,8 @@
     },
     "q-pp-im-it-113-12": {
       "questionId": "q-pp-im-it-113-12",
-      "answer": "D",
-      "explanation": "MariaDB 是由 MySQL 的原始開發者 Michael Widenius 在 2009 年 Oracle 收購 MySQL 後所創建的分支版本。其創建目的是為了確保資料庫系統能夠保持自由且開放原始碼，同時維持與 MySQL 高度相容性。MariaDB 以 Widenius 女兒 Maria 的名字命名，屬於社群驅動的開發專案。其他選項中，MonetDB 是欄式資料庫、SAP R3 是企業資源規劃系統、Sybase 是商業資料庫產品，而 Firebird 雖是開源資料庫但與 MySQL 收購事件無關。"
+      "answer": "B",
+      "explanation": "DNS 是階層式且分散式的命名系統，不是 centralized naming system；它會把 www.im.ntu.tw 等人類可讀名稱解析成 IP address，而 .tw 是 top-level domain。因此錯誤敘述為 (B)。"
     },
     "q-pp-im-it-113-13": {
       "questionId": "q-pp-im-it-113-13",
@@ -5198,7 +5198,7 @@
     "q-pp-im-it-113-19": {
       "questionId": "q-pp-im-it-113-19",
       "answer": "C",
-      "explanation": "Min heap 只保證父節點的值不大於子節點，根節點為最小值，但對於任意元素並無額外的排序性質可以利用。因此，要在 min heap 中搜尋一個任意元素，最壞情況下必須逐一檢查所有 n 個節點。這與二元搜尋樹不同，min heap 無法在 O(log n) 時間內定位任意元素。所以在 n 個節點的 min heap 中搜尋任意元素的時間複雜度為 O(n)。"
+      "explanation": "Functional dependency 描述一個屬性或屬性集合如何決定另一個屬性，是關聯式資料庫正規化與維持資料品質的重要約束，因此答案為 (C) functional dependency。"
     },
     "q-pp-im-it-113-2": {
       "questionId": "q-pp-im-it-113-2",
@@ -5252,8 +5252,8 @@
     },
     "q-pp-im-it-113-9": {
       "questionId": "q-pp-im-it-113-9",
-      "answer": "D",
-      "explanation": "ISO 27001 是資訊安全管理系統（ISMS）的國際標準規範，提供一套完整的政策與程序框架，涵蓋組織資訊風險管理所需的法律、實體及技術控制措施。ISO 9001 是品質管理系統標準，ISO 14000 系列是環境管理標準，而 ISO 7700 並非資訊安全相關的有效標準。因此，正確答案為 ISO 27001，選項 D。"
+      "answer": "E",
+      "explanation": "互斥可確保共享資源同一時間只由一個 process 存取；設計不當的互斥機制確實可能造成 starvation、deadlock 或 livelock。因此 (A)–(D) 都正確，依題意應選 (E)。"
     },
     "q-pp-im-it-114-1": {
       "questionId": "q-pp-im-it-114-1",
@@ -7359,6 +7359,21 @@
       "questionId": "q-pp-cs-en-115-50",
       "answer": "C",
       "explanation": "on shaky ground 意為「立足不穩、根基薄弱」，句尾 raising doubts about whether it can withstand judicial review 說明不穩的正是法律上的正當性，(C) 精準對應。(A) 獲得支持與「不穩」相反。(B) 錯在該法案還只是 proposed，尚未 enacted。(D) 的 structurally sound 同樣與 shaky 矛盾。故選 (C)。"
+    },
+    "q-pp-im-it-113-23": {
+      "questionId": "q-pp-im-it-113-23",
+      "answer": "E",
+      "explanation": "GPT 的完整名稱是 Generative Pre-trained Transformer（生成式預訓練 Transformer）。選項 (A) Generative Proficiency in Text、(B) Grasping the Paradigm of Texts、(C) Generative Prowess in Text 與 (D) Generative Pathfinding Transformer 都不是正確名稱，因此應選 (E) none of the above。三個組成詞分別指出模型可生成內容（Generative）、先在大量資料上預訓練（Pre-trained），以及採用 Transformer 架構。"
+    },
+    "q-pp-im-it-113-24": {
+      "questionId": "q-pp-im-it-113-24",
+      "answer": "D",
+      "explanation": "Turing test（圖靈測試）用來評估機器在對話互動中所呈現的行為，是否能讓人類評審無法可靠區分它與人類，因此正確答案為 (D)。AGI 指具有廣泛任務能力的通用人工智慧；Turing complete 描述計算系統能否模擬通用計算；Chinese room argument 則是質疑符號處理是否等同真正理解的思想實驗，三者都不是題目所問的評估方法。"
+    },
+    "q-pp-im-it-113-25": {
+      "questionId": "q-pp-im-it-113-25",
+      "answer": "N/A",
+      "explanation": "本題是開放式 C++ 實作題，沒有選項答案。(a) 插入時先配置並初始化新節點，再從 rootPtr 依 employeeID 比較向左或向右走，直到找到空子指標後接上新節點；空樹則直接把新節點設為根。以下寫法需引入 <new>：\n\nint BinarySearchTree::InsertNewEmployee(int newID, string newName, int newAge) {\n  TreeNode *node = new (std::nothrow) TreeNode;\n  if (node == NULL) return 0;\n  node->employeeID = newID;\n  node->employeeName = newName;\n  node->age = newAge;\n  node->leftChildPtr = node->rightChildPtr = NULL;\n  if (rootPtr == NULL) { rootPtr = node; return 1; }\n  TreeNode *current = rootPtr;\n  TreeNode *parent = NULL;\n  while (current != NULL) {\n    parent = current;\n    current = (newID < current->employeeID) ? current->leftChildPtr : current->rightChildPtr;\n  }\n  if (newID < parent->employeeID) parent->leftChildPtr = node;\n  else parent->rightChildPtr = node;\n  return 1;\n}\n\n(b) 中序走訪依「左子樹、節點、右子樹」順序輸出，對 BST 即為 employeeID 遞增順序：\n\nvoid BinarySearchTree::ListAllEmployee() { inorder(rootPtr); }\n\nvoid BinarySearchTree::inorder(TreeNode *treePtr) {\n  if (treePtr == NULL) return;\n  inorder(treePtr->leftChildPtr);\n  cout << \"(\" << treePtr->employeeID << \", \" << treePtr->employeeName << \", \" << treePtr->age << \")\" << endl;\n  inorder(treePtr->rightChildPtr);\n}\n\n插入平均時間為 O(h)，其中 h 是樹高；未平衡 BST 最壞可退化為 O(n)。中序走訪會拜訪每個節點一次，時間為 O(n)，遞迴額外空間為 O(h)。"
     }
   }
 }
