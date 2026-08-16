@@ -43,8 +43,9 @@ describe('考卷內容可信度標記', () => {
     expect(getPaperContentIssue('pp-im-en-115')).toBeUndefined()
   })
 
-  it('106 缺文章、109／111／112 內容存疑', () => {
-    expect(getPaperContentIssue('pp-im-en-106')?.contentStatus).toBe('incomplete')
+  it('106 已修復，109／111／112 內容仍存疑', () => {
+    expect(isPaperUnreliable('pp-im-en-106')).toBe(false)
+    expect(getPaperContentIssue('pp-im-en-106')).toBeUndefined()
     for (const id of ['pp-im-en-109', 'pp-im-en-111', 'pp-im-en-112']) {
       expect(getPaperContentIssue(id)?.contentStatus).toBe('suspect')
     }

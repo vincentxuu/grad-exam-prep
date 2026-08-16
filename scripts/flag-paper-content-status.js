@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // 把已知有問題的考卷標記出來，讓 app 能把它們排除在練習之外。
 //
-// 這五份的問題都源自最初一次性匯入題庫的那個 commit（e570124）—— 逐份讀 PDF、
+// 這批問題都源自最初一次性匯入題庫的那個 commit（e570124）—— 逐份讀 PDF、
 // 沒有校驗，於是各自壞在不同地方。壞法有三種，其中「題數對但內容不對」這種
 // 一直沒被發現，因為卷面 50 題齊、每題都有答案與詳解，列表頁看起來完全正常。
 //
@@ -17,11 +17,6 @@ const dataDir = path.join(__dirname, '../public/data')
 const file = path.join(dataDir, 'past-papers.json')
 
 const FLAGS = {
-  'pp-im-en-106': {
-    contentStatus: 'incomplete',
-    contentIssue:
-      '克漏字與閱讀測驗的文章沒抽進來，第 21–50 題只剩單句與 [Passage I Cloze] 這類註記，無法作答；這 30 題的詳解也是在沒有文章的情況下從選項推測出來的，答案不可信。',
-  },
   'pp-im-en-109': {
     contentStatus: 'suspect',
     contentIssue:

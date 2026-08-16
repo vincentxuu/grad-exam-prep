@@ -2533,7 +2533,7 @@
     "q-pp-im-en-106-13": {
       "questionId": "q-pp-im-en-106-13",
       "answer": "A",
-      "explanation": "本題考查讓步連接詞的用法。空格後面接的是一個完整的子句（he scarcely sold a single painting during his lifetime），因此需要一個能引導讓步副詞子句的連接詞。正確答案是 (A) even，在此代表 \"even though\"（雖然／儘管），表示「儘管梵谷在世時幾乎一幅畫都沒賣出去，他死後仍然聲名大噪」。選項 (B) \"in spite\" 必須與 \"of\" 搭配，後接名詞或動名詞片語，而非完整子句。選項 (C) \"despite that\" 在標準英語中並不慣用，\"despite\" 本身後接名詞片語。選項 (D) \"however\" 是副詞，不能作為引導子句的從屬連接詞。"
+      "explanation": "原卷把選項 (A) 誤印為 bare “even”，但空格後是完整子句，標準英文應為 “even though”。本題依此勘誤作答為 (A)：儘管梵谷生前幾乎沒有賣出畫作，他死後仍聲名大噪。"
     },
     "q-pp-im-en-106-14": {
       "questionId": "q-pp-im-en-106-14",
@@ -2682,8 +2682,8 @@
     },
     "q-pp-im-en-106-41": {
       "questionId": "q-pp-im-en-106-41",
-      "answer": "D",
-      "explanation": "這道題要求判斷文章最可能的標題。選項A「你喜歡元旦嗎？」、選項B「我討厭元旦」、選項C「讓我們慶祝元旦」都只表達單一情感或立場，而選項D「不同的元旦」則暗示文章涵蓋了多元觀點或文化背景。閱讀理解文章通常會從多角度探討一個主題，因此標題應能反映文章的整體內容而非單一情緒。選項D「Different New Year's Days」最能概括一篇介紹不同文化、不同人對元旦有不同看法或慶祝方式的文章，是最合適的標題。"
+      "answer": "B",
+      "explanation": "作者兩度直接說 “That’s why I hate New Year’s”，全文也都在反對被固定日期支配，因此最貼切的標題是 (B) “I Hate New Year’s Day.”"
     },
     "q-pp-im-en-106-42": {
       "questionId": "q-pp-im-en-106-42",
@@ -2707,13 +2707,13 @@
     },
     "q-pp-im-en-106-46": {
       "questionId": "q-pp-im-en-106-46",
-      "answer": "A",
-      "explanation": "本題詢問作者在文章開頭的行為。根據台大資管所106年英文科Passage II的內容，作者在文章開頭表達了感謝之意（showing gratitude），透過感謝的語氣開啟了整篇文章。選項(B) feigning innocence（假裝無辜）、選項(C) expressing surprise（表達驚訝）、以及選項(D) giving condolence（表達慰問）均不符合文章開頭的語氣與內容。因此正確答案為(A) showing gratitude。"
+      "answer": "C",
+      "explanation": "開頭的 “little thought”、 “beyond expectation” 與 “beyond conception” 都表示作者未曾料到自己會受邀到斯德哥爾摩，因此答案是 (C) expressing surprise。"
     },
     "q-pp-im-en-106-47": {
       "questionId": "q-pp-im-en-106-47",
-      "answer": "D",
-      "explanation": "根據文章第50題的線索，作者的童年記憶被戰爭的恐懼所籠罩（overshadowed by the fear of war），這表明童年的氛圍充滿了不安與動盪。「chaotic」（混亂的）最能描述在戰爭陰影下、充滿不確定性與動盪的童年環境。「dormant」（休眠的）指靜止潛伏，「miserable」（悲慘的）偏向個人痛苦，「premature」（早熟的）與整體氛圍描述無關，皆不如「chaotic」貼切。此外，第48題提到的「deus ex machina」（意外轉折）也暗示童年生活充滿突發與混亂的事件，進一步支持答案D。"
+      "answer": "A",
+      "explanation": "文中的 “den-life”、 “doze of hibernation”、 “in suspension” 與 “torpid” 都描寫封閉、沉睡般的童年氛圍，因此答案是 (A) dormant。"
     },
     "q-pp-im-en-106-48": {
       "questionId": "q-pp-im-en-106-48",
@@ -2722,8 +2722,8 @@
     },
     "q-pp-im-en-106-49": {
       "questionId": "q-pp-im-en-106-49",
-      "answer": "D",
-      "explanation": "本題詢問文章第三段所提到的「戰爭」最可能是哪一場。選項中包含第一次世界大戰、第二次世界大戰、越戰及英愛戰爭（Anglo-Irish War）。英愛戰爭（1919-1921年）是一個非常具體且少見的選項，通常只有在專門討論愛爾蘭歷史或英愛關係的文章中才會出現。相較於其他較廣為人知的世界大戰或越戰，英愛戰爭的出現暗示整篇文章的主題與愛爾蘭或英愛關係密切相關。在標準化考試的命題邏輯中，最具體且與文章主題直接相關的選項往往是正確答案，因此答案為(D) The Anglo-Irish War。"
+      "answer": "B",
+      "explanation": "作者明示童年在 1940 年代，廣播內容又包括轟炸機、遭轟炸城市、戰線、敵軍與盟軍，因此所指的是 (B) World War II。"
     },
     "q-pp-im-en-106-5": {
       "questionId": "q-pp-im-en-106-5",
