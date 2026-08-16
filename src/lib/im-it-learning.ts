@@ -3,6 +3,7 @@ import conceptMasterRaw from '../../public/data/im-it-concept-master.json'
 import lessonsRaw from '../../public/data/im-it-lessons.json'
 import questionMetadataRaw from '../../public/data/im-it-question-metadata.json'
 import sourcesRaw from '../../public/data/im-it-source-registry.json'
+import { getBeginnerGlossaryForSubject } from './beginner-glossary'
 import {
   createLearningCatalog,
   type LearningConceptCard,
@@ -39,6 +40,7 @@ export const imItLearningCatalog = createLearningCatalog({
   lessons,
   cards,
   sources,
+  beginnerGlossary: getBeginnerGlossaryForSubject('im-it'),
   overview: {
     topics,
     totalQuestions: questionMetadataRaw.totalQuestions,

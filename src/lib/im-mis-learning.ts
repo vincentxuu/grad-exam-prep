@@ -3,6 +3,7 @@ import conceptMasterRaw from '../../public/data/im-mis-concept-master.json'
 import lessonsRaw from '../../public/data/im-mis-lessons.json'
 import questionMetadataRaw from '../../public/data/im-mis-question-metadata.json'
 import sourcesRaw from '../../public/data/im-mis-source-registry.json'
+import { getBeginnerGlossaryForSubject } from './beginner-glossary'
 import {
   createLearningCatalog,
   type LearningConceptCard,
@@ -31,6 +32,7 @@ export const imMisLearningCatalog = createLearningCatalog({
   lessons,
   cards,
   sources,
+  beginnerGlossary: getBeginnerGlossaryForSubject('im-mis'),
   overview: {
     topics,
     totalQuestions: questionMetadataRaw.totalQuestions,
@@ -48,7 +50,7 @@ export const imMisLearningCatalog = createLearningCatalog({
       browseLabel: '瀏覽 37 題 MIS 題庫',
       moduleTitle: '已上線學習模組',
       moduleDescription:
-        '依十年官方題面整理成七堂主題課。每堂用生活情境建立答題結構，再以歷屆申論題和逐小題 rubric 自我檢查。',
+        '依十年官方題面整理成七堂主題課。每堂用生活情境建立答題結構，再以歷屆申論題和逐項自評標準檢查答案。',
       subtopicUnit: '個子主題',
       lessonQuestionUnit: '題',
       lessonActionLabel: '開始學習',
@@ -62,7 +64,7 @@ export const imMisLearningCatalog = createLearningCatalog({
     cardUnit: '張概念卡',
     pastPaperUnit: '題對應考古題',
     contentNotice:
-      '題面來自台大官方試卷；解析與 rubric 為本站依 reviewed sources 整理的非官方內容，策略申論容許有條件且有證據的替代論點。',
+      '題面來自台大官方試卷；解析與逐項自評標準（rubric）為本站依已複查來源整理的非官方內容，策略申論容許有條件且有證據的替代論點。',
     objectivesTitle: '先抓住這幾件事',
     scenarioEyebrow: '先想像這個場景',
     scenarioPrompt: '先別急著背名詞，花十秒想一想：',
@@ -79,7 +81,7 @@ export const imMisLearningCatalog = createLearningCatalog({
     cardsDescription: '先用自己的話說出定義、機制、條件與取捨，再展開答案。',
     practiceTitle: '最後用考古題自評',
     practiceDescription:
-      '請先完成自己的申論，再依非官方解析和逐小題 rubric 檢查；不使用 A–E 假選項或虛假分數。',
+      '請先完成自己的申論，再依非官方解析和逐項自評標準檢查；不使用 A–E 假選項或虛假分數。',
     practiceActionLabel: '開始本課申論自評',
     sourcesTitle: '參考來源',
   },

@@ -24,6 +24,11 @@ describe('IM-IT lesson content', () => {
 
     expect(screen.getByRole('heading', { level: 1, name: lesson.title })).toBeInTheDocument()
     expect(screen.getByText('內容已複查')).toBeInTheDocument()
+    const glossaryHeading = screen.getByRole('heading', { name: '這堂先懂這些詞' })
+    const summary = screen.getByText(lesson.summary)
+    expect(
+      glossaryHeading.compareDocumentPosition(summary) & Node.DOCUMENT_POSITION_FOLLOWING
+    ).toBe(Node.DOCUMENT_POSITION_FOLLOWING)
     expect(screen.getByRole('heading', { name: '先抓住這幾件事' })).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: '一起拆題目' })).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: '換你快速判斷' })).toBeInTheDocument()

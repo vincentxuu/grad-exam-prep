@@ -20,8 +20,10 @@
     "check:im-nonenglish-flashcards": "node scripts/archive-im-nonenglish-flashcards.js",
     "generate:im-vocab": "node scripts/generate-im-vocab-flashcards.js --write",
     "check:im-vocab": "node scripts/generate-im-vocab-flashcards.js",
-    "generate:im-learning": "node scripts/build-im-mis-learning-artifacts.mjs --write && node scripts/build-im-stat-learning-artifacts.mjs --write && node scripts/sync-im-learning-subjects.mjs && node scripts/publish-im-curated-srs.mjs",
-    "check:im-learning": "node scripts/build-im-mis-learning-artifacts.mjs --check && node scripts/build-im-stat-learning-artifacts.mjs --check && node scripts/validate-im-mis-learning-artifacts.mjs && node scripts/validate-im-stat-learning-artifacts.mjs && node scripts/sync-im-learning-subjects.mjs --check && node scripts/publish-im-curated-srs.mjs --check",
+    "generate:im-learning": "node scripts/build-im-mis-learning-artifacts.mjs --write && node scripts/build-im-stat-learning-artifacts.mjs --write && node scripts/sync-im-learning-subjects.mjs && node scripts/publish-im-curated-srs.mjs && node scripts/build-im-beginner-glossary.mjs",
+    "check:im-learning": "node scripts/build-im-mis-learning-artifacts.mjs --check && node scripts/build-im-stat-learning-artifacts.mjs --check && node scripts/validate-im-mis-learning-artifacts.mjs && node scripts/validate-im-stat-learning-artifacts.mjs && node scripts/sync-im-learning-subjects.mjs --check && node scripts/publish-im-curated-srs.mjs --check && npm run check:im-beginner-glossary",
+    "generate:im-beginner-glossary": "node scripts/build-im-beginner-glossary.mjs",
+    "check:im-beginner-glossary": "node scripts/build-im-beginner-glossary.mjs --check && node scripts/validate-im-beginner-glossary.mjs",
     "check:papers": "node scripts/check-paper-integrity.js"
   },
   "dependencies": {

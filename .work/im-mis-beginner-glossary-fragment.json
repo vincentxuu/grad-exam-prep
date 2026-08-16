@@ -1,0 +1,303 @@
+{
+  "subjectId": "im-mis",
+  "terms": [
+    {
+      "id": "im-mis-glossary-it-business-alignment",
+      "label": "IT 與商業策略對齊",
+      "aliases": ["IT-business alignment", "strategy alignment"],
+      "plainDefinition": "資訊科技投資要直接支持公司想服務誰、提供什麼價值及如何競爭。",
+      "everydayExample": "餐廳主打快速出餐，才優先投資點餐與廚房排程。",
+      "confusionNote": "不是 IT 部門照單買設備，也不是所有部門都用同一套工具。",
+      "lessonIds": ["lesson-im-mis-strategy-01"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-mis-glossary-complementary-assets",
+      "label": "互補性資產",
+      "aliases": ["complementary assets"],
+      "plainDefinition": "技術要搭配流程、人員技能、管理支持與資料品質才可能產生價值。",
+      "everydayExample": "買好咖啡機還要有會操作的人、配方與保養制度。",
+      "confusionNote": "不是額外的硬體配件。",
+      "lessonIds": ["lesson-im-mis-strategy-01"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-mis-glossary-it-portfolio",
+      "label": "IT 投資組合",
+      "aliases": ["IT portfolio"],
+      "plainDefinition": "像分配理財資產一樣，把 IT 預算分散在維運、成長、法遵與實驗項目。",
+      "everydayExample": "家庭預算同時留給修水管、節能設備和新家電試用。",
+      "confusionNote": "不是把所有專案列成一張清單；重點是整體風險與效益配置。",
+      "lessonIds": ["lesson-im-mis-strategy-01"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-mis-glossary-enterprise-agility",
+      "label": "企業敏捷性",
+      "aliases": ["enterprise agility", "agility"],
+      "plainDefinition": "組織察覺環境變化後，能快速重新配置流程、資料與資源。",
+      "everydayExample": "菜價暴漲時，餐廳能迅速換菜單與供應商。",
+      "confusionNote": "不是單純做事快，也不等於使用 Scrum。",
+      "lessonIds": ["lesson-im-mis-strategy-01"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-mis-glossary-multi-sided-platform",
+      "label": "多邊平台",
+      "aliases": ["multi-sided platform", "two-sided market"],
+      "plainDefinition": "同時讓兩種以上彼此需要的使用者群在同一套規則下互動。",
+      "everydayExample": "外送平台連結顧客、餐廳與外送員。",
+      "confusionNote": "不是只要有很多使用者就算平台。",
+      "lessonIds": ["lesson-im-mis-platforms-01"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-mis-glossary-network-effect",
+      "label": "網路效應",
+      "aliases": ["network effect", "same-side effect", "cross-side effect"],
+      "plainDefinition": "使用者人數改變時，同側或另一側使用者得到的價值也跟著改變。",
+      "everydayExample": "外送平台餐廳增加，會讓顧客更想加入。",
+      "confusionNote": "人多不必然是正向；壅塞、詐騙也可能讓價值下降。",
+      "lessonIds": ["lesson-im-mis-platforms-01"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-mis-glossary-cross-subsidy",
+      "label": "交叉補貼",
+      "aliases": ["cross-subsidy", "platform pricing"],
+      "plainDefinition": "平台讓一側少付或免費，靠另一側付費來支持整體成長。",
+      "everydayExample": "信用卡給持卡人回饋，向商家收手續費。",
+      "confusionNote": "免費不是沒有成本，也不一定能永久維持。",
+      "lessonIds": ["lesson-im-mis-platforms-01"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-mis-glossary-platform-governance",
+      "label": "平台治理",
+      "aliases": ["platform governance"],
+      "plainDefinition": "平台用審核、排序、收費、申訴與處分規則管理參與者行為。",
+      "everydayExample": "電商查核假貨、處理退貨並停權詐騙賣家。",
+      "confusionNote": "不是政府監管，也不只是寫使用條款。",
+      "lessonIds": ["lesson-im-mis-platforms-01"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-mis-glossary-codification",
+      "label": "知識編碼化",
+      "aliases": ["codification"],
+      "plainDefinition": "把可說清楚、可重複使用的經驗整理成文件、規則或資料庫。",
+      "everydayExample": "把常見客訴的處理步驟寫成手冊。",
+      "confusionNote": "不是把所有人的經驗硬塞進表格。",
+      "lessonIds": ["lesson-im-mis-enterprise-01"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-mis-glossary-tacit-knowledge",
+      "label": "內隱知識",
+      "aliases": ["tacit knowledge"],
+      "plainDefinition": "很難完整寫下、常需靠實作與互動才能學會的經驗。",
+      "everydayExample": "老師傅憑聲音判斷機器異常。",
+      "confusionNote": "不代表絕對不能記錄；可透過示範、案例逐步外顯。",
+      "lessonIds": ["lesson-im-mis-enterprise-01"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-mis-glossary-erp",
+      "label": "企業資源規劃系統",
+      "aliases": ["ERP", "Enterprise Resource Planning"],
+      "plainDefinition": "用共享資料串起財務、採購、庫存、生產等跨部門流程的企業系統。",
+      "everydayExample": "訂單成立後，庫存與會計資料一起更新。",
+      "confusionNote": "ERP 不是單純會計軟體，也不保證導入後流程自然變好。",
+      "lessonIds": ["lesson-im-mis-enterprise-01"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-mis-glossary-push-pull-supply-chain",
+      "label": "推式／拉式供應鏈",
+      "aliases": ["push supply chain", "pull supply chain"],
+      "plainDefinition": "推式依預測先做貨；拉式等實際需求出現再觸發補貨或生產。",
+      "everydayExample": "麵包店早上先烤是推式，接單後才做客製蛋糕是拉式。",
+      "confusionNote": "不是好壞二選一，多數企業混合使用。",
+      "lessonIds": ["lesson-im-mis-enterprise-01"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-mis-glossary-ml-use-case",
+      "label": "機器學習使用情境",
+      "aliases": ["ML use case", "AI use case"],
+      "plainDefinition": "明確說明模型要幫誰做哪個決策，以及錯了會造成什麼影響。",
+      "everydayExample": "預測明天備多少便當，而不是籠統說導入 AI。",
+      "confusionNote": "模型功能不是完整 use case；還要有人、流程與結果。",
+      "lessonIds": ["lesson-im-mis-data-ai-01"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-mis-glossary-data-leakage",
+      "label": "資料洩漏",
+      "aliases": ["data leakage", "leakage control"],
+      "plainDefinition": "訓練時偷看到實際部署時不可能取得的答案或未來資訊。",
+      "everydayExample": "用是否已退貨去預測下單當下會不會退貨。",
+      "confusionNote": "不只是個資外洩；這裡指模型評估被答案或未來資訊污染。",
+      "lessonIds": ["lesson-im-mis-data-ai-01"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-mis-glossary-data-concept-drift",
+      "label": "資料漂移／概念漂移",
+      "aliases": ["data drift", "concept drift"],
+      "plainDefinition": "前者是輸入資料分布改變；後者是輸入與正確答案的關係改變。",
+      "everydayExample": "顧客年齡層改變是資料漂移；同樣購物行為不再代表會續訂是概念漂移。",
+      "confusionNote": "兩者可分別發生，資料漂移不必然讓模型失效。",
+      "lessonIds": ["lesson-im-mis-data-ai-01"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-mis-glossary-ai-trustworthiness",
+      "label": "AI 可信賴性",
+      "aliases": ["trustworthiness", "trustworthy AI"],
+      "plainDefinition": "AI 在準確、安全、公平、隱私、透明與可問責等面向值得依賴的程度。",
+      "everydayExample": "貸款模型除了準確，還要能申訴、保護資料並監測歧視。",
+      "confusionNote": "不等於使用者主觀相信品牌，也不是單一分數。",
+      "lessonIds": ["lesson-im-mis-data-ai-01"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-mis-glossary-build-buy-outsource-saas",
+      "label": "自建／採購／委外／訂閱服務",
+      "aliases": ["build", "buy", "outsource", "SaaS"],
+      "plainDefinition": "分別是自己開發、買現成軟體、請外部廠商執行，以及按期訂閱雲端軟體。",
+      "everydayExample": "自己煮、買調理包、請外燴、訂月費餐盒。",
+      "confusionNote": "委外只轉移執行，不會把需求與治理責任一起丟掉。",
+      "lessonIds": ["lesson-im-mis-development-01"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-mis-glossary-scrum",
+      "label": "Scrum",
+      "aliases": ["Scrum framework"],
+      "plainDefinition": "用短週期、透明檢查與調整來處理複雜工作的敏捷框架。",
+      "everydayExample": "每兩週完成可試用的小改版，再依回饋調整。",
+      "confusionNote": "不是一套固定瀑布流程，也不是每天站會的別名。",
+      "lessonIds": ["lesson-im-mis-development-01"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-mis-glossary-testing-levels",
+      "label": "單元／整合／系統／使用者驗收測試",
+      "aliases": ["unit testing", "integration testing", "system testing", "UAT"],
+      "plainDefinition": "依序檢查小零件、零件介面、整套系統，以及業務是否願意接受。",
+      "everydayExample": "先測水龍頭、再測整段水管、再測全屋供水，最後由屋主驗收。",
+      "confusionNote": "全部技術測試通過仍可能做錯需求。",
+      "lessonIds": ["lesson-im-mis-development-01"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-mis-glossary-ux",
+      "label": "使用者體驗",
+      "aliases": ["UX", "User Experience"],
+      "plainDefinition": "人在使用產品前、中、後的整體感受與完成目標的容易程度。",
+      "everydayExample": "網路購票是否找得到班次、看得懂價格並順利付款。",
+      "confusionNote": "不只是畫面漂亮。",
+      "lessonIds": ["lesson-im-mis-development-01"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-mis-glossary-relational-schema",
+      "label": "關聯式資料庫綱要",
+      "aliases": ["relational schema"],
+      "plainDefinition": "用資料表、欄位、關係與規則定義資料如何組織。",
+      "everydayExample": "圖書、讀者、借閱各是一張表，靠編號連接。",
+      "confusionNote": "schema 是結構規則，不是資料內容本身。",
+      "lessonIds": ["lesson-im-mis-data-architecture-01"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-mis-glossary-sql-join",
+      "label": "SQL 資料表連接",
+      "aliases": ["SQL JOIN", "JOIN"],
+      "plainDefinition": "依共同欄位把不同資料表中相關的資料組合起來查詢。",
+      "everydayExample": "用訂單的顧客編號找出顧客姓名。",
+      "confusionNote": "漏掉連接條件會把每列任意配對，產生笛卡兒積。",
+      "lessonIds": ["lesson-im-mis-data-architecture-01"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-mis-glossary-nosql-acid",
+      "label": "NoSQL 與 ACID",
+      "aliases": ["NoSQL", "ACID"],
+      "plainDefinition": "NoSQL 是不只使用關聯表的一類資料庫；ACID 是讓一組資料操作維持可靠的交易特性。",
+      "everydayExample": "商品規格可用文件保存，但付款扣庫存仍可能需要全做或全不做。",
+      "confusionNote": "NoSQL 不是沒有結構，也不是一律不支援 ACID。",
+      "lessonIds": ["lesson-im-mis-data-architecture-01"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-mis-glossary-horizontal-vertical-scaling",
+      "label": "水平／垂直擴展",
+      "aliases": ["horizontal scaling", "vertical scaling", "horizontal scale", "vertical scale"],
+      "plainDefinition": "水平是增加更多機器分工；垂直是把單台機器升級得更強。",
+      "everydayExample": "多開收銀櫃台，或換一位速度更快的收銀員。",
+      "confusionNote": "水平擴展不會自動變簡單，會增加分割與協調成本。",
+      "lessonIds": ["lesson-im-mis-data-architecture-01"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-mis-glossary-data-minimization-purpose-limitation",
+      "label": "資料最小化／目的限制",
+      "aliases": ["data minimization", "purpose limitation"],
+      "plainDefinition": "只收完成明確目的所需的最少資料，且不任意拿去做原先未說明的用途。",
+      "everydayExample": "門禁只需確認住戶資格，不必保存每次臉部影像。",
+      "confusionNote": "取得同意也不代表可以無限蒐集。",
+      "lessonIds": ["lesson-im-mis-governance-01"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-mis-glossary-transparency-accountability-redress",
+      "label": "透明、問責與救濟",
+      "aliases": ["transparency", "accountability", "redress"],
+      "plainDefinition": "讓人知道系統怎麼影響自己、有人對結果負責，受害時有申訴與補救管道。",
+      "everydayExample": "信用被誤判時能看懂原因、找得到負責單位並要求更正。",
+      "confusionNote": "只貼隱私政策不等於透明，也不等於已可問責。",
+      "lessonIds": ["lesson-im-mis-governance-01"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-mis-glossary-esg",
+      "label": "環境、社會與治理",
+      "aliases": ["ESG", "Environmental Social Governance"],
+      "plainDefinition": "從環境影響、社會權益與組織治理三面向評估企業風險與責任。",
+      "everydayExample": "評估資料中心耗電、演算法歧視與董事會監督。",
+      "confusionNote": "ESG 不是單一分數，也不保證投資 IT 必然有正面效果。",
+      "lessonIds": ["lesson-im-mis-governance-01"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-mis-glossary-privacy-by-design",
+      "label": "隱私融入設計",
+      "aliases": ["privacy by design"],
+      "plainDefinition": "從需求和架構一開始就減少資料與風險，而非上線後才補隱私聲明。",
+      "everydayExample": "設計門禁時就只存雜湊識別碼並設定自動刪除。",
+      "confusionNote": "不是一個產品認證或最後加密就完成。",
+      "lessonIds": ["lesson-im-mis-governance-01"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-mis-glossary-self-review-rubric",
+      "label": "逐項自評標準",
+      "aliases": ["rubric", "評分規準"],
+      "plainDefinition": "把好答案拆成一條條可以自行確認的要點，幫你檢查論證是否完整。",
+      "everydayExample": "像交報告前用清單確認有定義、理由、例子和限制。",
+      "confusionNote": "它不是官方標準答案，也不代表勾選後就取得正式分數。",
+      "lessonIds": [
+        "lesson-im-mis-strategy-01",
+        "lesson-im-mis-platforms-01",
+        "lesson-im-mis-enterprise-01",
+        "lesson-im-mis-data-ai-01",
+        "lesson-im-mis-development-01",
+        "lesson-im-mis-data-architecture-01",
+        "lesson-im-mis-governance-01"
+      ],
+      "reviewStatus": "reviewed"
+    }
+  ]
+}
