@@ -44,6 +44,9 @@ describe('IM-IT lesson content', () => {
 
     expect(screen.getByRole('heading', { name: '一間忙碌的餐廳' })).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: '把故事換成電腦語言' })).toBeInTheDocument()
+    expect(screen.getByRole('table')).toBeInTheDocument()
+    expect(screen.getByRole('columnheader', { name: '生活中的角色' })).toBeInTheDocument()
+    expect(screen.getByRole('columnheader', { name: '技術概念' })).toBeInTheDocument()
     expect(screen.getByText(/比喻到這裡為止/)).toBeInTheDocument()
     expect(screen.getByText(/同一個 process、共享 code 與 heap/)).toBeInTheDocument()
   })

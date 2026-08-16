@@ -47,16 +47,18 @@ export function ImItLessonContent({ lesson, cards, sources }: Props) {
 
       {lesson.learningScenario ? (
         <section className="space-y-5" aria-labelledby="learning-scenario-title">
-          <div className="rounded-xl border border-sky-200 bg-sky-50/70 p-5 dark:border-sky-900 dark:bg-sky-950/20">
-            <p className="text-xs font-semibold tracking-wide text-sky-700 dark:text-sky-300">
+          <div className="rounded-xl border-2 border-sky-700 bg-sky-50 p-5 text-slate-950 dark:border-sky-400 dark:bg-sky-950 dark:text-sky-50">
+            <p className="text-xs font-semibold tracking-wide text-sky-800 dark:text-sky-200">
               先想像這個場景
             </p>
             <h2 id="learning-scenario-title" className="mt-2 text-balance text-xl font-semibold">
               {lesson.learningScenario.title}
             </h2>
             <p className="mt-3 text-pretty text-sm leading-7">{lesson.learningScenario.hook}</p>
-            <div className="mt-4 border-l-2 border-sky-400 pl-4">
-              <p className="text-xs text-muted-foreground">先別急著往下看，花十秒想一想：</p>
+            <div className="mt-4 border-l-2 border-sky-600 pl-4 dark:border-sky-300">
+              <p className="text-xs text-slate-700 dark:text-slate-200">
+                先別急著往下看，花十秒想一想：
+              </p>
               <p className="mt-1 text-pretty font-medium leading-7">
                 {lesson.learningScenario.predict}
               </p>
@@ -66,31 +68,43 @@ export function ImItLessonContent({ lesson, cards, sources }: Props) {
           <div>
             <h3 className="text-base font-semibold">把故事換成電腦語言</h3>
             <div className="mt-3 overflow-hidden rounded-lg border">
-              <div className="grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] gap-3 bg-muted/50 px-4 py-2 text-xs font-medium text-muted-foreground">
-                <span>生活中的角色</span>
-                <span aria-hidden="true">→</span>
-                <span>技術概念</span>
-              </div>
-              {lesson.learningScenario.mapping.map((item) => (
-                <div
-                  key={`${item.everyday}-${item.technical}`}
-                  className="grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-start gap-3 border-t px-4 py-3 text-sm leading-6"
-                >
-                  <span className="text-pretty">{item.everyday}</span>
-                  <span aria-hidden="true" className="text-muted-foreground">
-                    →
-                  </span>
-                  <span className="text-pretty font-medium">{item.technical}</span>
-                </div>
-              ))}
+              <table className="w-full table-fixed text-left text-sm leading-6">
+                <thead className="bg-slate-100 text-xs text-slate-700 dark:bg-slate-800 dark:text-slate-100">
+                  <tr>
+                    <th scope="col" className="w-[46%] px-4 py-2 font-semibold">
+                      生活中的角色
+                    </th>
+                    <th scope="col" className="w-[8%] px-1 py-2 text-center font-semibold">
+                      <span className="sr-only">對應到</span>
+                    </th>
+                    <th scope="col" className="w-[46%] px-4 py-2 font-semibold">
+                      技術概念
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {lesson.learningScenario.mapping.map((item) => (
+                    <tr key={`${item.everyday}-${item.technical}`} className="border-t">
+                      <td className="px-4 py-3 align-top text-pretty">{item.everyday}</td>
+                      <td
+                        aria-hidden="true"
+                        className="px-1 py-3 text-center align-top text-slate-600 dark:text-slate-300"
+                      >
+                        →
+                      </td>
+                      <td className="px-4 py-3 align-top text-pretty font-medium">
+                        {item.technical}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </div>
 
-          <aside className="rounded-lg border border-amber-200 bg-amber-50/60 px-4 py-3 text-sm leading-6 dark:border-amber-900 dark:bg-amber-950/20">
+          <aside className="rounded-lg border-2 border-amber-700 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-950 dark:border-amber-400 dark:bg-amber-950 dark:text-amber-50">
             <span className="font-semibold">比喻到這裡為止：</span>{' '}
-            <span className="text-pretty text-muted-foreground">
-              {lesson.learningScenario.boundary}
-            </span>
+            <span className="text-pretty">{lesson.learningScenario.boundary}</span>
           </aside>
 
           <div>
