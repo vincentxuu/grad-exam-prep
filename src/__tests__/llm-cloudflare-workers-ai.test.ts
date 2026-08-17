@@ -3,6 +3,7 @@
  */
 import { AIMessage, HumanMessage, SystemMessage } from '@langchain/core/messages'
 import { z } from 'zod'
+import { generateEntry } from '@/lib/lexicon/generate'
 import { generateStructured, messageText } from '@/lib/llm/invoke'
 import { createModel } from '@/lib/llm/model'
 
@@ -89,5 +90,60 @@ describe('Cloudflare Workers AI binding model', () => {
       route: `cloudflare:${route.model}`,
     })
     expect(run).toHaveBeenCalledTimes(1)
+    expect(run.mock.calls[0][1].messages[1].content).toContain('"required"')
+    expect(run.mock.calls[0][1].messages[1].content).toContain('"answer"')
+  })
+
+  it('手動 JSON 第一次缺少必填欄位時會帶驗證原因重試', async () => {
+    const run = jest
+      .fn()
+      .mockResolvedValueOnce({ response: '{"wrong":"field"}' })
+      .mockResolvedValueOnce({ response: '{"answer":"fixed"}' })
+
+    const result = await generateStructured({
+      env: binding(run),
+      system: 'Return JSON',
+      user: 'ping',
+      schema: z.object({ answer: z.string() }),
+      maxTokens: 64,
+    })
+
+    expect(result).toEqual({
+      ok: true,
+      data: { answer: 'fixed' },
+      route: `cloudflare:${route.model}`,
+    })
+    expect(run).toHaveBeenCalledTimes(2)
+    expect(run.mock.calls[1][1].messages[1].content).toContain('上一份輸出的問題：answer:')
+  })
+
+  it('詞條手動 fallback 會把完整 JSON Schema 傳給 Cloudflare 模型', async () => {
+    const generatedEntry = {
+      headword: 'mitigate',
+      kind: 'word' as const,
+      senses: [{ pos: 'verb', zh: '減輕', en: 'make less severe' }],
+      collocations: ['mitigate risk'],
+      phrases: [],
+      confusables: [],
+      synonyms: ['alleviate'],
+      antonyms: ['aggravate'],
+      examples: [
+        { en: 'The patch mitigates the risk.', zh: '這個修補降低了風險。', context: 'technical' },
+      ],
+    }
+    const run = jest.fn().mockResolvedValue({ response: JSON.stringify(generatedEntry) })
+
+    const result = await generateEntry(binding(run), 'mitigate')
+
+    expect(result).toEqual({
+      ok: true,
+      data: generatedEntry,
+      route: `cloudflare:${route.model}`,
+    })
+    const prompt = run.mock.calls[0][1].messages[1].content as string
+    expect(prompt).toContain('"headword"')
+    expect(prompt).toContain('"senses"')
+    expect(prompt).toContain('"collocations"')
+    expect(prompt).toContain('"examples"')
   })
 })

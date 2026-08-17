@@ -1,5 +1,5 @@
 import { HumanMessage, SystemMessage } from '@langchain/core/messages'
-import type { z } from 'zod'
+import { z } from 'zod'
 import { providerInfo } from './catalog'
 import type { LlmRuntimeConfig } from './config'
 import {
@@ -53,6 +53,24 @@ function messageText(content: unknown): string {
   return toTaiwanTraditional(plainMessageText(content))
 }
 
+const MANUAL_JSON_ATTEMPTS = 2
+
+function validationSummary(error: z.ZodError): string {
+  return error.issues
+    .slice(0, 8)
+    .map((issue) => `${issue.path.join('.') || '<root>'}: ${issue.message}`)
+    .join('; ')
+}
+
+function manualJsonPrompt<T>(user: string, schema: z.ZodType<T>, previousIssue?: string): string {
+  const jsonSchema = JSON.stringify(z.toJSONSchema(schema), null, 2)
+  const correction = previousIssue
+    ? `\n\n上一份輸出的問題：${previousIssue}\n請重新產生一份完整且符合 schema 的 JSON。`
+    : ''
+
+  return `${user}\n\n只回傳符合下列 JSON Schema 的 JSON object，不要加 Markdown code fence 或任何說明文字。\n\n${jsonSchema}${correction}`
+}
+
 interface StructuredOptions<T> {
   env: LlmEnv
   /** D1 的執行期設定，優先於 env */
@@ -78,6 +96,7 @@ async function tryRoute<T>(route: ModelRoute, opts: StructuredOptions<T>): Promi
   }
 
   const model = createModel(env, route, { maxTokens })
+  let previousIssue: string | undefined
 
   // 先走 provider 原生的結構化輸出
   try {
@@ -86,30 +105,48 @@ async function tryRoute<T>(route: ModelRoute, opts: StructuredOptions<T>): Promi
       await structured.invoke([new SystemMessage(system), new HumanMessage(user)])
     )
     const parsed = schema.safeParse(data)
-    if (!parsed.success) {
-      return { ok: false, reason: 'invalid', message: '回應不符合預期結構' }
-    }
-    return { ok: true, data: parsed.data, route: routeLabel(route) }
+    if (parsed.success) return { ok: true, data: parsed.data, route: routeLabel(route) }
+
+    // 原生 structured output 偶爾仍會缺欄；帶著錯誤原因進手動 JSON 修復路徑。
+    previousIssue = validationSummary(parsed.error)
   } catch {
     // 有些模型／端點不支援 function calling，退回手動解析
   }
 
-  try {
-    const response = await model.invoke([
-      new SystemMessage(system),
-      new HumanMessage(`${user}\n\n只回傳符合結構的 JSON，不要加任何說明文字。`),
-    ])
-    const parsed = schema.safeParse(extractJson(messageText(response.content)))
-    if (!parsed.success) {
-      return { ok: false, reason: 'invalid', message: '回應不符合預期結構' }
+  for (let attempt = 0; attempt < MANUAL_JSON_ATTEMPTS; attempt += 1) {
+    let response
+    try {
+      response = await model.invoke([
+        new SystemMessage(system),
+        new HumanMessage(manualJsonPrompt(user, schema, previousIssue)),
+      ])
+    } catch (err) {
+      return {
+        ok: false,
+        reason: 'error',
+        message: err instanceof Error ? err.message : String(err),
+      }
     }
-    return { ok: true, data: parsed.data, route: routeLabel(route) }
-  } catch (err) {
-    return {
-      ok: false,
-      reason: 'error',
-      message: err instanceof Error ? err.message : String(err),
+
+    let candidate: unknown
+    try {
+      candidate = extractJson(messageText(response.content))
+    } catch (err) {
+      previousIssue = err instanceof Error ? err.message : String(err)
+      if (attempt + 1 < MANUAL_JSON_ATTEMPTS) continue
+      return { ok: false, reason: 'error', message: previousIssue }
     }
+
+    const parsed = schema.safeParse(candidate)
+    if (parsed.success) return { ok: true, data: parsed.data, route: routeLabel(route) }
+    previousIssue = validationSummary(parsed.error)
+  }
+
+  console.warn(`[llm structured ${routeLabel(route)}] invalid response: ${previousIssue}`)
+  return {
+    ok: false,
+    reason: 'invalid',
+    message: `回應不符合預期結構：${previousIssue ?? 'unknown validation error'}`,
   }
 }
 
