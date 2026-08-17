@@ -4,7 +4,7 @@
   "status": "reviewed",
   "contentPolicy": "本站提供依教材與考古題整理的原創摘要；不是教材轉載，也不把技術覆核答案稱為官方答案。",
   "counts": {
-    "lessons": 35,
+    "lessons": 40,
     "coveredSubtopics": 61,
     "coveredQuestions": 209
   },
@@ -5094,6 +5094,638 @@
         "q-pp-im-it-115-30"
       ],
       "reviewStatus": "reviewed"
+    },
+    {
+      "id": "lesson-im-it-ai-cnn-image-advanced-01",
+      "subtopicId": "im-it-ai-cnn-rnn-sequence",
+      "coveredSubtopicIds": [
+        "im-it-ai-cnn-rnn-sequence",
+        "im-it-ai-neural-networks"
+      ],
+      "title": "CNN 與影像辨識：從 filter 到特徵金字塔",
+      "summary": "深入 CNN 的卷積運算、pooling 策略與典型架構演進（LeNet → VGG → ResNet），理解 feature map 的階層語義，並以 transfer learning 連結預訓練模型與下游任務。補齊零考古題的 CNN 子題。",
+      "estimatedMinutes": 34,
+      "minimumPastPaperRefs": 0,
+      "evidenceNote": "im-it-ai-cnn-rnn-sequence 目前沒有 direct primary past-paper refs，本課為教材導向的進階補充。",
+      "learningObjectives": [
+        "說明 convolution filter 如何在 input 上滑動並產生 feature map",
+        "區分 max pooling 與 average pooling 的取捨",
+        "以 ResNet 的 skip connection 解釋為何更深的網路不一定更難訓練",
+        "說明 transfer learning 如何將預訓練的 feature extractor 接上新任務"
+      ],
+      "sections": [
+        {
+          "title": "Convolution 提取局部空間特徵",
+          "body": "CNN 的核心運算是 convolution：一個小型 filter（通常 3×3 或 5×5）在 input 上滑動，每個位置計算 element-wise multiply 再加總，產生一個 feature map 的值。同一個 filter 在所有位置共享 weights，這就是 parameter sharing — 讓 CNN 能偵測位移不變的局部 pattern（如邊緣、角落、紋理），且參數量遠小於 fully connected layer。",
+          "bullets": [
+            "Filter size 決定 receptive field，stride 決定 output resolution",
+            "Padding 用來控制 output 尺寸，常見 same padding 保持 input 大小",
+            "多個 filters 產生多個 feature maps，每個偵測不同 pattern",
+            "Parameter sharing 是 CNN 高效的關鍵：一個 3×3 filter 只有 9 個 weights"
+          ]
+        },
+        {
+          "title": "Pooling 壓縮空間保留語義",
+          "body": "Pooling layer 降低 feature map 的空間尺寸，保留重要特徵同時減少運算量。Max pooling 取 window 內最大值，保留最強 activation；average pooling 取平均值，保留整體分布。Global average pooling 將整張 feature map 壓成一個數值，常用在最後的分類層之前，取代 fully connected layer。",
+          "bullets": [
+            "Max pooling 對微小位移提供 translation invariance",
+            "Average pooling 保留更多空間資訊但可能模糊 strong activation",
+            "Pooling 不含可學習參數，純粹是降維操作",
+            "現代架構有時用 stride > 1 的 convolution 取代 pooling"
+          ]
+        },
+        {
+          "title": "從 LeNet 到 ResNet：深度的挑戰與解法",
+          "body": "LeNet（1998）用 5 層處理手寫數字；VGG（2014）證明堆疊 3×3 filters 到 16-19 層能大幅提升效果；但更深的網路遇到 vanishing gradient 與 degradation problem — training accuracy 反而下降。ResNet（2015）引入 skip connection：每個 block 的 output 加上 input（y = F(x) + x），讓 gradient 有直接通路，使 100+ 層的訓練成為可能。",
+          "bullets": [
+            "VGG 用多個 3×3 取代大 filter，receptive field 相同但參數更少",
+            "Degradation 不是 overfitting — training error 也上升",
+            "Skip connection 讓 block 只需學習 residual F(x) = y - x",
+            "ResNet-50 是許多 transfer learning 任務的預設 backbone"
+          ]
+        },
+        {
+          "title": "Transfer learning 讓預訓練知識可重用",
+          "body": "在大型資料集（如 ImageNet）預訓練好的 CNN 已學到通用的視覺特徵：低層是邊緣和紋理，高層是物件部件和語義。Transfer learning 凍結或微調這些層，只重新訓練最後的分類頭，讓小資料集也能達到好效果。這是目前最常見的 CNN 應用方式。",
+          "bullets": [
+            "Feature extraction 模式：凍結所有卷積層，只訓練分類層",
+            "Fine-tuning 模式：以較小 learning rate 微調部分或全部卷積層",
+            "預訓練模型的底層特徵通常可跨 domain 重用",
+            "資料量越少越應偏向 feature extraction，避免 overfitting"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "一個 3×3 filter 在 32×32 input 上以 stride=1、padding=0 滑動，output feature map 大小是多少？",
+          "steps": [
+            "Output size = (input - filter + 2*padding) / stride + 1",
+            "= (32 - 3 + 0) / 1 + 1 = 30",
+            "Output 是 30×30"
+          ],
+          "answer": "30×30。每邊少了 (filter_size - 1) / 2 = 1 個像素。"
+        },
+        {
+          "prompt": "為什麼 ResNet-152 的 training error 比 plain 56-layer network 還低？",
+          "steps": [
+            "Plain network 深度增加後遇到 degradation — training error 反而上升。",
+            "ResNet 的 skip connection 讓 gradient 直接流過，解決 gradient vanishing。",
+            "每個 block 只需學 residual，worst case 是 identity mapping。"
+          ],
+          "answer": "Skip connection 確保加深不會比淺網路差，gradient 有直接通路。"
+        }
+      ],
+      "commonPitfalls": [
+        "把 pooling 當成有可學習參數的操作",
+        "認為更深的網路一定更好（忽略 degradation）",
+        "把 transfer learning 的 feature extraction 和 fine-tuning 混為一談",
+        "認為 CNN 只能處理影像（也可處理 1D signal 和 structured grid data）"
+      ],
+      "sourceRefs": [
+        "src-goodfellow-deep-learning",
+        "src-stanford-cs231n"
+      ],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed",
+      "learningScenario": {
+        "title": "圖書館自動分類系統",
+        "hook": "圖書館想自動辨識書封上的圖案來分類：掃描器用固定大小的視窗逐格檢查，每層看到越來越複雜的圖樣（邊緣→紋理→物件），最後壓縮成一個分類標籤。",
+        "predict": "如果把一本偵探小說的書封左移 5 像素，系統還能正確分類嗎？",
+        "mapping": [
+          {
+            "everyday": "固定大小視窗逐格掃描書封",
+            "technical": "Convolution filter sliding over input"
+          },
+          {
+            "everyday": "每層看到更複雜的圖樣",
+            "technical": "Hierarchical feature extraction"
+          },
+          {
+            "everyday": "壓縮成一個代表值",
+            "technical": "Pooling reduces spatial dimensions"
+          },
+          {
+            "everyday": "借用已訓練好的辨識器只換分類頭",
+            "technical": "Transfer learning with pre-trained backbone"
+          }
+        ],
+        "boundary": "CNN 的 translation invariance 來自 parameter sharing 和 pooling，但對 rotation 和 scale 的不變性有限。Transfer learning 的效果取決於 source 和 target domain 的相似度。",
+        "examCues": [
+          "Convolution 的 parameter sharing 讓同一 filter 偵測所有位置的 pattern。",
+          "Max pooling 取最大值，average pooling 取平均值。",
+          "ResNet 的 skip connection 解決深層網路的 degradation problem。",
+          "Transfer learning 分 feature extraction（凍結）和 fine-tuning（微調）兩種模式。"
+        ]
+      }
+    },
+    {
+      "id": "lesson-im-it-ai-rnn-lstm-sequence-advanced-01",
+      "subtopicId": "im-it-ai-cnn-rnn-sequence",
+      "coveredSubtopicIds": [
+        "im-it-ai-cnn-rnn-sequence"
+      ],
+      "title": "RNN 與 LSTM：序列記憶、遺忘與長期依賴",
+      "summary": "從 vanilla RNN 的 hidden state 更新出發，理解為何長序列會遇到 vanishing gradient，再以 LSTM 的 gate 機制解決長期依賴。覆蓋典型序列任務（語言模型、翻譯、時序預測）的架構選擇。",
+      "estimatedMinutes": 32,
+      "minimumPastPaperRefs": 0,
+      "evidenceNote": "im-it-ai-cnn-rnn-sequence 目前沒有 direct primary past-paper refs，本課為教材導向的進階補充。",
+      "learningObjectives": [
+        "畫出 vanilla RNN 的 unrolled 計算圖並指出 hidden state 如何傳遞",
+        "解釋為何 vanilla RNN 在長序列上遇到 vanishing gradient",
+        "說明 LSTM 的 forget gate、input gate、output gate 各自的作用",
+        "比較 RNN/LSTM 與 Transformer 在序列任務上的 trade-offs"
+      ],
+      "sections": [
+        {
+          "title": "Vanilla RNN：每一步都帶著記憶往前走",
+          "body": "RNN 在每個 time step 讀取 input x_t 和前一步的 hidden state h_{t-1}，經過同一組 weights 產生新的 h_t。Unroll 後可以看成一個很深的 feedforward network，每層共享參數。Hidden state 是序列到目前為止的 compressed summary。",
+          "bullets": [
+            "h_t = f(W_h · h_{t-1} + W_x · x_t + b)，f 通常是 tanh 或 ReLU",
+            "參數在所有 time steps 共享，所以 RNN 能處理任意長度序列",
+            "Unrolled RNN 等效於一個 T 層深的 network（T = 序列長度）",
+            "Output 可以在每步產生（sequence-to-sequence）或只在最後產生（classification）"
+          ]
+        },
+        {
+          "title": "Vanishing gradient：記憶會衰減",
+          "body": "Backpropagation through time (BPTT) 把 gradient 沿時間反向傳播。每經過一步要乘一次 Jacobian，如果 spectral radius < 1，gradient 指數衰減；如果 > 1，gradient 爆炸。結果：vanilla RNN 很難學到間隔超過 10-20 步的依賴關係。Gradient clipping 可防爆炸，但 vanishing 需要架構改變。",
+          "bullets": [
+            "Gradient 衰減意味著早期 input 對 loss 的影響無法有效回傳",
+            "Gradient clipping 設定上限防止爆炸，但不解決 vanishing",
+            "這不是 RNN 的 bug，是 deep network + 參數共享的數學結果",
+            "LSTM 和 GRU 是針對 vanishing gradient 的架構級解法"
+          ]
+        },
+        {
+          "title": "LSTM：用 gate 控制記憶的寫入、保留與讀出",
+          "body": "LSTM 增加 cell state c_t 作為長期記憶通道，用三個 gate 控制資訊流：forget gate 決定 c_{t-1} 保留多少（0 = 全忘、1 = 全記），input gate 決定新資訊寫入多少，output gate 決定 c_t 有多少暴露給 h_t。Gate 值由 sigmoid 產生（0-1 之間），允許 gradient 沿 cell state 直接流動。",
+          "bullets": [
+            "Forget gate: f_t = σ(W_f · [h_{t-1}, x_t] + b_f)",
+            "Input gate: i_t = σ(W_i · [h_{t-1}, x_t] + b_i)",
+            "Cell update: c_t = f_t ⊙ c_{t-1} + i_t ⊙ tanh(W_c · [h_{t-1}, x_t] + b_c)",
+            "Output gate: o_t = σ(W_o · [h_{t-1}, x_t] + b_o)，h_t = o_t ⊙ tanh(c_t)"
+          ]
+        },
+        {
+          "title": "GRU 與架構選擇",
+          "body": "GRU 把 forget 和 input gate 合併為 update gate，沒有獨立的 cell state，參數比 LSTM 少約 25%。實務上 LSTM 和 GRU 效果通常相近。但對長序列（>500 tokens）和需要大量平行化的場景，Transformer 因為 self-attention 的 O(1) 路徑長度和 GPU 友好的並行計算，已大幅取代 RNN/LSTM。",
+          "bullets": [
+            "GRU 有 2 個 gate（update、reset），LSTM 有 3 個 gate",
+            "RNN/LSTM 必須逐步計算，無法在 time 維度並行",
+            "Transformer 的 self-attention 可以平行處理所有 positions",
+            "RNN/LSTM 仍用於 online/streaming 場景和小模型 edge deployment"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "一個 vanilla RNN 在 100 步序列上訓練，第 5 步的 input 幾乎不影響 loss。為什麼？",
+          "steps": [
+            "BPTT 從 step 100 反向傳 gradient 到 step 5，經過 95 次乘法。",
+            "若 Jacobian spectral radius < 1，gradient 指數衰減。",
+            "第 5 步的 gradient 可能小到接近 0。"
+          ],
+          "answer": "Vanishing gradient：gradient 經過太多步的乘法後衰減到接近零。"
+        },
+        {
+          "prompt": "LSTM 的 forget gate 輸出 [0.99, 0.01, 0.8]（3 個 cell state 維度）。這代表什麼？",
+          "steps": [
+            "第 1 維保留 99% 的前一步記憶。",
+            "第 2 維幾乎完全遺忘（保留 1%）。",
+            "第 3 維保留 80%。"
+          ],
+          "answer": "LSTM 可以對 cell state 的每個維度獨立決定保留或遺忘的比例。"
+        }
+      ],
+      "commonPitfalls": [
+        "把 vanishing gradient 和 gradient clipping 混為一談（clipping 解決 exploding，不解決 vanishing）",
+        "認為 LSTM 完全解決了長期依賴（仍有實務上限，Transformer 更適合超長序列）",
+        "把 GRU 的 2 gate 和 LSTM 的 3 gate 搞混",
+        "認為 RNN 已完全被 Transformer 取代（streaming 和 edge 場景仍在用）"
+      ],
+      "sourceRefs": [
+        "src-goodfellow-deep-learning",
+        "src-stanford-cs224n"
+      ],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed",
+      "learningScenario": {
+        "title": "接力賽跑記憶傳遞",
+        "hook": "一場接力賽中，每位跑者收到前一棒的記錄（hidden state），加上自己看到的路況（input），更新記錄再傳給下一棒。但傳了 100 棒後，第 1 棒的筆記幾乎完全被覆蓋。",
+        "predict": "如果第 1 棒發現前方有大坑，這個訊息能傳到第 100 棒嗎？",
+        "mapping": [
+          {
+            "everyday": "每棒帶著前一棒的記錄往前跑",
+            "technical": "RNN hidden state passed between time steps"
+          },
+          {
+            "everyday": "傳了太多棒，早期記錄被覆蓋",
+            "technical": "Vanishing gradient in long sequences"
+          },
+          {
+            "everyday": "加一本專門的長期筆記本，用鎖控制讀寫",
+            "technical": "LSTM cell state with gates"
+          },
+          {
+            "everyday": "決定哪些舊記錄保留、哪些新資訊寫入",
+            "technical": "Forget gate and input gate"
+          }
+        ],
+        "boundary": "LSTM 減緩但不完全解決長期依賴問題。對超過 500 tokens 的序列，Transformer 的 self-attention 通常更有效。GRU 是 LSTM 的簡化版，效果通常相近。",
+        "examCues": [
+          "Vanishing gradient 是數學結果，不是 bug — gradient clipping 只解決 exploding。",
+          "LSTM 有 3 個 gate（forget、input、output），GRU 有 2 個（update、reset）。",
+          "RNN 必須逐步計算，無法在時間維度平行化。",
+          "Cell state 是 LSTM 的長期記憶通道，hidden state 是短期輸出。"
+        ]
+      }
+    },
+    {
+      "id": "lesson-im-it-ai-transformer-attention-advanced-01",
+      "subtopicId": "im-it-ai-transformers-attention",
+      "coveredSubtopicIds": [
+        "im-it-ai-transformers-attention"
+      ],
+      "title": "Self-Attention 機制與 Transformer 架構詳解",
+      "summary": "從 Q/K/V 矩陣運算理解 scaled dot-product attention，再組合成 multi-head attention，搭配 positional encoding、layer normalization 與 feed-forward layers 構成完整 Transformer block。覆蓋 encoder-only（BERT）、decoder-only（GPT）與 encoder-decoder 三種變體。",
+      "estimatedMinutes": 38,
+      "minimumPastPaperRefs": 1,
+      "learningObjectives": [
+        "從 Q、K、V 矩陣推導 scaled dot-product attention 的計算流程",
+        "解釋 multi-head attention 為何能捕捉不同 subspace 的關聯",
+        "說明 positional encoding 如何補償 self-attention 的 permutation invariance",
+        "區分 BERT（encoder-only）與 GPT（decoder-only）的 pre-training 策略"
+      ],
+      "sections": [
+        {
+          "title": "Scaled Dot-Product Attention：計算 token 間的關聯強度",
+          "body": "每個 input token 被投影成三個向量：Query（我想找什麼）、Key（我是什麼）、Value（我的內容）。Attention score = Q · K^T / √d_k，再經 softmax 得到權重分布，最後加權聚合 Value。除以 √d_k 是為了防止高維度時 dot product 過大導致 softmax 進入飽和區。",
+          "bullets": [
+            "Attention(Q, K, V) = softmax(QK^T / √d_k) · V",
+            "每個 token 的 output 是所有 tokens Value 的加權和",
+            "權重由 Query 和 Key 的相似度決定，與位置無關",
+            "√d_k scaling 防止大維度下 gradient 過小（softmax 飽和）"
+          ]
+        },
+        {
+          "title": "Multi-Head Attention：多重視角同時觀察",
+          "body": "單一 attention head 只能學一種關聯模式。Multi-head attention 將 Q、K、V 各自分成 h 個 subspace（head），每個 head 獨立算 attention 再 concatenate，最後通過一個線性投影。不同 head 可以學到語法關係、語義相似、位置偏好等不同 pattern。",
+          "bullets": [
+            "d_model 被分成 h 個 head，每個 head 維度 d_k = d_model / h",
+            "MultiHead(Q,K,V) = Concat(head_1, ..., head_h) · W_O",
+            "h = 8 或 12 是常見設定",
+            "不同 head 學到的 attention pattern 可以視覺化但不等於因果解釋"
+          ]
+        },
+        {
+          "title": "Transformer Block 的完整組成",
+          "body": "一個 Transformer block = multi-head attention + add & layer norm + feed-forward network + add & layer norm。Residual connection（add）讓 gradient 直接流過，layer norm 穩定訓練。Positional encoding 在 input embedding 加上位置資訊，因為 self-attention 本身是 permutation invariant — 打亂 token 順序不會改變 output（沒有 position info 的話）。",
+          "bullets": [
+            "Residual connection 類似 ResNet 的 skip connection",
+            "Layer normalization 對每個 token 的 features 做 normalize",
+            "Feed-forward network 通常是兩層 MLP，對每個 position 獨立操作",
+            "Sinusoidal 或 learned positional encoding 補償 permutation invariance"
+          ]
+        },
+        {
+          "title": "三種 Transformer 變體：BERT、GPT 與 Encoder-Decoder",
+          "body": "Encoder-only（BERT）：用 masked language model 預訓練，每個 token 能看到全部其他 tokens（bidirectional），適合分類、NER 等理解任務。Decoder-only（GPT）：用 causal language model 預訓練，每個 token 只能看到左邊（autoregressive），適合生成任務。Encoder-decoder（T5、原始 Transformer）：encoder 處理 input，decoder 生成 output，適合翻譯等 sequence-to-sequence 任務。",
+          "bullets": [
+            "BERT 的 [MASK] 預測是 bidirectional — 可以同時看左右 context",
+            "GPT 的 causal mask 確保生成時只看已生成的 tokens",
+            "Fine-tuning 在 pre-trained model 上加 task-specific head",
+            "模型大小從 BERT-base（110M）到 GPT-4（估計 >1T parameters）"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "Self-attention 計算中為什麼要除以 √d_k？",
+          "steps": [
+            "Q 和 K 的 dot product 量級與維度 d_k 成正比。",
+            "高維度時 dot product 值很大，softmax 會接近 one-hot。",
+            "Gradient 在 softmax 飽和區會變得很小。",
+            "除以 √d_k 把 variance 拉回 ~1。"
+          ],
+          "answer": "防止高維度 dot product 過大導致 softmax 飽和、gradient 消失。"
+        },
+        {
+          "prompt": "BERT 和 GPT 都是 Transformer，為什麼 BERT 不能直接做文字生成？",
+          "steps": [
+            "BERT 是 encoder-only，pre-training 用 masked language model。",
+            "每個 token 能 attend 所有 positions（bidirectional）。",
+            "生成時不能看到未來的 tokens，需要 causal mask。",
+            "GPT 的 decoder 天生有 causal mask，適合 autoregressive generation。"
+          ],
+          "answer": "BERT 的 bidirectional attention 在生成時會看到答案，破壞 autoregressive 假設。"
+        }
+      ],
+      "commonPitfalls": [
+        "認為 self-attention 就是整個 Transformer（還有 FFN、residual、norm）",
+        "把 positional encoding 和 attention weights 混淆",
+        "認為 BERT 是 bidirectional RNN（它是 bidirectional attention，不是 recurrent）",
+        "把 fine-tuning 當成從頭訓練（fine-tuning 是在 pre-trained weights 上繼續調）",
+        "認為 multi-head 一定比 single-head 好（取決於 d_model 和任務）"
+      ],
+      "sourceRefs": [
+        "src-vaswani-attention-2017",
+        "src-stanford-cs224n"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-115-27"
+      ],
+      "reviewStatus": "reviewed",
+      "learningScenario": {
+        "title": "圓桌會議的注意力分配",
+        "hook": "一場圓桌會議中，每位與會者（token）先準備三張卡片：我想問什麼（Query）、我能回答什麼（Key）、我的觀點（Value）。每個人拿自己的 Q 和所有人的 K 比對，決定要多認真聽誰的 V。",
+        "predict": "如果會議有 100 人，每個人都要和其他 99 人比對，運算量有多大？",
+        "mapping": [
+          {
+            "everyday": "拿 Q 和所有 K 比對相似度",
+            "technical": "Scaled dot-product attention QK^T/√d_k"
+          },
+          {
+            "everyday": "依相似度決定聽誰的觀點",
+            "technical": "Softmax attention weights over Values"
+          },
+          {
+            "everyday": "同時開 8 個討論小組各自聚焦",
+            "technical": "Multi-head attention with h heads"
+          },
+          {
+            "everyday": "座位號碼牌告訴大家誰坐哪裡",
+            "technical": "Positional encoding for order information"
+          },
+          {
+            "everyday": "BERT 聽所有人、GPT 只聽前面的人",
+            "technical": "Bidirectional vs causal attention mask"
+          }
+        ],
+        "boundary": "Self-attention 的計算複雜度是 O(n²)，n 是序列長度。Attention weights 不等於因果解釋。BERT 和 GPT 都是 Transformer，差異在 pre-training 策略和 attention mask。",
+        "examCues": [
+          "除以 √d_k 防止 softmax 飽和。",
+          "Multi-head 讓不同 head 學不同 pattern。",
+          "Positional encoding 補償 self-attention 的 permutation invariance。",
+          "BERT 是 encoder-only（bidirectional），GPT 是 decoder-only（causal）。"
+        ]
+      }
+    },
+    {
+      "id": "lesson-im-it-ai-rag-prompt-llm-advanced-01",
+      "subtopicId": "im-it-ai-generative-llm",
+      "coveredSubtopicIds": [
+        "im-it-ai-generative-llm"
+      ],
+      "title": "RAG、Prompt Engineering 與 LLM 應用實務",
+      "summary": "從 RAG 的 retrieve-then-generate 流程出發，理解 embedding、vector search 與 chunking 策略。再覆蓋 prompt engineering 的核心技巧（few-shot、chain-of-thought、system prompt），以及 LLM 應用的常見架構選擇（fine-tuning vs RAG vs agent）。",
+      "estimatedMinutes": 36,
+      "minimumPastPaperRefs": 1,
+      "learningObjectives": [
+        "畫出 RAG 系統的完整資料流：indexing → retrieval → augmentation → generation",
+        "解釋 embedding model 如何把文字轉成可搜尋的 vector representation",
+        "區分 zero-shot、few-shot 與 chain-of-thought prompting 的適用情境",
+        "比較 fine-tuning、RAG 與 agent-based 三種 LLM 應用架構的 trade-offs"
+      ],
+      "sections": [
+        {
+          "title": "RAG 的完整流程：不只是查資料庫",
+          "body": "RAG 分為 offline indexing 和 online serving 兩個階段。Indexing：將文件切成 chunks，用 embedding model 轉成 vectors，存入 vector database。Serving：使用者提問 → embedding → vector search 找出最相關的 chunks → 把 chunks 放入 LLM 的 context → LLM 生成答案。每個環節都可能出錯：chunk 太大語義模糊、embedding 品質差、retrieval 找錯文件、LLM 忽略 context。",
+          "bullets": [
+            "Chunking 策略影響 retrieval 品質：太大失去精確度，太小缺少上下文",
+            "Embedding model 把語義相似的文字映射到 vector space 的相近位置",
+            "Vector search 通常用 approximate nearest neighbor（ANN），不是精確搜尋",
+            "Generation 時 LLM 可能忽略 retrieved context（faithfulness 問題）"
+          ]
+        },
+        {
+          "title": "Prompt Engineering：用指令控制 LLM 行為",
+          "body": "Prompt 是 LLM 的控制介面。Zero-shot 只給指令不給範例；few-shot 在 prompt 中提供 2-5 個 input-output 範例讓模型學習格式和風格；chain-of-thought (CoT) 要求模型在回答前先列出推理步驟，對數學和邏輯問題效果顯著。System prompt 設定角色和約束，user prompt 提供具體問題。",
+          "bullets": [
+            "Few-shot 的範例要代表期望的 output 格式和品質",
+            "Chain-of-thought 在 GPT-4 class 模型上對推理任務提升明顯",
+            "Prompt 的措辭差異可能導致完全不同的 output",
+            "Temperature 控制 randomness：低值更 deterministic，高值更 creative"
+          ]
+        },
+        {
+          "title": "Fine-tuning vs RAG vs Agent：三種架構選擇",
+          "body": "Fine-tuning 用特定資料繼續訓練模型 weights，適合 domain-specific tone 或格式。RAG 不改模型，適合需要最新或動態知識的場景。Agent 讓 LLM 呼叫外部工具（搜尋、計算、API），適合需要多步推理和執行動作的場景。三者不互斥：一個系統可以同時 fine-tune base model、RAG 加入知識、用 agent 框架串接工具。",
+          "bullets": [
+            "Fine-tuning 需要標註資料和 GPU 資源，但能改變模型內在行為",
+            "RAG 不需重訓模型，知識更新只需更新 index",
+            "Agent 增加系統複雜度和 latency，但能力邊界最廣",
+            "選擇取決於 knowledge freshness、行為控制、成本和 latency 需求"
+          ]
+        },
+        {
+          "title": "LLM 應用的評估與風險",
+          "body": "LLM 應用不能只靠 accuracy 一個指標。Faithfulness 衡量回答是否有根據（vs confabulation）；relevance 衡量是否回答了問題；safety 衡量是否產生有害內容。Evaluation 可用人工評估、LLM-as-judge 或自動化 metric。Red teaming 主動測試模型的失敗模式。",
+          "bullets": [
+            "Confabulation rate 是 RAG 系統的核心指標",
+            "LLM-as-judge 用另一個 LLM 評估回答品質，但有 bias",
+            "Latency 和 cost per query 在生產系統中同樣重要",
+            "版本管理 prompt 和 model 版本是 MLOps 的一部分"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "一個 RAG 系統回答了「公司去年營收是 50 億」，但實際是 80 億。問題出在哪？",
+          "steps": [
+            "先檢查 retrieval：是否找到了正確的文件？",
+            "如果找到錯誤文件 → retrieval failure（embedding 或 chunking 問題）。",
+            "如果找到正確文件但 LLM 忽略或曲解 → generation faithfulness failure。",
+            "如果 index 中根本沒有最新財報 → indexing freshness failure。"
+          ],
+          "answer": "RAG 失敗要分層診斷：indexing → retrieval → generation，每層有不同修復方式。"
+        },
+        {
+          "prompt": "什麼時候應該 fine-tune 而不是用 RAG？",
+          "steps": [
+            "需要改變模型的回答風格或格式 → fine-tune。",
+            "需要最新資訊但不需改變行為 → RAG。",
+            "需要 domain-specific 行為 + 最新資訊 → fine-tune + RAG。"
+          ],
+          "answer": "Fine-tune 改行為，RAG 加知識。兩者解決不同問題，常一起使用。"
+        }
+      ],
+      "commonPitfalls": [
+        "把 RAG 當成修改模型參數（RAG 不改 weights）",
+        "認為 few-shot prompting 就是 fine-tuning（prompting 不更新 weights）",
+        "認為 temperature = 0 就能保證 deterministic output（不同 API call 仍可能有差異）",
+        "把 agent 和 chatbot 當同義詞（agent 有工具呼叫能力，chatbot 不一定有）"
+      ],
+      "sourceRefs": [
+        "src-stanford-cs224n",
+        "src-lewis-rag-2020"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-115-30"
+      ],
+      "reviewStatus": "reviewed",
+      "learningScenario": {
+        "title": "智慧客服的知識更新系統",
+        "hook": "客服部門的 AI 助手需要回答最新的產品問題。團隊把產品文件切成段落、轉成可搜尋的向量存起來（indexing）。客戶提問時，先搜尋最相關的段落，再把段落放進 AI 的提示中讓它生成回答。",
+        "predict": "如果產品上個月改版但文件還沒更新，AI 會回答什麼？",
+        "mapping": [
+          {
+            "everyday": "把文件切段並轉成可搜尋格式",
+            "technical": "Chunking + embedding + vector indexing"
+          },
+          {
+            "everyday": "客戶提問時搜尋最相關的段落",
+            "technical": "Vector similarity search / retrieval"
+          },
+          {
+            "everyday": "把搜到的段落放進 AI 提示中",
+            "technical": "Context augmentation in prompt"
+          },
+          {
+            "everyday": "AI 根據段落生成回答",
+            "technical": "LLM generation with retrieved context"
+          },
+          {
+            "everyday": "提供範例教 AI 回答格式",
+            "technical": "Few-shot prompting"
+          }
+        ],
+        "boundary": "RAG 不修改模型 weights，只在 inference 時加入外部知識。Prompt engineering 是控制介面，不是訓練方法。Fine-tuning 改行為，RAG 加知識，兩者解決不同問題。",
+        "examCues": [
+          "RAG 在生成前檢索外部知識，不修改模型參數。",
+          "Few-shot prompting 在 prompt 中提供範例，不更新 weights。",
+          "Temperature 控制 output 的 randomness。",
+          "Fine-tune 改行為，RAG 加知識 — 可以同時使用。"
+        ]
+      }
+    },
+    {
+      "id": "lesson-im-it-ai-ethics-governance-advanced-01",
+      "subtopicId": "im-it-ai-ethics-governance",
+      "coveredSubtopicIds": [
+        "im-it-ai-ethics-governance"
+      ],
+      "title": "AI 倫理、偏差與治理：從公平性指標到法規框架",
+      "summary": "從 algorithmic bias 的來源與類型出發，理解 fairness metric 之間的不可能定理，再覆蓋可解釋性（XAI）的技術光譜。最後連結 EU AI Act 與 NIST AI RMF 的風險分級治理框架。補齊零考古題的 AI 倫理子題。",
+      "estimatedMinutes": 34,
+      "minimumPastPaperRefs": 0,
+      "evidenceNote": "im-it-ai-ethics-governance 目前沒有 direct primary past-paper refs，但 AI 倫理與治理是近年考試趨勢。",
+      "learningObjectives": [
+        "列出 algorithmic bias 在資料收集、標註、模型訓練與部署階段的來源",
+        "解釋為什麼 demographic parity 和 equalized odds 不能同時滿足",
+        "區分 inherently interpretable models 與 post-hoc explanation methods",
+        "比較 EU AI Act 的風險分級與 NIST AI RMF 的自願性框架"
+      ],
+      "sections": [
+        {
+          "title": "Bias 不只是模型問題：整個 pipeline 都可能引入",
+          "body": "Algorithmic bias 可以在 AI 系統的每個階段產生。資料收集偏差（某些群體在訓練資料中被低代表）、標註偏差（標註者的主觀判斷不一致）、模型偏差（模型放大資料中的 pattern）、部署偏差（模型用在和訓練分布不同的情境）。即使每個環節看起來合理，組合起來仍可能導致系統性不公平。",
+          "bullets": [
+            "歷史偏差：訓練資料反映過去的不平等，模型學會並延續",
+            "代表性偏差：某些群體在資料中的比例低於實際人口",
+            "測量偏差：用 proxy variable 代替真正想衡量的概念",
+            "Feedback loop：模型預測影響未來資料收集，形成自我強化"
+          ]
+        },
+        {
+          "title": "公平性指標：不存在唯一正確的定義",
+          "body": "Demographic parity 要求不同群體的 positive rate 相同；equalized odds 要求不同群體的 TPR 和 FPR 相同；calibration 要求相同預測分數在不同群體有相同的實際 positive rate。Impossibility theorem（Chouldechova 2017）證明：除非 base rate 完全相同，不可能同時滿足所有公平性指標。選擇哪個指標是價值判斷，不是純技術問題。",
+          "bullets": [
+            "Demographic parity 不考慮不同群體的 base rate 差異",
+            "Equalized odds 確保模型對不同群體有相同的 error rate",
+            "Impossibility theorem 意味著必須做 trade-off，不能追求全部指標",
+            "公平性指標的選擇應由 stakeholders 共同決定，不只是工程師"
+          ]
+        },
+        {
+          "title": "可解釋性（XAI）：讓黑盒子透明的技術光譜",
+          "body": "Inherently interpretable models（linear regression、decision tree）結構本身可解讀。Post-hoc methods 對已訓練好的模型提供解釋：LIME 用局部線性近似、SHAP 基於 game theory 分配每個 feature 的貢獻。但解釋不等於因果，SHAP 值高不代表該 feature 是原因。高風險應用可能需要 inherently interpretable model，而不是在黑盒上加解釋。",
+          "bullets": [
+            "Decision tree 的路徑本身就是解釋",
+            "LIME 在預測點附近建立局部線性模型",
+            "SHAP 為每個 feature 分配一致的邊際貢獻值",
+            "Attention weights 不是可靠的解釋（不等於 feature importance）"
+          ]
+        },
+        {
+          "title": "AI 治理框架：從風險分級到問責",
+          "body": "EU AI Act（2024）按風險分級：unacceptable（禁止，如社會信用評分）、high-risk（須合規評估，如招募、信用評分）、limited（透明度義務）、minimal（自由使用）。NIST AI RMF 是自願性框架，用 GOVERN、MAP、MEASURE、MANAGE 四個功能管理 AI 風險。兩者互補：EU AI Act 是法律義務，NIST 是最佳實踐。",
+          "bullets": [
+            "EU AI Act 的 high-risk 類別需要 conformity assessment 和人工監督",
+            "NIST AI RMF 不規定合規標準，而是提供風險管理流程",
+            "Accountability 需要明確指定責任人、audit trail 和 escalation 機制",
+            "AI governance 不只是技術問題：需要法律、倫理和 business 的跨領域合作"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "一個招聘 AI 的 positive rate（推薦面試）在男性和女性間相同，但女性的 FPR 明顯較高。這是否公平？",
+          "steps": [
+            "Demographic parity 滿足：positive rate 相同。",
+            "Equalized odds 不滿足：女性 FPR 高，表示更多不適合的女性被推薦。",
+            "這可能反映 base rate 不同，也可能反映 feature 品質差異。"
+          ],
+          "answer": "取決於選擇的公平性定義。這個系統滿足 demographic parity 但違反 equalized odds — 兩者在 base rate 不同時無法同時滿足。"
+        },
+        {
+          "prompt": "某公司用 SHAP 發現「郵遞區號」在信用評分模型中 importance 最高。應該刪掉這個 feature 嗎？",
+          "steps": [
+            "郵遞區號可能是 race 或 income 的 proxy variable。",
+            "但刪掉不一定改善公平性 — 其他 features 可能傳遞同樣的資訊。",
+            "SHAP 顯示相關性，不證明因果或歧視。",
+            "需要結合 fairness metrics 和 domain expertise 判斷。"
+          ],
+          "answer": "SHAP importance 是診斷起點，不是直接的行動指南。需要進一步分析是否構成 proxy discrimination。"
+        }
+      ],
+      "commonPitfalls": [
+        "認為移除 sensitive attributes 就能消除偏差（proxy variables 仍可傳遞資訊）",
+        "認為所有公平性指標可以同時滿足（impossibility theorem）",
+        "把 SHAP/LIME 的 feature importance 當成因果解釋",
+        "認為 NIST AI RMF 是法律強制要求（它是自願性框架）",
+        "認為 EU AI Act 只管歐盟公司（任何向歐盟市場提供 AI 的公司都受管轄）"
+      ],
+      "sourceRefs": [
+        "src-nist-ai-rmf-1",
+        "src-eu-ai-act-2024",
+        "src-chouldechova-fairness-impossibility-2017"
+      ],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed",
+      "learningScenario": {
+        "title": "大學獎學金自動審核系統",
+        "hook": "大學用 AI 自動初審獎學金申請。有人發現來自偏鄉的申請者通過率明顯較低。調查後發現：訓練資料中偏鄉學生本來就少，而且「推薦信語言豐富度」這個 feature 可能是城鄉差距的 proxy。",
+        "predict": "如果把「居住地」從模型 features 中移除，偏差就會消失嗎？",
+        "mapping": [
+          {
+            "everyday": "訓練資料中偏鄉學生少",
+            "technical": "Representation bias in training data"
+          },
+          {
+            "everyday": "推薦信語言豐富度是城鄉的替代指標",
+            "technical": "Proxy variable for protected attribute"
+          },
+          {
+            "everyday": "移除居住地後其他 features 仍傳遞同樣資訊",
+            "technical": "Removing features doesn't eliminate proxy discrimination"
+          },
+          {
+            "everyday": "不同公平指標給出矛盾結論",
+            "technical": "Fairness impossibility theorem"
+          },
+          {
+            "everyday": "高風險決定需要人工覆核和申訴機制",
+            "technical": "Human oversight and accountability in AI governance"
+          }
+        ],
+        "boundary": "公平性指標之間存在數學上的不可能同時滿足。移除 sensitive attribute 不等於消除偏差。NIST AI RMF 是自願性框架，EU AI Act 是法律義務。可解釋性工具（SHAP、LIME）顯示相關性不證明因果。",
+        "examCues": [
+          "Bias 可以在資料收集、標註、訓練、部署每個階段產生。",
+          "Demographic parity 和 equalized odds 不能同時滿足（除非 base rate 相同）。",
+          "SHAP/LIME 是 post-hoc explanation，不是因果證明。",
+          "EU AI Act 按風險分級：unacceptable、high-risk、limited、minimal。"
+        ]
+      }
     }
   ]
 }

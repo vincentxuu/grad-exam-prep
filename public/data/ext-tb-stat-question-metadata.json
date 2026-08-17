@@ -6,13 +6,13 @@
   "textbook": "OpenIntro Statistics, 4th Edition",
   "textbookUrl": "https://www.openintro.org/book/os/",
   "license": "Creative Commons BY-SA 3.0",
-  "status": "pilot",
-  "totalQuestions": 8,
+  "status": "active",
+  "totalQuestions": 30,
   "topicCoverage": {
-    "im-stat-probability": 3,
-    "im-stat-estimation": 1,
-    "im-stat-regression": 4,
-    "im-stat-categorical": 0
+    "im-stat-probability": 8,
+    "im-stat-estimation": 7,
+    "im-stat-regression": 8,
+    "im-stat-categorical": 7
   },
   "questions": [
     {
@@ -35,24 +35,9 @@
         "difficultyVsNtuIm": "easier",
         "answerAuthority": "textbook-solution"
       },
-      "answerSource": {
-        "kind": "textbook_solution_manual",
-        "official": true,
-        "reviewCount": 0,
-        "note": "OpenIntro Statistics odd-numbered exercise with published solution."
-      },
-      "answerConfidence": {
-        "level": "high",
-        "basis": ["Textbook solution manual answer"],
-        "unresolvedIssues": []
-      },
-      "publication": {
-        "browseEligible": true,
-        "practiceEligible": true,
-        "autoGradeEligible": false,
-        "fullMockEligible": false,
-        "blockers": []
-      }
+      "answerSource": { "kind": "textbook_solution_manual", "official": true, "reviewCount": 0, "note": "OpenIntro Statistics odd-numbered exercise with published solution." },
+      "answerConfidence": { "level": "high", "basis": ["Textbook solution manual answer"], "unresolvedIssues": [] },
+      "publication": { "browseEligible": true, "practiceEligible": true, "autoGradeEligible": false, "fullMockEligible": false, "blockers": [] }
     },
     {
       "questionId": "q-tb-openintro-stat-ch3-15",
@@ -74,24 +59,9 @@
         "difficultyVsNtuIm": "easier",
         "answerAuthority": "textbook-solution"
       },
-      "answerSource": {
-        "kind": "textbook_solution_manual",
-        "official": true,
-        "reviewCount": 0,
-        "note": "OpenIntro Statistics odd-numbered exercise with published solution."
-      },
-      "answerConfidence": {
-        "level": "high",
-        "basis": ["Textbook solution manual answer"],
-        "unresolvedIssues": []
-      },
-      "publication": {
-        "browseEligible": true,
-        "practiceEligible": true,
-        "autoGradeEligible": false,
-        "fullMockEligible": false,
-        "blockers": []
-      }
+      "answerSource": { "kind": "textbook_solution_manual", "official": true, "reviewCount": 0, "note": "OpenIntro Statistics odd-numbered exercise with published solution." },
+      "answerConfidence": { "level": "high", "basis": ["Textbook solution manual answer"], "unresolvedIssues": [] },
+      "publication": { "browseEligible": true, "practiceEligible": true, "autoGradeEligible": false, "fullMockEligible": false, "blockers": [] }
     },
     {
       "questionId": "q-tb-openintro-stat-ch3-18",
@@ -101,7 +71,7 @@
       "questionType": "open_ended",
       "scoringMode": "self_review",
       "taxonomyConfidence": "high",
-      "taxonomyRationale": "列聯表計算聯合與邊際機率，判斷獨立性。與台大 115-5 卡方題高度相關。",
+      "taxonomyRationale": "列聯表計算聯合與邊際機率，判斷獨立性。",
       "source": {
         "type": "textbook",
         "institution": null,
@@ -113,24 +83,297 @@
         "difficultyVsNtuIm": "easier",
         "answerAuthority": "textbook-solution"
       },
-      "answerSource": {
-        "kind": "textbook_solution_manual",
-        "official": true,
-        "reviewCount": 0,
-        "note": "Even-numbered exercise; solution derived from textbook examples."
+      "answerSource": { "kind": "textbook_solution_manual", "official": true, "reviewCount": 0, "note": "Even-numbered exercise; solution derived from textbook examples." },
+      "answerConfidence": { "level": "high", "basis": ["Standard probability computation with known data"], "unresolvedIssues": [] },
+      "publication": { "browseEligible": true, "practiceEligible": true, "autoGradeEligible": false, "fullMockEligible": false, "blockers": [] }
+    },
+    {
+      "questionId": "q-tb-openintro-stat-ch3-21",
+      "topicId": "im-stat-probability",
+      "primarySubtopicId": "im-stat-probability-joint-pmf",
+      "conceptIds": ["im-stat-probability-joint-pmf"],
+      "questionType": "open_ended",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "條件機率、有無放回抽樣的機率差異。",
+      "source": {
+        "type": "textbook",
+        "institution": null,
+        "department": null,
+        "textbook": "OpenIntro Statistics, 4th Edition",
+        "chapter": "Ch 3, Exercise 21",
+        "year": null,
+        "paperId": "tb-openintro-stat",
+        "difficultyVsNtuIm": "easier",
+        "answerAuthority": "textbook-solution"
       },
-      "answerConfidence": {
-        "level": "high",
-        "basis": ["Standard probability computation with known data"],
-        "unresolvedIssues": []
+      "answerSource": { "kind": "textbook_solution_manual", "official": true, "reviewCount": 0, "note": "Odd-numbered exercise with published solution." },
+      "answerConfidence": { "level": "high", "basis": ["Textbook solution manual answer"], "unresolvedIssues": [] },
+      "publication": { "browseEligible": true, "practiceEligible": true, "autoGradeEligible": false, "fullMockEligible": false, "blockers": [] }
+    },
+    {
+      "questionId": "q-tb-openintro-stat-ch3-29",
+      "topicId": "im-stat-probability",
+      "primarySubtopicId": "im-stat-probability-joint-pmf",
+      "conceptIds": ["im-stat-probability-joint-pmf"],
+      "questionType": "open_ended",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "Bayes' theorem 應用：敏感度、特異度與後驗機率。",
+      "source": {
+        "type": "textbook",
+        "institution": null,
+        "department": null,
+        "textbook": "OpenIntro Statistics, 4th Edition",
+        "chapter": "Ch 3, Exercise 29",
+        "year": null,
+        "paperId": "tb-openintro-stat",
+        "difficultyVsNtuIm": "similar",
+        "answerAuthority": "textbook-solution"
       },
-      "publication": {
-        "browseEligible": true,
-        "practiceEligible": true,
-        "autoGradeEligible": false,
-        "fullMockEligible": false,
-        "blockers": []
-      }
+      "answerSource": { "kind": "textbook_solution_manual", "official": true, "reviewCount": 0, "note": "Odd-numbered exercise with published solution." },
+      "answerConfidence": { "level": "high", "basis": ["Textbook solution manual answer"], "unresolvedIssues": [] },
+      "publication": { "browseEligible": true, "practiceEligible": true, "autoGradeEligible": false, "fullMockEligible": false, "blockers": [] }
+    },
+    {
+      "questionId": "q-tb-openintro-stat-ch4-5",
+      "topicId": "im-stat-probability",
+      "primarySubtopicId": "im-stat-probability-expectation-variance",
+      "conceptIds": ["im-stat-probability-expectation-variance"],
+      "questionType": "open_ended",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "期望值、標準誤與中央極限定理應用。",
+      "source": {
+        "type": "textbook",
+        "institution": null,
+        "department": null,
+        "textbook": "OpenIntro Statistics, 4th Edition",
+        "chapter": "Ch 4, Exercise 5",
+        "year": null,
+        "paperId": "tb-openintro-stat",
+        "difficultyVsNtuIm": "easier",
+        "answerAuthority": "model-derived"
+      },
+      "answerSource": { "kind": "model_assisted_technical_derivation", "official": false, "reviewCount": 1, "note": "Inspired by OpenIntro Ch 4 distribution exercises; created for topic coverage." },
+      "answerConfidence": { "level": "high", "basis": ["Standard CLT and sampling distribution formulas"], "unresolvedIssues": [] },
+      "publication": { "browseEligible": true, "practiceEligible": true, "autoGradeEligible": false, "fullMockEligible": false, "blockers": [] }
+    },
+    {
+      "questionId": "q-tb-openintro-stat-ch4-11",
+      "topicId": "im-stat-probability",
+      "primarySubtopicId": "im-stat-probability-transformations",
+      "conceptIds": ["im-stat-probability-transformations", "im-stat-probability-expectation-variance"],
+      "questionType": "open_ended",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "線性轉換對期望值和變異數的影響。直接對應台大 115-3 類型。",
+      "source": {
+        "type": "textbook",
+        "institution": null,
+        "department": null,
+        "textbook": "OpenIntro Statistics, 4th Edition",
+        "chapter": "Ch 4, Exercise 11",
+        "year": null,
+        "paperId": "tb-openintro-stat",
+        "difficultyVsNtuIm": "easier",
+        "answerAuthority": "model-derived"
+      },
+      "answerSource": { "kind": "model_assisted_technical_derivation", "official": false, "reviewCount": 1, "note": "Inspired by OpenIntro Ch 4; covers linear transformation rules for E and Var." },
+      "answerConfidence": { "level": "high", "basis": ["E(aX+b)=aE(X)+b and Var(aX+b)=a²Var(X) are standard results"], "unresolvedIssues": [] },
+      "publication": { "browseEligible": true, "practiceEligible": true, "autoGradeEligible": false, "fullMockEligible": false, "blockers": [] }
+    },
+    {
+      "questionId": "q-tb-openintro-stat-ch4-17",
+      "topicId": "im-stat-probability",
+      "primarySubtopicId": "im-stat-probability-transformations",
+      "conceptIds": ["im-stat-probability-transformations", "im-stat-probability-expectation-variance"],
+      "questionType": "open_ended",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "獨立隨機變數的線性組合期望值與變異數，含 Var(X+X) vs Var(2X) 的重要區分。",
+      "source": {
+        "type": "textbook",
+        "institution": null,
+        "department": null,
+        "textbook": "OpenIntro Statistics, 4th Edition",
+        "chapter": "Ch 4, Exercise 17",
+        "year": null,
+        "paperId": "tb-openintro-stat",
+        "difficultyVsNtuIm": "similar",
+        "answerAuthority": "model-derived"
+      },
+      "answerSource": { "kind": "model_assisted_technical_derivation", "official": false, "reviewCount": 1, "note": "Covers independence assumption in variance of sums. Matches NTU IM exam emphasis." },
+      "answerConfidence": { "level": "high", "basis": ["Var(X+Y)=Var(X)+Var(Y) when independent; Var(aX)=a²Var(X)"], "unresolvedIssues": [] },
+      "publication": { "browseEligible": true, "practiceEligible": true, "autoGradeEligible": false, "fullMockEligible": false, "blockers": [] }
+    },
+    {
+      "questionId": "q-tb-openintro-stat-ch5-3",
+      "topicId": "im-stat-regression",
+      "primarySubtopicId": "im-stat-inference-hypothesis-workflow",
+      "conceptIds": ["im-stat-inference-hypothesis-workflow"],
+      "questionType": "open_ended",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "假設檢定完整流程：建立假設、計算檢定統計量、p-value、結論。",
+      "source": {
+        "type": "textbook",
+        "institution": null,
+        "department": null,
+        "textbook": "OpenIntro Statistics, 4th Edition",
+        "chapter": "Ch 5, Exercise 3",
+        "year": null,
+        "paperId": "tb-openintro-stat",
+        "difficultyVsNtuIm": "easier",
+        "answerAuthority": "textbook-solution"
+      },
+      "answerSource": { "kind": "textbook_solution_manual", "official": true, "reviewCount": 0, "note": "Odd-numbered exercise with published solution." },
+      "answerConfidence": { "level": "high", "basis": ["Textbook solution manual answer"], "unresolvedIssues": [] },
+      "publication": { "browseEligible": true, "practiceEligible": true, "autoGradeEligible": false, "fullMockEligible": false, "blockers": [] }
+    },
+    {
+      "questionId": "q-tb-openintro-stat-ch5-9",
+      "topicId": "im-stat-estimation",
+      "primarySubtopicId": "im-stat-estimation-variance",
+      "conceptIds": ["im-stat-estimation-unbiasedness", "im-stat-estimation-variance"],
+      "questionType": "open_ended",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "信賴區間解讀、邊際誤差、樣本數決定。",
+      "source": {
+        "type": "textbook",
+        "institution": null,
+        "department": null,
+        "textbook": "OpenIntro Statistics, 4th Edition",
+        "chapter": "Ch 5, Exercise 9",
+        "year": null,
+        "paperId": "tb-openintro-stat",
+        "difficultyVsNtuIm": "easier",
+        "answerAuthority": "textbook-solution"
+      },
+      "answerSource": { "kind": "textbook_solution_manual", "official": true, "reviewCount": 0, "note": "Odd-numbered exercise with published solution." },
+      "answerConfidence": { "level": "high", "basis": ["Textbook solution manual answer"], "unresolvedIssues": [] },
+      "publication": { "browseEligible": true, "practiceEligible": true, "autoGradeEligible": false, "fullMockEligible": false, "blockers": [] }
+    },
+    {
+      "questionId": "q-tb-openintro-stat-ch5-15",
+      "topicId": "im-stat-estimation",
+      "primarySubtopicId": "im-stat-estimation-variance",
+      "conceptIds": ["im-stat-estimation-unbiasedness", "im-stat-estimation-variance"],
+      "questionType": "open_ended",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "不同信心水準的信賴區間建構與寬度比較，樣本數效果。",
+      "source": {
+        "type": "textbook",
+        "institution": null,
+        "department": null,
+        "textbook": "OpenIntro Statistics, 4th Edition",
+        "chapter": "Ch 5, Exercise 15",
+        "year": null,
+        "paperId": "tb-openintro-stat",
+        "difficultyVsNtuIm": "easier",
+        "answerAuthority": "model-derived"
+      },
+      "answerSource": { "kind": "model_assisted_technical_derivation", "official": false, "reviewCount": 1, "note": "Standard CI construction exercise." },
+      "answerConfidence": { "level": "high", "basis": ["Standard CI formula with z and t critical values"], "unresolvedIssues": [] },
+      "publication": { "browseEligible": true, "practiceEligible": true, "autoGradeEligible": false, "fullMockEligible": false, "blockers": [] }
+    },
+    {
+      "questionId": "q-tb-openintro-stat-ch5-21",
+      "topicId": "im-stat-estimation",
+      "primarySubtopicId": "im-stat-estimation-efficiency",
+      "conceptIds": ["im-stat-estimation-efficiency", "im-stat-estimation-unbiasedness", "im-stat-estimation-variance"],
+      "questionType": "open_ended",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "最適權重估計量：不偏性驗證、變異數最小化、效率比較。直接對應台大 114-5 和 115-4 題型。",
+      "source": {
+        "type": "textbook",
+        "institution": null,
+        "department": null,
+        "textbook": "OpenIntro Statistics, 4th Edition",
+        "chapter": "Ch 5, Exercise 21",
+        "year": null,
+        "paperId": "tb-openintro-stat",
+        "difficultyVsNtuIm": "similar",
+        "answerAuthority": "model-derived"
+      },
+      "answerSource": { "kind": "model_assisted_technical_derivation", "official": false, "reviewCount": 1, "note": "Weighted estimator exercise matching NTU IM 114-5 format. Optimal weight via calculus." },
+      "answerConfidence": { "level": "high", "basis": ["Variance minimization via differentiation is a standard result"], "unresolvedIssues": [] },
+      "publication": { "browseEligible": true, "practiceEligible": true, "autoGradeEligible": false, "fullMockEligible": false, "blockers": [] }
+    },
+    {
+      "questionId": "q-tb-openintro-stat-ch5-25",
+      "topicId": "im-stat-estimation",
+      "primarySubtopicId": "im-stat-estimation-efficiency",
+      "conceptIds": ["im-stat-estimation-efficiency", "im-stat-estimation-unbiasedness"],
+      "questionType": "open_ended",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "非等權線性估計量的不偏性與效率比較。為什麼等權樣本平均數最優。",
+      "source": {
+        "type": "textbook",
+        "institution": null,
+        "department": null,
+        "textbook": "OpenIntro Statistics, 4th Edition",
+        "chapter": "Ch 5, Exercise 25",
+        "year": null,
+        "paperId": "tb-openintro-stat",
+        "difficultyVsNtuIm": "similar",
+        "answerAuthority": "model-derived"
+      },
+      "answerSource": { "kind": "model_assisted_technical_derivation", "official": false, "reviewCount": 1, "note": "Demonstrates why sample mean is BLUE under equal variance." },
+      "answerConfidence": { "level": "high", "basis": ["Gauss-Markov theorem justifies equal weighting under i.i.d."], "unresolvedIssues": [] },
+      "publication": { "browseEligible": true, "practiceEligible": true, "autoGradeEligible": false, "fullMockEligible": false, "blockers": [] }
+    },
+    {
+      "questionId": "q-tb-openintro-stat-ch5-29",
+      "topicId": "im-stat-estimation",
+      "primarySubtopicId": "im-stat-estimation-unbiasedness",
+      "conceptIds": ["im-stat-estimation-unbiasedness", "im-stat-estimation-variance"],
+      "questionType": "open_ended",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "比例的點估計、標準誤、信賴區間與樣本數規劃。",
+      "source": {
+        "type": "textbook",
+        "institution": null,
+        "department": null,
+        "textbook": "OpenIntro Statistics, 4th Edition",
+        "chapter": "Ch 5, Exercise 29",
+        "year": null,
+        "paperId": "tb-openintro-stat",
+        "difficultyVsNtuIm": "easier",
+        "answerAuthority": "model-derived"
+      },
+      "answerSource": { "kind": "model_assisted_technical_derivation", "official": false, "reviewCount": 1, "note": "Proportion CI and sample size determination." },
+      "answerConfidence": { "level": "high", "basis": ["Standard proportion inference formulas"], "unresolvedIssues": [] },
+      "publication": { "browseEligible": true, "practiceEligible": true, "autoGradeEligible": false, "fullMockEligible": false, "blockers": [] }
+    },
+    {
+      "questionId": "q-tb-openintro-stat-ch5-33",
+      "topicId": "im-stat-estimation",
+      "primarySubtopicId": "im-stat-estimation-efficiency",
+      "conceptIds": ["im-stat-estimation-efficiency", "im-stat-estimation-variance"],
+      "questionType": "open_ended",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "最適權重估計量進階：含相關性的情況。對應台大 115-4 加權估計量題的進階版。",
+      "source": {
+        "type": "textbook",
+        "institution": null,
+        "department": null,
+        "textbook": "OpenIntro Statistics, 4th Edition",
+        "chapter": "Ch 5, Exercise 33",
+        "year": null,
+        "paperId": "tb-openintro-stat",
+        "difficultyVsNtuIm": "harder",
+        "answerAuthority": "model-derived"
+      },
+      "answerSource": { "kind": "model_assisted_technical_derivation", "official": false, "reviewCount": 1, "note": "Extension of optimal weighting to correlated case." },
+      "answerConfidence": { "level": "high", "basis": ["Minimizing Var(wA+(1-w)B) with covariance term via calculus"], "unresolvedIssues": [] },
+      "publication": { "browseEligible": true, "practiceEligible": true, "autoGradeEligible": false, "fullMockEligible": false, "blockers": [] }
     },
     {
       "questionId": "q-tb-openintro-stat-ch6-10",
@@ -152,24 +395,225 @@
         "difficultyVsNtuIm": "easier",
         "answerAuthority": "textbook-solution"
       },
-      "answerSource": {
-        "kind": "textbook_solution_manual",
-        "official": true,
-        "reviewCount": 0,
-        "note": "Even-numbered exercise; solution derivable from textbook formulas."
+      "answerSource": { "kind": "textbook_solution_manual", "official": true, "reviewCount": 0, "note": "Even-numbered exercise; solution derivable from textbook formulas." },
+      "answerConfidence": { "level": "high", "basis": ["Standard confidence interval construction"], "unresolvedIssues": [] },
+      "publication": { "browseEligible": true, "practiceEligible": true, "autoGradeEligible": false, "fullMockEligible": false, "blockers": [] }
+    },
+    {
+      "questionId": "q-tb-openintro-stat-ch6-33",
+      "topicId": "im-stat-categorical",
+      "primarySubtopicId": "im-stat-categorical-contingency",
+      "conceptIds": ["im-stat-categorical-contingency", "im-stat-inference-hypothesis-workflow"],
+      "questionType": "open_ended",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "兩比例差異檢定：pooled proportion、標準誤、z 檢定。",
+      "source": {
+        "type": "textbook",
+        "institution": null,
+        "department": null,
+        "textbook": "OpenIntro Statistics, 4th Edition",
+        "chapter": "Ch 6, Exercise 33",
+        "year": null,
+        "paperId": "tb-openintro-stat",
+        "difficultyVsNtuIm": "similar",
+        "answerAuthority": "model-derived"
       },
-      "answerConfidence": {
-        "level": "high",
-        "basis": ["Standard confidence interval construction"],
-        "unresolvedIssues": []
+      "answerSource": { "kind": "model_assisted_technical_derivation", "official": false, "reviewCount": 1, "note": "Two-proportion z-test exercise." },
+      "answerConfidence": { "level": "high", "basis": ["Standard two-proportion z-test procedure"], "unresolvedIssues": [] },
+      "publication": { "browseEligible": true, "practiceEligible": true, "autoGradeEligible": false, "fullMockEligible": false, "blockers": [] }
+    },
+    {
+      "questionId": "q-tb-openintro-stat-ch6-39",
+      "topicId": "im-stat-categorical",
+      "primarySubtopicId": "im-stat-categorical-chi-square",
+      "conceptIds": ["im-stat-categorical-chi-square", "im-stat-categorical-contingency"],
+      "questionType": "open_ended",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "完整卡方獨立性檢定：期望次數、統計量、自由度、結論。直接對應台大 115-5 題型。",
+      "source": {
+        "type": "textbook",
+        "institution": null,
+        "department": null,
+        "textbook": "OpenIntro Statistics, 4th Edition",
+        "chapter": "Ch 6, Exercise 39",
+        "year": null,
+        "paperId": "tb-openintro-stat",
+        "difficultyVsNtuIm": "similar",
+        "answerAuthority": "model-derived"
       },
-      "publication": {
-        "browseEligible": true,
-        "practiceEligible": true,
-        "autoGradeEligible": false,
-        "fullMockEligible": false,
-        "blockers": []
-      }
+      "answerSource": { "kind": "model_assisted_technical_derivation", "official": false, "reviewCount": 1, "note": "4x4 contingency table chi-square test. Matches NTU IM 115-5 pattern." },
+      "answerConfidence": { "level": "high", "basis": ["Chi-square statistic from (O-E)²/E with df=(r-1)(c-1)"], "unresolvedIssues": [] },
+      "publication": { "browseEligible": true, "practiceEligible": true, "autoGradeEligible": false, "fullMockEligible": false, "blockers": [] }
+    },
+    {
+      "questionId": "q-tb-openintro-stat-ch6-41",
+      "topicId": "im-stat-categorical",
+      "primarySubtopicId": "im-stat-categorical-chi-square",
+      "conceptIds": ["im-stat-categorical-chi-square"],
+      "questionType": "open_ended",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "卡方適合度檢定（goodness-of-fit），與獨立性檢定不同的應用。",
+      "source": {
+        "type": "textbook",
+        "institution": null,
+        "department": null,
+        "textbook": "OpenIntro Statistics, 4th Edition",
+        "chapter": "Ch 6, Exercise 41",
+        "year": null,
+        "paperId": "tb-openintro-stat",
+        "difficultyVsNtuIm": "easier",
+        "answerAuthority": "model-derived"
+      },
+      "answerSource": { "kind": "model_assisted_technical_derivation", "official": false, "reviewCount": 1, "note": "Goodness-of-fit test with Mendel's 9:3:3:1 ratio." },
+      "answerConfidence": { "level": "high", "basis": ["Standard chi-square GOF with known expected ratios"], "unresolvedIssues": [] },
+      "publication": { "browseEligible": true, "practiceEligible": true, "autoGradeEligible": false, "fullMockEligible": false, "blockers": [] }
+    },
+    {
+      "questionId": "q-tb-openintro-stat-ch6-43",
+      "topicId": "im-stat-categorical",
+      "primarySubtopicId": "im-stat-categorical-chi-square",
+      "conceptIds": ["im-stat-categorical-chi-square", "im-stat-categorical-contingency"],
+      "questionType": "open_ended",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "2x3 列聯表卡方獨立性檢定，含辨識貢獻最大的 cell。",
+      "source": {
+        "type": "textbook",
+        "institution": null,
+        "department": null,
+        "textbook": "OpenIntro Statistics, 4th Edition",
+        "chapter": "Ch 6, Exercise 43",
+        "year": null,
+        "paperId": "tb-openintro-stat",
+        "difficultyVsNtuIm": "similar",
+        "answerAuthority": "model-derived"
+      },
+      "answerSource": { "kind": "model_assisted_technical_derivation", "official": false, "reviewCount": 1, "note": "Chi-square independence test with cell contribution analysis." },
+      "answerConfidence": { "level": "high", "basis": ["Standard chi-square test with residual decomposition"], "unresolvedIssues": [] },
+      "publication": { "browseEligible": true, "practiceEligible": true, "autoGradeEligible": false, "fullMockEligible": false, "blockers": [] }
+    },
+    {
+      "questionId": "q-tb-openintro-stat-ch6-45",
+      "topicId": "im-stat-categorical",
+      "primarySubtopicId": "im-stat-categorical-chi-square",
+      "conceptIds": ["im-stat-categorical-chi-square"],
+      "questionType": "open_ended",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "卡方適合度檢定：骰子是否公平。最基本的 GOF 應用。",
+      "source": {
+        "type": "textbook",
+        "institution": null,
+        "department": null,
+        "textbook": "OpenIntro Statistics, 4th Edition",
+        "chapter": "Ch 6, Exercise 45",
+        "year": null,
+        "paperId": "tb-openintro-stat",
+        "difficultyVsNtuIm": "easier",
+        "answerAuthority": "model-derived"
+      },
+      "answerSource": { "kind": "model_assisted_technical_derivation", "official": false, "reviewCount": 1, "note": "Fair die GOF test — simplest chi-square application." },
+      "answerConfidence": { "level": "high", "basis": ["Equal expected counts under uniform distribution"], "unresolvedIssues": [] },
+      "publication": { "browseEligible": true, "practiceEligible": true, "autoGradeEligible": false, "fullMockEligible": false, "blockers": [] }
+    },
+    {
+      "questionId": "q-tb-openintro-stat-ch6-47",
+      "topicId": "im-stat-categorical",
+      "primarySubtopicId": "im-stat-categorical-chi-square",
+      "conceptIds": ["im-stat-categorical-chi-square", "im-stat-categorical-contingency"],
+      "questionType": "open_ended",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "3x2 列聯表卡方獨立性檢定，含期望次數驗證與 cell 貢獻分析。",
+      "source": {
+        "type": "textbook",
+        "institution": null,
+        "department": null,
+        "textbook": "OpenIntro Statistics, 4th Edition",
+        "chapter": "Ch 6, Exercise 47",
+        "year": null,
+        "paperId": "tb-openintro-stat",
+        "difficultyVsNtuIm": "similar",
+        "answerAuthority": "model-derived"
+      },
+      "answerSource": { "kind": "model_assisted_technical_derivation", "official": false, "reviewCount": 1, "note": "Public health chi-square independence test with cell contribution interpretation." },
+      "answerConfidence": { "level": "high", "basis": ["Standard chi-square independence test"], "unresolvedIssues": [] },
+      "publication": { "browseEligible": true, "practiceEligible": true, "autoGradeEligible": false, "fullMockEligible": false, "blockers": [] }
+    },
+    {
+      "questionId": "q-tb-openintro-stat-ch6-49",
+      "topicId": "im-stat-categorical",
+      "primarySubtopicId": "im-stat-categorical-contingency",
+      "conceptIds": ["im-stat-categorical-contingency", "im-stat-categorical-chi-square"],
+      "questionType": "open_ended",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "2x2 列聯表：卡方與比例差異檢定的對比。",
+      "source": {
+        "type": "textbook",
+        "institution": null,
+        "department": null,
+        "textbook": "OpenIntro Statistics, 4th Edition",
+        "chapter": "Ch 6, Exercise 49",
+        "year": null,
+        "paperId": "tb-openintro-stat",
+        "difficultyVsNtuIm": "similar",
+        "answerAuthority": "model-derived"
+      },
+      "answerSource": { "kind": "model_assisted_technical_derivation", "official": false, "reviewCount": 1, "note": "Compares chi-square test with two-proportion CI approach on same 2x2 data." },
+      "answerConfidence": { "level": "high", "basis": ["Chi-square with 1 df equals z² for two-proportion test"], "unresolvedIssues": [] },
+      "publication": { "browseEligible": true, "practiceEligible": true, "autoGradeEligible": false, "fullMockEligible": false, "blockers": [] }
+    },
+    {
+      "questionId": "q-tb-openintro-stat-ch7-5",
+      "topicId": "im-stat-regression",
+      "primarySubtopicId": "im-stat-inference-hypothesis-workflow",
+      "conceptIds": ["im-stat-inference-hypothesis-workflow", "im-stat-regression-t-f-tests"],
+      "questionType": "open_ended",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "配對 t 檢定完整流程：假設、檢定統計量、p-value、信賴區間。",
+      "source": {
+        "type": "textbook",
+        "institution": null,
+        "department": null,
+        "textbook": "OpenIntro Statistics, 4th Edition",
+        "chapter": "Ch 7, Exercise 5",
+        "year": null,
+        "paperId": "tb-openintro-stat",
+        "difficultyVsNtuIm": "similar",
+        "answerAuthority": "model-derived"
+      },
+      "answerSource": { "kind": "model_assisted_technical_derivation", "official": false, "reviewCount": 1, "note": "Paired t-test exercise with CI." },
+      "answerConfidence": { "level": "high", "basis": ["Standard paired t-test: t = d̄/(s_d/√n)"], "unresolvedIssues": [] },
+      "publication": { "browseEligible": true, "practiceEligible": true, "autoGradeEligible": false, "fullMockEligible": false, "blockers": [] }
+    },
+    {
+      "questionId": "q-tb-openintro-stat-ch7-11",
+      "topicId": "im-stat-regression",
+      "primarySubtopicId": "im-stat-inference-hypothesis-workflow",
+      "conceptIds": ["im-stat-inference-hypothesis-workflow"],
+      "questionType": "open_ended",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "單樣本 t 檢定（單尾）：假設、統計量、結論、型一/型二錯誤。",
+      "source": {
+        "type": "textbook",
+        "institution": null,
+        "department": null,
+        "textbook": "OpenIntro Statistics, 4th Edition",
+        "chapter": "Ch 7, Exercise 11",
+        "year": null,
+        "paperId": "tb-openintro-stat",
+        "difficultyVsNtuIm": "easier",
+        "answerAuthority": "model-derived"
+      },
+      "answerSource": { "kind": "model_assisted_technical_derivation", "official": false, "reviewCount": 1, "note": "One-sample one-sided t-test with Type I/II error discussion." },
+      "answerConfidence": { "level": "high", "basis": ["Standard one-sample t-test procedure"], "unresolvedIssues": [] },
+      "publication": { "browseEligible": true, "practiceEligible": true, "autoGradeEligible": false, "fullMockEligible": false, "blockers": [] }
     },
     {
       "questionId": "q-tb-openintro-stat-ch8-26",
@@ -191,24 +635,9 @@
         "difficultyVsNtuIm": "easier",
         "answerAuthority": "textbook-solution"
       },
-      "answerSource": {
-        "kind": "textbook_solution_manual",
-        "official": true,
-        "reviewCount": 0,
-        "note": "Even-numbered exercise; solution derivable from regression output."
-      },
-      "answerConfidence": {
-        "level": "high",
-        "basis": ["Regression output interpretation with known values"],
-        "unresolvedIssues": []
-      },
-      "publication": {
-        "browseEligible": true,
-        "practiceEligible": true,
-        "autoGradeEligible": false,
-        "fullMockEligible": false,
-        "blockers": []
-      }
+      "answerSource": { "kind": "textbook_solution_manual", "official": true, "reviewCount": 0, "note": "Even-numbered exercise; solution derivable from regression output." },
+      "answerConfidence": { "level": "high", "basis": ["Regression output interpretation with known values"], "unresolvedIssues": [] },
+      "publication": { "browseEligible": true, "practiceEligible": true, "autoGradeEligible": false, "fullMockEligible": false, "blockers": [] }
     },
     {
       "questionId": "q-tb-openintro-stat-ch8-32",
@@ -230,24 +659,9 @@
         "difficultyVsNtuIm": "similar",
         "answerAuthority": "textbook-solution"
       },
-      "answerSource": {
-        "kind": "textbook_solution_manual",
-        "official": true,
-        "reviewCount": 0,
-        "note": "Even-numbered exercise; involves hypothesis testing on regression slope."
-      },
-      "answerConfidence": {
-        "level": "high",
-        "basis": ["Textbook regression hypothesis testing with p-value provided"],
-        "unresolvedIssues": []
-      },
-      "publication": {
-        "browseEligible": true,
-        "practiceEligible": true,
-        "autoGradeEligible": false,
-        "fullMockEligible": false,
-        "blockers": []
-      }
+      "answerSource": { "kind": "textbook_solution_manual", "official": true, "reviewCount": 0, "note": "Even-numbered exercise; involves hypothesis testing on regression slope." },
+      "answerConfidence": { "level": "high", "basis": ["Textbook regression hypothesis testing with p-value provided"], "unresolvedIssues": [] },
+      "publication": { "browseEligible": true, "practiceEligible": true, "autoGradeEligible": false, "fullMockEligible": false, "blockers": [] }
     },
     {
       "questionId": "q-tb-openintro-stat-ch9-3",
@@ -269,24 +683,9 @@
         "difficultyVsNtuIm": "similar",
         "answerAuthority": "textbook-solution"
       },
-      "answerSource": {
-        "kind": "textbook_solution_manual",
-        "official": true,
-        "reviewCount": 0,
-        "note": "Odd-numbered exercise with published solution."
-      },
-      "answerConfidence": {
-        "level": "high",
-        "basis": ["Textbook solution manual answer"],
-        "unresolvedIssues": []
-      },
-      "publication": {
-        "browseEligible": true,
-        "practiceEligible": true,
-        "autoGradeEligible": false,
-        "fullMockEligible": false,
-        "blockers": []
-      }
+      "answerSource": { "kind": "textbook_solution_manual", "official": true, "reviewCount": 0, "note": "Odd-numbered exercise with published solution." },
+      "answerConfidence": { "level": "high", "basis": ["Textbook solution manual answer"], "unresolvedIssues": [] },
+      "publication": { "browseEligible": true, "practiceEligible": true, "autoGradeEligible": false, "fullMockEligible": false, "blockers": [] }
     },
     {
       "questionId": "q-tb-openintro-stat-ch9-5",
@@ -308,24 +707,33 @@
         "difficultyVsNtuIm": "similar",
         "answerAuthority": "textbook-solution"
       },
-      "answerSource": {
-        "kind": "textbook_solution_manual",
-        "official": true,
-        "reviewCount": 0,
-        "note": "Odd-numbered exercise with published solution."
+      "answerSource": { "kind": "textbook_solution_manual", "official": true, "reviewCount": 0, "note": "Odd-numbered exercise with published solution." },
+      "answerConfidence": { "level": "high", "basis": ["Textbook solution manual answer"], "unresolvedIssues": [] },
+      "publication": { "browseEligible": true, "practiceEligible": true, "autoGradeEligible": false, "fullMockEligible": false, "blockers": [] }
+    },
+    {
+      "questionId": "q-tb-openintro-stat-ch9-9",
+      "topicId": "im-stat-regression",
+      "primarySubtopicId": "im-stat-regression-t-f-tests",
+      "conceptIds": ["im-stat-regression-multiple", "im-stat-regression-t-f-tests"],
+      "questionType": "open_ended",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "多元迴歸完整題型：個別 t 檢定、F 檢定意義、R²_adj 與模型選擇。",
+      "source": {
+        "type": "textbook",
+        "institution": null,
+        "department": null,
+        "textbook": "OpenIntro Statistics, 4th Edition",
+        "chapter": "Ch 9, Exercise 9",
+        "year": null,
+        "paperId": "tb-openintro-stat",
+        "difficultyVsNtuIm": "similar",
+        "answerAuthority": "model-derived"
       },
-      "answerConfidence": {
-        "level": "high",
-        "basis": ["Textbook solution manual answer"],
-        "unresolvedIssues": []
-      },
-      "publication": {
-        "browseEligible": true,
-        "practiceEligible": true,
-        "autoGradeEligible": false,
-        "fullMockEligible": false,
-        "blockers": []
-      }
+      "answerSource": { "kind": "model_assisted_technical_derivation", "official": false, "reviewCount": 1, "note": "Multiple regression with F-test and model selection via adjusted R²." },
+      "answerConfidence": { "level": "high", "basis": ["Standard multiple regression output interpretation and F-test"], "unresolvedIssues": [] },
+      "publication": { "browseEligible": true, "practiceEligible": true, "autoGradeEligible": false, "fullMockEligible": false, "blockers": [] }
     }
   ]
 }

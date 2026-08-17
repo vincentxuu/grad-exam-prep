@@ -559,6 +559,95 @@
       ],
       "usage": "generative-ai-risk-and-governance-check",
       "status": "reviewed"
+    },
+    {
+      "id": "src-goodfellow-deep-learning",
+      "title": "Deep Learning",
+      "authors": [
+        "Ian Goodfellow",
+        "Yoshua Bengio",
+        "Aaron Courville"
+      ],
+      "type": "textbook",
+      "year": 2016,
+      "url": "https://www.deeplearningbook.org/",
+      "note": "MIT Press。深度學習的標準教材，涵蓋 CNN、RNN、optimization、regularization。"
+    },
+    {
+      "id": "src-stanford-cs231n",
+      "title": "CS231n: Deep Learning for Computer Vision",
+      "authors": [
+        "Fei-Fei Li",
+        "Andrej Karpathy",
+        "Justin Johnson"
+      ],
+      "type": "course",
+      "year": 2023,
+      "url": "https://cs231n.stanford.edu/",
+      "note": "Stanford 電腦視覺課程，涵蓋 CNN 架構演進、transfer learning、object detection。"
+    },
+    {
+      "id": "src-vaswani-attention-2017",
+      "title": "Attention Is All You Need",
+      "authors": [
+        "Ashish Vaswani",
+        "Noam Shazeer",
+        "Niki Parmar",
+        "Jakob Uszkoreit",
+        "Llion Jones",
+        "Aidan N. Gomez",
+        "Lukasz Kaiser",
+        "Illia Polosukhin"
+      ],
+      "type": "paper",
+      "year": 2017,
+      "url": "https://arxiv.org/abs/1706.03762",
+      "note": "Transformer 架構原始論文，提出 scaled dot-product attention 與 multi-head attention。"
+    },
+    {
+      "id": "src-lewis-rag-2020",
+      "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "authors": [
+        "Patrick Lewis",
+        "Ethan Perez",
+        "Aleksandra Piktus",
+        "Fabio Petroni",
+        "Vladimir Karpukhin",
+        "Naman Goyal",
+        "Heinrich Küttler",
+        "Mike Lewis",
+        "Wen-tau Yih",
+        "Tim Rocktäschel",
+        "Sebastian Riedel",
+        "Douwe Kiela"
+      ],
+      "type": "paper",
+      "year": 2020,
+      "url": "https://arxiv.org/abs/2005.11401",
+      "note": "RAG 架構原始論文，結合 retrieval 和 generation。"
+    },
+    {
+      "id": "src-eu-ai-act-2024",
+      "title": "EU Artificial Intelligence Act",
+      "authors": [
+        "European Parliament",
+        "Council of the European Union"
+      ],
+      "type": "regulation",
+      "year": 2024,
+      "url": "https://artificialintelligenceact.eu/",
+      "note": "歐盟 AI 法案，按風險分級規範 AI 系統（unacceptable、high-risk、limited、minimal）。"
+    },
+    {
+      "id": "src-chouldechova-fairness-impossibility-2017",
+      "title": "Fair Prediction with Disparate Impact: A Study of Bias in Recidivism Prediction Instruments",
+      "authors": [
+        "Alexandra Chouldechova"
+      ],
+      "type": "paper",
+      "year": 2017,
+      "url": "https://arxiv.org/abs/1703.00056",
+      "note": "公平性不可能定理：除非 base rate 相同，calibration 和 error rate balance 不能同時滿足。"
     }
   ]
 }

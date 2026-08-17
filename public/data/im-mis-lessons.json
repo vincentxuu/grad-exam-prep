@@ -4,7 +4,7 @@
   "status": "reviewed",
   "contentPolicy": "原創 MIS 申論學習摘要；past-paper refs 為題面範圍證據，rubric 為非官方自評工具。",
   "counts": {
-    "lessons": 7,
+    "lessons": 17,
     "coveredSubtopics": 24,
     "coveredQuestions": 37
   },
@@ -909,6 +909,1003 @@
         "q-pp-im-mis-111-2",
         "q-pp-im-mis-113-4",
         "q-pp-im-mis-115-2"
+      ],
+      "reviewStatus": "reviewed",
+      "evidenceNote": "考古題只證明此範圍曾出現；題面均為申論或開放題，答案非官方，課程練習採 rubric self-review，絕不進自動計分或完整模擬考。"
+    },
+    {
+      "id": "lesson-im-mis-strategy-alignment-investment-02",
+      "subtopicId": "im-mis-strategy-alignment-differentiation",
+      "coveredSubtopicIds": [
+        "im-mis-strategy-alignment-differentiation",
+        "im-mis-strategy-investment-value"
+      ],
+      "title": "IT 對齊與投資價值：從策略意圖到績效衡量",
+      "summary": "深入探討 IT-business alignment 的操作化方式與 IT 投資如何透過互補性資產轉化為績效，建立從策略意圖到可衡量結果的完整推論鏈。",
+      "estimatedMinutes": 38,
+      "minimumPastPaperRefs": 4,
+      "learningObjectives": [
+        "解釋 strategic alignment model 的四象限與實務應用",
+        "以 complementary assets 論證為什麼相同 IT 投資在不同組織產生不同績效",
+        "設計 IT investment portfolio 並區分 mandatory、growth 與 experimental 類別",
+        "以 ROI、NPV 與 option value 比較不同投資的評估限制"
+      ],
+      "sections": [
+        {
+          "title": "對齊不是一次性規劃，是持續校準",
+          "body": "Henderson-Venkatraman 的 Strategic Alignment Model 把 IT 與業務對齊分為策略層與執行層，四種 alignment perspective 表示不同的驅動方向。現實中對齊不是靜態文件，而是在環境變化中持續調整的能力。",
+          "bullets": [
+            "Strategy execution 由業務策略驅動 IT 基礎設施設計",
+            "Technology transformation 由 IT 能力啟發新業務策略",
+            "Service level 關注 IT 如何有效支援營運",
+            "Competitive potential 利用 IT 能力創造市場差異化",
+            "對齊程度可用 survey、IT governance maturity 或 outcome gap 衡量"
+          ]
+        },
+        {
+          "title": "IT 價值需要互補性資產才能兌現",
+          "body": "Brynjolfsson 的 productivity paradox 研究顯示，IT 資本投入與生產力之間的關係受到組織流程再設計、管理實踐、人力技能與企業文化的中介。沒有這些互補性資產，技術投入可能只增加成本而不提升績效。",
+          "bullets": [
+            "互補性資產包括：流程改造、管理承諾、訓練、組織結構調整",
+            "absorption capacity 影響組織能多快將新技術轉化為能力",
+            "IT 投資的延遲效應（lag effect）使短期 ROI 可能低估長期價值",
+            "cross-sectional 研究無法證明因果，需考慮 reverse causality"
+          ]
+        },
+        {
+          "title": "投資組合管理不能只看財務回報",
+          "body": "IT portfolio management 按風險、回報與策略貢獻分類投資項目。純財務指標（NPV、IRR）對平台投資與實驗項目有系統性低估，因為它們忽略 option value、學習效果與生態系統效應。",
+          "bullets": [
+            "分類：run-the-business（維運）、grow-the-business（成長）、transform-the-business（轉型）",
+            "Real options 適合高不確定性的階段性投資決策",
+            "TCO 需包含 migration、training、opportunity cost 與 exit cost",
+            "Balanced scorecard 可補充非財務面向的衡量"
+          ]
+        },
+        {
+          "title": "申論要寫出機制，不只列理論名稱",
+          "body": "考題常問「IT 如何創造價值」或「比較兩種對齊策略」。回答需要建立完整的因果鏈：誰的投資→改變什麼流程→產生什麼能力→影響什麼績效指標→在什麼條件下成立。",
+          "bullets": [
+            "先界定分析層級：firm-level、process-level 或 individual-level",
+            "寫出可反駁的條件句而非絕對宣稱",
+            "用具體案例驗證機制，標明時間與產業脈絡",
+            "承認替代解釋與衡量限制"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "如何回答「IT 對齊與投資價值」的比較題？",
+          "steps": [
+            "定義比較軸與分析單位。",
+            "各寫一條作用機制。",
+            "加入至少兩項條件或風險。",
+            "用案例與指標驗證。"
+          ],
+          "answer": "可接受的答案不只一種；關鍵是條件透明、概念正確、推論可追蹤，並能說明限制。"
+        },
+        {
+          "prompt": "題目要求提出建議時，如何避免只列 buzzwords？",
+          "steps": [
+            "先指出要改善的問題。",
+            "說明建議如何改變流程、資訊或激勵。",
+            "指定責任人與衡量方式。",
+            "補上失敗訊號與替代方案。"
+          ],
+          "answer": "建議應包含 action、mechanism、metric 與 risk，而不是只寫「導入 AI／雲端／平台」。"
+        }
+      ],
+      "commonPitfalls": [
+        "把工具名稱當成因果解釋",
+        "沒有說明分析層級與前提",
+        "只寫單一立場，不處理權衡",
+        "把非官方參考解析當唯一標準答案",
+        "引用時事卻沒有日期與來源邊界"
+      ],
+      "sourceRefs": [
+        "src-im-mis-laudon-17e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-106-1",
+        "q-pp-im-mis-108-1",
+        "q-pp-im-mis-112-2",
+        "q-pp-im-mis-114-2"
+      ],
+      "reviewStatus": "reviewed",
+      "evidenceNote": "考古題只證明此範圍曾出現；題面均為申論或開放題，答案非官方，課程練習採 rubric self-review，絕不進自動計分或完整模擬考。"
+    },
+    {
+      "id": "lesson-im-mis-strategy-agility-boundary-02",
+      "subtopicId": "im-mis-strategy-agility-environment",
+      "coveredSubtopicIds": [
+        "im-mis-strategy-agility-environment",
+        "im-mis-strategy-organization-economics"
+      ],
+      "title": "企業敏捷與組織邊界：環境動態下的 IT 角色",
+      "summary": "深入探討環境不確定性如何影響 IT 策略選擇，以及 IT 如何改變企業的組織邊界（自建 vs 外包 vs 平台）。交易成本理論、代理理論與動態能力的整合應用。",
+      "estimatedMinutes": 36,
+      "minimumPastPaperRefs": 3,
+      "learningObjectives": [
+        "運用 sense-seize-transform 框架分析企業 IT 敏捷能力",
+        "以交易成本理論解釋 IT 如何改變 make-or-buy 決策",
+        "區分交易成本與代理成本在 IT outsourcing 分析中的差異",
+        "在高環境動態下設計模組化 IT 架構以保持彈性"
+      ],
+      "sections": [
+        {
+          "title": "環境動態決定 IT 能力的重點",
+          "body": "Teece 的 dynamic capabilities 框架將能力分為 sensing（偵測機會與威脅）、seizing（設計商業模式回應）和 transforming（重組資源適應變化）。IT 在每個階段扮演不同角色：資料分析支持 sensing、數位平台加速 seizing、模組化架構降低 transforming 成本。",
+          "bullets": [
+            "低動態環境下 operational efficiency 可能比 agility 更重要",
+            "高動態環境下過度最佳化反而增加轉換成本",
+            "Digital options 指 IT 基礎建設提供的未來行動彈性",
+            "Agility 有成本：冗餘、實驗與快速迭代需要持續投資"
+          ]
+        },
+        {
+          "title": "交易成本與組織邊界",
+          "body": "Coase 與 Williamson 的交易成本理論認為企業邊界取決於市場交易成本與內部組織成本的比較。IT 可以同時降低兩者：降低搜尋與監督成本使外包可行，也降低內部協調成本使擴張可行。結果取決於資產專屬性與環境不確定性。",
+          "bullets": [
+            "資產專屬性高 → 傾向自建（避免被鎖定）",
+            "資產專屬性低且市場競爭充分 → 傾向外包",
+            "IT 降低搜尋成本、協調成本與監督成本",
+            "平台經濟創造第三種選項：既非完全自建也非完全外包"
+          ]
+        },
+        {
+          "title": "代理理論補充監督與激勵面向",
+          "body": "代理成本（monitoring cost + bonding cost + residual loss）在 IT outsourcing 中特別重要。IT 可以降低監督成本（透過 dashboard、SLA tracking），但資訊不對稱與利益衝突不會因技術而消失。",
+          "bullets": [
+            "交易成本關注事前的合約設計，代理理論關注事後的行為偏差",
+            "IT 系統不能取代信任與激勵機制設計",
+            "多供應商策略降低依賴但增加整合成本",
+            "雲端與 SaaS 改變但不消除 lock-in 風險"
+          ]
+        },
+        {
+          "title": "模組化架構支持組織敏捷",
+          "body": "模組化（loosely coupled、well-defined interfaces）允許獨立替換元件而不影響整體。微服務、API-first 與 event-driven 架構是技術實踐，但模組化的真正價值在於降低未來決策的轉換成本。",
+          "bullets": [
+            "模組化有設計成本：interface 定義、版本管理、測試複雜度",
+            "過度模組化會增加分散式系統的 operational complexity",
+            "業務模組化與技術模組化應同步考量",
+            "Conway's Law：系統架構反映組織溝通結構"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "如何回答「企業敏捷與組織邊界」的比較題？",
+          "steps": [
+            "定義比較軸與分析單位。",
+            "各寫一條作用機制。",
+            "加入至少兩項條件或風險。",
+            "用案例與指標驗證。"
+          ],
+          "answer": "可接受的答案不只一種；關鍵是條件透明、概念正確、推論可追蹤，並能說明限制。"
+        },
+        {
+          "prompt": "題目要求提出建議時，如何避免只列 buzzwords？",
+          "steps": [
+            "先指出要改善的問題。",
+            "說明建議如何改變流程、資訊或激勵。",
+            "指定責任人與衡量方式。",
+            "補上失敗訊號與替代方案。"
+          ],
+          "answer": "建議應包含 action、mechanism、metric 與 risk，而不是只寫「導入 AI／雲端／平台」。"
+        }
+      ],
+      "commonPitfalls": [
+        "把工具名稱當成因果解釋",
+        "沒有說明分析層級與前提",
+        "只寫單一立場，不處理權衡",
+        "把非官方參考解析當唯一標準答案",
+        "引用時事卻沒有日期與來源邊界"
+      ],
+      "sourceRefs": [
+        "src-im-mis-laudon-17e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-107-2",
+        "q-pp-im-mis-109-1",
+        "q-pp-im-mis-113-2"
+      ],
+      "reviewStatus": "reviewed",
+      "evidenceNote": "考古題只證明此範圍曾出現；題面均為申論或開放題，答案非官方，課程練習採 rubric self-review，絕不進自動計分或完整模擬考。"
+    },
+    {
+      "id": "lesson-im-mis-strategy-case-synthesis-03",
+      "subtopicId": "im-mis-strategy-alignment-differentiation",
+      "coveredSubtopicIds": [
+        "im-mis-strategy-alignment-differentiation",
+        "im-mis-strategy-investment-value",
+        "im-mis-strategy-agility-environment",
+        "im-mis-strategy-organization-economics"
+      ],
+      "title": "IT 策略申論實戰：跨概念整合與案例分析",
+      "summary": "將 IT 策略四個子題的理論整合應用於申論題實戰。練習從題目辨識需要的理論組合，建立跨概念的論證結構，並以案例驗證。",
+      "estimatedMinutes": 34,
+      "minimumPastPaperRefs": 4,
+      "learningObjectives": [
+        "從考題辨識需要整合哪些 IT 策略子題",
+        "建立「情境→理論→機制→條件→驗證」的完整申論結構",
+        "在時間壓力下取捨論述深度與廣度",
+        "辨識常見的邏輯謬誤與論證陷阱"
+      ],
+      "sections": [
+        {
+          "title": "辨識題型與理論選擇",
+          "body": "MIS 申論題常以案例情境出發，要求分析、比較或建議。第一步是辨識題目涉及的理論範圍：純策略對齊、投資評估、組織邊界分析、或綜合性案例。不同題型需要不同的論述結構。",
+          "bullets": [
+            "「解釋 X 如何影響 Y」→ 需要因果機制，不只是相關",
+            "「比較 A 與 B」→ 需要明確的比較軸與雙向分析",
+            "「提出建議」→ 需要 action、mechanism、metric、risk",
+            "「以 Z 理論分析」→ 必須用指定理論的核心概念"
+          ]
+        },
+        {
+          "title": "跨概念整合的論證模式",
+          "body": "高分答案通常不是只用單一理論，而是整合多個角度。例如：用 alignment 框定問題、complementary assets 解釋為什麼失敗、transaction cost 分析 make-or-buy、dynamic capability 提出調整方向。",
+          "bullets": [
+            "每個理論處理一層問題：what（是什麼）、why（為什麼）、how（如何做）、when（什麼條件下）",
+            "理論之間要有邏輯連接，不是堆疊",
+            "承認理論的適用邊界（scope condition）",
+            "用案例串連各理論的實例證據"
+          ]
+        },
+        {
+          "title": "時間管理與論述取捨",
+          "body": "90 分鐘寫 3-4 題申論，每題約 20-25 分鐘。前 3 分鐘審題與列大綱，中間 15 分鐘寫論述，最後 2 分鐘檢查邏輯一致性。深度優於廣度：寫透兩個理論勝過蜻蜓點水五個。",
+          "bullets": [
+            "大綱先列核心論點再展開細節",
+            "每段的第一句是主張，後面是支持與限制",
+            "跳過不確定的理論細節，用框架結構補償",
+            "結尾回扣題目問題，不要開新話題"
+          ]
+        },
+        {
+          "title": "常見邏輯謬誤與檢查清單",
+          "body": "申論中常見的問題不是知識不足，而是論證結構有缺陷。事後合理化（hindsight bias）、倖存者偏差（只看成功案例）、false dichotomy（只提供兩個選項）、和 circular reasoning（結論當前提）是最常見的扣分點。",
+          "bullets": [
+            "避免用結論當前提（X 成功因為 X 做得好）",
+            "案例要包含失敗案例或條件限制",
+            "建議的可行性需要考慮資源與時間限制",
+            "「因此必然」→ 改為「因此在…條件下，傾向…」"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "如何回答「IT 策略申論實戰」的比較題？",
+          "steps": [
+            "定義比較軸與分析單位。",
+            "各寫一條作用機制。",
+            "加入至少兩項條件或風險。",
+            "用案例與指標驗證。"
+          ],
+          "answer": "可接受的答案不只一種；關鍵是條件透明、概念正確、推論可追蹤，並能說明限制。"
+        },
+        {
+          "prompt": "題目要求提出建議時，如何避免只列 buzzwords？",
+          "steps": [
+            "先指出要改善的問題。",
+            "說明建議如何改變流程、資訊或激勵。",
+            "指定責任人與衡量方式。",
+            "補上失敗訊號與替代方案。"
+          ],
+          "answer": "建議應包含 action、mechanism、metric 與 risk，而不是只寫「導入 AI／雲端／平台」。"
+        }
+      ],
+      "commonPitfalls": [
+        "把工具名稱當成因果解釋",
+        "沒有說明分析層級與前提",
+        "只寫單一立場，不處理權衡",
+        "把非官方參考解析當唯一標準答案",
+        "引用時事卻沒有日期與來源邊界"
+      ],
+      "sourceRefs": [
+        "src-im-mis-laudon-17e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-109-2",
+        "q-pp-im-mis-111-1",
+        "q-pp-im-mis-113-2",
+        "q-pp-im-mis-114-2"
+      ],
+      "reviewStatus": "reviewed",
+      "evidenceNote": "考古題只證明此範圍曾出現；題面均為申論或開放題，答案非官方，課程練習採 rubric self-review，絕不進自動計分或完整模擬考。"
+    },
+    {
+      "id": "lesson-im-mis-data-ai-lifecycle-analytics-02",
+      "subtopicId": "im-mis-data-ai-data-lifecycle",
+      "coveredSubtopicIds": [
+        "im-mis-data-ai-data-lifecycle",
+        "im-mis-data-ai-analytics-forecasting"
+      ],
+      "title": "資料生命週期與分析決策：從問題定義到預測應用",
+      "summary": "深入資料品質治理的實務面向、分析方法的選擇邏輯、以及預測模型如何支持（而非取代）決策。強調「先有問題，再找資料」的正確順序。",
+      "estimatedMinutes": 36,
+      "minimumPastPaperRefs": 4,
+      "learningObjectives": [
+        "設計資料治理流程中的品質檢查點與責任分配",
+        "區分 descriptive、diagnostic、predictive 與 prescriptive analytics 的適用場景",
+        "解釋為什麼預測準確不等於決策正確",
+        "運用社群網路分析的基本指標支持組織決策"
+      ],
+      "sections": [
+        {
+          "title": "資料治理從 ownership 開始，不從工具開始",
+          "body": "資料治理需要明確的 data owner（對品質負責）、data steward（執行治理規則）與 data consumer（按規範使用）。常見的失敗是只買工具而不建立角色與流程，導致 metadata 不完整、lineage 不可追蹤、品質無人負責。",
+          "bullets": [
+            "Data catalog 記錄定義、來源、更新頻率與 PII 標記",
+            "品質維度：accuracy、completeness、consistency、timeliness、validity",
+            "Master data management 需要跨部門共識",
+            "Data quality 問題在 ETL 管線中會被放大"
+          ]
+        },
+        {
+          "title": "分析層次決定方法與資源投入",
+          "body": "Descriptive 回答「發生了什麼」（報表、儀表板）、diagnostic 回答「為什麼」（drill-down、關聯分析）、predictive 回答「可能會怎樣」（迴歸、機器學習）、prescriptive 回答「應該怎麼做」（最佳化、模擬）。不是所有問題都需要 AI，很多問題用 SQL 和視覺化就夠了。",
+          "bullets": [
+            "先確認 descriptive analytics 是否已回答問題",
+            "Predictive 需要歷史資料與穩定模式",
+            "Prescriptive 需要可量化的目標函數與限制條件",
+            "分析成熟度不是線性前進，而是按需選擇"
+          ]
+        },
+        {
+          "title": "預測準確不等於決策正確",
+          "body": "模型預測的是條件機率，決策還需要考慮成本結構、倫理限制、利害關係人偏好與不可逆性。一個 95% accuracy 的模型如果 5% 的錯誤案例成本極高（例如醫療），可能不如保守策略。",
+          "bullets": [
+            "decision boundary 要考慮 false positive 與 false negative 的不對稱成本",
+            "預測區間（prediction interval）比點預測更適合決策",
+            "模型不可解釋時，人類是否能覆核與否決？",
+            "社群分析的 centrality 指標選擇也需對應決策目標"
+          ]
+        },
+        {
+          "title": "社群分析用結構指標回答組織問題",
+          "body": "社群網路分析（SNA）把關係結構量化：degree centrality（連結數量）、betweenness centrality（橋接位置）、closeness（到其他人的距離）。組織問題不同，需要的指標也不同：尋找知識瓶頸用 betweenness，識別影響力核心用 eigenvector centrality。",
+          "bullets": [
+            "先定義 node 與 edge 代表什麼（人/部門、溝通/交易）",
+            "靜態快照與動態演變的結論不同",
+            "指標值需要與隨機網路比較才有意義",
+            "SNA 需要考慮隱私與同意"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "如何回答「資料生命週期與分析決策」的比較題？",
+          "steps": [
+            "定義比較軸與分析單位。",
+            "各寫一條作用機制。",
+            "加入至少兩項條件或風險。",
+            "用案例與指標驗證。"
+          ],
+          "answer": "可接受的答案不只一種；關鍵是條件透明、概念正確、推論可追蹤，並能說明限制。"
+        },
+        {
+          "prompt": "題目要求提出建議時，如何避免只列 buzzwords？",
+          "steps": [
+            "先指出要改善的問題。",
+            "說明建議如何改變流程、資訊或激勵。",
+            "指定責任人與衡量方式。",
+            "補上失敗訊號與替代方案。"
+          ],
+          "answer": "建議應包含 action、mechanism、metric 與 risk，而不是只寫「導入 AI／雲端／平台」。"
+        }
+      ],
+      "commonPitfalls": [
+        "把工具名稱當成因果解釋",
+        "沒有說明分析層級與前提",
+        "只寫單一立場，不處理權衡",
+        "把非官方參考解析當唯一標準答案",
+        "引用時事卻沒有日期與來源邊界"
+      ],
+      "sourceRefs": [
+        "src-im-mis-laudon-17e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-108-2",
+        "q-pp-im-mis-109-4",
+        "q-pp-im-mis-110-4",
+        "q-pp-im-mis-113-1"
+      ],
+      "reviewStatus": "reviewed",
+      "evidenceNote": "考古題只證明此範圍曾出現；題面均為申論或開放題，答案非官方，課程練習採 rubric self-review，絕不進自動計分或完整模擬考。"
+    },
+    {
+      "id": "lesson-im-mis-data-ai-model-fairness-02",
+      "subtopicId": "im-mis-data-ai-model-evaluation-fairness",
+      "coveredSubtopicIds": [
+        "im-mis-data-ai-model-evaluation-fairness"
+      ],
+      "title": "模型評估、公平性與漂移：為什麼準確率不夠用",
+      "summary": "深入模型評估的多面向考量：從離線指標到線上表現、從整體準確率到子群體公平、從部署時的表現到隨時間漂移的衰退。",
+      "estimatedMinutes": 34,
+      "minimumPastPaperRefs": 3,
+      "learningObjectives": [
+        "設計完整的模型評估流程（train/val/test split、cross-validation、leakage prevention）",
+        "解釋 fairness 的多種定義及其不可兼得性（impossibility theorem）",
+        "區分 data drift 與 concept drift 並設計監控機制",
+        "評估 A/B test 與 shadow deployment 在模型更新中的角色"
+      ],
+      "sections": [
+        {
+          "title": "評估流程的正確順序",
+          "body": "Train/validation/test 三分法的核心是防止資訊洩漏：validation 選擇超參數與模型架構，test 只在最終評估使用一次。Time-based split 在時間序列資料中尤其重要。Cross-validation 適合資料量小的情境，但在時間序列中不能隨機切分。",
+          "bullets": [
+            "Data leakage 最常發生在 feature engineering 階段",
+            "Test set 反覆使用等同 validation set，失去泛化估計能力",
+            "代表性：test set 應反映部署環境的分布",
+            "Online vs offline metrics 可能差異顯著（offline 過度樂觀）"
+          ]
+        },
+        {
+          "title": "單一指標無法捕捉模型品質",
+          "body": "Accuracy 在不平衡資料中幾乎無用（99% 正常 → 全猜正常也有 99% accuracy）。Precision、recall、F1、AUC-ROC 各回答不同問題。業務指標（轉化率、退貨率、客訴量）才是最終判斷。",
+          "bullets": [
+            "Precision 關注「模型說 positive 的有多少是對的」",
+            "Recall 關注「所有 positive 中模型找到了多少」",
+            "AUC-ROC 衡量在所有 threshold 下的綜合排序能力",
+            "Calibration 衡量預測機率與實際機率的一致性"
+          ]
+        },
+        {
+          "title": "公平性沒有唯一定義",
+          "body": "Demographic parity（各群體獲得正面結果的比例相同）、equalized odds（各群體的 TPR 和 FPR 相同）、individual fairness（相似個體得到相似結果）在數學上不可能同時滿足（Chouldechova/Kleinberg impossibility）。選擇哪個定義是價值判斷，不是技術問題。",
+          "bullets": [
+            "歷史資料反映歷史偏見，模型會學到並放大",
+            "Protected attributes 的定義因法律管轄區域而異",
+            "去除 sensitive feature 不代表消除偏見（proxy variables）",
+            "Fairness 與 accuracy 之間常存在 trade-off"
+          ]
+        },
+        {
+          "title": "部署後模型會老化",
+          "body": "Data drift（輸入分布改變）不必然導致 concept drift（輸入-輸出關係改變），但兩者都會讓模型預測品質下降。監控需要同時追蹤輸入統計量與輸出品質指標。Retraining 策略包括定期重訓、觸發式重訓與持續學習。",
+          "bullets": [
+            "監控指標：PSI（Population Stability Index）衡量分布變化",
+            "Ground truth 延遲是監控的主要挑戰",
+            "Model versioning 與 rollback 機制必須在部署前就設計",
+            "A/B test 或 shadow mode 驗證新模型後再切換"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "如何回答「模型評估、公平性與漂移」的比較題？",
+          "steps": [
+            "定義比較軸與分析單位。",
+            "各寫一條作用機制。",
+            "加入至少兩項條件或風險。",
+            "用案例與指標驗證。"
+          ],
+          "answer": "可接受的答案不只一種；關鍵是條件透明、概念正確、推論可追蹤，並能說明限制。"
+        },
+        {
+          "prompt": "題目要求提出建議時，如何避免只列 buzzwords？",
+          "steps": [
+            "先指出要改善的問題。",
+            "說明建議如何改變流程、資訊或激勵。",
+            "指定責任人與衡量方式。",
+            "補上失敗訊號與替代方案。"
+          ],
+          "answer": "建議應包含 action、mechanism、metric 與 risk，而不是只寫「導入 AI／雲端／平台」。"
+        }
+      ],
+      "commonPitfalls": [
+        "把工具名稱當成因果解釋",
+        "沒有說明分析層級與前提",
+        "只寫單一立場，不處理權衡",
+        "把非官方參考解析當唯一標準答案",
+        "引用時事卻沒有日期與來源邊界"
+      ],
+      "sourceRefs": [
+        "src-im-mis-laudon-17e",
+        "src-im-mis-google-ml-rules"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-108-3",
+        "q-pp-im-mis-108-4",
+        "q-pp-im-mis-112-3"
+      ],
+      "reviewStatus": "reviewed",
+      "evidenceNote": "考古題只證明此範圍曾出現；題面均為申論或開放題，答案非官方，課程練習採 rubric self-review，絕不進自動計分或完整模擬考。"
+    },
+    {
+      "id": "lesson-im-mis-data-ai-ops-governance-02",
+      "subtopicId": "im-mis-data-ai-ai-operations-governance",
+      "coveredSubtopicIds": [
+        "im-mis-data-ai-ai-operations-governance"
+      ],
+      "title": "AI 維運與治理：從 POC 到可靠生產系統",
+      "summary": "深入 AI 專案從概念驗證到生產部署的全生命週期挑戰，包括 MLOps 實踐、組織導入策略、NIST AI RMF 的治理框架，以及 AI 供應商管理。",
+      "estimatedMinutes": 36,
+      "minimumPastPaperRefs": 3,
+      "learningObjectives": [
+        "解釋為什麼大多數 AI POC 無法進入生產環境",
+        "設計 MLOps 管線的關鍵元件（CI/CD for ML、feature store、model registry）",
+        "運用 NIST AI RMF 的 Map-Measure-Manage-Govern 框架分析 AI 風險",
+        "評估 AI 供應商選擇的 lock-in、責任歸屬與退出策略"
+      ],
+      "sections": [
+        {
+          "title": "POC 到生產的鴻溝",
+          "body": "AI POC 成功（在乾淨資料上 accuracy 高）不代表生產可行。常見阻礙：資料管線不穩定、延遲不達標、邊緣案例處理不完整、domain expert 不信任模型、缺乏 monitoring 與回退機制。Google 的 ML technical debt 論文估計模型本身只佔系統 5%。",
+          "bullets": [
+            "POC 通常用乾淨資料、離線評估、單一版本",
+            "生產需要：資料管線、特徵工程、serving infrastructure、監控",
+            "模型品質 ≠ 系統品質 ≠ 業務價值",
+            "先用 rule-based baseline 確認問題值得用 ML 解決"
+          ]
+        },
+        {
+          "title": "MLOps 是 DevOps 的延伸，不是替代",
+          "body": "MLOps 在 DevOps 的 CI/CD 上增加了 data pipeline、feature store、experiment tracking、model registry 與 monitoring。核心原則是 reproducibility（相同資料+程式碼→相同模型）和 observability（隨時知道模型在做什麼）。",
+          "bullets": [
+            "Feature store 解決 training-serving skew",
+            "Model registry 記錄版本、metadata 與 approval status",
+            "自動化 retraining 管線需要明確的觸發條件與品質門檻",
+            "實驗追蹤（MLflow、Weights & Biases）記錄超參數與結果"
+          ]
+        },
+        {
+          "title": "NIST AI RMF 提供治理框架",
+          "body": "NIST AI Risk Management Framework 分為四功能：Map（辨識 AI 風險脈絡）、Measure（量化風險）、Manage（降低與監控風險）、Govern（建立組織治理結構）。它不是法規，而是自願性框架，但可作為答題時的結構化分析工具。",
+          "bullets": [
+            "Map：辨識 stakeholders、use case、failure modes 與 impact",
+            "Measure：選擇 trustworthiness characteristics 的量化指標",
+            "Manage：設計 mitigation、monitoring 與 escalation 流程",
+            "Govern：角色、責任、政策與 accountability 機制"
+          ]
+        },
+        {
+          "title": "AI 供應商管理的特殊挑戰",
+          "body": "AI-as-a-Service 的 lock-in 不只在技術層面（API、模型格式），更在資料層面（訓練資料被供應商使用、模型效果依賴供應商的更新）。責任歸屬在 AI 出錯時特別模糊：供應商提供模型、企業提供資料、使用者承受後果。",
+          "bullets": [
+            "評估供應商的 transparency：model card、data sheet、audit report",
+            "合約需明確：資料使用權、模型所有權、SLA、liability",
+            "exit strategy：資料可匯出性、模型可替代性",
+            "coopetition（共競）：供應商既是 partner 也可能是 competitor"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "如何回答「AI 維運與治理」的比較題？",
+          "steps": [
+            "定義比較軸與分析單位。",
+            "各寫一條作用機制。",
+            "加入至少兩項條件或風險。",
+            "用案例與指標驗證。"
+          ],
+          "answer": "可接受的答案不只一種；關鍵是條件透明、概念正確、推論可追蹤，並能說明限制。"
+        },
+        {
+          "prompt": "題目要求提出建議時，如何避免只列 buzzwords？",
+          "steps": [
+            "先指出要改善的問題。",
+            "說明建議如何改變流程、資訊或激勵。",
+            "指定責任人與衡量方式。",
+            "補上失敗訊號與替代方案。"
+          ],
+          "answer": "建議應包含 action、mechanism、metric 與 risk，而不是只寫「導入 AI／雲端／平台」。"
+        }
+      ],
+      "commonPitfalls": [
+        "把工具名稱當成因果解釋",
+        "沒有說明分析層級與前提",
+        "只寫單一立場，不處理權衡",
+        "把非官方參考解析當唯一標準答案",
+        "引用時事卻沒有日期與來源邊界"
+      ],
+      "sourceRefs": [
+        "src-im-mis-laudon-17e",
+        "src-im-mis-nist-ai-rmf",
+        "src-im-mis-google-ml-rules"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-113-3",
+        "q-pp-im-mis-115-1",
+        "q-pp-im-mis-108-2"
+      ],
+      "reviewStatus": "reviewed",
+      "evidenceNote": "考古題只證明此範圍曾出現；題面均為申論或開放題，答案非官方，課程練習採 rubric self-review，絕不進自動計分或完整模擬考。"
+    },
+    {
+      "id": "lesson-im-mis-governance-privacy-esg-02",
+      "subtopicId": "im-mis-governance-privacy-security",
+      "coveredSubtopicIds": [
+        "im-mis-governance-privacy-security",
+        "im-mis-governance-esg-accountability"
+      ],
+      "title": "隱私風險與 ESG 問責：從法規遵循到組織信任",
+      "summary": "深入數位時代的隱私保護框架（GDPR、個資法）與 ESG 揭露的可驗證性，強調治理不是勾選清單而是持續的風險管理。",
+      "estimatedMinutes": 34,
+      "minimumPastPaperRefs": 2,
+      "learningObjectives": [
+        "比較 GDPR 的核心原則與台灣個資法的差異",
+        "設計 privacy by design 的技術與組織措施",
+        "區分 ESG 揭露中的可衡量指標與漂綠（greenwashing）",
+        "運用問責（accountability）概念連結隱私與 ESG"
+      ],
+      "sections": [
+        {
+          "title": "隱私保護的原則與實踐落差",
+          "body": "GDPR 的六大原則（lawfulness、purpose limitation、data minimization、accuracy、storage limitation、integrity/confidentiality）提供分析框架，但實踐中常遇到：合法基礎的選擇困難、跨境傳輸限制、同意機制的形式化（dark patterns）、和 data subject rights 的技術實現成本。",
+          "bullets": [
+            "Data minimization 不只是少收資料，還包括及時刪除",
+            "Purpose limitation 限制資料的二次使用",
+            "DPIA（Data Protection Impact Assessment）是風險而非合規工具",
+            "台灣個資法對 sensitive data 的定義與 GDPR 不同"
+          ]
+        },
+        {
+          "title": "Privacy by design 不是事後補丁",
+          "body": "Cavoukian 的 PbD 七原則要求在系統設計階段就嵌入隱私保護：預設最嚴格設定、最小化蒐集、端對端安全、透明度。技術手段包括 anonymization、pseudonymization、differential privacy、federated learning，但每種都有適用限制。",
+          "bullets": [
+            "Anonymization 是不可逆的，pseudonymization 是可逆的（仍是個資）",
+            "k-anonymity 在高維資料中容易被攻破",
+            "Differential privacy 增加雜訊，降低分析精度",
+            "技術手段不能替代治理措施（政策、訓練、稽核）"
+          ]
+        },
+        {
+          "title": "ESG 揭露要可衡量才能問責",
+          "body": "ESG 揭露框架（GRI、SASB、TCFD、ISSB）要求企業報告環境影響、社會責任與治理品質。IT 的 ESG 面向包括：碳足跡（data center、cloud migration）、數位包容（digital divide）、演算法倫理（bias、transparency）。漂綠的核心問題是宣稱與證據的落差。",
+          "bullets": [
+            "Scope 1/2/3 碳排放：Scope 3 包含供應鏈與雲端供應商",
+            "ESG 評等機構的方法論差異大，同公司可能獲得不同評等",
+            "Greenwashing 辨識：看指標是否可驗證、基準是否合理、邊界是否一致",
+            "數位永續：軟體效能最佳化也是減碳手段"
+          ]
+        },
+        {
+          "title": "問責是隱私與 ESG 的共同基礎",
+          "body": "Accountability 要求不只是遵守規則，還要能證明自己遵守了規則。這需要：記錄決策過程（audit trail）、定期評估（assessment）、獨立驗證（audit）、透明揭露（disclosure）。在 AI 系統中，accountability 特別困難，因為決策過程可能不可解釋。",
+          "bullets": [
+            "accountability ≠ responsibility：前者是對制度負責，後者是對結果負責",
+            "Audit trail 需要在系統設計時就規劃",
+            "第三方稽核增加可信度但也增加成本",
+            "申論中用 accountability 框架可以串連隱私與 ESG"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "如何回答「隱私風險與 ESG 問責」的比較題？",
+          "steps": [
+            "定義比較軸與分析單位。",
+            "各寫一條作用機制。",
+            "加入至少兩項條件或風險。",
+            "用案例與指標驗證。"
+          ],
+          "answer": "可接受的答案不只一種；關鍵是條件透明、概念正確、推論可追蹤，並能說明限制。"
+        },
+        {
+          "prompt": "題目要求提出建議時，如何避免只列 buzzwords？",
+          "steps": [
+            "先指出要改善的問題。",
+            "說明建議如何改變流程、資訊或激勵。",
+            "指定責任人與衡量方式。",
+            "補上失敗訊號與替代方案。"
+          ],
+          "answer": "建議應包含 action、mechanism、metric 與 risk，而不是只寫「導入 AI／雲端／平台」。"
+        }
+      ],
+      "commonPitfalls": [
+        "把工具名稱當成因果解釋",
+        "沒有說明分析層級與前提",
+        "只寫單一立場，不處理權衡",
+        "把非官方參考解析當唯一標準答案",
+        "引用時事卻沒有日期與來源邊界"
+      ],
+      "sourceRefs": [
+        "src-im-mis-laudon-17e",
+        "src-im-mis-nist-privacy-framework"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-111-2",
+        "q-pp-im-mis-113-4"
+      ],
+      "reviewStatus": "reviewed",
+      "evidenceNote": "考古題只證明此範圍曾出現；題面均為申論或開放題，答案非官方，課程練習採 rubric self-review，絕不進自動計分或完整模擬考。"
+    },
+    {
+      "id": "lesson-im-mis-governance-vendor-ai-trust-02",
+      "subtopicId": "im-mis-governance-vendor-ai-governance",
+      "coveredSubtopicIds": [
+        "im-mis-governance-vendor-ai-governance"
+      ],
+      "title": "AI 供應商治理與信任架構：共競、依賴與退出",
+      "summary": "深入 AI 時代的供應商治理挑戰：當供應商既是合作夥伴又是潛在競爭者，如何建立信任、管理依賴、規劃退出？",
+      "estimatedMinutes": 32,
+      "minimumPastPaperRefs": 2,
+      "learningObjectives": [
+        "分析 AI 供應商的 coopetition 動態與信任風險",
+        "設計多供應商策略的評估框架",
+        "建立 AI 供應商合約的關鍵條款清單",
+        "規劃 vendor exit 策略以降低 lock-in 風險"
+      ],
+      "sections": [
+        {
+          "title": "共競（Coopetition）改變供應商關係",
+          "body": "大型雲端與 AI 供應商（AWS、Google、Microsoft）同時提供基礎設施服務與自有應用產品，使它們既是企業的供應商也是潛在競爭者。這種 coopetition 動態要求企業重新思考供應商關係：不能只看技術能力和價格，還要評估策略風險。",
+          "bullets": [
+            "供應商可能利用平台資料開發競爭產品",
+            "API 定價策略可能隨市場地位變化",
+            "生態系統依賴不同於單一工具依賴",
+            "開源替代方案降低但不消除 lock-in"
+          ]
+        },
+        {
+          "title": "多供應商策略的權衡",
+          "body": "分散供應商降低單點依賴風險，但增加整合成本、標準化難度與管理複雜度。best-of-breed（每類選最佳）vs integrated suite（單一供應商全包）的決策需要考慮技術相依性、團隊能力與轉換成本。",
+          "bullets": [
+            "Multi-cloud 不只是技術部署，還涉及 skill、cost 與 governance",
+            "資料可攜性（data portability）是最關鍵的 lock-in 防線",
+            "API 抽象層可降低但不消除切換成本",
+            "過度分散會稀釋談判籌碼與技術深度"
+          ]
+        },
+        {
+          "title": "AI 供應商合約的特殊條款",
+          "body": "AI 服務合約需要額外關注傳統 IT 合約不涵蓋的面向：訓練資料的使用權（供應商能否用客戶資料改進模型？）、模型輸出的智慧財產權、liability（AI 出錯時誰負責？）、以及模型更新對下游應用的影響。",
+          "bullets": [
+            "data residency 與 data sovereignty 要求因地區而異",
+            "model transparency：供應商是否提供 model card、training data sheet？",
+            "SLA 不只是 uptime，還包括 latency、throughput 與 accuracy degradation",
+            "indemnification 條款在 AI 生成內容（copyright）領域特別重要"
+          ]
+        },
+        {
+          "title": "Exit strategy 要在 entry 時就設計",
+          "body": "供應商退出策略不是在出問題時才想，而是在選擇供應商時就要規劃。關鍵問題：資料能否完整匯出？模型能否在其他平台運行？自有團隊是否有能力接管？切換期間的服務中斷如何處理？",
+          "bullets": [
+            "定義 portable artifacts：資料、模型權重、特徵工程邏輯、監控規則",
+            "transition period 的 SLA 與 support 義務",
+            "容器化與 infrastructure as code 降低遷移成本",
+            "定期執行 exit drill（模擬切換演練）"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "如何回答「AI 供應商治理與信任架構」的比較題？",
+          "steps": [
+            "定義比較軸與分析單位。",
+            "各寫一條作用機制。",
+            "加入至少兩項條件或風險。",
+            "用案例與指標驗證。"
+          ],
+          "answer": "可接受的答案不只一種；關鍵是條件透明、概念正確、推論可追蹤，並能說明限制。"
+        },
+        {
+          "prompt": "題目要求提出建議時，如何避免只列 buzzwords？",
+          "steps": [
+            "先指出要改善的問題。",
+            "說明建議如何改變流程、資訊或激勵。",
+            "指定責任人與衡量方式。",
+            "補上失敗訊號與替代方案。"
+          ],
+          "answer": "建議應包含 action、mechanism、metric 與 risk，而不是只寫「導入 AI／雲端／平台」。"
+        }
+      ],
+      "commonPitfalls": [
+        "把工具名稱當成因果解釋",
+        "沒有說明分析層級與前提",
+        "只寫單一立場，不處理權衡",
+        "把非官方參考解析當唯一標準答案",
+        "引用時事卻沒有日期與來源邊界"
+      ],
+      "sourceRefs": [
+        "src-im-mis-laudon-17e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-115-2",
+        "q-pp-im-mis-113-4"
+      ],
+      "reviewStatus": "reviewed",
+      "evidenceNote": "考古題只證明此範圍曾出現；題面均為申論或開放題，答案非官方，課程練習採 rubric self-review，絕不進自動計分或完整模擬考。"
+    },
+    {
+      "id": "lesson-im-mis-development-acquisition-agile-02",
+      "subtopicId": "im-mis-development-acquisition-estimation",
+      "coveredSubtopicIds": [
+        "im-mis-development-acquisition-estimation",
+        "im-mis-development-agile-delivery"
+      ],
+      "title": "系統取得策略與敏捷交付深入：從 sourcing 到 sprint",
+      "summary": "深入 build/buy/outsource/SaaS 的決策框架與 Scrum 的實務執行細節，重點在申論中如何分析取得決策的權衡。",
+      "estimatedMinutes": 36,
+      "minimumPastPaperRefs": 3,
+      "learningObjectives": [
+        "運用多準則框架比較 build、buy、outsource 與 SaaS",
+        "以功能點（FPA）與 COCOMO 估算系統開發成本",
+        "解釋 Scrum events 之間的 inspection-adaptation 循環",
+        "辨識敏捷導入中的常見反模式（anti-patterns）"
+      ],
+      "sections": [
+        {
+          "title": "系統取得不是技術決策，是策略決策",
+          "body": "Build/buy/outsource/SaaS 決策涉及：策略差異化（核心能力是否應外包？）、控制權（data sovereignty、customization）、成本結構（capex vs opex、TCO）、速度（time-to-market）、風險（vendor lock-in、knowledge loss）。不同生命週期階段的最佳選擇可能不同。",
+          "bullets": [
+            "核心差異化系統傾向 build，commodity 傾向 buy/SaaS",
+            "SaaS 將 capex 轉為 opex，但長期 TCO 可能更高",
+            "Outsourcing 轉移執行但不轉移責任",
+            "hybrid 策略（核心自建 + 周邊 SaaS）常見於中大型企業"
+          ]
+        },
+        {
+          "title": "成本估算是範圍管理工具",
+          "body": "FPA（Function Point Analysis）從使用者可見功能（輸入、輸出、查詢、內部檔案、外部介面）估算系統規模。COCOMO II 以規模、成本驅動因子與開發模式估算工時。兩者都有誤差，重點是建立估算的 uncertainty range 而非精確數字。",
+          "bullets": [
+            "功能點是需求導向，不依賴技術選擇",
+            "COCOMO II 的 scale factors 反映專案複雜度",
+            "估算在專案早期誤差最大（cone of uncertainty）",
+            "敏捷中常用 story points 替代功能點，但用途不同"
+          ]
+        },
+        {
+          "title": "Scrum 的核心是 empiricism，不是儀式",
+          "body": "Scrum 基於 transparency（所有人看到相同資訊）、inspection（定期檢視進度與產出）、adaptation（根據發現調整）。五個 events（Sprint、Planning、Daily、Review、Retrospective）各服務不同的 inspection-adaptation 循環。",
+          "bullets": [
+            "Sprint Planning 決定「做什麼」與「怎麼做」",
+            "Sprint Review 不是 demo，是蒐集 stakeholder feedback",
+            "Retrospective 改善流程，不是追究責任",
+            "Done 的定義（Definition of Done）是品質的最低門檻"
+          ]
+        },
+        {
+          "title": "敏捷反模式比方法論更重要",
+          "body": "常見反模式：Scrum-but（名義上 Scrum 但跳過關鍵 events）、micro-management（把 Daily Scrum 變成主管報告）、Sprint 0 無限延長（永遠在「準備」）、velocity 作為 KPI（把估算工具變成績效指標）。",
+          "bullets": [
+            "Velocity 是 planning 工具，不是 productivity metric",
+            "PO 兼任 SM 或 developer 違反角色分離原則",
+            "技術債累積導致 velocity 逐 sprint 下降",
+            "大型專案需要 scaling framework（SAFe、LeSS）但增加複雜度"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "如何回答「系統取得策略與敏捷交付」的比較題？",
+          "steps": [
+            "定義比較軸與分析單位。",
+            "各寫一條作用機制。",
+            "加入至少兩項條件或風險。",
+            "用案例與指標驗證。"
+          ],
+          "answer": "可接受的答案不只一種；關鍵是條件透明、概念正確、推論可追蹤，並能說明限制。"
+        },
+        {
+          "prompt": "題目要求提出建議時，如何避免只列 buzzwords？",
+          "steps": [
+            "先指出要改善的問題。",
+            "說明建議如何改變流程、資訊或激勵。",
+            "指定責任人與衡量方式。",
+            "補上失敗訊號與替代方案。"
+          ],
+          "answer": "建議應包含 action、mechanism、metric 與 risk，而不是只寫「導入 AI／雲端／平台」。"
+        }
+      ],
+      "commonPitfalls": [
+        "把工具名稱當成因果解釋",
+        "沒有說明分析層級與前提",
+        "只寫單一立場，不處理權衡",
+        "把非官方參考解析當唯一標準答案",
+        "引用時事卻沒有日期與來源邊界"
+      ],
+      "sourceRefs": [
+        "src-im-mis-laudon-17e",
+        "src-im-mis-scrum-guide-2020"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-107-3",
+        "q-pp-im-mis-111-3",
+        "q-pp-im-mis-114-3"
+      ],
+      "reviewStatus": "reviewed",
+      "evidenceNote": "考古題只證明此範圍曾出現；題面均為申論或開放題，答案非官方，課程練習採 rubric self-review，絕不進自動計分或完整模擬考。"
+    },
+    {
+      "id": "lesson-im-mis-development-testing-ux-02",
+      "subtopicId": "im-mis-development-testing-quality",
+      "coveredSubtopicIds": [
+        "im-mis-development-testing-quality",
+        "im-mis-development-requirements-ux"
+      ],
+      "title": "測試品質與使用者體驗：從需求到驗收的風險管理",
+      "summary": "深入測試策略設計與使用者體驗評估，重點在如何用測試降低交付風險、用 UX 研究確保做出使用者需要的產品。",
+      "estimatedMinutes": 34,
+      "minimumPastPaperRefs": 3,
+      "learningObjectives": [
+        "設計分層測試策略（test pyramid）並解釋各層的成本效益",
+        "區分 verification（做對了嗎？）與 validation（做對的東西了嗎？）",
+        "運用 Nielsen 的可用性啟發法評估介面設計",
+        "設計使用者研究計畫（persona、journey map、usability test）"
+      ],
+      "sections": [
+        {
+          "title": "測試金字塔的成本效益邏輯",
+          "body": "Test pyramid 建議底層多（unit test：快、便宜、穩定）、中層適中（integration test）、頂層少（E2E test：慢、脆弱、但最接近使用者行為）。反轉的 ice cream cone 模式（大量 E2E、少量 unit）會導致回饋慢、維護貴、失敗難定位。",
+          "bullets": [
+            "Unit test 驗證邏輯單元，不應依賴外部服務",
+            "Integration test 驗證元件間介面與資料流",
+            "E2E test 從使用者視角驗證關鍵路徑",
+            "不是所有問題都能用自動化測試發現：安全、效能需專項測試"
+          ]
+        },
+        {
+          "title": "UAT 是 validation，不只是最後一關 testing",
+          "body": "User Acceptance Testing 回答的是「這是使用者要的嗎？」而非「程式碼正確嗎？」。UAT 需要業務代表參與，用真實情境與資料測試，且結果影響 go/no-go 決策。常見失敗：UAT 被壓縮到只剩一天、參與者不是真正的使用者、沒有 acceptance criteria。",
+          "bullets": [
+            "Acceptance criteria 應在需求階段就定義",
+            "缺陷分嚴重度（severity）與影響範圍（priority）",
+            "缺陷發現越晚，修復成本呈指數增長",
+            "Regression testing 確保修復不引入新問題"
+          ]
+        },
+        {
+          "title": "UX 研究不是「問使用者喜歡什麼」",
+          "body": "使用者說的（attitude）與做的（behavior）常常不同。UX 研究方法分為：行為觀察（usability test、A/B test、analytics）與態度調查（interview、survey、card sorting）。兩者結合才能建立完整的使用者理解。",
+          "bullets": [
+            "Persona 從使用者研究資料歸納，不是想像出來的",
+            "Journey map 記錄 touchpoint、emotion 與 pain point",
+            "5 位使用者的 usability test 可發現約 85% 的問題",
+            "Prototype fidelity 應匹配研究目的：概念驗證用低保真、互動測試用高保真"
+          ]
+        },
+        {
+          "title": "Nielsen 十大可用性啟發法的實務應用",
+          "body": "Jakob Nielsen 的十項可用性啟發法（visibility of system status、match with real world、user control、consistency、error prevention 等）不是檢查清單，而是設計原則。申論中可用它們評估案例系統的 UX 問題並提出改善建議。",
+          "bullets": [
+            "Visibility of system status：使用者隨時知道系統在做什麼",
+            "Error prevention 比 error messages 更重要",
+            "Consistency & standards：內部一致、外部符合慣例",
+            "Flexibility & efficiency：同時滿足新手與專家的使用路徑"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "如何回答「測試品質與使用者體驗」的比較題？",
+          "steps": [
+            "定義比較軸與分析單位。",
+            "各寫一條作用機制。",
+            "加入至少兩項條件或風險。",
+            "用案例與指標驗證。"
+          ],
+          "answer": "可接受的答案不只一種；關鍵是條件透明、概念正確、推論可追蹤，並能說明限制。"
+        },
+        {
+          "prompt": "題目要求提出建議時，如何避免只列 buzzwords？",
+          "steps": [
+            "先指出要改善的問題。",
+            "說明建議如何改變流程、資訊或激勵。",
+            "指定責任人與衡量方式。",
+            "補上失敗訊號與替代方案。"
+          ],
+          "answer": "建議應包含 action、mechanism、metric 與 risk，而不是只寫「導入 AI／雲端／平台」。"
+        }
+      ],
+      "commonPitfalls": [
+        "把工具名稱當成因果解釋",
+        "沒有說明分析層級與前提",
+        "只寫單一立場，不處理權衡",
+        "把非官方參考解析當唯一標準答案",
+        "引用時事卻沒有日期與來源邊界"
+      ],
+      "sourceRefs": [
+        "src-im-mis-laudon-17e",
+        "src-im-mis-nielsen-heuristics"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-110-3",
+        "q-pp-im-mis-111-4",
+        "q-pp-im-mis-112-4"
       ],
       "reviewStatus": "reviewed",
       "evidenceNote": "考古題只證明此範圍曾出現；題面均為申論或開放題，答案非官方，課程練習採 rubric self-review，絕不進自動計分或完整模擬考。"

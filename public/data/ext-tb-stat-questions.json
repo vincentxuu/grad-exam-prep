@@ -4,7 +4,7 @@
   "textbook": "OpenIntro Statistics, 4th Edition",
   "url": "https://www.openintro.org/book/os/",
   "license": "Creative Commons BY-SA 3.0",
-  "totalQuestions": 8,
+  "totalQuestions": 30,
   "questions": [
     {
       "id": "q-tb-openintro-stat-ch3-7",
@@ -34,6 +34,114 @@
       "subQuestions": ["a", "b", "c", "d"]
     },
     {
+      "id": "q-tb-openintro-stat-ch3-21",
+      "examId": "im",
+      "subjectId": "im-stat",
+      "text": "Consider the following card experiment. You have a well-shuffled standard deck of 52 cards.\n\n(a) What is the probability of drawing a heart or a face card (Jack, Queen, King)?\n(b) Two cards are drawn without replacement. What is the probability that both are aces?\n(c) Two cards are drawn without replacement. What is the probability that the second card is an ace, given that the first card drawn is not an ace?\n(d) If instead the cards are drawn with replacement, what is the probability that both are aces? Compare your answer to part (b) and explain the difference.",
+      "points": null,
+      "hasImage": false,
+      "subQuestions": ["a", "b", "c", "d"]
+    },
+    {
+      "id": "q-tb-openintro-stat-ch3-29",
+      "examId": "im",
+      "subjectId": "im-stat",
+      "text": "Lupus is a medical phenomenon where antibodies that are supposed to attack foreign cells to prevent infections instead see plasma proteins as combatants. It is combated with various medications that can cause serious side effects. The test for lupus is positive 98% of the time if a person actually has lupus (sensitivity), and the test is negative 74% of the time if a person does not have lupus (specificity). About 2 in 10,000 people have lupus.\n\n(a) What is the probability that a randomly selected person with a positive test actually has lupus?\n(b) What is the probability that a randomly selected person with a negative test truly does not have lupus?\n(c) If the test is improved so that specificity rises to 99%, what is the probability that a person with a positive test actually has lupus?",
+      "points": null,
+      "hasImage": false,
+      "subQuestions": ["a", "b", "c"]
+    },
+    {
+      "id": "q-tb-openintro-stat-ch4-5",
+      "examId": "im",
+      "subjectId": "im-stat",
+      "text": "A large university has 15,000 students. The average FTES (Full-Time Equivalent Students) per classroom is 33.542 with a standard deviation of 9.568.\n\nSuppose that 49 classes are selected at random.\n\n(a) What is the expected value of the mean FTES for the sample of 49 classes?\n(b) What is the standard error of the sample mean?\n(c) If the distribution of FTES is not normal, can we still apply the Central Limit Theorem here? Under what conditions?\n(d) What is the probability that the sample mean FTES is between 30 and 35?",
+      "points": null,
+      "hasImage": false,
+      "subQuestions": ["a", "b", "c", "d"]
+    },
+    {
+      "id": "q-tb-openintro-stat-ch4-11",
+      "examId": "im",
+      "subjectId": "im-stat",
+      "text": "A company has 8 employees, each earning different salaries. The mean salary is $72,000 and the standard deviation is $12,000.\n\n(a) If each employee receives a $5,000 raise, what are the new mean and standard deviation of the salaries?\n(b) If instead each employee's salary is increased by 10%, what are the new mean and standard deviation?\n(c) Now consider a bonus scheme where each employee receives a $3,000 bonus plus 5% of their salary. What are the new mean and standard deviation?",
+      "points": null,
+      "hasImage": false,
+      "subQuestions": ["a", "b", "c"]
+    },
+    {
+      "id": "q-tb-openintro-stat-ch4-17",
+      "examId": "im",
+      "subjectId": "im-stat",
+      "text": "Consider two independent random variables X and Y. X has mean 5 and variance 9. Y has mean 3 and variance 4.\n\n(a) What is E(X + Y)? What is Var(X + Y)?\n(b) What is E(2X - 3Y + 7)?\n(c) What is Var(2X - 3Y + 7)?\n(d) Let W = X + X (i.e., the sum of two independent copies of X). What is E(W) and Var(W)? Compare Var(W) with Var(2X) and explain why they differ.",
+      "points": null,
+      "hasImage": false,
+      "subQuestions": ["a", "b", "c", "d"]
+    },
+    {
+      "id": "q-tb-openintro-stat-ch5-3",
+      "examId": "im",
+      "subjectId": "im-stat",
+      "text": "The nutrition label on a bag of potato chips says that a one ounce serving of potato chips has 130 calories. A random sample of 35 bags yielded a sample mean of 134 calories with a standard deviation of 17 calories.\n\n(a) Write the hypotheses for testing if the nutrition label is accurate (i.e., the mean calorie content is different from 130).\n(b) Calculate the test statistic.\n(c) What is the p-value?\n(d) At the significance level α = 0.05, what do you conclude?\n(e) If we had used a significance level of α = 0.01 instead, would the conclusion change?",
+      "points": null,
+      "hasImage": false,
+      "subQuestions": ["a", "b", "c", "d", "e"]
+    },
+    {
+      "id": "q-tb-openintro-stat-ch5-9",
+      "examId": "im",
+      "subjectId": "im-stat",
+      "text": "A 95% confidence interval for the average calories in a cereal brand is calculated to be (86.3, 103.7).\n\n(a) The sample mean is 95 calories. How was this determined from the confidence interval?\n(b) The margin of error is 8.7 calories. How was this determined?\n(c) If we want a margin of error of only 4 calories, and assume the standard deviation is 15, what sample size would we need for a 95% confidence interval?\n(d) True or false: \"95% of all cereals of this brand have between 86.3 and 103.7 calories.\" Explain.",
+      "points": null,
+      "hasImage": false,
+      "subQuestions": ["a", "b", "c", "d"]
+    },
+    {
+      "id": "q-tb-openintro-stat-ch5-15",
+      "examId": "im",
+      "subjectId": "im-stat",
+      "text": "A random sample of n = 36 observations from a normally distributed population produces a sample mean of x̄ = 47.3 and sample standard deviation s = 6.2.\n\n(a) Construct a 90% confidence interval for the population mean μ.\n(b) Construct a 99% confidence interval for the population mean μ.\n(c) Compare the widths of the two intervals. Which is wider and why?\n(d) If the sample size were increased to n = 100 (with the same x̄ and s), would the 90% CI be wider or narrower? Calculate it.",
+      "points": null,
+      "hasImage": false,
+      "subQuestions": ["a", "b", "c", "d"]
+    },
+    {
+      "id": "q-tb-openintro-stat-ch5-21",
+      "examId": "im",
+      "subjectId": "im-stat",
+      "text": "Suppose you have two independent estimators θ̂₁ and θ̂₂ of the same parameter θ. Both are unbiased. θ̂₁ has variance σ₁² = 16 and θ̂₂ has variance σ₂² = 9.\n\n(a) Verify that the weighted estimator θ̂_w = w·θ̂₁ + (1−w)·θ̂₂ is unbiased for any weight w.\n(b) Find the variance of θ̂_w as a function of w.\n(c) Find the optimal weight w* that minimizes Var(θ̂_w).\n(d) What is the variance of the optimally weighted estimator? Compare it with Var(θ̂₁) and Var(θ̂₂).\n(e) Is the optimally weighted estimator more efficient than either estimator alone? Explain.",
+      "points": null,
+      "hasImage": false,
+      "subQuestions": ["a", "b", "c", "d", "e"]
+    },
+    {
+      "id": "q-tb-openintro-stat-ch5-25",
+      "examId": "im",
+      "subjectId": "im-stat",
+      "text": "Consider the estimator T = (X₁ + 2X₂ + 3X₃) / 6, where X₁, X₂, X₃ are i.i.d. random variables from a population with mean μ and variance σ².\n\n(a) Is T an unbiased estimator of μ? Show your work.\n(b) What is the variance of T?\n(c) Compare the variance of T with the variance of the sample mean X̄ = (X₁ + X₂ + X₃) / 3. Which is more efficient?\n(d) Explain why equal weighting (the sample mean) is optimal among all linear unbiased estimators when the observations are i.i.d.",
+      "points": null,
+      "hasImage": false,
+      "subQuestions": ["a", "b", "c", "d"]
+    },
+    {
+      "id": "q-tb-openintro-stat-ch5-29",
+      "examId": "im",
+      "subjectId": "im-stat",
+      "text": "A factory produces items with a defect rate p. You take a random sample of n = 200 items and find 18 defective.\n\n(a) What is the point estimate of p?\n(b) What is the standard error of the sample proportion p̂?\n(c) Construct a 95% confidence interval for p.\n(d) A quality standard says the defect rate must be below 12%. Based on your confidence interval, does the factory meet this standard?\n(e) How large a sample would you need so that a 95% CI has a margin of error no greater than 0.02?",
+      "points": null,
+      "hasImage": false,
+      "subQuestions": ["a", "b", "c", "d", "e"]
+    },
+    {
+      "id": "q-tb-openintro-stat-ch5-33",
+      "examId": "im",
+      "subjectId": "im-stat",
+      "text": "Two measurement instruments A and B both estimate the same quantity μ. A has variance 25, B has variance 100. We combine them as θ̂ = wA + (1−w)B.\n\n(a) If both instruments are unbiased, is θ̂ unbiased for all w?\n(b) Derive the variance of θ̂ as a function of w, assuming A and B are independent.\n(c) Find the weight w* that minimizes this variance.\n(d) Compute the variance at the optimal weight and the relative efficiency compared to using instrument A alone.\n(e) Now suppose the measurements are correlated with Cov(A,B) = 10. Rederive the optimal weight.",
+      "points": null,
+      "hasImage": false,
+      "subQuestions": ["a", "b", "c", "d", "e"]
+    },
+    {
       "id": "q-tb-openintro-stat-ch6-10",
       "examId": "im",
       "subjectId": "im-stat",
@@ -41,6 +149,87 @@
       "points": null,
       "hasImage": false,
       "subQuestions": ["a", "b", "c", "d"]
+    },
+    {
+      "id": "q-tb-openintro-stat-ch6-33",
+      "examId": "im",
+      "subjectId": "im-stat",
+      "text": "A hospital is interested in whether a new hand-washing protocol reduces infection rates. In a sample of 250 patients under the old protocol, 32 developed infections. In a sample of 300 patients under the new protocol, 25 developed infections.\n\n(a) Calculate the infection rate (sample proportion) under each protocol.\n(b) State the null and alternative hypotheses for testing whether the new protocol reduces infection rates.\n(c) Calculate the pooled proportion and the standard error for the difference in proportions.\n(d) Calculate the test statistic and p-value.\n(e) At α = 0.05, what do you conclude?",
+      "points": null,
+      "hasImage": false,
+      "subQuestions": ["a", "b", "c", "d", "e"]
+    },
+    {
+      "id": "q-tb-openintro-stat-ch6-39",
+      "examId": "im",
+      "subjectId": "im-stat",
+      "text": "A university survey asks students about their primary mode of transportation to campus (Drive, Bus, Bike, Walk) and their class standing (Freshman, Sophomore, Junior, Senior). The observed counts are:\n\n| | Drive | Bus | Bike | Walk | Total |\n|---|---|---|---|---|---|\n| Freshman | 25 | 30 | 10 | 35 | 100 |\n| Sophomore | 35 | 25 | 15 | 25 | 100 |\n| Junior | 40 | 20 | 20 | 20 | 100 |\n| Senior | 50 | 15 | 25 | 10 | 100 |\n| Total | 150 | 90 | 70 | 90 | 400 |\n\n(a) State the hypotheses for a chi-square test of independence.\n(b) Calculate the expected count for the cell (Freshman, Drive).\n(c) Calculate the expected counts for all cells.\n(d) Calculate the chi-square test statistic.\n(e) How many degrees of freedom does this test have?\n(f) At α = 0.05, what do you conclude about the relationship between class standing and transportation mode?",
+      "points": null,
+      "hasImage": false,
+      "subQuestions": ["a", "b", "c", "d", "e", "f"]
+    },
+    {
+      "id": "q-tb-openintro-stat-ch6-41",
+      "examId": "im",
+      "subjectId": "im-stat",
+      "text": "A genetics researcher wants to test whether pea plants follow Mendel's predicted ratio of 9:3:3:1 for a dihybrid cross. Out of 556 offspring, the observed counts are: 315 round-yellow, 108 round-green, 101 wrinkled-yellow, 32 wrinkled-green.\n\n(a) What are the expected counts under Mendel's model?\n(b) State the hypotheses for a chi-square goodness-of-fit test.\n(c) Calculate the chi-square test statistic.\n(d) How many degrees of freedom?\n(e) At α = 0.05, is there evidence that the data deviate from Mendel's predicted ratios?",
+      "points": null,
+      "hasImage": false,
+      "subQuestions": ["a", "b", "c", "d", "e"]
+    },
+    {
+      "id": "q-tb-openintro-stat-ch6-43",
+      "examId": "im",
+      "subjectId": "im-stat",
+      "text": "A market researcher surveyed 600 consumers about their preference for three brands (A, B, C) across two age groups (Under 30, 30 and Over). The results are:\n\n| | Brand A | Brand B | Brand C | Total |\n|---|---|---|---|---|\n| Under 30 | 120 | 90 | 90 | 300 |\n| 30 and Over | 80 | 100 | 120 | 300 |\n| Total | 200 | 190 | 210 | 600 |\n\n(a) Calculate all expected counts under the null hypothesis of independence.\n(b) Calculate the chi-square test statistic.\n(c) Determine the degrees of freedom and find the p-value range.\n(d) At α = 0.05, is there a significant association between age group and brand preference?\n(e) Which cells contribute most to the chi-square statistic? What does this tell you about the nature of the association?",
+      "points": null,
+      "hasImage": false,
+      "subQuestions": ["a", "b", "c", "d", "e"]
+    },
+    {
+      "id": "q-tb-openintro-stat-ch6-45",
+      "examId": "im",
+      "subjectId": "im-stat",
+      "text": "A die is rolled 600 times with the following results:\n\n| Face | 1 | 2 | 3 | 4 | 5 | 6 |\n|---|---|---|---|---|---|---|\n| Observed | 89 | 107 | 95 | 110 | 98 | 101 |\n\n(a) State the null and alternative hypotheses for testing whether the die is fair.\n(b) Calculate the expected count for each face.\n(c) Calculate the chi-square test statistic.\n(d) How many degrees of freedom does this test have?\n(e) At α = 0.05, is there evidence that the die is not fair?",
+      "points": null,
+      "hasImage": false,
+      "subQuestions": ["a", "b", "c", "d", "e"]
+    },
+    {
+      "id": "q-tb-openintro-stat-ch6-47",
+      "examId": "im",
+      "subjectId": "im-stat",
+      "text": "A public health study examines the relationship between smoking status (Never, Former, Current) and lung disease status (Yes, No). Data from 1,000 participants:\n\n| | Disease: Yes | Disease: No | Total |\n|---|---|---|---|\n| Never smoked | 12 | 488 | 500 |\n| Former smoker | 15 | 235 | 250 |\n| Current smoker | 30 | 220 | 250 |\n| Total | 57 | 943 | 1000 |\n\n(a) Calculate the expected counts for all cells under independence.\n(b) Verify that all expected counts are at least 5.\n(c) Calculate the chi-square test statistic.\n(d) With df = 2 and α = 0.01, what do you conclude?\n(e) Which smoking category contributes most to the chi-square statistic? Interpret this finding.",
+      "points": null,
+      "hasImage": false,
+      "subQuestions": ["a", "b", "c", "d", "e"]
+    },
+    {
+      "id": "q-tb-openintro-stat-ch6-49",
+      "examId": "im",
+      "subjectId": "im-stat",
+      "text": "In a 2×2 contingency table, the observed counts are:\n\n| | Success | Failure | Total |\n|---|---|---|---|\n| Treatment | 45 | 55 | 100 |\n| Control | 30 | 70 | 100 |\n| Total | 75 | 125 | 200 |\n\n(a) Calculate the expected counts under independence.\n(b) Calculate the chi-square test statistic.\n(c) The p-value for the chi-square test with 1 df is approximately 0.029. At α = 0.05, what do you conclude?\n(d) Calculate the difference in proportions (Treatment − Control) and construct a 95% CI for this difference.\n(e) Does the confidence interval agree with the chi-square test result? Explain.",
+      "points": null,
+      "hasImage": false,
+      "subQuestions": ["a", "b", "c", "d", "e"]
+    },
+    {
+      "id": "q-tb-openintro-stat-ch7-5",
+      "examId": "im",
+      "subjectId": "im-stat",
+      "text": "A psychologist conducted a study to examine the effect of a new therapy on reducing anxiety scores. The anxiety scores of 25 patients were measured before and after the therapy. The mean difference (before − after) was 4.2 with a standard deviation of 8.3.\n\n(a) State the hypotheses for testing whether the therapy reduces anxiety.\n(b) Calculate the test statistic for the paired t-test.\n(c) With 24 degrees of freedom, estimate the p-value. Use the t-distribution.\n(d) At α = 0.05, what do you conclude?\n(e) Construct a 95% confidence interval for the mean difference. Does it support your conclusion?",
+      "points": null,
+      "hasImage": false,
+      "subQuestions": ["a", "b", "c", "d", "e"]
+    },
+    {
+      "id": "q-tb-openintro-stat-ch7-11",
+      "examId": "im",
+      "subjectId": "im-stat",
+      "text": "A company claims that the average processing time for online orders is 2.5 days. A consumer group suspects it is longer. They randomly sample 40 orders and find a mean processing time of 2.8 days with a standard deviation of 0.9 days.\n\n(a) Write the hypotheses.\n(b) Calculate the test statistic.\n(c) Calculate the p-value using the t-distribution with 39 degrees of freedom.\n(d) At α = 0.05, what do you conclude?\n(e) What type of error could you be making with your conclusion?",
+      "points": null,
+      "hasImage": false,
+      "subQuestions": ["a", "b", "c", "d", "e"]
     },
     {
       "id": "q-tb-openintro-stat-ch8-26",
@@ -77,6 +266,15 @@
       "points": null,
       "hasImage": false,
       "subQuestions": ["a", "b"]
+    },
+    {
+      "id": "q-tb-openintro-stat-ch9-9",
+      "examId": "im",
+      "subjectId": "im-stat",
+      "text": "A researcher models house prices (in $1,000s) using the following predictors: size (in sq ft), number of bedrooms, lot size (in acres), and age of house (in years). The regression output from a sample of 80 houses:\n\n| | Estimate | Std. Error | t value | Pr(>|t|) |\n|---|---------|-----------|---------|----------|\n| (Intercept) | 52.35 | 21.14 | 2.48 | 0.015 |\n| size | 0.072 | 0.018 | 4.00 | 0.0002 |\n| bedrooms | -13.58 | 7.12 | -1.91 | 0.060 |\n| lot_size | 12.65 | 8.43 | 1.50 | 0.138 |\n| age | -0.35 | 0.14 | -2.50 | 0.015 |\n\nR² = 0.61, R²_adj = 0.59, F-statistic = 29.34 (p < 0.0001)\n\n(a) Write the regression equation.\n(b) Interpret the coefficient for bedrooms. Why might it be negative?\n(c) Test whether age is a significant predictor at α = 0.05. State hypotheses, test statistic, and conclusion.\n(d) The overall F-test is significant. What does this tell us? Can we conclude every predictor is significant?\n(e) If we remove lot_size and bedrooms (both non-significant), R²_adj increases to 0.60. Explain why removing variables can increase R²_adj.",
+      "points": null,
+      "hasImage": false,
+      "subQuestions": ["a", "b", "c", "d", "e"]
     }
   ]
 }
