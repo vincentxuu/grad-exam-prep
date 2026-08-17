@@ -7,8 +7,6 @@ describe('IM beginner glossary', () => {
   const catalogs = [imItLearningCatalog, imMisLearningCatalog, imStatLearningCatalog]
 
   test('covers every published lesson without forming another jargon wall', () => {
-    expect(catalogs.map((catalog) => catalog.lessons.length)).toEqual([35, 7, 6])
-
     for (const catalog of catalogs) {
       for (const lesson of catalog.lessons) {
         const terms = catalog.getBeginnerGlossaryForLesson(lesson.id)

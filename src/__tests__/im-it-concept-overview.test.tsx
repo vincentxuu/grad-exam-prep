@@ -9,8 +9,12 @@ describe('IM-IT concept overview', () => {
 
     expect(screen.getByText('分類已審核')).toBeInTheDocument()
     expect(screen.getByText(/9 大主題 · 61 個子主題 · 260 題/)).toBeInTheDocument()
-    expect(screen.getByText(/226 題/)).toBeInTheDocument()
-    expect(screen.getByText(/20 題/)).toBeInTheDocument()
+    expect(
+      screen.getByText(new RegExp(`^${imItLearningCatalog.overview?.eligibleCount} 題$`))
+    ).toBeInTheDocument()
+    expect(
+      screen.getByText(new RegExp(`^${imItLearningCatalog.overview?.disputedCount} 題$`))
+    ).toBeInTheDocument()
     expect(screen.getByText(/暫不列入完整模擬考成績/)).toBeInTheDocument()
     expect(screen.getByRole('link', { name: '瀏覽 260 題計概題庫' })).toHaveAttribute(
       'href',
@@ -29,13 +33,13 @@ describe('IM-IT concept overview', () => {
     expect(screen.getAllByText(/^\d+ 個子主題 · \d+ 題$/)).toHaveLength(9)
   })
 
-  test('links all thirty-five reviewed learning modules', () => {
+  test('links all reviewed learning modules', () => {
     render(<ImItConceptOverview />)
 
     expect(screen.getByText('已上線學習模組')).toBeInTheDocument()
     expect(screen.getByText('61 / 61')).toBeInTheDocument()
     const lessonLinks = screen.getAllByRole('link', { name: '開始學習' })
-    expect(lessonLinks).toHaveLength(35)
+    expect(lessonLinks).toHaveLength(imItLearningCatalog.lessons.length)
     expect(lessonLinks.map((link) => link.getAttribute('href'))).toContain(
       '/im/subjects/im-it/lessons/lesson-im-it-network-models-encapsulation'
     )

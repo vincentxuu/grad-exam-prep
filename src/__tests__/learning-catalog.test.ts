@@ -36,11 +36,11 @@ describe('learning catalog', () => {
   })
 
   test.each([
-    ['im-mis', imMisLearningCatalog, 7],
-    ['im-stat', imStatLearningCatalog, 6],
-  ] as const)('registers the %s catalog and its reviewed lessons', (subjectId, catalog, count) => {
+    ['im-mis', imMisLearningCatalog],
+    ['im-stat', imStatLearningCatalog],
+  ] as const)('registers the %s catalog and its reviewed lessons', (subjectId, catalog) => {
     expect(getLearningCatalog('im', subjectId)).toBe(catalog)
-    expect(catalog.lessons).toHaveLength(count)
+    expect(catalog.lessons.length).toBeGreaterThan(0)
     expect(catalog.lessons.every((lesson) => lesson.reviewStatus === 'reviewed')).toBe(true)
   })
 

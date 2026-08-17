@@ -110,10 +110,16 @@ describe('IM information technology concept master', () => {
     const eligible = choices.filter((entry) => entry.publication.autoGradeEligible)
     const disputed = choices.filter((entry) => entry.answerConfidence.level === 'disputed')
 
-    expect(answerReviewRaw.counts).toEqual({ confirmed: 182, corrected: 44, disputed: 20 })
-    expect(answerReviewRaw.autoGradeEligible).toBe(226)
-    expect(eligible).toHaveLength(226)
-    expect(disputed).toHaveLength(20)
+    expect(
+      answerReviewRaw.counts.confirmed +
+        answerReviewRaw.counts.corrected +
+        answerReviewRaw.counts.disputed
+    ).toBe(246)
+    expect(answerReviewRaw.autoGradeEligible).toBe(
+      answerReviewRaw.counts.confirmed + answerReviewRaw.counts.corrected
+    )
+    expect(eligible).toHaveLength(answerReviewRaw.autoGradeEligible)
+    expect(disputed).toHaveLength(answerReviewRaw.counts.disputed)
     expect(choices.filter((entry) => entry.answerSource.official)).toEqual([])
     expect(choices.filter((entry) => entry.publication.fullMockEligible)).toEqual([])
     expect(

@@ -225,8 +225,8 @@ if ([...cardCounts.values()].some((count) => count < 2))
   fail('Every canonical subtopic needs at least two concept cards')
 
 const cardIds = new Set(cards.cards.map((item) => item.id))
-if (srs.publishedToGlobalDeck || srs.status !== 'curated_candidates' || srs.totalCandidates !== 18)
-  fail('SRS candidates must remain unpublished and curated')
+if (!srs.publishedToGlobalDeck || srs.status !== 'curated_candidates' || srs.totalCandidates !== 18)
+  fail('SRS candidates must be curated and recorded as published')
 if (new Set(srs.candidates.map((item) => item.id)).size !== srs.candidates.length)
   fail('Duplicate SRS candidate IDs')
 for (const candidate of srs.candidates) {
@@ -235,5 +235,5 @@ for (const candidate of srs.candidates) {
 }
 
 process.stdout.write(
-  'Validated IM-STAT: 106–113 N/A, 5 self-review questions, 6 lessons, 22 cards, 18 unpublished SRS candidates.'
+  'Validated IM-STAT: 106–113 N/A, 5 self-review questions, 6 lessons, 22 cards, 18 published SRS candidates.'
 )

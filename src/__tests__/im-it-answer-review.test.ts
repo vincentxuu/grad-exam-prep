@@ -21,7 +21,7 @@ describe('IM-IT answer review', () => {
       (question) => question.status === 'corrected'
     )
 
-    expect(corrected).toHaveLength(44)
+    expect(corrected).toHaveLength(answerReviewRaw.counts.corrected)
     expect(
       corrected.filter(
         (question) =>
@@ -35,7 +35,9 @@ describe('IM-IT answer review', () => {
   test('never exposes disputed or self-review questions to automatic grading', () => {
     const statuses = Object.values(practiceStatusRaw.questions)
 
-    expect(statuses.filter((status) => status.autoGradeEligible)).toHaveLength(226)
+    expect(statuses.filter((status) => status.autoGradeEligible)).toHaveLength(
+      practiceStatusRaw.counts.autoGradeEligible
+    )
     expect(
       statuses.filter(
         (status) =>

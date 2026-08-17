@@ -33,7 +33,9 @@
       "everydayExample": "像出版社不因文章流暢就直接刊登，仍要查證、審稿、標示責任並處理更正。",
       "confusionNote": "加上 RAG 或人工抽查能降低部分風險，但都不能保證輸出永遠正確。",
       "lessonIds": [
-        "lesson-im-it-ai-generative-governance-01"
+        "lesson-im-it-ai-generative-governance-01",
+        "lesson-im-it-ai-rag-prompt-llm-advanced-01",
+        "lesson-im-it-ai-ethics-governance-advanced-01"
       ],
       "reviewStatus": "reviewed"
     },
@@ -117,7 +119,9 @@
       "confusionNote": "attention 不是模型具有人的專注或理解；Transformer 也不只用於文字。",
       "lessonIds": [
         "lesson-im-it-ai-neural-sequence-transformer-01",
-        "lesson-im-it-ai-generative-governance-01"
+        "lesson-im-it-ai-generative-governance-01",
+        "lesson-im-it-ai-rnn-lstm-sequence-advanced-01",
+        "lesson-im-it-ai-transformer-attention-advanced-01"
       ],
       "reviewStatus": "reviewed"
     },
@@ -362,7 +366,9 @@
       "everydayExample": "CNN 像在照片各處找同一種圖案，RNN/LSTM 像讀句子時保留前文線索。",
       "confusionNote": "這是典型設計偏好，不代表 CNN 只能看圖片或 RNN 一定最適合所有序列。",
       "lessonIds": [
-        "lesson-im-it-ai-neural-sequence-transformer-01"
+        "lesson-im-it-ai-neural-sequence-transformer-01",
+        "lesson-im-it-ai-cnn-image-advanced-01",
+        "lesson-im-it-ai-rnn-lstm-sequence-advanced-01"
       ],
       "reviewStatus": "reviewed"
     },
@@ -1153,7 +1159,10 @@
       "confusionNote": "token 不等於一個中文字或一個英文單字；流暢輸出也不保證事實正確。",
       "lessonIds": [
         "lesson-im-it-ai-neural-sequence-transformer-01",
-        "lesson-im-it-ai-generative-governance-01"
+        "lesson-im-it-ai-generative-governance-01",
+        "lesson-im-it-ai-transformer-attention-advanced-01",
+        "lesson-im-it-ai-rag-prompt-llm-advanced-01",
+        "lesson-im-it-ai-ethics-governance-advanced-01"
       ],
       "reviewStatus": "reviewed"
     },
@@ -1296,7 +1305,10 @@
       "everydayExample": "像一排排篩選站，各站把前一站訊息重新加權後再傳下去。",
       "confusionNote": "名稱來自生物啟發，但不是大腦的完整複製品。",
       "lessonIds": [
-        "lesson-im-it-ai-neural-sequence-transformer-01"
+        "lesson-im-it-ai-neural-sequence-transformer-01",
+        "lesson-im-it-ai-cnn-image-advanced-01",
+        "lesson-im-it-ai-rnn-lstm-sequence-advanced-01",
+        "lesson-im-it-ai-transformer-attention-advanced-01"
       ],
       "reviewStatus": "reviewed"
     },
@@ -1442,7 +1454,9 @@
       "everydayExample": "背熟題庫答案卻遇到改寫題就不會，是過度擬合的生活版。",
       "confusionNote": "訓練分數高不等於模型好；accuracy 也不適合所有不平衡問題。",
       "lessonIds": [
-        "lesson-im-it-ai-foundations-ml-evaluation-01"
+        "lesson-im-it-ai-foundations-ml-evaluation-01",
+        "lesson-im-it-ai-cnn-image-advanced-01",
+        "lesson-im-it-ai-ethics-governance-advanced-01"
       ],
       "reviewStatus": "reviewed"
     },
@@ -1644,7 +1658,8 @@
       "everydayExample": "像先翻課本找頁碼，再根據那些段落整理答案。",
       "confusionNote": "RAG 不會自動保證正確；檢索錯、資料舊或模型誤讀仍會出錯。",
       "lessonIds": [
-        "lesson-im-it-ai-generative-governance-01"
+        "lesson-im-it-ai-generative-governance-01",
+        "lesson-im-it-ai-rag-prompt-llm-advanced-01"
       ],
       "reviewStatus": "reviewed"
     },
@@ -1965,7 +1980,10 @@
       "everydayExample": "用已標垃圾郵件訓練分類器是監督式；自動把客群分群是非監督式。",
       "confusionNote": "監督式不是有人每一步盯著模型，非監督式也不是完全沒有目標。",
       "lessonIds": [
-        "lesson-im-it-ai-foundations-ml-evaluation-01"
+        "lesson-im-it-ai-foundations-ml-evaluation-01",
+        "lesson-im-it-ai-cnn-image-advanced-01",
+        "lesson-im-it-ai-rnn-lstm-sequence-advanced-01",
+        "lesson-im-it-ai-ethics-governance-advanced-01"
       ],
       "reviewStatus": "reviewed"
     },

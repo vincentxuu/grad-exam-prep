@@ -41,7 +41,9 @@
       "everydayExample": "像出版社不因文章流暢就直接刊登，仍要查證、審稿、標示責任並處理更正。",
       "confusionNote": "加上 RAG 或人工抽查能降低部分風險，但都不能保證輸出永遠正確。",
       "lessonIds": [
-        "lesson-im-it-ai-generative-governance-01"
+        "lesson-im-it-ai-generative-governance-01",
+        "lesson-im-it-ai-rag-prompt-llm-advanced-01",
+        "lesson-im-it-ai-ethics-governance-advanced-01"
       ],
       "reviewStatus": "reviewed",
       "subjectId": "im-it"
@@ -130,7 +132,9 @@
       "confusionNote": "attention 不是模型具有人的專注或理解；Transformer 也不只用於文字。",
       "lessonIds": [
         "lesson-im-it-ai-neural-sequence-transformer-01",
-        "lesson-im-it-ai-generative-governance-01"
+        "lesson-im-it-ai-generative-governance-01",
+        "lesson-im-it-ai-rnn-lstm-sequence-advanced-01",
+        "lesson-im-it-ai-transformer-attention-advanced-01"
       ],
       "reviewStatus": "reviewed",
       "subjectId": "im-it"
@@ -389,7 +393,9 @@
       "everydayExample": "CNN 像在照片各處找同一種圖案，RNN/LSTM 像讀句子時保留前文線索。",
       "confusionNote": "這是典型設計偏好，不代表 CNN 只能看圖片或 RNN 一定最適合所有序列。",
       "lessonIds": [
-        "lesson-im-it-ai-neural-sequence-transformer-01"
+        "lesson-im-it-ai-neural-sequence-transformer-01",
+        "lesson-im-it-ai-cnn-image-advanced-01",
+        "lesson-im-it-ai-rnn-lstm-sequence-advanced-01"
       ],
       "reviewStatus": "reviewed",
       "subjectId": "im-it"
@@ -1227,7 +1233,10 @@
       "confusionNote": "token 不等於一個中文字或一個英文單字；流暢輸出也不保證事實正確。",
       "lessonIds": [
         "lesson-im-it-ai-neural-sequence-transformer-01",
-        "lesson-im-it-ai-generative-governance-01"
+        "lesson-im-it-ai-generative-governance-01",
+        "lesson-im-it-ai-transformer-attention-advanced-01",
+        "lesson-im-it-ai-rag-prompt-llm-advanced-01",
+        "lesson-im-it-ai-ethics-governance-advanced-01"
       ],
       "reviewStatus": "reviewed",
       "subjectId": "im-it"
@@ -1378,7 +1387,10 @@
       "everydayExample": "像一排排篩選站，各站把前一站訊息重新加權後再傳下去。",
       "confusionNote": "名稱來自生物啟發，但不是大腦的完整複製品。",
       "lessonIds": [
-        "lesson-im-it-ai-neural-sequence-transformer-01"
+        "lesson-im-it-ai-neural-sequence-transformer-01",
+        "lesson-im-it-ai-cnn-image-advanced-01",
+        "lesson-im-it-ai-rnn-lstm-sequence-advanced-01",
+        "lesson-im-it-ai-transformer-attention-advanced-01"
       ],
       "reviewStatus": "reviewed",
       "subjectId": "im-it"
@@ -1532,7 +1544,9 @@
       "everydayExample": "背熟題庫答案卻遇到改寫題就不會，是過度擬合的生活版。",
       "confusionNote": "訓練分數高不等於模型好；accuracy 也不適合所有不平衡問題。",
       "lessonIds": [
-        "lesson-im-it-ai-foundations-ml-evaluation-01"
+        "lesson-im-it-ai-foundations-ml-evaluation-01",
+        "lesson-im-it-ai-cnn-image-advanced-01",
+        "lesson-im-it-ai-ethics-governance-advanced-01"
       ],
       "reviewStatus": "reviewed",
       "subjectId": "im-it"
@@ -1746,7 +1760,8 @@
       "everydayExample": "像先翻課本找頁碼，再根據那些段落整理答案。",
       "confusionNote": "RAG 不會自動保證正確；檢索錯、資料舊或模型誤讀仍會出錯。",
       "lessonIds": [
-        "lesson-im-it-ai-generative-governance-01"
+        "lesson-im-it-ai-generative-governance-01",
+        "lesson-im-it-ai-rag-prompt-llm-advanced-01"
       ],
       "reviewStatus": "reviewed",
       "subjectId": "im-it"
@@ -2086,7 +2101,10 @@
       "everydayExample": "用已標垃圾郵件訓練分類器是監督式；自動把客群分群是非監督式。",
       "confusionNote": "監督式不是有人每一步盯著模型，非監督式也不是完全沒有目標。",
       "lessonIds": [
-        "lesson-im-it-ai-foundations-ml-evaluation-01"
+        "lesson-im-it-ai-foundations-ml-evaluation-01",
+        "lesson-im-it-ai-cnn-image-advanced-01",
+        "lesson-im-it-ai-rnn-lstm-sequence-advanced-01",
+        "lesson-im-it-ai-ethics-governance-advanced-01"
       ],
       "reviewStatus": "reviewed",
       "subjectId": "im-it"
@@ -2373,7 +2391,10 @@
       "everydayExample": "餐廳主打快速出餐，才優先投資點餐與廚房排程。",
       "confusionNote": "不是 IT 部門照單買設備，也不是所有部門都用同一套工具。",
       "lessonIds": [
-        "lesson-im-mis-strategy-01"
+        "lesson-im-mis-strategy-01",
+        "lesson-im-mis-strategy-alignment-investment-02",
+        "lesson-im-mis-strategy-agility-boundary-02",
+        "lesson-im-mis-strategy-case-synthesis-03"
       ],
       "reviewStatus": "reviewed",
       "subjectId": "im-mis"
@@ -2388,7 +2409,9 @@
       "everydayExample": "買好咖啡機還要有會操作的人、配方與保養制度。",
       "confusionNote": "不是額外的硬體配件。",
       "lessonIds": [
-        "lesson-im-mis-strategy-01"
+        "lesson-im-mis-strategy-01",
+        "lesson-im-mis-strategy-alignment-investment-02",
+        "lesson-im-mis-strategy-case-synthesis-03"
       ],
       "reviewStatus": "reviewed",
       "subjectId": "im-mis"
@@ -2403,7 +2426,10 @@
       "everydayExample": "家庭預算同時留給修水管、節能設備和新家電試用。",
       "confusionNote": "不是把所有專案列成一張清單；重點是整體風險與效益配置。",
       "lessonIds": [
-        "lesson-im-mis-strategy-01"
+        "lesson-im-mis-strategy-01",
+        "lesson-im-mis-strategy-alignment-investment-02",
+        "lesson-im-mis-strategy-case-synthesis-03",
+        "lesson-im-mis-development-acquisition-agile-02"
       ],
       "reviewStatus": "reviewed",
       "subjectId": "im-mis"
@@ -2419,7 +2445,9 @@
       "everydayExample": "菜價暴漲時，餐廳能迅速換菜單與供應商。",
       "confusionNote": "不是單純做事快，也不等於使用 Scrum。",
       "lessonIds": [
-        "lesson-im-mis-strategy-01"
+        "lesson-im-mis-strategy-01",
+        "lesson-im-mis-strategy-agility-boundary-02",
+        "lesson-im-mis-strategy-case-synthesis-03"
       ],
       "reviewStatus": "reviewed",
       "subjectId": "im-mis"
@@ -2555,13 +2583,16 @@
       "label": "機器學習使用情境",
       "aliases": [
         "ML use case",
-        "AI use case"
+        "AI use case",
+        "機器學習"
       ],
       "plainDefinition": "明確說明模型要幫誰做哪個決策，以及錯了會造成什麼影響。",
       "everydayExample": "預測明天備多少便當，而不是籠統說導入 AI。",
       "confusionNote": "模型功能不是完整 use case；還要有人、流程與結果。",
       "lessonIds": [
-        "lesson-im-mis-data-ai-01"
+        "lesson-im-mis-data-ai-01",
+        "lesson-im-mis-data-ai-lifecycle-analytics-02",
+        "lesson-im-mis-data-ai-model-fairness-02"
       ],
       "reviewStatus": "reviewed",
       "subjectId": "im-mis"
@@ -2577,7 +2608,9 @@
       "everydayExample": "用是否已退貨去預測下單當下會不會退貨。",
       "confusionNote": "不只是個資外洩；這裡指模型評估被答案或未來資訊污染。",
       "lessonIds": [
-        "lesson-im-mis-data-ai-01"
+        "lesson-im-mis-data-ai-01",
+        "lesson-im-mis-data-ai-lifecycle-analytics-02",
+        "lesson-im-mis-data-ai-model-fairness-02"
       ],
       "reviewStatus": "reviewed",
       "subjectId": "im-mis"
@@ -2593,7 +2626,10 @@
       "everydayExample": "顧客年齡層改變是資料漂移；同樣購物行為不再代表會續訂是概念漂移。",
       "confusionNote": "兩者可分別發生，資料漂移不必然讓模型失效。",
       "lessonIds": [
-        "lesson-im-mis-data-ai-01"
+        "lesson-im-mis-data-ai-01",
+        "lesson-im-mis-data-ai-lifecycle-analytics-02",
+        "lesson-im-mis-data-ai-model-fairness-02",
+        "lesson-im-mis-data-ai-ops-governance-02"
       ],
       "reviewStatus": "reviewed",
       "subjectId": "im-mis"
@@ -2609,7 +2645,10 @@
       "everydayExample": "貸款模型除了準確，還要能申訴、保護資料並監測歧視。",
       "confusionNote": "不等於使用者主觀相信品牌，也不是單一分數。",
       "lessonIds": [
-        "lesson-im-mis-data-ai-01"
+        "lesson-im-mis-data-ai-01",
+        "lesson-im-mis-data-ai-model-fairness-02",
+        "lesson-im-mis-data-ai-ops-governance-02",
+        "lesson-im-mis-governance-vendor-ai-trust-02"
       ],
       "reviewStatus": "reviewed",
       "subjectId": "im-mis"
@@ -2627,7 +2666,11 @@
       "everydayExample": "自己煮、買調理包、請外燴、訂月費餐盒。",
       "confusionNote": "委外只轉移執行，不會把需求與治理責任一起丟掉。",
       "lessonIds": [
-        "lesson-im-mis-development-01"
+        "lesson-im-mis-development-01",
+        "lesson-im-mis-strategy-agility-boundary-02",
+        "lesson-im-mis-data-ai-ops-governance-02",
+        "lesson-im-mis-governance-vendor-ai-trust-02",
+        "lesson-im-mis-development-acquisition-agile-02"
       ],
       "reviewStatus": "reviewed",
       "subjectId": "im-mis"
@@ -2642,7 +2685,9 @@
       "everydayExample": "每兩週完成可試用的小改版，再依回饋調整。",
       "confusionNote": "不是一套固定瀑布流程，也不是每天站會的別名。",
       "lessonIds": [
-        "lesson-im-mis-development-01"
+        "lesson-im-mis-development-01",
+        "lesson-im-mis-development-acquisition-agile-02",
+        "lesson-im-mis-development-testing-ux-02"
       ],
       "reviewStatus": "reviewed",
       "subjectId": "im-mis"
@@ -2660,7 +2705,8 @@
       "everydayExample": "先測水龍頭、再測整段水管、再測全屋供水，最後由屋主驗收。",
       "confusionNote": "全部技術測試通過仍可能做錯需求。",
       "lessonIds": [
-        "lesson-im-mis-development-01"
+        "lesson-im-mis-development-01",
+        "lesson-im-mis-development-testing-ux-02"
       ],
       "reviewStatus": "reviewed",
       "subjectId": "im-mis"
@@ -2676,7 +2722,8 @@
       "everydayExample": "網路購票是否找得到班次、看得懂價格並順利付款。",
       "confusionNote": "不只是畫面漂亮。",
       "lessonIds": [
-        "lesson-im-mis-development-01"
+        "lesson-im-mis-development-01",
+        "lesson-im-mis-development-testing-ux-02"
       ],
       "reviewStatus": "reviewed",
       "subjectId": "im-mis"
@@ -2757,7 +2804,8 @@
       "everydayExample": "門禁只需確認住戶資格，不必保存每次臉部影像。",
       "confusionNote": "取得同意也不代表可以無限蒐集。",
       "lessonIds": [
-        "lesson-im-mis-governance-01"
+        "lesson-im-mis-governance-01",
+        "lesson-im-mis-governance-privacy-esg-02"
       ],
       "reviewStatus": "reviewed",
       "subjectId": "im-mis"
@@ -2774,7 +2822,9 @@
       "everydayExample": "信用被誤判時能看懂原因、找得到負責單位並要求更正。",
       "confusionNote": "只貼隱私政策不等於透明，也不等於已可問責。",
       "lessonIds": [
-        "lesson-im-mis-governance-01"
+        "lesson-im-mis-governance-01",
+        "lesson-im-mis-governance-privacy-esg-02",
+        "lesson-im-mis-governance-vendor-ai-trust-02"
       ],
       "reviewStatus": "reviewed",
       "subjectId": "im-mis"
@@ -2790,7 +2840,8 @@
       "everydayExample": "評估資料中心耗電、演算法歧視與董事會監督。",
       "confusionNote": "ESG 不是單一分數，也不保證投資 IT 必然有正面效果。",
       "lessonIds": [
-        "lesson-im-mis-governance-01"
+        "lesson-im-mis-governance-01",
+        "lesson-im-mis-governance-privacy-esg-02"
       ],
       "reviewStatus": "reviewed",
       "subjectId": "im-mis"
@@ -2805,7 +2856,8 @@
       "everydayExample": "設計門禁時就只存雜湊識別碼並設定自動刪除。",
       "confusionNote": "不是一個產品認證或最後加密就完成。",
       "lessonIds": [
-        "lesson-im-mis-governance-01"
+        "lesson-im-mis-governance-01",
+        "lesson-im-mis-governance-privacy-esg-02"
       ],
       "reviewStatus": "reviewed",
       "subjectId": "im-mis"

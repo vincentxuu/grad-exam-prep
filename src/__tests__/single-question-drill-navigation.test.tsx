@@ -15,7 +15,7 @@ describe('single question drill navigation', () => {
 
   test('keeps lesson progress and lets a read-only question advance through the queue', () => {
     const question = getQuestionsByExam('im').find(
-      (candidate) => candidate.id === 'q-pp-im-it-106-5'
+      (candidate) => candidate.id === 'q-pp-im-it-106-12'
     )
     expect(question).toBeDefined()
 
@@ -26,7 +26,7 @@ describe('single question drill navigation', () => {
         mode="drill"
         drillSearchParams={{
           mode: 'drill',
-          queue: 'q-pp-im-it-106-6',
+          queue: 'q-pp-im-it-106-13',
           position: '1',
           total: '2',
           returnTo: '/im/subjects/im-it/lessons/lesson-im-it-architecture',
@@ -41,7 +41,7 @@ describe('single question drill navigation', () => {
     fireEvent.click(screen.getByRole('button', { name: '下一題 →' }))
 
     expect(push).toHaveBeenCalledWith(
-      '/im/questions/q-pp-im-it-106-6?mode=drill&position=2&total=2&returnTo=%2Fim%2Fsubjects%2Fim-it%2Flessons%2Flesson-im-it-architecture'
+      '/im/questions/q-pp-im-it-106-13?mode=drill&position=2&total=2&returnTo=%2Fim%2Fsubjects%2Fim-it%2Flessons%2Flesson-im-it-architecture'
     )
   })
 })

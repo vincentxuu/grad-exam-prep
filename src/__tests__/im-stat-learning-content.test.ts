@@ -1,3 +1,4 @@
+import flashcardsRaw from '../../public/data/flashcards.json'
 import cardsRaw from '../../public/data/im-stat-concept-cards.json'
 import conceptsRaw from '../../public/data/im-stat-concept-master.json'
 import lessonsRaw from '../../public/data/im-stat-lessons.json'
@@ -61,7 +62,7 @@ describe('IM-STAT reviewed learning content', () => {
     ])
   })
 
-  test('creates two reviewed cards per concept and keeps SRS candidates unpublished', () => {
+  test('creates two reviewed cards per concept and records the published SRS candidates', () => {
     const counts = new Map<string, number>()
     const cardIds = new Set(cardsRaw.cards.map((card) => card.id))
 
@@ -73,8 +74,16 @@ describe('IM-STAT reviewed learning content', () => {
     expect([...counts.values()].every((count) => count >= 2)).toBe(true)
 
     expect(srsRaw.status).toBe('curated_candidates')
-    expect(srsRaw.publishedToGlobalDeck).toBe(false)
+    expect(srsRaw.publishedToGlobalDeck).toBe(true)
+    expect(srsRaw.policy).toContain('已寫入 flashcards.json')
     expect(srsRaw.totalCandidates).toBe(18)
+    expect(srsRaw.totalCandidates).toBe(srsRaw.candidates.length)
     expect(srsRaw.candidates.every((candidate) => cardIds.has(candidate.conceptCardId))).toBe(true)
+    const globalCardIds = new Set(flashcardsRaw.map((card) => card.id))
+    expect(
+      srsRaw.candidates.every((candidate) =>
+        globalCardIds.has(`fc-im-stat-${candidate.conceptCardId.replace('card-im-stat-', '')}`)
+      )
+    ).toBe(true)
   })
 })

@@ -8438,8 +8438,8 @@
     "status": "model-assisted-technical-review-complete",
     "official": false,
     "confirmed": 182,
-    "corrected": 44,
-    "disputed": 20,
-    "autoGradeEligible": 226
+    "corrected": 57,
+    "disputed": 7,
+    "autoGradeEligible": 239
   }
 }

@@ -15,7 +15,7 @@
     "correctedAgainstReviewBaseline": 32,
     "disputed": 14
   },
-  "autoGradeEligible": 232,
+  "autoGradeEligible": 239,
   "questions": [
     {
       "questionId": "q-pp-im-it-106-1",
@@ -123,8 +123,8 @@
         "public/data/questions.json 題面交叉核對",
         "1NF 嚴格 relational definition 與常見教學檢核定義之獨立比較；無官方答案 key"
       ],
-      "practiceEligible": false,
-      "autoGradeEligible": false
+      "practiceEligible": true,
+      "autoGradeEligible": true
     },
     {
       "questionId": "q-pp-im-it-106-6",
@@ -192,8 +192,8 @@
         "public/data/questions.json 題面交叉核對",
         "big-data 3V 與後續 5V taxonomy 的獨立定義比較；無官方答案 key"
       ],
-      "practiceEligible": false,
-      "autoGradeEligible": false
+      "practiceEligible": true,
+      "autoGradeEligible": true
     },
     {
       "questionId": "q-pp-im-it-106-9",
@@ -1357,8 +1357,8 @@
         "獨立逐項技術推導；未採用第一輪 reasoning",
         "無官方答案 key"
       ],
-      "practiceEligible": false,
-      "autoGradeEligible": false
+      "practiceEligible": true,
+      "autoGradeEligible": true
     },
     {
       "questionId": "q-pp-im-it-108-17",
@@ -1382,8 +1382,8 @@
         "獨立逐項技術推導；未採用第一輪 reasoning",
         "無官方答案 key"
       ],
-      "practiceEligible": false,
-      "autoGradeEligible": false
+      "practiceEligible": true,
+      "autoGradeEligible": true
     },
     {
       "questionId": "q-pp-im-it-108-18",
@@ -2015,8 +2015,8 @@
         "public/data/questions.json（Q110-5 題幹與選項）",
         "獨立依 stored-program architecture 與現代 cache hierarchy 推導"
       ],
-      "practiceEligible": false,
-      "autoGradeEligible": false
+      "practiceEligible": true,
+      "autoGradeEligible": true
     },
     {
       "questionId": "q-pp-im-it-110-6",
@@ -3241,8 +3241,8 @@
         ".work/im-it-pdf-audit-111-115.md（確認 PDF 原始 memory-layout 選項）",
         "獨立比較教科書邏輯位址模型與實際 Unix virtual-address layout"
       ],
-      "practiceEligible": false,
-      "autoGradeEligible": false
+      "practiceEligible": true,
+      "autoGradeEligible": true
     },
     {
       "questionId": "q-pp-im-it-112-14",
@@ -3668,8 +3668,8 @@
         "public/data/questions.json 題目交叉核對",
         "獨立 stack 與 calling-convention 推導；無官方答案 key"
       ],
-      "practiceEligible": false,
-      "autoGradeEligible": false
+      "practiceEligible": true,
+      "autoGradeEligible": true
     },
     {
       "questionId": "q-pp-im-it-113-6",

@@ -36,7 +36,7 @@ describe('IM-MIS subject-specific learning artifacts', () => {
     ).toBe(true)
   })
 
-  test('publishes a closed seven-topic lesson and concept-card corpus', () => {
+  test('publishes a reviewed seven-topic lesson and concept-card corpus', () => {
     const subtopics = conceptRaw.topics.flatMap((topic) => topic.subtopics)
     const coverage = lessonsRaw.lessons.flatMap((lesson) => lesson.coveredSubtopicIds)
     const cardCounts = new Map<string, number>()
@@ -44,7 +44,7 @@ describe('IM-MIS subject-specific learning artifacts', () => {
       cardCounts.set(card.subtopicId, (cardCounts.get(card.subtopicId) ?? 0) + 1)
 
     expect(conceptRaw.topics).toHaveLength(7)
-    expect(lessonsRaw.lessons).toHaveLength(7)
+    expect(lessonsRaw.lessons).toHaveLength(lessonsRaw.counts.lessons)
     expect(new Set(coverage).size).toBe(subtopics.length)
     expect(subtopics.every((subtopic) => (cardCounts.get(subtopic.id) ?? 0) >= 2)).toBe(true)
     expect(

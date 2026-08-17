@@ -19,7 +19,7 @@ describe('question review registry', () => {
   })
 
   test('retains existing IM-IT dispute guards', () => {
-    const review = getQuestionReview('q-pp-im-it-106-5')
+    const review = getQuestionReview('q-pp-im-it-106-12')
 
     expect(review?.status).toBe('disputed')
     expect(review?.autoGradeEligible).toBe(false)

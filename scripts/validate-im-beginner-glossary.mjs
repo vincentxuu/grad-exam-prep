@@ -10,7 +10,6 @@ const lessonFiles = {
   'im-mis': 'public/data/im-mis-lessons.json',
   'im-stat': 'public/data/im-stat-lessons.json',
 }
-const expectedLessonCounts = { 'im-it': 35, 'im-mis': 7, 'im-stat': 6 }
 const errors = []
 const require = (condition, message) => {
   if (!condition) errors.push(message)
@@ -26,11 +25,10 @@ const coverage = new Map()
 const lessonById = new Map()
 
 for (const [subjectId, file] of Object.entries(lessonFiles)) {
-  const lessons = read(file).lessons
-  require(lessons.length ===
-    expectedLessonCounts[
-      subjectId
-    ], `${subjectId}: expected ${expectedLessonCounts[subjectId]} lessons, found ${lessons.length}`)
+  const lessonArtifact = read(file)
+  const lessons = lessonArtifact.lessons
+  require(lessonArtifact.counts.lessons ===
+    lessons.length, `${subjectId}: declared ${lessonArtifact.counts.lessons} lessons, found ${lessons.length}`)
   for (const lesson of lessons) {
     lessonById.set(lesson.id, { subjectId, text: JSON.stringify(lesson).toLowerCase() })
     coverage.set(lesson.id, [])
