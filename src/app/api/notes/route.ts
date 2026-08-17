@@ -1,27 +1,16 @@
-import { getCloudflareContext } from '@opennextjs/cloudflare'
-import { NextRequest, NextResponse } from 'next/server'
-import { validateBearerToken } from '@/lib/auth'
-
-function unauthorized() {
-  return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
-}
-
-function getExpectedHash(): string | null {
-  return process.env.PASSPHRASE_HASH ?? null
-}
+import { NextResponse } from 'next/server'
+import { isAuthed, withAuth } from '@/lib/api-auth'
 
 function genId(): string {
   return `note-${Date.now()}-${Math.random().toString(36).slice(2)}`
 }
 
-export async function GET(request: NextRequest) {
-  const hash = getExpectedHash()
-  if (!hash || !validateBearerToken(request, hash)) return unauthorized()
+export async function GET(request: Request) {
+  const ctx = await withAuth(request)
+  if (!isAuthed(ctx)) return ctx
 
   try {
-    const { env } = await getCloudflareContext({ async: true })
-    const db = (env as unknown as { DB: D1Database }).DB
-    const rows = await db
+    const rows = await ctx.db
       .prepare('SELECT * FROM notes ORDER BY updated_at DESC')
       .all<{ id: string; content: string; tags: string; created_at: number; updated_at: number }>()
 
@@ -38,9 +27,9 @@ export async function GET(request: NextRequest) {
   }
 }
 
-export async function POST(request: NextRequest) {
-  const hash = getExpectedHash()
-  if (!hash || !validateBearerToken(request, hash)) return unauthorized()
+export async function POST(request: Request) {
+  const ctx = await withAuth(request)
+  if (!isAuthed(ctx)) return ctx
 
   try {
     const body = (await request.json()) as { content?: string; tags?: string[] }
@@ -49,12 +38,10 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'content required' }, { status: 400 })
     }
 
-    const { env } = await getCloudflareContext({ async: true })
-    const db = (env as unknown as { DB: D1Database }).DB
     const id = genId()
     const now = Date.now()
 
-    await db
+    await ctx.db
       .prepare(
         'INSERT INTO notes (id, content, tags, created_at, updated_at) VALUES (?, ?, ?, ?, ?)'
       )

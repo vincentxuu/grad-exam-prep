@@ -1,17 +1,16 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { SyncPanel } from '@/components/sync/sync-panel'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
-import { isAuthenticated } from '@/lib/auth'
+import { useAuth } from '@/lib/auth-context'
 import type { Note } from '@/lib/sync'
 import { createNote, deleteNote, fetchNotes, updateNote } from '@/lib/sync'
 
 export default function NotesPage() {
-  const [authed, setAuthed] = useState(false)
+  const { user } = useAuth()
   const [notes, setNotes] = useState<Note[]>([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -21,17 +20,13 @@ export default function NotesPage() {
   const [editContent, setEditContent] = useState('')
   const [editTags, setEditTags] = useState('')
 
-  useEffect(() => {
-    setAuthed(isAuthenticated())
-  }, [])
-
   async function loadNotes() {
     setLoading(true)
     setError(null)
     try {
       const data = await fetchNotes()
       setNotes(data)
-    } catch (e) {
+    } catch {
       setError('載入失敗，請確認已登入')
     } finally {
       setLoading(false)
@@ -39,8 +34,8 @@ export default function NotesPage() {
   }
 
   useEffect(() => {
-    if (authed) loadNotes()
-  }, [authed])
+    if (user) loadNotes()
+  }, [user])
 
   async function handleCreate() {
     if (!newContent.trim()) return
@@ -90,11 +85,8 @@ export default function NotesPage() {
         </p>
       </div>
 
-      <SyncPanel onAuthChange={setAuthed} />
-
-      {authed ? (
+      {user ? (
         <>
-          {/* New note form */}
           <div className="rounded-lg border p-4 space-y-3">
             <h2 className="text-sm font-medium">新增筆記</h2>
             <Textarea
@@ -203,8 +195,8 @@ export default function NotesPage() {
         </>
       ) : (
         <div className="rounded-lg border p-8 text-center text-muted-foreground">
-          <p className="text-sm">請先在上方輸入通行碼以存取雲端筆記</p>
-          <p className="text-xs mt-1">未登入時可在本地使用備考計畫和閃卡功能</p>
+          <p className="text-sm">請先登入以存取雲端筆記</p>
+          <p className="text-xs mt-1">點右上角「登入」按鈕</p>
         </div>
       )}
     </div>
