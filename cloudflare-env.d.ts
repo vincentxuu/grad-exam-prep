@@ -9,7 +9,7 @@ interface CloudflareEnv {
   // ── LLM provider 路由（做法沿用 vincentxuu/quidproquo）──────────────
   /** groq | google | openai | cloudflare | openrouter | cerebras | ollama，預設 cloudflare */
   LLM_PROVIDER?: string
-  /** 預設 @cf/meta/llama-3.3-70b-instruct-fp8-fast */
+  /** 預設 @cf/zai-org/glm-4.7-flash */
   LLM_MODEL?: string
   /** 主 provider 失敗時退到這家，未設定就不退 */
   LLM_FALLBACK_PROVIDER?: string

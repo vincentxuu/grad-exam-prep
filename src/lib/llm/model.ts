@@ -14,7 +14,7 @@ import type { LlmRuntimeConfig } from './config'
  * 設定來源分兩層，優先序由高到低：
  *   1. D1 的 `llm_config`（`LlmRuntimeConfig`）—— 改完不用重新部署
  *   2. env 變數 —— 部署期設定
- *   3. 程式預設 cloudflare / @cf/meta/llama-3.3-70b-instruct-fp8-fast
+ *   3. 程式預設 cloudflare / @cf/zai-org/glm-4.7-flash
  *
  * **外部 provider 的 API key 只從 env 讀，不進設定表**；Cloudflare 直接用
  * binding。wrangler secret 是加密存放且讀不回來，D1 是明文。
@@ -49,7 +49,7 @@ export interface LlmEnv {
 }
 
 export const DEFAULT_PROVIDER: ModelProvider = 'cloudflare'
-export const DEFAULT_MODEL = '@cf/meta/llama-3.3-70b-instruct-fp8-fast'
+export const DEFAULT_MODEL = '@cf/zai-org/glm-4.7-flash'
 
 export function resolveRoute(env: LlmEnv, config?: LlmRuntimeConfig): ModelRoute {
   return {
