@@ -107,16 +107,30 @@ export interface RecommendedLesson {
   questionHref: string
 }
 
-export function getTodayRecommendedLessons(examId: string, date: Date): RecommendedLesson[] {
-  const catalogs = getLearningCatalogs().filter((c) => c.examId === examId && c.lessons.length > 0)
-  if (catalogs.length === 0) return []
+export function getTodayRecommendedLessons(
+  examId: string,
+  date: Date,
+  focusSubjectIds?: string[]
+): RecommendedLesson[] {
+  const allCatalogs = getLearningCatalogs().filter(
+    (c) => c.examId === examId && c.lessons.length > 0
+  )
+  if (allCatalogs.length === 0) return []
 
   const dayOfYear = Math.floor(
     (date.getTime() - new Date(date.getFullYear(), 0, 0).getTime()) / 86_400_000
   )
 
-  const picked: RecommendedLesson[] = []
-  const subjectOrder = [...catalogs].sort((a, b) => {
+  const hasFocus = focusSubjectIds && focusSubjectIds.length > 0
+  const focusSet = hasFocus ? new Set(focusSubjectIds) : null
+
+  const targetCatalogs = focusSet
+    ? allCatalogs.filter((c) => focusSet.has(c.subjectId))
+    : allCatalogs
+
+  if (targetCatalogs.length === 0) return []
+
+  const subjectOrder = [...targetCatalogs].sort((a, b) => {
     const priorityMap: Record<string, number> = {
       'im-it': 0,
       'im-mis': 1,
@@ -126,7 +140,8 @@ export function getTodayRecommendedLessons(examId: string, date: Date): Recommen
     return (priorityMap[a.subjectId] ?? 99) - (priorityMap[b.subjectId] ?? 99)
   })
 
-  const startIndex = dayOfYear % subjectOrder.length
+  const picked: RecommendedLesson[] = []
+  const startIndex = focusSet ? 0 : dayOfYear % subjectOrder.length
   for (let i = 0; i < Math.min(2, subjectOrder.length); i++) {
     const catalog = subjectOrder[(startIndex + i) % subjectOrder.length]
     const lessonIndex = dayOfYear % catalog.lessons.length

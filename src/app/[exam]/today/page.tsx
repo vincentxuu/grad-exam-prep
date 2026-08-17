@@ -103,7 +103,14 @@ function TodayContent({ params }: Props) {
   )
   const planHref = `/${exam}/plan?plan=${encodeURIComponent(plan.id)}`
 
-  const recommended = useMemo(() => getTodayRecommendedLessons(examId, today), [examId])
+  const focusSubjects = useMemo(
+    () => [...new Set(focusTasks.map((t) => t.subjectTag).filter(Boolean))] as string[],
+    [focusTasks]
+  )
+  const recommended = useMemo(
+    () => getTodayRecommendedLessons(examId, today, focusSubjects.length > 0 ? focusSubjects : undefined),
+    [examId, focusSubjects]
+  )
 
   return (
     <div className="mx-auto max-w-5xl space-y-6 pb-12">
@@ -177,7 +184,6 @@ function TodayContent({ params }: Props) {
 
             {focusTasks.length > 0 && (
               <div className="space-y-3 mt-4">
-                <p className="text-xs font-semibold text-muted-foreground">備考計畫任務</p>
                 {focusTasks.map((task) => {
                   const latestEvidence = findLatestTaskEvidence(state.dailyLearning, task.id)
                   const isOpen = openTaskId === task.id
