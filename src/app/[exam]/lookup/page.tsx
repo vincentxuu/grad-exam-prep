@@ -10,6 +10,8 @@ import { Button } from '@/components/ui/button'
 import { EXAM_LABELS, getSubjectsByExam } from '@/lib/content'
 import { fromSavedWord } from '@/lib/review-card'
 import { daysUntilDue } from '@/lib/srs'
+import { isAuthenticated } from '@/lib/auth'
+import { removeSavedWordServer, setPreferencesServer } from '@/lib/server-storage'
 import { localStorageImpl } from '@/lib/storage'
 import { useFlashcardStore } from '@/store/flashcard'
 import type { ExamId } from '@/types/content'
@@ -56,11 +58,13 @@ function LookupContent({ params }: Props) {
   function updatePersona(next: PersonaProfile) {
     localStorageImpl.setPreferences({ persona: next })
     setPersona(next)
+    if (isAuthenticated()) setPreferencesServer({ persona: next }).catch(() => {})
   }
 
   function remove(headword: string) {
     localStorageImpl.removeSavedWord(headword)
     setSavedWords(localStorageImpl.getSavedWords())
+    if (isAuthenticated()) removeSavedWordServer(headword).catch(() => {})
   }
 
   const personaFilled = !!persona && (persona.work.trim() !== '' || persona.interests.length > 0)

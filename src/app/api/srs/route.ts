@@ -1,6 +1,5 @@
-import { getCloudflareContext } from '@opennextjs/cloudflare'
-import { type NextRequest, NextResponse } from 'next/server'
-import { authenticateRequest } from '@/lib/auth'
+import { NextResponse } from 'next/server'
+import { isAuthed, withAuth } from '@/lib/api-auth'
 import type { CardSRSState } from '@/types/storage'
 
 interface SrsRow {
@@ -23,17 +22,15 @@ function rowToState(row: SrsRow): CardSRSState {
   }
 }
 
-export async function GET(request: NextRequest) {
-  const { env } = await getCloudflareContext({ async: true })
-  const { DB, JWT_SECRET } = env as unknown as CloudflareEnv
+export async function GET(request: Request) {
+  const ctx = await withAuth(request)
+  if (!isAuthed(ctx)) return ctx
 
-  const user = await authenticateRequest(request, JWT_SECRET)
-  if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
-
-  const rows = await DB.prepare(
-    'SELECT card_id, interval, repetitions, ease_factor, next_review, last_reviewed_at FROM user_srs_cards WHERE user_id = ?'
-  )
-    .bind(user.id)
+  const rows = await ctx.db
+    .prepare(
+      'SELECT card_id, interval, repetitions, ease_factor, next_review, last_reviewed_at FROM user_srs_cards WHERE user_id = ?'
+    )
+    .bind(ctx.user.id)
     .all<SrsRow>()
 
   const states: Record<string, CardSRSState> = {}

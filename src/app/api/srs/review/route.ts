@@ -1,6 +1,5 @@
-import { getCloudflareContext } from '@opennextjs/cloudflare'
 import { NextResponse } from 'next/server'
-import { authenticateRequest } from '@/lib/auth'
+import { isAuthed, withAuth } from '@/lib/api-auth'
 import type { RecallRating } from '@/lib/srs'
 import { initialCardState, reviewCard } from '@/lib/srs'
 import type { CardSRSState } from '@/types/storage'
@@ -15,11 +14,8 @@ interface SrsRow {
 }
 
 export async function POST(request: Request) {
-  const { env } = await getCloudflareContext({ async: true })
-  const { DB, JWT_SECRET } = env as unknown as CloudflareEnv
-
-  const user = await authenticateRequest(request, JWT_SECRET)
-  if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  const ctx = await withAuth(request)
+  if (!isAuthed(ctx)) return ctx
 
   let body: { cardId?: string; rating?: number }
   try {
@@ -35,10 +31,11 @@ export async function POST(request: Request) {
 
   const now = Date.now()
 
-  const existing = await DB.prepare(
-    'SELECT card_id, interval, repetitions, ease_factor, next_review, last_reviewed_at FROM user_srs_cards WHERE user_id = ? AND card_id = ?'
-  )
-    .bind(user.id, cardId)
+  const existing = await ctx.db
+    .prepare(
+      'SELECT card_id, interval, repetitions, ease_factor, next_review, last_reviewed_at FROM user_srs_cards WHERE user_id = ? AND card_id = ?'
+    )
+    .bind(ctx.user.id, cardId)
     .first<SrsRow>()
 
   const currentState: CardSRSState = existing
@@ -54,18 +51,19 @@ export async function POST(request: Request) {
 
   const updated = reviewCard(currentState, rating as RecallRating, now)
 
-  await DB.prepare(
-    `INSERT INTO user_srs_cards (user_id, card_id, interval, repetitions, ease_factor, next_review, last_reviewed_at)
-     VALUES (?, ?, ?, ?, ?, ?, ?)
-     ON CONFLICT(user_id, card_id) DO UPDATE SET
-       interval = excluded.interval,
-       repetitions = excluded.repetitions,
-       ease_factor = excluded.ease_factor,
-       next_review = excluded.next_review,
-       last_reviewed_at = excluded.last_reviewed_at`
-  )
+  await ctx.db
+    .prepare(
+      `INSERT INTO user_srs_cards (user_id, card_id, interval, repetitions, ease_factor, next_review, last_reviewed_at)
+       VALUES (?, ?, ?, ?, ?, ?, ?)
+       ON CONFLICT(user_id, card_id) DO UPDATE SET
+         interval = excluded.interval,
+         repetitions = excluded.repetitions,
+         ease_factor = excluded.ease_factor,
+         next_review = excluded.next_review,
+         last_reviewed_at = excluded.last_reviewed_at`
+    )
     .bind(
-      user.id,
+      ctx.user.id,
       cardId,
       updated.interval,
       updated.repetitions,

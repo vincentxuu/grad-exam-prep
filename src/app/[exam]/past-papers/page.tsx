@@ -8,6 +8,8 @@ import { Card, CardContent } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { EXAM_LABELS, getQuestionCount, getSubjectsByExam } from '@/lib/content'
+import { isAuthenticated } from '@/lib/auth'
+import { setPaperPracticeServer } from '@/lib/server-storage'
 import { localStorageImpl } from '@/lib/storage'
 import type { ExamId } from '@/types/content'
 import { Download } from 'lucide-react'
@@ -59,10 +61,12 @@ export default function PastPapersPage({ params }: Props) {
         delete n[paperId]
         return n
       })
+      if (isAuthenticated()) setPaperPracticeServer(paperId, null).catch(() => {})
     } else {
       const data = { practicedAt: Date.now() }
       localStorageImpl.setPaperPractice(paperId, data)
       setPaperStates((s) => ({ ...s, [paperId]: data }))
+      if (isAuthenticated()) setPaperPracticeServer(paperId, data).catch(() => {})
     }
   }
 
@@ -74,6 +78,7 @@ export default function PastPapersPage({ params }: Props) {
     localStorageImpl.setPaperPractice(paperId, data)
     setPaperStates((s) => ({ ...s, [paperId]: data }))
     setEditingNotes(null)
+    if (isAuthenticated()) setPaperPracticeServer(paperId, data).catch(() => {})
   }
 
   const practicedCount = Object.keys(paperStates).filter((id) =>

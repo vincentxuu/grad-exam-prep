@@ -8,6 +8,8 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { useSpeech } from '@/hooks/use-speech'
 import { lexiconCardId } from '@/lib/lexicon/normalize'
+import { isAuthenticated } from '@/lib/auth'
+import { addSavedWordServer, removeSavedWordServer } from '@/lib/server-storage'
 import { localStorageImpl } from '@/lib/storage'
 import type { LookupResponse, PersonaProfile } from '@/types/lexicon'
 import type { WordSource } from '@/types/storage'
@@ -91,20 +93,23 @@ export function LookupPanel({ term, persona, source, showInput = true, onSaveCha
   }, [term, lookup])
 
   function save(headword: string) {
-    localStorageImpl.addSavedWord({
+    const word = {
       headword,
       cardId: lexiconCardId(headword),
       addedAt: Date.now(),
-      source: source ?? { kind: 'manual' },
-    })
+      source: source ?? { kind: 'manual' as const },
+    }
+    localStorageImpl.addSavedWord(word)
     setSavedWords((prev) => [...prev, headword])
     onSaveChange?.()
+    if (isAuthenticated()) addSavedWordServer(word).catch(() => {})
   }
 
   function unsave(headword: string) {
     localStorageImpl.removeSavedWord(headword)
     setSavedWords((prev) => prev.filter((h) => h !== headword))
     onSaveChange?.()
+    if (isAuthenticated()) removeSavedWordServer(headword).catch(() => {})
   }
 
   return (

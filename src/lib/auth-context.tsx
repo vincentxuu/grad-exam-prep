@@ -3,6 +3,8 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react'
 import type { AuthUser } from '@/lib/auth'
 import { clearToken, getAuthHeader, parseTokenPayload, storeToken } from '@/lib/auth'
+import { fetchFullState } from '@/lib/server-storage'
+import { localStorageImpl } from '@/lib/storage'
 
 interface AuthContextValue {
   user: AuthUser | null
@@ -15,13 +17,36 @@ interface AuthContextValue {
 
 const AuthContext = createContext<AuthContextValue | null>(null)
 
+function hydrateFromServer() {
+  fetchFullState()
+    .then((serverState) => {
+      const local = localStorageImpl.getState()
+      localStorageImpl.importJSON(
+        JSON.stringify({
+          ...local,
+          completedTasks: { ...local.completedTasks, ...serverState.completedTasks },
+          customTasks: serverState.customTasks.length > 0 ? serverState.customTasks : local.customTasks,
+          srsState: { ...local.srsState, ...serverState.srsState },
+          paperPractice: { ...local.paperPractice, ...serverState.paperPractice },
+          savedWords: serverState.savedWords.length > 0 ? serverState.savedWords : local.savedWords,
+          dailyLearning: { ...local.dailyLearning, ...serverState.dailyLearning },
+          preferences: { ...local.preferences, ...serverState.preferences },
+        }),
+        { mergeDailyLearning: true }
+      )
+    })
+    .catch(() => {})
+}
+
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<AuthUser | null>(null)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    setUser(parseTokenPayload())
+    const parsed = parseTokenPayload()
+    setUser(parsed)
     setLoading(false)
+    if (parsed) hydrateFromServer()
   }, [])
 
   const login = useCallback(async (email: string, password: string) => {
@@ -34,6 +59,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     if (!res.ok) throw new Error(data.error ?? '登入失敗')
     storeToken(data.token!)
     setUser(data.user!)
+    hydrateFromServer()
   }, [])
 
   const register = useCallback(async (email: string, password: string) => {

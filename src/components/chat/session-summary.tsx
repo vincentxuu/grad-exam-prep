@@ -3,8 +3,10 @@
 import { useState } from 'react'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
+import { getAuthHeader, isAuthenticated } from '@/lib/auth'
 import { lexiconCardId } from '@/lib/lexicon/normalize'
 import { reviewCard as applySrs } from '@/lib/srs'
+import { addSavedWordServer } from '@/lib/server-storage'
 import { localStorageImpl } from '@/lib/storage'
 import { CORRECTION_KIND_LABEL, type Correction, type SessionSummary } from '@/types/chat'
 
@@ -35,20 +37,29 @@ export function SessionSummaryView({ summary, onRestart }: Props) {
     const cardId = lexiconCardId(headword)
     const existing = localStorageImpl.getSRSCard(cardId)
     if (existing) {
-      // 評為「熟悉」（rating 2），與在閃卡頁按下那顆按鈕等價
-      localStorageImpl.updateSRSCard(cardId, applySrs(existing, 2))
+      const updated = applySrs(existing, 2)
+      localStorageImpl.updateSRSCard(cardId, updated)
+      if (isAuthenticated()) {
+        fetch('/api/srs/review', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', ...getAuthHeader() },
+          body: JSON.stringify({ cardId, rating: 2 }),
+        }).catch(() => {})
+      }
     }
     setPromoted((p) => [...p, headword])
   }
 
   function addWord(headword: string) {
-    localStorageImpl.addSavedWord({
+    const word = {
       headword,
       cardId: lexiconCardId(headword),
       addedAt: Date.now(),
-      source: { kind: 'chat' },
-    })
+      source: { kind: 'chat' as const },
+    }
+    localStorageImpl.addSavedWord(word)
     setAdded((a) => [...a, headword])
+    if (isAuthenticated()) addSavedWordServer(word).catch(() => {})
   }
 
   const grouped = groupByKind(summary.corrections)
