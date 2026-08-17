@@ -1,0 +1,82 @@
+{
+  "version": "1.0",
+  "sourceType": "textbook",
+  "textbook": "OpenIntro Statistics, 4th Edition",
+  "url": "https://www.openintro.org/book/os/",
+  "license": "Creative Commons BY-SA 3.0",
+  "totalQuestions": 8,
+  "questions": [
+    {
+      "id": "q-tb-openintro-stat-ch3-7",
+      "examId": "im",
+      "subjectId": "im-stat",
+      "text": "A Pew Research survey asked 2,373 randomly sampled registered voters their political affiliation (Republican, Democrat, or Independent) and whether or not they identify as swing voters. 35% of respondents identified as Independent, 23% identified as swing voters, and 11% identified as both.\n\n(a) Are being Independent and being a swing voter disjoint, i.e. mutually exclusive?\n(b) Draw a Venn diagram summarizing the variables and their associated probabilities.\n(c) What percent of voters are Independent but not swing voters?\n(d) What percent of voters are Independent or swing voters?\n(e) What percent of voters are neither Independent nor swing voters?\n(f) Is the event that someone is a swing voter independent of the event that someone is a political Independent?",
+      "points": null,
+      "hasImage": false,
+      "subQuestions": ["a", "b", "c", "d", "e", "f"]
+    },
+    {
+      "id": "q-tb-openintro-stat-ch3-15",
+      "examId": "im",
+      "subjectId": "im-stat",
+      "text": "A Pew Research poll asked 1,306 Americans whether there is solid evidence that the average temperature on earth has been getting warmer over the past few decades. The table below shows the distribution of responses by party and ideology.\n\n|                          | Earth is warming | Not warming | Don't Know / Refuse | Total |\n|--------------------------|-----------------|-------------|--------------------|---------|\n| Conservative Republican  | 0.11            | 0.20        | 0.02               | 0.33  |\n| Mod/Lib Republican       | 0.06            | 0.06        | 0.01               | 0.13  |\n| Mod/Cons Democrat        | 0.25            | 0.07        | 0.02               | 0.34  |\n| Liberal Democrat          | 0.18            | 0.01        | 0.01               | 0.20  |\n| Total                    | 0.60            | 0.34        | 0.06               | 1.00  |\n\n(a) Are believing that the earth is warming and being a liberal Democrat mutually exclusive?\n(b) What is the probability that a randomly chosen respondent believes the earth is warming or is a liberal Democrat?\n(c) What is the probability that a randomly chosen respondent believes the earth is warming given that he is a liberal Democrat?\n(d) What is the probability that a randomly chosen respondent believes the earth is warming given that he is a conservative Republican?\n(e) Does it appear that whether a respondent believes the earth is warming is independent of their party and ideology? Explain your reasoning.\n(f) What is the probability that a randomly chosen respondent is a moderate/liberal Republican given that he does not believe that the earth is warming?",
+      "points": null,
+      "hasImage": false,
+      "subQuestions": ["a", "b", "c", "d", "e", "f"]
+    },
+    {
+      "id": "q-tb-openintro-stat-ch3-18",
+      "examId": "im",
+      "subjectId": "im-stat",
+      "text": "Assortative mating is a nonrandom mating pattern where individuals with similar genotypes and/or phenotypes mate with one another more frequently than what would be expected under a random mating pattern. Researchers studying this topic collected data on eye colors of 204 Scandinavian men and their female partners. The table below summarizes the results.\n\n| Self (male) | Blue | Brown | Green | Total |\n|-------------|------|-------|-------|-------|\n| Blue        | 78   | 23    | 13    | 114   |\n| Brown       | 19   | 23    | 12    | 54    |\n| Green       | 11   | 9     | 16    | 36    |\n| Total       | 108  | 55    | 41    | 204   |\n\n(a) What is the probability that a randomly chosen male respondent or his partner has blue eyes?\n(b) What is the probability that a randomly chosen male respondent with blue eyes has a partner with blue eyes?\n(c) What is the probability that a randomly chosen male respondent with brown eyes has a partner with blue eyes? What about the probability of a randomly chosen male respondent with green eyes having a partner with blue eyes?\n(d) Does it appear that the eye colors of male respondents and their partners are independent? Explain your reasoning.",
+      "points": null,
+      "hasImage": false,
+      "subQuestions": ["a", "b", "c", "d"]
+    },
+    {
+      "id": "q-tb-openintro-stat-ch6-10",
+      "examId": "im",
+      "subjectId": "im-stat",
+      "text": "The General Social Survey asked 1,578 US residents: \"Do you think the use of marijuana should be made legal, or not?\" 61% of the respondents said it should be made legal.\n\n(a) Is 61% a sample statistic or a population parameter? Explain.\n(b) Construct a 95% confidence interval for the proportion of US residents who think marijuana should be made legal, and interpret it in the context of the data.\n(c) A critic points out that this 95% confidence interval is only accurate if the statistic follows a normal distribution, or if the normal model is a good approximation. Is this true for these data? Explain.\n(d) A news piece on this survey's findings states, \"Majority of Americans think marijuana should be legalized.\" Based on your confidence interval, is this news piece's statement justified?",
+      "points": null,
+      "hasImage": false,
+      "subQuestions": ["a", "b", "c", "d"]
+    },
+    {
+      "id": "q-tb-openintro-stat-ch8-26",
+      "examId": "im",
+      "subjectId": "im-stat",
+      "text": "The following regression output is for predicting the heart weight (in g) of cats from their body weight (in kg). The coefficients are estimated using a dataset of 144 domestic cats.\n\n| | Estimate | Std. Error | t value | Pr(>|t|) |\n|---|---------|-----------|---------|----------|\n| (Intercept) | -0.357 | 0.692 | -0.515 | 0.607 |\n| body wt | 4.034 | 0.250 | 16.119 | 0.000 |\n\ns = 1.452, R² = 64.66%, R²_adj = 64.41%\n\n(a) Write out the linear model.\n(b) Interpret the intercept.\n(c) Interpret the slope.\n(d) Interpret R².\n(e) Calculate the correlation coefficient.",
+      "points": null,
+      "hasImage": false,
+      "subQuestions": ["a", "b", "c", "d", "e"]
+    },
+    {
+      "id": "q-tb-openintro-stat-ch8-32",
+      "examId": "im",
+      "subjectId": "im-stat",
+      "text": "Many people believe that gender, weight, drinking habits, and many other factors are much more important in predicting blood alcohol content (BAC) than simply considering the number of drinks a person consumed. Here we examine data from sixteen student volunteers at Ohio State University who each drank a randomly assigned number of cans of beer. Thirty minutes later, a police officer measured their blood alcohol content (BAC) in grams of alcohol per deciliter of blood. The regression table summarizes the findings.\n\n| | Estimate | Std. Error | t value | Pr(>|t|) |\n|---|---------|-----------|---------|----------|\n| (Intercept) | -0.0127 | 0.0126 | -1.00 | 0.3320 |\n| beers | 0.0180 | 0.0024 | 7.48 | 0.0000 |\n\n(a) Describe the relationship between the number of cans of beer and BAC.\n(b) Write the equation of the regression line. Interpret the slope and intercept in context.\n(c) Do the data provide strong evidence that drinking more cans of beer is associated with an increase in blood alcohol? State the null and alternative hypotheses, report the p-value, and state your conclusion.\n(d) The correlation coefficient for number of cans of beer and BAC is 0.89. Calculate R² and interpret it in context.\n(e) Suppose we visit a bar, ask people how many drinks they have had, and also take their BAC. Do you think the relationship between number of drinks and BAC would be as strong as the relationship found in the Ohio State study?",
+      "points": null,
+      "hasImage": false,
+      "subQuestions": ["a", "b", "c", "d", "e"]
+    },
+    {
+      "id": "q-tb-openintro-stat-ch9-3",
+      "examId": "im",
+      "subjectId": "im-stat",
+      "text": "We considered the variables smoke and parity, one at a time, in modeling birth weights of babies. A more realistic approach to modeling infant weights is to consider all possibly related variables at once. Other variables of interest include length of pregnancy in days (gestation), mother's age in years (age), mother's height in inches (height), and mother's pregnancy weight in pounds (weight). The summary table below shows the results of a regression model for predicting the average birth weight of babies based on all of the variables (n = 1,236). Note that smoke is coded as 1 for smokers.\n\n| | Estimate | Std. Error | t value | Pr(>|t|) |\n|---|---------|-----------|---------|----------|\n| (Intercept) | -80.41 | 14.35 | -5.60 | 0.0000 |\n| gestation | 0.44 | 0.03 | 15.26 | 0.0000 |\n| parity | -3.33 | 1.13 | -2.95 | 0.0033 |\n| age | -0.01 | 0.09 | -0.10 | 0.9170 |\n| height | 1.15 | 0.21 | 5.63 | 0.0000 |\n| weight | 0.05 | 0.03 | 1.99 | 0.0471 |\n| smoke | -8.40 | 0.95 | -8.81 | 0.0000 |\n\n(a) Write the equation of the regression model that includes all of the variables.\n(b) Interpret the slopes of gestation and age in this context.\n(c) The coefficient for parity is different than in the simple linear model. Why might there be a difference?\n(d) Calculate the residual for the first observation in the data set: bwt=120, gestation=284, parity=0, age=27, height=62, weight=100, smoke=0.\n(e) The variance of the residuals is 249.28, and the variance of the birth weights of all babies in the data set is 332.57. Calculate the R² and the adjusted R². Note that there are 1,236 observations in the data set.",
+      "points": null,
+      "hasImage": false,
+      "subQuestions": ["a", "b", "c", "d", "e"]
+    },
+    {
+      "id": "q-tb-openintro-stat-ch9-5",
+      "examId": "im",
+      "subjectId": "im-stat",
+      "text": "A survey of 55 Duke University students asked about their GPA, number of hours they study at night, number of nights they go out, and their gender. Summary output of the regression model is shown below. Note that male is coded as 1.\n\n| | Estimate | Std. Error | t value | Pr(>|t|) |\n|---|---------|-----------|---------|----------|\n| (Intercept) | 3.45 | 0.35 | 9.85 | 0.00 |\n| studyweek | 0.00 | 0.00 | 0.27 | 0.79 |\n| sleepnight | 0.01 | 0.05 | 0.11 | 0.91 |\n| outnight | 0.05 | 0.05 | 1.01 | 0.32 |\n| gender | -0.08 | 0.12 | -0.68 | 0.50 |\n\n(a) Calculate a 95% confidence interval for the coefficient of gender in the model, and interpret it in the context of the data.\n(b) Would you expect a 95% confidence interval for the slope of the remaining variables to include 0? Explain.",
+      "points": null,
+      "hasImage": false,
+      "subQuestions": ["a", "b"]
+    }
+  ]
+}

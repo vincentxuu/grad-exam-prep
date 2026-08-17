@@ -1,5 +1,6 @@
 import cardsRaw from '../../public/data/im-it-concept-cards.json'
 import conceptMasterRaw from '../../public/data/im-it-concept-master.json'
+import extTbAiRaw from '../../public/data/ext-tb-ai-question-metadata.json'
 import lessonsRaw from '../../public/data/im-it-lessons.json'
 import questionMetadataRaw from '../../public/data/im-it-question-metadata.json'
 import sourcesRaw from '../../public/data/im-it-source-registry.json'
@@ -13,6 +14,7 @@ import {
   type LearningTopic,
   type LearningWorkedExample,
 } from './learning'
+import { mergeExternalQuestions } from './question-metadata'
 import { buildQuestionDrillHref } from './question-drill'
 
 export type ImItWorkedExample = LearningWorkedExample
@@ -30,6 +32,7 @@ const topicQuestionCounts: Record<string, number> = {}
 for (const question of questionMetadataRaw.questions) {
   topicQuestionCounts[question.topicId] = (topicQuestionCounts[question.topicId] ?? 0) + 1
 }
+mergeExternalQuestions(topicQuestionCounts, extTbAiRaw as never)
 
 export const imItLearningCatalog = createLearningCatalog({
   examId: 'im',

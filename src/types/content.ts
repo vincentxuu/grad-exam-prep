@@ -165,6 +165,67 @@ export interface Question {
   subQuestions: string[]
 }
 
+export type QuestionSourceType =
+  | 'ntu-im-exam'
+  | 'other-school-exam'
+  | 'ntu-other-dept-exam'
+  | 'textbook'
+
+export type DifficultyComparison = 'similar' | 'harder' | 'easier'
+
+export type AnswerAuthority = 'official-key' | 'textbook-solution' | 'model-derived'
+
+export interface QuestionSource {
+  type: QuestionSourceType
+  institution: string | null
+  department: string | null
+  textbook: string | null
+  chapter: string | null
+  year: number | null
+  paperId: string
+  difficultyVsNtuIm: DifficultyComparison | null
+  answerAuthority: AnswerAuthority
+}
+
+export interface QuestionMetadataEntry {
+  questionId: string
+  paperId: string
+  topicId: string
+  primarySubtopicId: string
+  questionType: string
+  scoringMode: string
+  taxonomyConfidence?: string
+  taxonomyRationale?: string
+  answerSource: {
+    kind: string
+    official: boolean
+    reviewCount: number
+    note?: string
+  }
+  answerConfidence: {
+    level: string
+    basis: string[]
+    unresolvedIssues?: string[]
+  }
+  publication: {
+    browseEligible: boolean
+    practiceEligible: boolean
+    autoGradeEligible: boolean
+    fullMockEligible: boolean
+    blockers: string[]
+  }
+  source?: QuestionSource
+}
+
+export interface QuestionMetadataFile {
+  schemaVersion: number
+  subjectId: string
+  totalQuestions: number
+  questions: QuestionMetadataEntry[]
+  sourceType?: QuestionSourceType
+  sourceLabel?: string
+}
+
 export interface GuideSource {
   platform: string
   url: string

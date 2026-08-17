@@ -1,0 +1,331 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "im-stat",
+  "sourceType": "textbook",
+  "sourceLabel": "教材統計練習題",
+  "textbook": "OpenIntro Statistics, 4th Edition",
+  "textbookUrl": "https://www.openintro.org/book/os/",
+  "license": "Creative Commons BY-SA 3.0",
+  "status": "pilot",
+  "totalQuestions": 8,
+  "topicCoverage": {
+    "im-stat-probability": 3,
+    "im-stat-estimation": 1,
+    "im-stat-regression": 4,
+    "im-stat-categorical": 0
+  },
+  "questions": [
+    {
+      "questionId": "q-tb-openintro-stat-ch3-7",
+      "topicId": "im-stat-probability",
+      "primarySubtopicId": "im-stat-probability-joint-pmf",
+      "conceptIds": ["im-stat-probability-joint-pmf"],
+      "questionType": "open_ended",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "考聯合機率、互斥事件與獨立性判斷。",
+      "source": {
+        "type": "textbook",
+        "institution": null,
+        "department": null,
+        "textbook": "OpenIntro Statistics, 4th Edition",
+        "chapter": "Ch 3, Exercise 7",
+        "year": null,
+        "paperId": "tb-openintro-stat",
+        "difficultyVsNtuIm": "easier",
+        "answerAuthority": "textbook-solution"
+      },
+      "answerSource": {
+        "kind": "textbook_solution_manual",
+        "official": true,
+        "reviewCount": 0,
+        "note": "OpenIntro Statistics odd-numbered exercise with published solution."
+      },
+      "answerConfidence": {
+        "level": "high",
+        "basis": ["Textbook solution manual answer"],
+        "unresolvedIssues": []
+      },
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": []
+      }
+    },
+    {
+      "questionId": "q-tb-openintro-stat-ch3-15",
+      "topicId": "im-stat-probability",
+      "primarySubtopicId": "im-stat-probability-joint-pmf",
+      "conceptIds": ["im-stat-probability-joint-pmf"],
+      "questionType": "open_ended",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "列聯表計算條件機率與獨立性判斷。",
+      "source": {
+        "type": "textbook",
+        "institution": null,
+        "department": null,
+        "textbook": "OpenIntro Statistics, 4th Edition",
+        "chapter": "Ch 3, Exercise 15",
+        "year": null,
+        "paperId": "tb-openintro-stat",
+        "difficultyVsNtuIm": "easier",
+        "answerAuthority": "textbook-solution"
+      },
+      "answerSource": {
+        "kind": "textbook_solution_manual",
+        "official": true,
+        "reviewCount": 0,
+        "note": "OpenIntro Statistics odd-numbered exercise with published solution."
+      },
+      "answerConfidence": {
+        "level": "high",
+        "basis": ["Textbook solution manual answer"],
+        "unresolvedIssues": []
+      },
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": []
+      }
+    },
+    {
+      "questionId": "q-tb-openintro-stat-ch3-18",
+      "topicId": "im-stat-probability",
+      "primarySubtopicId": "im-stat-probability-joint-pmf",
+      "conceptIds": ["im-stat-probability-joint-pmf"],
+      "questionType": "open_ended",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "列聯表計算聯合與邊際機率，判斷獨立性。與台大 115-5 卡方題高度相關。",
+      "source": {
+        "type": "textbook",
+        "institution": null,
+        "department": null,
+        "textbook": "OpenIntro Statistics, 4th Edition",
+        "chapter": "Ch 3, Exercise 18",
+        "year": null,
+        "paperId": "tb-openintro-stat",
+        "difficultyVsNtuIm": "easier",
+        "answerAuthority": "textbook-solution"
+      },
+      "answerSource": {
+        "kind": "textbook_solution_manual",
+        "official": true,
+        "reviewCount": 0,
+        "note": "Even-numbered exercise; solution derived from textbook examples."
+      },
+      "answerConfidence": {
+        "level": "high",
+        "basis": ["Standard probability computation with known data"],
+        "unresolvedIssues": []
+      },
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": []
+      }
+    },
+    {
+      "questionId": "q-tb-openintro-stat-ch6-10",
+      "topicId": "im-stat-estimation",
+      "primarySubtopicId": "im-stat-estimation-unbiasedness",
+      "conceptIds": ["im-stat-estimation-unbiasedness", "im-stat-estimation-variance"],
+      "questionType": "open_ended",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "信賴區間建構與統計推論基礎，涉及估計量概念。",
+      "source": {
+        "type": "textbook",
+        "institution": null,
+        "department": null,
+        "textbook": "OpenIntro Statistics, 4th Edition",
+        "chapter": "Ch 6, Exercise 10",
+        "year": null,
+        "paperId": "tb-openintro-stat",
+        "difficultyVsNtuIm": "easier",
+        "answerAuthority": "textbook-solution"
+      },
+      "answerSource": {
+        "kind": "textbook_solution_manual",
+        "official": true,
+        "reviewCount": 0,
+        "note": "Even-numbered exercise; solution derivable from textbook formulas."
+      },
+      "answerConfidence": {
+        "level": "high",
+        "basis": ["Standard confidence interval construction"],
+        "unresolvedIssues": []
+      },
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": []
+      }
+    },
+    {
+      "questionId": "q-tb-openintro-stat-ch8-26",
+      "topicId": "im-stat-regression",
+      "primarySubtopicId": "im-stat-regression-multiple",
+      "conceptIds": ["im-stat-regression-multiple"],
+      "questionType": "open_ended",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "簡單線性迴歸輸出解讀：模型方程式、斜率截距解釋、R²。直接對應台大 114-4 題型。",
+      "source": {
+        "type": "textbook",
+        "institution": null,
+        "department": null,
+        "textbook": "OpenIntro Statistics, 4th Edition",
+        "chapter": "Ch 8, Exercise 26",
+        "year": null,
+        "paperId": "tb-openintro-stat",
+        "difficultyVsNtuIm": "easier",
+        "answerAuthority": "textbook-solution"
+      },
+      "answerSource": {
+        "kind": "textbook_solution_manual",
+        "official": true,
+        "reviewCount": 0,
+        "note": "Even-numbered exercise; solution derivable from regression output."
+      },
+      "answerConfidence": {
+        "level": "high",
+        "basis": ["Regression output interpretation with known values"],
+        "unresolvedIssues": []
+      },
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": []
+      }
+    },
+    {
+      "questionId": "q-tb-openintro-stat-ch8-32",
+      "topicId": "im-stat-regression",
+      "primarySubtopicId": "im-stat-regression-t-f-tests",
+      "conceptIds": ["im-stat-regression-multiple", "im-stat-regression-t-f-tests"],
+      "questionType": "open_ended",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "迴歸假設檢定（斜率 t 檢定）、R² 計算。直接對應台大 114-4 題型。",
+      "source": {
+        "type": "textbook",
+        "institution": null,
+        "department": null,
+        "textbook": "OpenIntro Statistics, 4th Edition",
+        "chapter": "Ch 8, Exercise 32",
+        "year": null,
+        "paperId": "tb-openintro-stat",
+        "difficultyVsNtuIm": "similar",
+        "answerAuthority": "textbook-solution"
+      },
+      "answerSource": {
+        "kind": "textbook_solution_manual",
+        "official": true,
+        "reviewCount": 0,
+        "note": "Even-numbered exercise; involves hypothesis testing on regression slope."
+      },
+      "answerConfidence": {
+        "level": "high",
+        "basis": ["Textbook regression hypothesis testing with p-value provided"],
+        "unresolvedIssues": []
+      },
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": []
+      }
+    },
+    {
+      "questionId": "q-tb-openintro-stat-ch9-3",
+      "topicId": "im-stat-regression",
+      "primarySubtopicId": "im-stat-regression-multiple",
+      "conceptIds": ["im-stat-regression-multiple", "im-stat-regression-t-f-tests"],
+      "questionType": "open_ended",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "多元迴歸完整解讀：方程式、斜率意義、R² 與 adjusted R² 計算。幾乎等同台大 114-4 題型。",
+      "source": {
+        "type": "textbook",
+        "institution": null,
+        "department": null,
+        "textbook": "OpenIntro Statistics, 4th Edition",
+        "chapter": "Ch 9, Exercise 3",
+        "year": null,
+        "paperId": "tb-openintro-stat",
+        "difficultyVsNtuIm": "similar",
+        "answerAuthority": "textbook-solution"
+      },
+      "answerSource": {
+        "kind": "textbook_solution_manual",
+        "official": true,
+        "reviewCount": 0,
+        "note": "Odd-numbered exercise with published solution."
+      },
+      "answerConfidence": {
+        "level": "high",
+        "basis": ["Textbook solution manual answer"],
+        "unresolvedIssues": []
+      },
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": []
+      }
+    },
+    {
+      "questionId": "q-tb-openintro-stat-ch9-5",
+      "topicId": "im-stat-regression",
+      "primarySubtopicId": "im-stat-regression-t-f-tests",
+      "conceptIds": ["im-stat-regression-t-f-tests", "im-stat-estimation-variance"],
+      "questionType": "open_ended",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "多元迴歸信賴區間與顯著性判斷。",
+      "source": {
+        "type": "textbook",
+        "institution": null,
+        "department": null,
+        "textbook": "OpenIntro Statistics, 4th Edition",
+        "chapter": "Ch 9, Exercise 5",
+        "year": null,
+        "paperId": "tb-openintro-stat",
+        "difficultyVsNtuIm": "similar",
+        "answerAuthority": "textbook-solution"
+      },
+      "answerSource": {
+        "kind": "textbook_solution_manual",
+        "official": true,
+        "reviewCount": 0,
+        "note": "Odd-numbered exercise with published solution."
+      },
+      "answerConfidence": {
+        "level": "high",
+        "basis": ["Textbook solution manual answer"],
+        "unresolvedIssues": []
+      },
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": []
+      }
+    }
+  ]
+}

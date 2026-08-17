@@ -1,5 +1,7 @@
 import cardsRaw from '../../public/data/im-stat-concept-cards.json'
 import conceptMasterRaw from '../../public/data/im-stat-concept-master.json'
+import extNccuStatRaw from '../../public/data/ext-nccu-im-stat-question-metadata.json'
+import extTbStatRaw from '../../public/data/ext-tb-stat-question-metadata.json'
 import lessonsRaw from '../../public/data/im-stat-lessons.json'
 import questionMetadataRaw from '../../public/data/im-stat-question-metadata.json'
 import sourcesRaw from '../../public/data/im-stat-source-registry.json'
@@ -11,6 +13,7 @@ import {
   type LearningSource,
   type LearningTopic,
 } from './learning'
+import { mergeExternalQuestions } from './question-metadata'
 import { buildQuestionDrillHref } from './question-drill'
 
 const lessons = lessonsRaw.lessons as LearningLesson[]
@@ -22,6 +25,7 @@ const topicQuestionCounts: Record<string, number> = {}
 for (const question of questionMetadataRaw.questions) {
   topicQuestionCounts[question.topicId] = (topicQuestionCounts[question.topicId] ?? 0) + 1
 }
+mergeExternalQuestions(topicQuestionCounts, extNccuStatRaw as never, extTbStatRaw as never)
 
 export const imStatLearningCatalog = createLearningCatalog({
   examId: 'im',
