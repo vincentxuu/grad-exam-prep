@@ -19,7 +19,7 @@
       ],
       "title": "AI 與機器學習基礎：從問題類型到模型評估",
       "summary": "從 Turing test 與 AI 問題定義出發，區分 supervised、unsupervised 與 reinforcement learning，理解 linear regression 的預測形式，再以 confusion matrix 推導 precision、recall 與 accuracy。真題答案只有非官方技術覆核，Big Data 與 disputed 題不列入 refs。",
-      "estimatedMinutes": 36,
+      "estimatedMinutes": 40,
       "minimumPastPaperRefs": 5,
       "learningObjectives": [
         "說明 Turing test 評估的是可觀察行為，而不是直接證明機器具有意識",
@@ -30,7 +30,7 @@
       "sections": [
         {
           "title": "AI 問題先從可觀察目標開始",
-          "body": "Artificial intelligence 涵蓋讓機器執行感知、推理、搜尋、學習或決策等工作的技術。Turing test 以對話等可觀察行為，判斷評估者是否能把機器與人類區分；它不是意識、情感或全面智慧的直接證明。CAPTCHA 則把方向反過來，用容易由人完成、較難由自動程式完成的挑戰辨識使用者，但現代模型能力改變後，特定 CAPTCHA 不一定仍有效。",
+          "body": "Artificial intelligence（AI）泛指讓機器執行感知、推理、搜尋、學習或決策等原本需要人類智慧才能完成之工作的技術總稱。AI 的定義在學術上並無唯一共識，但核心特徵是以可觀察、可量化的任務表現來評估，而非直接檢驗機器是否具備意識或情感。\n\nTuring test 是最經典的評估框架：一位人類評估者透過文字對話，嘗試分辨對方是人還是機器。如果評估者無法可靠區分，則認為機器通過測試。關鍵在於 Turing test 只評估外在行為是否像人，不檢查機器內部的實作方式或是否真正「理解」。通過 Turing test 不代表機器具備 artificial general intelligence（AGI）或意識。\n\nCAPTCHA 則把方向反過來：它設計出對人類容易但對自動程式困難的挑戰（如辨識扭曲文字、點選含紅綠燈的圖片），用來確認使用者是人類而非 bot。但隨著深度學習模型能力提升，許多 CAPTCHA 已被攻破，因此 CAPTCHA 的有效性取決於當下技術水準，不是永久有效的機制。\n\n【考古題常見陷阱】題目問「以下何者最能描述 Turing test」時，常有選項暗示 Turing test 證明意識或 AGI — 這是錯的。Turing test 只證明「行為上無法區分」，不是「本質上相同」。另一個陷阱是把 CAPTCHA 當成訓練 AI 模型的方法（reCAPTCHA v2 確實有副產品用途，但 CAPTCHA 的設計目的是驗證身分）。",
           "bullets": [
             "Turing test 評估外在行為是否像人，不檢查內部實作方式",
             "通過單一測試不代表具備 artificial general intelligence",
@@ -40,7 +40,7 @@
         },
         {
           "title": "從回饋形式區分學習典範",
-          "body": "Supervised learning 從帶有 target labels 的 examples 學習 input 到 output 的關係，常用於 classification 與 regression。Unsupervised learning 沒有指定正確 target，模型從資料尋找群組或結構。Reinforcement learning 中，agent 與 environment 互動，根據 reward 學習能累積長期報酬的 policy。題目要先看可用資料與回饋，不要只看演算法名稱。",
+          "body": "Supervised learning 的核心是從帶有正確答案（target label）的訓練資料中，學習 input → output 的映射函數 f: X → Y。訓練過程中，模型看到每筆資料的 input x 和對應的正確 output y，透過最小化預測值 f(x) 和真實值 y 之間的誤差（loss function）來調整參數。根據 output 型態分為兩大類：Classification 輸出離散類別（如垃圾郵件偵測輸出 spam/not-spam），Regression 輸出連續數值（如房價預測輸出 $425,000）。\n\nUnsupervised learning 的訓練資料沒有 target label，模型的任務是從資料本身發現結構或規律。最常見的 task 是 clustering（把相似的資料點歸為同一群），例如把顧客按消費行為分成幾個群組。其他 unsupervised task 包括降維（dimensionality reduction）和關聯規則探勘。\n\nReinforcement learning（RL）中，agent 在 environment 中執行 action，根據收到的 reward signal 學習能最大化長期累積報酬的 policy。RL 的回饋不是每一步的標準答案，而是延遲的數值獎勵，例如圍棋 agent 在整盤結束後才知道輸贏。\n\n【關鍵區分】判斷學習類型看兩件事：(1) 訓練資料有沒有 label？有 → supervised；沒有 → unsupervised。(2) 回饋形式是什麼？正確答案 → supervised；reward signal → RL。考古題常用情境描述考，例如「某系統依據過往交易紀錄（含違約標記）預測客戶是否會違約」— 有歷史 label → supervised classification。Clustering 看起來也在「分類」，但它的訓練資料沒有預先標注的群組 → unsupervised。",
           "bullets": [
             "Classification 預測離散類別，例如 spam／not spam",
             "Regression 預測連續數值，例如價格或需求量",
@@ -50,7 +50,7 @@
         },
         {
           "title": "Linear regression 把關係寫成可計算模型",
-          "body": "Linear regression 用線性方程描述 dependent variable 與一個或多個 features 的關係。單一 feature 時可寫成 y-hat=b0+b1x，其中 b0 是 intercept、b1 是 slope。訓練會選擇參數，使預測與觀測值的誤差在指定 loss 下盡量小。線性模型可用於預測與解釋關聯，但觀察到係數不等於證明因果。",
+          "body": "Linear regression 用線性方程描述一個 dependent variable（被解釋變數 y）與一個或多個 independent variables（特徵 x）之間的關係。最簡單的形式是 simple linear regression：ŷ = β₀ + β₁x，其中 β₀ 是 intercept（截距，當 x=0 時的預測值），β₁ 是 slope（斜率，x 每增加一單位對 ŷ 的影響）。\n\n訓練過程的目標是找到使 loss function 最小的參數值。最常用的 loss 是 MSE（Mean Squared Error）= Σ(yᵢ - ŷᵢ)² / n。可用 normal equation（解析解）或 gradient descent（迭代法）求解。Normal equation 是求參數的數學方法，不是另一種預測問題類型。\n\n【具體範例】房價模型 ŷ = 100 + 15x（萬元），x 是坪數。當 x=20 時，ŷ = 100 + 15×20 = 400 萬元。Slope 15 表示「在此模型假設下，坪數每增加 1 坪，預測房價增加 15 萬元」。這是模型中的關聯解讀，不是因果證明 — 可能是坪數大的房子地段也好，真正影響價格的是地段而非坪數。\n\nMultiple linear regression 有多個 feature：ŷ = β₀ + β₁x₁ + β₂x₂ + ... + βₚxₚ。「線性」指的是對參數（β）線性，不代表只能有一個 feature。考古題常混淆「多元」（多個 feature）和「非線性」（對 x 取平方等），前者仍是 linear regression。\n\n【考試連結】看到 ŷ = b₀ + b₁x 類型的題目，先代入數值算預測值，再解釋 slope 的意義。注意不要把「相關」說成「因果」。",
           "bullets": [
             "y-hat 是模型預測，不一定等於實際 y",
             "Slope 表示其他條件固定時，x 增加一單位所對應的預測變化",
@@ -60,7 +60,7 @@
         },
         {
           "title": "訓練表現不等於泛化能力",
-          "body": "模型在 training data 上表現好，仍可能只記住訓練樣本而 overfit。常見流程把資料分成 training、validation 與 test sets：training 用來估計參數，validation 用來選模型或 hyperparameters，test 應留到最後評估泛化。Regularization、更多合適資料與控制模型複雜度可降低 overfitting 風險，但沒有任何單一技巧保證泛化。",
+          "body": "模型在 training data 上表現好，不代表它能在未見過的新資料上也表現好。如果模型只是「背答案」— 記住訓練樣本的每個細節（包括噪音），它在訓練集上可能接近完美，但面對新資料時表現急劇下降。這種現象叫做 overfitting（過擬合）。相反地，如果模型太簡單，連訓練資料中的基本規律都學不到，叫做 underfitting（欠擬合）。\n\n為了評估模型的泛化能力，標準做法是把資料切成三份：Training set 用來訓練模型參數；Validation set 用來選擇模型架構或調整 hyperparameters（如 learning rate、regularization 強度）；Test set 只在最後評估一次，不能反覆拿來調參，否則會造成 information leakage — 測試資訊洩漏進模型選擇過程，導致離線評估過度樂觀。\n\n【降低 overfitting 的常見方法】(1) Regularization：在 loss function 中加入參數大小的懲罰項（如 L1、L2），限制模型複雜度。(2) 增加訓練資料量或使用 data augmentation。(3) 降低模型複雜度（如減少神經網路層數或參數量）。(4) Early stopping：在 validation loss 開始上升時停止訓練。(5) Dropout：隨機關閉部分神經元，減少共適應。\n\n【Data leakage 範例】在做時間序列預測時，如果用未來的資料當 feature 訓練模型（例如用明天的股價預測今天的趨勢），就是 data leakage。考古題可能問「為什麼模型離線表現好但上線後很差」，答案通常指向 data leakage 或訓練資料分布與實際部署情境不同。",
           "bullets": [
             "Test set 不應反覆拿來調參，否則會把測試資訊洩漏進模型選擇",
             "Underfitting 表示模型連 training pattern 都無法充分學到",
@@ -70,7 +70,7 @@
         },
         {
           "title": "用 Confusion Matrix 選對指標",
-          "body": "Binary classification 將結果分成 TP、FP、FN、TN。Precision=TP/(TP+FP)，回答「預測為 positive 的案例中有多少是真的」；Recall=TP/(TP+FN)，回答「所有實際 positive 中找到了多少」；Accuracy=(TP+TN)/(TP+FP+FN+TN)，衡量整體正確比例。當類別極度不平衡時，高 accuracy 可能掩蓋模型完全找不到少數類別，因此要依錯誤成本同時觀察 precision、recall 等指標。",
+          "body": "Binary classification 將模型的每個預測結果和實際標籤交叉比對，歸入四個格子：True Positive（TP，預測 positive 且正確）、False Positive（FP，預測 positive 但錯誤，又稱 Type I error）、False Negative（FN，預測 negative 但錯誤，又稱 Type II error）、True Negative（TN，預測 negative 且正確）。這四個數字排成的 2×2 矩陣就是 confusion matrix。\n\n三個核心指標：\n• Precision = TP / (TP + FP)：在所有被模型判為 positive 的案例中，有多少真的是 positive？回答「模型說的話可不可信」。\n• Recall = TP / (TP + FN)：在所有實際為 positive 的案例中，模型找到了多少？回答「模型有沒有漏掉」。也叫 Sensitivity 或 True Positive Rate。\n• Accuracy = (TP + TN) / (TP + FP + FN + TN)：全部案例中判對的比例。\n\n【具體計算】假設 TP=40、FP=10、FN=20、TN=30，總計 100 筆。Precision = 40/50 = 0.80；Recall = 40/60 ≈ 0.667；Accuracy = 70/100 = 0.70。三個指標回答不同問題，不能只看最高的那個。\n\n【class imbalance 陷阱】如果 100 筆資料中有 95 筆是 negative，模型全部猜 negative 就能得到 accuracy = 0.95，但它完全沒有找到任何 positive case（recall = 0）。這就是為什麼在不平衡資料集上，accuracy 可能具有誤導性，必須同時看 precision 和 recall。考古題最常考的計算錯誤是把 precision 和 recall 的分母對調（precision 分母是 TP+FP，recall 分母是 TP+FN）。",
           "bullets": [
             "False positive 會降低 precision",
             "False negative 會降低 recall",
@@ -171,7 +171,7 @@
       "subtopicId": "im-it-arch-cpu-organization",
       "title": "CPU 與指令架構：從開機到管線執行",
       "summary": "以 stored-program 架構為起點，串起 CPU 組成、instruction cycle、ISA、RISC/CISC、pipeline hazard 與平行加速上限。重點是分清抽象層級，避免把韌體、作業系統、指令集與微架構混在一起。對應考古題答案均為非官方技術覆核。",
-      "estimatedMinutes": 36,
+      "estimatedMinutes": 34,
       "learningObjectives": [
         "說明 Von Neumann stored-program 架構的主要功能單元與 CPU 內部角色。",
         "依 fetch、decode、execute、write-back 流程追蹤一條指令的執行。",
@@ -181,7 +181,7 @@
       "sections": [
         {
           "title": "Stored-program 與開機邊界",
-          "body": "Von Neumann 架構把 processor、memory、input、output 視為四個功能單元，指令與資料位於同一可定址記憶體模型。電源開啟後，CPU 需要先從預定位置開始執行韌體；傳統 PC 以 BIOS、現代系統常以 UEFI 完成硬體初始化並把控制權交給後續 boot loader。這個階段不同於作業系統 kernel 已經開始提供完整服務。",
+          "body": "Von Neumann 架構是現代電腦的基本設計藍圖，其核心概念是 stored-program：指令和資料都存放在同一個可定址的記憶體中。CPU 按照 program counter（PC）指向的位址，依序從記憶體取出指令並執行。這與早期需要用實體接線或打孔卡片來改變程式行為的機器截然不同。\n\nVon Neumann 架構的四個主要功能單元：(1) Processor（CPU）包含 control unit（控制單元，協調指令流程）和 ALU（算術邏輯單元，執行加減乘除和邏輯運算）。(2) Memory 保存待執行的指令和資料。(3) Input devices 接收外部輸入。(4) Output devices 輸出結果。CPU 內部還有 registers — 少量但極快的暫存空間，用來存放正在處理的資料和指令。\n\n【開機流程】電源開啟後，CPU 從預設的記憶體位址開始執行韌體（firmware）。傳統 PC 使用 BIOS（Basic Input/Output System），現代系統使用 UEFI（Unified Extensible Firmware Interface）。韌體完成硬體初始化（POST = Power-On Self-Test）後，將控制權交給 boot loader（如 GRUB），boot loader 再載入作業系統 kernel。注意：BIOS/UEFI 是 firmware，CMOS 是保存 BIOS 設定的非揮發記憶體，boot loader 是載入 OS 的程式，三者角色不同。\n\n【Harvard vs Von Neumann】Harvard 架構把指令記憶體和資料記憶體在架構層級上分離，各有獨立的匯流排，可同時存取指令和資料。現代處理器常在 L1 cache 層級使用 Harvard 式的 I-cache 和 D-cache 分離，但在 main memory 層級仍是統一定址的 Von Neumann 模型。考古題常問兩者的核心差異 — 答案聚焦在「指令與資料的記憶體/通路是否在架構模型上分離」。",
           "bullets": [
             "CPU 主要包含 control unit、ALU 與 registers；memory 保存待執行指令與資料。",
             "program counter 保存下一條預計取出的指令位置。",
@@ -191,7 +191,7 @@
         },
         {
           "title": "Instruction cycle 與時脈",
-          "body": "在簡化模型中，CPU 重複 fetch、decode、execute，再把結果寫回 register 或 memory。時脈提供狀態更新節奏，但 GHz 只表示每秒 clock cycles 的量級，不等於每秒完成相同數量的程式指令。每指令週期數、同時在途的指令、cache miss 與 branch 行為都會影響實際效能。",
+          "body": "CPU 的基本運作是不斷重複 instruction cycle（指令週期）。在簡化的四階段模型中，每個週期包含：(1) Fetch — 依 program counter 的位址從記憶體取出指令，同時 PC 自動遞增指向下一條指令。(2) Decode — 控制單元解讀指令的 opcode（操作碼），確定要執行什麼運算、需要哪些 operands。(3) Execute — ALU 或其他功能單元執行運算，可能包括算術計算、邏輯判斷、記憶體存取或分支跳轉。(4) Write-back — 將結果寫回 register 或 memory。\n\n時脈（clock）提供 CPU 狀態更新的節奏。Clock frequency 以 Hz 為單位：1 MHz = 10⁶ Hz（每秒一百萬個 clock cycles），1 GHz = 10⁹ Hz（每秒十億個 clock cycles）。注意 MHz 和 GHz 差了 1000 倍 — 考古題曾出現把 3 GHz 誤標為 3 MHz 的題目。\n\n【clock frequency ≠ 效能】更高的 clock frequency 不等於更快的程式執行。實際效能取決於多個因素：CPI（Cycles Per Instruction）— 每條指令平均需要幾個 clock cycle；IPC（Instructions Per Cycle）— 每個 cycle 平均完成幾條指令（superscalar 處理器可 > 1）；cache miss 導致的等待時間；branch misprediction 造成的 pipeline flush。因此，執行時間 = 指令數 × CPI × clock cycle time。\n\n【考試連結】題目常給出 clock frequency 和 CPI，要求計算執行時間或比較兩個 CPU 的效能。記住不能只比 GHz — 還要看 CPI 和實際完成的工作量。",
           "bullets": [
             "fetch 依 program counter 取得 instruction，並準備下一個位址。",
             "decode 判讀 opcode、operands 與所需執行資源。",
@@ -201,7 +201,7 @@
         },
         {
           "title": "ISA、RISC 與 CISC",
-          "body": "Instruction Set Architecture 是 software 可見的硬體契約，包含 instructions、registers、data types、addressing modes 與 exception 等。RISC 傾向較規則、較簡單且便於 pipeline 的 instructions；CISC 傾向提供更多或更複雜的 instructions，可能用較少的 assembly instructions 表達工作。這是設計取向，不代表所有實作都符合簡單二分。",
+          "body": "Instruction Set Architecture（ISA）是軟體和硬體之間的契約，定義了程式設計師（或編譯器）可以使用的所有指令、registers、資料型態、addressing modes 和 exception 處理機制。ISA 是「可見」的抽象層 — 它規定了「能做什麼」，但不規定「怎麼做」（那是 microarchitecture 的事）。\n\n兩大設計哲學：\n\nRISC（Reduced Instruction Set Computer）的設計原則：(1) 指令格式固定長度，便於 decode 和 pipeline。(2) 指令簡單，每條指令通常在一個 cycle 完成。(3) Load/Store 架構 — 只有 load 和 store 指令存取記憶體，其他運算都在 register 之間進行。(4) 大量 registers 減少記憶體存取。代表：ARM、MIPS、RISC-V。\n\nCISC（Complex Instruction Set Computer）的設計原則：(1) 指令長度可變，功能複雜的指令可能需要多個 cycle。(2) 單條指令可以完成較複雜的工作（如 memory-to-memory 運算）。(3) 指令數量多，addressing mode 豐富。代表：x86。\n\n【重要澄清】RISC 和 CISC 是設計取向（design philosophy），不是效能排名。RISC 不一定比 CISC 快。現代 x86 處理器內部會把 CISC 指令拆成類 RISC 的 micro-operations 再執行。較少的 assembly instructions（CISC 可能用更少行數表達同樣工作）不等於較少的 execution time — 因為每條複雜指令可能需要更多 cycles。\n\n【考試連結】題目常列出 ISA 的特徵要你分辨 RISC/CISC，或問「以下哪個是 ISA 層級的概念」— registers、instructions 是 ISA；pipeline depth、cache size 是 microarchitecture。",
           "bullets": [
             "x86 通常歸為 CISC，ARM 通常歸為 RISC，但現代內部實作可能把 instructions 轉成較細的 operations。",
             "較少的動態 instruction count 不必然代表較少 cycles 或較短執行時間。",
@@ -211,7 +211,7 @@
         },
         {
           "title": "Pipeline hazard 與平行加速上限",
-          "body": "Pipeline 讓多條 instructions 處於不同階段，以提升 throughput。若後一條指令需要前一條尚未產生的 operand，就形成 data hazard；硬體可用 forwarding、stall 或重新排程處理。即使增加 processors，程式中不可平行部分仍限制整體 speedup，這可由 Amdahl's law 量化。",
+          "body": "Pipeline 是提升 CPU throughput 的關鍵技術。原理類似工廠流水線：當第一條指令在 execute 階段時，第二條指令已經在 decode 階段，第三條指令正在 fetch。理想情況下，雖然每條指令仍需要經過所有階段（latency 不變），但每個 clock cycle 都能完成一條指令（throughput 提升到接近 1 IPC）。\n\n三種 pipeline hazard（危障）：\n\n(1) Data hazard：後一條指令需要前一條指令尚未產生的運算結果。例如 ADD R1,R2,R3 後緊接 SUB R4,R1,R5 — R1 的新值還沒寫回，SUB 就需要讀取。解法：Forwarding（也叫 bypass）— 直接把 ALU 輸出轉送給下一條指令，不等寫回 register file；或插入 Stall（bubble）— 暫停後續指令一個 cycle。\n\n(2) Control hazard：遇到分支指令（如 if-else、loop）時，下一條指令的地址在 branch 結果確定前未知。解法：Branch prediction — 預測分支方向，猜對就繼續；猜錯就 flush pipeline 重來。現代處理器的 branch predictor 準確率通常超過 95%。\n\n(3) Structural hazard：兩條指令同時需要同一個硬體資源（如同時要讀記憶體）。解法：增加硬體資源（如分離 I-cache 和 D-cache）。\n\n【Amdahl's Law】即使有多個 processors，程式中不可平行的部分仍然限制整體加速。公式：Speedup = 1 / (p + (1-p)/n)，其中 p 是不可平行比例（serial fraction），n 是 processors 數量。例如 p=0.2、n=4 時，Speedup = 1/(0.2+0.8/4) = 1/0.4 = 2.5 倍，不是 4 倍。\n\n【考試陷阱】(1) 把 data hazard 和 cache miss 混淆 — data hazard 是指令間的資料相依，cache miss 是資料不在 cache 中。(2) 套 Amdahl's law 時把 p 誤當「可平行比例」— p 是不可平行比例。",
           "bullets": [
             "data hazard 來自資料相依；control hazard 常由 branch 的下一個 PC 尚未確定造成。",
             "stall 插入等待週期，會降低 pipeline 的有效 throughput。",
@@ -331,7 +331,7 @@
       ],
       "title": "記憶體階層與資料表示：從位元正確性到存取延遲",
       "summary": "先用 bit、byte、parity 與常見媒體格式建立資料表示觀念，再比較 register、cache、RAM、ROM 與 secondary storage 的容量、速度和揮發性，最後以 locality 與 average memory access time 串起快取的作用。所引用考古題答案皆為非官方技術覆核；本課只納入可自動判分且與兩個子主題直接相關的題目。",
-      "estimatedMinutes": 34,
+      "estimatedMinutes": 33,
       "minimumPastPaperRefs": 8,
       "learningObjectives": [
         "以 parity 規則判斷能偵測與不能偵測的位元錯誤",
@@ -376,7 +376,7 @@
       "sections": [
         {
           "title": "資料表示從 bit pattern 與解讀規則開始",
-          "body": "電腦儲存的是 bit pattern；相同位元串必須搭配編碼或格式規格，才知道它代表整數、文字、像素或指令。Byte 通常是 8 bits，但資料意義不是由位元本身自動決定。題目遇到 JPEG、PNG、GIF、BMP、TIFF 或 MPEG 時，要分清靜態 image format 與影音壓縮／容器語境，不要因名稱都與媒體有關便視為同一類。",
+          "body": "電腦儲存的本質是 bit pattern — 一連串的 0 和 1。相同的位元串在不同的解讀規則下可以代表完全不同的東西：整數、浮點數、ASCII 字元、Unicode 文字、像素顏色、或機器指令。決定意義的是格式規格（encoding standard），不是位元本身。一個 byte 通常是 8 bits，可以表示 2⁸ = 256 種不同的值。\n\n常見的媒體格式需要區分靜態影像和影音：\n• 靜態影像格式：JPEG（有損壓縮，適合照片）、PNG（無損壓縮，支援透明背景）、GIF（支援簡單動畫，256 色限制）、BMP（未壓縮點陣圖）、TIFF（高品質印刷用途）。\n• 影音格式：MPEG 是影音編碼標準家族（如 MPEG-2 用於 DVD、MPEG-4/H.264 用於串流）。\n\n文字編碼方面：ASCII 用 7 bits 表示 128 個字元（英文字母、數字、控制字元）。Unicode 是統一的字元集標準，涵蓋全球文字系統。UTF-8 是 Unicode 最常用的編碼方式，對 ASCII 字元使用 1 byte，對中文字元使用 3 bytes。\n\n【考古題常見陷阱】題目問「以下何者為靜態影像格式」時，MPEG 是常見的誘答選項 — MPEG 主要是影音壓縮標準，不是靜態影像格式。副檔名只是提示，不保證檔案內容符合該格式。另一個常考點是問 1 KB = 多少 bytes — 在嚴格定義中 1 KB = 1024 bytes（2¹⁰），但有些標準使用 1000。",
           "bullets": [
             "格式規格定義 bit pattern 的結構與解碼方式",
             "JPEG、PNG、GIF、BMP、TIFF 常作為靜態影像格式辨識",
@@ -386,7 +386,7 @@
         },
         {
           "title": "Parity 能偵錯，但不能保證資料正確",
-          "body": "Even parity 讓資料位元加上 parity bit 後的 1 總數為偶數；odd parity 則為奇數。接收端若 parity 不符，可確定傳輸中至少發生了某種錯誤；若 parity 符合，只代表沒有偵測到錯誤。單一 parity bit 能偵測任何奇數個 bit flips，卻會漏掉偶數個 bit flips，因此不是 error correction，也不能證明資料絕對正確。",
+          "body": "Parity check 是最簡單的錯誤偵測機制。原理是在原始資料位元之外附加一個 parity bit，使整個 codeword（資料位元 + parity bit）中 1 的總數符合約定的奇偶性。Even parity 要求 1 的總數為偶數；Odd parity 要求 1 的總數為奇數。\n\n【運作機制】發送端：計算資料位元中 1 的個數，設定 parity bit 使總數符合規則。接收端：重新計算收到的完整 codeword 中 1 的個數，若不符合約定的奇偶性 → 偵測到錯誤（parity mismatch）。\n\n【具體範例】使用 even parity，傳送資料 1011001：1 的個數 = 4（偶數），所以 parity bit = 0，傳送 10110010。如果傳輸中第 3 個 bit 翻轉變成 10100010，接收端數 1 的個數 = 3（奇數），不符合 even parity → 偵測到錯誤。但如果第 3 和第 5 個 bit 同時翻轉（兩個錯誤），1 的個數可能回到偶數，parity check 就無法偵測。\n\n【關鍵限制】(1) 單一 parity bit 能偵測奇數個 bit flips，但會漏掉偶數個 bit flips。(2) Parity match 只表示「未偵測到錯誤」，不是「資料一定正確」。(3) Parity 是 error detection，不是 error correction — 它能發現錯了，但不知道是哪一位錯了（需要 Hamming code 等更進階的機制才能定位並修正錯誤）。\n\n考古題常考的計算：給定一串 bit 和 parity 規則，判斷 parity bit 值或判斷是否偵測到錯誤。",
           "bullets": [
             "先數完整 codeword 中 1 的個數，再套用 even 或 odd 規則",
             "Parity mismatch 表示偵測到錯誤",
@@ -396,7 +396,7 @@
         },
         {
           "title": "記憶體階層是速度、容量與成本的折衷",
-          "body": "越靠近 CPU 的 register 與 L1 cache 通常越快、容量越小、每 bit 成本越高；往下經 L2／L3 cache、DRAM 到 SSD 或磁碟，容量通常增加而延遲也增加。這是概念上的典型趨勢，不應背成所有產品都具有固定容量。RAM、DDR RAM 與 SDRAM 通常是 volatile；ROM、flash 與 SSD 在斷電後仍保留資料，屬 non-volatile。多顆 secondary-storage devices 還可組成 RAID，以 striping、mirroring 或 parity 等方式追求容量、效能或故障容忍；RAID 本身不等於加密、存取控制或完整備份。",
+          "body": "記憶體階層（memory hierarchy）的設計基於一個根本矛盾：越快的記憶體越貴、容量越小。從 CPU 往外，典型的階層由快到慢依序為：\n\n(1) Registers — CPU 內部，容量最小（通常幾十到幾百個，每個 32 或 64 bits），存取時間約 1 clock cycle。存放正在計算的 operands。\n(2) L1 Cache — CPU 晶片上，通常分為 I-cache（指令）和 D-cache（資料），容量 32-64 KB，存取約 1-4 cycles。\n(3) L2 Cache — CPU 晶片上或緊鄰，容量 256 KB - 數 MB，存取約 4-14 cycles。\n(4) L3 Cache — 多核共享，容量數 MB - 數十 MB，存取約 20-50 cycles。\n(5) Main Memory（DRAM）— 容量 GB 等級，存取約 50-100 ns。DDR SDRAM 是目前主流。\n(6) Secondary Storage — SSD（數十 μs）或 HDD（數 ms），容量 TB 等級，斷電後資料仍保留（non-volatile）。\n\n【volatile vs non-volatile】Registers、cache、DRAM 都是 volatile — 斷電後資料消失。ROM（Read-Only Memory）、Flash memory、SSD 是 non-volatile — 斷電後資料仍保留。DDR RAM 的名稱中有 RAM，但它是 volatile 的。\n\n【RAID】多顆磁碟可組成 RAID（Redundant Array of Independent Disks），常見等級：RAID 0（striping，提升效能但無容錯）、RAID 1（mirroring，完整備份）、RAID 5（distributed parity，兼顧效能和容錯）。RAID 不等於加密、存取控制或完整的異地備份。\n\n【考試連結】排序題常考「由快到慢」或「由小到大」排列記憶體元件。陷阱是把 ROM 和 RAM 的速度搞混（ROM 的「Read-Only」是可寫入性質，不是速度概念）。",
           "bullets": [
             "Register 由指令直接使用，容量遠小於 cache",
             "L1 通常比 L2 小且快；L2 通常較大且較慢",
@@ -407,7 +407,7 @@
         },
         {
           "title": "Cache 利用 locality 降低平均存取時間",
-          "body": "Cache 保留近期或鄰近使用的資料與指令。Temporal locality 表示最近用過的項目可能很快再用；spatial locality 表示鄰近位址可能接著被用。Cache hit 可用較短延遲取得資料，miss 則需往較慢層級查找並付出 miss penalty。簡化的 average memory access time 可寫成 hit time + miss rate × miss penalty。",
+          "body": "Cache 的存在是為了解決 CPU 和 main memory 之間巨大的速度落差。CPU 每秒可以執行數十億次運算，但每次存取 DRAM 需要等待 50-100 ns（相當於 100-200 個 clock cycles）。Cache 是介於 CPU 和 main memory 之間的小型高速記憶體，存放最近或即將使用的資料副本。\n\nCache 能發揮作用，是因為程式的記憶體存取模式具有 locality（區域性）：\n• Temporal locality（時間區域性）：剛存取過的資料很可能短時間內再次被存取。例如迴圈中反覆讀取同一個變數。\n• Spatial locality（空間區域性）：存取某個位址後，鄰近位址很可能接著被存取。例如遍歷陣列的連續元素。\n\nCache 以 cache line（或 block）為單位管理資料，通常 64 bytes。當 CPU 讀取一個 byte 時，整條 cache line 會被載入，這樣鄰近的 bytes 下次就能直接從 cache 取得（利用 spatial locality）。\n\n【效能計算】Average Memory Access Time（AMAT）= Hit Time + Miss Rate × Miss Penalty。例如 L1 cache hit time = 1 cycle，miss rate = 5%，miss penalty = 100 cycles 時，AMAT = 1 + 0.05 × 100 = 6 cycles — 比每次都去 main memory（100 cycles）快得多。\n\n【Cache replacement】當 cache 滿了需要淘汰舊資料：LRU（Least Recently Used）淘汰最久沒用過的；LFU（Least Frequently Used）淘汰使用次數最少的；FIFO 淘汰最先載入的。考古題常問這三者的差異。\n\n【考試連結】最常考的題型：(1) 給定 hit rate 和 miss penalty 計算 AMAT。(2) 區分 temporal 和 spatial locality 的例子。(3) 解釋為什麼「加大 cache」不是無限有效 — 因為 cache 越大，搜尋時間也越長，且成本急劇上升。",
           "bullets": [
             "Hit rate 與 miss rate 相加為 1",
             "較高 hit rate 通常可降低平均存取時間",
@@ -492,7 +492,7 @@
       "sections": [
         {
           "title": "Big Data 的 V 是問題特性，不是固定產品清單",
-          "body": "Big Data 指傳統資料管理方式難以有效處理的大型、複雜資料集合。Volume 描述資料量，velocity 描述產生與流入速度，variety 描述格式與來源多樣性，veracity 描述資料準確性與可信度。不同教材可能再加入 value 等 V，因此題目若未指定 3V、4V 或 5V framework，不應把 framework 差異當成唯一答案依據。",
+          "body": "Big Data 指的是傳統資料處理工具難以有效處理的大規模、高速度、多樣性資料集。Laney（2001）提出的 3V 模型是最被廣泛接受的框架：\n\n• Volume（量）：資料量大到超出單機處理能力，需要分散式系統。從 TB 到 PB 甚至 EB 等級。\n• Velocity（速度）：資料產生和需要處理的速度極快。例如社群媒體每秒產生的貼文、IoT 感測器的即時串流資料。\n• Variety（多樣性）：資料格式不統一。結構化資料（關聯式表格）、半結構化資料（JSON、XML）、非結構化資料（文字、影像、影片）混合存在。\n\n後來有人擴充到 5V（加上 Veracity 資料品質可信度、Value 商業價值），但 Laudon MIS 教科書和多數考試以 3V 為主。考古題曾問「Big Data 特性是否包含 Value」— 答案取決於採用的版本，但嚴格來說 Laney 原始模型只有 3V。\n\n【重要澄清】Big Data 不是一個產品名稱或特定技術，而是描述資料問題特性的框架。Hadoop、Spark、Kafka 等是處理 Big Data 的工具，但它們本身不是 Big Data。同樣地，「有很多資料」不自動等於 Big Data — 還要看處理速度和多樣性是否超出傳統工具的能力。\n\n【考試連結】選擇題常要你從描述中辨識是哪個 V。例如「即時分析來自全球感測器的串流資料」→ Velocity；「同時處理交易紀錄、客服錄音和社群評論」→ Variety。",
           "bullets": [
             "Volume 大不只指檔案數量，也涉及儲存與平行處理需求。",
             "Velocity 會影響 batch 或 stream processing 的選擇。",
@@ -502,7 +502,7 @@
         },
         {
           "title": "分析用途跨領域，但仍需可驗證的問題與資料",
-          "body": "Big-data analytics 可支援 decision making、forecast/prediction、security vulnerability assessment 與 public governance；是否有效仍取決於資料品質、代表性、方法與驗證。資料量大本身不會自動產生價值，也不能把 correlation 直接當 causation。先寫清楚 decision target、可用 features、時間範圍與 evaluation criterion，才能判斷資料與方法是否適用。",
+          "body": "Big Data 分析的應用橫跨商業、醫療、交通、金融、教育等領域，但有效的分析必須從明確的問題開始，而不是「有資料就分析」。典型的分析流程：(1) 定義商業問題（要預測什麼？要優化什麼？）→ (2) 蒐集並清理相關資料 → (3) 選擇適當的分析方法 → (4) 建立模型或進行分析 → (5) 驗證結果並轉化為可行動的洞見。\n\n常見的分析類型：\n• Descriptive analytics（描述性分析）：回答「發生了什麼」。例如銷售報表、網站流量統計。\n• Diagnostic analytics（診斷性分析）：回答「為什麼發生」。例如找出銷售下降的原因。\n• Predictive analytics（預測性分析）：回答「可能會發生什麼」。使用統計模型或 ML 預測未來趨勢。\n• Prescriptive analytics（處方性分析）：回答「應該怎麼做」。結合預測結果和優化方法給出行動建議。\n\n【資料品質的重要性】Garbage in, garbage out — 再好的演算法也無法從低品質的資料中產生可靠的結論。常見的資料品質問題包括：遺漏值（missing values）、重複記錄、格式不一致、標籤錯誤、取樣偏差。在分析之前，資料清理（data cleaning）和探索性資料分析（EDA）是不可省略的步驟。\n\n【考試連結】題目常給一個商業情境，要你判斷屬於哪種分析類型。關鍵是看問題是「回顧過去」（descriptive）、「解釋原因」（diagnostic）、「預測未來」（predictive）還是「建議行動」（prescriptive）。",
           "bullets": [
             "Decision making 把分析結果連結到可選行動。",
             "Forecast 使用過去與目前資料估計未來，但需評估 distribution shift。",
@@ -512,7 +512,7 @@
         },
         {
           "title": "NoSQL 依資料模型與 access pattern 選擇",
-          "body": "NoSQL 不是『完全不能使用 SQL』的單一產品類別，而是多種非關聯式資料管理方法的統稱。常見 models 包含 document、key-value、wide-column 與 graph。它們常提供較彈性的 schema，適合特定大規模或半結構化 workload，但不表示一定比 relational database 快、完全沒有 schema、不能建立 indexes 或不能支援 transactions。",
+          "body": "NoSQL（Not Only SQL）是一類非關聯式資料庫的統稱，設計目的是處理關聯式資料庫不擅長的場景：極大量資料、高併發讀寫、靈活的 schema、或特殊的資料結構需求。NoSQL 不是一種單一技術，而是依資料模型分為四大類：\n\n(1) Key-Value Store：最簡單的模型，每筆資料是一個 key-value pair。查詢只能透過 key 取值，不支援複雜查詢。適合 session 管理、快取。代表：Redis、DynamoDB。\n\n(2) Document Store：value 是結構化文件（通常是 JSON），可以對文件內容建立索引和查詢。適合內容管理、商品目錄等 schema 不固定的場景。代表：MongoDB、CouchDB。\n\n(3) Column-Family Store：資料按 column family 分組儲存，而非按 row。適合大規模寫入和分析型查詢。代表：Cassandra、HBase。\n\n(4) Graph Database：以 node（節點）和 edge（邊）為基本單位，擅長表達和查詢複雜的關係。適合社交網路、推薦系統、知識圖譜。代表：Neo4j。\n\n選擇 NoSQL 類型的關鍵是 access pattern（存取模式）：主要靠 key 查詢 → key-value；需要查詢文件內容 → document；大量寫入和列導向分析 → column-family；關係查詢為主 → graph。\n\n【考試連結】題目常描述一個應用場景，要你選擇最適合的 NoSQL 類型。例如「社交網路中找出兩個用戶之間的最短路徑」→ Graph Database，不是 Document Store。",
           "bullets": [
             "Document store 以 JSON-like documents 保存欄位、陣列與巢狀結構。",
             "Key-value store 以 unique key 找 value，適合 session、cache 等直接 lookup。",
@@ -522,7 +522,7 @@
         },
         {
           "title": "Horizontal scaling、sharding 與 replication 不同",
-          "body": "Vertical scaling 增強單一 server；horizontal scaling 增加 nodes，讓資料或負載分散。Sharding 依 shard key 把不同資料分區放到不同 shards，主要擴充分散的容量與吞吐；replication 則保存資料副本以支援 availability、讀取或故障復原。兩者可以同時使用，但複製同一資料不是 sharding，把資料切開也不自動產生備援。",
+          "body": "擴展資料庫容量和效能有兩種方向：\n\n• Vertical scaling（垂直擴展/scale up）：升級單台機器的硬體 — 加 CPU、加記憶體、換更快的 SSD。優點是簡單，不需要改程式架構。缺點是有物理上限（單機能裝的硬體有限），且高階硬體價格非線性增長。\n\n• Horizontal scaling（水平擴展/scale out）：增加更多機器，把資料和負載分散到多台機器上。這是 NoSQL 和現代分散式系統的主要擴展方式。\n\n水平擴展的兩個關鍵機制：\n\nSharding（分片）：把一個大的資料集切割成多個 shard，每個 shard 存放在不同的機器上。切割的依據稱為 shard key — 例如按用戶 ID 範圍（user 1-1000 在 shard A，1001-2000 在 shard B）或按 hash 值分配。Sharding 的目的是把讀寫負載分散到多台機器，每台機器只處理一部分資料。\n\nReplication（複製）：同一份資料維持多個副本（replica），存放在不同機器上。目的有二：(1) 容錯 — 一台機器壞了，其他副本仍可提供服務。(2) 讀取效能 — 讀取可以分散到多個 replica。但寫入時需要同步所有 replica，會引入一致性問題。\n\n【Sharding ≠ Replication】Sharding 是把「不同的資料」放到不同機器（每台機器有資料的一部分）；Replication 是把「相同的資料」放到多台機器（每台機器有完整或部分副本）。兩者可以同時使用：先 shard 把資料分片，再對每個 shard 做 replication 以確保容錯。\n\n【考試連結】題目常混淆 sharding 和 replication，問「以下哪個是增加資料可用性的方法」→ Replication；「以下哪個是提升寫入吞吐量的方法」→ Sharding。",
           "bullets": [
             "好的 shard key 應避免所有 writes 集中到單一 hot shard。",
             "不含 shard key 的查詢可能需要 scatter/gather 到多個 shards。",
@@ -532,7 +532,7 @@
         },
         {
           "title": "CAP 描述 network partition 發生時的保證取捨",
-          "body": "CAP 的 C 是 consistency：所有成功讀取看到符合單一一致視圖的資料；A 是 availability：每個送達未失效節點的請求都得到非錯誤回應；P 是 partition tolerance：節點間訊息遺失或延遲形成分區時系統仍運作。網路分區發生時，系統無法同時保證 C 與 A：可拒絕部分請求維持一致性，或持續回應但允許讀到較舊／分歧資料。CAP 不是日常狀況下任意『三選二』的效能口號。",
+          "body": "CAP theorem（Brewer's theorem）指出，在分散式系統中，以下三個保證不可能同時完全滿足：\n\n• Consistency（一致性）：所有節點在同一時間看到的資料相同。任何讀取都能取得最新的寫入結果。\n• Availability（可用性）：每個請求都能收到（非錯誤的）回應，即使部分節點故障。系統不會拒絕服務。\n• Partition tolerance（分區容忍）：即使網路分區（部分節點之間無法通訊）發生，系統仍能繼續運作。\n\n在實際的分散式系統中，網路分區是不可避免的（網線可能斷、路由器可能故障），因此 P 幾乎是必須的。這意味著當 partition 發生時，系統必須在 C 和 A 之間取捨：\n\n• CP 系統：選擇一致性，犧牲可用性。Partition 發生時，可能暫時拒絕服務直到一致性恢復。例如 HBase、MongoDB（在某些配置下）。\n• AP 系統：選擇可用性，犧牲強一致性。Partition 發生時，仍提供服務但可能回傳舊資料（eventual consistency）。例如 Cassandra、DynamoDB。\n\n【重要澄清】CAP 不是說「任何時候只能選兩個」— 在沒有 partition 的正常情況下，系統可以同時提供 C 和 A。CAP 描述的是「當 partition 發生時」的取捨。另外，Consistency 在 CAP 中指的是 linearizability（線性一致性），和 ACID 中的 Consistency（資料完整性約束）是不同概念。\n\n【考試連結】題目常給一個系統描述，問它是 CP 還是 AP。關鍵看「partition 發生時，系統會暫停服務（CP）還是繼續服務但可能資料不一致（AP）」。也常考 CAP 和 ACID 中 Consistency 的差異。",
           "bullets": [
             "選 CP 表示 partition 時可能犧牲部分 availability 以避免不一致結果。",
             "選 AP 表示 partition 時持續回應，但必須容許暫時不一致並在之後協調。",
@@ -646,7 +646,7 @@
       "subtopicId": "im-it-db-relational-model",
       "title": "關聯模型：從資料表讀懂鍵與限制",
       "summary": "以 relation、tuple、attribute 為起點，建立主鍵、候選鍵、外鍵與參照完整性的判讀方法，並連結歷屆題常考的資料庫優勢與表格結構。",
-      "estimatedMinutes": 28,
+      "estimatedMinutes": 32,
       "learningObjectives": [
         "分辨 relation schema、relation instance、tuple、attribute 與 domain",
         "從欄位限制判斷 superkey、candidate key、primary key 與 composite key",
@@ -656,7 +656,7 @@
       "sections": [
         {
           "title": "一張表不只是試算表",
-          "body": "關聯模型把資料表示成 relations。表頭所描述的欄位名稱、型別與限制是 schema；某一時刻實際存在的資料列集合是 instance。每一列是 tuple，每一欄是 attribute，而 attribute 可接受的合法值集合稱為 domain。考題若問資料庫的 logical structure，通常是在問 schema，而不是存放 metadata 的 data dictionary。",
+          "body": "關聯式資料庫（relational database）的基本單位是 relation（關聯），在實務中通常稱為 table（資料表）。一個 relation 由兩部分組成：schema（結構定義，包含表名和各 attribute 的名稱與型態）和 instance（實際的資料列集合）。每一列稱為 tuple（元組/row/record），每一欄稱為 attribute（屬性/column/field）。\n\n【和試算表的差異】關聯式資料表看起來像 Excel 試算表，但有本質差異：(1) 每個 attribute 有明確的 domain（值域），例如「年齡」欄位只能是正整數。(2) 在理論上，tuple 之間沒有順序 — 不能靠「第三列」來引用資料。(3) 每個 attribute 值必須是 atomic（原子性的，不可再分割的）— 這是 1NF 的基本要求。(4) 透過 constraint（約束）來維護資料完整性，試算表沒有這個機制。\n\nRelation 的 degree 是 attribute 的數量（欄數），cardinality 是 tuple 的數量（列數）。注意這裡的 cardinality 和 ER model 中的 cardinality（relationship 的對應數量）是不同的概念，考古題常故意混淆。\n\n【考試連結】題目常要你區分 relation、table、schema、instance、tuple、attribute 等術語。記住 relation = table，tuple = row，attribute = column，schema = 結構定義，instance = 資料內容。最常見的陷阱是把 relation 的「cardinality」（行數）和 ER 的「cardinality」（關係對應數）搞混。",
           "bullets": [
             "schema 描述結構，instance 描述某一時刻的內容",
             "tuple 對應資料列，attribute 對應欄位",
@@ -666,7 +666,7 @@
         },
         {
           "title": "用最小性判斷各種鍵",
-          "body": "能唯一識別每一列的欄位集合是 superkey；若移除其中任何欄位就失去唯一性，才是 candidate key。設計者從候選鍵選一組作為 primary key，其餘可稱 alternate keys。當唯一識別必須同時依賴兩個以上欄位時，就是 composite key。解題時先驗證唯一性，再檢查最小性，不要只看到欄位名稱含 ID 就直接判為主鍵。",
+          "body": "在關聯式模型中，鍵（key）是用來唯一識別每個 tuple 的 attribute 或 attribute 組合。不同類型的鍵各有定義：\n\n• Super key（超鍵）：能唯一識別所有 tuple 的任何 attribute 組合。例如 {學號}、{學號, 姓名}、{學號, 姓名, 生日} 都是 super key — 只要包含學號就能唯一識別。\n\n• Candidate key（候選鍵）：最小的 super key — 不能再移除任何 attribute 仍保持唯一識別能力。例如 {學號} 是 candidate key，但 {學號, 姓名} 不是（因為移除姓名後仍能唯一識別）。一個 relation 可以有多個 candidate key。\n\n• Primary key（主鍵）：從 candidate keys 中選定的一個作為主要識別依據。每個 relation 只有一個 primary key。Primary key 的值不能是 NULL。\n\n• Alternate key（替代鍵）：沒被選為 primary key 的其他 candidate keys。\n\n【判斷方法 — 最小性】判斷一個 attribute 組合是否為 candidate key，關鍵看「最小性」：(1) 它能唯一識別嗎？如果不能 → 連 super key 都不是。(2) 移除任何一個 attribute 後仍能唯一識別嗎？如果可以 → 它不是最小的，只是 super key 不是 candidate key。\n\n【具體範例】學生表(學號, 身分證, 姓名, 系所)：{學號} 和 {身分證} 各自能唯一識別 → 都是 candidate key。{學號, 身分證} 能唯一識別但不是最小的 → 只是 super key。選 {學號} 為 primary key，則 {身分證} 是 alternate key。\n\n【考試連結】選擇題常給一個 relation 的 functional dependency 集合，要你找出所有 candidate keys。步驟：找出所有能推導出全部 attribute 的最小 attribute 組合。",
           "bullets": [
             "每個 candidate key 都是 superkey，但 superkey 不一定最小",
             "primary key 是被選中的 candidate key，不等於所有 UNIQUE 欄位",
@@ -676,7 +676,7 @@
         },
         {
           "title": "外鍵維持跨表一致",
-          "body": "foreign key 是一組欄位，其值參照另一個關聯中的候選鍵，最常見是參照 primary key。參照完整性要求外鍵值要嘛能在被參照鍵中找到，要嘛在欄位允許時為 NULL。刪除被參照資料時，資料庫可設定 RESTRICT、CASCADE 或 SET NULL；這些是不同政策，不應把 CASCADE 當成外鍵的固定行為。",
+          "body": "Foreign key（外鍵）是一個 relation 中引用另一個 relation 之 primary key 的 attribute。它的作用是建立表與表之間的關聯，並維護 referential integrity（參照完整性）— 確保每個外鍵值都對應到被引用表中的一個有效 tuple。\n\n【運作機制】假設有兩個表：\n• 學生表(學號 PK, 姓名, 系所代碼 FK)\n• 系所表(系所代碼 PK, 系名)\n\n學生表中的「系所代碼」是 foreign key，引用系所表的「系所代碼」。Referential integrity 約束要求：學生表中每個非 NULL 的系所代碼值，都必須在系所表中存在。這意味著：(1) 不能在學生表中填入一個系所表中不存在的系所代碼。(2) 不能刪除系所表中仍被學生表引用的系所。\n\n【Foreign key 可以是 NULL 嗎？】可以！Foreign key 允許 NULL（除非額外設定 NOT NULL 約束），表示「目前未指定」。例如一個學生暫時還沒選定系所。但 primary key 絕對不能是 NULL。考古題 112-22 就考過這個概念 — 「FK 不可以是 NULL」是錯誤的。\n\n【Foreign key 可以是 composite 嗎？】可以。如果被引用的 primary key 是由多個 attribute 組成的 composite key，那麼 foreign key 也必須包含相同數量的 attribute。\n\n【On Delete/Update 行為】當被引用的 tuple 被刪除或更新時，常見的處理方式：CASCADE（連帶刪除/更新引用方）、SET NULL（將外鍵設為 NULL）、RESTRICT（禁止操作）。考古題通常不考具體 SQL 語法，但會考概念理解。",
           "bullets": [
             "同一張表可以有多組 foreign keys",
             "外鍵可以是 composite，也可以參照同一張表",
@@ -686,7 +686,7 @@
         },
         {
           "title": "為什麼不用一堆檔案就好",
-          "body": "DBMS 將資料定義、限制與存取集中管理，可減少重複資料與更新不一致，並提供查詢、權限、並行控制及復原機制。所謂 data independence，是應用程式不必知道每筆資料在磁碟上的實體配置；它不是說應用程式完全不受 schema 變更影響。考題常把正確術語換成相似但不精確的句子，應回到資料定義與程式分離、有效率存取、完整性及降低冗餘這幾個核心。",
+          "body": "在關聯式資料庫出現之前，組織通常用檔案系統（file-based approach）管理資料：每個應用程式維護自己的資料檔案。這種方式會產生嚴重的問題：\n\n(1) Data redundancy（資料冗餘）：同一筆資料在多個檔案中重複存放。例如員工姓名同時出現在人事檔案、薪資檔案和考勤檔案中。\n\n(2) Data inconsistency（資料不一致）：冗餘導致更新時可能只改了部分副本。例如員工改名後只更新了人事檔案，薪資檔案中還是舊名字。\n\n(3) Data isolation（資料孤島）：不同檔案格式不統一，跨檔案查詢困難。人事系統用 CSV，薪資系統用自訂二進位格式，要做聯合查詢需要寫特殊的轉換程式。\n\n(4) 缺乏 concurrency control：多個使用者同時存取同一檔案可能造成資料損壞。\n\n(5) 缺乏完整性約束：檔案系統不能強制「薪資必須 > 0」或「部門代碼必須存在」等規則。\n\n【DBMS 的解決方案】資料庫管理系統（DBMS）把所有資料集中管理，提供：schema 定義、SQL 查詢語言、交易管理（ACID）、存取控制、備份復原、並行控制。應用程式透過 DBMS 的介面存取資料，不直接操作檔案。這個介於應用程式和實體資料之間的抽象層稱為 data independence — 改變實體儲存方式不需要修改應用程式。\n\n【考試連結】申論題常問「比較檔案系統和 DBMS 的優缺點」。DBMS 的缺點包括：初始建置成本高、需要專業 DBA 維護、對簡單應用可能是 overkill。檔案系統在某些場景（如嵌入式系統、超高效能需求）仍有其價值。",
           "bullets": [
             "集中 constraints 可在多個應用程式之間維持一致規則",
             "查詢最佳化讓使用者描述要什麼，而非逐筆指定怎麼找",
@@ -785,7 +785,7 @@
       ],
       "title": "SQL 查詢：從條件篩選到分組與 JOIN",
       "summary": "以可重現的小型資料表練習 CREATE TABLE、SELECT、WHERE、COUNT、DISTINCT、GROUP BY、HAVING 與 JOIN。重點是依 SQL 的處理層次判斷條件放置位置，並用括號消除 AND/OR 的優先順序歧義。對應考古題答案均為非官方技術覆核。",
-      "estimatedMinutes": 36,
+      "estimatedMinutes": 35,
       "minimumPastPaperRefs": 6,
       "learningObjectives": [
         "寫出基本 CREATE TABLE 與 SELECT-FROM-WHERE 語句。",
@@ -796,7 +796,7 @@
       "sections": [
         {
           "title": "Table Definition 與基本查詢骨架",
-          "body": "CREATE TABLE 建立 table schema，欄位定義放在括號內；CREATE DATABASE 建立的是 database，不會用同樣語法直接定義 Customers 的 columns。讀取資料則使用 SELECT 指定輸出 expressions、FROM 指定來源 tables，必要時以 WHERE 過濾 rows。",
+          "body": "SQL（Structured Query Language）是操作關聯式資料庫的標準語言，分為幾大類：DDL（Data Definition Language，定義表結構）、DML（Data Manipulation Language，查詢和修改資料）、DCL（Data Control Language，權限管理）。考古題以 DML 的 SELECT 查詢最常考。\n\n【DDL 基本語法】\nCREATE TABLE Student (\n  student_id INT PRIMARY KEY,\n  name VARCHAR(50) NOT NULL,\n  dept_id INT REFERENCES Department(dept_id),\n  gpa DECIMAL(3,2)\n);\n\n這定義了一個 Student 表，student_id 是 primary key（自動 NOT NULL），dept_id 是 foreign key 引用 Department 表。\n\n【SELECT 查詢骨架】一個完整的 SELECT 語句的執行順序（注意和書寫順序不同）：\n(1) FROM — 確定資料來源的表\n(2) WHERE — 過濾個別 row\n(3) GROUP BY — 分組\n(4) HAVING — 過濾分組\n(5) SELECT — 選擇要輸出的欄位\n(6) ORDER BY — 排序結果\n(7) LIMIT — 限制輸出數量\n\n【基本查詢範例】\nSELECT name, gpa FROM Student WHERE gpa >= 3.5 ORDER BY gpa DESC;\n意思是：從 Student 表中選出 GPA ≥ 3.5 的學生，依 GPA 由高到低排序，只輸出姓名和 GPA。\n\n【考試連結】考古題最常考的 SQL 題型：(1) 給定表結構和查詢需求，寫出 SQL。(2) 給定 SQL，判斷輸出結果。(3) 找出 SQL 中的語法錯誤。最常見的陷阱是搞混 WHERE 和 HAVING — WHERE 過濾個別 row（在 GROUP BY 之前），HAVING 過濾分組後的結果（在 GROUP BY 之後）。",
           "bullets": [
             "CREATE TABLE Customers (CustomerID INT, CustomerName VARCHAR(255)); 是基本 DDL 形式。",
             "SELECT * 代表選取目前來源中所有 columns，不等於不過濾 rows。",
@@ -806,7 +806,7 @@
         },
         {
           "title": "WHERE、AND/OR 與括號",
-          "body": "WHERE 對分組前的 individual rows 套用條件。一般 SQL 中 AND 的優先順序高於 OR，但只靠記憶優先順序容易讓需求與語句不一致；把同一邏輯群組放進括號更清楚。要找 Country 為 Taiwan，且 City 是 Taipei 或 Kaohsiung，城市條件必須形成一組。",
+          "body": "WHERE 子句用來過濾不符合條件的 row，只留下條件為 true 的 row。WHERE 在 GROUP BY 之前執行，所以它過濾的是個別 row，不是分組。\n\n【比較運算子】=（等於）、<>（不等於）、<、>、<=、>=。字串比較用單引號：WHERE country = 'Taiwan'。NULL 值不能用 = 比較 — 必須用 IS NULL 或 IS NOT NULL。\n\n【邏輯運算子優先順序】NOT > AND > OR。這意味著 WHERE A OR B AND C 等價於 WHERE A OR (B AND C)，不是 (A OR B) AND C。如果要先算 OR，必須加括號：WHERE (A OR B) AND C。\n\n【具體範例】要找出台北或高雄的資管系學生：\n✓ WHERE (city = 'Taipei' OR city = 'Kaohsiung') AND dept = 'MIS'\n✗ WHERE city = 'Taipei' OR city = 'Kaohsiung' AND dept = 'MIS'\n第二種寫法因為 AND 優先於 OR，等價於：city = 'Taipei' OR (city = 'Kaohsiung' AND dept = 'MIS') — 會選出所有台北人（不限科系）加上高雄的資管系學生，不是預期結果。\n\n【其他常用條件】\n• BETWEEN a AND b：包含兩端，等價於 >= a AND <= b\n• IN (v1, v2, v3)：等價於 = v1 OR = v2 OR = v3\n• LIKE '%pattern%'：模糊比對，% 匹配任意長度字串，_ 匹配單一字元\n• EXISTS (subquery)：子查詢有結果時為 true\n\n【考試連結】最常考的陷阱就是 AND/OR 優先順序。考古題 106-19 涉及 port 範圍判斷，核心就是條件組合的邏輯正確性。另一個常見陷阱是 NULL 的三值邏輯：NULL = NULL 的結果不是 true，而是 unknown。",
           "bullets": [
             "正確邏輯是 Country='Taiwan' AND (City='Taipei' OR City='Kaohsiung')。",
             "省略括號可能把其他 country 的 Kaohsiung rows 一併選入。",
@@ -816,7 +816,7 @@
         },
         {
           "title": "Aggregate、DISTINCT、GROUP BY 與 HAVING",
-          "body": "Aggregate function 把多個 rows 彙整成統計值。COUNT(*) 計算 rows；COUNT(column) 忽略該 column 為 NULL 的 rows；COUNT(DISTINCT column) 計算不同且非 NULL 的 values。GROUP BY 先依 key 形成 groups，再對每組計算 aggregate；HAVING 則篩選 aggregate 後的 groups。",
+          "body": "Aggregate functions（聚合函數）對一組 row 計算出單一值：COUNT（計數）、SUM（加總）、AVG（平均）、MAX（最大）、MIN（最小）。\n\n【DISTINCT】去除重複值。SELECT DISTINCT city FROM Student 只輸出不重複的城市名。COUNT(DISTINCT dept_id) 計算不同部門的數量。\n\n【GROUP BY】把 row 按照指定欄位分組，然後對每組分別套用 aggregate function。例如：\nSELECT dept_id, COUNT(*) AS student_count, AVG(gpa) AS avg_gpa\nFROM Student\nGROUP BY dept_id;\n\n這會按 dept_id 分組，算出每個系所的學生數和平均 GPA。重要規則：SELECT 子句中，除了 aggregate function 之外的所有欄位，都必須出現在 GROUP BY 中。SELECT dept_id, name, COUNT(*) FROM Student GROUP BY dept_id 是錯誤的 — name 沒有在 GROUP BY 中。\n\n【HAVING vs WHERE】WHERE 在 GROUP BY 之前過濾個別 row，HAVING 在 GROUP BY 之後過濾分組。例如：\nSELECT dept_id, AVG(gpa) FROM Student\nWHERE gpa IS NOT NULL        -- 先排除 GPA 為空的學生\nGROUP BY dept_id\nHAVING AVG(gpa) >= 3.0;      -- 再排除平均 GPA < 3.0 的系所\n\nWHERE 中不能使用 aggregate function（因為 WHERE 在分組前執行，此時還沒有分組結果可計算）。HAVING 中可以使用 aggregate function。\n\n【考試連結】最常考的題型：(1) WHERE 和 HAVING 的差異。(2) SELECT 中的欄位是否都在 GROUP BY 中。(3) COUNT(*) vs COUNT(column) 的差異 — COUNT(*) 計算所有 row（包含 NULL），COUNT(column) 只計算該欄位非 NULL 的 row。",
           "bullets": [
             "計算不同國家數：COUNT(DISTINCT Country)。",
             "計算每個國家的客戶數：GROUP BY Country 搭配 COUNT。",
@@ -826,7 +826,7 @@
         },
         {
           "title": "JOIN 依關聯欄位組合資料",
-          "body": "JOIN 把兩個或更多 tables 的 rows 依 join condition 組合，讓查詢同時輸出不同 tables 的 columns。INNER JOIN 只保留符合條件的配對；LEFT JOIN 保留左表所有 rows，右表沒有配對時以 NULL 補足。JOIN 不等於永久建立新 table，也不自動移除 duplicates。",
+          "body": "JOIN 是 SQL 最核心的操作之一 — 它把兩個或多個表依照共同的欄位值合併成一個結果集。不同類型的 JOIN 決定了「當某一邊沒有匹配時怎麼辦」。\n\n【INNER JOIN】只輸出兩邊都有匹配的 row。\nSELECT S.name, D.dept_name\nFROM Student S INNER JOIN Department D ON S.dept_id = D.dept_id;\n如果某個學生的 dept_id 在 Department 表中不存在，該學生不會出現在結果中。\n\n【LEFT (OUTER) JOIN】左表的所有 row 都保留，右表沒有匹配的部分填 NULL。\nSELECT S.name, D.dept_name\nFROM Student S LEFT JOIN Department D ON S.dept_id = D.dept_id;\n即使某個學生的 dept_id 不存在於 Department 表，該學生仍會出現，dept_name 為 NULL。\n\n【RIGHT (OUTER) JOIN】和 LEFT JOIN 相反 — 右表全保留，左表沒匹配的填 NULL。\n\n【FULL (OUTER) JOIN】兩邊都全保留，沒匹配的填 NULL。\n\n【CROSS JOIN】笛卡爾積 — 左表每一 row 和右表每一 row 配對。如果左表 10 row、右表 5 row，結果是 50 row。通常不直接使用，但 WHERE 條件不慎遺漏 JOIN 條件時可能意外產生。\n\n【Self JOIN】一個表和自己 JOIN。例如找出「和 Alice 同系的所有學生」：\nSELECT S2.name FROM Student S1 JOIN Student S2 ON S1.dept_id = S2.dept_id WHERE S1.name = 'Alice' AND S2.name <> 'Alice';\n\n【考試連結】(1) 給定 SQL 判斷輸出行數 — 關鍵是理解 INNER 會減少行數，LEFT/RIGHT 保留一邊所有行。(2) 自然連接（NATURAL JOIN）自動用同名欄位 JOIN，但如果有多個同名欄位可能產生非預期結果 — 考古題常用此陷阱。",
           "bullets": [
             "常見條件是 foreign key 對應 referenced key，例如 Orders.CustomerID = Customers.CustomerID。",
             "缺少或寫錯 join condition 可能產生 Cartesian product 或錯誤配對。",
@@ -938,7 +938,7 @@
       "subtopicId": "im-it-db-transactions",
       "title": "交易與復原：用 ACID 判斷並行風險",
       "summary": "從交易邊界與 ACID 出發，判讀 lost update、dirty read、不可重複讀等並行異常，再以 lock、serializability、log 與 checkpoint 建立完整的復原觀念。",
-      "estimatedMinutes": 32,
+      "estimatedMinutes": 33,
       "learningObjectives": [
         "用具體操作解釋 Atomicity、Consistency、Isolation、Durability",
         "從 interleaved schedule 辨識 lost update、dirty read 與 non-repeatable read",
@@ -948,7 +948,7 @@
       "sections": [
         {
           "title": "交易是不可拆散的工作單位",
-          "body": "transaction 是一組必須共同成功或共同失敗的資料庫操作，通常從 BEGIN 到 COMMIT 或 ROLLBACK。把銀行轉帳拆成扣款與入帳兩步時，只完成其中一步就會破壞資料；交易邊界的目的就是讓 DBMS 有能力把兩步視為一個整體。交易不是單一 SQL 的同義詞，一個交易可以包含多個讀寫敘述。",
+          "body": "Transaction（交易/事務）是資料庫中一組不可分割的操作序列 — 要嘛全部成功（commit），要嘛全部取消（rollback/abort），不能只做一半。這個「全有或全無」的特性叫做 atomicity。\n\n【經典範例：銀行轉帳】A 帳戶轉 1000 元到 B 帳戶，包含兩個操作：(1) A 帳戶餘額 - 1000。(2) B 帳戶餘額 + 1000。如果系統在 (1) 完成後、(2) 完成前當機，A 的錢扣了但 B 沒收到 — 1000 元憑空消失。Transaction 機制確保：如果 (2) 失敗，(1) 也會被 rollback，A 的餘額恢復原狀。\n\n【Transaction 的生命週期】\n(1) BEGIN：開始交易。\n(2) 執行一連串的讀取和寫入操作。\n(3) COMMIT：所有操作都成功，永久寫入資料庫。\n(4) 或 ROLLBACK/ABORT：放棄所有操作，回到交易開始前的狀態。\n\n交易一旦 commit，其結果必須是永久的（durability），即使系統隨後當機也不能遺失。這通常透過 write-ahead log（WAL）實現 — 在修改資料頁之前，先把修改記錄寫到日誌檔案。當機復原時，從日誌重播或回滾未完成的交易。\n\n【考試連結】考古題最常考的情境是判斷「如果系統在某個時間點當機，資料庫的狀態是什麼」。答案取決於交易是否已經 commit：已 commit → 結果保留（redo if needed）；未 commit → 結果取消（undo）。",
           "bullets": [
             "COMMIT 表示交易結果成為正式狀態",
             "ROLLBACK 放棄尚未提交的修改",
@@ -958,7 +958,7 @@
         },
         {
           "title": "ACID 四個字母各管一件事",
-          "body": "Atomicity 保證全做或全不做；Consistency 要求交易把資料庫從一個合法狀態帶到另一個合法狀態；Isolation 讓並行交易的可見結果等價於某個循序順序；Durability 保證已提交結果在故障後仍可恢復。Availability 不屬於 ACID，而 integrity 也不是 I 的展開。考題若只給縮寫，先寫出四個全名再判斷選項。",
+          "body": "ACID 是交易必須滿足的四個特性，每個字母解決一個不同的問題：\n\n【A - Atomicity（原子性）】交易中的所有操作要嘛全部成功，要嘛全部取消。解決的問題：避免部分完成的操作留下不一致的資料狀態。實現機制：undo log — 記錄每個操作的反向操作，rollback 時依序執行。\n\n【C - Consistency（一致性）】交易執行前後，資料庫必須保持在一個合法的狀態。所有的完整性約束（如 primary key 唯一、foreign key 參照存在、CHECK 約束成立）在交易結束後仍然滿足。例如轉帳後，所有帳戶餘額的總和不變。注意：ACID 的 Consistency 是「資料完整性約束」的概念，和 CAP theorem 的 Consistency（所有節點看到相同資料）是不同的。\n\n【I - Isolation（隔離性）】多個交易並行執行時，每個交易感覺自己是唯一在執行的，看不到其他交易的中間狀態。理想情況下，並行執行的結果和某個序列執行（一個接一個）的結果相同 — 這叫做 serializability。實務上為了效能，會放寬 isolation level。\n\n【D - Durability（持久性）】交易一旦 commit，其修改永久保存，即使系統隨後斷電或當機。實現機制：redo log + 定期 checkpoint — 當機復原時，從 checkpoint 開始重播 redo log 中已 commit 的交易。\n\n【考試連結】選擇題常給一個情境問「違反了 ACID 的哪個特性」。例如「轉帳只扣了 A 但沒加到 B」→ 違反 Atomicity；「兩個交易同時修改同一筆資料導致結果錯誤」→ 違反 Isolation。最大陷阱是混淆 ACID-C 和 CAP-C。",
           "bullets": [
             "Atomicity 常靠 log 與 UNDO 支援",
             "Isolation 的強弱由 isolation level 與 concurrency control 決定",
@@ -968,7 +968,7 @@
         },
         {
           "title": "並行執行為何會出錯",
-          "body": "兩個交易交錯執行形成 schedule。若其結果等價於某個 serial schedule，就具有 serializability。沒有適當控制時，可能讀到未提交資料形成 dirty read、同一列前後讀值不同形成 non-repeatable read，或兩個交易以舊值覆蓋彼此形成 lost update。serializable 是最強的常見隔離目標，但較強隔離通常也帶來更多等待或重試。",
+          "body": "在多用戶環境中，多個交易同時存取和修改相同的資料可能導致三種經典的並行問題：\n\n【Dirty Read（髒讀）】交易 T1 修改了資料但尚未 commit，交易 T2 讀取了 T1 修改後的值。如果 T1 隨後 rollback，T2 讀到的資料就是無效的（從未實際存在的值）。例如：T1 把價格從 100 改成 150（還沒 commit），T2 讀到 150 並據此計算。T1 rollback 後價格回到 100，但 T2 已經用了錯誤的 150。\n\n【Non-repeatable Read（不可重複讀）】交易 T1 讀取某筆資料後，交易 T2 修改並 commit 了該筆資料，T1 再次讀取時得到不同的值。同一個交易中，兩次讀取同一筆資料的結果不一致。例如：T1 讀到帳戶餘額 5000，T2 把餘額改成 3000 並 commit，T1 再讀時看到 3000。\n\n【Phantom Read（幻讀）】交易 T1 用某個條件查詢得到一組結果，交易 T2 隨後插入或刪除了符合該條件的資料並 commit，T1 再次用相同條件查詢時得到不同數量的 row。例如：T1 查詢「GPA > 3.5 的學生」得到 10 人，T2 新增一位 GPA 3.8 的學生並 commit，T1 再查時得到 11 人 — 多出的一人像「幽靈」般出現。\n\n【Isolation Levels】SQL 標準定義四個隔離等級，從低到高：\n(1) READ UNCOMMITTED：允許 dirty read（最低隔離）\n(2) READ COMMITTED：防止 dirty read，但允許 non-repeatable read\n(3) REPEATABLE READ：防止 dirty read 和 non-repeatable read，但允許 phantom read\n(4) SERIALIZABLE：防止所有三種問題（最高隔離，但效能最差）\n\n【考試連結】題目常給一個交易執行順序，問會發生哪種問題，或問哪個 isolation level 能防止特定問題。記住三者的嚴重程度：dirty read > non-repeatable read > phantom read，對應的 isolation level 由低到高排列。",
           "bullets": [
             "serial schedule 完成一個交易後才執行下一個",
             "serializable schedule 可以交錯，但結果必須等價於某個 serial order",
@@ -978,7 +978,7 @@
         },
         {
           "title": "鎖與日誌分別處理並行和故障",
-          "body": "shared lock 允許多個讀者共存，exclusive lock 排除其他讀寫者。two-phase locking 要求交易先進入只取得鎖的 growing phase，再進入只釋放鎖的 shrinking phase，可產生 conflict-serializable schedules，但仍可能 deadlock。故障復原則常採 write-ahead logging：資料頁寫回前，描述修改的 log 必須先持久化。checkpoint 縮短復原要掃描的範圍，但不等於可以無條件刪除所有舊 log。",
+          "body": "資料庫用兩套機制分別處理並行控制和故障復原：Lock（鎖）處理並行，Log（日誌）處理故障。\n\n【Lock-based concurrency control】\n• Shared lock（S lock / 讀鎖）：多個交易可以同時持有同一筆資料的 S lock。持有 S lock 只能讀取，不能修改。\n• Exclusive lock（X lock / 寫鎖）：一次只有一個交易能持有。持有 X lock 可以讀取和修改。其他交易既不能讀也不能寫（除非使用 MVCC 等技術）。\n\n相容性：S lock 和 S lock 相容（多個讀者可並行），S lock 和 X lock 不相容，X lock 和 X lock 不相容。\n\n【Two-Phase Locking（2PL）】確保 serializability 的協定：(1) Growing phase — 交易只能取得鎖，不能釋放。(2) Shrinking phase — 交易只能釋放鎖，不能取得。一旦釋放任何一個鎖，就進入 shrinking phase，不能再取得新鎖。2PL 保證了可序列化性，但可能導致 deadlock。\n\n【Log-based recovery】\n• Write-Ahead Logging（WAL）：在修改資料頁之前，必須先把修改記錄（log record）寫到持久的日誌檔案。Log record 包含：交易 ID、修改的資料項、修改前的值（before image，用於 undo）、修改後的值（after image，用於 redo）。\n\n• 復原流程：當機重啟後，掃描日誌：(1) Redo 所有已 commit 的交易（確保 durability）。(2) Undo 所有未 commit 的交易（確保 atomicity）。Checkpoint 機制定期記錄「到此時為止所有已 commit 的交易」，縮小復原時需要掃描的日誌範圍。\n\n【考試連結】題目常問「系統在某時間點當機，以下哪些交易需要 redo、哪些需要 undo」。規則簡單：checkpoint 之後 commit 的 → redo；checkpoint 之後開始但未 commit 的 → undo。",
           "bullets": [
             "deadlock 是形成等待環，starvation 是某交易長期得不到資源",
             "UNDO 撤回未提交交易，REDO 重播已提交但尚未落盤的修改",
@@ -1080,7 +1080,7 @@
       ],
       "title": "複雜度、排序與搜尋：從輸入形狀推導成本",
       "summary": "以輸入規模與基本操作次數建立 Big-O、Omega、Theta，再用 Bubble Sort 與 QuickSort 分析 best/worst case、提前停止與穩定性，最後整理搜尋演算法成立所需的資料前提。對應考古題答案均為非官方技術覆核。",
-      "estimatedMinutes": 38,
+      "estimatedMinutes": 33,
       "minimumPastPaperRefs": 4,
       "learningObjectives": [
         "區分 Big-O、Omega、Theta，以及 best/average/worst case 的不同問題。",
@@ -1091,7 +1091,7 @@
       "sections": [
         {
           "title": "先定義 n、操作與 case",
-          "body": "複雜度分析先指定 input size n 與要計數的基本操作，再觀察 n 成長時成本的量級。Big-O 給漸近上界，Omega 給漸近下界，Theta 表示上下界同階。Best、average、worst case 則是在同一個 n 下，針對不同輸入集合或分布描述演算法行為；它們不是 O、Omega、Theta 的同義詞。",
+          "body": "演算法的時間複雜度（time complexity）衡量的是「隨著輸入規模 n 增長，演算法需要的基本操作次數如何增長」。用 Big-O 記號表示上界（worst case 的增長速度）。\n\n【定義 n】n 是輸入的規模，具體定義取決於問題。排序問題中 n 是元素數量；圖演算法中 n 可能是節點數 V 或邊數 E；字串演算法中 n 是字串長度。\n\n【常見複雜度等級（由快到慢）】\n• O(1)：常數時間，和輸入規模無關。例如存取陣列中的第 i 個元素。\n• O(log n)：對數時間，每次操作把問題規模減半。例如 binary search。\n• O(n)：線性時間，需要看過每個元素一次。例如線性搜尋。\n• O(n log n)：最佳比較排序的下界。例如 merge sort、heap sort。\n• O(n²)：二次方時間。例如 bubble sort、selection sort、insertion sort 的 worst case。\n• O(2ⁿ)：指數時間，通常只適用於很小的 n。例如暴力枚舉子集。\n\n【Best / Average / Worst case】同一個演算法在不同輸入下可能有不同的表現。例如 insertion sort 在已排序的陣列上是 O(n)（best case），但在反向排序的陣列上是 O(n²)（worst case）。Big-O 通常描述 worst case。Big-Ω 描述 lower bound（best case），Big-Θ 描述 tight bound（當 O 和 Ω 相同時）。\n\n【空間複雜度】除了時間，也要考慮演算法需要的額外記憶體。In-place 演算法只需要 O(1) 額外空間（如 quicksort 的 partition），而 merge sort 需要 O(n) 額外空間。\n\n【考試連結】最常考的題型：(1) 給定程式碼（通常是巢狀迴圈），判斷時間複雜度。(2) 比較不同排序演算法的複雜度。(3) 從給定的 Big-O 判斷能否在時限內處理特定規模的輸入。",
           "bullets": [
             "忽略常數與低階項是為了比較成長率，不代表實際執行時間完全相同。",
             "O(n²) 是上界敘述；若同時可證明 Omega(n²)，才能寫成 Theta(n²)。",
@@ -1101,7 +1101,7 @@
         },
         {
           "title": "Bubble Sort：相鄰交換與提前停止",
-          "body": "Bubble Sort 反覆比較相鄰元素，若左值較大就交換，使未定位區間中的大值逐步移向右端。逆序輸入會產生約 n(n-1)/2 次比較與大量交換，因此 worst case 是 Theta(n²)。若實作記錄一整趟是否發生交換，已排序輸入只需掃描一次即可停止，best case 是 Theta(n)。",
+          "body": "Bubble Sort 是最直覺的排序演算法：反覆掃描陣列，比較相鄰的兩個元素，如果順序錯誤就交換。每一輪掃描（pass），最大的未排序元素會像氣泡一樣「浮」到正確位置。\n\n【運作機制】以升序排列 [5, 3, 8, 1, 2] 為例：\nPass 1：比較 (5,3)→交換→[3,5,8,1,2]；(5,8)→不換；(8,1)→交換→[3,5,1,8,2]；(8,2)→交換→[3,5,1,2,8]。最大值 8 到位。\nPass 2：比較 (3,5)→不換；(5,1)→交換→[3,1,5,2,8]；(5,2)→交換→[3,1,2,5,8]。第二大值 5 到位。\n如此重複，直到整個陣列排序完成。\n\n【提前停止優化】如果某一輪 pass 中沒有發生任何交換，表示陣列已經完全排序，可以提前結束。這使得 best case（已排序的陣列）的複雜度降為 O(n) — 只需要掃一遍確認沒有交換。\n\n【複雜度分析】\n• Worst case：O(n²) — 反向排序的陣列，每一輪都需要交換。\n• Best case：O(n) — 已排序的陣列（加入提前停止優化）。\n• Average case：O(n²)。\n• 空間複雜度：O(1)（in-place）。\n• 穩定性：穩定（stable）— 相等元素的相對順序不會改變，因為只有嚴格大於時才交換。\n\n【考試連結】Bubble sort 是考古題最常出現的排序演算法，通常要你(1) 手動執行幾個 pass 寫出中間結果，或 (2) 判斷最壞情況下需要幾次比較。n 個元素最壞需要 n(n-1)/2 次比較。",
           "bullets": [
             "沒有 swapped flag 的固定輪數版本，即使已排序也可能執行 Theta(n²)。",
             "只在 left > right 時交換，可保留相等元素的相對順序，因此標準 Bubble Sort 是 stable。",
@@ -1111,7 +1111,7 @@
         },
         {
           "title": "QuickSort：切分品質決定遞迴深度",
-          "body": "QuickSort 選擇 pivot，以 partition 將元素分到 pivot 兩側，再遞迴處理子陣列。若切分大致平衡，遞迴深度約 log n，每層總 partition 工作約 n，典型成本為 Theta(n log n)。若每次 pivot 都是最小或最大值，子問題只從 n 降到 n-1，總成本成為 Theta(n²)。",
+          "body": "QuickSort 使用 divide-and-conquer 策略：選一個 pivot（基準值），把陣列分成「小於 pivot」和「大於 pivot」兩部分（partition），然後對兩部分遞迴排序。\n\n【Partition 機制】選定 pivot 後（常用最後一個元素、隨機元素或 median-of-three），掃描陣列把元素分成兩組：≤ pivot 的放左邊，> pivot 的放右邊。Partition 結束後，pivot 就在它最終的正確位置。\n\n【具體範例】排序 [7, 2, 1, 6, 8, 5, 3, 4]，選 pivot = 4：\nPartition 後：[2, 1, 3, 4, 8, 5, 7, 6]。4 在正確位置（index 3）。\n遞迴排序左半 [2, 1, 3] 和右半 [8, 5, 7, 6]。\n\n【複雜度取決於 pivot 選擇品質】\n• Best case：每次 pivot 恰好是中位數，把陣列等分。遞迴深度 O(log n)，每層 O(n) 比較。總計 O(n log n)。\n• Worst case：每次 pivot 是最大或最小值（例如已排序的陣列用最後元素做 pivot），一邊 0 個元素、另一邊 n-1 個。遞迴深度 O(n)，總計 O(n²)。\n• Average case：O(n log n)。隨機化 pivot 選擇可以讓 worst case 出現的機率極低。\n\n【空間複雜度】In-place partition 不需要額外陣列，但遞迴呼叫需要 call stack 空間：best case O(log n)、worst case O(n)。\n\n【穩定性】QuickSort 不是穩定排序 — partition 過程中可能改變相等元素的相對順序。\n\n【考試連結】(1) 手動執行 partition 過程是常見題型。(2) 常考 QuickSort worst case 出現的條件。(3) 比較 QuickSort 和 MergeSort — QuickSort 通常更快（cache 友善，常數因子小），但 worst case 更差且不穩定。",
           "bullets": [
             "已排序資料不必然讓所有 QuickSort 變慢；是否退化取決於 pivot/partition 策略。",
             "Randomized pivot 或較穩健的 pivot selection 可降低反覆極端切分的機率，但不消除理論 worst case。",
@@ -1121,7 +1121,7 @@
         },
         {
           "title": "穩定性與搜尋前提",
-          "body": "Stable sort 保證 key 相同的 records 維持原相對順序，這在先後套用多個排序鍵時很重要。Insertion Sort、Merge Sort 與只交換嚴格逆序相鄰元素的 Bubble Sort 可實作為 stable；典型 in-place QuickSort 不保證。搜尋也依資料結構而異：線性搜尋不要求排序；binary search 需要可依 index 取得中點且資料已依同一比較規則排序。",
+          "body": "【排序的穩定性】穩定排序（stable sort）保證：當兩個元素的排序鍵相同時，它們在排序後的相對順序和排序前一致。例如按成績排序學生名單，兩個都是 90 分的學生在排序後的前後順序和原來一樣。\n\n穩定排序：Bubble Sort、Insertion Sort、Merge Sort、Counting Sort、Radix Sort。\n不穩定排序：Selection Sort、Quick Sort、Heap Sort。\n\n穩定性在「多鍵排序」時特別重要：先按姓名排序，再按成績排序。如果第二次排序是穩定的，那麼成績相同的學生仍按姓名排序。如果不穩定，姓名順序可能被打亂。\n\n【各排序演算法比較表】\n| 演算法 | Best | Average | Worst | 空間 | 穩定？ |\n| Bubble Sort | O(n) | O(n²) | O(n²) | O(1) | ✓ |\n| Insertion Sort | O(n) | O(n²) | O(n²) | O(1) | ✓ |\n| Selection Sort | O(n²) | O(n²) | O(n²) | O(1) | ✗ |\n| Merge Sort | O(n log n) | O(n log n) | O(n log n) | O(n) | ✓ |\n| Quick Sort | O(n log n) | O(n log n) | O(n²) | O(log n) | ✗ |\n| Heap Sort | O(n log n) | O(n log n) | O(n log n) | O(1) | ✗ |\n\n【Binary Search 前提】Binary Search 要求陣列已排序。步驟：比較中間元素和目標值，如果目標值較小就搜尋左半，較大就搜尋右半。每次把搜尋範圍減半，所以時間複雜度是 O(log n)。如果陣列未排序，只能用線性搜尋 O(n)。\n\n【考試連結】(1) 排序穩定性是常考選擇題。(2) 常考「以下哪個排序最壞情況仍是 O(n log n)」→ Merge Sort 和 Heap Sort。(3) Binary Search 的前提條件（已排序）和每次比較後搜尋範圍如何縮小。",
           "bullets": [
             "穩定性只約束 equal keys，不表示排序結果唯一或演算法一定較快。",
             "Merge Sort 是否 stable 取決於 merge 遇到相等值時是否先取左側元素。",
@@ -1234,7 +1234,7 @@
       ],
       "title": "Trees、BST 與 Heaps：形狀約束與順序規則",
       "summary": "先建立 tree、complete binary tree 與 array representation，再比較 BST 的全域搜尋順序和 heap 的局部 parent-child 順序，最後推導 traversal、priority queue、insert 與 arbitrary search 的複雜度。對應考古題答案均為非官方技術覆核。",
-      "estimatedMinutes": 40,
+      "estimatedMinutes": 35,
       "minimumPastPaperRefs": 5,
       "learningObjectives": [
         "使用 root、parent、child、leaf、depth、height 與 complete binary tree 描述樹。",
@@ -1245,7 +1245,7 @@
       "sections": [
         {
           "title": "Tree 形狀與 array mapping",
-          "body": "Tree 以 parent-child 關係表達階層；binary tree 的每個節點最多兩個 children。Complete binary tree 除最後一層外皆填滿，最後一層由左到右填入，因此能緊密存入 array。使用 zero-based index 時，非 root 節點 i>0 的 parent 是 floor((i-1)/2)，left child 是 2i+1，right child 是 2i+2。",
+          "body": "Tree（樹）是一種階層式的資料結構，由 node（節點）和 edge（邊）組成。每棵樹有一個 root（根節點），每個 node 最多有一個 parent（父節點），可以有零到多個 children（子節點）。沒有 children 的 node 叫做 leaf（葉節點）。\n\n【關鍵術語】\n• Depth（深度）：從 root 到某 node 的路徑長度。Root 的 depth 是 0。\n• Height（高度）：從某 node 到最遠 leaf 的路徑長度。Leaf 的 height 是 0。樹的 height = root 的 height。\n• Binary tree：每個 node 最多有 2 個 children（left child 和 right child）。\n• Complete binary tree：除了最後一層外都填滿，最後一層的 nodes 靠左排列。\n• Full binary tree：每個 node 要嘛有 0 個 children，要嘛有 2 個 children。\n\n【Array 表示法】Complete binary tree 可以用陣列高效儲存。將 root 放在 index 1（或 0），則對於 index i 的 node：\n• 若 root 在 index 1：left child = 2i，right child = 2i+1，parent = i/2（取整數）\n• 若 root 在 index 0：left child = 2i+1，right child = 2i+2，parent = (i-1)/2\n\n這個對應關係不需要 pointer，省記憶體且 cache-friendly。但只適用於 complete binary tree — 如果樹不是 complete 的，會浪費很多空間（sparse array）。\n\n【考試連結】(1) 給定陣列求對應的樹形狀，或反過來。(2) n 個 node 的 complete binary tree 的 height 是 ⌊log₂ n⌋。(3) 分辨 complete、full、perfect binary tree — perfect 是每個非 leaf node 都有 2 個 children 且所有 leaf 在同一層。",
           "bullets": [
             "Root 沒有 parent，leaf 沒有 children。",
             "Depth 是 root 到節點的邊數；height 是節點到最深 leaf 的最長邊數，使用前要確認課本 convention。",
@@ -1255,7 +1255,7 @@
         },
         {
           "title": "BST 的全域 ordering 與 traversal",
-          "body": "Binary Search Tree 對每個節點維持搜尋順序：左子樹 keys 小於節點、右子樹 keys 大於節點；若允許 duplicates，必須另訂一致政策。Inorder traversal 依 left subtree、node、right subtree 走訪，因此對 distinct-key BST 會產生遞增序列。這個全域 ordering 讓搜尋能依比較結果排除一側子樹，但成本取決於 tree height。",
+          "body": "Binary Search Tree（BST）是一種特殊的 binary tree，滿足 BST property：對於任何 node，左子樹的所有 node 值都小於該 node，右子樹的所有 node 值都大於該 node。注意是「所有」不是「直接 children」— 這是全域（global）的排序約束。\n\n【基本操作與複雜度】\n• Search：從 root 開始，比較目標值和當前 node。小於 → 往左走，大於 → 往右走。Average case O(log n)，worst case O(n)（退化成鏈表）。\n• Insert：按 search 路徑找到正確位置，新增 leaf。\n• Delete：三種情況：(1) 刪除 leaf → 直接移除。(2) 刪除只有一個 child 的 node → child 替代。(3) 刪除有兩個 children 的 node → 用 in-order successor（右子樹最小值）或 in-order predecessor（左子樹最大值）替代。\n\n【四種 traversal】\n• In-order（中序）：左 → root → 右。在 BST 上會產生升序排列。\n• Pre-order（前序）：root → 左 → 右。可用來序列化/重建 BST。\n• Post-order（後序）：左 → 右 → root。常用於刪除樹或計算子樹大小。\n• Level-order（層序）：逐層由左到右，使用 queue 實作。\n\n【具體範例】BST [8, 3, 10, 1, 6, 14]，root=8。In-order traversal 結果：1, 3, 6, 8, 10, 14（升序）。\n\n【考試連結】最常考的題型：(1) 依序插入元素畫出 BST。(2) 對 BST 執行 in-order traversal 寫出結果。(3) 刪除某 node 後的 BST 形狀。陷阱：BST 的形狀取決於插入順序 — 同一組元素用不同順序插入會得到不同的 BST。",
           "bullets": [
             "Inorder：left → node → right；preorder：node → left → right；postorder：left → right → node。",
             "平衡 BST 的 search/insert 可為 O(log n)；嚴重偏斜時 worst case 可到 O(n)。",
@@ -1265,7 +1265,7 @@
         },
         {
           "title": "Heap 只保證 parent-child 順序",
-          "body": "Binary heap 同時要求 complete binary tree 形狀與 heap-order property。Min-heap 的 parent key 小於或等於 children，因此 root 是最小值；max-heap 則相反，root 是最大值。Heap 不保證左子樹所有值都小於右子樹，也不支援 BST 式二分搜尋。歷屆 Q112-27 題幹把 min-heap 不等號方向印反，但其 insertion 複雜度答案不受影響；課程採正確定義。",
+          "body": "Heap（堆積）是一種 complete binary tree，滿足 heap property：\n• Max-heap：每個 node 的值 ≥ 其 children 的值。Root 是最大值。\n• Min-heap：每個 node 的值 ≤ 其 children 的值。Root 是最小值。\n\n【Heap vs BST 的核心差異】BST 保證全域排序（左子樹 < root < 右子樹），所以 in-order traversal 能得到排序結果。Heap 只保證 parent-child 之間的順序，不保證左右子樹之間的大小關係。例如在 max-heap 中，root 的 left child 可能比 right child 大，也可能比 right child 小 — 只要兩者都 ≤ root 即可。\n\n因此，Heap 不能做高效的「搜尋特定值」（需要 O(n)），但能在 O(1) 取得最大/最小值（root），適合實作 priority queue。\n\n【Heap 的陣列實作】因為 Heap 是 complete binary tree，用陣列表示非常高效。Max-heap [16, 14, 10, 8, 7, 9, 3]：\n• Index 0: 16（root，最大值）\n• Index 1: 14, Index 2: 10（16 的 children）\n• Index 3: 8, Index 4: 7（14 的 children）\n• Index 5: 9, Index 6: 3（10 的 children）\n\n【考試連結】最常考的陷阱：(1) 以為 Heap 有排序功能 — Heap 只保證 root 是最大/最小，不保證整體排序。(2) 以為 Heap 的 in-order traversal 能得到排序結果 — 那是 BST 的特性。(3) B-tree 和 Heap 是完全不同的東西 — B-tree 是多路搜尋樹（用於資料庫索引），Heap 是 priority queue 的實作。",
           "bullets": [
             "Min-heap：parent ≤ children；max-heap：parent ≥ children。",
             "Heap 的 siblings 與不同 branches 之間沒有完整排序。",
@@ -1275,7 +1275,7 @@
         },
         {
           "title": "Sift 操作與複雜度",
-          "body": "Insert 先把新 key 放到 array 末端以維持 complete shape，再沿 parent chain sift-up，最多移動 tree height，所以 worst case O(log n)。刪除最高優先值時，取出 root、把最後元素移到 root，再 sift-down，亦為 O(log n)。取得 root 是 O(1)，但尋找任意指定 key 在 worst case 可能檢查全部 n 個節點，因 heap order 無法像 BST 那樣排除唯一方向。",
+          "body": "Heap 的兩個核心操作都透過 sift（篩選/滲透）來維護 heap property：\n\n【Insert（插入）→ Sift-up】新元素先放在陣列末尾（complete binary tree 的最後位置），然後和 parent 比較：如果違反 heap property（例如在 max-heap 中新元素 > parent），就和 parent 交換。重複此過程直到到達 root 或不再違反。最多交換 O(log n) 次（樹的高度）。\n\n【Extract-max/min（取出最值）→ Sift-down】取出 root（最大/最小值），用陣列最後一個元素替換 root，然後從 root 往下和 children 比較：在 max-heap 中，如果 root 比某個 child 小，就和較大的 child 交換。重複此過程直到到達 leaf 或不再違反。最多交換 O(log n) 次。\n\n【Build Heap】把一個無序陣列轉成 heap。天真做法：逐一 insert，O(n log n)。高效做法（Floyd's algorithm）：從最後一個非 leaf node（index n/2 - 1）開始，對每個 node 做 sift-down。看似每個 node 都做 O(log n) 的 sift-down，但實際上大部分 node 離 leaf 很近，總複雜度是 O(n)，不是 O(n log n)。\n\n【Heap Sort】步驟：(1) Build max-heap，O(n)。(2) 反覆 extract-max（把 root 和最後一個元素交換，heap size 減 1，sift-down），重複 n-1 次。總計 O(n log n)。Heap Sort 的優點是 worst case 也是 O(n log n)，且 in-place（O(1) 額外空間）。缺點是不穩定。\n\n【Priority Queue】Heap 最常見的應用是實作 priority queue — 支援 insert（加入元素）和 extract-max/min（取出最高優先級元素），兩者都是 O(log n)。應用場景：OS 的 CPU 排程、Dijkstra 演算法、事件驅動模擬。\n\n【考試連結】(1) 手動執行 insert 或 extract-max 過程。(2) Build Heap 的時間複雜度是 O(n) 不是 O(n log n)。(3) Heap Sort 和 Merge Sort 都是 O(n log n) worst case，但 Heap Sort 是 in-place。",
           "bullets": [
             "Insert 與 extract-min/max 的 O(log n) 來自 complete binary tree height。",
             "Peek root 不修改結構，可在 O(1) 完成。",
@@ -1384,7 +1384,7 @@
       "subtopicId": "im-it-network-application-protocols",
       "title": "應用層協定：從網址、設定到郵件與代理",
       "summary": "以『使用者要完成什麼任務』整理 DNS、DHCP、HTTP、Cookie、電子郵件、LDAP 與 proxy/CDN。重點是追蹤一次請求前後需要哪些服務，並分清名稱解析、參數配置、內容傳輸與狀態保存。",
-      "estimatedMinutes": 30,
+      "estimatedMinutes": 36,
       "learningObjectives": [
         "依任務辨識 DNS、DHCP、HTTP、SMTP、IMAP、POP3 與 LDAP。",
         "追蹤瀏覽網站前的名稱解析與 HTTP 狀態管理流程。",
@@ -1394,7 +1394,7 @@
       "sections": [
         {
           "title": "先問協定解決哪個問題",
-          "body": "應用層協定常一起出現在同一段網路流程，但各自負責不同任務。DNS 把名稱轉成位址，DHCP 配置主機連線所需參數，HTTP 傳送 Web 資源；若先把任務分開，選項再換句話說也不容易混淆。",
+          "body": "Application layer（應用層）是網路模型最上層，直接面對使用者和應用程式。應用層協定定義了不同主機上的程式如何交換訊息。理解任何協定的第一步不是背 port 號或封包格式，而是問：「這個協定解決什麼問題？」\n\n【核心應用層協定與用途】\n• HTTP/HTTPS（port 80/443）：Web 瀏覽器和伺服器之間傳輸超文本。HTTPS = HTTP + TLS 加密。\n• DNS（port 53）：把人類可讀的域名（www.ntu.edu.tw）轉換成 IP 位址（140.112.x.x）。\n• DHCP（port 67/68）：自動分配 IP 位址、subnet mask、default gateway 等網路設定給客戶端。\n• SMTP（port 25/587）：送出電子郵件。\n• POP3（port 110）/ IMAP（port 143）：接收電子郵件。POP3 下載後通常刪除伺服器副本，IMAP 保留同步。\n• FTP（port 20/21）：檔案傳輸。使用兩個 connection：control（21）和 data（20）。\n• SSH（port 22）：加密的遠端登入和命令執行。\n• Telnet（port 23）：未加密的遠端登入，已被 SSH 取代。\n\n【Client-Server vs Peer-to-Peer】大部分應用層協定使用 client-server 模型：客戶端發起請求，伺服器回應。P2P（如 BitTorrent）中每個 node 同時扮演 client 和 server。\n\n【考試連結】(1) 給定情境判斷使用哪個協定。(2) 常考 port 號：80(HTTP), 443(HTTPS), 53(DNS), 25(SMTP), 22(SSH)。(3) 區分 DNS（域名→IP）和 DHCP（自動分配 IP 配置）— 兩者都和 IP 有關但功能完全不同。",
           "bullets": [
             "DNS：階層式名稱解析，將網域名稱查成 IP 等紀錄。",
             "DHCP：讓新加入網路的主機取得 IP、subnet mask、default gateway 與 DNS server 等設定。",
@@ -1404,7 +1404,7 @@
         },
         {
           "title": "HTTP 無狀態，Cookie 補上連續性",
-          "body": "HTTP 的每次 request 本身可獨立處理，伺服器不會只靠協定自動記得上一次互動。Cookie 可由伺服器透過 Set-Cookie 設定，也可在安全與作用域限制允許時由瀏覽器端程式管理；之後由瀏覽器依 Domain、Path 等規則附加到請求，常用來攜帶 session identifier 或偏好設定。",
+          "body": "HTTP（HyperText Transfer Protocol）是 Web 的基礎協定。Client（瀏覽器）發送 request（如 GET /index.html），server 回傳 response（如 200 OK + HTML 內容）。HTTP 的一個核心特性是 stateless（無狀態）— 每個 request 是獨立的，server 不會自動記住之前的 request 來自誰。\n\n【HTTP Methods】\n• GET：取得資源。不改變伺服器狀態。參數放在 URL 中。\n• POST：提交資料。可能改變伺服器狀態（如新增訂單）。參數放在 body 中。\n• PUT：更新整個資源。\n• DELETE：刪除資源。\n• PATCH：部分更新資源。\n\n【HTTP Status Codes】\n• 2xx 成功：200 OK、201 Created。\n• 3xx 重導向：301 Moved Permanently、302 Found。\n• 4xx 客戶端錯誤：400 Bad Request、403 Forbidden、404 Not Found。\n• 5xx 伺服器錯誤：500 Internal Server Error、503 Service Unavailable。\n\n【Cookie 機制】因為 HTTP stateless，server 無法辨識兩個 request 來自同一個使用者。Cookie 解決這個問題：server 在 response 中附加 Set-Cookie header，瀏覽器儲存 cookie 後，後續的 request 自動附上 Cookie header。常見用途：session management（登入狀態）、使用者偏好設定、追蹤行為。\n\n【Session 的運作】Server 產生一個唯一的 session ID，透過 cookie 發送給 client。Client 後續的 request 都帶上這個 session ID，server 用它查找對應的 session 資料（如購物車內容、登入身分）。Session 資料存在 server 端，cookie 中只有 session ID。\n\n【考試連結】(1) 為什麼 HTTP 是 stateless？因為每個 request 獨立。(2) Cookie 和 Session 的關係：cookie 是載體，session 是機制。(3) HTTPS 和 HTTP 的差異：HTTPS = HTTP + TLS 加密，保護傳輸中的資料不被竊聽或篡改。",
           "bullets": [
             "Cookie 儲存在使用者端瀏覽器管理的空間，不等於瀏覽器 cache。",
             "Cookie 常保存識別碼；真正的購物車或登入狀態可以留在伺服器 session。",
@@ -1414,7 +1414,7 @@
         },
         {
           "title": "郵件：送信與收信分工",
-          "body": "電子郵件不是靠單一協定完成。SMTP 負責提交與轉送郵件；IMAP、POP3 讓使用者讀取信件。考題常用『同步多裝置』或『下載到本機』提示 IMAP 與 POP3 的差異。",
+          "body": "電子郵件系統涉及三種角色和多個協定，送信和收信使用不同的協定：\n\n【送信流程】\n(1) 寄件者用 MUA（Mail User Agent，如 Outlook、Gmail）撰寫郵件。\n(2) MUA 透過 SMTP 把郵件送到寄件者的 MTA（Mail Transfer Agent，即郵件伺服器）。\n(3) 寄件者的 MTA 透過 SMTP 把郵件轉送到收件者的 MTA。中間可能經過多個 MTA 轉發。\n(4) 收件者的 MTA 把郵件存入 mailbox。\n\n【收信流程】\n(5) 收件者的 MUA 透過 POP3 或 IMAP 從 MTA 取回郵件。\n\n【SMTP vs POP3 vs IMAP】\n• SMTP（Simple Mail Transfer Protocol）：負責「送信」。從 client 到 server，或從 server 到 server。使用 port 25（server 間）或 587（client 送信，通常需要認證）。SMTP 是 push 協定。\n• POP3（Post Office Protocol v3）：負責「收信」。Client 連到 server 下載郵件，下載後通常從 server 刪除。適合單一裝置收信。Port 110。\n• IMAP（Internet Message Access Protocol）：也負責「收信」，但郵件保留在 server 上，client 和 server 保持同步。適合多裝置同時使用同一信箱。Port 143。\n\n【MIME】原始 SMTP 只能傳 ASCII 文字。MIME（Multipurpose Internet Mail Extensions）擴充了郵件格式，讓郵件能包含附件（圖片、PDF）、HTML 格式、非 ASCII 字元（中文）。MIME 不是獨立的協定，而是 SMTP 上的格式擴充。\n\n【考試連結】最常考的陷阱：(1) SMTP 是「送信」用的，不是「收信」用的。(2) POP3 和 IMAP 都是收信，差異在於 POP3 下載後刪除（或保留但不同步），IMAP 保持同步。(3) 郵件從寄件者到收件者的完整路徑會經過 SMTP → SMTP → POP3/IMAP 三個階段。",
           "bullets": [
             "SMTP：client 提交郵件給 mail server，mail servers 之間也用它轉送。",
             "IMAP：以伺服器信箱為中心同步資料夾、已讀狀態與郵件，適合多裝置。",
@@ -1424,7 +1424,7 @@
         },
         {
           "title": "代理與 CDN：誰替誰取資料",
-          "body": "proxy 的核心是代替一方發出或接收請求。Forward proxy 代表 client 存取外部資源；reverse proxy 站在 server 前方接收外部請求。CDN 通常在靠近使用者的 edge 節點快取與回應內容，可視為大規模的反向代理與內容分送系統。",
+          "body": "Proxy（代理）和 CDN（Content Delivery Network）都是在 client 和 origin server 之間加入中間層，但目的和運作方式不同。\n\n【Forward Proxy（正向代理）】站在 client 端，代替 client 向 server 發送 request。Client 的 request 先到 proxy，proxy 用自己的 IP 向 server 取資料後回傳給 client。用途：(1) 隱藏 client 的真實 IP。(2) 突破存取限制（如公司內部上網管制）。(3) 快取常用內容，加速後續同樣的 request。(4) 內容過濾（公司禁止員工存取特定網站）。\n\n【Reverse Proxy（反向代理）】站在 server 端，代替 server 接收 client 的 request。Client 以為自己在和 origin server 通訊，實際上是和 reverse proxy 通訊。用途：(1) Load balancing — 把 request 分配到多台 backend server。(2) SSL termination — 在 proxy 端處理 HTTPS 加解密，backend server 只處理 HTTP。(3) 快取靜態內容。(4) 安全防護（WAF）。\n\n【CDN】CDN 是分散在全球各地的 edge server 網路，把原始內容的副本快取到靠近使用者的地點。當使用者請求 www.example.com 的圖片時，DNS 會把使用者導向最近的 CDN edge server，而不是 origin server。如果 edge server 有快取 → 直接回傳（cache hit）；沒有 → 向 origin server 取得後快取並回傳。\n\n用途：(1) 降低延遲 — 資料從地理上更近的 server 傳送。(2) 分散流量 — 減輕 origin server 的負擔。(3) 提高可用性 — 即使 origin server 暫時無法存取，CDN 仍能提供快取內容。\n\n【考試連結】(1) Forward proxy 隱藏 client，reverse proxy 隱藏 server。(2) CDN 是一種特殊的 reverse proxy / cache。(3) 不要把 proxy 和 VPN 混淆 — VPN 加密整個網路通訊，proxy 只代理特定應用層協定的 request。",
           "bullets": [
             "Forward proxy 可做存取控制、隱藏 client 來源或集中快取，服務對象偏 client。",
             "Reverse proxy 可做 TLS termination、load balancing、快取與保護 origin，服務對象偏 server。",
@@ -1538,7 +1538,7 @@
       ],
       "title": "IP 定址、路由與傳輸：封包如何找到路，資料如何抵達應用程式",
       "summary": "從 CIDR 與 subnet mask 判斷目的地主機是否在同一子網路，接著比較 distance-vector 與 link-state routing，理解 IPv4 TTL 如何限制封包壽命；最後以 TCP、UDP、receive window 與 congestion window 串起端到端傳輸。所引用考古題答案皆為技術推導與人工覆核結果，並非官方答案。",
-      "estimatedMinutes": 40,
+      "estimatedMinutes": 45,
       "minimumPastPaperRefs": 7,
       "learningObjectives": [
         "用 prefix length 或 subnet mask 分出 IPv4 位址的 network 與 host portions，並以 AND 運算求 network address",
@@ -1584,7 +1584,7 @@
       "sections": [
         {
           "title": "CIDR 與 subnet mask：先判斷目的地在不在同一網路",
-          "body": "IPv4 位址共有 32 bits。CIDR 的 /n 表示前 n bits 是 network prefix，其餘 32-n bits 是 host portion；等價的 subnet mask 由前 n 個 1 與其後的 0 組成。把 IP address 與 mask 逐 bit AND，就得到 network address。主機比較自己與目的位址的 network address：相同時可在本地鏈路尋找目的主機，不同時通常把封包交給 default gateway。Subnet mask 的工作是劃分 network 與 host portions，不是指出 gateway、加密封包或決定 MTU。",
+          "body": "IPv4 位址是 32-bit 的數字，通常用點分十進位表示（如 192.168.1.100）。每個位址分為兩部分：network prefix（網路部分，識別所屬子網路）和 host part（主機部分，識別子網路內的特定主機）。\n\n【Subnet Mask】Subnet mask 用來界定哪些 bits 屬於 network prefix。例如 255.255.255.0（二進位 11111111.11111111.11111111.00000000）表示前 24 bits 是 network prefix，後 8 bits 是 host part。將 IP 位址和 subnet mask 做 bitwise AND 運算，得到 network address。\n\n例如：IP = 192.168.1.100，mask = 255.255.255.0\nNetwork address = 192.168.1.0（前 24 bits 保留，後 8 bits 歸零）\n\n【CIDR 表示法】CIDR（Classless Inter-Domain Routing）用斜線後接 prefix 長度表示：192.168.1.0/24 等同 network = 192.168.1.0、mask = 255.255.255.0。/24 表示前 24 bits 是 network prefix。\n\n【同一子網路判斷】當主機 A 要發送封包給主機 B 時，A 用自己的 subnet mask 對 B 的 IP 做 AND 運算，比較結果是否和自己的 network address 相同。相同 → B 在同一子網路，直接透過 L2（ARP 找 MAC）傳送。不同 → B 在不同子網路，把封包送到 default gateway（路由器）。\n\n【可用主機數計算】/24 網路有 2⁸ = 256 個地址，減去 network address（全 0，如 192.168.1.0）和 broadcast address（全 1，如 192.168.1.255），可用主機數 = 254。一般公式：可用主機 = 2^(32 - prefix length) - 2。\n\n【考試連結】(1) 給定 IP 和 mask，計算 network address。(2) 給定 CIDR，計算可用主機數。(3) 判斷兩個 IP 是否在同一子網路。最常見的計算錯誤是忘記減 2（network 和 broadcast address）。",
           "bullets": [
             "/24 對應 255.255.255.0；/26 對應 255.255.255.192",
             "Network address = IP address AND subnet mask",
@@ -1594,7 +1594,7 @@
         },
         {
           "title": "Forwarding、longest-prefix match 與 IPv4 TTL",
-          "body": "Router 收到 IPv4 datagram 後，依 destination address 查 forwarding table。若多個 prefix 都匹配，選最長、也就是最具體的 prefix；若沒有更具體項目，才使用 default route。每經過一個轉送 datagram 的 router，IPv4 TTL 都至少減 1；當 TTL 歸零，router 丟棄封包，通常回送 ICMP Time Exceeded。TTL 因此限制封包可經過的 hops，避免錯誤 route 形成 loop 時無限消耗網路資源。",
+          "body": "路由器收到封包後，需要決定從哪個 interface（介面）轉發出去。這個決定依據 forwarding table（轉發表），其中每個 entry 包含 network prefix 和對應的 next-hop 或 output interface。\n\n【Longest-Prefix Match】如果封包的目的 IP 同時匹配多個 entry，路由器選擇 prefix 最長的（最具體的）entry。例如 forwarding table 有 10.0.0.0/8 和 10.1.0.0/16，目的 IP 為 10.1.2.3 同時匹配兩者，但 /16 更具體 → 選 /16 的 entry。如果都不匹配，使用 default route（0.0.0.0/0）。\n\n【TTL（Time to Live）】IPv4 header 中的 TTL 欄位是一個計數器（通常初始值 64 或 128），每經過一個路由器減 1。當 TTL 降為 0 時，路由器丟棄封包並向來源發送 ICMP Time Exceeded 訊息。目的是防止封包在路由迴圈中無限循環。traceroute 工具利用 TTL 的特性：依序發送 TTL=1, 2, 3... 的封包，根據每個路由器回傳的 ICMP 訊息追蹤封包經過的路徑。\n\n【IPv4 vs IPv6】IPv4 位址 32 bits（約 43 億個），已經耗盡。IPv6 位址 128 bits（3.4×10³⁸ 個），足夠為地球上每粒沙子分配多個地址。IPv6 簡化了 header 結構（沒有 checksum 和 fragmentation 在 header 中），支援更高效的路由。過渡技術包括 dual stack（同時支援 v4/v6）、tunneling（v6 封包包在 v4 中傳送）、NAT64。\n\n【考試連結】(1) Longest-prefix match 的比較過程。(2) TTL 的作用和機制。(3) IPv4 和 IPv6 的位址長度差異（32 vs 128 bits）。",
           "bullets": [
             "Route entry 通常包含 destination prefix、next hop／outgoing interface 與 metric",
             "Longest-prefix match 看 prefix 長度，不是看 route 寫在表格的先後順序",
@@ -1604,7 +1604,7 @@
         },
         {
           "title": "Distance-vector 與 link-state：路由器如何學會路徑",
-          "body": "Distance-vector router 把自己目前到各目的地的 distance estimate 傳給直接鄰居，再利用鄰居提供的資訊更新路由；典型例子是 RIP。Link-state router 則散布自己的 link-state information，使同一 routing domain 內的路由器建立拓撲資料庫，再各自計算 shortest-path tree；OSPF 是 link-state protocol。兩者都能 adaptive 地回應拓撲變化，但交換的資訊、路由器掌握的網路視圖與收斂問題不同。",
+          "body": "路由協定（routing protocol）讓路由器自動學習和交換路由資訊，建立 forwarding table。兩大類路由演算法：\n\n【Distance-Vector（距離向量）】每個路由器維護一個表，記錄到每個目的網路的「距離」（通常是 hop count）和「方向」（經由哪個 neighbor）。定期和相鄰路由器交換整個路由表。收到 neighbor 的資訊後，用 Bellman-Ford 演算法更新自己的表：如果經由某個 neighbor 的路徑比目前已知的更短，就更新。\n\n代表協定：RIP（Routing Information Protocol），以 hop count 為 metric，最大 15 hops。\n\n問題：Count to infinity — 當一條路徑失效時，路由器之間可能反覆遞增距離值，收斂很慢。解法：Split horizon（不把路由資訊送回學到的方向）、Poison reverse（告訴來源該路徑已失效）、設定最大 hop count。\n\n【Link-State（連結狀態）】每個路由器探測自己直接相連的 link 狀態（延遲、頻寬、是否可用），然後用 flooding 把這個資訊廣播給所有路由器。每個路由器都獲得完整的網路拓撲圖，然後用 Dijkstra's shortest path algorithm 獨立計算到每個目的地的最短路徑。\n\n代表協定：OSPF（Open Shortest Path First）。\n\n【比較】\n| | Distance-Vector | Link-State |\n| 交換資訊 | 整個路由表 | 只有自己的 link 狀態 |\n| 交換對象 | 只和 neighbors | 全網路 flooding |\n| 演算法 | Bellman-Ford | Dijkstra |\n| 收斂速度 | 慢 | 快 |\n| 代表 | RIP | OSPF |\n\n【考試連結】(1) 分辨 RIP 和 OSPF 分別使用哪種演算法。(2) Distance-vector 的 count-to-infinity 問題。(3) Link-state 為什麼收斂更快（每個路由器有完整拓撲，不需要等鄰居傳播）。",
           "bullets": [
             "Distance-vector：和鄰居交換距離資訊，不要求每台 router 先取得完整拓撲",
             "Link-state：flood link-state advertisements，建立 topology database 後算 shortest paths",
@@ -1614,7 +1614,7 @@
         },
         {
           "title": "Transport layer：TCP 與 UDP 把資料交給正確應用程式",
-          "body": "Transport protocol 使用 port numbers 在同一主機上 multiplex 與 demultiplex application flows。TCP 是 connection-oriented，向應用程式提供 reliable、in-order byte stream；它用 sequence numbers、acknowledgments、checksum 與 retransmission 處理遺失或錯誤，但不保留應用程式每次 write 的 message boundary。UDP 提供 datagram service，header 固定 8 bytes、機制較少，不保證 delivery、duplicate protection 或 ordering；應用程式若需要這些性質，必須自行設計或改用合適協定。",
+          "body": "Transport layer（傳輸層）的核心任務是把資料從一個主機的應用程式送到另一個主機的正確應用程式。它透過 port number 來區分同一台主機上的不同應用程式（例如 HTTP 用 port 80，SSH 用 port 22）。\n\n【TCP（Transmission Control Protocol）】\n提供 reliable（可靠）、ordered（有序）、connection-oriented（連接導向）的傳輸。\n\n核心機制：\n(1) Three-way handshake 建立連線：Client → SYN → Server；Server → SYN-ACK → Client；Client → ACK → Server。\n(2) Sequence number 和 acknowledgment 確保封包按序到達，遺失的封包會重傳。\n(3) Checksum 檢測資料完整性。\n(4) Four-way handshake 關閉連線：FIN → ACK → FIN → ACK。\n\n適用場景：需要可靠傳輸的應用，如 HTTP、FTP、SMTP、SSH。\n\n【UDP（User Datagram Protocol）】\n提供 unreliable（不保證到達）、unordered（不保證順序）、connectionless（無連接）的傳輸。\n\n特點：沒有 handshake、沒有重傳、沒有 flow control。Header 很小（8 bytes vs TCP 的 20+ bytes），overhead 低。\n\n適用場景：對速度要求高、能容忍少量遺失的應用，如 DNS 查詢、影音串流、線上遊戲、VoIP。\n\n【Port number 範圍】\n• Well-known ports：0-1023，保留給常見服務。\n• Registered ports：1024-49151，應用程式註冊使用。\n• Dynamic/Ephemeral ports：49152-65535，client 端暫時使用。\n\n【考試連結】(1) TCP 和 UDP 的差異表。(2) Three-way handshake 的流程。(3) 給定應用場景判斷用 TCP 或 UDP — 需要可靠性 → TCP，需要速度/低延遲 → UDP。(4) Port number 的總範圍是 0-65535（16 bits），不是 0-2048。",
           "bullets": [
             "TCP connection 以 endpoints 識別，建立連線時使用 three-way handshake",
             "TCP 的 reliable byte stream 不代表每個應用訊息只會對應一個 TCP segment",
@@ -1624,7 +1624,7 @@
         },
         {
           "title": "TCP 的兩種窗口：flow control 不等於 congestion control",
-          "body": "Receiver advertised window（rwnd）由接收端通告，限制 sender 可送入接收窗口的資料範圍，以免壓垮 receiver buffer，這是 flow control。Congestion window（cwnd）是 sender 維護的新資料傳送限制，用來控制注入網路的資料量，這是 congestion control。在目前窗口固定、沒有因 cwnd 驟降而留下較大既有 flight 的簡化題型中，可送或維持的 outstanding data 上限可寫成 min(rwnd, cwnd)。若 loss 後 cwnd 突然縮小，已在途的 flight size 可能暫時大於新的 cwnd，此時 sender 不應再增加在途資料，而要等待 ACK 使 flight size 降低。Slow start 用 ACK 回饋逐步增加 cwnd，目的是探測未知的 network capacity；在常見的簡化題型中，每個 segment 都被 ACK 且無損失時，cwnd 約每 RTT 加倍，但實際初始窗口與成長會受標準、ACK 行為及實作影響。",
+          "body": "TCP 同時使用兩種不同的窗口機制來控制傳輸速率，它們解決不同的問題：\n\n【Flow Control（流量控制）】\n目的：防止發送端傳太快，淹沒接收端的 buffer。\n機制：接收端在每個 ACK 中附帶 receive window（rwnd）大小，告訴發送端「我的 buffer 還能接收多少資料」。發送端不會送出超過 rwnd 的未確認資料。\n問題本質：sender 速度 > receiver 處理速度。\n\n具體運作：接收端有一個 receive buffer（例如 64 KB）。當應用程式消耗 buffer 中的資料較慢時，buffer 逐漸填滿，rwnd 縮小。如果 rwnd = 0，發送端暫停發送，定期發送 probe 封包確認 rwnd 是否恢復。\n\n【Congestion Control（壅塞控制）】\n目的：防止發送端傳太快，導致網路中間的路由器 buffer 溢出（壅塞）。\n機制：發送端維護一個 congestion window（cwnd），根據網路回饋（packet loss、delay）動態調整。實際傳送窗口 = min(rwnd, cwnd)。\n\n四個階段：\n(1) Slow Start：cwnd 從 1 MSS 開始，每收到一個 ACK 就加倍。指數增長直到達到 ssthresh（slow start threshold）。\n(2) Congestion Avoidance：cwnd 超過 ssthresh 後，改為每個 RTT 增加 1 MSS。線性增長。\n(3) Fast Retransmit：收到 3 個 duplicate ACK 時，不等 timeout 就立即重傳。\n(4) Fast Recovery：3 個 dup ACK 後，ssthresh 和 cwnd 減半，直接進入 congestion avoidance（不回到 slow start）。\n\n【關鍵區分】Flow control 看的是 receiver 的處理能力（端到端），congestion control 看的是網路的承載能力（中間路徑）。兩者獨立運作，實際傳送量受兩者中較小的限制。\n\n【考試連結】(1) 分辨 flow control 和 congestion control 的目的。(2) Slow start 的名稱具有誤導性 — 它的增長速度是指數的（1→2→4→8），一點都不 slow。(3) cwnd 和 rwnd 的關係：effective window = min(cwnd, rwnd)。",
           "bullets": [
             "rwnd 保護 receiver；cwnd 保護 network，兩者控制的瓶頸不同",
             "TCP header 的 Window field 通告接收端目前願意接受的資料範圍",
@@ -1711,7 +1711,7 @@
       "subtopicId": "im-it-network-link-lan",
       "title": "資料鏈結層與 LAN：從 MAC、Ethernet 到 VLAN 與無線存取",
       "summary": "從一個 frame 如何在區域網路內送達開始，建立 MAC、ARP、shared/switched Ethernet、碰撞控制與 VLAN 的完整脈絡，再比較 Wi-Fi、Bluetooth、NFC、RFID 與 5G 的作用距離和用途。歷屆題 refs 用於定位原始題面；其答案另經人工技術覆核，均非官方答案。",
-      "estimatedMinutes": 34,
+      "estimatedMinutes": 35,
       "learningObjectives": [
         "說明 Ethernet frame、MAC address 與 ARP 在同一 IPv4 LAN 內的分工。",
         "比較 shared half-duplex Ethernet 與 switched full-duplex Ethernet 的碰撞行為。",
@@ -1721,7 +1721,7 @@
       "sections": [
         {
           "title": "Frame、MAC 與 ARP：先找到同一鏈路上的下一跳",
-          "body": "資料鏈結層負責在一段鏈路上傳送 frame。Ethernet frame 內的來源與目的 MAC address 用來識別該鏈路上的網路介面；IP address 則供網路層做跨網路遞送。當 IPv4 主機知道下一跳 IP、卻不知道對應的 MAC 時，會用 ARP 在本地 broadcast domain 查詢。若目的主機不在同一 subnet，ARP 查的是 default gateway 的 MAC，而不是遠端主機的 MAC。",
+          "body": "Data link layer（資料鏈結層）負責在同一條實體鏈路（link）上的兩個相鄰節點之間傳送資料。它將 network layer 的 packet 封裝成 frame，加上 header（含 source/destination MAC address）和 trailer（含 error detection 如 CRC）。\n\n【MAC Address】MAC（Media Access Control）address 是每個網路介面卡（NIC）的硬體位址，通常 48 bits（6 bytes），用十六進位表示如 AA:BB:CC:DD:EE:FF。MAC address 是在製造時燒錄的（理論上全球唯一），用於同一個 LAN 內的通訊。IP address 是邏輯位址（可更改），MAC address 是實體位址（通常固定）。\n\n【ARP（Address Resolution Protocol）】當主機知道目標的 IP 但不知道 MAC address 時（同一子網路），使用 ARP 查詢。流程：(1) 發送端廣播 ARP Request：「誰的 IP 是 192.168.1.5？請告訴我你的 MAC。」(2) 目標主機收到後單播 ARP Reply：「我是 192.168.1.5，我的 MAC 是 XX:XX:XX:XX:XX:XX。」(3) 發送端把結果存入 ARP cache（快取），後續通訊不需要再查詢。\n\n【跨子網路通訊的 MAC 變化】當封包要跨越子網路時：IP 位址（source 和 destination）在整個傳輸過程中保持不變，但 MAC address 每經過一個路由器就會改變。例如主機 A → Router R → 主機 B：\n• A 到 R：src MAC = A 的 MAC，dst MAC = R 的 MAC\n• R 到 B：src MAC = R 的 MAC，dst MAC = B 的 MAC\n\n【考試連結】(1) ARP 的運作流程。(2) IP 和 MAC 的差異：IP 是邏輯位址（L3），MAC 是實體位址（L2）。(3) 跨子網路通訊中，IP 不變但 MAC 每一跳都變。(4) ARP 只在同一 LAN 內運作。",
           "bullets": [
             "MAC address 是資料鏈結層識別資訊；IP address 是可路由的網路層邏輯位址。",
             "ARP 解析 IPv4 的同鏈路下一跳 IP 與 MAC 對應；IPv6 使用 Neighbor Discovery，不使用 ARP。",
@@ -1731,7 +1731,7 @@
         },
         {
           "title": "Shared 與 Switched Ethernet 不能混為一談",
-          "body": "早期以 coaxial cable 或 hub 連接的 shared Ethernet，所有節點共享同一 collision domain，常以 half-duplex 運作；CSMA/CD 在傳送時偵測碰撞，碰撞後使用 binary exponential backoff 隨機等待再重傳。現代 switched Ethernet 通常每個 switch port 是獨立 collision domain，端點與 switch 採 full-duplex 時不會發生共享媒體碰撞，因此不需要在該鏈路執行 CSMA/CD。",
+          "body": "Ethernet 是最常見的 LAN 技術。早期的 Ethernet 使用 shared medium（共享媒介）：所有主機連在同一條纜線或 hub 上，同一時間只有一台主機可以傳送資料。如果兩台同時傳送就會發生 collision（碰撞）。\n\n【CSMA/CD（Carrier Sense Multiple Access with Collision Detection）】\n早期 Ethernet 使用 CSMA/CD 處理碰撞：\n(1) Carrier Sense — 傳送前先聽線路是否有人在傳。\n(2) Multiple Access — 多台主機共享同一媒介。\n(3) Collision Detection — 傳送中持續監聽，偵測到碰撞就立即停止，等待隨機時間後重試（binary exponential backoff）。\n\n【Hub vs Switch】\n• Hub（集線器）：工作在 physical layer（L1）。收到 frame 後，向所有 port 轉發（除了來源 port）。所有連接的主機共享頻寬，形成一個 collision domain。\n• Switch（交換器）：工作在 data link layer（L2）。學習並記錄每個 port 連接的 MAC address（MAC address table），收到 frame 後只轉發到目標 MAC 所在的 port。每個 port 是獨立的 collision domain，支援全雙工通訊，大幅減少碰撞。\n\n現代 LAN 幾乎全部使用 switch，碰撞已很少發生。CSMA/CD 主要是考試和歷史上的重要概念。\n\n【Collision Domain vs Broadcast Domain】\n• Collision domain：碰撞可能發生的範圍。Switch 的每個 port 是一個 collision domain。\n• Broadcast domain：廣播可到達的範圍。Switch 不隔離 broadcast — 同一 switch 上的所有 port 在同一 broadcast domain。需要 router 或 VLAN 來隔離 broadcast domain。\n\n【考試連結】(1) Hub 和 Switch 的工作層級和行為差異。(2) CSMA/CD 的三個步驟。(3) Collision domain 和 broadcast domain 的概念。(4) Switch 減少碰撞但不隔離 broadcast。",
           "bullets": [
             "Carrier sense 只表示傳送前先聽；collision detection 是傳送期間偵測有無碰撞。",
             "Binary exponential backoff 會隨連續碰撞次數擴大隨機等待範圍，降低再次同時重傳的機率。",
@@ -1741,7 +1741,7 @@
         },
         {
           "title": "可靠傳送、Wi-Fi 存取與 VLAN",
-          "body": "Sliding window 允許傳送端在等待 acknowledgment 前保留多個尚未確認的 frame，提高鏈路利用率；window、sequence number 與重傳規則共同維持可靠與有序傳送。無線節點難以在傳送時可靠偵測碰撞，所以 Wi-Fi 使用 CSMA/CA，先感測媒體並以等待、隨機 backoff，必要時搭配 RTS/CTS 來降低碰撞機率。VLAN 則是交換式 LAN 的邏輯切割：IEEE 802.1Q tag 讓同一套實體交換設備承載多個彼此隔離的 broadcast domains。",
+          "body": "【Wi-Fi（IEEE 802.11）使用 CSMA/CA】無線網路不能像有線 Ethernet 那樣使用 CSMA/CD，因為無線裝置無法在傳送時同時偵測碰撞（half-duplex 限制）。Wi-Fi 改用 CSMA/CA（Collision Avoidance）：\n(1) 傳送前先聽 — 如果媒介忙碌，等待。\n(2) 媒介空閒後再等一個隨機的 backoff 時間 — 避免多台裝置同時開始傳送。\n(3) 傳送後等待 ACK — 如果沒收到 ACK，假設碰撞發生，重試。\n\n可選的 RTS/CTS 機制解決 hidden terminal problem：A 和 C 都在 B 的範圍內，但 A 和 C 互相看不到。A 先發 RTS（Request to Send）給 B，B 回 CTS（Clear to Send），C 聽到 CTS 就知道要等待。\n\n【VLAN（Virtual LAN）】VLAN 用軟體把一個 physical switch 劃分成多個邏輯上獨立的 LAN。同一 VLAN 內的 port 可以互相通訊（同一 broadcast domain），不同 VLAN 之間需要 router（L3）才能通訊。\n\n用途：(1) 安全隔離 — 財務部門和研發部門在同一棟大樓、同一台 switch，但用 VLAN 隔離，互相看不到 broadcast。(2) 減少 broadcast traffic — 大型 LAN 的 broadcast 可能佔用大量頻寬。(3) 靈活管理 — 員工搬座位時只需改 VLAN 設定，不需要重新佈線。\n\n【Trunk port】連接兩台 switch 的 port 通常設為 trunk port，可以同時傳送多個 VLAN 的 frame。使用 802.1Q 在 Ethernet frame 中加入 VLAN tag（12 bits，最多 4096 個 VLAN）來識別每個 frame 屬於哪個 VLAN。\n\n【考試連結】(1) CSMA/CD vs CSMA/CA 的差異（偵測 vs 避免）。(2) VLAN 隔離 broadcast domain 但不隔離 collision domain（switch 已經解決了 collision）。(3) VLAN 之間的通訊需要 router（inter-VLAN routing）。",
           "bullets": [
             "Sliding window 是流量與可靠傳送機制；CSMA/CA 是共享無線媒體的存取機制，兩者解決的問題不同。",
             "CSMA/CA 是 collision avoidance，不代表能保證碰撞永遠不發生。",
@@ -1751,7 +1751,7 @@
         },
         {
           "title": "無線技術依範圍與任務選擇",
-          "body": "Wi-Fi、Bluetooth、NFC、RFID 與 5G 都使用無線電，但不是可互換的同類答案。Wi-Fi 主要提供建築物或熱點範圍的 WLAN；Bluetooth 主要是短距離個人裝置連線；NFC 強調刻意靠近、通常在數公分內的近場互動，可包含 passive tag 或 card emulation；RFID 的核心是用 tag 與 reader 識別或追蹤物件，距離依頻段與主被動設計而異；5G 是電信業者提供的廣域 cellular access，目標包括較高資料率、較低延遲與大量裝置連線。",
+          "body": "不同的無線技術適用於不同的通訊範圍和使用場景：\n\n【依通訊範圍分類】\n• WPAN（Wireless Personal Area Network）— 範圍 ~10m\n  - Bluetooth：短距離裝置間通訊，如耳機、鍵盤、手機傳檔。Low Energy 版本（BLE）用於 IoT 感測器。\n  - Zigbee：低功耗、低速率，適合智慧家庭感測器網路。\n  - NFC：極短距離（< 10 cm），用於行動支付、門禁卡。\n\n• WLAN（Wireless LAN）— 範圍 ~100m\n  - Wi-Fi（802.11）：最常見的無線 LAN 技術。版本演進：802.11b(11Mbps) → g(54Mbps) → n(600Mbps, MIMO) → ac(Gbps+, 5GHz) → ax/Wi-Fi 6(更高效率)。\n\n• WMAN（Wireless MAN）— 範圍 ~50km\n  - WiMAX（802.16）：曾被期望取代 DSL，但已被 4G LTE 取代。\n\n• WWAN（Wireless WAN）— 全球範圍\n  - 行動通訊：2G(GSM) → 3G(WCDMA) → 4G(LTE) → 5G。每代提升頻寬和降低延遲。5G 的三大特點：eMBB（超高頻寬）、URLLC（超低延遲）、mMTC（大量 IoT 連接）。\n  - 衛星通訊：覆蓋偏遠地區，延遲較高（GEO 衛星 ~600ms RTT）。\n\n【考試連結】(1) 給定情境選擇適當的無線技術（近距離傳檔 → Bluetooth，室內上網 → Wi-Fi，室外移動上網 → 4G/5G）。(2) Wi-Fi 使用 CSMA/CA，不是 CSMA/CD。(3) 5G 的三大應用場景（eMBB/URLLC/mMTC）。(4) NFC 和 Bluetooth 的距離差異（NFC < 10cm，Bluetooth ~10m）。",
           "bullets": [
             "Wi-Fi：WLAN 網路存取，常經 access point 連到有線 LAN。",
             "Bluetooth：短距離 PAN，例如耳機、鍵鼠與穿戴裝置；不等同 Wi-Fi LAN。",
@@ -1869,7 +1869,7 @@
       "subtopicId": "im-it-network-models-encapsulation",
       "title": "網路模型與封裝：從應用資料一路追到訊框",
       "summary": "用 OSI 與 TCP/IP 兩套分層視角整理協定、設備與資料單位，並以封裝流程串起應用資料、segment、packet 與 frame。完成後能從題目中的關鍵詞定位層級，而不是只背七層口訣。",
-      "estimatedMinutes": 28,
+      "estimatedMinutes": 35,
       "learningObjectives": [
         "依功能區分 OSI 七層與 TCP/IP 模型的對應關係。",
         "說明資料從送端到收端時的封裝與解封裝流程。",
@@ -1879,7 +1879,7 @@
       "sections": [
         {
           "title": "分層不是背名稱，而是切責任",
-          "body": "網路模型把端到端通訊拆成彼此可替換的責任。上層關心應用語意，中間層處理端點傳輸與跨網路遞送，下層負責在單一鏈路上送出位元。答題時先問『這個敘述要解決哪一種責任』，通常比直接回想層號更穩定。",
+          "body": "網路通訊涉及大量複雜的任務（路由、加密、錯誤偵測、應用程式介面…），分層模型把這些任務切成有明確邊界的層級，每層只負責一組特定的功能，透過定義好的介面和下層互動。\n\n【OSI 七層模型】ISO 定義的理論參考模型，由下到上：\n(1) Physical — 實體訊號傳輸（電壓、頻率、接頭、纜線）。設備：Hub、Repeater。\n(2) Data Link — 同一鏈路上的 frame 傳送和錯誤偵測。設備：Switch、Bridge。\n(3) Network — 跨網路的 packet 路由和定址。設備：Router。協定：IP。\n(4) Transport — 端對端的可靠傳輸和 flow control。協定：TCP、UDP。\n(5) Session — 建立、管理、終止會談。\n(6) Presentation — 資料格式轉換、加密、壓縮。\n(7) Application — 直接面對使用者的服務。協定：HTTP、SMTP、DNS。\n\n【TCP/IP 四層模型】實務上更常用的模型，OSI L5-L7 合併為 Application layer：\n(1) Network Access（Link）= OSI L1+L2\n(2) Internet = OSI L3\n(3) Transport = OSI L4\n(4) Application = OSI L5+L6+L7\n\n【為什麼要分層？】(1) 降低複雜度 — 每層只需要知道上下層的介面。(2) 模組化 — 可以獨立修改某層的實作。(3) 標準化 — 不同廠商的設備只要遵循同層協定就能互通。\n\n【考試連結】(1) 背各層的「層數 + 名稱 + 代表協定/設備」是基本功。(2) 常考「以下設備工作在哪一層」→ Hub=L1，Switch=L2，Router=L3。(3) OSI 和 TCP/IP 模型的對應關係。(4) 不要把 OSI 模型當成實作標準 — 它是參考模型，實際的 Internet 使用 TCP/IP 模型。",
           "bullets": [
             "OSI 第 7 至 5 層分別為應用、表達、會議；實務 TCP/IP 模型常把它們合併為應用層。",
             "OSI 第 4 層傳輸層處理端點到端點的傳輸；TCP、UDP 與 port 屬於此層。",
@@ -1889,7 +1889,7 @@
         },
         {
           "title": "四種資料單位與封裝方向",
-          "body": "送端由上往下封裝：每層把上層內容視為 payload，再加入本層控制資訊。收端則由下往上檢查並移除標頭。考題若同時出現 port、IP、MAC，可沿封裝順序判斷它們分屬傳輸層、網路層與資料鏈結層。",
+          "body": "每一層把上層傳來的資料加上自己的 header（有時也加 trailer），形成該層的 PDU（Protocol Data Unit）。這個過程叫做 encapsulation（封裝）。\n\n【各層的 PDU 名稱】\n• Application layer → Data（資料/Message）\n• Transport layer → Segment（TCP）或 Datagram（UDP）\n• Network layer → Packet\n• Data Link layer → Frame\n• Physical layer → Bit stream\n\n【封裝過程（由上到下）】\n(1) Application 產生 HTTP request data。\n(2) Transport 加上 TCP header（含 source/dest port, sequence number）→ 成為 segment。\n(3) Network 加上 IP header（含 source/dest IP, TTL）→ 成為 packet。\n(4) Data Link 加上 Ethernet header（含 source/dest MAC）和 trailer（CRC）→ 成為 frame。\n(5) Physical 把 frame 轉成 bit stream 在實體媒介上傳送。\n\n【解封裝過程（由下到上）】接收端反向操作：每層讀取並移除自己的 header，把剩餘的資料傳給上層，直到 application 層取得原始資料。\n\n【具體範例】你在瀏覽器輸入 www.ntu.edu.tw，按下 Enter：\n1. Application: 產生 HTTP GET request\n2. Transport: 加 TCP header（dest port 80）→ segment\n3. Network: 加 IP header（dest IP = NTU 伺服器 IP）→ packet\n4. Data Link: 加 MAC header（dest MAC = default gateway 的 MAC）→ frame\n5. Physical: 轉成電子訊號送出\n\n【考試連結】(1) 各層 PDU 的正確名稱是常考選擇題。(2) 封裝的方向：傳送端由上到下加 header，接收端由下到上移除 header。(3) 常考陷阱：Datagram 專指 UDP 的 segment，不要和 IP packet 混淆。",
           "bullets": [
             "應用層產生 message/data。",
             "傳輸層加入 TCP 或 UDP 標頭，形成 segment 或 datagram，port 用來識別端點上的應用。",
@@ -1899,7 +1899,7 @@
         },
         {
           "title": "位址、設備與作用範圍",
-          "body": "不同識別資訊的有效範圍不同。MAC 通常服務當前鏈路，IP 用於端到端路由，port 則把抵達主機的資料交給正確程序。設備名稱也應從主要功能判斷，不要假設一台設備永遠只做一層。",
+          "body": "網路中不同層使用不同的位址來識別通訊端點，每種位址的作用範圍不同：\n\n【各層位址】\n• Physical layer — 沒有地址，只有物理訊號。\n• Data Link layer — MAC address（48 bits），在同一 LAN 內唯一識別一個 NIC。作用範圍：同一鏈路（hop-by-hop 會變）。\n• Network layer — IP address（IPv4 32 bits / IPv6 128 bits），在網際網路上唯一識別一台主機。作用範圍：端到端不變（NAT 例外）。\n• Transport layer — Port number（16 bits, 0-65535），識別同一主機上的不同應用程式/process。作用範圍：端到端不變。\n\n【Socket = IP + Port】應用程式透過 socket（如 192.168.1.100:8080）進行網路通訊。Socket 唯一識別了網路中某台主機上的某個 process。\n\n【各層代表設備】\n• Repeater/Hub — L1：只看 bits，廣播到所有 port。\n• Switch/Bridge — L2：看 MAC address，學習轉發到正確 port。\n• Router — L3：看 IP address，決定下一跳（next hop）。\n• L4 Switch / Load Balancer — L4：看 port number，分配流量到不同 server。\n• L7 Load Balancer / Proxy — L7：看應用層內容（如 HTTP URL），根據內容做決策。\n\n【考試連結】(1) 哪個位址在傳輸過程中會變（MAC）、哪個不變（IP）。(2) 設備工作在哪一層。(3) Port 號的範圍是 0-65535（2¹⁶），well-known ports 是 0-1023（不是 0-2048）。(4) Socket 的組成：IP address + port number。",
           "bullets": [
             "switch 主要依 MAC frame 在 LAN 內轉送；router 主要依 IP packet 連接不同網路。",
             "gateway 是較廣義的跨網路或跨協定入口，題目若強調連接異質網路，通常不是單純 repeater。",
@@ -1909,7 +1909,7 @@
         },
         {
           "title": "用流程解模型題",
-          "body": "看到網路題先圈出協定、位址、設備與資料單位，再判斷題目問的是『哪一層』、『哪個範圍』或『哪種架構』。client-server 描述的是角色互動，不等同某一個 OSI 層；HTTP、郵件、網路列印與 RPC 都能採 client-server。",
+          "body": "考古題中關於網路模型的題目，通常可以用「追蹤封包的旅程」來解。以下是解題的系統化方法：\n\n【題型一：設備判層】題目給一個網路設備的描述，問它工作在哪一層。方法：看設備使用什麼資訊做決策。\n• 看 MAC → L2（Switch）\n• 看 IP → L3（Router）\n• 看 Port → L4\n• 看 HTTP 內容 → L7\n• 只轉發/放大訊號 → L1（Hub/Repeater）\n\n【題型二：PDU 判斷】題目問「在某層傳輸的資料單位是什麼」。\n背誦口訣：Data → Segment/Datagram → Packet → Frame → Bits\n（由上到下：應用 → 傳輸 → 網路 → 鏈結 → 實體）\n\n【題型三：位址變化追蹤】題目給一個跨子網路的通訊場景，問封包在不同位置的 header 內容。\n規則：(1) IP address（source/dest）端到端不變。(2) MAC address 每經過 router 就改變：src MAC = 傳送方的 MAC，dst MAC = 下一跳的 MAC。(3) Port number 端到端不變。\n\n【具體範例】Host A（192.168.1.10）→ Router R（192.168.1.1 / 10.0.0.1）→ Server B（10.0.0.100）\n\n在 A 到 R 的鏈路上：\n• IP src = 192.168.1.10, IP dst = 10.0.0.100（不變）\n• MAC src = A 的 MAC, MAC dst = R 左介面的 MAC\n\n在 R 到 B 的鏈路上：\n• IP src = 192.168.1.10, IP dst = 10.0.0.100（不變）\n• MAC src = R 右介面的 MAC, MAC dst = B 的 MAC\n\n【題型四：協定配對】題目列出多個協定，要你對應到正確的層。常見混淆：DNS 是 application layer（不是 network layer，雖然它處理 IP 位址）。ARP 跨越 L2/L3（有時歸 L2，有時歸 L3，考試通常歸 L2/L3 邊界）。\n\n【考試連結】這類題目考的是系統化思考能力，不是背誦。掌握「每層用什麼位址、做什麼決策、設備是什麼」三個維度，就能推導出答案。",
           "bullets": [
             "SMTP 是應用層；TCP 是傳輸層；IP 是網路層。",
             "『所有封包都走同一路徑』只適合有既定虛擬電路的描述，不是一般 datagram 的保證。",
@@ -2015,7 +2015,7 @@
       "subtopicId": "im-it-os-file-storage-io",
       "title": "檔案、儲存與 I/O：從 inode 到 buffering",
       "summary": "從作業系統提供的 file abstraction 出發，理解 directory、inode、device driver、buffering、spooling 與 dynamic linking 的角色。完成後能判斷資料放在哪裡、誰負責控制裝置，以及慢速 I/O 如何與程式執行解耦。對應考古題答案均為非官方技術覆核。",
-      "estimatedMinutes": 34,
+      "estimatedMinutes": 37,
       "learningObjectives": [
         "說明 file system 如何以 directory entry、metadata 與 data blocks 組織檔案。",
         "區分 device driver、firmware 與一般 application 的責任。",
@@ -2025,7 +2025,7 @@
       "sections": [
         {
           "title": "File abstraction 與常見 file systems",
-          "body": "作業系統把持久儲存裝置抽象成 files 與 directories，讓應用程式透過一致介面讀寫，不必直接操作磁碟區塊。FAT32、exFAT、NTFS、APFS、HFS 與 ext3 都是 file system 或其家族成員；MS-DOS 則是 operating system 名稱，不能只因名稱含 Disk 就視為 file system。",
+          "body": "作業系統把持久儲存裝置（硬碟、SSD）的原始區塊抽象成 file（檔案）和 directory（目錄），讓應用程式透過統一的介面（open、read、write、close）存取資料，不需要直接操作磁碟的 sector 和 track。\n\n【File 的屬性】每個 file 有：name（檔名）、type（類型，通常由副檔名暗示但不絕對）、size（大小）、location（磁碟上的位置）、timestamps（建立/修改/存取時間）、permissions（讀/寫/執行權限）、owner（擁有者）。\n\n【Directory 結構】目錄本身也是一種特殊的 file，內容是「檔名 → inode/metadata 位置」的對照表。目錄可以包含子目錄，形成樹狀階層結構。路徑（path）用來定位檔案：absolute path 從根目錄開始（如 /home/user/file.txt），relative path 從目前目錄開始（如 ./file.txt）。\n\n【常見 File Systems】\n• FAT32：簡單、跨平台相容（USB 隨身碟常用），但單一檔案最大 4 GB、分割區最大 2 TB。\n• NTFS：Windows 的標準檔案系統，支援權限、加密、日誌、大檔案。\n• ext4：Linux 的主流檔案系統，支援日誌、大容量、快速恢復。\n• APFS：Apple 的現代檔案系統（macOS/iOS），支援快照、加密、space sharing。\n• HFS+：Apple 的舊檔案系統，已被 APFS 取代。\n\n注意：MS-DOS 是作業系統的名稱，不是 file system。exFAT 是 FAT32 的改良版（解除 4GB 限制），常用於大容量 SD 卡。\n\n【考試連結】(1) 區分 file system（FAT32、NTFS、ext4）和 operating system（Windows、Linux、macOS）。(2) FAT32 的 4GB 單檔限制是常考知識點。(3) File system 的選擇通常取決於作業系統相容性和功能需求。",
           "bullets": [
             "file system 定義命名、metadata、空間配置與存取規則。",
             "directory 建立名稱到檔案識別資訊的對應，不等於保存全部檔案內容。",
@@ -2035,7 +2035,7 @@
         },
         {
           "title": "inode、metadata 與 data blocks",
-          "body": "在 Unix-like file systems 中，inode 保存檔案類型、權限、owner、size、timestamps 與指向 data blocks 的資訊；檔名通常位於 directory entry。inode 不直接等同檔案內容，也不保存一般意義下的檔名。讀取路徑時，系統逐層查 directory entries，找到對應 inode，再定位資料區塊。",
+          "body": "在 Unix-like file systems（如 ext4）中，檔案的管理資訊和實際資料是分開儲存的：\n\n【inode（Index Node）】每個 file 和 directory 對應一個 inode，存放 metadata（元資料）：\n• File type（普通檔案、目錄、symbolic link 等）\n• Permissions（rwx for owner/group/others）\n• Owner UID 和 Group GID\n• File size（bytes）\n• Timestamps（atime, mtime, ctime）\n• 指向 data blocks 的 pointer\n\n注意：inode 不存儲檔名！檔名存在 directory entry 中（directory 是「檔名 → inode number」的對照表）。這就是為什麼一個 file 可以有多個 hard link — 多個 directory entry 指向同一個 inode。\n\n【Data blocks】檔案的實際內容（文字、圖片、程式碼…）存在 data blocks 中。inode 中有指向這些 blocks 的 pointer。對於小檔案，直接 pointer 就夠了。對於大檔案，使用多級間接 pointer（indirect, double indirect, triple indirect）來索引更多 blocks。\n\n【具體範例】\n$ ls -li /home/user/\n12345 -rw-r--r-- 2 user group 1024 Aug 17 file.txt\n\n• 12345 是 inode number\n• -rw-r--r-- 是 permissions\n• 2 是 hard link count\n• user/group 是 owner\n• 1024 是 file size\n• Aug 17 是修改時間\n• file.txt 是檔名（存在 directory entry 中，不在 inode 中）\n\n【Hard link vs Symbolic link】Hard link 是另一個 directory entry 指向同一個 inode（link count 增加）。Symbolic link（soft link）是一個特殊檔案，內容是目標檔案的路徑。刪除原檔後，hard link 仍可存取（因為 inode 還在），symbolic link 變成 dangling（斷裂的）。\n\n【考試連結】(1) inode 存什麼、不存什麼（不存檔名）。(2) Hard link 和 symbolic link 的差異。(3) inode 的 pointer 結構如何支援大檔案。",
           "bullets": [
             "metadata 描述檔案；data blocks 保存實際 bytes。",
             "多個 hard links 可讓不同 directory entries 指向同一 inode。",
@@ -2045,7 +2045,7 @@
         },
         {
           "title": "Device driver 與 storage management 責任",
-          "body": "Device driver 是與特定裝置及作業系統介面相配合的軟體，將核心的通用 I/O requests 轉成裝置可執行的操作。Firmware 通常在裝置或主機板環境中執行；driver 則在 OS 軟體堆疊中協調裝置。標準教材常把 files/directories primitives、空間管理、disk scheduling 與備份到穩定儲存媒體列為 storage management 工作；相較之下，file integrity check 不在該典型責任清單。",
+          "body": "Device driver 是作業系統中與特定硬體裝置溝通的軟體模組。它把 OS kernel 的通用 I/O request 翻譯成該裝置能理解的具體操作指令，並處理裝置的中斷回應。\n\n【Driver vs Firmware】\n• Driver 在 OS 軟體層級執行，隨 OS 載入。每種裝置型號通常需要對應的 driver。\n• Firmware 在裝置本身或主機板上的 ROM/Flash 中執行（如 BIOS/UEFI、SSD controller firmware）。Firmware 在 OS 啟動之前就已運作。\n\n【OS 的 Storage Management 責任】\n作業系統管理儲存裝置的多個面向：\n(1) File system management — 建立和維護 file/directory 的邏輯結構。\n(2) Free space management — 追蹤哪些 disk blocks 是空閒的（bitmap 或 linked list）。\n(3) Disk scheduling — 決定讀寫 request 的執行順序（適用於 HDD，SSD 因無機械臂不太需要）。常見演算法：FCFS（先來先服務）、SSTF（最短尋道時間優先）、SCAN（電梯演算法，一個方向掃到底再反轉）、C-SCAN（只往一個方向掃描，到底後跳回起點）。\n(4) Backup and recovery — 定期備份到穩定儲存媒體。\n\n【RAID 回顧】RAID 把多顆磁碟組合成邏輯上的一個儲存單元。RAID 0（striping，效能↑容錯×）、RAID 1（mirroring，容錯↑容量×0.5）、RAID 5（distributed parity，效能↑容錯↑，允許壞一顆碟）、RAID 6（double parity，允許壞兩顆）、RAID 10（1+0，striping + mirroring）。\n\n【考試連結】(1) Driver 和 firmware 的差異。(2) Disk scheduling 演算法的比較。(3) RAID 各等級的特性。(4) 注意 RAID 不等於備份 — RAID 防硬體故障，但不防人為刪除、病毒或邏輯錯誤。",
           "bullets": [
             "application 呼叫系統提供的 I/O API，不需知道裝置暫存器細節。",
             "driver 處理裝置命令、interrupt 與資料傳輸協調。",
@@ -2055,7 +2055,7 @@
         },
         {
           "title": "Buffering、spooling 與載入共享程式庫",
-          "body": "Buffering 以記憶體中的暫存區吸收 producer/consumer 速度或資料單位差異；spooling 則把完整 jobs 排入持久或較大的 queue，讓慢速且通常一次服務一個工作的裝置依序處理。Executable 啟動時，loader 建立 process image；若使用 shared libraries，dynamic linker 會映射或載入需要的 library code、處理 relocations 與 symbols。",
+          "body": "【Buffering（緩衝）】Buffer 是記憶體中的暫存區域，用來調和 producer 和 consumer 之間的速度差異或資料單位差異。例如鍵盤輸入一個字元是 1 byte，但磁碟讀寫以 block（通常 4 KB）為單位 — buffer 把零散的鍵盤輸入累積到足夠大小後再一次寫入磁碟。\n\n類型：Single buffer（一個 buffer 交替讀寫）、Double buffer（兩個 buffer，producer 寫 A 的同時 consumer 讀 B，提高平行度）、Circular buffer（多個 buffer 組成環形佇列）。\n\n【Spooling（Simultaneous Peripheral Operations On-Line）】Spooling 把完整的 job 排入持久的佇列，讓慢速且一次只服務一個 job 的裝置依序處理。最經典的例子是印表機 spooler：多個程式同時提交列印任務，spooler 把它們存到磁碟上的佇列中，印表機依序取出列印。這避免了一個程式佔住印表機等待其他程式完成的問題。\n\n【Buffering vs Spooling】Buffer 在記憶體中暫存正在傳輸中的資料（短期、小量），Spooling 把完整的 job 存到磁碟佇列中排隊等待（長期、大量）。Buffer 是 byte/block 等級的流量匹配，Spool 是 job/document 等級的排隊系統。\n\n【Dynamic Linking 與 Shared Libraries】執行程式（executable）時，loader 在記憶體中建立 process image。如果程式使用 shared libraries（如 Linux 的 .so、Windows 的 .dll），dynamic linker 在程式啟動時（或首次呼叫時）把需要的 library 映射到 process 的 address space。多個 process 可以共享同一份 library 的 physical memory，節省記憶體。\n\n靜態連結（static linking）在編譯時就把 library code 複製到 executable 中 — 檔案更大但不依賴外部 library。動態連結（dynamic linking）在執行時載入 — 檔案小但需要 library 在系統中存在。\n\n【考試連結】(1) Buffering 和 spooling 的差異是常考選擇題。(2) Shared library 的優點（節省記憶體、更新方便）和缺點（DLL hell、版本衝突）。(3) 不要把 buffer 和 cache 混淆 — buffer 是流量匹配，cache 是利用 locality 加速存取。",
           "bullets": [
             "streaming read/write 常以 buffers 減少小量 I/O 次數與速度落差。",
             "printer spool 讓 application 提交 job 後繼續執行，printer 再依 queue 處理。",
@@ -2173,7 +2173,7 @@
       "subtopicId": "im-it-os-processes-threads",
       "title": "行程、執行緒與作業系統如何管理執行",
       "summary": "從作業系統的資源管理角色出發，辨認 process 與 thread 的資源邊界，理解 user mode、kernel mode、IPC 與 context switch，並能排除考題中常見的混淆敘述。",
-      "estimatedMinutes": 32,
+      "estimatedMinutes": 48,
       "learningObjectives": [
         "說明作業系統在行程生命週期與資源管理中的責任。",
         "比較 process 與 thread 的位址空間、執行狀態與溝通成本。",
@@ -2183,7 +2183,7 @@
       "sections": [
         {
           "title": "作業系統是資源管理者",
-          "body": "應用程式不直接任意控制 CPU、記憶體與裝置。作業系統建立抽象介面，追蹤資源擁有者，並在多個工作之間執行保護與分配。考題若問作業系統的主要功能，通常要從資源、行程、記憶體、儲存、I/O 與安全管理來判斷。",
+          "body": "作業系統（Operating System, OS）是管理電腦硬體和軟體資源、為使用者和應用程式提供服務的系統軟體。它的四大核心功能：\n\n(1) Process management（行程管理）— 建立、排程、同步、終止行程。決定哪個行程何時使用 CPU。\n(2) Memory management（記憶體管理）— 追蹤哪些記憶體區域正在使用、分配和回收記憶體、虛擬記憶體管理。\n(3) File system management（檔案系統管理）— 建立/刪除檔案和目錄、讀寫控制、空間管理。\n(4) I/O management（輸入輸出管理）— 管理裝置驅動程式、緩衝、排程 I/O 請求。\n\n【OS 的兩個角色】\n• Resource manager：公平且高效地在多個程式之間分配 CPU 時間、記憶體空間、I/O 裝置等有限資源。\n• Abstraction provider：隱藏硬體的複雜細節，提供簡單一致的介面（如「open file」而不是「移動磁碟臂到 track 37, sector 5」）。\n\n【OS 的類型】\n• Batch OS：一次執行一個工作，無互動。歷史上最早的形式。\n• Time-sharing OS（多工 OS）：多個使用者/程式交替使用 CPU，每個獲得一小段時間（time slice），營造出同時執行的假象。\n• Real-time OS（RTOS）：保證在特定時間限制內完成任務。分為 hard real-time（絕對不能超時，如飛行控制）和 soft real-time（允許偶爾超時，如影音播放）。\n• Distributed OS：管理多台互聯電腦上的資源。\n\n【考試連結】(1) OS 的四大功能是常考的列舉題。(2) 分辨 batch、time-sharing、real-time OS 的特徵。(3) Kernel 是 OS 的核心，常駐記憶體；Shell 是使用者介面（CLI 或 GUI），不要混淆。",
           "bullets": [
             "行程管理包含建立、終止、暫停、恢復與同步行程。",
             "CPU scheduling 決定下一個可執行工作，但排程演算法細節屬另一子主題。",
@@ -2193,7 +2193,7 @@
         },
         {
           "title": "Process：正在執行的程式實例",
-          "body": "program 是靜態的指令與資料，process 則是程式的一次執行實例。作業系統為 process 維護 PID、位址空間與已開啟資源，並為其中每個 thread 維護 program counter、register state 與 stack。不同 process 原則上受記憶體保護而隔離，不會因為由同一 parent 建立就自動共享位址空間。",
+          "body": "Process（行程/進程）是一個正在執行的程式實例（a program in execution）。同一個程式可以產生多個 process（例如開三個瀏覽器視窗就是三個 process）。每個 process 有獨立的：\n\n(1) Address space（位址空間）— 包含 code（程式碼）、data（全域變數）、heap（動態配置記憶體）、stack（函式呼叫和區域變數）。\n(2) PCB（Process Control Block）— OS 用來管理 process 的資料結構，包含 process ID（PID）、program counter、register values、process state、memory management info、I/O status、scheduling info。\n\n【Process 的狀態轉換】\n• New → Ready：process 被建立，等待 CPU。\n• Ready → Running：scheduler 選中此 process，分配 CPU。\n• Running → Ready：time slice 用完（preemption），回到等待佇列。\n• Running → Waiting/Blocked：需要等待 I/O 完成或其他事件。\n• Waiting → Ready：等待的事件完成（如 I/O done）。\n• Running → Terminated：執行完畢或被終止。\n\n【Process 建立】在 Unix 中，fork() 建立一個新 process（child），它是 parent process 的幾乎完整副本。exec() 把 child 的程式碼替換成新的程式。因此 Unix 中啟動新程式的典型方式是 fork() + exec()。在 Windows 中，CreateProcess() 同時完成建立和載入新程式。\n\n【Inter-Process Communication（IPC）】Process 之間的 address space 是隔離的，無法直接存取彼此的記憶體。需要特殊的 IPC 機制：Shared memory（共享記憶體段）、Message passing（透過 OS 傳遞訊息）、Pipe（單向資料流）、Socket（跨機器通訊）。\n\n【考試連結】(1) Process 的五個狀態和轉換條件。(2) PCB 包含什麼資訊。(3) fork() 和 exec() 的差異。(4) Process 和 Program 的差異 — Program 是靜態的指令集合，Process 是動態的執行實例。",
           "bullets": [
             "同一個 program 可以同時產生多個彼此獨立的 processes。",
             "每個 process 有自己的執行狀態與受保護的 virtual address space。",
@@ -2203,7 +2203,7 @@
         },
         {
           "title": "Thread：共享資源的執行路徑",
-          "body": "thread 是 process 內的一條執行路徑。一個 process 可有多個 threads，共享 code、heap 與多數 process 資源；每個 thread 仍需保有自己的 program counter、register state 與 stack，才能獨立前進。共享位址空間讓 threads 溝通較便宜，也同時帶來 race condition 的風險。",
+          "body": "Thread（執行緒/線程）是 process 內的一條執行路徑。一個 process 可以包含多個 threads，它們共享 process 的 address space（code, data, heap, open files），但每個 thread 有自己的 stack、program counter、registers。\n\n【Thread vs Process】\n| | Process | Thread |\n| 建立成本 | 高（需配置獨立 address space） | 低（共享已有的 address space） |\n| 切換成本 | 高（需切換 address space） | 低（只需切換 stack 和 register） |\n| 資源共享 | 獨立（需 IPC） | 共享（直接存取相同的 heap/data） |\n| 隔離性 | 高（一個 crash 不影響其他） | 低（一個 thread crash 可能影響整個 process） |\n\n【多執行緒的好處】\n(1) Responsiveness — GUI 程式中，一個 thread 處理 UI，另一個 thread 做背景計算，UI 不會卡住。\n(2) Resource sharing — 同一 process 的 threads 共享記憶體，通訊不需要 IPC 的 overhead。\n(3) Scalability — 在多核 CPU 上，不同 threads 可以真正平行執行在不同 core 上。\n\n【User-level vs Kernel-level Threads】\n• User-level thread：由使用者空間的 thread library 管理，OS kernel 不知道它們的存在。優點是建立和切換快（不需要 system call）。缺點是一個 thread 做 blocking I/O 會阻塞整個 process。\n• Kernel-level thread：由 OS kernel 管理和排程。一個 thread blocking 不影響其他 threads。現代 OS（Linux、Windows）主要使用 kernel-level threads。\n\n【Thread safety 問題】多個 threads 共享記憶體帶來 race condition 風險 — 當多個 threads 同時讀寫共享資料，結果取決於執行順序，可能產生錯誤。需要 synchronization 機制（mutex、semaphore）來保護 critical section。\n\n【考試連結】(1) Thread 和 process 的比較表。(2) Thread 共享什麼、不共享什麼（共享 code/data/heap/files，不共享 stack/PC/registers）。(3) User-level vs kernel-level threads 的差異。",
           "bullets": [
             "thread 通常比 process 更 lightweight，建立與切換成本較低。",
             "同一 process 的 threads 可直接讀寫共享資料，不代表讀寫天然安全。",
@@ -2213,7 +2213,7 @@
         },
         {
           "title": "User mode、Kernel mode 與 System Call",
-          "body": "一般應用程式在 user mode 執行，不能直接存取 kernel 保留的位址或執行特權指令。需要檔案、網路或建立行程等服務時，程式透過 system call 進入 kernel，由核心驗證參數並執行受保護操作，完成後再回到 user mode。mode switch 是權限層級改變，不一定等同 scheduler 切換到另一個 process/thread；本文的 context switch 專指這種 execution entity 的切換。",
+          "body": "現代 CPU 至少有兩種執行模式，用來保護 OS kernel 不被使用者程式破壞：\n\n【User mode（使用者模式）】一般應用程式在 user mode 下執行，只能存取自己的 address space 中被允許的區域。不能執行特權指令（如直接存取硬體、修改 page table、停止 CPU），也不能存取 kernel 的記憶體。\n\n【Kernel mode（核心模式/特權模式）】OS kernel 在 kernel mode 下執行，可以存取所有記憶體和硬體，執行所有指令包括特權指令。\n\n【Mode switching】\n• User → Kernel：當應用程式需要 OS 的服務時（如讀寫檔案、分配記憶體、網路通訊），透過 system call（系統呼叫）從 user mode 轉換到 kernel mode。System call 是應用程式和 OS kernel 之間的介面。\n• Kernel → User：OS 完成服務後，切回 user mode 把結果交給應用程式。\n\n其他觸發 kernel mode 的方式：硬體中斷（interrupt，如鍵盤按鍵、磁碟完成讀寫）和異常（exception/trap，如除以零、page fault）。\n\n【常見 System Calls】\n• Process 管理：fork(), exec(), wait(), exit()\n• File 管理：open(), read(), write(), close()\n• Device 管理：ioctl(), read(), write()\n• Memory 管理：mmap(), brk()\n• Communication：pipe(), socket(), send(), recv()\n\n【為什麼需要兩種模式？】如果應用程式可以直接存取硬體或其他 process 的記憶體，一個 buggy 或惡意的程式就能破壞整個系統。Mode bit 確保只有 OS kernel 能執行危險操作，應用程式必須「請求」OS 代為執行。\n\n【考試連結】(1) User mode 和 kernel mode 的差異。(2) System call 的角色 — 應用程式進入 kernel mode 的唯一合法途徑。(3) Interrupt 和 exception 也會觸發 mode switch，但它們不是 system call。",
           "bullets": [
             "不同 processes 通常各有自己的 user virtual address space，而不是全部應用共用一個。",
             "kernel code 在 kernel mode 執行，可管理硬體與受保護資源。",
@@ -2223,7 +2223,7 @@
         },
         {
           "title": "Context Switch 保存了什麼",
-          "body": "CPU 從一個 thread 或 process 改執行另一個時，作業系統必須保存目前執行狀態，並恢復下一個工作的狀態。最低限度包含 program counter、stack pointer 與必要 registers；process switch 還可能更換 address-space mapping。這段時間沒有直接推進使用者工作，因此是多工的必要成本。",
+          "body": "Context switch（上下文切換）是 OS 在兩個 process（或 thread）之間切換 CPU 使用權的過程。每次切換都需要保存當前 process 的狀態並載入下一個 process 的狀態。\n\n【Context 包含什麼】需要保存的狀態（稱為 context）包含：\n• Program Counter（PC）— 下一條要執行的指令位址\n• CPU registers — 包括通用暫存器、stack pointer、frame pointer\n• Process state — running/ready/waiting\n• Memory management info — page table base register、TLB 相關\n• Scheduling info — 優先權、時間片剩餘\n\n這些資訊保存在 PCB（Process Control Block）中。\n\n【Context switch 的步驟】\n(1) OS 把當前 process（P1）的 context 保存到 P1 的 PCB。\n(2) OS 更新 P1 的 state（running → ready 或 waiting）。\n(3) OS 從下一個 process（P2）的 PCB 載入 context（PC、registers 等）。\n(4) OS 更新 P2 的 state（ready → running）。\n(5) CPU 從 P2 的 PC 位置繼續執行。\n\n【Context switch 的成本】Context switch 是純粹的 overhead — 在切換過程中 CPU 沒有在做有用的計算。成本包括：(1) 保存和載入 registers 的時間。(2) TLB flush — 切換到新 process 的 address space 後，舊的 TLB entries 無效，需要重新從 page table 載入，初期會有較多 TLB miss。(3) Cache pollution — 新 process 的資料不在 cache 中，初期會有較多 cache miss。\n\n【Thread context switch vs Process context switch】Thread context switch 只需要切換 stack、PC 和 registers（因為同一 process 的 threads 共享 address space），不需要切換 page table 和 flush TLB。所以 thread context switch 比 process context switch 快得多。\n\n【考試連結】(1) Context switch 保存什麼到哪裡（context → PCB）。(2) 為什麼 context switch 是 overhead。(3) Thread 和 process context switch 的成本差異。(4) Context switch 的頻率取決於 time slice 的長度 — time slice 越短，context switch 越頻繁，overhead 越高，但互動性越好。",
           "bullets": [
             "context switch 的核心定義是保存與恢復 execution state。",
             "在 CPU cores 之間移動工作可能伴隨 switch，但不是定義本身。",
@@ -2389,7 +2389,7 @@
       "sections": [
         {
           "title": "排程器在互相衝突的目標間取捨",
-          "body": "CPU scheduler 從 ready processes 中選擇下一個執行者。常見目標包含提高 CPU utilization 與 throughput、降低 waiting／turnaround／response time，以及公平分配 CPU。這些目標可能衝突：互動系統重視 response time，批次工作可能更在意 throughput；因此沒有脫離 workload 與政策假設、永遠最好的單一演算法。",
+          "body": "CPU scheduling（CPU 排程）是 OS 決定哪個 process 獲得 CPU 使用權的機制。排程器（scheduler）必須在多個互相衝突的目標之間取捨：\n\n(1) CPU utilization（CPU 使用率）— 盡量讓 CPU 忙碌，避免閒置。理想目標 > 90%。\n(2) Throughput（吞吐量）— 單位時間內完成的 process 數量越多越好。\n(3) Turnaround time（週轉時間）— 從 process 提交到完成的總時間越短越好。\n(4) Waiting time（等待時間）— process 在 ready queue 中等待的總時間越短越好。\n(5) Response time（回應時間）— 從提交到第一次產生輸出的時間越短越好。對互動式系統特別重要。\n\n這些目標往往衝突：追求高 throughput 可能犧牲個別 process 的 response time。例如把所有 CPU 時間給一個長 process 可以提高 utilization，但其他短 process 必須等很久。\n\n【Preemptive vs Non-preemptive】\n• Non-preemptive（非搶占式）：一旦 process 獲得 CPU，就執行到完成或自願放棄（如 I/O）。簡單但可能造成長 process 壟斷 CPU。\n• Preemptive（搶占式）：OS 可以在 time slice 到期或更高優先權的 process 到達時，強制中斷當前 process 的 CPU 使用權。現代 OS 幾乎都使用 preemptive scheduling。\n\n【考試連結】(1) 五個排程目標的定義。(2) Turnaround time = waiting time + burst time。(3) 區分 preemptive 和 non-preemptive — 考古題常問「以下哪個排程演算法是 preemptive 的」。",
           "bullets": [
             "Waiting time 是 process 在 ready queue 等待的總時間",
             "Turnaround time 是完成時間減到達時間",
@@ -2399,7 +2399,7 @@
         },
         {
           "title": "用選擇規則辨認排程演算法",
-          "body": "FCFS 依到達順序，簡單但可能出現 convoy effect。若所有 CPU burst 已知，non-preemptive SJF 可最小化該組工作的平均等待時間，但長工作可能 starvation。Priority scheduling 也可能讓低優先序工作長期等候，可用 aging 緩解。Round Robin 讓 ready processes 依序取得 time quantum；只要工作持續留在 ready queue 且系統正常推進，便不會因新短工作或高優先序工作而永久被略過。",
+          "body": "不同的排程演算法用不同的規則選擇下一個要執行的 process：\n\n【FCFS（First-Come, First-Served）】按到達順序執行。Non-preemptive。最簡單但可能造成 convoy effect — 一個長 process 後面排著很多短 process，平均 waiting time 很高。\n\n範例：P1(24ms), P2(3ms), P3(3ms) 依序到達。\nFCFS 執行順序：P1→P2→P3。Waiting time：P1=0, P2=24, P3=27。平均 = 17ms。\n如果改成 P2→P3→P1：Waiting time：P2=0, P3=3, P1=6。平均 = 3ms。\n\n【SJF（Shortest Job First）】選擇 burst time 最短的 process。可證明在所有非搶占式演算法中平均 waiting time 最短（optimal）。問題：無法精確預知 burst time，且可能造成長 process starvation。\n\n【SRTF（Shortest Remaining Time First）】SJF 的搶占式版本。每當新 process 到達時，比較新 process 的 burst time 和當前 process 的剩餘時間，選較短的。\n\n【Priority Scheduling】每個 process 有 priority number，CPU 分配給最高優先權的 process。可以是 preemptive 或 non-preemptive。問題：低優先權的 process 可能永遠得不到 CPU → starvation。解法：Aging — 隨時間逐漸提高等待中 process 的優先權。\n\n【Round Robin（RR）】每個 process 獲得一個固定的 time quantum（時間片，如 10ms），用完就被搶占回到 ready queue 尾端。公平但 time quantum 的大小很關鍵：太大 → 退化成 FCFS；太小 → context switch overhead 太高。\n\n【考試連結】給定一組 process 的到達時間和 burst time，計算各演算法下的 waiting time 和 turnaround time。最常考 RR 和 SJF。",
           "bullets": [
             "Time quantum 太大時，Round Robin 趨近 FCFS",
             "Time quantum 太小會增加 context-switch overhead",
@@ -2409,7 +2409,7 @@
         },
         {
           "title": "MLFQ 以行為回饋調整優先序",
-          "body": "Multilevel feedback queue 使用多個不同優先序的 queues，process 可以依 CPU 使用行為與等待狀況在 queues 之間移動。常見設計讓新工作先進高優先序 queue；用完整個 quantum 的 CPU-bound 工作可能被降級，頻繁等待 I/O 的互動工作則較常留在高優先序。實際規則由系統政策決定，不能把 MLFQ 誤寫成所有工作終身固定在同一 queue。",
+          "body": "MLFQ（Multilevel Feedback Queue）是現代 OS 最常用的排程機制，結合了多種演算法的優點。它有多個 priority levels 的 queue，每個 queue 有自己的排程規則：\n\n【運作原則】\n(1) 新 process 進入最高優先權的 queue。\n(2) 如果 process 在 time quantum 內完成 → 離開。\n(3) 如果 process 用完整個 time quantum（CPU-bound 行為）→ 降級到下一個較低優先權的 queue。\n(4) 如果 process 在 time quantum 內主動放棄 CPU（I/O-bound 行為）→ 留在當前 queue 或升級。\n(5) 較高優先權 queue 的 time quantum 較短（如 8ms），較低優先權的較長（如 16ms、32ms...）。\n\n【為什麼這樣設計？】\n• I/O-bound process 通常只需要短暫的 CPU 時間就會做 I/O，它們停留在高優先權 queue，獲得快速回應 → 好的 response time。\n• CPU-bound process 需要大量 CPU 時間，逐漸降到低優先權 queue，但每次獲得更長的 time quantum → 減少 context switch overhead。\n• 系統自動根據行為調整，不需要人工指定 priority。\n\n【Starvation 解法】長期停留在低優先權 queue 的 process 可能 starvation。解法：Priority boosting — 定期把所有 process 搬回最高優先權 queue。\n\n【具體範例】三層 MLFQ：Q0(quantum=8ms, RR), Q1(quantum=16ms, RR), Q2(FCFS)。\n新 process P 進入 Q0。如果 P 在 8ms 內完成 → 結束。如果用完 8ms → 降到 Q1。在 Q1 用完 16ms → 降到 Q2。Q2 用 FCFS 執行（不再搶占）。\n\n【考試連結】(1) MLFQ 降級和升級的條件。(2) 為什麼 I/O-bound process 優先權較高（不是因為更重要，而是因為它們很快就會放棄 CPU）。(3) MLFQ 的 starvation 問題和 priority boosting 解法。",
           "bullets": [
             "Feedback 的重點是 process 可跨 queue 移動",
             "高優先序 queue 通常可搶占低優先序 queue",
@@ -2419,7 +2419,7 @@
         },
         {
           "title": "Paging 用固定大小單位連接虛擬與實體記憶體",
-          "body": "Paging 把 virtual address space 切成固定大小 pages，把 physical memory 切成相同大小 frames。Virtual address 可拆成 virtual page number 與 offset；page table 將 page number 映射到 frame number，而 offset 保持不變。若目標 page 不在 memory，會觸發 page fault，由作業系統載入頁面。當配置的 frames 無法容納 active working sets，page faults 急升，系統可能把大部分時間花在 paging 而不是執行，形成 thrashing。",
+          "body": "Virtual memory（虛擬記憶體）讓每個 process 以為自己擁有一大塊連續的 address space，但實際上這些位址映射到分散在 physical memory 各處的區塊，甚至可能部分存放在磁碟上。\n\n【Paging 機制】Paging 把 virtual address space 切成固定大小的 page（通常 4 KB），把 physical memory 切成相同大小的 frame。Page table 記錄每個 page 映射到哪個 frame。\n\n地址轉換：virtual address = (page number, offset)。CPU 用 page number 查 page table 找到 frame number，再加上 offset 得到 physical address。\n\n例如 page size = 4KB（2¹² bytes），virtual address = 0x3A7F：\n• Page number = 0x3（前面的 bits）\n• Offset = 0xA7F（後面 12 bits）\n• 查 page table：page 3 → frame 7\n• Physical address = frame 7 的起始位址 + 0xA7F\n\n【Page Fault】當 process 存取的 page 不在 physical memory 中（可能被 swap 到磁碟），CPU 產生 page fault exception。OS 處理：(1) 找到該 page 在磁碟的位置。(2) 找一個空的 frame（如果沒有，用 page replacement algorithm 淘汰一個）。(3) 從磁碟載入 page 到 frame。(4) 更新 page table。(5) 重新執行造成 fault 的指令。\n\n【Page Replacement Algorithms】\n• FIFO：淘汰最先載入的 page。簡單但可能淘汰常用的 page。有 Belady's anomaly — 增加 frame 數反而增加 page fault。\n• LRU（Least Recently Used）：淘汰最久沒被存取的 page。效果好但實作成本高。\n• Optimal（OPT）：淘汰未來最久不會被使用的 page。理論最佳但需要預知未來，只用作比較基準。\n\n【TLB（Translation Lookaside Buffer）】Page table 存在 memory 中，每次地址轉換都要先查 page table（memory access）再存取資料（又一次 memory access），等於每次存取要兩次 memory access。TLB 是一個小型高速快取，存放最近使用的 page-to-frame 映射。TLB hit → 直接得到 frame number（不需要查 page table），TLB miss → 查 page table 並更新 TLB。\n\n【考試連結】(1) 給定 page size 和 virtual address，計算 page number 和 offset。(2) 給定 page reference string 和 frame 數，用 FIFO/LRU/OPT 計算 page fault 數。(3) FIFO 有 Belady's anomaly 但 LRU 沒有。",
           "bullets": [
             "4 KiB 是常見基本 page size，但架構也可能支援其他或 huge pages",
             "Page table 的核心用途是 virtual-to-physical address mapping",
@@ -2490,7 +2490,7 @@
       "subtopicId": "im-it-os-virtualization-containers",
       "title": "虛擬化、容器與 Serverless：分清隔離邊界",
       "summary": "從 hypervisor 與 virtual machine 出發，比較 container 的共享 kernel 模型，再辨認 cluster、network virtualization 與 serverless 各自解決的問題。對應考古題答案均為非官方技術覆核。",
-      "estimatedMinutes": 32,
+      "estimatedMinutes": 36,
       "learningObjectives": [
         "說明 virtualization、hypervisor、host 與 guest OS 的關係",
         "比較 virtual machine 與 container 的隔離邊界、啟動成本及相依條件",
@@ -2500,7 +2500,7 @@
       "sections": [
         {
           "title": "Virtualization 把實體資源變成邏輯資源",
-          "body": "Virtualization 是以軟體建立硬體平台、儲存或網路資源的虛擬版本。系統虛擬化中，hypervisor 將 CPU、memory、storage 與 devices 配置給多個 virtual machines。每個 VM 看見自己的 virtual hardware，並可執行自己的 guest OS。Type 1 hypervisor 直接控制硬體；Type 2 hypervisor 執行在 host OS 上，但兩者核心工作都是隔離並仲裁資源。",
+          "body": "Virtualization（虛擬化）是把一份實體資源（CPU、記憶體、儲存、網路）抽象成多份邏輯資源的技術。最常見的形式是 server virtualization — 在一台 physical server 上同時運行多個 virtual machines（VM），每個 VM 有自己的 OS 和應用程式，彼此隔離。\n\n【Hypervisor（虛擬機器監控器）】管理 VM 的軟體叫做 hypervisor，分為兩種類型：\n\n• Type 1（Bare-metal）：直接安裝在實體硬體上，不需要 host OS。效能好，適合資料中心。例如 VMware ESXi、Microsoft Hyper-V、Xen、KVM（Linux 內建）。\n• Type 2（Hosted）：安裝在 host OS 之上，作為一般應用程式運行。方便但效能較差。例如 VMware Workstation、VirtualBox、Parallels。\n\n【虛擬化的好處】\n(1) Server consolidation — 多個低使用率的 physical server 合併到一台，提高硬體使用效率。\n(2) Isolation — 每個 VM 互相隔離，一個 VM crash 不影響其他。\n(3) Flexibility — 可以快速建立、複製、遷移 VM。\n(4) Legacy support — 在新硬體上運行需要舊 OS 的軟體。\n\n【具體數字感受】一台 64 核 CPU、512 GB RAM 的實體伺服器，可能同時運行 20-50 個 VM（每個 VM 分配 2-4 核、8-16 GB RAM）。如果每個服務只用一台 physical server，大部分時間 CPU 使用率 < 10%。虛擬化把使用率提升到 60-80%。\n\n【考試連結】(1) Type 1 和 Type 2 hypervisor 的差異。(2) 虛擬化的好處列舉。(3) 不要把 virtualization 和 emulation 混淆 — virtualization 在同架構上直接執行指令，emulation 是翻譯指令到不同架構（例如在 x86 上模擬 ARM）。",
           "bullets": [
             "Host 是提供實體資源的一方，guest 是 VM 內執行的作業系統與工作負載",
             "CPU virtualization 讓多個 virtual CPUs 分享實體處理器時間",
@@ -2510,7 +2510,7 @@
         },
         {
           "title": "VM 與 Container 的隔離層不同",
-          "body": "VM 虛擬化硬體邊界，每個 VM 通常包含完整 guest OS 與 kernel；container 則由 host OS kernel 提供 process、filesystem、network 等隔離機制，container image 主要帶應用程式與 user-space dependencies。因為不必為每個 instance 啟動一套 guest kernel，container 通常啟動更快、額外記憶體占用較低。代價是它依賴 host kernel 提供的介面，隔離邊界也不同於硬體 VM。",
+          "body": "VM 和 Container 都能在同一台 physical server 上運行多個隔離的環境，但它們的隔離層級根本不同：\n\n【VM（Virtual Machine）】\n每個 VM 包含一個完整的 guest OS（如一個 VM 跑 Ubuntu、另一個跑 Windows）加上應用程式。Hypervisor 模擬硬體給每個 VM。\n層級：Hardware → Hypervisor → Guest OS → App\n\n優點：強隔離（每個 VM 有獨立的 kernel）、可以運行不同 OS。\n缺點：啟動慢（需要開機載入整個 OS）、佔用空間大（每個 VM 的 OS image 數 GB）、overhead 高。\n\n【Container（容器）】\n所有 containers 共享 host OS 的 kernel，每個 container 只包含應用程式和它的依賴（libraries、config），不包含 OS。Container engine（如 Docker）利用 Linux kernel 的 namespace（隔離 PID、network、filesystem 等）和 cgroups（限制 CPU、記憶體使用量）實現隔離。\n層級：Hardware → Host OS → Container Engine → App + Libs\n\n優點：啟動快（秒級，不需要開機）、佔用空間小（MB 級）、overhead 低。\n缺點：隔離性較弱（共享 kernel，kernel 漏洞可能影響所有 containers）、所有 containers 必須用相同的 OS kernel（不能在 Linux host 上跑 Windows container）。\n\n【Docker image & container】Docker image 是唯讀的模板（包含 app + 依賴），container 是 image 的運行實例。Dockerfile 定義如何建立 image。Docker Hub 是公開的 image registry。\n\n【Kubernetes (K8s)】管理大量 containers 的編排系統（orchestration）。負責自動部署、擴縮容（scaling）、負載均衡、故障恢復。\n\n【考試連結】(1) VM vs Container 的比較表是常考題。(2) Container 共享 kernel 但 VM 有獨立 kernel。(3) Docker 是 container runtime，Kubernetes 是 container orchestration。",
           "bullets": [
             "多個 containers 可以共享同一 host kernel，但擁有隔離的 namespaces 與受限資源",
             "VM 可在同一硬體上執行不同 guest operating systems",
@@ -2520,7 +2520,7 @@
         },
         {
           "title": "Cluster 與 Virtualization 不是同義詞",
-          "body": "Computer cluster 把多個可獨立運作的 nodes 透過網路協同，目標可能是提高 computing power、擴充容量或改善 fault tolerance；virtualization 則在資源之上建立抽象與隔離。一個 cluster 可由實體機或 VMs 組成，單一主機也能在沒有 cluster 的情況下執行多個 VMs。增加節點與備援能改善可用性，但不會自動修補漏洞、阻止入侵或取代 access control。",
+          "body": "Cluster（叢集）和 Virtualization（虛擬化）經常一起使用，但它們解決的問題不同：\n\n【Cluster】把多台 physical server 連接起來，對外表現為一個系統，目的是提高效能和/或可用性。\n\n類型：\n• High-Performance Computing（HPC）cluster：把計算任務分配到多台機器平行處理。例如科學模擬、天氣預報。\n• High-Availability（HA）cluster：多台機器提供相同服務，一台故障時其他接手（failover），確保服務不中斷。\n• Load-Balancing cluster：把客戶端 request 分散到多台機器，避免單台機器過載。\n\n【Virtualization】在一台 physical server 上虛擬出多個邏輯環境。目的是提高單台機器的使用效率。\n\n【差異】\n• Cluster：多台 physical → 一個邏輯系統（scale out）\n• Virtualization：一台 physical → 多個邏輯環境（scale up / consolidation）\n\n兩者可以組合：在多台 physical server 上各自運行多個 VM，再把這些 VM 組成 cluster。這就是現代雲端資料中心的典型架構。\n\n【Grid Computing vs Cloud Computing】\n• Grid：跨組織的鬆散耦合資源共享（如 SETI@home），各節點可能異質。\n• Cloud：透過網路按需提供計算資源，由單一供應商管理（如 AWS、Azure、GCP）。\n\n【考試連結】(1) 區分 cluster 和 virtualization 的方向（多→一 vs 一→多）。(2) Cluster 的三種類型。(3) Grid 和 Cloud 的差異。(4) 考古題 112-9 考過 computer cluster — 注意 clustering（叢集）和 ML clustering（分群）是完全不同的概念。",
           "bullets": [
             "Cluster 關注多節點協同，VM 關注單一工作負載看到的虛擬硬體邊界",
             "Fault tolerance 需要 replication、health checks 與 failover，不能只靠節點數量",
@@ -2530,7 +2530,7 @@
         },
         {
           "title": "Serverless 仍然有 Server",
-          "body": "Serverless computing 把 server provisioning、OS patching、instance scaling 等基礎設施管理交給 cloud provider。開發者部署 function 或其他受管理工作負載，平台依事件動態配置執行資源，常按呼叫次數、執行時間與實際資源使用量計費。實體與虛擬 servers 仍存在，只是被平台抽象化。Serverless 適合事件驅動與間歇性工作，但仍需考慮 cold start、執行時間限制、外部狀態與 provider-specific interfaces。",
+          "body": "Serverless computing 不是「沒有 server」，而是開發者不需要管理 server。雲端供應商負責所有基礎設施（server provisioning、scaling、patching、monitoring），開發者只需要寫 code 和定義 trigger。\n\n【FaaS（Function as a Service）】Serverless 的核心模式。開發者把程式邏輯寫成一個個 function，上傳到雲端。Function 在事件觸發時自動執行，執行完畢後資源釋放。按實際執行時間和呼叫次數計費，閒置時不收費。\n\n代表服務：AWS Lambda、Google Cloud Functions、Azure Functions。\n\n【Serverless vs Traditional Server】\n| | Traditional | Serverless |\n| Server 管理 | 開發者/DevOps | 雲端供應商 |\n| Scaling | 手動或設定自動規則 | 自動，每個 request 獨立 |\n| 計費 | 按時間（即使閒置） | 按呼叫次數和執行時間 |\n| 啟動時間 | 持續運行 | Cold start（首次可能延遲數百 ms） |\n| 執行時間限制 | 無 | 有（如 Lambda 最長 15 分鐘） |\n\n【Cold Start 問題】如果一個 function 很久沒被呼叫，雲端可能回收其容器。下次呼叫時需要重新建立容器和載入程式碼，產生額外延遲（cold start）。解法：定期 warm-up 呼叫、使用 provisioned concurrency。\n\n【BaaS（Backend as a Service）】另一種 serverless 模式，把常見的後端功能（認證、資料庫、推播通知）做成現成的服務。開發者直接呼叫 API，不需要自己實作。例如 Firebase（Google）、Supabase。\n\n【考試連結】(1) Serverless 不是沒有 server — 只是開發者不管 server。(2) FaaS 的特點：event-driven、auto-scaling、pay-per-use。(3) Cold start 是 serverless 的主要缺點。(4) 和 IaaS/PaaS/SaaS 的關係：Serverless 可視為 PaaS 的進一步抽象。",
           "bullets": [
             "Serverless 的 server 由 provider 管理，不是物理上消失",
             "通常不需預先購買固定 instance capacity，但仍可能有最低費用或配額",
@@ -2649,7 +2649,7 @@
       ],
       "title": "物件導向：封裝、繼承與多型的責任邊界",
       "summary": "以 class、object 與對外介面建立 OOP 基礎，區分 encapsulation、inheritance、polymorphism、instance/class variables 與 access control。存取控制與繼承細節以本課來源涵蓋的 Java 語意為準，避免把特定語言規則誤當成所有 OOP 語言的共同定律。對應考古題答案均為非官方技術覆核。",
-      "estimatedMinutes": 34,
+      "estimatedMinutes": 40,
       "minimumPastPaperRefs": 6,
       "learningObjectives": [
         "說明 class、object、state、behavior 與 encapsulation 的關係。",
@@ -2660,7 +2660,7 @@
       "sections": [
         {
           "title": "Class、Object 與 Encapsulation",
-          "body": "Class 描述一類 objects 的 state 與 behavior；object 是該 class 的具體實例。Encapsulation 把資料與操作資料的方法組成一個單位，並以受控介面保護 invariant。它不是把所有欄位一律設成 private 就完成，而是讓外部只能透過能維持有效狀態的操作互動。",
+          "body": "物件導向程式設計（OOP）把程式組織成 object（物件）的集合，每個 object 包含 data（資料，稱為 attribute/field）和 behavior（行為，稱為 method）。Class（類別）是 object 的藍圖（blueprint），定義了這類 object 有哪些 attribute 和 method。Object 是 class 的 instance（實例）。\n\n【具體範例】\nclass Dog {\n  String name;        // attribute\n  int age;            // attribute\n  void bark() { ... } // method\n}\n\nDog myDog = new Dog(); // myDog 是 Dog class 的 instance（object）\nmyDog.name = \"小黑\";\nmyDog.bark();\n\n【Encapsulation（封裝）】把 data 和操作 data 的 method 包裝在一起，並透過 access modifier 控制外部的存取權限。目的是 information hiding — 外部只能透過公開的 method（public interface）和 object 互動，不能直接存取內部的 data。\n\nclass BankAccount {\n  private double balance;          // 外部不能直接存取\n  public void deposit(double amt) { // 只能透過方法操作\n    if (amt > 0) balance += amt;\n  }\n  public double getBalance() {      // 提供受控的讀取\n    return balance;\n  }\n}\n\n封裝的好處：(1) 保護 data 完整性（不會有人直接把 balance 設成負數）。(2) 可以改變內部實作而不影響外部使用者。(3) 降低耦合度。\n\n【Constructor（建構子）】特殊的 method，在建立 object 時自動呼叫，用來初始化 attribute。名稱和 class 相同，沒有 return type。\n\n【考試連結】(1) Class 是藍圖，Object 是實例 — 不要搞混。(2) Encapsulation 的核心是 information hiding + access control。(3) Private 表示只有 class 內部能存取，public 表示所有地方都能存取。",
           "bullets": [
             "State 常由 fields/member variables 表示，behavior 常由 methods/member functions 表示。",
             "Public interface 說明外部可做什麼；implementation details 說明內部如何完成。",
@@ -2670,7 +2670,7 @@
         },
         {
           "title": "Instance、Class 與 Local Variables",
-          "body": "Instance variable 屬於特定 object，每個實例通常有自己的 copy；class/static variable 屬於 class 本身，通常由所有 instances 共用。Local variable 宣告在 method 或 block 內，只在該執行範圍有效。『member variable 必須宣告在 method body』把 member 與 local 的位置顛倒。",
+          "body": "在 OOP 中，變數（variable）依據宣告位置和生命週期分為三類：\n\n【Instance Variable（實例變數）】\n宣告在 class 內但 method 外。每個 object 有自己獨立的一份副本。生命週期和 object 相同。\nclass Student {\n  String name;  // instance variable — 每個學生有自己的名字\n  int grade;\n}\nStudent s1 = new Student(); s1.name = \"Alice\";\nStudent s2 = new Student(); s2.name = \"Bob\";\n// s1.name 和 s2.name 是不同的副本\n\n【Class Variable（類別變數 / Static Variable）】\n用 static 修飾。所有 object 共享同一份。屬於 class 本身，不屬於任何特定 object。可以用 class 名稱直接存取（如 Student.count），不需要建立 object。\nclass Student {\n  static int count = 0;  // class variable — 所有學生共享\n  Student() { count++; }  // 每建立一個學生，count +1\n}\n\n【Local Variable（區域變數）】\n宣告在 method 或 block 內。只在該 method/block 執行期間存在。Method 結束後就消失。必須在使用前初始化（instance variable 有預設值，但 local variable 沒有）。\nvoid calculate() {\n  int result = 0;  // local variable\n  result = 10 + 20;\n  // method 結束後 result 消失\n}\n\n【記憶體配置】\n• Instance variables → 存在 heap 上（和 object 一起）\n• Class variables → 存在 method area / static area\n• Local variables → 存在 stack 上（和 method 的 stack frame 一起）\n\n【考試連結】(1) 區分 instance variable、class variable、local variable 的差異（scope、lifetime、memory location）。(2) Static method 只能存取 static variable，不能直接存取 instance variable（因為沒有 this/object）。(3) 預設值：instance variable 有（int=0, String=null），local variable 沒有。",
           "bullets": [
             "兩個 objects 可有不同 instance state。",
             "Class/static state 的更新會被所有透過同一 class state 的 instances 看見。",
@@ -2680,7 +2680,7 @@
         },
         {
           "title": "Inheritance、Abstract Class 與 Access Control",
-          "body": "Inheritance 建立 base/superclass 與 derived/subclass 關係，讓 subclass 重用或擴充既有介面與實作。Subclass 不保證能直接存取 superclass 的所有 members；private、constructor 與語言特定規則都可能限制可見性。Abstract class 用於提供不能直接完整實例化的共同概念，但可包含 concrete behavior。",
+          "body": "Inheritance（繼承）讓一個 class（子類 / subclass / derived class）繼承另一個 class（父類 / superclass / base class）的 attribute 和 method，實現 code reuse 和 is-a 關係。\n\nclass Animal {\n  String name;\n  void eat() { System.out.println(name + \" is eating\"); }\n}\nclass Dog extends Animal {\n  void bark() { System.out.println(\"Woof!\"); }\n}\n// Dog 繼承了 Animal 的 name 和 eat()，同時有自己的 bark()\n\n【Method Overriding（方法覆寫）】子類可以重新定義父類的 method，提供不同的實作。Runtime 時根據 object 的實際類型決定呼叫哪個版本（這就是 polymorphism 的基礎）。\n\n【Abstract Class（抽象類別）】宣告了 abstract method 的 class — 這些 method 只有簽名沒有實作，強制子類必須提供實作。Abstract class 不能被 instantiate（不能建立 object）。\n\nabstract class Shape {\n  abstract double area();  // 沒有實作\n  void describe() { System.out.println(\"I am a shape\"); }\n}\nclass Circle extends Shape {\n  double radius;\n  double area() { return Math.PI * radius * radius; }  // 必須實作\n}\n\n【Interface（介面）】定義一組 method 簽名（Java 8+ 可有 default implementation），class 透過 implements 實現。一個 class 可以 implement 多個 interface（Java 不支援 multiple inheritance of classes，但支援 multiple implementation of interfaces）。\n\n【Access Modifiers】\n• public：所有地方都能存取\n• protected：同 package + 子類\n• default（沒寫）：同 package\n• private：只有同 class\n\n【考試連結】(1) Abstract class vs interface 的差異。(2) Overriding（runtime, 子類重新實作父類方法）vs Overloading（compile-time, 同 class 中方法名相同但參數不同）。(3) Java 不支援 class 的多重繼承。",
           "bullets": [
             "在 Java 中，protected 允許 same-package access，並在符合規格條件時供 subclass 存取。",
             "Private member 的資料可能仍構成 object state，但 subclass 通常不能直接以名稱存取。",
@@ -2690,7 +2690,7 @@
         },
         {
           "title": "Polymorphism 是共同介面，不是單純複製程式碼",
-          "body": "Polymorphism 讓呼叫端透過共同 interface 操作不同 concrete implementations。當實際呼叫哪個 override 由 runtime object type 決定時，形成常見的 dynamic dispatch。Inheritance 可協助 code reuse，但 polymorphism 的主要價值是讓使用端依賴抽象契約，而非知道每一種具體 class。",
+          "body": "Polymorphism（多型）是 OOP 的核心概念 — 同一個介面（method name）在不同的 object 上有不同的行為。「一個介面，多種實作」。\n\n【Runtime Polymorphism（動態多型）】透過 inheritance + method overriding 實現。在執行時根據 object 的實際類型決定呼叫哪個 method 版本。也叫做 dynamic dispatch 或 late binding。\n\nAnimal a1 = new Dog();   // 宣告類型 Animal，實際類型 Dog\nAnimal a2 = new Cat();   // 宣告類型 Animal，實際類型 Cat\na1.makeSound();  // 呼叫 Dog 的 makeSound() → \"Woof!\"\na2.makeSound();  // 呼叫 Cat 的 makeSound() → \"Meow!\"\n// 同樣的 makeSound() 呼叫，根據 object 實際類型產生不同行為\n\n這是 OOP 最強大的特性 — 你可以寫一個方法接受 Animal 類型的參數，它能正確處理任何 Animal 的子類，不需要知道具體是 Dog 還是 Cat。新增 Bird class 時，現有的程式碼完全不需要修改。\n\n【Compile-time Polymorphism（靜態多型）】透過 method overloading 實現。同一個 class 中有多個同名方法，但參數類型或數量不同。Compiler 在編譯時根據參數決定呼叫哪個版本。\n\nvoid print(int x) { ... }     // print(int)\nvoid print(String s) { ... }  // print(String)\nvoid print(int x, int y) { ... } // print(int, int)\n\n【多型的好處】\n(1) 程式碼可擴展 — 新增子類不需要修改現有程式碼（Open-Closed Principle）。\n(2) 降低耦合 — 呼叫端只需要知道介面，不需要知道具體實作。\n(3) 可替換性 — 可以用不同的實作替換，只要遵循相同的介面。\n\n【考試連結】(1) Runtime polymorphism 靠 inheritance + overriding；compile-time polymorphism 靠 overloading。(2) Dynamic binding 在執行時決定呼叫哪個 method，static binding 在編譯時決定。(3) Polymorphism 不是「複製一份程式碼改改名」— 那是 code duplication，沒有用到任何 OOP 特性。",
           "bullets": [
             "相同 method call 可由不同 object 執行不同實作。",
             "Interface/base type 定義契約，concrete class 實作契約。",
@@ -2801,7 +2801,7 @@
       "subtopicId": "im-it-security-cryptography",
       "title": "密碼學、PKI 與 TLS：從金鑰到可信連線",
       "summary": "先分清對稱加密、公開金鑰、雜湊與數位簽章的用途，再以憑證、CA／RA 與 TLS 串起網站身分驗證、機密性及完整性。對應考古題答案均為非官方技術覆核。",
-      "estimatedMinutes": 34,
+      "estimatedMinutes": 38,
       "learningObjectives": [
         "依安全需求選擇對稱加密、非對稱加密、雜湊或數位簽章",
         "說明 RSA 與 AES 的角色差異，以及混合式加密為何同時使用兩者",
@@ -2811,7 +2811,7 @@
       "sections": [
         {
           "title": "先從安全目標選工具",
-          "body": "密碼學工具解決的問題不同。加密把明文轉成只有持有適當金鑰者能還原的密文，主要保護 confidentiality；cryptographic hash 把任意長度輸入映成固定長度摘要，常用來檢查 integrity，但不能靠摘要還原原文；digital signature 由私鑰產生、由公鑰驗證，用來驗證訊息來源及內容未被竄改。單獨加密不自動證明寄件者身分，單獨雜湊也無法阻止攻擊者同時替換資料與摘要。",
+          "body": "資訊安全的三大核心目標（CIA Triad）決定了需要哪些密碼學工具：\n\n• Confidentiality（機密性）— 確保資料只有授權的人能讀取。工具：加密（encryption）。\n• Integrity（完整性）— 確保資料沒有被未授權地修改。工具：雜湊（hash）、數位簽章（digital signature）。\n• Authentication（身分驗證）— 確認通訊對方的身分是真的。工具：數位憑證（digital certificate）、MAC。\n\n另外還有 Non-repudiation（不可否認性）— 發送者事後不能否認曾發送某訊息。工具：數位簽章。\n\n【Hash Function（雜湊函式）】把任意長度的輸入映射成固定長度的 hash value（摘要）。特性：(1) 單向 — 從 hash value 無法還原出原始資料。(2) 抗碰撞 — 極難找到兩個不同輸入產生相同 hash value。(3) 雪崩效應 — 輸入改變 1 bit，output 會大幅改變。常見演算法：MD5（128 bits，已不安全）、SHA-1（160 bits，已不推薦）、SHA-256（256 bits，目前主流）。\n\n用途：(1) 驗證檔案完整性（下載後比對 hash）。(2) 密碼儲存（資料庫存 hash 值而非原始密碼）。(3) 數位簽章的基礎。(4) Blockchain 中的 block linkage。\n\n【MAC（Message Authentication Code）】結合 hash 和 secret key，同時驗證 integrity 和 authentication。發送端用 key 產生 MAC，接收端用相同的 key 驗證。HMAC 是使用 hash function 實作的 MAC（如 HMAC-SHA256）。\n\n【考試連結】(1) 先確認安全目標，再選擇工具。(2) Hash 提供 integrity 但不提供 confidentiality（任何人都能計算 hash）。(3) MD5 和 SHA-1 已被認為不安全（collision attacks），考古題可能問這個。",
           "bullets": [
             "Confidentiality：避免未授權者讀懂資料，典型工具是 encryption",
             "Integrity：偵測內容是否改變，可用帶金鑰的 MAC 或 digital signature",
@@ -2821,7 +2821,7 @@
         },
         {
           "title": "對稱、非對稱與混合式加密",
-          "body": "對稱加密由雙方共用同一把秘密金鑰，AES 是現代常見標準；DES 金鑰空間過小，已不適合保護新系統。非對稱密碼使用一對相關的 public/private keys，RSA 是代表性演算法。用接收者公鑰加密時，對應私鑰才能解密；用簽署者私鑰產生簽章時，公鑰可驗證。非對稱運算成本較高且有資料長度與 padding 限制，因此實務通常用它建立或保護短小的 session key，再用對稱演算法處理大量資料。",
+          "body": "加密（encryption）是把明文（plaintext）轉換成密文（ciphertext）的過程，只有持有正確金鑰（key）的人才能解密（decryption）還原明文。依據加解密使用的 key 是否相同，分為兩大類：\n\n【Symmetric Encryption（對稱加密）】\n加密和解密使用同一把 key。\n特點：速度快（比非對稱快 100-1000 倍），適合大量資料加密。\n問題：Key distribution — 通訊雙方需要安全地共享同一把 key。如果 key 被截獲，整個加密就破了。\n常見演算法：AES（Advanced Encryption Standard, 目前主流，key 128/192/256 bits）、DES（56-bit key, 已不安全）、3DES（168-bit key, DES 的改良）。\n\n【Asymmetric Encryption（非對稱加密 / Public Key Cryptography）】\n使用一對 key：public key（公鑰）和 private key（私鑰）。Public key 公開，private key 保密。\n• 用 public key 加密 → 只有 private key 能解密（confidentiality）。\n• 用 private key 簽名 → 任何人用 public key 能驗證（authentication + non-repudiation）。\n特點：解決了 key distribution 問題（public key 可以公開傳送），但速度慢。\n常見演算法：RSA（基於大數分解困難）、ECC（Elliptic Curve Cryptography, 更短的 key 達到相同安全強度）、Diffie-Hellman（key exchange, 不直接加密）。\n\n【Hybrid Encryption（混合式加密）】\n實務上的標準做法 — 結合兩者的優點：\n(1) 用 asymmetric encryption 安全地交換一個臨時的 symmetric key（session key）。\n(2) 用 symmetric key 加密實際的資料（速度快）。\nTLS/HTTPS 就是用這種方式：handshake 階段用非對稱交換 session key，之後用對稱加密傳輸資料。\n\n【考試連結】(1) 對稱加密快但有 key distribution 問題；非對稱加密慢但解決 key distribution。(2) AES 是對稱，RSA 是非對稱。(3) 數位簽章用 private key 簽名、public key 驗證（不是反過來！）。(4) DES 已不安全是因為 key 太短（56 bits），可被暴力破解。",
           "bullets": [
             "AES、DES、IDEA 與 Caesar cipher 都是對稱式；RSA 是非對稱式",
             "公開金鑰可以公開，private key 必須由持有者保護",
@@ -2831,7 +2831,7 @@
         },
         {
           "title": "憑證把身分綁到公鑰",
-          "body": "只有一把 public key，尚不能知道它屬於誰。X.509 digital certificate 以結構化欄位記錄 subject、subject public key、issuer、有效期間、serial number 等資訊，並由 issuer 簽章。CA 負責簽發與簽署憑證；RA 可協助驗證申請者身分與核准申請，但通常不負責簽發憑證。Serial number 在同一 issuer 範圍內識別憑證，CRL 或 OCSP 等撤銷機制也會利用 issuer 與 serial number 定位憑證。",
+          "body": "Non-symmetric encryption 解決了 key distribution 的問題，但產生了新問題：你怎麼確定拿到的 public key 真的屬於你想通訊的對象？攻擊者可能冒充對方，把自己的 public key 給你（Man-in-the-Middle attack）。\n\n【Digital Certificate（數位憑證）】由受信任的第三方 Certificate Authority（CA）簽發，把一個 identity（如網站域名 www.ntu.edu.tw）和一個 public key 綁在一起。憑證內容包含：\n• Subject（持有者身分）\n• Subject's public key\n• Issuer（簽發的 CA）\n• Validity period（有效期限）\n• CA 的 digital signature（用 CA 的 private key 對上述資訊簽名）\n\n驗證流程：(1) 你收到 www.ntu.edu.tw 的憑證。(2) 用 CA 的 public key 驗證憑證上的 digital signature。(3) 如果驗證通過 → 憑證是真的 → 裡面的 public key 確實屬於 www.ntu.edu.tw。\n\n【PKI（Public Key Infrastructure）】\n建立和管理數位憑證的完整架構：\n• Root CA：最頂層的 CA，其憑證（root certificate）預先安裝在 OS 和瀏覽器中（trust store）。\n• Intermediate CA：由 Root CA 簽發，實際負責簽發終端憑證。形成 certificate chain。\n• Certificate chain 驗證：終端憑證 → 由 intermediate CA 簽發 → intermediate CA 的憑證由 Root CA 簽發 → Root CA 在 trust store 中 → 整條鏈可信。\n\n【Certificate Revocation】如果 private key 洩露，需要撤銷憑證。機制：CRL（Certificate Revocation List，CA 定期發布）、OCSP（Online Certificate Status Protocol，即時查詢）。\n\n【考試連結】(1) CA 的角色是把 identity 綁定到 public key。(2) 數位簽章驗證用的是 CA 的 public key，不是 subject 的。(3) Self-signed certificate 是自己簽發給自己的，瀏覽器會顯示「不受信任」的警告。",
           "bullets": [
             "Certificate 證明的是身分與 public key 的受信綁定，不會公開 private key",
             "Issuer 欄位指出簽發者；subject 欄位指出憑證所描述的實體",
@@ -2841,7 +2841,7 @@
         },
         {
           "title": "TLS 如何讓 HTTP 變成 HTTPS",
-          "body": "HTTPS 是在 TLS 保護通道上傳送 HTTP。握手期間，雙方協商參數、建立共享祕密，client 驗證 server 提供的憑證與其持有私鑰的證明；之後通常用高效率的對稱式 authenticated encryption 保護應用資料。公開網站多使用受 client trust store 信任的 CA 憑證，但 TLS 協定本身也能搭配私有 CA 或預先信任的 self-signed certificate。若 server 也要求 client 出示並證明持有 client certificate，則形成 mutual TLS。",
+          "body": "TLS（Transport Layer Security）在 TCP 之上建立加密通道，保護應用層資料的 confidentiality 和 integrity。HTTPS = HTTP over TLS。\n\n【TLS Handshake 流程（簡化版 TLS 1.2）】\n(1) Client Hello — Client 發送支援的 TLS 版本、加密演算法清單（cipher suites）和一個 random number。\n(2) Server Hello — Server 選擇 cipher suite，發送自己的 random number 和 digital certificate。\n(3) Certificate Verification — Client 驗證 server 的憑證（檢查 CA 簽名、有效期、域名是否匹配）。\n(4) Key Exchange — Client 產生 pre-master secret，用 server 的 public key 加密後傳送。\n(5) Session Key Generation — 雙方各自用 pre-master secret + 兩個 random numbers 計算出相同的 session key（symmetric key）。\n(6) Finished — 雙方用 session key 加密確認訊息，handshake 完成。\n\n之後所有的 HTTP 通訊都用 session key 做 symmetric encryption。\n\n【TLS 1.3 改進】\n• Handshake 減少一個 round trip（1-RTT，甚至 0-RTT 重連）。\n• 移除不安全的 cipher suites（如 RC4、SHA-1）。\n• 所有 handshake 訊息在 Server Hello 後都加密。\n\n【TLS 提供了什麼？】\n(1) Confidentiality — 傳輸中的資料加密，竊聽者只能看到密文。\n(2) Integrity — MAC 保護資料不被篡改。\n(3) Authentication — 透過 certificate 驗證 server 身分。\n\n【TLS 沒有提供什麼？】\n• 不保護端點安全 — 如果 server 被入侵，攻擊者有 private key 就能解密。\n• 不保護 metadata — 竊聽者仍能看到目標 IP、域名（SNI）、流量模式。\n\n【考試連結】(1) HTTPS = HTTP + TLS，不是 HTTP + SSL（SSL 是 TLS 的前身，已棄用）。(2) TLS handshake 使用 asymmetric encryption 交換 session key，之後用 symmetric encryption 傳輸資料（hybrid encryption）。(3) TLS 工作在 transport layer 之上、application layer 之下。",
           "bullets": [
             "TLS 同時保護機密性、完整性，並通常驗證 server 身分",
             "憑證內有 public key；private key 留在持有者端，不隨憑證傳送",
@@ -2961,7 +2961,7 @@
       "sections": [
         {
           "title": "先辨識服務目的，再辨識使用的技術",
-          "body": "新興數位應用不等於單一底層技術。Fintech 是把數位技術應用於金融服務；mobile payment 是其中聚焦付款流程的一類服務。Crowdfunding 平台讓許多支持者共同資助專案，MOOC 則以網路大規模提供開放式課程。判題時先問服務解決什麼問題，不要因為都使用網站或手機就歸為同一類。",
+          "body": "考古題中的「新興科技」題目通常不是考深層技術原理，而是考你能否正確辨識：(1) 某項服務或產品解決什麼問題。(2) 它使用了哪些技術組合。(3) 這些技術分別扮演什麼角色。\n\n【雲端服務模型】\n• IaaS（Infrastructure as a Service）— 提供虛擬化的運算、儲存、網路資源。使用者管理 OS 以上的所有層級。例如 AWS EC2、Azure VM。\n• PaaS（Platform as a Service）— 提供開發和部署應用程式的平台。使用者只管理應用程式和資料。例如 Google App Engine、Heroku。\n• SaaS（Software as a Service）— 提供現成的應用程式，使用者只使用軟體。例如 Gmail、Salesforce、Microsoft 365。\n\n記憶法：從 IaaS 到 SaaS，供應商管理的範圍越來越大，使用者的控制權越來越小。\n\n【IoT（Internet of Things）】把實體裝置（感測器、家電、車輛、工廠設備）連上網路，收集資料並遠端控制。IoT 的典型架構：感測器 → 邊緣裝置（local processing）→ 雲端（分析和儲存）→ 應用（dashboard、自動控制）。\n\n【Fintech 常見應用】\n• 行動支付（如 Apple Pay、Line Pay）— NFC 或 QR code。\n• P2P 轉帳 — 不經過傳統銀行的直接轉帳。\n• Robo-advisor — 用演算法提供投資建議。\n• Blockchain 應用 — 加密貨幣、DeFi。\n\n【考試連結】題目常給一個服務描述，問它屬於 IaaS/PaaS/SaaS，或問「以下哪項技術被用在此服務中」。關鍵是先辨識服務的目的（問題是什麼），再辨識技術（用什麼解決）。不要被品牌名稱誤導 — Azure 同時提供 IaaS、PaaS、SaaS，不能只說「Azure 是 IaaS」。",
           "bullets": [
             "Fintech 的範圍可包含支付、借貸、保險、投資與監理科技，不只 mobile payment。",
             "Mobile payment 的核心是啟動、授權或完成付款，不是所有募集資金網站都屬於支付服務。",
@@ -2971,7 +2971,7 @@
         },
         {
           "title": "Voice-only smart speaker 的語音處理鏈",
-          "body": "原始 voice-only smart speaker 由 microphone 接收聲音，經 speech recognition 轉成可處理的文字或語意表示，再以 natural language processing 判斷意圖，執行查詢或裝置控制，最後可用 speech synthesis 回覆。若題目明確限定只有 microphone 與 speaker 的產品，image recognition 不在完成這條語音流程的必要技術中。",
+          "body": "Smart speaker（智慧音箱，如 Amazon Echo、Google Home）是一個整合多項 AI 技術的產品。考古題常考你能否辨識它使用了哪些技術以及各自的角色。\n\n【語音處理完整流程】\n(1) Wake word detection（喚醒詞偵測）— 裝置在本地（on-device）持續監聽「Alexa」「Hey Google」等喚醒詞。這一步通常用小型 keyword spotting 模型在裝置上運行，不需要上傳到雲端。\n\n(2) Automatic Speech Recognition (ASR) — 把使用者的語音轉換成文字。例如「明天台北天氣如何」→ 文字序列。現代 ASR 使用深度學習模型（如 end-to-end transformer models）。\n\n(3) Natural Language Understanding (NLU) — 理解文字的意圖和關鍵資訊。「明天台北天氣如何」→ intent: 查詢天氣, entity: location=台北, time=明天。NLU 結合了 intent classification 和 named entity recognition (NER)。\n\n(4) Dialog Management — 管理對話狀態和流程。決定下一步是回答問題、追問更多資訊、還是執行動作。\n\n(5) Response Generation + Text-to-Speech (TTS) — 產生回覆文字，再用 TTS 合成語音。TTS 把文字轉換成自然流暢的語音（speech synthesis），現代系統如 WaveNet 能產生接近真人的語音。\n\n【考試連結】(1) 考古題 107-1 考 smart speaker 使用的 AI 技術。(2) ASR（語音→文字）和 TTS（文字→語音）是反方向的。(3) NLP 是 Natural Language Processing 的總稱，包含 NLU 和 NLG。(4) 不要把 speech recognition（語音辨識）和 speaker recognition（說話者辨識）搞混 — 前者辨識「說了什麼」，後者辨識「誰在說」。",
           "bullets": [
             "Speech recognition 處理聲音到詞語或文字的轉換。",
             "Natural language processing 用於理解使用者意圖與參數。",
@@ -2981,7 +2981,7 @@
         },
         {
           "title": "自動駕駛要分開看感知、定位與決策",
-          "body": "自動駕駛系統需要知道周遭有什麼、車輛位於何處，以及下一步如何控制。Camera/computer vision、radar 與 lidar 可提供周遭物體或距離等環境觀測；衛星導航主要提供位置與時間資訊。GPS 因此屬定位的重要輸入，但不是直接觀察附近行人、車輛輪廓或障礙物的感測器。",
+          "body": "自動駕駛（autonomous driving）涉及三大技術模組，考古題常考你能否正確辨識每個模組使用的技術：\n\n【Perception（感知）】— 偵測周圍環境中的物件\n• Camera（攝影機）— 拍攝影像，用 computer vision（特別是 CNN）偵測車輛、行人、交通號誌、車道線。\n• LiDAR（Light Detection and Ranging）— 發射雷射光束，測量反射時間得到精確的 3D 點雲（point cloud）。能精確測量距離和物體形狀，但成本高、受天氣影響。\n• Radar — 發射無線電波，偵測物體距離和速度。穿透力強（雨霧中仍可用），但解析度較低。\n• Ultrasonic sensor — 超短距離偵測（如停車時偵測障礙物）。\n\n多種感測器融合（sensor fusion）提供更可靠的環境感知。\n\n【Localization（定位）】— 確定車輛在地圖上的精確位置\n• GPS/GNSS — 全球定位，精度約 1-5 公尺。不夠精確用於車道級定位。\n• HD Map（高精地圖）— 預先建置的詳細道路模型，包含車道線、交通號誌位置等。\n• SLAM（Simultaneous Localization and Mapping）— 同時建圖和定位。\n• GPS + IMU + 視覺里程計的融合 — 提供公分級定位。\n\n【Decision（決策）】— 規劃路徑和控制車輛\n• Path planning — 規劃從 A 到 B 的最佳路線。\n• Motion planning — 決定下一秒的速度、方向、加速度。\n• Control — 把決策轉換成方向盤角度、油門/煞車力道。\n\n【SAE 自動駕駛等級】L0（無自動化）→ L1（單項輔助）→ L2（部分自動化，如 Tesla Autopilot）→ L3（有條件自動化）→ L4（高度自動化，限定區域）→ L5（完全自動化）。\n\n【考試連結】(1) Camera + computer vision 是 perception 的核心技術，不是 navigation 技術。(2) LiDAR 提供 3D 距離資訊，Camera 提供 2D 影像 — 兩者互補。(3) 考古題 108-8 考自動駕駛的感測技術。",
           "bullets": [
             "Perception 將 sensor observations 轉成物體、車道或可通行空間等估計。",
             "Localization 估計車輛在地圖或座標系中的位置，通常融合多種訊號。",
@@ -2991,7 +2991,7 @@
         },
         {
           "title": "Digital twin 是會隨實體狀態更新的電子表示",
-          "body": "Digital twin 是現實實體或系統的電子表示，可透過量測資料觀察其狀態與狀態轉換。它可支援 real-time monitoring、simulation、testing 與 maintenance，但不代表只建立一次且不再更新的 3D 圖，也不保證模擬結果必然正確；模型、感測資料與同步機制仍會帶來誤差。",
+          "body": "Digital twin（數位分身/數位孿生）是一個實體物件、流程或系統的虛擬副本，透過即時資料流和實體保持同步。它不是靜態的 3D 模型或 CAD 圖 — 關鍵特徵是「持續同步更新」。\n\n【運作機制】\n(1) Physical entity（實體）：裝配 IoT 感測器，持續收集溫度、壓力、震動、位置等資料。\n(2) Data transmission：感測器資料透過網路傳送到雲端。\n(3) Digital twin（虛擬）：根據即時資料更新虛擬模型的狀態。可以包含物理模擬（physics simulation）來預測行為。\n(4) Feedback loop：在虛擬環境中測試不同的「what-if」情境，根據結果對實體進行調整。\n\n【應用場景】\n• 製造業 — 工廠設備的 digital twin 監控運行狀態，預測何時需要維護（predictive maintenance），減少意外停機。\n• 城市規劃 — 建築物的 digital twin 模擬能源消耗、人流動線、災害影響。\n• 醫療 — 人體器官的 digital twin 模擬藥物反應或手術效果。\n• 航太 — NASA 的 Apollo 13 任務就是早期的 digital twin 概念 — 在地面的模擬器中重現太空中的故障情境，找出解決方案。\n\n【Digital Twin vs Simulation vs 3D Model】\n• 3D Model：靜態的視覺表示。\n• Simulation：可以模擬行為，但通常不和實體即時同步。\n• Digital Twin：和實體即時同步 + 可以模擬 + 可以反向控制。三者是遞進關係。\n\n【考試連結】(1) Digital twin 的核心特徵是「和實體即時同步」。(2) 不要把 digital twin 和一般的資料庫或監控面板混淆 — digital twin 包含行為模型和模擬能力。(3) IoT 是 digital twin 的基礎設施 — 沒有感測器資料就沒有即時同步。",
           "bullets": [
             "Physical entity 是被表示的設備、流程或系統。",
             "Sensors/records 把實體狀態送入資料流程，更新 electronic representation。",
@@ -3115,7 +3115,7 @@
       "title": "進位、布林邏輯與數位電路：從位元到狀態",
       "summary": "從二進位與十六進位轉換出發，用真值表與 De Morgan 定律化簡邏輯，再把 gates 組合為 adder、multiplexer 與具狀態的 flip-flop。本範圍為完整主題樹所需的基礎課，不宣稱是考古高頻。",
       "evidenceNote": "進位與位元運算、布林代數、數位電路在 canonical metadata 皆為 0 題 direct primary refs；本課是 reviewed-source-backed foundational coverage，pastPaperRefs 保持空陣列，不以相鄰題冒充直接證據。",
-      "estimatedMinutes": 38,
+      "estimatedMinutes": 31,
       "minimumPastPaperRefs": 0,
       "learningObjectives": [
         "在二進位、十進位與十六進位間轉換，並執行基本 bitwise operations",
@@ -3160,7 +3160,7 @@
       "sections": [
         {
           "title": "進位是位階權重",
-          "body": "二進位每位權重是 2 的次方；十六進位以 0–9、A–F 表示 0–15，並可四位二進位一組直接轉換。",
+          "body": "不同進位制（number system）的核心概念是「位階權重」— 每個位置的值等於該位置的 digit 乘以 base 的位置次方。\n\n【常見進位制】\n• Binary（二進位, base 2）：digit 只有 0 和 1。電腦內部使用。\n• Octal（八進位, base 8）：digit 0-7。Unix 檔案權限常用（如 755）。\n• Decimal（十進位, base 10）：digit 0-9。人類日常使用。\n• Hexadecimal（十六進位, base 16）：digit 0-9, A-F（A=10, B=11, ..., F=15）。記憶體位址、色碼常用。\n\n【轉換方法】\n十進位 → 二進位：反覆除以 2，取餘數，由下到上排列。\n例如：13₁₀ → 13÷2=6...1, 6÷2=3...0, 3÷2=1...1, 1÷2=0...1 → 1101₂\n\n二進位 → 十進位：各位元乘以 2 的位置次方後加總。\n例如：1101₂ = 1×2³ + 1×2² + 0×2¹ + 1×2⁰ = 8+4+0+1 = 13₁₀\n\n二進位 ↔ 十六進位：每 4 個 bits 對應一個 hex digit。\n例如：1010 1111₂ = AF₁₆（1010=A=10, 1111=F=15）\n\n二進位 ↔ 八進位：每 3 個 bits 對應一個 octal digit。\n例如：101 111₂ = 57₈（101=5, 111=7）\n\n【二進位的算術】\n加法：0+0=0, 0+1=1, 1+0=1, 1+1=10（進位）。\n例如：1011 + 0101 = 10000（11+5=16）\n\n【負數表示法】\n• Sign-magnitude：最高位元表示正負（0=正, 1=負），其餘表示大小。問題：有 +0 和 -0 兩種零。\n• 1's complement：把每個 bit 反轉。問題：仍有兩種零。\n• 2's complement：反轉所有 bit 後加 1。現代電腦的標準。只有一種零，且加法不需要特殊處理正負號。\n例如：-5 的 8-bit 2's complement = ~00000101 + 1 = 11111010 + 1 = 11111011\n\n【考試連結】(1) 進位轉換是最常考的計算題。(2) 2's complement 表示法及其範圍：n bits 可表示 -2^(n-1) 到 2^(n-1)-1。(3) 最高位元 1 在 2's complement 中代表負數，不是 sign-magnitude 的正負號。",
           "bullets": [
             "101101₂=45₁₀",
             "2D₁₆=0010 1101₂",
@@ -3169,7 +3169,7 @@
         },
         {
           "title": "真值表與布林定律",
-          "body": "真值表列出所有輸入組合與對應輸出。化簡時保留功能等價，不是任意刪除變數。",
+          "body": "布林代數（Boolean algebra）是數位電路設計的數學基礎。變數只有兩個值：0（false）和 1（true）。三種基本運算對應三種基本邏輯閘（logic gate）：\n\n【三種基本邏輯閘】\n• AND（與閘）：A AND B = A·B。只有兩個輸入都是 1 時輸出才是 1。\n  真值表：00→0, 01→0, 10→0, 11→1\n• OR（或閘）：A OR B = A+B。只要有一個輸入是 1 輸出就是 1。\n  真值表：00→0, 01→1, 10→1, 11→1\n• NOT（非閘/反閘）：NOT A = A'。輸入反轉。\n  真值表：0→1, 1→0\n\n衍生邏輯閘：\n• NAND = NOT AND：AND 的輸出再反轉。是 universal gate（可以用 NAND 組合出所有其他閘）。\n• NOR = NOT OR：OR 的輸出再反轉。也是 universal gate。\n• XOR（互斥或）：兩個輸入不同時輸出 1，相同時輸出 0。\n  真值表：00→0, 01→1, 10→1, 11→0\n\n【布林定律】\n• 交換律：A·B = B·A, A+B = B+A\n• 結合律：(A·B)·C = A·(B·C)\n• 分配律：A·(B+C) = A·B + A·C, A+(B·C) = (A+B)·(A+C)\n• De Morgan's Theorem：(A·B)' = A'+B', (A+B)' = A'·B'\n  白話：AND 取反 = 各取反再 OR；OR 取反 = 各取反再 AND。\n• 互補律：A·A' = 0, A+A' = 1\n• 吸收律：A + A·B = A, A·(A+B) = A\n\n【考試連結】(1) 用真值表驗證布林等式是最穩的方法。(2) De Morgan's theorem 是化簡布林表達式的關鍵工具。(3) NAND 和 NOR 的 universal gate 性質。(4) XOR 在考古題中常出現在 parity check 和加法器電路中。",
           "bullets": [
             "A AND 1=A",
             "A OR 0=A",
@@ -3179,7 +3179,7 @@
         },
         {
           "title": "組合電路做即時計算",
-          "body": "Half adder 產生 sum 與 carry；full adder 還處理 carry-in。Multiplexer 根據 select lines 從多個輸入中選一個。",
+          "body": "組合電路（combinational circuit）的輸出完全由當前的輸入決定，沒有記憶功能。給定相同的輸入，永遠得到相同的輸出。\n\n【常見組合電路】\n\n• Half Adder（半加器）：兩個 1-bit 輸入相加，產生 Sum 和 Carry。\n  Sum = A XOR B, Carry = A AND B。\n  例如：A=1, B=1 → Sum=0, Carry=1（等於 10₂ = 2₁₀）\n\n• Full Adder（全加器）：三個 1-bit 輸入（A, B, Carry-in）相加。\n  Sum = A XOR B XOR Cin, Cout = (A AND B) OR (Cin AND (A XOR B))。\n  多個 full adder 串接可以做 n-bit 加法（ripple-carry adder）。\n\n• Multiplexer (MUX)：多個輸入中選擇一個輸出。n 條選擇線可以從 2ⁿ 個輸入中選一個。像是一個「資料選擇器」。4:1 MUX 有 4 個資料輸入、2 條選擇線、1 個輸出。\n\n• Decoder：n 個輸入、2ⁿ 個輸出。某一時刻只有一個輸出是 1（由輸入的二進位值決定哪一個）。例如 2:4 decoder：輸入 01 → 輸出 Y1=1，其餘為 0。記憶體的位址解碼就用 decoder。\n\n• Encoder：Decoder 的反向 — 2ⁿ 個輸入、n 個輸出。把「哪一條輸入是 1」編碼成二進位數。\n\n【布林表達式 → 電路】任何布林表達式都可以用 AND、OR、NOT 閘組合實現。兩種標準形式：\n• SOP（Sum of Products）：多個 AND 項用 OR 連接。每個 AND 項叫 minterm。\n• POS（Product of Sums）：多個 OR 項用 AND 連接。每個 OR 項叫 maxterm。\n\nKarnaugh Map（K-map）是化簡布林表達式的視覺化工具，把相鄰的 minterm 合併以減少邏輯閘數量。\n\n【考試連結】(1) Half adder 和 full adder 的差異（有沒有 carry-in）。(2) MUX 和 decoder 的功能。(3) 給定布林表達式畫出電路圖，或反過來。",
           "bullets": [
             "Sum 可用 XOR 表示",
             "Carry 與 AND 有關",
@@ -3188,7 +3188,7 @@
         },
         {
           "title": "時序電路加入狀態",
-          "body": "Flip-flop 在規定時機取樣並保留 1 bit；多個 flip-flops 可組成 register。Clocked design 必須考慮 setup、hold 與 propagation delay。",
+          "body": "時序電路（sequential circuit）的輸出不只取決於當前輸入，還取決於電路的內部狀態（記憶）。組合電路 + 記憶元件 = 時序電路。\n\n【Flip-Flop（正反器）】最基本的 1-bit 記憶元件。可以儲存一個 bit（0 或 1），在 clock signal 的觸發下更新狀態。\n\n常見類型：\n• SR Flip-Flop：Set (S=1) → 輸出 Q=1。Reset (R=1) → 輸出 Q=0。S=R=1 是無效狀態（禁止）。\n• D Flip-Flop：在 clock 觸發時，輸出 Q = 輸入 D 的值。最常用、最直覺。\n• JK Flip-Flop：J=K=1 時 toggle（翻轉）。解決了 SR flip-flop 的無效狀態問題。\n• T Flip-Flop：T=1 時 toggle，T=0 時保持。常用於計數器。\n\n【Register（暫存器）】多個 flip-flop 並聯，儲存多 bit 資料。一個 n-bit register 由 n 個 D flip-flop 組成。CPU 的 registers 就是這樣實現的。\n\n【Counter（計數器）】一串 flip-flop 連接起來，每個 clock pulse 計數加 1。n-bit counter 可以計數 0 到 2ⁿ-1。用途：program counter（指令計數器）、timer。\n\n【Finite State Machine（有限狀態機, FSM）】由有限個狀態和狀態間的轉換組成。每個 clock cycle 根據當前狀態和輸入決定下一個狀態和輸出。\n兩種類型：\n• Mealy machine：輸出取決於當前狀態 + 輸入。\n• Moore machine：輸出只取決於當前狀態。\n\nFSM 在考古題中通常以「狀態圖」的形式出現。\n\n【考試連結】(1) 組合電路 vs 時序電路的差異：有沒有記憶/狀態。(2) D flip-flop 的功能（最常考）。(3) 時序電路需要 clock signal 來同步狀態更新。(4) Register 是 flip-flop 的擴展。",
           "bullets": [
             "Sequential output 取決於當前輸入與現有狀態",
             "Register 與 main memory 層級不可混為同一概念"
@@ -3235,7 +3235,7 @@
       ],
       "title": "I/O 與效能：從 polling、interrupt 到 DMA",
       "summary": "比較 programmed I/O、interrupt-driven I/O 與 DMA 的 CPU 介入程度，連結 memory-mapped I/O、interrupt service routine、latency、throughput 與顯示器解析度。",
-      "estimatedMinutes": 30,
+      "estimatedMinutes": 32,
       "minimumPastPaperRefs": 2,
       "learningObjectives": [
         "區分 polling、interrupt-driven I/O 與 DMA",
@@ -3280,7 +3280,7 @@
       "sections": [
         {
           "title": "三種 I/O 控制方式",
-          "body": "Polling 簡單但可能浪費 CPU cycles；interrupt 讓 CPU 先做其他工作；DMA 適合大批資料搬運。",
+          "body": "CPU 和 I/O 裝置（鍵盤、磁碟、網路卡）之間的通訊有三種主要方式，效率依序提升：\n\n【Programmed I/O（程式控制 I/O）/ Polling】\nCPU 不斷檢查 I/O 裝置的狀態暫存器（status register），直到裝置準備好。這叫做 busy waiting — CPU 在一個迴圈中反覆詢問「你好了嗎？」，什麼都不做直到得到肯定回答。\n優點：實作簡單。\n缺點：CPU 完全被佔用等待，浪費大量 CPU 時間。在等待磁碟讀取的毫秒級時間裡，CPU 可以執行數百萬條指令。\n\n【Interrupt-driven I/O（中斷驅動 I/O）】\nCPU 發出 I/O 指令後去做其他事情。當 I/O 裝置完成時，發出硬體 interrupt（中斷）通知 CPU。CPU 暫停當前工作，執行 interrupt handler（中斷處理程式）處理 I/O 結果，然後回到原本的工作。\n優點：CPU 不需要 busy waiting，可以做有用的計算。\n缺點：每個 byte 或 word 的傳輸仍需要 CPU 介入。大量資料傳輸（如讀取整個磁碟 block）時，CPU 仍會被頻繁中斷。\n\n【DMA（Direct Memory Access）】\nDMA controller 接管資料傳輸工作。CPU 只需要告訴 DMA controller「從磁碟讀取 N bytes 到記憶體位址 X」，然後去做其他事。DMA controller 直接在 I/O 裝置和記憶體之間傳輸資料，不經過 CPU。傳輸完成時才用 interrupt 通知 CPU。\n優點：CPU 幾乎完全解放，適合大量資料傳輸。\n缺點：需要額外的 DMA controller 硬體。DMA 和 CPU 可能在 bus 上競爭（cycle stealing）。\n\n【三者比較】\n| | Polling | Interrupt | DMA |\n| CPU 佔用 | 100% busy wait | 每次中斷短暫處理 | 只在開始和結束 |\n| 適用場景 | 極短 I/O | 一般 I/O | 大量資料傳輸 |\n| 硬體需求 | 最簡單 | 需要中斷控制器 | 需要 DMA controller |\n\n【考試連結】(1) 三種 I/O 方式的比較是經典考題。(2) DMA 是直接在「裝置和記憶體」之間傳輸，不經過 CPU 的 register。(3) Interrupt 讓 CPU 可以做其他事，但每次傳輸仍需 CPU 介入；DMA 進一步把「傳輸」這件事也交出去。",
           "bullets": [
             "Programmed I/O 常需 CPU 處理資料搬移",
             "Interrupt 有 context-switch 成本",
@@ -3289,7 +3289,7 @@
         },
         {
           "title": "位址與中斷流程",
-          "body": "Memory-mapped I/O 把 device registers 映射到 address space。Interrupt 發生時 CPU 保存必要狀態、辨識來源、執行 ISR 後返回。",
+          "body": "【I/O 定址方式】CPU 如何和 I/O 裝置溝通？兩種方式：\n\n• Memory-mapped I/O：I/O 裝置的暫存器被映射到記憶體位址空間的某個區域。CPU 用和存取記憶體相同的指令（load/store）來存取 I/O 裝置。例如把 video memory 映射到特定的記憶體位址，寫入該位址就能在螢幕上顯示。\n優點：不需要特殊的 I/O 指令。\n缺點：佔用記憶體位址空間。\n\n• Port-mapped I/O（Isolated I/O）：I/O 裝置有獨立的位址空間（port addresses），CPU 用特殊的 I/O 指令（如 x86 的 IN/OUT）存取。\n優點：不佔用記憶體位址空間。\n缺點：需要特殊的指令。\n\n【Interrupt 完整流程】\n(1) I/O 裝置完成工作，透過 interrupt request line 發送 interrupt signal 給 CPU。\n(2) CPU 完成當前指令後檢查 interrupt line。\n(3) CPU 保存當前的 context（PC、registers 等）到 stack。\n(4) CPU 透過 interrupt vector table 找到對應的 interrupt handler 位址。每種 interrupt 有一個 vector number，vector table 是「vector number → handler 位址」的對照表。\n(5) CPU 跳轉到 interrupt handler 執行。Handler 處理 I/O 結果（如把資料從 buffer 複製到 process 的記憶體）。\n(6) Handler 完成後，CPU 從 stack 恢復之前的 context，繼續執行原本的指令。\n\n【Interrupt priority】多個裝置同時中斷時，需要 priority 決定先處理哪個。方法：Programmable Interrupt Controller（PIC）或 APIC，根據設定的 priority level 排隊。高優先權的 interrupt 可以打斷低優先權的 handler（nested interrupt）。\n\n【考試連結】(1) Memory-mapped I/O vs port-mapped I/O 的差異。(2) Interrupt 的流程步驟。(3) Interrupt vector table 的角色。(4) Interrupt 和 exception/trap 的差異 — interrupt 來自外部（硬體），exception 來自 CPU 內部（如除以零、page fault）。",
           "bullets": [
             "32-bit byte address 在簡化模型下可定位 2^32 bytes",
             "Device register 不等於 CPU general-purpose register"
@@ -3297,7 +3297,7 @@
         },
         {
           "title": "效能必須先定義指標",
-          "body": "Latency 是一次操作完成前等待；throughput 是單位時間完成量。提高 throughput 不保證每次 latency 也降低。",
+          "body": "衡量電腦系統效能不能只看一個數字（如 CPU 頻率），必須根據使用場景選擇適當的指標：\n\n【CPU 效能指標】\n• Clock frequency（時脈頻率）：每秒 clock cycles 數。GHz 等級。但高頻率不等於高效能（要看 CPI）。\n• CPI（Cycles Per Instruction）：平均每條指令需要的 clock cycles。不同指令的 CPI 不同（add 可能 1 cycle，memory access 可能 100+ cycles）。\n• MIPS（Million Instructions Per Second）：每秒百萬條指令。問題：不同 ISA 的指令功能不同，MIPS 無法跨架構比較。\n• FLOPS（Floating Point Operations Per Second）：每秒浮點運算次數。用於科學計算和 GPU 效能衡量。\n\nCPU 執行時間 = 指令數 × CPI × Clock cycle time = 指令數 × CPI / Clock frequency\n\n【記憶體效能】\n• Bandwidth（頻寬）：單位時間傳輸的資料量（GB/s）。\n• Latency（延遲）：從發出 request 到收到第一個 byte 的時間。\n• AMAT（Average Memory Access Time）= Hit time + Miss rate × Miss penalty。\n\n【I/O 效能】\n• IOPS（Input/Output Operations Per Second）：每秒 I/O 操作次數。SSD 通常比 HDD 高 100 倍以上。\n• Throughput（吞吐量）：每秒傳輸的資料量。\n• Seek time（尋道時間，HDD）：磁碟臂移動到正確 track 的時間。\n\n【系統整體效能】\n• Amdahl's law：限制因素分析。Speedup = 1 / (p + (1-p)/n)。\n• Benchmark：用標準化的程式（如 SPEC、Geekbench）在不同系統上運行，比較得分。比單一指標更有意義。\n\n【考試連結】(1) 不能只用 clock frequency 比較不同 CPU 的效能。(2) CPU time 公式和 AMAT 公式是常考計算題。(3) MIPS 的跨架構比較陷阱。(4) 考古題常混用 MB（megabyte）和 Mb（megabit），注意 1 byte = 8 bits。",
           "bullets": [
             "Batching 可提高 throughput 卻增加個別等待",
             "Buffering 可吸收短期速率差"
@@ -3305,7 +3305,7 @@
         },
         {
           "title": "顯示與列印指標不可混用",
-          "body": "Display resolution 通常以水平×垂直 pixels 描述畫面格數，例如 Full HD 1920×1080；printer resolution 常以 dpi 描述每英吋可放置的 dots。兩者都談細節密度，但量測對象與單位不同。",
+          "body": "螢幕和印表機使用不同的解析度和品質指標，考古題常考你能否區分：\n\n【螢幕（Display）指標】\n• Resolution（解析度）：水平 × 垂直的像素數。例如 1920×1080（Full HD）、3840×2160（4K UHD）。像素越多，畫面越清晰。\n• PPI（Pixels Per Inch）：每英寸的像素密度。同樣的 resolution 在較小的螢幕上 PPI 更高，顯示更細緻。例如 27 吋 1080p 約 82 PPI，5.5 吋 1080p 約 401 PPI。\n• Refresh rate（更新率）：螢幕每秒重繪畫面的次數。60 Hz 表示每秒更新 60 次。高更新率（120/144/240 Hz）讓動態畫面更流暢，重要於遊戲和影片。\n• Response time（反應時間）：像素從一個顏色變成另一個顏色的時間（ms）。越短越好，減少動態模糊。\n\n【印表機（Printer）指標】\n• DPI（Dots Per Inch）：每英寸的墨點數。DPI 越高，列印品質越好。一般文件 300 DPI 足夠，照片列印至少 600 DPI。\n• PPM（Pages Per Minute）：每分鐘列印頁數。衡量列印速度。\n\n【PPI vs DPI】\n• PPI 用於螢幕（pixels per inch）。\n• DPI 用於列印（dots per inch）。\n雖然日常口語常混用，但技術上它們是不同的概念：一個 screen pixel 可能由多個 sub-pixel（RGB）組成；一個 print dot 通常是單色墨點。\n\n【色彩深度（Color Depth）】每個 pixel 用多少 bits 表示顏色。\n• 8-bit：256 色。\n• 16-bit：65,536 色（High Color）。\n• 24-bit：約 16.7 百萬色（True Color，每個 RGB channel 8 bits）。\n• 32-bit：24-bit + 8-bit alpha channel（透明度）。\n\n影像檔案大小估算：Width × Height × Color depth / 8 = bytes（未壓縮）。\n例如：1920×1080 × 24 bits / 8 = 6,220,800 bytes ≈ 5.93 MB。\n\n【考試連結】(1) PPI 和 DPI 的差異。(2) 影像檔案大小計算。(3) Resolution 和 refresh rate 是不同的指標（前者是空間解析度，後者是時間解析度）。",
           "bullets": [
             "Pixel 是顯示影像的離散 picture element",
             "Dpi 常描述印表機輸出點密度",
@@ -3359,7 +3359,7 @@
       "title": "程式執行基礎：型別、控制流程、函式與記憶體",
       "summary": "從 type system 與 control flow 追蹤程式狀態，再用 function call、scope、recursion、stack、heap 與 pointer/reference 說明資料的可見範圍與生命週期。",
       "evidenceNote": "指標與動態記憶體在 canonical metadata 為 0 題 direct primary refs；本節是 foundational coverage，引用的 refs 直接支撐型別、程式典範、執行特性與遞迴，不把它們當成指標題的直接證據。",
-      "estimatedMinutes": 40,
+      "estimatedMinutes": 33,
       "minimumPastPaperRefs": 6,
       "learningObjectives": [
         "以型別與 control flow 追蹤程式",
@@ -3404,7 +3404,7 @@
       "sections": [
         {
           "title": "型別與控制流程",
-          "body": "Type system 對 values 與 expressions 分類並限制操作。If、loop、switch 改變執行順序；追蹤時要記錄每步狀態。",
+          "body": "程式語言透過 data type（資料型別）告訴電腦如何解讀記憶體中的 bit pattern。常見的 primitive types：\n\n• int（整數）：通常 32 bits，範圍 -2³¹ 到 2³¹-1（使用 2's complement）。\n• float/double（浮點數）：遵循 IEEE 754 標準。float 32 bits（~7 位有效數字），double 64 bits（~15 位有效數字）。浮點數有精度限制 — 0.1 + 0.2 ≠ 0.3（因為 0.1 在二進位中是無限循環小數）。\n• char（字元）：通常 1-2 bytes。ASCII 使用 7 bits（128 字元），Unicode/UTF-8 可變長度。\n• boolean：true 或 false。\n\n【型別的重要性】同樣的 bit pattern 01000001，作為 int 解讀是 65，作為 char 解讀是 'A'，作為 float 解讀是另一個數。型別決定了解讀方式、運算方式和佔用空間。\n\n【控制流程】程式不一定從第一行執行到最後一行。控制流程結構讓程式能做選擇和重複：\n\n• Sequential（循序）：按順序一行一行執行。\n• Selection（選擇/條件）：if-else, switch-case。根據條件決定執行哪段程式碼。\n  if (score >= 60) pass(); else fail();\n• Iteration（迴圈/重複）：for, while, do-while。重複執行一段程式碼直到條件不成立。\n  for (int i = 0; i < n; i++) { ... }  // 執行 n 次\n  while (x > 0) { x = x / 2; }         // 直到 x ≤ 0\n\n【Short-circuit evaluation】邏輯運算的短路求值：\n• A && B：如果 A 是 false，不評估 B（因為結果一定是 false）。\n• A || B：如果 A 是 true，不評估 B（因為結果一定是 true）。\n\n【考試連結】(1) 浮點數的精度問題（0.1+0.2≠0.3）。(2) for 迴圈的初始化、條件、更新三個部分。(3) 追蹤程式碼的執行流程是常見的手動追蹤題。(4) int overflow：32-bit int 最大值 2³¹-1 = 2147483647，加 1 會 overflow。",
           "bullets": [
             "Dynamic typing 仍有 runtime types",
             "Cast 不保證資料不損失",
@@ -3413,7 +3413,7 @@
         },
         {
           "title": "函式、scope 與 lifetime",
-          "body": "Function 建立輸入、局部狀態與輸出的邊界。Lexical scope 由程式文字結構決定名稱解析；object lifetime 可跨越某個 scope。",
+          "body": "Function（函式/方法）是把一段可重複使用的程式碼封裝成一個有名字的區塊，接受參數、執行運算、回傳結果。\n\n【函式的基本結構】\nint add(int a, int b) {    // return type, function name, parameters\n    int result = a + b;     // function body\n    return result;          // return statement\n}\nint sum = add(3, 5);       // function call, arguments\n\n• Parameter（參數/形式參數）：函式定義中的變數名（a, b）。\n• Argument（引數/實際參數）：呼叫函式時傳入的值（3, 5）。\n\n【Pass by Value vs Pass by Reference】\n• Pass by value：傳入值的副本。函式內修改 parameter 不影響外部的原始變數。Java 的 primitive types 和 C 預設都是 pass by value。\n• Pass by reference：傳入變數的「參考/位址」。函式內的修改直接影響外部的原始變數。C++ 使用 & 符號，Java 的 object 傳的是 reference 的值（pass reference by value）。\n\n【Scope（作用域）】變數在程式中可以被存取的範圍。\n• Global scope：在所有函式外宣告，整個程式都能存取。應盡量避免（降低耦合）。\n• Local scope：在函式或 block 內宣告，只在該範圍內可見。\n• Block scope：在 { } 內宣告的變數只在該 block 內可見（如 for 迴圈的 int i）。\n\n【Lifetime（生命週期）】變數在記憶體中存在的時間。\n• Automatic（自動）：local variable，函式執行時建立、結束時銷毀。存在 stack 上。\n• Static：static variable，程式執行期間一直存在。初始化只執行一次。\n• Dynamic：用 malloc/new 手動配置，用 free/delete 手動釋放。存在 heap 上。\n\n【考試連結】(1) Pass by value 和 pass by reference 的行為差異是常考追蹤題。(2) Local variable 的 scope 和 lifetime。(3) Global variable 的風險和替代方案。",
           "bullets": [
             "Parameter passing 規則依語言而定",
             "Local variable 通常只在 block/function 內可見"
@@ -3421,7 +3421,7 @@
         },
         {
           "title": "遞迴與 call stack",
-          "body": "Recursive call 會建立新的 activation record，保存 parameters、locals 與 return location。缺 base case 或無法收斂可導致 stack overflow。",
+          "body": "Recursion（遞迴）是函式呼叫自己的技巧。每次遞迴呼叫都會在 call stack 上新增一個 stack frame，包含該次呼叫的 local variables、parameters 和 return address。\n\n【遞迴的兩個必要條件】\n(1) Base case（基礎案例）：不再遞迴的終止條件。沒有 base case → 無限遞迴 → stack overflow。\n(2) Recursive case（遞迴案例）：把問題分解成更小的子問題，呼叫自己解決。每次遞迴呼叫必須朝 base case 靠近。\n\n【經典範例：階乘 n!】\nint factorial(int n) {\n    if (n <= 1) return 1;        // base case\n    return n * factorial(n - 1);  // recursive case\n}\n\nfactorial(4) 的執行過程：\nfactorial(4) → 4 * factorial(3)\n  factorial(3) → 3 * factorial(2)\n    factorial(2) → 2 * factorial(1)\n      factorial(1) → 1  (base case, 開始回傳)\n    → 2 * 1 = 2\n  → 3 * 2 = 6\n→ 4 * 6 = 24\n\n【Call Stack 運作】每次函式呼叫（不只是遞迴）都在 stack 上 push 一個 frame。Frame 包含：parameters、local variables、return address（呼叫完成後要回到哪裡繼續執行）。函式 return 時 pop 該 frame，根據 return address 回到呼叫者。\n\n【Stack Overflow】遞迴太深（例如 n 太大，或忘記 base case），stack frames 把 stack 的空間用完 → stack overflow error。解法：(1) 確保有正確的 base case。(2) 改用 iterative（迴圈）版本。(3) Tail recursion optimization（尾遞迴優化，部分語言和編譯器支援）。\n\n【遞迴 vs 迴圈】任何遞迴都可以改寫成迴圈（使用顯式 stack）。遞迴通常程式碼更簡潔（特別是 tree traversal、divide-and-conquer），但空間效率較差（每次呼叫都用 stack space）。\n\n【考試連結】(1) 手動追蹤遞迴的執行過程是高頻考題。(2) 遞迴的時間複雜度分析（如 fibonacci 的 O(2ⁿ)）。(3) Stack frame 包含什麼。(4) Stack overflow 的原因和解法。",
           "bullets": [
             "先找 base case",
             "再驗證每步使問題變小"
@@ -3429,7 +3429,7 @@
         },
         {
           "title": "指標與動態記憶體",
-          "body": "Pointer/reference 可間接存取 object。Stack 常配合 calls 管理，heap 用於動態生命週期，但精確配置由 language/runtime 決定。",
+          "body": "Pointer（指標）是一個變數，其值是另一個變數的記憶體位址。指標讓程式能直接操作記憶體位址，是 C/C++ 的核心概念。\n\n【基本語法（C 語言）】\nint x = 42;       // x 是 int，值為 42\nint *p = &x;      // p 是 int 指標，存放 x 的位址。& 是取址運算子。\nprintf(\"%d\", *p);  // *p 是解引用（dereference），取得 p 指向的值 → 42\n*p = 100;          // 透過指標修改 x 的值 → x 變成 100\n\n【指標與陣列】在 C 中，陣列名是指向陣列第一個元素的指標。a[i] 等價於 *(a+i)。指標算術：p+1 不是加 1 byte，而是加一個元素的大小（如 int* 加 4 bytes）。\n\n【動態記憶體配置】\n程式的記憶體分為：\n• Stack：local variables、function parameters。自動管理（function return 就釋放）。空間較小。\n• Heap：動態配置的記憶體。手動管理（程式設計師負責配置和釋放）。空間較大。\n\nC 語言：\nint *arr = (int*)malloc(10 * sizeof(int));  // 在 heap 上配置 10 個 int\n// 使用 arr...\nfree(arr);  // 手動釋放，否則 memory leak\n\nC++：\nint *arr = new int[10];  // 配置\ndelete[] arr;            // 釋放\n\n【Memory Leak（記憶體洩漏）】配置了記憶體但忘記釋放，程式佔用的記憶體不斷增加。長時間運行的程式（如 server）如果有 memory leak，最終可能耗盡記憶體。\n\n【Dangling Pointer】指標指向的記憶體已經被釋放。存取 dangling pointer 是 undefined behavior — 可能 crash、可能讀到垃圾值、可能看起來正常但在別處出錯。\n\n【Garbage Collection（GC）】Java、Python 等語言使用 GC 自動追蹤哪些物件不再被引用，自動回收記憶體。程式設計師不需要手動 free。優點是避免 memory leak 和 dangling pointer；缺點是 GC 執行時可能造成暫停（pause）。\n\n【考試連結】(1) 指標的基本操作（取址 &、解引用 *）。(2) Stack 和 heap 的差異。(3) Memory leak 和 dangling pointer 的定義和原因。(4) GC 和手動記憶體管理的比較。",
           "bullets": [
             "Null 不指向有效 object",
             "Use-after-free 與 leak 是不同錯誤",
@@ -3489,7 +3489,7 @@
       "title": "從原始碼到上線：編譯、測試與軟體生命週期",
       "summary": "以 GCC 的 preprocessing、compilation、assembly、linking 階段為起點，連結 C++ error-handling 原則、可重複 verification 與 NIST SSDF 的安全軟體生命週期。",
       "evidenceNote": "Language runtime 的 canonical direct ref 有題面與 answer-review mismatch，因此沒有安全 direct refs；錯誤處理與測試也為 0 題 direct primary refs，兩者皆為 reviewed-source-backed foundational coverage。Software lifecycle 則保留題面完整且 eligible 的 q-pp-im-it-106-23、q-pp-im-it-110-10，僅支撐 development-diagram／UML 辨識，不把 UML 內容歸因於 NIST SSDF。",
-      "estimatedMinutes": 36,
+      "estimatedMinutes": 25,
       "minimumPastPaperRefs": 2,
       "learningObjectives": [
         "區分 preprocessing、compilation、assembly 與 linking",
@@ -3625,7 +3625,7 @@
       ],
       "title": "線性結構與雜湊：依操作需求選容器",
       "summary": "以 stack、queue、array、linked list 與 hash table 的操作契約為核心，從存取順序、更新成本、碰撞處理與 load factor 判斷資料結構；不把平均 O(1) 誤寫成最壞保證。",
-      "estimatedMinutes": 38,
+      "estimatedMinutes": 25,
       "minimumPastPaperRefs": 3,
       "learningObjectives": [
         "依 LIFO、FIFO、索引存取與中間插刪需求選擇線性結構",
@@ -3757,7 +3757,7 @@
       ],
       "title": "圖演算法與設計策略：從相依關係到可證明步驟",
       "summary": "用 BFS、DFS、topological sort、MST 與最短路徑建立圖問題辨識框架，再比較 greedy、divide-and-conquer 與 dynamic programming 的前提及正確性論證。",
-      "estimatedMinutes": 42,
+      "estimatedMinutes": 25,
       "minimumPastPaperRefs": 1,
       "evidenceNote": "im-it-ds-algorithm-design 在 canonical question metadata 中沒有 direct primary past-paper refs；im-it-ds-graphs 本課也只有 1 題內容完整且可直接使用的 topological-sort ref。112-26 題面破碎，已排除。其餘 graph 與 algorithm-design 內容是 reviewed MIT algorithms source 支撐的 foundational coverage，不宣稱歷屆高頻。",
       "learningObjectives": [
@@ -3896,7 +3896,7 @@
       ],
       "title": "ER 建模與正規化：從需求語句到穩定資料表",
       "summary": "先用 entity、attribute、relationship、cardinality 建立概念模型，再以 functional dependency、1NF、2NF、3NF 分解冗餘與更新異常。",
-      "estimatedMinutes": 40,
+      "estimatedMinutes": 25,
       "minimumPastPaperRefs": 5,
       "learningObjectives": [
         "辨識 entity、attribute、relationship 與 cardinality",
@@ -4030,7 +4030,7 @@
       ],
       "title": "資料庫儲存與索引：等值、範圍與分析查詢",
       "summary": "從 page I/O 與資料排列理解 heap file、B+ tree、hash index、多維分析結構及 optimizer 選擇，避免把所有索引都當成無條件加速器。",
-      "estimatedMinutes": 32,
+      "estimatedMinutes": 25,
       "minimumPastPaperRefs": 3,
       "learningObjectives": [
         "說明索引以額外空間與維護成本換取讀取效率",
@@ -4161,7 +4161,7 @@
       ],
       "title": "同步、互斥與死結：讓並行工作安全前進",
       "summary": "從 race condition、critical section、mutex、semaphore 建立同步基本模型，再區分 deadlock、livelock、starvation 與 Banker's safety check。",
-      "estimatedMinutes": 38,
+      "estimatedMinutes": 25,
       "minimumPastPaperRefs": 4,
       "learningObjectives": [
         "以 interleaving 說明 race condition",
@@ -4306,7 +4306,7 @@
       ],
       "title": "雲端、Edge 與網路服務品質：把工作放在正確的位置",
       "summary": "從 SaaS/PaaS 與 hybrid cloud 的服務責任切入，理解 edge computing 為何把處理移近資料來源，再用 bandwidth、latency、jitter、availability、streaming 與 VPN 判讀使用體驗。",
-      "estimatedMinutes": 34,
+      "estimatedMinutes": 25,
       "minimumPastPaperRefs": 4,
       "learningObjectives": [
         "區分 SaaS、PaaS 與部署模型",
@@ -4440,7 +4440,7 @@
       ],
       "title": "從 CIA 到 Zero Trust：把資安目標、身分與治理串起來",
       "summary": "先用 CIA 與 risk 語言定義要保護什麼，再分辨 identification、authentication、authorization、accountability，最後以 RBAC、SSO、Zero Trust、ISMS、ISO 27001 與 privacy 建立持續治理。",
-      "estimatedMinutes": 40,
+      "estimatedMinutes": 25,
       "minimumPastPaperRefs": 5,
       "learningObjectives": [
         "正確展開 CIA 並連結控制措施",
@@ -4583,7 +4583,7 @@
       ],
       "title": "從入口到人心：網路、應用與社交攻擊的分層防禦",
       "summary": "以攻擊發生的位置分類 MITM、DDoS、buffer overflow、SQL injection、malware、phishing 與 social engineering，再把 HTTPS/SSH、firewall、secure coding、patching 與使用者驗證放回適當防線。",
-      "estimatedMinutes": 38,
+      "estimatedMinutes": 25,
       "minimumPastPaperRefs": 4,
       "learningObjectives": [
         "依攻擊面分類網路、應用、惡意程式與社交工程",
@@ -4715,7 +4715,7 @@
       ],
       "title": "Blockchain 與 Mining：可驗證帳本不是中央資料庫",
       "summary": "以 NISTIR 8202 的 tamper-evident distributed ledger 定義，連結 transaction、block、hash linkage 與 consensus。考題把 mining 簡化為交易驗證，本課再區分 validating nodes 與 miners 在 Bitcoin-like proof-of-work 流程的角色。",
-      "estimatedMinutes": 28,
+      "estimatedMinutes": 25,
       "minimumPastPaperRefs": 4,
       "evidenceNote": "四題 eligible refs 直接支撐 mining 考題簡化與無中央權威的可驗證帳本；NISTIR 8202 提供 hash linkage、distributed consensus 與 proof-of-work 的技術邊界。",
       "learningObjectives": [
@@ -4845,7 +4845,7 @@
       ],
       "title": "從神經網路到 Transformer：層級、序列與 Attention",
       "summary": "以 layered representation 與 training 為底座，比較 CNN 的局部共享特性、RNN/LSTM 的序列狀態，再進入 Transformer self-attention 的 token 關聯。",
-      "estimatedMinutes": 36,
+      "estimatedMinutes": 25,
       "minimumPastPaperRefs": 3,
       "evidenceNote": "im-it-ai-cnn-rnn-sequence 目前沒有 direct primary past-paper refs，屬 foundational coverage；對應 cards 不掛考古 refs。",
       "learningObjectives": [
@@ -4976,7 +4976,7 @@
       ],
       "title": "生成式 AI 與治理：從 GPT/RAG 題型到風險責任",
       "summary": "先掌握考題直接要求的 GPT 展開與 RAG 定義，再以 NIST AI RMF 與 GenAI Profile 區分 confabulation、bias、privacy 與 accountability，不把檢索或流暢文字當成正確保證。",
-      "estimatedMinutes": 30,
+      "estimatedMinutes": 25,
       "minimumPastPaperRefs": 2,
       "evidenceNote": "im-it-ai-ethics-governance 沒有 direct primary past-paper refs，屬 foundational coverage；對應 cards 不掛考古 refs。RAG 只保留 q-pp-im-it-115-30 直接支持的「生成前查詢外部權威知識庫」層次。",
       "learningObjectives": [
@@ -5104,7 +5104,7 @@
       ],
       "title": "CNN 與影像辨識：從 filter 到特徵金字塔",
       "summary": "深入 CNN 的卷積運算、pooling 策略與典型架構演進（LeNet → VGG → ResNet），理解 feature map 的階層語義，並以 transfer learning 連結預訓練模型與下游任務。補齊零考古題的 CNN 子題。",
-      "estimatedMinutes": 34,
+      "estimatedMinutes": 25,
       "minimumPastPaperRefs": 0,
       "evidenceNote": "im-it-ai-cnn-rnn-sequence 目前沒有 direct primary past-paper refs，本課為教材導向的進階補充。",
       "learningObjectives": [
@@ -5226,7 +5226,7 @@
       ],
       "title": "RNN 與 LSTM：序列記憶、遺忘與長期依賴",
       "summary": "從 vanilla RNN 的 hidden state 更新出發，理解為何長序列會遇到 vanishing gradient，再以 LSTM 的 gate 機制解決長期依賴。覆蓋典型序列任務（語言模型、翻譯、時序預測）的架構選擇。",
-      "estimatedMinutes": 32,
+      "estimatedMinutes": 25,
       "minimumPastPaperRefs": 0,
       "evidenceNote": "im-it-ai-cnn-rnn-sequence 目前沒有 direct primary past-paper refs，本課為教材導向的進階補充。",
       "learningObjectives": [
@@ -5348,7 +5348,7 @@
       ],
       "title": "Self-Attention 機制與 Transformer 架構詳解",
       "summary": "從 Q/K/V 矩陣運算理解 scaled dot-product attention，再組合成 multi-head attention，搭配 positional encoding、layer normalization 與 feed-forward layers 構成完整 Transformer block。覆蓋 encoder-only（BERT）、decoder-only（GPT）與 encoder-decoder 三種變體。",
-      "estimatedMinutes": 38,
+      "estimatedMinutes": 25,
       "minimumPastPaperRefs": 1,
       "learningObjectives": [
         "從 Q、K、V 矩陣推導 scaled dot-product attention 的計算流程",
@@ -5478,7 +5478,7 @@
       ],
       "title": "RAG、Prompt Engineering 與 LLM 應用實務",
       "summary": "從 RAG 的 retrieve-then-generate 流程出發，理解 embedding、vector search 與 chunking 策略。再覆蓋 prompt engineering 的核心技巧（few-shot、chain-of-thought、system prompt），以及 LLM 應用的常見架構選擇（fine-tuning vs RAG vs agent）。",
-      "estimatedMinutes": 36,
+      "estimatedMinutes": 25,
       "minimumPastPaperRefs": 1,
       "learningObjectives": [
         "畫出 RAG 系統的完整資料流：indexing → retrieval → augmentation → generation",
@@ -5606,7 +5606,7 @@
       ],
       "title": "AI 倫理、偏差與治理：從公平性指標到法規框架",
       "summary": "從 algorithmic bias 的來源與類型出發，理解 fairness metric 之間的不可能定理，再覆蓋可解釋性（XAI）的技術光譜。最後連結 EU AI Act 與 NIST AI RMF 的風險分級治理框架。補齊零考古題的 AI 倫理子題。",
-      "estimatedMinutes": 34,
+      "estimatedMinutes": 25,
       "minimumPastPaperRefs": 0,
       "evidenceNote": "im-it-ai-ethics-governance 目前沒有 direct primary past-paper refs，但 AI 倫理與治理是近年考試趨勢。",
       "learningObjectives": [

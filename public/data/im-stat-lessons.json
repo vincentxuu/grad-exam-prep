@@ -3,20 +3,8 @@
   "subjectId": "im-stat",
   "status": "reviewed",
   "examScope": {
-    "applicableYears": [
-      114,
-      115
-    ],
-    "notApplicableYears": [
-      106,
-      107,
-      108,
-      109,
-      110,
-      111,
-      112,
-      113
-    ],
+    "applicableYears": [114, 115],
+    "notApplicableYears": [106, 107, 108, 109, 110, 111, 112, 113],
     "notApplicableReason": "106–113 學年度資訊管理學研究所招生筆試未設獨立統計考科；官方索引與各年完整 MIS 卷均無統計題，因此不是缺卷。",
     "firstAppearance": "114 學年度統計題首次出現在資訊管理導論合科卷；115 學年度官方科名改為資訊管理導論與統計學。"
   },
@@ -34,104 +22,106 @@
       "id": "lesson-im-stat-prereq-expectation-variance",
       "kind": "prerequisite",
       "subtopicId": "im-stat-probability-expectation-variance",
-      "coveredSubtopicIds": [
-        "im-stat-probability-expectation-variance"
-      ],
+      "coveredSubtopicIds": ["im-stat-probability-expectation-variance"],
       "title": "先備：把平均與波動拆開看",
       "summary": "先建立期望值、變異數、線性組合與獨立性的運算骨架，供 PMF 與估計量課使用。",
-      "estimatedMinutes": 24,
+      "estimatedMinutes": 35,
       "evidenceNote": "這是必要先備課，不宣稱由 114–115 的某一題直接完整覆蓋。",
-      "sourceRefs": [
-        "src-im-stat-openintro",
-        "src-im-stat-psu-414"
-      ],
+      "sourceRefs": ["src-im-stat-openintro", "src-im-stat-psu-414"],
       "pastPaperRefs": [],
       "learningObjectives": [
-        "計算離散變數期望值",
-        "分辨變異數與標準差",
-        "處理獨立變數線性組合的變異數"
+        "用 PMF 計算離散隨機變數的期望值 E[X]",
+        "用定義式和簡便式計算變異數 Var(X)，並說明兩者何時用",
+        "推導線性轉換 E(aX+b) 和 Var(aX+b) 的結果",
+        "判斷兩變數獨立時 Var(X+Y) 的計算方式，以及不獨立時需加入什麼項"
       ],
       "learningScenario": {
         "title": "多次量體溫的讀數",
         "hook": "同一支溫度計每次讀值略有不同；中心位置與晃動程度是兩件事。",
         "predict": "若把兩次讀數相加，中心與波動會如何改變？",
         "mapping": [
-          {
-            "everyday": "長期平均讀數",
-            "technical": "期望值 E(Y)"
-          },
-          {
-            "everyday": "讀值上下晃動",
-            "technical": "變異數 Var(Y)"
-          },
-          {
-            "everyday": "把讀數乘倍率",
-            "technical": "Var(aY)=a²Var(Y)"
-          },
-          {
-            "everyday": "兩次誤差互不影響",
-            "technical": "獨立時 covariance 為 0"
-          }
+          { "everyday": "長期平均讀數", "technical": "期望值 E(Y)" },
+          { "everyday": "讀值上下晃動", "technical": "變異數 Var(Y)" },
+          { "everyday": "把讀數乘倍率", "technical": "Var(aY)=a²Var(Y)" },
+          { "everyday": "兩次誤差互不影響", "technical": "獨立時 covariance 為 0" }
         ],
         "boundary": "實際量測可能有系統性偏誤與相關誤差，不能一律當作 iid。",
-        "examCues": [
-          "E(aX+b)",
-          "Var(aX)",
-          "independent sample",
-          "σ²"
-        ]
+        "examCues": ["E(aX+b)", "Var(aX)", "independent sample", "σ²"]
       },
       "sections": [
         {
-          "title": "中心",
-          "body": "期望值是依機率加權的長期平均。",
+          "title": "期望值：依機率加權的長期平均",
+          "body": "期望值 (expected value) E[X] 是隨機變數 X 所有可能值的加權平均，權重就是各值出現的機率。離散型公式：E[X] = Σ_x x · P(X=x)。直覺上，如果你把實驗重複無限次，把每次結果記錄下來取平均，那個平均值就趨近 E[X]。\n\n【範例】一顆不公平的骰子，P(X=1)=0.1, P(X=2)=0.2, P(X=3)=0.3, P(X=4)=0.2, P(X=5)=0.1, P(X=6)=0.1。\nE[X] = 1(0.1) + 2(0.2) + 3(0.3) + 4(0.2) + 5(0.1) + 6(0.1) = 0.1 + 0.4 + 0.9 + 0.8 + 0.5 + 0.6 = 3.3\n\n注意 E[X]=3.3 不是 X 可能取到的值（骰子沒有 3.3 點），它是一個加權位置指標。期望值的核心性質是線性性：E[aX+b] = aE[X]+b，不需要知道分佈形狀就成立。\n\n考試陷阱：E[X²] ≠ (E[X])²。這個不等式正是變異數存在的原因（見下一節）。如果題目問 E[g(X)]，你不能把 g 直接套在 E[X] 上，必須回到 Σ g(x)·P(X=x)。",
           "bullets": [
-            "E(aX+b)=aE(X)+b"
+            "E[X] = Σ_x x · P(X=x)，權重是機率，所有機率必須加總為 1",
+            "E[X] 不一定是 X 的可能取值，例如公平骰子 E[X]=3.5",
+            "線性性：E[aX+b] = aE[X]+b，對任何分佈都成立，不需獨立假設",
+            "E[X+Y] = E[X]+E[Y] 永遠成立（不需獨立），但 E[XY] = E[X]E[Y] 只在獨立時成立",
+            "E[g(X)] ≠ g(E[X])，除非 g 是線性函數"
           ]
         },
         {
-          "title": "波動",
-          "body": "變異數衡量離中心的平方距離。",
+          "title": "變異數：衡量離中心的平方距離",
+          "body": "變異數 (variance) 量化 X 偏離期望值的程度：Var(X) = E[(X - E[X])²]。展開後得到簡便公式：Var(X) = E[X²] - (E[X])²。兩個公式數學上等價，但簡便式在計算時通常更快，因為你只需要分別算 E[X²] 和 E[X]。\n\n【範例】延續上面的骰子，E[X]=3.3。\nE[X²] = 1²(0.1) + 2²(0.2) + 3²(0.3) + 4²(0.2) + 5²(0.1) + 6²(0.1)\n      = 0.1 + 0.8 + 2.7 + 3.2 + 2.5 + 3.6 = 12.9\nVar(X) = E[X²] - (E[X])² = 12.9 - (3.3)² = 12.9 - 10.89 = 2.01\n\n標準差 SD(X) = √Var(X) = √2.01 ≈ 1.418，和 X 同單位（點數）。變異數的單位是原單位的平方，所以「方差 2.01 點²」在實際解讀時不直觀，通常報告標準差。\n\n線性轉換：Var(aX+b) = a²Var(X)。注意加常數 b 不影響波動（所有值同移），但乘以 a 會讓波動放大 a² 倍。考試最常考的錯誤就是寫成 Var(aX) = aVar(X)，漏掉平方。",
           "bullets": [
-            "Var(aX)=a²Var(X)"
+            "定義式 Var(X) = E[(X-μ)²]，簡便式 Var(X) = E[X²] - (E[X])²，兩者等價",
+            "Var(X) ≥ 0 永遠成立；Var(X)=0 表示 X 是常數（不隨機）",
+            "Var(aX+b) = a²Var(X)：加常數不改變波動，乘係數要平方",
+            "標準差 SD = √Var，與原變數同單位，比變異數更直觀",
+            "計算時先分別求 E[X] 和 E[X²]，再用簡便式，比定義式少一步減法"
           ]
         },
         {
-          "title": "相加",
-          "body": "變異數相加需要處理 covariance。",
+          "title": "兩變數相加：什麼時候變異數直接加？",
+          "body": "兩個隨機變數的和 X+Y 的變異數有通用公式：Var(X+Y) = Var(X) + Var(Y) + 2Cov(X,Y)。共變異數 Cov(X,Y) = E[XY] - E[X]E[Y] 衡量 X 和 Y 是否「一起動」。如果 Cov>0，X 大時 Y 也傾向大（同向），波動會被放大；Cov<0 則波動被抵消。\n\n當 X 和 Y 獨立時，Cov(X,Y)=0，所以 Var(X+Y) = Var(X) + Var(Y)，波動直接相加。但要特別注意：Cov=0 不一定代表獨立（獨立 → Cov=0，反過來不一定）。\n\n【範例】Y1, Y2 是 iid（獨立同分布），E[Yi]=μ, Var(Yi)=σ²。\n樣本平均 Ȳ = (Y1+Y2)/2。\nE[Ȳ] = (E[Y1]+E[Y2])/2 = (μ+μ)/2 = μ（不偏）\nVar(Ȳ) = Var((Y1+Y2)/2) = (1/2)²·Var(Y1+Y2) = (1/4)·(σ²+σ²) = σ²/2\n\n推廣到 n 個 iid 觀測值：Var(Ȳ) = σ²/n。這就是為什麼增加樣本數能降低估計的不確定性——分母是 n。\n\n考試陷阱：Var(X-Y) = Var(X) + Var(Y)（獨立時），注意是加不是減。因為 Var(-Y) = (-1)²Var(Y) = Var(Y)。很多學生會直覺寫成減法。",
           "bullets": [
-            "獨立時 covariance=0"
+            "通用公式：Var(X+Y) = Var(X) + Var(Y) + 2Cov(X,Y)",
+            "獨立 → Cov=0 → 變異數直接相加，但 Cov=0 不一定獨立",
+            "iid 樣本平均：Var(Ȳ) = σ²/n，樣本越大估計越穩定",
+            "Var(X-Y) = Var(X) + Var(Y)（獨立時），是加不是減！",
+            "Cov(X,Y) = E[XY] - E[X]E[Y]，可看成「乘積期望」減「期望乘積」"
           ]
         },
         {
-          "title": "檢查",
-          "body": "先確認權重、單位與獨立假設。",
+          "title": "計算流程與檢查清單",
+          "body": "面對期望值和變異數的計算題，建議用以下步驟避免出錯：\n\n第一步：確認隨機變數的 support（可能取值）和對應機率，檢查機率總和是否為 1。如果題目給的是權重而非機率，先正規化（除以總和）。\n\n第二步：決定要算什麼。如果目標是 E[g(X)]，列出每個 x 對應的 g(x)·P(X=x) 再加總。如果目標是 Var(X)，分別算 E[X] 和 E[X²]，用簡便式 E[X²]-(E[X])²。\n\n第三步：處理線性組合。把目標表達式拆成 aX+bY+c 的形式，先處理期望值（直接線性展開），再處理變異數（注意係數要平方、確認獨立性才能省略 Cov 項）。\n\n第四步：檢查答案的合理性。Var 不能是負的（如果算出負數，一定算錯了）。E[X] 應該落在 X 的 support 範圍內。標準差的單位和 X 一樣。\n\n【快速驗算】如果 X 只取兩個值 a 和 b，P(X=a)=p，P(X=b)=1-p，那 E[X]=pa+b(1-p)，Var(X)=p(1-p)(a-b)²。這個特例很適合拿來驗算 Bernoulli。",
           "bullets": [
-            "標準差與原變數同單位"
+            "步驟一：確認 support、機率列表、Σp=1",
+            "步驟二：E[X] 和 E[X²] 分開算，最後用簡便式求 Var",
+            "步驟三：線性組合先拆 aX+bY+c，期望值直接展開，變異數係數要平方",
+            "步驟四：Var ≥ 0、E[X] 在 support 範圍內、SD 與 X 同單位",
+            "Bernoulli 速算：E[X]=p, Var(X)=p(1-p)，可當成快速驗算工具"
           ]
         }
       ],
       "workedExamples": [
         {
-          "prompt": "E(Y)=μ、Var(Y)=σ²，求 E(2Y+1)。",
+          "prompt": "X 的 PMF：P(X=0)=0.3, P(X=1)=0.5, P(X=2)=0.2。求 E[X], Var(X), E[3X+2], Var(3X+2)。",
           "steps": [
-            "套線性性"
+            "E[X] = 0(0.3) + 1(0.5) + 2(0.2) = 0 + 0.5 + 0.4 = 0.9",
+            "E[X²] = 0²(0.3) + 1²(0.5) + 2²(0.2) = 0 + 0.5 + 0.8 = 1.3",
+            "Var(X) = E[X²] - (E[X])² = 1.3 - 0.81 = 0.49",
+            "E[3X+2] = 3(0.9) + 2 = 4.7（線性性）",
+            "Var(3X+2) = 3²·Var(X) = 9(0.49) = 4.41（加常數不影響變異數）"
           ],
-          "answer": "2μ+1"
+          "answer": "E[X]=0.9, Var(X)=0.49, E[3X+2]=4.7, Var(3X+2)=4.41"
         },
         {
-          "prompt": "Y1,Y2 iid，求 Var((Y1+Y2)/2)。",
+          "prompt": "Y1, Y2, Y3 iid，E[Yi]=10, Var(Yi)=4。求 Var(Ȳ) 和 Var(Y1-Y2)。",
           "steps": [
-            "獨立所以變異數相加",
-            "係數平方"
+            "Ȳ = (Y1+Y2+Y3)/3",
+            "Var(Ȳ) = (1/3)²·(Var(Y1)+Var(Y2)+Var(Y3)) = (1/9)·(4+4+4) = 12/9 = 4/3 ≈ 1.333",
+            "Var(Y1-Y2) = Var(Y1) + (-1)²Var(Y2) = 4+4 = 8（獨立，是加不是減）"
           ],
-          "answer": "σ²/2"
+          "answer": "Var(Ȳ) = 4/3, Var(Y1-Y2) = 8"
         }
       ],
       "commonPitfalls": [
-        "把 Var(aY) 寫成 aVar(Y)",
-        "未確認獨立就直接加變異數",
-        "把標準差和變異數混用"
+        "把 Var(aX) 寫成 aVar(X)，漏掉平方：正確是 a²Var(X)",
+        "未確認獨立就直接加變異數：不獨立時要加 2Cov(X,Y) 項",
+        "把標準差和變異數混用：σ 是標準差，σ² 是變異數",
+        "算 E[X²] 時把指數寫在機率上：正確是 Σ x²·P(x)，不是 Σ x·P(x)²",
+        "Var(X-Y) 寫成 Var(X)-Var(Y)：獨立時正確答案是 Var(X)+Var(Y)"
       ]
     },
     {
@@ -140,103 +130,108 @@
       "id": "lesson-im-stat-prereq-hypothesis-workflow",
       "kind": "prerequisite",
       "subtopicId": "im-stat-inference-hypothesis-workflow",
-      "coveredSubtopicIds": [
-        "im-stat-inference-hypothesis-workflow"
-      ],
+      "coveredSubtopicIds": ["im-stat-inference-hypothesis-workflow"],
       "title": "先備：假設檢定是一條決策流程",
       "summary": "把 H0/H1、統計量、參考分配、p 值與結論串成同一條不跳步的流程。",
-      "estimatedMinutes": 22,
+      "estimatedMinutes": 32,
       "evidenceNote": "這是迴歸 F 檢定與卡方檢定的共同先備，不代表歷屆題涵蓋所有檢定。",
-      "sourceRefs": [
-        "src-im-stat-openintro",
-        "src-im-stat-nist-handbook"
-      ],
+      "sourceRefs": ["src-im-stat-openintro", "src-im-stat-nist-handbook"],
       "pastPaperRefs": [],
       "learningObjectives": [
-        "寫出可檢驗的 H0/H1",
-        "以顯著水準作決策",
-        "避免把顯著關聯說成因果"
+        "寫出正確的 H0/H1 對，並說明為什麼 H0 包含等號",
+        "根據資料類型和假設選擇 z 檢定或 t 檢定",
+        "用 p 值和顯著水準 α 做出拒絕或不拒絕的決策",
+        "區分 Type I 和 Type II 錯誤，解釋 power 的意義"
       ],
       "learningScenario": {
         "title": "煙霧警報器的決策",
         "hook": "警報器先假設沒有火災，再看感測訊號是否異常到足以推翻原假設。",
         "predict": "警報響了，能否直接斷言起火原因？",
         "mapping": [
-          {
-            "everyday": "先假設沒有火災",
-            "technical": "虛無假設 H0"
-          },
-          {
-            "everyday": "感測器異常程度",
-            "technical": "test statistic"
-          },
-          {
-            "everyday": "允許的誤報門檻",
-            "technical": "significance level α"
-          },
-          {
-            "everyday": "警報後的決策",
-            "technical": "reject / fail to reject H0"
-          }
+          { "everyday": "先假設沒有火災", "technical": "虛無假設 H0" },
+          { "everyday": "感測器異常程度", "technical": "test statistic" },
+          { "everyday": "允許的誤報門檻", "technical": "significance level α" },
+          { "everyday": "警報後的決策", "technical": "reject / fail to reject H0" }
         ],
         "boundary": "統計檢定量化資料與 H0 的不相容程度，不會自動證明因果或 H1 為真。",
-        "examCues": [
-          "H0/H1",
-          "α=0.05",
-          "p-value",
-          "reject H0"
-        ]
+        "examCues": ["H0/H1", "α=0.05", "p-value", "reject H0"]
       },
       "sections": [
         {
-          "title": "立假設",
-          "body": "先寫母體層次命題。",
+          "title": "第一步：把問題翻譯成假設對",
+          "body": "假設檢定從兩個互斥的母體宣稱開始。虛無假設 H0 代表「什麼都沒發生」或「沒有差異」，它一定包含等號（=, ≤, ≥）。對立假設 H1（或 Ha）是你真正想主張的方向。\n\n【為什麼 H0 有等號？】因為我們需要在 H0 為真的精確情境下算出統計量的分佈。如果 H0 是模糊的「μ 可能是任何值」，就無法算 p 值。所以 H0 固定一個基準點，然後看資料離這個基準點有多遠。\n\n【範例】某藥廠宣稱新藥平均降壓 10mmHg。你懷疑沒那麼多。\nH0: μ = 10（或 μ ≥ 10）\nH1: μ < 10（左尾檢定）\n\n如果你只想知道「有沒有差」但不確定方向：\nH0: μ = 10, H1: μ ≠ 10（雙尾檢定）\n\n考試陷阱：H0 和 H1 必須涵蓋所有可能。如果 H0 是 μ=10，H1 不能是 μ=15，因為 μ=12 時兩個都不成立。H1 通常是 μ≠10、μ>10 或 μ<10。",
           "bullets": [
-            "H0 含等號"
+            "H0 包含等號（=, ≤, ≥），代表「現狀」或「無效果」",
+            "H1 是研究者想證明的方向：≠（雙尾）、>（右尾）、<（左尾）",
+            "H0 和 H1 必須互斥且窮盡所有可能",
+            "等號放在 H0 是為了在精確假設下計算檢定統計量的分佈",
+            "先寫假設再看資料——看完資料再選方向會導致多重比較問題"
           ]
         },
         {
-          "title": "選統計量",
-          "body": "依資料型態選參考分配。",
+          "title": "第二步：選統計量與參考分配",
+          "body": "檢定統計量把「樣本結果離 H0 有多遠」標準化成一個無單位的數字。最常用的兩個：\n\n(1) z 統計量：z = (X̄ - μ₀) / (σ/√n)。適用條件：母體標準差 σ 已知，或樣本夠大（n≥30，靠中央極限定理）。z 服從標準常態 N(0,1)。\n\n(2) t 統計量：t = (X̄ - μ₀) / (s/√n)。適用條件：σ 未知，用樣本標準差 s 估計。t 服從自由度 df=n-1 的 t 分佈。n 小時 t 分佈比常態分佈胖（尾巴更重），n 大時趨近常態。\n\n【範例】隨機抽 16 位病患，X̄=8.5, s=3, 檢定 H0: μ=10。\nt = (8.5-10)/(3/√16) = (-1.5)/(3/4) = (-1.5)/0.75 = -2.0\ndf = 16-1 = 15\n\n接下來查 t(15) 的表或用軟體算 p 值。|t|=2.0 在 df=15 時，雙尾 p ≈ 0.064。\n\n選擇原則：σ 已知用 z（實務上很少），σ 未知用 t（最常見）。比例檢定用 z = (p̂-p₀)/√(p₀(1-p₀)/n)。",
           "bullets": [
-            "確認假設條件"
+            "z 檢定：σ 已知或 n≥30，z = (X̄-μ₀)/(σ/√n)，參考 N(0,1)",
+            "t 檢定：σ 未知用 s 估計，t = (X̄-μ₀)/(s/√n)，參考 t(n-1)",
+            "t 分佈比常態胖（n 小時明顯），n→∞ 時 t→z",
+            "比例檢定用 z = (p̂-p₀)/√(p₀(1-p₀)/n)，前提是 np₀ 和 n(1-p₀) 都 ≥ 10",
+            "分母 σ/√n 或 s/√n 叫做標準誤 (standard error)，是估計量的標準差"
           ]
         },
         {
-          "title": "作決策",
-          "body": "比較 p 與 α 或統計量與臨界值。",
+          "title": "第三步：p 值、臨界值與決策",
+          "body": "p 值是「在 H0 為真的前提下，觀察到的統計量或更極端值出現的機率」。它不是「H0 為真的機率」——這是考試最常考的觀念題。\n\n決策規則很簡單：p ≤ α 就拒絕 H0；p > α 就不拒絕 H0。α（顯著水準）是事先設定的誤報容忍度，最常見的是 0.05（5%）。\n\n【範例】接上面的例子，t=-2.0, df=15, 雙尾 p ≈ 0.064。\n若 α=0.05：p=0.064 > 0.05，不拒絕 H0。結論：在 5% 顯著水準下，沒有足夠證據認為 μ≠10。\n若 α=0.10：p=0.064 < 0.10，拒絕 H0。結論：在 10% 顯著水準下，有證據認為 μ≠10。\n\n同一筆資料，換 α 就換結論——這就是為什麼報告 p 值比只說「顯著/不顯著」更有資訊量。\n\n等價方法：臨界值法。查 t(15) 雙尾 α=0.05 的臨界值 ±2.131。|t|=2.0 < 2.131，未落入拒絕域，不拒絕 H0。和 p 值法結論一致。\n\n注意措辭：不拒絕 H0 ≠ 接受 H0。你只是「證據不夠強」，不是「證明 H0 為真」。",
           "bullets": [
-            "p<α 才拒絕 H0"
+            "p 值 = P(觀察到或更極端 | H0 為真)，不是 P(H0 為真 | 資料)",
+            "p ≤ α 拒絕 H0，p > α 不拒絕 H0。α 必須在看資料前決定",
+            "臨界值法等價：|統計量| > 臨界值 → 拒絕；兩種方法結論一定一致",
+            "「不拒絕 H0」≠「接受 H0」，只代表證據不足以推翻現狀",
+            "α 越小越保守（越不容易拒絕）；實務常用 0.05、0.01、0.10"
           ]
         },
         {
-          "title": "下結論",
-          "body": "結論要回到題目語境。",
+          "title": "第四步：結論、錯誤類型與 Power",
+          "body": "結論必須用題目原始語境表達，不能只寫「拒絕 H0」。例如：「在 5% 顯著水準下，有統計證據顯示新藥的平均降壓效果低於宣稱的 10mmHg」。\n\n兩種錯誤：\n- Type I error (α)：H0 為真但你拒絕了它（誤報、false positive）。機率就是 α。\n- Type II error (β)：H0 為假但你沒拒絕它（漏報、false negative）。機率是 β。\n- Power = 1-β：H0 為假時正確拒絕的機率。Power 越高越好。\n\n【影響 Power 的三個因素】\n(1) 效果量 (effect size)：真實值離 H0 越遠，越容易偵測到差異。\n(2) 樣本數 n：n 越大，標準誤越小，統計量越大，Power 越高。\n(3) α 水準：α 越大（越願意冒誤報風險），Power 越高。\n\n考試常問：「增加樣本數對 Type I error 有什麼影響？」答案：沒有影響。Type I error = α 是你自己設的，和 n 無關。增加 n 影響的是 Power（降低 Type II error）。\n\n另一個常考陷阱：統計顯著 ≠ 實務重要。p=0.001 不代表效果大，可能只是 n 很大，讓很小的差異也能被偵測到。必須同時看效果量（effect size）和信賴區間。",
           "bullets": [
-            "不把關聯寫成因果"
+            "結論用題目語境表達，不只寫統計術語",
+            "Type I error = α（誤報），Type II error = β（漏報），Power = 1-β",
+            "增加 n 提高 Power 但不改變 α（α 是研究者設定的）",
+            "統計顯著 ≠ 實務重要：大樣本可以讓微小差異也顯著",
+            "永遠不要說「證明 H0 為真」或「證明因果關係」"
           ]
         }
       ],
       "workedExamples": [
         {
-          "prompt": "p=0.03、α=0.05。",
+          "prompt": "某校宣稱學生平均 GPA ≥ 3.0。隨機抽 25 位學生，X̄=2.85, s=0.5, α=0.05。完成檢定。",
           "steps": [
-            "比較 p 與 α"
+            "H0: μ ≥ 3.0, H1: μ < 3.0（左尾）",
+            "t = (2.85-3.0)/(0.5/√25) = (-0.15)/0.1 = -1.5",
+            "df = 25-1 = 24",
+            "查 t(24) 左尾 α=0.05 臨界值 = -1.711",
+            "t=-1.5 > -1.711（未落入拒絕域），不拒絕 H0",
+            "結論：在 5% 顯著水準下，沒有足夠證據認為平均 GPA 低於 3.0"
           ],
-          "answer": "拒絕 H0"
+          "answer": "不拒絕 H0。數據不足以推翻校方宣稱。"
         },
         {
-          "prompt": "p=0.12、α=0.05。",
+          "prompt": "Type I error rate 是 0.05。如果真實 μ=2.7（H0 為假），Power 是 0.80。問 Type II error rate？增加樣本數後 α 會改變嗎？",
           "steps": [
-            "比較 p 與 α"
+            "Power = 1-β = 0.80，所以 β = 0.20",
+            "Type II error rate = β = 0.20",
+            "α 是研究者事先設定的門檻，和樣本數 n 無關",
+            "增加 n 會提高 Power（降低 β），但 α 維持 0.05"
           ],
-          "answer": "未能拒絕 H0，不是證明 H0"
+          "answer": "β=0.20。增加 n 不改變 α。"
         }
       ],
       "commonPitfalls": [
-        "把未拒絕寫成接受 H0",
-        "先看答案再補 H0/H1",
-        "把顯著關聯宣稱為因果"
+        "把「不拒絕 H0」寫成「接受 H0」：正確說法是「沒有足夠證據拒絕」",
+        "先看資料再決定 H1 方向：這會膨脹 Type I error",
+        "把 p 值解讀為「H0 為真的機率」：p 值是「假設 H0 為真時觀察到這樣或更極端結果的機率」",
+        "認為增加 n 會降低 α：α 是固定的，n 影響的是 Power",
+        "把顯著關聯直接宣稱為因果關係"
       ]
     },
     {
@@ -245,107 +240,108 @@
       "id": "lesson-im-stat-pmf-transformations",
       "kind": "past_paper_micro_lesson",
       "subtopicId": "im-stat-probability-joint-pmf",
-      "coveredSubtopicIds": [
-        "im-stat-probability-joint-pmf",
-        "im-stat-probability-transformations"
-      ],
+      "coveredSubtopicIds": ["im-stat-probability-joint-pmf", "im-stat-probability-transformations"],
       "title": "把聯合機率表搬到新座標",
       "summary": "用 115-3 練習正規化、離散變數轉換、合併重複像點與邊際化。",
-      "estimatedMinutes": 32,
-      "sourceRefs": [
-        "src-im-stat-ntu-115-pdf",
-        "src-im-stat-openintro",
-        "src-im-stat-psu-414"
-      ],
-      "pastPaperRefs": [
-        "q-pp-im-stat-115-3"
-      ],
+      "estimatedMinutes": 40,
+      "sourceRefs": ["src-im-stat-ntu-115-pdf", "src-im-stat-openintro", "src-im-stat-psu-414"],
+      "pastPaperRefs": ["q-pp-im-stat-115-3"],
       "learningObjectives": [
-        "由 support 權重求正規化常數",
-        "逐點完成離散變數轉換",
-        "由聯合 PMF 加總出邊際 PMF"
+        "從聯合機率表讀出 joint、marginal、conditional PMF",
+        "由 support 權重求正規化常數 c 使總機率為 1",
+        "逐點完成離散變數轉換，正確處理多對一映射（合併 preimage）",
+        "由聯合 PMF 加總出邊際 PMF，並計算條件 PMF"
       ],
       "learningScenario": {
         "title": "抽獎券換籃子",
         "hook": "每個舊格放著不同張數的抽獎券，新規則會把它們搬到標有 Y1、Y2 的籃子。",
         "predict": "兩個舊格搬到同一個新籃子時，機率應如何處理？",
         "mapping": [
-          {
-            "everyday": "舊格子的票數",
-            "technical": "未正規化權重"
-          },
-          {
-            "everyday": "全部票數",
-            "technical": "normalizing constant c"
-          },
-          {
-            "everyday": "依新標籤搬票",
-            "technical": "變數轉換 mapping"
-          },
-          {
-            "everyday": "同籃票數相加",
-            "technical": "preimage probabilities sum"
-          }
+          { "everyday": "舊格子的票數", "technical": "未正規化權重" },
+          { "everyday": "全部票數", "technical": "normalizing constant c" },
+          { "everyday": "依新標籤搬票", "technical": "變數轉換 mapping" },
+          { "everyday": "同籃票數相加", "technical": "preimage probabilities sum" }
         ],
         "boundary": "連續型變數轉換還要處理密度與 Jacobian，不能直接沿用數票模型。",
-        "examCues": [
-          "joint PMF",
-          "support",
-          "normalizing constant",
-          "marginal"
-        ]
+        "examCues": ["joint PMF", "support", "normalizing constant", "marginal"]
       },
       "sections": [
         {
-          "title": "列 support",
-          "body": "先列出所有可能輸入點。",
+          "title": "聯合 PMF：兩變數同時取值的機率表",
+          "body": "聯合機率質量函數 (Joint PMF) p(x,y) = P(X=x, Y=y) 描述兩個離散隨機變數同時取某組值的機率。把所有 (x,y) 組合的機率列成表格，就是聯合機率表。表中所有格子的機率總和必為 1。\n\n邊際 PMF (Marginal PMF) 是從聯合表中「壓縮」掉一個維度：p_X(x) = Σ_y p(x,y)，也就是把 X=x 那一列（或一行）的所有機率加起來。直覺上，這就是「不管 Y 取什麼值，X=x 的整體機率是多少」。\n\n條件 PMF 則是「在已知 Y=y 的前提下，X 的分佈」：P(X=x|Y=y) = p(x,y)/p_Y(y)。分母是 Y=y 的邊際機率。\n\n【範例】班級程式能力 X∈{0,1,2} 和統計能力 Y∈{0,1}：\n\n         Y=0   Y=1   p_X(x)\n  X=0    0.10  0.20   0.30\n  X=1    0.15  0.25   0.40\n  X=2    0.20  0.10   0.30\n  p_Y(y) 0.45  0.55   1.00\n\n讀表：P(X=1,Y=1)=0.25（聯合）；P(X=1)=0.15+0.25=0.40（邊際）；P(X=1|Y=1)=0.25/0.55≈0.4545（條件）。\n\n考試陷阱：邊際是加總（不管另一變數），條件是除法（固定另一變數）。看到「given Y=1」就是條件；看到「不論 Y 為何」就是邊際。",
           "bullets": [
-            "support 外機率為 0"
+            "Joint PMF: p(x,y) = P(X=x, Y=y)，所有 (x,y) 的機率加總 = 1",
+            "Marginal PMF: p_X(x) = Σ_y p(x,y)，把不關心的變數「加總掉」",
+            "Conditional PMF: P(X=x|Y=y) = p(x,y)/p_Y(y)，分母是邊際不是聯合",
+            "獨立性判定：X⊥Y 若且唯若 p(x,y) = p_X(x)·p_Y(y) 對所有 (x,y) 成立",
+            "表格最後一行/一列就是邊際 PMF，可以用來快速驗算"
           ]
         },
         {
-          "title": "正規化",
-          "body": "權重除以總和。",
+          "title": "正規化：讓權重變成機率",
+          "body": "有時題目不直接給機率，而是給「權重」或「未正規化的 PMF」，例如 f(x,y) = c·g(x,y)，要求先找 c 使得所有格子加總為 1。\n\n方法很直接：Σ_x Σ_y g(x,y) = S（先加總所有權重），然後 c = 1/S。每格的機率就是 g(x,y)/S。\n\n【範例】某二維分佈的權重為：\n\n         Y=0   Y=1\n  X=0     2     3\n  X=1     4     1\n  X=2     1     1\n\n總權重 S = 2+3+4+1+1+1 = 12，所以 c = 1/12。\nP(X=0,Y=0) = 2/12 = 1/6\nP(X=1,Y=0) = 4/12 = 1/3\n\n驗算：所有格子 = (2+3+4+1+1+1)/12 = 12/12 = 1 ✓\n\n考試陷阱：有些題目的 support（X 和 Y 可能的取值範圍）不明顯，需要先確認 g(x,y)>0 的範圍。support 外的點機率為 0，不要列入計算。如果 g(x,y) 是公式而非表格（例如 g(x,y)=x+y），要先列出所有 (x,y) 點，才不會漏。",
           "bullets": [
-            "總機率必為 1"
+            "正規化：c = 1/Σ_all g(x,y)，使得 Σ c·g(x,y) = 1",
+            "support 外的點機率 = 0，只對 g(x,y)>0 的 (x,y) 加總",
+            "如果 g 是公式，先列出所有合法 (x,y) 組合再加總",
+            "正規化後立刻驗算總和是否為 1，避免算錯帶到後面",
+            "正規化常數 c 通常是一個分數（如 1/12），不是整數"
           ]
         },
         {
-          "title": "轉換",
-          "body": "逐點算新座標。",
+          "title": "離散變數轉換：逐點映射與合併",
+          "body": "離散變數轉換是把 (X,Y) 透過函數 (Y1,Y2)=(g1(X,Y), g2(X,Y)) 映射到新座標。步驟：\n\n第一步：對每個原始 support 點 (x,y)，算出對應的 (y1,y2) = (g1(x,y), g2(x,y))。\n第二步：如果兩個不同的 (x,y) 映射到同一個 (y1,y2)（多對一），把它們的機率相加。這叫做「合併 preimage」。\n第三步：寫出新的 Joint PMF p_{Y1,Y2}(y1,y2)。\n\n【範例】X∈{1,2,3}, Y∈{0,1}，定義 Y1=X+Y, Y2=X-Y。\n\n原始 (X,Y) → (Y1,Y2):\n(1,0) → (1,1)  機率 a\n(1,1) → (2,0)  機率 b\n(2,0) → (2,2)  機率 c\n(2,1) → (3,1)  機率 d\n(3,0) → (3,3)  機率 e\n(3,1) → (4,2)  機率 f\n\n這個例子中每個 (y1,y2) 都只有一個 preimage，所以機率直接搬過去。但如果 (1,1) 和 (2,0) 都映到同一個 (y1,y2)，就要把 b 和 c 加起來。\n\n考試陷阱：最常犯的錯是漏掉某個 preimage 點。建議用表格列出所有 (x,y) 對應的 (y1,y2)，不要跳步。",
           "bullets": [
-            "重複像點要合併"
+            "步驟：列所有 (x,y) → 算 (y1,y2) → 合併同一個 (y1,y2) 的機率",
+            "多對一映射：不同 (x,y) 映到同一 (y1,y2) 時機率要相加",
+            "一對一映射：每個新點只有一個 preimage，機率直接搬",
+            "轉換後的新 PMF 總和仍然 = 1（只是重新分配，總量不變）",
+            "用表格逐點列出映射關係，比在腦中算安全得多"
           ]
         },
         {
-          "title": "邊際化",
-          "body": "固定 Y1 對 Y2 加總。",
+          "title": "邊際化與獨立性檢驗",
+          "body": "拿到新的 Joint PMF p_{Y1,Y2}(y1,y2) 後，常見的後續操作是：\n\n(1) 求邊際：p_{Y1}(y1) = Σ_{y2} p_{Y1,Y2}(y1,y2)。把 Y2 加總掉，得到 Y1 單獨的分佈。\n\n(2) 檢驗獨立性：如果對每一組 (y1,y2)，p(y1,y2) = p_{Y1}(y1)·p_{Y2}(y2) 都成立，則 Y1⊥Y2。只要找到一組不等，就是不獨立。\n\n【範例】延續上面的表：\n\n          Y2=0   Y2=1   Y2=2   Y2=3   p_{Y1}\n  Y1=1     0      a      0      0      a\n  Y1=2     b      0      c      0      b+c\n  Y1=3     0      d      0      e      d+e\n  Y1=4     0      0      f      0      f\n  p_{Y2}   b      a+d    c+f    e      1\n\n檢驗：p(Y1=1,Y2=1) = a，p_{Y1}(1)·p_{Y2}(1) = a·(a+d)。\n只有 d=0 時才相等。如果 d≠0，Y1 和 Y2 不獨立。\n\n考試技巧：不需要驗每一格。找最容易算的格子（最好有 0 的），如果 p(y1,y2)=0 但 p_{Y1}(y1)>0 且 p_{Y2}(y2)>0，立刻判定不獨立。一個反例就夠了。\n\n最後檢查：邊際 PMF 的總和必須是 1。如果加起來不是 1，代表前面某步算錯了。",
           "bullets": [
-            "最後再次檢查總和"
+            "邊際化：固定 Y1，對 Y2 的所有可能值加總（反之亦然）",
+            "獨立性：需要對所有 (y1,y2) 都成立 p(y1,y2)=p_{Y1}(y1)·p_{Y2}(y2)",
+            "快速反證：找一格 p(y1,y2)=0 但兩個邊際都 >0 → 不獨立",
+            "邊際 PMF 的總和必為 1，可當作最終驗算",
+            "條件分佈 P(Y1|Y2=y2) = p(y1,y2)/p_{Y2}(y2)，分母是邊際機率"
           ]
         }
       ],
       "workedExamples": [
         {
-          "prompt": "六點權重總和為 12。",
+          "prompt": "Joint 權重表（6 個 support 點）：(1,1)→2, (1,2)→1, (2,1)→3, (2,2)→4, (3,1)→1, (3,2)→1。求正規化常數、P(X=2)、P(X=2|Y=1)。",
           "steps": [
-            "令總機率為 1"
+            "總權重 S = 2+1+3+4+1+1 = 12，c = 1/12",
+            "正規化：P(1,1)=2/12, P(1,2)=1/12, P(2,1)=3/12, P(2,2)=4/12, P(3,1)=1/12, P(3,2)=1/12",
+            "P(X=2) = P(2,1)+P(2,2) = 3/12+4/12 = 7/12（邊際：加總 Y）",
+            "P(Y=1) = P(1,1)+P(2,1)+P(3,1) = 2/12+3/12+1/12 = 6/12 = 1/2",
+            "P(X=2|Y=1) = P(2,1)/P(Y=1) = (3/12)/(1/2) = (1/4)/(1/2) = 1/2"
           ],
-          "answer": "c=12"
+          "answer": "c=1/12, P(X=2)=7/12, P(X=2|Y=1)=1/2"
         },
         {
-          "prompt": "兩個舊點映到同一新點。",
+          "prompt": "定義 Y1=X+Y, Y2=XY。原始 support：(1,0), (1,1), (2,0), (2,1)，各機率 1/4。寫出 Y1,Y2 的 Joint PMF。",
           "steps": [
-            "找完整 preimage",
-            "機率相加"
+            "(1,0)→(Y1=1,Y2=0), p=1/4",
+            "(1,1)→(Y1=2,Y2=1), p=1/4",
+            "(2,0)→(Y1=2,Y2=0), p=1/4",
+            "(2,1)→(Y1=3,Y2=2), p=1/4",
+            "Y1=2 有兩個 preimage 但映到不同 Y2（Y2=1 和 Y2=0），所以不需合併",
+            "Joint PMF: p(1,0)=1/4, p(2,0)=1/4, p(2,1)=1/4, p(3,2)=1/4"
           ],
-          "answer": "新點機率為兩者之和"
+          "answer": "4 個 support 點各 1/4，無合併發生"
         }
       ],
       "commonPitfalls": [
-        "漏列零權重 support 點",
-        "一對多或多對一時未合併",
-        "邊際化加錯維度"
+        "漏列 support 點：先完整列出所有 (x,y) 再做轉換",
+        "多對一時忘記合併機率：同一個 (y1,y2) 出現兩次要加總",
+        "邊際化時加錯維度：固定 X 就對 Y 加總，不是反過來",
+        "搞混邊際和條件：邊際是加總（Σ），條件是除法（÷ 邊際機率）",
+        "正規化後忘記驗算總和 = 1"
       ]
     },
     {
@@ -354,110 +350,108 @@
       "id": "lesson-im-stat-unbiased-efficient-estimators",
       "kind": "past_paper_micro_lesson",
       "subtopicId": "im-stat-estimation-unbiasedness",
-      "coveredSubtopicIds": [
-        "im-stat-estimation-unbiasedness",
-        "im-stat-estimation-variance",
-        "im-stat-estimation-efficiency"
-      ],
+      "coveredSubtopicIds": ["im-stat-estimation-unbiasedness", "im-stat-estimation-variance", "im-stat-estimation-efficiency"],
       "title": "多支有雜訊的溫度計怎麼加權",
       "summary": "用 114-5 與 115-4 練習權重和、不偏性、估計量變異數與最小變異權重。",
-      "estimatedMinutes": 38,
-      "sourceRefs": [
-        "src-im-stat-ntu-114-pdf",
-        "src-im-stat-ntu-115-pdf",
-        "src-im-stat-psu-415"
-      ],
-      "pastPaperRefs": [
-        "q-pp-im-stat-114-5",
-        "q-pp-im-stat-115-4"
-      ],
+      "estimatedMinutes": 45,
+      "sourceRefs": ["src-im-stat-ntu-114-pdf", "src-im-stat-ntu-115-pdf", "src-im-stat-psu-415"],
+      "pastPaperRefs": ["q-pp-im-stat-114-5", "q-pp-im-stat-115-4"],
       "learningObjectives": [
-        "由權重和判斷不偏性",
-        "正確計算加權估計量變異數",
-        "以微分或對稱性尋找最適權重"
+        "由權重和 Σwi=1 判斷估計量是否為不偏 (unbiased)",
+        "正確計算加權估計量的變異數（獨立時 Var = σ²Σwi²）",
+        "用微分法或 Lagrange 乘數找最小變異數的最適權重",
+        "解釋 relative efficiency 並用 Var 的比值比較兩個估計量"
       ],
       "learningScenario": {
         "title": "合併多支溫度計",
         "hook": "每支溫度計都在真實溫度附近晃動，權重代表你多相信哪一支。",
         "predict": "權重總和為 1 是否已保證波動最小？",
         "mapping": [
-          {
-            "everyday": "每支讀值",
-            "technical": "iid observations Yi"
-          },
-          {
-            "everyday": "採信程度",
-            "technical": "weights wi"
-          },
-          {
-            "everyday": "刻度不整體偏移",
-            "technical": "Σwi=1 使估計量不偏"
-          },
-          {
-            "everyday": "讀數最穩定",
-            "technical": "minimize Var(estimator)"
-          }
+          { "everyday": "每支讀值", "technical": "iid observations Yi" },
+          { "everyday": "採信程度", "technical": "weights wi" },
+          { "everyday": "刻度不整體偏移", "technical": "Σwi=1 使估計量不偏" },
+          { "everyday": "讀數最穩定", "technical": "minimize Var(estimator)" }
         ],
         "boundary": "若儀器變異數不同或彼此相關，等權重不一定最佳；需使用完整 covariance。",
-        "examCues": [
-          "unbiased estimator",
-          "Σweights=1",
-          "Var(weighted mean)",
-          "efficiency"
-        ]
+        "examCues": ["unbiased estimator", "Σweights=1", "Var(weighted mean)", "efficiency"]
       },
       "sections": [
         {
-          "title": "先看期望值",
-          "body": "權重和控制中心位置。",
+          "title": "不偏性：期望值命中目標",
+          "body": "估計量 (estimator) θ̂ 是用樣本資料計算出的統計量，用來估計母體參數 θ（如 μ, σ², p）。如果 E[θ̂] = θ，我們說 θ̂ 是不偏的 (unbiased)。直覺上，不偏表示「重複抽樣無限次取平均，估計量會剛好命中真實值」。\n\n最常見的加權估計量形式：θ̂ = w1·Y1 + w2·Y2 + ... + wn·Yn，其中 Yi 是 iid 樣本，E[Yi] = μ, Var(Yi) = σ²。\n\n要讓 θ̂ 不偏估計 μ：\nE[θ̂] = w1·E[Y1] + w2·E[Y2] + ... + wn·E[Yn] = (w1+w2+...+wn)·μ\n\n所以 E[θ̂] = μ 的充要條件是 Σwi = 1。\n\n【範例】樣本平均 Ȳ = (Y1+Y2+...+Yn)/n，每個 wi = 1/n，Σwi = n·(1/n) = 1。✓ 不偏。\n\n反例：θ̂ = (Y1+Y2)/3，Σwi = 2/3 ≠ 1，E[θ̂] = (2/3)μ ≠ μ。✗ 有偏，偏差 bias = -(1/3)μ。\n\n考試陷阱：不偏是對期望值的要求，不是說「每次估計都很準」。一個不偏估計量可能每次都離真值很遠（如果變異數很大），只要平均下來命中就算不偏。好的估計量要同時不偏且低變異數。",
           "bullets": [
-            "Σwi=1"
+            "不偏 (unbiased)：E[θ̂] = θ，長期平均命中真值",
+            "加權估計 μ 的不偏條件：Σwi = 1",
+            "偏差 bias(θ̂) = E[θ̂] - θ，不偏時 bias = 0",
+            "樣本平均 Ȳ = ΣYi/n 是 μ 的不偏估計量（wi = 1/n, Σwi = 1）",
+            "不偏不代表精確——Var 大的不偏估計量可能每次都差很多"
           ]
         },
         {
-          "title": "再算變異數",
-          "body": "獨立時用權重平方加總。",
+          "title": "估計量變異數：每次估計離期望值多遠",
+          "body": "光不偏不夠，我們還要估計量盡量穩定（低變異數）。對加權估計量 θ̂ = Σwi·Yi：\n\n如果 Yi 彼此獨立（Cov=0）：\nVar(θ̂) = w1²·Var(Y1) + w2²·Var(Y2) + ... + wn²·Var(Yn)\n\n如果 Yi 是 iid（獨立同分佈，Var(Yi) = σ²）：\nVar(θ̂) = σ²·(w1² + w2² + ... + wn²) = σ²·Σwi²\n\n【範例】Ȳ = ΣYi/n，每個 wi = 1/n：\nVar(Ȳ) = σ²·Σ(1/n)² = σ²·n·(1/n²) = σ²/n\n\nn 越大，Var(Ȳ) 越小——這就是為什麼大樣本的平均值更可靠。\n\n【反例】θ̂ = Y1（只用第一個觀測值，w1=1, 其他 wi=0）：\nVar(θ̂) = σ²·1² = σ²\n\n比較：Var(Ȳ) = σ²/n ≤ σ² = Var(Y1)，所以 Ȳ 比 Y1 穩定（n≥1 時）。\n\n考試陷阱：Var(θ̂) 的公式裡是 wi²（權重平方），不是 wi。很多學生漏掉平方。另一個常見錯誤是沒確認獨立就直接用 σ²·Σwi²——如果 Yi 不獨立，要加入 covariance 項：Var(θ̂) = σ²·Σwi² + 2σ²·Σ_{i<j} wi·wj·ρ，其中 ρ 是相關係數。",
           "bullets": [
-            "Var=σ²Σwi²"
+            "iid 加權：Var(θ̂) = σ²·Σwi²，關鍵是權重要平方",
+            "樣本平均：Var(Ȳ) = σ²/n，n 越大越穩定",
+            "不獨立時要加 Cov 項：Var = σ²·Σwi² + 2·Σ_{i<j} wi·wj·Cov(Yi,Yj)",
+            "Σwi² 可用 Cauchy-Schwarz 不等式得下界：Σwi² ≥ (Σwi)²/n = 1/n",
+            "等權重 wi=1/n 使 Σwi² 最小 = 1/n → Var(Ȳ) = σ²/n 是所有等 σ² 不偏估計中最小的"
           ]
         },
         {
-          "title": "找最小值",
-          "body": "可用微分或 Cauchy。",
+          "title": "最適權重：用微分找最小變異數",
+          "body": "問題：在 Σwi=1（不偏）的限制下，選什麼權重讓 Var(θ̂) = σ²·Σwi² 最小？\n\n方法一：Lagrange 乘數法。\n目標：min Σwi² subject to Σwi=1。\nL = Σwi² - λ(Σwi - 1)\n∂L/∂wi = 2wi - λ = 0 → wi = λ/2（所有 i 一樣）\n代入限制：n·(λ/2) = 1 → λ = 2/n → wi = 1/n\n\n結論：iid 情形下，等權重是最佳選擇，最小 Var = σ²/n。\n\n方法二：兩變數直接微分。\n如果只有 Y1, Y2，θ̂ = w·Y1 + (1-w)·Y2（自動滿足 Σwi=1）。\nVar = σ²·[w² + (1-w)²] = σ²·(2w²-2w+1)\n令 dVar/dw = σ²·(4w-2) = 0 → w = 1/2\nVar_min = σ²·(1/4+1/4) = σ²/2 ✓\n\n114 年考題的變化型：權重不是簡單的 wi，而是 g(i)/Σg(i) 的形式，需要先展開 g 函數再計算 Σg² 和 Σg。\n\n【非等 σ² 情形】如果 Var(Yi) = σi²（各不相同），最適權重為 wi ∝ 1/σi²（對變異數大的觀測值給小權重）。直覺：越不穩定的溫度計越不該相信。",
           "bullets": [
-            "等品質 iid 常導向平均"
+            "iid 等 σ²：最適權重 = 等權重 wi=1/n，Var_min = σ²/n",
+            "Lagrange 法：min Σwi² s.t. Σwi=1 → wi = 1/n",
+            "兩變數快捷：θ̂ = wY1+(1-w)Y2，微分 dVar/dw=0 解 w",
+            "非等 σ²：wi ∝ 1/σi²（精度加權），越穩定的觀測給越大權重",
+            "最適權重不一定是等權重——只有 iid 時才恰好是"
           ]
         },
         {
-          "title": "核對限制",
-          "body": "先確認 iid 與有限變異數。",
+          "title": "效率與相對效率：比較兩個估計量",
+          "body": "Relative Efficiency (RE) 用來比較兩個不偏估計量的優劣：\nRE(θ̂1, θ̂2) = Var(θ̂2) / Var(θ̂1)\n\n如果 RE > 1，表示 θ̂1 的變異數比較小（更有效率）。如果 RE = 2，表示 θ̂2 的波動是 θ̂1 的兩倍——用 θ̂2 需要兩倍的樣本量才能達到和 θ̂1 一樣的精確度。\n\n【範例】θ̂1 = Ȳ = ΣYi/n, Var(θ̂1) = σ²/n。\nθ̂2 = Y1（只用第一筆）, Var(θ̂2) = σ²。\nRE(Ȳ, Y1) = σ² / (σ²/n) = n。\n\n也就是說，用全部樣本的平均比只用一筆效率高 n 倍。\n\n【進階觀念】Cramér-Rao Lower Bound (CRLB) 是不偏估計量變異數的理論下界。如果某個估計量的 Var 恰好等於 CRLB，它就是 UMVUE (Uniformly Minimum Variance Unbiased Estimator)，不可能再更好了。考試通常不要求推導 CRLB，但會問「什麼是有效估計量」或「為什麼 Ȳ 是 UMVUE」。\n\n考試陷阱：RE 的分子分母不要搞反。慣例是 RE(θ̂1, θ̂2) = Var(θ̂2)/Var(θ̂1)，但有些教材反過來，看清題目定義。另外，efficiency 只在兩者都不偏時才有意義——如果其中一個有偏，不能直接比 Var。",
           "bullets": [
-            "相關時要加 covariance"
+            "RE(θ̂1, θ̂2) = Var(θ̂2)/Var(θ̂1)，RE>1 表示 θ̂1 更好",
+            "RE = n 表示效率差 n 倍——用差的估計量需要 n 倍樣本",
+            "CRLB 是不偏估計量 Var 的下界，達到 CRLB 的叫 efficient estimator",
+            "樣本平均 Ȳ 在常態母體下是 μ 的 UMVUE",
+            "RE 只在兩者都不偏時有意義，有偏估計量要用 MSE = Var + Bias² 比較"
           ]
         }
       ],
       "workedExamples": [
         {
-          "prompt": "g(i) 每五項為 2,3,4,5,1。",
+          "prompt": "Y1, Y2, ..., Y5 iid, E[Yi]=μ, Var(Yi)=σ²。比較 θ̂1=Ȳ 和 θ̂2=(2Y1+3Y2)/(5) 的不偏性和效率。",
           "steps": [
-            "Σg=3T",
-            "Σg²=11T"
+            "θ̂1: Σwi = 5·(1/5) = 1 ✓ 不偏。Var = σ²/5",
+            "θ̂2: w1=2/5, w2=3/5，Σwi = 2/5+3/5 = 1 ✓ 不偏（但只用了 2 筆）",
+            "Var(θ̂2) = σ²·((2/5)²+(3/5)²) = σ²·(4/25+9/25) = σ²·(13/25)",
+            "RE(θ̂1, θ̂2) = Var(θ̂2)/Var(θ̂1) = (13σ²/25)/(σ²/5) = (13/25)·5 = 13/5 = 2.6",
+            "θ̂1 效率是 θ̂2 的 2.6 倍"
           ],
-          "answer": "Var(m)=11σ²/(9T)"
+          "answer": "兩者都不偏。Var(θ̂1)=σ²/5, Var(θ̂2)=13σ²/25。RE=2.6，Ȳ 更有效率。"
         },
         {
-          "prompt": "m2=(Y1+αY2)/(1+α)。",
+          "prompt": "θ̂ = wY1 + (1-w)Y2。Var(Y1)=4, Var(Y2)=9，獨立。找使 Var(θ̂) 最小的 w。",
           "steps": [
-            "寫變異數",
-            "微分"
+            "不偏：w+(1-w)=1 ✓ 自動滿足",
+            "Var(θ̂) = w²·4 + (1-w)²·9 = 4w² + 9(1-2w+w²) = 13w² - 18w + 9",
+            "dVar/dw = 26w - 18 = 0 → w = 18/26 = 9/13 ≈ 0.692",
+            "1-w = 4/13 ≈ 0.308",
+            "Var_min = 13·(9/13)² - 18·(9/13) + 9 = 81/13 - 162/13 + 117/13 = 36/13 ≈ 2.769",
+            "驗證：wi ∝ 1/σi² → w1 ∝ 1/4=0.25, w2 ∝ 1/9≈0.111 → w1 = 0.25/(0.25+0.111) = 9/13 ✓"
           ],
-          "answer": "α=1"
+          "answer": "w = 9/13, Var_min = 36/13 ≈ 2.77。精度高的（σ²=4）給大權重。"
         }
       ],
       "commonPitfalls": [
-        "把原卷分母看成 T",
-        "權重和為 1 就誤認一定最有效率",
-        "漏掉權重平方"
+        "把原卷分母看成 T 而非實際觀測數：仔細看 Σg(i) 代表什麼",
+        "權重和為 1 就誤認一定最有效率：效率還要看 Σwi²，等權重只在 iid 等 σ² 時最佳",
+        "漏掉權重平方：Var = σ²·Σwi²，不是 σ²·Σwi",
+        "非等變異數時用等權重：最適權重是 wi ∝ 1/σi²",
+        "把 relative efficiency 分子分母搞反：RE(好的, 差的) > 1"
       ]
     },
     {
@@ -466,106 +460,105 @@
       "id": "lesson-im-stat-regression-dashboard",
       "kind": "past_paper_micro_lesson",
       "subtopicId": "im-stat-regression-multiple",
-      "coveredSubtopicIds": [
-        "im-stat-regression-multiple",
-        "im-stat-regression-t-f-tests"
-      ],
+      "coveredSubtopicIds": ["im-stat-regression-multiple", "im-stat-regression-t-f-tests"],
       "title": "讀懂多元迴歸儀表板",
       "summary": "用 114-4 解讀 adjusted R²、殘差自由度、係數 t 值與整體 F 檢定。",
-      "estimatedMinutes": 34,
-      "sourceRefs": [
-        "src-im-stat-ntu-114-pdf",
-        "src-im-stat-openintro",
-        "src-im-stat-nist-handbook"
-      ],
-      "pastPaperRefs": [
-        "q-pp-im-stat-114-4"
-      ],
+      "estimatedMinutes": 45,
+      "sourceRefs": ["src-im-stat-ntu-114-pdf", "src-im-stat-openintro", "src-im-stat-nist-handbook"],
+      "pastPaperRefs": ["q-pp-im-stat-114-4"],
       "learningObjectives": [
-        "由 n 與 k 算殘差自由度",
-        "由 coef/std err 算 t 值",
-        "區分單一係數 t 檢定與聯合 F 檢定"
+        "寫出多元迴歸模型 Y = β0 + β1X1 + ... + βkXk + ε 並解釋每個符號",
+        "由 n 和 k 算殘差自由度 df = n-k-1，解釋為什麼要減 k+1",
+        "由 coefficient/std error 算 t 值，判斷個別係數是否顯著",
+        "區分 R²、adjusted R² 和 F 檢定的用途"
       ],
       "learningScenario": {
         "title": "垃圾量預測儀表板",
         "hook": "儀表板有多個旋鈕解釋家庭垃圾量，但多裝旋鈕不代表模型真的更好。",
         "predict": "哪個數字會對無用旋鈕扣分？整組旋鈕是否有用又看哪裡？",
         "mapping": [
-          {
-            "everyday": "每個旋鈕效果",
-            "technical": "regression coefficient"
-          },
-          {
-            "everyday": "效果相對噪音",
-            "technical": "t=coef/std err"
-          },
-          {
-            "everyday": "對多裝旋鈕扣分",
-            "technical": "adjusted R²"
-          },
-          {
-            "everyday": "整組旋鈕共同測試",
-            "technical": "joint F-test"
-          }
+          { "everyday": "每個旋鈕效果", "technical": "regression coefficient" },
+          { "everyday": "效果相對噪音", "technical": "t=coef/std err" },
+          { "everyday": "對多裝旋鈕扣分", "technical": "adjusted R²" },
+          { "everyday": "整組旋鈕共同測試", "technical": "joint F-test" }
         ],
         "boundary": "迴歸係數與顯著性不是因果證據；模型設定、共線性與資料品質仍需檢查。",
-        "examCues": [
-          "Adj. R-squared",
-          "Df Residuals",
-          "coef/std err",
-          "Prob(F-statistic)"
-        ]
+        "examCues": ["Adj. R-squared", "Df Residuals", "coef/std err", "Prob(F-statistic)"]
       },
       "sections": [
         {
-          "title": "辨識 n 與 k",
-          "body": "n 是樣本數，k 是斜率個數。",
+          "title": "多元迴歸模型：一個方程多個解釋變數",
+          "body": "多元迴歸模型寫成 Y = β0 + β1X1 + β2X2 + ... + βkXk + ε，其中 Y 是要預測的反應變數，X1~Xk 是 k 個解釋變數，β0 是截距（所有 X 都等於 0 時 Y 的預測值），β1~βk 是斜率（每個 Xi 增加 1 單位、其他 X 固定時，Y 的預期變化量），ε 是隨機誤差。\n\n【重要假設】ε ~ N(0, σ²) 且各觀測值的 ε 彼此獨立。實務上還假設 X 之間沒有嚴重共線性、Y 和 X 的關係確實近似線性。\n\n估計用最小平方法 (OLS)：找 β̂0, β̂1,...,β̂k 使得殘差平方和 SSE = Σ(yi-ŷi)² 最小。\n\n【範例】114 考題的模型：垃圾量 = β0 + β1·家庭人數 + β2·居住年數 + β3·年收入。\n這裡 k=3（三個解釋變數），如果有 n=440 筆資料，殘差自由度 = n-k-1 = 440-3-1 = 436。\n\n為什麼減 k+1？因為估計了 k+1 個參數（k 個斜率 + 1 個截距），每估計一個參數「用掉」一個自由度。",
           "bullets": [
-            "df residual=n-k-1"
+            "模型：Y = β0 + β1X1 + ... + βkXk + ε，ε 假設 iid N(0,σ²)",
+            "βj 的解讀：其他 X 固定時，Xj 增加 1 單位對 Y 的預期影響",
+            "OLS 最小化 SSE = Σ(yi-ŷi)²，找最佳 β̂",
+            "殘差自由度 df = n-k-1（n 筆資料、k 個斜率、1 個截距）",
+            "β0 的解讀要小心：所有 X=0 時 Y 的預測值，但 X=0 可能在 support 外"
           ]
         },
         {
-          "title": "adjusted R²",
-          "body": "比較不同複雜度模型。",
+          "title": "個別係數檢定：t 值告訴你這個變數有沒有用",
+          "body": "對每個係數 βj，我們想檢定 H0: βj=0（這個變數對 Y 沒有影響）vs H1: βj≠0。\n\nt 統計量 = β̂j / SE(β̂j)，其中 SE 是 coefficient 的 standard error。t 值越大（絕對值），越有信心 βj ≠ 0。\n\n對應的 p 值來自 t(df) 分佈，df = n-k-1。p < α（通常 0.05）就拒絕 H0，認為 Xj 的效果顯著。\n\n【範例】某迴歸輸出：\n  變數      coef    std err    t      p\n  家庭人數  7.1943   1.092    6.59   0.000\n  居住年數  0.1432   0.213    0.67   0.502\n  年收入    0.0023   0.0008   2.88   0.004\n\n解讀：家庭人數（p<0.001）和年收入（p=0.004）顯著，居住年數（p=0.502）不顯著。\n\n考試考法：常給 coef 和 std err，要你手算 t = coef/std err，或者反過來給 t 和其中一個求另一個。\n\n考試陷阱：個別 t 檢定只能說「在其他變數已在模型中的情況下，這個變數是否有額外貢獻」。如果兩個 X 高度相關（共線性），可能兩個的 t 都不顯著，但它們合在一起很有用——這時要看 F 檢定。",
           "bullets": [
-            "使用 n、k、R²"
+            "t = β̂j / SE(β̂j)，衡量「效果大小 ÷ 不確定性」",
+            "p 值來自 t(n-k-1) 分佈，p < 0.05 通常判定顯著",
+            "t 檢定是「條件性」的：在其他 X 已入模的前提下測額外貢獻",
+            "共線性高時個別 t 可能都不顯著，但聯合 F 可能顯著",
+            "95% 信賴區間：β̂j ± t*·SE(β̂j)，不包含 0 等價於 p<0.05"
           ]
         },
         {
-          "title": "t 值",
-          "body": "係數除以標準誤。",
+          "title": "R²、adjusted R² 與模型解釋力",
+          "body": "R² (coefficient of determination) = 1 - SSE/SST，其中 SST = Σ(yi-ȳ)² 是總變異，SSE = Σ(yi-ŷi)² 是殘差變異。R² 表示「模型解釋了多少比例的 Y 的變異」，介於 0 和 1 之間。\n\n問題：多加一個 X 變數，R² 一定會增加或不變（即使那個 X 根本沒用）。所以不能只看 R² 比較不同複雜度的模型。\n\nAdjusted R²（調整後 R²）對模型複雜度做懲罰：\nAdj. R² = 1 - [(1-R²)·(n-1)/(n-k-1)]\n\n如果加入一個無用變數，R² 微增但 k 增加導致懲罰項變大，Adj. R² 可能下降。\n\n【範例】n=440, k=3, R²=0.170。\nAdj. R² = 1 - [(1-0.170)·(439)/(436)] = 1 - [0.830·1.00688] = 1 - 0.8357 = 0.1643\n\nR² 和 Adj. R² 差 0.006，差距不大是因為 n 遠大於 k。當 n 接近 k 時差距會很明顯。\n\n考試陷阱：R²=0.17 不代表模型「不好」。在社會科學中，R²=0.2 已經相當高。R² 的高低取決於領域和研究目的，沒有絕對標準。",
           "bullets": [
-            "不要拿 p 值當 t"
+            "R² = 1-SSE/SST，表示模型解釋的變異比例，0~1 之間",
+            "R² 只增不減：多加 X 一定 ≥ 原來，所以不能用 R² 比較不同 k 的模型",
+            "Adj. R² = 1-[(1-R²)(n-1)/(n-k-1)]，對複雜度做懲罰",
+            "Adj. R² 可能因無用變數而下降，所以比 R² 更適合選模型",
+            "R² 的「好壞」沒有絕對標準，取決於領域和應用"
           ]
         },
         {
-          "title": "F 檢定",
-          "body": "檢查所有斜率是否共同為零。",
+          "title": "F 檢定：所有變數是否共同有用",
+          "body": "F 檢定檢驗 H0: β1=β2=...=βk=0（所有解釋變數都沒用）vs H1: 至少一個 βj≠0。\n\nF 統計量 = (SSR/k) / (SSE/(n-k-1)) = (R²/k) / ((1-R²)/(n-k-1))\n\n其中 SSR = SST-SSE 是模型解釋的變異。F 服從 F(k, n-k-1) 分佈。\n\n如果 p(F) < α，拒絕 H0，代表這組 X 變數整體來說對 Y 有解釋力。\n\n【範例】n=440, k=3, R²=0.170。\nF = (0.170/3) / ((1-0.170)/436) = 0.05667 / 0.001904 ≈ 29.76\np(F) ≈ 0.000，遠小於 0.05 → 拒絕 H0。\n結論：在 5% 顯著水準下，家庭人數、居住年數、年收入作為一組對垃圾量有顯著解釋力。\n\n【個別 t 和聯合 F 的關係】\n- 所有個別 t 都顯著 → F 一定顯著。\n- F 顯著 → 不代表每個個別 t 都顯著（可能只有部分顯著）。\n- 所有個別 t 都不顯著 → F 可能還是顯著（共線性造成的）。\n\n考試技巧：如果只有一個解釋變數（k=1），t² = F 恰好成立，t 檢定和 F 檢定等價。",
           "bullets": [
-            "p<0.05 拒絕 H0"
+            "F 檢定 H0: β1=...=βk=0（全部沒用） vs H1: 至少一個 ≠ 0",
+            "F = (R²/k)/((1-R²)/(n-k-1))，服從 F(k, n-k-1)",
+            "F 顯著只代表「至少一個有用」，不告訴你是哪一個——看個別 t",
+            "k=1 時 t² = F，兩個檢定等價",
+            "F 大但個別 t 都不顯著 → 可能有共線性問題"
           ]
         }
       ],
       "workedExamples": [
         {
-          "prompt": "n=440,k=3,R²=.170。",
+          "prompt": "迴歸輸出：n=440, k=3, R²=0.170, β̂_家庭人數=7.1943, SE=1.092。(a) 算 Adj. R²  (b) 算 t 值  (c) β̂ 的 95% 信賴區間（假設 t*≈1.96）",
           "steps": [
-            "代 adjusted R² 公式"
+            "(a) Adj. R² = 1-[(1-0.170)·439/436] = 1-[0.830·1.00688] = 1-0.8357 ≈ 0.1643",
+            "(b) t = 7.1943/1.092 ≈ 6.59",
+            "(c) CI = 7.1943 ± 1.96·1.092 = 7.1943 ± 2.1403 = [5.054, 9.335]",
+            "CI 不包含 0，和 t 檢定顯著一致"
           ],
-          "answer": "約 .1643"
+          "answer": "Adj. R²≈0.164, t≈6.59 (顯著), 95% CI=[5.05, 9.33]"
         },
         {
-          "prompt": "coef=7.1943,se=1.092。",
+          "prompt": "模型 A: k=2, R²=0.15, n=100。模型 B: k=5, R²=0.18, n=100。哪個 Adj. R² 更高？",
           "steps": [
-            "相除"
+            "A: Adj.R² = 1-[(1-0.15)·99/97] = 1-[0.85·1.0206] = 1-0.8675 = 0.1325",
+            "B: Adj.R² = 1-[(1-0.18)·99/94] = 1-[0.82·1.0532] = 1-0.8636 = 0.1364",
+            "B 的 Adj.R²(0.1364) 略高於 A(0.1325)，但差距很小(0.004)",
+            "多加 3 個變數只提升 R² 0.03、Adj.R² 0.004，可能不值得"
           ],
-          "answer": "t≈6.59"
+          "answer": "B 略高 (0.1364 vs 0.1325)，但提升極微，需考慮模型簡約性。"
         }
       ],
       "commonPitfalls": [
-        "把 Df Model 當殘差自由度",
-        "把 individual t 與 joint F 混用",
-        "把顯著係數解讀為因果"
+        "把 Df Model 當殘差自由度：殘差 df = n-k-1，模型 df = k",
+        "把個別 t 和聯合 F 搞混：t 測單一變數，F 測全部變數的聯合效果",
+        "把顯著係數解讀為因果：迴歸只測關聯，因果需要實驗設計或因果推論方法",
+        "R²=0.17 就說模型差：R² 的好壞取決於領域，社會科學 0.17 已不低",
+        "只看 R² 不看 Adj. R² 來比較不同 k 的模型：R² 只增不減，比較要用 Adj. R²"
       ]
     },
     {
@@ -574,106 +567,111 @@
       "id": "lesson-im-stat-chi-square-independence",
       "kind": "past_paper_micro_lesson",
       "subtopicId": "im-stat-categorical-contingency",
-      "coveredSubtopicIds": [
-        "im-stat-categorical-contingency",
-        "im-stat-categorical-chi-square"
-      ],
+      "coveredSubtopicIds": ["im-stat-categorical-contingency", "im-stat-categorical-chi-square"],
       "title": "座位分布是否真的互不相關",
       "summary": "用 115-5 從列聯表建立期望次數、卡方統計量、自由度與檢定結論。",
-      "estimatedMinutes": 30,
-      "sourceRefs": [
-        "src-im-stat-ntu-115-pdf",
-        "src-im-stat-openintro",
-        "src-im-stat-nist-handbook"
-      ],
-      "pastPaperRefs": [
-        "q-pp-im-stat-115-5"
-      ],
+      "estimatedMinutes": 40,
+      "sourceRefs": ["src-im-stat-ntu-115-pdf", "src-im-stat-openintro", "src-im-stat-nist-handbook"],
+      "pastPaperRefs": ["q-pp-im-stat-115-5"],
       "learningObjectives": [
-        "由邊際合計計算期望次數",
-        "計算 Pearson χ² 與自由度",
-        "以臨界值作決策並正確敘述關聯"
+        "由列聯表的邊際合計計算每一格的期望次數",
+        "計算 Pearson χ² 統計量 = Σ(O-E)²/E",
+        "正確算出自由度 df = (r-1)(c-1) 並解釋為什麼不是 r·c",
+        "以臨界值或 p 值作決策，並正確敘述「關聯」而非「因果」"
       ],
       "learningScenario": {
         "title": "商店時段與商品選擇",
         "hook": "店長想知道商品選擇是否與到店時段有關，先算兩者若獨立時每格應有多少人。",
         "predict": "觀察格與期望格差多少，才值得懷疑兩者有關？",
         "mapping": [
-          {
-            "everyday": "實際每格人數",
-            "technical": "observed count O"
-          },
-          {
-            "everyday": "若互不相關應有的人數",
-            "technical": "expected count E"
-          },
-          {
-            "everyday": "標準化後累積差距",
-            "technical": "Σ(O-E)²/E"
-          },
-          {
-            "everyday": "表格可自由變動程度",
-            "technical": "df=(r-1)(c-1)"
-          }
+          { "everyday": "實際每格人數", "technical": "observed count O" },
+          { "everyday": "若互不相關應有的人數", "technical": "expected count E" },
+          { "everyday": "標準化後累積差距", "technical": "Σ(O-E)²/E" },
+          { "everyday": "表格可自由變動程度", "technical": "df=(r-1)(c-1)" }
         ],
         "boundary": "顯著關聯不代表因果；期望次數過小、樣本不獨立或抽樣偏誤會破壞檢定。",
-        "examCues": [
-          "contingency table",
-          "expected count",
-          "χ²",
-          "(r-1)(c-1)"
-        ]
+        "examCues": ["contingency table", "expected count", "χ²", "(r-1)(c-1)"]
       },
       "sections": [
         {
-          "title": "立假設",
-          "body": "H0 是兩類別變數獨立。",
+          "title": "列聯表與獨立性假設",
+          "body": "列聯表 (contingency table) 是把兩個類別變數交叉分類的計數表。r 列 × c 欄代表第一個變數有 r 個類別、第二個有 c 個類別。每格的數字是落在該組合的觀察次數 (observed count, O)。\n\n卡方獨立性檢定的假設：\nH0: 兩個變數獨立（知道其中一個不影響另一個的分佈）\nH1: 兩個變數不獨立（存在關聯）\n\n【範例】115 年考題：某教室有 200 名學生，調查座位偏好（前排/中間/後排）和年級（大一/大二/大三/大四）。\n\n              大一  大二  大三  大四  合計\n  前排         30    20    15    10    75\n  中間         25    30    20    25   100\n  後排         10    10     5     0    25\n  合計         65    60    40    35   200\n\n問：座位偏好和年級是否有關？\n\n注意：卡方檢定只測「是否有關聯」，不測「關聯的方向或強度」。如果拒絕 H0，你可以說「座位偏好和年級有顯著關聯」，但不能說「年級導致座位偏好改變」。",
           "bullets": [
-            "H1 是不獨立"
+            "列聯表：r×c 的計數表，每格是觀察次數 O",
+            "H0: 兩變數獨立，H1: 兩變數不獨立（有關聯）",
+            "卡方檢定是右尾檢定：χ² 越大，越不像獨立",
+            "前提假設：隨機抽樣、觀測值獨立、每格期望次數 ≥ 5（粗略規則）",
+            "結論只能說「有/沒有關聯」，不能說「因果」"
           ]
         },
         {
-          "title": "算期望值",
-          "body": "E=row total×column total/grand total。",
+          "title": "期望次數：如果獨立的話每格應該有多少人",
+          "body": "如果兩變數真的獨立，每格的期望次數 E 可以用邊際合計算出：\n\nE_ij = (第 i 列合計 × 第 j 欄合計) / 總數 = (R_i × C_j) / N\n\n直覺：如果獨立，落在第 i 列的比例是 R_i/N，落在第 j 欄的比例是 C_j/N，兩個同時成立的比例就是乘積 (R_i/N)·(C_j/N)，乘以總數 N 就得 E_ij = R_i·C_j/N。\n\n【範例】E(前排,大一) = 75·65/200 = 4875/200 = 24.375\nE(中間,大一) = 100·65/200 = 6500/200 = 32.5\nE(後排,大一) = 25·65/200 = 1625/200 = 8.125\n\n驗算：24.375+32.5+8.125 = 65 = 大一合計 ✓（每欄的期望值加起來要等於欄合計）\n\n完整期望值表：\n              大一    大二    大三    大四\n  前排       24.375  22.5    15.0    13.125\n  中間       32.5    30.0    20.0    17.5\n  後排        8.125   7.5     5.0     4.375\n\n注意：E(後排,大四) = 25·35/200 = 4.375 < 5。有些教材建議期望次數都要 ≥ 5，否則卡方近似不夠好。如果有格子 E < 5，可能需要合併類別或用 Fisher exact test。",
           "bullets": [
-            "各列各欄合計要吻合"
+            "E_ij = (R_i × C_j) / N，每格獨立計算",
+            "直覺：獨立 = 行比例 × 列比例 × 總數",
+            "每列的期望值加總 = 列合計，每欄加總 = 欄合計（自行驗算）",
+            "粗略規則：所有 E ≥ 5；如果有 E < 5 需要考慮合併或改用其他方法",
+            "期望值通常不是整數——這是正常的，不要四捨五入後再算 χ²"
           ]
         },
         {
-          "title": "累積差距",
-          "body": "每格計算 (O-E)²/E。",
+          "title": "卡方統計量與自由度",
+          "body": "Pearson 卡方統計量：χ² = Σ_所有格 (O_ij - E_ij)² / E_ij\n\n每一格計算「觀察值和期望值的偏差」，平方後除以期望值（標準化），再全部加總。χ² 越大表示觀察分佈和獨立假設下的期望分佈差異越大。\n\n自由度 df = (r-1)(c-1)。\n\n為什麼不是 r·c？因為有邊際限制：固定了行合計和列合計後，表中有些格子的值可以自由變動，有些被決定了。r 行的行合計給 r 個限制（但和總數重複所以只有 r-1 個獨立限制），c 列同理。所以自由度 = r·c-1-(r-1)-(c-1) = (r-1)(c-1)。\n\n【範例】延續 3×4 表：df = (3-1)(4-1) = 2×3 = 6。\n\n計算 χ²（部分格）：\nχ²(前,大一) = (30-24.375)²/24.375 = (5.625)²/24.375 = 31.64/24.375 ≈ 1.298\nχ²(中,大一) = (25-32.5)²/32.5 = (-7.5)²/32.5 = 56.25/32.5 ≈ 1.731\nχ²(後,大四) = (0-4.375)²/4.375 = 19.14/4.375 ≈ 4.375\n...\n把所有 12 格加總得到 χ² ≈ 15.2（舉例用的近似值）。\n\n考試技巧：(O-E)² 展開後不要和 O²-E² 搞混。另外，χ² 永遠 ≥ 0（因為是平方和），所以只有右尾拒絕域。",
           "bullets": [
-            "全部格相加"
+            "χ² = Σ (O-E)²/E，每格算一項然後全部加總",
+            "df = (r-1)(c-1)，不是 r·c，也不是 r·c-1",
+            "χ² ≥ 0 永遠成立，越大越不像獨立 → 只有右尾拒絕域",
+            "3×4 表有 12 格但 df=6，因為邊際限制用掉了 6 個自由度",
+            "(O-E)² 的「-E」是先減再平方，不是分別平方再減"
           ]
         },
         {
-          "title": "決策",
-          "body": "比較臨界值或 p 值。",
+          "title": "決策、結論與注意事項",
+          "body": "查 χ²(df) 的臨界值表或 p 值。如果 χ² > χ²_α(df)，拒絕 H0（有關聯）；否則不拒絕。\n\n【範例】χ²≈15.2, df=6, α=0.05。\n查表：χ²_0.05(6) = 12.592。\n15.2 > 12.592 → 拒絕 H0。\n\n結論：在 5% 顯著水準下，有統計證據顯示座位偏好與年級之間存在關聯。\n\n不能說：「年級導致座位偏好不同」（因果）。\n不能說：「大四學生不坐後排」（這是描述個別格子，不是檢定的結論）。\n\n【Goodness-of-fit 變體】卡方檢定還有另一種用法——適合度檢定 (goodness-of-fit)。這時只有一個變數 k 個類別，H0 指定一個理論分佈（例如「均勻分佈」或「某特定比例」），df = k-1。公式一樣是 Σ(O-E)²/E，差別只在 E 的來源和 df。\n\n【考試重要區分】\n獨立性檢定：兩個變數，r×c 表，df=(r-1)(c-1)\n適合度檢定：一個變數，k 個類別，df=k-1\n兩者公式相同但 df 不同——看清題目問的是「兩變數有沒有關」還是「分佈合不合理」。",
           "bullets": [
-            "只陳述關聯"
+            "χ² > χ²_α(df) 拒絕 H0 → 「有顯著關聯」，反之「沒有足夠證據」",
+            "結論措辭：只說關聯 (association)，不說因果 (causation)",
+            "獨立性 df = (r-1)(c-1)，適合度 df = k-1，公式相同但 df 不同",
+            "期望次數 < 5 的格子超過 20% 時，χ² 近似不可靠，考慮合併或 Fisher 法",
+            "χ² 只告訴你「有沒有關聯」，不告訴你「多強」或「方向」——需要看殘差或效果量"
           ]
         }
       ],
       "workedExamples": [
         {
-          "prompt": "2×3 表的自由度。",
+          "prompt": "2×3 列聯表，N=120。觀察值：\n        A    B    C\n  男   20   30   10   (60)\n  女   15   10   35   (60)\n      (35) (40) (45) (120)\n α=0.05，檢定性別和偏好是否獨立。",
           "steps": [
-            "(2-1)(3-1)"
+            "H0: 性別和偏好獨立  H1: 不獨立",
+            "期望值：E(男,A) = 60·35/120 = 17.5, E(男,B) = 60·40/120 = 20, E(男,C) = 60·45/120 = 22.5",
+            "E(女,A) = 17.5, E(女,B) = 20, E(女,C) = 22.5",
+            "χ² = (20-17.5)²/17.5 + (30-20)²/20 + (10-22.5)²/22.5 + (15-17.5)²/17.5 + (10-20)²/20 + (35-22.5)²/22.5",
+            "   = 0.357 + 5.000 + 6.944 + 0.357 + 5.000 + 6.944 = 24.602",
+            "df = (2-1)(3-1) = 2",
+            "χ²_0.05(2) = 5.991。24.602 >> 5.991 → 拒絕 H0",
+            "結論：有強烈統計證據顯示性別和偏好之間存在關聯。"
           ],
-          "answer": "df=2"
+          "answer": "χ²=24.6, df=2, 遠大於臨界值 5.991，拒絕獨立假設。"
         },
         {
-          "prompt": "χ²=6.42，5% 臨界值 5.99。",
+          "prompt": "適合度檢定：某骰子擲 120 次，O = {25, 17, 22, 18, 20, 18}。H0: 公平骰（各面 1/6）。α=0.05。",
           "steps": [
-            "比較大小"
+            "E = 120/6 = 20 for each face",
+            "χ² = (25-20)²/20 + (17-20)²/20 + (22-20)²/20 + (18-20)²/20 + (20-20)²/20 + (18-20)²/20",
+            "   = 25/20 + 9/20 + 4/20 + 4/20 + 0/20 + 4/20 = 46/20 = 2.3",
+            "df = 6-1 = 5（適合度用 k-1）",
+            "χ²_0.05(5) = 11.07。2.3 < 11.07 → 不拒絕 H0",
+            "結論：沒有足夠證據認為骰子不公平。"
           ],
-          "answer": "拒絕獨立假設"
+          "answer": "χ²=2.3, df=5, 不拒絕 H0。數據與公平骰一致。"
         }
       ],
       "commonPitfalls": [
-        "以觀察值代替期望值當分母",
-        "自由度用 rc",
-        "拒絕獨立就宣稱因果"
+        "以觀察值代替期望值當分母：是 (O-E)²/E 不是 (O-E)²/O",
+        "自由度用 r·c 或 r·c-1：獨立性是 (r-1)(c-1)，適合度是 k-1",
+        "拒絕獨立就宣稱因果：只能說「有關聯」",
+        "搞混獨立性檢定和適合度檢定：前者兩個變數、後者一個變數",
+        "期望值不是整數就四捨五入：保留小數點，最後算 χ² 才準確"
       ]
     }
   ]

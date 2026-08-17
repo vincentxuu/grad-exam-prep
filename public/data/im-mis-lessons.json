@@ -60,38 +60,46 @@
       "sections": [
         {
           "title": "策略對齊不是列一張採購單",
-          "body": "差異化、成本、創新等策略先定義目標客群與價值主張，再問資訊品質、流程速度或互動體驗如何支持它。",
+          "body": "IT-business alignment 是指資訊科技的投資、架構與能力必須與企業的策略目標相互配合。Porter 的競爭策略把企業定位分為成本領導、差異化與聚焦三種，每種策略需要不同的 IT 支持方式：成本領導需要自動化與流程標準化，差異化需要客戶體驗系統與創新平台，聚焦則需要精準的市場資料與客群分析能力。\n\n對齊的核心困難在於：IT 本身通常是可模仿的（competitors can buy the same ERP），真正的競爭優勢來自 IT 與組織特有的流程、文化、知識之間的結合方式。所以答題時不能只說「導入 CRM 系統」，要寫出 CRM 如何改變客戶互動流程、產生什麼 capability（例如 cross-selling accuracy 提升）、最終如何影響可衡量的 business outcome（例如 customer lifetime value 成長 15%）。\n\n考試常見陷阱：只列出 IT 工具清單而沒有解釋 capability 與 outcome 之間的中介機制。好的答案要寫出完整的因果鏈：IT investment → process change → capability → measurable KPI → strategic objective。",
           "bullets": [
-            "IT 本身通常可被模仿",
-            "要寫出 capability 與 business outcome 的中介機制",
-            "KPI 必須能對應策略目標"
+            "IT 本身通常可被模仿，競爭優勢來自 IT 與組織獨特流程的結合",
+            "每種競爭策略（成本、差異化、聚焦）需要不同的 IT 支持模式",
+            "申論要寫出 capability 與 business outcome 的中介機制，不只列工具",
+            "KPI 必須能直接對應策略目標，例如差異化策略對應 NPS 或 retention rate",
+            "alignment 不是一次性專案而是持續校準，環境變了對齊也要調整"
           ]
         },
         {
           "title": "IT value 依賴互補性資產",
-          "body": "相同系統在不同企業產生不同績效，常因流程再設計、管理承諾、資料品質、人員技能與吸收能力不同。",
+          "body": "Brynjolfsson 與 Hitt 在 1990 年代末研究了上千家企業的 IT 投資與生產力數據，提出 productivity paradox：統計上 IT 投資與生產力的正相關，只在企業同時投入「互補性資產」（complementary assets）時才顯著。互補性資產包含四大類：(1) 組織資產——流程再設計、扁平化組織結構；(2) 管理資產——管理層承諾、變革領導力；(3) 社會資產——員工數位技能、教育訓練、吸收能力（absorptive capacity）；(4) 文化資產——創新導向的組織文化、容錯試錯的環境。\n\n以 ERP 導入為例：一家台灣製造業花費 3000 萬導入 SAP，同時投入 18 個月的流程盤點與再設計、培訓 200 名員工、設置跨部門 master data owner。另一家同規模企業花同樣金額但跳過流程再設計，直接把舊流程搬上系統。前者交期縮短 30%，後者反而因系統僵化導致交期延長。差異不在 IT 投資金額，而在互補性資產的投入。\n\n考試怎麼考：通常給一個 IT 導入失敗或成功的案例，問你用互補性資產理論分析原因。答題要指出缺了哪些互補性資產、為什麼那些資產在該產業脈絡下不可或缺、以及如何改善配置。",
           "bullets": [
-            "不要把採購支出直接等同績效",
-            "短期導入成本與長期能力要分開",
-            "用 adoption、usage 與 process metric 追蹤"
+            "Productivity paradox 的核心不是 IT 沒用，而是 IT 的效果被互補性資產中介",
+            "互補性資產至少包含四類：組織流程、管理承諾、人力技能、組織文化",
+            "同一套系統在不同組織產生不同結果，通常可以用互補性資產的差異解釋",
+            "IT 投資有延遲效應（lag effect），短期 ROI 可能低估長期價值",
+            "申論答題要建立因果鏈：缺什麼資產 → 造成什麼問題 → 如何改善"
           ]
         },
         {
           "title": "投資組合要同時看效益與風險",
-          "body": "NPV 等財務工具有助比較現金流，但策略平台、法遵、學習 option 與相依關係可能無法被單一數字完整表達。",
+          "body": "IT 投資不能只用 NPV 或 ROI 評估。Laudon 教科書把 IT 投資效益分為 tangible（可量化：成本節省、營收增加）和 intangible（難量化：品牌形象提升、決策品質改善、組織學習能力增強）。對於平台型投資或實驗型投資，純財務指標會系統性低估其價值，因為它們忽略了三個重要面向：(1) option value——平台投資保留了未來擴展的選擇權，即使當前 NPV 為負；(2) 學習效果——實驗型投資讓組織累積知識，降低未來決策風險；(3) 生態系統效應——平台投資可能吸引外部開發者或合作夥伴，產生網路效應。\n\nIT 投資組合管理（portfolio management）的框架通常把項目分為三類：run-the-business（維運現有系統，低風險低回報）、grow-the-business（擴展能力，中等風險與回報）、transform-the-business（創新轉型，高風險高回報）。預算分配要考慮企業目前的策略方向：穩定期偏重 run，成長期偏重 grow，數位轉型期需要增加 transform 比例。\n\n考試常見題型：比較兩種 IT 投資的評估方法，或分析為什麼某項投資的 NPV 分析結論與最終的投資決策不一致。答題要列出 tangible 與 intangible benefits，並說明 NPV 的三個系統性限制。",
           "bullets": [
-            "明列 tangible 與 intangible benefits",
-            "比較 dependency、uncertainty 與 downside",
-            "設定 stage gate 與停止條件"
+            "Tangible benefits 可量化（成本節省、營收增加），intangible 難量化（品牌、學習能力）",
+            "NPV 系統性低估平台投資，因為忽略 option value 和生態系統效應",
+            "投資組合三分類：run（維運）、grow（成長）、transform（轉型）",
+            "Real options 適合高不確定性的階段性投資：先投小錢驗證，再決定是否擴大",
+            "設定 stage gate 與停止條件，避免 sunk cost fallacy 導致持續加碼失敗項目"
           ]
         },
         {
           "title": "環境與組織邊界會改變答案",
-          "body": "IT 可降低市場交易成本，也可降低企業內部協調成本；究竟外包、擴張或縮小，要比較資產專屬性、監督成本與環境動態。",
+          "body": "交易成本理論（Transaction Cost Economics, TCE）由 Coase 與 Williamson 發展，解釋企業為什麼存在：當市場交易成本（搜尋、談判、監督、執行合約）高於企業內部組織成本時，企業會選擇自行完成（make）而非外包（buy）。IT 的特殊角色在於：它可以同時降低市場交易成本（電子市場降低搜尋成本、智慧合約降低執行成本）和內部協調成本（ERP 降低部門間的資訊傳遞成本）。最終企業邊界往哪個方向移動，取決於哪邊的成本降低更多。\n\n資產專屬性（asset specificity）是 TCE 的核心變數：當投資高度專屬於特定交易關係（例如為某客戶客製的系統），外包風險高（被鎖定），傾向自建。當投資通用性高（例如標準化的 cloud infrastructure），外包可行且常更有效率。代理理論（agency theory）則從另一個角度補充：即使交易成本低，如果代理人（外包商）的利益與委託人（企業）不一致，加上資訊不對稱，仍可能導致偷懶或機會主義行為。\n\n高環境動態性（environmental dynamism）下，Teece 的 dynamic capabilities 框架指出企業需要 sensing（偵測變化）、seizing（抓住機會）、transforming（重組資源）三種能力。IT 在此扮演感測器（data analytics）、行動器（digital platform）和重組工具（modular architecture）的角色。但敏捷有成本：保留冗餘、持續實驗、快速迭代都需要投資。\n\n考試提醒：結論要寫成條件句（「在 X 條件下，傾向 Y」），不要寫成絕對判斷（「應該外包」）。",
           "bullets": [
-            "交易成本與代理成本不是同義詞",
-            "高 dynamism 偏重感知與快速重組",
-            "結論應寫成條件句"
+            "交易成本理論解釋 make-or-buy：比較市場交易成本與內部組織成本",
+            "資產專屬性高 → 傾向自建（避免被鎖定），專屬性低 → 傾向外包",
+            "代理理論補充利益不一致面向，IT 監控降低代理成本但不能消除資訊不對稱",
+            "高 dynamism 偏重 sensing、seizing、transforming 三種動態能力",
+            "結論應寫成條件句（在 X 條件下傾向 Y），不要寫成絕對判斷"
           ]
         }
       ],
@@ -191,38 +199,46 @@
       "sections": [
         {
           "title": "先畫出平台各側與交換內容",
-          "body": "平台不是單一買賣雙方。答題先列出每一側提供與取得的價值，再辨識誰對誰產生 network effect。",
+          "body": "多邊平台（multi-sided platform）是一種商業模式，它透過基礎設施連結兩個或以上互相依賴的使用者群體，讓他們在平台上進行原本靠自己難以達成的互動。理解平台的第一步是辨識它有哪些「邊」（sides），以及每一邊提供與獲取什麼價值。以 Uber 為例：乘客提供搭乘需求與付款，司機提供車輛與時間，Uber 提供配對演算法與支付基礎設施。三方的價值交換構成平台的核心。\n\n網路效應（network effects）是平台最重要的競爭機制。Same-side network effects 指同一側使用者之間的影響（例如社群媒體上使用者越多，每個人能看到的內容越豐富）。Cross-side network effects 指不同側之間的影響（Uber 乘客越多，司機賺錢機會越大，反之亦然）。但網路效應不必然是正面的：同側競爭（太多司機分薄收入）、品質稀釋（太多賣家導致搜尋成本上升）都是負面網路效應的例子。\n\n答題時第一步畫出各側的角色、提供的價值與取得的價值，標清楚 same-side 和 cross-side 的網路效應方向（正或負），再分析平台的競爭機制。不要假設「使用者越多一定越好」——要指出在什麼條件下成立、什麼條件下反轉。",
           "bullets": [
-            "區分 same-side 與 cross-side effect",
-            "使用者數多不必然等於高品質",
-            "標示資料、金流與責任流"
+            "多邊平台連結互相依賴的使用者群體，核心是降低雙方的搜尋與配對成本",
+            "區分 same-side（同側）與 cross-side（跨側）network effect，並標明正負方向",
+            "使用者數量多不必然等於高品質——同側競爭和品質稀釋是負面網路效應",
+            "答題先畫出各側角色與價值交換，再分析網路效應的方向和強度",
+            "標示資料流（誰看到什麼資訊）、金流（誰付錢給誰）與責任流（誰負什麼責任）"
           ]
         },
         {
           "title": "定價取決於彈性與成長策略",
-          "body": "平台可能補貼價格敏感、能吸引另一側或品質關鍵的一側，再從其他側變現；補貼不是永遠免費。",
+          "body": "平台定價的核心原理與傳統企業不同：平台需要同時維持多邊的參與意願，所以定價策略不是「成本加利潤」，而是「誰對價格最敏感？誰的參與對另一側最有吸引力？」Rochet & Tirole 的雙邊市場理論指出，平台應該補貼價格彈性高（price-sensitive）或對另一側價值貢獻大的一邊，再從另一邊收費。\n\n例如 Google 讓搜尋使用者完全免費——因為使用者的搜尋行為產生了精準的意圖資料，這些資料對廣告主極有價值。Google 從廣告主收取高額競價費用。這不是慈善，是經濟邏輯：補貼使用者邊→累積使用者規模→使用者規模增加廣告的 targeting 精準度→廣告主願意付更高價格。整個定價模型的基礎是 cross-side network effect。\n\n但補貼不是永遠免費。平台的生命週期通常經歷：啟動期（大量補貼建立臨界質量）→成長期（減少補貼、開始收費）→成熟期（差異化收費、增值服務變現）。Multi-homing（使用者同時使用多個平台）會削弱定價能力，因為使用者可以輕易轉移。Switching cost（轉換成本）則有利於平台留住使用者——但過高的轉換成本也可能招來反壟斷審查。\n\n考試常見題型：分析某平台的定價策略為什麼補貼某一側、分析補貼策略的可持續性、比較兩個平台的定價差異。",
           "bullets": [
-            "比較 price elasticity",
-            "注意 multi-homing 與 switching cost",
-            "交叉補貼要有可持續收入來源"
+            "平台定價的邏輯是補貼價格敏感或價值貢獻大的一邊，從另一邊變現",
+            "交叉補貼有經濟理由但不能永續——需要找到可持續的收入來源",
+            "Multi-homing 削弱定價能力（使用者隨時可以跳槽），switching cost 增強但有反壟斷風險",
+            "平台生命週期：補貼建量→減補貼開始收費→差異化增值變現",
+            "比較 price elasticity 來決定補貼哪一側，不是隨意選擇"
           ]
         },
         {
           "title": "數位市場降低部分成本也創造新摩擦",
-          "body": "搜尋、複製與配對成本可下降，但資訊不對稱、排序偏誤、假評價、隱私與 winner-take-most 風險仍需治理。",
+          "body": "數位市場（digital marketplace）相比傳統市場降低了三種成本：搜尋成本（search cost，消費者能快速比價和找到產品）、複製成本（replication cost，數位商品的邊際成本趨近零）、配對成本（matching cost，演算法推薦降低買賣雙方的配對時間）。這些成本下降讓價格更透明、市場更有效率，也讓小商家能接觸到全球消費者。\n\n但數位市場也帶來新的問題：(1) 資訊不對稱——線上購物無法觸摸商品，產品品質不確定性高於實體店，這催生了評價機制（review system）作為信任代理。但假評價（fake reviews）又削弱了這個機制。(2) 演算法偏誤——推薦系統決定了什麼商品被曝光，什麼被隱藏。平台的推薦演算法既是服務也是權力：它可以偏向付費商家、偏向利潤率高的商品，或因為訓練資料偏差而系統性忽略某些群體。(3) Winner-take-most——網路效應加上規模經濟容易導致市場集中，少數平台壟斷整個市場，中小商家的議價能力被壓縮。\n\n直播電商、AI 推薦、VR 試穿等新技術只有在降低消費者不確定性、改善互動品質、或縮短決策流程時才創造真正的商業價值。否則它們只是噱頭。答題時不要只說「直播提升銷售」，要解釋機制：直播透過即時互動降低了什麼不確定性（例如看到實物、問即時問題），這個機制在什麼品類最有效（高不確定性的商品如服裝），在什麼品類效果有限（標準化商品如電池）。",
           "bullets": [
-            "透明度不等於資訊完全",
-            "演算法推薦會影響曝光分配",
-            "治理規則本身也會改變誘因"
+            "數位市場降低搜尋、複製與配對成本，但創造新的資訊不對稱和演算法偏誤問題",
+            "評價機制是信任代理，但假評價和刷評削弱其可信度",
+            "推薦演算法決定曝光分配，既是服務也是權力——有偏誤風險",
+            "Winner-take-most 是網路效應的副作用，不是所有市場都必然走向壟斷",
+            "新技術（直播、VR）的價值要回到「降低了什麼不確定性」的機制來評估"
           ]
         },
         {
           "title": "新技術要回到轉換機制",
-          "body": "直播、AI 推薦或 VR 只有在降低不確定性、改善互動或縮短決策流程時才形成商業價值。",
+          "body": "每當考題提到新技術（直播電商、AI 推薦、VR/AR 體驗、元宇宙）時，不要被技術名詞牽著走。回答的框架始終是：這個技術改變了什麼互動？降低了什麼成本或不確定性？對平台的哪些參與者產生什麼影響？有什麼副作用或風險？\n\n以共享經濟為例：Airbnb 的核心創新不是「網站」，而是信任機制的設計。它解決了「讓陌生人住在你家裡」的信任問題，方法包括：雙向評價（host 和 guest 互評）、身分驗證（護照/電話驗證）、付款保護（第三方託管）、保險（host guarantee）。這些機制的每一個都對應了一個具體的風險——如果拿掉其中一個，平台的運作就會受影響。\n\n答題模板：(1) 辨識技術或模式的核心轉換——它把什麼不可能變成可能？(2) 拆解實現這個轉換的關鍵機制——通常 2-3 個就夠。(3) 分析每個機制的適用條件與限制。(4) 用 conversion rate、retention rate、complaint rate 等指標驗證效果。(5) 指出潛在風險：隱私、誤導、退貨、平台依賴等。\n\n考試技巧：台大 MIS 考題偏好要你「分析」而非「描述」。描述是列出技術功能，分析是解釋因果機制和條件。同樣篇幅，後者拿更多分。",
           "bullets": [
-            "不要只列技術名詞",
-            "同時評估誤導、退貨與隱私",
-            "以 conversion、retention、complaint 等指標驗證"
+            "新技術的價值不在技術本身，在於它降低了什麼不確定性或改變了什麼互動模式",
+            "共享經濟的核心不是「共享」，是信任機制設計（評價、驗證、保險、託管）",
+            "答題框架：核心轉換 → 關鍵機制 → 適用條件 → 指標驗證 → 風險分析",
+            "以 conversion、retention、complaint 等指標驗證新技術的商業效果",
+            "台大 MIS 偏好「分析」（因果機制+條件）勝過「描述」（功能列表），同篇幅後者分更高"
           ]
         }
       ],
@@ -318,38 +334,46 @@
       "sections": [
         {
           "title": "知識策略依可編碼性與工作型態選擇",
-          "body": "重複、標準化問題適合 codification；高度客製、脈絡依賴的問題需要 expert network 與互動。",
+          "body": "知識管理（Knowledge Management, KM）的核心問題是：組織如何有效地創造、儲存、分享和應用知識？Nonaka 的 SECI 模型把知識創造分為四種轉換：Socialization（tacit → tacit，師徒制、觀察學習）、Externalization（tacit → explicit，把經驗寫成文件或模型）、Combination（explicit → explicit，整合多份報告成新文件）、Internalization（explicit → tacit，閱讀 SOP 後轉化為個人技能）。\n\n實務上知識管理有兩大策略：Codification（編碼化）強調把知識寫成文件、建入資料庫，讓員工可以搜尋和重用——適合重複性高、標準化的問題，例如銀行的貸款審核流程、IT 的故障排除手冊。Personalization（人際連結）強調建立專家網絡，讓員工快速找到「懂的人」直接討論——適合高度客製化、情境依賴的問題，例如管理顧問的策略建議、研發部門的技術突破。\n\nHansen 等人的研究發現：成功的企業通常以一種策略為主、另一種為輔（80/20 法則），而不是兩種並重。原因在於兩種策略需要不同的 IT 投資、激勵制度和組織文化，同時追求會導致資源分散和訊號混亂。例如一家以 codification 為主的企業需要投資知識庫系統和鼓勵文件撰寫的獎勵制度；一家以 personalization 為主的企業則需要投資專家定位系統和鼓勵跨部門合作的文化。\n\n考試常見：比較 codification 與 personalization 的適用條件，或分析某企業的 KM 策略選擇。",
           "bullets": [
-            "Tacit knowledge 不代表完全不能記錄",
-            "Repository 仍需版本與品質治理",
-            "兩種策略可以互補"
+            "Nonaka SECI 模型：Socialization、Externalization、Combination、Internalization",
+            "Codification 適合重複標準化問題，Personalization 適合高度客製化情境",
+            "兩種策略不宜並重（Hansen 80/20 法則），因為它們需要不同的 IT、激勵和文化",
+            "Tacit knowledge 不代表完全不能記錄，而是記錄後會遺失脈絡依賴的部分",
+            "知識庫（repository）需要版本控制、品質審核和定期更新，否則會成為過時資訊的垃圾場"
           ]
         },
         {
           "title": "企業系統整合資料也標準化流程",
-          "body": "ERP 以共享資料與跨部門流程降低重複輸入和資訊延遲，但導入也可能帶來僵化、轉換成本與 fit-gap。",
+          "body": "企業資源規劃（Enterprise Resource Planning, ERP）是一套整合性軟體系統，它以一個集中的資料庫連結組織內所有主要功能部門（財務、人資、生產、銷售、採購），讓不同部門共享即時資料，消除資訊孤島。ERP 的核心價值不在軟體功能，而在於它強迫組織標準化流程：要導入 ERP，企業必須先定義統一的流程規範，決定每個步驟由誰負責、產出什麼資料、傳給誰。\n\n但 ERP 導入是 MIS 中最常出問題的領域之一。Laudon 教科書列出的主要風險包括：(1) fit-gap problem——套裝軟體的預設流程與企業實際流程之間的落差。處理方式有三種：改變流程配合系統（best practice adoption）、客製化系統配合流程（customization）、或兩者折中。客製化會大幅增加維護成本和升級難度。(2) change management——員工抗拒新系統，因為它改變了工作方式、權力結構和績效衡量。(3) master data management——不同部門對同一實體（例如「客戶」「產品」）的定義可能不同，整合時需要建立 single source of truth 並指定 data owner。(4) total cost of ownership（TCO）——除了授權費，還包括顧問費、客製化費、培訓費、資料遷移費、以及每年的維護費和升級費。\n\n考試常見：給一個 ERP 導入案例，分析成功或失敗的原因。好的答案會用 fit-gap、complementary assets、change management 等框架分析，而不是只說「缺乏高層支持」。",
           "bullets": [
-            "整合不等於所有流程相同",
-            "先辨識 master data 與責任 owner",
-            "客製化會增加升級成本"
+            "ERP 的核心價值是以共享資料庫消除資訊孤島、用標準流程降低部門間的協調成本",
+            "Fit-gap 有三種處理方式：改流程、改系統、折中——各有成本和風險",
+            "客製化增加短期 fit 但大幅增加長期維護和升級成本",
+            "Master data owner 必須跨部門協商——「客戶」的定義在行銷和財務部門可能不同",
+            "ERP 導入失敗通常不是技術問題，而是 change management 和 fit-gap 決策問題"
           ]
         },
         {
           "title": "流程改造不能只把紙本搬上線",
-          "body": "BPR 重新檢查活動、責任與資訊流；若舊流程不合理，單純 automation 只會更快地複製浪費。",
+          "body": "Business Process Reengineering（BPR）由 Hammer 與 Champy 在 1993 年提出，核心主張是：不要用 IT 加速現有流程，而是根本性地重新設計流程。他們的經典例子是 Ford 的應付帳款部門：原本 500 人處理發票核對，BPR 後用「無發票系統」（收料時直接比對採購單，匹配就自動付款），人力降到 125 人，減少 75%。關鍵不是自動化原來的流程（那只會讓 500 人更快做錯誤的事），而是質問「為什麼需要發票？」然後重新設計整個流程。\n\n區分 automation 與 transformation 是考試的高頻考點。Automation 是用 IT 加速現有流程（把紙本表單變成線上表單），Transformation 是重新設計流程邏輯（取消表單，改用自動觸發的事件驅動流程）。前者保留了原有的流程缺陷，後者從根本上消除不必要的步驟。\n\n流程分析的實務做法：(1) 畫出 as-is（現狀）流程圖，標出每個步驟的等待時間、處理時間與 handoff（交接）次數。(2) 辨識非增值活動（non-value-adding activities）——等待、審批、搬運、重工。(3) 設計 to-be（目標）流程，減少 handoff、合併步驟、平行化處理、消除冗餘審批。(4) 搭配 change management——流程改造意味著有人的工作會改變或消失，沒有組織支持的 BPR 會被抵制。\n\n考試提醒：不要寫「導入系統改善流程」。要說清楚：改了什麼步驟、消除了什麼浪費、為什麼新流程比舊的好、需要什麼配套措施。",
           "bullets": [
-            "區分 automation 與 transformation",
-            "檢查 handoff 與等待",
-            "搭配 change management"
+            "BPR 的核心是「質問流程存在的理由」，不是用 IT 加速現有流程",
+            "區分 automation（加速現有步驟）和 transformation（重設計流程邏輯）是高頻考點",
+            "流程分析四步：畫 as-is → 辨識非增值活動 → 設計 to-be → 搭配 change management",
+            "Handoff（跨部門交接）是流程延遲和錯誤的主要來源",
+            "BPR 有失敗風險：過度破壞導致組織混亂、員工抗拒、或新流程與實際運作脫節"
           ]
         },
         {
           "title": "Push 與 pull 是需求訊號的取捨",
-          "body": "Push 依預測提前生產，pull 依實際需求觸發；產品前置期、波動、缺貨成本與資訊共享決定組合。",
+          "body": "供應鏈管理（Supply Chain Management, SCM）的核心挑戰是：如何在需求不確定的情況下，平衡庫存成本與缺貨風險？Push 策略是根據預測（forecast）提前生產和配送，適合需求穩定、前置時間長的產品（例如基本款成衣、罐頭食品）。Pull 策略是根據實際訂單（actual demand）才觸發生產和配送，適合需求波動大、產品生命週期短的產品（例如流行時裝、電子產品）。\n\n大多數現代供應鏈採用 push-pull 混合策略，以 decoupling point（分離點）為界：分離點之前用 push（標準化零件提前生產），之後用 pull（根據訂單組裝客製化產品）。Dell 的直銷模式就是經典案例：零件以 push 模式預先備料，但電腦只在接到訂單後才開始組裝（build-to-order）。\n\nBullwhip effect（長鞭效應）是供應鏈中最重要的現象之一：終端需求的小幅波動會在往上游傳遞的過程中被逐級放大，導致上游供應商的訂單波動遠大於實際消費波動。主要原因包括：(1) demand forecast updating——每一層根據自己看到的訂單做預測，而不是看終端消費者；(2) order batching——為了降低物流成本而攢到一定量才下單；(3) price fluctuation——促銷期間大量囤貨；(4) shortage gaming——預期缺貨時加大訂單。對策是 information sharing（讓上游看到 POS 資料）、CPFR（協同規劃預測補貨）、VMI（供應商管理庫存）。\n\n考試常見：分析某供應鏈的 push/pull 選擇、解釋 bullwhip effect 的成因與對策、或設計 information sharing 機制。",
           "bullets": [
-            "不是所有產業都能純 pull",
-            "延遲與 batch 會放大 bullwhip effect",
-            "比較 inventory 與 service level"
+            "Push 靠預測提前生產（適合穩定需求），Pull 靠實際需求觸發（適合波動需求）",
+            "Push-pull 混合用 decoupling point 為界，如 Dell 的 build-to-order 模式",
+            "Bullwhip effect 四大成因：需求預測更新、批量訂購、價格波動、缺貨博弈",
+            "對策核心是 information sharing——讓上游看到終端消費資料，減少逐級放大",
+            "不是所有產業都能純 pull——前置時間長、供應不穩定的產品仍需 push 成分"
           ]
         }
       ],
@@ -443,38 +467,46 @@
       "sections": [
         {
           "title": "資料生命週期從決策問題開始",
-          "body": "收集大量資料前要先界定模型輸出會支持哪個決策、錯誤成本與可用回饋，否則容易得到無法部署的高分模型。",
+          "body": "AI 專案最常見的失敗模式不是模型不好，而是從一開始就沒有搞清楚要解決什麼決策問題。Google 的 ML Rules（Rule #1）明確指出：「Don't be afraid to launch a product without machine learning.」——先確認 ML 真的能比簡單規則做得更好，再投資。\n\n資料生命週期的正確順序是：(1) 定義決策問題——模型的輸出會支持誰做什麼決策？錯誤的成本是什麼？(2) 確認資料可行性——需要什麼資料？這些資料是否可取得、合法、品質夠好？(3) 建立 baseline——用最簡單的方法（規則、統計模型）先建立一個基準，確認問題值得用 ML 解決。(4) 收集與清理資料——記錄資料來源（provenance）、標注方法、品質問題和 consent 狀態。(5) 特徵工程與模型訓練。(6) 評估與部署。(7) 監控與維護。\n\n很多 MIS 教材只講後面幾步（模型怎麼建），但考試更常考前面幾步：什麼問題適合用 AI 解決？什麼時候不應該用 AI？資料品質不好時怎麼辦？這些管理決策的考題用技術知識答不了。\n\n考試常見題型：給一個 AI 應用場景，問你如何評估它是否可行。好的答案從決策問題開始，不從演算法開始。",
           "bullets": [
-            "定義 unit of analysis",
-            "記錄資料來源與 consent",
-            "先建立簡單 baseline"
+            "AI 專案從決策問題開始，不從資料或演算法開始（Google ML Rule #1）",
+            "先用簡單 baseline 確認問題值得用 ML，避免 over-engineering",
+            "資料品質五維度：accuracy、completeness、consistency、timeliness、validity",
+            "記錄資料來源（provenance）和 consent 是治理的基礎，不是事後補做",
+            "很多 AI 專案的失敗原因不是模型差，而是決策問題沒定義清楚或資料不可行"
           ]
         },
         {
           "title": "評估指標要符合任務與風險",
-          "body": "分類、預測與社群偵測需要不同指標；離線表現、穩定性、公平與業務結果也不能用單一 accuracy 取代。",
+          "body": "模型評估是 MIS 考試的高頻考點，但很多考生只知道 accuracy 一個指標。實際上不同的任務需要不同的指標，而且「模型準確」不等於「決策正確」。\n\n分類任務的核心指標：Accuracy（整體正確率）在不平衡資料中幾乎無用——如果 99% 的交易是正常的，一個「全部猜正常」的模型 accuracy 就是 99%，但它完全無法偵測詐騙。Precision（查準率）=「模型說是詐騙的裡面，真的是詐騙的有多少」，Recall（查全率）=「所有真正的詐騙裡面，模型找到了多少」。兩者之間有 trade-off：調高 threshold 會提高 precision 但降低 recall。選擇哪個指標更重要取決於業務脈絡：詐騙偵測優先 recall（寧可多查也不能漏掉），垃圾郵件過濾優先 precision（寧可放過也不能誤殺重要信件）。\n\n迴歸任務的指標：MSE（均方誤差）、MAE（平均絕對誤差）、R²（解釋變異比例）。排序任務的指標：AUC-ROC、NDCG。\n\n但離線指標（offline metrics）永遠只是估計。真正重要的是線上指標（online metrics）——模型上線後，業務指標（轉化率、退貨率、客訴量）是否真的改善了？很多時候離線 accuracy 高但線上效果差，原因包括：training-serving skew（訓練和部署的資料分布不同）、feedback loop（模型決策改變了使用者行為）、A/B test 的 novelty effect（新鮮感消退後效果下降）。\n\n考試提醒：回答時要說清楚你選什麼指標、為什麼選這個、在什麼條件下這個指標可能誤導。",
           "bullets": [
-            "保留真正未參與調整的 test set",
-            "檢查 subgroup performance",
-            "無 ground truth 時揭露 proxy 限制"
+            "Accuracy 在不平衡資料中幾乎無用——99% 正常的資料中全猜正常也有 99% accuracy",
+            "Precision vs Recall 的取捨取決於業務：漏檢成本高選 recall，誤報成本高選 precision",
+            "離線指標只是估計，線上業務指標（轉化率、客訴量）才是最終判斷",
+            "Training-serving skew 和 feedback loop 是離線好但線上差的常見原因",
+            "沒有 ground truth 的任務（例如推薦系統）需要用 proxy metric，但要揭露 proxy 的限制"
           ]
         },
         {
           "title": "部署後模型仍是持續運作的系統",
-          "body": "監控輸入分布、預測品質、延遲、人工轉接與異常，設定 retrain、rollback 與 version control。",
+          "body": "AI 模型不像傳統軟體——程式碼部署後行為是確定的。AI 模型部署後，如果輸入資料的分布改變了（data drift），模型的預測品質就會下降。更嚴重的是 concept drift：即使輸入分布不變，輸入和輸出之間的關係也可能改變（例如 COVID-19 改變了消費行為模式，導致原本準確的需求預測模型完全失準）。\n\n監控（monitoring）是 AI 維運的核心。需要同時監控：(1) 輸入統計量——特徵的分布是否偏離訓練時的分布？可以用 PSI（Population Stability Index）或 KS-test 量化。(2) 預測品質——如果有 ground truth（例如事後知道是否真的是詐騙），追蹤 precision/recall 的變化趨勢。如果沒有 ground truth（例如推薦系統的長期效果），用 proxy metric 和人工抽樣。(3) 系統指標——延遲（latency）、吞吐量（throughput）、錯誤率、資源使用率。\n\n當監控發現問題時，應對策略包括：定期重訓（scheduled retraining）、觸發式重訓（drift 超過閾值時觸發）、持續學習（online learning，但風險更高）。新模型上線前必須經過 shadow deployment（影子部署，新模型與舊模型同時運行，比較結果）或 A/B test。設定 rollback 機制——如果新模型表現差，立即切回舊版本。\n\n考試角度：台大 MIS 考 AI 時很少考演算法細節，更常考「一個 AI 系統上線後會出什麼問題、怎麼處理」。",
           "bullets": [
-            "Data drift 不必然造成 concept drift",
-            "新模型需 shadow/A-B evaluation",
-            "保留 audit trail"
+            "Data drift（輸入分布變化）不必然導致 concept drift（輸入-輸出關係變化），但都需要監控",
+            "監控三個層面：輸入統計量（PSI、KS-test）、預測品質（precision/recall 趨勢）、系統指標（延遲、錯誤率）",
+            "新模型上線用 shadow deployment 或 A/B test 驗證，不要直接切換",
+            "Rollback 機制必須在部署前設計好——出問題時要能一鍵回退",
+            "模型版本控制（model registry）記錄每個版本的超參數、訓練資料和評估結果"
           ]
         },
         {
           "title": "AI 治理連結責任與控制",
-          "body": "FOMO、供應商依賴與模糊 KPI 常讓專案失敗；NIST AI RMF 的風險管理可協助把 trustworthiness 放進設計、使用與評估。",
+          "body": "AI 治理（AI governance）是近年台大 MIS 考試的熱門議題。很多企業導入 AI 的動機是 FOMO（fear of missing out，怕落後），而不是清晰的業務需求。結果是：大量 POC（概念驗證）但很少進入生產；進入生產的也缺乏監控和問責。Gartner 曾估計超過 85% 的 AI 專案無法產出商業價值。\n\nNIST AI Risk Management Framework（AI RMF）提供了一個結構化的治理框架，分為四個功能：(1) Map——辨識 AI 系統的脈絡：誰是利害關係人？可能的失敗模式是什麼？影響範圍和嚴重程度？(2) Measure——選擇 trustworthiness 特性（accuracy、fairness、transparency、explainability、security、privacy、robustness）的量化指標。(3) Manage——設計風險降低措施：監控、人工覆核（human-in-the-loop）、escalation 流程、incident response。(4) Govern——建立組織層面的治理結構：角色與責任（誰對 AI 決策負責？）、政策（什麼場景禁止使用 AI？）、accountability 機制（出問題時如何追責？）。\n\nAI RMF 不是法規（非強制），但可以作為答題的結構化框架。考題問「如何設計一個負責任的 AI 系統」時，用 Map-Measure-Manage-Govern 四步回答，比列出「要公平、透明、可解釋」這種空洞清單要好得多。\n\n另一個常考的概念是 AI 的 liability（責任歸屬）：當 AI 做出錯誤決策（例如自駕車撞人、信貸模型歧視），責任在開發者、使用者、還是 AI 供應商？目前沒有統一答案，但 EU AI Act 的風險分級方法（unacceptable/high/limited/minimal risk）是重要的參考框架。",
           "bullets": [
-            "先列 use-case owner",
-            "辨識 harmed stakeholders",
-            "設定 human escalation 與退出機制"
+            "FOMO 是很多企業導入 AI 的真正動機，結果是大量 POC 但很少進入生產",
+            "NIST AI RMF 四步：Map（辨識脈絡）→ Measure（量化指標）→ Manage（降低風險）→ Govern（治理結構）",
+            "AI 的 liability 目前沒有統一答案——開發者、使用者、供應商的責任邊界模糊",
+            "EU AI Act 按風險分級：不可接受/高風險/有限風險/最低風險，不同級別有不同要求",
+            "答題用 Map-Measure-Manage-Govern 框架，比列「公平透明可解釋」等空洞清單好得多"
           ]
         }
       ],
@@ -578,38 +610,46 @@
       "sections": [
         {
           "title": "系統取得先比較策略與內部能力",
-          "body": "自行開發提供控制與客製，套裝/SaaS 加快導入，委外轉移部分執行但不轉移需求、風險與治理責任。",
+          "body": "系統取得（system acquisition）的四種基本選擇：Build（自行開發）提供最大的客製化和控制權，但需要技術團隊和時間；Buy（套裝軟體/COTS）加快導入速度，但需要接受標準流程，客製化增加維護成本；Outsource（委外開發）轉移執行責任但不轉移管理責任，需要明確的 SLA 和驗收標準；SaaS（軟體即服務）以訂閱制使用雲端軟體，快速導入、低前期投資，但長期 TCO 可能更高且有供應商依賴風險。\n\n選擇的核心判斷依據是 strategic uniqueness（策略獨特性）：如果這個系統是企業的核心差異化來源（例如 Netflix 的推薦演算法），自建可以保護競爭優勢。如果是 commodity 功能（例如人資薪資計算、電子郵件），Buy 或 SaaS 通常更經濟。但這不是二選一：很多中大型企業用 hybrid 策略——核心系統自建、周邊系統 SaaS、特定模組委外。\n\nTCO（Total Cost of Ownership）分析是考試高頻考點。TCO 不只是授權費或訂閱費，還包括：implementation（導入費用：顧問、資料遷移、整合）、training（培訓費用）、customization（客製化）、maintenance（維護與升級）、opportunity cost（導入期間的營業損失）、exit cost（未來轉換供應商的成本）。很多企業只看前期成本而忽略長期維護和退出成本，導致 TCO 估計偏低。\n\n考試提醒：不要只寫「應該用 SaaS」或「應該自建」，要列出判斷依據（strategic uniqueness、能力、成本、風險）和條件限制。",
           "bullets": [
-            "比較 strategic uniqueness",
-            "估算 lifecycle cost",
-            "保留 vendor exit plan"
+            "四種取得方式：Build（控制最大）、Buy（導入最快）、Outsource（轉移執行）、SaaS（低前期投資）",
+            "選擇依據是 strategic uniqueness：核心差異化傾向自建，commodity 傾向 Buy/SaaS",
+            "TCO 不只是授權費：還包括導入、客製化、培訓、維護、退出成本",
+            "Outsource 轉移執行但不轉移管理責任——需要明確 SLA 和驗收標準",
+            "Hybrid 策略（核心自建 + 周邊 SaaS）是中大型企業的常見選擇"
           ]
         },
         {
           "title": "Scrum 是經驗式框架，不是職稱清單",
-          "body": "Product Owner 對價值排序負責，Scrum Master 協助框架有效運作，Developers 對可用 Increment 負責；events 支援 inspection/adaptation。",
+          "body": "Scrum 是最廣泛使用的敏捷框架，它基於「經驗主義」（empiricism）——承認無法在專案開始前就知道所有需求和風險，所以用短迭代（Sprint，通常 2-4 週）來逐步學習和調整。Scrum 的三大支柱是：Transparency（所有人看到相同的資訊，例如公開的 Sprint Backlog 和 Burndown Chart）、Inspection（定期檢視進度和產出，例如 Sprint Review）、Adaptation（根據檢視結果調整計劃，例如 Sprint Retrospective 改善流程）。\n\nScrum 定義了三個角色：Product Owner（PO）對「做什麼」負責——管理 Product Backlog（按商業價值排列的需求清單），決定每個 Sprint 做哪些 item。Scrum Master（SM）對「框架是否有效運作」負責——排除團隊的阻礙（impediments），協助團隊和組織理解 Scrum 的原則。Developers 對「如何做」和「完成可用的產品增量」負責——他們自組織（self-managing），自行決定如何完成 Sprint Backlog 中的 item。\n\n五個 Events 構成 Scrum 的節奏：Sprint（時間箱）、Sprint Planning（決定本 Sprint 目標和工作項目）、Daily Scrum（每天 15 分鐘同步進度和阻礙，不是主管彙報會）、Sprint Review（向 stakeholders 展示成果、蒐集反饋）、Sprint Retrospective（團隊回顧如何改善流程）。每個 event 都服務於 inspection-adaptation 循環。\n\nDefinition of Done（完成定義）是品質的最低門檻——一個 item 必須滿足 DoD 才能算完成。DoD 通常包括：程式碼已 code review、通過自動化測試、文件已更新、部署到 staging 環境驗證。如果 DoD 不夠嚴格，就會產生 undone work（技術債），在未來造成問題。\n\n考試常見：比較 Scrum 與 Waterfall、分析 Scrum 角色的責任邊界、辨識 Scrum 反模式。",
           "bullets": [
-            "Daily Scrum 不是主管點名",
-            "Sprint Backlog 由 Developers 管理",
-            "Done 必須有品質定義"
+            "Scrum 三支柱：Transparency、Inspection、Adaptation——承認不確定性，用短迭代學習",
+            "PO 對「做什麼」負責（商業價值排序），SM 對「框架運作」負責，Developers 對「怎麼做」負責",
+            "Daily Scrum 是團隊同步，不是主管點名——15 分鐘，focus on impediments",
+            "Sprint Review 不是 demo show——是蒐集 stakeholder feedback 來調整 Product Backlog",
+            "Definition of Done 是品質門檻——不夠嚴格會累積 undone work（技術債）"
           ]
         },
         {
           "title": "測試層級回答不同風險",
-          "body": "Unit 看局部行為，integration 看介面，system 看端到端，UAT 看業務可接受性，usability 看使用者完成任務的困難。",
+          "body": "軟體測試的目的不是證明「沒有 bug」（那是不可能的），而是在可接受的成本內降低交付風險。不同的測試層級回答不同的問題：Unit test 問「這個函數的邏輯正確嗎？」，Integration test 問「這兩個模組的介面相容嗎？」，System test 問「整個系統從頭到尾跑得通嗎？」，UAT（User Acceptance Test）問「這是使用者要的東西嗎？」。\n\nTest pyramid 模型建議底層多（unit test：快速、便宜、穩定、容易定位問題）、中層適中（integration test）、頂層少（E2E test：慢、脆弱、難定位問題但最接近使用者行為）。反轉的 ice cream cone 模式（大量 E2E、少量 unit）會導致回饋週期長、維護成本高、失敗時難以定位根因。\n\n一個考試常考但考生容易搞混的區分是 verification vs validation：Verification 問「Are we building the product right?」——程式碼是否正確實現了規格書的要求。Validation 問「Are we building the right product?」——我們做出來的東西是否真的是使用者需要的。測試主要處理 verification，而 validation 需要使用者參與（UAT、usability test、beta test）。一個完美通過所有測試的系統，如果需求本身是錯的，仍然是一個沒用的系統。\n\n缺陷的修復成本與發現時間成正比——需求階段發現的問題可能只需要修改文件，上線後才發現的相同問題可能需要修改系統、資料遷移和使用者重新培訓。所以「測試越早開始越好」不只是口號，是有經濟邏輯的。\n\n考試提醒：答題時區分各層測試的目的和適用場景，不要只列名稱。解釋為什麼 unit test 在底層、什麼問題它抓不到（介面問題、系統整合問題、需求偏差）。",
           "bullets": [
-            "測試通過不代表需求正確",
-            "自動化適合重複 regression",
-            "缺陷成本與 feedback timing 有關"
+            "各層測試回答不同問題：unit 看邏輯、integration 看介面、system 看端到端、UAT 看業務可接受性",
+            "Test pyramid：底層多（unit, 快且便宜）、頂層少（E2E, 慢且脆弱）",
+            "Verification（做對了嗎？）vs Validation（做對的東西了嗎？）是高頻考點",
+            "缺陷修復成本與發現時間成正比——早發現便宜，晚發現代價高",
+            "測試通過不代表需求正確——通過所有測試但需求錯了，系統仍然沒用"
           ]
         },
         {
           "title": "需求與估算隨資訊增加而細化",
-          "body": "User story 強調角色、目標與價值；use case 詳述 actor 與互動流程。早期可用 T-shirt sizing，資訊較完整後再用功能點或模型。",
+          "body": "需求表達有多種工具，各有適用場景：User story（作為〈角色〉，我想要〈目標〉，以便〈價值〉）強調使用者視角和商業價值，適合敏捷開發的需求溝通，但它不是詳細規格，需要搭配 acceptance criteria 和 conversation 才完整。Use case 由 Jacobson 提出，詳細描述 actor 與系統的互動流程（主要流程、替代流程、例外流程），適合需要精確規格的場景。兩者不是互斥的——user story 適合初期溝通和優先排序，use case 適合需要詳細規格的高風險功能。\n\n估算（estimation）是預測而非承諾。Cone of uncertainty 指出：專案初期的估算誤差可能是 4 倍（即實際成本可能是估算的 0.25x 到 4x），隨著專案進展和資訊增加，誤差範圍會收窄。所以好的估算不是給一個精確數字，而是給一個 range 並標明 uncertainty。\n\n常用估算方法：(1) Function Point Analysis（FPA）——從使用者可見功能（external inputs/outputs、inquiries、internal files、external interfaces）計算功能點，再乘以生產力係數得到工時。FPA 是需求導向的，不依賴技術選擇。(2) COCOMO II——根據程式碼規模（KLOC 或 function points）、scale factors（前例、彈性、團隊凝聚力、process maturity、架構風險解決程度）和 cost drivers 估算工時。(3) Story points（敏捷）——相對估算，用 Fibonacci 數列（1, 2, 3, 5, 8, 13）表示相對大小和複雜度。Story points 不是時數——它們衡量的是不確定性和複雜度，不是工作量。\n\n考試常見：比較不同估算方法的適用條件、分析為什麼估算常常偏低（optimism bias, scope creep, unknown unknowns）。",
           "bullets": [
-            "估算不是承諾",
-            "列出 uncertainty range",
-            "保留 acceptance criteria 與例外流程"
+            "User story 適合溝通和排序，Use case 適合詳細規格——兩者互補不互斥",
+            "估算是預測不是承諾——好的估算給 range 和 uncertainty，不是精確數字",
+            "Cone of uncertainty：專案初期估算誤差可達 4 倍，隨資訊增加而收窄",
+            "FPA 是需求導向（不依賴技術），COCOMO 是規模導向，Story points 是相對複雜度",
+            "Story points 不是時數——它衡量不確定性和複雜度，不應拿來當績效指標"
           ]
         }
       ],
@@ -708,38 +748,46 @@
       "sections": [
         {
           "title": "關聯式與 NoSQL 不是一致性有無的二分法",
-          "body": "選擇要看資料模型、transaction boundary、query pattern、scale、availability 與一致性要求；不同 NoSQL 系統也有不同保證。",
+          "body": "關聯式資料庫（Relational Database, RDBMS）把資料組織成表格（table），每張表有固定的欄位（schema），表與表之間用 foreign key 連結。它的核心強項是 ACID 交易保證（Atomicity、Consistency、Isolation、Durability）和結構化查詢語言 SQL。適合的場景：資料結構穩定、需要嚴格一致性、查詢模式以 JOIN 為主（例如銀行帳務、ERP 系統）。\n\nNoSQL 是一類非關聯式資料庫的統稱，包括四種主要模型：Document（如 MongoDB，存 JSON-like 文件，適合彈性 schema）、Key-value（如 Redis，簡單快速的鍵值查找）、Column-family（如 Cassandra，適合大規模寫入和時間序列）、Graph（如 Neo4j，適合關係密集的資料如社群網路）。NoSQL 的核心強項是 horizontal scalability（水平擴展）和 schema flexibility（彈性 schema）。\n\n一個常見的考試迷思是「NoSQL 不支援 ACID」。事實是：(1) 很多 NoSQL 系統在 single-document 層級支援 ACID（如 MongoDB 4.0+ 支援 multi-document transactions）；(2) CAP 定理（一致性、可用性、分區容忍性三取二）描述的是分散式系統在網路分區時的行為，不是「NoSQL 不能做一致性」；(3) 選擇 RDBMS vs NoSQL 不是「一致性有無」的二分法，而是「在特定 workload 下，哪種 trade-off 更合適」的決策。\n\n答題框架：先描述 workload 特性（讀寫比例、資料模型複雜度、consistency 需求、scale 需求、query pattern），再依此推導適合的資料庫類型，最後說明 trade-off。",
           "bullets": [
-            "避免宣稱 NoSQL 一律不支援 ACID",
-            "Schema flexibility 仍需 validation",
-            "先寫出 workload 與 failure assumptions"
+            "RDBMS 強在 ACID 和 SQL JOIN，適合結構穩定、一致性要求嚴格的場景",
+            "NoSQL 四種模型各有適用場景：document、key-value、column-family、graph",
+            "「NoSQL 不支援 ACID」是迷思——很多 NoSQL 在 single-document 支援 ACID",
+            "CAP 定理描述分散式系統在網路分區時的 trade-off，不是「RDBMS 好 NoSQL 差」",
+            "選擇的判斷依據是 workload 特性，不是技術偏好"
           ]
         },
         {
           "title": "SQL 從關係與粒度開始",
-          "body": "先決定輸出每列代表什麼，再沿 PK/FK JOIN；aggregate 前確認 grouping grain，row filter 用 WHERE，group filter 用 HAVING。",
+          "body": "SQL（Structured Query Language）是 MIS 考試中少數需要實際「寫程式碼」的技能。台大 MIS 考題常出一個情境表格，要你寫 SQL 查詢或解讀查詢結果。掌握 SQL 的關鍵不在語法（那些可以查手冊），而在於思考邏輯。\n\n寫 SQL 的正確思考順序：(1) 先決定輸出——每一列（row）代表什麼？例如「每個部門的平均薪資」代表每列是一個部門。(2) 確認需要的表——資料分散在哪些表？用什麼 key 連接？(3) JOIN——沿著 PK/FK（primary key / foreign key）連接表。注意 INNER JOIN（只保留兩邊都有的）、LEFT JOIN（保留左表全部，右表沒有的填 NULL）的差別。(4) WHERE——在 grouping 之前篩選個別記錄（row-level filter）。(5) GROUP BY——依分組欄位聚合（aggregate），常搭配 COUNT、SUM、AVG、MAX、MIN。非 aggregate 欄位必須出現在 GROUP BY 中。(6) HAVING——在 grouping 之後篩選群組（group-level filter）。(7) ORDER BY——排序，預設 ASC，用 DESC 反向。\n\n最常出錯的地方：(1) JOIN 條件漏寫導致 Cartesian product（笛卡兒積），結果集爆炸。(2) WHERE 和 HAVING 混淆——WHERE 篩選 row，HAVING 篩選 group。(3) GROUP BY 漏列非 aggregate 欄位——在 strict mode 下會報錯。(4) NULL 的行為不直覺——NULL ≠ 0，NULL ≠ ''，NULL 參與比較的結果是 UNKNOWN，不是 TRUE 或 FALSE。\n\n考試提醒：先在紙上畫出表的 ER 圖和想要的結果格式，再寫 SQL。邊想邊寫很容易漏 JOIN 或 GROUP BY。",
           "bullets": [
-            "JOIN 條件漏寫會產生 Cartesian product",
-            "非 aggregate 欄位需符合 grouping 規則",
-            "ORDER BY 明示方向"
+            "寫 SQL 的思考順序：決定輸出粒度 → 找表和 JOIN → WHERE 篩選 → GROUP BY 聚合 → HAVING 篩選 → ORDER BY",
+            "JOIN 條件漏寫會產生 Cartesian product（N×M 筆結果），是最常見的錯誤",
+            "WHERE 篩選個別記錄（row-level），HAVING 篩選群組（group-level），不要混用",
+            "非 aggregate 欄位必須在 GROUP BY 中列出，否則結果不確定",
+            "NULL 行為不直覺：NULL ≠ 0、NULL 參與比較的結果是 UNKNOWN"
           ]
         },
         {
           "title": "可擴展性同時有技術與治理成本",
-          "body": "Horizontal scale 會引入 partition、replication、consistency 與 operation complexity；vertical scale 也有容量與單點限制。",
+          "body": "可擴展性（scalability）是指系統處理增長的負載（使用者數、資料量、交易量）的能力。有兩種基本策略：Vertical scaling（scale up，加強單一機器的 CPU、記憶體、儲存）簡單直接但有物理上限和單點故障風險。Horizontal scaling（scale out，增加更多機器組成叢集）理論上無上限，但引入了分散式系統的複雜度。\n\n水平擴展需要解決的核心問題：(1) Partitioning（分片）——資料如何切分到不同節點？依 key range（範圍分片）還是 hash（雜湊分片）？分片策略影響查詢效率和 hotspot 風險。(2) Replication（複本）——資料複製到多個節點，提高可用性和讀取吞吐量。但寫入時需要決定 consistency model：strong consistency（所有節點同時更新，延遲高）vs eventual consistency（先回應再逐步同步，延遲低但短暫不一致）。(3) Coordination——分散式交易（distributed transaction）、consensus protocol（如 Raft、Paxos）增加延遲和複雜度。\n\n治理面向同樣重要：(1) 運維能力——分散式系統的 debug、監控和故障排除遠比單機複雜，團隊是否有能力？(2) 備份與恢復——分散式系統的 backup/restore 需要考慮一致性快照。(3) 成本——水平擴展的硬體便宜但運維人力成本高。(4) 供應商依賴——cloud-native 的擴展方案（如 AWS DynamoDB auto-scaling）方便但 lock-in 風險高。\n\n考試常見：分析某系統的擴展策略、比較 vertical 和 horizontal 的優缺點、解釋 CAP 定理在實際案例中的應用。",
           "bullets": [
-            "比較讀寫比例與 hotspot",
-            "納入 backup/restore",
-            "評估團隊操作能力"
+            "Vertical scaling 簡單但有上限和單點故障；Horizontal scaling 理論無上限但複雜度高",
+            "水平擴展的核心問題：partitioning（資料切分）、replication（複本同步）、coordination（一致性協議）",
+            "Strong consistency vs eventual consistency 的選擇取決於業務對不一致的容忍度",
+            "分散式系統的運維成本（debug、監控、故障排除）遠高於單機",
+            "評估擴展方案時同時考慮技術可行性和團隊操作能力"
           ]
         },
         {
           "title": "開源不等於沒有義務",
-          "body": "GPL 與 Apache-2.0 的散布、notice、source 與 patent 條款不同；回答前要說明版本、使用方式與是否散布。",
+          "body": "開源軟體（Open Source Software, OSS）是指原始碼公開、允許使用者自由使用、修改和散布的軟體。但「開源」不等於「沒有規則」——不同的開源授權（license）有非常不同的義務和限制。MIS 考試常考的是理解授權條款對企業決策的影響。\n\n主要的授權類型：(1) Permissive license（寬鬆型，如 MIT、Apache-2.0、BSD）——允許自由使用、修改和散布，包括放入商業產品中，只需保留版權聲明和免責條款。Apache-2.0 還額外提供 patent grant（專利授權），降低專利訴訟風險。(2) Copyleft license（傳遞型，如 GPL-2.0、GPL-3.0）——如果你修改了 GPL 軟體並散布，你必須以同樣的 GPL 授權公開你的修改版原始碼。這就是所謂的「傳染性」——但注意：只有在「散布」（distribution）時才觸發義務。如果只在內部使用或提供 SaaS 服務（不散布程式碼），傳統 GPL 不要求公開原始碼（但 AGPL 會）。(3) AGPL（Affero GPL）——擴展了 GPL，把「透過網路提供服務」也視為一種散布，要求公開原始碼。這對 SaaS 提供者影響最大。\n\n企業 OSS 治理的實務考量：(1) License compliance——專案中用了哪些 OSS？各有什麼授權？有沒有衝突（例如 GPL 和 proprietary 混用）？需要用 SCA（Software Composition Analysis）工具掃描。(2) Security——OSS 的安全漏洞需要持續追蹤（如 CVE 資料庫），因為沒有供應商幫你修補。(3) Sustainability——依賴的 OSS 專案是否活躍維護？單一維護者的專案有 bus factor 風險。(4) 法律風險——授權違規可能導致訴訟或被迫公開原始碼。\n\n考試提醒：不要用「傳染性」一詞簡化 GPL——要說清楚觸發條件（散布）和不觸發的情境（內部使用、SaaS 在傳統 GPL 下）。法律判斷需要由專業律師確認，考試答案只能基於公開的授權條款進行分析。",
           "bullets": [
-            "不要用「傳染性」取代精確條款",
-            "SaaS/內部使用與 distribution 要分開",
-            "法律判斷需由合格專業人士確認"
+            "Permissive（MIT、Apache）允許商業使用只需保留聲明；Copyleft（GPL）散布時須以同授權公開原始碼",
+            "GPL 的義務只在「散布」時觸發——內部使用和傳統 SaaS 不需公開原始碼，但 AGPL 例外",
+            "Apache-2.0 的 patent grant 降低專利訴訟風險，是企業偏好的寬鬆授權",
+            "企業 OSS 治理需要 SCA 工具掃描授權合規、CVE 追蹤安全漏洞、評估專案活躍度",
+            "不要用「傳染性」簡化 GPL——精確說明觸發條件和不觸發情境"
           ]
         }
       ],
@@ -836,38 +884,46 @@
       "sections": [
         {
           "title": "Privacy 是組織風險管理問題",
-          "body": "IoT 感測器可持續蒐集位置、行為與環境資料；治理要處理目的、最小化、保存、存取、分享與個人權利。",
+          "body": "隱私保護不只是法律合規——它是組織的風險管理決策。GDPR（歐盟通用資料保護規範）提出六大原則：(1) Lawfulness（合法性，需要有合法基礎如 consent 或 legitimate interest）；(2) Purpose limitation（目的限定，蒐集時說清楚用途，不能事後改用途）；(3) Data minimization（最小化，只蒐集達成目的所需的最少資料）；(4) Accuracy（正確性，資料必須保持正確和最新）；(5) Storage limitation（儲存期限，目的達成後應刪除）；(6) Integrity & confidentiality（安全性，防止未授權存取和資料外洩）。\n\nIoT（物聯網）讓隱私問題變得更複雜：感測器可以持續蒐集位置、行為、生理和環境資料，使用者往往不知道（或無法有效拒絕）。NIST Privacy Framework 提供了管理框架：Identify（盤點資料處理活動和隱私風險）、Govern（建立治理政策和角色）、Control（實施技術和管理控制）、Communicate（對內對外透明溝通）、Protect（技術保護措施）。\n\n台灣個資法（Personal Data Protection Act）與 GDPR 的主要差異：(1) 適用範圍——GDPR 不分公私部門統一適用，台灣個資法分公務機關和非公務機關適用不同條文；(2) 域外效力——GDPR 適用於處理歐盟居民資料的全球企業，台灣個資法的域外效力較有限；(3) 處罰力度——GDPR 最高罰款為全球年營收 4%，台灣個資法罰款金額較低。(4) 資料可攜權——GDPR 明確賦予資料可攜權（right to data portability），台灣個資法目前沒有。\n\n考試常見：分析某案例的隱私風險、比較 GDPR 和台灣個資法、用 NIST Privacy Framework 提出改善建議。consent 不能解決所有問題——在 power imbalance 的情境中（員工面對雇主、學生面對學校），consent 的「自願性」存疑。",
           "bullets": [
-            "Consent 不一定足以處理所有 power imbalance",
-            "辨識 inference 與 secondary use",
-            "設定 retention/deletion controls"
+            "GDPR 六大原則：lawfulness、purpose limitation、data minimization、accuracy、storage limitation、integrity",
+            "IoT 讓隱私問題更複雜——持續蒐集、使用者難以知情或拒絕",
+            "台灣個資法與 GDPR 的關鍵差異：適用範圍、域外效力、罰款力度、資料可攜權",
+            "Consent 在 power imbalance 情境中的自願性存疑——不是所有隱私風險都能靠同意解決",
+            "設定 retention/deletion controls：資料不用了就該刪，保留「以防萬一」增加風險"
           ]
         },
         {
           "title": "ESG 要從口號落到治理與揭露",
-          "body": "Environmental、Social、Governance 各自包含不同 impact、risk 與 oversight；IT 可改善量測與透明，也可能增加能源、監控與 exclusion 風險。",
+          "body": "ESG（Environmental, Social, Governance）是評估企業在環境保護、社會責任和公司治理三個面向表現的框架。隨著全球監管趨嚴（ISSB 發布永續揭露準則、歐盟 CSRD、台灣金管會要求上市公司 ESG 報告），ESG 從「自願性善舉」轉變為「合規義務」。\n\nIT 與 ESG 的關係是雙面的：(1) IT 作為 ESG 的推動者——ESG 資料管理平台、碳足跡追蹤系統、供應鏈透明化工具、AI 驅動的能源最佳化。(2) IT 本身的 ESG 影響——data center 的碳排放（全球約佔 1-2% 電力消耗）、電子廢棄物（e-waste）、AI 訓練的碳足跡（訓練一個大型語言模型的碳排放相當於數輛汽車一生的排放）、演算法偏見造成的社會不公平、數位落差（digital divide）加劇的社會排斥。\n\nGreen washing（漂綠）是 ESG 最大的誠信風險：企業宣稱環保但缺乏可驗證的證據。辨識漂綠的方法：(1) 指標是否可量化和可驗證（「碳中和」的計算邊界是什麼？是否包含 Scope 3？）(2) 基準是否合理（與同業比較還是與自己的過去比較？）(3) 邊界是否一致（只報告績效好的部門？）(4) 第三方驗證（是否有獨立機構稽核？）。\n\nScope 1/2/3 碳排放分類是 MIS 考題中常出現的概念：Scope 1 是直接排放（自有設備燃燒），Scope 2 是電力使用間接排放（購電），Scope 3 是價值鏈排放（供應商、物流、雲端供應商、產品使用和廢棄）。Scope 3 通常佔總排放的 70-90%，但也是最難量測和控制的。",
           "bullets": [
-            "說明 metric boundary",
-            "避免把 IT 投資必然寫成正向",
-            "揭露方法、假設與責任人"
+            "ESG 從自願善舉轉為合規義務——ISSB、CSRD、台灣金管會都要求揭露",
+            "IT 對 ESG 是雙面刃：既是推動者（追蹤工具）也是排放源（data center、AI 訓練）",
+            "辨識漂綠：指標是否可量化、基準是否合理、邊界是否一致、有無第三方驗證",
+            "Scope 3 通常佔總碳排放 70-90%，包含雲端供應商的排放——最難控制也最常被忽略",
+            "申論中不要把 IT 投資寫成「必然有利於 ESG」——要同時分析正面和負面影響"
           ]
         },
         {
           "title": "供應商策略同時有速度與依賴",
-          "body": "外部 foundation model 可縮短 time-to-market，但帶來 roadmap、成本、資料、可攜性與競爭者依賴。",
+          "body": "AI 時代的供應商關係與傳統 IT outsourcing 有本質不同：大型雲端和 AI 供應商（AWS、Google、Microsoft、OpenAI）不只是「工具提供者」，它們擁有基礎模型（foundation models）、大量資料、運算基礎設施和平台生態系統，同時可能是企業的合作夥伴和競爭對手。這種 coopetition（共競）動態要求企業重新思考供應商關係。\n\n供應商依賴（vendor lock-in）在 AI 領域比傳統 IT 更嚴重：(1) 技術依賴——模型 API 格式、prompt engineering 方式、fine-tuning 工具都與供應商綁定。(2) 資料依賴——fine-tuning 資料上傳後，供應商是否可以使用？合約怎麼規範？(3) 品質依賴——供應商更新模型版本可能改變行為，影響下游應用。GPT-4 到 GPT-4o 的行為差異就讓很多企業的應用出問題。(4) 人才依賴——團隊只學會了某個供應商的工具和框架，切換成本高。\n\n降低 lock-in 的策略：(1) 架構層面——使用抽象層（abstraction layer），讓應用程式不直接呼叫供應商 API。(2) 合約層面——明確約定資料所有權、使用限制、退出條件、資料匯出格式。(3) 能力層面——保持內部團隊的供應商中立技能（例如學 PyTorch/TensorFlow 而不只學某個供應商的 SDK）。(4) 多供應商策略——但注意過度分散會增加整合成本和稀釋談判籌碼。\n\n信任治理（trust governance）是考試新趨勢：AI 供應商的 transparency（是否提供 model card、training data sheet、audit report？）、accountability（出問題時誰負責？）、redress（使用者如何申訴和取得補償？）。EU AI Act 對高風險 AI 系統要求提供者公開技術文件，是法規層面的信任治理。",
           "bullets": [
-            "合約不是唯一控制",
-            "需要 architecture isolation 與 fallback",
-            "監控 vendor/model changes"
+            "AI 時代的供應商依賴比傳統 IT 更深——技術、資料、品質、人才四個層面都可能被鎖定",
+            "供應商更新模型版本可能改變行為——GPT-4 到 GPT-4o 的差異就影響了很多應用",
+            "降低 lock-in：抽象層架構、合約約定、中立技能培養、多供應商策略",
+            "Coopetition（共競）：供應商既是 partner 也可能成為 competitor",
+            "信任治理要求 transparency（model card）、accountability（責任歸屬）、redress（申訴機制）"
           ]
         },
         {
           "title": "Trustworthiness 需要全生命週期控制",
-          "body": "Privacy by design、human escalation、audit log、incident response 與透明溝通共同維持信任；不能只靠品牌聲明。",
+          "body": "數位系統的可信度（trustworthiness）不是靠一份政策文件或一次安全稽核就能建立的——它需要在系統的整個生命週期中持續維護。NIST 定義的 trustworthiness characteristics 包括：accuracy（系統行為符合設計規格）、reliability（在預期和非預期條件下穩定運作）、safety（不造成人身傷害）、security（抵禦攻擊）、privacy（保護個人資料）、fairness（不歧視特定群體）、transparency（使用者能理解系統的行為和決策依據）、explainability（能解釋個別決策的原因）、accountability（有人對系統行為負責，有追責機制）。\n\n在實務中建立 trustworthiness 需要四個層面的控制：(1) Privacy by design——在系統設計階段就嵌入隱私保護，而不是事後補丁。包括預設最嚴格設定（privacy by default）、資料最小化、端對端加密。技術手段包括 anonymization（不可逆去識別化）、pseudonymization（可逆去識別化，仍受個資法保護）、differential privacy（加入統計雜訊保護個體資料）、federated learning（資料不離開本地端）。(2) Human-in-the-loop——對高風險決策（貸款審批、醫療診斷、刑事判決）設置人工覆核環節，不完全依賴 AI 決策。(3) Audit trail——記錄系統的決策過程和依據，以便事後追溯和問責。在 AI 系統中特別困難，因為深度學習模型的決策過程本身難以解釋。(4) Incident response——出問題時的應對流程：偵測、通報、處理、復原、事後檢討。GDPR 要求在發現個資外洩後 72 小時內通報主管機關。\n\n考試角度：台大 MIS 近年考 trustworthiness 的頻率增加，通常以案例方式出題（例如「某公司 AI 系統出問題了，分析責任歸屬和改善措施」）。用上述四個控制面向作為回答框架，比列出一堆原則名詞更有說服力。",
           "bullets": [
-            "對高風險決策提高人工覆核",
-            "把受影響者納入評估",
-            "定期重估風險與退出條件"
+            "Trustworthiness 不是一次性稽核——需要在系統生命週期中持續維護",
+            "Privacy by design：設計階段嵌入隱私保護，不是事後補丁",
+            "Anonymization 不可逆（不再受個資法保護），pseudonymization 可逆（仍是個資）",
+            "Human-in-the-loop 在高風險決策中不可或缺——但需要設計 escalation criteria",
+            "GDPR 要求個資外洩 72 小時內通報——需要事先建立 incident response 流程"
           ]
         }
       ],
@@ -933,43 +989,46 @@
       "sections": [
         {
           "title": "對齊不是一次性規劃，是持續校準",
-          "body": "Henderson-Venkatraman 的 Strategic Alignment Model 把 IT 與業務對齊分為策略層與執行層，四種 alignment perspective 表示不同的驅動方向。現實中對齊不是靜態文件，而是在環境變化中持續調整的能力。",
+          "body": "Henderson-Venkatraman 的 Strategic Alignment Model（SAM）是 MIS 領域最經典的對齊框架，它把 IT 與業務的對齊關係分為四個象限、兩個層級：策略層（external domain，關注競爭定位和技術能力）和執行層（internal domain，關注組織設計和 IT 基礎設施）。四種 alignment perspective 描述不同的驅動方向：(1) Strategy execution——業務策略驅動 IT 基礎設施的設計和調整，最傳統的方式（例如企業決定進軍電商，然後建置電商平台）。(2) Technology transformation——IT 能力反過來啟發新的業務策略（例如大數據分析能力讓企業發現新的市場機會）。(3) Service level——從 IT 運營效率的角度改善 IT 對業務的支援品質。(4) Competitive potential——利用 IT 的獨特能力直接創造市場差異化。\n\n為什麼對齊不是「做一次就好」？因為外部環境持續變動（技術突破、法規改變、競爭者動作），企業的策略也需要調整，IT 的對齊方向就必須跟著重新校準。Luftman 發展了 alignment maturity model（對齊成熟度模型），把企業的對齊程度分為五個等級，從 ad hoc（各自為政）到 optimized（IT 與業務完全融合）。衡量對齊程度的方法包括：alignment survey、IT governance maturity assessment、outcome gap analysis（IT 交付的成果 vs 策略預期的差距）。\n\n考試進階：如果題目問「什麼時候不需要對齊？」——答案是「基本上都需要，但對齊的方式因策略目標而異」。真正的陷阱是把對齊等同於「IT 服從業務」——technology transformation 和 competitive potential 恰好是 IT 驅動業務。",
           "bullets": [
-            "Strategy execution 由業務策略驅動 IT 基礎設施設計",
-            "Technology transformation 由 IT 能力啟發新業務策略",
-            "Service level 關注 IT 如何有效支援營運",
-            "Competitive potential 利用 IT 能力創造市場差異化",
-            "對齊程度可用 survey、IT governance maturity 或 outcome gap 衡量"
+            "SAM 四種 perspective：strategy execution、technology transformation、service level、competitive potential",
+            "對齊不是「IT 服從業務」——technology transformation 是 IT 驅動業務策略的方向",
+            "Luftman 對齊成熟度五等級：ad hoc → committed → established → improved → optimized",
+            "對齊程度可用 survey、governance maturity、outcome gap analysis 衡量",
+            "環境變動要求持續校準——對齊是動態能力，不是靜態文件"
           ]
         },
         {
           "title": "IT 價值需要互補性資產才能兌現",
-          "body": "Brynjolfsson 的 productivity paradox 研究顯示，IT 資本投入與生產力之間的關係受到組織流程再設計、管理實踐、人力技能與企業文化的中介。沒有這些互補性資產，技術投入可能只增加成本而不提升績效。",
+          "body": "Brynjolfsson 的 productivity paradox 研究是 MIS 最重要的實證發現之一：在 1980-90 年代，美國企業大量投資 IT 但國家整體生產力成長停滯（Solow residual paradox）。後續研究發現不是 IT 沒有效果，而是效果被延遲和中介了。\n\n互補性資產的完整分類（Laudon 教科書版本）：(1) 組織投資（organizational investments）——流程重新設計（business process redesign）、組織結構調整（例如從功能別轉為跨功能團隊）、新的激勵機制和績效衡量方式。(2) 管理投資（managerial investments）——高層管理的承諾和領導、變革管理能力、專案治理結構。(3) 社會投資（social investments）——員工的教育培訓、新技能發展、組織的吸收能力（absorptive capacity，Cohen & Levinthal 1990 定義為「辨識外部新知識的價值、消化它、並應用到商業目的的能力」）。\n\n為什麼同一套 ERP 在不同企業產生不同結果？因為互補性資產的投入不同。研究顯示：IT 投資的生產力效果有 2-3 年的延遲（lag effect），因為組織需要時間學習和適應新系統。Cross-sectional 研究（同一時間比較不同企業）看到的相關性不能直接解讀為因果——可能是「績效好的企業更有資源投資 IT」（reverse causality），也可能是「IT 投資和互補性資產投資同時受第三個因素驅動」（confounding）。\n\n申論答題的陷阱：不要寫「IT 投資越多績效越好」——要加上互補性資產的中介條件。也不要寫「沒有互補性資產 IT 就沒用」——IT 可能降低某些成本即使沒有流程再設計，只是效果較小。條件句（「在…條件下…」）比絕對句分數更高。",
           "bullets": [
-            "互補性資產包括：流程改造、管理承諾、訓練、組織結構調整",
-            "absorption capacity 影響組織能多快將新技術轉化為能力",
-            "IT 投資的延遲效應（lag effect）使短期 ROI 可能低估長期價值",
-            "cross-sectional 研究無法證明因果，需考慮 reverse causality"
+            "Productivity paradox 不是 IT 沒用——是效果被延遲（2-3 年 lag）和被互補性資產中介",
+            "互補性資產三類：組織（流程重設計）、管理（高層承諾）、社會（訓練、吸收能力）",
+            "Absorptive capacity = 辨識新知識價值 + 消化 + 應用到商業目的（Cohen & Levinthal）",
+            "Cross-sectional 研究無法證因果——可能是 reverse causality 或 confounding",
+            "申論要寫條件句（在…條件下傾向…），不要寫絕對句（IT 投資必然帶來績效）"
           ]
         },
         {
           "title": "投資組合管理不能只看財務回報",
-          "body": "IT portfolio management 按風險、回報與策略貢獻分類投資項目。純財務指標（NPV、IRR）對平台投資與實驗項目有系統性低估，因為它們忽略 option value、學習效果與生態系統效應。",
+          "body": "IT 投資組合管理的核心邏輯是：不同性質的 IT 投資需要不同的評估方法和風險容忍度，不能用同一把尺衡量。常見的分類方式是按策略角色分三類：(1) Run-the-business（維運）——維持現有系統運作，如 ERP 升級、資安合規、基礎設施更新。低風險低回報，通常是 mandatory（不做不行）。佔預算比例通常 60-70%。(2) Grow-the-business（成長）——擴展現有能力，如新市場的 CRM 部署、行動通路開發、資料分析平台。中等風險中等回報。佔預算比例通常 20-30%。(3) Transform-the-business（轉型）——全新的商業模式或能力，如 AI 驅動的新服務、區塊鏈應用、IoT 生態系統。高風險高回報。佔預算比例通常 5-15%。\n\n純財務指標的限制：NPV（Net Present Value）假設未來現金流可預測，但 transform 類投資的收益高度不確定。IRR（Internal Rate of Return）假設再投資報酬率等於 IRR，在高報酬率項目中會高估。TCO（Total Cost of Ownership）只看成本面，忽略收益面。\n\nReal options（實質選擇權）是評估高不確定性投資的補充方法：它把投資視為「購買未來行動的選擇權」——先花小錢做 POC，驗證可行性後再決定是否擴大投資。選擇權的價值隨不確定性增加而增加（因為你保留了退出的權利），這正好是 NPV 會低估的部分。Balanced Scorecard（BSC）從財務、客戶、內部流程、學習與成長四個面向補充非財務指標的衡量。\n\n考試進階：如果題目問「某公司的 CIO 提出一項 IT 投資計畫，NPV 分析顯示為負，但 CIO 仍建議投資，合理嗎？」——合理的答案不是「NPV 為負不應投資」，而是分析 NPV 可能忽略了什麼（option value、學習效果、生態系統效應、strategic positioning），以及在什麼條件下 CIO 的判斷更有價值。",
           "bullets": [
-            "分類：run-the-business（維運）、grow-the-business（成長）、transform-the-business（轉型）",
-            "Real options 適合高不確定性的階段性投資決策",
-            "TCO 需包含 migration、training、opportunity cost 與 exit cost",
-            "Balanced scorecard 可補充非財務面向的衡量"
+            "投資組合三分類：run（維運 60-70%）、grow（成長 20-30%）、transform（轉型 5-15%）",
+            "NPV 假設現金流可預測，對高不確定性投資系統性低估",
+            "Real options 把投資視為「購買未來選擇權」——不確定性越大，選擇權越值錢",
+            "TCO 不只是授權費：含 implementation、training、customization、maintenance、exit cost",
+            "Balanced Scorecard 補充非財務面向：客戶滿意、流程效率、學習成長"
           ]
         },
         {
           "title": "申論要寫出機制，不只列理論名稱",
-          "body": "考題常問「IT 如何創造價值」或「比較兩種對齊策略」。回答需要建立完整的因果鏈：誰的投資→改變什麼流程→產生什麼能力→影響什麼績效指標→在什麼條件下成立。",
+          "body": "台大 MIS 申論題的高分答案有一個共同特點：它們不只列出理論名稱和定義，而是展示理論如何被應用到具體情境中，並建立完整的因果推論鏈。這段是關於「如何答 MIS 申論」的方法論——考所有 MIS 主題都適用。\n\n申論的基本結構（Claim-Mechanism-Condition-Evidence）：(1) Claim（主張）——你的核心論點是什麼？例如「企業 A 的 IT 投資未能提升績效」。(2) Mechanism（機制）——透過什麼因果路徑產生這個結果？例如「因為缺乏互補性資產（具體是流程再設計和員工培訓），IT 系統雖然部署但使用率低，流程效率沒有改善」。(3) Condition（條件）——在什麼條件下你的論點成立？例如「這在勞動密集且員工數位技能低的傳統製造業中特別顯著」。(4) Evidence（證據）——用什麼證據支持？例如「Brynjolfsson 的研究顯示 IT 投資效果有 2-3 年延遲，與該企業導入 ERP 僅 6 個月的時間一致」。\n\n常見錯誤：(1) 只列理論不解釋——「根據 TCE，應該外包」（沒說為什麼，缺 mechanism）。(2) 結論當前提——「IT 投資成功因為 IT 做得好」（circular reasoning）。(3) 只看成功案例——沒有提到失敗的可能性或替代解釋。(4) 沒有限定條件——「所有企業都應該用 Scrum」（false universality）。(5) 引用過時或不精確的資訊——「AI 市場規模超過 X 億美元」（數字很快過時，且來源不明）。\n\n時間管理：90 分鐘 3-4 題，每題約 20-25 分鐘。前 3 分鐘審題列大綱（辨識要用哪些理論、設定論述結構），中間 15-18 分鐘寫論述，最後 2-3 分鐘檢查邏輯一致性和結尾。深度優於廣度——寫透兩個理論比蜻蜓點水五個好。每段第一句是主張（claim），後面是機制和證據（support），結尾回扣問題（so what）。\n\n答題品質的自我檢查：我的每個主張都有機制解釋嗎？我有指出條件限制嗎？我用了案例但有標注時間和產業脈絡嗎？我有考慮替代解釋嗎？如果這四個問題的答案都是「是」，你的答案品質就在前 20%。",
           "bullets": [
-            "先界定分析層級：firm-level、process-level 或 individual-level",
-            "寫出可反駁的條件句而非絕對宣稱",
-            "用具體案例驗證機制，標明時間與產業脈絡",
-            "承認替代解釋與衡量限制"
+            "申論結構：Claim（主張）→ Mechanism（機制）→ Condition（條件）→ Evidence（證據）",
+            "深度優於廣度：寫透兩個理論比蜻蜓點水五個好",
+            "每段第一句是 claim，後面是 support，結尾回扣問題——不要在結尾開新話題",
+            "常見扣分：結論當前提、只看成功案例、沒有限定條件、引用過時數字",
+            "自我檢查四問：有機制嗎？有條件嗎？有脈絡嗎？有替代解釋嗎？"
           ]
         }
       ],
@@ -1034,42 +1093,46 @@
       "sections": [
         {
           "title": "環境動態決定 IT 能力的重點",
-          "body": "Teece 的 dynamic capabilities 框架將能力分為 sensing（偵測機會與威脅）、seizing（設計商業模式回應）和 transforming（重組資源適應變化）。IT 在每個階段扮演不同角色：資料分析支持 sensing、數位平台加速 seizing、模組化架構降低 transforming 成本。",
+          "body": "Teece 在 2007 年提出的 dynamic capabilities 框架將企業的競爭優勢分解為三種能力：Sensing（偵測機會與威脅）、Seizing（設計商業模式回應機會）和 Transforming（重組資源與結構適應變化）。IT 在每個階段扮演不同角色：資料分析和市場監測工具支持 sensing（例如社群聆聽工具偵測消費者情緒變化）、數位平台和快速部署能力支持 seizing（例如用 low-code 平台快速推出新服務的 MVP）、模組化架構和 API 降低 transforming 的重組成本。\n\n但 agility 有成本，不是越敏捷越好。低動態環境（例如公用事業、政府機構）下，operational efficiency 可能比 agility 更重要——過度追求敏捷會增加不必要的冗餘和實驗成本。高動態環境（例如金融科技、社群媒體）下，過度最佳化現有流程反而增加轉換成本（optimization trap）。Sambamurthy 等人的 digital options 概念指出：IT 基礎建設投資的一部分價值來自它提供的「未來行動彈性」——即使現在不用，保有這個選擇權本身就有價值。\n\n考試常見題型：給一個企業面對環境變化的案例，分析它需要哪種 dynamic capability，以及 IT 如何支持。好的答案會辨識環境的動態程度，再對應到適合的能力組合，而不是一律喊「要更敏捷」。",
           "bullets": [
-            "低動態環境下 operational efficiency 可能比 agility 更重要",
-            "高動態環境下過度最佳化反而增加轉換成本",
-            "Digital options 指 IT 基礎建設提供的未來行動彈性",
-            "Agility 有成本：冗餘、實驗與快速迭代需要持續投資"
+            "Dynamic capabilities 三階段：Sensing（偵測）、Seizing（回應）、Transforming（重組）",
+            "IT 在每個階段的角色不同：分析工具→快速部署能力→模組化架構",
+            "低動態環境下效率可能比敏捷重要——agility 有成本（冗餘、實驗、迭代）",
+            "Digital options：IT 基礎建設的價值部分來自「保留未來行動彈性」",
+            "Optimization trap：過度最佳化現有流程反而增加未來轉換成本"
           ]
         },
         {
           "title": "交易成本與組織邊界",
-          "body": "Coase 與 Williamson 的交易成本理論認為企業邊界取決於市場交易成本與內部組織成本的比較。IT 可以同時降低兩者：降低搜尋與監督成本使外包可行，也降低內部協調成本使擴張可行。結果取決於資產專屬性與環境不確定性。",
+          "body": "交易成本理論（Transaction Cost Economics, TCE）的核心問題是：企業的邊界應該劃在哪裡？Coase（1937）指出企業存在的原因是市場交易有成本——搜尋交易對象、談判條款、監督執行、處理違約的成本。當這些成本高於企業內部完成的組織成本時，企業選擇自建（make）；反之選擇外包（buy）。Williamson（1985）進一步指出：交易成本的高低主要取決於三個因素——資產專屬性（asset specificity，投資是否只對這個交易有價值？）、交易頻率（frequency）、和不確定性（uncertainty）。\n\nIT 對企業邊界的影響是雙向的：(1) 降低市場交易成本——電子市場降低搜尋成本、智慧合約降低執行成本、平台降低配對成本→這些推動企業縮小、更多外包。(2) 降低內部組織成本——ERP 降低部門間協調成本、知識管理系統降低內部知識傳遞成本→這些使企業擴張變得可行。最終邊界往哪移動取決於哪邊降低更多。\n\n資產專屬性高的情境（例如為特定客戶量身打造的系統、使用專屬技術棧的應用）傾向自建，因為外包後容易被供應商 hold-up（要挾）。資產專屬性低的情境（例如標準化的雲端基礎設施、通用的 HR 系統）傾向外包或 SaaS，因為市場上有充分競爭。平台經濟創造了第三種選項——企業不需要完全自建也不需要完全外包，而是加入平台生態系統、利用平台的基礎設施。\n\n考試注意：TCE 分析的結論必須是條件式的（「在 X 條件下傾向 Y」），不能是絕對判斷。",
           "bullets": [
-            "資產專屬性高 → 傾向自建（避免被鎖定）",
-            "資產專屬性低且市場競爭充分 → 傾向外包",
-            "IT 降低搜尋成本、協調成本與監督成本",
-            "平台經濟創造第三種選項：既非完全自建也非完全外包"
+            "TCE 核心：比較市場交易成本和內部組織成本，決定 make or buy",
+            "資產專屬性是最關鍵的變數——專屬性高傾向自建，低傾向外包",
+            "IT 同時降低兩種成本，邊界移動方向取決於哪邊降低更多",
+            "平台經濟創造第三選項：不完全自建也不完全外包，加入生態系統",
+            "TCE 結論必須是條件式——不要寫「應該外包」，要寫「在…條件下傾向外包」"
           ]
         },
         {
           "title": "代理理論補充監督與激勵面向",
-          "body": "代理成本（monitoring cost + bonding cost + residual loss）在 IT outsourcing 中特別重要。IT 可以降低監督成本（透過 dashboard、SLA tracking），但資訊不對稱與利益衝突不會因技術而消失。",
+          "body": "代理理論（Agency Theory）從不同角度補充 TCE 對外包決策的分析。代理關係是指委託人（principal，如企業）將工作委託給代理人（agent，如外包商）時，因為雙方利益不完全一致且存在資訊不對稱，代理人可能做出不利於委託人的行為。代理成本包含三個部分：monitoring cost（委託人監督代理人的成本）、bonding cost（代理人為了取得信任而付出的成本，如揭露報告、合規認證）、residual loss（即使有監督和信任措施，仍然存在的效率損失）。\n\nTCE 和代理理論的關鍵差異：TCE 關注「事前」的合約設計和交易結構選擇（governance structure），代理理論關注「事後」的行為偏差和監督機制。兩者互補而非替代。在 IT 外包分析中，TCE 幫你決定「該不該外包」，代理理論幫你設計「外包後怎麼監督」。\n\nIT 可以降低 monitoring cost（透過 dashboard、SLA 自動追蹤、code repository 透明化），但不能消除利益不一致本身。如果外包商的 KPI 是「功能交付數量」但企業真正在乎的是「使用者體驗品質」，再多的 dashboard 也無法解決激勵不一致的問題——需要重新設計合約的激勵結構。\n\n多供應商策略降低依賴但增加整合和管理成本。雲端和 SaaS 改變了 lock-in 的形式（從合約 lock-in 到資料和生態系統 lock-in），但沒有消除它。",
           "bullets": [
-            "交易成本關注事前的合約設計，代理理論關注事後的行為偏差",
-            "IT 系統不能取代信任與激勵機制設計",
-            "多供應商策略降低依賴但增加整合成本",
-            "雲端與 SaaS 改變但不消除 lock-in 風險"
+            "代理成本三部分：monitoring cost、bonding cost、residual loss",
+            "TCE 關注事前的合約設計，代理理論關注事後的行為偏差——兩者互補",
+            "IT 降低 monitoring cost（dashboard、SLA 追蹤）但不能消除利益不一致",
+            "激勵結構設計比監控技術更重要——KPI 不一致時 dashboard 無用",
+            "雲端改變 lock-in 形式（從合約到生態系統）但沒有消除 lock-in"
           ]
         },
         {
           "title": "模組化架構支持組織敏捷",
-          "body": "模組化（loosely coupled、well-defined interfaces）允許獨立替換元件而不影響整體。微服務、API-first 與 event-driven 架構是技術實踐，但模組化的真正價值在於降低未來決策的轉換成本。",
+          "body": "模組化（modularity）是同時支持效率和敏捷的架構原則。模組化系統的特徵是：loosely coupled（元件之間低耦合，修改一個不影響其他的）、well-defined interfaces（介面明確定義，元件可以獨立替換）、high cohesion（每個元件內部功能高度內聚）。在軟體架構中，微服務（microservices）、API-first 設計和 event-driven architecture 是模組化的技術實踐。\n\n模組化的真正價值不在技術層面，而在於它降低了未來決策的轉換成本。如果你用單體架構（monolith），未來想換掉其中一個功能就要改動整個系統；如果用模組化架構，只需要替換那個模組。這就是 digital option 的具體實踐——模組化的前期設計成本是你為未來彈性支付的「權利金」。\n\n但模組化不是免費的。設計成本：interface 定義需要花時間思考和協商，且一旦定義好就很難改變（interface 是模組之間的合約）。運營複雜度：分散式系統的 debug、監控和故障排除比單體系統複雜得多（分散式系統的 failure modes 遠多於單體）。協調成本：多個團隊開發不同模組，需要版本管理、API 相容性和發布協調。Conway's Law 指出：系統的架構會反映組織的溝通結構——如果組織不是模組化的，系統也很難真正模組化。\n\n考試提醒：不要把模組化寫成「一定好」。要說清楚適用條件（高不確定性環境、需要頻繁更改的系統）和不適用條件（簡單系統、低變化需求、小團隊）。",
           "bullets": [
-            "模組化有設計成本：interface 定義、版本管理、測試複雜度",
-            "過度模組化會增加分散式系統的 operational complexity",
-            "業務模組化與技術模組化應同步考量",
-            "Conway's Law：系統架構反映組織溝通結構"
+            "模組化三特徵：loosely coupled、well-defined interfaces、high cohesion",
+            "模組化的價值是降低未來轉換成本——前期設計成本是 digital option 的「權利金」",
+            "模組化有成本：interface 設計、分散式系統的 debug 複雜度、團隊協調",
+            "Conway's Law：系統架構反映組織溝通結構——組織不模組化則系統也難模組化",
+            "不要把模組化寫成一定好——要說清楚適用條件和不適用條件"
           ]
         }
       ],
@@ -1135,42 +1198,46 @@
       "sections": [
         {
           "title": "辨識題型與理論選擇",
-          "body": "MIS 申論題常以案例情境出發，要求分析、比較或建議。第一步是辨識題目涉及的理論範圍：純策略對齊、投資評估、組織邊界分析、或綜合性案例。不同題型需要不同的論述結構。",
+          "body": "MIS 申論題表面上考「MIS 知識」，實際上考的是「結構化分析能力」。辨識題型是答題的第一步：\n\n(1)「解釋型」——「解釋 X 如何影響 Y」或「說明 X 的機制」。需要因果推論：A 透過什麼路徑導致 B？中間有什麼中介變數？在什麼條件下成立？例如「解釋 IT 如何提升企業競爭力」→ 不能只說「IT 提升效率」，要寫出具體機制（IT 降低哪些成本 → 釋放哪些資源 → 投入什麼能力 → 產出什麼競爭優勢）。\n\n(2)「比較型」——「比較 A 與 B」或「A 和 B 有何不同？」需要明確的比較軸。常見錯誤是分別描述 A 和 B 但不做直接比較。正確做法是設定 2-3 個比較軸（例如適用場景、成本結構、風險特性），然後在每個軸上同時論述 A 和 B。\n\n(3)「建議型」——「請提出建議」或「如果你是 CIO，你會怎麼做？」需要 action + mechanism + metric + risk：做什麼（具體行動）、為什麼有效（透過什麼機制改善問題）、怎麼衡量（什麼指標判斷成功）、有什麼風險（以及如何應對）。\n\n(4)「理論應用型」——「以 X 理論分析」。必須使用指定理論的核心概念和分析框架，不能換用其他理論。例如「以交易成本理論分析外包決策」就必須用資產專屬性、交易頻率、不確定性這些 TCE 核心變數。",
           "bullets": [
-            "「解釋 X 如何影響 Y」→ 需要因果機制，不只是相關",
-            "「比較 A 與 B」→ 需要明確的比較軸與雙向分析",
-            "「提出建議」→ 需要 action、mechanism、metric、risk",
-            "「以 Z 理論分析」→ 必須用指定理論的核心概念"
+            "解釋型：需要因果推論鏈，不是描述「A 和 B 有關」",
+            "比較型：設定比較軸，在每個軸上同時論述 A 和 B，不分開描述",
+            "建議型：action + mechanism + metric + risk 四要素缺一不可",
+            "理論應用型：必須用指定理論的核心概念，不能換用其他理論",
+            "第一步永遠是辨識題型——題型決定論述結構"
           ]
         },
         {
           "title": "跨概念整合的論證模式",
-          "body": "高分答案通常不是只用單一理論，而是整合多個角度。例如：用 alignment 框定問題、complementary assets 解釋為什麼失敗、transaction cost 分析 make-or-buy、dynamic capability 提出調整方向。",
+          "body": "高分答案的共同特點是理論整合——不是堆疊理論名詞，而是讓多個理論各處理一層問題，形成完整的分析。每個理論有它的解釋範圍（scope）：alignment 框定問題（IT 投資是否對準策略目標？）、complementary assets 解釋落差（為什麼同樣的投資效果不同？）、transaction cost 分析結構（自建還是外包？）、dynamic capabilities 指引調整（環境變了怎麼辦？）。\n\n整合的邏輯：先用一個理論界定問題（what is the problem?），再用另一個理論解釋原因（why did it happen?），接著用第三個理論提出對策（what should we do?），最後指出限制條件（under what conditions?）。例如分析一個 ERP 導入失敗案例：用 alignment model 指出 IT 投資沒有對準策略目標 → 用 complementary assets 解釋缺乏流程再設計和培訓 → 用 change management 理論提出改善建議 → 用 TCE 分析在該企業的產業脈絡下，哪些部分應該自建、哪些應該外包。\n\n理論之間要有邏輯連接（transition），不是並列。錯誤範例：「根據 TCE…。根據 RBV…。根據 dynamic capabilities…。」正確範例：「TCE 的分析顯示這個系統的資產專屬性高，因此傾向自建。但 RBV 進一步指出，自建的前提是企業擁有相關的核心資源和能力。如果這些能力不足，dynamic capabilities 框架建議…」。\n\n每個理論都有 scope condition（適用邊界），答題時要承認：「TCE 的分析假設交易雙方是理性的，如果存在信任關係或社會連結，純粹的成本分析可能不適用」。承認限制反而增加分數，因為它展示了批判思考能力。",
           "bullets": [
-            "每個理論處理一層問題：what（是什麼）、why（為什麼）、how（如何做）、when（什麼條件下）",
-            "理論之間要有邏輯連接，不是堆疊",
-            "承認理論的適用邊界（scope condition）",
-            "用案例串連各理論的實例證據"
+            "整合邏輯：界定問題（what）→ 解釋原因（why）→ 提出對策（how）→ 限定條件（when）",
+            "理論之間要有邏輯連接（transition），不是並列堆疊",
+            "每個理論有 scope condition——承認適用邊界反而增加分數",
+            "用案例串連各理論的實例證據，而非抽象論述",
+            "寫透 2-3 個理論比蜻蜓點水 5 個好——深度優於廣度"
           ]
         },
         {
           "title": "時間管理與論述取捨",
-          "body": "90 分鐘寫 3-4 題申論，每題約 20-25 分鐘。前 3 分鐘審題與列大綱，中間 15 分鐘寫論述，最後 2 分鐘檢查邏輯一致性。深度優於廣度：寫透兩個理論勝過蜻蜓點水五個。",
+          "body": "90 分鐘寫 3-4 題申論，時間管理決定你能不能把知道的東西寫出來。經驗法則：每題 20-25 分鐘（含審題和檢查），前 3 分鐘不動筆——只審題和列大綱。\n\n審題三步驟：(1) 圈出關鍵名詞（圈出「比較」「分析」「建議」「以 X 理論」等指令詞，和「IT 策略」「互補性資產」「供應鏈」等內容詞）。(2) 判斷題型（解釋/比較/建議/理論應用）。(3) 列大綱——決定要用哪 2-3 個理論、設定論述結構（每個理論用 1-2 段，加上引言和結論）。大綱在紙上只需要 5-8 個關鍵詞。\n\n中間 15-18 分鐘寫論述。每段結構：第一句是主張（claim，這段要說什麼），中間是機制和證據（support），最後回扣問題（so what，跟題目的關係）。不要在段尾開新話題——那是下一段的事。\n\n最後 2-3 分鐘檢查：(1) 每個主張都有機制支持嗎？（不能只有結論沒有推導）(2) 有指出條件限制嗎？（不能只有絕對判斷）(3) 有回扣題目嗎？（不能最後一段跑題）。\n\n如果時間不夠：先寫最有把握的理論（深度），再用 bullet points 補其他角度（廣度）。閱卷者更喜歡一個理論寫得深入透徹，而不是五個理論都只寫定義。",
           "bullets": [
-            "大綱先列核心論點再展開細節",
-            "每段的第一句是主張，後面是支持與限制",
-            "跳過不確定的理論細節，用框架結構補償",
-            "結尾回扣題目問題，不要開新話題"
+            "時間分配：前 3 分鐘審題列大綱、中間 15-18 分鐘寫、最後 2-3 分鐘檢查",
+            "審題三步：圈關鍵詞 → 判斷題型 → 列大綱（5-8 個關鍵詞）",
+            "每段結構：claim（主張）→ support（機制+證據）→ so what（回扣問題）",
+            "時間不夠時：先寫透一個理論，再用 bullet points 補其他角度",
+            "結尾回扣題目——不要在最後一段開新話題"
           ]
         },
         {
           "title": "常見邏輯謬誤與檢查清單",
-          "body": "申論中常見的問題不是知識不足，而是論證結構有缺陷。事後合理化（hindsight bias）、倖存者偏差（只看成功案例）、false dichotomy（只提供兩個選項）、和 circular reasoning（結論當前提）是最常見的扣分點。",
+          "body": "申論中常見的邏輯錯誤不是「知識不足」而是「推論有缺陷」。辨識和避免這些錯誤是拿高分的關鍵：\n\n(1) Circular reasoning（循環論證）——用結論當前提。例如「X 公司成功是因為它做得好」→ 沒有解釋力，因為「做得好」就是「成功」的同義詞。修正：「X 公司成功是因為它在 ERP 導入時同時投資了流程再設計和員工培訓（互補性資產），使得 IT 投資的效果在 2 年後顯現」。\n\n(2) Survivorship bias（倖存者偏差）——只看成功案例得出結論。例如「Google、Apple 都採用平台策略，所以平台策略是最好的」→ 沒有看到無數採用平台策略但失敗的公司。修正：加入失敗案例或至少指出「存在 survivorship bias，結論不能泛化」。\n\n(3) False dichotomy（假二分法）——只提供兩個選項，忽略其他可能。例如「企業要麼自建要麼外包」→ 忽略了 SaaS、hybrid、platform participation 等中間選項。修正：列出完整的選項空間再比較。\n\n(4) Post hoc ergo propter hoc（事後歸因謬誤）——因為 A 發生在 B 之前，就認為 A 導致 B。例如「導入 ERP 後營收成長 20%，所以 ERP 提升了營收」→ 可能是整體經濟回暖或其他因素。修正：說明可能的替代解釋，或至少指出「相關不等於因果」。\n\n(5) False universality（假普遍性）——把特定條件下的結論推廣到所有情境。例如「所有企業都應該用 Scrum」→ 忽略 Scrum 不適合高法規限制、需求完全確定、或團隊缺乏自主權的情境。修正：所有建議都加上適用條件。\n\n自我檢查的「四個問題」：我的每個主張都有機制支持嗎？我有指出適用條件嗎？我考慮了替代解釋嗎？我的案例有標注時間和產業脈絡嗎？四個都是「是」，你的答案品質就在前 20%。",
           "bullets": [
-            "避免用結論當前提（X 成功因為 X 做得好）",
-            "案例要包含失敗案例或條件限制",
-            "建議的可行性需要考慮資源與時間限制",
-            "「因此必然」→ 改為「因此在…條件下，傾向…」"
+            "五大邏輯錯誤：循環論證、倖存者偏差、假二分法、事後歸因、假普遍性",
+            "循環論證修正：用具體機制（互補性資產、流程再設計）替代空洞的「做得好」",
+            "所有建議都加適用條件——「所有企業都應該 X」幾乎必定是錯的",
+            "案例必須包含脈絡（時間、產業、規模），否則證據力不足",
+            "自我檢查四問：有機制？有條件？有替代解釋？有脈絡？→ 全是就在前 20%"
           ]
         }
       ],
@@ -1235,42 +1302,46 @@
       "sections": [
         {
           "title": "資料治理從 ownership 開始，不從工具開始",
-          "body": "資料治理需要明確的 data owner（對品質負責）、data steward（執行治理規則）與 data consumer（按規範使用）。常見的失敗是只買工具而不建立角色與流程，導致 metadata 不完整、lineage 不可追蹤、品質無人負責。",
+          "body": "資料治理（data governance）的第一步不是買工具，而是建立角色和責任。三個核心角色：Data owner（資料擁有者，通常是業務部門主管）——對資料品質負最終責任，決定誰可以存取、如何使用、何時刪除。Data steward（資料管理員）——執行治理規則的日常操作，維護 metadata、監控品質指標、處理品質問題。Data consumer（資料使用者）——按規範使用資料，發現問題時回報。\n\n常見的治理失敗模式：只買了 data catalog 工具但沒有指定 owner → metadata 沒人維護 → 半年後 catalog 充滿過時資訊 → 使用者不信任 → 回到用 email 問同事。另一個常見失敗：不同部門對同一個欄位有不同定義（例如行銷部門的「活躍用戶」是 30 天內登入，產品部門的「活躍用戶」是 7 天內有交易行為），沒有 master data management 協調就會產出矛盾的報告。\n\n資料品質五維度（Laudon 教科書版本）：Accuracy（資料是否正確反映真實世界？）、Completeness（是否有遺漏？）、Consistency（不同系統中的相同資料是否一致？）、Timeliness（資料是否足夠即時？）、Validity（資料是否符合定義的格式和規則？）。品質問題在 ETL（Extract-Transform-Load）管線中會被放大——上游的一個小錯誤到下游可能影響千萬筆記錄的分析結果。\n\n考試常見：分析某企業的資料治理問題、設計治理流程、解釋為什麼「有資料」不等於「可用的資料」。",
           "bullets": [
-            "Data catalog 記錄定義、來源、更新頻率與 PII 標記",
-            "品質維度：accuracy、completeness、consistency、timeliness、validity",
-            "Master data management 需要跨部門共識",
-            "Data quality 問題在 ETL 管線中會被放大"
+            "資料治理三角色：owner（負品質責任）、steward（執行規則）、consumer（按規範使用）",
+            "只買工具不建角色是最常見的治理失敗——data catalog 沒人維護等於沒有",
+            "Master data management 需要跨部門協商定義——「活躍用戶」在不同部門可能意思不同",
+            "品質五維度：accuracy、completeness、consistency、timeliness、validity",
+            "ETL 管線會放大品質問題——上游小錯下游可能影響千萬筆分析"
           ]
         },
         {
           "title": "分析層次決定方法與資源投入",
-          "body": "Descriptive 回答「發生了什麼」（報表、儀表板）、diagnostic 回答「為什麼」（drill-down、關聯分析）、predictive 回答「可能會怎樣」（迴歸、機器學習）、prescriptive 回答「應該怎麼做」（最佳化、模擬）。不是所有問題都需要 AI，很多問題用 SQL 和視覺化就夠了。",
+          "body": "分析不是「都用 AI」——很多問題用 SQL 和視覺化就能回答。分析層次分四級：Descriptive analytics（描述性，回答「發生了什麼？」）用報表和儀表板呈現歷史資料，例如「上月營收是多少？哪個區域成長最快？」。Diagnostic analytics（診斷性，回答「為什麼？」）用 drill-down、交叉分析和關聯分析找到原因，例如「為什麼北區營收下滑？是客戶流失還是客單價降低？」。Predictive analytics（預測性，回答「可能會怎樣？」）用統計模型和機器學習預測未來，例如「下個月的需求量是多少？哪些客戶可能流失？」。Prescriptive analytics（指示性，回答「應該怎麼做？」）用最佳化和模擬找到最佳行動，例如「在預算限制下，如何分配行銷資源最大化 ROI？」\n\n很多企業直接跳到 predictive/prescriptive，但連 descriptive 都沒做好。如果你連「上月各區域營收多少」這個問題都回答不了（因為資料分散在不同系統、定義不一致），就不該急著建機器學習模型。分析成熟度不是線性前進的——應該根據業務問題的需要選擇適合的層級，而不是「越高級越好」。\n\nPredictive analytics 的前提是歷史模式在未來仍然成立（stationarity assumption）。COVID-19 就是一個反例——所有基於歷史消費行為的預測模型在 2020 年初全部失準。所以預測模型需要搭配不確定性估計（prediction interval 而非 point prediction）和異常偵測機制。",
           "bullets": [
-            "先確認 descriptive analytics 是否已回答問題",
-            "Predictive 需要歷史資料與穩定模式",
-            "Prescriptive 需要可量化的目標函數與限制條件",
-            "分析成熟度不是線性前進，而是按需選擇"
+            "四層分析：descriptive（報表）→ diagnostic（為什麼）→ predictive（預測）→ prescriptive（最佳化）",
+            "很多問題用 SQL 和視覺化就夠——不是所有問題都需要 AI",
+            "descriptive 沒做好就不該急著做 predictive——資料品質是前提",
+            "分析成熟度不是線性前進——按需選擇層級，不是越高越好",
+            "Predictive 的前提是歷史模式未來仍成立——COVID 是 stationarity 被打破的經典反例"
           ]
         },
         {
           "title": "預測準確不等於決策正確",
-          "body": "模型預測的是條件機率，決策還需要考慮成本結構、倫理限制、利害關係人偏好與不可逆性。一個 95% accuracy 的模型如果 5% 的錯誤案例成本極高（例如醫療），可能不如保守策略。",
+          "body": "模型預測的是條件機率（P(Y|X)），不是決策本身。「模型準確」不等於「決策正確」，因為決策還需要考慮：(1) 成本結構——false positive 和 false negative 的代價通常不對稱。在詐騙偵測中，漏掉一筆 100 萬的詐騙（FN）比誤報一筆正常交易（FP）嚴重得多。(2) 倫理限制——即使模型顯示某個群體的違約率較高，是否應該據此拒絕貸款？這涉及公平性和歧視問題。(3) 不可逆性——自駕車的決策錯誤可能致命，金融交易的決策錯誤通常可以補救，兩者需要完全不同的信心門檻。(4) 利害關係人偏好——管理者對風險的態度、法規的要求、社會期待都會影響決策門檻。\n\n所以完整的「從資料到決策」流程是：資料→模型→預測（機率或分數）→ decision boundary（決策閾值，需要人類設定）→行動→結果→回饋。Decision boundary 不是模型決定的，是人類根據成本結構和風險偏好決定的。很多 AI 事故的根因不是模型不準，而是 decision boundary 設錯了或根本沒有人類監督。\n\n考試角度：如果題目給一個 AI 決策出錯的案例，不要只分析模型（「accuracy 不夠高」），要分析整個決策鏈——包括 decision boundary 是否合理、有沒有人類覆核、cost structure 是否被正確考慮。",
           "bullets": [
-            "decision boundary 要考慮 false positive 與 false negative 的不對稱成本",
-            "預測區間（prediction interval）比點預測更適合決策",
-            "模型不可解釋時，人類是否能覆核與否決？",
-            "社群分析的 centrality 指標選擇也需對應決策目標"
+            "模型預測機率，人類設定 decision boundary——兩者分離是 AI 決策的關鍵設計",
+            "FP 和 FN 的代價通常不對稱——詐騙偵測和垃圾郵件的 boundary 完全不同",
+            "prediction interval（預測區間）比 point prediction 更適合支持決策",
+            "很多 AI 事故不是模型不準，而是 decision boundary 設錯或缺乏人類監督",
+            "分析 AI 決策出錯時，要看整個決策鏈，不只看模型 accuracy"
           ]
         },
         {
           "title": "社群分析用結構指標回答組織問題",
-          "body": "社群網路分析（SNA）把關係結構量化：degree centrality（連結數量）、betweenness centrality（橋接位置）、closeness（到其他人的距離）。組織問題不同，需要的指標也不同：尋找知識瓶頸用 betweenness，識別影響力核心用 eigenvector centrality。",
+          "body": "社群網路分析（Social Network Analysis, SNA）是一種把關係結構量化的方法，在 MIS 中用於分析組織內的溝通模式、知識流動和影響力分布。SNA 的基礎概念：Node（節點，代表人、部門或組織）和 Edge（邊，代表關係——溝通、合作、資金流動、資訊傳遞）。不同的分析目標需要不同的 centrality 指標：\n\nDegree centrality（連結數量）——衡量一個節點有多少直接連結。高 degree 的人「認識很多人」，但不一定是組織中最有影響力的。Betweenness centrality（橋接位置）——衡量一個節點位於多少最短路徑上。高 betweenness 的人是「資訊橋樑」，控制不同群組之間的資訊流動——如果他離職，原本連接的群組可能斷聯。Closeness centrality（到其他人的平均距離）——高 closeness 的人能最快接觸到網路中的所有人，適合需要快速擴散資訊的場景。Eigenvector centrality——不只看你認識多少人，還看你認識的人是否也很有影響力（「認識重要的人」比「認識很多人」更重要）。\n\n使用 SNA 時需要注意：(1) 先定義 node 和 edge 代表什麼——email 往來、專案合作、層級匯報是完全不同的網路。(2) 靜態快照和動態演變的結論可能不同——一年前的溝通網路和現在可能已經不同。(3) centrality 指標的絕對值需要與隨機網路（random graph）比較才有意義——因為即使隨機連結也會產生 centrality 差異。(4) SNA 涉及隱私——記錄誰跟誰溝通的資料本身是敏感的。\n\n考試常見：給一個組織的溝通資料，分析誰是關鍵節點、組織的知識瓶頸在哪裡、如何改善知識流動。",
           "bullets": [
-            "先定義 node 與 edge 代表什麼（人/部門、溝通/交易）",
-            "靜態快照與動態演變的結論不同",
-            "指標值需要與隨機網路比較才有意義",
-            "SNA 需要考慮隱私與同意"
+            "四種 centrality：degree（連結多）、betweenness（橋接位置）、closeness（接觸快）、eigenvector（認識重要的人）",
+            "betweenness 高的人是資訊橋樑——離職可能導致群組斷聯",
+            "先定義 node 和 edge 代表什麼——email、專案合作、匯報是不同的網路",
+            "centrality 的絕對值要跟隨機網路比較才有意義",
+            "SNA 涉及隱私——記錄溝通模式本身是敏感資料"
           ]
         }
       ],
@@ -1334,42 +1405,46 @@
       "sections": [
         {
           "title": "評估流程的正確順序",
-          "body": "Train/validation/test 三分法的核心是防止資訊洩漏：validation 選擇超參數與模型架構，test 只在最終評估使用一次。Time-based split 在時間序列資料中尤其重要。Cross-validation 適合資料量小的情境，但在時間序列中不能隨機切分。",
+          "body": "模型評估的正確流程始於資料分割（data split），目的是防止資訊洩漏（information leakage）。Train set 用於訓練模型參數，validation set 用於選擇超參數和模型架構（例如比較 Random Forest 和 Gradient Boosting 哪個更好），test set 只在最終評估時使用一次——它代表「模型從未見過的真實世界資料」。\n\n最常見的評估錯誤是把 test set 當成 validation set 反覆使用——每次調完參數就用 test set 看效果，這等於把 test set 的資訊洩漏進了模型選擇過程，導致離線評估過度樂觀。上線後效果不如預期就是因為這個。時間序列資料不能隨機切分（random split），必須用 time-based split（用過去的資料預測未來），否則模型會「看到未來」。\n\nCross-validation（交叉驗證）在資料量小的時候替代固定的 validation set：把資料分成 k 份，輪流用 k-1 份訓練、1 份驗證，取 k 次結果的平均。但在時間序列中不能隨機做 k-fold——要用 rolling-window 或 expanding-window 方法。\n\n線上指標和離線指標可能差異顯著：模型離線 AUC 0.95 但上線後轉化率沒有提升，可能原因包括 training-serving skew（訓練用的特徵和線上推論用的特徵計算方式不同）、feedback loop（模型決策改變了使用者行為，導致新資料的分布與訓練資料不同）、novelty effect（使用者初期對新推薦感到新鮮，效果消退後回歸基線）。",
           "bullets": [
-            "Data leakage 最常發生在 feature engineering 階段",
-            "Test set 反覆使用等同 validation set，失去泛化估計能力",
-            "代表性：test set 應反映部署環境的分布",
-            "Online vs offline metrics 可能差異顯著（offline 過度樂觀）"
+            "Train/validation/test 三分法的核心是防止資訊洩漏——test set 只用一次",
+            "反覆用 test set 調參等於把它變成 validation set，離線評估會過度樂觀",
+            "時間序列不能 random split——必須用 time-based split 避免「看到未來」",
+            "Cross-validation 適合小資料量，但時間序列要用 rolling/expanding window",
+            "離線好線上差的三大原因：training-serving skew、feedback loop、novelty effect"
           ]
         },
         {
           "title": "單一指標無法捕捉模型品質",
-          "body": "Accuracy 在不平衡資料中幾乎無用（99% 正常 → 全猜正常也有 99% accuracy）。Precision、recall、F1、AUC-ROC 各回答不同問題。業務指標（轉化率、退貨率、客訴量）才是最終判斷。",
+          "body": "Accuracy 是最常被誤用的指標。在不平衡資料集中（例如 99% 正常交易、1% 詐騙），一個「全部預測為正常」的模型 accuracy 就是 99%，但它完全無法偵測詐騙——recall 是 0%。所以不平衡場景下 accuracy 幾乎無用。\n\n正確的指標選擇取決於業務問題：Precision（查準率）= TP/(TP+FP)，回答「模型說是詐騙的裡面，真的是詐騙的有多少？」——precision 高代表誤報少。Recall（查全率）= TP/(TP+FN)，回答「所有真正的詐騙裡面，模型找到了多少？」——recall 高代表漏檢少。F1-score = precision 和 recall 的調和平均。\n\n業務脈絡決定取捨：詐騙偵測優先 recall（寧可多查幾個正常交易，也不能漏掉大額詐騙）。垃圾郵件過濾優先 precision（寧可放過幾封垃圾郵件，也不能誤殺重要信件）。兩者的 trade-off 由 decision threshold（決策閾值）控制——調高閾值 precision 上升 recall 下降，反之亦然。\n\nAUC-ROC 衡量模型在所有 threshold 下的綜合排序能力。Calibration 衡量預測機率與實際機率的一致性——一個模型預測「80% 機率是詐騙」，實際應該有大約 80% 的案例真的是詐騙。Calibration 差的模型即使 AUC 高，也不適合直接用預測機率做決策。\n\n但最終判斷還是業務指標：轉化率有沒有提升？退貨率有沒有降低？客訴量有沒有減少？離線的 ML 指標只是中間指標。",
           "bullets": [
-            "Precision 關注「模型說 positive 的有多少是對的」",
-            "Recall 關注「所有 positive 中模型找到了多少」",
-            "AUC-ROC 衡量在所有 threshold 下的綜合排序能力",
-            "Calibration 衡量預測機率與實際機率的一致性"
+            "不平衡資料中 accuracy 幾乎無用——全猜多數類就能達到高 accuracy",
+            "Precision（誤報少）vs Recall（漏檢少）的取捨由業務脈絡決定",
+            "AUC-ROC 衡量綜合排序能力，Calibration 衡量預測機率的可信度",
+            "Decision threshold 控制 precision-recall trade-off——不是模型決定，是人類決定",
+            "離線 ML 指標是中間指標——最終判斷看業務指標（轉化率、退貨率、客訴量）"
           ]
         },
         {
           "title": "公平性沒有唯一定義",
-          "body": "Demographic parity（各群體獲得正面結果的比例相同）、equalized odds（各群體的 TPR 和 FPR 相同）、individual fairness（相似個體得到相似結果）在數學上不可能同時滿足（Chouldechova/Kleinberg impossibility）。選擇哪個定義是價值判斷，不是技術問題。",
+          "body": "AI 公平性（fairness）是近年台大 MIS 考題的重要議題。核心困難在於：公平性有多種數學定義，而且它們在數學上不可能同時滿足（Chouldechova/Kleinberg impossibility theorem）。\n\n三種主要定義：Demographic parity（人口統計均等）——不同群體獲得正面結果的比例應該相同（例如男女的貸款核准率應該一樣）。Equalized odds（均等化勝算）——不同群體的 True Positive Rate 和 False Positive Rate 應該相同（例如男女中，真正有能力還款的人被核准的比例應該一樣）。Individual fairness（個體公平）——相似的個體應該得到相似的結果（例如收入、信用歷史、負債比相近的兩個人，不論性別，應該得到相同的貸款決策）。\n\nImpossibility theorem 指出：除非各群體的基礎率（base rate）完全相同，否則 demographic parity 和 equalized odds 不可能同時滿足。這意味著「選擇哪個公平性定義」不是技術問題，而是價值判斷——不同的利害關係人可能偏好不同的定義。\n\n技術手段也有限制：移除 sensitive features（如性別、種族）不代表消除偏見——因為其他特徵（如郵遞區號、學校名稱）可能是 proxy variables（代理變數），間接攜帶相同的資訊。歷史資料反映歷史偏見，模型會學到並放大這些偏見。\n\n考試常見：給一個 AI 決策案例，分析公平性問題並提出改善建議。好的答案要指出用哪個公平性定義、為什麼選這個、以及選擇帶來的 trade-off。",
           "bullets": [
-            "歷史資料反映歷史偏見，模型會學到並放大",
-            "Protected attributes 的定義因法律管轄區域而異",
-            "去除 sensitive feature 不代表消除偏見（proxy variables）",
-            "Fairness 與 accuracy 之間常存在 trade-off"
+            "三種公平性定義：demographic parity（結果比例相同）、equalized odds（TPR/FPR 相同）、individual fairness（相似個體相似結果）",
+            "Impossibility theorem：除非群體基礎率相同，demographic parity 和 equalized odds 不可能同時滿足",
+            "選擇哪個定義是價值判斷，不是技術問題——不同利害關係人偏好不同",
+            "移除 sensitive features 不消除偏見——proxy variables 間接攜帶相同資訊",
+            "歷史資料反映歷史偏見——模型會學到並放大，不能假設資料是中性的"
           ]
         },
         {
           "title": "部署後模型會老化",
-          "body": "Data drift（輸入分布改變）不必然導致 concept drift（輸入-輸出關係改變），但兩者都會讓模型預測品質下降。監控需要同時追蹤輸入統計量與輸出品質指標。Retraining 策略包括定期重訓、觸發式重訓與持續學習。",
+          "body": "模型部署後會老化——這是 AI 系統與傳統軟體最大的差異。傳統軟體部署後行為是確定的（同樣的輸入產生同樣的輸出），但 AI 模型的行為取決於輸入資料的分布，當分布改變了，模型的預測品質就會下降。\n\nData drift（資料漂移）指輸入資料的分布改變了。例如：電商推薦模型在雙 11 期間的使用者行為分布與平時完全不同。Concept drift（概念漂移）指輸入與輸出之間的關係改變了。例如：COVID-19 之後，「家庭收入」和「旅遊支出」之間的關係完全改變（高收入不再意味著高旅遊支出）。Data drift 不必然導致 concept drift，但兩者都需要監控。\n\n監控的三個層面：(1) 輸入統計量——用 PSI（Population Stability Index）或 KS-test 比較生產資料與訓練資料的分布差異。PSI > 0.1 通常表示輕微漂移，> 0.25 表示顯著漂移。(2) 預測品質——如果有 ground truth（事後可以知道真實結果），直接追蹤 precision/recall 的趨勢。如果沒有（例如推薦系統的長期效果），用 proxy metric 和定期人工抽樣。(3) 系統指標——延遲、吞吐量、錯誤率、資源使用率。\n\n新模型上線的安全策略：Shadow deployment（影子部署）——新舊模型同時運行，比較預測結果但只用舊模型的結果做決策。A/B test——隨機分流，一部分使用者用新模型、一部分用舊模型，比較業務指標。Canary release——先對 5% 的流量使用新模型，沒問題再逐步擴大。所有策略都需要事先設定 rollback 機制——如果新模型表現差，一鍵切回舊版本。",
           "bullets": [
-            "監控指標：PSI（Population Stability Index）衡量分布變化",
-            "Ground truth 延遲是監控的主要挑戰",
-            "Model versioning 與 rollback 機制必須在部署前就設計",
-            "A/B test 或 shadow mode 驗證新模型後再切換"
+            "Data drift（輸入分布變化）不必然導致 concept drift（輸入-輸出關係變化），但都需監控",
+            "PSI > 0.1 輕微漂移、> 0.25 顯著漂移——需要觸發重訓評估",
+            "三層監控：輸入統計量（PSI）、預測品質（precision/recall 趨勢）、系統指標（延遲、錯誤率）",
+            "新模型上線用 shadow/A-B/canary 驗證，不要直接切換",
+            "Rollback 機制必須在部署前設計——出問題時要一鍵回退"
           ]
         }
       ],
@@ -1433,42 +1508,46 @@
       "sections": [
         {
           "title": "POC 到生產的鴻溝",
-          "body": "AI POC 成功（在乾淨資料上 accuracy 高）不代表生產可行。常見阻礙：資料管線不穩定、延遲不達標、邊緣案例處理不完整、domain expert 不信任模型、缺乏 monitoring 與回退機制。Google 的 ML technical debt 論文估計模型本身只佔系統 5%。",
+          "body": "AI POC（概念驗證）成功不代表能上線。Google 的 Machine Learning Technical Debt 論文估計：在一個生產級 AI 系統中，ML model code（模型本身的程式碼）只佔整體系統的大約 5%。其餘 95% 是 data collection、feature extraction、data verification、serving infrastructure、monitoring、configuration、process management 等基礎設施。\n\n從 POC 到生產的典型障礙：(1) 資料管線不穩定——POC 用的是一次性下載的乾淨資料集，生產需要持續、自動化、可靠的資料管線，包含異常處理和資料品質檢查。(2) 延遲不達標——POC 用批次處理（batch），生產可能需要即時推論（real-time inference），GPU/CPU 資源需求完全不同。(3) 邊緣案例——POC 在「正常情境」下表現好，但生產環境有各種意外輸入（missing values、out-of-distribution data、adversarial input）。(4) 信任問題——domain expert 不信任模型的預測，不願意採用。(5) 缺乏監控——上線後沒有追蹤模型表現，直到業務指標大幅惡化才發現問題。\n\n務實的建議：先用 rule-based baseline（例如 if-then 規則）確認問題值得用 ML 解決。如果 baseline 已經表現不錯，ML 帶來的增量可能不足以證明其複雜度和成本。Google ML Rules 的 Rule #1：「Don't be afraid to launch a product without machine learning.」\n\n考試常見：分析一個 AI 專案從 POC 到生產的挑戰、解釋為什麼 85% 的 AI 專案無法產出商業價值。",
           "bullets": [
-            "POC 通常用乾淨資料、離線評估、單一版本",
-            "生產需要：資料管線、特徵工程、serving infrastructure、監控",
-            "模型品質 ≠ 系統品質 ≠ 業務價值",
-            "先用 rule-based baseline 確認問題值得用 ML 解決"
+            "ML code 只佔生產級 AI 系統的 ~5%，其餘 95% 是資料管線、監控、基礎設施",
+            "POC→生產五大障礙：資料管線、延遲、邊緣案例、信任、監控",
+            "先用 rule-based baseline 確認問題值得用 ML——很多問題簡單規則就夠好",
+            "模型品質 ≠ 系統品質 ≠ 業務價值——三者是不同層面的評估",
+            "Google ML Rule #1：不要怕在沒有 ML 的情況下推出產品"
           ]
         },
         {
           "title": "MLOps 是 DevOps 的延伸，不是替代",
-          "body": "MLOps 在 DevOps 的 CI/CD 上增加了 data pipeline、feature store、experiment tracking、model registry 與 monitoring。核心原則是 reproducibility（相同資料+程式碼→相同模型）和 observability（隨時知道模型在做什麼）。",
+          "body": "MLOps 是 DevOps 原則在機器學習領域的延伸。DevOps 處理「程式碼→建置→測試→部署→監控」的自動化，MLOps 在此基礎上增加了「資料→特徵→訓練→評估→部署→監控→重訓」的自動化。核心原則是 reproducibility（相同資料 + 相同程式碼 = 相同模型）和 observability（隨時知道模型在做什麼、用什麼資料、產出什麼結果）。\n\n關鍵元件：(1) Feature store（特徵儲存庫）——集中管理特徵的計算邏輯和數值，解決 training-serving skew（訓練時用 Python 算的特徵值和線上用 Java 算的不一致）。(2) Model registry（模型登記庫）——記錄每個模型版本的 metadata：誰訓練的、用什麼資料、什麼超參數、評估結果如何、是否通過審核。(3) Experiment tracking（實驗追蹤）——工具如 MLflow 和 Weights & Biases，自動記錄每次訓練的超參數、評估指標和產出的 artifacts，讓實驗可以被重現和比較。(4) CI/CD for ML——程式碼變更觸發自動化的訓練管線、品質檢查和部署，就像軟體開發的 CI/CD 但多了模型品質閘門（quality gate）。\n\n自動化 retraining 管線需要明確的觸發條件：時間觸發（每週重訓）、drift 觸發（PSI 超過閾值時重訓）、資料量觸發（累積足夠新標注資料時重訓）。觸發條件的設定需要業務判斷——太頻繁浪費資源，太少則模型老化。\n\n考試角度：MLOps 的重點不在工具名稱（MLflow、Kubeflow 都不需要記），而在理解為什麼需要這些能力、它們解決什麼問題。",
           "bullets": [
-            "Feature store 解決 training-serving skew",
-            "Model registry 記錄版本、metadata 與 approval status",
-            "自動化 retraining 管線需要明確的觸發條件與品質門檻",
-            "實驗追蹤（MLflow、Weights & Biases）記錄超參數與結果"
+            "MLOps = DevOps + 資料管線 + 特徵管理 + 模型版本 + 監控重訓",
+            "Feature store 解決 training-serving skew——訓練和推論用同一份特徵計算邏輯",
+            "Model registry 記錄版本 metadata：資料、超參數、評估結果、審核狀態",
+            "CI/CD for ML 在軟體 CI/CD 基礎上加了模型品質閘門（quality gate）",
+            "Retraining 觸發條件需要業務判斷——太頻繁浪費資源，太少模型老化"
           ]
         },
         {
           "title": "NIST AI RMF 提供治理框架",
-          "body": "NIST AI Risk Management Framework 分為四功能：Map（辨識 AI 風險脈絡）、Measure（量化風險）、Manage（降低與監控風險）、Govern（建立組織治理結構）。它不是法規，而是自願性框架，但可作為答題時的結構化分析工具。",
+          "body": "NIST AI Risk Management Framework（AI RMF）是目前最完整的 AI 治理框架。它不是法規（非強制），但被廣泛引用為 AI 治理的參考標準，也是 MIS 考試中 AI 治理的理想答題框架。AI RMF 分為四個功能：\n\nMap（辨識）——辨識 AI 系統的脈絡和風險。包括：這個 AI 系統用在什麼場景？影響誰？可能的失敗模式（failure modes）是什麼？失敗的影響範圍和嚴重程度如何？哪些是高風險決策（例如影響個人的就業、信用、自由）？\n\nMeasure（量化）——選擇 trustworthiness characteristics 的量化指標並測量。NIST 定義的 trustworthiness 特性包括：accuracy、reliability、safety、security、privacy、fairness、transparency、explainability、accountability。每個特性需要對應的指標和測量方法（例如 fairness 用 demographic parity ratio 量化，explainability 用 SHAP values 或 LIME 提供個案解釋）。\n\nManage（管理）——設計風險降低措施。包括：技術措施（模型監控、drift detection、anomaly detection）、人類措施（human-in-the-loop、escalation 到人類決策者）、組織措施（incident response plan、定期風險重新評估）。不同風險等級的 AI 應用需要不同強度的管理措施——高風險（影響個人權益的決策）需要更嚴格的人類監督。\n\nGovern（治理）——建立組織層面的治理結構。包括：誰對 AI 決策負責（accountability 不能模糊）？什麼場景禁止使用 AI？AI 倫理委員會的角色和權限？如何處理 AI 事故（incident response）？如何與利害關係人溝通（transparency report）？\n\n考試技巧：用 Map-Measure-Manage-Govern 回答 AI 治理題，比列出「公平、透明、可解釋、問責」等抽象原則有結構得多。",
           "bullets": [
-            "Map：辨識 stakeholders、use case、failure modes 與 impact",
-            "Measure：選擇 trustworthiness characteristics 的量化指標",
-            "Manage：設計 mitigation、monitoring 與 escalation 流程",
-            "Govern：角色、責任、政策與 accountability 機制"
+            "NIST AI RMF 四功能：Map（辨識風險）→ Measure（量化指標）→ Manage（降低風險）→ Govern（治理結構）",
+            "Map 先問：這個 AI 影響誰？失敗模式是什麼？嚴重程度如何？",
+            "Measure 的 trustworthiness 特性：accuracy、fairness、transparency、explainability 等",
+            "Manage 分三層：技術（監控）、人類（escalation）、組織（incident response）",
+            "用 Map-Measure-Manage-Govern 答題，比列抽象原則有結構得多"
           ]
         },
         {
           "title": "AI 供應商管理的特殊挑戰",
-          "body": "AI-as-a-Service 的 lock-in 不只在技術層面（API、模型格式），更在資料層面（訓練資料被供應商使用、模型效果依賴供應商的更新）。責任歸屬在 AI 出錯時特別模糊：供應商提供模型、企業提供資料、使用者承受後果。",
+          "body": "AI 供應商管理在 AI 時代有其特殊挑戰，與傳統 IT 供應商管理有本質不同。傳統 IT 供應商提供的是確定性工具（ERP 系統的行為是可預測的），AI 供應商提供的是機率性系統（foundation model 的行為會隨版本更新改變，且無法完全預測）。\n\n四個層面的特殊挑戰：(1) 資料使用權——你上傳資料 fine-tune 模型後，供應商能不能用你的資料改進它的通用模型？這涉及智慧財產和競爭優勢。合約需要明確約定 data usage、data residency（資料存放地區）、data retention（保留期限）和 data deletion（刪除機制）。(2) 模型輸出的智慧財產權——AI 生成的內容（文字、程式碼、圖像）的著作權歸誰？目前法律上沒有統一答案。(3) Liability（責任歸屬）——AI 系統出錯時誰負責？供應商提供模型、企業提供資料和決策邏輯、使用者承受後果。Indemnification 條款（賠償條款）在 AI 生成內容的版權爭議中特別重要。(4) 模型更新風險——供應商升級模型版本（例如 GPT-4 → GPT-4o）可能改變行為，影響下游應用的品質和穩定性。企業需要 version pinning（鎖定版本）或 migration testing（升級測試）能力。\n\nExit strategy 要在選擇供應商時就規劃——不是出問題時才想。關鍵問題：資料能否完整匯出？模型（或替代模型）能否在其他平台運行？自有團隊是否有能力接管？切換期間的服務中斷如何處理？定期執行 exit drill（模擬切換演練）可以驗證退出計劃的可行性。\n\n考試常見：分析 AI 供應商選擇的考量因素、設計供應商合約的關鍵條款、評估 lock-in 風險。",
           "bullets": [
-            "評估供應商的 transparency：model card、data sheet、audit report",
-            "合約需明確：資料使用權、模型所有權、SLA、liability",
-            "exit strategy：資料可匯出性、模型可替代性",
-            "coopetition（共競）：供應商既是 partner 也可能是 competitor"
+            "AI 供應商提供機率性系統——行為隨版本更新改變，與傳統確定性 IT 工具不同",
+            "四個特殊挑戰：資料使用權、輸出智慧財產權、liability 歸屬、模型更新風險",
+            "合約必須明確：data usage、residency、retention、deletion、IP ownership",
+            "Exit strategy 在選供應商時就要規劃——定期做 exit drill 驗證可行性",
+            "Version pinning 或 migration testing 防止供應商更新破壞下游應用"
           ]
         }
       ],
@@ -1534,42 +1613,46 @@
       "sections": [
         {
           "title": "隱私保護的原則與實踐落差",
-          "body": "GDPR 的六大原則（lawfulness、purpose limitation、data minimization、accuracy、storage limitation、integrity/confidentiality）提供分析框架，但實踐中常遇到：合法基礎的選擇困難、跨境傳輸限制、同意機制的形式化（dark patterns）、和 data subject rights 的技術實現成本。",
+          "body": "GDPR 不只是一部法律——它建立了一套隱私保護的分析框架，可以用來評估任何涉及個人資料的系統。GDPR 的六大原則已在概覽課介紹過，進階課聚焦在實踐落差。\n\n最大的實踐挑戰是 lawful basis（合法基礎）的選擇。GDPR 列出六種合法基礎：consent（同意）、contract（合約履行必要）、legal obligation（法律義務）、vital interests（保護生命）、public task（公共任務）、legitimate interest（正當利益）。企業最常用 consent，但 consent 的有效性在很多場景下存疑：(1) Power imbalance——員工面對雇主、學生面對學校，「同意」真的是自願的嗎？(2) Dark patterns——介面設計故意讓使用者難以拒絕或撤回同意。(3) Consent fatigue——使用者看都不看就按「同意」，consent 形式上有效但實質上無意義。\n\n另一個重要概念是 DPIA（Data Protection Impact Assessment，資料保護影響評估）。GDPR 要求對「可能對個人權利和自由產生高風險」的資料處理活動進行 DPIA。DPIA 不是合規清單（checklist），而是風險管理工具——它要求企業分析：(1) 處理活動的目的和必要性。(2) 對個人的風險（辨識風險、量化嚴重程度和可能性）。(3) 降低風險的措施（技術和組織措施）。(4) 殘餘風險是否可接受。如果殘餘風險過高，需要向主管機關諮詢。\n\n台灣個資法的主要差異已在概覽課介紹。進階補充：台灣目前沒有 GDPR 等級的獨立監管機構（DPA, Data Protection Authority），個資保護的執行分散在各目的事業主管機關（例如金管會管金融業個資），這導致執法標準不一致。",
           "bullets": [
-            "Data minimization 不只是少收資料，還包括及時刪除",
-            "Purpose limitation 限制資料的二次使用",
-            "DPIA（Data Protection Impact Assessment）是風險而非合規工具",
-            "台灣個資法對 sensitive data 的定義與 GDPR 不同"
+            "GDPR 六種合法基礎：consent 最常用但有效性在 power imbalance 和 dark patterns 下存疑",
+            "Consent fatigue：使用者看都不看就按同意——形式有效但實質無意義",
+            "DPIA 是風險管理工具，不是合規清單——分析風險、措施、殘餘風險",
+            "台灣缺乏獨立的資料保護監管機構——執法分散在各目的事業主管機關",
+            "隱私保護的難點不在技術（加密、去識別化），在治理（角色、流程、問責）"
           ]
         },
         {
           "title": "Privacy by design 不是事後補丁",
-          "body": "Cavoukian 的 PbD 七原則要求在系統設計階段就嵌入隱私保護：預設最嚴格設定、最小化蒐集、端對端安全、透明度。技術手段包括 anonymization、pseudonymization、differential privacy、federated learning，但每種都有適用限制。",
+          "body": "Privacy by Design（PbD）由加拿大隱私專員 Cavoukian 提出七大原則，GDPR 第 25 條將其納入法律要求。核心思想是：隱私保護不是事後補丁，而是在系統設計階段就嵌入。七大原則簡化為四個實務要求：(1) 預設最嚴格設定（privacy by default）——系統預設蒐集最少資料、開放最少權限，使用者要主動 opt-in 才會增加蒐集。(2) 目的限定——每筆資料的蒐集目的在設計時就確定，不能事後改用途。(3) 全生命週期保護——從蒐集、使用、儲存到刪除，每個環節都有保護措施。(4) 透明度——使用者能清楚知道什麼資料被蒐集、如何使用、誰可以存取。\n\n技術手段各有適用限制：Anonymization（不可逆去識別化）——處理後資料不再是個人資料（不受 GDPR 保護），但在高維資料中很容易被重新識別（k-anonymity 在 30+ 個欄位的資料中幾乎無法達成有效匿名）。Pseudonymization（可逆去識別化）——用代碼替換直接識別符（如姓名、身分證號），但持有對應表就能還原，所以仍然受 GDPR 保護。Differential privacy（差分隱私）——在統計查詢結果中加入校準過的隨機雜訊，數學上保證不會洩漏任何個人的資訊。但雜訊降低了分析精度，且在小樣本中可能讓分析結果不可用。Federated learning（聯邦學習）——資料不離開本地端，只傳送模型更新——但 gradient inversion attacks 有時可以從模型更新推斷原始資料。\n\n重要考試觀念：技術手段不能替代治理措施。即使用了最先進的加密和去識別化技術，如果組織沒有建立資料存取政策、員工培訓和定期稽核，隱私洩漏仍然會發生——因為大多數隱私事件的根因是人為錯誤或政策不足，不是技術被破解。",
           "bullets": [
-            "Anonymization 是不可逆的，pseudonymization 是可逆的（仍是個資）",
-            "k-anonymity 在高維資料中容易被攻破",
-            "Differential privacy 增加雜訊，降低分析精度",
-            "技術手段不能替代治理措施（政策、訓練、稽核）"
+            "PbD 四實務要求：預設最嚴、目的限定、全生命週期保護、透明度",
+            "Anonymization 不可逆但高維資料難真正匿名，pseudonymization 可逆仍受 GDPR 保護",
+            "Differential privacy 保護個體但降低分析精度，小樣本可能不可用",
+            "Federated learning 資料不離開本地但 gradient inversion attacks 仍是威脅",
+            "技術手段不替代治理——大多數隱私事件根因是人為錯誤，不是技術被破解"
           ]
         },
         {
           "title": "ESG 揭露要可衡量才能問責",
-          "body": "ESG 揭露框架（GRI、SASB、TCFD、ISSB）要求企業報告環境影響、社會責任與治理品質。IT 的 ESG 面向包括：碳足跡（data center、cloud migration）、數位包容（digital divide）、演算法倫理（bias、transparency）。漂綠的核心問題是宣稱與證據的落差。",
+          "body": "ESG 揭露從「自願善舉」轉為「合規義務」。ISSB（International Sustainability Standards Board）在 2023 年發布 IFRS S1（一般永續揭露）和 S2（氣候相關揭露），預計將成為全球永續報告的基準。歐盟 CSRD（Corporate Sustainability Reporting Directive）要求在歐盟營運的大型企業（含非歐盟母公司的歐盟子公司）按 ESRS 準則揭露。台灣金管會要求上市櫃公司依資本額分階段編製永續報告。\n\nIT 與 ESG 的雙面關係已在概覽課介紹。進階焦點是漂綠（greenwashing）的辨識。漂綠的四個檢測維度：(1) 可量化性——「我們致力於碳中和」vs「我們在 2023 年 Scope 1+2 排放為 12,345 公噸 CO2e，較 2022 年減少 8%」。後者有具體數字、有基準年、有比較基礎。(2) 邊界一致性——只報告績效好的部門或區域？Scope 3 有沒有包含？報告邊界在不同年度之間是否一致？(3) 第三方驗證——ESG 報告有沒有經過獨立稽核？稽核機構的獨立性如何？(4) 實質性——報告的指標是否涵蓋企業最重要的 ESG 影響？例如一家石化公司大量報告員工福利（social）但不報告碳排放（environmental）就有 materiality 問題。\n\nScope 3 是 ESG 報告中最大的挑戰。Scope 1 是直接排放（自有設備燃燒），Scope 2 是外購電力的間接排放，Scope 3 是整個價值鏈的排放（供應商、物流、員工通勤、產品使用和廢棄）。Scope 3 通常佔總排放的 70-90%，但也是最難量測的——需要供應商提供資料或使用估算模型。對科技業來說，雲端供應商的 data center 碳排放是 Scope 3 的重要組成。",
           "bullets": [
-            "Scope 1/2/3 碳排放：Scope 3 包含供應鏈與雲端供應商",
-            "ESG 評等機構的方法論差異大，同公司可能獲得不同評等",
-            "Greenwashing 辨識：看指標是否可驗證、基準是否合理、邊界是否一致",
-            "數位永續：軟體效能最佳化也是減碳手段"
+            "ESG 揭露轉為合規義務：ISSB IFRS S1/S2、歐盟 CSRD、台灣金管會分階段要求",
+            "漂綠四維度檢測：可量化性、邊界一致性、第三方驗證、實質性",
+            "Scope 3 佔總排放 70-90% 但最難量測——需要供應商配合或估算模型",
+            "科技業 Scope 3 含雲端供應商排放——選擇 green cloud 也是 ESG 決策",
+            "ESG 評等機構方法論差異大——同公司可能被評 A 也被評 C"
           ]
         },
         {
           "title": "問責是隱私與 ESG 的共同基礎",
-          "body": "Accountability 要求不只是遵守規則，還要能證明自己遵守了規則。這需要：記錄決策過程（audit trail）、定期評估（assessment）、獨立驗證（audit）、透明揭露（disclosure）。在 AI 系統中，accountability 特別困難，因為決策過程可能不可解釋。",
+          "body": "Accountability（問責）是隱私和 ESG 的共同基礎概念——它把「遵守規則」提升到「能證明自己遵守了規則」。Accountability 不等於 responsibility：responsibility 是對結果負責（「這件事是我做的」），accountability 是對制度負責（「我能證明我按照正確的流程做了這件事，即使結果不如預期」）。\n\n在隱私領域，accountability 要求企業不只遵守 GDPR 的原則，還要能夠向主管機關展示它們如何遵守。這需要：(1) Records of processing activities（處理活動記錄）——記錄所有的個資處理活動：誰處理、處理什麼、目的是什麼、法律基礎是什麼、保存多久。(2) DPIA 記錄——高風險處理活動的影響評估和決策依據。(3) DPO（Data Protection Officer）——一些情境下 GDPR 要求指定專責的資料保護長。(4) Training records——員工的隱私培訓記錄。\n\n在 ESG 領域，accountability 要求企業的永續承諾有可驗證的治理機制。董事會層級的 ESG 責任歸屬（誰簽名負責）、定期的第三方稽核、公開的揭露報告、利害關係人的回饋機制、以及明確的改善目標和時間表。\n\n在 AI 領域，accountability 特別困難，因為深度學習模型的決策過程可能不可解釋（black box）。如何對一個「連開發者都無法完全解釋為什麼做出這個決定」的系統問責？可能的做法包括：(1) 記錄 AI 決策的輸入和輸出（audit trail），即使不能解釋中間過程。(2) 定期以人工抽樣檢視 AI 決策的品質和公平性。(3) 設定高風險決策的人類覆核機制。(4) 明確指定誰對 AI 系統的行為負最終責任。\n\n考試技巧：用 accountability 框架串連隱私、ESG 和 AI 治理的答案，展示你能跨議題整合思考。",
           "bullets": [
-            "accountability ≠ responsibility：前者是對制度負責，後者是對結果負責",
-            "Audit trail 需要在系統設計時就規劃",
-            "第三方稽核增加可信度但也增加成本",
-            "申論中用 accountability 框架可以串連隱私與 ESG"
+            "Accountability ≠ responsibility：前者是「能證明按流程做了」，後者是「對結果負責」",
+            "GDPR 要求 accountability：處理記錄、DPIA、DPO、培訓記錄——不只遵守還要證明",
+            "ESG accountability 需要董事會簽名、第三方稽核、公開揭露、改善時間表",
+            "AI accountability 困難在於 black box——可用 audit trail、抽樣檢視、人類覆核補償",
+            "考試技巧：用 accountability 框架串連隱私/ESG/AI——展示跨議題整合能力"
           ]
         }
       ],
@@ -1632,42 +1715,46 @@
       "sections": [
         {
           "title": "共競（Coopetition）改變供應商關係",
-          "body": "大型雲端與 AI 供應商（AWS、Google、Microsoft）同時提供基礎設施服務與自有應用產品，使它們既是企業的供應商也是潛在競爭者。這種 coopetition 動態要求企業重新思考供應商關係：不能只看技術能力和價格，還要評估策略風險。",
+          "body": "Coopetition（共競）是 Brandenburger & Nalebuff 提出的概念：兩家企業可以同時是合作夥伴和競爭對手。在 AI 時代，這個概念特別適用於大型雲端和 AI 供應商（AWS、Google、Microsoft）與它們的企業客戶之間的關係。\n\n以 AWS 為例：(1) 作為合作夥伴——提供 IaaS/PaaS 基礎設施、AI/ML 服務（SageMaker、Bedrock）、全球化部署能力。企業透過 AWS 加速創新和擴展。(2) 作為潛在競爭者——Amazon 可能利用平台資料理解市場趨勢，推出自有產品（Amazon Basics 就是一個例子——觀察平台上的暢銷商品後推出自有品牌）。同樣的邏輯在 AI 領域也存在：供應商觀察客戶的使用模式後可能開發競爭性的 AI 應用。\n\n評估 coopetition 風險的框架：(1) 資料風險——供應商能否存取你的業務資料？是否用你的資料改進它的通用模型？(2) 策略風險——供應商是否可能進入你的市場？它的 roadmap 是否與你的競爭對手合作？(3) 生態系統風險——你對這個供應商生態系統的依賴程度如何？競爭者是否在同一個生態系統中？(4) 定價風險——供應商是否可能在你高度依賴後提高價格？\n\n考試常見：分析企業與 AI 供應商的 coopetition 動態、評估供應商選擇的策略風險。",
           "bullets": [
-            "供應商可能利用平台資料開發競爭產品",
-            "API 定價策略可能隨市場地位變化",
-            "生態系統依賴不同於單一工具依賴",
-            "開源替代方案降低但不消除 lock-in"
+            "Coopetition：供應商同時是合作夥伴和潛在競爭者——AI 時代更普遍",
+            "Amazon 觀察平台暢銷商品後推出自有品牌——同邏輯適用於 AI 領域",
+            "評估四面風險：資料（被用來訓練模型？）、策略（進入你的市場？）、生態系統（依賴程度？）、定價（依賴後提價？）",
+            "Coopetition 不代表不應合作——而是要在合作的同時管理競爭風險",
+            "開源替代方案降低但不消除依賴——因為維運能力和生態系統仍可能被鎖定"
           ]
         },
         {
           "title": "多供應商策略的權衡",
-          "body": "分散供應商降低單點依賴風險，但增加整合成本、標準化難度與管理複雜度。best-of-breed（每類選最佳）vs integrated suite（單一供應商全包）的決策需要考慮技術相依性、團隊能力與轉換成本。",
+          "body": "分散供應商降低單點依賴風險，但增加整合和管理成本。Best-of-breed（每類選最佳）vs Integrated suite（單一供應商全包）的決策不只是技術問題——它影響組織的技能結構、成本模型和治理複雜度。\n\nMulti-cloud 策略（同時使用 AWS、Azure、GCP）的現實考量：(1) 技術複雜度——每個雲端有不同的服務命名、API 設計、安全模型和計費方式，團隊需要掌握多套工具。(2) 最低公約數問題——為了保持可攜性，你可能被迫只使用各雲端都支援的基本功能，放棄每個雲端的差異化服務（managed database、serverless、ML services）。(3) 治理複雜度——統一的監控、安全和合規需要額外的 abstraction layer。(4) 成本——多供應商可能失去量折扣的議價能力。\n\n資料可攜性（data portability）是最關鍵的 lock-in 防線——如果你能帶走資料，就永遠有退出的選擇。合約需要明確約定：資料匯出的格式、頻率、成本和 SLA。API 抽象層（abstraction layer）可以降低但不消除切換成本——它讓應用程式不直接呼叫供應商 API，未來切換時只需改抽象層的實作，不需改應用程式。但抽象層本身也有維護成本，而且可能限制了對供應商進階功能的使用。\n\n過度分散的風險：談判籌碼稀釋（每個供應商的合約金額都小，沒有議價空間）、技術深度不足（團隊對每個平台都只會皮毛）、整合測試和故障排除成本倍增。",
           "bullets": [
-            "Multi-cloud 不只是技術部署，還涉及 skill、cost 與 governance",
-            "資料可攜性（data portability）是最關鍵的 lock-in 防線",
-            "API 抽象層可降低但不消除切換成本",
-            "過度分散會稀釋談判籌碼與技術深度"
+            "Multi-cloud 現實考量：技術複雜度、最低公約數問題、治理複雜度、成本",
+            "資料可攜性是最關鍵的 lock-in 防線——能帶走資料就永遠有退出選擇",
+            "API 抽象層降低切換成本但有維護成本且可能限制進階功能使用",
+            "過度分散有反效果：議價力稀釋、技術深度不足、整合成本倍增",
+            "不是越多供應商越好——集中和分散各有成本，需要按業務風險取捨"
           ]
         },
         {
           "title": "AI 供應商合約的特殊條款",
-          "body": "AI 服務合約需要額外關注傳統 IT 合約不涵蓋的面向：訓練資料的使用權（供應商能否用客戶資料改進模型？）、模型輸出的智慧財產權、liability（AI 出錯時誰負責？）、以及模型更新對下游應用的影響。",
+          "body": "AI 服務合約需要超越傳統 IT 合約的條款。傳統 IT 合約主要規範：服務範圍、SLA（uptime、response time）、計費方式、知識產權、保密、終止條件。AI 服務合約需要額外覆蓋：\n\n(1) 資料使用條款——客戶上傳的資料（training data、prompts、fine-tuning data）供應商是否可以使用？用於什麼目的？是否與其他客戶的資料混合？OpenAI 的 API terms 在這方面經歷過多次修改——早期版本允許使用客戶資料改進模型，後來改為預設不使用（opt-out）。合約要明確約定 data usage、data isolation、data residency（資料存放地區，例如歐盟客戶要求資料不離開歐洲）。\n\n(2) 模型透明度——供應商是否提供 model card（模型的能力、限制、訓練資料描述、已知偏見）？是否提供 training data sheet（訓練資料的來源和品質資訊）？是否提供 audit report（獨立評估報告）？這些資訊對企業評估 AI 風險至關重要，但很多供應商不願意公開。\n\n(3) SLA 擴展——AI 服務的 SLA 不只是 uptime 和 response time。還需要覆蓋：latency（推論延遲）、throughput（每秒可處理的請求數）、accuracy degradation（模型品質下降的監控和通知義務）、model deprecation notice period（模型退役的預告時間——如果供應商要停止某個模型版本，需要提前多久通知？）。\n\n(4) Indemnification（賠償條款）——如果 AI 生成的內容侵犯了第三方的智慧財產權，誰負責？Microsoft、Google 和 OpenAI 都已經為各自的商業 AI 服務提供了某種程度的 IP indemnification，但覆蓋範圍和條件不同。\n\n(5) 模型更新管理——供應商升級模型版本時，是否給客戶 migration testing 的時間？是否支援 version pinning（鎖定特定版本）？更新後如果行為改變，責任歸屬如何？",
           "bullets": [
-            "data residency 與 data sovereignty 要求因地區而異",
-            "model transparency：供應商是否提供 model card、training data sheet？",
-            "SLA 不只是 uptime，還包括 latency、throughput 與 accuracy degradation",
-            "indemnification 條款在 AI 生成內容（copyright）領域特別重要"
+            "AI 合約額外條款：data usage、model transparency、SLA 擴展、indemnification、更新管理",
+            "Data usage 要明確：供應商能否用客戶資料改進模型？data isolation 和 residency 呢？",
+            "Model card 和 training data sheet 是評估 AI 風險的基礎——但很多供應商不願公開",
+            "AI SLA 除了 uptime 還要覆蓋 latency、throughput、accuracy degradation、deprecation notice",
+            "IP indemnification 條款在 AI 生成內容的版權爭議中特別重要"
           ]
         },
         {
           "title": "Exit strategy 要在 entry 時就設計",
-          "body": "供應商退出策略不是在出問題時才想，而是在選擇供應商時就要規劃。關鍵問題：資料能否完整匯出？模型能否在其他平台運行？自有團隊是否有能力接管？切換期間的服務中斷如何處理？",
+          "body": "Exit strategy 不是在供應商出問題時才想的——是在選擇供應商時就要設計。如果你在選擇前沒有想過退出方案，選擇後就已經被鎖定了。\n\n設計 exit strategy 的四個面向：(1) 可攜性評估——盤點哪些 artifacts 需要帶走：原始資料（能否完整匯出？格式是什麼？）、模型權重（如果是 fine-tuned 模型，權重歸誰？）、特徵工程邏輯（pipeline 程式碼）、監控規則和告警設定、歷史評估報告。(2) 替代方案維護——持續評估市場上的替代供應商，保持團隊對替代技術的基本熟悉度（不需精通，但要能在 3 個月內切換）。(3) 合約條款——明確約定 transition period 的 SLA 和支援義務（供應商在你切換期間仍需維持服務）、資料匯出的時間表和格式、提前終止的條件和費用。(4) 定期演練——exit drill（退出演練）模擬切換流程，驗證資料匯出、替代方案部署和服務恢復的時間。就像 disaster recovery drill 一樣，不演練就不知道計劃是否可行。\n\n技術層面的 lock-in 降低：容器化（Docker/Kubernetes）讓應用程式不依賴特定基礎設施。Infrastructure as Code（Terraform、Pulumi）讓基礎設施配置可以在不同雲端重建。Open standards（ONNX 模型格式、OpenAPI 介面規格）降低模型和 API 的供應商綁定。但這些只降低技術層面的 lock-in——資料、人才和生態系統的 lock-in 需要其他策略。\n\n考試提醒：不要把 exit strategy 寫成「選另一個供應商」——要寫出具體的退出計劃（帶走什麼、怎麼遷移、多久完成、風險是什麼）。",
           "bullets": [
-            "定義 portable artifacts：資料、模型權重、特徵工程邏輯、監控規則",
-            "transition period 的 SLA 與 support 義務",
-            "容器化與 infrastructure as code 降低遷移成本",
-            "定期執行 exit drill（模擬切換演練）"
+            "Exit strategy 在選擇供應商時就要設計——選擇後才想就已經被鎖定了",
+            "四面向：可攜性評估、替代方案維護、合約條款、定期退出演練",
+            "定期做 exit drill——就像 disaster recovery drill，不演練就不知道計劃是否可行",
+            "容器化和 IaC 降低技術 lock-in，但資料和人才 lock-in 需要其他策略",
+            "不要寫「選另一個供應商」——要寫具體退出計劃（帶什麼、怎麼遷、多久、風險）"
           ]
         }
       ],
@@ -1730,42 +1817,46 @@
       "sections": [
         {
           "title": "系統取得不是技術決策，是策略決策",
-          "body": "Build/buy/outsource/SaaS 決策涉及：策略差異化（核心能力是否應外包？）、控制權（data sovereignty、customization）、成本結構（capex vs opex、TCO）、速度（time-to-market）、風險（vendor lock-in、knowledge loss）。不同生命週期階段的最佳選擇可能不同。",
+          "body": "Build/buy/outsource/SaaS 決策的進階分析需要用多準則框架，而不是簡單的成本比較。Laudon 教科書的多準則框架考量至少五個面向：(1) Strategic uniqueness——這個系統是否是企業的核心差異化來源？核心能力應該自建以保護競爭優勢。(2) Control needs——對資料、流程和升級時程的控制需求有多高？SaaS 的控制權最低，build 最高。(3) Cost structure——capex（自建一次性投入）vs opex（SaaS 持續訂閱費）的財務偏好。SaaS 將 capex 轉為 opex，對現金流有好處，但長期 TCO 可能更高（5 年期 SaaS 費用可能超過一次性買斷）。(4) Time-to-market——SaaS 最快（幾天到幾週），buy 中等（幾個月），build 最慢（幾個月到幾年）。(5) Risk profile——build 風險在於開發失敗和 scope creep；buy 風險在於 fit-gap 和客製化成本；outsource 風險在於溝通問題和品質控制；SaaS 風險在於供應商依賴和資料安全。\n\n常見的 hybrid 策略：核心自建 + 周邊 SaaS（例如自建推薦引擎 + 用 Salesforce 做 CRM + 用 Slack 做內部溝通）、核心買斷 + 部分模組客製化、自建原型 + 成熟後外包維護。選擇不是一次性的——系統在不同生命週期階段可能需要不同的取得方式。\n\n考試進階：不要只寫「應該用 SaaS」——要列出你用了哪些準則、每個準則下的分析是什麼、結論在什麼條件下成立。",
           "bullets": [
-            "核心差異化系統傾向 build，commodity 傾向 buy/SaaS",
-            "SaaS 將 capex 轉為 opex，但長期 TCO 可能更高",
-            "Outsourcing 轉移執行但不轉移責任",
-            "hybrid 策略（核心自建 + 周邊 SaaS）常見於中大型企業"
+            "多準則框架五面向：strategic uniqueness、control needs、cost structure、time-to-market、risk profile",
+            "SaaS 將 capex 轉 opex，短期現金流好但 5 年期 TCO 可能超過買斷",
+            "Hybrid 策略常見：核心自建 + 周邊 SaaS + 部分模組外包",
+            "選擇不是一次性的——系統在不同生命週期階段可能需要不同取得方式",
+            "答題要列出用了哪些準則、分析是什麼、結論在什麼條件下成立"
           ]
         },
         {
           "title": "成本估算是範圍管理工具",
-          "body": "FPA（Function Point Analysis）從使用者可見功能（輸入、輸出、查詢、內部檔案、外部介面）估算系統規模。COCOMO II 以規模、成本驅動因子與開發模式估算工時。兩者都有誤差，重點是建立估算的 uncertainty range 而非精確數字。",
+          "body": "成本估算方法的進階理解。FPA（Function Point Analysis）的計算步驟：(1) 辨識五種功能類型：External Inputs（EI，從外部接收的資料）、External Outputs（EO，向外部發送的資料或報告）、External Inquiries（EQ，查詢功能，輸入觸發輸出但不改變資料庫）、Internal Logical Files（ILF，系統維護的資料群組）、External Interface Files（EIF，系統參考但不維護的外部資料群組）。(2) 每個功能類型依複雜度（低/中/高）加權。(3) 加總得到 Unadjusted Function Points（UFP）。(4) 乘以 Value Adjustment Factor（考慮系統特性如分散式處理、效能需求、複雜度等）得到 Adjusted Function Points。(5) 除以團隊生產力（每功能點的工時）估算總工時。\n\nFPA 的優點是需求導向（不依賴技術選擇——同一個功能用 Java 或 Python 開發，功能點相同），但缺點是需要相對明確的需求定義才能辨識功能。在敏捷開發中，Story points 取代了功能點的角色——但兩者的用途不同。Story points 是相對估算（「這個 story 是那個 story 的 2 倍複雜」），不是絕對估算（「這個 story 需要 40 小時」），不應該轉換為時數或用來衡量團隊生產力。\n\nCone of uncertainty 指出估算誤差隨專案階段收窄：概念階段估算的誤差範圍是 0.25x-4x（實際可能是估算的四分之一到四倍），需求確認後收窄到 0.5x-2x，設計完成後收窄到 0.8x-1.25x。所以好的估算不是給一個精確數字，而是給一個範圍並標明所在階段。\n\n估算偏低的常見原因：optimism bias（人類天生低估複雜度）、scope creep（需求持續增加但估算不更新）、unknown unknowns（不知道自己不知道什麼）、anchoring（被第一個估算值錨定，後續調整不足）。",
           "bullets": [
-            "功能點是需求導向，不依賴技術選擇",
-            "COCOMO II 的 scale factors 反映專案複雜度",
-            "估算在專案早期誤差最大（cone of uncertainty）",
-            "敏捷中常用 story points 替代功能點，但用途不同"
+            "FPA 五功能類型：EI、EO、EQ、ILF、EIF，依複雜度加權後得到功能點",
+            "FPA 需求導向（不依賴技術選擇）但需要明確需求——敏捷中用 story points 替代",
+            "Story points 是相對估算不是絕對時數——不應轉換為時數或衡量生產力",
+            "Cone of uncertainty：概念階段誤差 0.25x-4x，設計完成後收窄到 0.8x-1.25x",
+            "估算偏低四原因：optimism bias、scope creep、unknown unknowns、anchoring"
           ]
         },
         {
           "title": "Scrum 的核心是 empiricism，不是儀式",
-          "body": "Scrum 基於 transparency（所有人看到相同資訊）、inspection（定期檢視進度與產出）、adaptation（根據發現調整）。五個 events（Sprint、Planning、Daily、Review、Retrospective）各服務不同的 inspection-adaptation 循環。",
+          "body": "Scrum 的進階理解聚焦在 empiricism（經驗主義）的運作機制。很多組織「導入 Scrum」但只採用了形式（每天開站會、兩週一次 sprint）而沒有採用核心原則（透明度、檢視、調適）。\n\nScrum Guide 2020 版本的重要更新：(1) 更強調「自管理」（self-managing）而非「自組織」（self-organizing）——區別在於自管理的團隊不只決定「怎麼做」，還參與決定「做什麼」和「誰來做」。(2) Sprint Goal 成為必要元素——每個 Sprint 必須有一個明確的目標，所有工作圍繞這個目標。沒有 Sprint Goal 的 Sprint 只是「在時間箱裡做一堆任務」，失去了聚焦和決策依據。(3) Product Goal 是長期目標——Product Backlog 是達成 Product Goal 的計劃，PO 需要管理 stakeholder 期望和優先順序。\n\n常見的 Scrum 反模式（anti-patterns）：(1) Scrum-but——「我們用 Scrum，但不做 Retrospective」「我們用 Scrum，但 Sprint 長度不固定」。每個 event 都有特定目的，跳過一個就破壞了 inspection-adaptation 循環。(2) Micro-management——把 Daily Scrum 變成主管彙報會，PO 直接指派工作而不是排序 Backlog。(3) Sprint 0 永無止境——「我們還在做架構設計、環境準備、需求收集」——Sprint 0 不應該超過 1-2 個 Sprint 的時間。(4) Velocity 作為 KPI——velocity 是 planning 工具（幫助團隊預估下個 Sprint 能做多少），不是 productivity metric。把它當 KPI 會導致團隊灌水（inflating story points）。\n\n考試角度：比較 Scrum 和 Waterfall 時，不要只列差異表——要解釋在什麼條件下各自適用（需求確定度、change frequency、feedback availability、team autonomy）。",
           "bullets": [
-            "Sprint Planning 決定「做什麼」與「怎麼做」",
-            "Sprint Review 不是 demo，是蒐集 stakeholder feedback",
-            "Retrospective 改善流程，不是追究責任",
-            "Done 的定義（Definition of Done）是品質的最低門檻"
+            "Scrum 2020 強調 self-managing（決定怎麼做+做什麼）而非 self-organizing",
+            "Sprint Goal 是必要元素——沒有 Goal 的 Sprint 只是「時間箱裡的任務列表」",
+            "四大反模式：Scrum-but（跳過 event）、micro-management、Sprint 0 無限延長、velocity 當 KPI",
+            "Velocity 是 planning 工具不是 productivity metric——當 KPI 會導致灌水",
+            "比較 Scrum vs Waterfall 要寫適用條件，不只列差異表"
           ]
         },
         {
           "title": "敏捷反模式比方法論更重要",
-          "body": "常見反模式：Scrum-but（名義上 Scrum 但跳過關鍵 events）、micro-management（把 Daily Scrum 變成主管報告）、Sprint 0 無限延長（永遠在「準備」）、velocity 作為 KPI（把估算工具變成績效指標）。",
+          "body": "敏捷導入的組織挑戰通常比技術挑戰大。技術團隊可以在一個月內學會 Scrum 的形式，但組織文化的轉變需要一年以上。常見的組織阻力：(1) 中層管理者——敏捷強調自管理團隊和扁平化溝通，中層管理者的「資訊中繼站」角色被削弱，導致抵制。(2) 績效制度——傳統的個人績效考核（individual performance review）與敏捷強調的團隊協作和共同責任衝突。(3) 合約管理——固定範圍固定價格（fixed scope, fixed price）的外包合約與敏捷的迭代交付和需求變更不相容。(4) 法規環境——某些產業（金融、醫療、國防）的法規要求完整的事前文件和審批流程，與敏捷的「working software over comprehensive documentation」原則衝突。\n\n大規模敏捷（Scaling Agile）框架：SAFe（Scaled Agile Framework）是最廣泛使用的，它在多團隊層面增加了 Agile Release Train（ART，由多個 Scrum 團隊組成的跨功能團隊）、Program Increment（PI，通常 10-12 週的規劃週期）和 PI Planning（所有團隊同時參與的規劃活動）。LeSS（Large-Scale Scrum）則強調「less is more」——盡量減少額外的角色和流程，讓多個團隊共用一個 Product Backlog 和一個 PO。\n\n考試提醒：不要把敏捷等同於「沒有規劃」或「不寫文件」。敏捷是「適量規劃」（just enough planning）和「有用的文件」（living documentation），不是「不做」。如果考題問「敏捷適合所有專案嗎？」——答案是不，要說清楚在什麼條件下不適用。",
           "bullets": [
-            "Velocity 是 planning 工具，不是 productivity metric",
-            "PO 兼任 SM 或 developer 違反角色分離原則",
-            "技術債累積導致 velocity 逐 sprint 下降",
-            "大型專案需要 scaling framework（SAFe、LeSS）但增加複雜度"
+            "敏捷導入的組織阻力：中層管理者角色削弱、個人績效制度衝突、合約不相容、法規要求",
+            "SAFe 增加 ART 和 PI Planning 處理多團隊協調；LeSS 強調減少額外流程",
+            "大規模敏捷有成本——框架本身增加協調複雜度和學習曲線",
+            "敏捷不等於「不規劃不寫文件」——是「適量規劃」和「有用的文件」",
+            "敏捷不適合所有專案——需求完全確定、法規要求完整文件的場景可能不適用"
           ]
         }
       ],
@@ -1830,42 +1921,46 @@
       "sections": [
         {
           "title": "測試金字塔的成本效益邏輯",
-          "body": "Test pyramid 建議底層多（unit test：快、便宜、穩定）、中層適中（integration test）、頂層少（E2E test：慢、脆弱、但最接近使用者行為）。反轉的 ice cream cone 模式（大量 E2E、少量 unit）會導致回饋慢、維護貴、失敗難定位。",
+          "body": "Test pyramid 不是教條——它是根據回饋速度和定位能力做出的經濟判斷。底層多 unit test 的原因：(1) 快——一個 unit test 可能只需 1 毫秒，10,000 個 unit test 在 10 秒內跑完。開發者每次修改程式碼後立即知道是否破壞了什麼。(2) 便宜——不需要外部服務、資料庫或網路。(3) 穩定——不依賴外部環境，不會因為測試環境不穩定而「假失敗」（flaky test）。(4) 容易定位——失敗時精確指出是哪個函數哪一行出問題。\n\n頂層少 E2E test 的原因恰好相反：慢（可能需要啟動瀏覽器、資料庫、多個服務，一個測試幾十秒到幾分鐘）、脆弱（任何環節不穩定都可能失敗——UI 改了、資料庫清空了、第三方服務掛了）、難定位（失敗了但不知道是前端、後端、資料庫還是第三方的問題）。但 E2E test 的優點是最接近使用者的真實行為——它測試的是整個系統協同工作的結果，不是單一元件的邏輯。\n\n反轉的 ice cream cone 模式（大量 E2E、少量 unit）是很多組織的現實——因為 E2E 測試看起來「更有信心」（畢竟測了整個流程），但長期代價是：CI/CD 管線速度慢（每次修改要等 30 分鐘跑 E2E）、維護成本高（UI 改了所有 E2E 都要更新）、假失敗多（團隊開始忽略失敗的測試，測試失去意義）。\n\n考試常見：解釋 test pyramid 的設計邏輯、分析某組織的測試策略問題。不要只畫三角形——要說清楚每層「為什麼多」或「為什麼少」的經濟原因。",
           "bullets": [
-            "Unit test 驗證邏輯單元，不應依賴外部服務",
-            "Integration test 驗證元件間介面與資料流",
-            "E2E test 從使用者視角驗證關鍵路徑",
-            "不是所有問題都能用自動化測試發現：安全、效能需專項測試"
+            "Unit test 多的原因：快（毫秒級）、便宜（不依賴外部）、穩定（不 flaky）、容易定位",
+            "E2E test 少的原因：慢（啟動完整環境）、脆弱（任何環節不穩定都會失敗）、難定位",
+            "Ice cream cone（大量 E2E 少量 unit）的代價：CI/CD 慢、維護貴、假失敗多",
+            "Test pyramid 是經濟判斷不是教條——不是所有情境都適用（例如 legacy code 可能先寫 integration test）",
+            "不只畫三角形——解釋每層多或少的經濟原因才能拿分"
           ]
         },
         {
           "title": "UAT 是 validation，不只是最後一關 testing",
-          "body": "User Acceptance Testing 回答的是「這是使用者要的嗎？」而非「程式碼正確嗎？」。UAT 需要業務代表參與，用真實情境與資料測試，且結果影響 go/no-go 決策。常見失敗：UAT 被壓縮到只剩一天、參與者不是真正的使用者、沒有 acceptance criteria。",
+          "body": "UAT（User Acceptance Testing）回答的問題和其他測試完全不同。Unit/integration/system test 回答「Are we building the product right?」（我們做的東西是否正確實現了規格書？）——這是 verification。UAT 回答「Are we building the right product?」（我們做出來的東西是否是使用者需要的？）——這是 validation。兩者的區別是考試高頻考點。\n\n一個完美通過所有 unit/integration/system test 的系統，如果需求本身是錯的（使用者其實不需要這個功能、流程設計不符合實際工作方式），仍然是一個失敗的系統。所以 UAT 不只是「最後一關測試」——它是唯一一個能發現需求層面問題的環節。\n\nUAT 的品質取決於三個條件：(1) 參與者是真正的使用者——不是開發團隊冒充使用者，不是管理者代替使用者。(2) 使用真實情境和資料——不是預設好的「正常案例」，要包含 edge cases 和異常情境。(3) 有明確的 acceptance criteria——在需求定義階段就寫好（例如「使用者能在 3 步驟內完成退貨申請，每步驟等待時間不超過 2 秒」），UAT 時依據這些 criteria 判斷通過與否。\n\n缺陷的修復成本與發現時間的關係（Boehm 的研究）：需求階段發現的缺陷修復成本 = 1x，設計階段 = 3-6x，程式碼階段 = 10x，系統測試階段 = 15-40x，上線後 = 40-1000x。這就是為什麼 shift-left testing（盡早測試）不只是口號——它有明確的經濟邏輯。\n\n考試提醒：verification vs validation 是必考題。回答時要用具體例子說明兩者的差別。",
           "bullets": [
-            "Acceptance criteria 應在需求階段就定義",
-            "缺陷分嚴重度（severity）與影響範圍（priority）",
-            "缺陷發現越晚，修復成本呈指數增長",
-            "Regression testing 確保修復不引入新問題"
+            "Verification = building the product right（對規格）；Validation = building the right product（對需求）",
+            "UAT 是唯一能發現需求層面錯誤的環節——所有其他測試只能驗證規格",
+            "UAT 三要素：真正的使用者、真實的情境和資料、事先定義的 acceptance criteria",
+            "缺陷修復成本隨發現時間指數增長：需求階段 1x → 上線後 40-1000x（Boehm）",
+            "Shift-left testing 有明確的經濟邏輯——不只是口號"
           ]
         },
         {
           "title": "UX 研究不是「問使用者喜歡什麼」",
-          "body": "使用者說的（attitude）與做的（behavior）常常不同。UX 研究方法分為：行為觀察（usability test、A/B test、analytics）與態度調查（interview、survey、card sorting）。兩者結合才能建立完整的使用者理解。",
+          "body": "UX 研究的核心原則是：使用者說的（attitude）和做的（behavior）經常不同。使用者可能說「我覺得這個設計很好用」，但在實際操作時反覆迷路、點錯按鈕、看不到重要資訊。所以 UX 研究需要同時使用 attitudinal methods（態度研究）和 behavioral methods（行為研究）。\n\n行為研究方法：Usability test（可用性測試）——讓 5-8 位使用者完成真實任務，觀察他們的操作行為、卡住的地方和錯誤。Jakob Nielsen 的研究發現 5 位使用者就能發現約 85% 的可用性問題。A/B test——隨機分流，比較兩個版本的業務指標（轉化率、完成率、跳出率）。Analytics（行為分析）——透過 click tracking、heatmap、funnel analysis 等工具量化使用者的行為模式。\n\n態度研究方法：使用者訪談——深入了解使用者的需求、動機、挫折和期望。Survey——大規模蒐集使用者意見。Card sorting——讓使用者按照自己的理解分類資訊，用於設計資訊架構和導航。\n\n設計工具：Persona 從研究資料歸納出使用者原型——不是想像出來的虛構人物，而是基於實際研究的行為模式和需求概括。Journey map 記錄使用者完成任務的完整流程：每個 touchpoint（接觸點）、使用者的 emotion（情緒）、pain point（痛點）和 opportunity（改善機會）。\n\nPrototype 的 fidelity 應該匹配研究目的：概念驗證用低保真（紙本原型、線框圖），互動測試用高保真（可點擊的原型）。用高保真原型做概念驗證會浪費時間，用低保真原型做互動測試會得到不準確的結果。",
           "bullets": [
-            "Persona 從使用者研究資料歸納，不是想像出來的",
-            "Journey map 記錄 touchpoint、emotion 與 pain point",
-            "5 位使用者的 usability test 可發現約 85% 的問題",
-            "Prototype fidelity 應匹配研究目的：概念驗證用低保真、互動測試用高保真"
+            "使用者說的（attitude）和做的（behavior）經常不同——需要同時用兩類方法",
+            "5 位使用者的 usability test 可發現約 85% 的可用性問題（Nielsen 研究）",
+            "Persona 基於研究資料歸納，不是想像出的虛構人物",
+            "Journey map 記錄 touchpoint、emotion、pain point、opportunity",
+            "Prototype fidelity 匹配研究目的：概念驗證用低保真，互動測試用高保真"
           ]
         },
         {
           "title": "Nielsen 十大可用性啟發法的實務應用",
-          "body": "Jakob Nielsen 的十項可用性啟發法（visibility of system status、match with real world、user control、consistency、error prevention 等）不是檢查清單，而是設計原則。申論中可用它們評估案例系統的 UX 問題並提出改善建議。",
+          "body": "Nielsen 的十大可用性啟發法（10 Usability Heuristics）是 UX 評估的經典框架。它不是檢查清單——而是一組設計原則，可以用來分析和改善任何互動式系統。MIS 考試中最常用到的幾條：\n\n(1) Visibility of system status（系統狀態可見性）——使用者應該隨時知道系統在做什麼。例如：上傳檔案時顯示進度條，提交表單後顯示成功/失敗訊息，處理中顯示 loading indicator。違反的例子：使用者按了「提交」按鈕但畫面沒有任何反應，不知道是否成功。\n\n(2) Match between system and the real world（與真實世界的對應）——系統使用使用者熟悉的語言和概念，而不是系統內部的技術術語。例如：用「購物車」而不是「暫存訂單列表」，用「最近瀏覽」而不是「瀏覽歷史佇列」。\n\n(3) User control and freedom（使用者控制和自由）——使用者需要「緊急出口」。例如：undo/redo 功能、返回按鈕、取消操作的能力。沒有 undo 的操作（如永久刪除）需要確認對話框。\n\n(4) Error prevention（錯誤預防）——比 error message 更重要的是從一開始就防止錯誤發生。例如：日期選擇器比文字輸入框更能防止格式錯誤、灰掉不可用的選項比事後報錯更好、表單即時驗證比提交後才報錯更好。\n\n(5) Consistency and standards（一致性和標準）——內部一致（系統內相同操作的行為相同）和外部一致（符合平台和產業慣例）。例如：iOS app 的返回按鈕在左上角是外部慣例，如果你放在右上角會讓使用者困惑。\n\n申論中用 Nielsen 啟發法的方式：給一個系統的 UI 截圖或描述，辨識它違反了哪幾條啟發法，說明違反的後果（使用者會有什麼困惑或錯誤），然後提出改善建議。這是 MIS 考試中少數可以拿「分析→辨識問題→建議」高分的題型。",
           "bullets": [
-            "Visibility of system status：使用者隨時知道系統在做什麼",
-            "Error prevention 比 error messages 更重要",
-            "Consistency & standards：內部一致、外部符合慣例",
-            "Flexibility & efficiency：同時滿足新手與專家的使用路徑"
+            "Visibility of system status：使用者隨時知道系統在做什麼——loading、success、error 都要顯示",
+            "Error prevention 比 error message 重要——日期選擇器、灰掉不可用選項、即時驗證",
+            "Consistency & standards：內部一致（同操作同行為）和外部一致（符合平台慣例）",
+            "Nielsen 啟發法不是檢查清單——是設計原則，用來分析和改善任何互動系統",
+            "申論用法：辨識違反哪條→說明後果→提出改善——這是高分的分析→建議題型"
           ]
         }
       ],

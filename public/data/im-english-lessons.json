@@ -19,7 +19,7 @@
       ],
       "title": "資管所英文閱讀策略：科技長文快速理解",
       "summary": "台大資管所英文閱讀測驗以 300-500 字的科技、商業或社會議題文章為主，佔總分約 30-40%。本課建立從定位題型到回推答案的系統化閱讀流程，避免逐字翻譯浪費時間。",
-      "estimatedMinutes": 30,
+      "estimatedMinutes": 35,
       "minimumPastPaperRefs": 10,
       "learningObjectives": [
         "區分四種閱讀題型（主旨、細節、推論、字義），並選擇對應的定位策略",
@@ -30,42 +30,46 @@
       "sections": [
         {
           "title": "先看題目再讀文章：定位式閱讀",
-          "body": "資管所閱讀測驗通常一篇文章配 3-5 題，時間壓力大。最有效的策略不是從頭讀到尾，而是先掃過所有題目的題幹（不看選項），標記關鍵字和段落線索，再帶著目標回到文章定位。主旨題放最後做，因為做完細節題後自然能判斷全文方向。",
+          "body": "資管所閱讀測驗通常一篇文章配 3-5 題，時間壓力大。最有效的策略不是從頭讀到尾，而是先掃過所有題目的題幹（不看選項），標記關鍵字和段落線索，再帶著目標回到文章定位。這個方法叫做 scan-then-read：先花 30 秒掃題幹，找出每題要問什麼——是問主旨（What is the main idea）、問細節（According to the passage）、問推論（It can be inferred that）、還是問字義（The word X most likely means）。標記完後再讀文章，讀的時候心裡帶著題目的關鍵字，碰到相關段落就停下來對照。這比讀完全文再回頭找答案省 30-40% 的時間。主旨題永遠放最後做，因為做完其他題後你對文章的整體方向已經有感覺，不需要額外推敲。考古題裡主旨題的正確選項通常避免極端用語（never, always），而用 generally, mainly, primarily 等溫和表述。",
           "bullets": [
-            "細節題找特定名詞、數字或引號內容，定位到具體段落後只需讀該段",
-            "推論題的答案通常不在文字表面，而在因果關係或對比結構中",
-            "字義題看上下文的同位語、破折號後的解釋、或 that is / in other words 等訊號",
-            "NOT true 題需要逐項比對原文，確認三個為真後剩下的才是答案"
+            "細節題找特定名詞、數字或引號內容，定位到具體段落後只需讀該段。例如題幹出現 '2023 revenue'，直接在文中搜尋數字就能定位",
+            "推論題的答案通常不在文字表面，而在因果關係或對比結構中。看到 because, therefore, as a result 就標記，這些是推論題的線索區",
+            "字義題看上下文的同位語（逗號後的解釋）、破折號後的重述、或 that is / in other words / namely 等訊號詞",
+            "NOT true 題需要逐項比對原文，確認三個為真後剩下的才是答案。這種題最花時間，考試時如果卡住先跳過",
+            "實戰技巧：用鉛筆在題幹的關鍵字下畫線，讀文章時碰到相同概念就在旁邊標題號，這樣回頭找答案的時候不用重讀"
           ]
         },
         {
-          "title": "科技類文章的論述結構",
-          "body": "資管所英文閱讀有大量科技議題文章（約佔閱讀題的 36%），包含 AI、資安、數位轉型、社群媒體等主題。這類文章通常遵循固定的論述模式：先描述一個技術或現象，接著說明其運作原理或優勢，然後轉折到限制、風險或爭議，最後給出展望或建議。抓住這個結構，即使有不認識的專業術語也能推斷段落功能。",
+          "title": "科技類文章的論述結構與快速拆解",
+          "body": "資管所英文閱讀有大量科技議題文章（約佔閱讀題的 36%），包含 AI、資安、數位轉型、社群媒體等主題。這類文章幾乎都遵循一個可預測的四段結構。第一段是 hook + 背景：用一個驚人的數據或現象開場，例如 'By 2025, the global AI market is projected to reach $190 billion, yet fewer than 15% of enterprises have deployed AI at scale.' 第二段是技術說明：解釋某個技術如何運作，這段會出現大量專有名詞，但作者通常會在首次出現時用 which means / referred to as / defined as 給出定義。第三段是轉折：however / nevertheless / despite these advantages 標記從優勢轉向風險或限制。第四段是結論或展望：overall / in summary / looking ahead。抓住這個結構，你讀文章時就知道每段的功能，即使有不認識的字也能快速判斷它大概在說什麼。例如看到第三段開頭是 However，你可以直接推斷這段是在講問題或限制，不需要逐字翻譯。",
           "bullets": [
-            "第一段通常是背景介紹或 hook（引人注意的事實或統計數字）",
-            "轉折詞是結構地標：however / nevertheless / on the other hand 標記反面觀點",
-            "科技文章的專有名詞通常會在首次出現時給定義或解釋，不需要事先認識",
-            "結論段常出現 overall / in conclusion / the future of，主旨題答案多在這裡"
+            "第一段的 hook 常包含統計數字或趨勢描述，細節題經常考這裡的數據。看到百分比或金額時標記下來",
+            "第二段的技術解釋裡，專有名詞後面的 which / that is / i.e. 就是定義，字義題的答案往往在這些解釋中",
+            "轉折詞是結構地標，也是出題熱區：however / nevertheless / on the other hand / in contrast / despite / although。轉折前後的對比常出推論題",
+            "結論段的 overall / in conclusion / the future of / it remains to be seen 包含作者立場，主旨題答案多在這裡",
+            "練習方法：拿一篇科技文章，只讀每段第一句和最後一句，嘗試回答主旨題——如果能答對，說明你已經掌握了結構化閱讀"
           ]
         },
         {
-          "title": "商業與社會議題文章的閱讀要點",
-          "body": "除了科技文章，考卷也會出現商業策略、經濟趨勢、社會現象等題材。這類文章的特徵是觀點對立（支持 vs 反對）、數據引用、案例舉證。關鍵是分清作者立場和引用他人觀點的差異——題目常考「作者認為」而非「文章提到」。",
+          "title": "商業與社會議題文章：分辨觀點歸屬",
+          "body": "除了科技文章，考卷也會出現商業策略、經濟趨勢、社會現象等題材。這類文章最大的特徵是多觀點呈現——作者會引用不同陣營的看法，然後在文末表態或留下開放式結論。出題者最愛考的就是「作者認為什麼」和「某某人主張什麼」的區別。看到這類判斷題時，要特別注意歸屬語（attribution markers）。例如：'Critics argue that social media platforms amplify misinformation.' 這是 critics 的觀點，不是作者的。'While some researchers suggest that remote work boosts productivity, recent data paint a more nuanced picture.' 這裡 some researchers 的觀點和作者的評價是不同的——作者用 'more nuanced picture' 暗示自己不完全同意。考古題裡，如果問 'The author would most likely agree that...'，答案通常不在引用他人觀點的句子裡，而在作者自己的評論句裡。自己的評論句特徵是：沒有 according to / X argues / Y claims 等歸屬語，或使用 indeed / clearly / importantly 等表態語。",
           "bullets": [
-            "注意引號和 according to / critics argue / proponents claim 等歸屬語",
-            "數字和百分比常是細節題的考點，讀到時標記起來",
-            "比較結構（more than / unlike / whereas）暗示推論題的方向",
-            "文化背景知識不足時，用文章內部線索推斷，不要用常識猜答案"
+            "引用標記：according to / X argues / critics contend / proponents claim / studies show — 這些標記後面是別人的觀點，不是作者自己的",
+            "作者評論句特徵：用 indeed / clearly / importantly / it is worth noting 開頭，或放在引用後面用 but / however 反駁",
+            "數字和百分比是細節題的高頻考點，例如 'a 37% increase' 或 'more than two-thirds'，讀到時在旁邊標記以便快速定位",
+            "比較結構（more than / unlike / whereas / in contrast to）暗示推論題的方向，比較的兩方就是答案的候選範圍",
+            "文化背景知識不足時，完全依靠文章內部線索推斷。考試的正確答案一定能從原文推導出來，不需要外部知識"
           ]
         },
         {
-          "title": "時間分配與應試節奏",
-          "body": "50 題 80 分鐘，平均每題 1.6 分鐘。閱讀題因為需要讀文章，每題實際需要 2-2.5 分鐘，因此字彙和文法題必須控制在每題 1 分鐘以內。建議順序：先做字彙和文法（前 30 題，約 30 分鐘），再做閱讀（後 20 題，約 50 分鐘）。遇到不確定的字彙題先標記跳過，不要卡住。",
+          "title": "時間分配與模擬實戰節奏",
+          "body": "50 題 80 分鐘，平均每題 1.6 分鐘。但實際不能平均分配，因為閱讀題需要先讀文章，每題的隱含成本比字彙文法題高很多。根據考古題結構：前 20-25 題是字彙、接下來 5-15 題是文法、最後 15-20 題是閱讀。建議答題順序：先做字彙（目標 25 分鐘，每題 1 分鐘，不確定就標記跳過）、再做文法（目標 15 分鐘，每題 1-1.5 分鐘）、最後做閱讀（目標 40 分鐘，每篇文章 12-15 分鐘含讀文 + 答題）。為什麼不先做閱讀？因為閱讀要進入文章的語境需要時間，如果先做完簡單題目讓大腦進入英文模式，再處理閱讀的效率更高。另外，字彙題不會的就是不會，多想 2 分鐘也猜不出來，但閱讀題多花 1 分鐘重讀可能找到線索。所以字彙要快、閱讀可以慢。考試結束前 5 分鐘回頭處理標記題，優先挑有把握的——通常是字彙題裡你認識其中 2 個選項可以刪去的那種。",
           "bullets": [
-            "字彙題看不出答案就用刪去法，排除明顯不合語境的選項",
-            "閱讀題每篇文章先花 2 分鐘快速掃讀，再逐題定位，比反覆重讀有效率",
-            "最後 5 分鐘回頭檢查標記題，優先處理有把握提升的題目",
-            "不要在單一題目上花超過 3 分鐘，猜一個最可能的選項然後繼續"
+            "字彙題速度關鍵：認識就選、不認識就用詞根拆解或語境推斷（見字彙課的四步猜字法），超過 1 分鐘就標記跳過",
+            "文法題檢查順序：先看動詞（時態、一致性）→ 再看代名詞 → 再看平行結構 → 最後看修飾語。按這個順序 90% 的文法題可以在 1 分鐘內解決",
+            "閱讀題每篇文章先花 2 分鐘快速掃讀（每段首句 + 轉折詞 + 結論句），建立結構地圖後再逐題定位，比反覆重讀全文有效率",
+            "最後 5 分鐘回頭檢查標記題，優先處理「我認識兩個選項可以刪」的題目，投資報酬率最高",
+            "模擬練習時用手機倒數計時 80 分鐘，結束就停筆。慢慢訓練自己的速度感，目標是考前一個月能在 75 分鐘內做完"
           ]
         }
       ]
@@ -79,8 +83,8 @@
         "im-en-grammar-preposition"
       ],
       "title": "文法核心陷阱：高頻錯誤點與解題模式",
-      "summary": "文法題佔考卷約 20%（每年 9-14 題），以 fill-in-the-blank 和 error identification 為主。本課整理歷年高頻文法考點，建立快速判斷的檢查清單。",
-      "estimatedMinutes": 28,
+      "summary": "文法題佔考卷約 20%（每年 4-14 題），以 fill-in-the-blank 和 error identification 為主。本課整理歷年高頻文法考點，建立快速判斷的檢查清單。",
+      "estimatedMinutes": 32,
       "minimumPastPaperRefs": 10,
       "learningObjectives": [
         "掌握主詞動詞一致性的五種常見陷阱（介詞片語干擾、關係子句、倒裝等）",
@@ -91,44 +95,46 @@
       "sections": [
         {
           "title": "主詞動詞一致性：別被中間的修飾語騙了",
-          "body": "主詞動詞一致性是最基本但也最容易被出題者設計陷阱的考點。常見手法是在主詞和動詞之間插入長長的介詞片語、關係子句或同位語，讓考生誤判主詞的單複數。解題關鍵：先找出真正的主詞，忽略所有中間的修飾語。",
+          "body": "主詞動詞一致性是文法題裡出現頻率最高的考點，也是出題者最喜歡設陷阱的地方。陷阱手法只有一個核心原理：在主詞和動詞之間插入一大段修飾語，讓你搞不清楚到底誰是主詞。考古題實例：'The deployment of cloud-based services across multiple government agencies (has/have) raised concerns about data sovereignty.' 主詞是 deployment（單數），不是 services 或 agencies，所以答案是 has。解題步驟：先把介詞片語（of... across... about...）全部用括號圈起來，剩下的就是主詞和動詞的骨架。再看一個考古題常見陷阱：'Neither the CEO nor the board members (was/were) aware of the security breach.' 這裡用 neither...nor... 連接兩個主詞，動詞的單複數跟靠近動詞的那個主詞一致——board members 是複數，所以用 were。如果顛倒成 'Neither the board members nor the CEO was aware...' 就用 was。這叫 proximity rule（就近原則），either...or 也適用。",
           "bullets": [
-            "「The impact of these technologies on various industries is...」— 主詞是 impact（單數），不是 technologies 或 industries",
-            "each / every / neither / either 開頭的主詞永遠接單數動詞",
-            "A number of + 複數名詞 + 複數動詞；The number of + 複數名詞 + 單數動詞",
-            "倒裝句（There is/are, Here comes/come）的動詞數要看後面的真正主詞",
-            "集合名詞（team, committee, staff）在美式英語中通常當單數"
+            "介詞片語干擾：'The impact of these technologies on various industries (is/are)...' — 刪掉 of... on...，主詞 impact 是單數，用 is",
+            "each / every / neither / either 開頭永遠接單數動詞，即使後面的名詞是複數：'Every student and teacher has...'（不是 have）",
+            "A number of + 複數名詞 + 複數動詞（a number of = many）；The number of + 複數名詞 + 單數動詞（the number of = 那個數字）",
+            "倒裝句的主詞在動詞後面：'Among the challenges (is/are) the lack of funding and the shortage of talent.' — 主詞是 lack and shortage（複數），用 are",
+            "集合名詞的美式 vs 英式：team / committee / government 在美式英語當單數（The team is），在英式英語可以當複數（The team are）。資管所考試通常依美式用法"
           ]
         },
         {
-          "title": "時態六組對決：看時間線選時態",
-          "body": "時態題的核心不是記規則，而是在句子裡找時間線索（時間副詞、連接詞、上下文動詞）。考試常考的不是基本時態，而是兩個時態的對比選擇。把每組對決的判斷標準記住，比背整張時態表有效。",
+          "title": "時態六組對決：看時間線索選時態",
+          "body": "時態題的本質不是考你是否記得 12 種時態的名字和形式，而是考你是否能從句子裡找到時間線索，判斷事件在時間軸上的相對位置。考試最常考的不是基本時態，而是兩個時態的對比選擇——題目給你兩個看起來都對的選項，你要用句中的時間線索判斷哪個才正確。第一組：現在完成 vs 過去簡單。判斷標準就是一句話：有沒有和現在的連結。'The company (has invested / invested) heavily in AI since 2018.' — since 2018 到現在都在持續，用 has invested。'The company (has invested / invested) $5 million in AI last year.' — last year 是已結束的過去時間點，用 invested。第二組：過去完成 vs 過去簡單。兩件事都發生在過去，但你需要表達「更早」的那件，用 had + pp。'By the time the patch was released, hackers (already exploited / had already exploited) the vulnerability.' — 駭客利用漏洞發生在補丁釋出之前（更早），用 had already exploited。第三組最難：假設語氣（subjunctive）。'If the company (adopted / had adopted) multi-factor authentication earlier, the breach would not have occurred.' — 這是與過去事實相反的假設（公司當時沒有採用 MFA），if 子句用 had + pp，主句用 would have + pp。",
           "bullets": [
-            "現在完成 vs 過去簡單：有 since / for / so far / yet 用完成式；有具體過去時間點（in 2020, yesterday）用過去式",
-            "過去完成 vs 過去簡單：兩個過去事件，先發生的用 had + pp；by the time / before / after 是線索",
-            "假設語氣：if + 過去式 → would + 原形（與現在事實相反）；if + had pp → would have pp（與過去事實相反）",
-            "未來表達：will vs be going to vs 現在進行式，考試通常考 be going to（已有計畫）和 will（當場決定）的差異"
+            "現在完成 vs 過去簡單的時間線索：since / for / so far / yet / recently / already → 完成式；in 2020 / yesterday / last week / ago → 過去式",
+            "過去完成的觸發詞：by the time / before / after / once / until + 過去事件 — 更早的那件事用 had + pp",
+            "假設語氣公式：與現在相反 → if + 過去式, would + 原形；與過去相反 → if + had pp, would have + pp",
+            "suggest / recommend / insist / demand 後面的 that 子句用原形動詞（subjunctive mood）：'The auditor recommended that the firm (adopts → adopt) stronger controls.'",
+            "常見考試陷阱：在 if 子句裡混用 would，例如 'If he would have known...' 是錯誤的，正確是 'If he had known...'"
           ]
         },
         {
           "title": "介係詞搭配：用語塊取代翻譯",
-          "body": "介係詞題沒有邏輯可推導，只能靠熟悉度。最有效的方法不是背介係詞的「意思」，而是記住整個搭配語塊。考古題高頻搭配集中在學術和商業用語，和日常英文的搭配不同。",
+          "body": "介係詞是英文裡最沒有邏輯可言的部分——為什麼是 depend on 而不是 depend of？為什麼是 comply with 而不是 comply to？沒有為什麼，只有約定俗成。所以介係詞題唯一的準備方法就是記住搭配語塊（collocations），把「動詞 + 介係詞」或「形容詞 + 介係詞」當成一個整體來記，不要試圖用中文翻譯推導。考古題高頻搭配可以分成四類。第一類是因果關係：result in（導致某結果）和 result from（源自某原因）是考古題最愛考的一對。'The data breach resulted in a $50M fine.' vs 'The fine resulted from a data breach.' 只差一個介係詞，意思完全反過來。類似的還有 lead to / contribute to / give rise to（都表示導致）vs stem from / arise from / originate from（都表示源自）。第二類是學術論述：in terms of / with regard to / with respect to / as for / concerning 都表示「關於」，但正式程度不同。in terms of 最常用，as for 比較口語，concerning 比較正式。第三類是讓步轉折：in spite of / despite + 名詞（絕對不能接 that 子句！）。'Despite (that → the fact that) the CEO resigned, ...' — despite 後面只能接名詞或動名詞，不能直接接子句。如果要接子句，用 although / even though。第四類是動詞固定搭配：comply with / consist of / account for / depend on / rely on / succeed in / engage in / interfere with — 這些沒有規律，只能背。",
           "bullets": [
-            "結果類：result in（導致）vs result from（源自）；lead to / contribute to / give rise to",
-            "關於類：in terms of / with regard to / with respect to / as for / concerning",
-            "儘管類：in spite of / despite + 名詞（不接 that 子句）；although / even though + 子句",
-            "數量類：a number of / a variety of / a series of（注意後接動詞的單複數）",
-            "動詞搭配：comply with / consist of / account for / depend on / rely on"
+            "因果反義配對：result in（導致）vs result from（源自）/ attribute X to Y（把 X 歸因於 Y）/ X is attributed to Y — 考古題出現率極高",
+            "despite / in spite of 後面只能接名詞或動名詞，不能接子句。要接子句就用 although / even though / notwithstanding the fact that",
+            "搭配記憶法：把常考動詞寫成句子記。不要記 'comply + with'，而是記 'Companies must comply with GDPR regulations.'",
+            "容易搞混的介係詞：interested in（不是 interested at）/ capable of（不是 capable to）/ responsible for（不是 responsible of）/ familiar with（不是 familiar to）",
+            "考試時如果不確定介係詞，默念整個語塊看哪個「聽起來」順——如果你有大量英文閱讀經驗，語感會幫你選對。沒有語感就靠背"
           ]
         },
         {
-          "title": "Error Identification 的檢查清單",
-          "body": "錯誤辨識題要你從四個畫底線的部分找出語法錯誤。不要試圖「感覺」哪個怪，而是用固定的檢查順序逐項排除。依統計，最常出錯的位置是動詞形式（時態/語態/一致性），其次是代名詞指代和平行結構。",
+          "title": "Error Identification 的系統化檢查清單",
+          "body": "錯誤辨識題（error identification）要你從四個畫底線的部分找出語法錯誤。這類題最忌「憑感覺」——很多選項讀起來怪怪的但其實是對的，有些讀起來很順但其實有錯。你需要一個固定的檢查順序，像 checklist 一樣逐項排除。根據 10 年考古題統計，錯誤類型的分布是：動詞形式 35%（時態、語態、一致性）、詞性 25%（名詞當動詞用或副詞當形容詞用）、代名詞 15%、平行結構 15%、修飾語 10%。所以檢查順序應該跟著這個比例走。第一步查動詞：主詞是 the team 但動詞用了 are？if 假設句裡出現了 would have？被動語態的 by 後面是動作執行者嗎？第二步查詞性：'The system operates (efficient → efficiently).' — 修飾動詞要用副詞不是形容詞。考古題常見陷阱是把 -ly 副詞換成形容詞放在動詞旁邊。第三步查代名詞：'Each employee should submit their (→ his or her) report.' — each 是單數，嚴格文法要用單數代名詞。但這條規則在現代英文中有爭議，考試通常還是考傳統用法。第四步查平行結構：'The new policy aims to reduce costs, (improving → improve) efficiency, and enhance security.' — to reduce / improve / enhance 三個動詞要平行，第二個不能變動名詞。",
           "bullets": [
-            "第一步檢查動詞：時態是否一致、主詞動詞是否一致、主動被動是否正確",
-            "第二步檢查代名詞：指代是否明確、單複數是否對應、格是否正確（who vs whom）",
-            "第三步檢查平行結構：and / or / not only...but also 連接的成分是否同類（名詞對名詞、動名詞對動名詞）",
-            "第四步檢查修飾語：形容詞修飾名詞、副詞修飾動詞/形容詞，dangling modifier 是常見陷阱"
+            "第一步檢查動詞（佔 35%）：時態是否前後一致、主詞動詞是否數量一致、主動被動是否合理。這步能抓到超過三分之一的錯誤",
+            "第二步檢查詞性（佔 25%）：形容詞修飾名詞、副詞修飾動詞/形容詞/其他副詞。常見陷阱：considerable vs considerably / respective vs respectively",
+            "第三步檢查代名詞（佔 15%）：指代是否明確（this / that / it 指什麼？）、單複數是否對應、格是否正確（who vs whom / I vs me）",
+            "第四步檢查平行結構（佔 15%）：and / or / not only...but also / both...and / either...or 連接的成分必須同類。名詞對名詞、動名詞對動名詞、不定詞對不定詞",
+            "第五步檢查修飾語（佔 10%）：dangling modifier 是最難抓的。'After analyzing the data, the report was submitted.' — 誰分析了資料？報告不會分析，是人在分析。正確：'After analyzing the data, the team submitted the report.'"
           ]
         }
       ]
@@ -142,7 +148,7 @@
       ],
       "title": "資訊科技專業字彙：從考古題歸納高頻詞",
       "summary": "字彙佔考卷約 50%（每年 23-30 題），其中約 35% 涉及科技和商業領域。本課從 10 年考古題中歸納高頻字彙模式，建立以詞根詞綴為基礎的猜字策略。本站已建立 3004 個領域詞彙（im-domain-vocab.json）和 CEFR 分級資料（im-english-cefr.json）可搭配複習。",
-      "estimatedMinutes": 32,
+      "estimatedMinutes": 38,
       "minimumPastPaperRefs": 10,
       "learningObjectives": [
         "掌握 30 個資管所考古題最高頻的字根和字首，用於推測不認識的單字",
@@ -153,45 +159,46 @@
       "sections": [
         {
           "title": "詞根詞綴策略：拆解不認識的字",
-          "body": "資管所英文字彙題的選項常出現 GRE 等級的低頻字，但多數可以用詞根詞綴拆解。即使不知道精確意思，也能判斷正負向和大致語義範圍。考古題分析顯示，掌握 30 個核心詞根可以覆蓋約 60% 的字彙題選項。",
+          "body": "資管所英文字彙題的選項常出現 GRE 等級的低頻字，但多數可以用詞根詞綴拆解。這個策略的原理很簡單：英文的學術詞彙大多由拉丁文和希臘文的詞根組合而成，你只要認識組成零件，就能推測整個字的大概意思。舉例：'The CEO's ostentatious display of wealth drew criticism.' ostentatious 看起來很難，但拆開看：ostent- 來自拉丁文 ostendere（展示），-atious 是形容詞字尾表示「充滿…的」，所以 ostentatious = 充滿展示的 = 炫耀的。再看一個考古題常見的字：'The new regulation was designed to circumvent existing loopholes.' circum- = 圍繞（像 circumference 圓周），vent = 走（像 venture 冒險前往），circumvent = 繞著走 = 規避。你不需要記住每個詞根的拉丁文來源，只需要認識最常見的 30 個前綴和詞根，就能覆蓋考古題約 60% 的字彙選項。以下是按功能分類的核心清單。否定前綴最實用——因為考題常考一個字和它的反義。un- / in-(im-, il-, ir-) / dis- / mis- / non-：如果你認識 'adequate'（足夠的），就能推出 'inadequate'（不足夠的）。注意 in- 在 m, p 前變 im-（impossible）、在 l 前變 il-（illegal）、在 r 前變 ir-（irregular）。",
           "bullets": [
-            "否定前綴：un- / in-(im-, il-, ir-) / dis- / mis- / non- — 快速判斷選項是否為反義",
-            "程度前綴：over-(過度) / under-(不足) / out-(超越) / re-(重新) — 語境中判斷方向",
-            "動作詞根：-duct(引導) / -rupt(破裂) / -ject(投射) / -mit(送) / -vert(轉) — 推測動詞含義",
-            "狀態字尾：-ous / -ive / -able 是形容詞；-ment / -tion / -ness 是名詞；-ize / -ify 是動詞",
-            "實戰例：conspicuous = con(共同) + spic(看) + uous(形容詞) = 一起被看到的 = 顯眼的"
+            "否定前綴：un- / in-(im-, il-, ir-) / dis- / mis- / non- — 看到這些前綴，先想想去掉前綴後的字你認不認識",
+            "程度前綴：over-(過度 overestimate) / under-(不足 undermine) / out-(超越 outperform) / re-(重新 restructure) / pre-(預先 prerequisite)",
+            "核心動作詞根：-duct(引導 conduct/deduce) / -rupt(破裂 disrupt/corrupt) / -ject(投射 project/reject) / -mit(送 transmit/commit) / -vert(轉 convert/divert)",
+            "詞性判斷字尾：-ous / -ive / -able / -ful / -less → 形容詞；-ment / -tion / -ness / -ity → 名詞；-ize / -ify / -ate → 動詞；-ly → 副詞",
+            "實戰拆解練習：遇到不認識的字就拆。'unprecedented' = un(否定) + precedent(先例) + ed → 沒有先例的 → 前所未有的。'counterproductive' = counter(反) + productive(有生產力的) → 反而降低生產力的 → 適得其反的"
           ]
         },
         {
-          "title": "資訊科技高頻詞群",
-          "body": "資管所英文考卷的科技相關字彙可分為四大群：(1) 系統與架構（infrastructure, scalability, interoperability）、(2) 資安與隱私（encryption, vulnerability, breach）、(3) 商業與策略（disruption, leverage, monetize）、(4) AI 與資料（algorithm, dataset, bias）。每群記住 10-15 個核心詞加上常見搭配，比散記單字有效率。",
+          "title": "資訊科技高頻詞群：按主題記憶",
+          "body": "資管所英文考卷的科技相關字彙不是隨機出現的，而是集中在幾個反覆出現的主題群。把同一個群的字一起記，比散記單字有效率得多，因為你會在考古題的同一篇閱讀或同一區的字彙題裡碰到同一群的字。第一群是系統與架構：deploy（部署，不是 display 展示）、integrate（整合）、configure（設定）、compatible（相容的）、scalable（可擴展的）、redundant（冗餘的，在 IT 裡是正面的——備援用的）、latency（延遲）、throughput（吞吐量）、infrastructure（基礎設施）、interoperability（互操作性，指不同系統能一起工作）。例句：'The new cloud infrastructure is designed to be scalable, allowing the company to handle increased throughput without significant latency.' 第二群是資安與隱私：authenticate（驗證身份）vs authorize（授權）——這是考古題最愛考的混淆組。authenticate 是確認「你是誰」（帳號密碼、指紋），authorize 是決定「你能做什麼」（權限）。encryption（加密）、vulnerability（漏洞）、breach（資料外洩）、phishing（釣魚攻擊）、compliance（法規遵循）。第三群是商業策略：disrupt（顛覆）、pivot（轉型）、leverage（利用，動詞用法）、monetize（變現）、acquisition（收購）、stakeholder（利害關係人）。第四群是 AI 與資料：algorithm（演算法）、bias（偏差）、inference（推論）、supervised / unsupervised（監督式 / 非監督式）、autonomous（自主的）。",
           "bullets": [
-            "系統類：deploy / integrate / configure / compatible / redundant / latency / throughput",
-            "資安類：authenticate / encrypt / decrypt / phishing / malware / firewall / compliance",
-            "商業類：disrupt / pivot / scale / leverage / monetize / acquisition / stakeholder",
-            "AI 類：algorithm / neural / bias / dataset / inference / supervised / autonomous",
-            "注意一字多義：platform（平台 vs 月台）、protocol（協定 vs 禮儀）、bug（臭蟲 vs 程式錯誤）"
+            "系統類必背：deploy / integrate / configure / scalable / redundant / latency / throughput / interoperability — 閱讀科技文章時幾乎每篇都有",
+            "資安最重要的混淆組：authenticate（你是誰）vs authorize（你能幹嘛）/ encryption（加密）vs encoding（編碼，不涉及安全）/ vulnerability（漏洞）vs exploit（利用漏洞的手段）",
+            "商業詞要注意一字多義：leverage 名詞是槓桿/影響力，動詞是利用；platform 在 IT 是平台，日常是月台；protocol 在 IT 是協定，外交是禮儀",
+            "AI 詞群近年出題增加：algorithm / neural network / bias / dataset / inference / supervised learning / deep learning / generative / autonomous — 搭配計概 AI 課程一起記",
+            "記憶策略：每個詞群選 5 個最核心的字，各造一個包含 2-3 個群內字的句子。重複讀句子比重複讀單字表有效"
           ]
         },
         {
-          "title": "易混淆近義詞辨析",
-          "body": "字彙題最難的不是完全不認識的字，而是四個選項都認識但語境只適合其中一個。這類題考的是 collocations（搭配語）和 connotations（語感），需要知道哪個字配哪個上下文。以下是考古題高頻的混淆組。",
+          "title": "易混淆近義詞辨析：語境才是王道",
+          "body": "字彙題最難的不是完全不認識的字（那種靠詞根拆解），而是四個選項你都認識但語境只適合其中一個。這類題考的是 collocations（搭配語）和 connotations（語感/暗示意義），你需要知道哪個字配哪個上下文。舉例：'The company decided to (alter / transform / modify / convert) its business model in response to market disruption.' 四個字都有「改變」的意思，但程度不同。alter 是小幅調整、modify 是修改、convert 是格式轉換（convert PDF to Word）、transform 是根本性轉變。搭配 business model 和 disruption 這種語境，暗示的是大規模的變革，所以答案是 transform。以下是考古題高頻的 10 組混淆詞，每組背一個判斷標準就夠。affect vs effect：affect 幾乎永遠是動詞（影響），effect 幾乎永遠是名詞（效果）。唯一的例外：effect 當動詞用時是「實現/促成」的意思（effect change = 帶來改變），但考古題很少考這個例外。ensure vs insure vs assure：ensure 確保某事發生（ensure quality）、insure 買保險（insure a car）、assure 向人保證（I assure you）。如果後面接人用 assure，接事情用 ensure，接財產用 insure。complement vs compliment：complement 互補（complementary skills = 互補的技能）、compliment 讚美。記法：complEment 的 E 像 Equal，互補是讓彼此 complete。",
           "bullets": [
-            "affect vs effect：affect 是動詞（影響）；effect 是名詞（效果），但 effect 也可當動詞（實現，effecting change）",
-            "ensure vs insure vs assure：ensure（確保某事發生）/ insure（投保）/ assure（向人保證）",
-            "complement vs compliment：complement（互補）/ compliment（讚美）",
-            "principal vs principle：principal（主要的/校長）/ principle（原則）",
-            "discrete vs discreet：discrete（離散的/獨立的）/ discreet（謹慎的/低調的）"
+            "affect vs effect：99% 的情況 affect = 動詞、effect = 名詞。例外 effect 當動詞 = 實現（罕見）",
+            "ensure vs insure vs assure：接事情用 ensure、接人用 assure、接財產用 insure。'Please ensure that all data is encrypted.' / 'I assure you this is secure.'",
+            "complement vs compliment：complement（互補，e 像 complete）/ compliment（讚美，i 像 I say something nice）",
+            "principal vs principle：principal = 主要的/校長/本金（形容詞或人）；principle = 原則/原理（抽象概念）。'The principal reason is a matter of principle.'",
+            "discrete vs discreet：discrete = 離散的/獨立的（IT 術語 discrete variables）；discreet = 謹慎低調的（人的行為）。考計概的人一定認識 discrete，但考英文時別跟 discreet 搞混"
           ]
         },
         {
-          "title": "語境推斷法：四步猜字流程",
-          "body": "即使完全不認識題目中的空格該填什麼字，也可以用語境線索系統化地縮小範圍。這個方法不保證 100% 正確，但可以把四選一的 25% 命中率提高到 50-75%。",
+          "title": "語境推斷法：四步猜字流程（不認識也能選對）",
+          "body": "即使你完全不認識題目要填的字，也不需要放棄——語境推斷法可以把四選一的 25% 命中率提高到 50-75%。這個方法的核心思想是：你不需要知道正確答案是什麼，你只需要排除不可能的選項。每排除一個，命中率就從 25% → 33% → 50%。以下是按順序執行的四個步驟。第一步：判斷詞性。看空格前後的結構——如果前面是 the/a/an/this 且後面沒有名詞，空格要填名詞；如果前面是 is/are/was，後面沒有 -ing 或 by，可能要填形容詞（補語）或名詞。例如 'The company achieved remarkable ______ in Q3.'，前面有 remarkable（形容詞），空格後是 in Q3（介詞片語），所以空格填名詞。如果選項裡有一個動詞和三個名詞，直接刪掉動詞。第二步：判斷正負向。上下文的情緒是正面（growth, success, improvement）還是負面（decline, failure, threat）？如果句子在講正面結果，選項裡的負面詞就可以排除。注意轉折詞會翻轉方向——'Despite the challenges, the outcome was ______.' despite 後面是負面的，但主句是正面的，所以空格填正面的字。第三步：判斷搭配。某些動詞固定接特定介詞或名詞。如果空格後面是 'to improvements'，那空格裡的動詞通常是 lead / contribute / amount。第四步：代入驗證——把剩下的選項代入句子默讀，讀起來最通順的通常就是答案。",
           "bullets": [
-            "第一步：判斷詞性 — 空格前後的結構決定需要名詞、動詞、形容詞或副詞，先排除詞性不合的選項",
-            "第二步：判斷正負 — 上下文的情緒是正面還是負面？用 but / however / unfortunately 等轉折詞判斷",
-            "第三步：判斷搭配 — 空格後面接什麼？某些動詞固定接 to / for / with，可以排除搭配不合的選項",
-            "第四步：代入驗證 — 把剩下的選項代入句子，讀起來最通順的通常就是答案"
+            "第一步判斷詞性排除法：空格前有 very / quite / extremely → 填形容詞或副詞。空格前有 to + 空格 → 填原形動詞或名詞。光靠詞性就能排除 1-2 個選項",
+            "第二步正負向判斷：積極語境的信號詞 → enhance / facilitate / foster / bolster / thrive；消極語境的信號詞 → hamper / impede / hinder / deteriorate / exacerbate",
+            "第三步搭配判斷：'______ with regulations' → comply；'______ from experience' → benefit / learn / stem。搭配是比意思更強的線索",
+            "第四步代入驗證：把 2 個候選答案分別代入，整句默讀一遍。如果你有每天讀英文新聞的習慣，語感會幫你選對。這步不是猜，是用你的被動語言知識做最後判斷",
+            "練習方法：做完字彙題後，不只看答案對不對，還要分析為什麼其他三個選項不適合——是詞性不對、正負向不合、還是搭配不對。這個反思過程比多做新題有效"
           ]
         }
       ]
@@ -207,7 +214,7 @@
       ],
       "title": "考古題解題模式：10 年出題規律與答題策略",
       "summary": "分析 106-115 年共 500 題的出題規律，建立針對台大資管所英文考卷的最佳化答題策略。包含題型分布、難度趨勢、常見陷阱模式和時間分配建議。",
-      "estimatedMinutes": 25,
+      "estimatedMinutes": 30,
       "minimumPastPaperRefs": 50,
       "learningObjectives": [
         "掌握 10 年考卷的固定結構：字彙 → 文法 → 閱讀的題號分布和佔分比例",
@@ -218,42 +225,46 @@
       "sections": [
         {
           "title": "10 年出題結構分析",
-          "body": "106-115 年每年固定 50 題選擇題，80 分鐘。題型分布穩定：字彙約 23-30 題（佔 46-60%，集中在第 1-25 題）、文法約 4-14 題（佔 8-28%，集中在第 25-35 題）、閱讀約 15-19 題（佔 30-38%，集中在第 35-50 題）。閱讀通常有 2-3 篇文章，每篇配 4-7 題。112 年閱讀題特別少（僅 8 題），115 年文法題特別少（僅 4 題），但整體結構穩定。",
+          "body": "106-115 年每年固定 50 題選擇題、80 分鐘。經過逐年分析，題型分布有固定的規律但也有例外年份。字彙題穩定佔最大宗，每年 23-30 題（46-60%），通常集中在第 1-25 題。這些題以 fill-in-the-blank 為主，給你一個句子挖空，四個選項選最適合的字。字彙題的句子通常是獨立的，不需要上下文，所以速度可以很快。文法題是波動最大的題型，每年 4-14 題（8-28%），115 年文法只有 4 題，但 110 年有 14 題。文法題有兩種形式：fill-in-the-blank（選正確的文法形式填空）和 error identification（從四個畫線部分找出錯誤）。error identification 通常比 fill-in 難，因為你需要檢查四個地方而不是選一個答案。閱讀題每年 15-19 題（30-38%），通常是 2-3 篇文章，每篇配 4-7 題。112 年是例外，閱讀只有 8 題，那年字彙題特別多。閱讀文章的長度在 300-500 字之間，主題以科技和商業為主（約 70%），偶有社會議題、健康、環境等。近三年科技議題比例增加，尤其 AI 和數位轉型相關文章。了解這個結構的意義在於：你可以預判每個區段大概幾題、需要多少時間，不會在某個區段卡住太久。",
           "bullets": [
-            "字彙題數量最多且位置最前，是搶時間的關鍵區段",
-            "文法題數量波動最大（4-14 題），不能依賴固定比例備考",
-            "閱讀題每篇文章的第一題通常最容易（主旨或明確細節），最後一題通常最難（推論或 NOT true）",
-            "近年趨勢：科技相關閱讀題比例增加，純文學類減少"
+            "字彙題佔最大宗（46-60%），速度快的考生能在 20-25 分鐘內做完前 25 題，為閱讀爭取更多時間",
+            "文法題波動大，不要假設每年都有固定題數。備考時字彙和文法的複習比例建議 7:3",
+            "閱讀題每篇文章的第一題通常是主旨或明確細節（最容易），最後一題通常是推論或 NOT true（最難）",
+            "近年趨勢：科技相關閱讀（AI、資安、數位轉型）比例增加到 70%+，和計概/MIS 的學習內容有重疊，一石二鳥",
+            "113-115 年的考卷結構最可能代表未來的出題方向，備考時這三年的考古題優先做"
           ]
         },
         {
-          "title": "三種出題陷阱模式",
-          "body": "出題者設計錯誤選項（distractors）有固定手法。認識這些手法可以在不確定答案時提高猜中率。",
+          "title": "三種出題陷阱模式與破解法",
+          "body": "出題者設計錯誤選項（distractors）有規律可循。認識這些規律不是為了投機取巧，而是在你不確定答案的時候提供額外的判斷線索。第一種是形似音似陷阱：選項裡故意放入拼寫相近但意思完全不同的字。考古題高頻案例：complement（互補）vs compliment（讚美）、discrete（離散的）vs discreet（謹慎的）、principal（主要的）vs principle（原則）、stationary（靜止的）vs stationery（文具）。破解法：碰到長相相似的選項時，這兩個之中有一個很可能就是正確答案——出題者是故意要你分辨的。先確定你知道兩個字各自的意思，再根據語境選。第二種是語境反轉陷阱：選項在其他語境下完全正確，但在本句的正負向、搭配或邏輯中不合。例如 'The policy was intended to mitigate / aggravate the impact of automation on employment.'，mitigate（緩和）和 aggravate（加劇）都是合法的動詞，但 intended to 暗示目標是正面的，所以答案是 mitigate。破解法：看句子的意圖方向，再看選項的效果方向，兩者要一致。第三種是過度概括陷阱，專門出現在閱讀題。選項用 always / never / all / none / only 做極端表述，但原文用的是 most / often / generally / tends to。'All companies that adopted AI saw productivity gains.' — 原文可能只說 'Many companies reported improvements.'。破解法：在一般推論題中，含極端用語的選項通常是錯的。但在 NOT true 或 EXCEPT 題中，這個邏輯反過來——極端表述反而可能是正確的「不為真」的選項。",
           "bullets": [
-            "形似音似陷阱：選項中放入拼寫相近的字（如 complement / compliment、discreet / discrete），靠粗心犯錯",
-            "語境反轉陷阱：選項在其他語境下正確，但在本句的正負向、時態或搭配中不合",
-            "過度概括陷阱：閱讀題選項用 always / never / all / none 做極端表述，原文通常是 most / often / generally",
-            "識別陷阱後的策略：當兩個選項極度相似時，答案通常在這兩個之中；含極端用語的選項在 NOT true 題型中反而可能是答案"
+            "形似陷阱的破解：看到兩個長相相似的選項，答案大概率在這兩個之中。先搞清楚兩者各自的意思",
+            "語境反轉的破解：先判斷句子的意圖方向（正面還是負面），再看選項的效果方向。不一致的直接排除",
+            "過度概括的破解：一般題中，always / never / only / all 通常是錯誤選項。但 NOT true / EXCEPT 題反過來",
+            "當兩個選項意思非常接近時（如 hinder 和 impede 都表示阻礙），通常兩個都不是答案——因為出題者不會放兩個「都對」的選項",
+            "陷阱辨識是最後手段。如果你認識所有選項，直接選語境最合的就好。只有在不確定的時候才需要分析出題者的意圖"
           ]
         },
         {
-          "title": "個性化備考策略",
-          "body": "英文不加權，但能拉開差距。投資報酬率最高的備考方式不是大量做新題，而是從錯題中找到自己的弱點模式，針對性補強。",
+          "title": "個性化備考策略：從錯題找弱點模式",
+          "body": "英文不加權（台大資管），但每年都有考生因為英文太差被刷掉。反過來說，英文好的考生可以用英文拉開 5-10 分的差距。投資報酬率最高的備考方式不是大量做新題或背單字書，而是從考古題的錯題中找到你的弱點模式，然後針對性補強。做法是：做完一份考古題後，把每一題的錯誤分成三類。第一類：「字不認識」——你根本不知道某個選項是什麼意思。這種錯誤的解法是擴充字彙量，但不是漫無目的地背。用本站的 CEFR 分級資料，先確認你的字彙程度在哪個等級（B1? B2? C1?），然後專攻你當前等級 +1 的字。如果你是 B2 程度，就專攻 C1 的字，不要直接跳 C2。第二類：「字認識但選錯」——你知道每個選項的意思，但選了語境不合的那個。這種錯誤的解法是練搭配和語感。記法：每次碰到這類錯題，把正確答案連同整個句子抄下來，反覆讀 3 遍。你的大腦會記住這個搭配模式。第三類：「閱讀理解錯」——你讀懂了文章但答案選錯了。回去找你判斷失誤的位置——是被 NOT true 題搞混了？是把別人的觀點當成作者的了？是被極端用語的選項騙了？這類錯誤的解法是重新讀文章，標記你忽略的結構線索。",
           "bullets": [
-            "做完一份考古題後，把錯題分成三類：(1) 不認識的字 → 加入字彙複習清單；(2) 認識但選錯 → 分析陷阱類型；(3) 閱讀理解錯 → 回去讀原文找判斷失誤的位置",
-            "字彙弱的考生：優先用本站 CEFR 分級資料，先背 B2-C1 等級的核心詞，再挑戰 C2",
-            "文法弱的考生：整理自己的錯題清單，多數人的文法弱點集中在 2-3 個考點，不需要全面複習",
-            "閱讀弱的考生：每天讀一篇 300-500 字的英文科技新聞（CNN Tech, BBC Technology），培養速讀習慣"
+            "「字不認識」的系統化背法：用本站 CEFR 分級資料。B2 程度先攻 C1 字彙（約 800 字），C1 程度再攻 C2（約 500 字）。不要亂背",
+            "「字認識但選錯」的修正法：把正確答案連同完整句子抄進筆記本，每天複習 10 句。2 週後語感就會改善",
+            "「閱讀理解錯」的診斷法：回到原文，用螢光筆標記你漏看的轉折詞、歸屬語或限定詞。通常錯誤就藏在一個 however 或 some 裡",
+            "備考里程碑：做 3 份考古題後統計三類錯誤的比例。如果「字不認識」超過 50%，先花 2 週背字彙再繼續做題。如果「選錯」超過 30%，加強搭配練習",
+            "字彙弱 → 每天背 20 個新字 + 複習 30 個舊字（間隔重複法）。文法弱 → 整理自己的錯題清單（通常集中在 2-3 個考點）。閱讀弱 → 每天讀一篇 300 字英文科技新聞"
           ]
         },
         {
-          "title": "模擬實戰的練習節奏",
-          "body": "考前最後一個月，每週做 1-2 份完整考古題，嚴格計時 80 分鐘。做完後的檢討比做題本身更重要。",
+          "title": "模擬實戰的三階段練習計畫",
+          "body": "考前最後三個月，把練習分成三個階段。每個階段的重點不同。第一階段（考前 3 個月）：不計時做題。這個階段的重點是建立題感和累積字彙，不是練速度。每做一份考古題，花雙倍時間檢討：查每一個不認識的字、分析每一個錯題的原因、把常見搭配抄進筆記。建議每週做 1 份考古題，從最舊的年份開始（106、107），因為近年的題要留到後面模擬。第二階段（考前 2 個月）：半計時練習。給自己 100 分鐘做完一份（比正式的 80 分鐘多 20 分鐘），開始練習答題順序和跳題策略。這個階段你要找出自己的最佳答題順序——有些人先做閱讀再做字彙更有效（因為腦子還清醒的時候處理最難的），有些人先做字彙讓腦子進入英文模式。試兩三次找到適合自己的順序。第三階段（考前 1 個月）：完全模擬。嚴格計時 80 分鐘，中間不查字典、不上廁所、不看手機。用 113、114、115 年的考古題，因為這三年最接近明年的出題風格。做完後記錄分數和各題型正確率，畫一張折線圖追蹤進步。目標正確率：字彙 70%+、文法 80%+、閱讀 60%+。為什麼文法最高？因為文法考點有限，把 5 個核心考點掌握就能拿高分。為什麼閱讀最低？因為閱讀受文章難度影響大，波動最高，投資報酬率相對最低。如果你的時間有限，優先提升字彙（基數最大，提升 10% 就是 2-3 題）和文法（投資報酬率最高）。",
           "bullets": [
-            "第一輪（3 個月前）：不計時做題，重點是建立題感和累積字彙",
-            "第二輪（2 個月前）：半計時（100 分鐘），開始練習答題順序和跳題策略",
-            "第三輪（1 個月前）：嚴格計時 80 分鐘，模擬考試節奏，每做一份記錄各題型正確率",
-            "目標正確率：字彙 70%+、文法 80%+、閱讀 60%+（閱讀投資報酬率最低，字彙和文法更容易提分）"
+            "第一階段（3 個月前）：不計時、每週 1 份、重點在檢討不在做題。做 1 小時、檢討 2 小時是正確的比例",
+            "第二階段（2 個月前）：100 分鐘限時，開始練跳題策略（不確定的標記後跳過，最後 5 分鐘回來處理）",
+            "第三階段（1 個月前）：嚴格 80 分鐘，模擬考場環境。用 113-115 年考古題，記錄各題型正確率追蹤進步曲線",
+            "備考優先排序（時間有限時）：字彙 > 文法 > 閱讀。字彙佔 50% 題目，提升最快；文法考點有限，容易拿滿分；閱讀波動大，短期提升有限",
+            "每份考古題做完後，不只看總分，還要分析：哪些題型的正確率在進步？哪些停滯？停滯的就是下一週要專攻的方向"
           ]
         }
       ]
