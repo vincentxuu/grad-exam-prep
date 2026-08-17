@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "subjectId": "im-stat",
   "status": "curated_candidates",
-  "publishedToGlobalDeck": false,
-  "policy": "候選卡尚未寫入 flashcards.json；需經 product integration 與 migration review 後才能啟用。",
+  "publishedToGlobalDeck": true,
+  "policy": "全部 18 張候選卡已寫入 flashcards.json（fc-im-stat-* 格式）。",
   "totalCandidates": 18,
   "candidates": [
     {

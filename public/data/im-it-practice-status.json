@@ -3,8 +3,8 @@
   "subjectId": "im-it",
   "official": false,
   "counts": {
-    "autoGradeEligible": 226,
-    "disputed": 20,
+    "autoGradeEligible": 232,
+    "disputed": 14,
     "selfReviewOnly": 14
   },
   "questions": {
@@ -99,9 +99,9 @@
       "note": "答案已完成可重現的技術覆核；非官方答案。"
     },
     "q-pp-im-it-106-19": {
-      "status": "disputed",
-      "autoGradeEligible": false,
-      "note": "答案存在爭議，保留瀏覽但不判分。"
+      "status": "corrected",
+      "autoGradeEligible": true,
+      "note": "爭議已解決：存在更明確的錯項，恢復自動批改。非官方答案。"
     },
     "q-pp-im-it-106-20": {
       "status": "confirmed",
@@ -669,9 +669,9 @@
       "note": "答案已完成可重現的技術覆核；非官方答案。"
     },
     "q-pp-im-it-111-8": {
-      "status": "disputed",
-      "autoGradeEligible": false,
-      "note": "答案存在爭議，保留瀏覽但不判分。"
+      "status": "corrected",
+      "autoGradeEligible": true,
+      "note": "爭議已解決：存在更明確的錯項，恢復自動批改。非官方答案。"
     },
     "q-pp-im-it-111-9": {
       "status": "confirmed",
@@ -864,9 +864,9 @@
       "note": "答案已完成可重現的技術覆核；非官方答案。"
     },
     "q-pp-im-it-112-22": {
-      "status": "disputed",
-      "autoGradeEligible": false,
-      "note": "答案存在爭議，保留瀏覽但不判分。"
+      "status": "corrected",
+      "autoGradeEligible": true,
+      "note": "爭議已解決：存在更明確的錯項，恢復自動批改。非官方答案。"
     },
     "q-pp-im-it-112-23": {
       "status": "confirmed",
@@ -879,9 +879,9 @@
       "note": "答案已完成可重現的技術覆核；非官方答案。"
     },
     "q-pp-im-it-112-25": {
-      "status": "disputed",
-      "autoGradeEligible": false,
-      "note": "答案存在爭議，保留瀏覽但不判分。"
+      "status": "corrected",
+      "autoGradeEligible": true,
+      "note": "爭議已解決：存在更明確的錯項，恢復自動批改。非官方答案。"
     },
     "q-pp-im-it-112-26": {
       "status": "confirmed",
@@ -1189,9 +1189,9 @@
       "note": "答案已完成可重現的技術覆核；非官方答案。"
     },
     "q-pp-im-it-115-8": {
-      "status": "disputed",
-      "autoGradeEligible": false,
-      "note": "答案存在爭議，保留瀏覽但不判分。"
+      "status": "corrected",
+      "autoGradeEligible": true,
+      "note": "爭議已解決：存在更明確的錯項，恢復自動批改。非官方答案。"
     },
     "q-pp-im-it-115-9": {
       "status": "confirmed",
@@ -1259,9 +1259,9 @@
       "note": "答案已完成可重現的技術覆核；非官方答案。"
     },
     "q-pp-im-it-115-22": {
-      "status": "disputed",
-      "autoGradeEligible": false,
-      "note": "答案存在爭議，保留瀏覽但不判分。"
+      "status": "corrected",
+      "autoGradeEligible": true,
+      "note": "爭議已解決：存在更明確的錯項，恢復自動批改。非官方答案。"
     },
     "q-pp-im-it-115-23": {
       "status": "confirmed",
