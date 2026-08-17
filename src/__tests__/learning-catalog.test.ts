@@ -5,6 +5,7 @@ import {
   getImItSources,
   imItLearningCatalog,
 } from '@/lib/im-it-learning'
+import { imEnglishLearningCatalog } from '@/lib/im-english-learning'
 import { imMisLearningCatalog } from '@/lib/im-mis-learning'
 import { imStatLearningCatalog } from '@/lib/im-stat-learning'
 import { getLearningCatalog, getLearningCatalogs } from '@/lib/learning-catalog'
@@ -32,6 +33,7 @@ describe('learning catalog', () => {
       imItLearningCatalog,
       imMisLearningCatalog,
       imStatLearningCatalog,
+      imEnglishLearningCatalog,
     ])
   })
 

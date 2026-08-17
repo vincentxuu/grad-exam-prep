@@ -72,7 +72,16 @@
             "模擬練習時用手機倒數計時 80 分鐘，結束就停筆。慢慢訓練自己的速度感，目標是考前一個月能在 75 分鐘內做完"
           ]
         }
-      ]
+      ],
+      "workedExamples": [],
+      "commonPitfalls": [
+        "逐字翻譯全文導致時間不夠：閱讀測驗不需要理解每個字，只需要定位答案",
+        "主旨題選了只涵蓋某一段的選項：正確答案必須概括全文，不能只反映一個段落",
+        "NOT true 題只確認一個選項就選答案：必須驗證所有選項，三真一假才能確定"
+      ],
+      "sourceRefs": [],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
     },
     {
       "id": "lesson-im-en-grammar-traps-01",
@@ -137,7 +146,16 @@
             "第五步檢查修飾語（佔 10%）：dangling modifier 是最難抓的。'After analyzing the data, the report was submitted.' — 誰分析了資料？報告不會分析，是人在分析。正確：'After analyzing the data, the team submitted the report.'"
           ]
         }
-      ]
+      ],
+      "workedExamples": [],
+      "commonPitfalls": [
+        "被語感誤導而忽略文法規則：考試考的是規則，不是「聽起來對不對」",
+        "分詞構句的主詞一致性：Walking down the street, the rain started — 主詞不一致是常見陷阱",
+        "混淆 affect（動詞）和 effect（名詞）：資管考題中高頻出現的混淆詞"
+      ],
+      "sourceRefs": [],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
     },
     {
       "id": "lesson-im-en-vocab-tech-01",
@@ -201,7 +219,16 @@
             "練習方法：做完字彙題後，不只看答案對不對，還要分析為什麼其他三個選項不適合——是詞性不對、正負向不合、還是搭配不對。這個反思過程比多做新題有效"
           ]
         }
-      ]
+      ],
+      "workedExamples": [],
+      "commonPitfalls": [
+        "只背中文意思不看搭配詞：implement a policy 不能用 carry out a policy 替換，搭配詞在考試中常被考",
+        "把日常意思套到專業詞彙：protocol 日常是「禮儀」，在 IT 是「協定」",
+        "忽略否定前綴的細微差異：unable vs disable vs inactive 三者語義不同"
+      ],
+      "sourceRefs": [],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
     },
     {
       "id": "lesson-im-en-exam-patterns-01",
@@ -267,7 +294,16 @@
             "每份考古題做完後，不只看總分，還要分析：哪些題型的正確率在進步？哪些停滯？停滯的就是下一週要專攻的方向"
           ]
         }
-      ]
+      ],
+      "workedExamples": [],
+      "commonPitfalls": [
+        "花太多時間在單一難題上：考試是比總分，跳過一題回頭做比硬撐更划算",
+        "沒有檢查答案卡的塗寫：跳題後容易錯位，每 10 題檢查一次",
+        "考前只背單字不做整卷模擬：時間分配和題型轉換的節奏只有整卷練習才能建立"
+      ],
+      "sourceRefs": [],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
     }
   ]
 }
