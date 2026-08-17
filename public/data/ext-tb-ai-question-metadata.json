@@ -3,6 +3,156 @@
   "subjectId": "im-it",
   "sourceType": "textbook",
   "sourceLabel": "教材 AI/ML 練習題",
-  "totalQuestions": 0,
-  "questions": []
+  "textbook": "Practice Questions (AI-generated)",
+  "status": "active",
+  "totalQuestions": 6,
+  "topicCoverage": {
+    "im-it-ai": 6
+  },
+  "questions": [
+    {
+      "questionId": "q-tb-it-cnn-1",
+      "topicId": "im-it-ai",
+      "primarySubtopicId": "im-it-ai-cnn-rnn-sequence",
+      "conceptIds": ["im-it-ai-cnn-rnn-sequence"],
+      "questionType": "single_choice",
+      "scoringMode": "automatic_candidate",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "CNN 卷積層功能。",
+      "source": {
+        "type": "textbook",
+        "institution": null,
+        "department": null,
+        "textbook": "Practice Questions (AI-generated)",
+        "chapter": null,
+        "year": null,
+        "paperId": "tb-it-practice",
+        "difficultyVsNtuIm": "similar",
+        "answerAuthority": "model-derived"
+      },
+      "answerSource": { "kind": "model_assisted_technical_derivation", "official": false, "reviewCount": 0, "note": "AI 生成的練習題，答案經技術驗證。" },
+      "answerConfidence": { "level": "high", "basis": ["Convolutional layers apply learned filters to detect local features"], "unresolvedIssues": [] },
+      "publication": { "browseEligible": true, "practiceEligible": true, "autoGradeEligible": true, "fullMockEligible": false, "blockers": [] }
+    },
+    {
+      "questionId": "q-tb-it-cnn-2",
+      "topicId": "im-it-ai",
+      "primarySubtopicId": "im-it-ai-cnn-rnn-sequence",
+      "conceptIds": ["im-it-ai-cnn-rnn-sequence"],
+      "questionType": "single_choice",
+      "scoringMode": "automatic_candidate",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "Pooling layer 功能。",
+      "source": {
+        "type": "textbook",
+        "institution": null,
+        "department": null,
+        "textbook": "Practice Questions (AI-generated)",
+        "chapter": null,
+        "year": null,
+        "paperId": "tb-it-practice",
+        "difficultyVsNtuIm": "similar",
+        "answerAuthority": "model-derived"
+      },
+      "answerSource": { "kind": "model_assisted_technical_derivation", "official": false, "reviewCount": 0, "note": "AI 生成的練習題，答案經技術驗證。" },
+      "answerConfidence": { "level": "high", "basis": ["Pooling reduces spatial dimensions while retaining key features"], "unresolvedIssues": [] },
+      "publication": { "browseEligible": true, "practiceEligible": true, "autoGradeEligible": true, "fullMockEligible": false, "blockers": [] }
+    },
+    {
+      "questionId": "q-tb-it-cnn-3",
+      "topicId": "im-it-ai",
+      "primarySubtopicId": "im-it-ai-cnn-rnn-sequence",
+      "conceptIds": ["im-it-ai-cnn-rnn-sequence"],
+      "questionType": "single_choice",
+      "scoringMode": "automatic_candidate",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "RNN 隱藏狀態機制。",
+      "source": {
+        "type": "textbook",
+        "institution": null,
+        "department": null,
+        "textbook": "Practice Questions (AI-generated)",
+        "chapter": null,
+        "year": null,
+        "paperId": "tb-it-practice",
+        "difficultyVsNtuIm": "similar",
+        "answerAuthority": "model-derived"
+      },
+      "answerSource": { "kind": "model_assisted_technical_derivation", "official": false, "reviewCount": 0, "note": "AI 生成的練習題，答案經技術驗證。" },
+      "answerConfidence": { "level": "high", "basis": ["RNN passes hidden state across time steps to carry sequential information"], "unresolvedIssues": [] },
+      "publication": { "browseEligible": true, "practiceEligible": true, "autoGradeEligible": true, "fullMockEligible": false, "blockers": [] }
+    },
+    {
+      "questionId": "q-tb-it-ethics-1",
+      "topicId": "im-it-ai",
+      "primarySubtopicId": "im-it-ai-ethics-governance",
+      "conceptIds": ["im-it-ai-ethics-governance"],
+      "questionType": "single_choice",
+      "scoringMode": "automatic_candidate",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "AI bias 來源辨識。",
+      "source": {
+        "type": "textbook",
+        "institution": null,
+        "department": null,
+        "textbook": "Practice Questions (AI-generated)",
+        "chapter": null,
+        "year": null,
+        "paperId": "tb-it-practice",
+        "difficultyVsNtuIm": "similar",
+        "answerAuthority": "model-derived"
+      },
+      "answerSource": { "kind": "model_assisted_technical_derivation", "official": false, "reviewCount": 0, "note": "AI 生成的練習題，答案經技術驗證。" },
+      "answerConfidence": { "level": "high", "basis": ["Historical bias in training data causes algorithmic discrimination"], "unresolvedIssues": [] },
+      "publication": { "browseEligible": true, "practiceEligible": true, "autoGradeEligible": true, "fullMockEligible": false, "blockers": [] }
+    },
+    {
+      "questionId": "q-tb-it-ethics-2",
+      "topicId": "im-it-ai",
+      "primarySubtopicId": "im-it-ai-ethics-governance",
+      "conceptIds": ["im-it-ai-ethics-governance"],
+      "questionType": "single_choice",
+      "scoringMode": "automatic_candidate",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "EU AI Act 風險分級。",
+      "source": {
+        "type": "textbook",
+        "institution": null,
+        "department": null,
+        "textbook": "Practice Questions (AI-generated)",
+        "chapter": null,
+        "year": null,
+        "paperId": "tb-it-practice",
+        "difficultyVsNtuIm": "similar",
+        "answerAuthority": "model-derived"
+      },
+      "answerSource": { "kind": "model_assisted_technical_derivation", "official": false, "reviewCount": 0, "note": "AI 生成的練習題，答案經技術驗證。" },
+      "answerConfidence": { "level": "high", "basis": ["Judicial sentencing AI is classified as high-risk under EU AI Act"], "unresolvedIssues": [] },
+      "publication": { "browseEligible": true, "practiceEligible": true, "autoGradeEligible": true, "fullMockEligible": false, "blockers": [] }
+    },
+    {
+      "questionId": "q-tb-it-ethics-3",
+      "topicId": "im-it-ai",
+      "primarySubtopicId": "im-it-ai-ethics-governance",
+      "conceptIds": ["im-it-ai-ethics-governance"],
+      "questionType": "single_choice",
+      "scoringMode": "automatic_candidate",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "AI 可解釋性重要性。",
+      "source": {
+        "type": "textbook",
+        "institution": null,
+        "department": null,
+        "textbook": "Practice Questions (AI-generated)",
+        "chapter": null,
+        "year": null,
+        "paperId": "tb-it-practice",
+        "difficultyVsNtuIm": "similar",
+        "answerAuthority": "model-derived"
+      },
+      "answerSource": { "kind": "model_assisted_technical_derivation", "official": false, "reviewCount": 0, "note": "AI 生成的練習題，答案經技術驗證。" },
+      "answerConfidence": { "level": "high", "basis": ["Explainability ensures accountability and trust in AI decisions"], "unresolvedIssues": [] },
+      "publication": { "browseEligible": true, "practiceEligible": true, "autoGradeEligible": true, "fullMockEligible": false, "blockers": [] }
+    }
+  ]
 }
