@@ -5,6 +5,7 @@ interface CloudflareEnv {
   ASSETS: Fetcher
   AI: Ai
   PASSPHRASE_HASH: string
+  JWT_SECRET: string
 
   // ── LLM provider 路由（做法沿用 vincentxuu/quidproquo）──────────────
   /** groq | google | openai | cloudflare | openrouter | cerebras | ollama，預設 cloudflare */

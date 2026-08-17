@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { UserMenu } from '@/components/auth/user-menu'
 import { QuickCapture } from '@/components/lexicon/quick-capture'
 import { cn } from '@/lib/utils'
 
@@ -68,6 +69,7 @@ export function Header() {
         </nav>
 
         <QuickCapture />
+        <UserMenu />
       </div>
     </header>
   )

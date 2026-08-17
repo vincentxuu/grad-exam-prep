@@ -17,6 +17,8 @@ import { useSpeech } from '@/hooks/use-speech'
 import { FLASHCARD_EXAM_LABELS, getFlashcardSubjects } from '@/lib/flashcard-meta'
 import { fromFlashcard, fromSavedWord, type ReviewCard } from '@/lib/review-card'
 import type { RecallRating } from '@/lib/srs'
+import { getAuthHeader } from '@/lib/auth'
+import { useAuth } from '@/lib/auth-context'
 import { daysUntilDue, initialCardState, RECALL_LABELS } from '@/lib/srs'
 import { localStorageImpl } from '@/lib/storage'
 import { extractWord, isVocabCard } from '@/lib/vocab'
@@ -59,7 +61,8 @@ function FlashcardsContent({ params }: Props) {
     [subjects]
   )
 
-  const { reviewCard } = useFlashcardStore()
+  const { user } = useAuth()
+  const { reviewCard: reviewCardLocal } = useFlashcardStore()
   const {
     voices,
     selectedVoiceURI,
@@ -90,34 +93,52 @@ function FlashcardsContent({ params }: Props) {
     now: number
   }>({ states: {}, now: 0 })
 
-  // localStorage 只能在 client 讀
   useEffect(() => {
     const stored = localStorageImpl.getState()
     const saved = stored.savedWords
     setSavedWords(saved)
     setPersona(stored.preferences.persona)
-    setSchedule({
-      states: stored.srsState,
-      now: Date.now(),
-    })
+
+    if (!user) {
+      setSchedule({ states: stored.srsState, now: Date.now() })
+    }
 
     const controller = new AbortController()
     setCardsLoading(true)
     setCardsError(null)
-    fetch(`/api/flashcards?exam=${encodeURIComponent(exam)}`, { signal: controller.signal })
+
+    const fetchCards = fetch(`/api/flashcards?exam=${encodeURIComponent(exam)}`, {
+      signal: controller.signal,
+    })
       .then(async (response) => {
         if (!response.ok) throw new Error(`HTTP ${response.status}`)
         return response.json() as Promise<{ cards: Flashcard[]; allCardIds: string[] }>
       })
-      .then(({ cards, allCardIds }) => {
-        const validIds = new Set([...allCardIds, ...saved.map((word) => word.cardId)])
-        localStorageImpl.pruneSRSState(validIds)
-        setSchedule((current) => ({
-          states: Object.fromEntries(
-            Object.entries(current.states).filter(([cardId]) => validIds.has(cardId))
-          ),
-          now: Date.now(),
-        }))
+
+    const fetchSrs = user
+      ? fetch('/api/srs', {
+          signal: controller.signal,
+          headers: { ...getAuthHeader() },
+        }).then(async (response) => {
+          if (!response.ok) throw new Error(`SRS ${response.status}`)
+          return response.json() as Promise<{ states: Record<string, CardSRSState> }>
+        })
+      : null
+
+    Promise.all([fetchCards, fetchSrs])
+      .then(([{ cards, allCardIds }, srsData]) => {
+        if (!user) {
+          const validIds = new Set([...allCardIds, ...saved.map((word) => word.cardId)])
+          localStorageImpl.pruneSRSState(validIds)
+          setSchedule((current) => ({
+            states: Object.fromEntries(
+              Object.entries(current.states).filter(([cardId]) => validIds.has(cardId))
+            ),
+            now: Date.now(),
+          }))
+        } else if (srsData) {
+          setSchedule({ states: srsData.states, now: Date.now() })
+        }
         setExamCards(cards)
         setCardsLoading(false)
       })
@@ -128,7 +149,7 @@ function FlashcardsContent({ params }: Props) {
       })
 
     return () => controller.abort()
-  }, [exam])
+  }, [exam, user])
 
   /** 靜態閃卡與查來的字，正規化成同一種卡後共用同一個 SRS 排程 */
   const allCards: ReviewCard[] = useMemo(
@@ -193,11 +214,30 @@ function FlashcardsContent({ params }: Props) {
   }
 
   function handleRating(rating: RecallRating) {
-    const updated = reviewCard(reviewQueue[currentIdx], rating)
-    setSchedule((current) => ({
-      states: { ...current.states, [updated.cardId]: updated },
-      now: Date.now(),
-    }))
+    const card = reviewQueue[currentIdx]
+
+    if (user) {
+      fetch('/api/srs/review', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', ...getAuthHeader() },
+        body: JSON.stringify({ cardId: card.id, rating }),
+      })
+        .then((res) => (res.ok ? (res.json() as Promise<{ card: CardSRSState }>) : Promise.reject()))
+        .then((data) => {
+          setSchedule((current) => ({
+            states: { ...current.states, [data.card.cardId]: data.card },
+            now: Date.now(),
+          }))
+        })
+        .catch(() => {})
+    } else {
+      const updated = reviewCardLocal(card, rating)
+      setSchedule((current) => ({
+        states: { ...current.states, [updated.cardId]: updated },
+        now: Date.now(),
+      }))
+    }
+
     if (currentIdx + 1 < reviewQueue.length) {
       setCurrentIdx((i) => i + 1)
       setRevealed(false)
