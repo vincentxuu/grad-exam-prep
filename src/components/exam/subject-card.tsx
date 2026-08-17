@@ -1,5 +1,6 @@
+import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import type { ImportanceRating, Subject } from '@/types/content'
 import { ImportanceStars } from './importance-stars'
 
@@ -40,6 +41,12 @@ export function SubjectCard({ subject, href }: SubjectCardProps) {
             <p className="text-xs text-muted-foreground">+{subject.topics.length - 3} 個主題</p>
           )}
         </CardContent>
+        <CardFooter className="pt-0 pb-4">
+          <span className="inline-flex items-center gap-1 text-xs font-medium text-primary group-hover:underline underline-offset-4">
+            開始學習
+            <ArrowRight className="h-3 w-3" aria-hidden="true" />
+          </span>
+        </CardFooter>
       </Card>
     </Link>
   )

@@ -1,6 +1,8 @@
 import type { PhaseWithMeta, TaskWithMeta } from '@/lib/study-plan'
 import type { ExamId } from '@/types/content'
 import type { CardSRSState, DailyLearningRecord, TaskLearningEvidence } from '@/types/storage'
+import { getLearningCatalogs } from './learning-catalog'
+import type { LearningCatalog, LearningLesson } from './learning'
 
 const EMPTY_TASK_IDS: ReadonlySet<string> = new Set()
 const TAIPEI_CALENDAR = new Intl.DateTimeFormat('en-US', {
@@ -96,4 +98,47 @@ export function getTaskLearningHref(
   subjectTag?: string | null
 ): string | undefined {
   return subjectTag ? `/${examId}/subjects/${subjectTag}` : undefined
+}
+
+export interface RecommendedLesson {
+  catalog: LearningCatalog
+  lesson: LearningLesson
+  href: string
+  questionHref: string
+}
+
+export function getTodayRecommendedLessons(examId: string, date: Date): RecommendedLesson[] {
+  const catalogs = getLearningCatalogs().filter((c) => c.examId === examId && c.lessons.length > 0)
+  if (catalogs.length === 0) return []
+
+  const dayOfYear = Math.floor(
+    (date.getTime() - new Date(date.getFullYear(), 0, 0).getTime()) / 86_400_000
+  )
+
+  const picked: RecommendedLesson[] = []
+  const subjectOrder = [...catalogs].sort((a, b) => {
+    const priorityMap: Record<string, number> = {
+      'im-it': 0,
+      'im-mis': 1,
+      'im-stat': 2,
+      'im-english': 3,
+    }
+    return (priorityMap[a.subjectId] ?? 99) - (priorityMap[b.subjectId] ?? 99)
+  })
+
+  const startIndex = dayOfYear % subjectOrder.length
+  for (let i = 0; i < Math.min(2, subjectOrder.length); i++) {
+    const catalog = subjectOrder[(startIndex + i) % subjectOrder.length]
+    const lessonIndex = dayOfYear % catalog.lessons.length
+    const lesson = catalog.lessons[lessonIndex]
+    const topicId = lesson.coveredSubtopicIds[0]?.replace(/-[^-]+$/, '') ?? ''
+    picked.push({
+      catalog,
+      lesson,
+      href: `${catalog.lessonBaseHref}/${lesson.id}`,
+      questionHref: `/${examId}/questions?subject=${catalog.subjectId}${topicId ? `&topic=${topicId}` : ''}`,
+    })
+  }
+
+  return picked
 }

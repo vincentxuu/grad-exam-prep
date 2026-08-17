@@ -1,12 +1,23 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import { EnglishPracticeRoute } from '@/components/exam/english-practice-route'
+import { ItPracticeRoute } from '@/components/exam/it-practice-route'
 import { LearningConceptOverview } from '@/components/exam/learning-concept-overview'
+import { MisPracticeRoute } from '@/components/exam/mis-practice-route'
+import { StatPracticeRoute } from '@/components/exam/stat-practice-route'
 import { TopicTree } from '@/components/exam/topic-tree'
 import { Badge } from '@/components/ui/badge'
 import { EXAM_LABELS, getExam, getSubject, subjects } from '@/lib/content'
 import { getLearningCatalog } from '@/lib/learning-catalog'
 import type { ExamId } from '@/types/content'
+
+const PRACTICE_ROUTES: Record<string, React.ComponentType> = {
+  'im-it': ItPracticeRoute,
+  'im-mis': MisPracticeRoute,
+  'im-stat': StatPracticeRoute,
+  'im-english': EnglishPracticeRoute,
+}
 
 interface Props {
   params: Promise<{ exam: string; subjectId: string }>
@@ -26,6 +37,8 @@ export default async function SubjectPage({ params }: Props) {
 
   if (!examData || !subject || subject.examId !== exam) notFound()
 
+  const PracticeRoute = exam === 'im' ? PRACTICE_ROUTES[subjectId] : undefined
+
   const materialTypeLabel: Record<string, string> = {
     book: '📖 書目',
     notes: '📝 講義',
@@ -35,7 +48,7 @@ export default async function SubjectPage({ params }: Props) {
   }
 
   return (
-    <div className="space-y-6 max-w-2xl">
+    <div className="space-y-6 max-w-3xl">
       <div className="flex items-center gap-2 text-sm text-muted-foreground">
         <Link href={`/${exam}`} className="hover:text-foreground">
           {EXAM_LABELS[exam as ExamId]}
@@ -51,6 +64,8 @@ export default async function SubjectPage({ params }: Props) {
         </div>
         <p className="text-muted-foreground text-sm mt-1">{subject.topics.length} 個主題</p>
       </div>
+
+      {PracticeRoute && <PracticeRoute />}
 
       <section className="space-y-3">
         <h2 className="text-lg font-semibold">主題樹（依重要度排序）</h2>
