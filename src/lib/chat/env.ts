@@ -1,6 +1,6 @@
 import { getCloudflareContext } from '@opennextjs/cloudflare'
 import type { NextRequest } from 'next/server'
-import { validateBearerToken } from '@/lib/auth'
+import { authenticateRequest } from '@/lib/auth'
 import { checkAndIncrementQuota, type Db, readQuota } from '@/lib/lexicon/store'
 import type { LlmRuntimeConfig } from '@/lib/llm/config'
 import type { LlmEnv } from '@/lib/llm/model'
@@ -9,7 +9,7 @@ export const DEFAULT_CHAT_QUOTA = 40
 
 export interface ChatEnv extends LlmEnv {
   DB: D1Database
-  PASSPHRASE_HASH?: string
+  JWT_SECRET?: string
   CHAT_DAILY_QUOTA?: string
 }
 
@@ -49,8 +49,10 @@ export class ChatQuotaExceeded extends Error {
   }
 }
 
-export function isUnlimited(request: NextRequest, env: ChatEnv): boolean {
-  return !!env.PASSPHRASE_HASH && validateBearerToken(request, env.PASSPHRASE_HASH)
+export async function isUnlimited(request: NextRequest, env: ChatEnv): Promise<boolean> {
+  if (!env.JWT_SECRET) return false
+  const user = await authenticateRequest(request, env.JWT_SECRET)
+  return !!user
 }
 
 export async function spendChatQuota(

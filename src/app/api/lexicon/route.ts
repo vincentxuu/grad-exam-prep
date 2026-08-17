@@ -1,6 +1,6 @@
 import { getCloudflareContext } from '@opennextjs/cloudflare'
 import { type NextRequest, NextResponse } from 'next/server'
-import { validateBearerToken } from '@/lib/auth'
+import { authenticateRequest } from '@/lib/auth'
 import { generateEntry, generatePersonal } from '@/lib/lexicon/generate'
 import { normalizeTerm, personaHash } from '@/lib/lexicon/normalize'
 import {
@@ -19,7 +19,7 @@ import type { LookupResponse, PersonaProfile } from '@/types/lexicon'
 
 interface Env extends LlmEnv {
   DB: D1Database
-  PASSPHRASE_HASH?: string
+  JWT_SECRET?: string
   LEXICON_DAILY_QUOTA?: string
 }
 
@@ -99,7 +99,7 @@ export async function POST(request: NextRequest) {
   const limit = quotaLimit(env, config)
 
   // 帶通關密語的請求不受配額限制
-  const unlimited = !!env.PASSPHRASE_HASH && validateBearerToken(request, env.PASSPHRASE_HASH)
+  const unlimited = env.JWT_SECRET ? !!(await authenticateRequest(request, env.JWT_SECRET)) : false
   const userId = getUserId(request) ?? 'anonymous'
 
   /** 只在真的要花錢時才動配額。回 null 代表被擋下。 */

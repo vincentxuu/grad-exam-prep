@@ -132,21 +132,3 @@ export async function authenticateRequest(
   return verifyJWT(authHeader.slice(7), secret)
 }
 
-// ── Legacy passphrase support (for admin routes) ───────────────────
-
-export function validateBearerToken(request: Request, expectedHash: string): boolean {
-  const authHeader = request.headers.get('Authorization')
-  if (!authHeader?.startsWith('Bearer ')) return false
-  const token = authHeader.slice(7)
-  return token === expectedHash
-}
-
-/** @deprecated Use hashPassword + salt instead */
-export async function hashPassphrase(passphrase: string): Promise<string> {
-  const encoder = new TextEncoder()
-  const data = encoder.encode(passphrase)
-  const hash = await crypto.subtle.digest('SHA-256', data)
-  return Array.from(new Uint8Array(hash))
-    .map((b) => b.toString(16).padStart(2, '0'))
-    .join('')
-}

@@ -13,7 +13,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
-import { clearToken, getAuthHeader, hashPassphrase, isAuthenticated, storeToken } from '@/lib/auth'
+import { getAuthHeader } from '@/lib/auth'
+import { useAuth } from '@/lib/auth-context'
 import { PROVIDER_CATALOG, providerInfo } from '@/lib/llm/catalog'
 
 interface ConfigState {
@@ -58,8 +59,7 @@ const EMPTY_FORM: Form = {
 }
 
 export function LlmSettings() {
-  const [authed, setAuthed] = useState(isAuthenticated)
-  const [passphrase, setPassphrase] = useState('')
+  const { user } = useAuth()
   const [loaded, setLoaded] = useState<LoadedConfig | null>(null)
   const [form, setForm] = useState<Form>(EMPTY_FORM)
   const [status, setStatus] = useState<string | null>(null)
@@ -72,9 +72,7 @@ export function LlmSettings() {
     try {
       const res = await fetch('/api/llm-config', { headers: getAuthHeader() })
       if (res.status === 401) {
-        clearToken()
-        setAuthed(false)
-        setStatus('通關密語不正確，或伺服器沒有設定 PASSPHRASE_HASH')
+        setStatus('未登入或權限不足')
         return
       }
       if (!res.ok) throw new Error()
@@ -96,15 +94,8 @@ export function LlmSettings() {
   }, [])
 
   useEffect(() => {
-    if (authed) load()
-  }, [authed, load])
-
-  async function handleLogin() {
-    if (!passphrase.trim()) return
-    storeToken(await hashPassphrase(passphrase))
-    setPassphrase('')
-    setAuthed(true)
-  }
+    if (user) load()
+  }, [user, load])
 
   async function handleSave() {
     setBusy('save')
@@ -156,25 +147,12 @@ export function LlmSettings() {
     }
   }
 
-  if (!authed) {
+  if (!user) {
     return (
       <div className="space-y-3 rounded-lg border p-4">
         <p className="text-muted-foreground text-sm">
-          改的是全站設定，要通關密語。這是同步功能用的那一組。
+          請先登入才能修改 LLM 設定。點右上角「登入」按鈕。
         </p>
-        <div className="flex gap-2">
-          <Input
-            type="password"
-            value={passphrase}
-            onChange={(e) => setPassphrase(e.target.value)}
-            onKeyDown={(e) => e.key === 'Enter' && handleLogin()}
-            placeholder="通關密語"
-          />
-          <Button onClick={handleLogin} disabled={!passphrase.trim()}>
-            登入
-          </Button>
-        </div>
-        {status && <p className="text-destructive text-sm">{status}</p>}
       </div>
     )
   }
@@ -366,16 +344,6 @@ export function LlmSettings() {
       <div className="flex items-center gap-3">
         <Button onClick={handleSave} disabled={busy !== null}>
           {busy === 'save' ? '存檔中…' : '存檔'}
-        </Button>
-        <Button
-          variant="ghost"
-          onClick={() => {
-            clearToken()
-            setAuthed(false)
-            setLoaded(null)
-          }}
-        >
-          登出
         </Button>
         {busy === 'load' && <Badge variant="secondary">讀取中</Badge>}
       </div>
