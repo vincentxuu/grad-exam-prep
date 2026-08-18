@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { createPortal } from 'react-dom'
 import { Button } from '@/components/ui/button'
 import { useAuth } from '@/lib/auth-context'
 
@@ -57,11 +58,19 @@ export function UserMenu() {
     }
   }
 
-  return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/50">
+  const modal = (
+    <div
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-black/50"
+      onClick={(e) => {
+        if (e.target === e.currentTarget) {
+          setOpen(false)
+          setError(null)
+        }
+      }}
+    >
       <form
         onSubmit={handleSubmit}
-        className="bg-background border rounded-lg p-6 w-full max-w-sm mx-4 space-y-4"
+        className="bg-background border rounded-lg p-6 w-full max-w-sm mx-4 space-y-4 shadow-lg"
       >
         <div className="flex items-center justify-between">
           <h2 className="font-medium">{mode === 'login' ? '登入' : '註冊'}</h2>
@@ -139,4 +148,6 @@ export function UserMenu() {
       </form>
     </div>
   )
+
+  return typeof document !== 'undefined' ? createPortal(modal, document.body) : modal
 }
