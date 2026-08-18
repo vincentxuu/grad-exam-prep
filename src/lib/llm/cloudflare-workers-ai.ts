@@ -43,8 +43,15 @@ function workersAiMessages(messages: BaseMessage[]) {
 
 function responseText(output: unknown): string {
   if (typeof output === 'string') return output
-  if (!output || typeof output !== 'object' || !('response' in output)) return ''
-  return typeof output.response === 'string' ? output.response : ''
+  if (!output || typeof output !== 'object') return ''
+  const obj = output as Record<string, unknown>
+  if (typeof obj.response === 'string') return obj.response
+  if (Array.isArray(obj.choices)) {
+    const first = obj.choices[0] as Record<string, unknown> | undefined
+    const msg = (first?.message ?? first?.delta) as Record<string, unknown> | undefined
+    if (typeof msg?.content === 'string') return msg.content
+  }
+  return ''
 }
 
 async function* responseDeltas(stream: ReadableStream): AsyncGenerator<string> {
