@@ -1,6 +1,6 @@
 'use client'
 
-import { Plus } from 'lucide-react'
+import { Plus } from '@sketchyicons/react'
 import { useEffect, useState } from 'react'
 import { LookupPanel } from '@/components/lexicon/lookup-panel'
 import { Button } from '@/components/ui/button'

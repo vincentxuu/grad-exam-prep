@@ -1,6 +1,6 @@
 'use client'
 
-import { ChevronRight } from 'lucide-react'
+import { ChevronRight } from '@sketchyicons/react'
 import { notFound } from 'next/navigation'
 import { Suspense, use, useEffect, useMemo, useState } from 'react'
 import { FlashcardExampleSupport } from '@/components/flashcard/example-support'
@@ -376,7 +376,7 @@ function FlashcardsContent({ params }: Props) {
       <div className="space-y-3">
         <div>
           <div className="flex items-center gap-2 flex-wrap">
-            <h1 className="text-2xl font-bold">
+            <h1 className="text-2xl font-bold font-display">
               {FLASHCARD_EXAM_LABELS[exam as ExamId]} — 閃卡練習
             </h1>
             {dueCount > 0 && <Badge className="text-xs">{dueCount} 張待複習</Badge>}

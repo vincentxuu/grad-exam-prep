@@ -1,6 +1,6 @@
 'use client'
 
-import { CheckCircle2, Circle } from 'lucide-react'
+import { CheckCircle2, Circle, X } from '@sketchyicons/react'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { Suspense, use, useState } from 'react'
@@ -65,7 +65,7 @@ function PlanContent({ exam }: { exam: string }) {
       <div>
         <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
           <div>
-            <h1 className="text-2xl font-bold">{EXAM_LABELS[exam as ExamId]} — 備考計畫</h1>
+            <h1 className="text-2xl font-bold font-display">{EXAM_LABELS[exam as ExamId]} — 備考計畫</h1>
             <p className="text-muted-foreground text-sm mt-1">
               距考試約 {daysToExam} 天 · 目標考期：
               {examDate.toLocaleDateString('zh-TW', { year: 'numeric', month: 'long' })} ·{' '}
@@ -197,7 +197,7 @@ function PlanContent({ exam }: { exam: string }) {
                         title="刪除自訂任務"
                         onClick={() => removeCustomTask(task.id)}
                       >
-                        ✕
+                        <X className="h-3.5 w-3.5" aria-hidden="true" />
                       </Button>
                     )}
                   </div>

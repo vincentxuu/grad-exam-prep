@@ -72,7 +72,7 @@ function LookupContent({ params }: Props) {
   return (
     <div className="space-y-6 max-w-3xl">
       <div>
-        <h1 className="text-2xl font-bold">{EXAM_LABELS[exam as ExamId]} — 查詞</h1>
+        <h1 className="text-2xl font-bold font-display">{EXAM_LABELS[exam as ExamId]} — 查詞</h1>
         <p className="text-muted-foreground text-sm mt-1">
           單字與片語都查得到。查過的字可加入單字庫，進入閃卡的複習排程。
         </p>

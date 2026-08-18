@@ -1,6 +1,6 @@
 'use client'
 
-import { X } from 'lucide-react'
+import { X } from '@sketchyicons/react'
 import { notFound } from 'next/navigation'
 import { Suspense, use, useCallback, useEffect, useState } from 'react'
 import { LookupPanel } from '@/components/lexicon/lookup-panel'
@@ -68,7 +68,7 @@ function ReadingContent({ params }: Props) {
   return (
     <div className="space-y-4 max-w-5xl">
       <div>
-        <h1 className="text-2xl font-bold">{EXAM_LABELS[exam as ExamId]} — 輔助閱讀</h1>
+        <h1 className="text-2xl font-bold font-display">{EXAM_LABELS[exam as ExamId]} — 輔助閱讀</h1>
         <p className="text-muted-foreground text-sm mt-1">
           貼上一段文章或論文，每個字都可以點來查詞。查過的字可以直接加進複習排程。
         </p>

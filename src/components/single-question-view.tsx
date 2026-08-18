@@ -1,5 +1,6 @@
 'use client'
 
+import { ArrowLeft, ArrowRight, Check, X } from '@sketchyicons/react'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import { LookupSheet } from '@/components/lexicon/lookup-sheet'
@@ -99,7 +100,8 @@ export function SingleQuestionView({
           className="ml-auto text-xs text-muted-foreground h-7"
           onClick={() => router.push(drillNavigation.completionHref)}
         >
-          ← {returnsToLesson ? '返回課程' : '返回題庫'}
+          <ArrowLeft className="h-4 w-4" aria-hidden="true" />
+          {returnsToLesson ? '返回課程' : '返回題庫'}
         </Button>
       </div>
 
@@ -241,9 +243,14 @@ export function SingleQuestionView({
             {canAutoGrade ? (
               <div className="flex items-center gap-3 flex-wrap">
                 <span
-                  className={`text-base font-semibold ${isCorrect ? 'text-[hsl(var(--success))]' : 'text-destructive'}`}
+                  className={`inline-flex items-center gap-1 text-base font-semibold ${isCorrect ? 'text-[hsl(var(--success))]' : 'text-destructive'}`}
                 >
-                  {isCorrect ? '✓ 答對了！' : '✗ 答錯了'}
+                  {isCorrect ? (
+                    <Check className="h-4 w-4" aria-hidden="true" />
+                  ) : (
+                    <X className="h-4 w-4" aria-hidden="true" />
+                  )}
+                  {isCorrect ? '答對了！' : '答錯了'}
                 </span>
                 {selected && (
                   <Badge variant={isCorrect ? 'default' : 'destructive'} className="uppercase">
@@ -309,7 +316,8 @@ export function SingleQuestionView({
             disabled={submitting}
             onClick={() => submitResult('correct')}
           >
-            ✓ 會了
+            <Check className="h-4 w-4" aria-hidden="true" />
+            會了
           </Button>
           <Button
             variant="destructive"
@@ -317,7 +325,8 @@ export function SingleQuestionView({
             disabled={submitting}
             onClick={() => submitResult('wrong')}
           >
-            ✗ 不會
+            <X className="h-4 w-4" aria-hidden="true" />
+            不會
           </Button>
         </div>
       )}
@@ -328,7 +337,8 @@ export function SingleQuestionView({
           size="lg"
           onClick={() => router.push(drillNavigation.nextHref ?? drillNavigation.completionHref)}
         >
-          {drillNavigation.nextHref ? '下一題 →' : returnsToLesson ? '返回課程' : '返回題庫'}
+          {drillNavigation.nextHref ? '下一題' : returnsToLesson ? '返回課程' : '返回題庫'}
+          {drillNavigation.nextHref && <ArrowRight className="h-4 w-4" aria-hidden="true" />}
         </Button>
       ) : null}
     </div>

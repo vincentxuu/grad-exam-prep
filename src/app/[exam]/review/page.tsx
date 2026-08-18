@@ -1,5 +1,6 @@
 'use client'
 
+import { Check, X } from '@sketchyicons/react'
 import { notFound } from 'next/navigation'
 import { use, useState, useEffect } from 'react'
 import { Badge } from '@/components/ui/badge'
@@ -46,7 +47,7 @@ export default function ReviewPage({ params }: Props) {
   if (reviewQuestions.length === 0) {
     return (
       <div className="space-y-2 max-w-lg">
-        <h1 className="text-2xl font-bold">{EXAM_LABELS[exam as ExamId]} — 錯題本</h1>
+        <h1 className="text-2xl font-bold font-display">{EXAM_LABELS[exam as ExamId]} — 錯題本</h1>
         <p className="text-muted-foreground text-sm">目前沒有錯題，繼續加油！</p>
       </div>
     )
@@ -55,7 +56,7 @@ export default function ReviewPage({ params }: Props) {
   if (currentIdx >= reviewQuestions.length) {
     return (
       <div className="space-y-2 max-w-lg">
-        <h1 className="text-2xl font-bold">{EXAM_LABELS[exam as ExamId]} — 錯題本</h1>
+        <h1 className="text-2xl font-bold font-display">{EXAM_LABELS[exam as ExamId]} — 錯題本</h1>
         <p className="text-sm">本輪 {reviewQuestions.length} 題複習完畢！</p>
         <Button onClick={() => { setCurrentIdx(0); setRevealed(false); setSelected(null) }}>
           再來一輪
@@ -84,7 +85,7 @@ export default function ReviewPage({ params }: Props) {
   return (
     <div className="space-y-4 max-w-3xl">
       <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold">{EXAM_LABELS[exam as ExamId]} — 錯題本</h1>
+        <h1 className="text-2xl font-bold font-display">{EXAM_LABELS[exam as ExamId]} — 錯題本</h1>
         <span className="text-sm text-muted-foreground">
           {currentIdx + 1} / {reviewQuestions.length}
         </span>
@@ -146,7 +147,8 @@ export default function ReviewPage({ params }: Props) {
             disabled={submitting}
             onClick={() => submitResult('correct')}
           >
-            ✓ 會了（移出錯題本）
+            <Check className="h-4 w-4" aria-hidden="true" />
+            會了（移出錯題本）
           </Button>
           <Button
             variant="outline"
@@ -154,7 +156,8 @@ export default function ReviewPage({ params }: Props) {
             disabled={submitting}
             onClick={() => submitResult('wrong')}
           >
-            ✗ 還不會
+            <X className="h-4 w-4" aria-hidden="true" />
+            還不會
           </Button>
         </div>
       )}

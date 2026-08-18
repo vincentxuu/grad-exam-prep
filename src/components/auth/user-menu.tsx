@@ -1,5 +1,6 @@
 'use client'
 
+import { X } from '@sketchyicons/react'
 import { useState } from 'react'
 import { createPortal } from 'react-dom'
 import { Button } from '@/components/ui/button'
@@ -76,13 +77,14 @@ export function UserMenu() {
           <h2 className="font-medium">{mode === 'login' ? '登入' : '註冊'}</h2>
           <button
             type="button"
+            aria-label="關閉登入視窗"
             onClick={() => {
               setOpen(false)
               setError(null)
             }}
-            className="text-muted-foreground hover:text-foreground"
+            className="rounded-sm p-1 text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           >
-            ✕
+            <X className="h-4 w-4" aria-hidden="true" />
           </button>
         </div>
 

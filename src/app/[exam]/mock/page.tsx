@@ -1,5 +1,6 @@
 'use client'
 
+import { ArrowLeft, ArrowRight, Check, Timer, TriangleAlert, X } from '@sketchyicons/react'
 import { notFound } from 'next/navigation'
 import { Suspense, use, useCallback, useEffect, useState } from 'react'
 import { PageLoading } from '@/components/page-loading'
@@ -123,7 +124,7 @@ function MockExamContent({ params }: Props) {
 
     return (
       <div className="space-y-6 max-w-lg">
-        <h1 className="text-2xl font-bold">{EXAM_LABELS[exam as ExamId]} — 模擬考</h1>
+        <h1 className="text-2xl font-bold font-display">{EXAM_LABELS[exam as ExamId]} — 模擬考</h1>
 
         <div className="space-y-3">
           <div>
@@ -177,8 +178,9 @@ function MockExamContent({ params }: Props) {
 
         {excludedPaper && (
           <div className="rounded-md border border-amber-300 bg-amber-50 px-4 py-3 text-sm dark:border-amber-800 dark:bg-amber-950">
-            <p className="font-semibold text-amber-900 dark:text-amber-200">
-              ⚠️ 這一年的卷子暫時不能拿來模擬考
+            <p className="flex items-center gap-1.5 font-semibold text-amber-900 dark:text-amber-200">
+              <TriangleAlert className="h-4 w-4 shrink-0" aria-hidden="true" />
+              這一年的卷子暫時不能拿來模擬考
             </p>
             <p className="mt-1 text-amber-800 dark:text-amber-300">{excludedPaper.contentIssue}</p>
             <p className="mt-1 text-amber-800 dark:text-amber-300">
@@ -211,8 +213,11 @@ function MockExamContent({ params }: Props) {
           <span>
             {currentIdx + 1} / {questions.length} 題
           </span>
-          <span className={secondsLeft < 300 ? 'text-red-500 font-bold' : ''}>
-            ⏱ {formatTime(secondsLeft)}
+          <span
+            className={`inline-flex items-center gap-1 ${secondsLeft < 300 ? 'text-red-500 font-bold' : ''}`}
+          >
+            <Timer className="h-4 w-4" aria-hidden="true" />
+            {formatTime(secondsLeft)}
           </span>
         </div>
 
@@ -245,11 +250,13 @@ function MockExamContent({ params }: Props) {
             disabled={currentIdx === 0}
             onClick={() => setCurrentIdx((i) => i - 1)}
           >
-            ← 上一題
+            <ArrowLeft className="h-4 w-4" aria-hidden="true" />
+            上一題
           </Button>
           {currentIdx < questions.length - 1 ? (
             <Button onClick={() => setCurrentIdx((i) => i + 1)} className="flex-1">
-              下一題 →
+              下一題
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Button>
           ) : (
             <Button onClick={handleSubmit} className="flex-1 bg-green-600 hover:bg-green-700">
@@ -263,10 +270,10 @@ function MockExamContent({ params }: Props) {
 
   return (
     <div className="space-y-4 max-w-3xl">
-      <h2 className="text-xl font-bold">成績單</h2>
+      <h2 className="text-xl font-bold font-display">成績單</h2>
       <Card>
         <CardContent className="py-4 px-4 text-center space-y-1">
-          <p className="text-3xl font-bold">
+          <p className="text-3xl font-bold font-mono tabular-nums">
             {score} / {total}
           </p>
           <p className="text-muted-foreground text-sm">
@@ -285,7 +292,11 @@ function MockExamContent({ params }: Props) {
             <Card key={q.id} className={isCorrect ? 'border-green-200' : 'border-red-200'}>
               <CardContent className="py-3 px-4 space-y-1">
                 <div className="flex gap-2 items-center text-sm">
-                  <span>{isCorrect ? '✓' : '✗'}</span>
+                  {isCorrect ? (
+                    <Check className="h-4 w-4 text-green-600" aria-hidden="true" />
+                  ) : (
+                    <X className="h-4 w-4 text-red-600" aria-hidden="true" />
+                  )}
                   <span className="font-medium">第 {q.number} 題</span>
                   <span className="text-muted-foreground">你答：{userAns ?? '未作答'}</span>
                   {!isCorrect && <span className="text-green-600">正解：{correct ?? '?'}</span>}

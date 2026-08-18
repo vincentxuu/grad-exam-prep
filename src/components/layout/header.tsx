@@ -1,9 +1,11 @@
 'use client'
 
+import { GraduationCap } from '@sketchyicons/react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { UserMenu } from '@/components/auth/user-menu'
 import { QuickCapture } from '@/components/lexicon/quick-capture'
+import { ThemeToggle } from '@/components/layout/theme-toggle'
 import { cn } from '@/lib/utils'
 
 const staticItems = [
@@ -47,7 +49,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center gap-2 sm:gap-6 min-w-0">
         <Link href="/" className="flex items-center gap-1.5 font-bold text-primary shrink-0">
-          <span className="text-lg">🎓</span>
+          <GraduationCap className="h-5 w-5" aria-hidden="true" />
           <span className="hidden sm:inline text-sm">台大研所備考</span>
         </Link>
 
@@ -68,6 +70,7 @@ export function Header() {
           ))}
         </nav>
 
+        <ThemeToggle />
         <QuickCapture />
         <UserMenu />
       </div>

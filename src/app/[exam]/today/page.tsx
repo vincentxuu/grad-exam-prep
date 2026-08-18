@@ -357,7 +357,7 @@ function TodayContent({ params }: Props) {
               <ListChecks className="h-4 w-4 text-primary" />
               <h2 className="text-sm font-semibold">本階段進度</h2>
             </div>
-            <p className="mt-3 text-3xl font-bold tabular-nums">
+            <p className="mt-3 text-3xl font-bold font-mono tabular-nums">
               {currentPhase?.completionPct ?? 0}%
             </p>
             <p className="mt-1 text-xs text-muted-foreground">

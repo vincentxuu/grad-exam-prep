@@ -35,10 +35,10 @@ describe('single question drill navigation', () => {
     )
 
     expect(screen.getByText('本課 1/2')).toBeInTheDocument()
-    expect(screen.getByRole('button', { name: '← 返回課程' })).toBeEnabled()
+    expect(screen.getByRole('button', { name: '返回課程' })).toBeEnabled()
 
     fireEvent.click(screen.getByRole('button', { name: '查看可用資訊' }))
-    fireEvent.click(screen.getByRole('button', { name: '下一題 →' }))
+    fireEvent.click(screen.getByRole('button', { name: '下一題' }))
 
     expect(push).toHaveBeenCalledWith(
       '/im/questions/q-pp-im-it-106-13?mode=drill&position=2&total=2&returnTo=%2Fim%2Fsubjects%2Fim-it%2Flessons%2Flesson-im-it-architecture'

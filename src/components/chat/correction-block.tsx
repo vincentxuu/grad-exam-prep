@@ -1,5 +1,6 @@
 'use client'
 
+import { ChevronDown } from '@sketchyicons/react'
 import { useState } from 'react'
 import { Badge } from '@/components/ui/badge'
 import { CORRECTION_KIND_LABEL, type Correction } from '@/types/chat'
@@ -17,9 +18,13 @@ export function CorrectionBlock({ corrections }: { corrections: Correction[] }) 
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
-        className="text-xs text-amber-700 dark:text-amber-400 hover:underline"
+        className="inline-flex items-center gap-1 text-xs text-amber-700 hover:underline dark:text-amber-400"
       >
-        {open ? '收起訂正' : `${corrections.length} 處可以更好 ▾`}
+        {open ? '收起訂正' : `${corrections.length} 處可以更好`}
+        <ChevronDown
+          className={`h-3 w-3 transition-transform ${open ? 'rotate-180' : ''}`}
+          aria-hidden="true"
+        />
       </button>
 
       {open && (

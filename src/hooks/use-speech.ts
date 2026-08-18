@@ -32,16 +32,16 @@ const LANG_LABELS: Record<string, string> = {
 }
 
 const CLOUDFLARE_VOICES: VoiceOption[] = [
-  { voiceURI: 'luna', name: 'Luna', lang: 'en-US', label: '🤖 Luna（女聲）' },
-  { voiceURI: 'athena', name: 'Athena', lang: 'en-US', label: '🤖 Athena（女聲）' },
-  { voiceURI: 'stella', name: 'Stella', lang: 'en-US', label: '🤖 Stella（女聲）' },
-  { voiceURI: 'apollo', name: 'Apollo', lang: 'en-US', label: '🤖 Apollo（男聲）' },
-  { voiceURI: 'orion', name: 'Orion', lang: 'en-US', label: '🤖 Orion（男聲）' },
-  { voiceURI: 'helios', name: 'Helios', lang: 'en-US', label: '🤖 Helios（男聲）' },
-  { voiceURI: 'perseus', name: 'Perseus', lang: 'en-US', label: '🤖 Perseus（男聲）' },
-  { voiceURI: 'angus', name: 'Angus', lang: 'en-US', label: '🤖 Angus（男聲）' },
-  { voiceURI: 'orpheus', name: 'Orpheus', lang: 'en-US', label: '🤖 Orpheus（男聲）' },
-  { voiceURI: 'arcas', name: 'Arcas', lang: 'en-US', label: '🤖 Arcas（男聲）' },
+  { voiceURI: 'luna', name: 'Luna', lang: 'en-US', label: 'Luna（女聲）' },
+  { voiceURI: 'athena', name: 'Athena', lang: 'en-US', label: 'Athena（女聲）' },
+  { voiceURI: 'stella', name: 'Stella', lang: 'en-US', label: 'Stella（女聲）' },
+  { voiceURI: 'apollo', name: 'Apollo', lang: 'en-US', label: 'Apollo（男聲）' },
+  { voiceURI: 'orion', name: 'Orion', lang: 'en-US', label: 'Orion（男聲）' },
+  { voiceURI: 'helios', name: 'Helios', lang: 'en-US', label: 'Helios（男聲）' },
+  { voiceURI: 'perseus', name: 'Perseus', lang: 'en-US', label: 'Perseus（男聲）' },
+  { voiceURI: 'angus', name: 'Angus', lang: 'en-US', label: 'Angus（男聲）' },
+  { voiceURI: 'orpheus', name: 'Orpheus', lang: 'en-US', label: 'Orpheus（男聲）' },
+  { voiceURI: 'arcas', name: 'Arcas', lang: 'en-US', label: 'Arcas（男聲）' },
 ]
 
 

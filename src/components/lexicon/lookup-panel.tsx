@@ -1,6 +1,6 @@
 'use client'
 
-import { Loader2, Search } from 'lucide-react'
+import { Check, Loader2, Search } from '@sketchyicons/react'
 import { useCallback, useEffect, useState } from 'react'
 import { EntryCard } from '@/components/lexicon/entry-card'
 import { PersonalBridge } from '@/components/lexicon/personal-bridge'
@@ -169,7 +169,10 @@ export function LookupPanel({ term, persona, source, showInput = true, onSaveCha
           <div className="flex items-center gap-2 flex-wrap border-t pt-3">
             {savedWords.includes(state.data.entry.headword) ? (
               <>
-                <span className="text-xs text-muted-foreground">✓ 已在單字庫</span>
+                <span className="inline-flex items-center gap-1 text-xs text-muted-foreground">
+                  <Check className="h-3 w-3" aria-hidden="true" />
+                  已在單字庫
+                </span>
                 <Button
                   variant="ghost"
                   size="sm"

@@ -1,5 +1,6 @@
 'use client'
 
+import { Check, Plus } from '@sketchyicons/react'
 import { useState } from 'react'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -84,7 +85,10 @@ export function SessionSummaryView({ summary, onRestart }: Props) {
               <div key={w} className="flex items-center gap-2 rounded-md border px-3 py-2 text-sm">
                 <span className="font-medium">{w}</span>
                 {promoted.includes(w) ? (
-                  <span className="text-xs text-muted-foreground ml-auto">✓ 已記為熟悉</span>
+                  <span className="ml-auto inline-flex items-center gap-1 text-xs text-muted-foreground">
+                    <Check className="h-3 w-3" aria-hidden="true" />
+                    已記為熟悉
+                  </span>
                 ) : (
                   <Button
                     size="sm"
@@ -144,8 +148,9 @@ export function SessionSummaryView({ summary, onRestart }: Props) {
           <div className="flex flex-wrap gap-1.5">
             {summary.newWords.map((w) =>
               added.includes(w) ? (
-                <Badge key={w} variant="secondary" className="text-xs">
-                  ✓ {w}
+                <Badge key={w} variant="secondary" className="gap-1 text-xs">
+                  <Check className="h-3 w-3" aria-hidden="true" />
+                  {w}
                 </Badge>
               ) : (
                 <Button
@@ -155,7 +160,8 @@ export function SessionSummaryView({ summary, onRestart }: Props) {
                   className="h-7 text-xs"
                   onClick={() => addWord(w)}
                 >
-                  + {w}
+                  <Plus className="h-3 w-3" aria-hidden="true" />
+                  {w}
                 </Button>
               )
             )}

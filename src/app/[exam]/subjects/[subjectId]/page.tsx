@@ -1,6 +1,7 @@
 import {
   BookOpen,
   Clapperboard,
+  ExternalLink,
   Globe,
   NotebookPen,
   School,
@@ -114,7 +115,8 @@ export default async function SubjectPage({ params }: Props) {
                         rel="noopener noreferrer"
                         className="text-xs text-primary hover:underline"
                       >
-                        前往連結 →
+                        前往連結
+                        <ExternalLink className="ml-1 inline h-3 w-3" aria-hidden="true" />
                       </a>
                     )}
                   </div>

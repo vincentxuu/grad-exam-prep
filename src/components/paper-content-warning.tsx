@@ -1,3 +1,4 @@
+import { TriangleAlert } from '@sketchyicons/react'
 import { getPaperContentIssue } from '@/lib/content'
 
 const LABEL = {
@@ -17,8 +18,9 @@ export function PaperContentWarning({ paperId }: { paperId: string }) {
 
   return (
     <div className="rounded-md border border-amber-300 bg-amber-50 px-4 py-3 text-sm dark:border-amber-800 dark:bg-amber-950">
-      <p className="font-semibold text-amber-900 dark:text-amber-200">
-        ⚠️ {LABEL[paper.contentStatus]}
+      <p className="flex items-center gap-1.5 font-semibold text-amber-900 dark:text-amber-200">
+        <TriangleAlert className="h-4 w-4 shrink-0" aria-hidden="true" />
+        {LABEL[paper.contentStatus]}
       </p>
       <p className="mt-1 text-amber-800 dark:text-amber-300">{paper.contentIssue}</p>
       <p className="mt-1 text-amber-800 dark:text-amber-300">

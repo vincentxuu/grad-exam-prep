@@ -79,7 +79,7 @@ export default function NotesPage() {
   return (
     <div className="space-y-6 max-w-2xl">
       <div>
-        <h1 className="text-2xl font-bold">時事筆記</h1>
+        <h1 className="text-2xl font-bold font-display">時事筆記</h1>
         <p className="text-muted-foreground text-sm mt-1">
           記錄科技時事、考試重點、個人心得，同步至雲端
         </p>

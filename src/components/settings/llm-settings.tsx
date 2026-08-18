@@ -1,5 +1,6 @@
 'use client'
 
+import { Check, X } from '@sketchyicons/react'
 import { useCallback, useEffect, useState } from 'react'
 import { ModelPicker } from '@/components/settings/model-picker'
 import { TrialChat } from '@/components/settings/trial-chat'
@@ -40,6 +41,11 @@ interface PingResult {
   ms: number
 }
 
+interface StatusMessage {
+  tone: 'success' | 'error'
+  message: string
+}
+
 /** 表單全部用字串，送出時才轉型 —— 清空欄位要能表達「回到預設」。 */
 type Form = Record<
   'provider' | 'model' | 'fallbackProvider' | 'fallbackModel' | 'lexiconQuota' | 'chatQuota',
@@ -62,7 +68,7 @@ export function LlmSettings() {
   const { user } = useAuth()
   const [loaded, setLoaded] = useState<LoadedConfig | null>(null)
   const [form, setForm] = useState<Form>(EMPTY_FORM)
-  const [status, setStatus] = useState<string | null>(null)
+  const [status, setStatus] = useState<StatusMessage | null>(null)
   const [ping, setPing] = useState<PingResult | null>(null)
   const [busy, setBusy] = useState<'load' | 'save' | 'test' | null>(null)
 
@@ -72,7 +78,7 @@ export function LlmSettings() {
     try {
       const res = await fetch('/api/llm-config', { headers: getAuthHeader() })
       if (res.status === 401) {
-        setStatus('未登入或權限不足')
+        setStatus({ tone: 'error', message: '未登入或權限不足' })
         return
       }
       if (!res.ok) throw new Error()
@@ -87,7 +93,7 @@ export function LlmSettings() {
         chatQuota: data.config.chatQuota?.toString() ?? '',
       })
     } catch {
-      setStatus('讀取失敗')
+      setStatus({ tone: 'error', message: '讀取失敗' })
     } finally {
       setBusy(null)
     }
@@ -112,13 +118,16 @@ export function LlmSettings() {
       })
       const data = (await res.json()) as { error?: string }
       if (!res.ok) {
-        setStatus(data.error ?? '存檔失敗')
+        setStatus({ tone: 'error', message: data.error ?? '存檔失敗' })
         return
       }
-      setStatus('✓ 已存檔。既有的 worker isolate 最多一分鐘後換到新設定。')
+      setStatus({
+        tone: 'success',
+        message: '已存檔。既有的 worker isolate 最多一分鐘後換到新設定。',
+      })
       await load()
     } catch {
-      setStatus('存檔失敗')
+      setStatus({ tone: 'error', message: '存檔失敗' })
     } finally {
       setBusy(null)
     }
@@ -136,12 +145,12 @@ export function LlmSettings() {
       })
       const data = (await res.json()) as PingResult & { error?: string }
       if (!res.ok) {
-        setStatus(data.error ?? '測試失敗')
+        setStatus({ tone: 'error', message: data.error ?? '測試失敗' })
         return
       }
       setPing(data)
     } catch {
-      setStatus('測試失敗')
+      setStatus({ tone: 'error', message: '測試失敗' })
     } finally {
       setBusy(null)
     }
@@ -251,8 +260,13 @@ export function LlmSettings() {
                 : 'border-destructive/40 bg-destructive/10'
             }`}
           >
-            <p className="font-medium">
-              {ping.ok ? '✓ 通了' : '✗ 打不通'} —{' '}
+            <p className="flex items-center gap-1.5 font-medium">
+              {ping.ok ? (
+                <Check aria-hidden="true" className="size-4 shrink-0 text-green-700" />
+              ) : (
+                <X aria-hidden="true" className="size-4 shrink-0 text-destructive" />
+              )}
+              <span>{ping.ok ? '通了' : '打不通'} —</span>{' '}
               <code className="font-mono text-xs">{ping.route}</code>
               {ping.ok && <span className="text-muted-foreground"> · {ping.ms} ms</span>}
             </p>
@@ -348,7 +362,21 @@ export function LlmSettings() {
         {busy === 'load' && <Badge variant="secondary">讀取中</Badge>}
       </div>
 
-      {status && <p className="text-sm">{status}</p>}
+      {status && (
+        <p
+          className={`flex items-start gap-1.5 text-sm ${
+            status.tone === 'error' ? 'text-destructive' : 'text-green-700'
+          }`}
+          role="status"
+        >
+          {status.tone === 'success' ? (
+            <Check aria-hidden="true" className="mt-0.5 size-4 shrink-0" />
+          ) : (
+            <X aria-hidden="true" className="mt-0.5 size-4 shrink-0" />
+          )}
+          <span>{status.message}</span>
+        </p>
+      )}
 
       <p className="text-muted-foreground text-xs leading-relaxed">
         Cloudflare 直接使用部署設定裡的 AI binding。其他 provider 的 API key

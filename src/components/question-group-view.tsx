@@ -1,5 +1,6 @@
 'use client'
 
+import { ArrowLeft, ArrowRight, Check, X } from '@sketchyicons/react'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import { LookupSheet } from '@/components/lexicon/lookup-sheet'
@@ -138,7 +139,8 @@ export function QuestionGroupView({
           className="ml-auto text-xs text-muted-foreground h-7"
           onClick={() => router.push(completionHref ?? `/${exam}/questions`)}
         >
-          ← {returnsToLesson ? '返回課程' : '返回題庫'}
+          <ArrowLeft className="h-4 w-4" aria-hidden="true" />
+          {returnsToLesson ? '返回課程' : '返回題庫'}
         </Button>
       </div>
 
@@ -226,7 +228,11 @@ export function QuestionGroupView({
                       <span
                         className={`text-xs font-medium shrink-0 ${isCorrect ? 'text-[hsl(var(--success))]' : 'text-destructive'}`}
                       >
-                        {isCorrect ? '✓' : '✗'}
+                        {isCorrect ? (
+                          <Check className="inline h-4 w-4" aria-hidden="true" />
+                        ) : (
+                          <X className="inline h-4 w-4" aria-hidden="true" />
+                        )}
                         {!isCorrect && answerData && (
                           <span className="ml-1 uppercase">正解 {answerData.answer}</span>
                         )}
@@ -336,10 +342,13 @@ export function QuestionGroupView({
               </Card>
               <Button onClick={handleNext} className="w-full" size="lg" disabled={submitting}>
                 {nextHref || nextQuestionId
-                  ? '下一組 →'
+                  ? '下一組'
                   : returnsToLesson
                     ? '返回課程'
                     : '返回題庫'}
+                {(nextHref || nextQuestionId) && (
+                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                )}
               </Button>
             </div>
           )}

@@ -1,3 +1,4 @@
+import { CalendarDays, LibraryBig, Scale, type SketchyIcon, Trophy } from '@sketchyicons/react'
 import Link from 'next/link'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
@@ -7,7 +8,7 @@ export default function HomePage() {
   return (
     <div className="space-y-8">
       <section className="text-center space-y-3 py-6">
-        <h1 className="text-3xl font-bold tracking-tight">台大研所備考</h1>
+        <h1 className="text-3xl font-bold font-display tracking-tight">台大研所備考</h1>
         <p className="text-muted-foreground max-w-xl mx-auto">
           台大資管所 & 資工所完整備考資源：科目主題樹、備考時程、閃卡練習、考古題索引
         </p>
@@ -57,10 +58,15 @@ export default function HomePage() {
       </div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center text-sm text-muted-foreground">
-        <QuickLink href="/guides" icon="🏆" label="上榜心得" desc="時間分配、各科策略、心態" />
-        <QuickLink href="/compare" icon="⚖️" label="兩所比較" desc="考試形式、難度、適合對象" />
-        <QuickLink href="/resources" icon="📚" label="資源庫" desc="補習班、書目、YouTube、PTT" />
-        <QuickLink href="/im" icon="📅" label="備考計畫" desc="8個月完整時程規劃" />
+        <QuickLink href="/guides" icon={Trophy} label="上榜心得" desc="時間分配、各科策略、心態" />
+        <QuickLink href="/compare" icon={Scale} label="兩所比較" desc="考試形式、難度、適合對象" />
+        <QuickLink
+          href="/resources"
+          icon={LibraryBig}
+          label="資源庫"
+          desc="補習班、書目、YouTube、PTT"
+        />
+        <QuickLink href="/im" icon={CalendarDays} label="備考計畫" desc="8個月完整時程規劃" />
       </div>
     </div>
   )
@@ -82,13 +88,15 @@ function QuickLink({
   desc,
 }: {
   href: string
-  icon: string
+  icon: SketchyIcon
   label: string
   desc: string
 }) {
+  const Icon = icon
+
   return (
     <Link href={href} className="block p-4 rounded-lg border hover:bg-accent transition-colors">
-      <div className="text-2xl mb-1">{icon}</div>
+      <Icon className="mx-auto mb-2 h-6 w-6 text-primary" aria-hidden="true" />
       <div className="font-medium text-foreground">{label}</div>
       <div className="text-xs mt-0.5">{desc}</div>
     </Link>

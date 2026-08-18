@@ -1,5 +1,6 @@
 'use client'
 
+import { ArrowRight, Check, Download, ExternalLink, NotebookPen, X } from '@sketchyicons/react'
 import { notFound } from 'next/navigation'
 import { use, useState } from 'react'
 import { Badge } from '@/components/ui/badge'
@@ -12,7 +13,6 @@ import { isAuthenticated } from '@/lib/auth'
 import { setPaperPracticeServer } from '@/lib/server-storage'
 import { localStorageImpl } from '@/lib/storage'
 import type { ExamId } from '@/types/content'
-import { Download } from 'lucide-react'
 import pastPapersData from '../../../../public/data/past-papers.json'
 
 interface Props {
@@ -88,7 +88,7 @@ export default function PastPapersPage({ params }: Props) {
   return (
     <div className="space-y-4 max-w-3xl">
       <div>
-        <h1 className="text-2xl font-bold">{EXAM_LABELS[exam as ExamId]} — 考古題</h1>
+        <h1 className="text-2xl font-bold font-display">{EXAM_LABELS[exam as ExamId]} — 考古題</h1>
         <p className="text-muted-foreground text-sm mt-1">
           已練習 {practicedCount} / {papers.filter((p) => p.url || p.localPath).length} 份
         </p>
@@ -128,13 +128,15 @@ export default function PastPapersPage({ params }: Props) {
                         rel="noopener noreferrer"
                         className="text-xs text-primary hover:underline"
                       >
-                        新分頁 ↗
+                        新分頁
+                        <ExternalLink className="inline h-3 w-3" aria-hidden="true" />
                       </a>
                       <button
                         onClick={() => setViewingPdf(null)}
                         className="text-xs text-muted-foreground hover:text-foreground"
                       >
-                        關閉 ✕
+                        關閉
+                        <X className="inline h-3 w-3" aria-hidden="true" />
                       </button>
                     </div>
                   </div>
@@ -202,7 +204,8 @@ export default function PastPapersPage({ params }: Props) {
                                     href={`/${exam}/questions?paper=${paper.id}&subject=${paper.subjectId}`}
                                     className="text-xs text-primary hover:underline whitespace-nowrap"
                                   >
-                                    逐題練習（{questionCount}）→
+                                    逐題練習（{questionCount}）
+                                    <ArrowRight className="inline h-3 w-3" aria-hidden="true" />
                                   </a>
                                   {/* PDF 是對的，出問題的是抽進題庫的那份文字 */}
                                   {paper.contentStatus && (
@@ -232,9 +235,13 @@ export default function PastPapersPage({ params }: Props) {
                                   onChange={() => togglePracticed(paper.id)}
                                   className="h-3.5 w-3.5 accent-primary"
                                 />
-                                <span className="text-xs text-muted-foreground">
+                                <span className="inline-flex items-center gap-1 text-xs text-muted-foreground">
+                                  {practiced && <Check className="h-3 w-3" aria-hidden="true" />}
                                   {practiced
-                                    ? `✓ ${new Date(practiceData.practicedAt).toLocaleDateString('zh-TW', { month: 'short', day: 'numeric' })}`
+                                    ? new Date(practiceData.practicedAt).toLocaleDateString('zh-TW', {
+                                        month: 'short',
+                                        day: 'numeric',
+                                      })
                                     : '已練習'}
                                 </span>
                               </label>
@@ -253,16 +260,25 @@ export default function PastPapersPage({ params }: Props) {
                                         if (e.key === 'Escape') setEditingNotes(null)
                                       }}
                                     />
-                                    <Button size="sm" variant="ghost" className="h-7 px-2 text-xs" onClick={() => saveNotes(paper.id)}>✓</Button>
+                                    <Button
+                                      size="icon"
+                                      variant="ghost"
+                                      className="h-7 w-7"
+                                      aria-label="儲存筆記"
+                                      onClick={() => saveNotes(paper.id)}
+                                    >
+                                      <Check className="h-4 w-4" aria-hidden="true" />
+                                    </Button>
                                   </div>
                                 ) : (
                                   <Button
                                     variant="ghost"
                                     size="sm"
-                                    className="h-6 px-2 text-xs text-muted-foreground"
+                                    className="h-6 gap-1 px-2 text-xs text-muted-foreground"
                                     onClick={() => { setEditingNotes(paper.id); setNoteText(practiceData?.notes ?? '') }}
                                   >
-                                    {practiceData?.notes ? `📝 ${practiceData.notes}` : '+ 筆記'}
+                                    <NotebookPen className="h-3 w-3" aria-hidden="true" />
+                                    {practiceData?.notes ?? '新增筆記'}
                                   </Button>
                                 )
                               )}
