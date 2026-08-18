@@ -9,7 +9,7 @@ import { createModel } from '@/lib/llm/model'
 
 const route = {
   provider: 'cloudflare' as const,
-  model: '@cf/meta/llama-3.3-70b-instruct-fp8-fast',
+  model: '@cf/zai-org/glm-4.7-flash',
   fallback: false,
 }
 
