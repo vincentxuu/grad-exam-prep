@@ -5,7 +5,7 @@ import {
   Layers,
   ListChecks,
   TimerReset,
-} from 'lucide-react'
+} from '@sketchyicons/react'
 import Link from 'next/link'
 
 const DAILY_STEPS = [
@@ -50,7 +50,7 @@ export function ItPracticeRoute() {
             <p className="font-mono text-[11px] font-semibold tracking-[0.18em] text-primary uppercase">
               IT study route
             </p>
-            <h2 id="it-practice-title" className="mt-1 text-xl font-bold tracking-tight">
+            <h2 id="it-practice-title" className="mt-1 text-xl font-bold font-display tracking-tight">
               計概每天三步，選擇題拿穩
             </h2>
             <p className="mt-1 max-w-2xl text-sm text-muted-foreground">

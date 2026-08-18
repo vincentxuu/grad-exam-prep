@@ -25,7 +25,7 @@ export default async function ExamPage({ params }: Props) {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-bold">{examData.name}</h1>
+        <h1 className="text-2xl font-bold font-display">{examData.name}</h1>
         <p className="text-muted-foreground text-sm mt-1">{examData.format.note}</p>
       </div>
 

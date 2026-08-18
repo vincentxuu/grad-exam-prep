@@ -11,7 +11,7 @@ import {
   ListChecks,
   Repeat2,
   Target,
-} from 'lucide-react'
+} from '@sketchyicons/react'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { type ReactNode, Suspense, use, useMemo, useState } from 'react'
@@ -125,7 +125,7 @@ function TodayContent({ params }: Props) {
               })}
             </p>
             <div>
-              <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">今天只走一輪</h1>
+              <h1 className="text-2xl font-bold font-display tracking-tight sm:text-3xl">今天只走一輪</h1>
               <p className="mt-2 max-w-2xl text-sm leading-6 text-muted-foreground">
                 先把昨天的知識叫回來，再推進新內容。今天的完成不是「看過」，而是至少有一次不看資料的正確輸出。
               </p>

@@ -5,7 +5,7 @@ import {
   Newspaper,
   PenLine,
   RefreshCcw,
-} from 'lucide-react'
+} from '@sketchyicons/react'
 import Link from 'next/link'
 
 const DAILY_STEPS = [
@@ -50,7 +50,7 @@ export function MisPracticeRoute() {
             <p className="font-mono text-[11px] font-semibold tracking-[0.18em] text-primary uppercase">
               MIS study route
             </p>
-            <h2 id="mis-practice-title" className="mt-1 text-xl font-bold tracking-tight">
+            <h2 id="mis-practice-title" className="mt-1 text-xl font-bold font-display tracking-tight">
               MIS 的申論，靠框架和案例
             </h2>
             <p className="mt-1 max-w-2xl text-sm text-muted-foreground">

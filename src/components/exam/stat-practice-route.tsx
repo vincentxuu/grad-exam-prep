@@ -5,7 +5,7 @@ import {
   ClipboardCheck,
   Info,
   Layers,
-} from 'lucide-react'
+} from '@sketchyicons/react'
 import Link from 'next/link'
 
 const DAILY_STEPS = [
@@ -50,7 +50,7 @@ export function StatPracticeRoute() {
             <p className="font-mono text-[11px] font-semibold tracking-[0.18em] text-primary uppercase">
               Stat study route
             </p>
-            <h2 id="stat-practice-title" className="mt-1 text-xl font-bold tracking-tight">
+            <h2 id="stat-practice-title" className="mt-1 text-xl font-bold font-display tracking-tight">
               統計新考科，公式 × 練題雙軌
             </h2>
             <p className="mt-1 max-w-2xl text-sm text-muted-foreground">
