@@ -1,14 +1,17 @@
 'use client'
 
-import { ChevronDown, Download, GraduationCap, Settings, User } from '@sketchyicons/react'
+import { ChevronDown, Download, GraduationCap, Menu, Settings, User } from '@sketchyicons/react'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
-import { QuickCapture } from '@/components/lexicon/quick-capture'
+import { Fragment, useState } from 'react'
 import { ThemeToggle } from '@/components/layout/theme-toggle'
+import { QuickCapture } from '@/components/lexicon/quick-capture'
+import { Button } from '@/components/ui/button'
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+  DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
@@ -70,7 +73,7 @@ function ExamSwitcher({ exam }: { exam: string }) {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger className="flex items-center gap-1 rounded-md px-2 py-1 text-sm font-medium hover:bg-accent transition-colors">
+      <DropdownMenuTrigger className="flex shrink-0 items-center gap-1 whitespace-nowrap rounded-md px-2 py-1 text-sm font-medium hover:bg-accent transition-colors">
         {current.label}
         <ChevronDown className="h-3 w-3 text-muted-foreground" aria-hidden="true" />
       </DropdownMenuTrigger>
@@ -106,7 +109,7 @@ function NavDropdown({
     <DropdownMenu>
       <DropdownMenuTrigger
         className={cn(
-          'flex items-center gap-0.5 rounded-md px-2 sm:px-3 py-1.5 text-sm transition-colors hover:bg-accent hover:text-accent-foreground whitespace-nowrap',
+          'flex shrink-0 items-center gap-0.5 rounded-md px-2 lg:px-3 py-1.5 text-sm transition-colors hover:bg-accent hover:text-accent-foreground whitespace-nowrap',
           isActive
             ? 'bg-accent text-accent-foreground font-medium'
             : 'text-muted-foreground'
@@ -140,7 +143,7 @@ function MoreDropdown({ pathname }: { pathname: string | null }) {
     <DropdownMenu>
       <DropdownMenuTrigger
         className={cn(
-          'flex items-center gap-0.5 rounded-md px-2 sm:px-3 py-1.5 text-sm transition-colors hover:bg-accent hover:text-accent-foreground whitespace-nowrap',
+          'flex shrink-0 items-center gap-0.5 rounded-md px-2 lg:px-3 py-1.5 text-sm transition-colors hover:bg-accent hover:text-accent-foreground whitespace-nowrap',
           isActive
             ? 'bg-accent text-accent-foreground font-medium'
             : 'text-muted-foreground'
@@ -157,6 +160,69 @@ function MoreDropdown({ pathname }: { pathname: string | null }) {
               className={cn(
                 pathname?.startsWith(item.href) && 'font-medium bg-accent'
               )}
+            >
+              {item.label}
+            </Link>
+          </DropdownMenuItem>
+        ))}
+      </DropdownMenuContent>
+    </DropdownMenu>
+  )
+}
+
+/** Below `md` the inline nav cannot fit, so every section collapses into this menu. */
+function MobileNav({ exam, pathname }: { exam: string; pathname: string | null }) {
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger
+        aria-label="開啟導覽選單"
+        className="flex md:hidden h-8 w-8 shrink-0 items-center justify-center rounded-md text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
+      >
+        <Menu className="h-4 w-4" aria-hidden="true" />
+      </DropdownMenuTrigger>
+      <DropdownMenuContent
+        align="start"
+        className="w-52 max-h-[calc(100vh-5rem)] overflow-y-auto"
+      >
+        <DropdownMenuItem asChild>
+          <Link
+            href={`/${exam}/today`}
+            className={cn(pathname?.endsWith('/today') && 'font-medium bg-accent')}
+          >
+            今日
+          </Link>
+        </DropdownMenuItem>
+
+        {NAV_GROUPS.map((group) => (
+          <Fragment key={group.label}>
+            <DropdownMenuSeparator />
+            <DropdownMenuLabel className="py-1 text-xs font-normal text-muted-foreground">
+              {group.label}
+            </DropdownMenuLabel>
+            {group.items.map((item) => (
+              <DropdownMenuItem key={item.key} asChild>
+                <Link
+                  href={`/${exam}/${item.key}`}
+                  className={cn(
+                    pathname?.startsWith(`/${exam}/${item.key}`) && 'font-medium bg-accent'
+                  )}
+                >
+                  {item.label}
+                </Link>
+              </DropdownMenuItem>
+            ))}
+          </Fragment>
+        ))}
+
+        <DropdownMenuSeparator />
+        <DropdownMenuLabel className="py-1 text-xs font-normal text-muted-foreground">
+          更多
+        </DropdownMenuLabel>
+        {GLOBAL_ITEMS.map((item) => (
+          <DropdownMenuItem key={item.href} asChild>
+            <Link
+              href={item.href}
+              className={cn(pathname?.startsWith(item.href) && 'font-medium bg-accent')}
             >
               {item.label}
             </Link>
@@ -229,9 +295,6 @@ function UserDropdown() {
     </DropdownMenu>
   )
 }
-
-import { useState } from 'react'
-import { Button } from '@/components/ui/button'
 
 function LoginModal({ onClose }: { onClose: () => void }) {
   const { login, register } = useAuth()
@@ -342,11 +405,13 @@ export function Header() {
 
         <ExamSwitcher exam={exam} />
 
-        <nav className="flex items-center gap-0.5 text-sm flex-1 min-w-0">
+        <MobileNav exam={exam} pathname={pathname} />
+
+        <nav className="hidden md:flex items-center gap-0.5 text-sm flex-1 min-w-0 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           <Link
             href={`/${exam}/today`}
             className={cn(
-              'px-2 sm:px-3 py-1.5 rounded-md transition-colors hover:bg-accent hover:text-accent-foreground whitespace-nowrap shrink-0',
+              'px-2 lg:px-3 py-1.5 rounded-md transition-colors hover:bg-accent hover:text-accent-foreground whitespace-nowrap shrink-0',
               pathname?.endsWith('/today')
                 ? 'bg-accent text-accent-foreground font-medium'
                 : 'text-muted-foreground'
@@ -362,9 +427,11 @@ export function Header() {
           <MoreDropdown pathname={pathname} />
         </nav>
 
-        <QuickCapture />
-        <ThemeToggle />
-        <UserDropdown />
+        <div className="ml-auto flex shrink-0 items-center gap-1 sm:gap-2">
+          <QuickCapture />
+          <ThemeToggle />
+          <UserDropdown />
+        </div>
       </div>
     </header>
   )
