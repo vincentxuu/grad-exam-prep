@@ -79,6 +79,8 @@ describe('open-ended question view', () => {
     render(<SingleQuestionView exam="im" question={question!} mode="drill" />)
     fireEvent.click(screen.getByRole('button', { name: '查看可用資訊' }))
 
-    expect(screen.getByRole('button', { name: '返回題庫' })).toBeEnabled()
+    const returnButtons = screen.getAllByRole('button', { name: '返回題庫' })
+    expect(returnButtons).toHaveLength(2)
+    expect(returnButtons.at(-1)).toBeEnabled()
   })
 })

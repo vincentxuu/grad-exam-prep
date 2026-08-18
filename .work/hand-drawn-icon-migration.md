@@ -4,8 +4,8 @@
 - [x] Inventory current icon imports and shared wrappers.
 - [x] Define a restrained hand-drawn icon token and migration boundary.
 - [x] Replace compatible project icons through the shared dependency/API.
-- [ ] Verify accessibility, tests, typecheck, and Cloudflare build.
-- [ ] Record final scope and any intentionally retained icons.
+- [x] Verify accessibility, tests, typecheck, and Cloudflare build.
+- [x] Record final scope and any intentionally retained icons.
 
 ## Direction
 
@@ -23,3 +23,16 @@
 - Stroke and fill inherit `currentColor`; primary color is reserved for navigation identity and feature
   markers, while controls inherit their surrounding foreground color.
 - Motion remains limited to the existing loading spinner; the hand-drawn geometry is deterministic.
+
+## Outcome
+
+- `@sketchyicons/react` is the only icon package used across 46 source files; `lucide-react` and its
+  lockfile entry were removed.
+- Replaced UI emoji and glyphs used for navigation, success/error state, warnings, ratings, resource
+  categories, and external links with accessible Sketchyicons components.
+- Exhaustive scans found no remaining alternate icon imports, handwritten inline SVG, CSS-generated
+  icons, or references to the unused starter SVG files in `public/`.
+- Intentionally retained arrows and symbols that are learning content, correction notation, question
+  data, mathematical notation, or locale flags rather than interface icons.
+- Verified with TypeScript, 56 Jest suites / 410 tests, 61-paper / 1,475-question integrity checks,
+  and a complete OpenNext Cloudflare production bundle.
