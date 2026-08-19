@@ -1,0 +1,11 @@
+-- 詞條深度：區分「完整詞條」與「只有例句的輕量詞條」。
+--
+-- flashcard 的「產生例句」只需要例句，卻一直在同步生成整份辭典詞條
+-- （4000 tokens），慢到會撞上 edge 的連線逾時。拆出輕量路徑之後，
+-- 兩種深度共用同一張表，靠這個欄位分辨誰是誰：
+--
+--   full     —— 完整詞條，查詞面板與複習答案面用
+--   examples —— 只有例句，flashcard 用
+--
+-- 既有的資料列全部是完整詞條，所以預設 'full'。
+ALTER TABLE lexicon_entries ADD COLUMN depth TEXT NOT NULL DEFAULT 'full';

@@ -23,6 +23,9 @@
   "env": {
     "production": {
       "name": "grad-exam-prep-production",
+      "ai": {
+        "binding": "AI"
+      },
       "d1_databases": [
         {
           "binding": "DB",

@@ -15,7 +15,7 @@ import type { LexiconEntry, PersonalBridge } from '@/types/lexicon'
 
 /** 用 Map 撐起來的假 D1，只支援 store.ts 實際用到的那幾句 SQL。 */
 function fakeDb() {
-  const entries = new Map<string, { kind: string; data: string; model: string }>()
+  const entries = new Map<string, { kind: string; data: string; model: string; depth: string }>()
   const aliases = new Map<string, string>()
   const personal = new Map<string, string>()
   const quota = new Map<string, number>()
@@ -27,9 +27,9 @@ function fakeDb() {
         bind(...values: unknown[]) {
           return {
             async first<T>(): Promise<T | null> {
-              if (q.startsWith('SELECT data FROM lexicon_entries')) {
+              if (q.startsWith('SELECT data, depth FROM lexicon_entries')) {
                 const row = entries.get(values[0] as string)
-                return row ? ({ data: row.data } as T) : null
+                return row ? ({ data: row.data, depth: row.depth } as T) : null
               }
               if (q.startsWith('SELECT headword FROM lexicon_aliases')) {
                 const hw = aliases.get(values[0] as string)
@@ -50,10 +50,16 @@ function fakeDb() {
             },
             async run() {
               if (q.startsWith('INSERT INTO lexicon_entries')) {
-                entries.set(values[0] as string, {
+                const headword = values[0] as string
+                const depth = values[4] as string
+                // 對應 SQL 的 DO UPDATE ... WHERE：輕量詞條不覆蓋完整詞條
+                const existing = entries.get(headword)
+                if (existing && depth !== 'full' && existing.depth === 'full') return
+                entries.set(headword, {
                   kind: values[1] as string,
                   data: values[2] as string,
                   model: values[3] as string,
+                  depth,
                 })
                 return
               }
@@ -145,11 +151,56 @@ describe('getEntry / putEntry', () => {
     expect(await getEntry(db, 'nonexistent')).toBeNull()
   })
 
+  it('輕量詞條對 minDepth: full 算 cache miss', async () => {
+    const { db } = fakeDb()
+    await putEntry(db, entry('mitigate'), 'cloudflare:glm', 'mitigate', { depth: 'examples' })
+
+    // flashcard 拿得到（有例句就夠）
+    expect((await getEntry(db, 'mitigate'))?.headword).toBe('mitigate')
+    // 查詞面板拿不到，會重新生成一份完整的
+    expect(await getEntry(db, 'mitigate', { minDepth: 'full' })).toBeNull()
+  })
+
+  it('走 alias 命中時一樣看深度', async () => {
+    const { db } = fakeDb()
+    await putEntry(db, entry('intercept'), 'cloudflare:glm', 'intercepted', { depth: 'examples' })
+
+    expect((await getEntry(db, 'intercepted'))?.headword).toBe('intercept')
+    expect(await getEntry(db, 'intercepted', { minDepth: 'full' })).toBeNull()
+  })
+
+  it('完整詞條可以升級輕量詞條，但輕量詞條不會降級完整詞條', async () => {
+    const { db, entries } = fakeDb()
+
+    await putEntry(db, entry('mitigate'), 'cloudflare:glm', 'mitigate', { depth: 'examples' })
+    await putEntry(db, entry('mitigate'), 'groq:llama', 'mitigate', { depth: 'full' })
+    expect(entries.get('mitigate')?.depth).toBe('full')
+    expect((await getEntry(db, 'mitigate', { minDepth: 'full' }))?.headword).toBe('mitigate')
+
+    // 之後 flashcard 又生了一份輕量的，不能把完整詞條蓋掉
+    await putEntry(db, entry('mitigate'), 'cloudflare:glm', 'mitigate', { depth: 'examples' })
+    expect(entries.get('mitigate')?.depth).toBe('full')
+    expect(entries.get('mitigate')?.model).toBe('groq:llama')
+  })
+
+  it('沒帶 depth 的舊資料列當成完整詞條', async () => {
+    const { db, entries } = fakeDb()
+    entries.set('legacy', {
+      kind: 'word',
+      model: 'legacy',
+      depth: undefined as unknown as string,
+      data: JSON.stringify(entry('legacy')),
+    })
+
+    expect((await getEntry(db, 'legacy', { minDepth: 'full' }))?.headword).toBe('legacy')
+  })
+
   it('讀取舊快取時也會把簡體內容正規化成臺灣繁體', async () => {
     const { db, entries } = fakeDb()
     entries.set('software', {
       kind: 'word',
       model: 'legacy',
+      depth: 'full',
       data: JSON.stringify({
         ...entry('software'),
         senses: [{ pos: 'noun', zh: '软件与数据库', en: 'software and databases' }],

@@ -7,8 +7,8 @@ import { PersonalBridge } from '@/components/lexicon/personal-bridge'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { useSpeech } from '@/hooks/use-speech'
-import { lexiconCardId } from '@/lib/lexicon/normalize'
 import { isAuthenticated } from '@/lib/auth'
+import { lexiconCardId } from '@/lib/lexicon/normalize'
 import { addSavedWordServer, removeSavedWordServer } from '@/lib/server-storage'
 import { localStorageImpl } from '@/lib/storage'
 import type { LookupResponse, PersonaProfile } from '@/types/lexicon'
@@ -53,7 +53,7 @@ export function LookupPanel({ term, persona, source, showInput = true, onSaveCha
       if (!forceGenerate && !persona) {
         setState({ status: 'loading', stage: 'cache' })
         try {
-          const res = await fetch(`/api/lexicon?q=${encodeURIComponent(q)}`)
+          const res = await fetch(`/api/lexicon?q=${encodeURIComponent(q)}&depth=full`)
           if (res.ok) {
             setState({ status: 'done', data: (await res.json()) as LookupResponse })
             return
