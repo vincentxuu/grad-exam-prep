@@ -45,13 +45,76 @@ function responseText(output: unknown): string {
   if (typeof output === 'string') return output
   if (!output || typeof output !== 'object') return ''
   const obj = output as Record<string, unknown>
+
+  // Format 1: { response: "..." } (llama, older models)
   if (typeof obj.response === 'string') return obj.response
+
+  // Format 2: { choices: [{ message: { content: "..." } }] } (OpenAI-compatible)
   if (Array.isArray(obj.choices)) {
     const first = obj.choices[0] as Record<string, unknown> | undefined
     const msg = (first?.message ?? first?.delta) as Record<string, unknown> | undefined
     if (typeof msg?.content === 'string') return msg.content
   }
+
+  // Format 3: { result: { response: "..." } } or { result: { choices: [...] } }
+  if (obj.result && typeof obj.result === 'object') {
+    const inner = responseText(obj.result)
+    if (inner) return inner
+  }
+
+  // Format 4: { content: "..." } (direct content)
+  if (typeof obj.content === 'string') return obj.content
+
+  // Format 5: { message: { content: "..." } } (unwrapped single message)
+  if (obj.message && typeof obj.message === 'object') {
+    const msg = obj.message as Record<string, unknown>
+    if (typeof msg.content === 'string') return msg.content
+  }
+
   return ''
+}
+
+async function readStreamToText(stream: ReadableStream): Promise<string> {
+  const reader = stream.getReader()
+  const decoder = new TextDecoder()
+  const chunks: string[] = []
+  try {
+    while (true) {
+      const { done, value } = await reader.read()
+      if (done) break
+      chunks.push(decoder.decode(value, { stream: true }))
+    }
+    chunks.push(decoder.decode())
+  } finally {
+    reader.releaseLock()
+  }
+
+  const raw = chunks.join('')
+
+  // SSE stream: parse data lines
+  if (raw.includes('data:')) {
+    const parts: string[] = []
+    for (const line of raw.split('\n')) {
+      if (!line.startsWith('data:')) continue
+      const data = line.slice(5).trim()
+      if (!data || data === '[DONE]') continue
+      try {
+        const parsed = JSON.parse(data) as Record<string, unknown>
+        const text = responseText(parsed)
+        if (text) parts.push(text)
+      } catch {
+        parts.push(data)
+      }
+    }
+    return parts.join('')
+  }
+
+  // Plain JSON response
+  try {
+    return responseText(JSON.parse(raw))
+  } catch {
+    return raw
+  }
 }
 
 async function* responseDeltas(stream: ReadableStream): AsyncGenerator<string> {
@@ -117,8 +180,22 @@ export class ChatCloudflareWorkersAI extends SimpleChatModel {
       },
       options.signal ? { signal: options.signal } : undefined
     )
+
+    // Some models return a ReadableStream even without stream: true
+    if (output instanceof ReadableStream) {
+      const text = await readStreamToText(output)
+      if (text) await runManager?.handleLLMNewToken(text)
+      return text
+    }
+
     const text = responseText(output)
     if (text) await runManager?.handleLLMNewToken(text)
+
+    // Last resort: stringify and log for debugging
+    if (!text && output) {
+      console.warn('[workers-ai] unexpected response shape:', JSON.stringify(output).slice(0, 500))
+    }
+
     return text
   }
 
