@@ -46,78 +46,28 @@ function responseText(output: unknown): string {
   if (!output || typeof output !== 'object') return ''
   const obj = output as Record<string, unknown>
 
-  // Format 1: { response: "..." } (llama, older models)
+  // Legacy: { response: "..." }
   if (typeof obj.response === 'string') return obj.response
 
-  // Format 2: { choices: [{ message: { content: "..." } }] } (OpenAI-compatible)
+  // OpenAI-compatible: { choices: [{ message: { content, reasoning_content } }] }
   if (Array.isArray(obj.choices)) {
     const first = obj.choices[0] as Record<string, unknown> | undefined
     const msg = (first?.message ?? first?.delta) as Record<string, unknown> | undefined
     if (typeof msg?.content === 'string') return msg.content
-    // Reasoning models (glm-4.7-flash) put output in reasoning_content when content is null
+    // Reasoning models: content is null, answer may be in reasoning_content
     if (msg?.content === null && typeof msg?.reasoning_content === 'string')
       return msg.reasoning_content
   }
 
-  // Format 3: { result: { response: "..." } } or { result: { choices: [...] } }
+  // Wrapped: { result: { ... } }
   if (obj.result && typeof obj.result === 'object') {
     const inner = responseText(obj.result)
     if (inner) return inner
   }
 
-  // Format 4: { content: "..." } (direct content)
   if (typeof obj.content === 'string') return obj.content
 
-  // Format 5: { message: { content: "..." } } (unwrapped single message)
-  if (obj.message && typeof obj.message === 'object') {
-    const msg = obj.message as Record<string, unknown>
-    if (typeof msg.content === 'string') return msg.content
-  }
-
   return ''
-}
-
-async function readStreamToText(stream: ReadableStream): Promise<string> {
-  const reader = stream.getReader()
-  const decoder = new TextDecoder()
-  const chunks: string[] = []
-  try {
-    while (true) {
-      const { done, value } = await reader.read()
-      if (done) break
-      chunks.push(decoder.decode(value, { stream: true }))
-    }
-    chunks.push(decoder.decode())
-  } finally {
-    reader.releaseLock()
-  }
-
-  const raw = chunks.join('')
-
-  // SSE stream: parse data lines
-  if (raw.includes('data:')) {
-    const parts: string[] = []
-    for (const line of raw.split('\n')) {
-      if (!line.startsWith('data:')) continue
-      const data = line.slice(5).trim()
-      if (!data || data === '[DONE]') continue
-      try {
-        const parsed = JSON.parse(data) as Record<string, unknown>
-        const text = responseText(parsed)
-        if (text) parts.push(text)
-      } catch {
-        parts.push(data)
-      }
-    }
-    return parts.join('')
-  }
-
-  // Plain JSON response
-  try {
-    return responseText(JSON.parse(raw))
-  } catch {
-    return raw
-  }
 }
 
 async function* responseDeltas(stream: ReadableStream): AsyncGenerator<string> {
@@ -175,30 +125,60 @@ export class ChatCloudflareWorkersAI extends SimpleChatModel {
     options: this['ParsedCallOptions'],
     runManager?: CallbackManagerForLLMRun
   ): Promise<string> {
+    // Reasoning models need more tokens (reasoning + content both count).
+    // Give 3x the requested max to accommodate the thinking budget.
+    const effectiveMax = Math.max(this.maxTokens, 8192)
+
     const output = await this.ai.run(
       this.model,
       {
         messages: workersAiMessages(messages),
-        max_tokens: this.maxTokens,
-      },
+        max_tokens: effectiveMax,
+      } as Record<string, unknown>,
       options.signal ? { signal: options.signal } : undefined
     )
 
-    // Some models return a ReadableStream even without stream: true
     if (output instanceof ReadableStream) {
-      const text = await readStreamToText(output)
-      if (text) await runManager?.handleLLMNewToken(text)
-      return text
+      const reader = (output as ReadableStream).getReader()
+      const decoder = new TextDecoder()
+      const chunks: string[] = []
+      let done = false
+      while (!done) {
+        const result = await reader.read()
+        done = result.done
+        if (result.value) chunks.push(decoder.decode(result.value, { stream: !done }))
+      }
+      chunks.push(decoder.decode())
+      const raw = chunks.join('')
+
+      // Parse SSE or JSON
+      if (raw.includes('data:')) {
+        const parts: string[] = []
+        for (const line of raw.split('\n')) {
+          if (!line.startsWith('data:')) continue
+          const data = line.slice(5).trim()
+          if (!data || data === '[DONE]') continue
+          try {
+            parts.push(responseText(JSON.parse(data)))
+          } catch { /* skip */ }
+        }
+        const text = parts.filter(Boolean).join('')
+        if (text) await runManager?.handleLLMNewToken(text)
+        return text
+      }
+
+      try {
+        const text = responseText(JSON.parse(raw))
+        if (text) await runManager?.handleLLMNewToken(text)
+        return text
+      } catch {
+        if (raw) await runManager?.handleLLMNewToken(raw)
+        return raw
+      }
     }
 
     const text = responseText(output)
     if (text) await runManager?.handleLLMNewToken(text)
-
-    // Last resort: stringify and log for debugging
-    if (!text && output) {
-      console.warn('[workers-ai] unexpected response shape:', JSON.stringify(output).slice(0, 500))
-    }
-
     return text
   }
 
@@ -207,13 +187,15 @@ export class ChatCloudflareWorkersAI extends SimpleChatModel {
     options: this['ParsedCallOptions'],
     runManager?: CallbackManagerForLLMRun
   ): AsyncGenerator<ChatGenerationChunk> {
+    const effectiveMax = Math.max(this.maxTokens, 8192)
+
     const stream = (await this.ai.run(
       this.model,
       {
         messages: workersAiMessages(messages),
-        max_tokens: this.maxTokens,
+        max_tokens: effectiveMax,
         stream: true,
-      },
+      } as Record<string, unknown>,
       options.signal ? { signal: options.signal } : undefined
     )) as unknown as ReadableStream
 

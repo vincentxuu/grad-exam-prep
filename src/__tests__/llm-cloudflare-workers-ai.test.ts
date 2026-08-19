@@ -37,7 +37,7 @@ describe('Cloudflare Workers AI binding model', () => {
           { role: 'user', content: 'hello' },
           { role: 'assistant', content: 'hi' },
         ],
-        max_tokens: 321,
+        max_tokens: 8192,
       },
       undefined
     )
@@ -66,7 +66,7 @@ describe('Cloudflare Workers AI binding model', () => {
       route.model,
       {
         messages: [{ role: 'user', content: 'hello' }],
-        max_tokens: 99,
+        max_tokens: 8192,
         stream: true,
       },
       undefined
