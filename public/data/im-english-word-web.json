@@ -1,0 +1,3598 @@
+{
+  "schemaVersion": 1,
+  "totalWords": 89,
+  "semanticGroups": {
+    "caution-restraint": {
+      "count": 3,
+      "words": [
+        "circumspect",
+        "conservative",
+        "restrained"
+      ]
+    },
+    "truth-deception": {
+      "count": 3,
+      "words": [
+        "deceptive",
+        "dissimulation",
+        "scurrilous"
+      ]
+    },
+    "finance-money": {
+      "count": 3,
+      "words": [
+        "expenditure",
+        "parsimonious",
+        "revenue"
+      ]
+    },
+    "emotion-attitude": {
+      "count": 2,
+      "words": [
+        "disapproving",
+        "indifferent"
+      ]
+    },
+    "intention-purpose": {
+      "count": 2,
+      "words": [
+        "deliberate",
+        "intentionally"
+      ]
+    },
+    "change-improvement": {
+      "count": 2,
+      "words": [
+        "mitigate",
+        "reform"
+      ]
+    },
+    "creation-novelty": {
+      "count": 2,
+      "words": [
+        "imaginative",
+        "innovative"
+      ]
+    },
+    "authority-control": {
+      "count": 2,
+      "words": [
+        "confiscate",
+        "injunction"
+      ]
+    },
+    "truth-verification": {
+      "count": 2,
+      "words": [
+        "corroborate",
+        "substantiate"
+      ]
+    },
+    "scope-extent": {
+      "count": 2,
+      "words": [
+        "pervasive",
+        "ubiquitous"
+      ]
+    },
+    "memory-honor": {
+      "count": 2,
+      "words": [
+        "commemorate",
+        "reminiscence"
+      ]
+    },
+    "strength-determination": {
+      "count": 2,
+      "words": [
+        "resolute",
+        "tenacious"
+      ]
+    },
+    "quantity-sufficiency": {
+      "count": 2,
+      "words": [
+        "inadequately",
+        "insufficiently"
+      ]
+    },
+    "language-communication": {
+      "count": 2,
+      "words": [
+        "rhetoric",
+        "verbose"
+      ]
+    },
+    "strength-endurance": {
+      "count": 1,
+      "words": [
+        "resilience"
+      ]
+    },
+    "damage-destruction": {
+      "count": 1,
+      "words": [
+        "devastating"
+      ]
+    },
+    "change-worsening": {
+      "count": 1,
+      "words": [
+        "exacerbate"
+      ]
+    },
+    "vulnerability-risk": {
+      "count": 1,
+      "words": [
+        "susceptible"
+      ]
+    },
+    "rules-obedience": {
+      "count": 1,
+      "words": [
+        "compliance"
+      ]
+    },
+    "damage-harm": {
+      "count": 1,
+      "words": [
+        "detrimental"
+      ]
+    },
+    "change-disorder": {
+      "count": 1,
+      "words": [
+        "disruption"
+      ]
+    },
+    "uniqueness-rarity": {
+      "count": 1,
+      "words": [
+        "unprecedented"
+      ]
+    },
+    "choice-option": {
+      "count": 1,
+      "words": [
+        "alternative"
+      ]
+    },
+    "pollution-corruption": {
+      "count": 1,
+      "words": [
+        "contaminate"
+      ]
+    },
+    "trust-belief": {
+      "count": 1,
+      "words": [
+        "credulous"
+      ]
+    },
+    "respect-attitude": {
+      "count": 1,
+      "words": [
+        "deferential"
+      ]
+    },
+    "definition-boundary": {
+      "count": 1,
+      "words": [
+        "delineate"
+      ]
+    },
+    "punishment-criticism": {
+      "count": 1,
+      "words": [
+        "reprimanded"
+      ]
+    },
+    "access-restriction": {
+      "count": 1,
+      "words": [
+        "exclusive"
+      ]
+    },
+    "comparison-similarity": {
+      "count": 1,
+      "words": [
+        "resemblance"
+      ]
+    },
+    "remainder-leftover": {
+      "count": 1,
+      "words": [
+        "residue"
+      ]
+    },
+    "health-cleanliness": {
+      "count": 1,
+      "words": [
+        "disinfection"
+      ]
+    },
+    "analysis-investigation": {
+      "count": 1,
+      "words": [
+        "dissection"
+      ]
+    },
+    "explanation-clarity": {
+      "count": 1,
+      "words": [
+        "elucidated"
+      ]
+    },
+    "loss-sacrifice": {
+      "count": 1,
+      "words": [
+        "forfeited"
+      ]
+    },
+    "sequence-order": {
+      "count": 1,
+      "words": [
+        "predecessor"
+      ]
+    },
+    "difficulty-complexity": {
+      "count": 1,
+      "words": [
+        "complications"
+      ]
+    },
+    "quality-texture": {
+      "count": 1,
+      "words": [
+        "mellow"
+      ]
+    },
+    "danger-warning": {
+      "count": 1,
+      "words": [
+        "ominous"
+      ]
+    },
+    "punishment-exclusion": {
+      "count": 1,
+      "words": [
+        "exile"
+      ]
+    },
+    "inquiry-investigation": {
+      "count": 1,
+      "words": [
+        "interrogate"
+      ]
+    },
+    "comparison-contrast": {
+      "count": 1,
+      "words": [
+        "inversely"
+      ]
+    },
+    "shape-form": {
+      "count": 1,
+      "words": [
+        "corrugate"
+      ]
+    },
+    "change-modification": {
+      "count": 1,
+      "words": [
+        "commutations"
+      ]
+    },
+    "conflict-aggression": {
+      "count": 1,
+      "words": [
+        "harassment"
+      ]
+    },
+    "truth-openness": {
+      "count": 1,
+      "words": [
+        "transparent"
+      ]
+    },
+    "access-availability": {
+      "count": 1,
+      "words": [
+        "accessible"
+      ]
+    },
+    "emotion-uncertainty": {
+      "count": 1,
+      "words": [
+        "ambivalent"
+      ]
+    },
+    "visibility-prominence": {
+      "count": 1,
+      "words": [
+        "conspicuous"
+      ]
+    },
+    "addition-support": {
+      "count": 1,
+      "words": [
+        "complement"
+      ]
+    },
+    "opposition-conflict": {
+      "count": 1,
+      "words": [
+        "contradict"
+      ]
+    },
+    "decline-deterioration": {
+      "count": 1,
+      "words": [
+        "degradation"
+      ]
+    },
+    "excess-abundance": {
+      "count": 1,
+      "words": [
+        "extravagant"
+      ]
+    },
+    "prediction-sign": {
+      "count": 1,
+      "words": [
+        "harbinger"
+      ]
+    },
+    "permanence-stability": {
+      "count": 1,
+      "words": [
+        "immutable"
+      ]
+    },
+    "inclusion-integration": {
+      "count": 1,
+      "words": [
+        "incorporate"
+      ]
+    },
+    "intensity-magnitude": {
+      "count": 1,
+      "words": [
+        "overwhelming"
+      ]
+    },
+    "hierarchy-status": {
+      "count": 1,
+      "words": [
+        "relegate"
+      ]
+    },
+    "strictness-precision": {
+      "count": 1,
+      "words": [
+        "rigorous"
+      ]
+    },
+    "scope-independence": {
+      "count": 1,
+      "words": [
+        "unilateral"
+      ]
+    },
+    "beauty-art": {
+      "count": 1,
+      "words": [
+        "aesthetic"
+      ]
+    },
+    "positive-helpful": {
+      "count": 1,
+      "words": [
+        "beneficial"
+      ]
+    },
+    "quality-excellence": {
+      "count": 1,
+      "words": [
+        "remarkable"
+      ]
+    },
+    "simplicity-clarity": {
+      "count": 1,
+      "words": [
+        "straightforward"
+      ]
+    },
+    "harmony-fit": {
+      "count": 1,
+      "words": [
+        "compatible"
+      ]
+    },
+    "time-frequency": {
+      "count": 1,
+      "words": [
+        "intermittent"
+      ]
+    },
+    "emotion-sadness": {
+      "count": 1,
+      "words": [
+        "melancholy"
+      ]
+    },
+    "luck-chance": {
+      "count": 1,
+      "words": [
+        "serendipity"
+      ]
+    },
+    "emotion-anxiety": {
+      "count": 1,
+      "words": [
+        "apprehension"
+      ]
+    },
+    "planning-preparation": {
+      "count": 1,
+      "words": [
+        "contingency"
+      ]
+    },
+    "difference-separation": {
+      "count": 1,
+      "words": [
+        "divergence"
+      ]
+    },
+    "abstract-concept": {
+      "count": 1,
+      "words": [
+        "intangible"
+      ]
+    }
+  },
+  "words": {
+    "resilience": {
+      "chinese": "韌性；恢復力",
+      "pos": "n",
+      "synonyms": [
+        "tenacity",
+        "perseverance",
+        "fortitude",
+        "endurance",
+        "robustness"
+      ],
+      "antonyms": [
+        "fragility",
+        "vulnerability",
+        "weakness"
+      ],
+      "relatedWords": [
+        "resilient",
+        "resiliency"
+      ],
+      "confusableWith": [
+        "resistance"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Her resilience after losing her job inspired everyone around her.",
+          "zh": "她失業後的韌性激勵了身邊所有人。",
+          "source": "daily"
+        },
+        {
+          "en": "Urban resilience requires infrastructure that can withstand natural disasters.",
+          "zh": "城市韌性需要能承受自然災害的基礎設施。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "strength-endurance",
+      "mnemonicHint": "re(back) + sil(spring) + ience → 像彈簧一樣彈回來 → 恢復力"
+    },
+    "devastating": {
+      "chinese": "毀滅性的",
+      "pos": "adj",
+      "synonyms": [
+        "destructive",
+        "catastrophic",
+        "ruinous",
+        "disastrous"
+      ],
+      "antonyms": [
+        "constructive",
+        "beneficial",
+        "restorative"
+      ],
+      "relatedWords": [
+        "devastate",
+        "devastation"
+      ],
+      "confusableWith": [
+        "devasting (misspelling)"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The earthquake had a devastating impact on the coastal community.",
+          "zh": "地震對沿海社區造成了毀滅性的影響。",
+          "source": "daily"
+        },
+        {
+          "en": "The devastating effects of deforestation extend beyond biodiversity loss.",
+          "zh": "森林砍伐的毀滅性影響遠不止生物多樣性喪失。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "damage-destruction",
+      "mnemonicHint": "de(down) + vast(waste) + ating → 把一切變成廢墟 → 毀滅性的"
+    },
+    "indifferent": {
+      "chinese": "漠不關心的",
+      "pos": "adj",
+      "synonyms": [
+        "apathetic",
+        "unconcerned",
+        "detached",
+        "nonchalant"
+      ],
+      "antonyms": [
+        "passionate",
+        "concerned",
+        "enthusiastic"
+      ],
+      "relatedWords": [
+        "indifference",
+        "indifferently"
+      ],
+      "confusableWith": [
+        "different"
+      ],
+      "exampleSentences": [
+        {
+          "en": "He seemed indifferent to the criticism from his colleagues.",
+          "zh": "他對同事的批評似乎漠不關心。",
+          "source": "daily"
+        },
+        {
+          "en": "Voters who remain indifferent to policy changes may find themselves affected later.",
+          "zh": "對政策變化漠不關心的選民可能會在日後受到影響。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "emotion-attitude",
+      "mnemonicHint": "in(not) + different → 對什麼都覺得沒差別 → 漠不關心"
+    },
+    "deliberate": {
+      "chinese": "故意的；深思熟慮的",
+      "pos": "adj/v",
+      "synonyms": [
+        "intentional",
+        "calculated",
+        "premeditated",
+        "purposeful"
+      ],
+      "antonyms": [
+        "accidental",
+        "spontaneous",
+        "unintentional"
+      ],
+      "relatedWords": [
+        "deliberately",
+        "deliberation"
+      ],
+      "confusableWith": [
+        "delicate"
+      ],
+      "exampleSentences": [
+        {
+          "en": "She made a deliberate choice to change careers at 40.",
+          "zh": "她在40歲時做了一個深思熟慮的職業轉變決定。",
+          "source": "daily"
+        },
+        {
+          "en": "The deliberate manipulation of data undermines scientific credibility.",
+          "zh": "故意操縱數據會破壞科學可信度。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "intention-purpose",
+      "mnemonicHint": "de + liber(weigh) + ate → 反覆衡量過的 → 深思熟慮的"
+    },
+    "exacerbate": {
+      "chinese": "使惡化",
+      "pos": "v",
+      "synonyms": [
+        "worsen",
+        "aggravate",
+        "intensify",
+        "compound"
+      ],
+      "antonyms": [
+        "alleviate",
+        "mitigate",
+        "ameliorate"
+      ],
+      "relatedWords": [
+        "exacerbation"
+      ],
+      "confusableWith": [
+        "exaggerate"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Skipping meals can exacerbate headaches and fatigue.",
+          "zh": "不吃飯會加重頭痛和疲勞。",
+          "source": "daily"
+        },
+        {
+          "en": "Climate change is expected to exacerbate existing inequalities in developing nations.",
+          "zh": "氣候變遷預計將加劇發展中國家現有的不平等。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "change-worsening",
+      "mnemonicHint": "ex(out) + acerb(bitter) + ate → 使更苦澀 → 使惡化"
+    },
+    "mitigate": {
+      "chinese": "減輕；緩和",
+      "pos": "v",
+      "synonyms": [
+        "alleviate",
+        "lessen",
+        "diminish",
+        "ease",
+        "moderate"
+      ],
+      "antonyms": [
+        "exacerbate",
+        "aggravate",
+        "intensify"
+      ],
+      "relatedWords": [
+        "mitigation",
+        "mitigating"
+      ],
+      "confusableWith": [
+        "litigate"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Wearing sunscreen helps mitigate the risk of skin damage.",
+          "zh": "塗防曬霜有助於減輕皮膚損傷的風險。",
+          "source": "daily"
+        },
+        {
+          "en": "Governments must mitigate the economic impact of rising sea levels.",
+          "zh": "政府必須減輕海平面上升的經濟影響。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "change-improvement",
+      "mnemonicHint": "mit(mild) + ig + ate → 使變溫和 → 減輕"
+    },
+    "innovative": {
+      "chinese": "創新的",
+      "pos": "adj",
+      "synonyms": [
+        "inventive",
+        "groundbreaking",
+        "pioneering",
+        "novel"
+      ],
+      "antonyms": [
+        "conventional",
+        "traditional",
+        "outdated"
+      ],
+      "relatedWords": [
+        "innovate",
+        "innovation",
+        "innovator"
+      ],
+      "confusableWith": [
+        "imaginative"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The startup introduced an innovative approach to food delivery.",
+          "zh": "這家新創公司引入了一種創新的食品配送方式。",
+          "source": "daily"
+        },
+        {
+          "en": "Innovative technologies have transformed how businesses interact with consumers.",
+          "zh": "創新技術改變了企業與消費者互動的方式。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "creation-novelty",
+      "mnemonicHint": "in + nov(new) + ative → 帶來新東西的 → 創新的"
+    },
+    "susceptible": {
+      "chinese": "易受影響的",
+      "pos": "adj",
+      "synonyms": [
+        "vulnerable",
+        "prone",
+        "liable",
+        "predisposed"
+      ],
+      "antonyms": [
+        "immune",
+        "resistant",
+        "invulnerable"
+      ],
+      "relatedWords": [
+        "susceptibility"
+      ],
+      "confusableWith": [
+        "suspicious"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Children are more susceptible to infections during winter.",
+          "zh": "兒童在冬天更容易感染疾病。",
+          "source": "daily"
+        },
+        {
+          "en": "Populations with limited healthcare access are susceptible to preventable diseases.",
+          "zh": "醫療保健資源有限的人群容易罹患可預防的疾病。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "vulnerability-risk",
+      "mnemonicHint": "sus(under) + cept(take) + ible → 容易被接住 → 易受影響的"
+    },
+    "circumspect": {
+      "chinese": "謹慎的",
+      "pos": "adj",
+      "synonyms": [
+        "cautious",
+        "prudent",
+        "wary",
+        "discreet"
+      ],
+      "antonyms": [
+        "reckless",
+        "careless",
+        "impulsive"
+      ],
+      "relatedWords": [
+        "circumspection"
+      ],
+      "confusableWith": [
+        "circumstance"
+      ],
+      "exampleSentences": [
+        {
+          "en": "She was circumspect about sharing personal details online.",
+          "zh": "她對在網上分享個人資料非常謹慎。",
+          "source": "daily"
+        },
+        {
+          "en": "Investors should remain circumspect when evaluating high-yield opportunities.",
+          "zh": "投資者在評估高收益機會時應保持謹慎。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "caution-restraint",
+      "mnemonicHint": "circum(around) + spect(look) → 四處環顧 → 謹慎的"
+    },
+    "compliance": {
+      "chinese": "遵從；合規",
+      "pos": "n",
+      "synonyms": [
+        "adherence",
+        "conformity",
+        "obedience",
+        "observance"
+      ],
+      "antonyms": [
+        "defiance",
+        "rebellion",
+        "violation"
+      ],
+      "relatedWords": [
+        "comply",
+        "compliant",
+        "noncompliance"
+      ],
+      "confusableWith": [
+        "complacence"
+      ],
+      "exampleSentences": [
+        {
+          "en": "All employees must ensure compliance with the new safety protocols.",
+          "zh": "所有員工必須確保遵守新的安全規程。",
+          "source": "daily"
+        },
+        {
+          "en": "Regulatory compliance is a critical concern for fintech startups.",
+          "zh": "法規合規是金融科技新創公司的關鍵關切。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "rules-obedience",
+      "mnemonicHint": "com(together) + pli(fold) + ance → 配合要求 → 遵從"
+    },
+    "confiscate": {
+      "chinese": "沒收；充公",
+      "pos": "v",
+      "synonyms": [
+        "seize",
+        "impound",
+        "appropriate",
+        "commandeer"
+      ],
+      "antonyms": [
+        "return",
+        "restore",
+        "relinquish"
+      ],
+      "relatedWords": [
+        "confiscation"
+      ],
+      "confusableWith": [
+        "complicate"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The teacher confiscated the student's phone during the exam.",
+          "zh": "老師在考試期間沒收了學生的手機。",
+          "source": "daily"
+        },
+        {
+          "en": "Authorities may confiscate counterfeit goods at customs.",
+          "zh": "當局可能在海關沒收仿冒商品。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "authority-control",
+      "mnemonicHint": "con + fisc(treasury) + ate → 收歸國庫 → 沒收"
+    },
+    "corroborate": {
+      "chinese": "證實",
+      "pos": "v",
+      "synonyms": [
+        "confirm",
+        "verify",
+        "substantiate",
+        "validate"
+      ],
+      "antonyms": [
+        "contradict",
+        "refute",
+        "deny"
+      ],
+      "relatedWords": [
+        "corroboration",
+        "corroborative"
+      ],
+      "confusableWith": [
+        "collaborate"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The witness's testimony corroborated the victim's account.",
+          "zh": "證人的證詞證實了受害者的說法。",
+          "source": "daily"
+        },
+        {
+          "en": "Multiple studies corroborate the link between sleep deprivation and cognitive decline.",
+          "zh": "多項研究證實了睡眠不足與認知衰退之間的關聯。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "truth-verification",
+      "mnemonicHint": "cor(together) + robor(strength) + ate → 加強證據 → 證實"
+    },
+    "detrimental": {
+      "chinese": "有害的",
+      "pos": "adj",
+      "synonyms": [
+        "harmful",
+        "damaging",
+        "deleterious",
+        "injurious",
+        "adverse"
+      ],
+      "antonyms": [
+        "beneficial",
+        "advantageous",
+        "helpful"
+      ],
+      "relatedWords": [
+        "detriment",
+        "detrimentally"
+      ],
+      "confusableWith": [
+        "instrumental"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Excessive screen time can be detrimental to children's eyesight.",
+          "zh": "過多的螢幕時間可能對兒童的視力有害。",
+          "source": "daily"
+        },
+        {
+          "en": "The policy change proved detrimental to small business growth.",
+          "zh": "政策變更證明對小型企業的成長有害。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "damage-harm",
+      "mnemonicHint": "de(away) + tri(rub) + mental → 磨損消耗 → 有害的"
+    },
+    "disruption": {
+      "chinese": "擾亂；中斷",
+      "pos": "n",
+      "synonyms": [
+        "disturbance",
+        "interruption",
+        "upheaval",
+        "disorder"
+      ],
+      "antonyms": [
+        "continuity",
+        "stability",
+        "order"
+      ],
+      "relatedWords": [
+        "disrupt",
+        "disruptive",
+        "disruptor"
+      ],
+      "confusableWith": [
+        "destruction"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The power outage caused major disruption to train services.",
+          "zh": "停電對火車服務造成了重大中斷。",
+          "source": "daily"
+        },
+        {
+          "en": "Digital disruption has fundamentally altered the media landscape.",
+          "zh": "數位顛覆從根本上改變了媒體格局。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "change-disorder",
+      "mnemonicHint": "dis(apart) + rupt(break) + ion → 打破分開 → 擾亂"
+    },
+    "pervasive": {
+      "chinese": "普遍的",
+      "pos": "adj",
+      "synonyms": [
+        "widespread",
+        "prevalent",
+        "ubiquitous",
+        "omnipresent"
+      ],
+      "antonyms": [
+        "limited",
+        "rare",
+        "localized"
+      ],
+      "relatedWords": [
+        "pervade",
+        "pervasiveness"
+      ],
+      "confusableWith": [
+        "persuasive"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The influence of social media is pervasive in modern society.",
+          "zh": "社群媒體的影響在現代社會無處不在。",
+          "source": "daily"
+        },
+        {
+          "en": "Pervasive corruption undermines institutional trust.",
+          "zh": "普遍的腐敗破壞了制度信任。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "scope-extent",
+      "mnemonicHint": "per(through) + vas(go) + ive → 到處滲透 → 普遍的"
+    },
+    "unprecedented": {
+      "chinese": "前所未有的",
+      "pos": "adj",
+      "synonyms": [
+        "unparalleled",
+        "unmatched",
+        "extraordinary",
+        "novel"
+      ],
+      "antonyms": [
+        "common",
+        "typical",
+        "precedented"
+      ],
+      "relatedWords": [
+        "precedent"
+      ],
+      "confusableWith": [
+        "unpredicted"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The pandemic created unprecedented challenges for healthcare systems.",
+          "zh": "疫情為醫療系統帶來了前所未有的挑戰。",
+          "source": "daily"
+        },
+        {
+          "en": "The unprecedented rate of technological change demands adaptive governance.",
+          "zh": "前所未有的技術變革速度要求適應性治理。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "uniqueness-rarity",
+      "mnemonicHint": "un + precedent(先例) + ed → 沒有先例的 → 前所未有的"
+    },
+    "alternative": {
+      "chinese": "替代的",
+      "pos": "adj/n",
+      "synonyms": [
+        "substitute",
+        "option",
+        "replacement",
+        "backup"
+      ],
+      "antonyms": [
+        "original",
+        "primary",
+        "standard"
+      ],
+      "relatedWords": [
+        "alternate",
+        "alternatively"
+      ],
+      "confusableWith": [
+        "alternate (交替)"
+      ],
+      "exampleSentences": [
+        {
+          "en": "We need to find an alternative route due to road construction.",
+          "zh": "由於道路施工，我們需要找替代路線。",
+          "source": "daily"
+        },
+        {
+          "en": "Alternative energy sources are critical for reducing carbon emissions.",
+          "zh": "替代能源對減少碳排放至關重要。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "choice-option",
+      "mnemonicHint": "alter(other) + native → 另一個選擇 → 替代的"
+    },
+    "commemorate": {
+      "chinese": "紀念",
+      "pos": "v",
+      "synonyms": [
+        "honor",
+        "memorialize",
+        "celebrate",
+        "pay tribute to"
+      ],
+      "antonyms": [
+        "forget",
+        "neglect",
+        "overlook"
+      ],
+      "relatedWords": [
+        "commemoration",
+        "commemorative"
+      ],
+      "confusableWith": [
+        "commiserate"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The city held a ceremony to commemorate the victims.",
+          "zh": "城市舉行了儀式紀念受害者。",
+          "source": "daily"
+        },
+        {
+          "en": "Monuments that commemorate historical events shape collective memory.",
+          "zh": "紀念歷史事件的紀念碑塑造了集體記憶。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "memory-honor",
+      "mnemonicHint": "com(together) + memor(remember) + ate → 一起記住 → 紀念"
+    },
+    "contaminate": {
+      "chinese": "汙染",
+      "pos": "v",
+      "synonyms": [
+        "pollute",
+        "taint",
+        "corrupt",
+        "defile"
+      ],
+      "antonyms": [
+        "purify",
+        "cleanse",
+        "decontaminate"
+      ],
+      "relatedWords": [
+        "contamination",
+        "contaminant"
+      ],
+      "confusableWith": [
+        "contemplate"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Industrial waste can contaminate nearby rivers.",
+          "zh": "工業廢物可能汙染附近的河流。",
+          "source": "daily"
+        },
+        {
+          "en": "Cross-contamination in food processing poses serious health risks.",
+          "zh": "食品加工中的交叉汙染構成嚴重的衛生風險。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "pollution-corruption",
+      "mnemonicHint": "con + tamin(touch) + ate → 被壞東西碰到 → 汙染"
+    },
+    "credulous": {
+      "chinese": "輕信的",
+      "pos": "adj",
+      "synonyms": [
+        "gullible",
+        "naive",
+        "trusting",
+        "unsuspecting"
+      ],
+      "antonyms": [
+        "skeptical",
+        "cynical",
+        "suspicious"
+      ],
+      "relatedWords": [
+        "credulity",
+        "incredulous"
+      ],
+      "confusableWith": [
+        "credible"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The credulous investor lost his savings to a pyramid scheme.",
+          "zh": "輕信的投資者因龐氏騙局損失了積蓄。",
+          "source": "daily"
+        },
+        {
+          "en": "Credulous consumers are vulnerable to misleading advertisements.",
+          "zh": "輕信的消費者容易受到誤導性廣告的影響。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "trust-belief",
+      "mnemonicHint": "cred(believe) + ulous → 太容易相信 → 輕信的"
+    },
+    "deceptive": {
+      "chinese": "欺騙性的",
+      "pos": "adj",
+      "synonyms": [
+        "misleading",
+        "fraudulent",
+        "deceitful",
+        "dishonest"
+      ],
+      "antonyms": [
+        "honest",
+        "transparent",
+        "genuine"
+      ],
+      "relatedWords": [
+        "deceive",
+        "deception"
+      ],
+      "confusableWith": [
+        "perceptive"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The product's deceptive packaging made it look larger.",
+          "zh": "產品欺騙性的包裝讓它看起來更大。",
+          "source": "daily"
+        },
+        {
+          "en": "Deceptive marketing erodes consumer trust in a brand.",
+          "zh": "欺騙性營銷侵蝕消費者對品牌的信任。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "truth-deception",
+      "mnemonicHint": "de(from) + cept(take) + ive → 騙走的 → 欺騙性的"
+    },
+    "deferential": {
+      "chinese": "恭敬的",
+      "pos": "adj",
+      "synonyms": [
+        "respectful",
+        "reverent",
+        "courteous",
+        "submissive"
+      ],
+      "antonyms": [
+        "disrespectful",
+        "insolent",
+        "arrogant"
+      ],
+      "relatedWords": [
+        "deference",
+        "defer"
+      ],
+      "confusableWith": [
+        "differential"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The student was always deferential to her professors.",
+          "zh": "學生對教授們總是很恭敬。",
+          "source": "daily"
+        },
+        {
+          "en": "A deferential tone in negotiations can signal weakness.",
+          "zh": "談判中恭敬的語氣可能被視為軟弱。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "respect-attitude",
+      "mnemonicHint": "defer(讓步) + ential → 表示尊重 → 恭敬的"
+    },
+    "delineate": {
+      "chinese": "描繪；界定",
+      "pos": "v",
+      "synonyms": [
+        "outline",
+        "define",
+        "depict",
+        "demarcate"
+      ],
+      "antonyms": [
+        "obscure",
+        "blur",
+        "confuse"
+      ],
+      "relatedWords": [
+        "delineation"
+      ],
+      "confusableWith": [
+        "delegate"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The contract clearly delineates each party's responsibilities.",
+          "zh": "合約清楚界定了各方的責任。",
+          "source": "daily"
+        },
+        {
+          "en": "Researchers must delineate the scope of their study.",
+          "zh": "研究人員必須界定研究範圍。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "definition-boundary",
+      "mnemonicHint": "de + line + ate → 畫出線條 → 界定"
+    },
+    "revenue": {
+      "chinese": "營收",
+      "pos": "n",
+      "synonyms": [
+        "income",
+        "earnings",
+        "proceeds",
+        "turnover"
+      ],
+      "antonyms": [
+        "expenditure",
+        "cost",
+        "expense"
+      ],
+      "relatedWords": [
+        "revenue stream"
+      ],
+      "confusableWith": [
+        "avenue"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The company's annual revenue exceeded expectations.",
+          "zh": "公司的年營收超出預期。",
+          "source": "daily"
+        },
+        {
+          "en": "Advertising revenue remains the primary income for social media platforms.",
+          "zh": "廣告收入仍是社群媒體平台的主要收入來源。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "finance-money",
+      "mnemonicHint": "re(back) + venue(come) → 回來的錢 → 營收"
+    },
+    "resolute": {
+      "chinese": "堅決的",
+      "pos": "adj",
+      "synonyms": [
+        "determined",
+        "unwavering",
+        "steadfast",
+        "firm"
+      ],
+      "antonyms": [
+        "hesitant",
+        "indecisive",
+        "wavering"
+      ],
+      "relatedWords": [
+        "resolution",
+        "resolve"
+      ],
+      "confusableWith": [
+        "absolute"
+      ],
+      "exampleSentences": [
+        {
+          "en": "She remained resolute despite family pressure.",
+          "zh": "儘管家庭壓力，她仍然堅決。",
+          "source": "daily"
+        },
+        {
+          "en": "Resolute leadership is essential during crises.",
+          "zh": "危機期間堅決的領導力至關重要。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "strength-determination",
+      "mnemonicHint": "re + solute(solve) → 下定決心解決 → 堅決的"
+    },
+    "tenacious": {
+      "chinese": "頑強的",
+      "pos": "adj",
+      "synonyms": [
+        "persistent",
+        "dogged",
+        "relentless",
+        "unyielding"
+      ],
+      "antonyms": [
+        "yielding",
+        "feeble",
+        "surrendering"
+      ],
+      "relatedWords": [
+        "tenacity"
+      ],
+      "confusableWith": [
+        "audacious"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The tenacious reporter spent years investigating the scandal.",
+          "zh": "頑強的記者花了數年調查醜聞。",
+          "source": "daily"
+        },
+        {
+          "en": "Tenacious commitment to quality distinguishes market leaders.",
+          "zh": "對品質的頑強承諾是市場領導者的區別。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "strength-determination",
+      "mnemonicHint": "ten(hold) + acious → 緊緊抓住 → 頑強的"
+    },
+    "substantiate": {
+      "chinese": "證實",
+      "pos": "v",
+      "synonyms": [
+        "verify",
+        "confirm",
+        "validate",
+        "authenticate"
+      ],
+      "antonyms": [
+        "disprove",
+        "refute",
+        "undermine"
+      ],
+      "relatedWords": [
+        "substantiation",
+        "substantial"
+      ],
+      "confusableWith": [
+        "substitute"
+      ],
+      "exampleSentences": [
+        {
+          "en": "You need evidence to substantiate your claims.",
+          "zh": "你需要證據來證實你的主張。",
+          "source": "daily"
+        },
+        {
+          "en": "The research failed to substantiate the hypothesis.",
+          "zh": "該研究未能證實假說。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "truth-verification",
+      "mnemonicHint": "sub(under) + stant(stand) + iate → 站得住腳 → 證實"
+    },
+    "conservative": {
+      "chinese": "保守的",
+      "pos": "adj",
+      "synonyms": [
+        "traditional",
+        "conventional",
+        "cautious",
+        "moderate"
+      ],
+      "antonyms": [
+        "progressive",
+        "radical",
+        "liberal"
+      ],
+      "relatedWords": [
+        "conserve",
+        "conservation"
+      ],
+      "confusableWith": [
+        "preservative"
+      ],
+      "exampleSentences": [
+        {
+          "en": "He took a conservative approach to investing.",
+          "zh": "他採取保守的投資方式。",
+          "source": "daily"
+        },
+        {
+          "en": "Conservative estimates suggest temperatures will rise by 1.5°C.",
+          "zh": "保守估計全球溫度將上升1.5°C。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "caution-restraint",
+      "mnemonicHint": "conserv(keep) + ative → 保持現狀 → 保守的"
+    },
+    "injunction": {
+      "chinese": "禁令",
+      "pos": "n",
+      "synonyms": [
+        "order",
+        "directive",
+        "mandate",
+        "decree"
+      ],
+      "antonyms": [
+        "permission",
+        "authorization"
+      ],
+      "relatedWords": [
+        "enjoin"
+      ],
+      "confusableWith": [
+        "conjunction"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The court issued an injunction to stop the project.",
+          "zh": "法院發布禁令停止該項目。",
+          "source": "daily"
+        },
+        {
+          "en": "A preliminary injunction may prevent irreparable harm.",
+          "zh": "臨時禁令可防止不可挽回的損害。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "authority-control",
+      "mnemonicHint": "in(upon) + junct(bind) + ion → 強制約束 → 禁令"
+    },
+    "imaginative": {
+      "chinese": "富有想像力的",
+      "pos": "adj",
+      "synonyms": [
+        "creative",
+        "inventive",
+        "original",
+        "resourceful"
+      ],
+      "antonyms": [
+        "unimaginative",
+        "dull",
+        "prosaic"
+      ],
+      "relatedWords": [
+        "imagine",
+        "imagination"
+      ],
+      "confusableWith": [
+        "imaginary"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The children came up with imaginative solutions.",
+          "zh": "孩子們想出了富有想像力的方案。",
+          "source": "daily"
+        },
+        {
+          "en": "Imaginative problem-solving is a hallmark of successful entrepreneurs.",
+          "zh": "富有想像力的問題解決是成功企業家的特徵。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "creation-novelty",
+      "mnemonicHint": "imagin(image) + ative → 能創造畫面 → 富有想像力的"
+    },
+    "reprimanded": {
+      "chinese": "被訓斥的",
+      "pos": "v",
+      "synonyms": [
+        "rebuked",
+        "scolded",
+        "admonished",
+        "chastised"
+      ],
+      "antonyms": [
+        "praised",
+        "commended",
+        "applauded"
+      ],
+      "relatedWords": [
+        "reprimand"
+      ],
+      "confusableWith": [
+        "demanded"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The employee was reprimanded for arriving late.",
+          "zh": "員工因遲到而被訓斥。",
+          "source": "daily"
+        },
+        {
+          "en": "Officials violating ethics codes may be publicly reprimanded.",
+          "zh": "違反道德準則的官員可能被公開訓斥。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "punishment-criticism",
+      "mnemonicHint": "re(back) + primand(press) → 往回施壓 → 訓斥"
+    },
+    "disapproving": {
+      "chinese": "不贊成的",
+      "pos": "adj",
+      "synonyms": [
+        "critical",
+        "censorious",
+        "reproachful"
+      ],
+      "antonyms": [
+        "approving",
+        "supportive"
+      ],
+      "relatedWords": [
+        "disapprove",
+        "disapproval"
+      ],
+      "confusableWith": [
+        "disproving"
+      ],
+      "exampleSentences": [
+        {
+          "en": "She gave a disapproving look when he checked his phone.",
+          "zh": "他看手機時她投以不贊成的目光。",
+          "source": "daily"
+        },
+        {
+          "en": "The disapproving tone reflected public sentiment.",
+          "zh": "不贊成的語氣反映了公眾情緒。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "emotion-attitude",
+      "mnemonicHint": "dis(not) + approving → 不贊同 → 不贊成的"
+    },
+    "exclusive": {
+      "chinese": "獨家的",
+      "pos": "adj",
+      "synonyms": [
+        "sole",
+        "restricted",
+        "elite",
+        "limited"
+      ],
+      "antonyms": [
+        "inclusive",
+        "open",
+        "accessible"
+      ],
+      "relatedWords": [
+        "exclude",
+        "exclusion",
+        "exclusively"
+      ],
+      "confusableWith": [
+        "inclusive"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The hotel offers exclusive access to a private beach.",
+          "zh": "飯店提供專屬的私人海灘。",
+          "source": "daily"
+        },
+        {
+          "en": "Exclusive licensing agreements limit market competition.",
+          "zh": "獨家授權協議限制市場競爭。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "access-restriction",
+      "mnemonicHint": "ex(out) + clus(close) + ive → 把別人關在外面 → 排他的"
+    },
+    "expenditure": {
+      "chinese": "支出",
+      "pos": "n",
+      "synonyms": [
+        "spending",
+        "outlay",
+        "cost",
+        "expense"
+      ],
+      "antonyms": [
+        "income",
+        "revenue",
+        "savings"
+      ],
+      "relatedWords": [
+        "expend",
+        "expendable"
+      ],
+      "confusableWith": [
+        "experience"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Government expenditure on education has increased.",
+          "zh": "政府在教育上的支出增加了。",
+          "source": "daily"
+        },
+        {
+          "en": "Capital expenditure decisions require cost-benefit analysis.",
+          "zh": "資本支出決策需要成本效益分析。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "finance-money",
+      "mnemonicHint": "ex(out) + pend(pay) + iture → 付出去的錢 → 支出"
+    },
+    "reform": {
+      "chinese": "改革",
+      "pos": "n/v",
+      "synonyms": [
+        "overhaul",
+        "revamp",
+        "restructure",
+        "transform"
+      ],
+      "antonyms": [
+        "preserve",
+        "maintain"
+      ],
+      "relatedWords": [
+        "reformation",
+        "reformer"
+      ],
+      "confusableWith": [
+        "perform"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The government promised to reform the healthcare system.",
+          "zh": "政府承諾改革醫療保健制度。",
+          "source": "daily"
+        },
+        {
+          "en": "Educational reform must address both access and quality.",
+          "zh": "教育改革必須同時解決入學機會和品質。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "change-improvement",
+      "mnemonicHint": "re(again) + form → 重新塑造 → 改革"
+    },
+    "reminiscence": {
+      "chinese": "回憶",
+      "pos": "n",
+      "synonyms": [
+        "recollection",
+        "memory",
+        "remembrance"
+      ],
+      "antonyms": [
+        "forgetfulness",
+        "oblivion"
+      ],
+      "relatedWords": [
+        "reminisce",
+        "reminiscent"
+      ],
+      "confusableWith": [
+        "renaissance"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The photograph filled her with reminiscence of childhood.",
+          "zh": "照片讓她充滿對童年的回憶。",
+          "source": "daily"
+        },
+        {
+          "en": "Reminiscence therapy benefits patients with early-stage dementia.",
+          "zh": "回憶療法對早期失智症患者有益。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "memory-honor",
+      "mnemonicHint": "re(again) + minisc(remember) + ence → 再次記起 → 回憶"
+    },
+    "resemblance": {
+      "chinese": "相似",
+      "pos": "n",
+      "synonyms": [
+        "similarity",
+        "likeness",
+        "semblance",
+        "affinity"
+      ],
+      "antonyms": [
+        "difference",
+        "dissimilarity"
+      ],
+      "relatedWords": [
+        "resemble"
+      ],
+      "confusableWith": [
+        "remembrance"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The twins bear a striking resemblance to each other.",
+          "zh": "雙胞胎彼此有驚人的相似。",
+          "source": "daily"
+        },
+        {
+          "en": "Any resemblance to actual events is entirely coincidental.",
+          "zh": "與實際事件的相似純屬巧合。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "comparison-similarity",
+      "mnemonicHint": "re + sembl(similar) + ance → 看起來相同 → 相似"
+    },
+    "residue": {
+      "chinese": "殘留物",
+      "pos": "n",
+      "synonyms": [
+        "remnant",
+        "remainder",
+        "traces",
+        "leftovers"
+      ],
+      "antonyms": [
+        "whole",
+        "entirety"
+      ],
+      "relatedWords": [
+        "residual"
+      ],
+      "confusableWith": [
+        "rescue"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Pesticide residue on vegetables can be harmful.",
+          "zh": "蔬菜上的農藥殘留可能有害。",
+          "source": "daily"
+        },
+        {
+          "en": "Chemical residue in water poses environmental threats.",
+          "zh": "水中的化學殘留物構成環境威脅。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "remainder-leftover",
+      "mnemonicHint": "re(back) + sid(sit) + ue → 留下的東西 → 殘留物"
+    },
+    "restrained": {
+      "chinese": "克制的",
+      "pos": "adj",
+      "synonyms": [
+        "controlled",
+        "moderate",
+        "subdued",
+        "reserved"
+      ],
+      "antonyms": [
+        "unrestrained",
+        "extravagant",
+        "excessive"
+      ],
+      "relatedWords": [
+        "restrain",
+        "restraint"
+      ],
+      "confusableWith": [
+        "restricted"
+      ],
+      "exampleSentences": [
+        {
+          "en": "His restrained response impressed everyone.",
+          "zh": "他的克制反應讓大家印象深刻。",
+          "source": "daily"
+        },
+        {
+          "en": "Restrained fiscal policy helps prevent economic overheating.",
+          "zh": "克制的財政政策有助於防止經濟過熱。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "caution-restraint",
+      "mnemonicHint": "re(back) + strain(pull) + ed → 往回拉 → 克制的"
+    },
+    "scurrilous": {
+      "chinese": "誹謗的",
+      "pos": "adj",
+      "synonyms": [
+        "defamatory",
+        "slanderous",
+        "libelous",
+        "vulgar"
+      ],
+      "antonyms": [
+        "complimentary",
+        "respectful"
+      ],
+      "relatedWords": [
+        "scurrility"
+      ],
+      "confusableWith": [
+        "scrupulous"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The politician filed a lawsuit against the scurrilous allegations.",
+          "zh": "政治家對誹謗性指控提起訴訟。",
+          "source": "daily"
+        },
+        {
+          "en": "Scurrilous attacks on public figures often go viral.",
+          "zh": "對公眾人物的誹謗性攻擊經常瘋傳。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "truth-deception",
+      "mnemonicHint": "scurr(run around) + ilous → 到處散播惡言 → 誹謗的"
+    },
+    "disinfection": {
+      "chinese": "消毒",
+      "pos": "n",
+      "synonyms": [
+        "sterilization",
+        "sanitization",
+        "decontamination"
+      ],
+      "antonyms": [
+        "contamination",
+        "infection"
+      ],
+      "relatedWords": [
+        "disinfect",
+        "disinfectant"
+      ],
+      "confusableWith": [
+        "dissection"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Regular disinfection of surfaces is crucial during flu season.",
+          "zh": "流感季節定期消毒表面至關重要。",
+          "source": "daily"
+        },
+        {
+          "en": "Water disinfection methods include chlorination and UV treatment.",
+          "zh": "水消毒方法包括氯化和紫外線處理。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "health-cleanliness",
+      "mnemonicHint": "dis(remove) + infection → 去除感染 → 消毒"
+    },
+    "dissection": {
+      "chinese": "解剖",
+      "pos": "n",
+      "synonyms": [
+        "analysis",
+        "examination",
+        "investigation"
+      ],
+      "antonyms": [
+        "synthesis",
+        "assembly"
+      ],
+      "relatedWords": [
+        "dissect"
+      ],
+      "confusableWith": [
+        "disinfection"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The dissection of the frog was a memorable biology experience.",
+          "zh": "解剖青蛙是難忘的生物課經歷。",
+          "source": "daily"
+        },
+        {
+          "en": "Careful dissection of data reveals hidden patterns.",
+          "zh": "仔細剖析數據揭示隱藏模式。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "analysis-investigation",
+      "mnemonicHint": "dis(apart) + sect(cut) + ion → 切開 → 解剖"
+    },
+    "elucidated": {
+      "chinese": "闡明的",
+      "pos": "v",
+      "synonyms": [
+        "clarified",
+        "explained",
+        "illuminated"
+      ],
+      "antonyms": [
+        "obscured",
+        "confused"
+      ],
+      "relatedWords": [
+        "elucidate",
+        "elucidation"
+      ],
+      "confusableWith": [
+        "eliminated"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The professor elucidated the complex theory with examples.",
+          "zh": "教授用例子闡明了複雜理論。",
+          "source": "daily"
+        },
+        {
+          "en": "The research elucidated how stress affects immunity.",
+          "zh": "研究闡明了壓力影響免疫力的機制。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "explanation-clarity",
+      "mnemonicHint": "e(out) + lucid(clear) + ate → 使清楚 → 闡明"
+    },
+    "forfeited": {
+      "chinese": "喪失的",
+      "pos": "v",
+      "synonyms": [
+        "surrendered",
+        "relinquished",
+        "lost",
+        "sacrificed"
+      ],
+      "antonyms": [
+        "retained",
+        "gained",
+        "won"
+      ],
+      "relatedWords": [
+        "forfeit",
+        "forfeiture"
+      ],
+      "confusableWith": [
+        "fortified"
+      ],
+      "exampleSentences": [
+        {
+          "en": "He forfeited his deposit by canceling too late.",
+          "zh": "他因太晚取消而喪失了訂金。",
+          "source": "daily"
+        },
+        {
+          "en": "Companies violating regulations risk forfeiting licenses.",
+          "zh": "違反法規的公司面臨喪失執照的風險。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "loss-sacrifice",
+      "mnemonicHint": "for(away) + feit(do) → 被拿走 → 喪失"
+    },
+    "parsimonious": {
+      "chinese": "吝嗇的",
+      "pos": "adj",
+      "synonyms": [
+        "frugal",
+        "stingy",
+        "miserly",
+        "thrifty"
+      ],
+      "antonyms": [
+        "generous",
+        "lavish",
+        "extravagant"
+      ],
+      "relatedWords": [
+        "parsimony"
+      ],
+      "confusableWith": [
+        "harmonious"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Despite his wealth, he was notoriously parsimonious with tips.",
+          "zh": "儘管很富有，他在小費方面出了名的吝嗇。",
+          "source": "daily"
+        },
+        {
+          "en": "A parsimonious model uses the fewest variables to explain data.",
+          "zh": "簡約模型使用最少的變數來解釋數據。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "finance-money",
+      "mnemonicHint": "pars(spare) + imonious → 過度節省 → 吝嗇的"
+    },
+    "predecessor": {
+      "chinese": "前任",
+      "pos": "n",
+      "synonyms": [
+        "forerunner",
+        "precursor",
+        "antecedent"
+      ],
+      "antonyms": [
+        "successor",
+        "follower",
+        "heir"
+      ],
+      "relatedWords": [
+        "precede"
+      ],
+      "confusableWith": [
+        "processor"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The new CEO improved upon her predecessor's policies.",
+          "zh": "新任執行長改進了前任的政策。",
+          "source": "daily"
+        },
+        {
+          "en": "This model outperforms its predecessor in speed and accuracy.",
+          "zh": "這個模型在速度和準確性方面都優於前代。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "sequence-order",
+      "mnemonicHint": "pre(before) + cessor(go) → 在前面走的人 → 前任"
+    },
+    "complications": {
+      "chinese": "併發症",
+      "pos": "n",
+      "synonyms": [
+        "difficulties",
+        "problems",
+        "obstacles"
+      ],
+      "antonyms": [
+        "simplicity",
+        "ease"
+      ],
+      "relatedWords": [
+        "complicate",
+        "complicated"
+      ],
+      "confusableWith": [
+        "implications"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The surgery went well but there were complications.",
+          "zh": "手術順利但出現了併發症。",
+          "source": "daily"
+        },
+        {
+          "en": "Legal complications delayed the merger by months.",
+          "zh": "法律問題使合併推遲了數月。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "difficulty-complexity",
+      "mnemonicHint": "com + plic(fold) + ations → 很多層折疊 → 複雜化"
+    },
+    "mellow": {
+      "chinese": "醇和的",
+      "pos": "adj",
+      "synonyms": [
+        "gentle",
+        "soft",
+        "smooth",
+        "mild"
+      ],
+      "antonyms": [
+        "harsh",
+        "sharp",
+        "intense"
+      ],
+      "relatedWords": [
+        "mellowness"
+      ],
+      "confusableWith": [
+        "yellow"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The wine has a mellow flavor that improves with age.",
+          "zh": "葡萄酒有醇和的風味，越陳越好。",
+          "source": "daily"
+        },
+        {
+          "en": "A mellow leadership style fosters creativity.",
+          "zh": "溫和的領導風格促進創造力。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "quality-texture",
+      "mnemonicHint": "mellow 發音像「美好」→ 柔和的 → 醇和的"
+    },
+    "ominous": {
+      "chinese": "不祥的",
+      "pos": "adj",
+      "synonyms": [
+        "threatening",
+        "menacing",
+        "foreboding",
+        "sinister"
+      ],
+      "antonyms": [
+        "promising",
+        "auspicious"
+      ],
+      "relatedWords": [
+        "omen",
+        "ominously"
+      ],
+      "confusableWith": [
+        "omnibus"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Dark clouds gathered in an ominous sky before the storm.",
+          "zh": "暴風雨前烏雲在不祥的天空聚集。",
+          "source": "daily"
+        },
+        {
+          "en": "The ominous decline in biodiversity signals ecosystem collapse.",
+          "zh": "生物多樣性的不祥下降預示生態系統崩潰。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "danger-warning",
+      "mnemonicHint": "omin(omen) + ous → 有不好預兆 → 不祥的"
+    },
+    "exile": {
+      "chinese": "流放",
+      "pos": "n/v",
+      "synonyms": [
+        "banishment",
+        "expulsion",
+        "deportation"
+      ],
+      "antonyms": [
+        "repatriation",
+        "return"
+      ],
+      "relatedWords": [
+        "exiled"
+      ],
+      "confusableWith": [
+        "exalt"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The writer spent ten years in exile.",
+          "zh": "作家在流放中度過了十年。",
+          "source": "daily"
+        },
+        {
+          "en": "Political exile has been a common fate for dissidents.",
+          "zh": "政治流放是異議人士的常見命運。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "punishment-exclusion",
+      "mnemonicHint": "ex(out) + ile → 被趕出去 → 流放"
+    },
+    "interrogate": {
+      "chinese": "審問",
+      "pos": "v",
+      "synonyms": [
+        "question",
+        "examine",
+        "cross-examine",
+        "grill"
+      ],
+      "antonyms": [
+        "answer",
+        "respond"
+      ],
+      "relatedWords": [
+        "interrogation",
+        "interrogative"
+      ],
+      "confusableWith": [
+        "integrate"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The detective interrogated the suspect for hours.",
+          "zh": "偵探審問了嫌疑人幾個小時。",
+          "source": "daily"
+        },
+        {
+          "en": "Researchers interrogate data sets to uncover correlations.",
+          "zh": "研究人員深入質問數據集以發現相關性。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "inquiry-investigation",
+      "mnemonicHint": "inter(between) + rog(ask) + ate → 反覆追問 → 審問"
+    },
+    "inversely": {
+      "chinese": "反向地",
+      "pos": "adv",
+      "synonyms": [
+        "conversely",
+        "contrarily",
+        "oppositely"
+      ],
+      "antonyms": [
+        "directly",
+        "proportionally"
+      ],
+      "relatedWords": [
+        "inverse",
+        "inversion"
+      ],
+      "confusableWith": [
+        "universally"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Price and demand are inversely related.",
+          "zh": "價格和需求是反向相關的。",
+          "source": "daily"
+        },
+        {
+          "en": "Stress levels are inversely correlated with job satisfaction.",
+          "zh": "壓力水平與工作滿意度呈反向相關。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "comparison-contrast",
+      "mnemonicHint": "in(反) + verse(turn) + ly → 反轉地 → 反向地"
+    },
+    "corrugate": {
+      "chinese": "波紋狀的",
+      "pos": "v",
+      "synonyms": [
+        "crinkle",
+        "wrinkle",
+        "furrow"
+      ],
+      "antonyms": [
+        "smooth",
+        "flatten"
+      ],
+      "relatedWords": [
+        "corrugated"
+      ],
+      "confusableWith": [
+        "corroborate"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Corrugated cardboard provides extra strength for boxes.",
+          "zh": "瓦楞紙板為箱子提供額外強度。",
+          "source": "daily"
+        },
+        {
+          "en": "Corrugated roofing is widely used due to its affordability.",
+          "zh": "波紋屋頂因經濟實惠而廣泛使用。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "shape-form",
+      "mnemonicHint": "cor + rug(wrinkle) + ate → 起皺 → 波紋狀"
+    },
+    "commutations": {
+      "chinese": "減刑",
+      "pos": "n",
+      "synonyms": [
+        "reduction",
+        "lessening",
+        "substitution"
+      ],
+      "antonyms": [
+        "increase",
+        "extension"
+      ],
+      "relatedWords": [
+        "commute",
+        "commuter"
+      ],
+      "confusableWith": [
+        "communications"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The governor granted commutations to nonviolent offenders.",
+          "zh": "州長對非暴力罪犯給予減刑。",
+          "source": "daily"
+        },
+        {
+          "en": "Sentence commutations raise questions about justice equity.",
+          "zh": "減刑引發關於司法公平性的問題。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "change-modification",
+      "mnemonicHint": "com + mut(change) + ations → 改變 → 減刑"
+    },
+    "dissimulation": {
+      "chinese": "偽裝",
+      "pos": "n",
+      "synonyms": [
+        "pretense",
+        "deception",
+        "concealment"
+      ],
+      "antonyms": [
+        "honesty",
+        "sincerity"
+      ],
+      "relatedWords": [
+        "dissimulate"
+      ],
+      "confusableWith": [
+        "simulation"
+      ],
+      "exampleSentences": [
+        {
+          "en": "His calm exterior was a form of dissimulation.",
+          "zh": "他平靜的外表是一種偽裝。",
+          "source": "daily"
+        },
+        {
+          "en": "Political dissimulation erodes public trust.",
+          "zh": "政治偽裝侵蝕了公眾信任。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "truth-deception",
+      "mnemonicHint": "dis + simul(pretend) + ation → 假裝 → 偽裝"
+    },
+    "inadequately": {
+      "chinese": "不充分地",
+      "pos": "adv",
+      "synonyms": [
+        "insufficiently",
+        "poorly",
+        "deficiently"
+      ],
+      "antonyms": [
+        "adequately",
+        "sufficiently"
+      ],
+      "relatedWords": [
+        "inadequate",
+        "inadequacy"
+      ],
+      "confusableWith": [
+        "inaccurately"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The project failed because resources were inadequately allocated.",
+          "zh": "項目失敗因資源分配不足。",
+          "source": "daily"
+        },
+        {
+          "en": "Inadequately trained staff can compromise safety.",
+          "zh": "培訓不足的員工可能危及安全。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "quantity-sufficiency",
+      "mnemonicHint": "in(not) + adequately → 不夠充分 → 不充分地"
+    },
+    "insufficiently": {
+      "chinese": "不足地",
+      "pos": "adv",
+      "synonyms": [
+        "inadequately",
+        "deficiently",
+        "poorly"
+      ],
+      "antonyms": [
+        "sufficiently",
+        "amply"
+      ],
+      "relatedWords": [
+        "insufficient"
+      ],
+      "confusableWith": [
+        "inefficiently"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The warning was insufficiently clear.",
+          "zh": "警告不夠清楚。",
+          "source": "daily"
+        },
+        {
+          "en": "Insufficiently funded programs struggle to produce results.",
+          "zh": "資金不足的計畫難以產出成果。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "quantity-sufficiency",
+      "mnemonicHint": "in(not) + sufficiently → 不夠充足 → 不足地"
+    },
+    "intentionally": {
+      "chinese": "故意地",
+      "pos": "adv",
+      "synonyms": [
+        "deliberately",
+        "purposely",
+        "consciously"
+      ],
+      "antonyms": [
+        "accidentally",
+        "unintentionally"
+      ],
+      "relatedWords": [
+        "intention",
+        "intentional"
+      ],
+      "confusableWith": [
+        "intensely"
+      ],
+      "exampleSentences": [
+        {
+          "en": "She intentionally avoided eye contact.",
+          "zh": "她故意避免眼神接觸。",
+          "source": "daily"
+        },
+        {
+          "en": "Intentionally misleading consumers violates protection laws.",
+          "zh": "故意誤導消費者違反保護法。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "intention-purpose",
+      "mnemonicHint": "intention(意圖) + ally → 帶意圖地 → 故意地"
+    },
+    "harassment": {
+      "chinese": "騷擾",
+      "pos": "n",
+      "synonyms": [
+        "bullying",
+        "intimidation",
+        "persecution",
+        "torment"
+      ],
+      "antonyms": [
+        "protection",
+        "support"
+      ],
+      "relatedWords": [
+        "harass",
+        "harasser"
+      ],
+      "confusableWith": [
+        "embarrassment"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The company has a zero-tolerance policy for workplace harassment.",
+          "zh": "公司對職場騷擾採取零容忍政策。",
+          "source": "daily"
+        },
+        {
+          "en": "Online harassment disproportionately affects women and minorities.",
+          "zh": "網路騷擾不成比例地影響女性和少數族群。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "conflict-aggression",
+      "mnemonicHint": "harass + ment → 持續困擾某人 → 騷擾"
+    },
+    "transparent": {
+      "chinese": "透明的",
+      "pos": "adj",
+      "synonyms": [
+        "clear",
+        "open",
+        "candid",
+        "forthright"
+      ],
+      "antonyms": [
+        "opaque",
+        "secretive",
+        "hidden"
+      ],
+      "relatedWords": [
+        "transparency",
+        "transparently"
+      ],
+      "confusableWith": [
+        "apparent"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The government pledged to be more transparent about spending.",
+          "zh": "政府承諾在支出方面更加透明。",
+          "source": "daily"
+        },
+        {
+          "en": "Transparent algorithms are essential for accountable AI systems.",
+          "zh": "透明的演算法對負責任的AI系統至關重要。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "truth-openness",
+      "mnemonicHint": "trans(through) + par(appear) + ent → 能看穿的 → 透明的"
+    },
+    "accessible": {
+      "chinese": "可取得的；無障礙的",
+      "pos": "adj",
+      "synonyms": [
+        "available",
+        "reachable",
+        "obtainable",
+        "approachable"
+      ],
+      "antonyms": [
+        "inaccessible",
+        "restricted",
+        "exclusive"
+      ],
+      "relatedWords": [
+        "access",
+        "accessibility"
+      ],
+      "confusableWith": [
+        "assessable"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The new library is designed to be accessible to wheelchair users.",
+          "zh": "新圖書館的設計方便輪椅使用者進出。",
+          "source": "daily"
+        },
+        {
+          "en": "Making education accessible to all remains a global challenge.",
+          "zh": "讓所有人都能獲得教育仍是全球挑戰。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "access-availability",
+      "mnemonicHint": "access + ible → 能接近的 → 可取得的"
+    },
+    "ambivalent": {
+      "chinese": "矛盾的",
+      "pos": "adj",
+      "synonyms": [
+        "conflicted",
+        "uncertain",
+        "torn",
+        "indecisive"
+      ],
+      "antonyms": [
+        "decisive",
+        "certain",
+        "resolute"
+      ],
+      "relatedWords": [
+        "ambivalence"
+      ],
+      "confusableWith": [
+        "equivalent"
+      ],
+      "exampleSentences": [
+        {
+          "en": "She felt ambivalent about accepting the job offer abroad.",
+          "zh": "她對接受國外的工作機會感到矛盾。",
+          "source": "daily"
+        },
+        {
+          "en": "Public opinion remains ambivalent toward nuclear energy.",
+          "zh": "公眾輿論對核能仍持矛盾態度。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "emotion-uncertainty",
+      "mnemonicHint": "ambi(both) + valent(strength) → 兩種力量拉扯 → 矛盾的"
+    },
+    "conspicuous": {
+      "chinese": "顯眼的",
+      "pos": "adj",
+      "synonyms": [
+        "noticeable",
+        "prominent",
+        "obvious",
+        "striking"
+      ],
+      "antonyms": [
+        "inconspicuous",
+        "subtle",
+        "hidden"
+      ],
+      "relatedWords": [
+        "conspicuously",
+        "conspicuousness"
+      ],
+      "confusableWith": [
+        "conscious"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The bright red car was conspicuous in the parking lot.",
+          "zh": "那輛鮮紅色的車在停車場很顯眼。",
+          "source": "daily"
+        },
+        {
+          "en": "Conspicuous consumption often signals social status rather than need.",
+          "zh": "炫耀性消費通常代表社會地位而非需要。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "visibility-prominence",
+      "mnemonicHint": "con(together) + spic(look) + uous → 大家都在看 → 顯眼的"
+    },
+    "complement": {
+      "chinese": "補充",
+      "pos": "n/v",
+      "synonyms": [
+        "supplement",
+        "enhancement",
+        "addition",
+        "counterpart"
+      ],
+      "antonyms": [
+        "clash",
+        "conflict",
+        "detract"
+      ],
+      "relatedWords": [
+        "complementary"
+      ],
+      "confusableWith": [
+        "compliment (讚美)"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Red wine is the perfect complement to steak.",
+          "zh": "紅酒是牛排的完美搭配。",
+          "source": "daily"
+        },
+        {
+          "en": "Online learning can complement traditional classroom instruction.",
+          "zh": "線上學習可以補充傳統課堂教學。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "addition-support",
+      "mnemonicHint": "com(together) + ple(fill) + ment → 填滿補齊 → 補充。注意：compliment 是讚美"
+    },
+    "contradict": {
+      "chinese": "矛盾；反駁",
+      "pos": "v",
+      "synonyms": [
+        "deny",
+        "refute",
+        "oppose",
+        "counter"
+      ],
+      "antonyms": [
+        "confirm",
+        "support",
+        "agree"
+      ],
+      "relatedWords": [
+        "contradiction",
+        "contradictory"
+      ],
+      "confusableWith": [
+        "contrast"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The evidence contradicts the defendant's testimony.",
+          "zh": "證據與被告的證詞矛盾。",
+          "source": "daily"
+        },
+        {
+          "en": "Studies that contradict each other make it difficult to draw conclusions.",
+          "zh": "相互矛盾的研究使得難以得出結論。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "opposition-conflict",
+      "mnemonicHint": "contra(against) + dict(speak) → 反著說 → 反駁"
+    },
+    "degradation": {
+      "chinese": "退化；降解",
+      "pos": "n",
+      "synonyms": [
+        "deterioration",
+        "decline",
+        "decay",
+        "erosion"
+      ],
+      "antonyms": [
+        "improvement",
+        "enhancement",
+        "upgrade"
+      ],
+      "relatedWords": [
+        "degrade",
+        "degrading"
+      ],
+      "confusableWith": [
+        "graduation"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Environmental degradation threatens wildlife habitats.",
+          "zh": "環境退化威脅野生動物的棲息地。",
+          "source": "daily"
+        },
+        {
+          "en": "Soil degradation reduces agricultural productivity.",
+          "zh": "土壤退化降低了農業生產力。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "decline-deterioration",
+      "mnemonicHint": "de(down) + grad(step) + ation → 往下走 → 退化"
+    },
+    "extravagant": {
+      "chinese": "奢侈的",
+      "pos": "adj",
+      "synonyms": [
+        "lavish",
+        "excessive",
+        "wasteful",
+        "luxurious"
+      ],
+      "antonyms": [
+        "frugal",
+        "modest",
+        "economical"
+      ],
+      "relatedWords": [
+        "extravagance",
+        "extravagantly"
+      ],
+      "confusableWith": [
+        "extraordinary"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The wedding was criticized for its extravagant decorations.",
+          "zh": "婚禮因其奢侈的裝飾而受到批評。",
+          "source": "daily"
+        },
+        {
+          "en": "Extravagant spending during economic downturns draws public criticism.",
+          "zh": "在經濟低迷時期的奢侈支出引發公眾批評。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "excess-abundance",
+      "mnemonicHint": "extra(beyond) + vag(wander) + ant → 超出常規地花錢 → 奢侈的"
+    },
+    "harbinger": {
+      "chinese": "先兆",
+      "pos": "n",
+      "synonyms": [
+        "herald",
+        "omen",
+        "precursor",
+        "forerunner"
+      ],
+      "antonyms": [
+        "aftermath",
+        "consequence"
+      ],
+      "relatedWords": [
+        "harbinger of"
+      ],
+      "confusableWith": [
+        "hamburger"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The first robin is often seen as a harbinger of spring.",
+          "zh": "第一隻知更鳥通常被視為春天的先兆。",
+          "source": "daily"
+        },
+        {
+          "en": "Declining retail sales may be a harbinger of economic recession.",
+          "zh": "零售銷售下降可能是經濟衰退的先兆。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "prediction-sign",
+      "mnemonicHint": "harbor(港口) + inger → 先到港口的人帶來消息 → 先兆"
+    },
+    "immutable": {
+      "chinese": "不可變的",
+      "pos": "adj",
+      "synonyms": [
+        "unchangeable",
+        "fixed",
+        "permanent",
+        "constant"
+      ],
+      "antonyms": [
+        "mutable",
+        "changeable",
+        "variable"
+      ],
+      "relatedWords": [
+        "immutability",
+        "mutate"
+      ],
+      "confusableWith": [
+        "mutable"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The laws of physics are considered immutable.",
+          "zh": "物理定律被認為是不可變的。",
+          "source": "daily"
+        },
+        {
+          "en": "Blockchain records are designed to be immutable once confirmed.",
+          "zh": "區塊鏈記錄一旦確認就被設計為不可變的。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "permanence-stability",
+      "mnemonicHint": "im(not) + mut(change) + able → 不能改變的 → 不可變的"
+    },
+    "incorporate": {
+      "chinese": "納入",
+      "pos": "v",
+      "synonyms": [
+        "include",
+        "integrate",
+        "embed",
+        "assimilate"
+      ],
+      "antonyms": [
+        "exclude",
+        "remove",
+        "separate"
+      ],
+      "relatedWords": [
+        "incorporation",
+        "incorporated"
+      ],
+      "confusableWith": [
+        "cooperate"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The new design incorporates feedback from users.",
+          "zh": "新設計納入了使用者的回饋。",
+          "source": "daily"
+        },
+        {
+          "en": "Firms that incorporate sustainability practices gain competitive advantages.",
+          "zh": "納入永續實踐的企業獲得競爭優勢。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "inclusion-integration",
+      "mnemonicHint": "in + corpor(body) + ate → 放入主體中 → 納入"
+    },
+    "overwhelming": {
+      "chinese": "壓倒性的",
+      "pos": "adj",
+      "synonyms": [
+        "overpowering",
+        "immense",
+        "staggering",
+        "crushing"
+      ],
+      "antonyms": [
+        "underwhelming",
+        "manageable",
+        "insignificant"
+      ],
+      "relatedWords": [
+        "overwhelm",
+        "overwhelmingly"
+      ],
+      "confusableWith": [
+        "overcoming"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The overwhelming majority voted in favor of the proposal.",
+          "zh": "壓倒性多數投票贊成該提案。",
+          "source": "daily"
+        },
+        {
+          "en": "Students reported overwhelming stress during final exams.",
+          "zh": "學生在期末考試期間報告了壓倒性的壓力。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "intensity-magnitude",
+      "mnemonicHint": "over + whelm(submerge) + ing → 被淹沒的 → 壓倒性的"
+    },
+    "relegate": {
+      "chinese": "降級",
+      "pos": "v",
+      "synonyms": [
+        "demote",
+        "downgrade",
+        "banish",
+        "consign"
+      ],
+      "antonyms": [
+        "promote",
+        "upgrade",
+        "elevate"
+      ],
+      "relatedWords": [
+        "relegation"
+      ],
+      "confusableWith": [
+        "delegate"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The team was relegated to a lower division.",
+          "zh": "球隊被降級到較低的聯賽。",
+          "source": "daily"
+        },
+        {
+          "en": "Important tasks should not be relegated to junior staff.",
+          "zh": "重要任務不應被交給初級員工。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "hierarchy-status",
+      "mnemonicHint": "re(back) + leg(send) + ate → 送回去 → 降級"
+    },
+    "rhetoric": {
+      "chinese": "修辭",
+      "pos": "n",
+      "synonyms": [
+        "eloquence",
+        "oratory",
+        "discourse",
+        "persuasion"
+      ],
+      "antonyms": [
+        "silence",
+        "plainness"
+      ],
+      "relatedWords": [
+        "rhetorical",
+        "rhetorician"
+      ],
+      "confusableWith": [
+        "poetic"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The politician's rhetoric appealed to voters' emotions.",
+          "zh": "政治家的修辭訴諸選民的情感。",
+          "source": "daily"
+        },
+        {
+          "en": "Effective rhetoric requires a balance of logic and emotion.",
+          "zh": "有效的修辭需要邏輯和情感的平衡。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "language-communication",
+      "mnemonicHint": "rhet(speak) + oric → 說話的藝術 → 修辭"
+    },
+    "rigorous": {
+      "chinese": "嚴格的",
+      "pos": "adj",
+      "synonyms": [
+        "strict",
+        "thorough",
+        "meticulous",
+        "stringent"
+      ],
+      "antonyms": [
+        "lax",
+        "lenient",
+        "careless"
+      ],
+      "relatedWords": [
+        "rigor",
+        "rigorously"
+      ],
+      "confusableWith": [
+        "vigorous"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The university has a rigorous admissions process.",
+          "zh": "該大學有嚴格的入學程序。",
+          "source": "daily"
+        },
+        {
+          "en": "Rigorous peer review ensures the quality of scientific publications.",
+          "zh": "嚴格的同儕審查確保科學出版物的品質。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "strictness-precision",
+      "mnemonicHint": "rigor(stiffness) + ous → 像鐵一樣硬的標準 → 嚴格的"
+    },
+    "ubiquitous": {
+      "chinese": "無處不在的",
+      "pos": "adj",
+      "synonyms": [
+        "omnipresent",
+        "pervasive",
+        "universal",
+        "everywhere"
+      ],
+      "antonyms": [
+        "rare",
+        "scarce",
+        "uncommon"
+      ],
+      "relatedWords": [
+        "ubiquity",
+        "ubiquitously"
+      ],
+      "confusableWith": [
+        "unique"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Smartphones have become ubiquitous in modern life.",
+          "zh": "智慧手機在現代生活中無處不在。",
+          "source": "daily"
+        },
+        {
+          "en": "The ubiquitous presence of surveillance cameras raises privacy concerns.",
+          "zh": "監控攝影機的無處不在引發了隱私擔憂。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "scope-extent",
+      "mnemonicHint": "ubique(everywhere in Latin) + ous → 到處都有的 → 無處不在的"
+    },
+    "unilateral": {
+      "chinese": "單邊的",
+      "pos": "adj",
+      "synonyms": [
+        "one-sided",
+        "independent",
+        "solo",
+        "single-handed"
+      ],
+      "antonyms": [
+        "bilateral",
+        "multilateral",
+        "mutual"
+      ],
+      "relatedWords": [
+        "unilaterally",
+        "unilateralism"
+      ],
+      "confusableWith": [
+        "lateral"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The company made a unilateral decision without consulting employees.",
+          "zh": "公司在未諮詢員工的情況下做了單方面決定。",
+          "source": "daily"
+        },
+        {
+          "en": "Unilateral trade sanctions often provoke retaliatory measures.",
+          "zh": "單邊貿易制裁往往引發報復性措施。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "scope-independence",
+      "mnemonicHint": "uni(one) + lateral(side) → 只有一邊 → 單邊的"
+    },
+    "aesthetic": {
+      "chinese": "美學的",
+      "pos": "adj/n",
+      "synonyms": [
+        "artistic",
+        "visual",
+        "tasteful",
+        "elegant"
+      ],
+      "antonyms": [
+        "ugly",
+        "unattractive",
+        "tasteless"
+      ],
+      "relatedWords": [
+        "aesthetics",
+        "aesthetically"
+      ],
+      "confusableWith": [
+        "athletic"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The café has a minimalist aesthetic that attracts young people.",
+          "zh": "咖啡廳有吸引年輕人的極簡美學。",
+          "source": "daily"
+        },
+        {
+          "en": "Product aesthetic influences purchasing decisions as much as functionality.",
+          "zh": "產品美學與功能一樣影響購買決策。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "beauty-art",
+      "mnemonicHint": "aesthet(感知/感覺) + ic → 關於感覺和美的 → 美學的"
+    },
+    "beneficial": {
+      "chinese": "有益的",
+      "pos": "adj",
+      "synonyms": [
+        "advantageous",
+        "helpful",
+        "favorable",
+        "positive"
+      ],
+      "antonyms": [
+        "harmful",
+        "detrimental",
+        "adverse"
+      ],
+      "relatedWords": [
+        "benefit",
+        "beneficiary"
+      ],
+      "confusableWith": [
+        "artificial"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Regular exercise is beneficial to both physical and mental health.",
+          "zh": "定期運動對身心健康都有益。",
+          "source": "daily"
+        },
+        {
+          "en": "Trade agreements can be mutually beneficial when properly structured.",
+          "zh": "結構合理的貿易協議可以互利互惠。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "positive-helpful",
+      "mnemonicHint": "bene(good) + fic(do) + ial → 做好事的 → 有益的"
+    },
+    "remarkable": {
+      "chinese": "值得注目的",
+      "pos": "adj",
+      "synonyms": [
+        "extraordinary",
+        "notable",
+        "outstanding",
+        "impressive"
+      ],
+      "antonyms": [
+        "ordinary",
+        "unremarkable",
+        "mediocre"
+      ],
+      "relatedWords": [
+        "remarkably",
+        "remark"
+      ],
+      "confusableWith": [
+        "marketable"
+      ],
+      "exampleSentences": [
+        {
+          "en": "She made remarkable progress in just three months.",
+          "zh": "她在短短三個月內取得了驚人的進步。",
+          "source": "daily"
+        },
+        {
+          "en": "The remarkable resilience of coral reefs continues to surprise scientists.",
+          "zh": "珊瑚礁驚人的韌性持續讓科學家驚訝。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "quality-excellence",
+      "mnemonicHint": "re + mark(注意) + able → 值得再次注意 → 值得注目的"
+    },
+    "straightforward": {
+      "chinese": "直截了當的",
+      "pos": "adj",
+      "synonyms": [
+        "simple",
+        "direct",
+        "uncomplicated",
+        "honest"
+      ],
+      "antonyms": [
+        "complicated",
+        "devious",
+        "indirect"
+      ],
+      "relatedWords": [
+        "straightforwardly"
+      ],
+      "confusableWith": [
+        "forward"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The instructions were straightforward and easy to follow.",
+          "zh": "指示直截了當且容易遵循。",
+          "source": "daily"
+        },
+        {
+          "en": "A straightforward regulatory framework encourages business compliance.",
+          "zh": "直截了當的監管框架鼓勵企業合規。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "simplicity-clarity",
+      "mnemonicHint": "straight(直) + forward(前) → 直接向前 → 直截了當的"
+    },
+    "compatible": {
+      "chinese": "相容的",
+      "pos": "adj",
+      "synonyms": [
+        "harmonious",
+        "consistent",
+        "congruent",
+        "matching"
+      ],
+      "antonyms": [
+        "incompatible",
+        "conflicting",
+        "clashing"
+      ],
+      "relatedWords": [
+        "compatibility",
+        "incompatible"
+      ],
+      "confusableWith": [
+        "comparable"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Make sure the charger is compatible with your phone model.",
+          "zh": "確保充電器與你的手機型號相容。",
+          "source": "daily"
+        },
+        {
+          "en": "Economic growth must be compatible with environmental sustainability.",
+          "zh": "經濟成長必須與環境永續相容。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "harmony-fit",
+      "mnemonicHint": "com(together) + pat(suffer/feel) + ible → 能共處的 → 相容的"
+    },
+    "intermittent": {
+      "chinese": "間歇的",
+      "pos": "adj",
+      "synonyms": [
+        "sporadic",
+        "periodic",
+        "occasional",
+        "irregular"
+      ],
+      "antonyms": [
+        "continuous",
+        "constant",
+        "unceasing"
+      ],
+      "relatedWords": [
+        "intermittently"
+      ],
+      "confusableWith": [
+        "intermediate"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The region experiences intermittent power outages.",
+          "zh": "該地區經歷間歇性停電。",
+          "source": "daily"
+        },
+        {
+          "en": "Intermittent fasting has gained popularity as a weight management strategy.",
+          "zh": "間歇性斷食作為體重管理策略越來越受歡迎。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "time-frequency",
+      "mnemonicHint": "inter(between) + mitt(send) + ent → 斷斷續續地發送 → 間歇的"
+    },
+    "melancholy": {
+      "chinese": "憂鬱的",
+      "pos": "adj/n",
+      "synonyms": [
+        "sadness",
+        "sorrow",
+        "gloom",
+        "dejection"
+      ],
+      "antonyms": [
+        "joy",
+        "happiness",
+        "cheerfulness"
+      ],
+      "relatedWords": [
+        "melancholic"
+      ],
+      "confusableWith": [
+        "melody"
+      ],
+      "exampleSentences": [
+        {
+          "en": "A sense of melancholy filled the room after the farewell.",
+          "zh": "告別後一股憂鬱感瀰漫了房間。",
+          "source": "daily"
+        },
+        {
+          "en": "The melancholy tone of the novel reflects post-war disillusionment.",
+          "zh": "小說憂鬱的基調反映了戰後的幻滅感。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "emotion-sadness",
+      "mnemonicHint": "melan(black) + choly(bile) → 黑色膽汁（古代認為導致憂鬱）→ 憂鬱的"
+    },
+    "serendipity": {
+      "chinese": "意外的幸運發現",
+      "pos": "n",
+      "synonyms": [
+        "luck",
+        "fortune",
+        "chance",
+        "happenstance"
+      ],
+      "antonyms": [
+        "misfortune",
+        "bad luck"
+      ],
+      "relatedWords": [
+        "serendipitous",
+        "serendipitously"
+      ],
+      "confusableWith": [
+        "seniority"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Finding that book in the thrift store was pure serendipity.",
+          "zh": "在二手店找到那本書純屬意外的幸運。",
+          "source": "daily"
+        },
+        {
+          "en": "Many scientific breakthroughs have resulted from serendipity.",
+          "zh": "許多科學突破都源於意外的幸運發現。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "luck-chance",
+      "mnemonicHint": "來自波斯童話 'The Three Princes of Serendip'，主角總是偶然發現好東西"
+    },
+    "verbose": {
+      "chinese": "冗長的",
+      "pos": "adj",
+      "synonyms": [
+        "wordy",
+        "long-winded",
+        "prolix",
+        "rambling"
+      ],
+      "antonyms": [
+        "concise",
+        "succinct",
+        "brief"
+      ],
+      "relatedWords": [
+        "verbosity",
+        "verbosely"
+      ],
+      "confusableWith": [
+        "verse"
+      ],
+      "exampleSentences": [
+        {
+          "en": "His verbose emails always took too long to read.",
+          "zh": "他冗長的郵件總是要花太長時間閱讀。",
+          "source": "daily"
+        },
+        {
+          "en": "Academic writing should avoid verbose language in favor of precision.",
+          "zh": "學術寫作應避免冗長的語言，轉而追求精確。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "language-communication",
+      "mnemonicHint": "verb(word) + ose → 字太多的 → 冗長的"
+    },
+    "apprehension": {
+      "chinese": "憂慮；逮捕",
+      "pos": "n",
+      "synonyms": [
+        "anxiety",
+        "dread",
+        "unease",
+        "arrest"
+      ],
+      "antonyms": [
+        "confidence",
+        "reassurance",
+        "release"
+      ],
+      "relatedWords": [
+        "apprehend",
+        "apprehensive"
+      ],
+      "confusableWith": [
+        "comprehension"
+      ],
+      "exampleSentences": [
+        {
+          "en": "She felt a growing sense of apprehension before the interview.",
+          "zh": "面試前她感到越來越強的憂慮。",
+          "source": "daily"
+        },
+        {
+          "en": "Public apprehension about AI reflects concerns over job displacement.",
+          "zh": "公眾對AI的憂慮反映了對工作被取代的擔憂。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "emotion-anxiety",
+      "mnemonicHint": "ap(to) + prehend(seize/grasp) + sion → 被恐懼抓住 → 憂慮"
+    },
+    "contingency": {
+      "chinese": "突發事件；應急方案",
+      "pos": "n",
+      "synonyms": [
+        "eventuality",
+        "possibility",
+        "emergency",
+        "backup plan"
+      ],
+      "antonyms": [
+        "certainty",
+        "inevitability"
+      ],
+      "relatedWords": [
+        "contingent",
+        "contingency plan"
+      ],
+      "confusableWith": [
+        "consistency"
+      ],
+      "exampleSentences": [
+        {
+          "en": "We should have a contingency plan in case of bad weather.",
+          "zh": "我們應該有一個應對壞天氣的應急計劃。",
+          "source": "daily"
+        },
+        {
+          "en": "Effective risk management requires identifying potential contingencies.",
+          "zh": "有效的風險管理需要識別潛在的突發事件。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "planning-preparation",
+      "mnemonicHint": "con + ting(touch/happen) + ency → 可能碰到的事 → 突發事件"
+    },
+    "divergence": {
+      "chinese": "分歧",
+      "pos": "n",
+      "synonyms": [
+        "difference",
+        "deviation",
+        "disagreement",
+        "variation"
+      ],
+      "antonyms": [
+        "convergence",
+        "agreement",
+        "uniformity"
+      ],
+      "relatedWords": [
+        "diverge",
+        "divergent"
+      ],
+      "confusableWith": [
+        "convergence"
+      ],
+      "exampleSentences": [
+        {
+          "en": "There is a growing divergence of opinion within the team.",
+          "zh": "團隊內部的意見分歧越來越大。",
+          "source": "daily"
+        },
+        {
+          "en": "The divergence between policy goals and outcomes requires analysis.",
+          "zh": "政策目標與結果之間的分歧需要分析。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "difference-separation",
+      "mnemonicHint": "di(apart) + verg(turn) + ence → 轉向不同方向 → 分歧"
+    },
+    "intangible": {
+      "chinese": "無形的",
+      "pos": "adj",
+      "synonyms": [
+        "abstract",
+        "immaterial",
+        "invisible",
+        "impalpable"
+      ],
+      "antonyms": [
+        "tangible",
+        "concrete",
+        "physical"
+      ],
+      "relatedWords": [
+        "intangibility"
+      ],
+      "confusableWith": [
+        "untouchable"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Trust is an intangible but crucial element of relationships.",
+          "zh": "信任是關係中無形但至關重要的元素。",
+          "source": "daily"
+        },
+        {
+          "en": "Intangible assets like brand value can exceed physical assets in worth.",
+          "zh": "品牌價值等無形資產的價值可以超過實體資產。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "abstract-concept",
+      "mnemonicHint": "in(not) + tang(touch) + ible → 摸不到的 → 無形的"
+    }
+  }
+}

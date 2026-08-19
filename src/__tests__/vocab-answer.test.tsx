@@ -11,7 +11,7 @@ const card = {
 describe('VocabAnswer（discrepancy 卡）', () => {
   beforeEach(() => {
     render(
-      <VocabAnswer cardId={card.id} answer={card.answer} speak={jest.fn()} speakingId={null} />
+      <VocabAnswer cardId={card.id} prompt="discrepancy" answer={card.answer} speak={jest.fn()} speakingId={null} />
     )
   })
 
