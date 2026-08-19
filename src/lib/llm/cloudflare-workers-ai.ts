@@ -54,6 +54,9 @@ function responseText(output: unknown): string {
     const first = obj.choices[0] as Record<string, unknown> | undefined
     const msg = (first?.message ?? first?.delta) as Record<string, unknown> | undefined
     if (typeof msg?.content === 'string') return msg.content
+    // Reasoning models (glm-4.7-flash) put output in reasoning_content when content is null
+    if (msg?.content === null && typeof msg?.reasoning_content === 'string')
+      return msg.reasoning_content
   }
 
   // Format 3: { result: { response: "..." } } or { result: { choices: [...] } }
