@@ -34,9 +34,10 @@ export const lexiconEntrySchema = z.object({
   kind: z.enum(['word', 'phrase']),
   ipa: z.string().optional().describe('KK 或 IPA 音標，不確定就省略'),
   senses: z.array(senseSchema).describe('所有常見義項，不是只有最常見的那一個'),
-  collocations: z.array(z.string()).describe('常見搭配，例如 intercept a message'),
+  collocations: z.array(z.string()).default([]).describe('常見搭配，例如 intercept a message'),
   phrases: z
     .array(z.object({ phrase: z.string(), zh: z.string() }))
+    .default([])
     .describe('由這個字延伸出來的片語'),
   confusables: z
     .array(
@@ -46,10 +47,11 @@ export const lexiconEntrySchema = z.object({
         note: z.string().describe('為什麼會混淆、怎麼分辨'),
       })
     )
+    .default([])
     .describe('拼字或語意相近、考試常拿來當誘答的字'),
-  synonyms: z.array(z.string()),
-  antonyms: z.array(z.string()),
-  examples: z.array(exampleSchema).describe('至少三句，涵蓋不同語域'),
+  synonyms: z.array(z.string()).default([]),
+  antonyms: z.array(z.string()).default([]),
+  examples: z.array(exampleSchema).default([]).describe('至少三句，涵蓋不同語域'),
   examNote: z.string().optional().describe('研究所英文考試的重點提醒'),
 })
 
