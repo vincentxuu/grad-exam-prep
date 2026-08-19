@@ -85,7 +85,10 @@ export function FlashcardExampleSupport({
       .catch((reason: unknown) => {
         if (controller.signal.aborted) return
         setCacheState('miss')
-        setError(reason instanceof Error ? reason.message : '例句快取讀取失敗')
+        const msg = reason instanceof Error ? reason.message : ''
+        if (msg && !msg.includes('Load failed') && !msg.includes('fetch')) {
+          setError(msg)
+        }
       })
 
     return () => controller.abort()
@@ -123,7 +126,8 @@ export function FlashcardExampleSupport({
       setPersonal(body.personal)
     } catch (reason) {
       if (controller.signal.aborted) return
-      setError(reason instanceof Error ? reason.message : '例句生成失敗')
+      const msg = reason instanceof Error ? reason.message : ''
+      setError(msg && !msg.includes('Load failed') ? msg : '例句生成失敗，請重試')
     } finally {
       if (!controller.signal.aborted) setGenerating(false)
     }
