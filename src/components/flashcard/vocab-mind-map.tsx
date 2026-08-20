@@ -156,9 +156,9 @@ function WordNode({
         width={pillW}
         height={pillH}
         rx={pillH / 2}
-        fill={hovering ? node.color : 'hsl(var(--card))'}
+        fill={hovering ? node.color : 'hsl(var(--background))'}
         stroke={node.color}
-        strokeWidth={hovering ? 2 : 1}
+        strokeWidth={hovering ? 2.5 : 1.5}
         style={{ transition: 'fill 0.15s, stroke-width 0.15s' }}
       />
       <text
@@ -166,9 +166,9 @@ function WordNode({
         y={node.y}
         textAnchor="middle"
         dominantBaseline="central"
-        fill={hovering ? 'white' : node.color}
+        fill={hovering ? 'white' : 'hsl(var(--foreground))'}
         fontSize={12}
-        fontWeight={500}
+        fontWeight={600}
         fontFamily="var(--font-inter), system-ui, sans-serif"
         style={{ transition: 'fill 0.15s', pointerEvents: 'none' }}
       >
