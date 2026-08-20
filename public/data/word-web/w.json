@@ -546,5 +546,31 @@
       "semanticGroup": "counterfactual-past",
       "mnemonicHint": "would have + 過去分詞把「會」放進未實現的過去：would have missed 是「本來會錯過」。口語縮寫 would've 聽似 would of，但正確拼法永遠是 would have。"
     }
+  },
+  "glosses": {
+    "affect": "影響；感動",
+    "affected": "不自然的；假裝的",
+    "affects": "影響；假裝；喜歡（affect的三…",
+    "effect": "效果；影響",
+    "employees": "員工",
+    "having": "財產；所有物",
+    "height": "高度；海拔",
+    "importance": "重要性",
+    "interest": "興趣；嗜好",
+    "interested": "感興趣的",
+    "interestingly": "有趣的是",
+    "mass": "大量；質量；群眾",
+    "pristine": "原始的；純淨的",
+    "respect": "尊敬；尊重",
+    "respective": "分別的；各自的",
+    "staff": "全體人員；工作班子",
+    "value": "價值；價格",
+    "wears": "穿著；磨損",
+    "wears out": "磨損；使筋疲力盡",
+    "weighted": "偏向的；偏重的",
+    "will be": "將會是；將處於",
+    "worn": "磨損的；穿戴過的",
+    "worn out": "筋疲力盡的；用壞的",
+    "would be": "會是；本來會是"
   }
 }

@@ -260,5 +260,34 @@
       "semanticGroup": "time-frequency",
       "mnemonicHint": "now 加 a days，表示現在這些日子"
     }
+  },
+  "glosses": {
+    "artifice": "巧辦法；詭計",
+    "artificial": "人造的；假的",
+    "character": "個性；字元",
+    "disposition": "性情；傾向",
+    "environment": "環境；外界",
+    "imply": "暗示",
+    "insignificant": "微不足道的",
+    "mature": "成熟的",
+    "mean": "低劣的；卑賤的",
+    "meaning": "意義；含義",
+    "meaningful": "意味深長的",
+    "meaningless": "無意義的",
+    "meant": "mean的過去式和過去分詞",
+    "natural": "自然的；天生的",
+    "nature": "自然；本質；天性",
+    "neutral": "中立者；中立國",
+    "no meaning": "無意義（清單中的片語殘片；自然用法…",
+    "no means": "絕非（清單漏掉 by；正確固定片語…",
+    "normal": "常態；標準",
+    "not mean": "不表示；並非意指（清單中的未完整動…",
+    "not means": "非標準形式；不表示",
+    "nurture": "培養；養育",
+    "organic": "器官的；有機的",
+    "previously": "先前地",
+    "significant": "重要的；顯著的；有意義的",
+    "spontaneous": "自發的；自然的",
+    "today": "今天；當今"
   }
 }

@@ -20,6 +20,8 @@ export interface VocabMindMapProps {
   mnemonicHint?: string
   /** Speak the word. */
   onWordClick?: (word: string) => void
+  /** Chinese for a related word, shown on hover/focus. */
+  getGloss?: (word: string) => string | undefined
   /** True when the word is itself a headword, so the map can re-centre on it. */
   canExpand?: (word: string) => boolean
   onExpand?: (word: string) => void
@@ -233,23 +235,32 @@ function WordChip({
   word,
   color,
   expandable,
+  gloss,
   onWordClick,
   onExpand,
+  onFocusChange,
 }: {
   word: string
   color: string
   expandable: boolean
+  gloss?: string
   onWordClick?: (word: string) => void
   onExpand?: (word: string) => void
+  onFocusChange?: (word: string | null) => void
 }) {
   return (
     <span
       className="inline-flex items-center overflow-hidden rounded-full border"
       style={{ borderColor: color }}
+      onMouseEnter={() => onFocusChange?.(word)}
+      onMouseLeave={() => onFocusChange?.(null)}
     >
       <button
         type="button"
         onClick={() => onWordClick?.(word)}
+        onFocus={() => onFocusChange?.(word)}
+        onBlur={() => onFocusChange?.(null)}
+        title={gloss}
         className="px-2 py-0.5 text-xs font-medium"
       >
         {word}
@@ -363,6 +374,21 @@ export function VocabMindMap(props: VocabMindMapProps) {
             </div>
           </div>
 
+          {props.getGloss && (
+            <div className="flex h-7 items-center gap-2 border-b px-3 text-xs">
+              {active ? (
+                <>
+                  <span className="font-medium">{active}</span>
+                  <span className="text-muted-foreground">
+                    {props.getGloss(active) ?? '（尚無中文對照）'}
+                  </span>
+                </>
+              ) : (
+                <span className="text-muted-foreground">滑過或聚焦單字可看中文</span>
+              )}
+            </div>
+          )}
+
           {layout ? (
             <>
               <div className={mapVisibility} role="group" aria-label={`${props.word} 的語義網絡`}>
@@ -458,8 +484,10 @@ export function VocabMindMap(props: VocabMindMapProps) {
                         word={w}
                         color={g.color}
                         expandable={canExpand(w)}
+                        gloss={props.getGloss?.(w)}
                         onWordClick={props.onWordClick}
                         onExpand={props.onExpand}
+                        onFocusChange={setActive}
                       />
                     ))}
                   </div>
@@ -497,8 +525,10 @@ export function VocabMindMap(props: VocabMindMapProps) {
                       word={w}
                       color="hsl(var(--primary))"
                       expandable={canExpand(w)}
+                      gloss={props.getGloss?.(w)}
                       onWordClick={props.onWordClick}
                       onExpand={props.onExpand}
+                      onFocusChange={setActive}
                     />
                   ))}
                 </div>

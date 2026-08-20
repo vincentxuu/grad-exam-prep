@@ -40,6 +40,7 @@ const NAV_GROUPS: NavGroup[] = [
     label: '英文',
     items: [
       { key: 'lookup', label: '查詞' },
+      { key: 'word-web', label: '語義群' },
       { key: 'reading', label: '閱讀' },
       { key: 'reading-practice', label: '閱讀練習' },
       { key: 'chat', label: '對話' },
@@ -101,18 +102,14 @@ function NavDropdown({
   exam: string
   pathname: string | null
 }) {
-  const isActive = group.items.some(
-    (item) => pathname?.startsWith(`/${exam}/${item.key}`)
-  )
+  const isActive = group.items.some((item) => pathname?.startsWith(`/${exam}/${item.key}`))
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger
         className={cn(
           'flex shrink-0 items-center gap-0.5 rounded-md px-2 lg:px-3 py-1.5 text-sm transition-colors hover:bg-accent hover:text-accent-foreground whitespace-nowrap',
-          isActive
-            ? 'bg-accent text-accent-foreground font-medium'
-            : 'text-muted-foreground'
+          isActive ? 'bg-accent text-accent-foreground font-medium' : 'text-muted-foreground'
         )}
       >
         {group.label}
@@ -144,9 +141,7 @@ function MoreDropdown({ pathname }: { pathname: string | null }) {
       <DropdownMenuTrigger
         className={cn(
           'flex shrink-0 items-center gap-0.5 rounded-md px-2 lg:px-3 py-1.5 text-sm transition-colors hover:bg-accent hover:text-accent-foreground whitespace-nowrap',
-          isActive
-            ? 'bg-accent text-accent-foreground font-medium'
-            : 'text-muted-foreground'
+          isActive ? 'bg-accent text-accent-foreground font-medium' : 'text-muted-foreground'
         )}
       >
         更多
@@ -157,9 +152,7 @@ function MoreDropdown({ pathname }: { pathname: string | null }) {
           <DropdownMenuItem key={item.href} asChild>
             <Link
               href={item.href}
-              className={cn(
-                pathname?.startsWith(item.href) && 'font-medium bg-accent'
-              )}
+              className={cn(pathname?.startsWith(item.href) && 'font-medium bg-accent')}
             >
               {item.label}
             </Link>
@@ -180,10 +173,7 @@ function MobileNav({ exam, pathname }: { exam: string; pathname: string | null }
       >
         <Menu className="h-4 w-4" aria-hidden="true" />
       </DropdownMenuTrigger>
-      <DropdownMenuContent
-        align="start"
-        className="w-52 max-h-[calc(100vh-5rem)] overflow-y-auto"
-      >
+      <DropdownMenuContent align="start" className="w-52 max-h-[calc(100vh-5rem)] overflow-y-auto">
         <DropdownMenuItem asChild>
           <Link
             href={`/${exam}/today`}
@@ -373,14 +363,28 @@ function LoginModal({ onClose }: { onClose: () => void }) {
           {mode === 'login' ? (
             <>
               還沒有帳號？{' '}
-              <button type="button" onClick={() => { setMode('register'); setError(null) }} className="underline hover:text-foreground">
+              <button
+                type="button"
+                onClick={() => {
+                  setMode('register')
+                  setError(null)
+                }}
+                className="underline hover:text-foreground"
+              >
                 註冊
               </button>
             </>
           ) : (
             <>
               已有帳號？{' '}
-              <button type="button" onClick={() => { setMode('login'); setError(null) }} className="underline hover:text-foreground">
+              <button
+                type="button"
+                onClick={() => {
+                  setMode('login')
+                  setError(null)
+                }}
+                className="underline hover:text-foreground"
+              >
                 登入
               </button>
             </>
@@ -398,7 +402,10 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center gap-1 sm:gap-2 min-w-0">
-        <Link href={`/${exam}/today`} className="flex items-center gap-1.5 font-bold text-primary shrink-0">
+        <Link
+          href={`/${exam}/today`}
+          className="flex items-center gap-1.5 font-bold text-primary shrink-0"
+        >
           <GraduationCap className="h-5 w-5" aria-hidden="true" />
           <span className="hidden sm:inline text-sm">台大研所備考</span>
         </Link>

@@ -413,5 +413,34 @@
       "semanticGroup": "intensity-magnitude",
       "mnemonicHint": "over + whelm(submerge) + ing → 被淹沒的 → 壓倒性的"
     }
+  },
+  "glosses": {
+    "ambiguous": "模糊的；含糊的",
+    "auspicious": "吉祥的；有前途的",
+    "challenge": "挑戰；盤問",
+    "challenging": "具挑戰性的",
+    "clear": "清楚的；清除",
+    "command": "命令；指揮",
+    "exclusion": "排除；除外",
+    "exile": "流放",
+    "favorite": "最喜愛的；最愛之物",
+    "fixed": "固定的；不變的",
+    "immense": "巨大的；極大的",
+    "insignificant": "微不足道的",
+    "member": "成員；會員",
+    "moderate": "適度的；溫和的",
+    "obscured": "遮蔽的；湮沒的",
+    "opaque": "不透明的",
+    "opposing": "對面的；反對的",
+    "opposition": "反對；對立",
+    "ordering": "有序化",
+    "outcome": "結果；出口",
+    "outrage": "憤怒；暴行",
+    "overcoming": "克服",
+    "reject": "拒絕",
+    "request": "請求；需要",
+    "reveal": "露出；顯示",
+    "sequence": "序列；續發事件",
+    "staggering": "令人震驚的"
   }
 }

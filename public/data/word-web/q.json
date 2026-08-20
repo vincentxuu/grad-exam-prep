@@ -37,5 +37,11 @@
       "semanticGroup": "measurement-calculation",
       "mnemonicHint": "quotient 和 quota 都有「分出一份」的概念：除法把總數分開後得到的結果就是「商」；清單標成 adj 並不正確，本字是名詞。"
     }
+  },
+  "glosses": {
+    "coefficient": "係數",
+    "product": "產品；產物",
+    "ratio": "比；比率",
+    "sum": "總數；總和"
   }
 }

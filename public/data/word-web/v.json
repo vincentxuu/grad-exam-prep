@@ -212,5 +212,19 @@
       "semanticGroup": "health-disease",
       "mnemonicHint": "virus 與 viral 同族，都是病毒相關。"
     }
+  },
+  "glosses": {
+    "audience": "觀眾；聽眾；讀者群",
+    "brief": "摘要；簡報",
+    "concise": "簡潔的",
+    "level": "水平；水準",
+    "observe": "覺察到；遵守",
+    "opinion": "意見；評價",
+    "perspective": "觀點；角度",
+    "succinct": "簡潔的；精煉的",
+    "vertex": "頂點；最高點",
+    "view": "觀點；景色；觀看",
+    "views": "景點；見解；檢視；檢視（view的…",
+    "virulent": "劇毒的；惡性的"
   }
 }

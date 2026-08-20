@@ -823,7 +823,7 @@
       ]
     },
     "choice-selection": {
-      "label": "選擇・選擇",
+      "label": "選擇",
       "words": [
         "selectively"
       ]
@@ -1229,7 +1229,7 @@
       ]
     },
     "fate-destiny": {
-      "label": "命運・命運",
+      "label": "命運",
       "words": [
         "predestined"
       ]
@@ -1497,7 +1497,7 @@
       ]
     },
     "law-legal-proceedings": {
-      "label": "法律・法律・程序",
+      "label": "法律・程序",
       "words": [
         "litigants"
       ]
@@ -1676,7 +1676,7 @@
       ]
     },
     "pause-suspension": {
-      "label": "暫停・暫停",
+      "label": "暫停",
       "words": [
         "recess"
       ]
@@ -2024,7 +2024,7 @@
       ]
     },
     "scope-extent": {
-      "label": "範圍・範圍",
+      "label": "範圍",
       "words": [
         "beyond",
         "entire",
@@ -2051,7 +2051,7 @@
       ]
     },
     "sequence-order": {
-      "label": "順序・順序",
+      "label": "順序",
       "words": [
         "aforementioned",
         "descendants",

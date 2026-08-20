@@ -57,6 +57,32 @@ describe('Word Web 分片產物', () => {
     }
   })
 
+  it('分片內建關聯詞的中文對照，且只放自己需要的字', () => {
+    let glossed = 0
+    for (const file of fs.readdirSync(dir).filter((name) => name !== 'index.json')) {
+      const shard = readJson(file) as {
+        words: Record<string, Record<string, string[] | undefined>>
+        glosses: Record<string, string>
+      }
+      const related = new Set(
+        Object.values(shard.words).flatMap((entry) => [
+          ...(entry.synonyms ?? []),
+          ...(entry.antonyms ?? []),
+          ...(entry.relatedWords ?? []),
+          ...(entry.confusableWith ?? []),
+        ])
+      )
+      for (const [word, gloss] of Object.entries(shard.glosses)) {
+        expect(related.has(word)).toBe(true)
+        // 匯入字典的詞性前綴與 [醫]/[計] 標記都要清掉
+        expect(gloss).not.toMatch(/^[a-z]{1,4}\.|\[/)
+        expect(gloss.length).toBeLessThanOrEqual(18)
+        glossed += 1
+      }
+    }
+    expect(glossed).toBeGreaterThan(1000)
+  })
+
   it('單張卡片要下載的量遠小於整份資料', () => {
     const sourceSize = fs.statSync(path.join(root, 'public/data/im-english-word-web.json')).size
     const indexSize = fs.statSync(path.join(dir, 'index.json')).size

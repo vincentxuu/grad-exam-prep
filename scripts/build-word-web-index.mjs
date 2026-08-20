@@ -19,10 +19,58 @@ import { fileURLToPath } from 'node:url'
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const SOURCE = 'public/data/im-english-word-web.json'
 const OUT_DIR = 'public/data/word-web'
+// Chinese glosses for related words, best source first.
+const GLOSS_SOURCES = [
+  'public/data/ntu-im-vocab-master.json',
+  'public/data/im-english-vocab-v2.json',
+]
+const LEXICON_SOURCE = 'public/data/im-vocab-lexicon.json'
+const MAX_GLOSS_LENGTH = 18
 
 const tokenLabels = JSON.parse(
   fs.readFileSync(path.join(root, 'scripts/lib/semantic-group-tokens.json'), 'utf8')
 )
+
+/** ECDICT translations look like `a. 漠不關心的, 無重要性的, 中立的\\n[醫] ...` — keep the first senses. */
+export function cleanTranslation(raw) {
+  const firstLine = raw.split(/\\n|\n/)[0]
+  const withoutTags = firstLine.replace(/\[[^\]]*\]/g, '')
+  const withoutPos = withoutTags.replace(/^\s*(?:[a-z]{1,4}\.\s*)+/i, '')
+  const senses = withoutPos
+    .split(/[,，]/)
+    .map((part) => part.trim())
+    .filter(Boolean)
+    .slice(0, 2)
+  return senses.join('；')
+}
+
+/** Glosses sit on one status line, so cap them wherever they came from. */
+function capGloss(gloss) {
+  const trimmed = gloss.trim()
+  return trimmed.length > MAX_GLOSS_LENGTH ? `${trimmed.slice(0, MAX_GLOSS_LENGTH - 1)}…` : trimmed
+}
+
+function buildGlossary(source) {
+  const glossary = new Map()
+  const add = (word, gloss) => {
+    const key = word?.trim().toLowerCase()
+    if (!key || !gloss || glossary.has(key)) return
+    glossary.set(key, capGloss(gloss))
+  }
+
+  // Word Web headwords are the most accurate, then the curated vocab lists,
+  // and finally the imported dictionary.
+  for (const [word, entry] of Object.entries(source.words)) add(word, entry.chinese)
+  for (const file of GLOSS_SOURCES) {
+    const data = JSON.parse(fs.readFileSync(path.join(root, file), 'utf8'))
+    for (const entry of data.words ?? []) add(entry.word, entry.chinese)
+  }
+  const lexicon = JSON.parse(fs.readFileSync(path.join(root, LEXICON_SOURCE), 'utf8'))
+  for (const entry of lexicon.entries ?? [])
+    add(entry.word, cleanTranslation(entry.translation ?? ''))
+
+  return glossary
+}
 
 export function shardKey(word) {
   const initial = word.trim().toLowerCase().slice(0, 1)
@@ -30,22 +78,37 @@ export function shardKey(word) {
 }
 
 export function groupLabel(slug) {
-  return slug
-    .split('-')
-    .map((token) => tokenLabels[token] ?? token)
-    .join('・')
+  // `sequence-order` maps to 順序・順序 — collapse tokens that translate the same.
+  const parts = slug.split('-').map((token) => tokenLabels[token] ?? token)
+  return [...new Set(parts)].join('・')
 }
 
 export function buildArtifacts(source) {
   const entries = Object.entries(source.words).sort(([a], [b]) => a.localeCompare(b))
+  const glossary = buildGlossary(source)
 
   const shards = new Map()
+  const shardGlosses = new Map()
   const groups = new Map()
 
   for (const [word, entry] of entries) {
     const key = shardKey(word)
     if (!shards.has(key)) shards.set(key, {})
     shards.get(key)[word] = entry
+
+    // Ship each shard with the glosses its own related words need, so hovering
+    // a node never costs another request.
+    if (!shardGlosses.has(key)) shardGlosses.set(key, {})
+    const related = [
+      ...(entry.synonyms ?? []),
+      ...(entry.antonyms ?? []),
+      ...(entry.relatedWords ?? []),
+      ...(entry.confusableWith ?? []),
+    ]
+    for (const neighbour of related) {
+      const gloss = glossary.get(neighbour.trim().toLowerCase())
+      if (gloss) shardGlosses.get(key)[neighbour] = gloss
+    }
 
     const slug = entry.semanticGroup
     if (!slug) continue
@@ -66,7 +129,10 @@ export function buildArtifacts(source) {
 
   const files = { 'index.json': index }
   for (const [key, words] of [...shards.entries()].sort(([a], [b]) => a.localeCompare(b))) {
-    files[`${key}.json`] = { schemaVersion: 1, words }
+    const glosses = Object.fromEntries(
+      Object.entries(shardGlosses.get(key) ?? {}).sort(([a], [b]) => a.localeCompare(b))
+    )
+    files[`${key}.json`] = { schemaVersion: 1, words, glosses }
   }
   return files
 }

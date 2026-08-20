@@ -28,6 +28,12 @@ interface WordWebIndex {
 
 type ShardEntries = Record<string, Omit<WordWebEntry, 'word'>>
 
+interface Shard {
+  words: ShardEntries
+  /** Chinese glosses for this shard's related words, so hovering costs no request. */
+  glosses?: Record<string, string>
+}
+
 const BASE = '/data/word-web'
 
 // Module-level caches: the index is tiny and shared, and each shard is fetched
@@ -37,6 +43,7 @@ let indexWords: Set<string> | null = null
 let indexPromise: Promise<void> | null = null
 const shards = new Map<string, ShardEntries>()
 const shardPromises = new Map<string, Promise<void>>()
+const glossary = new Map<string, string>()
 
 export function wordWebShardKey(word: string): string {
   const initial = word.trim().toLowerCase().slice(0, 1)
@@ -63,9 +70,12 @@ function loadShard(key: string): Promise<void> {
   let pending = shardPromises.get(key)
   if (!pending) {
     pending = fetch(`${BASE}/${key}.json`)
-      .then((res) => (res.ok ? (res.json() as Promise<{ words: ShardEntries }>) : null))
+      .then((res) => (res.ok ? (res.json() as Promise<Shard>) : null))
       .then((raw) => {
         shards.set(key, raw?.words ?? {})
+        for (const [word, gloss] of Object.entries(raw?.glosses ?? {})) {
+          glossary.set(word.toLowerCase(), gloss)
+        }
       })
       .catch(() => {
         shards.set(key, {})
@@ -110,6 +120,10 @@ export function useWordWeb(word?: string | null) {
   return {
     entry,
     loading: !ready,
+    /** Chinese for a related word, when any of the vocabulary sources knows it. */
+    getGloss: (candidate: string) => glossary.get(candidate.toLowerCase()),
+    /** Every semantic group in the index, for the browse page. */
+    groups: indexData?.groups ?? null,
     /** True when the word is itself a headword, i.e. the map can expand into it. */
     hasWord: (candidate: string) => indexWords?.has(candidate.toLowerCase()) ?? false,
     getGroup: (slug?: string): WordWebGroupInfo | null => {

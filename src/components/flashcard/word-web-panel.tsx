@@ -20,7 +20,7 @@ interface WordWebPanelProps {
 export function WordWebPanel({ word, idPrefix = 'word-web', speak }: WordWebPanelProps) {
   const [trail, setTrail] = useState<string[]>([])
   const focus = trail.length > 0 ? trail[trail.length - 1] : word
-  const { entry, hasWord, getGroup } = useWordWeb(focus)
+  const { entry, hasWord, getGroup, getGloss } = useWordWeb(focus)
   const [shown, setShown] = useState<WordWebEntry | null>(entry)
 
   useEffect(() => {
@@ -94,6 +94,7 @@ export function WordWebPanel({ word, idPrefix = 'word-web', speak }: WordWebPane
         semanticGroupWords={group?.words}
         mnemonicHint={shown.mnemonicHint}
         onWordClick={speak ? (clicked) => speak(clicked, `${idPrefix}-${clicked}`) : undefined}
+        getGloss={getGloss}
         canExpand={hasWord}
         onExpand={expand}
       />

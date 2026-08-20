@@ -78,6 +78,19 @@ describe('WordWebPanel', () => {
     expect(screen.getByText('考題')).toBeInTheDocument()
   })
 
+  it('滑過關聯詞會顯示中文對照', async () => {
+    render(<WordWebPanel word="mitigate" />)
+    await screen.findByRole('button', { name: '同義：alleviate' })
+
+    expect(screen.getByText('滑過或聚焦單字可看中文')).toBeInTheDocument()
+    fireEvent.focus(screen.getByRole('button', { name: '同義：diminish' }))
+    expect(screen.getByText('減少')).toBeInTheDocument()
+
+    // 字典裡查不到的字要說清楚，不是留白
+    fireEvent.focus(screen.getByRole('button', { name: '相關：mitigating' }))
+    expect(screen.getByText('（尚無中文對照）')).toBeInTheDocument()
+  })
+
   it('點單字會朗讀', async () => {
     const speak = jest.fn()
     render(<WordWebPanel word="mitigate" speak={speak} idPrefix="card-1" />)
