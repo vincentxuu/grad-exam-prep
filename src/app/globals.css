@@ -37,6 +37,12 @@
     --input: 210 14% 89%;
     --ring: 207 26% 48%;
     --radius: 0.625rem;
+
+    /* Word Web relation colours — tuned for contrast on --card in each theme. */
+    --word-web-synonym: 207 34% 44%;
+    --word-web-related: 172 42% 34%;
+    --word-web-antonym: 350 55% 48%;
+    --word-web-confusable: 32 78% 40%;
   }
 
   .dark {
@@ -72,6 +78,11 @@
     --border: 210 15% 18%;
     --input: 210 15% 18%;
     --ring: 207 30% 58%;
+
+    --word-web-synonym: 207 55% 68%;
+    --word-web-related: 172 45% 56%;
+    --word-web-antonym: 352 70% 68%;
+    --word-web-confusable: 36 85% 62%;
   }
 }
 

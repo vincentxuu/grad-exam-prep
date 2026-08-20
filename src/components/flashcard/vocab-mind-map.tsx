@@ -1,6 +1,7 @@
 'use client'
 
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
+import { layoutWordWeb, type WordWebGroup, type WordWebNode } from '@/lib/word-web-layout'
 
 export interface VocabMindMapProps {
   word: string
@@ -15,162 +16,137 @@ export interface VocabMindMapProps {
   onWordClick?: (word: string) => void
 }
 
-interface NodeGroup {
+interface GroupDef {
+  key: string
   label: string
-  words: string[]
+  hint: string
   color: string
-  lineColor: string
-  startAngle: number
+  pick: (props: VocabMindMapProps) => string[] | undefined
 }
 
-const SVG_W = 500
-const SVG_H = 380
-const CX = SVG_W / 2
-const CY = SVG_H / 2
-const RADIUS = 140
+const GROUP_DEFS: GroupDef[] = [
+  {
+    key: 'synonym',
+    label: '同義',
+    hint: '意思相近',
+    color: 'hsl(var(--word-web-synonym))',
+    pick: (p) => p.synonyms,
+  },
+  {
+    key: 'related',
+    label: '相關',
+    hint: '同源／衍生',
+    color: 'hsl(var(--word-web-related))',
+    pick: (p) => p.relatedWords,
+  },
+  {
+    key: 'antonym',
+    label: '反義',
+    hint: '意思相反',
+    color: 'hsl(var(--word-web-antonym))',
+    pick: (p) => p.antonyms,
+  },
+  {
+    key: 'confusable',
+    label: '易混',
+    hint: '拼字易混淆',
+    color: 'hsl(var(--word-web-confusable))',
+    pick: (p) => p.confusableWith,
+  },
+]
 
-function buildGroups(props: VocabMindMapProps): NodeGroup[] {
-  const groups: NodeGroup[] = []
-  if (props.synonyms?.length)
-    groups.push({
-      label: '同義',
-      words: props.synonyms,
-      color: 'hsl(207 26% 48%)',
-      lineColor: 'hsl(207 26% 48% / 0.3)',
-      startAngle: -90,
-    })
-  if (props.relatedWords?.length)
-    groups.push({
-      label: '相關',
-      words: props.relatedWords,
-      color: 'hsl(207 26% 64%)',
-      lineColor: 'hsl(207 26% 64% / 0.3)',
-      startAngle: 0,
-    })
-  if (props.antonyms?.length)
-    groups.push({
-      label: '反義',
-      words: props.antonyms,
-      color: 'hsl(0 50% 58%)',
-      lineColor: 'hsl(0 50% 58% / 0.3)',
-      startAngle: 90,
-    })
-  if (props.confusableWith?.length)
-    groups.push({
-      label: '易混',
-      words: props.confusableWith,
-      color: 'hsl(38 80% 50%)',
-      lineColor: 'hsl(38 80% 50% / 0.3)',
-      startAngle: 180,
-    })
+type ViewMode = 'auto' | 'map' | 'list'
+
+function dedupe(words: string[], taken: Set<string>): string[] {
+  const out: string[] = []
+  for (const word of words) {
+    const key = word.toLowerCase()
+    if (taken.has(key)) continue
+    taken.add(key)
+    out.push(word)
+  }
+  return out
+}
+
+function buildGroups(
+  props: VocabMindMapProps
+): Array<WordWebGroup & { color: string; hint: string }> {
+  const taken = new Set<string>([props.word.toLowerCase()])
+  const groups: Array<WordWebGroup & { color: string; hint: string }> = []
+  for (const def of GROUP_DEFS) {
+    const words = dedupe(def.pick(props) ?? [], taken)
+    if (words.length === 0) continue
+    groups.push({ key: def.key, label: def.label, words, color: def.color, hint: def.hint })
+  }
   return groups
-}
-
-interface PlacedNode {
-  word: string
-  x: number
-  y: number
-  color: string
-  lineColor: string
-  groupLabel: string
-}
-
-function placeNodes(groups: NodeGroup[]): PlacedNode[] {
-  if (groups.length === 0) return []
-
-  const totalWords = groups.reduce((s, g) => s + g.words.length, 0)
-  if (totalWords === 0) return []
-
-  const nodes: PlacedNode[] = []
-  const slicePerWord = 360 / totalWords
-  let currentAngle = -90
-
-  for (const group of groups) {
-    for (const word of group.words) {
-      const rad = (currentAngle * Math.PI) / 180
-      const jitter = totalWords > 6 ? (Math.abs(hashCode(word) % 20) - 10) : 0
-      const r = RADIUS + jitter
-      nodes.push({
-        word,
-        x: CX + r * Math.cos(rad),
-        y: CY + r * Math.sin(rad),
-        color: group.color,
-        lineColor: group.lineColor,
-        groupLabel: group.label,
-      })
-      currentAngle += slicePerWord
-    }
-  }
-
-  return nodes
-}
-
-function hashCode(s: string): number {
-  let h = 0
-  for (let i = 0; i < s.length; i++) {
-    h = (Math.imul(31, h) + s.charCodeAt(i)) | 0
-  }
-  return h
 }
 
 function WordNode({
   node,
-  hovering,
-  onHover,
-  onClick,
+  color,
+  active,
+  dimmed,
+  onActivate,
+  onFocusChange,
 }: {
-  node: PlacedNode
-  hovering: boolean
-  onHover: (word: string | null) => void
-  onClick?: (word: string) => void
+  node: WordWebNode
+  color: string
+  active: boolean
+  dimmed: boolean
+  onActivate?: (word: string) => void
+  onFocusChange: (word: string | null) => void
 }) {
-  const textLen = node.word.length
-  const pillW = Math.max(textLen * 8 + 24, 60)
-  const pillH = 28
-
   return (
     <g
-      className="cursor-pointer"
-      onMouseEnter={() => onHover(node.word)}
-      onMouseLeave={() => onHover(null)}
-      onClick={() => onClick?.(node.word)}
+      className="cursor-pointer transition-opacity duration-150 focus:outline-none motion-reduce:transition-none"
+      opacity={dimmed ? 0.28 : 1}
       role="button"
       tabIndex={0}
       aria-label={`${node.groupLabel}：${node.word}`}
+      onMouseEnter={() => onFocusChange(node.word)}
+      onMouseLeave={() => onFocusChange(null)}
+      onFocus={() => onFocusChange(node.word)}
+      onBlur={() => onFocusChange(null)}
+      onClick={() => onActivate?.(node.word)}
       onKeyDown={(e) => {
-        if (e.key === 'Enter' || e.key === ' ') onClick?.(node.word)
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault()
+          onActivate?.(node.word)
+        }
       }}
     >
       <line
-        x1={CX}
-        y1={CY}
-        x2={node.x}
-        y2={node.y}
-        stroke={hovering ? node.color : node.lineColor}
-        strokeWidth={hovering ? 2 : 1.5}
-        strokeDasharray={hovering ? 'none' : '4 3'}
+        x1={node.edge.x1}
+        y1={node.edge.y1}
+        x2={node.edge.x2}
+        y2={node.edge.y2}
+        stroke={color}
+        strokeOpacity={active ? 0.9 : 0.35}
+        strokeWidth={active ? 2 : 1.25}
+        strokeDasharray={active ? 'none' : '4 4'}
+        strokeLinecap="round"
       />
       <rect
-        x={node.x - pillW / 2}
-        y={node.y - pillH / 2}
-        width={pillW}
-        height={pillH}
-        rx={pillH / 2}
-        fill={hovering ? node.color : 'hsl(var(--background))'}
-        stroke={node.color}
-        strokeWidth={hovering ? 2.5 : 1.5}
-        style={{ transition: 'fill 0.15s, stroke-width 0.15s' }}
+        x={node.x - node.width / 2}
+        y={node.y - node.height / 2}
+        width={node.width}
+        height={node.height}
+        rx={node.height / 2}
+        fill={active ? color : 'hsl(var(--card))'}
+        stroke={color}
+        strokeWidth={active ? 2 : 1.25}
+        className="transition-[fill,stroke-width] duration-150 motion-reduce:transition-none"
       />
       <text
         x={node.x}
         y={node.y}
         textAnchor="middle"
         dominantBaseline="central"
-        fill={hovering ? 'white' : 'hsl(var(--foreground))'}
+        fill={active ? 'hsl(var(--card))' : 'hsl(var(--foreground))'}
         fontSize={12}
         fontWeight={600}
         fontFamily="var(--font-inter), system-ui, sans-serif"
-        style={{ transition: 'fill 0.15s', pointerEvents: 'none' }}
+        style={{ pointerEvents: 'none' }}
       >
         {node.word}
       </text>
@@ -179,75 +155,201 @@ function WordNode({
 }
 
 export function VocabMindMap(props: VocabMindMapProps) {
-  const [hovered, setHovered] = useState<string | null>(null)
-  const groups = buildGroups(props)
-  const nodes = placeNodes(groups)
-  const hasNodes = nodes.length > 0
+  const [active, setActive] = useState<string | null>(null)
+  const [hiddenGroups, setHiddenGroups] = useState<string[]>([])
+  const [view, setView] = useState<ViewMode>('auto')
+
+  const groups = useMemo(() => buildGroups(props), [props])
+  const visibleGroups = groups.filter((g) => !hiddenGroups.includes(g.key))
+  const colorOf = useMemo(() => new Map(groups.map((g) => [g.key, g.color] as const)), [groups])
+
+  const layout = useMemo(
+    () =>
+      layoutWordWeb(
+        props.word,
+        props.chinese,
+        visibleGroups.map((g) => ({ key: g.key, label: g.label, words: g.words }))
+      ),
+    [props.word, props.chinese, groups, hiddenGroups]
+  )
+
+  const hasGroups = groups.length > 0
   const hasExtra =
     (props.exampleSentences?.length ?? 0) > 0 || props.semanticGroup || props.mnemonicHint
 
-  if (!hasNodes && !hasExtra) return null
+  if (!hasGroups && !hasExtra) return null
+
+  function toggleGroup(key: string) {
+    setActive(null)
+    setHiddenGroups((prev) => (prev.includes(key) ? prev.filter((k) => k !== key) : [...prev, key]))
+  }
+
+  const mapVisibility = view === 'map' ? 'block' : view === 'list' ? 'hidden' : 'hidden sm:block'
+  const listVisibility = view === 'list' ? 'block' : view === 'map' ? 'hidden' : 'sm:hidden'
 
   return (
     <div className="space-y-3">
-      {hasNodes && (
+      {hasGroups && (
         <div className="overflow-hidden rounded-lg border bg-card">
-          <div className="flex items-center gap-2 border-b px-3 py-2">
-            <span className="text-[10px] font-semibold tracking-widest text-muted-foreground uppercase">
+          <div className="flex flex-wrap items-center gap-1.5 border-b px-3 py-2">
+            <span className="mr-1 text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">
               Word Web
             </span>
-            {groups.map((g) => (
-              <span
-                key={g.label}
-                className="rounded-full px-2 py-0.5 text-[10px] font-medium"
-                style={{ backgroundColor: `${g.color}20`, color: g.color }}
-              >
-                {g.label}
-              </span>
-            ))}
+
+            {groups.map((g) => {
+              const off = hiddenGroups.includes(g.key)
+              return (
+                <button
+                  key={g.key}
+                  type="button"
+                  onClick={() => toggleGroup(g.key)}
+                  aria-pressed={!off}
+                  title={`${g.hint}（點擊${off ? '顯示' : '隱藏'}）`}
+                  className="rounded-full border px-2 py-0.5 text-[10px] font-medium transition-colors"
+                  style={{
+                    borderColor: off ? 'hsl(var(--border))' : g.color,
+                    backgroundColor: off
+                      ? 'transparent'
+                      : `color-mix(in srgb, ${g.color} 14%, transparent)`,
+                    color: off ? 'hsl(var(--muted-foreground))' : g.color,
+                  }}
+                >
+                  {g.label} {g.words.length}
+                </button>
+              )
+            })}
+
+            <div className="ml-auto flex items-center gap-1">
+              {(
+                [
+                  ['map', '圖譜'],
+                  ['list', '清單'],
+                ] as const
+              ).map(([mode, label]) => (
+                <button
+                  key={mode}
+                  type="button"
+                  onClick={() => setView((prev) => (prev === mode ? 'auto' : mode))}
+                  aria-pressed={view === mode}
+                  className={`rounded-md px-2 py-0.5 text-[10px] font-medium transition-colors ${
+                    view === mode
+                      ? 'bg-secondary text-secondary-foreground'
+                      : 'text-muted-foreground hover:bg-muted'
+                  }`}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
           </div>
 
-          <svg
-            viewBox={`0 0 ${SVG_W} ${SVG_H}`}
-            className="mx-auto block w-full max-w-md"
-            role="img"
-            aria-label={`${props.word} 的語義網絡`}
-          >
-            {nodes.map((n) => (
-              <WordNode
-                key={n.word}
-                node={n}
-                hovering={hovered === n.word}
-                onHover={setHovered}
-                onClick={props.onWordClick}
-              />
-            ))}
+          {layout ? (
+            <>
+              <div className={mapVisibility} role="group" aria-label={`${props.word} 的語義網絡`}>
+                <svg
+                  viewBox={layout.viewBox}
+                  preserveAspectRatio="xMidYMid meet"
+                  className="mx-auto block w-full max-w-lg"
+                  style={{
+                    // Never upscale past the intrinsic size — a two-word web should
+                    // stay small instead of stretching the label text.
+                    maxWidth: layout.width,
+                    aspectRatio: `${layout.width} / ${layout.height}`,
+                  }}
+                >
+                  <title>{`${props.word} 的語義網絡`}</title>
+                  {layout.nodes.map((node) => (
+                    <WordNode
+                      key={`${node.groupKey}-${node.word}`}
+                      node={node}
+                      color={colorOf.get(node.groupKey) ?? 'hsl(var(--primary))'}
+                      active={active === node.word}
+                      dimmed={active !== null && active !== node.word}
+                      onActivate={props.onWordClick}
+                      onFocusChange={setActive}
+                    />
+                  ))}
 
-            <circle cx={CX} cy={CY} r={36} fill="hsl(var(--primary))" opacity={0.12} />
-            <circle cx={CX} cy={CY} r={36} fill="none" stroke="hsl(var(--primary))" strokeWidth={2} />
-            <text
-              x={CX}
-              y={CY - 6}
-              textAnchor="middle"
-              dominantBaseline="central"
-              fill="hsl(var(--primary))"
-              fontSize={16}
-              fontWeight={700}
-              fontFamily="var(--font-sora), var(--font-inter), system-ui, sans-serif"
-            >
-              {props.word}
-            </text>
-            <text
-              x={CX}
-              y={CY + 14}
-              textAnchor="middle"
-              dominantBaseline="central"
-              fill="hsl(var(--muted-foreground))"
-              fontSize={11}
-            >
-              {props.chinese}
-            </text>
-          </svg>
+                  <g
+                    className={props.onWordClick ? 'cursor-pointer' : undefined}
+                    onClick={() => props.onWordClick?.(props.word)}
+                    role={props.onWordClick ? 'button' : undefined}
+                    aria-label={props.onWordClick ? `播放 ${props.word}` : undefined}
+                  >
+                    <ellipse
+                      cx={layout.hub.x}
+                      cy={layout.hub.y}
+                      rx={layout.hub.rx}
+                      ry={layout.hub.ry}
+                      fill="hsl(var(--primary))"
+                      opacity={0.1}
+                    />
+                    <ellipse
+                      cx={layout.hub.x}
+                      cy={layout.hub.y}
+                      rx={layout.hub.rx}
+                      ry={layout.hub.ry}
+                      fill="none"
+                      stroke="hsl(var(--primary))"
+                      strokeWidth={2}
+                    />
+                    <text
+                      x={layout.hub.x}
+                      y={layout.hub.y - 7}
+                      textAnchor="middle"
+                      dominantBaseline="central"
+                      fill="hsl(var(--primary))"
+                      fontSize={16}
+                      fontWeight={700}
+                      fontFamily="var(--font-sora), var(--font-inter), system-ui, sans-serif"
+                      style={{ pointerEvents: 'none' }}
+                    >
+                      {props.word}
+                    </text>
+                    <text
+                      x={layout.hub.x}
+                      y={layout.hub.y + 13}
+                      textAnchor="middle"
+                      dominantBaseline="central"
+                      fill="hsl(var(--muted-foreground))"
+                      fontSize={11}
+                      style={{ pointerEvents: 'none' }}
+                    >
+                      {props.chinese}
+                    </text>
+                  </g>
+                </svg>
+              </div>
+
+              <div className={`${listVisibility} space-y-2 px-3 py-3`}>
+                {visibleGroups.map((g) => (
+                  <div key={g.key} className="flex flex-wrap items-center gap-1.5">
+                    <span
+                      className="min-w-[2.5rem] text-[11px] font-medium"
+                      style={{ color: g.color }}
+                    >
+                      {g.label}
+                    </span>
+                    {g.words.map((w) => (
+                      <button
+                        key={w}
+                        type="button"
+                        onClick={() => props.onWordClick?.(w)}
+                        className="rounded-full border px-2 py-0.5 text-xs font-medium"
+                        style={{ borderColor: g.color }}
+                      >
+                        {w}
+                      </button>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </>
+          ) : (
+            <p className="px-3 py-6 text-center text-xs text-muted-foreground">
+              已隱藏所有關聯詞，點上方標籤可重新顯示。
+            </p>
+          )}
         </div>
       )}
 
@@ -269,7 +371,7 @@ export function VocabMindMap(props: VocabMindMapProps) {
 
           {props.exampleSentences && props.exampleSentences.length > 0 && (
             <div className="space-y-1.5 border-t pt-2">
-              <p className="text-[10px] font-semibold tracking-widest text-muted-foreground uppercase">
+              <p className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">
                 情境例句
               </p>
               {props.exampleSentences.map((s, i) => (

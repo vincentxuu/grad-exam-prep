@@ -159,6 +159,7 @@ export function VocabAnswer({ cardId, prompt, answer, speak, speakingId }: Vocab
             exampleSentences={wordWeb.exampleSentences}
             semanticGroup={wordWeb.semanticGroup}
             mnemonicHint={wordWeb.mnemonicHint}
+            onWordClick={(clicked) => speak(clicked, `${cardId}-web-${clicked}`)}
           />
         </div>
       )}
