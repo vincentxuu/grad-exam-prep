@@ -23,11 +23,11 @@ interface NodeGroup {
   startAngle: number
 }
 
-const SVG_W = 440
-const SVG_H = 320
+const SVG_W = 500
+const SVG_H = 380
 const CX = SVG_W / 2
-const CY = SVG_H / 2 - 10
-const RADIUS = 110
+const CY = SVG_H / 2
+const RADIUS = 140
 
 function buildGroups(props: VocabMindMapProps): NodeGroup[] {
   const groups: NodeGroup[] = []
@@ -156,7 +156,7 @@ function WordNode({
         width={pillW}
         height={pillH}
         rx={pillH / 2}
-        fill={hovering ? node.color : 'var(--card)'}
+        fill={hovering ? node.color : 'hsl(var(--card))'}
         stroke={node.color}
         strokeWidth={hovering ? 2 : 1}
         style={{ transition: 'fill 0.15s, stroke-width 0.15s' }}
@@ -223,14 +223,14 @@ export function VocabMindMap(props: VocabMindMapProps) {
               />
             ))}
 
-            <circle cx={CX} cy={CY} r={36} fill="var(--primary)" opacity={0.12} />
-            <circle cx={CX} cy={CY} r={36} fill="none" stroke="var(--primary)" strokeWidth={2} />
+            <circle cx={CX} cy={CY} r={36} fill="hsl(var(--primary))" opacity={0.12} />
+            <circle cx={CX} cy={CY} r={36} fill="none" stroke="hsl(var(--primary))" strokeWidth={2} />
             <text
               x={CX}
               y={CY - 6}
               textAnchor="middle"
               dominantBaseline="central"
-              fill="var(--primary)"
+              fill="hsl(var(--primary))"
               fontSize={16}
               fontWeight={700}
               fontFamily="var(--font-sora), var(--font-inter), system-ui, sans-serif"
@@ -242,7 +242,7 @@ export function VocabMindMap(props: VocabMindMapProps) {
               y={CY + 14}
               textAnchor="middle"
               dominantBaseline="central"
-              fill="var(--muted-foreground)"
+              fill="hsl(var(--muted-foreground))"
               fontSize={11}
             >
               {props.chinese}
