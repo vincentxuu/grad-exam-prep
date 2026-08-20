@@ -1,0 +1,776 @@
+{
+  "schemaVersion": 1,
+  "words": {
+    "tenacious": {
+      "chinese": "頑強的",
+      "pos": "adj",
+      "synonyms": [
+        "persistent",
+        "dogged",
+        "relentless",
+        "unyielding"
+      ],
+      "antonyms": [
+        "yielding",
+        "feeble",
+        "surrendering"
+      ],
+      "relatedWords": [
+        "tenacity"
+      ],
+      "confusableWith": [
+        "audacious"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The tenacious reporter spent years investigating the scandal.",
+          "zh": "頑強的記者花了數年調查醜聞。",
+          "source": "daily"
+        },
+        {
+          "en": "Tenacious commitment to quality distinguishes market leaders.",
+          "zh": "對品質的頑強承諾是市場領導者的區別。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "strength-determination",
+      "mnemonicHint": "ten(hold) + acious → 緊緊抓住 → 頑強的"
+    },
+    "than that": {
+      "chinese": "比那個……（不完整比較片段）",
+      "pos": "nonstandard fragment",
+      "synonyms": [
+        "compared with that",
+        "relative to that",
+        "versus that"
+      ],
+      "antonyms": [
+        "equal to that",
+        "the same as that",
+        "as much as that"
+      ],
+      "relatedWords": [
+        "than",
+        "that",
+        "comparison",
+        "comparative"
+      ],
+      "confusableWith": [
+        "then that",
+        "as that"
+      ],
+      "exampleSentences": [
+        {
+          "en": "This jacket costs less than that one in the window.",
+          "zh": "這件外套比櫥窗裡那件便宜。",
+          "source": "daily"
+        },
+        {
+          "en": "The observed preference for remote work was stronger than that predicted by the initial model.",
+          "zh": "實際觀察到的遠距工作偏好強於初始模型的預測。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "comparison-contrast",
+      "mnemonicHint": "這是被截斷的比較結構，不能單獨表意；自然句型要補成 comparative + than that one，或 than that predicted/observed。注意 than 是「比」，then 才是「然後」。"
+    },
+    "that i": {
+      "chinese": "那是我……；我所……（不完整子句）",
+      "pos": "nonstandard fragment",
+      "synonyms": [
+        "which I",
+        "what I",
+        "the fact that I"
+      ],
+      "antonyms": [
+        "that you",
+        "that they"
+      ],
+      "relatedWords": [
+        "that",
+        "I",
+        "me",
+        "my",
+        "mine"
+      ],
+      "confusableWith": [
+        "that me",
+        "what I"
+      ],
+      "exampleSentences": [
+        {
+          "en": "That I forgot your birthday does not mean I do not care.",
+          "zh": "我忘了你的生日並不表示我不在乎。",
+          "source": "daily"
+        },
+        {
+          "en": "The committee acknowledged that I had reported the discrepancy before the audit began.",
+          "zh": "委員會承認我在稽核開始前就已通報該差異。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "clause-reference",
+      "mnemonicHint": "原片段缺少後續謂語，而且英文代名詞 I 永遠大寫；修正時寫成 that I + verb，或讓整個 That I + verb 子句充當主詞。"
+    },
+    "the others": {
+      "chinese": "其餘的人或事物",
+      "pos": "pronoun phrase",
+      "synonyms": [
+        "the remaining ones",
+        "the rest",
+        "everyone else"
+      ],
+      "antonyms": [
+        "this one",
+        "the selected one",
+        "the former"
+      ],
+      "relatedWords": [
+        "other",
+        "others",
+        "another",
+        "otherwise"
+      ],
+      "confusableWith": [
+        "others",
+        "the other"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Two cookies are mine; the others are for the children.",
+          "zh": "兩塊餅乾是我的，其餘的是給孩子們的。",
+          "source": "daily"
+        },
+        {
+          "en": "Some participants chose buses, whereas the others favored rail transport.",
+          "zh": "部分參與者選擇公車，其餘的人則偏好鐵路運輸。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "groups-remainders",
+      "mnemonicHint": "the 指已知範圍，others 指複數的「其餘者」；the others 就是特定群體中剩下的全部，不同於泛指某些其他人的 others。"
+    },
+    "theory": {
+      "chinese": "理論；學說",
+      "pos": "n",
+      "synonyms": [
+        "explanation",
+        "explanatory framework",
+        "conceptual framework",
+        "system of ideas"
+      ],
+      "antonyms": [
+        "empirical observation",
+        "practical application"
+      ],
+      "relatedWords": [
+        "theoretical",
+        "theorize",
+        "theorist"
+      ],
+      "confusableWith": [
+        "therapy"
+      ],
+      "exampleSentences": [
+        {
+          "en": "I have a theory about why the door keeps sticking.",
+          "zh": "我有一個理論，可以解釋這扇門為何一直卡住。",
+          "source": "daily"
+        },
+        {
+          "en": "The theory predicts how markets respond to limited information.",
+          "zh": "該理論預測市場如何回應有限資訊。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "analysis-investigation",
+      "mnemonicHint": "theory 是用一套想法來觀看與解釋現象。"
+    },
+    "thinking": {
+      "chinese": "思考；想法",
+      "pos": "n/adj",
+      "synonyms": [
+        "reasoning",
+        "reflection",
+        "thought"
+      ],
+      "antonyms": [
+        "thoughtlessness",
+        "ignorance"
+      ],
+      "relatedWords": [
+        "think",
+        "thought",
+        "thinker"
+      ],
+      "confusableWith": [
+        "thinning"
+      ],
+      "exampleSentences": [
+        {
+          "en": "I am thinking about making soup for dinner.",
+          "zh": "我正在考慮晚餐煮湯。",
+          "source": "daily"
+        },
+        {
+          "en": "Critical thinking enables students to evaluate conflicting evidence.",
+          "zh": "批判性思考使學生能夠評估相互矛盾的證據。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "analysis-investigation",
+      "mnemonicHint": "think 加 ing，思考正在進行"
+    },
+    "third": {
+      "chinese": "第三的；排名第三的",
+      "pos": "adj",
+      "synonyms": [
+        "third-ranked",
+        "third-place",
+        "tertiary"
+      ],
+      "antonyms": [
+        "first",
+        "primary"
+      ],
+      "relatedWords": [
+        "three",
+        "thirdly"
+      ],
+      "confusableWith": [
+        "thirst"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Our dentist's office is on the third floor.",
+          "zh": "我們的牙醫診所在三樓。",
+          "source": "daily"
+        },
+        {
+          "en": "The third experiment produced results consistent with the original hypothesis.",
+          "zh": "第三次實驗所得的結果與原始假說一致。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "sequence-order",
+      "mnemonicHint": "three 的序數形式是 third"
+    },
+    "thorough": {
+      "chinese": "徹底的；詳盡的",
+      "pos": "adj",
+      "synonyms": [
+        "comprehensive",
+        "exhaustive",
+        "meticulous",
+        "complete"
+      ],
+      "antonyms": [
+        "superficial",
+        "incomplete",
+        "cursory"
+      ],
+      "relatedWords": [
+        "thoroughly",
+        "thoroughness"
+      ],
+      "confusableWith": [
+        "through",
+        "though"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Our mechanic performed a thorough inspection before the road trip.",
+          "zh": "我們的技師在公路旅行前做了徹底檢查。",
+          "source": "daily"
+        },
+        {
+          "en": "Because the audit was thorough, even minor accounting discrepancies were detected.",
+          "zh": "由於稽核十分詳盡，連細微的會計差異也被查出。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "depth-thoroughness",
+      "mnemonicHint": "thorough 有「從頭查到尾、不漏角落」的感覺；記住 thorough inspection 是徹底檢查，而 through 是穿過、though 是雖然。"
+    },
+    "thwart": {
+      "chinese": "阻撓；挫敗",
+      "pos": "v",
+      "synonyms": [
+        "foil",
+        "frustrate",
+        "impede",
+        "prevent"
+      ],
+      "antonyms": [
+        "assist",
+        "facilitate",
+        "enable"
+      ],
+      "relatedWords": [
+        "thwarts",
+        "thwarted",
+        "thwarting"
+      ],
+      "confusableWith": [
+        "wart",
+        "threat"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Extra locks thwarted the burglar's attempt to enter our garage.",
+          "zh": "額外的鎖使竊賊闖入車庫的企圖落空。",
+          "source": "daily"
+        },
+        {
+          "en": "Transparent procedures can thwart attempts to manipulate the allocation of public funds.",
+          "zh": "透明的程序可以阻止操弄公共資金分配的企圖。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "obstruction-prevention",
+      "mnemonicHint": "把 thwart 聯想成一道橫著擋路的木板，使計畫過不去；它不只是延遲，而是讓某人的企圖受阻或失敗。"
+    },
+    "to be": {
+      "chinese": "成為；存在；處於",
+      "pos": "infinitive phrase",
+      "synonyms": [
+        "to exist",
+        "to remain",
+        "to become"
+      ],
+      "antonyms": [
+        "not to exist",
+        "to cease to be",
+        "to disappear"
+      ],
+      "relatedWords": [
+        "be",
+        "am",
+        "is",
+        "are",
+        "was",
+        "were",
+        "been",
+        "being"
+      ],
+      "confusableWith": [
+        "to become",
+        "being"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Maya hopes to be a paramedic after she graduates.",
+          "zh": "Maya 希望畢業後成為救護技術員。",
+          "source": "daily"
+        },
+        {
+          "en": "The evidence appears to be consistent with the proposed hypothesis.",
+          "zh": "證據似乎與所提出的假設一致。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "existence-state",
+      "mnemonicHint": "to + be 是不定詞，be 會依主詞和時態變成 am/is/are/was/were；把它視為「要成為或處於某狀態」的基本骨架。"
+    },
+    "to strive": {
+      "chinese": "努力；奮鬥",
+      "pos": "infinitive phrase",
+      "synonyms": [
+        "to endeavor",
+        "to aim",
+        "to work hard",
+        "to make every effort"
+      ],
+      "antonyms": [
+        "to give up",
+        "to surrender",
+        "to neglect"
+      ],
+      "relatedWords": [
+        "strive",
+        "strives",
+        "strove",
+        "striven",
+        "striving"
+      ],
+      "confusableWith": [
+        "to thrive",
+        "to struggle"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Local athletes meet every morning to strive for better personal records.",
+          "zh": "當地運動員每天早上集合，努力爭取更好的個人紀錄。",
+          "source": "daily"
+        },
+        {
+          "en": "To strive for accuracy, researchers must disclose assumptions and replicate key measurements.",
+          "zh": "為追求準確性，研究人員必須揭露假設並重複關鍵測量。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "effort-ambition",
+      "mnemonicHint": "strive 是持續用力追求目標；不定詞 to strive 表示「去努力」。可連結 strove（過去式）與 striven（過去分詞），不要和 thrive「蓬勃發展」混淆。"
+    },
+    "to that": {
+      "chinese": "對那件事；到那裡",
+      "pos": "prepositional phrase",
+      "synonyms": [
+        "toward that",
+        "regarding that",
+        "in response to that"
+      ],
+      "antonyms": [
+        "away from that",
+        "from that"
+      ],
+      "relatedWords": [
+        "that",
+        "those"
+      ],
+      "confusableWith": [
+        "so that",
+        "to which"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Please add some lemon to that cup of tea.",
+          "zh": "請在那杯茶裡加一些檸檬。",
+          "source": "daily"
+        },
+        {
+          "en": "The committee objected strongly to that interpretation of the survey results.",
+          "zh": "委員會強烈反對那種對調查結果的解讀。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "reference-connection",
+      "mnemonicHint": "to 表示方向或關聯，that 指已提過的事物；兩者合用必須接在動詞或名詞後，不能當成獨立單字，例如 object to that interpretation（反對那種解讀）。"
+    },
+    "to which": {
+      "chinese": "對其；向其；到其",
+      "pos": "prepositional phrase",
+      "synonyms": [
+        "to that",
+        "toward which",
+        "in response to which"
+      ],
+      "antonyms": [
+        "from which",
+        "away from which"
+      ],
+      "relatedWords": [
+        "which",
+        "whichever"
+      ],
+      "confusableWith": [
+        "which",
+        "in which"
+      ],
+      "exampleSentences": [
+        {
+          "en": "This is the address to which you should send the package.",
+          "zh": "這就是你應該寄送包裹的地址。",
+          "source": "daily"
+        },
+        {
+          "en": "Researchers identified the conditions to which the organism was most sensitive.",
+          "zh": "研究人員找出了該生物最敏感的環境條件。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "reference-connection",
+      "mnemonicHint": "to 提到關係方向，which 回指前面的名詞；正式關係子句把介系詞提前形成 to which，口語則常說 which ... to。它不是完整句子，需搭配先行詞與子句。"
+    },
+    "train": {
+      "chinese": "火車；訓練",
+      "pos": "n/v",
+      "synonyms": [
+        "coach",
+        "instruct",
+        "prepare"
+      ],
+      "antonyms": [
+        "decondition",
+        "untrain"
+      ],
+      "relatedWords": [
+        "trainer",
+        "training",
+        "trainee"
+      ],
+      "confusableWith": [
+        "trail"
+      ],
+      "exampleSentences": [
+        {
+          "en": "We ran to the platform but missed the last train.",
+          "zh": "我們跑向月台，卻錯過了末班火車。",
+          "source": "daily"
+        },
+        {
+          "en": "The researchers used labeled images to train the recognition model.",
+          "zh": "研究人員使用已標記的影像來訓練辨識模型。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "planning-preparation",
+      "mnemonicHint": "一節節 train 像訓練步驟連起來"
+    },
+    "transparent": {
+      "chinese": "透明的",
+      "pos": "adj",
+      "synonyms": [
+        "clear",
+        "open",
+        "candid",
+        "forthright"
+      ],
+      "antonyms": [
+        "opaque",
+        "secretive",
+        "hidden"
+      ],
+      "relatedWords": [
+        "transparency",
+        "transparently"
+      ],
+      "confusableWith": [
+        "apparent"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The government pledged to be more transparent about spending.",
+          "zh": "政府承諾在支出方面更加透明。",
+          "source": "daily"
+        },
+        {
+          "en": "Transparent algorithms are essential for accountable AI systems.",
+          "zh": "透明的演算法對負責任的AI系統至關重要。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "truth-openness",
+      "mnemonicHint": "trans(through) + par(appear) + ent → 能看穿的 → 透明的"
+    },
+    "treasurable": {
+      "chinese": "值得珍藏的；珍貴的",
+      "pos": "adj",
+      "synonyms": [
+        "cherishable",
+        "precious",
+        "valuable",
+        "memorable"
+      ],
+      "antonyms": [
+        "worthless",
+        "disposable",
+        "forgettable"
+      ],
+      "relatedWords": [
+        "treasure",
+        "treasured",
+        "treasuring"
+      ],
+      "confusableWith": [
+        "treasured",
+        "measurable"
+      ],
+      "exampleSentences": [
+        {
+          "en": "She stored the treasurable family letters in a fireproof box.",
+          "zh": "她把那些值得珍藏的家書收藏在防火箱裡。",
+          "source": "daily"
+        },
+        {
+          "en": "The archivist considered the diary treasurable because no other firsthand account had survived.",
+          "zh": "由於沒有其他第一手紀錄留存，檔案管理員認為這本日記值得珍藏。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "value-appreciation",
+      "mnemonicHint": "treasure（珍寶、珍藏）加 -able（值得……的）就是「值得珍藏的」。此字正確但較罕見；日常英文通常用 precious 或 treasured，別誤寫成 treasureable。"
+    },
+    "triggered": {
+      "chinese": "觸發的；引起",
+      "pos": "v/adj",
+      "synonyms": [
+        "caused",
+        "activated",
+        "sparked"
+      ],
+      "antonyms": [
+        "prevented",
+        "suppressed"
+      ],
+      "relatedWords": [
+        "trigger",
+        "triggering"
+      ],
+      "confusableWith": [
+        "targeted"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Burnt toast triggered the smoke alarm this morning.",
+          "zh": "今天早上烤焦的吐司觸發了煙霧警報器。",
+          "source": "daily"
+        },
+        {
+          "en": "The stimulus triggered a measurable change in neural activity.",
+          "zh": "該刺激引發了可測量的神經活動變化。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "change-modification",
+      "mnemonicHint": "扣 trigger 扳機就觸發事件"
+    },
+    "turned down": {
+      "chinese": "拒絕了；調低了",
+      "pos": "phrasal verb",
+      "synonyms": [
+        "rejected",
+        "declined",
+        "refused",
+        "lowered"
+      ],
+      "antonyms": [
+        "accepted",
+        "approved",
+        "turned up"
+      ],
+      "relatedWords": [
+        "turn down",
+        "turns down",
+        "turning down"
+      ],
+      "confusableWith": [
+        "turned up",
+        "turned away"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Maya turned down the music when her baby fell asleep.",
+          "zh": "寶寶睡著後，瑪雅把音樂音量調低了。",
+          "source": "daily"
+        },
+        {
+          "en": "Several qualified applicants were turned down because the program had limited funding.",
+          "zh": "由於該計畫經費有限，數名合格申請者遭到拒絕。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "rejection-reduction",
+      "mnemonicHint": "turn down 可把東西「往下轉」而調低音量，也可把提議「往下壓」而拒絕；turned down 是其過去式或過去分詞，需依受詞判斷是哪個意思。"
+    },
+    "turns": {
+      "chinese": "轉動；輪次；變成",
+      "pos": "n/v",
+      "synonyms": [
+        "rotations",
+        "changes",
+        "rounds"
+      ],
+      "antonyms": [
+        "stops",
+        "stays"
+      ],
+      "relatedWords": [
+        "turn",
+        "turning",
+        "turnover"
+      ],
+      "confusableWith": [
+        "terms"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Leo turns off the kitchen light before going to bed.",
+          "zh": "里歐睡前會關掉廚房的燈。",
+          "source": "daily"
+        },
+        {
+          "en": "The indicator turns red when the solution reaches the target acidity.",
+          "zh": "當溶液達到目標酸度時，指示劑會變紅。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "change-modification",
+      "mnemonicHint": "turn 加 s，表示多次轉彎或輪替"
+    },
+    "type": {
+      "chinese": "類型；打字",
+      "pos": "n/v",
+      "synonyms": [
+        "kind",
+        "sort",
+        "category",
+        "class"
+      ],
+      "antonyms": [
+        "individual",
+        "instance"
+      ],
+      "relatedWords": [
+        "typed",
+        "typing",
+        "typist",
+        "typical"
+      ],
+      "confusableWith": [
+        "typeface",
+        "typical"
+      ],
+      "exampleSentences": [
+        {
+          "en": "What type of music do you listen to while cooking?",
+          "zh": "你做飯時會聽哪一類音樂？",
+          "source": "daily"
+        },
+        {
+          "en": "This type of bacteria can survive in extremely dry environments.",
+          "zh": "這類細菌能在極度乾燥的環境中存活。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "classification-type",
+      "mnemonicHint": "type 可把事物分成類型，也可指用鍵盤把字打出來。"
+    },
+    "types": {
+      "chinese": "類型；種類",
+      "pos": "n/v",
+      "synonyms": [
+        "kinds",
+        "categories",
+        "forms",
+        "classes"
+      ],
+      "antonyms": [
+        "uniformity",
+        "sameness"
+      ],
+      "relatedWords": [
+        "type",
+        "typical",
+        "typology"
+      ],
+      "confusableWith": [
+        "typeset"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The shop sells several types of tea.",
+          "zh": "這家店販售好幾種茶。",
+          "source": "daily"
+        },
+        {
+          "en": "Different cell types perform specialized biological functions.",
+          "zh": "不同細胞類型執行專門的生物功能。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "definition-boundary",
+      "mnemonicHint": "type 加 s，表示多種類型。"
+    }
+  }
+}

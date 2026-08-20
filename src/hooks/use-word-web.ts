@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 
 export interface WordWebEntry {
   word: string
@@ -10,56 +10,112 @@ export interface WordWebEntry {
   antonyms?: string[]
   relatedWords?: string[]
   confusableWith?: string[]
-  exampleSentences?: Array<{ en: string; zh: string }>
+  exampleSentences?: Array<{ en: string; zh: string; source?: string }>
   semanticGroup?: string
   mnemonicHint?: string
 }
 
-interface WordWebRaw {
-  words: Record<string, Omit<WordWebEntry, 'word'>>
+export interface WordWebGroupInfo {
+  slug: string
+  label: string
+  words: string[]
 }
 
-let cachedMap: Map<string, WordWebEntry> | null = null
-let fetchPromise: Promise<Map<string, WordWebEntry> | null> | null = null
-
-function fetchWordWeb(): Promise<Map<string, WordWebEntry> | null> {
-  if (cachedMap) return Promise.resolve(cachedMap)
-  if (fetchPromise) return fetchPromise
-  fetchPromise = fetch('/data/im-english-word-web.json')
-    .then((res) => (res.ok ? (res.json() as Promise<WordWebRaw>) : null))
-    .then((raw) => {
-      if (!raw) return null
-      const map = new Map<string, WordWebEntry>()
-      for (const [key, value] of Object.entries(raw.words)) {
-        map.set(key.toLowerCase(), { word: key, ...value })
-      }
-      cachedMap = map
-      return map
-    })
-    .catch(() => null)
-  return fetchPromise
+interface WordWebIndex {
+  words: string[]
+  groups: Record<string, { label: string; words: string[] }>
 }
 
-export function useWordWeb() {
-  const [data, setData] = useState<Map<string, WordWebEntry> | null>(cachedMap)
-  const [loading, setLoading] = useState(!cachedMap)
+type ShardEntries = Record<string, Omit<WordWebEntry, 'word'>>
+
+const BASE = '/data/word-web'
+
+// Module-level caches: the index is tiny and shared, and each shard is fetched
+// at most once per session no matter how many cards ask for it.
+let indexData: WordWebIndex | null = null
+let indexWords: Set<string> | null = null
+let indexPromise: Promise<void> | null = null
+const shards = new Map<string, ShardEntries>()
+const shardPromises = new Map<string, Promise<void>>()
+
+export function wordWebShardKey(word: string): string {
+  const initial = word.trim().toLowerCase().slice(0, 1)
+  return initial >= 'a' && initial <= 'z' ? initial : '_'
+}
+
+function loadIndex(): Promise<void> {
+  if (indexData) return Promise.resolve()
+  if (!indexPromise) {
+    indexPromise = fetch(`${BASE}/index.json`)
+      .then((res) => (res.ok ? (res.json() as Promise<WordWebIndex>) : null))
+      .then((raw) => {
+        if (!raw) return
+        indexData = raw
+        indexWords = new Set(raw.words)
+      })
+      .catch(() => undefined)
+  }
+  return indexPromise
+}
+
+function loadShard(key: string): Promise<void> {
+  if (shards.has(key)) return Promise.resolve()
+  let pending = shardPromises.get(key)
+  if (!pending) {
+    pending = fetch(`${BASE}/${key}.json`)
+      .then((res) => (res.ok ? (res.json() as Promise<{ words: ShardEntries }>) : null))
+      .then((raw) => {
+        shards.set(key, raw?.words ?? {})
+      })
+      .catch(() => {
+        shards.set(key, {})
+      })
+    shardPromises.set(key, pending)
+  }
+  return pending
+}
+
+function lookup(word: string): WordWebEntry | null {
+  const key = word.toLowerCase()
+  const entry = shards.get(wordWebShardKey(key))?.[key]
+  return entry ? { word: key, ...entry } : null
+}
+
+/**
+ * Loads the Word Web data for one headword. Only the index plus the shard for
+ * that initial are fetched, so a card costs ~15KB instead of the whole 580KB set.
+ */
+export function useWordWeb(word?: string | null) {
+  const [version, setVersion] = useState(0)
+  const shardKey = word ? wordWebShardKey(word) : null
+  const ready = indexWords !== null && (shardKey === null || shards.has(shardKey))
 
   useEffect(() => {
-    if (cachedMap) {
-      setData(cachedMap)
-      setLoading(false)
-      return
-    }
-    fetchWordWeb().then((result) => {
-      setData(result)
-      setLoading(false)
+    if (indexWords !== null && (shardKey === null || shards.has(shardKey))) return
+    let cancelled = false
+    const jobs = [loadIndex()]
+    if (shardKey) jobs.push(loadShard(shardKey))
+    Promise.all(jobs).then(() => {
+      if (!cancelled) setVersion((v) => v + 1)
     })
-  }, [])
+    return () => {
+      cancelled = true
+    }
+  }, [shardKey])
 
-  function getWord(word: string): WordWebEntry | null {
-    if (!data) return null
-    return data.get(word.toLowerCase()) ?? null
+  // Memoised so the returned entry keeps a stable identity across renders —
+  // callers put it in effect dependency lists.
+  const entry = useMemo(() => (word && ready ? lookup(word) : null), [word, ready, version])
+
+  return {
+    entry,
+    loading: !ready,
+    /** True when the word is itself a headword, i.e. the map can expand into it. */
+    hasWord: (candidate: string) => indexWords?.has(candidate.toLowerCase()) ?? false,
+    getGroup: (slug?: string): WordWebGroupInfo | null => {
+      if (!slug) return null
+      const group = indexData?.groups[slug]
+      return group ? { slug, label: group.label, words: group.words } : null
+    },
   }
-
-  return { getWord, loading }
 }

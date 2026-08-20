@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "words": {
+    "quotient": {
+      "chinese": "商數；（某種能力或特質的）指數",
+      "pos": "n",
+      "synonyms": [
+        "division result",
+        "result of division",
+        "ratio"
+      ],
+      "antonyms": [
+        "product",
+        "sum"
+      ],
+      "relatedWords": [
+        "quotients",
+        "quotient rule",
+        "intelligence quotient"
+      ],
+      "confusableWith": [
+        "quotation",
+        "coefficient"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Dividing twelve by three gives a quotient of four.",
+          "zh": "十二除以三所得的商是四。",
+          "source": "daily"
+        },
+        {
+          "en": "An intelligence quotient measures selected cognitive abilities but cannot capture every form of intelligence.",
+          "zh": "智商衡量特定的認知能力，卻無法涵蓋每一種智能。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "measurement-calculation",
+      "mnemonicHint": "quotient 和 quota 都有「分出一份」的概念：除法把總數分開後得到的結果就是「商」；清單標成 adj 並不正確，本字是名詞。"
+    }
+  }
+}

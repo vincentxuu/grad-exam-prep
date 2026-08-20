@@ -1,0 +1,780 @@
+{
+  "schemaVersion": 1,
+  "words": {
+    "lampoons": {
+      "chinese": "諷刺作品；嘲諷文章（lampoon 的複數）",
+      "pos": "n (plural)",
+      "synonyms": [
+        "satires",
+        "parodies",
+        "mockeries"
+      ],
+      "antonyms": [
+        "tributes",
+        "eulogies"
+      ],
+      "relatedWords": [
+        "lampoon",
+        "lampooned",
+        "lampooning",
+        "lampoonist"
+      ],
+      "confusableWith": [
+        "harpoons"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Those sharp lampoons made everyone at the comedy club laugh.",
+          "zh": "那些尖銳的諷刺作品逗得喜劇俱樂部裡的每個人都笑了。",
+          "source": "daily"
+        },
+        {
+          "en": "Political lampoons can expose abuses of power through exaggeration and ridicule.",
+          "zh": "政治諷刺作品能透過誇張與嘲弄揭露權力濫用。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "criticism-satire",
+      "mnemonicHint": "把 lampoons 想成用文字當『砲』轟名人：lampoon 是一篇嘲諷作品，加 -s 就是多篇諷刺作品。"
+    },
+    "language": {
+      "chinese": "語言；用語",
+      "pos": "n",
+      "synonyms": [
+        "speech",
+        "tongue",
+        "wording",
+        "terminology"
+      ],
+      "antonyms": [
+        "silence",
+        "wordlessness"
+      ],
+      "relatedWords": [
+        "linguistic",
+        "bilingual",
+        "metalanguage"
+      ],
+      "confusableWith": [
+        "luggage"
+      ],
+      "exampleSentences": [
+        {
+          "en": "We speak more than one language at home.",
+          "zh": "我們在家使用不只一種語言。",
+          "source": "daily"
+        },
+        {
+          "en": "Language shapes how communities preserve and transmit knowledge.",
+          "zh": "語言形塑社群保存與傳遞知識的方式。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "language-communication",
+      "mnemonicHint": "lingua 是舌頭與語言的拉丁字根。"
+    },
+    "languor": {
+      "chinese": "倦怠；無精打采",
+      "pos": "n",
+      "synonyms": [
+        "lethargy",
+        "listlessness",
+        "torpor",
+        "sluggishness"
+      ],
+      "antonyms": [
+        "vigor",
+        "energy",
+        "vitality"
+      ],
+      "relatedWords": [
+        "languorous",
+        "languorously",
+        "languish",
+        "languishing"
+      ],
+      "confusableWith": [
+        "language",
+        "languish"
+      ],
+      "exampleSentences": [
+        {
+          "en": "After the heavy lunch, a pleasant languor settled over me.",
+          "zh": "吃完豐盛的午餐後，一股愜意的倦怠感籠罩著我。",
+          "source": "daily"
+        },
+        {
+          "en": "Prolonged heat produced such languor among the workers that afternoon output declined.",
+          "zh": "持續的高溫使工人們倦怠不振，導致午後產量下降。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "energy-fatigue",
+      "mnemonicHint": "languor 和 languish（衰弱）同源；想像人在漫長午後懶洋洋地癱著，正是 languor 的倦怠狀態。"
+    },
+    "lapse": {
+      "chinese": "疏忽；失效；（時間）流逝",
+      "pos": "n/v",
+      "synonyms": [
+        "slip",
+        "oversight",
+        "expire",
+        "elapse"
+      ],
+      "antonyms": [
+        "vigilance",
+        "continuity",
+        "renewal"
+      ],
+      "relatedWords": [
+        "lapses",
+        "lapsed",
+        "lapsing"
+      ],
+      "confusableWith": [
+        "elapse",
+        "relapse"
+      ],
+      "exampleSentences": [
+        {
+          "en": "One brief lapse in attention made me miss my train stop.",
+          "zh": "一時分心讓我坐過了火車站。",
+          "source": "daily"
+        },
+        {
+          "en": "If the patent is allowed to lapse, competitors may legally use the invention.",
+          "zh": "若專利任其失效，競爭者便可能合法使用該發明。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "failure-interruption",
+      "mnemonicHint": "lapse 像注意力『落下去』的一瞬間，可指疏忽；資格或期限落空時，則表示失效。elapse 多半只指時間流逝。"
+    },
+    "larceny": {
+      "chinese": "竊盜罪；偷竊",
+      "pos": "n",
+      "synonyms": [
+        "theft",
+        "stealing",
+        "pilferage"
+      ],
+      "antonyms": [
+        "honesty",
+        "lawfulness"
+      ],
+      "relatedWords": [
+        "larcenous",
+        "larcenously",
+        "larcenist"
+      ],
+      "confusableWith": [
+        "robbery",
+        "burglary"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Police charged the shoplifter with petty larceny yesterday.",
+          "zh": "警方昨天以輕微竊盜罪起訴那名商店竊賊。",
+          "source": "daily"
+        },
+        {
+          "en": "Unlike robbery, larceny does not necessarily involve force or intimidation.",
+          "zh": "不同於搶劫，竊盜罪未必涉及武力或恐嚇。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "crime-theft",
+      "mnemonicHint": "把 larceny 聯想成『拿了財（lar-ce-ny）卻沒告知』；法律上核心是未經同意取走他人財物，別和使用暴力的 robbery 混淆。"
+    },
+    "lard": {
+      "chinese": "豬油",
+      "pos": "n",
+      "synonyms": [
+        "pork fat",
+        "rendered pork fat",
+        "pig fat"
+      ],
+      "antonyms": [
+        "vegetable oil",
+        "fat-free substitute"
+      ],
+      "relatedWords": [
+        "lardy",
+        "larded",
+        "larding"
+      ],
+      "confusableWith": [
+        "larder",
+        "larva"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Grandma fries the turnip cake in a spoonful of lard.",
+          "zh": "奶奶用一匙豬油煎蘿蔔糕。",
+          "source": "daily"
+        },
+        {
+          "en": "Before vegetable shortening became widespread, bakers often used lard to produce flaky pastry.",
+          "zh": "在植物性酥油普及以前，烘焙師常用豬油製作酥鬆的糕點。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "food-fat",
+      "mnemonicHint": "lard 就是從豬脂肪熬出的白色油脂；想像 larder（食品儲藏室）裡放著一罐 lard，但兩字不可混用。"
+    },
+    "large enough": {
+      "chinese": "夠大；尺寸足以符合需求",
+      "pos": "adj phrase",
+      "synonyms": [
+        "big enough",
+        "sufficiently large",
+        "adequate in size"
+      ],
+      "antonyms": [
+        "too small",
+        "undersized",
+        "insufficiently large"
+      ],
+      "relatedWords": [
+        "large",
+        "larger",
+        "largest",
+        "largeness"
+      ],
+      "confusableWith": [
+        "largely enough",
+        "long enough"
+      ],
+      "exampleSentences": [
+        {
+          "en": "This suitcase is large enough to hold both winter coats.",
+          "zh": "這個行李箱夠大，可以裝下兩件冬季外套。",
+          "source": "daily"
+        },
+        {
+          "en": "A sample large enough to represent the population reduces the risk of misleading conclusions.",
+          "zh": "足以代表母體的大型樣本可降低得出誤導性結論的風險。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "quantity-sufficiency",
+      "mnemonicHint": "large 描述尺寸，enough 表示達標；large enough 的順序就是『尺寸大到足夠』，例如 a room large enough for fifty people。"
+    },
+    "largely enough": {
+      "chinese": "非標準形式；夠大或大致足夠",
+      "pos": "nonstandard phrase",
+      "synonyms": [
+        "large enough",
+        "sufficiently large",
+        "generally adequate"
+      ],
+      "antonyms": [
+        "too small",
+        "clearly inadequate"
+      ],
+      "relatedWords": [
+        "large",
+        "largely",
+        "larger",
+        "largest"
+      ],
+      "confusableWith": [
+        "large enough"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The phrase 'largely enough' sounds wrong here; say 'large enough' for a box of sufficient size.",
+          "zh": "此處的 largely enough 不自然；要說箱子尺寸足夠，應改用 large enough。",
+          "source": "daily"
+        },
+        {
+          "en": "When an adjective describes sufficient size, 'largely enough' is malformed and should be corrected to 'large enough.'",
+          "zh": "當形容詞描述尺寸足夠時，largely enough 是錯誤形式，應修正為 large enough。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "usage-error-correction",
+      "mnemonicHint": "largely 是『主要地、大致上』的副詞，不等於『大的』；尺寸 + 足夠要用形容詞 large + enough，所以把多出的 -ly 劃掉：largely enough → large enough。"
+    },
+    "law": {
+      "chinese": "法律；法則",
+      "pos": "n",
+      "synonyms": [
+        "statute",
+        "legislation",
+        "rule",
+        "regulation"
+      ],
+      "antonyms": [
+        "lawlessness",
+        "anarchy"
+      ],
+      "relatedWords": [
+        "legal",
+        "lawful",
+        "lawyer"
+      ],
+      "confusableWith": [
+        "low"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The new law takes effect next month.",
+          "zh": "新法律下個月生效。",
+          "source": "daily"
+        },
+        {
+          "en": "Environmental law seeks to balance economic growth and public welfare.",
+          "zh": "環境法旨在平衡經濟成長與公共福祉。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "rules-obedience",
+      "mnemonicHint": "law 聯想到法院依法作出裁決。"
+    },
+    "leading": {
+      "chinese": "領先的；主要的；引導",
+      "pos": "v/adj",
+      "synonyms": [
+        "foremost",
+        "principal",
+        "guiding",
+        "directing"
+      ],
+      "antonyms": [
+        "trailing",
+        "following",
+        "secondary"
+      ],
+      "relatedWords": [
+        "lead",
+        "leader",
+        "leadership",
+        "leading-edge"
+      ],
+      "confusableWith": [
+        "leaning",
+        "loading"
+      ],
+      "exampleSentences": [
+        {
+          "en": "A volunteer is leading the visitors through the garden.",
+          "zh": "一名志工正帶領訪客穿過花園。",
+          "source": "daily"
+        },
+        {
+          "en": "The institute is a leading center for research on renewable energy storage.",
+          "zh": "該研究所是研究再生能源儲存技術的頂尖中心。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "leadership-rank",
+      "mnemonicHint": "leading 可表示正在帶領，也可形容走在最前面的頂尖者。"
+    },
+    "leads": {
+      "chinese": "帶領；導致；線索",
+      "pos": "n/v",
+      "synonyms": [
+        "guides",
+        "directs",
+        "causes",
+        "results in"
+      ],
+      "antonyms": [
+        "follows",
+        "trails",
+        "prevents"
+      ],
+      "relatedWords": [
+        "lead",
+        "leader",
+        "leading",
+        "leadership"
+      ],
+      "confusableWith": [
+        "leaks",
+        "leaves"
+      ],
+      "exampleSentences": [
+        {
+          "en": "This hallway leads directly to the hotel lobby.",
+          "zh": "這條走廊直接通往飯店大廳。",
+          "source": "daily"
+        },
+        {
+          "en": "Repeated exposure to loud noise leads to measurable hearing loss in some workers.",
+          "zh": "反覆暴露在巨大噪音中，會導致部分工作者出現可測得的聽力損失。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "causation-direction",
+      "mnemonicHint": "leads 可指帶路，也常用 leads to 表示某件事導致另一個結果。"
+    },
+    "levels": {
+      "chinese": "程度；層級；水準",
+      "pos": "n",
+      "synonyms": [
+        "degrees",
+        "stages",
+        "tiers",
+        "heights"
+      ],
+      "antonyms": [
+        "uniformity",
+        "single level"
+      ],
+      "relatedWords": [
+        "level",
+        "leveling",
+        "multilevel"
+      ],
+      "confusableWith": [
+        "levers"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The noise levels dropped after midnight.",
+          "zh": "午夜後噪音程度下降了。",
+          "source": "daily"
+        },
+        {
+          "en": "Elevated stress levels can impair memory and concentration.",
+          "zh": "壓力程度升高可能損害記憶與專注力。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "hierarchy-status",
+      "mnemonicHint": "level 加 s，表示多種高度或程度。"
+    },
+    "leverage": {
+      "chinese": "善用；影響力；槓桿作用",
+      "pos": "v/n",
+      "synonyms": [
+        "utilize",
+        "exploit",
+        "capitalize on",
+        "influence"
+      ],
+      "antonyms": [
+        "squander",
+        "waste",
+        "forgo"
+      ],
+      "relatedWords": [
+        "lever",
+        "leveraged",
+        "leveraging",
+        "leverages"
+      ],
+      "confusableWith": [
+        "coverage",
+        "average"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Our neighborhood leveraged volunteer skills to repair the playground cheaply.",
+          "zh": "我們的社區善用志工技能，以低成本修繕遊樂場。",
+          "source": "daily"
+        },
+        {
+          "en": "By leveraging its extensive distribution network, the firm entered rural markets ahead of its rivals.",
+          "zh": "該公司善用廣泛的配銷網絡，搶在競爭對手之前進入鄉村市場。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "advantage-utilization",
+      "mnemonicHint": "leverage 來自 lever（槓桿）：用小力撬動大物；引申為善用既有資源，放大成果或取得影響力。"
+    },
+    "limited": {
+      "chinese": "有限的；受限制的",
+      "pos": "adj",
+      "synonyms": [
+        "restricted",
+        "finite",
+        "scarce",
+        "narrow"
+      ],
+      "antonyms": [
+        "unlimited",
+        "abundant",
+        "unrestricted"
+      ],
+      "relatedWords": [
+        "limit",
+        "limitation",
+        "limiting"
+      ],
+      "confusableWith": [
+        "limpid"
+      ],
+      "exampleSentences": [
+        {
+          "en": "We have limited time before the train leaves.",
+          "zh": "火車出發前，我們的時間有限。",
+          "source": "daily"
+        },
+        {
+          "en": "The findings have limited applicability beyond urban populations.",
+          "zh": "這些發現對都市人口以外的適用性有限。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "scope-extent",
+      "mnemonicHint": "limit 界線 + ed：被界線限制住的。"
+    },
+    "literature": {
+      "chinese": "文學；文獻；書面資料",
+      "pos": "n",
+      "synonyms": [
+        "writings",
+        "written works",
+        "scholarship",
+        "published research"
+      ],
+      "antonyms": [
+        "oral tradition",
+        "nonliterary writing"
+      ],
+      "relatedWords": [
+        "literary",
+        "literate",
+        "literacy",
+        "literati"
+      ],
+      "confusableWith": [
+        "literacy",
+        "literal"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Our book club is exploring modern Japanese literature this month.",
+          "zh": "我們的讀書會這個月正在探索日本現代文學。",
+          "source": "daily"
+        },
+        {
+          "en": "The literature on urban heat consistently emphasizes the value of tree cover.",
+          "zh": "有關都市熱島的文獻一貫強調樹木覆蓋的重要性。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "language-scholarship",
+      "mnemonicHint": "literature 可指文學作品，也可指某研究領域已發表的整體文獻。"
+    },
+    "litigants": {
+      "chinese": "訴訟當事人（litigant 的複數）",
+      "pos": "n (plural)",
+      "synonyms": [
+        "parties",
+        "claimants",
+        "disputants"
+      ],
+      "antonyms": [
+        "nonparties",
+        "bystanders"
+      ],
+      "relatedWords": [
+        "litigant",
+        "litigate",
+        "litigation",
+        "litigious"
+      ],
+      "confusableWith": [
+        "litigators",
+        "legislators"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Both litigants waited outside the courtroom with their lawyers.",
+          "zh": "兩名訴訟當事人和各自的律師在法庭外等候。",
+          "source": "daily"
+        },
+        {
+          "en": "Because the litigants accepted mediation, the costly civil trial was avoided.",
+          "zh": "由於訴訟雙方接受調解，因而避免了代價高昂的民事審判。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "law-legal-proceedings",
+      "mnemonicHint": "litigants 是進入 litigation（訴訟）的人；字尾 -ant 表示參與者，加 -s 表示原告、被告等多位訴訟當事人。"
+    },
+    "lives": {
+      "chinese": "生命；生活",
+      "pos": "n",
+      "synonyms": [
+        "existences",
+        "lifetimes",
+        "life spans"
+      ],
+      "antonyms": [
+        "deaths",
+        "loss of life"
+      ],
+      "relatedWords": [
+        "life",
+        "live",
+        "living"
+      ],
+      "confusableWith": [
+        "leaves"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The firefighters saved two lives.",
+          "zh": "消防員挽救了兩條生命。",
+          "source": "daily"
+        },
+        {
+          "en": "Air pollution shortens millions of lives worldwide.",
+          "zh": "空氣污染縮短了全球數百萬人的壽命。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "life-existence",
+      "mnemonicHint": "life 的 f 變 v 加 es，複數是 lives。"
+    },
+    "living": {
+      "chinese": "活著的；現存的；生活",
+      "pos": "n/adj",
+      "synonyms": [
+        "alive",
+        "existing",
+        "surviving"
+      ],
+      "antonyms": [
+        "dead",
+        "deceased",
+        "lifeless"
+      ],
+      "relatedWords": [
+        "live",
+        "lively",
+        "livelihood"
+      ],
+      "confusableWith": [
+        "leaving"
+      ],
+      "exampleSentences": [
+        {
+          "en": "This is the oldest living tree in the park.",
+          "zh": "這是公園裡現存最古老的樹。",
+          "source": "daily"
+        },
+        {
+          "en": "The experiment compared living organisms with nonliving material.",
+          "zh": "該實驗比較了生物與非生物材料。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "life-existence",
+      "mnemonicHint": "live 去 e 加 ing：正在活著或生活。"
+    },
+    "looks into": {
+      "chinese": "調查；研究",
+      "pos": "phrase",
+      "synonyms": [
+        "investigates",
+        "examines",
+        "probes"
+      ],
+      "antonyms": [
+        "ignores",
+        "overlooks"
+      ],
+      "relatedWords": [
+        "look",
+        "look into"
+      ],
+      "confusableWith": [
+        "looks up"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Noah always looks into the mailbox when he gets home.",
+          "zh": "諾亞回家時總會查看信箱裡面。",
+          "source": "daily"
+        },
+        {
+          "en": "The paper looks into the causes of declining voter participation.",
+          "zh": "這篇論文探討投票參與率下降的原因。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "inquiry-investigation",
+      "mnemonicHint": "往裡面看，表示深入調查"
+    },
+    "lot": {
+      "chinese": "許多；一批；地段",
+      "pos": "n/adv",
+      "synonyms": [
+        "abundance",
+        "multitude",
+        "batch",
+        "parcel"
+      ],
+      "antonyms": [
+        "little",
+        "few",
+        "scarcity"
+      ],
+      "relatedWords": [
+        "allot",
+        "allotment",
+        "lots"
+      ],
+      "confusableWith": [
+        "lost"
+      ],
+      "exampleSentences": [
+        {
+          "en": "We learned a lot during the workshop.",
+          "zh": "我們在工作坊中學到了很多。",
+          "source": "daily"
+        },
+        {
+          "en": "A lot of variation remains unexplained by the model.",
+          "zh": "模型仍無法解釋大量變異。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "quantity-sufficiency",
+      "mnemonicHint": "a lot of 是「很多」；lot 也可指一批東西。"
+    },
+    "lower": {
+      "chinese": "降低；較低的",
+      "pos": "v/adj",
+      "synonyms": [
+        "reduce",
+        "decrease",
+        "drop",
+        "inferior"
+      ],
+      "antonyms": [
+        "raise",
+        "increase",
+        "higher"
+      ],
+      "relatedWords": [
+        "low",
+        "lowering",
+        "lowermost"
+      ],
+      "confusableWith": [
+        "lawyer"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Please lower the volume after ten.",
+          "zh": "十點後請把音量調低。",
+          "source": "daily"
+        },
+        {
+          "en": "Lower interest rates may stimulate private investment.",
+          "zh": "較低利率可能刺激民間投資。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "decline-deterioration",
+      "mnemonicHint": "low 加 er，可表示更低，也可作動詞降低。"
+    }
+  }
+}

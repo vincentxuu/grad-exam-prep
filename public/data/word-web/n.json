@@ -1,0 +1,264 @@
+{
+  "schemaVersion": 1,
+  "words": {
+    "natural": {
+      "chinese": "自然的；天生的",
+      "pos": "adj",
+      "synonyms": [
+        "innate",
+        "organic",
+        "normal",
+        "spontaneous"
+      ],
+      "antonyms": [
+        "artificial",
+        "unnatural",
+        "synthetic"
+      ],
+      "relatedWords": [
+        "nature",
+        "naturally",
+        "naturalism"
+      ],
+      "confusableWith": [
+        "neutral"
+      ],
+      "exampleSentences": [
+        {
+          "en": "This soap is made with natural ingredients.",
+          "zh": "這塊肥皂由天然成分製成。",
+          "source": "daily"
+        },
+        {
+          "en": "Natural selection favors traits that improve reproductive success.",
+          "zh": "自然選擇有利於能提高繁殖成功率的特徵。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "nature-environment",
+      "mnemonicHint": "nature 自然 + al 形容詞字尾。"
+    },
+    "nature": {
+      "chinese": "自然；本質；天性",
+      "pos": "n",
+      "synonyms": [
+        "environment",
+        "character",
+        "essence",
+        "disposition"
+      ],
+      "antonyms": [
+        "artifice",
+        "nurture"
+      ],
+      "relatedWords": [
+        "natural",
+        "naturally",
+        "naturalist"
+      ],
+      "confusableWith": [
+        "mature"
+      ],
+      "exampleSentences": [
+        {
+          "en": "A walk in nature helps me relax.",
+          "zh": "到大自然中散步能讓我放鬆。",
+          "source": "daily"
+        },
+        {
+          "en": "The study raises questions about the nature of human cooperation.",
+          "zh": "該研究提出關於人類合作本質的問題。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "nature-environment",
+      "mnemonicHint": "nature 既是大自然，也是事物天生的本質。"
+    },
+    "no meaning": {
+      "chinese": "無意義（清單中的片語殘片；自然用法通常是 have/has no meaning）",
+      "pos": "phrase fragment",
+      "synonyms": [
+        "meaningless",
+        "senseless",
+        "insignificant"
+      ],
+      "antonyms": [
+        "meaningful",
+        "significant",
+        "purposeful"
+      ],
+      "relatedWords": [
+        "mean",
+        "meaning",
+        "meaningful",
+        "meaningless"
+      ],
+      "confusableWith": [
+        "no means",
+        "not mean"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Without the map legend, these colored lines have no meaning to me.",
+          "zh": "沒有地圖圖例，這些彩色線條對我毫無意義。",
+          "source": "daily"
+        },
+        {
+          "en": "A correlation has no meaning unless the variables and sampling method are clearly defined.",
+          "zh": "除非變數與抽樣方法都有明確定義，否則相關性並無意義。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "meaning-significance",
+      "mnemonicHint": "這不是完整的固定片語，而是 no（沒有）加 meaning（意義）的殘片；造句時前面補 have/has，形成 have no meaning，才是自然完整的表達。"
+    },
+    "no means": {
+      "chinese": "絕非（清單漏掉 by；正確固定片語為 by no means）",
+      "pos": "malformed phrase",
+      "synonyms": [
+        "not at all",
+        "in no way",
+        "certainly not"
+      ],
+      "antonyms": [
+        "certainly",
+        "definitely",
+        "undoubtedly"
+      ],
+      "relatedWords": [
+        "mean",
+        "means",
+        "by all means",
+        "by no means"
+      ],
+      "confusableWith": [
+        "no meaning",
+        "by all means"
+      ],
+      "exampleSentences": [
+        {
+          "en": "This repair is by no means cheap, but it should last for years.",
+          "zh": "這次維修絕不便宜，但應該能維持多年。",
+          "source": "daily"
+        },
+        {
+          "en": "Economic growth is by no means sufficient to guarantee an equitable distribution of wealth.",
+          "zh": "經濟成長絕不足以保證財富的公平分配。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "negation-emphasis",
+      "mnemonicHint": "no means 單獨不是表示『絕非』的標準片語，前面一定要有 by：by no means 可想成『不靠任何方法都辦不到』，語氣就是『絕對不』。"
+    },
+    "not mean": {
+      "chinese": "不表示；並非意指（清單中的未完整動詞片語，需搭配主詞或助動詞）",
+      "pos": "verb phrase fragment",
+      "synonyms": [
+        "not signify",
+        "not imply",
+        "not intend"
+      ],
+      "antonyms": [
+        "mean",
+        "signify",
+        "imply"
+      ],
+      "relatedWords": [
+        "mean",
+        "means",
+        "meant",
+        "meaning"
+      ],
+      "confusableWith": [
+        "no meaning",
+        "not means"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Skipping dessert does not mean I dislike your cooking.",
+          "zh": "不吃甜點並不表示我不喜歡你做的菜。",
+          "source": "daily"
+        },
+        {
+          "en": "The absence of evidence does not mean that the proposed mechanism is impossible.",
+          "zh": "缺乏證據並不表示所提出的機制不可能存在。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "meaning-implication",
+      "mnemonicHint": "not mean 只是『不＋表示』的骨架，不能孤零零當完整詞條；記成 does not mean 或 do not mean，並依主詞補上正確助動詞。"
+    },
+    "not means": {
+      "chinese": "非標準形式；不表示",
+      "pos": "nonstandard phrase",
+      "synonyms": [
+        "does not signify",
+        "does not imply",
+        "does not indicate"
+      ],
+      "antonyms": [
+        "means",
+        "signifies",
+        "indicates"
+      ],
+      "relatedWords": [
+        "mean",
+        "means",
+        "meant",
+        "meaning"
+      ],
+      "confusableWith": [
+        "not mean",
+        "no means"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Her quiet reply does not mean she is angry.",
+          "zh": "她安靜的回答並不表示她在生氣。",
+          "source": "daily"
+        },
+        {
+          "en": "A temporary decline does not mean that the long-term trend has reversed.",
+          "zh": "短期下降並不表示長期趨勢已經逆轉。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "meaning-implication",
+      "mnemonicHint": "not 後面的動詞要用原形，所以 not means 是錯的；把第三人稱單數的 -s 移到助動詞 does，得到 does not mean。"
+    },
+    "nowadays": {
+      "chinese": "現今；如今",
+      "pos": "adv",
+      "synonyms": [
+        "today",
+        "presently",
+        "currently"
+      ],
+      "antonyms": [
+        "formerly",
+        "previously"
+      ],
+      "relatedWords": [
+        "now",
+        "present-day"
+      ],
+      "confusableWith": [
+        "now days"
+      ],
+      "exampleSentences": [
+        {
+          "en": "My grandparents nowadays use video calls to keep in touch.",
+          "zh": "我的祖父母現在會用視訊通話保持聯絡。",
+          "source": "daily"
+        },
+        {
+          "en": "Researchers nowadays can analyze vast datasets within hours.",
+          "zh": "現今的研究人員能在數小時內分析龐大的資料集。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "time-frequency",
+      "mnemonicHint": "now 加 a days，表示現在這些日子"
+    }
+  }
+}

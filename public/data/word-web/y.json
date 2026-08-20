@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "words": {
+    "york": {
+      "chinese": "約克；紐約名稱的一部分",
+      "pos": "proper n",
+      "synonyms": [
+        "York city",
+        "Eboracum",
+        "Jorvik"
+      ],
+      "antonyms": [
+        "non-York",
+        "elsewhere"
+      ],
+      "relatedWords": [
+        "Yorkshire",
+        "Yorkist",
+        "New Yorker"
+      ],
+      "confusableWith": [
+        "yolk",
+        "yorker"
+      ],
+      "exampleSentences": [
+        {
+          "en": "We took the train to York and walked around the old city walls.",
+          "zh": "我們搭火車到約克，並沿著古城牆散步。",
+          "source": "daily"
+        },
+        {
+          "en": "New York emerged as a major center of finance and immigration in the nineteenth century.",
+          "zh": "紐約在十九世紀成為金融與移民的重要中心。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "places-geography",
+      "mnemonicHint": "York 容易和蛋黃 yolk 混淆；城市 York 有 r，蛋黃 yolk 有 l。"
+    }
+  }
+}

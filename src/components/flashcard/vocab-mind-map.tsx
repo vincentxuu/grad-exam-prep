@@ -6,14 +6,23 @@ import { layoutWordWeb, type WordWebGroup, type WordWebNode } from '@/lib/word-w
 export interface VocabMindMapProps {
   word: string
   chinese: string
+  pos?: string
   synonyms?: string[]
   antonyms?: string[]
   relatedWords?: string[]
   confusableWith?: string[]
-  exampleSentences?: Array<{ en: string; zh: string }>
+  exampleSentences?: Array<{ en: string; zh: string; source?: string }>
   semanticGroup?: string
+  /** Chinese label for the semantic group, from the Word Web index. */
+  semanticGroupLabel?: string
+  /** Other headwords in the same semantic group. */
+  semanticGroupWords?: string[]
   mnemonicHint?: string
+  /** Speak the word. */
   onWordClick?: (word: string) => void
+  /** True when the word is itself a headword, so the map can re-centre on it. */
+  canExpand?: (word: string) => boolean
+  onExpand?: (word: string) => void
 }
 
 interface GroupDef {
@@ -55,7 +64,34 @@ const GROUP_DEFS: GroupDef[] = [
   },
 ]
 
+const POS_LABELS: Record<string, string> = {
+  n: '名詞',
+  v: '動詞',
+  adj: '形容詞',
+  adv: '副詞',
+  prep: '介系詞',
+  conj: '連接詞',
+  pron: '代名詞',
+  det: '限定詞',
+  num: '數詞',
+  phrase: '片語',
+}
+
+const SOURCE_LABELS: Record<string, string> = {
+  daily: '生活',
+  'exam-style': '考題',
+}
+
 type ViewMode = 'auto' | 'map' | 'list'
+
+/** Turns `n/v` into 名詞・動詞, and leaves anything unrecognised untouched. */
+function formatPos(pos: string): string {
+  const parts = pos.split('/')
+  if (parts.every((part) => POS_LABELS[part.trim()])) {
+    return parts.map((part) => POS_LABELS[part.trim()]).join('・')
+  }
+  return pos
+}
 
 function dedupe(words: string[], taken: Set<string>): string[] {
   const out: string[] = []
@@ -68,11 +104,11 @@ function dedupe(words: string[], taken: Set<string>): string[] {
   return out
 }
 
-function buildGroups(
-  props: VocabMindMapProps
-): Array<WordWebGroup & { color: string; hint: string }> {
+type ColoredGroup = WordWebGroup & { color: string; hint: string }
+
+function buildGroups(props: VocabMindMapProps): ColoredGroup[] {
   const taken = new Set<string>([props.word.toLowerCase()])
-  const groups: Array<WordWebGroup & { color: string; hint: string }> = []
+  const groups: ColoredGroup[] = []
   for (const def of GROUP_DEFS) {
     const words = dedupe(def.pick(props) ?? [], taken)
     if (words.length === 0) continue
@@ -86,34 +122,27 @@ function WordNode({
   color,
   active,
   dimmed,
+  expandable,
   onActivate,
+  onExpand,
   onFocusChange,
 }: {
   node: WordWebNode
   color: string
   active: boolean
   dimmed: boolean
+  expandable: boolean
   onActivate?: (word: string) => void
+  onExpand?: (word: string) => void
   onFocusChange: (word: string | null) => void
 }) {
+  const badgeX = node.x + node.width / 2 - 3
   return (
     <g
-      className="cursor-pointer transition-opacity duration-150 focus:outline-none motion-reduce:transition-none"
+      className="transition-opacity duration-150 motion-reduce:transition-none"
       opacity={dimmed ? 0.28 : 1}
-      role="button"
-      tabIndex={0}
-      aria-label={`${node.groupLabel}：${node.word}`}
       onMouseEnter={() => onFocusChange(node.word)}
       onMouseLeave={() => onFocusChange(null)}
-      onFocus={() => onFocusChange(node.word)}
-      onBlur={() => onFocusChange(null)}
-      onClick={() => onActivate?.(node.word)}
-      onKeyDown={(e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault()
-          onActivate?.(node.word)
-        }
-      }}
     >
       <line
         x1={node.edge.x1}
@@ -126,31 +155,117 @@ function WordNode({
         strokeDasharray={active ? 'none' : '4 4'}
         strokeLinecap="round"
       />
-      <rect
-        x={node.x - node.width / 2}
-        y={node.y - node.height / 2}
-        width={node.width}
-        height={node.height}
-        rx={node.height / 2}
-        fill={active ? color : 'hsl(var(--card))'}
-        stroke={color}
-        strokeWidth={active ? 2 : 1.25}
-        className="transition-[fill,stroke-width] duration-150 motion-reduce:transition-none"
-      />
-      <text
-        x={node.x}
-        y={node.y}
-        textAnchor="middle"
-        dominantBaseline="central"
-        fill={active ? 'hsl(var(--card))' : 'hsl(var(--foreground))'}
-        fontSize={12}
-        fontWeight={600}
-        fontFamily="var(--font-inter), system-ui, sans-serif"
-        style={{ pointerEvents: 'none' }}
+      <g
+        className="cursor-pointer focus:outline-none"
+        role="button"
+        tabIndex={0}
+        aria-label={`${node.groupLabel}：${node.word}`}
+        onFocus={() => onFocusChange(node.word)}
+        onBlur={() => onFocusChange(null)}
+        onClick={() => onActivate?.(node.word)}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault()
+            onActivate?.(node.word)
+          }
+        }}
       >
-        {node.word}
-      </text>
+        <rect
+          x={node.x - node.width / 2}
+          y={node.y - node.height / 2}
+          width={node.width}
+          height={node.height}
+          rx={node.height / 2}
+          fill={active ? color : 'hsl(var(--card))'}
+          stroke={color}
+          strokeWidth={active ? 2 : 1.25}
+          className="transition-[fill,stroke-width] duration-150 motion-reduce:transition-none"
+        />
+        <text
+          x={node.x - (expandable ? 5 : 0)}
+          y={node.y}
+          textAnchor="middle"
+          dominantBaseline="central"
+          fill={active ? 'hsl(var(--card))' : 'hsl(var(--foreground))'}
+          fontSize={12}
+          fontWeight={600}
+          fontFamily="var(--font-inter), system-ui, sans-serif"
+          style={{ pointerEvents: 'none' }}
+        >
+          {node.word}
+        </text>
+      </g>
+
+      {expandable && (
+        <g
+          className="cursor-pointer focus:outline-none"
+          role="button"
+          tabIndex={0}
+          aria-label={`展開 ${node.word} 的語義網絡`}
+          onClick={() => onExpand?.(node.word)}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault()
+              onExpand?.(node.word)
+            }
+          }}
+        >
+          <circle cx={badgeX} cy={node.y} r={7.5} fill={color} />
+          <text
+            x={badgeX}
+            y={node.y}
+            textAnchor="middle"
+            dominantBaseline="central"
+            fill="hsl(var(--card))"
+            fontSize={12}
+            fontWeight={700}
+            style={{ pointerEvents: 'none' }}
+          >
+            +
+          </text>
+        </g>
+      )}
     </g>
+  )
+}
+
+function WordChip({
+  word,
+  color,
+  expandable,
+  onWordClick,
+  onExpand,
+}: {
+  word: string
+  color: string
+  expandable: boolean
+  onWordClick?: (word: string) => void
+  onExpand?: (word: string) => void
+}) {
+  return (
+    <span
+      className="inline-flex items-center overflow-hidden rounded-full border"
+      style={{ borderColor: color }}
+    >
+      <button
+        type="button"
+        onClick={() => onWordClick?.(word)}
+        className="px-2 py-0.5 text-xs font-medium"
+      >
+        {word}
+      </button>
+      {expandable && (
+        <button
+          type="button"
+          onClick={() => onExpand?.(word)}
+          aria-label={`展開 ${word} 的語義網絡`}
+          className="px-1.5 py-0.5 text-xs font-bold"
+          style={{ backgroundColor: color, color: 'hsl(var(--card))' }}
+        >
+          +
+        </button>
+      )}
+    </span>
   )
 }
 
@@ -163,19 +278,24 @@ export function VocabMindMap(props: VocabMindMapProps) {
   const visibleGroups = groups.filter((g) => !hiddenGroups.includes(g.key))
   const colorOf = useMemo(() => new Map(groups.map((g) => [g.key, g.color] as const)), [groups])
 
-  const layout = useMemo(
-    () =>
-      layoutWordWeb(
-        props.word,
-        props.chinese,
-        visibleGroups.map((g) => ({ key: g.key, label: g.label, words: g.words }))
-      ),
-    [props.word, props.chinese, groups, hiddenGroups]
+  const layout = useMemo(() => {
+    const visible = groups
+      .filter((g) => !hiddenGroups.includes(g.key))
+      .map((g) => ({ key: g.key, label: g.label, words: g.words }))
+    return layoutWordWeb(props.word, props.chinese, visible)
+  }, [props.word, props.chinese, groups, hiddenGroups])
+
+  const siblings = (props.semanticGroupWords ?? []).filter(
+    (w) => w.toLowerCase() !== props.word.toLowerCase()
   )
+  const canExpand = (word: string) => Boolean(props.onExpand && props.canExpand?.(word))
 
   const hasGroups = groups.length > 0
   const hasExtra =
-    (props.exampleSentences?.length ?? 0) > 0 || props.semanticGroup || props.mnemonicHint
+    (props.exampleSentences?.length ?? 0) > 0 ||
+    props.semanticGroup ||
+    props.mnemonicHint ||
+    props.pos
 
   if (!hasGroups && !hasExtra) return null
 
@@ -265,7 +385,9 @@ export function VocabMindMap(props: VocabMindMapProps) {
                       color={colorOf.get(node.groupKey) ?? 'hsl(var(--primary))'}
                       active={active === node.word}
                       dimmed={active !== null && active !== node.word}
+                      expandable={canExpand(node.word)}
                       onActivate={props.onWordClick}
+                      onExpand={props.onExpand}
                       onFocusChange={setActive}
                     />
                   ))}
@@ -331,15 +453,14 @@ export function VocabMindMap(props: VocabMindMapProps) {
                       {g.label}
                     </span>
                     {g.words.map((w) => (
-                      <button
+                      <WordChip
                         key={w}
-                        type="button"
-                        onClick={() => props.onWordClick?.(w)}
-                        className="rounded-full border px-2 py-0.5 text-xs font-medium"
-                        style={{ borderColor: g.color }}
-                      >
-                        {w}
-                      </button>
+                        word={w}
+                        color={g.color}
+                        expandable={canExpand(w)}
+                        onWordClick={props.onWordClick}
+                        onExpand={props.onExpand}
+                      />
                     ))}
                   </div>
                 ))}
@@ -355,11 +476,34 @@ export function VocabMindMap(props: VocabMindMapProps) {
 
       {hasExtra && (
         <div className="space-y-2 rounded-lg border bg-card p-3">
-          {props.semanticGroup && (
+          {props.pos && (
             <p className="text-xs text-muted-foreground">
-              <span className="font-medium text-foreground">語義群：</span>
-              {props.semanticGroup}
+              <span className="font-medium text-foreground">詞性：</span>
+              {formatPos(props.pos)}
             </p>
+          )}
+
+          {props.semanticGroup && (
+            <div className="space-y-1.5">
+              <p className="text-xs text-muted-foreground">
+                <span className="font-medium text-foreground">語義群：</span>
+                {props.semanticGroupLabel ?? props.semanticGroup}
+              </p>
+              {siblings.length > 0 && (
+                <div className="flex flex-wrap items-center gap-1.5">
+                  {siblings.map((w) => (
+                    <WordChip
+                      key={w}
+                      word={w}
+                      color="hsl(var(--primary))"
+                      expandable={canExpand(w)}
+                      onWordClick={props.onWordClick}
+                      onExpand={props.onExpand}
+                    />
+                  ))}
+                </div>
+              )}
+            </div>
           )}
 
           {props.mnemonicHint && (
@@ -376,7 +520,14 @@ export function VocabMindMap(props: VocabMindMapProps) {
               </p>
               {props.exampleSentences.map((s, i) => (
                 <div key={i} className="text-xs leading-relaxed">
-                  <p className="text-foreground/90 italic">{s.en}</p>
+                  <p className="text-foreground/90">
+                    {s.source && SOURCE_LABELS[s.source] && (
+                      <span className="mr-1.5 rounded bg-muted px-1 py-0.5 text-[10px] not-italic text-muted-foreground">
+                        {SOURCE_LABELS[s.source]}
+                      </span>
+                    )}
+                    <span className="italic">{s.en}</span>
+                  </p>
                   <p className="text-muted-foreground">{s.zh}</p>
                 </div>
               ))}

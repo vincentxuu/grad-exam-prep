@@ -1,0 +1,1077 @@
+{
+  "schemaVersion": 1,
+  "words": {
+    "parsimonious": {
+      "chinese": "吝嗇的",
+      "pos": "adj",
+      "synonyms": [
+        "frugal",
+        "stingy",
+        "miserly",
+        "thrifty"
+      ],
+      "antonyms": [
+        "generous",
+        "lavish",
+        "extravagant"
+      ],
+      "relatedWords": [
+        "parsimony"
+      ],
+      "confusableWith": [
+        "harmonious"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Despite his wealth, he was notoriously parsimonious with tips.",
+          "zh": "儘管很富有，他在小費方面出了名的吝嗇。",
+          "source": "daily"
+        },
+        {
+          "en": "A parsimonious model uses the fewest variables to explain data.",
+          "zh": "簡約模型使用最少的變數來解釋數據。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "finance-money",
+      "mnemonicHint": "pars(spare) + imonious → 過度節省 → 吝嗇的"
+    },
+    "particular": {
+      "chinese": "特定的；講究的",
+      "pos": "adj/n",
+      "synonyms": [
+        "specific",
+        "certain",
+        "distinct",
+        "individual"
+      ],
+      "antonyms": [
+        "general",
+        "universal",
+        "unspecific"
+      ],
+      "relatedWords": [
+        "particularly",
+        "particularity",
+        "particularize"
+      ],
+      "confusableWith": [
+        "particle"
+      ],
+      "exampleSentences": [
+        {
+          "en": "I am looking for a particular shade of green.",
+          "zh": "我正在找某一種特定的綠色。",
+          "source": "daily"
+        },
+        {
+          "en": "This pattern is particularly evident in low-income regions.",
+          "zh": "這種模式在低收入地區尤其明顯。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "definition-boundary",
+      "mnemonicHint": "part 一部分 + icular：特別指出某一部分。"
+    },
+    "party": {
+      "chinese": "政黨；聚會；一方",
+      "pos": "n",
+      "synonyms": [
+        "political group",
+        "celebration",
+        "gathering",
+        "side"
+      ],
+      "antonyms": [
+        "individual",
+        "opponent"
+      ],
+      "relatedWords": [
+        "parties",
+        "partying",
+        "partygoer"
+      ],
+      "confusableWith": [
+        "partly",
+        "part"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Mina is hosting a birthday party at her apartment tonight.",
+          "zh": "米娜今晚要在她的公寓舉辦生日聚會。",
+          "source": "daily"
+        },
+        {
+          "en": "The opposition party demanded an independent review of the disputed policy.",
+          "zh": "反對黨要求對這項具爭議的政策進行獨立審查。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "society-politics",
+      "mnemonicHint": "把 party 想成一群人聚在一起：可以是聚會，也可以是理念相同的政黨。"
+    },
+    "pervasive": {
+      "chinese": "普遍的",
+      "pos": "adj",
+      "synonyms": [
+        "widespread",
+        "prevalent",
+        "ubiquitous",
+        "omnipresent"
+      ],
+      "antonyms": [
+        "limited",
+        "rare",
+        "localized"
+      ],
+      "relatedWords": [
+        "pervade",
+        "pervasiveness"
+      ],
+      "confusableWith": [
+        "persuasive"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The influence of social media is pervasive in modern society.",
+          "zh": "社群媒體的影響在現代社會無處不在。",
+          "source": "daily"
+        },
+        {
+          "en": "Pervasive corruption undermines institutional trust.",
+          "zh": "普遍的腐敗破壞了制度信任。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "scope-extent",
+      "mnemonicHint": "per(through) + vas(go) + ive → 到處滲透 → 普遍的"
+    },
+    "phased": {
+      "chinese": "分階段進行；逐步實施",
+      "pos": "v/adj",
+      "synonyms": [
+        "staged",
+        "sequenced",
+        "introduced in stages",
+        "implemented gradually"
+      ],
+      "antonyms": [
+        "rushed",
+        "compressed",
+        "implemented at once"
+      ],
+      "relatedWords": [
+        "phase",
+        "phases",
+        "phasing",
+        "phased out"
+      ],
+      "confusableWith": [
+        "fazed",
+        "phrased"
+      ],
+      "exampleSentences": [
+        {
+          "en": "We phased the apartment repairs over three weekends to control costs.",
+          "zh": "我們把公寓修繕分三個週末進行，以控制成本。",
+          "source": "daily"
+        },
+        {
+          "en": "The ministry phased its reforms carefully, while obsolete subsidies were phased out over five years.",
+          "zh": "該部會謹慎地分階段推行改革，同時在五年內逐步淘汰過時的補貼。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "change-stages",
+      "mnemonicHint": "phase 是「階段」，phased 表示事情已被切成階段執行；別和 fazed（使慌亂）混淆，而 phased out 才是「逐步淘汰」。"
+    },
+    "phased out": {
+      "chinese": "逐步淘汰；分階段停止使用",
+      "pos": "phr v",
+      "synonyms": [
+        "gradually discontinued",
+        "slowly eliminated",
+        "progressively withdrawn",
+        "wound down"
+      ],
+      "antonyms": [
+        "phased in",
+        "introduced",
+        "expanded"
+      ],
+      "relatedWords": [
+        "phase",
+        "phase out",
+        "phasing out",
+        "phaseout"
+      ],
+      "confusableWith": [
+        "fazed out",
+        "phased in"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Our office phased out paper receipts after adopting a digital system.",
+          "zh": "辦公室採用數位系統後，逐步停止使用紙本收據。",
+          "source": "daily"
+        },
+        {
+          "en": "Several nations phased out leaded gasoline because of its severe effects on public health.",
+          "zh": "數個國家因含鉛汽油嚴重危害公共健康而逐步將其淘汰。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "removal-gradual",
+      "mnemonicHint": "phase 是「階段」，out 是「退出」；讓舊制度一個階段接一個階段退出舞台，就是 phased out。"
+    },
+    "plans": {
+      "chinese": "計畫；打算",
+      "pos": "n/v",
+      "synonyms": [
+        "schemes",
+        "proposals",
+        "intends"
+      ],
+      "antonyms": [
+        "improvises",
+        "abandons"
+      ],
+      "relatedWords": [
+        "plan",
+        "planned",
+        "planning"
+      ],
+      "confusableWith": [
+        "planes"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Nora plans to cook dinner before her guests arrive.",
+          "zh": "諾拉打算在客人抵達前做好晚餐。",
+          "source": "daily"
+        },
+        {
+          "en": "The research team plans to test the hypothesis with a larger sample.",
+          "zh": "研究團隊計畫以更大的樣本檢驗該假說。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "planning-preparation",
+      "mnemonicHint": "plan 加 s，可指多個計畫或他打算"
+    },
+    "plants": {
+      "chinese": "植物；工廠；種植",
+      "pos": "n/v",
+      "synonyms": [
+        "flora",
+        "vegetation",
+        "factories"
+      ],
+      "antonyms": [
+        "animals",
+        "barrenness"
+      ],
+      "relatedWords": [
+        "plant",
+        "planted",
+        "planting"
+      ],
+      "confusableWith": [
+        "plans"
+      ],
+      "exampleSentences": [
+        {
+          "en": "I water the balcony plants every morning.",
+          "zh": "我每天早上都會澆灌陽台上的植物。",
+          "source": "daily"
+        },
+        {
+          "en": "The experiment measured how quickly plants absorbed nitrogen from the soil.",
+          "zh": "該實驗測量植物從土壤吸收氮的速度。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "creation-novelty",
+      "mnemonicHint": "plant 種下後會長成植物"
+    },
+    "pleasurable": {
+      "chinese": "令人愉快的；帶來樂趣的",
+      "pos": "adj",
+      "synonyms": [
+        "enjoyable",
+        "delightful",
+        "gratifying",
+        "pleasant"
+      ],
+      "antonyms": [
+        "unpleasant",
+        "painful",
+        "tedious"
+      ],
+      "relatedWords": [
+        "please",
+        "pleasure",
+        "pleased",
+        "pleasurably"
+      ],
+      "confusableWith": [
+        "pleasant",
+        "pleased"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Warm sunlight made the quiet walk especially pleasurable.",
+          "zh": "溫暖的陽光讓這趟寧靜的散步格外愉快。",
+          "source": "daily"
+        },
+        {
+          "en": "Designers often combine useful feedback with pleasurable interaction to sustain user engagement.",
+          "zh": "設計師常把實用回饋與愉悅互動結合，以維持使用者的投入。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "emotion-pleasure",
+      "mnemonicHint": "pleasure（樂趣）加 -able（能帶來）形成 pleasurable，表示某個活動或感受「能帶來樂趣」；主詞通常是令人愉快的事物。"
+    },
+    "popularity": {
+      "chinese": "受歡迎；普及",
+      "pos": "n",
+      "synonyms": [
+        "appeal",
+        "fame",
+        "acceptance"
+      ],
+      "antonyms": [
+        "unpopularity",
+        "obscurity"
+      ],
+      "relatedWords": [
+        "popular",
+        "popularize",
+        "popularly"
+      ],
+      "confusableWith": [
+        "population"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The bakery gained popularity after neighbors praised its bread.",
+          "zh": "鄰居稱讚這家麵包店的麵包後，它逐漸受到歡迎。",
+          "source": "daily"
+        },
+        {
+          "en": "The popularity of online courses has changed how universities deliver instruction.",
+          "zh": "線上課程日益普及，改變了大學提供教學的方式。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "visibility-prominence",
+      "mnemonicHint": "popular 加 ity，受歡迎的程度"
+    },
+    "population": {
+      "chinese": "人口；族群",
+      "pos": "n",
+      "synonyms": [
+        "inhabitants",
+        "residents",
+        "populace",
+        "citizenry"
+      ],
+      "antonyms": [
+        "individual",
+        "depopulation"
+      ],
+      "relatedWords": [
+        "populate",
+        "populous",
+        "population-wide"
+      ],
+      "confusableWith": [
+        "popularity"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The town has a population of ten thousand.",
+          "zh": "這座城鎮有一萬人口。",
+          "source": "daily"
+        },
+        {
+          "en": "An aging population places additional pressure on health systems.",
+          "zh": "人口老化對醫療體系造成額外壓力。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "people-society",
+      "mnemonicHint": "populate 居住 + -tion：居住在某地的人口。"
+    },
+    "positive": {
+      "chinese": "正面的；肯定的",
+      "pos": "adj",
+      "synonyms": [
+        "favorable",
+        "beneficial",
+        "optimistic"
+      ],
+      "antonyms": [
+        "negative",
+        "harmful"
+      ],
+      "relatedWords": [
+        "positivity",
+        "positively"
+      ],
+      "confusableWith": [
+        "position"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Her positive message cheered me up before work.",
+          "zh": "她正面的訊息讓我在上班前振作起來。",
+          "source": "daily"
+        },
+        {
+          "en": "The data revealed a positive correlation between sleep and test performance.",
+          "zh": "資料顯示睡眠與考試表現之間呈正相關。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "positive-helpful",
+      "mnemonicHint": "positive 像加號，聯想到正面增加"
+    },
+    "practices": {
+      "chinese": "做法；慣例；練習",
+      "pos": "n/v",
+      "synonyms": [
+        "customs",
+        "methods",
+        "procedures"
+      ],
+      "antonyms": [
+        "neglects",
+        "abandons"
+      ],
+      "relatedWords": [
+        "practice",
+        "practiced",
+        "practical"
+      ],
+      "confusableWith": [
+        "practises"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Evan practices the piano while dinner is cooking.",
+          "zh": "晚餐烹煮時，伊凡會練習鋼琴。",
+          "source": "daily"
+        },
+        {
+          "en": "The article compares farming practices in dry and humid regions.",
+          "zh": "這篇文章比較乾燥地區與潮濕地區的農耕方式。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "rules-obedience",
+      "mnemonicHint": "practice 加 s，表示多種做法或反覆練習"
+    },
+    "predecessor": {
+      "chinese": "前任",
+      "pos": "n",
+      "synonyms": [
+        "forerunner",
+        "precursor",
+        "antecedent"
+      ],
+      "antonyms": [
+        "successor",
+        "follower",
+        "heir"
+      ],
+      "relatedWords": [
+        "precede"
+      ],
+      "confusableWith": [
+        "processor"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The new CEO improved upon her predecessor's policies.",
+          "zh": "新任執行長改進了前任的政策。",
+          "source": "daily"
+        },
+        {
+          "en": "This model outperforms its predecessor in speed and accuracy.",
+          "zh": "這個模型在速度和準確性方面都優於前代。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "sequence-order",
+      "mnemonicHint": "pre(before) + cessor(go) → 在前面走的人 → 前任"
+    },
+    "predestined": {
+      "chinese": "命中注定的；預先注定的",
+      "pos": "adj/v",
+      "synonyms": [
+        "fated",
+        "foreordained",
+        "preordained",
+        "destined"
+      ],
+      "antonyms": [
+        "accidental",
+        "undetermined",
+        "self-determined"
+      ],
+      "relatedWords": [
+        "predestine",
+        "predestination",
+        "destiny",
+        "destination"
+      ],
+      "confusableWith": [
+        "predefined",
+        "destined"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Nothing about her career was predestined; she changed direction twice.",
+          "zh": "她的職涯沒有任何事情是命中注定的；她曾兩度改變方向。",
+          "source": "daily"
+        },
+        {
+          "en": "The doctrine suggests that certain outcomes are predestined rather than shaped by individual choice.",
+          "zh": "該教義主張，某些結果是預先注定的，而非由個人選擇塑造。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "fate-destiny",
+      "mnemonicHint": "pre- 是「事先」，destine 是「注定」；在事件發生前就已被命運寫好目的地，便是 predestined。"
+    },
+    "preempted": {
+      "chinese": "搶先阻止；先發制人地取代",
+      "pos": "v/adj",
+      "synonyms": [
+        "forestalled",
+        "superseded",
+        "displaced",
+        "prevented"
+      ],
+      "antonyms": [
+        "allowed",
+        "followed",
+        "deferred to"
+      ],
+      "relatedWords": [
+        "preempt",
+        "preemption",
+        "preemptive",
+        "preemptively"
+      ],
+      "confusableWith": [
+        "prompted",
+        "preoccupied"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Breaking news preempted my favorite program last night.",
+          "zh": "昨晚突發新聞取代了我最喜歡的節目。",
+          "source": "daily"
+        },
+        {
+          "en": "Early diplomatic action preempted a conflict that might otherwise have destabilized the region.",
+          "zh": "及早的外交行動搶先阻止了一場原本可能動搖該區域的衝突。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "prevention-priority",
+      "mnemonicHint": "pre- 是「在前」，empt 源自「取得、買下」；先一步把位置或機會占走，就能搶先阻止、取代或中止後面的事。"
+    },
+    "premature": {
+      "chinese": "過早的；未成熟的",
+      "pos": "adj",
+      "synonyms": [
+        "early",
+        "untimely",
+        "precocious",
+        "unseasonable"
+      ],
+      "antonyms": [
+        "timely",
+        "mature",
+        "overdue"
+      ],
+      "relatedWords": [
+        "prematurely",
+        "prematurity",
+        "mature",
+        "maturity"
+      ],
+      "confusableWith": [
+        "immature",
+        "precocious"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Canceling the picnic now would be premature because tomorrow's forecast may improve.",
+          "zh": "現在就取消野餐還太早，因為明天的天氣預報可能會好轉。",
+          "source": "daily"
+        },
+        {
+          "en": "Drawing firm conclusions from such a small sample is scientifically premature.",
+          "zh": "從如此小的樣本得出確定結論，在科學上言之過早。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "time-readiness",
+      "mnemonicHint": "pre- 是「在前」，mature 是「成熟」；在成熟之前就發生，因此是「過早的、早產的」。"
+    },
+    "preoccupied": {
+      "chinese": "全神貫注的；心事重重的（preoccupy 的過去式／過去分詞）",
+      "pos": "v/adj",
+      "synonyms": [
+        "absorbed",
+        "engrossed",
+        "distracted",
+        "obsessed"
+      ],
+      "antonyms": [
+        "attentive",
+        "unconcerned",
+        "mindful"
+      ],
+      "relatedWords": [
+        "preoccupy",
+        "preoccupation",
+        "preoccupying"
+      ],
+      "confusableWith": [
+        "preempted",
+        "predestined"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Maya seemed preoccupied with her interview and forgot to eat lunch.",
+          "zh": "瑪雅滿腦子都是面試，甚至忘了吃午餐。",
+          "source": "daily"
+        },
+        {
+          "en": "Researchers preoccupied with confirming their hypothesis may overlook contradictory evidence.",
+          "zh": "一心只想證實假說的研究者可能會忽略相矛盾的證據。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "attention-focus",
+      "mnemonicHint": "pre-（事先）＋occupy（占據）：某件事先占滿了腦袋，所以會「全神貫注」或「心事重重」。"
+    },
+    "prescribe": {
+      "chinese": "開立（藥物）；規定",
+      "pos": "v",
+      "synonyms": [
+        "order",
+        "recommend",
+        "stipulate",
+        "mandate"
+      ],
+      "antonyms": [
+        "prohibit",
+        "forbid",
+        "withdraw"
+      ],
+      "relatedWords": [
+        "prescribed",
+        "prescribing",
+        "prescription",
+        "prescriptive"
+      ],
+      "confusableWith": [
+        "proscribe",
+        "describe"
+      ],
+      "exampleSentences": [
+        {
+          "en": "After examining my ankle, the doctor prescribed an anti-inflammatory drug.",
+          "zh": "醫師檢查我的腳踝後，開了一種消炎藥。",
+          "source": "daily"
+        },
+        {
+          "en": "National regulations prescribe strict procedures for disposing of hazardous laboratory waste.",
+          "zh": "國家法規對危險實驗室廢棄物的處置訂有嚴格程序。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "rules-requirements",
+      "mnemonicHint": "pre-（預先）＋scribe（寫）：醫師預先把用藥寫下來是「開藥」，制度預先寫明則是「規定」。"
+    },
+    "presidents": {
+      "chinese": "總統；會長；董事長（president 的複數）",
+      "pos": "n (plural)",
+      "synonyms": [
+        "leaders",
+        "chief executives",
+        "heads of state",
+        "chairpersons"
+      ],
+      "antonyms": [
+        "subordinates",
+        "followers",
+        "private citizens"
+      ],
+      "relatedWords": [
+        "president",
+        "presidency",
+        "presidential",
+        "preside"
+      ],
+      "confusableWith": [
+        "precedents",
+        "residents"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Three former club presidents attended the anniversary dinner on Saturday.",
+          "zh": "三位前社團會長星期六出席了週年晚宴。",
+          "source": "daily"
+        },
+        {
+          "en": "Successive presidents expanded the treaty while preserving its central security commitments.",
+          "zh": "歷任總統在維持條約核心安全承諾的同時，擴大了條約範圍。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "leadership-governance",
+      "mnemonicHint": "preside 是「主持」，加 -nt 成為主持的人 president，再加 -s 就是多位「總統、會長或董事長」；別看成 precedents（先例）。"
+    },
+    "price": {
+      "chinese": "價格；代價",
+      "pos": "n/v",
+      "synonyms": [
+        "cost",
+        "charge",
+        "rate",
+        "value"
+      ],
+      "antonyms": [
+        "freebie",
+        "gift"
+      ],
+      "relatedWords": [
+        "priced",
+        "pricing",
+        "priceless"
+      ],
+      "confusableWith": [
+        "prize",
+        "pride"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The price of this jacket dropped after the holiday.",
+          "zh": "這件外套的價格在假期後下降了。",
+          "source": "daily"
+        },
+        {
+          "en": "Researchers examined whether a higher price leads consumers to assume better quality.",
+          "zh": "研究人員探討較高的價格是否會讓消費者認為品質更好。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "business-economics",
+      "mnemonicHint": "price 和 prize 只差一個字母；商品有 price，得獎拿 prize。"
+    },
+    "problem": {
+      "chinese": "問題；難題",
+      "pos": "n",
+      "synonyms": [
+        "difficulty",
+        "issue",
+        "obstacle",
+        "dilemma"
+      ],
+      "antonyms": [
+        "solution",
+        "answer",
+        "resolution"
+      ],
+      "relatedWords": [
+        "problems",
+        "problematic",
+        "problematically"
+      ],
+      "confusableWith": [
+        "problematic"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Call me if you have a problem with the washing machine.",
+          "zh": "如果洗衣機出了問題，就打電話給我。",
+          "source": "daily"
+        },
+        {
+          "en": "The passage identifies food waste as both an environmental and an economic problem.",
+          "zh": "文章指出，食物浪費既是環境問題，也是經濟問題。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "reasoning-solutions",
+      "mnemonicHint": "problem 是待解的問題，solution 則是把它解開的答案。"
+    },
+    "procedures": {
+      "chinese": "程序；手續",
+      "pos": "n",
+      "synonyms": [
+        "processes",
+        "methods",
+        "protocols"
+      ],
+      "antonyms": [
+        "improvisations",
+        "disorder"
+      ],
+      "relatedWords": [
+        "procedure",
+        "procedural"
+      ],
+      "confusableWith": [
+        "proceedings"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The clinic explained its check-in procedures before my appointment.",
+          "zh": "診所在我看診前說明了報到流程。",
+          "source": "daily"
+        },
+        {
+          "en": "All experimental procedures were approved by the ethics committee.",
+          "zh": "所有實驗程序都已獲倫理委員會核准。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "sequence-order",
+      "mnemonicHint": "proceed 向前走，procedure 是依序走的程序"
+    },
+    "product": {
+      "chinese": "產品；產物",
+      "pos": "n",
+      "synonyms": [
+        "goods",
+        "item",
+        "output",
+        "result"
+      ],
+      "antonyms": [
+        "input",
+        "raw material"
+      ],
+      "relatedWords": [
+        "produce",
+        "production",
+        "productive"
+      ],
+      "confusableWith": [
+        "produce"
+      ],
+      "exampleSentences": [
+        {
+          "en": "I returned the product because its lid would not close.",
+          "zh": "我退回了這項產品，因為它的蓋子無法闔上。",
+          "source": "daily"
+        },
+        {
+          "en": "The survey assessed whether price affected consumers' trust in the product.",
+          "zh": "該調查評估價格是否會影響消費者對產品的信任。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "creation-novelty",
+      "mnemonicHint": "produce 生產，product 是生產出的東西"
+    },
+    "profanities": {
+      "chinese": "褻瀆語；髒話（profanity 的複數）",
+      "pos": "n (plural)",
+      "synonyms": [
+        "obscenities",
+        "expletives",
+        "curses",
+        "swearwords"
+      ],
+      "antonyms": [
+        "blessings",
+        "compliments",
+        "courtesies"
+      ],
+      "relatedWords": [
+        "profanity",
+        "profane",
+        "profanely",
+        "profanation"
+      ],
+      "confusableWith": [
+        "proprieties",
+        "profoundness"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Angry fans shouted profanities after the referee ended the match.",
+          "zh": "裁判結束比賽後，憤怒的球迷高喊髒話。",
+          "source": "daily"
+        },
+        {
+          "en": "Repeated profanities in public broadcasts prompted regulators to review existing decency standards.",
+          "zh": "公共廣播中反覆出現的髒話，促使監管機關檢討現行的適當言語標準。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "offensive-language",
+      "mnemonicHint": "profane 指「褻瀆的、不敬的」，名詞 profanity 是一句髒話或褻瀆語；字尾變 -ies 表示複數 profanities。"
+    },
+    "professor": {
+      "chinese": "教授",
+      "pos": "n",
+      "synonyms": [
+        "academic",
+        "faculty member",
+        "university teacher",
+        "scholar"
+      ],
+      "antonyms": [
+        "student",
+        "learner"
+      ],
+      "relatedWords": [
+        "professorship",
+        "professorial",
+        "profess"
+      ],
+      "confusableWith": [
+        "professional"
+      ],
+      "exampleSentences": [
+        {
+          "en": "My professor answered the question after class.",
+          "zh": "我的教授在下課後回答了問題。",
+          "source": "daily"
+        },
+        {
+          "en": "The professor challenged the prevailing interpretation of the data.",
+          "zh": "這位教授質疑了對資料的主流詮釋。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "education-academia",
+      "mnemonicHint": "profess 宣稱專業知識 + or 人：教授。"
+    },
+    "prompted": {
+      "chinese": "促使；提示（prompt 的過去式／過去分詞）",
+      "pos": "v/adj",
+      "synonyms": [
+        "caused",
+        "triggered",
+        "induced",
+        "spurred"
+      ],
+      "antonyms": [
+        "prevented",
+        "deterred",
+        "discouraged"
+      ],
+      "relatedWords": [
+        "prompt",
+        "prompting",
+        "promptly",
+        "promptness"
+      ],
+      "confusableWith": [
+        "preempted",
+        "promoted"
+      ],
+      "exampleSentences": [
+        {
+          "en": "A calendar alert prompted Leo to call his grandmother before dinner.",
+          "zh": "行事曆提醒促使里奧在晚餐前打電話給祖母。",
+          "source": "daily"
+        },
+        {
+          "en": "Unexpected declines in bee populations prompted scientists to investigate pesticide exposure.",
+          "zh": "蜜蜂數量意外下降，促使科學家調查農藥暴露問題。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "cause-stimulus",
+      "mnemonicHint": "prompt 原本可指舞台旁的「提詞」，有人一提示就促成下一個動作；prompted 是已經「提示了、促使了」。"
+    },
+    "provoke": {
+      "chinese": "激怒；挑釁；引發",
+      "pos": "v",
+      "synonyms": [
+        "incite",
+        "trigger",
+        "arouse",
+        "elicit"
+      ],
+      "antonyms": [
+        "calm",
+        "appease",
+        "suppress"
+      ],
+      "relatedWords": [
+        "provoked",
+        "provoking",
+        "provocation",
+        "provocative"
+      ],
+      "confusableWith": [
+        "invoke",
+        "revoke"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Teasing that nervous dog could provoke it into biting you.",
+          "zh": "逗弄那隻緊張的狗可能會激怒牠，讓牠咬你。",
+          "source": "daily"
+        },
+        {
+          "en": "Sharp increases in food prices can provoke widespread social unrest.",
+          "zh": "食品價格急遽上漲可能引發廣泛的社會動盪。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "cause-stimulus",
+      "mnemonicHint": "pro-（向前）＋voke（呼喊，見 voice）：向前大喊把反應叫出來，就是「挑釁、激怒或引發」。"
+    },
+    "public": {
+      "chinese": "公眾的；公開的；大眾",
+      "pos": "adj/n",
+      "synonyms": [
+        "civic",
+        "communal",
+        "open",
+        "general"
+      ],
+      "antonyms": [
+        "private",
+        "secret"
+      ],
+      "relatedWords": [
+        "publicly",
+        "publicize",
+        "publicity"
+      ],
+      "confusableWith": [
+        "publish"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The garden is open to the public.",
+          "zh": "這座花園對大眾開放。",
+          "source": "daily"
+        },
+        {
+          "en": "Public confidence is essential for effective health policy.",
+          "zh": "公眾信任是有效衛生政策的必要條件。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "people-society",
+      "mnemonicHint": "public 與 publish 都有讓眾人看見的概念。"
+    }
+  }
+}

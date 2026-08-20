@@ -1,0 +1,636 @@
+{
+  "schemaVersion": 1,
+  "words": {
+    "habit": {
+      "chinese": "習慣；慣性",
+      "pos": "n",
+      "synonyms": [
+        "routine",
+        "custom",
+        "practice",
+        "tendency"
+      ],
+      "antonyms": [
+        "novelty",
+        "irregularity"
+      ],
+      "relatedWords": [
+        "habitual",
+        "habitually",
+        "habituate"
+      ],
+      "confusableWith": [
+        "habitat"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Checking the door twice became a habit.",
+          "zh": "檢查門兩次成了我的習慣。",
+          "source": "daily"
+        },
+        {
+          "en": "Regular exercise is a habit associated with improved well-being.",
+          "zh": "規律運動是與福祉改善相關的習慣。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "behavior-pattern",
+      "mnemonicHint": "habit 是反覆穿上的行為外衣，久了成習慣。"
+    },
+    "happens": {
+      "chinese": "發生；碰巧出現",
+      "pos": "v",
+      "synonyms": [
+        "occurs",
+        "takes place",
+        "arises",
+        "transpires"
+      ],
+      "antonyms": [
+        "ceases",
+        "is prevented",
+        "fails to occur"
+      ],
+      "relatedWords": [
+        "happen",
+        "happened",
+        "happening",
+        "happenstance"
+      ],
+      "confusableWith": [
+        "happiness",
+        "hastens"
+      ],
+      "exampleSentences": [
+        {
+          "en": "If anything happens to the package, call this number.",
+          "zh": "如果包裹出了任何狀況，就打這支電話。",
+          "source": "daily"
+        },
+        {
+          "en": "Evaporation happens more quickly when moving air carries water vapor away from a surface.",
+          "zh": "當流動的空氣把水蒸氣從表面帶走時，蒸發會發生得更快。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "events-occurrence",
+      "mnemonicHint": "happens 是 happen 的第三人稱單數，主詞是 it、he 或單數事物時常用。"
+    },
+    "harassment": {
+      "chinese": "騷擾",
+      "pos": "n",
+      "synonyms": [
+        "bullying",
+        "intimidation",
+        "persecution",
+        "torment"
+      ],
+      "antonyms": [
+        "protection",
+        "support"
+      ],
+      "relatedWords": [
+        "harass",
+        "harasser"
+      ],
+      "confusableWith": [
+        "embarrassment"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The company has a zero-tolerance policy for workplace harassment.",
+          "zh": "公司對職場騷擾採取零容忍政策。",
+          "source": "daily"
+        },
+        {
+          "en": "Online harassment disproportionately affects women and minorities.",
+          "zh": "網路騷擾不成比例地影響女性和少數族群。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "conflict-aggression",
+      "mnemonicHint": "harass + ment → 持續困擾某人 → 騷擾"
+    },
+    "harbinger": {
+      "chinese": "先兆",
+      "pos": "n",
+      "synonyms": [
+        "herald",
+        "omen",
+        "precursor",
+        "forerunner"
+      ],
+      "antonyms": [
+        "aftermath",
+        "consequence"
+      ],
+      "relatedWords": [
+        "harbinger of"
+      ],
+      "confusableWith": [
+        "hamburger"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The first robin is often seen as a harbinger of spring.",
+          "zh": "第一隻知更鳥通常被視為春天的先兆。",
+          "source": "daily"
+        },
+        {
+          "en": "Declining retail sales may be a harbinger of economic recession.",
+          "zh": "零售銷售下降可能是經濟衰退的先兆。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "prediction-sign",
+      "mnemonicHint": "harbor(港口) + inger → 先到港口的人帶來消息 → 先兆"
+    },
+    "have stuck": {
+      "chinese": "已黏住；已卡住；已堅持（stick 的現在完成式形式）",
+      "pos": "v phrase",
+      "synonyms": [
+        "have adhered",
+        "have remained lodged",
+        "have persisted"
+      ],
+      "antonyms": [
+        "have detached",
+        "have come loose",
+        "have given up"
+      ],
+      "relatedWords": [
+        "stick",
+        "sticks",
+        "sticking",
+        "stuck"
+      ],
+      "confusableWith": [
+        "are stuck",
+        "have struck"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Several wet leaves have stuck to the kitchen window overnight.",
+          "zh": "幾片濕葉子一夜之間黏在了廚房窗戶上。",
+          "source": "daily"
+        },
+        {
+          "en": "Although rival firms abandoned the standard, several manufacturers have stuck with it to preserve compatibility.",
+          "zh": "儘管競爭公司放棄了該標準，數家製造商仍堅持採用，以維持相容性。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "strength-determination",
+      "mnemonicHint": "stick 的過去式與過去分詞都是 stuck，所以 have stuck 是正確的現在完成式，不是 malformed form。實物 have stuck to 表示「已黏上」；人 have stuck with 表示「一直堅持」。"
+    },
+    "having affected": {
+      "chinese": "已經影響了",
+      "pos": "v phr",
+      "synonyms": [
+        "having influenced",
+        "having altered",
+        "having impacted"
+      ],
+      "antonyms": [
+        "having left unchanged",
+        "having spared"
+      ],
+      "relatedWords": [
+        "affect",
+        "affects",
+        "affected",
+        "affecting",
+        "affective"
+      ],
+      "confusableWith": [
+        "having effected",
+        "being affected"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Having affected the coastal villages, the typhoon moved north before dawn.",
+          "zh": "颱風影響沿海村落後，在黎明前向北移動。",
+          "source": "daily"
+        },
+        {
+          "en": "Researchers, having affected local water quality through the trial, were required to fund restoration work.",
+          "zh": "研究人員因試驗已影響當地水質，被要求出資進行復原工作。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "influence-effect",
+      "mnemonicHint": "這不是單字而是 having + affected：having 表示前一動作已完成，affected 是 affect（影響）的過去分詞；看到 having affected X，就理解為「在已經影響 X 之後」。正式詞條應回歸 affect 或 affected，並注意 effect 作動詞是「促成、實現」，意思不同。"
+    },
+    "healthy": {
+      "chinese": "健康的；有益健康的",
+      "pos": "adj",
+      "synonyms": [
+        "fit",
+        "well",
+        "wholesome",
+        "sound"
+      ],
+      "antonyms": [
+        "unhealthy",
+        "sick",
+        "ailing"
+      ],
+      "relatedWords": [
+        "health",
+        "healthily",
+        "healthiness"
+      ],
+      "confusableWith": [
+        "wealthy"
+      ],
+      "exampleSentences": [
+        {
+          "en": "We packed a healthy lunch for the hike.",
+          "zh": "我們為健行準備了健康的午餐。",
+          "source": "daily"
+        },
+        {
+          "en": "A healthy labor market requires both mobility and job security.",
+          "zh": "健全的勞動市場同時需要流動性與工作保障。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "health-wellbeing",
+      "mnemonicHint": "health 健康 + y，充滿健康狀態。"
+    },
+    "hedgehog": {
+      "chinese": "刺蝟；（比喻）只憑一個核心觀念思考的人",
+      "pos": "n",
+      "synonyms": [
+        "erinaceid",
+        "hedgepig",
+        "spiny mammal"
+      ],
+      "antonyms": [
+        "fox",
+        "generalist"
+      ],
+      "relatedWords": [
+        "hedgehogs",
+        "hedgehog-like"
+      ],
+      "confusableWith": [
+        "porcupine",
+        "groundhog"
+      ],
+      "exampleSentences": [
+        {
+          "en": "At dusk, a hedgehog shuffled under the garden gate in search of beetles.",
+          "zh": "黃昏時，一隻刺蝟慢慢鑽過花園門，尋找甲蟲。",
+          "source": "daily"
+        },
+        {
+          "en": "Unlike a fox, the hedgehog in Berlin's famous metaphor interprets the world through one central idea.",
+          "zh": "在柏林著名的比喻中，刺蝟不同於狐狸，會透過一個核心觀念解讀世界。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "animals-thinking-metaphor",
+      "mnemonicHint": "hedge（樹籬）+ hog（豬）：想像一隻像小豬的刺球躲在樹籬下，就是 hedgehog。比喻義來自「刺蝟只知道一件大事」，因此可指緊守單一核心想法的人；動物上的 porcupine 是豪豬，不是刺蝟。"
+    },
+    "higher": {
+      "chinese": "較高的；更高地",
+      "pos": "adj/adv",
+      "synonyms": [
+        "greater",
+        "upper",
+        "elevated",
+        "superior"
+      ],
+      "antonyms": [
+        "lower",
+        "lesser",
+        "inferior"
+      ],
+      "relatedWords": [
+        "high",
+        "highest",
+        "height"
+      ],
+      "confusableWith": [
+        "hire"
+      ],
+      "exampleSentences": [
+        {
+          "en": "This shelf is higher than I can reach.",
+          "zh": "這個架子高到我碰不到。",
+          "source": "daily"
+        },
+        {
+          "en": "Higher education levels are associated with longer life expectancy.",
+          "zh": "較高教育程度與較長預期壽命有關。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "comparison-degree",
+      "mnemonicHint": "high 加 er，表示比較級「更高」。"
+    },
+    "hinges on": {
+      "chinese": "取決於",
+      "pos": "phrase",
+      "synonyms": [
+        "depends on",
+        "rests on",
+        "is contingent on"
+      ],
+      "antonyms": [
+        "is independent of",
+        "ignores"
+      ],
+      "relatedWords": [
+        "hinge",
+        "hinged"
+      ],
+      "confusableWith": [
+        "hangs on"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Tonight's dinner hinges on whether the oven starts working.",
+          "zh": "今晚能否做成晚餐，取決於烤箱能不能啟動。",
+          "source": "daily"
+        },
+        {
+          "en": "The conclusion hinges on the validity of the survey data.",
+          "zh": "這項結論取決於調查資料是否有效。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "trust-belief",
+      "mnemonicHint": "門靠 hinge 鉸鏈轉，結果也靠條件轉"
+    },
+    "hooking": {
+      "chinese": "用鉤鉤住；勾接；吸引住",
+      "pos": "v/gerund",
+      "synonyms": [
+        "catching",
+        "snagging",
+        "attaching",
+        "engaging"
+      ],
+      "antonyms": [
+        "unhooking",
+        "detaching",
+        "releasing"
+      ],
+      "relatedWords": [
+        "hook",
+        "hooks",
+        "hooked",
+        "hookup"
+      ],
+      "confusableWith": [
+        "hacking",
+        "hopping"
+      ],
+      "exampleSentences": [
+        {
+          "en": "This curved hook is perfect for hooking the fallen branch and pulling it ashore.",
+          "zh": "這個彎鉤很適合鉤住落下的樹枝，再把它拉到岸邊。",
+          "source": "daily"
+        },
+        {
+          "en": "By highlighting the human cost of inflation, the opening paragraph succeeds in hooking the reader's attention.",
+          "zh": "開頭段落凸顯通膨的人力代價，成功抓住讀者的注意力。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "attachment-attraction",
+      "mnemonicHint": "hook 是「鉤子」，加 -ing 就是正在用鉤子勾住；抽象用法也像鉤子抓牢注意力。記住具體畫面「魚鉤 hooking 住魚」，就能延伸到 hooking an audience（吸引觀眾）。"
+    },
+    "hopping": {
+      "chinese": "單腳跳；蹦跳；快速換乘或移動",
+      "pos": "v/gerund",
+      "synonyms": [
+        "jumping",
+        "leaping",
+        "bouncing",
+        "skipping"
+      ],
+      "antonyms": [
+        "standing",
+        "staying",
+        "remaining"
+      ],
+      "relatedWords": [
+        "hop",
+        "hops",
+        "hopped",
+        "hopper"
+      ],
+      "confusableWith": [
+        "hoping",
+        "hooking"
+      ],
+      "exampleSentences": [
+        {
+          "en": "After hopping over three puddles, Mina noticed mud on both shoes.",
+          "zh": "米娜跳過三個水窪後，發現兩隻鞋都沾了泥。",
+          "source": "daily"
+        },
+        {
+          "en": "Because electrons can move by hopping between localized states, conductivity rises as temperature increases.",
+          "zh": "由於電子能在局域態之間躍遷，導電率會隨溫度升高而上升。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "jumping-movement",
+      "mnemonicHint": "hop 是短促的一跳，重複尾字母 p 再加 -ing 成 hopping；想像兔子 hop、hop、hop 地連跳。不要寫成 hoping：hop 要雙寫 p，hope 則去 e 加 -ing。"
+    },
+    "hotbed": {
+      "chinese": "溫床；滋生地",
+      "pos": "n",
+      "synonyms": [
+        "breeding ground",
+        "seedbed",
+        "center",
+        "hub"
+      ],
+      "antonyms": [
+        "backwater",
+        "dead zone"
+      ],
+      "relatedWords": [
+        "hotbeds",
+        "hotbed-like"
+      ],
+      "confusableWith": [
+        "seedbed",
+        "hotheaded"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Once a quiet warehouse district, the neighborhood is now a hotbed of live music.",
+          "zh": "這個社區曾是安靜的倉庫區，如今已成為現場音樂的熱門據點。",
+          "source": "daily"
+        },
+        {
+          "en": "During periods of weak oversight, anonymous forums may become a hotbed of coordinated misinformation.",
+          "zh": "在監管薄弱的時期，匿名論壇可能成為協同散播錯誤資訊的溫床。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "origin-breeding-ground",
+      "mnemonicHint": "hot + bed 原指用發酵肥料加熱、催苗的「熱苗床」，後來比喻讓活動快速滋長的「溫床」。它是可數名詞，常見句型為 a hotbed of + 活動／問題；manifest 的 v/adj 詞性應更正為 n。"
+    },
+    "huge": {
+      "chinese": "巨大的；極多的；重大的",
+      "pos": "adj",
+      "synonyms": [
+        "enormous",
+        "immense",
+        "vast",
+        "gigantic"
+      ],
+      "antonyms": [
+        "tiny",
+        "minuscule",
+        "slight"
+      ],
+      "relatedWords": [
+        "hugely",
+        "hugeness"
+      ],
+      "confusableWith": [
+        "hug",
+        "Hugh"
+      ],
+      "exampleSentences": [
+        {
+          "en": "A huge branch fell across the bicycle path last night.",
+          "zh": "昨晚有一根巨大的樹枝倒在自行車道上。",
+          "source": "daily"
+        },
+        {
+          "en": "The discovery created huge opportunities for studying planets beyond the solar system.",
+          "zh": "這項發現為研究太陽系外的行星創造了重大的機會。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "size-degree",
+      "mnemonicHint": "huge 是非常大；可把開頭 h 想成很高，提醒自己它表示巨大。"
+    },
+    "humankind": {
+      "chinese": "人類；全人類",
+      "pos": "n",
+      "synonyms": [
+        "humanity",
+        "human race",
+        "mankind",
+        "people collectively"
+      ],
+      "antonyms": [
+        "nonhuman life",
+        "other species"
+      ],
+      "relatedWords": [
+        "human",
+        "humanity",
+        "humane",
+        "humanitarian"
+      ],
+      "confusableWith": [
+        "human kind",
+        "humanity"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The exhibit tells the story of humankind through everyday tools.",
+          "zh": "這項展覽透過日常工具訴說人類的故事。",
+          "source": "daily"
+        },
+        {
+          "en": "The invention of writing enabled humankind to preserve knowledge across generations.",
+          "zh": "文字的發明使人類得以跨世代保存知識。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "people-humanity",
+      "mnemonicHint": "humankind 是 human 加 kind，指人這一類，也就是全人類。"
+    },
+    "hushing": {
+      "chinese": "使安靜；壓低聲音；壓制消息或異議",
+      "pos": "v/gerund",
+      "synonyms": [
+        "silencing",
+        "quieting",
+        "muffling",
+        "suppressing"
+      ],
+      "antonyms": [
+        "amplifying",
+        "voicing",
+        "publicizing"
+      ],
+      "relatedWords": [
+        "hush",
+        "hushes",
+        "hushed",
+        "hush-up"
+      ],
+      "confusableWith": [
+        "husking",
+        "rushing"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Please stop hushing the children; they are only cheering for their team.",
+          "zh": "請別再叫孩子們安靜；他們只是在替自己的隊伍加油。",
+          "source": "daily"
+        },
+        {
+          "en": "By hushing dissenting voices, the committee concealed weaknesses in the proposed policy.",
+          "zh": "委員會藉由壓制異議，掩蓋了擬議政策的弱點。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "silence-suppression",
+      "mnemonicHint": "hush! 是叫人「噓、安靜」，加 -ing 變成 hushing，表示正在讓聲音或意見沉下去。想像有人把食指放在嘴前說 hush；別和 husking（剝外殼）混淆，後者多一個 k。"
+    },
+    "husking": {
+      "chinese": "剝去穀物、玉米等的外殼或苞葉",
+      "pos": "v/gerund",
+      "synonyms": [
+        "shucking",
+        "dehulling",
+        "peeling",
+        "shelling"
+      ],
+      "antonyms": [
+        "encasing",
+        "covering",
+        "wrapping"
+      ],
+      "relatedWords": [
+        "husk",
+        "husks",
+        "husked",
+        "husker",
+        "husky"
+      ],
+      "confusableWith": [
+        "hushing",
+        "husky"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Before husking the corn, Leo spread an old sheet across the kitchen floor.",
+          "zh": "剝玉米苞葉前，里歐先在廚房地板鋪了一張舊床單。",
+          "source": "daily"
+        },
+        {
+          "en": "Using motorized rollers for husking rice reduced processing time but damaged some grains.",
+          "zh": "使用機動滾輪替稻米脫殼雖縮短了加工時間，卻也損傷了部分米粒。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "removal-outer-layer",
+      "mnemonicHint": "husk 是種子或玉米的外殼，husking 就是把這層外衣剝掉。把 k 想成一把尖工具插進 husk：有 k 才是在剝殼；沒有 k 的 hushing 則是在叫人安靜。"
+    }
+  }
+}

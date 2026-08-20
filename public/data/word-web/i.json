@@ -1,0 +1,1453 @@
+{
+  "schemaVersion": 1,
+  "words": {
+    "iii": {
+      "chinese": "羅馬數字三；第三項",
+      "pos": "num",
+      "synonyms": [
+        "Roman numeral three",
+        "number three",
+        "third item"
+      ],
+      "antonyms": [
+        "Roman numeral one",
+        "first item"
+      ],
+      "relatedWords": [
+        "II",
+        "IV",
+        "three"
+      ],
+      "confusableWith": [
+        "ill"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Chapter III is the shortest chapter.",
+          "zh": "第三章是最短的一章。",
+          "source": "daily"
+        },
+        {
+          "en": "Section III presents the methodology used in the experiment.",
+          "zh": "第三節說明實驗所採用的方法。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "sequence-order",
+      "mnemonicHint": "III 是三條直線，代表羅馬數字三。"
+    },
+    "imaginative": {
+      "chinese": "富有想像力的",
+      "pos": "adj",
+      "synonyms": [
+        "creative",
+        "inventive",
+        "original",
+        "resourceful"
+      ],
+      "antonyms": [
+        "unimaginative",
+        "dull",
+        "prosaic"
+      ],
+      "relatedWords": [
+        "imagine",
+        "imagination"
+      ],
+      "confusableWith": [
+        "imaginary"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The children came up with imaginative solutions.",
+          "zh": "孩子們想出了富有想像力的方案。",
+          "source": "daily"
+        },
+        {
+          "en": "Imaginative problem-solving is a hallmark of successful entrepreneurs.",
+          "zh": "富有想像力的問題解決是成功企業家的特徵。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "creation-novelty",
+      "mnemonicHint": "imagin(image) + ative → 能創造畫面 → 富有想像力的"
+    },
+    "immutable": {
+      "chinese": "不可變的",
+      "pos": "adj",
+      "synonyms": [
+        "unchangeable",
+        "fixed",
+        "permanent",
+        "constant"
+      ],
+      "antonyms": [
+        "mutable",
+        "changeable",
+        "variable"
+      ],
+      "relatedWords": [
+        "immutability",
+        "mutate"
+      ],
+      "confusableWith": [
+        "mutable"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The laws of physics are considered immutable.",
+          "zh": "物理定律被認為是不可變的。",
+          "source": "daily"
+        },
+        {
+          "en": "Blockchain records are designed to be immutable once confirmed.",
+          "zh": "區塊鏈記錄一旦確認就被設計為不可變的。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "permanence-stability",
+      "mnemonicHint": "im(not) + mut(change) + able → 不能改變的 → 不可變的"
+    },
+    "impassive": {
+      "chinese": "無動於衷的；面無表情的",
+      "pos": "adj",
+      "synonyms": [
+        "expressionless",
+        "unemotional",
+        "stoic",
+        "unmoved"
+      ],
+      "antonyms": [
+        "expressive",
+        "emotional",
+        "responsive"
+      ],
+      "relatedWords": [
+        "impassively",
+        "impassiveness",
+        "passion",
+        "passionate"
+      ],
+      "confusableWith": [
+        "impassioned",
+        "impassable"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Even when the alarm sounded, the guard's face remained impassive.",
+          "zh": "即使警報響起，警衛仍然面無表情。",
+          "source": "daily"
+        },
+        {
+          "en": "Although the witness remained impassive during questioning, changes in her pulse suggested considerable stress.",
+          "zh": "雖然證人在訊問時始終面無表情，她的脈搏變化卻顯示出相當大的壓力。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "emotion-detachment",
+      "mnemonicHint": "im-（不）+ passive（感受、反應的）可聯想成「不把情緒傳出來」，所以 impassive 是面無表情。特別小心 impassioned 是「充滿激情的」，幾乎相反；impassable 則是「無法通行的」。"
+    },
+    "imperious": {
+      "chinese": "專橫傲慢的；命令式的",
+      "pos": "adj",
+      "synonyms": [
+        "commanding",
+        "domineering",
+        "overbearing",
+        "authoritarian"
+      ],
+      "antonyms": [
+        "humble",
+        "deferential",
+        "submissive"
+      ],
+      "relatedWords": [
+        "imperiously",
+        "imperiousness",
+        "imperial",
+        "imperium"
+      ],
+      "confusableWith": [
+        "imperial",
+        "impetuous"
+      ],
+      "exampleSentences": [
+        {
+          "en": "With an imperious wave, the customer ordered the waiter to bring another chair.",
+          "zh": "那名顧客專橫地揮了揮手，命令服務生再拿一把椅子來。",
+          "source": "daily"
+        },
+        {
+          "en": "Leaders who adopt an imperious tone may secure immediate obedience while weakening long-term trust.",
+          "zh": "領導者若採取專橫的語氣，或許能立即得到服從，卻會削弱長期信任。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "authority-dominance",
+      "mnemonicHint": "imper- 來自拉丁文 imperium（統治、命令權），所以 imperious 像掌權者用不容反駁的口氣下令。imperial 偏「帝國的」，imperious 則描述人的態度「專橫的」。"
+    },
+    "inadequately": {
+      "chinese": "不充分地",
+      "pos": "adv",
+      "synonyms": [
+        "insufficiently",
+        "poorly",
+        "deficiently"
+      ],
+      "antonyms": [
+        "adequately",
+        "sufficiently"
+      ],
+      "relatedWords": [
+        "inadequate",
+        "inadequacy"
+      ],
+      "confusableWith": [
+        "inaccurately"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The project failed because resources were inadequately allocated.",
+          "zh": "項目失敗因資源分配不足。",
+          "source": "daily"
+        },
+        {
+          "en": "Inadequately trained staff can compromise safety.",
+          "zh": "培訓不足的員工可能危及安全。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "quantity-sufficiency",
+      "mnemonicHint": "in(not) + adequately → 不夠充分 → 不充分地"
+    },
+    "inclusive": {
+      "chinese": "包容的；涵蓋廣泛的；包括在內的",
+      "pos": "adj",
+      "synonyms": [
+        "all-embracing",
+        "comprehensive",
+        "welcoming",
+        "encompassing"
+      ],
+      "antonyms": [
+        "exclusive",
+        "restrictive",
+        "discriminatory"
+      ],
+      "relatedWords": [
+        "include",
+        "includes",
+        "included",
+        "including",
+        "inclusion",
+        "inclusively",
+        "inclusiveness"
+      ],
+      "confusableWith": [
+        "including",
+        "included"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Our neighborhood festival welcomes every family and offers inclusive activities for all ages.",
+          "zh": "我們的社區節慶歡迎每個家庭參加，並提供各年齡層都能參與的包容性活動。",
+          "source": "daily"
+        },
+        {
+          "en": "To create an inclusive workplace, employers must remove barriers rather than merely invite diverse applicants.",
+          "zh": "為了打造包容的職場，雇主必須消除障礙，而不只是邀請多元背景的求職者。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "inclusion-belonging",
+      "mnemonicHint": "in-（進入）+ clus（關閉、圈住）+ -ive：把每個人都圈「進」共同範圍，就是 inclusive。句法上 inclusive 是形容詞；including 是介系詞／分詞「包括……」，不能因為句子需要 including 就用 inclusive 代替。"
+    },
+    "incorporate": {
+      "chinese": "納入",
+      "pos": "v",
+      "synonyms": [
+        "include",
+        "integrate",
+        "embed",
+        "assimilate"
+      ],
+      "antonyms": [
+        "exclude",
+        "remove",
+        "separate"
+      ],
+      "relatedWords": [
+        "incorporation",
+        "incorporated"
+      ],
+      "confusableWith": [
+        "cooperate"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The new design incorporates feedback from users.",
+          "zh": "新設計納入了使用者的回饋。",
+          "source": "daily"
+        },
+        {
+          "en": "Firms that incorporate sustainability practices gain competitive advantages.",
+          "zh": "納入永續實踐的企業獲得競爭優勢。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "inclusion-integration",
+      "mnemonicHint": "in + corpor(body) + ate → 放入主體中 → 納入"
+    },
+    "incorrect": {
+      "chinese": "不正確的；錯誤的",
+      "pos": "adj",
+      "synonyms": [
+        "wrong",
+        "false",
+        "erroneous",
+        "inaccurate"
+      ],
+      "antonyms": [
+        "correct",
+        "accurate",
+        "right"
+      ],
+      "relatedWords": [
+        "incorrectly",
+        "incorrectness",
+        "correct"
+      ],
+      "confusableWith": [
+        "incomplete"
+      ],
+      "exampleSentences": [
+        {
+          "en": "One answer on my form was incorrect.",
+          "zh": "我的表格上有一個答案不正確。",
+          "source": "daily"
+        },
+        {
+          "en": "The conclusion is incorrect because it ignores contradictory evidence.",
+          "zh": "該結論因忽略相反證據而不正確。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "truth-deception",
+      "mnemonicHint": "in- 不 + correct 正確：不正確。"
+    },
+    "increasing": {
+      "chinese": "日益增加的；正在增加",
+      "pos": "adj/v",
+      "synonyms": [
+        "rising",
+        "growing",
+        "expanding",
+        "escalating"
+      ],
+      "antonyms": [
+        "decreasing",
+        "declining",
+        "shrinking"
+      ],
+      "relatedWords": [
+        "increase",
+        "increasingly",
+        "increased"
+      ],
+      "confusableWith": [
+        "including"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Increasing traffic makes my commute longer.",
+          "zh": "日益增加的車流讓我的通勤時間變長。",
+          "source": "daily"
+        },
+        {
+          "en": "Increasing temperatures threaten agricultural productivity.",
+          "zh": "日益升高的氣溫威脅農業生產力。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "change-improvement",
+      "mnemonicHint": "increase 加 ing，表示正在持續增加。"
+    },
+    "indict": {
+      "chinese": "起訴；正式控告（刑事罪行）",
+      "pos": "v",
+      "synonyms": [
+        "charge",
+        "accuse",
+        "prosecute"
+      ],
+      "antonyms": [
+        "acquit",
+        "exonerate",
+        "clear"
+      ],
+      "relatedWords": [
+        "indictment",
+        "indicted",
+        "indictable"
+      ],
+      "confusableWith": [
+        "indite",
+        "convict"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Local prosecutors may indict the driver after reviewing the traffic-camera footage.",
+          "zh": "地方檢察官查看行車監視器畫面後，可能會起訴那名駕駛。",
+          "source": "daily"
+        },
+        {
+          "en": "A grand jury declined to indict the executive because the evidence did not establish criminal intent.",
+          "zh": "大陪審團拒絕起訴該名主管，因為證據不足以證明其犯罪意圖。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "law-accusation",
+      "mnemonicHint": "indict 的 c 不發音，讀作 in-DITE；把它想成檢察官把罪名寫進（in）正式起訴書，表示「正式起訴」，而不是已經判決有罪（convict）。"
+    },
+    "indifferent": {
+      "chinese": "漠不關心的",
+      "pos": "adj",
+      "synonyms": [
+        "apathetic",
+        "unconcerned",
+        "detached",
+        "nonchalant"
+      ],
+      "antonyms": [
+        "passionate",
+        "concerned",
+        "enthusiastic"
+      ],
+      "relatedWords": [
+        "indifference",
+        "indifferently"
+      ],
+      "confusableWith": [
+        "different"
+      ],
+      "exampleSentences": [
+        {
+          "en": "He seemed indifferent to the criticism from his colleagues.",
+          "zh": "他對同事的批評似乎漠不關心。",
+          "source": "daily"
+        },
+        {
+          "en": "Voters who remain indifferent to policy changes may find themselves affected later.",
+          "zh": "對政策變化漠不關心的選民可能會在日後受到影響。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "emotion-attitude",
+      "mnemonicHint": "in(not) + different → 對什麼都覺得沒差別 → 漠不關心"
+    },
+    "inequality": {
+      "chinese": "不平等；不均等；差距",
+      "pos": "n",
+      "synonyms": [
+        "disparity",
+        "imbalance",
+        "inequity",
+        "unevenness"
+      ],
+      "antonyms": [
+        "equality",
+        "parity",
+        "equity"
+      ],
+      "relatedWords": [
+        "equal",
+        "unequal",
+        "inequalities",
+        "inequitably"
+      ],
+      "confusableWith": [
+        "inequity",
+        "inequation"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Our neighborhood clinic reduces health inequality by offering free weekend screenings.",
+          "zh": "我們社區的診所透過提供免費週末篩檢來縮小健康不平等。",
+          "source": "daily"
+        },
+        {
+          "en": "Persistent income inequality can limit social mobility even when access to primary education is universal.",
+          "zh": "即使初等教育已全面普及，持續存在的所得不平等仍可能限制社會流動。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "difference-separation",
+      "mnemonicHint": "in-（不）＋ equality（平等）就是「不平等」；看到 income、gender、health 等名詞接在前面時，通常是在談某領域中可衡量的資源或機會差距。"
+    },
+    "ingenuous": {
+      "chinese": "坦率天真的；單純而毫無心機的",
+      "pos": "adj",
+      "synonyms": [
+        "innocent",
+        "naive",
+        "candid",
+        "artless"
+      ],
+      "antonyms": [
+        "disingenuous",
+        "calculating",
+        "deceitful"
+      ],
+      "relatedWords": [
+        "ingenuously",
+        "ingenuousness",
+        "disingenuous"
+      ],
+      "confusableWith": [
+        "ingenious",
+        "indigenous"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Her ingenuous question about salaries made the experienced managers exchange awkward glances.",
+          "zh": "她天真坦率地詢問薪資，讓資深經理們尷尬地互看了一眼。",
+          "source": "daily"
+        },
+        {
+          "en": "The witness appeared ingenuous, but the court still required independent evidence to verify his account.",
+          "zh": "那名證人看來坦率單純，但法院仍要求獨立證據來核實他的陳述。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "truth-openness",
+      "mnemonicHint": "ingenuous 形容人「天真坦率、沒有心機」；別和 ingenious（有巧思的、聰明的）混淆。記成 genuine 前面多一個 in：內心 genuine，所以說話毫無算計。"
+    },
+    "inheriting": {
+      "chinese": "正在繼承；承接（特質、問題或制度）",
+      "pos": "v/adj",
+      "synonyms": [
+        "receiving",
+        "succeeding to",
+        "coming into",
+        "acquiring"
+      ],
+      "antonyms": [
+        "relinquishing",
+        "forfeiting",
+        "bequeathing"
+      ],
+      "relatedWords": [
+        "inherit",
+        "inherits",
+        "inherited",
+        "inheritance",
+        "inheritor"
+      ],
+      "confusableWith": [
+        "inhibiting",
+        "inhabiting"
+      ],
+      "exampleSentences": [
+        {
+          "en": "After inheriting her aunt's bakery, Mei kept the original sourdough recipe.",
+          "zh": "美繼承姑媽的麵包店後，保留了原本的酸種麵包配方。",
+          "source": "daily"
+        },
+        {
+          "en": "By inheriting outdated infrastructure, the new administration also assumed substantial maintenance costs.",
+          "zh": "新政府承接老舊基礎設施的同時，也承擔了龐大的維護成本。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "transfer-inheritance",
+      "mnemonicHint": "inherit 是「繼承」，-ing 表示動作正在進行或作為分詞使用；可繼承的不只遺產，也能承接基因、傳統、債務與前任留下的問題。"
+    },
+    "injunction": {
+      "chinese": "禁令",
+      "pos": "n",
+      "synonyms": [
+        "order",
+        "directive",
+        "mandate",
+        "decree"
+      ],
+      "antonyms": [
+        "permission",
+        "authorization"
+      ],
+      "relatedWords": [
+        "enjoin"
+      ],
+      "confusableWith": [
+        "conjunction"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The court issued an injunction to stop the project.",
+          "zh": "法院發布禁令停止該項目。",
+          "source": "daily"
+        },
+        {
+          "en": "A preliminary injunction may prevent irreparable harm.",
+          "zh": "臨時禁令可防止不可挽回的損害。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "authority-control",
+      "mnemonicHint": "in(upon) + junct(bind) + ion → 強制約束 → 禁令"
+    },
+    "innocence": {
+      "chinese": "清白；無罪；天真無邪",
+      "pos": "n",
+      "synonyms": [
+        "blamelessness",
+        "guiltlessness",
+        "purity",
+        "naivety"
+      ],
+      "antonyms": [
+        "guilt",
+        "culpability",
+        "corruption"
+      ],
+      "relatedWords": [
+        "innocent",
+        "innocently",
+        "innocuous"
+      ],
+      "confusableWith": [
+        "innocuousness",
+        "ignorance"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Despite the accusation, Lena maintained her innocence and showed the receipt from that evening.",
+          "zh": "儘管受到指控，莉娜仍堅稱自己清白，並出示了當晚的收據。",
+          "source": "daily"
+        },
+        {
+          "en": "DNA evidence established the prisoner's innocence after he had spent twelve years in custody.",
+          "zh": "DNA 證據證實該名囚犯無罪，而他此前已被關押十二年。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "law-accusation",
+      "mnemonicHint": "innocence 是 innocent 的名詞：in-（不）＋ noc（傷害、罪害）可聯想成「沒有造成罪害」，因此既可指法律上的清白，也可指孩子般的天真無邪。"
+    },
+    "innovative": {
+      "chinese": "創新的",
+      "pos": "adj",
+      "synonyms": [
+        "inventive",
+        "groundbreaking",
+        "pioneering",
+        "novel"
+      ],
+      "antonyms": [
+        "conventional",
+        "traditional",
+        "outdated"
+      ],
+      "relatedWords": [
+        "innovate",
+        "innovation",
+        "innovator"
+      ],
+      "confusableWith": [
+        "imaginative"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The startup introduced an innovative approach to food delivery.",
+          "zh": "這家新創公司引入了一種創新的食品配送方式。",
+          "source": "daily"
+        },
+        {
+          "en": "Innovative technologies have transformed how businesses interact with consumers.",
+          "zh": "創新技術改變了企業與消費者互動的方式。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "creation-novelty",
+      "mnemonicHint": "in + nov(new) + ative → 帶來新東西的 → 創新的"
+    },
+    "insighted": {
+      "chinese": "非標準形式；意指有洞察力的",
+      "pos": "nonstandard word",
+      "synonyms": [
+        "insightful",
+        "perceptive",
+        "discerning",
+        "astute"
+      ],
+      "antonyms": [
+        "unperceptive",
+        "shallow",
+        "obtuse"
+      ],
+      "relatedWords": [
+        "insight",
+        "insights",
+        "insightful",
+        "insightfully"
+      ],
+      "confusableWith": [
+        "insightful",
+        "incited"
+      ],
+      "exampleSentences": [
+        {
+          "en": "During proofreading, Ana replaced the nonstandard word 'insighted' with 'insightful' in her review.",
+          "zh": "校稿時，安娜把評論中不合標準的 insighted 改成了 insightful。",
+          "source": "daily"
+        },
+        {
+          "en": "Although 'insighted' occasionally appears in informal writing, academic editors normally require the standard adjective 'insightful.'",
+          "zh": "雖然 insighted 偶爾出現在非正式寫作中，學術編輯通常仍要求使用標準形容詞 insightful。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "malformed-correction",
+      "mnemonicHint": "insighted 是把 insight 誤加 -ed 形成的非標準形式；要說「有洞察力的」應用 insight＋ful＝insightful。把 -ful 記成「充滿洞見」，就不會誤寫成 -ed。"
+    },
+    "installed": {
+      "chinese": "已安裝的；裝設了；使就任了",
+      "pos": "v/adj",
+      "synonyms": [
+        "fitted",
+        "mounted",
+        "set up",
+        "placed"
+      ],
+      "antonyms": [
+        "removed",
+        "uninstalled",
+        "dismantled"
+      ],
+      "relatedWords": [
+        "install",
+        "installs",
+        "installing",
+        "installation",
+        "installer"
+      ],
+      "confusableWith": [
+        "instilled",
+        "insulated"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Yesterday the technician installed a quieter fan in my laptop.",
+          "zh": "技師昨天在我的筆電裡裝了一個更安靜的風扇。",
+          "source": "daily"
+        },
+        {
+          "en": "Engineers installed vibration sensors along the bridge to detect structural damage before it became visible.",
+          "zh": "工程師沿著橋梁裝設振動感測器，以便在結構損傷肉眼可見之前偵測到它。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "construction-installation",
+      "mnemonicHint": "install＝in（放進）＋ stall（固定位置）可聯想成「放進定位並完成裝設」；installed 是其過去式或過去分詞，別和 instilled（逐步灌輸）混淆。"
+    },
+    "instigated": {
+      "chinese": "煽動了；挑起了；促使（事件）發生",
+      "pos": "v/adj",
+      "synonyms": [
+        "incited",
+        "provoked",
+        "initiated",
+        "fomented"
+      ],
+      "antonyms": [
+        "prevented",
+        "suppressed",
+        "quelled"
+      ],
+      "relatedWords": [
+        "instigate",
+        "instigates",
+        "instigating",
+        "instigation",
+        "instigator"
+      ],
+      "confusableWith": [
+        "instilled",
+        "investigated"
+      ],
+      "exampleSentences": [
+        {
+          "en": "One false rumor instigated an argument between two previously friendly neighbors.",
+          "zh": "一則不實謠言挑起了兩名原本友善的鄰居之間的爭吵。",
+          "source": "daily"
+        },
+        {
+          "en": "Officials concluded that the sudden tax increase had instigated the nationwide protests.",
+          "zh": "官員認定，突然加稅引發了全國性的抗議。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "conflict-aggression",
+      "mnemonicHint": "instigate 常帶負面意味，表示「煽動、挑起」衝突或事件；可聯想 agitator（煽動者）在群眾中推動事態。instigated 是已經把事情挑起來了。"
+    },
+    "instilled": {
+      "chinese": "逐步灌輸了；使逐漸形成（觀念或感受）",
+      "pos": "v/adj",
+      "synonyms": [
+        "inculcated",
+        "imparted",
+        "implanted",
+        "infused"
+      ],
+      "antonyms": [
+        "eradicated",
+        "discouraged",
+        "removed"
+      ],
+      "relatedWords": [
+        "instill",
+        "instills",
+        "instilling",
+        "instillation"
+      ],
+      "confusableWith": [
+        "installed",
+        "instigated"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Weekly cooking lessons instilled confidence in Ravi, who had once feared using the stove.",
+          "zh": "每週的烹飪課逐漸讓拉維建立信心；他以前連使用爐子都害怕。",
+          "source": "daily"
+        },
+        {
+          "en": "The academy's mentoring program instilled a strong sense of public duty in its graduates.",
+          "zh": "該學院的導師制度在畢業生心中逐步培養出強烈的公共責任感。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "education-influence",
+      "mnemonicHint": "instill 原意像「一滴一滴注入」，所以不是一次塞入資訊，而是長時間把信心、價值觀或習慣慢慢灌輸進心裡；installed 則是安裝實體設備。"
+    },
+    "insufficiently": {
+      "chinese": "不足地",
+      "pos": "adv",
+      "synonyms": [
+        "inadequately",
+        "deficiently",
+        "poorly"
+      ],
+      "antonyms": [
+        "sufficiently",
+        "amply"
+      ],
+      "relatedWords": [
+        "insufficient"
+      ],
+      "confusableWith": [
+        "inefficiently"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The warning was insufficiently clear.",
+          "zh": "警告不夠清楚。",
+          "source": "daily"
+        },
+        {
+          "en": "Insufficiently funded programs struggle to produce results.",
+          "zh": "資金不足的計畫難以產出成果。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "quantity-sufficiency",
+      "mnemonicHint": "in(not) + sufficiently → 不夠充足 → 不足地"
+    },
+    "intangible": {
+      "chinese": "無形的",
+      "pos": "adj",
+      "synonyms": [
+        "abstract",
+        "immaterial",
+        "invisible",
+        "impalpable"
+      ],
+      "antonyms": [
+        "tangible",
+        "concrete",
+        "physical"
+      ],
+      "relatedWords": [
+        "intangibility"
+      ],
+      "confusableWith": [
+        "untouchable"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Trust is an intangible but crucial element of relationships.",
+          "zh": "信任是關係中無形但至關重要的元素。",
+          "source": "daily"
+        },
+        {
+          "en": "Intangible assets like brand value can exceed physical assets in worth.",
+          "zh": "品牌價值等無形資產的價值可以超過實體資產。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "abstract-concept",
+      "mnemonicHint": "in(not) + tang(touch) + ible → 摸不到的 → 無形的"
+    },
+    "integrates": {
+      "chinese": "整合；使融入；結合成完整體（第三人稱單數）",
+      "pos": "v",
+      "synonyms": [
+        "combines",
+        "incorporates",
+        "unifies",
+        "merges"
+      ],
+      "antonyms": [
+        "separates",
+        "isolates",
+        "excludes"
+      ],
+      "relatedWords": [
+        "integrate",
+        "integrated",
+        "integrating",
+        "integration",
+        "integrative"
+      ],
+      "confusableWith": [
+        "intergrades",
+        "disintegrates"
+      ],
+      "exampleSentences": [
+        {
+          "en": "This calendar app integrates my work shifts with my family's appointments.",
+          "zh": "這款行事曆應用程式把我的工作班表與家人的約會整合在一起。",
+          "source": "daily"
+        },
+        {
+          "en": "The proposed framework integrates economic, ecological, and cultural evidence into a single account of coastal change.",
+          "zh": "該框架把經濟、生態與文化證據整合成對海岸變遷的單一解釋。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "inclusion-integration",
+      "mnemonicHint": "integrate 和 integer（整數、完整體）同源；integrates 就是主詞把多個部分「整合成一個完整體」，字尾 -s 表示現在式第三人稱單數。"
+    },
+    "intelligence": {
+      "chinese": "智力；理解與解決問題的能力；情報",
+      "pos": "n",
+      "synonyms": [
+        "intellect",
+        "understanding",
+        "acumen",
+        "cleverness"
+      ],
+      "antonyms": [
+        "ignorance",
+        "stupidity",
+        "foolishness"
+      ],
+      "relatedWords": [
+        "intelligent",
+        "intelligently",
+        "intellectual"
+      ],
+      "confusableWith": [
+        "intelligibility",
+        "intelligentsia"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Her quick intelligence helped us repair the leaking faucet without calling a plumber.",
+          "zh": "她的敏捷才智讓我們不用叫水電工就修好了漏水的水龍頭。",
+          "source": "daily"
+        },
+        {
+          "en": "Modern intelligence-gathering systems can identify unusual activity patterns, but human analysts must still interpret their significance.",
+          "zh": "現代情報蒐集系統能辨識異常活動模式，但仍須由人類分析師解讀其意義。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "abstract-concept",
+      "mnemonicHint": "intelligence 裡有 intelligent（聰明的）：想像情報員不只蒐集 information，還要靠 intelligence 理解線索、作出判斷，因此可同時記住「智力」與「情報」兩義。"
+    },
+    "intensify": {
+      "chinese": "加強；加劇；使更強烈",
+      "pos": "v",
+      "synonyms": [
+        "heighten",
+        "strengthen",
+        "amplify",
+        "escalate"
+      ],
+      "antonyms": [
+        "weaken",
+        "lessen",
+        "alleviate"
+      ],
+      "relatedWords": [
+        "intense",
+        "intensity",
+        "intensification",
+        "intensified"
+      ],
+      "confusableWith": [
+        "intensive",
+        "intend"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Dark clouds began to intensify the chill as we walked home.",
+          "zh": "我們走回家時，烏雲開始加重寒意。",
+          "source": "daily"
+        },
+        {
+          "en": "Rising sea temperatures may intensify tropical storms by supplying them with additional energy.",
+          "zh": "海水溫度上升可能提供更多能量，進而加劇熱帶風暴。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "intensity-magnitude",
+      "mnemonicHint": "intense（強烈的）＋ -ify（使成為）＝使某事變得更 intense，所以 intensify 就是「使加強、使加劇」。"
+    },
+    "intentionally": {
+      "chinese": "故意地",
+      "pos": "adv",
+      "synonyms": [
+        "deliberately",
+        "purposely",
+        "consciously"
+      ],
+      "antonyms": [
+        "accidentally",
+        "unintentionally"
+      ],
+      "relatedWords": [
+        "intention",
+        "intentional"
+      ],
+      "confusableWith": [
+        "intensely"
+      ],
+      "exampleSentences": [
+        {
+          "en": "She intentionally avoided eye contact.",
+          "zh": "她故意避免眼神接觸。",
+          "source": "daily"
+        },
+        {
+          "en": "Intentionally misleading consumers violates protection laws.",
+          "zh": "故意誤導消費者違反保護法。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "intention-purpose",
+      "mnemonicHint": "intention(意圖) + ally → 帶意圖地 → 故意地"
+    },
+    "interested in": {
+      "chinese": "對……感興趣；想了解……",
+      "pos": "adj phr",
+      "synonyms": [
+        "curious about",
+        "keen on",
+        "engaged with",
+        "attracted to"
+      ],
+      "antonyms": [
+        "uninterested in",
+        "indifferent to",
+        "bored by"
+      ],
+      "relatedWords": [
+        "interest",
+        "interested",
+        "interesting",
+        "interestingly"
+      ],
+      "confusableWith": [
+        "interesting to"
+      ],
+      "exampleSentences": [
+        {
+          "en": "My younger sister is interested in astronomy and watches the moon through a small telescope.",
+          "zh": "我妹妹對天文學感興趣，會用小型望遠鏡觀察月亮。",
+          "source": "daily"
+        },
+        {
+          "en": "Researchers interested in urban migration examined housing records from three rapidly growing cities.",
+          "zh": "對都市遷移感興趣的研究人員檢視了三座快速成長城市的住宅紀錄。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "emotion-attitude",
+      "mnemonicHint": "人當主語時用 interested in：I am interested in robots，表示「我心裡對機器人有興趣」；記住感受者用 -ed，興趣指向的對象接 in。"
+    },
+    "interesting to": {
+      "chinese": "對……而言有趣；令……感興趣（後接感受者）",
+      "pos": "adj phr",
+      "synonyms": [
+        "appealing to",
+        "engaging for",
+        "intriguing to"
+      ],
+      "antonyms": [
+        "boring to",
+        "unappealing to",
+        "tedious for"
+      ],
+      "relatedWords": [
+        "interest",
+        "interesting",
+        "interested",
+        "interestingly"
+      ],
+      "confusableWith": [
+        "interested in"
+      ],
+      "exampleSentences": [
+        {
+          "en": "That antique map is interesting to Leo because it marks a vanished railway.",
+          "zh": "那張古地圖讓里歐覺得很有趣，因為上面標出了一條已消失的鐵路。",
+          "source": "daily"
+        },
+        {
+          "en": "Patterns that appear random to adults may be interesting to children who are testing simple rules.",
+          "zh": "成人眼中看似隨機的圖樣，對正在測試簡單規則的兒童而言可能很有趣。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "emotion-attitude",
+      "mnemonicHint": "事物用 interesting，感受者放在 to 後面：The puzzle is interesting to me；和 I am interested in the puzzle 對照，就不會把 -ing 與 -ed 搞反。"
+    },
+    "intermittent": {
+      "chinese": "間歇的",
+      "pos": "adj",
+      "synonyms": [
+        "sporadic",
+        "periodic",
+        "occasional",
+        "irregular"
+      ],
+      "antonyms": [
+        "continuous",
+        "constant",
+        "unceasing"
+      ],
+      "relatedWords": [
+        "intermittently"
+      ],
+      "confusableWith": [
+        "intermediate"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The region experiences intermittent power outages.",
+          "zh": "該地區經歷間歇性停電。",
+          "source": "daily"
+        },
+        {
+          "en": "Intermittent fasting has gained popularity as a weight management strategy.",
+          "zh": "間歇性斷食作為體重管理策略越來越受歡迎。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "time-frequency",
+      "mnemonicHint": "inter(between) + mitt(send) + ent → 斷斷續續地發送 → 間歇的"
+    },
+    "internet": {
+      "chinese": "網際網路",
+      "pos": "n",
+      "synonyms": [
+        "web",
+        "online network",
+        "cyberspace",
+        "global network"
+      ],
+      "antonyms": [
+        "offline world",
+        "disconnection"
+      ],
+      "relatedWords": [
+        "internet-based",
+        "online",
+        "internetwork"
+      ],
+      "confusableWith": [
+        "intranet"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The internet stopped working during the call.",
+          "zh": "通話期間網路斷線了。",
+          "source": "daily"
+        },
+        {
+          "en": "Internet access has transformed the distribution of information.",
+          "zh": "網際網路的普及改變了資訊傳播方式。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "technology-digital",
+      "mnemonicHint": "inter 相互 + net 網：彼此連接的全球網路。"
+    },
+    "interrogate": {
+      "chinese": "審問",
+      "pos": "v",
+      "synonyms": [
+        "question",
+        "examine",
+        "cross-examine",
+        "grill"
+      ],
+      "antonyms": [
+        "answer",
+        "respond"
+      ],
+      "relatedWords": [
+        "interrogation",
+        "interrogative"
+      ],
+      "confusableWith": [
+        "integrate"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The detective interrogated the suspect for hours.",
+          "zh": "偵探審問了嫌疑人幾個小時。",
+          "source": "daily"
+        },
+        {
+          "en": "Researchers interrogate data sets to uncover correlations.",
+          "zh": "研究人員深入質問數據集以發現相關性。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "inquiry-investigation",
+      "mnemonicHint": "inter(between) + rog(ask) + ate → 反覆追問 → 審問"
+    },
+    "inversely": {
+      "chinese": "反向地",
+      "pos": "adv",
+      "synonyms": [
+        "conversely",
+        "contrarily",
+        "oppositely"
+      ],
+      "antonyms": [
+        "directly",
+        "proportionally"
+      ],
+      "relatedWords": [
+        "inverse",
+        "inversion"
+      ],
+      "confusableWith": [
+        "universally"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Price and demand are inversely related.",
+          "zh": "價格和需求是反向相關的。",
+          "source": "daily"
+        },
+        {
+          "en": "Stress levels are inversely correlated with job satisfaction.",
+          "zh": "壓力水平與工作滿意度呈反向相關。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "comparison-contrast",
+      "mnemonicHint": "in(反) + verse(turn) + ly → 反轉地 → 反向地"
+    },
+    "ironed out": {
+      "chinese": "解決；消除問題",
+      "pos": "phrase",
+      "synonyms": [
+        "resolved",
+        "settled",
+        "smoothed out"
+      ],
+      "antonyms": [
+        "complicated",
+        "aggravated"
+      ],
+      "relatedWords": [
+        "iron",
+        "ironing"
+      ],
+      "confusableWith": [
+        "worn out"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The roommates ironed out their cleaning schedule over breakfast.",
+          "zh": "室友們在早餐時協調好清潔時間表。",
+          "source": "daily"
+        },
+        {
+          "en": "The committee ironed out inconsistencies in the final research protocol.",
+          "zh": "委員會解決了最終研究計畫書中的不一致之處。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "positive-helpful",
+      "mnemonicHint": "像熨衣服般把皺褶問題燙平"
+    },
+    "is considered": {
+      "chinese": "被認為；被視為（常接名詞、形容詞或 to be）",
+      "pos": "v phr (passive)",
+      "synonyms": [
+        "is deemed",
+        "is regarded as",
+        "is thought to be"
+      ],
+      "antonyms": [
+        "is dismissed as",
+        "is rejected as",
+        "is ruled out as"
+      ],
+      "relatedWords": [
+        "consider",
+        "considered",
+        "consideration",
+        "reconsider"
+      ],
+      "confusableWith": [
+        "consists of",
+        "is concerned"
+      ],
+      "exampleSentences": [
+        {
+          "en": "This chipped mug is considered lucky in our family, so nobody throws it away.",
+          "zh": "這個有缺口的杯子在我們家被視為幸運物，所以沒有人把它丟掉。",
+          "source": "daily"
+        },
+        {
+          "en": "A species is considered endangered when evidence indicates a high risk of extinction in the wild.",
+          "zh": "當證據顯示某物種在野外有很高的滅絕風險時，它便被視為瀕危物種。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "trust-belief",
+      "mnemonicHint": "consider 是「考慮、認為」，加上 is 與過去分詞 considered 形成被動：is considered＝「經過考量後被認為」；若補身分，常用 is considered a genius 或 is considered to be safe。"
+    },
+    "is regarded": {
+      "chinese": "被認為；被視為（通常接 as）",
+      "pos": "v phr (passive)",
+      "synonyms": [
+        "is considered",
+        "is viewed as",
+        "is deemed"
+      ],
+      "antonyms": [
+        "is disregarded",
+        "is dismissed",
+        "is ignored"
+      ],
+      "relatedWords": [
+        "regard",
+        "regarded",
+        "regarding",
+        "regardless"
+      ],
+      "confusableWith": [
+        "regarding",
+        "is guarded"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Around our neighborhood, Ms. Chen is regarded as the best person to ask about roses.",
+          "zh": "在我們社區，陳女士被公認是最適合請教玫瑰種植的人。",
+          "source": "daily"
+        },
+        {
+          "en": "Within classical economics, voluntary exchange is regarded as mutually beneficial when both parties possess adequate information.",
+          "zh": "在古典經濟學中，若雙方都掌握充分資訊，自願交換會被視為互利。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "respect-attitude",
+      "mnemonicHint": "regard 可聯想「朝某方向看」；is regarded as 就是「被大家以某種眼光看作……」。記住 regard 後面的身分標籤通常由 as 引出。"
+    },
+    "is seemed": {
+      "chinese": "非標準形式；似乎",
+      "pos": "nonstandard phrase",
+      "synonyms": [
+        "seems",
+        "appears",
+        "looks"
+      ],
+      "antonyms": [
+        "is proven",
+        "is confirmed",
+        "is known"
+      ],
+      "relatedWords": [
+        "seem",
+        "seems",
+        "seemed",
+        "seemingly"
+      ],
+      "confusableWith": [
+        "is seen",
+        "it seems"
+      ],
+      "exampleSentences": [
+        {
+          "en": "On this worksheet, \"is seemed\" is incorrect; write \"seems\" in \"The door seems stuck.\"",
+          "zh": "在這張學習單上，is seemed 是錯誤形式；「門似乎卡住了」應寫成 The door seems stuck。",
+          "source": "daily"
+        },
+        {
+          "en": "Because seem is normally intransitive, \"is seemed\" is ungrammatical here and should be corrected to \"seemed\" in the past-tense sentence.",
+          "zh": "因為 seem 通常是不及物動詞，此處的 is seemed 不合文法；在過去式句子中應改為 seemed。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "language-communication",
+      "mnemonicHint": "把 seem 記成自己就能變化的連綴動詞：seems／seemed，不需要 be 幫忙組被動。因此看到 is seemed 要亮紅燈；若想表達「被看見」，那是 is seen。"
+    },
+    "is viewed": {
+      "chinese": "被看待；被視為（常接 as）",
+      "pos": "v phr (passive)",
+      "synonyms": [
+        "is regarded",
+        "is considered",
+        "is perceived"
+      ],
+      "antonyms": [
+        "is ignored",
+        "is overlooked",
+        "is disregarded"
+      ],
+      "relatedWords": [
+        "view",
+        "viewed",
+        "viewer",
+        "viewpoint"
+      ],
+      "confusableWith": [
+        "is reviewed",
+        "is viewed as"
+      ],
+      "exampleSentences": [
+        {
+          "en": "In my grandparents' eyes, repairing old furniture is viewed as a satisfying weekend project.",
+          "zh": "在我祖父母眼中，修理舊家具被視為一項令人滿足的週末活動。",
+          "source": "daily"
+        },
+        {
+          "en": "Across many legal systems, judicial independence is viewed as essential to protecting citizens from arbitrary power.",
+          "zh": "在許多法律體系中，司法獨立被視為保護公民免受恣意權力侵害的必要條件。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "trust-belief",
+      "mnemonicHint": "view 是「觀看、觀點」；is viewed as 就像某事物「被放進某個觀點框裡」，因此表示「被看作……」。別和多一個 re- 的 is reviewed（被審查）混淆。"
+    }
+  }
+}

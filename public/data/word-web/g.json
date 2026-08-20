@@ -1,0 +1,416 @@
+{
+  "schemaVersion": 1,
+  "words": {
+    "gain": {
+      "chinese": "獲得；增加；收益",
+      "pos": "n/v",
+      "synonyms": [
+        "acquire",
+        "obtain",
+        "increase",
+        "profit"
+      ],
+      "antonyms": [
+        "lose",
+        "decrease",
+        "forfeit"
+      ],
+      "relatedWords": [
+        "gained",
+        "gaining",
+        "gains",
+        "gainful"
+      ],
+      "confusableWith": [
+        "grain",
+        "again"
+      ],
+      "exampleSentences": [
+        {
+          "en": "I hope to gain enough confidence to speak at the meeting.",
+          "zh": "我希望能獲得足夠的信心，在會議上發言。",
+          "source": "daily"
+        },
+        {
+          "en": "Plants gain mass by converting carbon dioxide and water into organic compounds.",
+          "zh": "植物透過將二氧化碳和水轉化為有機化合物來增加質量。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "change-acquisition",
+      "mnemonicHint": "gain 是得到或增加，和 lose 失去形成對比；weight gain 就是體重增加。"
+    },
+    "gas": {
+      "chinese": "氣體；瓦斯；汽油",
+      "pos": "n",
+      "synonyms": [
+        "vapor",
+        "fumes",
+        "gaseous substance",
+        "aeriform matter"
+      ],
+      "antonyms": [
+        "solid",
+        "liquid"
+      ],
+      "relatedWords": [
+        "gaseous",
+        "gasify",
+        "gasification",
+        "gassy"
+      ],
+      "confusableWith": [
+        "guess",
+        "gaze"
+      ],
+      "exampleSentences": [
+        {
+          "en": "We turned off the gas before replacing the stove.",
+          "zh": "我們在更換爐具前關掉了瓦斯。",
+          "source": "daily"
+        },
+        {
+          "en": "The instrument detects trace amounts of gas released by volcanic activity.",
+          "zh": "這項儀器能偵測火山活動釋出的微量氣體。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "matter-energy",
+      "mnemonicHint": "gas 可指氣體或燃料；gaseous 則是氣態的。"
+    },
+    "gender": {
+      "chinese": "社會性別；性別類別",
+      "pos": "n",
+      "synonyms": [
+        "gender category",
+        "social gender",
+        "social classification by gender"
+      ],
+      "antonyms": [
+        "gender neutrality",
+        "absence of gender classification"
+      ],
+      "relatedWords": [
+        "gendered",
+        "gender-neutral",
+        "transgender"
+      ],
+      "confusableWith": [
+        "genre"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The form asks for age and gender.",
+          "zh": "這份表格詢問年齡與性別。",
+          "source": "daily"
+        },
+        {
+          "en": "Gender inequality remains evident in senior leadership positions.",
+          "zh": "高階領導職位中的性別不平等仍很明顯。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "gender-identity",
+      "mnemonicHint": "gender 與 genre 拼法相近；前者是性別。"
+    },
+    "genuinely": {
+      "chinese": "真誠地；真正地；確實地",
+      "pos": "adv",
+      "synonyms": [
+        "sincerely",
+        "authentically",
+        "truly",
+        "honestly"
+      ],
+      "antonyms": [
+        "falsely",
+        "insincerely",
+        "artificially"
+      ],
+      "relatedWords": [
+        "genuine",
+        "genuineness"
+      ],
+      "confusableWith": [
+        "ingeniously",
+        "genially"
+      ],
+      "exampleSentences": [
+        {
+          "en": "I was genuinely surprised when my neighbors remembered my birthday.",
+          "zh": "鄰居記得我的生日，讓我真的很驚訝。",
+          "source": "daily"
+        },
+        {
+          "en": "Participants who genuinely believed the treatment was effective reported greater improvement than the control group.",
+          "zh": "真正相信治療有效的參與者，比控制組回報了更大的改善。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "truth-openness",
+      "mnemonicHint": "genuine 是「真的、真誠的」，加 -ly 變成副詞 genuinely。注意拼字會保留 genuine 的 e：不是 genuinly；它強調情感或事物並非假裝、仿造。"
+    },
+    "given that": {
+      "chinese": "鑑於；考慮到",
+      "pos": "conj",
+      "synonyms": [
+        "considering that",
+        "since",
+        "seeing that"
+      ],
+      "antonyms": [
+        "regardless of",
+        "despite"
+      ],
+      "relatedWords": [
+        "give",
+        "given"
+      ],
+      "confusableWith": [
+        "given to"
+      ],
+      "exampleSentences": [
+        {
+          "en": "We ate indoors, given that the patio was still wet.",
+          "zh": "由於露臺仍然潮濕，我們便在室內用餐。",
+          "source": "daily"
+        },
+        {
+          "en": "The result is surprising, given that both groups received identical training.",
+          "zh": "鑑於兩組接受了相同的訓練，這項結果令人意外。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "explanation-clarity",
+      "mnemonicHint": "given 是已知條件，given that 引出原因"
+    },
+    "giving condolence": {
+      "chinese": "致哀；慰問",
+      "pos": "nonstandard phrase",
+      "synonyms": [
+        "offering condolences",
+        "expressing sympathy",
+        "paying respects"
+      ],
+      "antonyms": [
+        "celebrating",
+        "congratulating",
+        "mocking"
+      ],
+      "relatedWords": [
+        "condole",
+        "condolence",
+        "condolences",
+        "condolatory"
+      ],
+      "confusableWith": [
+        "giving condolences",
+        "offering condolence"
+      ],
+      "exampleSentences": [
+        {
+          "en": "On the card, Leo replaced the awkward phrase \"giving condolence\" with \"offering condolences.\"",
+          "zh": "里奧在卡片上把不自然的 giving condolence 改成 offering condolences（致上慰問）。",
+          "source": "daily"
+        },
+        {
+          "en": "Because \"giving condolence\" is not the usual English collocation, the editor revised it to \"giving one's condolences.\"",
+          "zh": "因為 giving condolence 不是慣用的英文搭配，編輯將它改為 giving one's condolences（表達哀悼）。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "emotion-sadness",
+      "mnemonicHint": "這個形式少了慣用的複數 condolences，也缺少所有格。把它記成兩個自然公式：offer condolences，或 give one's condolences；不要直譯中文而寫 giving condolence。"
+    },
+    "glittering": {
+      "chinese": "閃閃發光的；華麗耀眼的",
+      "pos": "adj/v-ing",
+      "synonyms": [
+        "sparkling",
+        "gleaming",
+        "shimmering",
+        "dazzling"
+      ],
+      "antonyms": [
+        "dull",
+        "dim",
+        "matte"
+      ],
+      "relatedWords": [
+        "glitter",
+        "glitters",
+        "glittered",
+        "glittery"
+      ],
+      "confusableWith": [
+        "glimmering",
+        "glistening"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Tiny lights were glittering across the harbor as we walked home.",
+          "zh": "我們走回家時，點點燈光在港灣上閃爍。",
+          "source": "daily"
+        },
+        {
+          "en": "Despite the candidate's glittering résumé, the selection panel questioned his lack of practical experience.",
+          "zh": "儘管候選人的履歷光鮮亮眼，遴選委員會仍質疑他缺乏實務經驗。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "visibility-prominence",
+      "mnemonicHint": "glitter 讓人聯想到亮粉一閃一閃；加 -ing 可表示正在閃爍，也可作形容詞表示「耀眼的」。glittering résumé 還可比喻「極其亮眼的履歷」。"
+    },
+    "government official": {
+      "chinese": "政府官員",
+      "pos": "n phrase",
+      "synonyms": [
+        "public official",
+        "state official",
+        "civil servant"
+      ],
+      "antonyms": [
+        "private citizen",
+        "civilian"
+      ],
+      "relatedWords": [
+        "govern",
+        "government",
+        "governance",
+        "official",
+        "officials"
+      ],
+      "confusableWith": [
+        "government officer",
+        "elected official"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Yesterday, a government official visited the flooded neighborhood and spoke with residents.",
+          "zh": "昨天，一名政府官員走訪淹水社區並與居民交談。",
+          "source": "daily"
+        },
+        {
+          "en": "Every government official involved in procurement must disclose potential conflicts of interest.",
+          "zh": "每位參與採購的政府官員都必須揭露潛在的利益衝突。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "authority-control",
+      "mnemonicHint": "government 修飾 official，整體是名詞片語「政府官員」，不是形容詞。official 單獨可指官員，也可作「官方的」；看到 a government official 時，中心詞是可數名詞 official。"
+    },
+    "gratitude": {
+      "chinese": "感激；感謝",
+      "pos": "n",
+      "synonyms": [
+        "thankfulness",
+        "appreciation",
+        "gratefulness"
+      ],
+      "antonyms": [
+        "ingratitude",
+        "ungratefulness",
+        "resentment"
+      ],
+      "relatedWords": [
+        "grateful",
+        "gratefully",
+        "gratefulness"
+      ],
+      "confusableWith": [
+        "gratification",
+        "gratuity"
+      ],
+      "exampleSentences": [
+        {
+          "en": "After finding her lost wallet, Nora sent the bus driver a note of gratitude.",
+          "zh": "找回遺失的錢包後，諾拉寄了一張感謝卡給公車司機。",
+          "source": "daily"
+        },
+        {
+          "en": "Public expressions of gratitude can strengthen cooperation by assuring contributors that their efforts are valued.",
+          "zh": "公開表達感謝能讓貢獻者確信其付出受到重視，進而強化合作。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "respect-attitude",
+      "mnemonicHint": "gratitude 和 grateful 都帶 grat-，可聯想到「感激」。常見搭配是 express/show gratitude to someone 或 gratitude for something，表示對人或事的謝意。"
+    },
+    "grievance": {
+      "chinese": "不滿；申訴；委屈",
+      "pos": "n",
+      "synonyms": [
+        "complaint",
+        "grudge",
+        "resentment",
+        "protest"
+      ],
+      "antonyms": [
+        "satisfaction",
+        "contentment",
+        "approval"
+      ],
+      "relatedWords": [
+        "grieve",
+        "grieved",
+        "grieving",
+        "grievous"
+      ],
+      "confusableWith": [
+        "grief",
+        "grievous"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Our tenant filed a grievance after the landlord ignored three requests to repair the heater.",
+          "zh": "房東無視三次修理暖氣的要求後，我們的房客提出了申訴。",
+          "source": "daily"
+        },
+        {
+          "en": "Workers may submit a formal grievance when they believe the promotion process violates company policy.",
+          "zh": "員工若認為升遷程序違反公司政策，可以提出正式申訴。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "opposition-conflict",
+      "mnemonicHint": "grievance 與 grieve「悲痛」同源，可想成一件讓人難受、一直放在心上的不公平，因此成為「不滿」或正式「申訴」。常見搭配：file/air a grievance。"
+    },
+    "growing": {
+      "chinese": "成長中的；增加的",
+      "pos": "adj/v",
+      "synonyms": [
+        "increasing",
+        "expanding",
+        "developing",
+        "rising"
+      ],
+      "antonyms": [
+        "shrinking",
+        "declining",
+        "decreasing"
+      ],
+      "relatedWords": [
+        "grow",
+        "growth",
+        "grown"
+      ],
+      "confusableWith": [
+        "glowing"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The growing puppy needs more food each week.",
+          "zh": "這隻成長中的小狗每週需要更多食物。",
+          "source": "daily"
+        },
+        {
+          "en": "Growing demand for energy has intensified environmental pressure.",
+          "zh": "日益增加的能源需求加劇了環境壓力。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "change-improvement",
+      "mnemonicHint": "grow 去掉結尾變化直接加 ing，表示正在成長。"
+    }
+  }
+}

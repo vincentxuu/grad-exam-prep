@@ -1,0 +1,297 @@
+{
+  "schemaVersion": 1,
+  "words": {
+    "ubiquitous": {
+      "chinese": "無處不在的",
+      "pos": "adj",
+      "synonyms": [
+        "omnipresent",
+        "pervasive",
+        "universal",
+        "everywhere"
+      ],
+      "antonyms": [
+        "rare",
+        "scarce",
+        "uncommon"
+      ],
+      "relatedWords": [
+        "ubiquity",
+        "ubiquitously"
+      ],
+      "confusableWith": [
+        "unique"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Smartphones have become ubiquitous in modern life.",
+          "zh": "智慧手機在現代生活中無處不在。",
+          "source": "daily"
+        },
+        {
+          "en": "The ubiquitous presence of surveillance cameras raises privacy concerns.",
+          "zh": "監控攝影機的無處不在引發了隱私擔憂。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "scope-extent",
+      "mnemonicHint": "ubique(everywhere in Latin) + ous → 到處都有的 → 無處不在的"
+    },
+    "unbiased": {
+      "chinese": "公正的；無偏見的",
+      "pos": "adj",
+      "synonyms": [
+        "impartial",
+        "neutral",
+        "objective",
+        "fair"
+      ],
+      "antonyms": [
+        "biased",
+        "partial",
+        "prejudiced"
+      ],
+      "relatedWords": [
+        "bias",
+        "biased",
+        "unbiasedness"
+      ],
+      "confusableWith": [
+        "unabridged",
+        "unbalanced"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Our mediator stayed unbiased during the dispute between the neighbors.",
+          "zh": "我們的調解人在鄰居之間的爭端中保持公正。",
+          "source": "daily"
+        },
+        {
+          "en": "An unbiased sample is essential for drawing valid conclusions about the population.",
+          "zh": "無偏差的樣本是對母體得出有效結論的必要條件。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "fairness-objectivity",
+      "mnemonicHint": "un-（不）加 biased（有偏見的）就是「沒有偏向」。想像天平沒有倒向任何一邊；unbiased 是形容詞，不是動詞。"
+    },
+    "unilateral": {
+      "chinese": "單邊的",
+      "pos": "adj",
+      "synonyms": [
+        "one-sided",
+        "independent",
+        "solo",
+        "single-handed"
+      ],
+      "antonyms": [
+        "bilateral",
+        "multilateral",
+        "mutual"
+      ],
+      "relatedWords": [
+        "unilaterally",
+        "unilateralism"
+      ],
+      "confusableWith": [
+        "lateral"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The company made a unilateral decision without consulting employees.",
+          "zh": "公司在未諮詢員工的情況下做了單方面決定。",
+          "source": "daily"
+        },
+        {
+          "en": "Unilateral trade sanctions often provoke retaliatory measures.",
+          "zh": "單邊貿易制裁往往引發報復性措施。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "scope-independence",
+      "mnemonicHint": "uni(one) + lateral(side) → 只有一邊 → 單邊的"
+    },
+    "unique": {
+      "chinese": "獨特的；唯一的",
+      "pos": "adj",
+      "synonyms": [
+        "distinctive",
+        "singular",
+        "one-of-a-kind"
+      ],
+      "antonyms": [
+        "common",
+        "ordinary"
+      ],
+      "relatedWords": [
+        "uniqueness",
+        "uniquely"
+      ],
+      "confusableWith": [
+        "antique"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Each handmade mug has a unique pattern.",
+          "zh": "每個手工馬克杯都有獨一無二的圖案。",
+          "source": "daily"
+        },
+        {
+          "en": "The specimen contains a unique genetic marker absent from related species.",
+          "zh": "該標本含有近緣物種所沒有的獨特遺傳標記。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "uniqueness-rarity",
+      "mnemonicHint": "uni 是一，unique 就是獨一無二"
+    },
+    "unkempt": {
+      "chinese": "不整潔的；蓬亂的",
+      "pos": "adj",
+      "synonyms": [
+        "untidy",
+        "disheveled",
+        "scruffy",
+        "messy"
+      ],
+      "antonyms": [
+        "neat",
+        "tidy",
+        "well-groomed"
+      ],
+      "relatedWords": [
+        "kempt",
+        "unkemptness"
+      ],
+      "confusableWith": [
+        "unkept",
+        "unkind"
+      ],
+      "exampleSentences": [
+        {
+          "en": "After camping all weekend, Leo looked tired and unkempt.",
+          "zh": "露營了一整個週末後，里歐看起來疲憊又不修邊幅。",
+          "source": "daily"
+        },
+        {
+          "en": "The witness described an unkempt man wearing a torn gray coat.",
+          "zh": "目擊者描述一名衣著不整、穿著破舊灰色外套的男子。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "appearance-condition",
+      "mnemonicHint": "kempt 是「整理好的」，前加 un- 就變成「沒整理的」；常形容凌亂的頭髮、衣著或外表，拼字不要誤作 unkept。"
+    },
+    "unleashed": {
+      "chinese": "釋放了；使爆發的",
+      "pos": "v/adj",
+      "synonyms": [
+        "released",
+        "liberated",
+        "triggered",
+        "set loose"
+      ],
+      "antonyms": [
+        "restrained",
+        "contained",
+        "suppressed"
+      ],
+      "relatedWords": [
+        "unleash",
+        "unleashes",
+        "unleashing"
+      ],
+      "confusableWith": [
+        "unlatched",
+        "unlicensed"
+      ],
+      "exampleSentences": [
+        {
+          "en": "One careless click unleashed dozens of balloons across the room.",
+          "zh": "一次不小心的點擊讓數十顆氣球飛散到整個房間。",
+          "source": "daily"
+        },
+        {
+          "en": "Rapid deregulation unleashed competitive forces that transformed the telecommunications industry.",
+          "zh": "快速解除管制釋放了競爭力量，進而改變電信產業。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "release-activation",
+      "mnemonicHint": "leash 是牽繩，un-leash 就是解開牽繩、讓力量衝出去；unleashed 可作 unleash 的過去式，也可形容已被釋放或引爆的力量。"
+    },
+    "unprecedented": {
+      "chinese": "前所未有的",
+      "pos": "adj",
+      "synonyms": [
+        "unparalleled",
+        "unmatched",
+        "extraordinary",
+        "novel"
+      ],
+      "antonyms": [
+        "common",
+        "typical",
+        "precedented"
+      ],
+      "relatedWords": [
+        "precedent"
+      ],
+      "confusableWith": [
+        "unpredicted"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The pandemic created unprecedented challenges for healthcare systems.",
+          "zh": "疫情為醫療系統帶來了前所未有的挑戰。",
+          "source": "daily"
+        },
+        {
+          "en": "The unprecedented rate of technological change demands adaptive governance.",
+          "zh": "前所未有的技術變革速度要求適應性治理。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "uniqueness-rarity",
+      "mnemonicHint": "un + precedent(先例) + ed → 沒有先例的 → 前所未有的"
+    },
+    "unsanctioned": {
+      "chinese": "未經批准的；未獲授權的",
+      "pos": "adj",
+      "synonyms": [
+        "unauthorized",
+        "unapproved",
+        "unofficial",
+        "illicit"
+      ],
+      "antonyms": [
+        "authorized",
+        "approved",
+        "sanctioned"
+      ],
+      "relatedWords": [
+        "sanction",
+        "sanctioned",
+        "sanctioning"
+      ],
+      "confusableWith": [
+        "sanctioned",
+        "unsanitary"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Two students organized an unsanctioned concert in the dormitory lounge.",
+          "zh": "兩名學生在宿舍交誼廳舉辦了一場未經批准的演唱會。",
+          "source": "daily"
+        },
+        {
+          "en": "Officials warned that unsanctioned data collection could violate research ethics standards.",
+          "zh": "官員警告，未經授權的資料蒐集可能違反研究倫理標準。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "permission-authorization",
+      "mnemonicHint": "un-（未）加 sanctioned（獲正式批准的）表示「未獲批准」。sanction 本身也可指制裁，但 unsanctioned 在此針對的是缺少官方許可。"
+    }
+  }
+}

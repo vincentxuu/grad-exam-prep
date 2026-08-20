@@ -1,0 +1,625 @@
+{
+  "schemaVersion": 1,
+  "words": {
+    "manufacture": {
+      "chinese": "製造；大量生產；製成品",
+      "pos": "v/n",
+      "synonyms": [
+        "produce",
+        "make",
+        "fabricate",
+        "assemble"
+      ],
+      "antonyms": [
+        "destroy",
+        "dismantle"
+      ],
+      "relatedWords": [
+        "manufacturer",
+        "manufacturing",
+        "manufactured",
+        "manufactures"
+      ],
+      "confusableWith": [
+        "manure"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Several local workshops manufacture custom bicycles by hand.",
+          "zh": "幾家本地工坊以手工製造客製化自行車。",
+          "source": "daily"
+        },
+        {
+          "en": "Modern plants manufacture semiconductors in tightly controlled, dust-free environments.",
+          "zh": "現代工廠在嚴格管控的無塵環境中製造半導體。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "production-manufacturing",
+      "mnemonicHint": "manu- 是『手』，fact 是『做』：manufacture 原意是用手做，現代則多指工廠製造或大量生產。"
+    },
+    "mass": {
+      "chinese": "大量；質量；群眾",
+      "pos": "n/adj",
+      "synonyms": [
+        "bulk",
+        "quantity",
+        "multitude",
+        "body"
+      ],
+      "antonyms": [
+        "scarcity",
+        "individual"
+      ],
+      "relatedWords": [
+        "massive",
+        "mass-produce",
+        "masses"
+      ],
+      "confusableWith": [
+        "mess"
+      ],
+      "exampleSentences": [
+        {
+          "en": "A mass of clouds covered the mountain.",
+          "zh": "一大片雲遮住了山。",
+          "source": "daily"
+        },
+        {
+          "en": "The object’s mass remains constant even when gravity changes.",
+          "zh": "即使重力改變，物體的質量仍維持不變。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "quantity-sufficiency",
+      "mnemonicHint": "mass 有「聚成一大團」的畫面。"
+    },
+    "material": {
+      "chinese": "材料；物質；素材",
+      "pos": "n/adj",
+      "synonyms": [
+        "substance",
+        "matter",
+        "fabric",
+        "content"
+      ],
+      "antonyms": [
+        "immateriality",
+        "nothingness"
+      ],
+      "relatedWords": [
+        "materials",
+        "materially",
+        "materialism"
+      ],
+      "confusableWith": [
+        "maternal"
+      ],
+      "exampleSentences": [
+        {
+          "en": "This jacket is made from recycled material.",
+          "zh": "這件外套由回收材料製成。",
+          "source": "daily"
+        },
+        {
+          "en": "The archive provides valuable material for historical research.",
+          "zh": "該檔案館為歷史研究提供寶貴素材。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "substance-resource",
+      "mnemonicHint": "mater 母體 + ial：構成事物的材料。"
+    },
+    "measurable": {
+      "chinese": "可測量的；可量化的；明顯到足以衡量的",
+      "pos": "adj",
+      "synonyms": [
+        "quantifiable",
+        "calculable",
+        "assessable",
+        "observable"
+      ],
+      "antonyms": [
+        "immeasurable",
+        "unquantifiable"
+      ],
+      "relatedWords": [
+        "measure",
+        "measurement",
+        "measurably",
+        "immeasurable"
+      ],
+      "confusableWith": [
+        "treasurable",
+        "pleasurable"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Regular walks made a measurable difference to my blood pressure.",
+          "zh": "規律散步讓我的血壓出現了可測量的改善。",
+          "source": "daily"
+        },
+        {
+          "en": "The policy produced a measurable decline in household energy consumption.",
+          "zh": "該政策使家庭能源消耗出現可量化的下降。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "measurement-quantity",
+      "mnemonicHint": "measure（測量）加上 -able（能夠……的），就是『能被測量的』；看到 measurable 就想像拿尺把成果的差距實際量出來。"
+    },
+    "meat": {
+      "chinese": "肉；肉類；核心內容",
+      "pos": "n",
+      "synonyms": [
+        "flesh",
+        "animal protein",
+        "muscle tissue",
+        "edible tissue"
+      ],
+      "antonyms": [
+        "plant food",
+        "vegetables",
+        "meat substitute"
+      ],
+      "relatedWords": [
+        "meaty",
+        "meatless",
+        "meatiness",
+        "meat-eater"
+      ],
+      "confusableWith": [
+        "meet",
+        "mete"
+      ],
+      "exampleSentences": [
+        {
+          "en": "I stored the raw meat on the lowest shelf of the refrigerator.",
+          "zh": "我把生肉放在冰箱最下層的架子上。",
+          "source": "daily"
+        },
+        {
+          "en": "Producing meat generally requires more land than growing an equivalent amount of plant protein.",
+          "zh": "生產肉類通常比種植等量植物性蛋白質需要更多土地。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "food-nutrition",
+      "mnemonicHint": "meat 和 meet 同音；盤子裡的肉是 meat，碰面則是 meet。"
+    },
+    "mediocre": {
+      "chinese": "平庸的；品質普通的",
+      "pos": "adj",
+      "synonyms": [
+        "ordinary",
+        "average",
+        "second-rate",
+        "uninspired"
+      ],
+      "antonyms": [
+        "excellent",
+        "exceptional",
+        "outstanding"
+      ],
+      "relatedWords": [
+        "mediocrity",
+        "mediocrely"
+      ],
+      "confusableWith": [
+        "medium",
+        "mediocracy"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Despite the fancy decor, the restaurant served mediocre pasta.",
+          "zh": "儘管裝潢華麗，那家餐廳的義大利麵卻很普通。",
+          "source": "daily"
+        },
+        {
+          "en": "A mediocre response may identify the problem without evaluating its broader consequences.",
+          "zh": "平庸的作答或許能指出問題，卻不會評估其更廣泛的後果。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "quality-performance",
+      "mnemonicHint": "mediocre 和 medium 都帶有『中間』的感覺：成績卡卡在中間，沒有糟到墊底，也完全稱不上出色，就是平庸。"
+    },
+    "meeting": {
+      "chinese": "會議；會面",
+      "pos": "n",
+      "synonyms": [
+        "gathering",
+        "conference",
+        "assembly",
+        "session"
+      ],
+      "antonyms": [
+        "separation",
+        "adjournment"
+      ],
+      "relatedWords": [
+        "meet",
+        "meetings"
+      ],
+      "confusableWith": [
+        "meating"
+      ],
+      "exampleSentences": [
+        {
+          "en": "I have a meeting with my landlord after work.",
+          "zh": "我下班後要和房東見面。",
+          "source": "daily"
+        },
+        {
+          "en": "The research team held a meeting to review the unexpected results.",
+          "zh": "研究團隊召開會議，檢視出乎意料的結果。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "language-communication",
+      "mnemonicHint": "meet 聚在一起，meeting 就是聚會或會議"
+    },
+    "melancholy": {
+      "chinese": "憂鬱的",
+      "pos": "adj/n",
+      "synonyms": [
+        "sadness",
+        "sorrow",
+        "gloom",
+        "dejection"
+      ],
+      "antonyms": [
+        "joy",
+        "happiness",
+        "cheerfulness"
+      ],
+      "relatedWords": [
+        "melancholic"
+      ],
+      "confusableWith": [
+        "melody"
+      ],
+      "exampleSentences": [
+        {
+          "en": "A sense of melancholy filled the room after the farewell.",
+          "zh": "告別後一股憂鬱感瀰漫了房間。",
+          "source": "daily"
+        },
+        {
+          "en": "The melancholy tone of the novel reflects post-war disillusionment.",
+          "zh": "小說憂鬱的基調反映了戰後的幻滅感。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "emotion-sadness",
+      "mnemonicHint": "melan(black) + choly(bile) → 黑色膽汁（古代認為導致憂鬱）→ 憂鬱的"
+    },
+    "mellow": {
+      "chinese": "醇和的",
+      "pos": "adj",
+      "synonyms": [
+        "gentle",
+        "soft",
+        "smooth",
+        "mild"
+      ],
+      "antonyms": [
+        "harsh",
+        "sharp",
+        "intense"
+      ],
+      "relatedWords": [
+        "mellowness"
+      ],
+      "confusableWith": [
+        "yellow"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The wine has a mellow flavor that improves with age.",
+          "zh": "葡萄酒有醇和的風味，越陳越好。",
+          "source": "daily"
+        },
+        {
+          "en": "A mellow leadership style fosters creativity.",
+          "zh": "溫和的領導風格促進創造力。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "quality-texture",
+      "mnemonicHint": "mellow 發音像「美好」→ 柔和的 → 醇和的"
+    },
+    "members": {
+      "chinese": "成員；會員",
+      "pos": "n",
+      "synonyms": [
+        "participants",
+        "associates",
+        "representatives",
+        "constituents"
+      ],
+      "antonyms": [
+        "outsiders",
+        "nonmembers"
+      ],
+      "relatedWords": [
+        "member",
+        "membership",
+        "member-owned"
+      ],
+      "confusableWith": [
+        "membranes"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Club members receive a monthly newsletter.",
+          "zh": "俱樂部會員每月會收到電子報。",
+          "source": "daily"
+        },
+        {
+          "en": "Committee members disagreed over the proposed reforms.",
+          "zh": "委員會成員對提議的改革意見不一。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "inclusion-integration",
+      "mnemonicHint": "member 加 s，表示團體中的多位成員。"
+    },
+    "method": {
+      "chinese": "方法；方式",
+      "pos": "n",
+      "synonyms": [
+        "approach",
+        "procedure",
+        "technique",
+        "system"
+      ],
+      "antonyms": [
+        "randomness",
+        "disorganization"
+      ],
+      "relatedWords": [
+        "methodical",
+        "methodology",
+        "methodically"
+      ],
+      "confusableWith": [
+        "methodology"
+      ],
+      "exampleSentences": [
+        {
+          "en": "This method makes the stain easier to remove.",
+          "zh": "這個方法讓污漬更容易去除。",
+          "source": "daily"
+        },
+        {
+          "en": "The researchers adopted a mixed-method approach to data collection.",
+          "zh": "研究人員採用混合方法蒐集資料。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "planning-preparation",
+      "mnemonicHint": "method 是做事沿著 meta 路徑前進的方法。"
+    },
+    "miserable": {
+      "chinese": "痛苦的；悲慘的；糟透的",
+      "pos": "adj",
+      "synonyms": [
+        "wretched",
+        "unhappy",
+        "dejected",
+        "distressing"
+      ],
+      "antonyms": [
+        "happy",
+        "contented",
+        "comfortable"
+      ],
+      "relatedWords": [
+        "misery",
+        "miserably",
+        "miserableness"
+      ],
+      "confusableWith": [
+        "miserly",
+        "measurable"
+      ],
+      "exampleSentences": [
+        {
+          "en": "After waiting in wet shoes all afternoon, Leo felt miserable.",
+          "zh": "穿著濕鞋等了一整個下午後，里歐覺得難受極了。",
+          "source": "daily"
+        },
+        {
+          "en": "Workers endured miserable conditions until the factory adopted basic safety standards.",
+          "zh": "工人忍受著悲慘的環境，直到工廠採用基本安全標準。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "emotion-suffering",
+      "mnemonicHint": "把 miserable 連到 misery（痛苦）：一個人被 misery 包住，冷、濕、累又無助，那種整體感受就是 miserable。"
+    },
+    "misfit": {
+      "chinese": "不合群的人；與環境格格不入者",
+      "pos": "n",
+      "synonyms": [
+        "outsider",
+        "outcast",
+        "nonconformist",
+        "odd-one-out"
+      ],
+      "antonyms": [
+        "insider",
+        "conformist"
+      ],
+      "relatedWords": [
+        "fit",
+        "fitting",
+        "unfit",
+        "misfitting"
+      ],
+      "confusableWith": [
+        "mismatch",
+        "misfire"
+      ],
+      "exampleSentences": [
+        {
+          "en": "At the formal dinner, Ben felt like a misfit in his hiking boots.",
+          "zh": "在正式晚宴上，穿著登山靴的班覺得自己格格不入。",
+          "source": "daily"
+        },
+        {
+          "en": "Rather than dismissing the inventor as a misfit, the committee examined her unconventional proposal.",
+          "zh": "委員會沒有把這位發明家視為怪人而不予理會，而是審視了她非傳統的提案。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "social-belonging",
+      "mnemonicHint": "mis-（錯、不合）加 fit（適合）：像一塊放錯位置、怎麼都嵌不進拼圖的拼片，因此指與群體或環境格格不入的人。"
+    },
+    "mitigate": {
+      "chinese": "減輕；緩和",
+      "pos": "v",
+      "synonyms": [
+        "alleviate",
+        "lessen",
+        "diminish",
+        "ease",
+        "moderate"
+      ],
+      "antonyms": [
+        "exacerbate",
+        "aggravate",
+        "intensify"
+      ],
+      "relatedWords": [
+        "mitigation",
+        "mitigating"
+      ],
+      "confusableWith": [
+        "litigate"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Wearing sunscreen helps mitigate the risk of skin damage.",
+          "zh": "塗防曬霜有助於減輕皮膚損傷的風險。",
+          "source": "daily"
+        },
+        {
+          "en": "Governments must mitigate the economic impact of rising sea levels.",
+          "zh": "政府必須減輕海平面上升的經濟影響。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "change-improvement",
+      "mnemonicHint": "mit(mild) + ig + ate → 使變溫和 → 減輕"
+    },
+    "morbid": {
+      "chinese": "病態的；對死亡或可怕事物過度著迷的",
+      "pos": "adj",
+      "synonyms": [
+        "macabre",
+        "ghoulish",
+        "unhealthy",
+        "death-obsessed"
+      ],
+      "antonyms": [
+        "wholesome",
+        "healthy",
+        "cheerful"
+      ],
+      "relatedWords": [
+        "morbidity",
+        "morbidly",
+        "morbidness"
+      ],
+      "confusableWith": [
+        "moribund",
+        "mordant"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Curiosity turned morbid when he began collecting photographs of fatal accidents.",
+          "zh": "當他開始蒐集致命事故的照片時，那份好奇心變得病態。",
+          "source": "daily"
+        },
+        {
+          "en": "The novel's morbid imagery reflects a society preoccupied with disease and death.",
+          "zh": "小說中病態陰森的意象，反映了一個沉迷於疾病與死亡的社會。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "illness-death",
+      "mnemonicHint": "morbid 源自拉丁文 morbus（疾病）；想像注意力病態地黏在死亡與災難上，便能記住它不只是陰暗，而是『不健康地著迷』。"
+    },
+    "movies": {
+      "chinese": "電影",
+      "pos": "n",
+      "synonyms": [
+        "films",
+        "pictures",
+        "motion pictures"
+      ],
+      "antonyms": [
+        "reality",
+        "real life"
+      ],
+      "relatedWords": [
+        "movie",
+        "moviemaking"
+      ],
+      "confusableWith": [
+        "movements"
+      ],
+      "exampleSentences": [
+        {
+          "en": "We usually watch movies together on Friday nights.",
+          "zh": "我們通常在星期五晚上一起看電影。",
+          "source": "daily"
+        },
+        {
+          "en": "The essay argues that movies can shape public attitudes toward history.",
+          "zh": "這篇論文主張，電影能形塑大眾對歷史的態度。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "beauty-art",
+      "mnemonicHint": "movie 加複數 s，記成多部電影"
+    },
+    "music": {
+      "chinese": "音樂",
+      "pos": "n",
+      "synonyms": [
+        "musical sound",
+        "musical works",
+        "musical compositions"
+      ],
+      "antonyms": [
+        "silence",
+        "nonmusical noise"
+      ],
+      "relatedWords": [
+        "musical",
+        "musician",
+        "musically"
+      ],
+      "confusableWith": [
+        "mucus"
+      ],
+      "exampleSentences": [
+        {
+          "en": "I listen to music while cooking.",
+          "zh": "我做飯時會聽音樂。",
+          "source": "daily"
+        },
+        {
+          "en": "Music can serve as a powerful marker of cultural identity.",
+          "zh": "音樂可以成為文化認同的有力標誌。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "beauty-art",
+      "mnemonicHint": "music 與 musician 音樂家同族。"
+    }
+  }
+}

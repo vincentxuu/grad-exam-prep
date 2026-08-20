@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "words": {
+    "key": {
+      "chinese": "關鍵的；鑰匙；答案",
+      "pos": "adj/n",
+      "synonyms": [
+        "crucial",
+        "essential",
+        "central",
+        "vital"
+      ],
+      "antonyms": [
+        "minor",
+        "irrelevant",
+        "incidental"
+      ],
+      "relatedWords": [
+        "keyword",
+        "keynote",
+        "keyless"
+      ],
+      "confusableWith": [
+        "quay"
+      ],
+      "exampleSentences": [
+        {
+          "en": "I left the spare key with my neighbor.",
+          "zh": "我把備用鑰匙留給鄰居。",
+          "source": "daily"
+        },
+        {
+          "en": "Public trust is a key factor in successful policy implementation.",
+          "zh": "公眾信任是政策成功落實的關鍵因素。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "importance-priority",
+      "mnemonicHint": "key 能開鎖，也能開啟問題的答案。"
+    },
+    "knowledge": {
+      "chinese": "知識；了解；認知",
+      "pos": "n",
+      "synonyms": [
+        "understanding",
+        "information",
+        "awareness",
+        "learning"
+      ],
+      "antonyms": [
+        "ignorance",
+        "unawareness",
+        "misunderstanding"
+      ],
+      "relatedWords": [
+        "know",
+        "known",
+        "knowledgeable",
+        "acknowledge"
+      ],
+      "confusableWith": [
+        "acknowledgment",
+        "know-how"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Her knowledge of local buses saved us a long walk.",
+          "zh": "她對當地公車的了解，讓我們省去一段長路。",
+          "source": "daily"
+        },
+        {
+          "en": "Scientific knowledge changes when new evidence challenges an accepted explanation.",
+          "zh": "當新證據挑戰既有解釋時，科學知識就會改變。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "learning-understanding",
+      "mnemonicHint": "knowledge 來自 know；知道並理解後累積下來的內容，就是知識。"
+    }
+  }
+}

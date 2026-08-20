@@ -1,0 +1,216 @@
+{
+  "schemaVersion": 1,
+  "words": {
+    "verbose": {
+      "chinese": "冗長的",
+      "pos": "adj",
+      "synonyms": [
+        "wordy",
+        "long-winded",
+        "prolix",
+        "rambling"
+      ],
+      "antonyms": [
+        "concise",
+        "succinct",
+        "brief"
+      ],
+      "relatedWords": [
+        "verbosity",
+        "verbosely"
+      ],
+      "confusableWith": [
+        "verse"
+      ],
+      "exampleSentences": [
+        {
+          "en": "His verbose emails always took too long to read.",
+          "zh": "他冗長的郵件總是要花太長時間閱讀。",
+          "source": "daily"
+        },
+        {
+          "en": "Academic writing should avoid verbose language in favor of precision.",
+          "zh": "學術寫作應避免冗長的語言，轉而追求精確。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "language-communication",
+      "mnemonicHint": "verb(word) + ose → 字太多的 → 冗長的"
+    },
+    "vertical": {
+      "chinese": "垂直的；縱向的",
+      "pos": "adj/n",
+      "synonyms": [
+        "upright",
+        "perpendicular",
+        "erect"
+      ],
+      "antonyms": [
+        "horizontal",
+        "level",
+        "flat"
+      ],
+      "relatedWords": [
+        "vertically",
+        "verticality"
+      ],
+      "confusableWith": [
+        "vertex",
+        "vertigo"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Hang the mirror vertically beside the narrow bookshelf.",
+          "zh": "把鏡子垂直掛在窄書架旁邊。",
+          "source": "daily"
+        },
+        {
+          "en": "A vertical line on the graph represents the rate of population growth.",
+          "zh": "圖表上的垂直線代表人口成長率。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "spatial-orientation",
+      "mnemonicHint": "vert- 有「轉、朝向」的詞根意象；vertical 就像從地面直直朝天空延伸。可聯想座標圖的 vertical axis 是上下方向，與 horizontal 相反。"
+    },
+    "vied for": {
+      "chinese": "競逐；爭取",
+      "pos": "phrase",
+      "synonyms": [
+        "competed for",
+        "contended for",
+        "fought for"
+      ],
+      "antonyms": [
+        "yielded",
+        "withdrew"
+      ],
+      "relatedWords": [
+        "vie",
+        "vying"
+      ],
+      "confusableWith": [
+        "voted for"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The two children vied for the front seat of the car.",
+          "zh": "兩個孩子爭著坐汽車前座。",
+          "source": "daily"
+        },
+        {
+          "en": "Three candidates vied for the scholarship awarded by the university.",
+          "zh": "三名候選人競逐大學頒發的獎學金。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "conflict-aggression",
+      "mnemonicHint": "vie 是競爭，vied for 是曾爭取"
+    },
+    "view": {
+      "chinese": "觀點；景色；觀看",
+      "pos": "n/v",
+      "synonyms": [
+        "opinion",
+        "perspective",
+        "observe"
+      ],
+      "antonyms": [
+        "ignore",
+        "overlook"
+      ],
+      "relatedWords": [
+        "viewer",
+        "viewpoint",
+        "viewable"
+      ],
+      "confusableWith": [
+        "vue"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The view from our hotel room includes the entire harbor.",
+          "zh": "從我們的飯店房間可以看到整座港口。",
+          "source": "daily"
+        },
+        {
+          "en": "The new evidence challenges the traditional view of early human migration.",
+          "zh": "新證據挑戰了對早期人類遷徙的傳統觀點。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "emotion-attitude",
+      "mnemonicHint": "view 可看景色，也可表示看法"
+    },
+    "viewers": {
+      "chinese": "觀眾；觀看者",
+      "pos": "n",
+      "synonyms": [
+        "audience",
+        "spectators",
+        "watchers"
+      ],
+      "antonyms": [
+        "performers",
+        "participants"
+      ],
+      "relatedWords": [
+        "view",
+        "viewer",
+        "viewership"
+      ],
+      "confusableWith": [
+        "views"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Several viewers left helpful comments under my cooking video.",
+          "zh": "幾位觀眾在我的烹飪影片下留下了實用的留言。",
+          "source": "daily"
+        },
+        {
+          "en": "The researchers measured how long viewers focused on each advertisement.",
+          "zh": "研究人員測量觀眾注視每則廣告的時間。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "language-communication",
+      "mnemonicHint": "view 加 er 是觀看者，再加 s 表多人"
+    },
+    "virus": {
+      "chinese": "病毒",
+      "pos": "n",
+      "synonyms": [
+        "viral pathogen",
+        "infectious virus",
+        "viral agent"
+      ],
+      "antonyms": [
+        "virus-free state",
+        "absence of infection"
+      ],
+      "relatedWords": [
+        "viral",
+        "virology",
+        "virulent"
+      ],
+      "confusableWith": [
+        "bacteria"
+      ],
+      "exampleSentences": [
+        {
+          "en": "A virus kept me home for three days.",
+          "zh": "病毒感染讓我在家休息了三天。",
+          "source": "daily"
+        },
+        {
+          "en": "The virus can remain infectious outside its host for several hours.",
+          "zh": "該病毒可在宿主體外維持數小時的感染力。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "health-disease",
+      "mnemonicHint": "virus 與 viral 同族，都是病毒相關。"
+    }
+  }
+}

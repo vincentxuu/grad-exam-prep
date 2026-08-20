@@ -1,0 +1,1967 @@
+{
+  "schemaVersion": 1,
+  "words": {
+    "safe": {
+      "chinese": "安全的；無害的",
+      "pos": "adj",
+      "synonyms": [
+        "secure",
+        "protected",
+        "harmless",
+        "risk-free"
+      ],
+      "antonyms": [
+        "dangerous",
+        "unsafe",
+        "hazardous"
+      ],
+      "relatedWords": [
+        "safely",
+        "safety",
+        "safeguard"
+      ],
+      "confusableWith": [
+        "save"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Keep your passport in a safe place.",
+          "zh": "把護照放在安全的地方。",
+          "source": "daily"
+        },
+        {
+          "en": "Researchers must establish that the treatment is both safe and effective.",
+          "zh": "研究人員必須證實該療法安全且有效。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "safety-protection",
+      "mnemonicHint": "safe 和 safety 同族；safe 沒有 t，仍很安全。"
+    },
+    "sales": {
+      "chinese": "銷售；銷售額",
+      "pos": "n",
+      "synonyms": [
+        "transactions",
+        "revenue",
+        "turnover",
+        "selling"
+      ],
+      "antonyms": [
+        "purchases",
+        "returns"
+      ],
+      "relatedWords": [
+        "sale",
+        "sell",
+        "salesperson"
+      ],
+      "confusableWith": [
+        "sails"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Online sales increased before the holiday.",
+          "zh": "假日前線上銷售增加了。",
+          "source": "daily"
+        },
+        {
+          "en": "Electric vehicle sales rose despite weak consumer confidence.",
+          "zh": "儘管消費者信心疲弱，電動車銷量仍上升。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "finance-economy",
+      "mnemonicHint": "sale 加 s 是多筆銷售；別和 sails 船帆混淆。"
+    },
+    "sarcastically": {
+      "chinese": "諷刺地；挖苦地",
+      "pos": "adv",
+      "synonyms": [
+        "ironically",
+        "mockingly",
+        "sardonically",
+        "derisively"
+      ],
+      "antonyms": [
+        "sincerely",
+        "earnestly",
+        "genuinely"
+      ],
+      "relatedWords": [
+        "sarcasm",
+        "sarcastic",
+        "sarcastically"
+      ],
+      "confusableWith": [
+        "sardonically",
+        "ironically"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Leo sarcastically thanked me for spilling coffee on him.",
+          "zh": "里歐挖苦地謝我把咖啡灑在他身上。",
+          "source": "daily"
+        },
+        {
+          "en": "The columnist sarcastically praised policies that had clearly failed.",
+          "zh": "該專欄作家諷刺地稱讚那些明顯失敗的政策。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "tone-attitude",
+      "mnemonicHint": "sarcasm 是『諷刺』，sarcastic 是『諷刺的』，再加副詞字尾 -ally 就成了『諷刺地』；表面稱讚、實際挖苦是典型語氣。"
+    },
+    "scale": {
+      "chinese": "規模；程度；量表；秤",
+      "pos": "n",
+      "synonyms": [
+        "extent",
+        "scope",
+        "magnitude"
+      ],
+      "antonyms": [
+        "minuteness",
+        "insignificance"
+      ],
+      "relatedWords": [
+        "scaled",
+        "scaling",
+        "scalable"
+      ],
+      "confusableWith": [
+        "skill"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The kitchen scale showed that the bag of flour weighed one kilogram.",
+          "zh": "廚房秤顯示那袋麵粉重一公斤。",
+          "source": "daily"
+        },
+        {
+          "en": "Students rated each statement on a scale from one to five.",
+          "zh": "學生以一到五分的量表評定每項陳述。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "intensity-magnitude",
+      "mnemonicHint": "scale 像刻度一路延伸，表示規模"
+    },
+    "scientific": {
+      "chinese": "科學的",
+      "pos": "adj",
+      "synonyms": [
+        "empirical",
+        "systematic",
+        "evidence-based"
+      ],
+      "antonyms": [
+        "unscientific",
+        "superstitious"
+      ],
+      "relatedWords": [
+        "science",
+        "scientist",
+        "scientifically"
+      ],
+      "confusableWith": [
+        "specific"
+      ],
+      "exampleSentences": [
+        {
+          "en": "We listened to a scientific podcast while washing the dishes.",
+          "zh": "我們洗碗時收聽了一個科學播客節目。",
+          "source": "daily"
+        },
+        {
+          "en": "The claim is not supported by sufficient scientific evidence.",
+          "zh": "這項主張缺乏充分的科學證據支持。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "truth-verification",
+      "mnemonicHint": "science 加 ific，具有科學性"
+    },
+    "scurrilous": {
+      "chinese": "誹謗的",
+      "pos": "adj",
+      "synonyms": [
+        "defamatory",
+        "slanderous",
+        "libelous",
+        "vulgar"
+      ],
+      "antonyms": [
+        "complimentary",
+        "respectful"
+      ],
+      "relatedWords": [
+        "scurrility"
+      ],
+      "confusableWith": [
+        "scrupulous"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The politician filed a lawsuit against the scurrilous allegations.",
+          "zh": "政治家對誹謗性指控提起訴訟。",
+          "source": "daily"
+        },
+        {
+          "en": "Scurrilous attacks on public figures often go viral.",
+          "zh": "對公眾人物的誹謗性攻擊經常瘋傳。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "truth-deception",
+      "mnemonicHint": "scurr(run around) + ilous → 到處散播惡言 → 誹謗的"
+    },
+    "search": {
+      "chinese": "搜尋；搜查",
+      "pos": "n/v",
+      "synonyms": [
+        "seek",
+        "hunt",
+        "explore",
+        "investigate"
+      ],
+      "antonyms": [
+        "ignore",
+        "overlook",
+        "abandon"
+      ],
+      "relatedWords": [
+        "searched",
+        "searching",
+        "searchable",
+        "searcher"
+      ],
+      "confusableWith": [
+        "research",
+        "sear"
+      ],
+      "exampleSentences": [
+        {
+          "en": "I need to search my desk for the missing receipt.",
+          "zh": "我得在書桌裡找那張遺失的收據。",
+          "source": "daily"
+        },
+        {
+          "en": "Scientists continue to search for evidence of liquid water beneath the surface.",
+          "zh": "科學家持續尋找地表下存在液態水的證據。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "inquiry-discovery",
+      "mnemonicHint": "search 是到處找；research 則是反覆深入找資料，也就是研究。"
+    },
+    "seasons": {
+      "chinese": "季節；季度",
+      "pos": "n",
+      "synonyms": [
+        "periods",
+        "quarters",
+        "cycles"
+      ],
+      "antonyms": [
+        "constancy",
+        "timelessness"
+      ],
+      "relatedWords": [
+        "season",
+        "seasonal",
+        "seasonally"
+      ],
+      "confusableWith": [
+        "sessions"
+      ],
+      "exampleSentences": [
+        {
+          "en": "I store different blankets for the warm and cold seasons.",
+          "zh": "我會為溫暖與寒冷的季節準備不同的毯子。",
+          "source": "daily"
+        },
+        {
+          "en": "The researchers tracked bird migration across four seasons.",
+          "zh": "研究人員追蹤鳥類在四季中的遷徙情形。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "time-frequency",
+      "mnemonicHint": "season 加 s，四季輪替"
+    },
+    "second": {
+      "chinese": "第二的；秒；附議",
+      "pos": "adj/n/v",
+      "synonyms": [
+        "next",
+        "runner-up",
+        "moment",
+        "support"
+      ],
+      "antonyms": [
+        "first",
+        "last"
+      ],
+      "relatedWords": [
+        "secondary",
+        "secondly",
+        "secondhand"
+      ],
+      "confusableWith": [
+        "seconded"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Wait a second while I find my keys.",
+          "zh": "等我一下，我找找鑰匙。",
+          "source": "daily"
+        },
+        {
+          "en": "The second experiment confirmed the initial finding.",
+          "zh": "第二項實驗證實了最初的發現。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "sequence-order",
+      "mnemonicHint": "second 可記成時鐘的第二種指針：秒針。"
+    },
+    "seeking": {
+      "chinese": "尋找；追求",
+      "pos": "v/adj",
+      "synonyms": [
+        "searching",
+        "pursuing",
+        "looking for"
+      ],
+      "antonyms": [
+        "avoiding",
+        "shunning"
+      ],
+      "relatedWords": [
+        "seek",
+        "seeker"
+      ],
+      "confusableWith": [
+        "seeing"
+      ],
+      "exampleSentences": [
+        {
+          "en": "We walked around the block seeking our missing cat.",
+          "zh": "我們繞著街區尋找走失的貓。",
+          "source": "daily"
+        },
+        {
+          "en": "Scientists seeking evidence of ancient life analyzed the rock samples.",
+          "zh": "尋找古代生命證據的科學家分析了岩石樣本。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "inquiry-investigation",
+      "mnemonicHint": "seek 加 ing，持續尋找"
+    },
+    "selectively": {
+      "chinese": "選擇性地；有取捨地",
+      "pos": "adv",
+      "synonyms": [
+        "discriminately",
+        "deliberately",
+        "preferentially",
+        "judiciously"
+      ],
+      "antonyms": [
+        "indiscriminately",
+        "randomly",
+        "universally"
+      ],
+      "relatedWords": [
+        "select",
+        "selection",
+        "selective",
+        "selectivity"
+      ],
+      "confusableWith": [
+        "subjectively",
+        "exclusively"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Nina selectively muted alerts during her evening study session.",
+          "zh": "妮娜在晚間讀書時選擇性地關閉部分通知。",
+          "source": "daily"
+        },
+        {
+          "en": "Certain membranes selectively permit small molecules to cross.",
+          "zh": "某些薄膜會選擇性地允許小分子通過。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "choice-selection",
+      "mnemonicHint": "select 是挑選，selective 是有所選擇的，再加 -ly 變成動作方式：不是全部接受，而是依條件有取捨地處理。"
+    },
+    "selectively integrates": {
+      "chinese": "選擇性地整合",
+      "pos": "verb phrase",
+      "synonyms": [
+        "selectively combines",
+        "strategically merges",
+        "judiciously synthesizes"
+      ],
+      "antonyms": [
+        "indiscriminately combines",
+        "completely separates"
+      ],
+      "relatedWords": [
+        "select",
+        "selective",
+        "integrate",
+        "integration",
+        "integrative"
+      ],
+      "confusableWith": [
+        "selectively interprets",
+        "selectively segregates"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The study app selectively integrates vocabulary quizzes into each review session.",
+          "zh": "這款學習應用程式會在每次複習中選擇性地融入字彙測驗。",
+          "source": "daily"
+        },
+        {
+          "en": "Her review selectively integrates findings that support a unified argument.",
+          "zh": "她的文獻回顧選擇性地整合了支持統一論點的研究發現。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "integration-synthesis",
+      "mnemonicHint": "這是副詞 selectively 修飾動詞 integrates 的片語：selectively 表示有取捨地，integrates 表示整合；合起來就是只挑合適部分納入整體。"
+    },
+    "serendipity": {
+      "chinese": "意外的幸運發現",
+      "pos": "n",
+      "synonyms": [
+        "luck",
+        "fortune",
+        "chance",
+        "happenstance"
+      ],
+      "antonyms": [
+        "misfortune",
+        "bad luck"
+      ],
+      "relatedWords": [
+        "serendipitous",
+        "serendipitously"
+      ],
+      "confusableWith": [
+        "seniority"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Finding that book in the thrift store was pure serendipity.",
+          "zh": "在二手店找到那本書純屬意外的幸運。",
+          "source": "daily"
+        },
+        {
+          "en": "Many scientific breakthroughs have resulted from serendipity.",
+          "zh": "許多科學突破都源於意外的幸運發現。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "luck-chance",
+      "mnemonicHint": "來自波斯童話 'The Three Princes of Serendip'，主角總是偶然發現好東西"
+    },
+    "services": {
+      "chinese": "服務；公共設施",
+      "pos": "n",
+      "synonyms": [
+        "assistance",
+        "support",
+        "help",
+        "provision"
+      ],
+      "antonyms": [
+        "disservice",
+        "neglect"
+      ],
+      "relatedWords": [
+        "service",
+        "serve",
+        "servicing"
+      ],
+      "confusableWith": [
+        "serves"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The hotel offers free laundry services.",
+          "zh": "這家飯店提供免費洗衣服務。",
+          "source": "daily"
+        },
+        {
+          "en": "Rural communities often have limited access to medical services.",
+          "zh": "偏鄉社區通常較難取得醫療服務。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "positive-helpful",
+      "mnemonicHint": "service 加 s，記成多項可供使用的服務。"
+    },
+    "shocked": {
+      "chinese": "震驚的；受到衝擊的",
+      "pos": "adj/v",
+      "synonyms": [
+        "stunned",
+        "astonished",
+        "appalled",
+        "startled"
+      ],
+      "antonyms": [
+        "unfazed",
+        "calm",
+        "unsurprised"
+      ],
+      "relatedWords": [
+        "shock",
+        "shocking",
+        "shockingly"
+      ],
+      "confusableWith": [
+        "shocking",
+        "shook"
+      ],
+      "exampleSentences": [
+        {
+          "en": "We felt shocked when the repair bill doubled overnight.",
+          "zh": "修理費一夜之間翻倍時，我們都感到震驚。",
+          "source": "daily"
+        },
+        {
+          "en": "Observers were shocked by the sudden collapse of the coalition.",
+          "zh": "觀察人士對聯盟突然瓦解感到震驚。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "surprise-reaction",
+      "mnemonicHint": "shock 原指突然衝擊，加 -ed 表示人『受到衝擊』，因此感到震驚；人通常是 shocked，造成震驚的事則是 shocking。"
+    },
+    "showing": {
+      "chinese": "展示；顯示；表現出",
+      "pos": "v/n",
+      "synonyms": [
+        "displaying",
+        "revealing",
+        "demonstrating",
+        "indicating"
+      ],
+      "antonyms": [
+        "hiding",
+        "concealing",
+        "suppressing"
+      ],
+      "relatedWords": [
+        "show",
+        "shows",
+        "showed",
+        "shown"
+      ],
+      "confusableWith": [
+        "shown",
+        "showing-off"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Ella is showing gratitude by writing a thoughtful note.",
+          "zh": "艾拉寫了一張貼心的卡片來表達感激。",
+          "source": "daily"
+        },
+        {
+          "en": "Survey results showing regional differences require cautious interpretation.",
+          "zh": "顯示區域差異的調查結果需要謹慎解讀。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "display-expression",
+      "mnemonicHint": "show 加 -ing 表示正在展示或呈現；showing gratitude 不是把『感謝』拿出來看，而是透過行動表現感激，shown 則是 show 的過去分詞。"
+    },
+    "showing gratitude": {
+      "chinese": "表達感謝",
+      "pos": "v phrase",
+      "synonyms": [
+        "expressing thanks",
+        "showing appreciation",
+        "giving thanks"
+      ],
+      "antonyms": [
+        "showing ingratitude",
+        "withholding thanks"
+      ],
+      "relatedWords": [
+        "gratitude",
+        "grateful",
+        "gratefully"
+      ],
+      "confusableWith": [
+        "gratuity",
+        "gratification"
+      ],
+      "exampleSentences": [
+        {
+          "en": "A handwritten thank-you note is a warm way of showing gratitude.",
+          "zh": "手寫的感謝卡是表達謝意的溫暖方式。",
+          "source": "daily"
+        },
+        {
+          "en": "Showing gratitude strengthens social bonds and encourages reciprocal cooperation.",
+          "zh": "表達感謝能鞏固社會連結，並促進互惠合作。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "gratitude-appreciation",
+      "mnemonicHint": "showing 是「展現」，gratitude 是「感激」；把心裡的感謝展現出來，就是 showing gratitude。"
+    },
+    "shows": {
+      "chinese": "顯示；表明",
+      "pos": "v",
+      "synonyms": [
+        "demonstrates",
+        "reveals",
+        "displays",
+        "indicates"
+      ],
+      "antonyms": [
+        "conceals",
+        "hides"
+      ],
+      "relatedWords": [
+        "show",
+        "showing",
+        "shown"
+      ],
+      "confusableWith": [
+        "shoes"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The map shows the quickest route home.",
+          "zh": "這張地圖顯示回家最快的路線。",
+          "source": "daily"
+        },
+        {
+          "en": "The evidence shows that early intervention improves learning outcomes.",
+          "zh": "證據顯示，早期介入能改善學習成效。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "visibility-prominence",
+      "mnemonicHint": "show 加 s，表示主詞為單數時「展現」出結果。"
+    },
+    "shrines": {
+      "chinese": "聖壇；神龕；聖地（複數）",
+      "pos": "plural n",
+      "synonyms": [
+        "sanctuaries",
+        "holy places",
+        "sacred sites"
+      ],
+      "antonyms": [
+        "secular sites",
+        "profane places"
+      ],
+      "relatedWords": [
+        "shrine",
+        "enshrine",
+        "enshrinement"
+      ],
+      "confusableWith": [
+        "shines"
+      ],
+      "exampleSentences": [
+        {
+          "en": "We visited three hillside shrines before lunch.",
+          "zh": "午餐前，我們參觀了三座山坡上的神社。",
+          "source": "daily"
+        },
+        {
+          "en": "Archaeologists documented several coastal shrines that once served as centers of ritual exchange.",
+          "zh": "考古學家記錄了數座沿海聖地，它們過去曾是儀式交流的中心。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "religion-sacred-places",
+      "mnemonicHint": "shrines 是 shrine 的複數；可聯想 shine（發光），供奉燈火閃耀的地方就是神龕，但別漏掉 shrine 中的 r。"
+    },
+    "significant": {
+      "chinese": "重要的；顯著的；有意義的",
+      "pos": "adj",
+      "synonyms": [
+        "important",
+        "notable",
+        "substantial",
+        "meaningful"
+      ],
+      "antonyms": [
+        "insignificant",
+        "trivial",
+        "negligible"
+      ],
+      "relatedWords": [
+        "significance",
+        "significantly",
+        "signify"
+      ],
+      "confusableWith": [
+        "signifying",
+        "signatory"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Moving into my own home was a significant moment in my life.",
+          "zh": "搬進自己的家是我人生中一個重要時刻。",
+          "source": "daily"
+        },
+        {
+          "en": "The experiment revealed a significant difference between the two treatment groups.",
+          "zh": "實驗顯示兩個治療組之間存在顯著差異。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "importance-degree",
+      "mnemonicHint": "significant 裡有 sign，像清楚的記號一樣值得注意，因此是重要或顯著的。"
+    },
+    "sites": {
+      "chinese": "地點；網站；遺址",
+      "pos": "n",
+      "synonyms": [
+        "locations",
+        "places",
+        "venues",
+        "websites"
+      ],
+      "antonyms": [
+        "elsewhere",
+        "off-site"
+      ],
+      "relatedWords": [
+        "site",
+        "siting",
+        "website"
+      ],
+      "confusableWith": [
+        "sights"
+      ],
+      "exampleSentences": [
+        {
+          "en": "I bookmarked several useful travel sites.",
+          "zh": "我把幾個實用的旅遊網站加入書籤。",
+          "source": "daily"
+        },
+        {
+          "en": "Archaeological sites provide evidence of early urban settlement.",
+          "zh": "考古遺址提供早期城市聚落的證據。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "place-region",
+      "mnemonicHint": "site 地點加 s；sight 則是視野或景象。"
+    },
+    "smaller": {
+      "chinese": "較小的",
+      "pos": "adj",
+      "synonyms": [
+        "tinier",
+        "lesser",
+        "more compact"
+      ],
+      "antonyms": [
+        "larger",
+        "bigger"
+      ],
+      "relatedWords": [
+        "small",
+        "smallest"
+      ],
+      "confusableWith": [
+        "smother"
+      ],
+      "exampleSentences": [
+        {
+          "en": "I chose the smaller cup because I only wanted a little coffee.",
+          "zh": "我選了較小的杯子，因為我只想喝一點咖啡。",
+          "source": "daily"
+        },
+        {
+          "en": "A smaller sample may reduce the statistical power of the study.",
+          "zh": "較小的樣本可能降低研究的統計檢定力。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "intensity-magnitude",
+      "mnemonicHint": "small 加 er，尺寸更小"
+    },
+    "social outcast": {
+      "chinese": "被社會排斥的人；社會棄兒",
+      "pos": "n phrase",
+      "synonyms": [
+        "pariah",
+        "social reject",
+        "ostracized person",
+        "outsider"
+      ],
+      "antonyms": [
+        "insider",
+        "accepted member",
+        "popular figure"
+      ],
+      "relatedWords": [
+        "outcast",
+        "cast out",
+        "ostracize",
+        "ostracism"
+      ],
+      "confusableWith": [
+        "social outsider"
+      ],
+      "exampleSentences": [
+        {
+          "en": "His classmates treated him like a social outcast after the rumor spread.",
+          "zh": "謠言傳開後，同學們把他當成被排斥的人。",
+          "source": "daily"
+        },
+        {
+          "en": "Persistent exclusion can turn a vulnerable adolescent into a social outcast.",
+          "zh": "持續的排擠可能使脆弱的青少年淪為社會棄兒。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "social-inclusion-exclusion",
+      "mnemonicHint": "outcast 原意像是被 cast out（丟出去）的人；加上 social，就表示被群體推到社會圈外的人。"
+    },
+    "society": {
+      "chinese": "社會；協會",
+      "pos": "n",
+      "synonyms": [
+        "community",
+        "civilization",
+        "public",
+        "association"
+      ],
+      "antonyms": [
+        "isolation",
+        "individual"
+      ],
+      "relatedWords": [
+        "social",
+        "societal",
+        "socialize"
+      ],
+      "confusableWith": [
+        "sociology"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Our local history society meets monthly.",
+          "zh": "我們的地方歷史協會每月聚會。",
+          "source": "daily"
+        },
+        {
+          "en": "An inclusive society protects the rights of minority groups.",
+          "zh": "包容的社會會保障少數群體的權利。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "people-society",
+      "mnemonicHint": "soci- 同伴 + ety：許多人共同形成社會。"
+    },
+    "soft": {
+      "chinese": "柔軟的；輕柔的；不強烈的",
+      "pos": "adj",
+      "synonyms": [
+        "gentle",
+        "tender",
+        "smooth",
+        "mild"
+      ],
+      "antonyms": [
+        "hard",
+        "rough",
+        "harsh"
+      ],
+      "relatedWords": [
+        "soften",
+        "softness",
+        "softly"
+      ],
+      "confusableWith": [
+        "sofa",
+        "swift"
+      ],
+      "exampleSentences": [
+        {
+          "en": "This blanket feels warm and soft against my skin.",
+          "zh": "這條毯子貼著皮膚感覺溫暖又柔軟。",
+          "source": "daily"
+        },
+        {
+          "en": "Employers increasingly value soft skills such as communication and cooperation.",
+          "zh": "雇主日益重視溝通與合作等軟實力。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "physical-qualities",
+      "mnemonicHint": "soft 的核心感覺是不硬，可延伸為聲音輕柔、態度溫和或 soft skills 軟實力。"
+    },
+    "soil": {
+      "chinese": "土壤；弄髒",
+      "pos": "n/v",
+      "synonyms": [
+        "earth",
+        "ground",
+        "dirt"
+      ],
+      "antonyms": [
+        "cleanliness",
+        "purity"
+      ],
+      "relatedWords": [
+        "soiled",
+        "soiling"
+      ],
+      "confusableWith": [
+        "soul"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The garden soil was still wet after yesterday's rain.",
+          "zh": "昨天降雨後，花園的土壤仍然濕潤。",
+          "source": "daily"
+        },
+        {
+          "en": "The study examined how soil acidity affects crop growth.",
+          "zh": "該研究探討土壤酸度如何影響作物生長。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "pollution-corruption",
+      "mnemonicHint": "soil 是泥土，也會把東西弄髒"
+    },
+    "solution": {
+      "chinese": "解決方案；溶液",
+      "pos": "n",
+      "synonyms": [
+        "answer",
+        "remedy",
+        "resolution"
+      ],
+      "antonyms": [
+        "problem",
+        "impasse"
+      ],
+      "relatedWords": [
+        "solve",
+        "solvable",
+        "solver"
+      ],
+      "confusableWith": [
+        "solitude"
+      ],
+      "exampleSentences": [
+        {
+          "en": "I used a mild cleaning solution on the kitchen counter.",
+          "zh": "我用溫和的清潔液擦拭廚房檯面。",
+          "source": "daily"
+        },
+        {
+          "en": "The proposed solution reduced energy use without lowering productivity.",
+          "zh": "提出的解決方案在不降低生產力的情況下減少了能源使用。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "positive-helpful",
+      "mnemonicHint": "solve 加 tion，解決後得到方案"
+    },
+    "soon": {
+      "chinese": "很快；不久",
+      "pos": "adv",
+      "synonyms": [
+        "shortly",
+        "presently",
+        "before long",
+        "in a moment"
+      ],
+      "antonyms": [
+        "later",
+        "eventually"
+      ],
+      "relatedWords": [
+        "sooner",
+        "soonest",
+        "as soon as"
+      ],
+      "confusableWith": [
+        "son"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Dinner will be ready soon.",
+          "zh": "晚餐很快就好了。",
+          "source": "daily"
+        },
+        {
+          "en": "Without intervention, water demand may soon exceed supply.",
+          "zh": "若不介入，用水需求可能很快超過供給。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "time-frequency",
+      "mnemonicHint": "soon 雙 o 像兩個靠近的時鐘，表示很快。"
+    },
+    "south": {
+      "chinese": "南方；向南",
+      "pos": "n/adj/adv",
+      "synonyms": [
+        "southward",
+        "southern region",
+        "the south"
+      ],
+      "antonyms": [
+        "north",
+        "northward"
+      ],
+      "relatedWords": [
+        "southern",
+        "southerly"
+      ],
+      "confusableWith": [
+        "sought"
+      ],
+      "exampleSentences": [
+        {
+          "en": "We drove south to visit my aunt by the coast.",
+          "zh": "我們向南開車，去探望住在海邊的阿姨。",
+          "source": "daily"
+        },
+        {
+          "en": "The records indicate that the species gradually migrated south as temperatures fell.",
+          "zh": "紀錄顯示，隨著氣溫下降，該物種逐漸向南遷徙。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "definition-boundary",
+      "mnemonicHint": "地圖下方常是 south 南方"
+    },
+    "specific": {
+      "chinese": "特定的；明確的",
+      "pos": "adj",
+      "synonyms": [
+        "particular",
+        "precise",
+        "definite"
+      ],
+      "antonyms": [
+        "general",
+        "vague"
+      ],
+      "relatedWords": [
+        "specify",
+        "specification",
+        "specifically"
+      ],
+      "confusableWith": [
+        "scientific"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Please tell me the specific time you will arrive.",
+          "zh": "請告訴我你抵達的確切時間。",
+          "source": "daily"
+        },
+        {
+          "en": "The experiment was designed to test a specific hypothesis about memory.",
+          "zh": "該實驗旨在檢驗一項關於記憶的特定假說。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "strictness-precision",
+      "mnemonicHint": "spec 看清楚，specific 指得很明確"
+    },
+    "spectrum": {
+      "chinese": "光譜；範圍",
+      "pos": "n",
+      "synonyms": [
+        "range",
+        "continuum",
+        "band"
+      ],
+      "antonyms": [
+        "single point",
+        "narrowness"
+      ],
+      "relatedWords": [
+        "spectral",
+        "spectrometer"
+      ],
+      "confusableWith": [
+        "spectacle"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The rainbow showed a bright spectrum of colors above the houses.",
+          "zh": "彩虹在房屋上方呈現一道明亮的色彩光譜。",
+          "source": "daily"
+        },
+        {
+          "en": "The telescope detects radiation beyond the visible spectrum.",
+          "zh": "這座望遠鏡能偵測可見光譜以外的輻射。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "scope-extent",
+      "mnemonicHint": "spect 看，spectrum 是可見光展開的範圍"
+    },
+    "speculate": {
+      "chinese": "推測；臆測；投機",
+      "pos": "v",
+      "synonyms": [
+        "conjecture",
+        "surmise",
+        "guess",
+        "theorize"
+      ],
+      "antonyms": [
+        "verify",
+        "confirm",
+        "substantiate"
+      ],
+      "relatedWords": [
+        "speculation",
+        "speculative",
+        "speculator"
+      ],
+      "confusableWith": [
+        "stipulate",
+        "spectate"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Investors can only speculate about why the shop closed so suddenly.",
+          "zh": "投資人只能猜測那家店為何突然歇業。",
+          "source": "daily"
+        },
+        {
+          "en": "Researchers should not speculate beyond what the available evidence can substantiate.",
+          "zh": "研究人員不應作出超出現有證據所能證實範圍的推測。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "reasoning-uncertainty",
+      "mnemonicHint": "spec- 有「看」的意思；只看到部分線索便往下推想，就是 speculate，結論仍未被證實。"
+    },
+    "sports": {
+      "chinese": "運動；體育活動",
+      "pos": "n",
+      "synonyms": [
+        "athletics",
+        "games",
+        "physical activities",
+        "competitions"
+      ],
+      "antonyms": [
+        "inactivity",
+        "idleness"
+      ],
+      "relatedWords": [
+        "sport",
+        "sporting",
+        "sportsmanship"
+      ],
+      "confusableWith": [
+        "spots"
+      ],
+      "exampleSentences": [
+        {
+          "en": "We play sports after school on Fridays.",
+          "zh": "我們星期五放學後會做運動。",
+          "source": "daily"
+        },
+        {
+          "en": "Participation in sports is associated with improved mental health.",
+          "zh": "參與體育活動與心理健康改善有關。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "sports-fitness",
+      "mnemonicHint": "sport 加 s，泛指各種體育活動。"
+    },
+    "spring": {
+      "chinese": "春天；彈跳；泉水",
+      "pos": "n/v",
+      "synonyms": [
+        "springtime",
+        "leap",
+        "bounce"
+      ],
+      "antonyms": [
+        "autumn",
+        "collapse"
+      ],
+      "relatedWords": [
+        "sprang",
+        "sprung",
+        "springy"
+      ],
+      "confusableWith": [
+        "sprinkle"
+      ],
+      "exampleSentences": [
+        {
+          "en": "We open the windows more often in spring.",
+          "zh": "春天時，我們比較常打開窗戶。",
+          "source": "daily"
+        },
+        {
+          "en": "Rainfall in spring strongly influenced seedling survival.",
+          "zh": "春季降雨量大幅影響幼苗的存活率。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "change-improvement",
+      "mnemonicHint": "spring 有彈起的新生感，聯想到春天"
+    },
+    "stiffening": {
+      "chinese": "變硬；僵硬化；正在使更強硬",
+      "pos": "v/participle",
+      "synonyms": [
+        "hardening",
+        "rigidifying",
+        "tightening",
+        "tensing"
+      ],
+      "antonyms": [
+        "softening",
+        "loosening",
+        "relaxing"
+      ],
+      "relatedWords": [
+        "stiff",
+        "stiffen",
+        "stiffened",
+        "stiffness"
+      ],
+      "confusableWith": [
+        "stifling"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Cold weather is stiffening the clay before we can shape it.",
+          "zh": "寒冷天氣正使黏土變硬，讓我們來不及塑形。",
+          "source": "daily"
+        },
+        {
+          "en": "Repeated exposure to stress may cause a gradual stiffening of arterial walls.",
+          "zh": "反覆承受壓力可能導致動脈壁逐漸硬化。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "physical-hardness-change",
+      "mnemonicHint": "stiff（僵硬）加 -en（使變得）再加 -ing（正在進行），所以 stiffening 就是「正在變硬或使變硬」。"
+    },
+    "still others": {
+      "chinese": "還有其他人或事物",
+      "pos": "pron phrase",
+      "synonyms": [
+        "yet others",
+        "additional ones",
+        "another group"
+      ],
+      "antonyms": [
+        "the same ones",
+        "no others"
+      ],
+      "relatedWords": [
+        "other",
+        "others",
+        "another"
+      ],
+      "confusableWith": [
+        "the others",
+        "still another"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Some guests chose tea, while still others ordered lemonade.",
+          "zh": "有些客人選了茶，還有另一些人點了檸檬水。",
+          "source": "daily"
+        },
+        {
+          "en": "One group favored centralized control, whereas still others advocated local autonomy.",
+          "zh": "一個群體支持中央集權，然而還有其他群體主張地方自治。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "addition-alternative-groups",
+      "mnemonicHint": "此處 still 不是「靜止」，而是「還、仍然」；still others 就是在已列出的群體之外「還有另一批」。"
+    },
+    "straightforward": {
+      "chinese": "直截了當的",
+      "pos": "adj",
+      "synonyms": [
+        "simple",
+        "direct",
+        "uncomplicated",
+        "honest"
+      ],
+      "antonyms": [
+        "complicated",
+        "devious",
+        "indirect"
+      ],
+      "relatedWords": [
+        "straightforwardly"
+      ],
+      "confusableWith": [
+        "forward"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The instructions were straightforward and easy to follow.",
+          "zh": "指示直截了當且容易遵循。",
+          "source": "daily"
+        },
+        {
+          "en": "A straightforward regulatory framework encourages business compliance.",
+          "zh": "直截了當的監管框架鼓勵企業合規。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "simplicity-clarity",
+      "mnemonicHint": "straight(直) + forward(前) → 直接向前 → 直截了當的"
+    },
+    "strength": {
+      "chinese": "力量；優點",
+      "pos": "n",
+      "synonyms": [
+        "power",
+        "force",
+        "fortitude"
+      ],
+      "antonyms": [
+        "weakness",
+        "frailty"
+      ],
+      "relatedWords": [
+        "strong",
+        "strengthen"
+      ],
+      "confusableWith": [
+        "length"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Carrying the boxes upstairs took all my strength.",
+          "zh": "把箱子搬上樓耗盡了我所有力氣。",
+          "source": "daily"
+        },
+        {
+          "en": "The engineers measured the strength of the material under extreme pressure.",
+          "zh": "工程師測量該材料在極端壓力下的強度。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "strength-endurance",
+      "mnemonicHint": "strong 變 strength，表示力量"
+    },
+    "strive": {
+      "chinese": "努力；奮鬥",
+      "pos": "v",
+      "synonyms": [
+        "endeavor",
+        "try hard",
+        "aspire"
+      ],
+      "antonyms": [
+        "surrender",
+        "quit"
+      ],
+      "relatedWords": [
+        "striving",
+        "striver"
+      ],
+      "confusableWith": [
+        "strife"
+      ],
+      "exampleSentences": [
+        {
+          "en": "We strive to cook at home on most weeknights.",
+          "zh": "我們力求在大多數平日晚上自己下廚。",
+          "source": "daily"
+        },
+        {
+          "en": "Universities strive to balance academic freedom with public accountability.",
+          "zh": "大學致力於在學術自由與公共責任之間取得平衡。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "strength-determination",
+      "mnemonicHint": "strive 為目標持續出力"
+    },
+    "striven": {
+      "chinese": "努力過；力求過（strive 的過去分詞）",
+      "pos": "past participle",
+      "synonyms": [
+        "endeavored",
+        "labored",
+        "worked hard",
+        "exerted oneself"
+      ],
+      "antonyms": [
+        "refrained",
+        "surrendered",
+        "given up"
+      ],
+      "relatedWords": [
+        "strive",
+        "strove",
+        "striving",
+        "striver"
+      ],
+      "confusableWith": [
+        "strove",
+        "driven"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Our volunteers have striven to keep the neighborhood kitchen open.",
+          "zh": "我們的志工一直努力維持社區廚房的營運。",
+          "source": "daily"
+        },
+        {
+          "en": "Scientists have long striven to reconcile the competing explanations for this phenomenon.",
+          "zh": "科學家長久以來一直努力調和對此現象彼此競爭的解釋。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "effort-persistence",
+      "mnemonicHint": "strive 的三態是 strive–strove–striven；striven 不能單獨當過去式，通常要接 have、has 或 had，如 have striven。"
+    },
+    "striving": {
+      "chinese": "努力；奮鬥；力求",
+      "pos": "v/gerund",
+      "synonyms": [
+        "endeavoring",
+        "struggling",
+        "laboring",
+        "working toward"
+      ],
+      "antonyms": [
+        "surrendering",
+        "quitting",
+        "yielding"
+      ],
+      "relatedWords": [
+        "strive",
+        "strove",
+        "striven",
+        "striver"
+      ],
+      "confusableWith": [
+        "thriving",
+        "driving"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Maya is striving to finish the marathon without stopping.",
+          "zh": "瑪雅正努力不停步地跑完馬拉松。",
+          "source": "daily"
+        },
+        {
+          "en": "Emerging economies are striving to expand access to education without widening fiscal deficits.",
+          "zh": "新興經濟體正努力擴大教育機會，同時避免擴大財政赤字。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "effort-persistence",
+      "mnemonicHint": "strive 是朝目標奮力前進；加 -ing 表示努力正在持續，像雙手不停向目標伸展。"
+    },
+    "stuck": {
+      "chinese": "卡住的；困住的",
+      "pos": "adj/v",
+      "synonyms": [
+        "trapped",
+        "jammed",
+        "stranded"
+      ],
+      "antonyms": [
+        "free",
+        "released"
+      ],
+      "relatedWords": [
+        "stick",
+        "sticking"
+      ],
+      "confusableWith": [
+        "struck"
+      ],
+      "exampleSentences": [
+        {
+          "en": "My jacket zipper got stuck on the fabric.",
+          "zh": "我的外套拉鍊卡在布料上。",
+          "source": "daily"
+        },
+        {
+          "en": "Several particles remained stuck to the filter throughout the experiment.",
+          "zh": "在整個實驗過程中，有數個粒子一直黏在濾網上。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "access-restriction",
+      "mnemonicHint": "stick 黏住，stuck 是已被黏卡住"
+    },
+    "student": {
+      "chinese": "學生；研究者",
+      "pos": "n",
+      "synonyms": [
+        "learner",
+        "pupil",
+        "scholar",
+        "trainee"
+      ],
+      "antonyms": [
+        "teacher",
+        "instructor",
+        "educator"
+      ],
+      "relatedWords": [
+        "students",
+        "studenthood",
+        "student-centered"
+      ],
+      "confusableWith": [
+        "studious",
+        "study"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Each student must bring a laptop to tomorrow's class.",
+          "zh": "每位學生明天上課都必須帶筆記型電腦。",
+          "source": "daily"
+        },
+        {
+          "en": "The graduate student compared three theories of language acquisition.",
+          "zh": "那名研究生比較了三種語言習得理論。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "education-learning",
+      "mnemonicHint": "student 來自 study；正在 study 的人就是 student。"
+    },
+    "study": {
+      "chinese": "研究；學習",
+      "pos": "n/v",
+      "synonyms": [
+        "research",
+        "examine",
+        "investigate",
+        "learn"
+      ],
+      "antonyms": [
+        "ignore",
+        "neglect"
+      ],
+      "relatedWords": [
+        "student",
+        "studious",
+        "studied"
+      ],
+      "confusableWith": [
+        "studio"
+      ],
+      "exampleSentences": [
+        {
+          "en": "I study English for thirty minutes each day.",
+          "zh": "我每天學三十分鐘英文。",
+          "source": "daily"
+        },
+        {
+          "en": "The study examines how sleep affects cognitive performance.",
+          "zh": "該研究探討睡眠如何影響認知表現。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "analysis-investigation",
+      "mnemonicHint": "study 和 student 同族，都是投入學習。"
+    },
+    "style": {
+      "chinese": "風格；樣式",
+      "pos": "n",
+      "synonyms": [
+        "manner",
+        "fashion",
+        "mode"
+      ],
+      "antonyms": [
+        "uniformity",
+        "plainness"
+      ],
+      "relatedWords": [
+        "stylish",
+        "stylist",
+        "stylize"
+      ],
+      "confusableWith": [
+        "stile"
+      ],
+      "exampleSentences": [
+        {
+          "en": "I like the simple style of this wooden chair.",
+          "zh": "我喜歡這張木椅的簡約風格。",
+          "source": "daily"
+        },
+        {
+          "en": "The author uses a formal style to establish scholarly credibility.",
+          "zh": "作者運用正式的文體來建立學術可信度。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "beauty-art",
+      "mnemonicHint": "style 就像個人簽名，有獨特風格"
+    },
+    "subordination": {
+      "chinese": "從屬；次要地位；主從關係",
+      "pos": "n",
+      "synonyms": [
+        "subjection",
+        "subservience",
+        "inferiority",
+        "dependence"
+      ],
+      "antonyms": [
+        "dominance",
+        "independence",
+        "superiority"
+      ],
+      "relatedWords": [
+        "subordinate",
+        "subordinately",
+        "subordinator"
+      ],
+      "confusableWith": [
+        "coordination",
+        "subordinationism"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The new manager rejected the subordination of interns to routine errands.",
+          "zh": "新任經理反對把實習生貶為只負責例行跑腿工作。",
+          "source": "daily"
+        },
+        {
+          "en": "Excessive subordination of local authorities can weaken their capacity to address regional needs.",
+          "zh": "地方機關過度從屬於上級，可能削弱其因應區域需求的能力。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "hierarchy-power-relations",
+      "mnemonicHint": "sub- 是「在下方」，ordin 表示「秩序、層級」；被排在權力秩序下方，就是 subordination。"
+    },
+    "substantiate": {
+      "chinese": "證實",
+      "pos": "v",
+      "synonyms": [
+        "verify",
+        "confirm",
+        "validate",
+        "authenticate"
+      ],
+      "antonyms": [
+        "disprove",
+        "refute",
+        "undermine"
+      ],
+      "relatedWords": [
+        "substantiation",
+        "substantial"
+      ],
+      "confusableWith": [
+        "substitute"
+      ],
+      "exampleSentences": [
+        {
+          "en": "You need evidence to substantiate your claims.",
+          "zh": "你需要證據來證實你的主張。",
+          "source": "daily"
+        },
+        {
+          "en": "The research failed to substantiate the hypothesis.",
+          "zh": "該研究未能證實假說。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "truth-verification",
+      "mnemonicHint": "sub(under) + stant(stand) + iate → 站得住腳 → 證實"
+    },
+    "success": {
+      "chinese": "成功；成就",
+      "pos": "n",
+      "synonyms": [
+        "achievement",
+        "accomplishment",
+        "triumph",
+        "prosperity"
+      ],
+      "antonyms": [
+        "failure",
+        "defeat"
+      ],
+      "relatedWords": [
+        "succeed",
+        "successful",
+        "successfully"
+      ],
+      "confusableWith": [
+        "succession"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Her small bakery became a success.",
+          "zh": "她的小麵包店經營成功了。",
+          "source": "daily"
+        },
+        {
+          "en": "The program’s success depends on sustained public funding.",
+          "zh": "該計畫的成功取決於持續的公共資助。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "positive-achievement",
+      "mnemonicHint": "suc- 從下 + cess 走：一步步走上去就是成功。"
+    },
+    "succession": {
+      "chinese": "接連；一連串；繼承",
+      "pos": "n",
+      "synonyms": [
+        "sequence",
+        "series",
+        "progression",
+        "inheritance"
+      ],
+      "antonyms": [
+        "interruption",
+        "discontinuity",
+        "simultaneity"
+      ],
+      "relatedWords": [
+        "succeed",
+        "successive",
+        "successively",
+        "successor"
+      ],
+      "confusableWith": [
+        "success",
+        "secession"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The bells rang in rapid succession as the parade approached.",
+          "zh": "遊行隊伍接近時，鐘聲接連快速響起。",
+          "source": "daily"
+        },
+        {
+          "en": "A rapid succession of visual frames creates the illusion of continuous motion.",
+          "zh": "一連串快速呈現的視覺畫面會產生連續運動的錯覺。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "sequence-continuity",
+      "mnemonicHint": "suc-（接近、接著）加 cess（走）表示一個接一個跟著走；succession 因而可指接連發生，也可指王位或職位的繼承。"
+    },
+    "sugar": {
+      "chinese": "糖；加糖",
+      "pos": "n/v",
+      "synonyms": [
+        "sweetener",
+        "sucrose",
+        "table sugar"
+      ],
+      "antonyms": [
+        "unsweetened",
+        "sugar-free"
+      ],
+      "relatedWords": [
+        "sugary",
+        "sugarless",
+        "sugaring"
+      ],
+      "confusableWith": [
+        "sugary"
+      ],
+      "exampleSentences": [
+        {
+          "en": "I take my coffee without sugar.",
+          "zh": "我喝咖啡不加糖。",
+          "source": "daily"
+        },
+        {
+          "en": "Excessive sugar consumption is associated with metabolic disease.",
+          "zh": "過量攝取糖分與代謝疾病有關。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "food-nutrition",
+      "mnemonicHint": "看到 sugar 就聯想到甜味與方糖。"
+    },
+    "summarizes": {
+      "chinese": "總結；概述",
+      "pos": "v",
+      "synonyms": [
+        "condenses",
+        "recaps",
+        "outlines",
+        "encapsulates"
+      ],
+      "antonyms": [
+        "elaborates",
+        "expands",
+        "details"
+      ],
+      "relatedWords": [
+        "summarize",
+        "summary",
+        "summarized",
+        "summarizing",
+        "summarization"
+      ],
+      "confusableWith": [
+        "surmises",
+        "summons"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Her weekly update neatly summarizes what our team finished.",
+          "zh": "她的每週更新簡潔總結了團隊完成的工作。",
+          "source": "daily"
+        },
+        {
+          "en": "The concluding paragraph accurately summarizes the study's principal findings.",
+          "zh": "結論段落準確概述了該研究的主要發現。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "summary-condensation",
+      "mnemonicHint": "summary 是「摘要」，加上動詞字尾 -ize 成為 summarize；summarizes 是第三人稱單數，表示主詞把重點濃縮成摘要。"
+    },
+    "superficially": {
+      "chinese": "表面上地；草率地",
+      "pos": "adv",
+      "synonyms": [
+        "shallowly",
+        "cursorily",
+        "perfunctorily",
+        "outwardly"
+      ],
+      "antonyms": [
+        "thoroughly",
+        "deeply",
+        "substantively"
+      ],
+      "relatedWords": [
+        "superficial",
+        "superficiality",
+        "surface"
+      ],
+      "confusableWith": [
+        "superfluously"
+      ],
+      "exampleSentences": [
+        {
+          "en": "He only skimmed the contract superficially before signing it.",
+          "zh": "他簽約前只是草率地瀏覽了合約。",
+          "source": "daily"
+        },
+        {
+          "en": "Researchers who examine the evidence superficially may overlook variables that alter the conclusion.",
+          "zh": "研究人員若只從表面檢視證據，可能會忽略足以改變結論的變項。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "depth-thoroughness",
+      "mnemonicHint": "superficial 來自 surface「表面」的概念，加 -ly 變成副詞；想像只擦桌面、不清理縫隙，就是 superficially。"
+    },
+    "superficially summarizes": {
+      "chinese": "流於表面地概述",
+      "pos": "verb phrase",
+      "synonyms": [
+        "briefly recaps",
+        "cursorily outlines",
+        "skims over",
+        "gives a shallow overview"
+      ],
+      "antonyms": [
+        "analyzes deeply",
+        "explains thoroughly",
+        "examines comprehensively"
+      ],
+      "relatedWords": [
+        "superficial",
+        "superficially",
+        "summarize",
+        "summary",
+        "summarization"
+      ],
+      "confusableWith": [
+        "thoroughly summarizes",
+        "superficially resembles"
+      ],
+      "exampleSentences": [
+        {
+          "en": "During rushed meetings, Leo superficially summarizes each proposal without discussing costs.",
+          "zh": "每逢匆忙的會議，Leo 都只粗略概述各項提案，卻不討論成本。",
+          "source": "daily"
+        },
+        {
+          "en": "The abstract superficially summarizes the controversy but omits its historical causes.",
+          "zh": "該摘要僅粗略概述爭議，卻省略了其歷史成因。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "summary-condensation",
+      "mnemonicHint": "superficially 修飾 summarizes：不是深入分析，而是只把最外層重點縮成摘要；可聯想「只看 surface 就寫 summary」。"
+    },
+    "susceptible": {
+      "chinese": "易受影響的",
+      "pos": "adj",
+      "synonyms": [
+        "vulnerable",
+        "prone",
+        "liable",
+        "predisposed"
+      ],
+      "antonyms": [
+        "immune",
+        "resistant",
+        "invulnerable"
+      ],
+      "relatedWords": [
+        "susceptibility"
+      ],
+      "confusableWith": [
+        "suspicious"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Children are more susceptible to infections during winter.",
+          "zh": "兒童在冬天更容易感染疾病。",
+          "source": "daily"
+        },
+        {
+          "en": "Populations with limited healthcare access are susceptible to preventable diseases.",
+          "zh": "醫療保健資源有限的人群容易罹患可預防的疾病。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "vulnerability-risk",
+      "mnemonicHint": "sus(under) + cept(take) + ible → 容易被接住 → 易受影響的"
+    }
+  }
+}

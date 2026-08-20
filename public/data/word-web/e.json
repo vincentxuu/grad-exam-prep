@@ -1,0 +1,1320 @@
+{
+  "schemaVersion": 1,
+  "words": {
+    "earlier": {
+      "chinese": "較早的；先前地",
+      "pos": "adj/adv",
+      "synonyms": [
+        "previous",
+        "prior",
+        "beforehand",
+        "formerly"
+      ],
+      "antonyms": [
+        "later",
+        "subsequent"
+      ],
+      "relatedWords": [
+        "early",
+        "earliest",
+        "earliness"
+      ],
+      "confusableWith": [
+        "elder"
+      ],
+      "exampleSentences": [
+        {
+          "en": "I arrived earlier than everyone else.",
+          "zh": "我比其他人都早到。",
+          "source": "daily"
+        },
+        {
+          "en": "Earlier studies underestimated the long-term environmental impact.",
+          "zh": "早期研究低估了長期環境影響。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "sequence-order",
+      "mnemonicHint": "early 的 y 變 i 加 er，表示更早。"
+    },
+    "economic": {
+      "chinese": "經濟的；經濟上合算的",
+      "pos": "adj",
+      "synonyms": [
+        "financial",
+        "commercial",
+        "economy-related"
+      ],
+      "antonyms": [
+        "uneconomic",
+        "financially wasteful"
+      ],
+      "relatedWords": [
+        "economy",
+        "economics",
+        "economically"
+      ],
+      "confusableWith": [
+        "economical"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The town depends on tourists for economic activity.",
+          "zh": "這座城鎮的經濟活動仰賴觀光客。",
+          "source": "daily"
+        },
+        {
+          "en": "Economic inequality can limit access to higher education.",
+          "zh": "經濟不平等可能限制取得高等教育的機會。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "finance-economy",
+      "mnemonicHint": "economic 關乎 economy 經濟；economical 則是節省的。"
+    },
+    "effect": {
+      "chinese": "效果；影響",
+      "pos": "n",
+      "synonyms": [
+        "result",
+        "impact",
+        "consequence",
+        "outcome"
+      ],
+      "antonyms": [
+        "cause",
+        "origin"
+      ],
+      "relatedWords": [
+        "effective",
+        "affect",
+        "effectively"
+      ],
+      "confusableWith": [
+        "affect"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The medicine had an immediate effect.",
+          "zh": "這種藥立刻產生效果。",
+          "source": "daily"
+        },
+        {
+          "en": "The policy had little effect on overall consumer behavior.",
+          "zh": "該政策對整體消費者行為幾乎沒有影響。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "cause-effect",
+      "mnemonicHint": "effect 多作名詞「結果」；affect 多作動詞「影響」。"
+    },
+    "effecting": {
+      "chinese": "促成；實現",
+      "pos": "v",
+      "synonyms": [
+        "causing",
+        "bringing about",
+        "accomplishing"
+      ],
+      "antonyms": [
+        "preventing",
+        "blocking"
+      ],
+      "relatedWords": [
+        "effect",
+        "effective"
+      ],
+      "confusableWith": [
+        "affecting"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Our new chore chart is effecting a welcome change in how we share housework.",
+          "zh": "新的家事分工表正促使我們以更理想的方式分擔家務。",
+          "source": "daily"
+        },
+        {
+          "en": "The intervention succeeded in effecting a measurable reduction in school absences.",
+          "zh": "這項介入措施成功促使學生缺席率出現可測量的下降。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "change-modification",
+      "mnemonicHint": "effect 作動詞是促成，別和 affecting 影響混淆"
+    },
+    "efforts": {
+      "chinese": "努力；嘗試",
+      "pos": "n",
+      "synonyms": [
+        "attempts",
+        "endeavors",
+        "exertions",
+        "initiatives"
+      ],
+      "antonyms": [
+        "inaction",
+        "idleness"
+      ],
+      "relatedWords": [
+        "effort",
+        "effortful",
+        "effortless"
+      ],
+      "confusableWith": [
+        "effects"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Our efforts finally paid off.",
+          "zh": "我們的努力終於有了回報。",
+          "source": "daily"
+        },
+        {
+          "en": "International efforts have reduced the spread of the disease.",
+          "zh": "國際間的努力已降低疾病傳播。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "strength-determination",
+      "mnemonicHint": "effort 加 s，表示多次投入力量的嘗試。"
+    },
+    "eloquent": {
+      "chinese": "雄辯的；有感染力的",
+      "pos": "adj",
+      "synonyms": [
+        "articulate",
+        "expressive",
+        "fluent"
+      ],
+      "antonyms": [
+        "inarticulate",
+        "halting"
+      ],
+      "relatedWords": [
+        "eloquence",
+        "eloquently"
+      ],
+      "confusableWith": [
+        "elocution"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Nora gave an eloquent toast that brought tears to the newlyweds' eyes.",
+          "zh": "諾拉致了一段感人的祝酒詞，讓新婚夫妻熱淚盈眶。",
+          "source": "daily"
+        },
+        {
+          "en": "The candidate offered an eloquent defense of judicial independence during the oral exam.",
+          "zh": "考生在口試中雄辯地捍衛司法獨立。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "language-communication",
+      "mnemonicHint": "e 加 loquent 說話，善說就是 eloquent"
+    },
+    "elucidated": {
+      "chinese": "闡明的",
+      "pos": "v",
+      "synonyms": [
+        "clarified",
+        "explained",
+        "illuminated"
+      ],
+      "antonyms": [
+        "obscured",
+        "confused"
+      ],
+      "relatedWords": [
+        "elucidate",
+        "elucidation"
+      ],
+      "confusableWith": [
+        "eliminated"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The professor elucidated the complex theory with examples.",
+          "zh": "教授用例子闡明了複雜理論。",
+          "source": "daily"
+        },
+        {
+          "en": "The research elucidated how stress affects immunity.",
+          "zh": "研究闡明了壓力影響免疫力的機制。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "explanation-clarity",
+      "mnemonicHint": "e(out) + lucid(clear) + ate → 使清楚 → 闡明"
+    },
+    "encounters": {
+      "chinese": "遭遇；邂逅",
+      "pos": "n",
+      "synonyms": [
+        "meetings",
+        "contacts",
+        "interactions"
+      ],
+      "antonyms": [
+        "avoidance",
+        "noncontact"
+      ],
+      "relatedWords": [
+        "encounter",
+        "encountered"
+      ],
+      "confusableWith": [
+        "counters"
+      ],
+      "exampleSentences": [
+        {
+          "en": "My morning encounters with the neighbor's puppy always brighten my commute.",
+          "zh": "早上遇見鄰居的小狗，總能讓我的通勤心情變好。",
+          "source": "daily"
+        },
+        {
+          "en": "The interviews reveal that repeated encounters with discrimination shaped the migrants' identities.",
+          "zh": "訪談顯示，反覆遭遇歧視形塑了移民的身分認同。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "conflict-aggression",
+      "mnemonicHint": "en 加 counter 面對，encounter 是碰上"
+    },
+    "engenders": {
+      "chinese": "引起；產生",
+      "pos": "v",
+      "synonyms": [
+        "causes",
+        "generates",
+        "produces"
+      ],
+      "antonyms": [
+        "prevents",
+        "suppresses"
+      ],
+      "relatedWords": [
+        "engender",
+        "engendered"
+      ],
+      "confusableWith": [
+        "endangers"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Sharing tools with our neighbors engenders trust across the apartment building.",
+          "zh": "與鄰居共用工具，能在整棟公寓中培養信任。",
+          "source": "daily"
+        },
+        {
+          "en": "The author argues that unequal access to education engenders persistent social conflict.",
+          "zh": "作者主張，教育機會不均會引發持續的社會衝突。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "creation-novelty",
+      "mnemonicHint": "gender 與產生相關，engender 是造成"
+    },
+    "engineered": {
+      "chinese": "設計製造的；精心策劃的；改造的",
+      "pos": "v/adj",
+      "synonyms": [
+        "designed",
+        "constructed",
+        "devised",
+        "modified"
+      ],
+      "antonyms": [
+        "natural",
+        "spontaneous",
+        "unplanned"
+      ],
+      "relatedWords": [
+        "engineer",
+        "engineering",
+        "reengineer"
+      ],
+      "confusableWith": [
+        "engendered",
+        "endangered"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The shelf was engineered to support several heavy boxes.",
+          "zh": "這個架子經過設計，能承受好幾個重箱子。",
+          "source": "daily"
+        },
+        {
+          "en": "Scientists engineered the bacteria to produce a medically useful protein.",
+          "zh": "科學家改造這種細菌，使其製造具有醫療用途的蛋白質。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "technology-design",
+      "mnemonicHint": "engineer 是工程師，也可作動詞表示像工程師一樣精密設計；engineered 是其過去式或形容詞。"
+    },
+    "enough large": {
+      "chinese": "錯誤語序：應為 large enough",
+      "pos": "phrase",
+      "synonyms": [
+        "large enough",
+        "sufficiently large",
+        "adequately large"
+      ],
+      "antonyms": [
+        "too small",
+        "not large enough"
+      ],
+      "relatedWords": [
+        "enough",
+        "large",
+        "largely"
+      ],
+      "confusableWith": [
+        "large enough"
+      ],
+      "exampleSentences": [
+        {
+          "en": "I asked whether the suitcase was enough large, and my friend corrected me to large enough.",
+          "zh": "我問行李箱是否 enough large，朋友便糾正我應說 large enough。",
+          "source": "daily"
+        },
+        {
+          "en": "In the grammar question, enough large must become large enough when enough modifies the adjective.",
+          "zh": "在這道文法題中，當 enough 修飾形容詞時，enough large 必須改成 large enough。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "strictness-precision",
+      "mnemonicHint": "enough 修飾形容詞時放後面：large enough"
+    },
+    "enough largely": {
+      "chinese": "不自然語序：應依語意改寫",
+      "pos": "phrase",
+      "synonyms": [
+        "to a sufficient extent",
+        "sufficiently",
+        "adequately"
+      ],
+      "antonyms": [
+        "insufficiently",
+        "narrowly"
+      ],
+      "relatedWords": [
+        "enough",
+        "large",
+        "largely"
+      ],
+      "confusableWith": [
+        "large enough"
+      ],
+      "exampleSentences": [
+        {
+          "en": "I typed enough largely by mistake when I meant large enough to describe the room.",
+          "zh": "我想用 large enough 形容房間夠大時，誤打成 enough largely。",
+          "source": "daily"
+        },
+        {
+          "en": "The editing exercise flags enough largely because enough does not naturally modify the adverb largely.",
+          "zh": "編輯練習將 enough largely 標為錯誤，因為 enough 通常不能自然地修飾副詞 largely。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "strictness-precision",
+      "mnemonicHint": "largely 是副詞；先確認要說 largely 還是 large enough"
+    },
+    "ensure": {
+      "chinese": "確保；保證",
+      "pos": "v",
+      "synonyms": [
+        "guarantee",
+        "secure",
+        "assure",
+        "make certain"
+      ],
+      "antonyms": [
+        "jeopardize",
+        "endanger",
+        "imperil"
+      ],
+      "relatedWords": [
+        "ensured",
+        "ensuring",
+        "ensures"
+      ],
+      "confusableWith": [
+        "assure",
+        "insure"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Please lock the window to ensure the room stays dry.",
+          "zh": "請把窗戶鎖好，以確保房間保持乾燥。",
+          "source": "daily"
+        },
+        {
+          "en": "Independent audits help ensure that public funds are used for their intended purpose.",
+          "zh": "獨立稽核有助於確保公共資金用於原定目的。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "certainty-security",
+      "mnemonicHint": "ensure 是讓結果變得 sure，也就是確保；insure 通常指投保。"
+    },
+    "entire": {
+      "chinese": "全部的；完整的",
+      "pos": "adj",
+      "synonyms": [
+        "whole",
+        "complete",
+        "total",
+        "full"
+      ],
+      "antonyms": [
+        "partial",
+        "incomplete"
+      ],
+      "relatedWords": [
+        "entirely",
+        "entirety",
+        "whole"
+      ],
+      "confusableWith": [
+        "entry"
+      ],
+      "exampleSentences": [
+        {
+          "en": "I spent the entire afternoon cleaning.",
+          "zh": "我花了整個下午打掃。",
+          "source": "daily"
+        },
+        {
+          "en": "The policy affected the entire population rather than a single group.",
+          "zh": "這項政策影響全體人口，而非單一群體。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "scope-extent",
+      "mnemonicHint": "entire 與 entirety 同族，表示完整全部。"
+    },
+    "entitles": {
+      "chinese": "使有權利；給…資格",
+      "pos": "v",
+      "synonyms": [
+        "authorizes",
+        "qualifies",
+        "empowers"
+      ],
+      "antonyms": [
+        "disqualifies",
+        "forbids"
+      ],
+      "relatedWords": [
+        "entitle",
+        "entitlement"
+      ],
+      "confusableWith": [
+        "entitles to"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Our train delay entitles each passenger to a partial refund.",
+          "zh": "火車誤點使每位乘客都有權獲得部分退款。",
+          "source": "daily"
+        },
+        {
+          "en": "Successful completion of the course entitles students to receive a professional certificate.",
+          "zh": "完成這門課程後，學生有權取得專業證書。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "access-availability",
+      "mnemonicHint": "title 可代表權利，entitle 是賦予資格"
+    },
+    "entraps": {
+      "chinese": "誘捕；使陷入困境",
+      "pos": "v",
+      "synonyms": [
+        "traps",
+        "snares",
+        "ensnares"
+      ],
+      "antonyms": [
+        "frees",
+        "releases"
+      ],
+      "relatedWords": [
+        "entrap",
+        "entrapment"
+      ],
+      "confusableWith": [
+        "entreats"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The fine mesh entraps food scraps before they clog the kitchen drain.",
+          "zh": "細網會截住食物殘渣，避免它們堵塞廚房排水管。",
+          "source": "daily"
+        },
+        {
+          "en": "The porous membrane entraps airborne particles while allowing water vapor to pass.",
+          "zh": "多孔膜會截留空氣中的微粒，同時讓水蒸氣通過。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "access-restriction",
+      "mnemonicHint": "en 進入加 trap 陷阱，使落入圈套"
+    },
+    "environmental": {
+      "chinese": "環境的",
+      "pos": "adj",
+      "synonyms": [
+        "ecological",
+        "environment-related",
+        "green",
+        "conservationist"
+      ],
+      "antonyms": [
+        "polluting",
+        "environmentally harmful"
+      ],
+      "relatedWords": [
+        "environment",
+        "environmentalist",
+        "environmentally"
+      ],
+      "confusableWith": [
+        "experimental"
+      ],
+      "exampleSentences": [
+        {
+          "en": "We joined an environmental cleanup on Saturday.",
+          "zh": "我們星期六參加了環境清潔活動。",
+          "source": "daily"
+        },
+        {
+          "en": "Environmental regulation can reduce industrial pollution.",
+          "zh": "環境法規可以減少工業污染。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "nature-environment",
+      "mnemonicHint": "environment 環境 + al 形容詞字尾。"
+    },
+    "evaporation": {
+      "chinese": "蒸發；消散",
+      "pos": "n",
+      "synonyms": [
+        "vaporization",
+        "volatilization",
+        "drying"
+      ],
+      "antonyms": [
+        "condensation",
+        "liquefaction"
+      ],
+      "relatedWords": [
+        "evaporate",
+        "evaporative"
+      ],
+      "confusableWith": [
+        "evaluation"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Evaporation left a white mineral ring around the flowerpot saucer.",
+          "zh": "水分蒸發後，在花盆底盤周圍留下一圈白色礦物質痕跡。",
+          "source": "daily"
+        },
+        {
+          "en": "The experiment measured the rate of evaporation under different wind speeds.",
+          "zh": "該實驗測量不同風速下的蒸發速率。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "change-transformation",
+      "mnemonicHint": "vapor 蒸氣，evaporation 是變成蒸氣"
+    },
+    "even play": {
+      "chinese": "甚至玩；甚至扮演",
+      "pos": "phrase",
+      "synonyms": [
+        "even perform",
+        "even participate",
+        "actually play"
+      ],
+      "antonyms": [
+        "never play",
+        "refuse to play"
+      ],
+      "relatedWords": [
+        "even",
+        "play",
+        "player"
+      ],
+      "confusableWith": [
+        "evenly play"
+      ],
+      "exampleSentences": [
+        {
+          "en": "After two piano lessons, Maya can even play the chorus without looking at the keys.",
+          "zh": "上了兩堂鋼琴課後，瑪雅甚至能不看琴鍵就彈出副歌。",
+          "source": "daily"
+        },
+        {
+          "en": "Minor changes in soil moisture may even play a decisive role in seed germination.",
+          "zh": "土壤濕度的微小變化甚至可能在種子發芽中扮演決定性角色。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "addition-support",
+      "mnemonicHint": "even 加動詞 play，強調連玩或扮演都包括"
+    },
+    "evidence": {
+      "chinese": "證據；跡象",
+      "pos": "n",
+      "synonyms": [
+        "proof",
+        "testimony",
+        "indication",
+        "substantiation"
+      ],
+      "antonyms": [
+        "disproof",
+        "refutation"
+      ],
+      "relatedWords": [
+        "evident",
+        "evidently",
+        "evidential"
+      ],
+      "confusableWith": [
+        "confidence"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The wet floor was evidence that it had rained.",
+          "zh": "濕地板是剛下過雨的跡象。",
+          "source": "daily"
+        },
+        {
+          "en": "The available evidence does not establish a causal relationship.",
+          "zh": "現有證據無法證實因果關係。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "truth-verification",
+      "mnemonicHint": "e- 出 + vid 看：能被看出來的就是證據。"
+    },
+    "exacerbate": {
+      "chinese": "使惡化",
+      "pos": "v",
+      "synonyms": [
+        "worsen",
+        "aggravate",
+        "intensify",
+        "compound"
+      ],
+      "antonyms": [
+        "alleviate",
+        "mitigate",
+        "ameliorate"
+      ],
+      "relatedWords": [
+        "exacerbation"
+      ],
+      "confusableWith": [
+        "exaggerate"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Skipping meals can exacerbate headaches and fatigue.",
+          "zh": "不吃飯會加重頭痛和疲勞。",
+          "source": "daily"
+        },
+        {
+          "en": "Climate change is expected to exacerbate existing inequalities in developing nations.",
+          "zh": "氣候變遷預計將加劇發展中國家現有的不平等。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "change-worsening",
+      "mnemonicHint": "ex(out) + acerb(bitter) + ate → 使更苦澀 → 使惡化"
+    },
+    "exclusive": {
+      "chinese": "獨家的",
+      "pos": "adj",
+      "synonyms": [
+        "sole",
+        "restricted",
+        "elite",
+        "limited"
+      ],
+      "antonyms": [
+        "inclusive",
+        "open",
+        "accessible"
+      ],
+      "relatedWords": [
+        "exclude",
+        "exclusion",
+        "exclusively"
+      ],
+      "confusableWith": [
+        "inclusive"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The hotel offers exclusive access to a private beach.",
+          "zh": "飯店提供專屬的私人海灘。",
+          "source": "daily"
+        },
+        {
+          "en": "Exclusive licensing agreements limit market competition.",
+          "zh": "獨家授權協議限制市場競爭。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "access-restriction",
+      "mnemonicHint": "ex(out) + clus(close) + ive → 把別人關在外面 → 排他的"
+    },
+    "exhilarating": {
+      "chinese": "令人振奮的",
+      "pos": "adj",
+      "synonyms": [
+        "thrilling",
+        "invigorating",
+        "exciting"
+      ],
+      "antonyms": [
+        "boring",
+        "depressing"
+      ],
+      "relatedWords": [
+        "exhilarate",
+        "exhilaration"
+      ],
+      "confusableWith": [
+        "exasperating"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Cycling down the coastal road at sunrise was exhilarating.",
+          "zh": "日出時沿著海岸公路騎車，令人興奮不已。",
+          "source": "daily"
+        },
+        {
+          "en": "The memoir gives an exhilarating account of the first successful polar flight.",
+          "zh": "這本回憶錄對首次成功的極地飛行做了振奮人心的描述。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "emotion-attitude",
+      "mnemonicHint": "像吸入清新 air，exhilarating 令人精神振奮"
+    },
+    "exile": {
+      "chinese": "流放",
+      "pos": "n/v",
+      "synonyms": [
+        "banishment",
+        "expulsion",
+        "deportation"
+      ],
+      "antonyms": [
+        "repatriation",
+        "return"
+      ],
+      "relatedWords": [
+        "exiled"
+      ],
+      "confusableWith": [
+        "exalt"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The writer spent ten years in exile.",
+          "zh": "作家在流放中度過了十年。",
+          "source": "daily"
+        },
+        {
+          "en": "Political exile has been a common fate for dissidents.",
+          "zh": "政治流放是異議人士的常見命運。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "punishment-exclusion",
+      "mnemonicHint": "ex(out) + ile → 被趕出去 → 流放"
+    },
+    "expanded": {
+      "chinese": "擴大了；展開的；擴充的",
+      "pos": "v/adj",
+      "synonyms": [
+        "enlarged",
+        "extended",
+        "broadened",
+        "increased"
+      ],
+      "antonyms": [
+        "contracted",
+        "reduced",
+        "shrunk"
+      ],
+      "relatedWords": [
+        "expand",
+        "expansion",
+        "expansive",
+        "expanding"
+      ],
+      "confusableWith": [
+        "expended",
+        "extended"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The bakery expanded its menu to include three vegan cakes.",
+          "zh": "這間麵包店擴充了菜單，加入三款純素蛋糕。",
+          "source": "daily"
+        },
+        {
+          "en": "As trade expanded, coastal settlements developed into major commercial centers.",
+          "zh": "隨著貿易擴張，沿海聚落發展成重要的商業中心。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "change-growth",
+      "mnemonicHint": "expand 是向外擴張，expanded 表示已經擴大；別和花費掉的 expended 混淆。"
+    },
+    "expect": {
+      "chinese": "預期；期待；認為會發生",
+      "pos": "v",
+      "synonyms": [
+        "anticipate",
+        "await",
+        "predict",
+        "suppose"
+      ],
+      "antonyms": [
+        "doubt",
+        "disbelieve",
+        "discount"
+      ],
+      "relatedWords": [
+        "expected",
+        "expecting",
+        "expectation",
+        "unexpected"
+      ],
+      "confusableWith": [
+        "except",
+        "accept"
+      ],
+      "exampleSentences": [
+        {
+          "en": "I expect the repair shop to call before noon.",
+          "zh": "我預期修理店會在中午前打電話來。",
+          "source": "daily"
+        },
+        {
+          "en": "Economists expect demand to decline if borrowing costs remain high.",
+          "zh": "經濟學家預期，若借貸成本持續偏高，需求將會下降。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "thought-prediction",
+      "mnemonicHint": "expect 是預期某事會來；except 是把某事排除在外，兩者只差前綴中的一個字母。"
+    },
+    "expenditure": {
+      "chinese": "支出",
+      "pos": "n",
+      "synonyms": [
+        "spending",
+        "outlay",
+        "cost",
+        "expense"
+      ],
+      "antonyms": [
+        "income",
+        "revenue",
+        "savings"
+      ],
+      "relatedWords": [
+        "expend",
+        "expendable"
+      ],
+      "confusableWith": [
+        "experience"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Government expenditure on education has increased.",
+          "zh": "政府在教育上的支出增加了。",
+          "source": "daily"
+        },
+        {
+          "en": "Capital expenditure decisions require cost-benefit analysis.",
+          "zh": "資本支出決策需要成本效益分析。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "finance-money",
+      "mnemonicHint": "ex(out) + pend(pay) + iture → 付出去的錢 → 支出"
+    },
+    "experiences": {
+      "chinese": "經歷；體驗；經驗",
+      "pos": "n/v",
+      "synonyms": [
+        "encounters",
+        "events",
+        "episodes",
+        "observations"
+      ],
+      "antonyms": [
+        "inexperience",
+        "unfamiliarity",
+        "innocence"
+      ],
+      "relatedWords": [
+        "experience",
+        "experienced",
+        "experiential",
+        "inexperienced"
+      ],
+      "confusableWith": [
+        "experiments",
+        "expertise"
+      ],
+      "exampleSentences": [
+        {
+          "en": "We laughed while sharing our worst travel experiences.",
+          "zh": "我們分享彼此最糟的旅行經歷時笑了出來。",
+          "source": "daily"
+        },
+        {
+          "en": "Early childhood experiences can influence how individuals respond to stress later in life.",
+          "zh": "幼兒時期的經歷可能影響個人在日後如何因應壓力。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "life-learning",
+      "mnemonicHint": "experiences 是親身經歷的事情；累積這些經歷後，就會形成 experience 經驗。"
+    },
+    "experts": {
+      "chinese": "專家；熟練人士",
+      "pos": "n",
+      "synonyms": [
+        "specialists",
+        "authorities",
+        "professionals",
+        "masters"
+      ],
+      "antonyms": [
+        "novices",
+        "amateurs",
+        "laypeople"
+      ],
+      "relatedWords": [
+        "expert",
+        "expertise",
+        "expertly"
+      ],
+      "confusableWith": [
+        "exports",
+        "excerpts"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The museum invited local experts to identify the old coins.",
+          "zh": "博物館邀請當地專家鑑定這些古錢幣。",
+          "source": "daily"
+        },
+        {
+          "en": "Public-health experts warned that the small sample could not support a broad conclusion.",
+          "zh": "公共衛生專家警告，這個小型樣本不足以支持廣泛的結論。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "people-expertise",
+      "mnemonicHint": "experts 擁有 expertise 專業知識；novices 則是剛入門的新手。"
+    },
+    "explain": {
+      "chinese": "解釋；說明",
+      "pos": "v",
+      "synonyms": [
+        "clarify",
+        "describe",
+        "elucidate",
+        "account for"
+      ],
+      "antonyms": [
+        "confuse",
+        "obscure"
+      ],
+      "relatedWords": [
+        "explanation",
+        "explanatory",
+        "explicable"
+      ],
+      "confusableWith": [
+        "complain"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Can you explain how this button works?",
+          "zh": "你能解釋這個按鈕如何運作嗎？",
+          "source": "daily"
+        },
+        {
+          "en": "The model cannot fully explain the observed regional variation.",
+          "zh": "該模型無法充分解釋觀察到的區域差異。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "explanation-clarity",
+      "mnemonicHint": "ex- 向外 + plain 清楚：把意思說清楚。"
+    },
+    "expounded": {
+      "chinese": "詳細闡述",
+      "pos": "v",
+      "synonyms": [
+        "explained",
+        "elaborated on",
+        "set forth"
+      ],
+      "antonyms": [
+        "concealed",
+        "withheld"
+      ],
+      "relatedWords": [
+        "expound",
+        "exposition"
+      ],
+      "confusableWith": [
+        "expanded"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Dad expounded his shortcut in such detail that we missed the highway exit.",
+          "zh": "爸爸太過詳細地解說他的捷徑，結果我們錯過了高速公路出口。",
+          "source": "daily"
+        },
+        {
+          "en": "The economist expounded the theory of comparative advantage with a numerical example.",
+          "zh": "經濟學家以數值範例詳述比較利益理論。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "explanation-clarity",
+      "mnemonicHint": "ex 向外加 pound 放出觀點，詳細說明"
+    },
+    "expressing surprise": {
+      "chinese": "表達驚訝",
+      "pos": "phrase",
+      "synonyms": [
+        "showing astonishment",
+        "voicing amazement",
+        "reacting with wonder"
+      ],
+      "antonyms": [
+        "showing indifference",
+        "remaining unsurprised"
+      ],
+      "relatedWords": [
+        "express",
+        "surprise",
+        "surprised"
+      ],
+      "confusableWith": [
+        "surprising expression"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Ben opened the empty cake box, expressing surprise with a loud gasp.",
+          "zh": "班打開空的蛋糕盒，大聲倒抽一口氣表示驚訝。",
+          "source": "daily"
+        },
+        {
+          "en": "By expressing surprise at the null result, the lecturer revealed an expectation of correlation.",
+          "zh": "講師對無顯著結果表示驚訝，透露他原本預期變數之間會有相關。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "emotion-attitude",
+      "mnemonicHint": "express 把 surprise 驚訝說出來"
+    },
+    "expunged": {
+      "chinese": "刪除；抹去",
+      "pos": "v",
+      "synonyms": [
+        "erased",
+        "deleted",
+        "obliterated"
+      ],
+      "antonyms": [
+        "retained",
+        "recorded"
+      ],
+      "relatedWords": [
+        "expunge",
+        "expungement"
+      ],
+      "confusableWith": [
+        "expounded"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The bank confirmed that the mistaken late fee had been expunged from my record.",
+          "zh": "銀行確認，那筆誤收的滯納金已從我的紀錄中刪除。",
+          "source": "daily"
+        },
+        {
+          "en": "All personal identifiers were expunged from the transcripts before qualitative analysis.",
+          "zh": "進行質性分析前，逐字稿中的所有個人識別資訊都已刪除。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "removal-destruction",
+      "mnemonicHint": "ex 出去加 pung 刺，把記錄徹底剔除"
+    },
+    "exquisite": {
+      "chinese": "精美的；細膩的",
+      "pos": "adj",
+      "synonyms": [
+        "elegant",
+        "delicate",
+        "splendid"
+      ],
+      "antonyms": [
+        "crude",
+        "mediocre"
+      ],
+      "relatedWords": [
+        "exquisiteness",
+        "exquisitely"
+      ],
+      "confusableWith": [
+        "explicit"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The bakery sells exquisite fruit tarts decorated with tiny chocolate leaves.",
+          "zh": "這家麵包店販售精緻的水果塔，上面裝飾著小巧的巧克力葉片。",
+          "source": "daily"
+        },
+        {
+          "en": "Microscopy revealed the insect wing's exquisite network of veins.",
+          "zh": "顯微鏡觀察揭示了昆蟲翅膀上精巧的翅脈網絡。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "quality-excellence",
+      "mnemonicHint": "exquisite 音節精緻，聯想精雕細琢"
+    },
+    "extensive": {
+      "chinese": "廣泛的；大量的",
+      "pos": "adj",
+      "synonyms": [
+        "broad",
+        "comprehensive",
+        "wide-ranging"
+      ],
+      "antonyms": [
+        "limited",
+        "narrow"
+      ],
+      "relatedWords": [
+        "extent",
+        "extend",
+        "extensively"
+      ],
+      "confusableWith": [
+        "intensive"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The burst pipe caused extensive damage to our kitchen floor and cabinets.",
+          "zh": "水管爆裂，造成廚房地板和櫥櫃大範圍損壞。",
+          "source": "daily"
+        },
+        {
+          "en": "The conclusion rests on extensive archival research across six national libraries.",
+          "zh": "這項結論建立在六座國家圖書館的大量檔案研究之上。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "scope-extent",
+      "mnemonicHint": "extend 延伸，extensive 延伸範圍很廣"
+    },
+    "extraordinary": {
+      "chinese": "非凡的；異常的",
+      "pos": "adj",
+      "synonyms": [
+        "remarkable",
+        "exceptional",
+        "astonishing",
+        "unusual"
+      ],
+      "antonyms": [
+        "ordinary",
+        "common",
+        "unremarkable"
+      ],
+      "relatedWords": [
+        "extraordinarily",
+        "extraordinariness",
+        "ordinary"
+      ],
+      "confusableWith": [
+        "extravagant"
+      ],
+      "exampleSentences": [
+        {
+          "en": "She has an extraordinary memory for names.",
+          "zh": "她對名字有非凡的記憶力。",
+          "source": "daily"
+        },
+        {
+          "en": "The species demonstrates an extraordinary capacity to adapt.",
+          "zh": "該物種展現非凡的適應能力。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "uniqueness-rarity",
+      "mnemonicHint": "extra 超出 + ordinary 平常：超乎尋常。"
+    },
+    "extravagant": {
+      "chinese": "奢侈的",
+      "pos": "adj",
+      "synonyms": [
+        "lavish",
+        "excessive",
+        "wasteful",
+        "luxurious"
+      ],
+      "antonyms": [
+        "frugal",
+        "modest",
+        "economical"
+      ],
+      "relatedWords": [
+        "extravagance",
+        "extravagantly"
+      ],
+      "confusableWith": [
+        "extraordinary"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The wedding was criticized for its extravagant decorations.",
+          "zh": "婚禮因其奢侈的裝飾而受到批評。",
+          "source": "daily"
+        },
+        {
+          "en": "Extravagant spending during economic downturns draws public criticism.",
+          "zh": "在經濟低迷時期的奢侈支出引發公眾批評。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "excess-abundance",
+      "mnemonicHint": "extra(beyond) + vag(wander) + ant → 超出常規地花錢 → 奢侈的"
+    }
+  }
+}

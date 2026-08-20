@@ -1,0 +1,1653 @@
+{
+  "schemaVersion": 1,
+  "words": {
+    "abridged": {
+      "chinese": "刪節的；縮短的",
+      "pos": "adj",
+      "synonyms": [
+        "shortened",
+        "condensed",
+        "abbreviated"
+      ],
+      "antonyms": [
+        "unabridged",
+        "expanded"
+      ],
+      "relatedWords": [
+        "abridge",
+        "abridgment"
+      ],
+      "confusableWith": [
+        "bridged"
+      ],
+      "exampleSentences": [
+        {
+          "en": "I bought an abridged audiobook for the long drive.",
+          "zh": "我為了長途開車買了一套刪節版有聲書。",
+          "source": "daily"
+        },
+        {
+          "en": "Students compared the abridged edition with the complete historical text.",
+          "zh": "學生比較了刪節版與完整的歷史文本。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "simplicity-clarity",
+      "mnemonicHint": "a 加 bridge，像把長文架橋縮短"
+    },
+    "access": {
+      "chinese": "進入；使用權；取得",
+      "pos": "n/v",
+      "synonyms": [
+        "entry",
+        "admission",
+        "availability",
+        "reach"
+      ],
+      "antonyms": [
+        "denial",
+        "exclusion"
+      ],
+      "relatedWords": [
+        "accessible",
+        "accessibility",
+        "inaccessible"
+      ],
+      "confusableWith": [
+        "assess"
+      ],
+      "exampleSentences": [
+        {
+          "en": "I can access the files from my phone.",
+          "zh": "我可以用手機存取這些檔案。",
+          "source": "daily"
+        },
+        {
+          "en": "Equal access to education remains a central policy objective.",
+          "zh": "平等取得教育仍是核心政策目標。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "access-availability",
+      "mnemonicHint": "ac- 朝向 + cess 走：能走進去就是能存取。"
+    },
+    "accessible": {
+      "chinese": "可取得的；無障礙的",
+      "pos": "adj",
+      "synonyms": [
+        "available",
+        "reachable",
+        "obtainable",
+        "approachable"
+      ],
+      "antonyms": [
+        "inaccessible",
+        "restricted",
+        "exclusive"
+      ],
+      "relatedWords": [
+        "access",
+        "accessibility"
+      ],
+      "confusableWith": [
+        "assessable"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The new library is designed to be accessible to wheelchair users.",
+          "zh": "新圖書館的設計方便輪椅使用者進出。",
+          "source": "daily"
+        },
+        {
+          "en": "Making education accessible to all remains a global challenge.",
+          "zh": "讓所有人都能獲得教育仍是全球挑戰。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "access-availability",
+      "mnemonicHint": "access + ible → 能接近的 → 可取得的"
+    },
+    "accident": {
+      "chinese": "意外；事故",
+      "pos": "n",
+      "synonyms": [
+        "mishap",
+        "incident",
+        "collision",
+        "misfortune"
+      ],
+      "antonyms": [
+        "intention",
+        "plan",
+        "design"
+      ],
+      "relatedWords": [
+        "accidental",
+        "accidentally",
+        "accidents"
+      ],
+      "confusableWith": [
+        "incident",
+        "accent"
+      ],
+      "exampleSentences": [
+        {
+          "en": "No one was injured in the accident near the station.",
+          "zh": "車站附近的事故中沒有人受傷。",
+          "source": "daily"
+        },
+        {
+          "en": "Investigators concluded that the accident resulted from several preventable errors.",
+          "zh": "調查人員認定，這起事故是由數項可避免的錯誤所造成。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "risk-safety",
+      "mnemonicHint": "accident 是沒有事先 plan 的意外；accidental 則是意外發生的。"
+    },
+    "acclaimed": {
+      "chinese": "廣受讚譽的",
+      "pos": "adj",
+      "synonyms": [
+        "praised",
+        "celebrated",
+        "lauded"
+      ],
+      "antonyms": [
+        "criticized",
+        "condemned"
+      ],
+      "relatedWords": [
+        "acclaim",
+        "acclamation"
+      ],
+      "confusableWith": [
+        "claimed"
+      ],
+      "exampleSentences": [
+        {
+          "en": "We finally tried the acclaimed noodle shop near the station.",
+          "zh": "我們終於去吃了車站附近那間廣受好評的麵店。",
+          "source": "daily"
+        },
+        {
+          "en": "The seminar examined an acclaimed study of urban migration patterns.",
+          "zh": "研討課分析了一項廣受讚譽的都市遷徙模式研究。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "quality-excellence",
+      "mnemonicHint": "大家一起 acclaim 歡呼，表示受讚譽"
+    },
+    "activity": {
+      "chinese": "活動；活躍狀態",
+      "pos": "n",
+      "synonyms": [
+        "action",
+        "pursuit",
+        "exercise",
+        "operation"
+      ],
+      "antonyms": [
+        "inactivity",
+        "idleness",
+        "rest"
+      ],
+      "relatedWords": [
+        "active",
+        "activate",
+        "actively",
+        "activities"
+      ],
+      "confusableWith": [
+        "activation",
+        "activeness"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Cycling is my favorite outdoor activity on weekends.",
+          "zh": "騎自行車是我週末最喜歡的戶外活動。",
+          "source": "daily"
+        },
+        {
+          "en": "Researchers used satellite images to measure volcanic activity on the island.",
+          "zh": "研究人員利用衛星影像測量該島的火山活動。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "action-behavior",
+      "mnemonicHint": "activity 來自 active；處於 active 狀態就是有活動。"
+    },
+    "adding": {
+      "chinese": "增加；加入；補充說明",
+      "pos": "v/adj",
+      "synonyms": [
+        "including",
+        "inserting",
+        "combining",
+        "supplementing"
+      ],
+      "antonyms": [
+        "subtracting",
+        "removing",
+        "excluding"
+      ],
+      "relatedWords": [
+        "add",
+        "added",
+        "addition",
+        "additional"
+      ],
+      "confusableWith": [
+        "aiding",
+        "adjoining"
+      ],
+      "exampleSentences": [
+        {
+          "en": "She is adding fresh basil to the soup.",
+          "zh": "她正在把新鮮羅勒加入湯裡。",
+          "source": "daily"
+        },
+        {
+          "en": "The committee approved the proposal, adding that its costs would be reviewed annually.",
+          "zh": "委員會通過了該提案，並補充說明其成本將每年接受檢討。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "change-quantity",
+      "mnemonicHint": "add 加上 -ing 成為 adding；短母音後要雙寫 d。"
+    },
+    "addition": {
+      "chinese": "增加；加法；附加物",
+      "pos": "n",
+      "synonyms": [
+        "increase",
+        "supplement",
+        "inclusion",
+        "extension"
+      ],
+      "antonyms": [
+        "subtraction",
+        "removal",
+        "reduction"
+      ],
+      "relatedWords": [
+        "add",
+        "additional",
+        "additive"
+      ],
+      "confusableWith": [
+        "edition"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The balcony is a pleasant addition to the apartment.",
+          "zh": "陽台是這間公寓令人愉快的新添部分。",
+          "source": "daily"
+        },
+        {
+          "en": "In addition to cost, the analysis considers environmental impact.",
+          "zh": "除了成本之外，該分析也考量環境影響。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "addition-support",
+      "mnemonicHint": "add 加 + -ition 名詞字尾，就是增加。"
+    },
+    "adhering": {
+      "chinese": "遵守；黏附",
+      "pos": "v",
+      "synonyms": [
+        "sticking",
+        "clinging",
+        "attaching"
+      ],
+      "antonyms": [
+        "detaching",
+        "separating"
+      ],
+      "relatedWords": [
+        "adhere",
+        "adherence",
+        "adhesive"
+      ],
+      "confusableWith": [
+        "inhering"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The wet note is still adhering to the refrigerator door.",
+          "zh": "那張濕掉的便條仍黏在冰箱門上。",
+          "source": "daily"
+        },
+        {
+          "en": "Adhering to standardized procedures reduced measurement error across laboratories.",
+          "zh": "遵循標準化程序降低了各實驗室之間的測量誤差。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "rules-obedience",
+      "mnemonicHint": "adhesive 是黏著劑，adhering 就是黏住或遵守"
+    },
+    "aesthetic": {
+      "chinese": "美學的",
+      "pos": "adj/n",
+      "synonyms": [
+        "artistic",
+        "visual",
+        "tasteful",
+        "elegant"
+      ],
+      "antonyms": [
+        "ugly",
+        "unattractive",
+        "tasteless"
+      ],
+      "relatedWords": [
+        "aesthetics",
+        "aesthetically"
+      ],
+      "confusableWith": [
+        "athletic"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The café has a minimalist aesthetic that attracts young people.",
+          "zh": "咖啡廳有吸引年輕人的極簡美學。",
+          "source": "daily"
+        },
+        {
+          "en": "Product aesthetic influences purchasing decisions as much as functionality.",
+          "zh": "產品美學與功能一樣影響購買決策。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "beauty-art",
+      "mnemonicHint": "aesthet(感知/感覺) + ic → 關於感覺和美的 → 美學的"
+    },
+    "aforementioned": {
+      "chinese": "前述的",
+      "pos": "adj",
+      "synonyms": [
+        "previously mentioned",
+        "above-mentioned",
+        "foregoing"
+      ],
+      "antonyms": [
+        "following",
+        "subsequent"
+      ],
+      "relatedWords": [
+        "afore",
+        "mention"
+      ],
+      "confusableWith": [
+        "aforethought"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Please send the receipt to the aforementioned email address.",
+          "zh": "請將收據寄到前述的電子郵件地址。",
+          "source": "daily"
+        },
+        {
+          "en": "The aforementioned variables were excluded from the final regression model.",
+          "zh": "前述變數已從最終的迴歸模型中排除。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "sequence-order",
+      "mnemonicHint": "afore 在前，mentioned 已提及"
+    },
+    "africa": {
+      "chinese": "非洲",
+      "pos": "proper n",
+      "synonyms": [
+        "African continent",
+        "the continent of Africa",
+        "the mother continent"
+      ],
+      "antonyms": [
+        "non-African regions",
+        "elsewhere"
+      ],
+      "relatedWords": [
+        "African",
+        "Afrocentric",
+        "Afro-Asian"
+      ],
+      "confusableWith": [
+        "Antarctica",
+        "America"
+      ],
+      "exampleSentences": [
+        {
+          "en": "My neighbor spent two months traveling across southern Africa.",
+          "zh": "我的鄰居花了兩個月遊歷非洲南部。",
+          "source": "daily"
+        },
+        {
+          "en": "The study traces how changing rainfall patterns affect agriculture across Africa.",
+          "zh": "這項研究追蹤降雨模式的變化如何影響非洲各地的農業。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "places-geography",
+      "mnemonicHint": "Africa 是洲名，首字母要大寫；African 可指非洲的或非洲人。"
+    },
+    "african": {
+      "chinese": "非洲的；來自非洲的",
+      "pos": "adj",
+      "synonyms": [
+        "of Africa",
+        "from Africa",
+        "of African origin"
+      ],
+      "antonyms": [
+        "non-African",
+        "from another continent"
+      ],
+      "relatedWords": [
+        "Africa",
+        "Africans",
+        "Afrocentric"
+      ],
+      "confusableWith": [
+        "Afrikaans"
+      ],
+      "exampleSentences": [
+        {
+          "en": "We tried an African dish at the market.",
+          "zh": "我們在市場品嘗了一道非洲料理。",
+          "source": "daily"
+        },
+        {
+          "en": "Several African economies have expanded regional trade networks.",
+          "zh": "數個非洲經濟體已擴大區域貿易網絡。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "place-region",
+      "mnemonicHint": "Africa + n：來自非洲的人或事物。"
+    },
+    "alienated": {
+      "chinese": "疏離的；被轉讓的",
+      "pos": "adj",
+      "synonyms": [
+        "estranged",
+        "isolated",
+        "disaffected"
+      ],
+      "antonyms": [
+        "connected",
+        "reconciled"
+      ],
+      "relatedWords": [
+        "alienate",
+        "alienation"
+      ],
+      "confusableWith": [
+        "allied"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Working alone from home left Mia feeling alienated from her coworkers.",
+          "zh": "獨自在家工作讓米雅覺得與同事疏離。",
+          "source": "daily"
+        },
+        {
+          "en": "Participants who felt alienated from campus life reported lower engagement.",
+          "zh": "感到與校園生活疏離的參與者回報了較低的投入程度。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "punishment-exclusion",
+      "mnemonicHint": "alien 是外人，alienated 像被當外人"
+    },
+    "allocate": {
+      "chinese": "分配；配置",
+      "pos": "v",
+      "synonyms": [
+        "assign",
+        "allot",
+        "distribute"
+      ],
+      "antonyms": [
+        "withhold",
+        "retain"
+      ],
+      "relatedWords": [
+        "allocation",
+        "allocator"
+      ],
+      "confusableWith": [
+        "locate"
+      ],
+      "exampleSentences": [
+        {
+          "en": "We allocate part of each paycheck to our emergency fund.",
+          "zh": "我們把每次薪水的一部分撥入緊急預備金。",
+          "source": "daily"
+        },
+        {
+          "en": "Researchers must allocate limited computing resources across multiple experiments.",
+          "zh": "研究人員必須在多項實驗之間分配有限的運算資源。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "addition-support",
+      "mnemonicHint": "al 加 locate，替資源找到位置"
+    },
+    "alone": {
+      "chinese": "單獨的；獨自地",
+      "pos": "adj/adv",
+      "synonyms": [
+        "solitary",
+        "unaccompanied",
+        "by oneself",
+        "isolated"
+      ],
+      "antonyms": [
+        "together",
+        "accompanied"
+      ],
+      "relatedWords": [
+        "lonely",
+        "aloneness",
+        "lone"
+      ],
+      "confusableWith": [
+        "along"
+      ],
+      "exampleSentences": [
+        {
+          "en": "I prefer to study alone at night.",
+          "zh": "我喜歡晚上獨自讀書。",
+          "source": "daily"
+        },
+        {
+          "en": "Economic growth alone cannot guarantee social well-being.",
+          "zh": "僅靠經濟成長無法保障社會福祉。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "scope-independence",
+      "mnemonicHint": "a + lone：一個人孤單站著。"
+    },
+    "alternative": {
+      "chinese": "替代的",
+      "pos": "adj/n",
+      "synonyms": [
+        "substitute",
+        "option",
+        "replacement",
+        "backup"
+      ],
+      "antonyms": [
+        "original",
+        "primary",
+        "standard"
+      ],
+      "relatedWords": [
+        "alternate",
+        "alternatively"
+      ],
+      "confusableWith": [
+        "alternate (交替)"
+      ],
+      "exampleSentences": [
+        {
+          "en": "We need to find an alternative route due to road construction.",
+          "zh": "由於道路施工，我們需要找替代路線。",
+          "source": "daily"
+        },
+        {
+          "en": "Alternative energy sources are critical for reducing carbon emissions.",
+          "zh": "替代能源對減少碳排放至關重要。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "choice-option",
+      "mnemonicHint": "alter(other) + native → 另一個選擇 → 替代的"
+    },
+    "although": {
+      "chinese": "雖然；儘管",
+      "pos": "conj",
+      "synonyms": [
+        "though",
+        "even though",
+        "while",
+        "albeit"
+      ],
+      "antonyms": [
+        "because of this",
+        "as a result"
+      ],
+      "relatedWords": [
+        "though",
+        "albeit",
+        "notwithstanding"
+      ],
+      "confusableWith": [
+        "however"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Although I was tired, I finished the dishes.",
+          "zh": "雖然我很累，還是把碗洗完了。",
+          "source": "daily"
+        },
+        {
+          "en": "Although the sample was small, the effect was statistically significant.",
+          "zh": "儘管樣本很小，該效果仍達統計顯著。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "comparison-contrast",
+      "mnemonicHint": "all + though：即使全部如此，仍然有轉折。"
+    },
+    "ambivalent": {
+      "chinese": "矛盾的",
+      "pos": "adj",
+      "synonyms": [
+        "conflicted",
+        "uncertain",
+        "torn",
+        "indecisive"
+      ],
+      "antonyms": [
+        "decisive",
+        "certain",
+        "resolute"
+      ],
+      "relatedWords": [
+        "ambivalence"
+      ],
+      "confusableWith": [
+        "equivalent"
+      ],
+      "exampleSentences": [
+        {
+          "en": "She felt ambivalent about accepting the job offer abroad.",
+          "zh": "她對接受國外的工作機會感到矛盾。",
+          "source": "daily"
+        },
+        {
+          "en": "Public opinion remains ambivalent toward nuclear energy.",
+          "zh": "公眾輿論對核能仍持矛盾態度。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "emotion-uncertainty",
+      "mnemonicHint": "ambi(both) + valent(strength) → 兩種力量拉扯 → 矛盾的"
+    },
+    "ameliorated": {
+      "chinese": "改善了的",
+      "pos": "v",
+      "synonyms": [
+        "improved",
+        "enhanced",
+        "alleviated"
+      ],
+      "antonyms": [
+        "worsened",
+        "aggravated"
+      ],
+      "relatedWords": [
+        "ameliorate",
+        "amelioration"
+      ],
+      "confusableWith": [
+        "elaborated"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Opening the windows ameliorated the stuffy conditions in our apartment.",
+          "zh": "打開窗戶改善了公寓裡的悶熱情況。",
+          "source": "daily"
+        },
+        {
+          "en": "The adverse effects were ameliorated by a targeted nutrition program.",
+          "zh": "一項針對性的營養計畫緩解了這些不良影響。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "change-improvement",
+      "mnemonicHint": "聯想 a meal 讓狀況變好，ameliorate 是改善"
+    },
+    "amenities": {
+      "chinese": "便利設施；舒適設備",
+      "pos": "n",
+      "synonyms": [
+        "facilities",
+        "conveniences",
+        "services"
+      ],
+      "antonyms": [
+        "hardships",
+        "deprivations"
+      ],
+      "relatedWords": [
+        "amenity"
+      ],
+      "confusableWith": [
+        "amnesties"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Our new apartment has amenities such as a gym and laundry room.",
+          "zh": "我們的新公寓有健身房和洗衣間等便利設施。",
+          "source": "daily"
+        },
+        {
+          "en": "The survey linked access to public amenities with neighborhood satisfaction.",
+          "zh": "該調查將公共設施的可及性與社區滿意度連結起來。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "positive-helpful",
+      "mnemonicHint": "amenity 帶來舒適，複數指各種設施"
+    },
+    "amounts": {
+      "chinese": "數量；總額",
+      "pos": "n/v",
+      "synonyms": [
+        "quantities",
+        "totals",
+        "sums",
+        "volumes"
+      ],
+      "antonyms": [
+        "shortages",
+        "deficits",
+        "scarcity"
+      ],
+      "relatedWords": [
+        "amount",
+        "amounted",
+        "amounting"
+      ],
+      "confusableWith": [
+        "accounts",
+        "mounts"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The recipe uses small amounts of salt and sugar.",
+          "zh": "這份食譜只使用少量的鹽和糖。",
+          "source": "daily"
+        },
+        {
+          "en": "Large amounts of plastic waste enter coastal waters during the rainy season.",
+          "zh": "雨季期間，大量塑膠廢棄物流入沿海水域。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "quantity-measurement",
+      "mnemonicHint": "amounts 是 amount 的複數，常和不可數名詞搭配成 amounts of。"
+    },
+    "analogous": {
+      "chinese": "類似的；相應的",
+      "pos": "adj",
+      "synonyms": [
+        "similar",
+        "comparable",
+        "parallel"
+      ],
+      "antonyms": [
+        "different",
+        "unrelated"
+      ],
+      "relatedWords": [
+        "analogy",
+        "analogously"
+      ],
+      "confusableWith": [
+        "anomalous"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Sorting socks by color is analogous to organizing files by category.",
+          "zh": "按顏色整理襪子就像按類別整理檔案一樣。",
+          "source": "daily"
+        },
+        {
+          "en": "The researchers found the neural process analogous to a feedback loop.",
+          "zh": "研究人員發現這種神經過程類似於回饋迴路。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "comparison-similarity",
+      "mnemonicHint": "analogy 類比，analogous 表示可類比"
+    },
+    "antithetical": {
+      "chinese": "正相反的；對立的",
+      "pos": "adj",
+      "synonyms": [
+        "opposed",
+        "contrary",
+        "incompatible"
+      ],
+      "antonyms": [
+        "similar",
+        "compatible"
+      ],
+      "relatedWords": [
+        "antithesis",
+        "antithetically"
+      ],
+      "confusableWith": [
+        "hypothetical"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Leaving dirty dishes overnight is antithetical to my roommate's tidy habits.",
+          "zh": "把髒碗盤留到隔夜，完全違背我室友愛整潔的習慣。",
+          "source": "daily"
+        },
+        {
+          "en": "The evidence is antithetical to the theory's central prediction.",
+          "zh": "這項證據與該理論的核心預測完全相反。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "comparison-contrast",
+      "mnemonicHint": "anti 反對加 thesis 命題，兩者對立"
+    },
+    "apparatus": {
+      "chinese": "器具；裝置；儀器",
+      "pos": "n",
+      "synonyms": [
+        "equipment",
+        "instrumentation",
+        "machinery"
+      ],
+      "antonyms": [
+        "absence of equipment",
+        "unaided operation"
+      ],
+      "relatedWords": [
+        "apparatuses"
+      ],
+      "confusableWith": [
+        "appearance"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Dad stored the breathing apparatus beside his bed.",
+          "zh": "爸爸把呼吸器放在床邊。",
+          "source": "daily"
+        },
+        {
+          "en": "The laboratory apparatus measured changes in air pressure during combustion.",
+          "zh": "這套實驗室儀器測量了燃燒過程中的氣壓變化。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "shape-form",
+      "mnemonicHint": "apparatus 是一套為特定功能組成的裝置"
+    },
+    "apparel": {
+      "chinese": "服裝；衣著",
+      "pos": "n",
+      "synonyms": [
+        "clothing",
+        "attire",
+        "garments"
+      ],
+      "antonyms": [
+        "nudity",
+        "undress"
+      ],
+      "relatedWords": [
+        "appareled",
+        "appareling"
+      ],
+      "confusableWith": [
+        "apparent"
+      ],
+      "exampleSentences": [
+        {
+          "en": "This store sells outdoor apparel for hiking and camping.",
+          "zh": "這家店販售健行與露營用的戶外服裝。",
+          "source": "daily"
+        },
+        {
+          "en": "The report analyzes how apparel production affects regional water consumption.",
+          "zh": "該報告分析服裝生產如何影響區域用水量。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "beauty-art",
+      "mnemonicHint": "apparel 聯想 appear 時穿的衣服"
+    },
+    "appliance": {
+      "chinese": "電器；家用電器",
+      "pos": "n",
+      "synonyms": [
+        "electrical device",
+        "household machine",
+        "electrical equipment"
+      ],
+      "antonyms": [
+        "manual tool",
+        "hand-powered device"
+      ],
+      "relatedWords": [
+        "apply",
+        "appliances"
+      ],
+      "confusableWith": [
+        "compliance"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Unplug the appliance before cleaning its metal blades.",
+          "zh": "清潔這台電器的金屬刀片前，請先拔掉插頭。",
+          "source": "daily"
+        },
+        {
+          "en": "Engineers measured the appliance's energy consumption under peak load.",
+          "zh": "工程師測量了該電器在尖峰負載下的耗電量。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "shape-form",
+      "mnemonicHint": "apply 應用，appliance 是應用於工作的器具"
+    },
+    "appraisal": {
+      "chinese": "評估；估價",
+      "pos": "n",
+      "synonyms": [
+        "assessment",
+        "evaluation",
+        "valuation"
+      ],
+      "antonyms": [
+        "nonassessment",
+        "lack of evaluation"
+      ],
+      "relatedWords": [
+        "appraise",
+        "appraiser"
+      ],
+      "confusableWith": [
+        "approval"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The bank requested a home appraisal before approving our mortgage.",
+          "zh": "銀行在核准我們的房貸前要求進行房屋估價。",
+          "source": "daily"
+        },
+        {
+          "en": "A critical appraisal revealed several weaknesses in the study design.",
+          "zh": "批判性評估揭露了該研究設計中的幾項缺點。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "analysis-investigation",
+      "mnemonicHint": "appraise 評價，appraisal 是評估結果"
+    },
+    "apprehended": {
+      "chinese": "逮捕；理解了",
+      "pos": "v",
+      "synonyms": [
+        "arrested",
+        "captured",
+        "seized"
+      ],
+      "antonyms": [
+        "released",
+        "freed"
+      ],
+      "relatedWords": [
+        "apprehend",
+        "apprehension"
+      ],
+      "confusableWith": [
+        "comprehended"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Officers apprehended the bicycle thief outside our building.",
+          "zh": "警員在我們的大樓外逮捕了偷腳踏車的竊賊。",
+          "source": "daily"
+        },
+        {
+          "en": "Once the underlying principle is apprehended, the equation becomes easier to derive.",
+          "zh": "一旦理解背後的原理，這條方程式就更容易推導。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "access-restriction",
+      "mnemonicHint": "prehend 是抓，apprehended 可抓到人或意思"
+    },
+    "apprehension": {
+      "chinese": "憂慮；逮捕",
+      "pos": "n",
+      "synonyms": [
+        "anxiety",
+        "dread",
+        "unease",
+        "arrest"
+      ],
+      "antonyms": [
+        "confidence",
+        "reassurance",
+        "release"
+      ],
+      "relatedWords": [
+        "apprehend",
+        "apprehensive"
+      ],
+      "confusableWith": [
+        "comprehension"
+      ],
+      "exampleSentences": [
+        {
+          "en": "She felt a growing sense of apprehension before the interview.",
+          "zh": "面試前她感到越來越強的憂慮。",
+          "source": "daily"
+        },
+        {
+          "en": "Public apprehension about AI reflects concerns over job displacement.",
+          "zh": "公眾對AI的憂慮反映了對工作被取代的擔憂。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "emotion-anxiety",
+      "mnemonicHint": "ap(to) + prehend(seize/grasp) + sion → 被恐懼抓住 → 憂慮"
+    },
+    "apprentice": {
+      "chinese": "學徒；見習生",
+      "pos": "n",
+      "synonyms": [
+        "trainee",
+        "novice",
+        "learner"
+      ],
+      "antonyms": [
+        "master",
+        "expert"
+      ],
+      "relatedWords": [
+        "apprenticeship"
+      ],
+      "confusableWith": [
+        "apprentices"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The apprentice practiced cutting hair under the barber's supervision.",
+          "zh": "那名學徒在理髮師的指導下練習剪髮。",
+          "source": "daily"
+        },
+        {
+          "en": "The historian examined how each apprentice acquired skills through supervised practice.",
+          "zh": "歷史學家研究每名學徒如何透過受督導的實作習得技能。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "hierarchy-status",
+      "mnemonicHint": "apprentice 跟著 master 學技藝"
+    },
+    "approbations": {
+      "chinese": "讚許；認可",
+      "pos": "n",
+      "synonyms": [
+        "expressions of approval",
+        "commendations",
+        "accolades"
+      ],
+      "antonyms": [
+        "expressions of disapproval",
+        "condemnations"
+      ],
+      "relatedWords": [
+        "approbation",
+        "approbate"
+      ],
+      "confusableWith": [
+        "probations"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The chef accepted the diners' approbations with a modest smile.",
+          "zh": "主廚帶著謙遜的微笑接受食客們的讚許。",
+          "source": "daily"
+        },
+        {
+          "en": "Public approbations from senior scholars strengthened the proposal's credibility.",
+          "zh": "資深學者公開表達的讚許提升了該提案的可信度。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "respect-attitude",
+      "mnemonicHint": "approbation 中 approve 的聲音，表示認可"
+    },
+    "arbitrary": {
+      "chinese": "武斷的；任意的",
+      "pos": "adj",
+      "synonyms": [
+        "capricious",
+        "random",
+        "unprincipled"
+      ],
+      "antonyms": [
+        "reasoned",
+        "systematic"
+      ],
+      "relatedWords": [
+        "arbitrariness",
+        "arbitrarily"
+      ],
+      "confusableWith": [
+        "arbitration"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The landlord imposed an arbitrary fee for using the elevator.",
+          "zh": "房東任意收取使用電梯的費用。",
+          "source": "daily"
+        },
+        {
+          "en": "An arbitrary cutoff score excluded several otherwise qualified applicants.",
+          "zh": "任意設定的分數門檻排除了幾名原本合格的申請者。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "choice-option",
+      "mnemonicHint": "沒有理由只憑 arbiter 決定，就是武斷"
+    },
+    "archeologically": {
+      "chinese": "以考古學方式；從考古學角度",
+      "pos": "adv",
+      "synonyms": [
+        "archaeologically",
+        "from an archaeological perspective",
+        "by archaeological methods"
+      ],
+      "antonyms": [
+        "from a nonarchaeological perspective",
+        "without archaeological analysis"
+      ],
+      "relatedWords": [
+        "archeology",
+        "archeological"
+      ],
+      "confusableWith": [
+        "architecturally"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The ancient well behind our school is archeologically significant.",
+          "zh": "我們學校後方的古井具有考古學上的重要性。",
+          "source": "daily"
+        },
+        {
+          "en": "The researchers interpreted the pottery archeologically by comparing its layers and motifs.",
+          "zh": "研究人員透過比較陶器的地層與紋飾，從考古學角度加以解讀。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "analysis-investigation",
+      "mnemonicHint": "archaeology 加 ly，表示以考古方式"
+    },
+    "arguable": {
+      "chinese": "可爭辯的；可論證的",
+      "pos": "adj",
+      "synonyms": [
+        "debatable",
+        "disputable",
+        "defensible"
+      ],
+      "antonyms": [
+        "indisputable",
+        "untenable"
+      ],
+      "relatedWords": [
+        "argue",
+        "argument",
+        "arguably"
+      ],
+      "confusableWith": [
+        "argumentative"
+      ],
+      "exampleSentences": [
+        {
+          "en": "It is arguable whether our shared balcony counts as private space.",
+          "zh": "我們共用的陽台是否算私人空間，這一點仍有爭議。",
+          "source": "daily"
+        },
+        {
+          "en": "The claim is arguable because the sample excludes rural households.",
+          "zh": "這項主張仍可爭辯，因為樣本排除了鄉村家庭。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "emotion-uncertainty",
+      "mnemonicHint": "argue 加 able，能被辯論或主張"
+    },
+    "arguably": {
+      "chinese": "可以說；有理由認為",
+      "pos": "adv",
+      "synonyms": [
+        "possibly",
+        "plausibly",
+        "defensibly"
+      ],
+      "antonyms": [
+        "indisputably",
+        "undeniably"
+      ],
+      "relatedWords": [
+        "argue",
+        "arguable",
+        "argument"
+      ],
+      "confusableWith": [
+        "argumentatively"
+      ],
+      "exampleSentences": [
+        {
+          "en": "This is arguably the best bakery within walking distance.",
+          "zh": "這可以說是步行範圍內最好吃的麵包店。",
+          "source": "daily"
+        },
+        {
+          "en": "The printing press arguably accelerated the spread of scientific knowledge.",
+          "zh": "印刷術可以說加速了科學知識的傳播。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "emotion-uncertainty",
+      "mnemonicHint": "arguable 加 ly，以可辯護的方式說"
+    },
+    "arguing": {
+      "chinese": "爭論；論證",
+      "pos": "v",
+      "synonyms": [
+        "debating",
+        "contending",
+        "reasoning"
+      ],
+      "antonyms": [
+        "agreeing",
+        "conceding"
+      ],
+      "relatedWords": [
+        "argue",
+        "argument",
+        "arguer"
+      ],
+      "confusableWith": [
+        "bargaining"
+      ],
+      "exampleSentences": [
+        {
+          "en": "My neighbors were arguing about where to park the scooter.",
+          "zh": "我的鄰居為了機車該停在哪裡而爭吵。",
+          "source": "daily"
+        },
+        {
+          "en": "The essay concludes by arguing that income alone cannot predict well-being.",
+          "zh": "這篇論文最後主張，單靠收入無法預測幸福感。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "opposition-conflict",
+      "mnemonicHint": "argument 來自 argue，arguing 是正在爭辯"
+    },
+    "arid": {
+      "chinese": "乾旱的；枯燥的",
+      "pos": "adj",
+      "synonyms": [
+        "dry",
+        "parched",
+        "barren"
+      ],
+      "antonyms": [
+        "humid",
+        "fertile"
+      ],
+      "relatedWords": [
+        "aridity",
+        "aridness"
+      ],
+      "confusableWith": [
+        "acid"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Only drought-resistant herbs survived on our arid balcony.",
+          "zh": "只有耐旱的香草在我們乾燥的陽台上存活下來。",
+          "source": "daily"
+        },
+        {
+          "en": "The experiment tested crop yields under arid soil conditions.",
+          "zh": "該實驗測試了乾旱土壤條件下的作物產量。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "decline-deterioration",
+      "mnemonicHint": "a-rid 像水被除掉，土地乾旱"
+    },
+    "arrogated": {
+      "chinese": "擅取；霸占",
+      "pos": "v",
+      "synonyms": [
+        "appropriated",
+        "usurped",
+        "seized"
+      ],
+      "antonyms": [
+        "relinquished",
+        "surrendered"
+      ],
+      "relatedWords": [
+        "arrogate",
+        "arrogation"
+      ],
+      "confusableWith": [
+        "abrogated"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Our team leader arrogated the final scheduling decision to himself.",
+          "zh": "我們的組長擅自把最終排班決定權攬到自己身上。",
+          "source": "daily"
+        },
+        {
+          "en": "The executive arrogated powers previously reserved for the elected council.",
+          "zh": "該行政首長擅取了原本保留給民選議會的權力。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "authority-control",
+      "mnemonicHint": "arrogant 地把權力拿走，就是 arrogate"
+    },
+    "art": {
+      "chinese": "藝術；技藝",
+      "pos": "n",
+      "synonyms": [
+        "craft",
+        "artwork",
+        "creative expression",
+        "fine arts"
+      ],
+      "antonyms": [
+        "artlessness",
+        "lack of skill"
+      ],
+      "relatedWords": [
+        "artist",
+        "artistic",
+        "artistry"
+      ],
+      "confusableWith": [
+        "article"
+      ],
+      "exampleSentences": [
+        {
+          "en": "We saw modern art at the museum.",
+          "zh": "我們在博物館欣賞了現代藝術。",
+          "source": "daily"
+        },
+        {
+          "en": "Public art can strengthen a community’s cultural identity.",
+          "zh": "公共藝術能強化社區的文化認同。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "beauty-art",
+      "mnemonicHint": "art 是 artist 與 artistic 的核心字根。"
+    },
+    "aspired to": {
+      "chinese": "渴望；立志要",
+      "pos": "phrase",
+      "synonyms": [
+        "aimed to",
+        "longed to",
+        "sought to"
+      ],
+      "antonyms": [
+        "gave up",
+        "settled for"
+      ],
+      "relatedWords": [
+        "aspire",
+        "aspiration"
+      ],
+      "confusableWith": [
+        "expired"
+      ],
+      "exampleSentences": [
+        {
+          "en": "As a child, Lena aspired to run her own bakery.",
+          "zh": "莉娜小時候立志經營自己的麵包店。",
+          "source": "daily"
+        },
+        {
+          "en": "The early reformers aspired to create a more representative government.",
+          "zh": "早期改革者立志建立更具代表性的政府。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "intention-purpose",
+      "mnemonicHint": "a 加 spire 向高處，aspire to 是立志向上"
+    },
+    "audience": {
+      "chinese": "觀眾；聽眾；讀者群",
+      "pos": "n",
+      "synonyms": [
+        "spectators",
+        "listeners",
+        "viewers",
+        "readership"
+      ],
+      "antonyms": [
+        "performers",
+        "speakers",
+        "presenters"
+      ],
+      "relatedWords": [
+        "audiences",
+        "audience-centered",
+        "audience-facing"
+      ],
+      "confusableWith": [
+        "audio",
+        "attendance"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The singer thanked the audience before leaving the stage.",
+          "zh": "歌手離開舞臺前向觀眾致謝。",
+          "source": "daily"
+        },
+        {
+          "en": "The author adjusts technical terms to make the article accessible to a general audience.",
+          "zh": "作者調整專業術語，讓一般讀者也能理解這篇文章。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "media-communication",
+      "mnemonicHint": "audience 開頭的 audi- 和聽有關，最早指前來聽的人。"
+    },
+    "authentic": {
+      "chinese": "真實的；正宗的",
+      "pos": "adj",
+      "synonyms": [
+        "genuine",
+        "real",
+        "legitimate"
+      ],
+      "antonyms": [
+        "fake",
+        "counterfeit"
+      ],
+      "relatedWords": [
+        "authenticity",
+        "authenticate"
+      ],
+      "confusableWith": [
+        "authoritative"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The family restaurant serves authentic Hakka rice noodles.",
+          "zh": "這間家庭餐廳供應正宗的客家米粉。",
+          "source": "daily"
+        },
+        {
+          "en": "Historians verified the letter as an authentic primary source.",
+          "zh": "歷史學家證實這封信是一手真實史料。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "truth-verification",
+      "mnemonicHint": "author 原作者可驗真，authentic 表示真品"
+    },
+    "author's": {
+      "chinese": "作者的",
+      "pos": "adj",
+      "synonyms": [
+        "writer’s",
+        "creator’s",
+        "novelist’s"
+      ],
+      "antonyms": [
+        "reader's",
+        "reviewer's"
+      ],
+      "relatedWords": [
+        "author",
+        "authorship",
+        "authorial"
+      ],
+      "confusableWith": [
+        "authors"
+      ],
+      "exampleSentences": [
+        {
+          "en": "I borrowed the author's latest book.",
+          "zh": "我借了這位作者的最新著作。",
+          "source": "daily"
+        },
+        {
+          "en": "The author's argument depends on evidence from two longitudinal studies.",
+          "zh": "作者的論點依據兩項縱貫研究的證據。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "ownership-attribution",
+      "mnemonicHint": "author + 's：撇號 s 表示「作者的」。"
+    },
+    "available": {
+      "chinese": "可取得的；有空的",
+      "pos": "adj",
+      "synonyms": [
+        "obtainable",
+        "accessible",
+        "free",
+        "ready"
+      ],
+      "antonyms": [
+        "unavailable",
+        "occupied",
+        "inaccessible"
+      ],
+      "relatedWords": [
+        "availability",
+        "avail",
+        "availably"
+      ],
+      "confusableWith": [
+        "valuable"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Is this seat still available?",
+          "zh": "這個座位還空著嗎？",
+          "source": "daily"
+        },
+        {
+          "en": "Reliable data are not always available in developing regions.",
+          "zh": "在發展中地區不一定能取得可靠資料。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "access-availability",
+      "mnemonicHint": "avail 可利用 + able 能夠：能被利用的。"
+    },
+    "avaricious": {
+      "chinese": "貪婪的",
+      "pos": "adj",
+      "synonyms": [
+        "greedy",
+        "covetous",
+        "grasping"
+      ],
+      "antonyms": [
+        "generous",
+        "content"
+      ],
+      "relatedWords": [
+        "avarice",
+        "avariciously"
+      ],
+      "confusableWith": [
+        "vicarious"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The avaricious dealer charged tourists triple the usual price.",
+          "zh": "那名貪婪的商人向觀光客收取平常三倍的價格。",
+          "source": "daily"
+        },
+        {
+          "en": "The novel portrays the industrialist as an avaricious landowner.",
+          "zh": "這部小說將那名實業家描寫成貪婪的地主。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "excess-abundance",
+      "mnemonicHint": "avarice 貪欲加 ous，充滿貪念"
+    },
+    "avid": {
+      "chinese": "熱衷的；渴望的",
+      "pos": "adj",
+      "synonyms": [
+        "eager",
+        "enthusiastic",
+        "keen"
+      ],
+      "antonyms": [
+        "indifferent",
+        "reluctant"
+      ],
+      "relatedWords": [
+        "avidity",
+        "avidly"
+      ],
+      "confusableWith": [
+        "avoid"
+      ],
+      "exampleSentences": [
+        {
+          "en": "My aunt is an avid gardener who grows tomatoes on her roof.",
+          "zh": "我阿姨熱衷園藝，還在屋頂種番茄。",
+          "source": "daily"
+        },
+        {
+          "en": "Avid readers in the study demonstrated stronger vocabulary retention.",
+          "zh": "研究中熱愛閱讀的受試者展現出較強的詞彙記憶力。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "intention-purpose",
+      "mnemonicHint": "avid 和 avoid 只差 o，avid 是不想避開而熱衷"
+    }
+  }
+}

@@ -2,7 +2,7 @@
 
 import { useWordWeb } from '@/hooks/use-word-web'
 import { SpeakButton } from './speak-button'
-import { VocabMindMap } from './vocab-mind-map'
+import { WordWebPanel } from './word-web-panel'
 
 interface VocabAnswerProps {
   cardId: string
@@ -72,9 +72,8 @@ function extractWord(prompt: string): string {
 
 export function VocabAnswer({ cardId, prompt, answer, speak, speakingId }: VocabAnswerProps) {
   const parsed = parseVocabAnswer(answer)
-  const { getWord } = useWordWeb()
   const word = extractWord(prompt)
-  const wordWeb = getWord(word)
+  const { entry: wordWeb } = useWordWeb(word)
   const hasStructure = parsed.chinese || parsed.example || parsed.synonyms || parsed.antonyms
 
   if (!hasStructure && !wordWeb) {
@@ -149,18 +148,7 @@ export function VocabAnswer({ cardId, prompt, answer, speak, speakingId }: Vocab
 
       {wordWeb && (
         <div className="border-t pt-3 mt-3">
-          <VocabMindMap
-            word={word}
-            chinese={wordWeb.chinese}
-            synonyms={wordWeb.synonyms}
-            antonyms={wordWeb.antonyms}
-            relatedWords={wordWeb.relatedWords}
-            confusableWith={wordWeb.confusableWith}
-            exampleSentences={wordWeb.exampleSentences}
-            semanticGroup={wordWeb.semanticGroup}
-            mnemonicHint={wordWeb.mnemonicHint}
-            onWordClick={(clicked) => speak(clicked, `${cardId}-web-${clicked}`)}
-          />
+          <WordWebPanel word={word} idPrefix={`${cardId}-web`} speak={speak} />
         </div>
       )}
     </div>

@@ -1,0 +1,2365 @@
+{
+  "schemaVersion": 1,
+  "source": "public/data/im-english-word-web.json",
+  "words": [
+    "abridged",
+    "access",
+    "accessible",
+    "accident",
+    "acclaimed",
+    "activity",
+    "adding",
+    "addition",
+    "adhering",
+    "aesthetic",
+    "aforementioned",
+    "africa",
+    "african",
+    "alienated",
+    "allocate",
+    "alone",
+    "alternative",
+    "although",
+    "ambivalent",
+    "ameliorated",
+    "amenities",
+    "amounts",
+    "analogous",
+    "antithetical",
+    "apparatus",
+    "apparel",
+    "appliance",
+    "appraisal",
+    "apprehended",
+    "apprehension",
+    "apprentice",
+    "approbations",
+    "arbitrary",
+    "archeologically",
+    "arguable",
+    "arguably",
+    "arguing",
+    "arid",
+    "arrogated",
+    "art",
+    "aspired to",
+    "audience",
+    "authentic",
+    "author's",
+    "available",
+    "avaricious",
+    "avid",
+    "barriers",
+    "barristers",
+    "be featured",
+    "be featuring",
+    "been included",
+    "being stuck",
+    "benedictions",
+    "beneficial",
+    "beyond",
+    "binary",
+    "blackmail",
+    "bleak",
+    "blood",
+    "bold",
+    "bored",
+    "brethren",
+    "broken",
+    "broken down",
+    "burly",
+    "cancer",
+    "caused",
+    "cell",
+    "cells",
+    "censurable",
+    "center",
+    "chaotic",
+    "circumspect",
+    "cities",
+    "clamorous",
+    "clear",
+    "climate",
+    "color",
+    "commemorate",
+    "common",
+    "commutations",
+    "compartment",
+    "compatible",
+    "complement",
+    "compliance",
+    "complicate",
+    "complications",
+    "compliment",
+    "component",
+    "comprehension",
+    "computations",
+    "concave",
+    "concise",
+    "condolence",
+    "condone",
+    "confidants",
+    "confiscate",
+    "conflict",
+    "congenially",
+    "consequences",
+    "conservative",
+    "consistent",
+    "conspicuous",
+    "consumption",
+    "contact",
+    "contaminate",
+    "contingency",
+    "contradict",
+    "conventional",
+    "convincing",
+    "corroborate",
+    "corrugate",
+    "cost",
+    "counted on",
+    "counterfeits",
+    "create",
+    "credulous",
+    "customers",
+    "cyberbullying",
+    "daily",
+    "data",
+    "deceptive",
+    "decisive",
+    "deferential",
+    "degradation",
+    "deliberate",
+    "deliberately",
+    "deliberately disregards",
+    "delineate",
+    "descendants",
+    "described",
+    "despite that",
+    "detached",
+    "detrimental",
+    "devastating",
+    "diabetes",
+    "dictator",
+    "did i",
+    "diet",
+    "difficult",
+    "disapproving",
+    "discoursed",
+    "discovered",
+    "disinfection",
+    "disjointed",
+    "dismantled",
+    "dismiss",
+    "disorders",
+    "disparagement",
+    "disregards",
+    "disruption",
+    "dissection",
+    "dissidents",
+    "dissimulation",
+    "distinctive",
+    "divergence",
+    "do i",
+    "dormant",
+    "earlier",
+    "economic",
+    "effect",
+    "effecting",
+    "efforts",
+    "eloquent",
+    "elucidated",
+    "encounters",
+    "engenders",
+    "engineered",
+    "enough large",
+    "enough largely",
+    "ensure",
+    "entire",
+    "entitles",
+    "entraps",
+    "environmental",
+    "evaporation",
+    "even play",
+    "evidence",
+    "exacerbate",
+    "exclusive",
+    "exhilarating",
+    "exile",
+    "expanded",
+    "expect",
+    "expenditure",
+    "experiences",
+    "experts",
+    "explain",
+    "expounded",
+    "expressing surprise",
+    "expunged",
+    "exquisite",
+    "extensive",
+    "extraordinary",
+    "extravagant",
+    "facebook",
+    "facilities",
+    "factors",
+    "fad",
+    "families",
+    "fantastic",
+    "farming",
+    "farms",
+    "fascinated",
+    "favorite",
+    "feeding",
+    "feeling bored",
+    "feeling boring",
+    "feigning",
+    "feigning innocence",
+    "felt bored",
+    "felt boring",
+    "female",
+    "figures",
+    "film",
+    "flair",
+    "focus",
+    "foreshadowed",
+    "forfeited",
+    "forms",
+    "function",
+    "gain",
+    "gas",
+    "gender",
+    "genuinely",
+    "given that",
+    "giving condolence",
+    "glittering",
+    "government official",
+    "gratitude",
+    "grievance",
+    "growing",
+    "habit",
+    "happens",
+    "harassment",
+    "harbinger",
+    "have stuck",
+    "having affected",
+    "healthy",
+    "hedgehog",
+    "higher",
+    "hinges on",
+    "hooking",
+    "hopping",
+    "hotbed",
+    "huge",
+    "humankind",
+    "hushing",
+    "husking",
+    "iii",
+    "imaginative",
+    "immutable",
+    "impassive",
+    "imperious",
+    "inadequately",
+    "inclusive",
+    "incorporate",
+    "incorrect",
+    "increasing",
+    "indict",
+    "indifferent",
+    "inequality",
+    "ingenuous",
+    "inheriting",
+    "injunction",
+    "innocence",
+    "innovative",
+    "insighted",
+    "installed",
+    "instigated",
+    "instilled",
+    "insufficiently",
+    "intangible",
+    "integrates",
+    "intelligence",
+    "intensify",
+    "intentionally",
+    "interested in",
+    "interesting to",
+    "intermittent",
+    "internet",
+    "interrogate",
+    "inversely",
+    "ironed out",
+    "is considered",
+    "is regarded",
+    "is seemed",
+    "is viewed",
+    "jeopardy",
+    "jovial",
+    "key",
+    "knowledge",
+    "lampoons",
+    "language",
+    "languor",
+    "lapse",
+    "larceny",
+    "lard",
+    "large enough",
+    "largely enough",
+    "law",
+    "leading",
+    "leads",
+    "levels",
+    "leverage",
+    "limited",
+    "literature",
+    "litigants",
+    "lives",
+    "living",
+    "looks into",
+    "lot",
+    "lower",
+    "manufacture",
+    "mass",
+    "material",
+    "measurable",
+    "meat",
+    "mediocre",
+    "meeting",
+    "melancholy",
+    "mellow",
+    "members",
+    "method",
+    "miserable",
+    "misfit",
+    "mitigate",
+    "morbid",
+    "movies",
+    "music",
+    "natural",
+    "nature",
+    "no meaning",
+    "no means",
+    "not mean",
+    "not means",
+    "nowadays",
+    "obscure",
+    "offensive",
+    "older",
+    "ominous",
+    "onto",
+    "openly challenges",
+    "opposable",
+    "order",
+    "outcast",
+    "outrageous",
+    "overwhelming",
+    "parsimonious",
+    "particular",
+    "party",
+    "pervasive",
+    "phased",
+    "phased out",
+    "plans",
+    "plants",
+    "pleasurable",
+    "popularity",
+    "population",
+    "positive",
+    "practices",
+    "predecessor",
+    "predestined",
+    "preempted",
+    "premature",
+    "preoccupied",
+    "prescribe",
+    "presidents",
+    "price",
+    "problem",
+    "procedures",
+    "product",
+    "profanities",
+    "professor",
+    "prompted",
+    "provoke",
+    "public",
+    "quotient",
+    "raise",
+    "raised",
+    "rampant",
+    "rapidly",
+    "reasons",
+    "recess",
+    "reduce",
+    "redundancy",
+    "reflects",
+    "reform",
+    "regard of",
+    "regardless of",
+    "regret",
+    "relapsed",
+    "relaxed",
+    "relayed",
+    "relegate",
+    "relegated",
+    "remarkable",
+    "reminiscence",
+    "remiss",
+    "remission",
+    "replenished",
+    "replied",
+    "report",
+    "reports",
+    "reprimanded",
+    "required",
+    "resemblance",
+    "resides",
+    "residue",
+    "resigns",
+    "resilience",
+    "resolute",
+    "resonance",
+    "resource",
+    "resources",
+    "restoration",
+    "restrained",
+    "resuscitation",
+    "retorts",
+    "retreats",
+    "revenue",
+    "reverting",
+    "revolutionary",
+    "rhetoric",
+    "rigorous",
+    "robust",
+    "roll",
+    "rolled",
+    "rolling",
+    "rolls",
+    "safe",
+    "sales",
+    "sarcastically",
+    "scale",
+    "scientific",
+    "scurrilous",
+    "search",
+    "seasons",
+    "second",
+    "seeking",
+    "selectively",
+    "selectively integrates",
+    "serendipity",
+    "services",
+    "shocked",
+    "showing",
+    "showing gratitude",
+    "shows",
+    "shrines",
+    "significant",
+    "sites",
+    "smaller",
+    "social outcast",
+    "society",
+    "soft",
+    "soil",
+    "solution",
+    "soon",
+    "south",
+    "specific",
+    "spectrum",
+    "speculate",
+    "sports",
+    "spring",
+    "stiffening",
+    "still others",
+    "straightforward",
+    "strength",
+    "strive",
+    "striven",
+    "striving",
+    "stuck",
+    "student",
+    "study",
+    "style",
+    "subordination",
+    "substantiate",
+    "success",
+    "succession",
+    "sugar",
+    "summarizes",
+    "superficially",
+    "superficially summarizes",
+    "susceptible",
+    "tenacious",
+    "than that",
+    "that i",
+    "the others",
+    "theory",
+    "thinking",
+    "third",
+    "thorough",
+    "thwart",
+    "to be",
+    "to strive",
+    "to that",
+    "to which",
+    "train",
+    "transparent",
+    "treasurable",
+    "triggered",
+    "turned down",
+    "turns",
+    "type",
+    "types",
+    "ubiquitous",
+    "unbiased",
+    "unilateral",
+    "unique",
+    "unkempt",
+    "unleashed",
+    "unprecedented",
+    "unsanctioned",
+    "verbose",
+    "vertical",
+    "vied for",
+    "view",
+    "viewers",
+    "virus",
+    "wears out",
+    "weight",
+    "what if",
+    "whatever",
+    "which affect",
+    "who interested",
+    "will be",
+    "with respect to",
+    "women's",
+    "workers",
+    "worn",
+    "worn out",
+    "worth",
+    "would be",
+    "would have",
+    "york"
+  ],
+  "groups": {
+    "abstract-concept": {
+      "label": "抽象・概念",
+      "words": [
+        "intangible",
+        "intelligence"
+      ]
+    },
+    "access-availability": {
+      "label": "取得・可得性",
+      "words": [
+        "access",
+        "accessible",
+        "available",
+        "entitles",
+        "facilities",
+        "onto"
+      ]
+    },
+    "access-restriction": {
+      "label": "取得・限制",
+      "words": [
+        "apprehended",
+        "being stuck",
+        "entraps",
+        "exclusive",
+        "stuck"
+      ]
+    },
+    "action-behavior": {
+      "label": "行動・行為",
+      "words": [
+        "activity"
+      ]
+    },
+    "addition-alternative-groups": {
+      "label": "增加・替代・群體",
+      "words": [
+        "still others"
+      ]
+    },
+    "addition-support": {
+      "label": "增加・支持",
+      "words": [
+        "addition",
+        "allocate",
+        "complement",
+        "even play"
+      ]
+    },
+    "advantage-utilization": {
+      "label": "優勢・利用",
+      "words": [
+        "leverage"
+      ]
+    },
+    "agriculture-food": {
+      "label": "農業・食物",
+      "words": [
+        "farming",
+        "farms"
+      ]
+    },
+    "analysis-investigation": {
+      "label": "分析・調查",
+      "words": [
+        "appraisal",
+        "archeologically",
+        "computations",
+        "dissection",
+        "study",
+        "theory",
+        "thinking"
+      ]
+    },
+    "animals-thinking-metaphor": {
+      "label": "動物・思考・比喻",
+      "words": [
+        "hedgehog"
+      ]
+    },
+    "appearance-condition": {
+      "label": "外觀・條件",
+      "words": [
+        "unkempt"
+      ]
+    },
+    "attachment-attraction": {
+      "label": "依附・吸引",
+      "words": [
+        "hooking"
+      ]
+    },
+    "attention-focus": {
+      "label": "注意・專注",
+      "words": [
+        "preoccupied"
+      ]
+    },
+    "attention-priority": {
+      "label": "注意・優先",
+      "words": [
+        "focus"
+      ]
+    },
+    "authority-control": {
+      "label": "權威・控制",
+      "words": [
+        "arrogated",
+        "confiscate",
+        "dictator",
+        "government official",
+        "injunction"
+      ]
+    },
+    "authority-dominance": {
+      "label": "權威・支配",
+      "words": [
+        "imperious"
+      ]
+    },
+    "beauty-art": {
+      "label": "美感・藝術",
+      "words": [
+        "aesthetic",
+        "apparel",
+        "art",
+        "film",
+        "movies",
+        "music",
+        "style"
+      ]
+    },
+    "behavior-pattern": {
+      "label": "行為・模式",
+      "words": [
+        "habit"
+      ]
+    },
+    "biology-medicine": {
+      "label": "生物・醫學",
+      "words": [
+        "blood",
+        "cell"
+      ]
+    },
+    "biology-nutrition": {
+      "label": "生物・營養",
+      "words": [
+        "feeding"
+      ]
+    },
+    "biology-structure": {
+      "label": "生物・結構",
+      "words": [
+        "cells"
+      ]
+    },
+    "business-economics": {
+      "label": "商業・經濟學",
+      "words": [
+        "price"
+      ]
+    },
+    "calm-relaxation": {
+      "label": "平靜・放鬆",
+      "words": [
+        "relaxed"
+      ]
+    },
+    "causation-direction": {
+      "label": "因果・方向",
+      "words": [
+        "leads"
+      ]
+    },
+    "cause-effect": {
+      "label": "原因・效果",
+      "words": [
+        "caused",
+        "effect"
+      ]
+    },
+    "cause-stimulus": {
+      "label": "原因・刺激",
+      "words": [
+        "prompted",
+        "provoke"
+      ]
+    },
+    "caution-restraint": {
+      "label": "謹慎・克制",
+      "words": [
+        "circumspect",
+        "conservative",
+        "restrained"
+      ]
+    },
+    "certainty-security": {
+      "label": "確定・保安",
+      "words": [
+        "ensure"
+      ]
+    },
+    "change-acquisition": {
+      "label": "變化・獲取",
+      "words": [
+        "gain"
+      ]
+    },
+    "change-disorder": {
+      "label": "變化・失序",
+      "words": [
+        "chaotic",
+        "disruption"
+      ]
+    },
+    "change-growth": {
+      "label": "變化・成長",
+      "words": [
+        "expanded"
+      ]
+    },
+    "change-improvement": {
+      "label": "變化・改善",
+      "words": [
+        "ameliorated",
+        "growing",
+        "increasing",
+        "mitigate",
+        "raise",
+        "raised",
+        "reform",
+        "spring"
+      ]
+    },
+    "change-modification": {
+      "label": "變化・修改",
+      "words": [
+        "commutations",
+        "effecting",
+        "triggered",
+        "turns"
+      ]
+    },
+    "change-quantity": {
+      "label": "變化・數量",
+      "words": [
+        "adding"
+      ]
+    },
+    "change-return-state": {
+      "label": "變化・回歸・狀態",
+      "words": [
+        "reverting"
+      ]
+    },
+    "change-stages": {
+      "label": "變化・階段",
+      "words": [
+        "phased"
+      ]
+    },
+    "change-transformation": {
+      "label": "變化・轉變",
+      "words": [
+        "evaporation",
+        "revolutionary"
+      ]
+    },
+    "change-worsening": {
+      "label": "變化・惡化",
+      "words": [
+        "exacerbate"
+      ]
+    },
+    "choice-option": {
+      "label": "選擇・選項",
+      "words": [
+        "alternative",
+        "arbitrary"
+      ]
+    },
+    "choice-selection": {
+      "label": "選擇・選擇",
+      "words": [
+        "selectively"
+      ]
+    },
+    "clarity-obscurity": {
+      "label": "清晰・晦澀",
+      "words": [
+        "obscure"
+      ]
+    },
+    "classification-structure": {
+      "label": "分類・結構",
+      "words": [
+        "forms"
+      ]
+    },
+    "classification-type": {
+      "label": "分類・類型",
+      "words": [
+        "type"
+      ]
+    },
+    "clause-reference": {
+      "label": "條款・指涉",
+      "words": [
+        "that i"
+      ]
+    },
+    "commerce-market": {
+      "label": "貿易・市場",
+      "words": [
+        "customers"
+      ]
+    },
+    "communication-rebuttal": {
+      "label": "溝通・反駁",
+      "words": [
+        "retorts"
+      ]
+    },
+    "communication-response": {
+      "label": "溝通・回應",
+      "words": [
+        "replied"
+      ]
+    },
+    "comparison-contrast": {
+      "label": "比較・對比",
+      "words": [
+        "although",
+        "antithetical",
+        "inversely",
+        "than that"
+      ]
+    },
+    "comparison-degree": {
+      "label": "比較・程度",
+      "words": [
+        "higher"
+      ]
+    },
+    "comparison-similarity": {
+      "label": "比較・相似",
+      "words": [
+        "analogous",
+        "reflects",
+        "resemblance",
+        "with respect to"
+      ]
+    },
+    "condition-hypothesis": {
+      "label": "條件・假設",
+      "words": [
+        "what if"
+      ]
+    },
+    "conditional-state": {
+      "label": "條件句・狀態",
+      "words": [
+        "would be"
+      ]
+    },
+    "conflict-aggression": {
+      "label": "衝突・侵略",
+      "words": [
+        "blackmail",
+        "cyberbullying",
+        "encounters",
+        "harassment",
+        "instigated",
+        "vied for"
+      ]
+    },
+    "conflict-challenge": {
+      "label": "衝突・挑戰",
+      "words": [
+        "openly challenges"
+      ]
+    },
+    "conflict-offense": {
+      "label": "衝突・冒犯",
+      "words": [
+        "offensive"
+      ]
+    },
+    "connection-relationship": {
+      "label": "連結・關係",
+      "words": [
+        "contact"
+      ]
+    },
+    "construction-installation": {
+      "label": "建造・安裝",
+      "words": [
+        "installed"
+      ]
+    },
+    "counterfactual-past": {
+      "label": "與事實相反・過去",
+      "words": [
+        "would have"
+      ]
+    },
+    "creation-novelty": {
+      "label": "創造・新奇",
+      "words": [
+        "create",
+        "engenders",
+        "imaginative",
+        "innovative",
+        "plants",
+        "product"
+      ]
+    },
+    "crime-theft": {
+      "label": "犯罪・竊取",
+      "words": [
+        "larceny"
+      ]
+    },
+    "criticism-satire": {
+      "label": "批評・諷刺",
+      "words": [
+        "lampoons"
+      ]
+    },
+    "damage-destruction": {
+      "label": "損害・毀滅",
+      "words": [
+        "broken",
+        "broken down",
+        "devastating",
+        "dismantled"
+      ]
+    },
+    "damage-harm": {
+      "label": "損害・傷害",
+      "words": [
+        "detrimental"
+      ]
+    },
+    "danger-warning": {
+      "label": "危險・警告",
+      "words": [
+        "ominous"
+      ]
+    },
+    "data-analysis": {
+      "label": "數據・分析",
+      "words": [
+        "data",
+        "figures"
+      ]
+    },
+    "decline-deterioration": {
+      "label": "衰退・惡化",
+      "words": [
+        "arid",
+        "degradation",
+        "lower",
+        "reduce",
+        "wears out"
+      ]
+    },
+    "definition-boundary": {
+      "label": "定義・界線",
+      "words": [
+        "binary",
+        "compartment",
+        "delineate",
+        "particular",
+        "south",
+        "types"
+      ]
+    },
+    "depth-thoroughness": {
+      "label": "深度・徹底",
+      "words": [
+        "superficially",
+        "thorough"
+      ]
+    },
+    "difference-separation": {
+      "label": "差異・分離",
+      "words": [
+        "detached",
+        "disjointed",
+        "divergence",
+        "inequality"
+      ]
+    },
+    "difficulty-access": {
+      "label": "困難・取得",
+      "words": [
+        "barriers"
+      ]
+    },
+    "difficulty-complexity": {
+      "label": "困難・複雜",
+      "words": [
+        "complicate",
+        "complications"
+      ]
+    },
+    "difficulty-effort": {
+      "label": "困難・努力",
+      "words": [
+        "difficult"
+      ]
+    },
+    "display-expression": {
+      "label": "展示・表達",
+      "words": [
+        "showing"
+      ]
+    },
+    "duplication-excess": {
+      "label": "複製・過度",
+      "words": [
+        "redundancy"
+      ]
+    },
+    "education-academia": {
+      "label": "教育・學術",
+      "words": [
+        "professor"
+      ]
+    },
+    "education-influence": {
+      "label": "教育・影響",
+      "words": [
+        "instilled"
+      ]
+    },
+    "education-learning": {
+      "label": "教育・學習",
+      "words": [
+        "student"
+      ]
+    },
+    "effort-ambition": {
+      "label": "努力・企圖心",
+      "words": [
+        "to strive"
+      ]
+    },
+    "effort-persistence": {
+      "label": "努力・持續",
+      "words": [
+        "striven",
+        "striving"
+      ]
+    },
+    "emotion-anxiety": {
+      "label": "情緒・焦慮",
+      "words": [
+        "apprehension"
+      ]
+    },
+    "emotion-attitude": {
+      "label": "情緒・態度",
+      "words": [
+        "bored",
+        "disapproving",
+        "exhilarating",
+        "expressing surprise",
+        "fascinated",
+        "favorite",
+        "feeling bored",
+        "feeling boring",
+        "felt bored",
+        "indifferent",
+        "interested in",
+        "interesting to",
+        "jovial",
+        "view"
+      ]
+    },
+    "emotion-boredom": {
+      "label": "情緒・無聊",
+      "words": [
+        "felt boring"
+      ]
+    },
+    "emotion-detachment": {
+      "label": "情緒・疏離",
+      "words": [
+        "impassive"
+      ]
+    },
+    "emotion-pleasure": {
+      "label": "情緒・愉悅",
+      "words": [
+        "pleasurable"
+      ]
+    },
+    "emotion-remorse": {
+      "label": "情緒・悔恨",
+      "words": [
+        "regret"
+      ]
+    },
+    "emotion-sadness": {
+      "label": "情緒・悲傷",
+      "words": [
+        "bleak",
+        "condolence",
+        "giving condolence",
+        "melancholy"
+      ]
+    },
+    "emotion-suffering": {
+      "label": "情緒・痛苦",
+      "words": [
+        "miserable"
+      ]
+    },
+    "emotion-uncertainty": {
+      "label": "情緒・不確定",
+      "words": [
+        "ambivalent",
+        "arguable",
+        "arguably"
+      ]
+    },
+    "employment-departure": {
+      "label": "就業・離開",
+      "words": [
+        "resigns"
+      ]
+    },
+    "energy-fatigue": {
+      "label": "能量・疲勞",
+      "words": [
+        "languor"
+      ]
+    },
+    "events-occurrence": {
+      "label": "事件・發生",
+      "words": [
+        "happens"
+      ]
+    },
+    "excess-abundance": {
+      "label": "過度・豐富",
+      "words": [
+        "avaricious",
+        "extravagant"
+      ]
+    },
+    "exhaustion-depletion": {
+      "label": "耗竭・耗盡",
+      "words": [
+        "worn out"
+      ]
+    },
+    "existence-state": {
+      "label": "存在・狀態",
+      "words": [
+        "to be"
+      ]
+    },
+    "explanation-clarity": {
+      "label": "解釋・清晰",
+      "words": [
+        "clear",
+        "elucidated",
+        "explain",
+        "expounded",
+        "given that"
+      ]
+    },
+    "failure-interruption": {
+      "label": "失敗・中斷",
+      "words": [
+        "lapse"
+      ]
+    },
+    "fairness-objectivity": {
+      "label": "公平・客觀",
+      "words": [
+        "unbiased"
+      ]
+    },
+    "fate-destiny": {
+      "label": "命運・命運",
+      "words": [
+        "predestined"
+      ]
+    },
+    "finance-economy": {
+      "label": "財務・經濟",
+      "words": [
+        "economic",
+        "sales"
+      ]
+    },
+    "finance-money": {
+      "label": "財務・金錢",
+      "words": [
+        "cost",
+        "expenditure",
+        "parsimonious",
+        "revenue"
+      ]
+    },
+    "food-fat": {
+      "label": "食物・脂肪",
+      "words": [
+        "lard"
+      ]
+    },
+    "food-nutrition": {
+      "label": "食物・營養",
+      "words": [
+        "meat",
+        "sugar"
+      ]
+    },
+    "frequency-similarity": {
+      "label": "頻率・相似",
+      "words": [
+        "common"
+      ]
+    },
+    "future-state": {
+      "label": "未來・狀態",
+      "words": [
+        "will be"
+      ]
+    },
+    "gender-identity": {
+      "label": "性別・身分",
+      "words": [
+        "female",
+        "gender",
+        "women's"
+      ]
+    },
+    "gratitude-appreciation": {
+      "label": "感激・賞識",
+      "words": [
+        "showing gratitude"
+      ]
+    },
+    "groups-remainders": {
+      "label": "群體・剩餘",
+      "words": [
+        "the others"
+      ]
+    },
+    "harmony-fit": {
+      "label": "和諧・適合",
+      "words": [
+        "brethren",
+        "compatible",
+        "congenially",
+        "consistent"
+      ]
+    },
+    "health-cleanliness": {
+      "label": "健康・潔淨",
+      "words": [
+        "disinfection"
+      ]
+    },
+    "health-conditions": {
+      "label": "健康・條件",
+      "words": [
+        "disorders"
+      ]
+    },
+    "health-disease": {
+      "label": "健康・疾病",
+      "words": [
+        "cancer",
+        "diabetes",
+        "virus"
+      ]
+    },
+    "health-nutrition": {
+      "label": "健康・營養",
+      "words": [
+        "diet"
+      ]
+    },
+    "health-relapse-recovery": {
+      "label": "健康・復發・恢復",
+      "words": [
+        "relapsed",
+        "remission"
+      ]
+    },
+    "health-wellbeing": {
+      "label": "健康・福祉",
+      "words": [
+        "healthy"
+      ]
+    },
+    "hierarchy-power-relations": {
+      "label": "階層・力量・關係",
+      "words": [
+        "subordination"
+      ]
+    },
+    "hierarchy-status": {
+      "label": "階層・地位",
+      "words": [
+        "apprentice",
+        "levels",
+        "relegate",
+        "relegated",
+        "workers"
+      ]
+    },
+    "illness-death": {
+      "label": "疾病・死亡",
+      "words": [
+        "morbid"
+      ]
+    },
+    "importance-degree": {
+      "label": "重要性・程度",
+      "words": [
+        "significant"
+      ]
+    },
+    "importance-priority": {
+      "label": "重要性・優先",
+      "words": [
+        "key"
+      ]
+    },
+    "inclusion-belonging": {
+      "label": "包含・歸屬",
+      "words": [
+        "inclusive"
+      ]
+    },
+    "inclusion-integration": {
+      "label": "包含・整合",
+      "words": [
+        "been included",
+        "component",
+        "incorporate",
+        "integrates",
+        "members"
+      ]
+    },
+    "influence-causation": {
+      "label": "影響・因果",
+      "words": [
+        "which affect"
+      ]
+    },
+    "influence-effect": {
+      "label": "影響・效果",
+      "words": [
+        "having affected"
+      ]
+    },
+    "inquiry-discovery": {
+      "label": "探詢・發現",
+      "words": [
+        "search"
+      ]
+    },
+    "inquiry-investigation": {
+      "label": "探詢・調查",
+      "words": [
+        "did i",
+        "discovered",
+        "do i",
+        "interrogate",
+        "looks into",
+        "seeking"
+      ]
+    },
+    "integration-synthesis": {
+      "label": "整合・綜合",
+      "words": [
+        "selectively integrates"
+      ]
+    },
+    "intensity-magnitude": {
+      "label": "強度・規模",
+      "words": [
+        "intensify",
+        "overwhelming",
+        "scale",
+        "smaller"
+      ]
+    },
+    "intention-purpose": {
+      "label": "意圖・目的",
+      "words": [
+        "aspired to",
+        "avid",
+        "deliberate",
+        "deliberately",
+        "intentionally"
+      ]
+    },
+    "interest-engagement": {
+      "label": "興趣・投入",
+      "words": [
+        "who interested"
+      ]
+    },
+    "jumping-movement": {
+      "label": "跳躍・移動",
+      "words": [
+        "hopping"
+      ]
+    },
+    "language-communication": {
+      "label": "語言・溝通",
+      "words": [
+        "barristers",
+        "clamorous",
+        "discoursed",
+        "eloquent",
+        "is seemed",
+        "language",
+        "meeting",
+        "relayed",
+        "report",
+        "reports",
+        "rhetoric",
+        "verbose",
+        "viewers"
+      ]
+    },
+    "language-description": {
+      "label": "語言・描述",
+      "words": [
+        "described"
+      ]
+    },
+    "language-scholarship": {
+      "label": "語言・學術",
+      "words": [
+        "literature"
+      ]
+    },
+    "law-accusation": {
+      "label": "法律・指控",
+      "words": [
+        "indict",
+        "innocence"
+      ]
+    },
+    "law-legal-proceedings": {
+      "label": "法律・法律・程序",
+      "words": [
+        "litigants"
+      ]
+    },
+    "leadership-governance": {
+      "label": "領導・治理",
+      "words": [
+        "presidents"
+      ]
+    },
+    "leadership-rank": {
+      "label": "領導・等級",
+      "words": [
+        "leading"
+      ]
+    },
+    "learning-understanding": {
+      "label": "學習・理解",
+      "words": [
+        "knowledge"
+      ]
+    },
+    "life-existence": {
+      "label": "生命・存在",
+      "words": [
+        "lives",
+        "living"
+      ]
+    },
+    "life-learning": {
+      "label": "生命・學習",
+      "words": [
+        "experiences"
+      ]
+    },
+    "location-residence": {
+      "label": "位置・居住",
+      "words": [
+        "resides"
+      ]
+    },
+    "loss-sacrifice": {
+      "label": "損失・犧牲",
+      "words": [
+        "forfeited"
+      ]
+    },
+    "luck-chance": {
+      "label": "運氣・機會",
+      "words": [
+        "serendipity"
+      ]
+    },
+    "malformed-correction": {
+      "label": "畸形・修正",
+      "words": [
+        "insighted"
+      ]
+    },
+    "matter-energy": {
+      "label": "物質・能量",
+      "words": [
+        "gas"
+      ]
+    },
+    "meaning-emotional-impact": {
+      "label": "意義・情緒・衝擊",
+      "words": [
+        "resonance"
+      ]
+    },
+    "meaning-implication": {
+      "label": "意義・蘊含",
+      "words": [
+        "not mean",
+        "not means"
+      ]
+    },
+    "meaning-significance": {
+      "label": "意義・重要性",
+      "words": [
+        "no meaning"
+      ]
+    },
+    "measurement-calculation": {
+      "label": "測量・計算",
+      "words": [
+        "quotient"
+      ]
+    },
+    "measurement-importance": {
+      "label": "測量・重要性",
+      "words": [
+        "weight"
+      ]
+    },
+    "measurement-quantity": {
+      "label": "測量・數量",
+      "words": [
+        "measurable"
+      ]
+    },
+    "media-communication": {
+      "label": "媒體・溝通",
+      "words": [
+        "audience"
+      ]
+    },
+    "medical-revival": {
+      "label": "醫療・復甦",
+      "words": [
+        "resuscitation"
+      ]
+    },
+    "memory-honor": {
+      "label": "記憶・榮譽",
+      "words": [
+        "commemorate",
+        "reminiscence"
+      ]
+    },
+    "movement-withdrawal": {
+      "label": "移動・撤回",
+      "words": [
+        "retreats"
+      ]
+    },
+    "nature-environment": {
+      "label": "自然・環境",
+      "words": [
+        "climate",
+        "environmental",
+        "natural",
+        "nature"
+      ]
+    },
+    "negation-emphasis": {
+      "label": "否定・強調",
+      "words": [
+        "no means"
+      ]
+    },
+    "obstruction-prevention": {
+      "label": "阻礙・預防",
+      "words": [
+        "thwart"
+      ]
+    },
+    "offensive-language": {
+      "label": "冒犯・語言",
+      "words": [
+        "profanities"
+      ]
+    },
+    "opposition-conflict": {
+      "label": "對立・衝突",
+      "words": [
+        "arguing",
+        "conflict",
+        "contradict",
+        "despite that",
+        "dissidents",
+        "grievance"
+      ]
+    },
+    "origin-breeding-ground": {
+      "label": "起源・繁殖・依據",
+      "words": [
+        "hotbed"
+      ]
+    },
+    "ownership-attribution": {
+      "label": "所有權・歸因",
+      "words": [
+        "author's"
+      ]
+    },
+    "pause-suspension": {
+      "label": "暫停・暫停",
+      "words": [
+        "recess"
+      ]
+    },
+    "people-expertise": {
+      "label": "人群・專業",
+      "words": [
+        "experts"
+      ]
+    },
+    "people-humanity": {
+      "label": "人群・人性",
+      "words": [
+        "humankind"
+      ]
+    },
+    "people-relationships": {
+      "label": "人群・關係",
+      "words": [
+        "families"
+      ]
+    },
+    "people-society": {
+      "label": "人群・社會",
+      "words": [
+        "population",
+        "public",
+        "society"
+      ]
+    },
+    "permanence-stability": {
+      "label": "恆久・穩定",
+      "words": [
+        "dormant",
+        "immutable"
+      ]
+    },
+    "permission-authorization": {
+      "label": "許可・授權",
+      "words": [
+        "unsanctioned"
+      ]
+    },
+    "physical-hardness-change": {
+      "label": "身體・硬度・變化",
+      "words": [
+        "stiffening"
+      ]
+    },
+    "physical-qualities": {
+      "label": "身體・特質",
+      "words": [
+        "soft"
+      ]
+    },
+    "place-region": {
+      "label": "地點・區域",
+      "words": [
+        "african",
+        "cities",
+        "sites"
+      ]
+    },
+    "places-geography": {
+      "label": "地點・地理",
+      "words": [
+        "africa",
+        "york"
+      ]
+    },
+    "planning-preparation": {
+      "label": "規劃・準備",
+      "words": [
+        "contingency",
+        "method",
+        "plans",
+        "train"
+      ]
+    },
+    "pollution-corruption": {
+      "label": "污染・腐敗",
+      "words": [
+        "contaminate",
+        "soil"
+      ]
+    },
+    "position-focus": {
+      "label": "位置・專注",
+      "words": [
+        "center"
+      ]
+    },
+    "position-opposition": {
+      "label": "位置・對立",
+      "words": [
+        "opposable"
+      ]
+    },
+    "positive-achievement": {
+      "label": "正面・成就",
+      "words": [
+        "success"
+      ]
+    },
+    "positive-helpful": {
+      "label": "正面・有益",
+      "words": [
+        "amenities",
+        "benedictions",
+        "beneficial",
+        "ironed out",
+        "positive",
+        "services",
+        "solution"
+      ]
+    },
+    "prediction-sign": {
+      "label": "預測・徵象",
+      "words": [
+        "foreshadowed",
+        "harbinger"
+      ]
+    },
+    "prevention-priority": {
+      "label": "預防・優先",
+      "words": [
+        "preempted"
+      ]
+    },
+    "production-manufacturing": {
+      "label": "生產・製造",
+      "words": [
+        "manufacture"
+      ]
+    },
+    "punishment-criticism": {
+      "label": "懲罰・批評",
+      "words": [
+        "censurable",
+        "disparagement",
+        "reprimanded"
+      ]
+    },
+    "punishment-exclusion": {
+      "label": "懲罰・排除",
+      "words": [
+        "alienated",
+        "dismiss",
+        "exile"
+      ]
+    },
+    "purpose-operation": {
+      "label": "目的・運作",
+      "words": [
+        "function"
+      ]
+    },
+    "quality-appearance": {
+      "label": "品質・外觀",
+      "words": [
+        "color"
+      ]
+    },
+    "quality-excellence": {
+      "label": "品質・卓越",
+      "words": [
+        "acclaimed",
+        "exquisite",
+        "fantastic",
+        "flair",
+        "remarkable",
+        "worth"
+      ]
+    },
+    "quality-performance": {
+      "label": "品質・表現",
+      "words": [
+        "mediocre"
+      ]
+    },
+    "quality-texture": {
+      "label": "品質・質地",
+      "words": [
+        "mellow"
+      ]
+    },
+    "quantity-measurement": {
+      "label": "數量・測量",
+      "words": [
+        "amounts"
+      ]
+    },
+    "quantity-sufficiency": {
+      "label": "數量・充足",
+      "words": [
+        "inadequately",
+        "insufficiently",
+        "large enough",
+        "lot",
+        "mass",
+        "replenished"
+      ]
+    },
+    "reasoning-causation": {
+      "label": "推理・因果",
+      "words": [
+        "consequences",
+        "factors",
+        "reasons"
+      ]
+    },
+    "reasoning-solutions": {
+      "label": "推理・解方",
+      "words": [
+        "problem"
+      ]
+    },
+    "reasoning-uncertainty": {
+      "label": "推理・不確定",
+      "words": [
+        "speculate"
+      ]
+    },
+    "reference-connection": {
+      "label": "指涉・連結",
+      "words": [
+        "to that",
+        "to which"
+      ]
+    },
+    "rejection-reduction": {
+      "label": "拒絕・減少",
+      "words": [
+        "turned down"
+      ]
+    },
+    "relation-reference": {
+      "label": "關係・指涉",
+      "words": [
+        "regard of"
+      ]
+    },
+    "release-activation": {
+      "label": "釋放・啟動",
+      "words": [
+        "unleashed"
+      ]
+    },
+    "religion-sacred-places": {
+      "label": "宗教・神聖・地點",
+      "words": [
+        "shrines"
+      ]
+    },
+    "remainder-leftover": {
+      "label": "剩餘・殘餘",
+      "words": [
+        "residue"
+      ]
+    },
+    "removal-destruction": {
+      "label": "移除・毀滅",
+      "words": [
+        "expunged"
+      ]
+    },
+    "removal-gradual": {
+      "label": "移除・漸進",
+      "words": [
+        "phased out"
+      ]
+    },
+    "removal-outer-layer": {
+      "label": "移除・外部・層次",
+      "words": [
+        "husking"
+      ]
+    },
+    "repair-restoration": {
+      "label": "修復・復原",
+      "words": [
+        "restoration"
+      ]
+    },
+    "resources-assets": {
+      "label": "資源・資產",
+      "words": [
+        "resource"
+      ]
+    },
+    "respect-attitude": {
+      "label": "尊重・態度",
+      "words": [
+        "approbations",
+        "compliment",
+        "deferential",
+        "gratitude",
+        "is regarded"
+      ]
+    },
+    "responsibility-neglect": {
+      "label": "責任・忽視",
+      "words": [
+        "remiss"
+      ]
+    },
+    "risk-safety": {
+      "label": "風險・安全",
+      "words": [
+        "accident"
+      ]
+    },
+    "rotation-movement": {
+      "label": "輪替・移動",
+      "words": [
+        "roll",
+        "rolled",
+        "rolling",
+        "rolls"
+      ]
+    },
+    "rules-obedience": {
+      "label": "規則・服從",
+      "words": [
+        "adhering",
+        "compliance",
+        "condone",
+        "deliberately disregards",
+        "disregards",
+        "law",
+        "practices",
+        "required"
+      ]
+    },
+    "rules-requirements": {
+      "label": "規則・要求",
+      "words": [
+        "prescribe"
+      ]
+    },
+    "safety-protection": {
+      "label": "安全・保護",
+      "words": [
+        "safe"
+      ]
+    },
+    "scope-extent": {
+      "label": "範圍・範圍",
+      "words": [
+        "beyond",
+        "entire",
+        "extensive",
+        "limited",
+        "pervasive",
+        "spectrum",
+        "ubiquitous"
+      ]
+    },
+    "scope-independence": {
+      "label": "範圍・獨立",
+      "words": [
+        "alone",
+        "regardless of",
+        "unilateral",
+        "whatever"
+      ]
+    },
+    "sequence-continuity": {
+      "label": "順序・延續",
+      "words": [
+        "succession"
+      ]
+    },
+    "sequence-order": {
+      "label": "順序・順序",
+      "words": [
+        "aforementioned",
+        "descendants",
+        "earlier",
+        "iii",
+        "older",
+        "order",
+        "predecessor",
+        "procedures",
+        "second",
+        "third"
+      ]
+    },
+    "shape-form": {
+      "label": "形狀・形式",
+      "words": [
+        "apparatus",
+        "appliance",
+        "concave",
+        "corrugate"
+      ]
+    },
+    "shock-indignation": {
+      "label": "震驚・憤慨",
+      "words": [
+        "outrageous"
+      ]
+    },
+    "silence-suppression": {
+      "label": "沉默・壓制",
+      "words": [
+        "hushing"
+      ]
+    },
+    "simplicity-clarity": {
+      "label": "簡單・清晰",
+      "words": [
+        "abridged",
+        "concise",
+        "straightforward"
+      ]
+    },
+    "size-degree": {
+      "label": "大小・程度",
+      "words": [
+        "huge"
+      ]
+    },
+    "social-belonging": {
+      "label": "社會・歸屬",
+      "words": [
+        "misfit"
+      ]
+    },
+    "social-exclusion": {
+      "label": "社會・排除",
+      "words": [
+        "outcast"
+      ]
+    },
+    "social-inclusion-exclusion": {
+      "label": "社會・包含・排除",
+      "words": [
+        "social outcast"
+      ]
+    },
+    "society-politics": {
+      "label": "社會・政治",
+      "words": [
+        "party"
+      ]
+    },
+    "spatial-orientation": {
+      "label": "空間・取向",
+      "words": [
+        "vertical"
+      ]
+    },
+    "sports-fitness": {
+      "label": "運動・適配",
+      "words": [
+        "sports"
+      ]
+    },
+    "spread-escalation": {
+      "label": "擴散・升高",
+      "words": [
+        "rampant"
+      ]
+    },
+    "strength-determination": {
+      "label": "力量・決心",
+      "words": [
+        "bold",
+        "decisive",
+        "efforts",
+        "have stuck",
+        "resolute",
+        "strive",
+        "tenacious"
+      ]
+    },
+    "strength-endurance": {
+      "label": "力量・耐力",
+      "words": [
+        "burly",
+        "resilience",
+        "strength"
+      ]
+    },
+    "strength-resilience": {
+      "label": "力量・韌性",
+      "words": [
+        "robust"
+      ]
+    },
+    "strictness-precision": {
+      "label": "嚴格・精確",
+      "words": [
+        "enough large",
+        "enough largely",
+        "rigorous",
+        "specific"
+      ]
+    },
+    "substance-resource": {
+      "label": "物質・資源",
+      "words": [
+        "material",
+        "resources"
+      ]
+    },
+    "summary-condensation": {
+      "label": "摘要・濃縮",
+      "words": [
+        "summarizes",
+        "superficially summarizes"
+      ]
+    },
+    "surprise-reaction": {
+      "label": "驚訝・反應",
+      "words": [
+        "shocked"
+      ]
+    },
+    "technology-design": {
+      "label": "科技・設計",
+      "words": [
+        "engineered"
+      ]
+    },
+    "technology-digital": {
+      "label": "科技・數位",
+      "words": [
+        "internet"
+      ]
+    },
+    "technology-social-media": {
+      "label": "科技・社會・媒體",
+      "words": [
+        "facebook"
+      ]
+    },
+    "thought-prediction": {
+      "label": "思想・預測",
+      "words": [
+        "expect"
+      ]
+    },
+    "time-frequency": {
+      "label": "時間・頻率",
+      "words": [
+        "daily",
+        "fad",
+        "intermittent",
+        "nowadays",
+        "seasons",
+        "soon"
+      ]
+    },
+    "time-readiness": {
+      "label": "時間・準備",
+      "words": [
+        "premature"
+      ]
+    },
+    "time-speed": {
+      "label": "時間・速度",
+      "words": [
+        "rapidly"
+      ]
+    },
+    "tone-attitude": {
+      "label": "語氣・態度",
+      "words": [
+        "sarcastically"
+      ]
+    },
+    "tradition-custom": {
+      "label": "傳統・習俗",
+      "words": [
+        "conventional"
+      ]
+    },
+    "transfer-inheritance": {
+      "label": "轉移・繼承",
+      "words": [
+        "inheriting"
+      ]
+    },
+    "trust-belief": {
+      "label": "信任・信念",
+      "words": [
+        "confidants",
+        "convincing",
+        "counted on",
+        "credulous",
+        "hinges on",
+        "is considered",
+        "is viewed"
+      ]
+    },
+    "truth-deception": {
+      "label": "真相・欺騙",
+      "words": [
+        "counterfeits",
+        "deceptive",
+        "dissimulation",
+        "feigning",
+        "feigning innocence",
+        "incorrect",
+        "scurrilous"
+      ]
+    },
+    "truth-openness": {
+      "label": "真相・開放",
+      "words": [
+        "genuinely",
+        "ingenuous",
+        "transparent"
+      ]
+    },
+    "truth-verification": {
+      "label": "真相・驗證",
+      "words": [
+        "authentic",
+        "corroborate",
+        "evidence",
+        "scientific",
+        "substantiate"
+      ]
+    },
+    "understanding-learning": {
+      "label": "理解・學習",
+      "words": [
+        "comprehension"
+      ]
+    },
+    "uniqueness-rarity": {
+      "label": "獨特・稀有",
+      "words": [
+        "distinctive",
+        "extraordinary",
+        "unique",
+        "unprecedented"
+      ]
+    },
+    "usage-error-correction": {
+      "label": "用法・錯誤・修正",
+      "words": [
+        "largely enough"
+      ]
+    },
+    "use-consumption": {
+      "label": "使用・消耗",
+      "words": [
+        "consumption"
+      ]
+    },
+    "value-appreciation": {
+      "label": "價值・賞識",
+      "words": [
+        "treasurable"
+      ]
+    },
+    "visibility-prominence": {
+      "label": "能見度・顯著",
+      "words": [
+        "be featured",
+        "be featuring",
+        "conspicuous",
+        "glittering",
+        "popularity",
+        "shows"
+      ]
+    },
+    "vulnerability-risk": {
+      "label": "脆弱・風險",
+      "words": [
+        "jeopardy",
+        "susceptible"
+      ]
+    },
+    "wear-deterioration": {
+      "label": "磨損・惡化",
+      "words": [
+        "worn"
+      ]
+    }
+  }
+}

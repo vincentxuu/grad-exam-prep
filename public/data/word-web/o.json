@@ -1,0 +1,417 @@
+{
+  "schemaVersion": 1,
+  "words": {
+    "obscure": {
+      "chinese": "模糊的；晦澀的；鮮為人知的；遮蔽",
+      "pos": "adj/v",
+      "synonyms": [
+        "unclear",
+        "ambiguous",
+        "little-known",
+        "conceal"
+      ],
+      "antonyms": [
+        "clear",
+        "obvious",
+        "reveal"
+      ],
+      "relatedWords": [
+        "obscurity",
+        "obscurely",
+        "obscured",
+        "obscuring"
+      ],
+      "confusableWith": [
+        "opaque",
+        "obscured"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Steam began to obscure the bathroom mirror.",
+          "zh": "水蒸氣開始遮住浴室鏡面。",
+          "source": "daily"
+        },
+        {
+          "en": "Technical jargon can obscure the assumptions underlying an economic model.",
+          "zh": "技術術語可能掩蓋經濟模型背後的假設。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "clarity-obscurity",
+      "mnemonicHint": "ob- 有『朝向、覆在上面』的感覺，scure 可聯想被遮暗；像霧覆上玻璃，使東西看不清，也延伸成文字晦澀或事物鮮為人知。"
+    },
+    "offensive": {
+      "chinese": "冒犯的；令人不快的；攻擊性的",
+      "pos": "adj/n",
+      "synonyms": [
+        "insulting",
+        "objectionable",
+        "disrespectful",
+        "attacking"
+      ],
+      "antonyms": [
+        "inoffensive",
+        "respectful",
+        "defensive"
+      ],
+      "relatedWords": [
+        "offend",
+        "offense",
+        "offensively",
+        "offensiveness"
+      ],
+      "confusableWith": [
+        "defensive",
+        "inoffensive"
+      ],
+      "exampleSentences": [
+        {
+          "en": "That crude joke was offensive to several guests at dinner.",
+          "zh": "那個低俗笑話冒犯了晚餐會上的幾位客人。",
+          "source": "daily"
+        },
+        {
+          "en": "The survey found that offensive advertising can damage consumers' trust in a brand.",
+          "zh": "該調查發現，冒犯性的廣告可能損害消費者對品牌的信任。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "conflict-offense",
+      "mnemonicHint": "offend 是「冒犯」，加形容詞字尾 -ive 成為 offensive；也可聯想球賽的 offense 是主動進攻，因此既有「攻擊性的」也有「冒犯的」意思。"
+    },
+    "older": {
+      "chinese": "較老的；年長的",
+      "pos": "adj",
+      "synonyms": [
+        "elder",
+        "senior",
+        "more aged"
+      ],
+      "antonyms": [
+        "younger",
+        "newer"
+      ],
+      "relatedWords": [
+        "old",
+        "oldest"
+      ],
+      "confusableWith": [
+        "elder"
+      ],
+      "exampleSentences": [
+        {
+          "en": "My older brother taught me how to ride a bicycle.",
+          "zh": "我哥哥教我騎腳踏車。",
+          "source": "daily"
+        },
+        {
+          "en": "The study found that older adults benefited most from regular exercise.",
+          "zh": "研究發現，年長者從規律運動中獲益最多。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "sequence-order",
+      "mnemonicHint": "old 加 er，年紀更大"
+    },
+    "ominous": {
+      "chinese": "不祥的",
+      "pos": "adj",
+      "synonyms": [
+        "threatening",
+        "menacing",
+        "foreboding",
+        "sinister"
+      ],
+      "antonyms": [
+        "promising",
+        "auspicious"
+      ],
+      "relatedWords": [
+        "omen",
+        "ominously"
+      ],
+      "confusableWith": [
+        "omnibus"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Dark clouds gathered in an ominous sky before the storm.",
+          "zh": "暴風雨前烏雲在不祥的天空聚集。",
+          "source": "daily"
+        },
+        {
+          "en": "The ominous decline in biodiversity signals ecosystem collapse.",
+          "zh": "生物多樣性的不祥下降預示生態系統崩潰。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "danger-warning",
+      "mnemonicHint": "omin(omen) + ous → 有不好預兆 → 不祥的"
+    },
+    "onto": {
+      "chinese": "到…上面；向…上面",
+      "pos": "prep",
+      "synonyms": [
+        "upon",
+        "on top of",
+        "to a position on"
+      ],
+      "antonyms": [
+        "off",
+        "away from"
+      ],
+      "relatedWords": [
+        "on",
+        "onward"
+      ],
+      "confusableWith": [
+        "on to"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The cat jumped onto the sofa beside me.",
+          "zh": "那隻貓跳到我身旁的沙發上。",
+          "source": "daily"
+        },
+        {
+          "en": "The enzyme transfers a phosphate group onto the target protein.",
+          "zh": "該酵素將磷酸基團轉移到目標蛋白質上。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "access-availability",
+      "mnemonicHint": "on 加 to，動作移到表面上"
+    },
+    "openly challenges": {
+      "chinese": "公開質疑；公然挑戰",
+      "pos": "v phr",
+      "synonyms": [
+        "publicly questions",
+        "overtly disputes",
+        "directly confronts",
+        "publicly defies"
+      ],
+      "antonyms": [
+        "quietly accepts",
+        "privately concedes",
+        "openly supports"
+      ],
+      "relatedWords": [
+        "open",
+        "openly",
+        "challenge",
+        "challenger",
+        "challenging"
+      ],
+      "confusableWith": [
+        "open challenges",
+        "openly challenged"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Maya openly challenges the rule whenever it seems unfair.",
+          "zh": "每當規則顯得不公平時，瑪雅就會公開質疑它。",
+          "source": "daily"
+        },
+        {
+          "en": "This finding openly challenges the assumption that economic growth always reduces inequality.",
+          "zh": "這項發現公開挑戰了經濟成長必然降低不平等的假設。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "conflict-challenge",
+      "mnemonicHint": "openly 是「公開地」，challenges 是 challenge 遇到第三人稱單數主詞的形式；合起來就是某人不躲藏地把質疑擺上檯面。"
+    },
+    "opposable": {
+      "chinese": "可反對的；可對置的（尤指拇指能與其他手指相對）",
+      "pos": "adj",
+      "synonyms": [
+        "counterable",
+        "resistible",
+        "contestable",
+        "apposable"
+      ],
+      "antonyms": [
+        "unopposable",
+        "irresistible",
+        "fixed"
+      ],
+      "relatedWords": [
+        "oppose",
+        "opposed",
+        "opposing",
+        "opposition",
+        "opposability"
+      ],
+      "confusableWith": [
+        "opposed",
+        "oppositional"
+      ],
+      "exampleSentences": [
+        {
+          "en": "An opposable thumb lets you grip a slippery jar securely.",
+          "zh": "可與其他手指相對的拇指讓你能牢牢抓住濕滑的罐子。",
+          "source": "daily"
+        },
+        {
+          "en": "Primates use opposable digits to manipulate objects with remarkable precision.",
+          "zh": "靈長類利用可對置的指頭，以驚人的精準度操控物體。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "position-opposition",
+      "mnemonicHint": "oppose（使相對、反對）加 -able（能夠）就是「能夠相對或被反對的」；想像拇指轉過來與食指面對面夾住硬幣。"
+    },
+    "order": {
+      "chinese": "順序；命令；訂購",
+      "pos": "n/v",
+      "synonyms": [
+        "sequence",
+        "arrangement",
+        "command",
+        "request"
+      ],
+      "antonyms": [
+        "disorder",
+        "chaos",
+        "cancellation"
+      ],
+      "relatedWords": [
+        "orderly",
+        "ordering",
+        "reorder"
+      ],
+      "confusableWith": [
+        "odor"
+      ],
+      "exampleSentences": [
+        {
+          "en": "I placed an order for two sandwiches.",
+          "zh": "我點了兩份三明治。",
+          "source": "daily"
+        },
+        {
+          "en": "The variables were entered into the model in a fixed order.",
+          "zh": "各變項依固定順序輸入模型。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "sequence-order",
+      "mnemonicHint": "order 把事物排整齊，也可指下令或訂購。"
+    },
+    "outcast": {
+      "chinese": "被排斥者；遭放逐的人；被排斥的",
+      "pos": "n/adj",
+      "synonyms": [
+        "exile",
+        "pariah",
+        "reject",
+        "outsider"
+      ],
+      "antonyms": [
+        "insider",
+        "favorite",
+        "member"
+      ],
+      "relatedWords": [
+        "cast",
+        "cast out",
+        "casting out",
+        "exclusion"
+      ],
+      "confusableWith": [
+        "outlast",
+        "outcome"
+      ],
+      "exampleSentences": [
+        {
+          "en": "After exposing the lie, Leo felt like an outcast among his former friends.",
+          "zh": "揭穿謊言後，里歐覺得自己在昔日朋友之間像個被排斥的人。",
+          "source": "daily"
+        },
+        {
+          "en": "The novel portrays its protagonist as a social outcast who questions established customs.",
+          "zh": "這部小說將主角描寫成一名質疑既定習俗的社會邊緣人。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "social-exclusion",
+      "mnemonicHint": "out（出去）加 cast（丟、投）就是「被丟到群體外面的人」；把一個人從圈內 cast out，便成了 outcast。"
+    },
+    "outrageous": {
+      "chinese": "令人憤慨的；駭人聽聞的；極端離譜的",
+      "pos": "adj",
+      "synonyms": [
+        "shocking",
+        "scandalous",
+        "appalling",
+        "exorbitant"
+      ],
+      "antonyms": [
+        "reasonable",
+        "acceptable",
+        "moderate"
+      ],
+      "relatedWords": [
+        "outrage",
+        "outraged",
+        "outrageously",
+        "outrageousness"
+      ],
+      "confusableWith": [
+        "courageous",
+        "outraged"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Charging fifty dollars for tap water is outrageous.",
+          "zh": "一杯自來水收五十美元實在太離譜了。",
+          "source": "daily"
+        },
+        {
+          "en": "Critics condemned the outrageous misuse of public funds during the reconstruction project.",
+          "zh": "批評者譴責重建計畫期間駭人聽聞的公款濫用行為。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "shock-indignation",
+      "mnemonicHint": "outrage 是強烈憤怒，加 -ous 變成「會引發強烈憤怒的」；價格或行為誇張到讓人喊出 outrage，就是 outrageous。"
+    },
+    "overwhelming": {
+      "chinese": "壓倒性的",
+      "pos": "adj",
+      "synonyms": [
+        "overpowering",
+        "immense",
+        "staggering",
+        "crushing"
+      ],
+      "antonyms": [
+        "underwhelming",
+        "manageable",
+        "insignificant"
+      ],
+      "relatedWords": [
+        "overwhelm",
+        "overwhelmingly"
+      ],
+      "confusableWith": [
+        "overcoming"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The overwhelming majority voted in favor of the proposal.",
+          "zh": "壓倒性多數投票贊成該提案。",
+          "source": "daily"
+        },
+        {
+          "en": "Students reported overwhelming stress during final exams.",
+          "zh": "學生在期末考試期間報告了壓倒性的壓力。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "intensity-magnitude",
+      "mnemonicHint": "over + whelm(submerge) + ing → 被淹沒的 → 壓倒性的"
+    }
+  }
+}

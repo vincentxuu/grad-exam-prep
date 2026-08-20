@@ -1,0 +1,942 @@
+{
+  "schemaVersion": 1,
+  "words": {
+    "facebook": {
+      "chinese": "臉書；Facebook 社群平台",
+      "pos": "proper n",
+      "synonyms": [
+        "Facebook platform",
+        "social network",
+        "social media service"
+      ],
+      "antonyms": [
+        "offline interaction",
+        "private correspondence"
+      ],
+      "relatedWords": [
+        "Facebook page",
+        "Facebook user",
+        "Facebook post"
+      ],
+      "confusableWith": [
+        "face book",
+        "Facebook Messenger"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Rita posted the concert photos on Facebook for her friends.",
+          "zh": "麗塔把演唱會照片貼到臉書上給朋友看。",
+          "source": "daily"
+        },
+        {
+          "en": "The study examined how political messages spread through Facebook during an election.",
+          "zh": "這項研究檢視政治訊息在選舉期間如何透過 Facebook 傳播。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "technology-social-media",
+      "mnemonicHint": "Facebook 由 face 和 book 組成，可想成把人臉與個人資料集合成一本線上名冊。"
+    },
+    "facilities": {
+      "chinese": "設施；場所",
+      "pos": "n",
+      "synonyms": [
+        "amenities",
+        "installations",
+        "premises",
+        "infrastructure"
+      ],
+      "antonyms": [
+        "lack of facilities",
+        "absence of amenities"
+      ],
+      "relatedWords": [
+        "facility",
+        "facilitate",
+        "facilitation"
+      ],
+      "confusableWith": [
+        "faculties"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The park has clean restroom facilities.",
+          "zh": "這座公園有乾淨的洗手間設施。",
+          "source": "daily"
+        },
+        {
+          "en": "Modern research facilities can accelerate scientific discovery.",
+          "zh": "現代研究設施能加速科學發現。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "access-availability",
+      "mnemonicHint": "facility 加 s 是多項讓事情更方便的設施。"
+    },
+    "factors": {
+      "chinese": "因素；要素；因數",
+      "pos": "n",
+      "synonyms": [
+        "causes",
+        "elements",
+        "components",
+        "determinants"
+      ],
+      "antonyms": [
+        "results",
+        "effects",
+        "outcomes"
+      ],
+      "relatedWords": [
+        "factor",
+        "factorial",
+        "factorization",
+        "factored"
+      ],
+      "confusableWith": [
+        "factories",
+        "features"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Price and location were the main factors in choosing our apartment.",
+          "zh": "價格和地點是我們選擇公寓時的主要因素。",
+          "source": "daily"
+        },
+        {
+          "en": "The analysis controls for factors such as age, income, and prior education.",
+          "zh": "這項分析控制了年齡、收入及先前教育程度等因素。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "reasoning-causation",
+      "mnemonicHint": "factors 是促成結果的因素；數學裡能相乘得到某數的數也叫 factor 因數。"
+    },
+    "fad": {
+      "chinese": "一時流行",
+      "pos": "n",
+      "synonyms": [
+        "craze",
+        "vogue",
+        "passing fashion"
+      ],
+      "antonyms": [
+        "tradition",
+        "permanence"
+      ],
+      "relatedWords": [
+        "faddish"
+      ],
+      "confusableWith": [
+        "fade"
+      ],
+      "exampleSentences": [
+        {
+          "en": "My kitchen gadget looked useful online but proved to be a short-lived fad.",
+          "zh": "我的廚房小工具在網路上看似實用，後來卻證明只是一時風潮。",
+          "source": "daily"
+        },
+        {
+          "en": "The longitudinal data show that remote work is not merely a temporary fad.",
+          "zh": "長期追蹤資料顯示，遠距工作並非只是一時風潮。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "time-frequency",
+      "mnemonicHint": "fad 很快 fade 褪去，是短暫風潮"
+    },
+    "families": {
+      "chinese": "家庭；家族；族群",
+      "pos": "n",
+      "synonyms": [
+        "households",
+        "relatives",
+        "clans",
+        "lineages"
+      ],
+      "antonyms": [
+        "strangers",
+        "unrelated people"
+      ],
+      "relatedWords": [
+        "family",
+        "familial",
+        "familiar",
+        "family-oriented"
+      ],
+      "confusableWith": [
+        "familiars",
+        "facilities"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Several families organized a picnic beside the river.",
+          "zh": "好幾個家庭在河邊合辦了一場野餐。",
+          "source": "daily"
+        },
+        {
+          "en": "Rising housing costs have forced many families to move farther from city centers.",
+          "zh": "不斷上升的住宅成本迫使許多家庭搬到離市中心更遠的地方。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "people-relationships",
+      "mnemonicHint": "family 的複數把字尾 y 改成 ies，形成 families。"
+    },
+    "fantastic": {
+      "chinese": "極好的；奇幻的",
+      "pos": "adj",
+      "synonyms": [
+        "wonderful",
+        "excellent",
+        "superb"
+      ],
+      "antonyms": [
+        "terrible",
+        "awful"
+      ],
+      "relatedWords": [
+        "fantasy",
+        "fantastically"
+      ],
+      "confusableWith": [
+        "fanatic"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The soup tasted fantastic after I added fresh basil and lemon.",
+          "zh": "加入新鮮羅勒和檸檬後，這鍋湯味道好極了。",
+          "source": "daily"
+        },
+        {
+          "en": "The critic distinguishes fantastic imagery from realistic description in the novel.",
+          "zh": "評論家區分了小說中的奇幻意象與寫實描寫。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "quality-excellence",
+      "mnemonicHint": "fantasy 般奇妙，fantastic 可表示極好"
+    },
+    "farming": {
+      "chinese": "農業；耕作",
+      "pos": "n",
+      "synonyms": [
+        "agriculture",
+        "cultivation",
+        "agricultural production"
+      ],
+      "antonyms": [
+        "nonagricultural industry",
+        "urban development"
+      ],
+      "relatedWords": [
+        "farm",
+        "farmer",
+        "farmland"
+      ],
+      "confusableWith": [
+        "framing"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Her family has been farming here for generations.",
+          "zh": "她的家族世代都在這裡務農。",
+          "source": "daily"
+        },
+        {
+          "en": "Sustainable farming can protect soil while maintaining crop yields.",
+          "zh": "永續農業能在維持產量的同時保護土壤。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "agriculture-food",
+      "mnemonicHint": "farm 加 ing，就是持續從事耕作。"
+    },
+    "farms": {
+      "chinese": "農場；耕種",
+      "pos": "n/v",
+      "synonyms": [
+        "ranches",
+        "agricultural holdings",
+        "farmsteads"
+      ],
+      "antonyms": [
+        "urban areas",
+        "nonagricultural sites"
+      ],
+      "relatedWords": [
+        "farm",
+        "farmer",
+        "farmland"
+      ],
+      "confusableWith": [
+        "forms"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Several farms sell fresh eggs at this market.",
+          "zh": "好幾座農場在這個市場販售新鮮雞蛋。",
+          "source": "daily"
+        },
+        {
+          "en": "Small farms often lack access to affordable credit.",
+          "zh": "小型農場往往難以取得負擔得起的信貸。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "agriculture-food",
+      "mnemonicHint": "farm 加 s 可表示多座農場。"
+    },
+    "fascinated": {
+      "chinese": "著迷的",
+      "pos": "adj",
+      "synonyms": [
+        "captivated",
+        "absorbed",
+        "intrigued"
+      ],
+      "antonyms": [
+        "bored",
+        "indifferent"
+      ],
+      "relatedWords": [
+        "fascinate",
+        "fascination"
+      ],
+      "confusableWith": [
+        "fastened"
+      ],
+      "exampleSentences": [
+        {
+          "en": "My nephew was fascinated by the dough rising inside the warm oven.",
+          "zh": "我的姪子對麵糰在溫暖烤箱裡膨脹的過程著迷不已。",
+          "source": "daily"
+        },
+        {
+          "en": "Early astronomers were fascinated by the irregular motion of the planets.",
+          "zh": "早期天文學家深受行星不規則運動吸引。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "emotion-attitude",
+      "mnemonicHint": "目光像被 fasten 扣住，表示著迷"
+    },
+    "favorite": {
+      "chinese": "最喜愛的；最愛之物",
+      "pos": "adj/n",
+      "synonyms": [
+        "preferred",
+        "beloved",
+        "cherished",
+        "choice"
+      ],
+      "antonyms": [
+        "disliked",
+        "least favorite"
+      ],
+      "relatedWords": [
+        "favor",
+        "favorable",
+        "favoritism"
+      ],
+      "confusableWith": [
+        "favour"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Blue is my favorite color.",
+          "zh": "藍色是我最喜歡的顏色。",
+          "source": "daily"
+        },
+        {
+          "en": "The proposal became a favorite among younger voters.",
+          "zh": "該提案成為年輕選民最青睞的方案。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "emotion-attitude",
+      "mnemonicHint": "favor 喜愛 + ite，最受喜愛的人或物。"
+    },
+    "feeding": {
+      "chinese": "進食；覓食",
+      "pos": "v/adj",
+      "synonyms": [
+        "eating",
+        "foraging",
+        "grazing",
+        "consuming food"
+      ],
+      "antonyms": [
+        "fasting",
+        "starving",
+        "abstaining"
+      ],
+      "relatedWords": [
+        "feed",
+        "fed",
+        "feeder",
+        "feedstock"
+      ],
+      "confusableWith": [
+        "feeling",
+        "fleeing"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The baby stopped feeding and fell asleep in her mother's arms.",
+          "zh": "嬰兒停止進食，在母親懷中睡著了。",
+          "source": "daily"
+        },
+        {
+          "en": "Changes in ocean temperature can disrupt the feeding patterns of migratory whales.",
+          "zh": "海洋溫度的變化可能擾亂遷徙鯨魚的覓食模式。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "biology-nutrition",
+      "mnemonicHint": "feed 是餵養，母音變化後的過去式是 fed；feeding 是正在餵食或與進食有關的。"
+    },
+    "feeling bored": {
+      "chinese": "感到無聊",
+      "pos": "phrase",
+      "synonyms": [
+        "feeling uninterested",
+        "becoming disengaged",
+        "experiencing boredom"
+      ],
+      "antonyms": [
+        "feeling engaged",
+        "feeling excited"
+      ],
+      "relatedWords": [
+        "feel",
+        "bored",
+        "boredom"
+      ],
+      "confusableWith": [
+        "feeling boring"
+      ],
+      "exampleSentences": [
+        {
+          "en": "I began feeling bored while waiting for the repair shop to call.",
+          "zh": "等修理店來電時，我開始覺得無聊。",
+          "source": "daily"
+        },
+        {
+          "en": "Students reporting feeling bored during lectures recalled fewer key concepts on the exam.",
+          "zh": "回報上課時感到無聊的學生，在考試中記得的關鍵概念較少。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "emotion-attitude",
+      "mnemonicHint": "人自己的感受用 bored：feeling bored"
+    },
+    "feeling boring": {
+      "chinese": "覺得自己很無趣；常見誤用",
+      "pos": "phrase",
+      "synonyms": [
+        "feeling uninteresting",
+        "seeming dull",
+        "seeming boring"
+      ],
+      "antonyms": [
+        "feeling lively",
+        "seeming interesting"
+      ],
+      "relatedWords": [
+        "feel",
+        "boring",
+        "bore"
+      ],
+      "confusableWith": [
+        "feeling bored"
+      ],
+      "exampleSentences": [
+        {
+          "en": "I said feeling boring when I meant that the long train ride was making me bored.",
+          "zh": "我想表達漫長火車旅程讓我感到無聊時，誤說成 feeling boring。",
+          "source": "daily"
+        },
+        {
+          "en": "In the correction exercise, feeling boring implies being dull to others, whereas feeling bored names the emotion.",
+          "zh": "在訂正練習中，feeling boring 表示自己讓別人覺得無趣，feeling bored 才是指感到無聊。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "emotion-attitude",
+      "mnemonicHint": "boring 描述造成無聊的人事物，不是感到無聊"
+    },
+    "feigning": {
+      "chinese": "假裝；佯裝",
+      "pos": "v",
+      "synonyms": [
+        "pretending",
+        "simulating",
+        "faking"
+      ],
+      "antonyms": [
+        "being genuine",
+        "acting sincerely"
+      ],
+      "relatedWords": [
+        "feign",
+        "feigned"
+      ],
+      "confusableWith": [
+        "fainting"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The child avoided bedtime by feigning a stomachache after dessert.",
+          "zh": "孩子吃完甜點後假裝肚子痛，藉此逃避上床睡覺。",
+          "source": "daily"
+        },
+        {
+          "en": "The experiment tested whether beetles deter predators by feigning death.",
+          "zh": "該實驗測試甲蟲是否藉由裝死來嚇阻掠食者。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "truth-deception",
+      "mnemonicHint": "feign 的 g 不發音，意思是假裝"
+    },
+    "feigning innocence": {
+      "chinese": "假裝無辜",
+      "pos": "phrase",
+      "synonyms": [
+        "pretending innocence",
+        "playing innocent",
+        "simulating blamelessness"
+      ],
+      "antonyms": [
+        "admitting guilt",
+        "confessing responsibility"
+      ],
+      "relatedWords": [
+        "feign",
+        "innocent",
+        "innocence"
+      ],
+      "confusableWith": [
+        "faining innocence"
+      ],
+      "exampleSentences": [
+        {
+          "en": "My dog sat beside the torn cushion, feigning innocence with unusually wide eyes.",
+          "zh": "我的狗坐在破掉的坐墊旁，睜著異常大的眼睛假裝無辜。",
+          "source": "daily"
+        },
+        {
+          "en": "The narrator manipulates readers by feigning innocence while withholding evidence of his involvement.",
+          "zh": "敘述者一面假裝無辜，一面隱瞞自己涉入其中的證據，藉此操弄讀者。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "truth-deception",
+      "mnemonicHint": "feign 假裝加 innocence 無辜，意為裝無辜"
+    },
+    "felt bored": {
+      "chinese": "感到無聊了",
+      "pos": "phrase",
+      "synonyms": [
+        "became uninterested",
+        "felt weary",
+        "lost interest"
+      ],
+      "antonyms": [
+        "felt engaged",
+        "felt excited"
+      ],
+      "relatedWords": [
+        "feel",
+        "felt",
+        "bored"
+      ],
+      "confusableWith": [
+        "felt boring"
+      ],
+      "exampleSentences": [
+        {
+          "en": "I felt bored after the rain canceled our picnic and the internet stopped working.",
+          "zh": "下雨取消了野餐，網路又中斷後，我覺得很無聊。",
+          "source": "daily"
+        },
+        {
+          "en": "In the participial clause, felt bored is incorrect; feeling bored must introduce the reason.",
+          "zh": "在這個分詞構句中，felt bored 並不正確，必須用 feeling bored 引出原因。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "emotion-attitude",
+      "mnemonicHint": "felt 是 feel 過去式，人感到無聊用 bored"
+    },
+    "felt boring": {
+      "chinese": "讓人覺得無聊；感覺很乏味",
+      "pos": "v/adj phrase",
+      "synonyms": [
+        "seemed dull",
+        "felt tedious",
+        "came across as uninteresting"
+      ],
+      "antonyms": [
+        "felt engaging",
+        "seemed fascinating"
+      ],
+      "relatedWords": [
+        "feel",
+        "felt",
+        "bore",
+        "boring",
+        "bored",
+        "boredom"
+      ],
+      "confusableWith": [
+        "felt bored",
+        "was boring"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The documentary felt boring at first, but the final interview changed my mind.",
+          "zh": "那部紀錄片起初讓人覺得無聊，但最後的訪談改變了我的看法。",
+          "source": "daily"
+        },
+        {
+          "en": "Without concrete case studies, the economics lecture felt boring to many first-year students.",
+          "zh": "由於缺乏具體案例，那堂經濟學講座讓許多一年級學生覺得乏味。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "emotion-boredom",
+      "mnemonicHint": "felt 是 feel 的過去式，boring 描述「造成無聊感的事物」：The film felt boring。若主詞是人並想說「我感到無聊」，應改成 I felt bored，別把 boring 和 bored 對調。"
+    },
+    "female": {
+      "chinese": "雌性個體；女性",
+      "pos": "n",
+      "synonyms": [
+        "female individual",
+        "woman",
+        "girl"
+      ],
+      "antonyms": [
+        "male individual",
+        "man",
+        "boy"
+      ],
+      "relatedWords": [
+        "femaleness",
+        "female-specific",
+        "female-led"
+      ],
+      "confusableWith": [
+        "feminine"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Of the two cats, the female is smaller than the male.",
+          "zh": "這兩隻貓之中，母貓比公貓小。",
+          "source": "daily"
+        },
+        {
+          "en": "In this species, females reach maturity earlier than males.",
+          "zh": "在這個物種中，雌性比雄性更早成熟。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "gender-identity",
+      "mnemonicHint": "fem- 表示女性，如 feminine 與 feminism。"
+    },
+    "figures": {
+      "chinese": "數字；人物；圖表",
+      "pos": "n",
+      "synonyms": [
+        "numbers",
+        "statistics",
+        "numerical data"
+      ],
+      "antonyms": [
+        "narrative text",
+        "qualitative description"
+      ],
+      "relatedWords": [
+        "figure",
+        "figurative",
+        "figuration"
+      ],
+      "confusableWith": [
+        "fingers"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The sales figures look better this month.",
+          "zh": "這個月的銷售數字看起來更好。",
+          "source": "daily"
+        },
+        {
+          "en": "Official figures indicate a gradual decline in unemployment.",
+          "zh": "官方數據顯示失業率逐漸下降。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "data-analysis",
+      "mnemonicHint": "figure 加 s，可指多個數字或圖形。"
+    },
+    "film": {
+      "chinese": "電影；影片",
+      "pos": "n",
+      "synonyms": [
+        "movie",
+        "motion picture",
+        "cinema production"
+      ],
+      "antonyms": [
+        "real life",
+        "live performance"
+      ],
+      "relatedWords": [
+        "filming",
+        "filmmaker",
+        "filmic"
+      ],
+      "confusableWith": [
+        "fill"
+      ],
+      "exampleSentences": [
+        {
+          "en": "We watched a funny film after dinner.",
+          "zh": "晚餐後我們看了一部有趣的電影。",
+          "source": "daily"
+        },
+        {
+          "en": "The film challenges conventional accounts of national identity.",
+          "zh": "這部電影挑戰了對國家認同的傳統論述。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "beauty-art",
+      "mnemonicHint": "film 可指薄薄一層，也可指記錄影像的電影。"
+    },
+    "flair": {
+      "chinese": "天賦；才華；獨特風格",
+      "pos": "n",
+      "synonyms": [
+        "talent",
+        "aptitude",
+        "knack",
+        "panache"
+      ],
+      "antonyms": [
+        "ineptitude",
+        "clumsiness"
+      ],
+      "relatedWords": [
+        "flairs",
+        "flair for"
+      ],
+      "confusableWith": [
+        "flare",
+        "fair"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Mina has a flair for arranging flowers in unusual color combinations.",
+          "zh": "米娜很有天分，能用不尋常的配色來插花。",
+          "source": "daily"
+        },
+        {
+          "en": "Her flair for diplomatic negotiation helped the committee reach a unanimous agreement.",
+          "zh": "她在外交談判方面的天賦，幫助委員會達成一致協議。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "quality-excellence",
+      "mnemonicHint": "flair 聽起來像 flare「閃耀、火光」：一個人的特殊才華像亮光一樣顯眼。常用搭配是 have a flair for + 名詞或 V-ing，表示「對……有天分」。"
+    },
+    "focus": {
+      "chinese": "焦點；專注",
+      "pos": "n/v",
+      "synonyms": [
+        "concentrate",
+        "center",
+        "emphasize",
+        "attention"
+      ],
+      "antonyms": [
+        "distract",
+        "disperse"
+      ],
+      "relatedWords": [
+        "focused",
+        "focal",
+        "refocus"
+      ],
+      "confusableWith": [
+        "locus"
+      ],
+      "exampleSentences": [
+        {
+          "en": "I cannot focus while the television is on.",
+          "zh": "電視開著時我無法專心。",
+          "source": "daily"
+        },
+        {
+          "en": "The analysis focuses on the long-term effects of migration.",
+          "zh": "該分析聚焦於移民的長期影響。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "attention-priority",
+      "mnemonicHint": "focus 想成相機對焦，把注意力集中。"
+    },
+    "foreshadowed": {
+      "chinese": "預示；預兆（foreshadow 的過去式或過去分詞）",
+      "pos": "v",
+      "synonyms": [
+        "presaged",
+        "heralded",
+        "portended",
+        "anticipated"
+      ],
+      "antonyms": [
+        "concealed",
+        "obscured"
+      ],
+      "relatedWords": [
+        "foreshadow",
+        "foreshadows",
+        "foreshadowing"
+      ],
+      "confusableWith": [
+        "forecast",
+        "overshadowed"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Those dark clouds foreshadowed the thunderstorm that ruined our picnic.",
+          "zh": "那些烏雲預示了後來毀掉我們野餐的雷雨。",
+          "source": "daily"
+        },
+        {
+          "en": "A sudden decline in factory orders foreshadowed the recession several months before official figures confirmed it.",
+          "zh": "工廠訂單突然下滑，在官方數據證實前數月便預示了經濟衰退。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "prediction-sign",
+      "mnemonicHint": "fore- 是「在前」，shadow 是「影子」；事件真正到來前先投下影子，就是「預示」。foreshadowed 是規則變化的過去式／過去分詞。"
+    },
+    "forfeited": {
+      "chinese": "喪失的",
+      "pos": "v",
+      "synonyms": [
+        "surrendered",
+        "relinquished",
+        "lost",
+        "sacrificed"
+      ],
+      "antonyms": [
+        "retained",
+        "gained",
+        "won"
+      ],
+      "relatedWords": [
+        "forfeit",
+        "forfeiture"
+      ],
+      "confusableWith": [
+        "fortified"
+      ],
+      "exampleSentences": [
+        {
+          "en": "He forfeited his deposit by canceling too late.",
+          "zh": "他因太晚取消而喪失了訂金。",
+          "source": "daily"
+        },
+        {
+          "en": "Companies violating regulations risk forfeiting licenses.",
+          "zh": "違反法規的公司面臨喪失執照的風險。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "loss-sacrifice",
+      "mnemonicHint": "for(away) + feit(do) → 被拿走 → 喪失"
+    },
+    "forms": {
+      "chinese": "形式；種類；形成",
+      "pos": "n/v",
+      "synonyms": [
+        "types",
+        "varieties",
+        "kinds",
+        "categories"
+      ],
+      "antonyms": [
+        "uniformity",
+        "sameness",
+        "formlessness"
+      ],
+      "relatedWords": [
+        "form",
+        "formal",
+        "formation",
+        "formative"
+      ],
+      "confusableWith": [
+        "farms",
+        "forums"
+      ],
+      "exampleSentences": [
+        {
+          "en": "This medicine comes in liquid and tablet forms.",
+          "zh": "這種藥有液體和錠劑兩種形式。",
+          "source": "daily"
+        },
+        {
+          "en": "Water exists in three familiar forms under conditions found on Earth.",
+          "zh": "在地球可見的條件下，水以三種熟悉的形態存在。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "classification-structure",
+      "mnemonicHint": "forms 可指事物呈現的多種形式，也可以是 form 表格的複數。"
+    },
+    "function": {
+      "chinese": "功能；作用；運作",
+      "pos": "n/v",
+      "synonyms": [
+        "purpose",
+        "role",
+        "operation",
+        "work"
+      ],
+      "antonyms": [
+        "dysfunction",
+        "failure",
+        "malfunction"
+      ],
+      "relatedWords": [
+        "functional",
+        "functionality",
+        "functioning",
+        "dysfunctional"
+      ],
+      "confusableWith": [
+        "fiction",
+        "junction"
+      ],
+      "exampleSentences": [
+        {
+          "en": "This button has no function when the screen is locked.",
+          "zh": "螢幕鎖定時，這個按鈕沒有作用。",
+          "source": "daily"
+        },
+        {
+          "en": "One function of wetlands is to absorb excess water during heavy rainfall.",
+          "zh": "濕地的一項功能是在豪雨期間吸收過多的水。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "purpose-operation",
+      "mnemonicHint": "function 是事物發揮的功能；functional 表示功能正常或實用的。"
+    }
+  }
+}

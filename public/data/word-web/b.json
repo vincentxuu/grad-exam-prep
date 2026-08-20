@@ -1,0 +1,666 @@
+{
+  "schemaVersion": 1,
+  "words": {
+    "barriers": {
+      "chinese": "障礙；屏障",
+      "pos": "n",
+      "synonyms": [
+        "obstacles",
+        "hindrances",
+        "blockades",
+        "boundaries"
+      ],
+      "antonyms": [
+        "openings",
+        "gateways",
+        "aids"
+      ],
+      "relatedWords": [
+        "barrier",
+        "barrier-free",
+        "barrierless"
+      ],
+      "confusableWith": [
+        "barristers",
+        "borders"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Language barriers made it hard for us to ask for directions.",
+          "zh": "語言障礙讓我們很難開口問路。",
+          "source": "daily"
+        },
+        {
+          "en": "High tuition fees create barriers to higher education for low-income students.",
+          "zh": "高昂的學費為低收入學生接受高等教育設下障礙。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "difficulty-access",
+      "mnemonicHint": "barrier 像一根 bar 橫在路上，形成阻擋前進的障礙。"
+    },
+    "barristers": {
+      "chinese": "出庭律師",
+      "pos": "n",
+      "synonyms": [
+        "advocates",
+        "counselors",
+        "lawyers"
+      ],
+      "antonyms": [
+        "clients",
+        "defendants"
+      ],
+      "relatedWords": [
+        "barrister",
+        "bar"
+      ],
+      "confusableWith": [
+        "baristas"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Two barristers from upstairs joined us for coffee.",
+          "zh": "樓上的兩名出庭律師和我們一起喝了咖啡。",
+          "source": "daily"
+        },
+        {
+          "en": "The study compares how barristers present evidence in criminal appeals.",
+          "zh": "該研究比較出庭律師在刑事上訴中如何提出證據。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "language-communication",
+      "mnemonicHint": "在 bar 律師公會執業的 barrister"
+    },
+    "be featured": {
+      "chinese": "被特別介紹；擔任主角",
+      "pos": "phrase",
+      "synonyms": [
+        "be highlighted",
+        "be showcased",
+        "be presented"
+      ],
+      "antonyms": [
+        "be omitted",
+        "be hidden"
+      ],
+      "relatedWords": [
+        "feature",
+        "featured"
+      ],
+      "confusableWith": [
+        "be featuring"
+      ],
+      "exampleSentences": [
+        {
+          "en": "My pottery will be featured in the community center's window.",
+          "zh": "我的陶藝作品將在社區中心的櫥窗展出。",
+          "source": "daily"
+        },
+        {
+          "en": "The new findings will be featured in the journal's special issue.",
+          "zh": "這些新發現將刊登於該期刊的特刊。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "visibility-prominence",
+      "mnemonicHint": "feature 是特色，be featured 是被突出呈現"
+    },
+    "be featuring": {
+      "chinese": "將以…為特色",
+      "pos": "phrase",
+      "synonyms": [
+        "be showcasing",
+        "be presenting",
+        "be highlighting"
+      ],
+      "antonyms": [
+        "be omitting",
+        "be excluding"
+      ],
+      "relatedWords": [
+        "feature",
+        "featuring"
+      ],
+      "confusableWith": [
+        "be featured"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The cafe will be featuring local pastries throughout the holiday week.",
+          "zh": "這間咖啡館將在整個假期週間主打本地糕點。",
+          "source": "daily"
+        },
+        {
+          "en": "Next month's symposium will be featuring recent advances in battery design.",
+          "zh": "下個月的研討會將重點介紹電池設計的最新進展。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "visibility-prominence",
+      "mnemonicHint": "be 加 featuring 表主動以某物為亮點"
+    },
+    "been included": {
+      "chinese": "已被包含",
+      "pos": "phrase",
+      "synonyms": [
+        "been incorporated",
+        "been added",
+        "been encompassed"
+      ],
+      "antonyms": [
+        "been excluded",
+        "been omitted"
+      ],
+      "relatedWords": [
+        "include",
+        "inclusion",
+        "inclusive"
+      ],
+      "confusableWith": [
+        "being included"
+      ],
+      "exampleSentences": [
+        {
+          "en": "A service charge has already been included in our bill.",
+          "zh": "我們的帳單中已經包含服務費。",
+          "source": "daily"
+        },
+        {
+          "en": "Measures of household income have been included in the revised analysis.",
+          "zh": "修訂後的分析已納入家庭收入的衡量指標。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "inclusion-integration",
+      "mnemonicHint": "include 放進去，been included 表示已納入"
+    },
+    "being stuck": {
+      "chinese": "正被困住；處於卡住狀態",
+      "pos": "phrase",
+      "synonyms": [
+        "being trapped",
+        "being jammed",
+        "being stranded"
+      ],
+      "antonyms": [
+        "being freed",
+        "being released"
+      ],
+      "relatedWords": [
+        "stick",
+        "stuck"
+      ],
+      "confusableWith": [
+        "getting stuck"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Being stuck in a crowded elevator made everyone anxious.",
+          "zh": "受困在擁擠的電梯裡讓大家都很焦慮。",
+          "source": "daily"
+        },
+        {
+          "en": "Students described being stuck on the final equation despite understanding the theory.",
+          "zh": "學生表示，儘管理解理論，仍卡在最後一道方程式。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "access-restriction",
+      "mnemonicHint": "being 加 stuck，強調正在受困"
+    },
+    "benedictions": {
+      "chinese": "祝福；賜福禱告",
+      "pos": "n",
+      "synonyms": [
+        "blessings",
+        "invocations",
+        "benisons"
+      ],
+      "antonyms": [
+        "curses",
+        "condemnations"
+      ],
+      "relatedWords": [
+        "benediction",
+        "benedictory"
+      ],
+      "confusableWith": [
+        "jurisdictions"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The minister offered benedictions to the newly married couples.",
+          "zh": "牧師為新婚夫妻獻上祝福。",
+          "source": "daily"
+        },
+        {
+          "en": "The historian analyzed benedictions recorded in medieval wedding manuscripts.",
+          "zh": "歷史學家分析了中世紀婚禮手稿中記載的祝禱詞。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "positive-helpful",
+      "mnemonicHint": "bene 好加 diction 說話，說好話就是祝福"
+    },
+    "beneficial": {
+      "chinese": "有益的",
+      "pos": "adj",
+      "synonyms": [
+        "advantageous",
+        "helpful",
+        "favorable",
+        "positive"
+      ],
+      "antonyms": [
+        "harmful",
+        "detrimental",
+        "adverse"
+      ],
+      "relatedWords": [
+        "benefit",
+        "beneficiary"
+      ],
+      "confusableWith": [
+        "artificial"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Regular exercise is beneficial to both physical and mental health.",
+          "zh": "定期運動對身心健康都有益。",
+          "source": "daily"
+        },
+        {
+          "en": "Trade agreements can be mutually beneficial when properly structured.",
+          "zh": "結構合理的貿易協議可以互利互惠。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "positive-helpful",
+      "mnemonicHint": "bene(good) + fic(do) + ial → 做好事的 → 有益的"
+    },
+    "beyond": {
+      "chinese": "超越；在更遠處",
+      "pos": "prep/adv",
+      "synonyms": [
+        "past",
+        "outside",
+        "farther than",
+        "over"
+      ],
+      "antonyms": [
+        "within",
+        "inside",
+        "before"
+      ],
+      "relatedWords": [
+        "beyondness",
+        "overstep",
+        "exceed"
+      ],
+      "confusableWith": [
+        "behind"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The hiking trail continues beyond the bridge.",
+          "zh": "健行步道延伸到橋的另一端。",
+          "source": "daily"
+        },
+        {
+          "en": "The consequences extend beyond the immediate economic costs.",
+          "zh": "其後果超越眼前的經濟成本。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "scope-extent",
+      "mnemonicHint": "be + yond 那一邊：在界線更遠處。"
+    },
+    "binary": {
+      "chinese": "二元的；二進位的",
+      "pos": "adj/n",
+      "synonyms": [
+        "twofold",
+        "dual",
+        "dichotomous"
+      ],
+      "antonyms": [
+        "continuous",
+        "multiple"
+      ],
+      "relatedWords": [
+        "binarism",
+        "binarize"
+      ],
+      "confusableWith": [
+        "biliary"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The light switch offers a simple binary choice: on or off.",
+          "zh": "電燈開關提供一個簡單的二元選擇：開或關。",
+          "source": "daily"
+        },
+        {
+          "en": "The exam asks students to convert a decimal number into binary notation.",
+          "zh": "考題要求學生將十進位數字轉換成二進位表示法。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "definition-boundary",
+      "mnemonicHint": "bi 是二，binary 只有兩種狀態"
+    },
+    "blackmail": {
+      "chinese": "勒索；敲詐",
+      "pos": "n/v",
+      "synonyms": [
+        "extortion",
+        "blackmailing",
+        "extortion by threat"
+      ],
+      "antonyms": [
+        "lawful negotiation",
+        "voluntary cooperation"
+      ],
+      "relatedWords": [
+        "blackmailer",
+        "blackmailed"
+      ],
+      "confusableWith": [
+        "black male"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Someone tried to blackmail the shop owner with stolen photographs.",
+          "zh": "有人企圖用偷來的照片勒索店主。",
+          "source": "daily"
+        },
+        {
+          "en": "The legal analysis distinguishes blackmail from legitimate commercial negotiation.",
+          "zh": "這項法律分析區分了勒索與正當商業談判。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "conflict-aggression",
+      "mnemonicHint": "用黑暗秘密寄 mail 威脅，聯想勒索"
+    },
+    "bleak": {
+      "chinese": "荒涼的；黯淡的",
+      "pos": "adj",
+      "synonyms": [
+        "desolate",
+        "gloomy",
+        "grim"
+      ],
+      "antonyms": [
+        "hopeful",
+        "bright"
+      ],
+      "relatedWords": [
+        "bleakness",
+        "bleakly"
+      ],
+      "confusableWith": [
+        "bleach"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The empty apartment looked bleak without curtains or furniture.",
+          "zh": "沒有窗簾或家具的空公寓看起來十分冷清。",
+          "source": "daily"
+        },
+        {
+          "en": "The report presents a bleak outlook for species in shrinking habitats.",
+          "zh": "該報告對棲地日益縮減的物種提出了黯淡的前景。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "emotion-sadness",
+      "mnemonicHint": "bleak 聽似 black，景象黑暗黯淡"
+    },
+    "blood": {
+      "chinese": "血液",
+      "pos": "n",
+      "synonyms": [
+        "bloodstream",
+        "circulating blood",
+        "the body's vital fluid"
+      ],
+      "antonyms": [
+        "bloodlessness",
+        "absence of blood"
+      ],
+      "relatedWords": [
+        "bleed",
+        "bloody",
+        "bloodstream"
+      ],
+      "confusableWith": [
+        "flood"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The nurse took a small blood sample.",
+          "zh": "護理師抽取了一小份血液樣本。",
+          "source": "daily"
+        },
+        {
+          "en": "Blood carries oxygen from the lungs to tissues throughout the body.",
+          "zh": "血液把氧氣從肺部送到全身組織。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "biology-medicine",
+      "mnemonicHint": "blood 與 bleed 都和流血有關。"
+    },
+    "bold": {
+      "chinese": "大膽的；醒目的；粗體的",
+      "pos": "adj",
+      "synonyms": [
+        "brave",
+        "daring",
+        "audacious",
+        "striking"
+      ],
+      "antonyms": [
+        "timid",
+        "cautious",
+        "faint"
+      ],
+      "relatedWords": [
+        "boldly",
+        "boldness",
+        "embolden"
+      ],
+      "confusableWith": [
+        "bald"
+      ],
+      "exampleSentences": [
+        {
+          "en": "She made the title bold so it was easy to see.",
+          "zh": "她把標題設成粗體，讓它更容易看見。",
+          "source": "daily"
+        },
+        {
+          "en": "The government adopted a bold strategy to curb emissions.",
+          "zh": "政府採取大膽策略以抑制排放。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "strength-determination",
+      "mnemonicHint": "bold 的 b 像挺胸站立，記住「大膽」。"
+    },
+    "bored": {
+      "chinese": "感到無聊的",
+      "pos": "adj",
+      "synonyms": [
+        "uninterested",
+        "disengaged",
+        "fed up"
+      ],
+      "antonyms": [
+        "interested",
+        "engaged"
+      ],
+      "relatedWords": [
+        "bore",
+        "boring",
+        "boredom"
+      ],
+      "confusableWith": [
+        "boring"
+      ],
+      "exampleSentences": [
+        {
+          "en": "I felt bored while waiting for the delayed bus.",
+          "zh": "等候誤點的公車時，我覺得很無聊。",
+          "source": "daily"
+        },
+        {
+          "en": "Participants who became bored responded less carefully to the later questions.",
+          "zh": "感到無聊的參與者回答後面題目時較不仔細。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "emotion-attitude",
+      "mnemonicHint": "人感到 bored，事情令人 boring"
+    },
+    "brethren": {
+      "chinese": "弟兄；同胞",
+      "pos": "n",
+      "synonyms": [
+        "brother monks",
+        "fellow monks",
+        "monastic brothers"
+      ],
+      "antonyms": [
+        "outsiders",
+        "nonmembers"
+      ],
+      "relatedWords": [
+        "brother",
+        "brotherhood"
+      ],
+      "confusableWith": [
+        "breathren"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The monk invited his brethren to share the donated bread.",
+          "zh": "那名修士邀請弟兄們一起分享捐贈的麵包。",
+          "source": "daily"
+        },
+        {
+          "en": "The text describes how the brethren preserved manuscripts during the conflict.",
+          "zh": "該文本描述弟兄們如何在衝突期間保存手稿。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "harmony-fit",
+      "mnemonicHint": "古式 brother 複數 brethren，指弟兄"
+    },
+    "broken": {
+      "chinese": "破損的；中斷的",
+      "pos": "adj/v",
+      "synonyms": [
+        "damaged",
+        "shattered",
+        "fractured"
+      ],
+      "antonyms": [
+        "intact",
+        "repaired"
+      ],
+      "relatedWords": [
+        "break",
+        "breaking",
+        "breakage"
+      ],
+      "confusableWith": [
+        "broke"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The broken handle makes this suitcase difficult to carry.",
+          "zh": "壞掉的提把讓這個行李箱很難搬運。",
+          "source": "daily"
+        },
+        {
+          "en": "For analysis, the population was broken into five age groups.",
+          "zh": "為了進行分析，研究人口被分成五個年齡組。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "damage-destruction",
+      "mnemonicHint": "break 的過去分詞 broken，已經破了"
+    },
+    "broken down": {
+      "chinese": "故障的；分解的",
+      "pos": "adj/phrase",
+      "synonyms": [
+        "malfunctioning",
+        "collapsed",
+        "decomposed"
+      ],
+      "antonyms": [
+        "operational",
+        "intact"
+      ],
+      "relatedWords": [
+        "breakdown",
+        "break down"
+      ],
+      "confusableWith": [
+        "broken up"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Our washing machine has broken down before laundry day.",
+          "zh": "我們的洗衣機在洗衣日前就故障了。",
+          "source": "daily"
+        },
+        {
+          "en": "The survey data are broken down by age, occupation, and region.",
+          "zh": "調查資料依年齡、職業與地區分類呈現。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "damage-destruction",
+      "mnemonicHint": "break down 向下垮掉，表示故障或拆解"
+    },
+    "burly": {
+      "chinese": "魁梧的；健壯的",
+      "pos": "adj",
+      "synonyms": [
+        "brawny",
+        "sturdy",
+        "muscular"
+      ],
+      "antonyms": [
+        "slight",
+        "scrawny"
+      ],
+      "relatedWords": [
+        "burliness"
+      ],
+      "confusableWith": [
+        "burial"
+      ],
+      "exampleSentences": [
+        {
+          "en": "A burly mover carried our refrigerator up three flights of stairs.",
+          "zh": "一名魁梧的搬運工把我們的冰箱扛上三層樓。",
+          "source": "daily"
+        },
+        {
+          "en": "The witness consistently described the suspect as a burly man with a beard.",
+          "zh": "證人始終將嫌疑人描述為一名留鬍子的魁梧男子。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "strength-endurance",
+      "mnemonicHint": "burly 聯想 bulky，體格粗壯"
+    }
+  }
+}

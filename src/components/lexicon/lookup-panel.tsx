@@ -2,6 +2,7 @@
 
 import { Check, Loader2, Search } from '@sketchyicons/react'
 import { useCallback, useEffect, useState } from 'react'
+import { WordWebPanel } from '@/components/flashcard/word-web-panel'
 import { EntryCard } from '@/components/lexicon/entry-card'
 import { PersonalBridge } from '@/components/lexicon/personal-bridge'
 import { Button } from '@/components/ui/button'
@@ -161,6 +162,8 @@ export function LookupPanel({ term, persona, source, showInput = true, onSaveCha
       {state.status === 'done' && (
         <div className="space-y-4">
           <EntryCard entry={state.data.entry} speak={speak} speakingId={speakingId} />
+
+          <WordWebPanel word={state.data.entry.headword} idPrefix="lookup-web" speak={speak} />
 
           {state.data.personal && (
             <PersonalBridge bridge={state.data.personal} speak={speak} speakingId={speakingId} />

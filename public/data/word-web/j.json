@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "words": {
+    "jeopardy": {
+      "chinese": "危險；危難（常用 in jeopardy）",
+      "pos": "n",
+      "synonyms": [
+        "danger",
+        "peril",
+        "risk",
+        "hazard"
+      ],
+      "antonyms": [
+        "safety",
+        "security",
+        "protection"
+      ],
+      "relatedWords": [
+        "jeopardize",
+        "jeopardized",
+        "jeopardizing"
+      ],
+      "confusableWith": [
+        "jeopardize"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Leaving the freezer open put all our food in jeopardy during the power outage.",
+          "zh": "停電時讓冷凍庫敞開，使我們所有的食物都面臨損壞的危險。",
+          "source": "daily"
+        },
+        {
+          "en": "Without immediate habitat protection, the survival of the island's nesting seabirds remains in jeopardy.",
+          "zh": "若不立即保護棲地，島上築巢海鳥的生存仍將岌岌可危。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "vulnerability-risk",
+      "mnemonicHint": "把 jeopardy 想成競賽節目答錯後獎金「陷入危險」；固定搭配 in jeopardy＝處於危險中，而動詞 jeopardize 則是「使……陷入危險」。"
+    },
+    "jovial": {
+      "chinese": "快活友善的；興高采烈的",
+      "pos": "adj",
+      "synonyms": [
+        "cheerful",
+        "merry",
+        "genial",
+        "convivial"
+      ],
+      "antonyms": [
+        "gloomy",
+        "solemn",
+        "morose"
+      ],
+      "relatedWords": [
+        "joviality",
+        "jovially"
+      ],
+      "confusableWith": [
+        "jubilant",
+        "juvenile"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Despite the long queue, the jovial baker joked with every customer and handed children warm rolls.",
+          "zh": "儘管排隊人龍很長，那位快活的麵包師仍和每位顧客開玩笑，還遞給孩子們熱麵包。",
+          "source": "daily"
+        },
+        {
+          "en": "Rather than sounding hostile, the speaker adopted a jovial tone that eased tension during the negotiations.",
+          "zh": "講者沒有以敵意口吻發言，而是採取快活友善的語調，緩和了談判中的緊張氣氛。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "emotion-attitude",
+      "mnemonicHint": "jovial 源自 Jove（朱庇特）；想像眾神之王在宴會上豪爽大笑、讓全場氣氛歡樂，就能記住 jovial 是「快活而友善的」。"
+    }
+  }
+}

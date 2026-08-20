@@ -1,0 +1,550 @@
+{
+  "schemaVersion": 1,
+  "words": {
+    "wears out": {
+      "chinese": "磨損；使筋疲力盡",
+      "pos": "phrase",
+      "synonyms": [
+        "abrades",
+        "erodes",
+        "degrades"
+      ],
+      "antonyms": [
+        "preserves",
+        "protects"
+      ],
+      "relatedWords": [
+        "wear",
+        "worn",
+        "wearing"
+      ],
+      "confusableWith": [
+        "wears off"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Riding my bicycle to work wears out the tires faster.",
+          "zh": "每天騎腳踏車上班會讓輪胎磨損得更快。",
+          "source": "daily"
+        },
+        {
+          "en": "Repeated exposure to salt water wears out the protective coating.",
+          "zh": "反覆接觸鹽水會逐漸磨耗保護塗層。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "decline-deterioration",
+      "mnemonicHint": "反覆 wear 穿用，最後 wears out 磨壞"
+    },
+    "weight": {
+      "chinese": "重量；體重；重要性",
+      "pos": "n",
+      "synonyms": [
+        "mass",
+        "heaviness",
+        "burden",
+        "importance"
+      ],
+      "antonyms": [
+        "lightness",
+        "weightlessness"
+      ],
+      "relatedWords": [
+        "weigh",
+        "weighted",
+        "weighty",
+        "weightless"
+      ],
+      "confusableWith": [
+        "wait",
+        "height"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The airline checked the weight of my suitcase at the counter.",
+          "zh": "航空公司在櫃檯檢查了我行李箱的重量。",
+          "source": "daily"
+        },
+        {
+          "en": "The survey gave greater weight to responses from long-term residents.",
+          "zh": "這項調查較為重視長期居民的回答。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "measurement-importance",
+      "mnemonicHint": "weight 和 wait 同音；等著量體重時記得有 gh 的是重量。"
+    },
+    "what if": {
+      "chinese": "如果……會怎樣；倘若",
+      "pos": "conditional phrase",
+      "synonyms": [
+        "suppose",
+        "supposing",
+        "imagine if"
+      ],
+      "antonyms": [
+        "certainly",
+        "definitely"
+      ],
+      "relatedWords": [
+        "what",
+        "if",
+        "what-if"
+      ],
+      "confusableWith": [
+        "even if",
+        "as if"
+      ],
+      "exampleSentences": [
+        {
+          "en": "What if the last bus leaves before we reach the station?",
+          "zh": "如果我們抵達車站前末班車就開走了，該怎麼辦？",
+          "source": "daily"
+        },
+        {
+          "en": "Economists asked, \"What if consumer demand remains weak despite lower interest rates?\"",
+          "zh": "經濟學家提出：「如果降息後消費需求仍然疲弱，情況會如何？」",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "condition-hypothesis",
+      "mnemonicHint": "what（什麼結果）加 if（如果）用來提出假設或擔憂，相當於「如果……會怎樣？」作名詞修飾語時要加連字號，如 a what-if scenario。"
+    },
+    "whatever": {
+      "chinese": "無論什麼；任何事物",
+      "pos": "pron/det",
+      "synonyms": [
+        "anything",
+        "no matter what",
+        "whatever thing"
+      ],
+      "antonyms": [
+        "nothing",
+        "not anything"
+      ],
+      "relatedWords": [
+        "what",
+        "whatsoever"
+      ],
+      "confusableWith": [
+        "whichever"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Order whatever you want from the lunch menu.",
+          "zh": "午餐菜單上你想吃什麼就點什麼。",
+          "source": "daily"
+        },
+        {
+          "en": "Whatever the initial conditions, the model predicts a stable equilibrium.",
+          "zh": "無論初始條件為何，該模型都預測會達到穩定均衡。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "scope-independence",
+      "mnemonicHint": "what 加 ever，無論是什麼"
+    },
+    "which affect": {
+      "chinese": "影響……的（關係子句片段；接複數先行詞時合乎文法）",
+      "pos": "relative clause fragment",
+      "synonyms": [
+        "that affect",
+        "which influence",
+        "which impact"
+      ],
+      "antonyms": [
+        "which leave unchanged",
+        "which do not influence"
+      ],
+      "relatedWords": [
+        "affect",
+        "affects",
+        "affected",
+        "affecting"
+      ],
+      "confusableWith": [
+        "which effects",
+        "effect"
+      ],
+      "exampleSentences": [
+        {
+          "en": "These are the habits which affect my sleep the most.",
+          "zh": "這些就是最影響我睡眠的習慣。",
+          "source": "daily"
+        },
+        {
+          "en": "Researchers identified several variables which affect the accuracy of the forecasting model.",
+          "zh": "研究人員找出數個會影響預測模型準確度的變數。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "influence-causation",
+      "mnemonicHint": "這是從句片段，不宜單獨背；which 後面的 affect 要和先行詞一致：複數 variables which affect，單數 variable which affects。affect 多作動詞「影響」，effect 多作名詞「效果」。"
+    },
+    "who interested": {
+      "chinese": "有興趣的人（非標準片段）",
+      "pos": "nonstandard phrase",
+      "synonyms": [
+        "who is interested",
+        "those interested",
+        "people who are keen"
+      ],
+      "antonyms": [
+        "who is uninterested",
+        "those who are indifferent"
+      ],
+      "relatedWords": [
+        "interest",
+        "interested",
+        "interesting",
+        "interestingly"
+      ],
+      "confusableWith": [
+        "who is interesting",
+        "whom interested"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Anyone who is interested can join our pottery class tonight.",
+          "zh": "任何有興趣的人今晚都可以參加我們的陶藝課。",
+          "source": "daily"
+        },
+        {
+          "en": "Applicants who are interested in the fellowship must submit two recommendation letters.",
+          "zh": "有意申請該獎學金者必須繳交兩封推薦信。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "interest-engagement",
+      "mnemonicHint": "who interested 少了 be 動詞；說「有興趣的人」要用 who is interested（單數）或 who are interested（複數）。別和 who is interesting「很有趣的人」混淆。"
+    },
+    "will be": {
+      "chinese": "將會是；將處於",
+      "pos": "modal phrase",
+      "synonyms": [
+        "is going to be",
+        "shall be",
+        "is expected to be"
+      ],
+      "antonyms": [
+        "will not be",
+        "will cease to be"
+      ],
+      "relatedWords": [
+        "be",
+        "being",
+        "been",
+        "is"
+      ],
+      "confusableWith": [
+        "would be",
+        "will have been"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Dinner will be ready in about twenty minutes.",
+          "zh": "晚餐大約二十分鐘後會準備好。",
+          "source": "daily"
+        },
+        {
+          "en": "The revised policy will be effective at the beginning of the next fiscal year.",
+          "zh": "修訂後的政策將於下一個會計年度開始時生效。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "future-state",
+      "mnemonicHint": "will 把時間推向未來，be 表示「是／處於」；合起來就是「未來將是某種狀態」。後面可接名詞、形容詞或地點，如 will be a leader、ready、at home。"
+    },
+    "with respect to": {
+      "chinese": "關於；就…而言",
+      "pos": "phrase",
+      "synonyms": [
+        "regarding",
+        "concerning",
+        "in relation to"
+      ],
+      "antonyms": [
+        "apart from",
+        "excluding"
+      ],
+      "relatedWords": [
+        "respect",
+        "respective"
+      ],
+      "confusableWith": [
+        "with respects to"
+      ],
+      "exampleSentences": [
+        {
+          "en": "With respect to rent, we agreed to split it equally.",
+          "zh": "至於房租，我們同意平均分攤。",
+          "source": "daily"
+        },
+        {
+          "en": "The two samples differed significantly with respect to reading speed.",
+          "zh": "兩組樣本在閱讀速度方面有顯著差異。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "comparison-similarity",
+      "mnemonicHint": "把注意力 respect 放到某主題上"
+    },
+    "women's": {
+      "chinese": "女性的；婦女的",
+      "pos": "poss det/adj",
+      "synonyms": [
+        "of women",
+        "belonging to women",
+        "intended for women"
+      ],
+      "antonyms": [
+        "men's",
+        "intended for men"
+      ],
+      "relatedWords": [
+        "woman",
+        "women",
+        "womanhood"
+      ],
+      "confusableWith": [
+        "womens"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The store moved the women's shoes upstairs.",
+          "zh": "那家店把女鞋移到樓上。",
+          "source": "daily"
+        },
+        {
+          "en": "The study examines women's access to public health services.",
+          "zh": "該研究探討女性取得公共衛生服務的機會。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "gender-identity",
+      "mnemonicHint": "women + 's：撇號 s 表示「女性的」。"
+    },
+    "workers": {
+      "chinese": "工作者；勞工",
+      "pos": "n",
+      "synonyms": [
+        "employees",
+        "laborers",
+        "staff"
+      ],
+      "antonyms": [
+        "employers",
+        "idlers"
+      ],
+      "relatedWords": [
+        "work",
+        "worker",
+        "workforce"
+      ],
+      "confusableWith": [
+        "walkers"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Road workers repaired the pothole outside our building.",
+          "zh": "道路工人修補了我們大樓外的坑洞。",
+          "source": "daily"
+        },
+        {
+          "en": "The report found that night-shift workers faced higher levels of fatigue.",
+          "zh": "報告發現，夜班工作者的疲勞程度較高。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "hierarchy-status",
+      "mnemonicHint": "work 加 er 是工作者"
+    },
+    "worn": {
+      "chinese": "磨損的；穿戴過的",
+      "pos": "adj/pp",
+      "synonyms": [
+        "used",
+        "frayed",
+        "shabby",
+        "weathered"
+      ],
+      "antonyms": [
+        "new",
+        "pristine",
+        "unworn"
+      ],
+      "relatedWords": [
+        "wear",
+        "wears",
+        "wearing",
+        "wore"
+      ],
+      "confusableWith": [
+        "warn",
+        "worn out"
+      ],
+      "exampleSentences": [
+        {
+          "en": "My old hiking boots look worn but still feel comfortable.",
+          "zh": "我的舊登山靴看起來很磨損，但穿起來仍然舒服。",
+          "source": "daily"
+        },
+        {
+          "en": "Frequent traffic had worn a deep groove into the ancient stone steps.",
+          "zh": "頻繁的人流已在古老石階上磨出一道深溝。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "wear-deterioration",
+      "mnemonicHint": "wear–wore–worn 是「穿戴／磨損」的不規則三態；把 worn 想成鞋底紋路被磨平，既能表示「穿過的」，也能表示「磨損的」。"
+    },
+    "worn out": {
+      "chinese": "筋疲力盡的；用壞的",
+      "pos": "adj/phrasal verb",
+      "synonyms": [
+        "exhausted",
+        "spent",
+        "depleted",
+        "threadbare"
+      ],
+      "antonyms": [
+        "refreshed",
+        "energetic",
+        "renewed"
+      ],
+      "relatedWords": [
+        "wear out",
+        "wears out",
+        "wearing out",
+        "wore out"
+      ],
+      "confusableWith": [
+        "worn",
+        "burned out"
+      ],
+      "exampleSentences": [
+        {
+          "en": "After carrying boxes upstairs, I felt completely worn out.",
+          "zh": "把箱子搬上樓後，我感到筋疲力盡。",
+          "source": "daily"
+        },
+        {
+          "en": "The turbine blades were worn out by repeated thermal cycles and required replacement.",
+          "zh": "渦輪葉片因反覆的熱循環而耗損，必須更換。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "exhaustion-depletion",
+      "mnemonicHint": "wear out 是把耐用度一路「穿到外面都沒了」；人被耗盡就是筋疲力竭，物品被耗盡就是磨壞。worn out 可作形容詞，wore out 則是過去式動作。"
+    },
+    "worth": {
+      "chinese": "價值；值得的",
+      "pos": "n/adj",
+      "synonyms": [
+        "value",
+        "merit",
+        "deserving"
+      ],
+      "antonyms": [
+        "worthlessness",
+        "undeserving"
+      ],
+      "relatedWords": [
+        "worthy",
+        "worthwhile",
+        "worthiness"
+      ],
+      "confusableWith": [
+        "worse"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The homemade cake was worth the long wait.",
+          "zh": "這個自製蛋糕值得漫長的等待。",
+          "source": "daily"
+        },
+        {
+          "en": "These historical records are worth examining because they challenge the accepted account.",
+          "zh": "這些歷史紀錄值得研究，因為它們挑戰了公認的說法。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "quality-excellence",
+      "mnemonicHint": "worth 與 value 相連，表示值得"
+    },
+    "would be": {
+      "chinese": "會是；本來會是",
+      "pos": "modal phrase",
+      "synonyms": [
+        "might be",
+        "could be",
+        "was going to be"
+      ],
+      "antonyms": [
+        "would not be",
+        "could not be"
+      ],
+      "relatedWords": [
+        "be",
+        "being",
+        "been",
+        "would"
+      ],
+      "confusableWith": [
+        "will be",
+        "would have been"
+      ],
+      "exampleSentences": [
+        {
+          "en": "A quieter table would be better for our conversation.",
+          "zh": "較安靜的桌位會更適合我們談話。",
+          "source": "daily"
+        },
+        {
+          "en": "Without adequate controls, the experiment would be vulnerable to sampling bias.",
+          "zh": "若缺乏適當控制，這項實驗就容易受到抽樣偏誤影響。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "conditional-state",
+      "mnemonicHint": "would 是 will 往後退一步：可能是條件假設、較委婉語氣，或從過去看未來；would be 因此常譯為「會是／本來會是」，語氣不像 will be 那麼確定。"
+    },
+    "would have": {
+      "chinese": "本來會……；原本可能會……（後接過去分詞）",
+      "pos": "modal phrase",
+      "synonyms": [
+        "might have",
+        "could have",
+        "was likely to have"
+      ],
+      "antonyms": [
+        "would not have",
+        "could not have"
+      ],
+      "relatedWords": [
+        "have",
+        "has",
+        "had",
+        "having"
+      ],
+      "confusableWith": [
+        "would of",
+        "would have had"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Without your reminder, I would have missed the dentist appointment.",
+          "zh": "若不是你提醒，我本來會錯過牙醫預約。",
+          "source": "daily"
+        },
+        {
+          "en": "Under stricter assumptions, the proposed estimator would have produced substantially different results.",
+          "zh": "在更嚴格的假設下，所提出的估計量本來會產生大不相同的結果。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "counterfactual-past",
+      "mnemonicHint": "would have + 過去分詞把「會」放進未實現的過去：would have missed 是「本來會錯過」。口語縮寫 would've 聽似 would of，但正確拼法永遠是 would have。"
+    }
+  }
+}

@@ -1,0 +1,1379 @@
+{
+  "schemaVersion": 1,
+  "words": {
+    "daily": {
+      "chinese": "每日的；每天地；日報",
+      "pos": "adj/adv/n",
+      "synonyms": [
+        "everyday",
+        "day-to-day",
+        "diurnal",
+        "each day"
+      ],
+      "antonyms": [
+        "nightly",
+        "occasionally",
+        "infrequently"
+      ],
+      "relatedWords": [
+        "day",
+        "daytime",
+        "day-to-day"
+      ],
+      "confusableWith": [
+        "dairy",
+        "daylight"
+      ],
+      "exampleSentences": [
+        {
+          "en": "I check the weather forecast daily before cycling to work.",
+          "zh": "我每天騎車上班前都會查看天氣預報。",
+          "source": "daily"
+        },
+        {
+          "en": "Daily exposure to natural light may help regulate the body's sleep cycle.",
+          "zh": "每天接觸自然光可能有助於調節人體的睡眠週期。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "time-frequency",
+      "mnemonicHint": "day 加上 -ly 就是 daily；別和牛奶相關的 dairy 搞混。"
+    },
+    "data": {
+      "chinese": "資料；數據",
+      "pos": "n",
+      "synonyms": [
+        "information",
+        "figures",
+        "statistics",
+        "records"
+      ],
+      "antonyms": [
+        "misinformation",
+        "guesswork"
+      ],
+      "relatedWords": [
+        "database",
+        "dataset",
+        "datum"
+      ],
+      "confusableWith": [
+        "date"
+      ],
+      "exampleSentences": [
+        {
+          "en": "I backed up the data before replacing my laptop.",
+          "zh": "我在更換筆電前備份了資料。",
+          "source": "daily"
+        },
+        {
+          "en": "The data support a strong correlation but do not prove causation.",
+          "zh": "數據支持強烈相關性，但無法證明因果關係。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "data-analysis",
+      "mnemonicHint": "data 是 datum 的複數，現代也常當集合名詞。"
+    },
+    "deceptive": {
+      "chinese": "欺騙性的",
+      "pos": "adj",
+      "synonyms": [
+        "misleading",
+        "fraudulent",
+        "deceitful",
+        "dishonest"
+      ],
+      "antonyms": [
+        "honest",
+        "transparent",
+        "genuine"
+      ],
+      "relatedWords": [
+        "deceive",
+        "deception"
+      ],
+      "confusableWith": [
+        "perceptive"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The product's deceptive packaging made it look larger.",
+          "zh": "產品欺騙性的包裝讓它看起來更大。",
+          "source": "daily"
+        },
+        {
+          "en": "Deceptive marketing erodes consumer trust in a brand.",
+          "zh": "欺騙性營銷侵蝕消費者對品牌的信任。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "truth-deception",
+      "mnemonicHint": "de(from) + cept(take) + ive → 騙走的 → 欺騙性的"
+    },
+    "decisive": {
+      "chinese": "決定性的；關鍵的",
+      "pos": "adj",
+      "synonyms": [
+        "conclusive",
+        "determinative",
+        "critical"
+      ],
+      "antonyms": [
+        "inconclusive",
+        "inconsequential"
+      ],
+      "relatedWords": [
+        "decide",
+        "decision",
+        "decisively"
+      ],
+      "confusableWith": [
+        "divisive"
+      ],
+      "exampleSentences": [
+        {
+          "en": "A decisive phone call ended weeks of uncertainty about the apartment.",
+          "zh": "一通果斷的電話，結束了數週來對這間公寓的猶豫不決。",
+          "source": "daily"
+        },
+        {
+          "en": "Access to clean water proved decisive in reducing childhood mortality.",
+          "zh": "取得乾淨用水成為降低兒童死亡率的決定性因素。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "strength-determination",
+      "mnemonicHint": "decide 加 sive，能迅速作決定"
+    },
+    "deferential": {
+      "chinese": "恭敬的",
+      "pos": "adj",
+      "synonyms": [
+        "respectful",
+        "reverent",
+        "courteous",
+        "submissive"
+      ],
+      "antonyms": [
+        "disrespectful",
+        "insolent",
+        "arrogant"
+      ],
+      "relatedWords": [
+        "deference",
+        "defer"
+      ],
+      "confusableWith": [
+        "differential"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The student was always deferential to her professors.",
+          "zh": "學生對教授們總是很恭敬。",
+          "source": "daily"
+        },
+        {
+          "en": "A deferential tone in negotiations can signal weakness.",
+          "zh": "談判中恭敬的語氣可能被視為軟弱。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "respect-attitude",
+      "mnemonicHint": "defer(讓步) + ential → 表示尊重 → 恭敬的"
+    },
+    "degradation": {
+      "chinese": "退化；降解",
+      "pos": "n",
+      "synonyms": [
+        "deterioration",
+        "decline",
+        "decay",
+        "erosion"
+      ],
+      "antonyms": [
+        "improvement",
+        "enhancement",
+        "upgrade"
+      ],
+      "relatedWords": [
+        "degrade",
+        "degrading"
+      ],
+      "confusableWith": [
+        "graduation"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Environmental degradation threatens wildlife habitats.",
+          "zh": "環境退化威脅野生動物的棲息地。",
+          "source": "daily"
+        },
+        {
+          "en": "Soil degradation reduces agricultural productivity.",
+          "zh": "土壤退化降低了農業生產力。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "decline-deterioration",
+      "mnemonicHint": "de(down) + grad(step) + ation → 往下走 → 退化"
+    },
+    "deliberate": {
+      "chinese": "故意的；深思熟慮的",
+      "pos": "adj/v",
+      "synonyms": [
+        "intentional",
+        "calculated",
+        "premeditated",
+        "purposeful"
+      ],
+      "antonyms": [
+        "accidental",
+        "spontaneous",
+        "unintentional"
+      ],
+      "relatedWords": [
+        "deliberately",
+        "deliberation"
+      ],
+      "confusableWith": [
+        "delicate"
+      ],
+      "exampleSentences": [
+        {
+          "en": "She made a deliberate choice to change careers at 40.",
+          "zh": "她在40歲時做了一個深思熟慮的職業轉變決定。",
+          "source": "daily"
+        },
+        {
+          "en": "The deliberate manipulation of data undermines scientific credibility.",
+          "zh": "故意操縱數據會破壞科學可信度。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "intention-purpose",
+      "mnemonicHint": "de + liber(weigh) + ate → 反覆衡量過的 → 深思熟慮的"
+    },
+    "deliberately": {
+      "chinese": "故意地；深思熟慮地",
+      "pos": "adv",
+      "synonyms": [
+        "intentionally",
+        "purposefully",
+        "knowingly"
+      ],
+      "antonyms": [
+        "accidentally",
+        "inadvertently"
+      ],
+      "relatedWords": [
+        "deliberate",
+        "deliberation"
+      ],
+      "confusableWith": [
+        "desperately"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Leo deliberately left his phone at home so he could enjoy the hike.",
+          "zh": "里歐刻意把手機留在家裡，好好享受健行。",
+          "source": "daily"
+        },
+        {
+          "en": "The experiment deliberately varied room temperature while holding humidity constant.",
+          "zh": "該實驗刻意改變室溫，同時維持濕度不變。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "intention-purpose",
+      "mnemonicHint": "deliberate 思量後行動，所以是故意地"
+    },
+    "deliberately disregards": {
+      "chinese": "故意無視",
+      "pos": "phrase",
+      "synonyms": [
+        "intentionally ignores",
+        "purposefully overlooks",
+        "knowingly dismisses"
+      ],
+      "antonyms": [
+        "carefully considers",
+        "deliberately heeds"
+      ],
+      "relatedWords": [
+        "deliberate",
+        "disregard"
+      ],
+      "confusableWith": [
+        "deliberately regards"
+      ],
+      "exampleSentences": [
+        {
+          "en": "My brother deliberately disregards the laundry label and dries every shirt on high heat.",
+          "zh": "我弟弟刻意忽視洗衣標籤，把每件襯衫都用高溫烘乾。",
+          "source": "daily"
+        },
+        {
+          "en": "The proposed model deliberately disregards seasonal variation to isolate the long-term trend.",
+          "zh": "所提出的模型刻意忽略季節變化，以分離出長期趨勢。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "rules-obedience",
+      "mnemonicHint": "deliberately 故意加 disregard 不理會"
+    },
+    "delineate": {
+      "chinese": "描繪；界定",
+      "pos": "v",
+      "synonyms": [
+        "outline",
+        "define",
+        "depict",
+        "demarcate"
+      ],
+      "antonyms": [
+        "obscure",
+        "blur",
+        "confuse"
+      ],
+      "relatedWords": [
+        "delineation"
+      ],
+      "confusableWith": [
+        "delegate"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The contract clearly delineates each party's responsibilities.",
+          "zh": "合約清楚界定了各方的責任。",
+          "source": "daily"
+        },
+        {
+          "en": "Researchers must delineate the scope of their study.",
+          "zh": "研究人員必須界定研究範圍。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "definition-boundary",
+      "mnemonicHint": "de + line + ate → 畫出線條 → 界定"
+    },
+    "descendants": {
+      "chinese": "後代；子孫",
+      "pos": "n",
+      "synonyms": [
+        "offspring",
+        "heirs",
+        "progeny"
+      ],
+      "antonyms": [
+        "ancestors",
+        "forebears"
+      ],
+      "relatedWords": [
+        "descend",
+        "descendant",
+        "descent"
+      ],
+      "confusableWith": [
+        "dissidents"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Her descendants still gather at the farmhouse every Lunar New Year.",
+          "zh": "她的後代每逢農曆新年仍會在那棟農舍團聚。",
+          "source": "daily"
+        },
+        {
+          "en": "Genetic analysis linked the islanders to descendants of early coastal settlers.",
+          "zh": "基因分析顯示，這些島民與早期沿海定居者的後代有親緣關係。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "sequence-order",
+      "mnemonicHint": "descend 往下，家族向下延續是後代"
+    },
+    "described": {
+      "chinese": "描述了；被形容為",
+      "pos": "v/adj",
+      "synonyms": [
+        "portrayed",
+        "depicted",
+        "characterized",
+        "explained"
+      ],
+      "antonyms": [
+        "concealed",
+        "omitted",
+        "misrepresented"
+      ],
+      "relatedWords": [
+        "describe",
+        "description",
+        "descriptive",
+        "descriptively"
+      ],
+      "confusableWith": [
+        "prescribed",
+        "inscribed"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Nora described the lost bag as small, black, and square.",
+          "zh": "諾拉描述遺失的包包是小型、黑色且方正的。",
+          "source": "daily"
+        },
+        {
+          "en": "The process described in the passage converts agricultural waste into fuel.",
+          "zh": "文章所描述的過程會將農業廢棄物轉化為燃料。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "language-description",
+      "mnemonicHint": "describe 是描述，加上 -d 成為過去式或過去分詞 described。"
+    },
+    "despite that": {
+      "chinese": "儘管如此",
+      "pos": "phrase",
+      "synonyms": [
+        "nevertheless",
+        "even so",
+        "notwithstanding that"
+      ],
+      "antonyms": [
+        "because of that",
+        "as a result"
+      ],
+      "relatedWords": [
+        "despite",
+        "despite this"
+      ],
+      "confusableWith": [
+        "in spite that"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The bakery was nearly closed; despite that, the owner made us two sandwiches.",
+          "zh": "麵包店快打烊了；儘管如此，老闆仍替我們做了兩份三明治。",
+          "source": "daily"
+        },
+        {
+          "en": "The sample was small; despite that, the effect reached statistical significance.",
+          "zh": "樣本數很少；儘管如此，該效應仍達到統計顯著。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "opposition-conflict",
+      "mnemonicHint": "despite 表讓步，that 指前述情況"
+    },
+    "detached": {
+      "chinese": "分離的；冷漠的",
+      "pos": "adj",
+      "synonyms": [
+        "separated",
+        "disconnected",
+        "freestanding"
+      ],
+      "antonyms": [
+        "attached",
+        "connected"
+      ],
+      "relatedWords": [
+        "detach",
+        "detachment"
+      ],
+      "confusableWith": [
+        "detailed"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The garage is detached from the house, so we cross the yard to reach it.",
+          "zh": "車庫與房屋分開，因此我們得穿過院子才能到達。",
+          "source": "daily"
+        },
+        {
+          "en": "The researcher maintained a detached tone while reporting the emotionally charged interviews.",
+          "zh": "研究人員以客觀冷靜的語氣報告充滿情緒的訪談內容。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "difference-separation",
+      "mnemonicHint": "de 離開加 attach 黏住，detached 是拆開"
+    },
+    "detrimental": {
+      "chinese": "有害的",
+      "pos": "adj",
+      "synonyms": [
+        "harmful",
+        "damaging",
+        "deleterious",
+        "injurious",
+        "adverse"
+      ],
+      "antonyms": [
+        "beneficial",
+        "advantageous",
+        "helpful"
+      ],
+      "relatedWords": [
+        "detriment",
+        "detrimentally"
+      ],
+      "confusableWith": [
+        "instrumental"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Excessive screen time can be detrimental to children's eyesight.",
+          "zh": "過多的螢幕時間可能對兒童的視力有害。",
+          "source": "daily"
+        },
+        {
+          "en": "The policy change proved detrimental to small business growth.",
+          "zh": "政策變更證明對小型企業的成長有害。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "damage-harm",
+      "mnemonicHint": "de(away) + tri(rub) + mental → 磨損消耗 → 有害的"
+    },
+    "devastating": {
+      "chinese": "毀滅性的",
+      "pos": "adj",
+      "synonyms": [
+        "destructive",
+        "catastrophic",
+        "ruinous",
+        "disastrous"
+      ],
+      "antonyms": [
+        "constructive",
+        "beneficial",
+        "restorative"
+      ],
+      "relatedWords": [
+        "devastate",
+        "devastation"
+      ],
+      "confusableWith": [
+        "devasting (misspelling)"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The earthquake had a devastating impact on the coastal community.",
+          "zh": "地震對沿海社區造成了毀滅性的影響。",
+          "source": "daily"
+        },
+        {
+          "en": "The devastating effects of deforestation extend beyond biodiversity loss.",
+          "zh": "森林砍伐的毀滅性影響遠不止生物多樣性喪失。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "damage-destruction",
+      "mnemonicHint": "de(down) + vast(waste) + ating → 把一切變成廢墟 → 毀滅性的"
+    },
+    "diabetes": {
+      "chinese": "糖尿病",
+      "pos": "n",
+      "synonyms": [
+        "diabetes mellitus",
+        "chronic blood sugar disorder",
+        "sugar diabetes"
+      ],
+      "antonyms": [
+        "normal blood glucose",
+        "metabolic health"
+      ],
+      "relatedWords": [
+        "diabetic",
+        "prediabetes",
+        "antidiabetic"
+      ],
+      "confusableWith": [
+        "diabetics"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Exercise helps him manage his diabetes.",
+          "zh": "運動有助於他控制糖尿病。",
+          "source": "daily"
+        },
+        {
+          "en": "Type 2 diabetes is associated with insulin resistance.",
+          "zh": "第二型糖尿病與胰島素阻抗有關。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "health-disease",
+      "mnemonicHint": "dia- 穿過 + betes 走，古人以尿液異常描述此病。"
+    },
+    "dictator": {
+      "chinese": "獨裁者",
+      "pos": "n",
+      "synonyms": [
+        "autocrat",
+        "despot",
+        "tyrant"
+      ],
+      "antonyms": [
+        "elected representative",
+        "democratic leader"
+      ],
+      "relatedWords": [
+        "dictate",
+        "dictatorship",
+        "dictatorial"
+      ],
+      "confusableWith": [
+        "director"
+      ],
+      "exampleSentences": [
+        {
+          "en": "My grandfather still remembers the night the dictator ordered a citywide curfew.",
+          "zh": "祖父仍記得那位獨裁者下令全城宵禁的那一晚。",
+          "source": "daily"
+        },
+        {
+          "en": "The political science exam asks how a dictator consolidates power after a coup.",
+          "zh": "政治學考題要求說明獨裁者在政變後如何鞏固權力。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "authority-control",
+      "mnemonicHint": "dict 說命令，dictator 一人下令"
+    },
+    "did i": {
+      "chinese": "我是否做了…",
+      "pos": "phrase",
+      "synonyms": [
+        "did I actually",
+        "did I in fact",
+        "was I the one who did"
+      ],
+      "antonyms": [
+        "I did not",
+        "it was not I"
+      ],
+      "relatedWords": [
+        "do",
+        "did",
+        "done"
+      ],
+      "confusableWith": [
+        "do I"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Before locking the door, I wondered, did I leave the stove on?",
+          "zh": "鎖門前，我心想：我是不是忘了關爐火？",
+          "source": "daily"
+        },
+        {
+          "en": "While reviewing my answer, I asked, did I cite enough evidence for this claim?",
+          "zh": "檢查答案時，我問自己：我是否為這項主張引用了足夠的證據？",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "inquiry-investigation",
+      "mnemonicHint": "did 提到句首，形成過去式疑問 Did I"
+    },
+    "diet": {
+      "chinese": "飲食；日常食物；節食",
+      "pos": "n/v",
+      "synonyms": [
+        "food intake",
+        "eating pattern",
+        "nutrition plan",
+        "regimen"
+      ],
+      "antonyms": [
+        "fasting",
+        "starvation"
+      ],
+      "relatedWords": [
+        "dietary",
+        "dietitian",
+        "dieting",
+        "dieter"
+      ],
+      "confusableWith": [
+        "dye",
+        "deity"
+      ],
+      "exampleSentences": [
+        {
+          "en": "My doctor suggested adding more beans to my diet.",
+          "zh": "我的醫師建議我在日常飲食中增加豆類。",
+          "source": "daily"
+        },
+        {
+          "en": "A varied diet can supply nutrients that no single food provides in sufficient amounts.",
+          "zh": "多樣化的飲食能提供任何單一食物都無法充分供應的營養素。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "health-nutrition",
+      "mnemonicHint": "diet 是每天吃進去的飲食；go on a diet 則特別指為健康或體重而節食。"
+    },
+    "difficult": {
+      "chinese": "困難的；難以應付的",
+      "pos": "adj",
+      "synonyms": [
+        "hard",
+        "challenging",
+        "demanding",
+        "arduous"
+      ],
+      "antonyms": [
+        "easy",
+        "simple",
+        "straightforward"
+      ],
+      "relatedWords": [
+        "difficulty",
+        "difficulties",
+        "difficultly"
+      ],
+      "confusableWith": [
+        "different",
+        "diffident"
+      ],
+      "exampleSentences": [
+        {
+          "en": "It was difficult to carry the sofa up the narrow stairs.",
+          "zh": "要把沙發搬上狹窄的樓梯很困難。",
+          "source": "daily"
+        },
+        {
+          "en": "The species is difficult to observe because it remains underground during daylight hours.",
+          "zh": "這個物種因為白天都待在地下，所以很難觀察。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "difficulty-effort",
+      "mnemonicHint": "difficult 是事情很難，difficulty 則是那個困難本身。"
+    },
+    "disapproving": {
+      "chinese": "不贊成的",
+      "pos": "adj",
+      "synonyms": [
+        "critical",
+        "censorious",
+        "reproachful"
+      ],
+      "antonyms": [
+        "approving",
+        "supportive"
+      ],
+      "relatedWords": [
+        "disapprove",
+        "disapproval"
+      ],
+      "confusableWith": [
+        "disproving"
+      ],
+      "exampleSentences": [
+        {
+          "en": "She gave a disapproving look when he checked his phone.",
+          "zh": "他看手機時她投以不贊成的目光。",
+          "source": "daily"
+        },
+        {
+          "en": "The disapproving tone reflected public sentiment.",
+          "zh": "不贊成的語氣反映了公眾情緒。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "emotion-attitude",
+      "mnemonicHint": "dis(not) + approving → 不贊同 → 不贊成的"
+    },
+    "discoursed": {
+      "chinese": "論述；演講",
+      "pos": "v",
+      "synonyms": [
+        "held forth",
+        "expounded",
+        "lectured"
+      ],
+      "antonyms": [
+        "fell silent",
+        "kept quiet"
+      ],
+      "relatedWords": [
+        "discourse",
+        "discursive"
+      ],
+      "confusableWith": [
+        "disclosed"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Our neighbor discoursed on coffee beans while grinding a fresh batch for us.",
+          "zh": "鄰居一邊替我們磨新鮮咖啡豆，一邊滔滔不絕地談論咖啡豆。",
+          "source": "daily"
+        },
+        {
+          "en": "In the lecture, the historian discoursed on the economic causes of the revolution.",
+          "zh": "歷史學家在講座中詳細論述革命的經濟成因。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "language-communication",
+      "mnemonicHint": "discourse 是長篇論述，discoursed 表示曾論述"
+    },
+    "discovered": {
+      "chinese": "發現；查明",
+      "pos": "v",
+      "synonyms": [
+        "found",
+        "uncovered",
+        "detected",
+        "identified"
+      ],
+      "antonyms": [
+        "overlooked",
+        "missed",
+        "concealed"
+      ],
+      "relatedWords": [
+        "discover",
+        "discovery",
+        "discoverer"
+      ],
+      "confusableWith": [
+        "recovered"
+      ],
+      "exampleSentences": [
+        {
+          "en": "We discovered a quiet café near the station.",
+          "zh": "我們在車站附近發現一家安靜的咖啡館。",
+          "source": "daily"
+        },
+        {
+          "en": "Researchers discovered a previously unknown mechanism of resistance.",
+          "zh": "研究人員發現一種先前未知的抗藥機制。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "inquiry-investigation",
+      "mnemonicHint": "dis- 去除 + cover 覆蓋：掀開遮蓋就是發現。"
+    },
+    "disinfection": {
+      "chinese": "消毒",
+      "pos": "n",
+      "synonyms": [
+        "sterilization",
+        "sanitization",
+        "decontamination"
+      ],
+      "antonyms": [
+        "contamination",
+        "infection"
+      ],
+      "relatedWords": [
+        "disinfect",
+        "disinfectant"
+      ],
+      "confusableWith": [
+        "dissection"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Regular disinfection of surfaces is crucial during flu season.",
+          "zh": "流感季節定期消毒表面至關重要。",
+          "source": "daily"
+        },
+        {
+          "en": "Water disinfection methods include chlorination and UV treatment.",
+          "zh": "水消毒方法包括氯化和紫外線處理。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "health-cleanliness",
+      "mnemonicHint": "dis(remove) + infection → 去除感染 → 消毒"
+    },
+    "disjointed": {
+      "chinese": "不連貫的；脫節的",
+      "pos": "adj",
+      "synonyms": [
+        "incoherent",
+        "fragmented",
+        "disconnected"
+      ],
+      "antonyms": [
+        "coherent",
+        "connected"
+      ],
+      "relatedWords": [
+        "disjoint",
+        "disjointedly"
+      ],
+      "confusableWith": [
+        "disappointed"
+      ],
+      "exampleSentences": [
+        {
+          "en": "His disjointed directions sent us from the station to the wrong street.",
+          "zh": "他前後不連貫的指示讓我們從車站走到了錯的街道。",
+          "source": "daily"
+        },
+        {
+          "en": "The examiner criticized the essay's disjointed argument and abrupt transitions.",
+          "zh": "考官批評這篇論文論證不連貫、轉折突兀。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "difference-separation",
+      "mnemonicHint": "dis 分開加 joint 接點，接不上就不連貫"
+    },
+    "dismantled": {
+      "chinese": "拆除的；拆解了",
+      "pos": "v",
+      "synonyms": [
+        "disassembled",
+        "demolished",
+        "taken apart"
+      ],
+      "antonyms": [
+        "assembled",
+        "built"
+      ],
+      "relatedWords": [
+        "dismantle",
+        "dismantling"
+      ],
+      "confusableWith": [
+        "disjointed"
+      ],
+      "exampleSentences": [
+        {
+          "en": "We dismantled the old bookshelf so it would fit in the elevator.",
+          "zh": "我們拆開舊書架，好讓它能放進電梯。",
+          "source": "daily"
+        },
+        {
+          "en": "The reform dismantled legal barriers that had excluded women from universities.",
+          "zh": "這項改革廢除了過去將女性排除在大學之外的法律障礙。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "damage-destruction",
+      "mnemonicHint": "把 mantle 外殼逐件拿掉，聯想拆解"
+    },
+    "dismiss": {
+      "chinese": "駁回；解僱；不理會",
+      "pos": "v",
+      "synonyms": [
+        "disregard",
+        "reject",
+        "brush aside"
+      ],
+      "antonyms": [
+        "consider",
+        "heed"
+      ],
+      "relatedWords": [
+        "dismissal",
+        "dismissive"
+      ],
+      "confusableWith": [
+        "demise"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Do not dismiss the rattling noise until a mechanic checks the car.",
+          "zh": "在技師檢查汽車前，別把那陣喀喀聲當作小事。",
+          "source": "daily"
+        },
+        {
+          "en": "Researchers should not dismiss an alternative hypothesis without testing its predictions.",
+          "zh": "研究人員不應在尚未檢驗其預測前，就排除另一項假說。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "punishment-exclusion",
+      "mnemonicHint": "dis 離開加 miss，讓人離開或不予考慮"
+    },
+    "disorders": {
+      "chinese": "疾病；身心失調",
+      "pos": "n",
+      "synonyms": [
+        "ailments",
+        "conditions",
+        "illnesses",
+        "syndromes"
+      ],
+      "antonyms": [
+        "health",
+        "wellness",
+        "normal functioning"
+      ],
+      "relatedWords": [
+        "disorder",
+        "disordered",
+        "disorderly"
+      ],
+      "confusableWith": [
+        "distortions"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The clinic treats sleep disorders in both adults and children.",
+          "zh": "這間診所治療成人與兒童的睡眠障礙。",
+          "source": "daily"
+        },
+        {
+          "en": "Some inherited disorders result from changes in a single gene.",
+          "zh": "有些遺傳性疾病源自單一基因的變化。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "health-conditions",
+      "mnemonicHint": "order 是秩序；前面加 dis- 變成失去秩序，也可指身體或心理的失調。"
+    },
+    "disparagement": {
+      "chinese": "貶低；毀謗",
+      "pos": "n",
+      "synonyms": [
+        "belittlement",
+        "denigration",
+        "depreciation"
+      ],
+      "antonyms": [
+        "praise",
+        "commendation"
+      ],
+      "relatedWords": [
+        "disparage",
+        "disparaging"
+      ],
+      "confusableWith": [
+        "disparity"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Her constant disparagement of my cooking made family dinners uncomfortable.",
+          "zh": "她不斷貶低我的廚藝，讓家庭聚餐變得很不自在。",
+          "source": "daily"
+        },
+        {
+          "en": "The article examines how public disparagement of minority dialects reinforces social inequality.",
+          "zh": "該文探討公開貶抑少數族群方言如何加劇社會不平等。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "punishment-criticism",
+      "mnemonicHint": "disparage 貶低加 ment，表示貶損行為"
+    },
+    "disregards": {
+      "chinese": "忽視；不理會",
+      "pos": "v",
+      "synonyms": [
+        "ignores",
+        "overlooks",
+        "neglects"
+      ],
+      "antonyms": [
+        "heeds",
+        "considers"
+      ],
+      "relatedWords": [
+        "disregard",
+        "regard"
+      ],
+      "confusableWith": [
+        "discards"
+      ],
+      "exampleSentences": [
+        {
+          "en": "My roommate disregards the recycling labels and puts every bottle in the trash.",
+          "zh": "我的室友無視回收標示，把每個瓶子都丟進垃圾桶。",
+          "source": "daily"
+        },
+        {
+          "en": "The calculation disregards air resistance to simplify the projectile model.",
+          "zh": "為了簡化拋射物模型，這項計算忽略了空氣阻力。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "rules-obedience",
+      "mnemonicHint": "dis 否定加 regard 關注，就是不理會"
+    },
+    "disruption": {
+      "chinese": "擾亂；中斷",
+      "pos": "n",
+      "synonyms": [
+        "disturbance",
+        "interruption",
+        "upheaval",
+        "disorder"
+      ],
+      "antonyms": [
+        "continuity",
+        "stability",
+        "order"
+      ],
+      "relatedWords": [
+        "disrupt",
+        "disruptive",
+        "disruptor"
+      ],
+      "confusableWith": [
+        "destruction"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The power outage caused major disruption to train services.",
+          "zh": "停電對火車服務造成了重大中斷。",
+          "source": "daily"
+        },
+        {
+          "en": "Digital disruption has fundamentally altered the media landscape.",
+          "zh": "數位顛覆從根本上改變了媒體格局。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "change-disorder",
+      "mnemonicHint": "dis(apart) + rupt(break) + ion → 打破分開 → 擾亂"
+    },
+    "dissection": {
+      "chinese": "解剖",
+      "pos": "n",
+      "synonyms": [
+        "analysis",
+        "examination",
+        "investigation"
+      ],
+      "antonyms": [
+        "synthesis",
+        "assembly"
+      ],
+      "relatedWords": [
+        "dissect"
+      ],
+      "confusableWith": [
+        "disinfection"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The dissection of the frog was a memorable biology experience.",
+          "zh": "解剖青蛙是難忘的生物課經歷。",
+          "source": "daily"
+        },
+        {
+          "en": "Careful dissection of data reveals hidden patterns.",
+          "zh": "仔細剖析數據揭示隱藏模式。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "analysis-investigation",
+      "mnemonicHint": "dis(apart) + sect(cut) + ion → 切開 → 解剖"
+    },
+    "dissidents": {
+      "chinese": "異議人士",
+      "pos": "n",
+      "synonyms": [
+        "dissenters",
+        "nonconformists",
+        "objectors"
+      ],
+      "antonyms": [
+        "loyalists",
+        "conformists"
+      ],
+      "relatedWords": [
+        "dissent",
+        "dissident"
+      ],
+      "confusableWith": [
+        "descendants"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The documentary showed dissidents meeting secretly in a cramped apartment.",
+          "zh": "紀錄片呈現異議人士在一間狹小公寓內祕密集會。",
+          "source": "daily"
+        },
+        {
+          "en": "The historian used prison records to trace how dissidents organized against the regime.",
+          "zh": "歷史學家利用監獄紀錄，追查異議人士如何組織反抗政權。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "opposition-conflict",
+      "mnemonicHint": "dissent 異議，dissident 是持異議者"
+    },
+    "dissimulation": {
+      "chinese": "偽裝",
+      "pos": "n",
+      "synonyms": [
+        "pretense",
+        "deception",
+        "concealment"
+      ],
+      "antonyms": [
+        "honesty",
+        "sincerity"
+      ],
+      "relatedWords": [
+        "dissimulate"
+      ],
+      "confusableWith": [
+        "simulation"
+      ],
+      "exampleSentences": [
+        {
+          "en": "His calm exterior was a form of dissimulation.",
+          "zh": "他平靜的外表是一種偽裝。",
+          "source": "daily"
+        },
+        {
+          "en": "Political dissimulation erodes public trust.",
+          "zh": "政治偽裝侵蝕了公眾信任。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "truth-deception",
+      "mnemonicHint": "dis + simul(pretend) + ation → 假裝 → 偽裝"
+    },
+    "distinctive": {
+      "chinese": "獨特的；有特色的",
+      "pos": "adj",
+      "synonyms": [
+        "characteristic",
+        "unique",
+        "recognizable"
+      ],
+      "antonyms": [
+        "ordinary",
+        "indistinct"
+      ],
+      "relatedWords": [
+        "distinction",
+        "distinctively"
+      ],
+      "confusableWith": [
+        "distinct"
+      ],
+      "exampleSentences": [
+        {
+          "en": "A distinctive blue door makes our house easy for delivery drivers to find.",
+          "zh": "一扇醒目的藍色大門，讓外送員很容易找到我家。",
+          "source": "daily"
+        },
+        {
+          "en": "The fossil has a distinctive ridge that separates it from related species.",
+          "zh": "這件化石具有一道獨特的脊，使它有別於近緣物種。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "uniqueness-rarity",
+      "mnemonicHint": "distinct 不同加 ive，具有鮮明特色"
+    },
+    "divergence": {
+      "chinese": "分歧",
+      "pos": "n",
+      "synonyms": [
+        "difference",
+        "deviation",
+        "disagreement",
+        "variation"
+      ],
+      "antonyms": [
+        "convergence",
+        "agreement",
+        "uniformity"
+      ],
+      "relatedWords": [
+        "diverge",
+        "divergent"
+      ],
+      "confusableWith": [
+        "convergence"
+      ],
+      "exampleSentences": [
+        {
+          "en": "There is a growing divergence of opinion within the team.",
+          "zh": "團隊內部的意見分歧越來越大。",
+          "source": "daily"
+        },
+        {
+          "en": "The divergence between policy goals and outcomes requires analysis.",
+          "zh": "政策目標與結果之間的分歧需要分析。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "difference-separation",
+      "mnemonicHint": "di(apart) + verg(turn) + ence → 轉向不同方向 → 分歧"
+    },
+    "do i": {
+      "chinese": "我是否做…",
+      "pos": "phrase",
+      "synonyms": [
+        "do I actually",
+        "am I the one who",
+        "is it I who"
+      ],
+      "antonyms": [
+        "I do not",
+        "it is not I"
+      ],
+      "relatedWords": [
+        "do",
+        "doing",
+        "does"
+      ],
+      "confusableWith": [
+        "did I"
+      ],
+      "exampleSentences": [
+        {
+          "en": "When I see dark clouds, I ask, do I need an umbrella for the walk home?",
+          "zh": "看到烏雲時，我會問自己：走路回家需要帶傘嗎？",
+          "source": "daily"
+        },
+        {
+          "en": "Before choosing an option, I ask, do I understand what the question is testing?",
+          "zh": "選答案前，我會問自己：我明白這題在測驗什麼嗎？",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "inquiry-investigation",
+      "mnemonicHint": "助動詞 do 放句首，形成現在式疑問"
+    },
+    "dormant": {
+      "chinese": "休眠的；暫停活動的",
+      "pos": "adj",
+      "synonyms": [
+        "inactive",
+        "latent",
+        "quiescent"
+      ],
+      "antonyms": [
+        "active",
+        "awake"
+      ],
+      "relatedWords": [
+        "dormancy",
+        "dormantly"
+      ],
+      "confusableWith": [
+        "dominant"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The seeds remain dormant in the cupboard until I plant them in spring.",
+          "zh": "這些種子會在櫥櫃裡保持休眠，直到我春天播種。",
+          "source": "daily"
+        },
+        {
+          "en": "Geologists detected fresh gas emissions beneath the supposedly dormant volcano.",
+          "zh": "地質學家在這座被認為處於休眠狀態的火山下方偵測到新的氣體排放。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "permanence-stability",
+      "mnemonicHint": "dorm 像 dormitory 睡覺處，dormant 在沉睡"
+    }
+  }
+}

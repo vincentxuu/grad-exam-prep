@@ -1,0 +1,1927 @@
+{
+  "schemaVersion": 1,
+  "words": {
+    "raise": {
+      "chinese": "提高；舉起；募集",
+      "pos": "v/n",
+      "synonyms": [
+        "lift",
+        "increase",
+        "elevate",
+        "collect"
+      ],
+      "antonyms": [
+        "lower",
+        "reduce",
+        "drop"
+      ],
+      "relatedWords": [
+        "raised",
+        "raising",
+        "raiser"
+      ],
+      "confusableWith": [
+        "rise"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Please raise your hand if you need help.",
+          "zh": "需要協助請舉手。",
+          "source": "daily"
+        },
+        {
+          "en": "Higher taxes may raise the cost of imported goods.",
+          "zh": "提高稅率可能增加進口商品的成本。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "change-improvement",
+      "mnemonicHint": "raise 是及物動詞，要把某物舉高；rise 是自己升起。"
+    },
+    "raised": {
+      "chinese": "提高的；養育的",
+      "pos": "v/adj",
+      "synonyms": [
+        "lifted",
+        "elevated",
+        "reared"
+      ],
+      "antonyms": [
+        "lowered",
+        "dropped"
+      ],
+      "relatedWords": [
+        "raise",
+        "raising"
+      ],
+      "confusableWith": [
+        "razed"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Our neighbors raised three children in that small apartment.",
+          "zh": "我們的鄰居在那間小公寓裡養大了三個孩子。",
+          "source": "daily"
+        },
+        {
+          "en": "The findings raised important questions about the reliability of the earlier study.",
+          "zh": "這些發現引發了對先前研究可靠性的重要疑問。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "change-improvement",
+      "mnemonicHint": "raise 往上，raised 就是已提高"
+    },
+    "rampant": {
+      "chinese": "猖獗的；氾濫的；失控蔓延的",
+      "pos": "adj",
+      "synonyms": [
+        "widespread",
+        "unchecked",
+        "unrestrained",
+        "raging"
+      ],
+      "antonyms": [
+        "controlled",
+        "contained",
+        "limited"
+      ],
+      "relatedWords": [
+        "rampantly",
+        "rampancy"
+      ],
+      "confusableWith": [
+        "rambling",
+        "rampaging"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Mosquitoes grow rampant near the pond whenever summer rain leaves standing water.",
+          "zh": "每逢夏雨留下積水，池塘附近的蚊子就會大量滋生。",
+          "source": "daily"
+        },
+        {
+          "en": "Without independent oversight, rampant corruption can erode public trust in government institutions.",
+          "zh": "若缺乏獨立監督，猖獗的貪腐會侵蝕民眾對政府機構的信任。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "spread-escalation",
+      "mnemonicHint": "想像野草衝上 ramp（斜坡）後到處亂竄、無人能擋，便是 rampant：「猖獗且失控蔓延的」。"
+    },
+    "rapidly": {
+      "chinese": "迅速地；快速地",
+      "pos": "adv",
+      "synonyms": [
+        "quickly",
+        "swiftly",
+        "speedily",
+        "promptly"
+      ],
+      "antonyms": [
+        "slowly",
+        "gradually",
+        "sluggishly"
+      ],
+      "relatedWords": [
+        "rapid",
+        "rapidity",
+        "rapidness"
+      ],
+      "confusableWith": [
+        "readily",
+        "rabidly"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The dark clouds moved rapidly across the sky.",
+          "zh": "烏雲迅速掠過天空。",
+          "source": "daily"
+        },
+        {
+          "en": "As urban populations grow rapidly, public transportation becomes increasingly important.",
+          "zh": "隨著都市人口迅速成長，大眾運輸變得日益重要。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "time-speed",
+      "mnemonicHint": "rapid 是快速的，加上 -ly 就變成快速地 rapidly。"
+    },
+    "reasons": {
+      "chinese": "理由；原因",
+      "pos": "n/v",
+      "synonyms": [
+        "causes",
+        "grounds",
+        "motives",
+        "explanations"
+      ],
+      "antonyms": [
+        "results",
+        "effects",
+        "consequences"
+      ],
+      "relatedWords": [
+        "reason",
+        "reasonable",
+        "reasoning"
+      ],
+      "confusableWith": [
+        "seasons",
+        "resins"
+      ],
+      "exampleSentences": [
+        {
+          "en": "She gave several reasons for leaving the club early.",
+          "zh": "她提出了幾個提早離開社團的理由。",
+          "source": "daily"
+        },
+        {
+          "en": "The report considers the reasons behind the decline in voter participation.",
+          "zh": "該報告探討選民參與率下降背後的原因。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "reasoning-causation",
+      "mnemonicHint": "reasons 是 reason 的複數，常用來回答 why。"
+    },
+    "recess": {
+      "chinese": "休會；課間休息；凹處",
+      "pos": "n/v",
+      "synonyms": [
+        "break",
+        "adjournment",
+        "interval",
+        "pause"
+      ],
+      "antonyms": [
+        "session",
+        "continuation",
+        "resumption"
+      ],
+      "relatedWords": [
+        "recessed",
+        "recessing",
+        "recesses",
+        "in recess"
+      ],
+      "confusableWith": [
+        "recession",
+        "remission"
+      ],
+      "exampleSentences": [
+        {
+          "en": "During morning recess, the children traded stickers beside the playground.",
+          "zh": "上午課間休息時，孩子們在遊樂場旁交換貼紙。",
+          "source": "daily"
+        },
+        {
+          "en": "Parliament entered a month-long recess before debate on the revised budget resumed.",
+          "zh": "國會休會一個月，之後才恢復修訂預算案的辯論。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "pause-suspension",
+      "mnemonicHint": "re-（向後）＋cess（走，如 recede）：大家往後退、暫時離場就是「休會、休息」；牆面往後退則形成「凹處」。"
+    },
+    "reduce": {
+      "chinese": "減少；降低",
+      "pos": "v",
+      "synonyms": [
+        "decrease",
+        "lower",
+        "diminish",
+        "cut"
+      ],
+      "antonyms": [
+        "increase",
+        "raise",
+        "expand"
+      ],
+      "relatedWords": [
+        "reduction",
+        "reduced",
+        "reductive"
+      ],
+      "confusableWith": [
+        "reuse"
+      ],
+      "exampleSentences": [
+        {
+          "en": "We need to reduce the amount of food we waste.",
+          "zh": "我們需要減少浪費的食物量。",
+          "source": "daily"
+        },
+        {
+          "en": "Improved insulation can reduce household energy demand.",
+          "zh": "改善隔熱可降低家庭能源需求。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "decline-deterioration",
+      "mnemonicHint": "re- 往回 + duce 引導：把數量往回帶就是減少。"
+    },
+    "redundancy": {
+      "chinese": "冗餘；備援；（英）職位裁撤或被裁狀態",
+      "pos": "n",
+      "synonyms": [
+        "duplication",
+        "superfluity",
+        "excess",
+        "overlap"
+      ],
+      "antonyms": [
+        "necessity",
+        "indispensability"
+      ],
+      "relatedWords": [
+        "redundant",
+        "redundantly"
+      ],
+      "confusableWith": [
+        "abundance",
+        "repetition"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The merger put several office workers at risk of redundancy.",
+          "zh": "這次合併使數名辦公室員工面臨職位遭裁撤的風險。",
+          "source": "daily"
+        },
+        {
+          "en": "Organizational redundancy can protect critical operations from a single point of failure.",
+          "zh": "組織中的備援配置可保護關鍵作業，避免單點故障造成中斷。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "duplication-excess",
+      "mnemonicHint": "re-（再次）＋und（像 one，一個）＋-ancy：同一功能再多放一個，就是「重複配置」；多到不需要時便成了「冗餘」。"
+    },
+    "reflects": {
+      "chinese": "反映；映照；深思",
+      "pos": "v",
+      "synonyms": [
+        "mirrors",
+        "reveals",
+        "indicates",
+        "echoes"
+      ],
+      "antonyms": [
+        "distorts",
+        "conceals"
+      ],
+      "relatedWords": [
+        "reflect",
+        "reflection",
+        "reflective"
+      ],
+      "confusableWith": [
+        "deflects"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The mirror reflects the morning light.",
+          "zh": "鏡子映照著晨光。",
+          "source": "daily"
+        },
+        {
+          "en": "The survey reflects changing attitudes toward remote work.",
+          "zh": "該調查反映人們對遠距工作的態度正在改變。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "comparison-similarity",
+      "mnemonicHint": "re- 回 + flect 彎：把光彎回來就是反射。"
+    },
+    "reform": {
+      "chinese": "改革",
+      "pos": "n/v",
+      "synonyms": [
+        "overhaul",
+        "revamp",
+        "restructure",
+        "transform"
+      ],
+      "antonyms": [
+        "preserve",
+        "maintain"
+      ],
+      "relatedWords": [
+        "reformation",
+        "reformer"
+      ],
+      "confusableWith": [
+        "perform"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The government promised to reform the healthcare system.",
+          "zh": "政府承諾改革醫療保健制度。",
+          "source": "daily"
+        },
+        {
+          "en": "Educational reform must address both access and quality.",
+          "zh": "教育改革必須同時解決入學機會和品質。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "change-improvement",
+      "mnemonicHint": "re(again) + form → 重新塑造 → 改革"
+    },
+    "regard of": {
+      "chinese": "非標準形式；應改為 with regard to（關於）",
+      "pos": "nonstandard phrase",
+      "synonyms": [
+        "with regard to",
+        "regarding",
+        "concerning",
+        "about"
+      ],
+      "antonyms": [
+        "unrelated to",
+        "apart from"
+      ],
+      "relatedWords": [
+        "regard",
+        "regarding",
+        "regards"
+      ],
+      "confusableWith": [
+        "with regard to",
+        "regardless of"
+      ],
+      "exampleSentences": [
+        {
+          "en": "With regard to Friday's dinner, please tell me about any food allergies.",
+          "zh": "關於星期五的晚餐，請告訴我你是否對任何食物過敏。",
+          "source": "daily"
+        },
+        {
+          "en": "With regard to long-term costs, the policy may still improve public health overall.",
+          "zh": "就長期成本而言，這項政策整體上仍可能改善公共健康。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "relation-reference",
+      "mnemonicHint": "regard of 少了完整搭配；表達「關於」時固定使用 with regard to。regardless of 是另一個表示「不論」的片語，不要混為一談。"
+    },
+    "regardless of": {
+      "chinese": "不論；不管",
+      "pos": "phrase",
+      "synonyms": [
+        "despite",
+        "irrespective of",
+        "no matter"
+      ],
+      "antonyms": [
+        "because of",
+        "depending on"
+      ],
+      "relatedWords": [
+        "regard",
+        "regardless"
+      ],
+      "confusableWith": [
+        "in regard to"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Dana walks to work regardless of the weather.",
+          "zh": "不論天氣如何，黛娜都走路上班。",
+          "source": "daily"
+        },
+        {
+          "en": "The policy applies to all applicants regardless of socioeconomic status.",
+          "zh": "這項政策適用於所有申請者，不論其社會經濟地位。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "scope-independence",
+      "mnemonicHint": "沒有 regard 顧慮，因此不論條件"
+    },
+    "regret": {
+      "chinese": "後悔；遺憾",
+      "pos": "n/v",
+      "synonyms": [
+        "remorse",
+        "sorrow",
+        "rue",
+        "lament"
+      ],
+      "antonyms": [
+        "satisfaction",
+        "contentment"
+      ],
+      "relatedWords": [
+        "regretful",
+        "regrettable",
+        "regretted",
+        "regretting"
+      ],
+      "confusableWith": [
+        "regress"
+      ],
+      "exampleSentences": [
+        {
+          "en": "I regret missing your call last night.",
+          "zh": "我很後悔昨晚漏接了你的電話。",
+          "source": "daily"
+        },
+        {
+          "en": "Many firms later regretted cutting research budgets during the recession.",
+          "zh": "許多公司後來後悔在經濟衰退期間削減研究預算。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "emotion-remorse",
+      "mnemonicHint": "把 regret 想成 re-（回頭）＋gret（聽起來像「great」）：回頭看才發現本可做得更好，心裡便感到「後悔」。"
+    },
+    "relapsed": {
+      "chinese": "復發；故態復萌（relapse 的過去式／過去分詞）",
+      "pos": "v/adj",
+      "synonyms": [
+        "reverted",
+        "regressed",
+        "backslid"
+      ],
+      "antonyms": [
+        "recovered",
+        "improved",
+        "abstained"
+      ],
+      "relatedWords": [
+        "relapse",
+        "relapsing"
+      ],
+      "confusableWith": [
+        "relaxed",
+        "relayed"
+      ],
+      "exampleSentences": [
+        {
+          "en": "After three smoke-free months, Leo relapsed during a stressful week.",
+          "zh": "戒菸三個月後，里歐在壓力沉重的一週裡又復吸了。",
+          "source": "daily"
+        },
+        {
+          "en": "The patient relapsed when the treatment was discontinued prematurely.",
+          "zh": "治療過早停止後，患者的病情復發了。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "health-relapse-recovery",
+      "mnemonicHint": "re-（再次）＋lapse（滑落、失誤）：好轉後又「再次滑落」回原本的疾病或習慣，就是 relapsed。"
+    },
+    "relaxed": {
+      "chinese": "放鬆的；寬鬆的；使放鬆（relax 的過去式／過去分詞）",
+      "pos": "v/adj",
+      "synonyms": [
+        "calm",
+        "untroubled",
+        "at ease",
+        "loosened",
+        "rested"
+      ],
+      "antonyms": [
+        "tense",
+        "anxious",
+        "strict"
+      ],
+      "relatedWords": [
+        "relax",
+        "relaxation",
+        "relaxing"
+      ],
+      "confusableWith": [
+        "relapsed",
+        "released"
+      ],
+      "exampleSentences": [
+        {
+          "en": "A warm shower relaxed my sore shoulders.",
+          "zh": "洗個熱水澡讓我痠痛的肩膀放鬆了。",
+          "source": "daily"
+        },
+        {
+          "en": "The central bank relaxed lending restrictions to stimulate investment.",
+          "zh": "中央銀行放寬貸款限制，以刺激投資。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "calm-relaxation",
+      "mnemonicHint": "re-（往回）＋lax（鬆的）：讓緊繃狀態回到鬆弛，身體是「放鬆」，規定則是「放寬」。"
+    },
+    "relayed": {
+      "chinese": "轉達；轉送；接力傳遞（relay 的過去式／過去分詞）",
+      "pos": "v/adj",
+      "synonyms": [
+        "transmitted",
+        "conveyed",
+        "forwarded",
+        "passed on"
+      ],
+      "antonyms": [
+        "withheld",
+        "retained"
+      ],
+      "relatedWords": [
+        "relay",
+        "relaying"
+      ],
+      "confusableWith": [
+        "delayed",
+        "replied"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Mina relayed the gate change to everyone in our group.",
+          "zh": "米娜把登機門變更的消息轉告給我們群組裡的每個人。",
+          "source": "daily"
+        },
+        {
+          "en": "Researchers relayed the findings to local officials before publishing the report.",
+          "zh": "研究人員在發布報告前，先將研究結果轉達給地方官員。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "language-communication",
+      "mnemonicHint": "relay race 是「接力賽」：訊息像接力棒一樣從一人交到另一人，relayed 就是已經「轉達／傳遞」。"
+    },
+    "relegate": {
+      "chinese": "降級",
+      "pos": "v",
+      "synonyms": [
+        "demote",
+        "downgrade",
+        "banish",
+        "consign"
+      ],
+      "antonyms": [
+        "promote",
+        "upgrade",
+        "elevate"
+      ],
+      "relatedWords": [
+        "relegation"
+      ],
+      "confusableWith": [
+        "delegate"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The team was relegated to a lower division.",
+          "zh": "球隊被降級到較低的聯賽。",
+          "source": "daily"
+        },
+        {
+          "en": "Important tasks should not be relegated to junior staff.",
+          "zh": "重要任務不應被交給初級員工。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "hierarchy-status",
+      "mnemonicHint": "re(back) + leg(send) + ate → 送回去 → 降級"
+    },
+    "relegated": {
+      "chinese": "降級；貶至次要地位；委派（relegate 的過去式／過去分詞）",
+      "pos": "v/adj",
+      "synonyms": [
+        "demoted",
+        "downgraded",
+        "consigned",
+        "banished"
+      ],
+      "antonyms": [
+        "promoted",
+        "elevated",
+        "prioritized"
+      ],
+      "relatedWords": [
+        "relegate",
+        "relegation",
+        "relegating"
+      ],
+      "confusableWith": [
+        "regulated",
+        "delegated"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The coach relegated Dan to the bench after repeated mistakes.",
+          "zh": "丹屢次犯錯後，教練把他降為板凳球員。",
+          "source": "daily"
+        },
+        {
+          "en": "Manual record-keeping was relegated to a minor role after the database was introduced.",
+          "zh": "資料庫導入後，人工記錄被降至次要地位。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "hierarchy-status",
+      "mnemonicHint": "relegate 裡藏著 legate（使節、被派者）：把人「派到」較遠、較不重要的位置，便引申為「降級、貶至次要地位」。"
+    },
+    "remarkable": {
+      "chinese": "值得注目的",
+      "pos": "adj",
+      "synonyms": [
+        "extraordinary",
+        "notable",
+        "outstanding",
+        "impressive"
+      ],
+      "antonyms": [
+        "ordinary",
+        "unremarkable",
+        "mediocre"
+      ],
+      "relatedWords": [
+        "remarkably",
+        "remark"
+      ],
+      "confusableWith": [
+        "marketable"
+      ],
+      "exampleSentences": [
+        {
+          "en": "She made remarkable progress in just three months.",
+          "zh": "她在短短三個月內取得了驚人的進步。",
+          "source": "daily"
+        },
+        {
+          "en": "The remarkable resilience of coral reefs continues to surprise scientists.",
+          "zh": "珊瑚礁驚人的韌性持續讓科學家驚訝。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "quality-excellence",
+      "mnemonicHint": "re + mark(注意) + able → 值得再次注意 → 值得注目的"
+    },
+    "reminiscence": {
+      "chinese": "回憶",
+      "pos": "n",
+      "synonyms": [
+        "recollection",
+        "memory",
+        "remembrance"
+      ],
+      "antonyms": [
+        "forgetfulness",
+        "oblivion"
+      ],
+      "relatedWords": [
+        "reminisce",
+        "reminiscent"
+      ],
+      "confusableWith": [
+        "renaissance"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The photograph filled her with reminiscence of childhood.",
+          "zh": "照片讓她充滿對童年的回憶。",
+          "source": "daily"
+        },
+        {
+          "en": "Reminiscence therapy benefits patients with early-stage dementia.",
+          "zh": "回憶療法對早期失智症患者有益。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "memory-honor",
+      "mnemonicHint": "re(again) + minisc(remember) + ence → 再次記起 → 回憶"
+    },
+    "remiss": {
+      "chinese": "疏忽的；怠慢的",
+      "pos": "adj",
+      "synonyms": [
+        "negligent",
+        "careless",
+        "lax",
+        "neglectful"
+      ],
+      "antonyms": [
+        "diligent",
+        "conscientious",
+        "attentive"
+      ],
+      "relatedWords": [
+        "remissly",
+        "remissness"
+      ],
+      "confusableWith": [
+        "remit",
+        "remission"
+      ],
+      "exampleSentences": [
+        {
+          "en": "We would be remiss if we left the dog outside in this heat.",
+          "zh": "如果我們在這種高溫下把狗留在戶外，那就是失職疏忽。",
+          "source": "daily"
+        },
+        {
+          "en": "Regulators were remiss in failing to inspect the factory's safety equipment.",
+          "zh": "監管人員未檢查工廠的安全設備，實屬怠忽職守。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "responsibility-neglect",
+      "mnemonicHint": "re-（往回）＋miss（漏掉）：該做的事反覆 miss 掉，就是「疏忽的」；常見句型 be remiss in doing 表示怠於做某事。"
+    },
+    "remission": {
+      "chinese": "（疾病）緩解期；減輕；免除",
+      "pos": "n",
+      "synonyms": [
+        "abatement",
+        "subsidence",
+        "relief",
+        "reprieve"
+      ],
+      "antonyms": [
+        "relapse",
+        "exacerbation",
+        "recurrence"
+      ],
+      "relatedWords": [
+        "remissions",
+        "remittent"
+      ],
+      "confusableWith": [
+        "remiss",
+        "permission"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Her cancer has remained in remission for five years.",
+          "zh": "她的癌症已維持緩解狀態五年。",
+          "source": "daily"
+        },
+        {
+          "en": "Clinical remission does not necessarily indicate that the underlying disease has been cured.",
+          "zh": "臨床緩解不一定表示潛在疾病已被治癒。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "health-relapse-recovery",
+      "mnemonicHint": "re-（往回）＋mission（送出）：症狀像被「送回去」而暫時退去，進入 remission；但緩解不等於完全治癒。"
+    },
+    "replenished": {
+      "chinese": "補充；重新裝滿（replenish 的過去式／過去分詞）",
+      "pos": "v/adj",
+      "synonyms": [
+        "refilled",
+        "restocked",
+        "renewed",
+        "resupplied"
+      ],
+      "antonyms": [
+        "depleted",
+        "exhausted",
+        "drained"
+      ],
+      "relatedWords": [
+        "replenish",
+        "replenishment",
+        "replenishing"
+      ],
+      "confusableWith": [
+        "relinquished",
+        "refurbished"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Sam replenished the bird feeder before leaving for work.",
+          "zh": "山姆上班前補滿了餵鳥器。",
+          "source": "daily"
+        },
+        {
+          "en": "Seasonal rainfall replenished the reservoirs after a prolonged drought.",
+          "zh": "季節性降雨在長期乾旱後重新補充了水庫的蓄水量。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "quantity-sufficiency",
+      "mnemonicHint": "re-（再次）＋plen（滿，聯想到 plenty）＋-ish：讓缺少的東西「再次變滿」，就是 replenish；完成後便是 replenished。"
+    },
+    "replied": {
+      "chinese": "回答；回覆（reply 的過去式／過去分詞）",
+      "pos": "v",
+      "synonyms": [
+        "answered",
+        "responded",
+        "acknowledged",
+        "retorted"
+      ],
+      "antonyms": [
+        "ignored",
+        "disregarded",
+        "remained silent"
+      ],
+      "relatedWords": [
+        "reply",
+        "replies",
+        "replying",
+        "replier"
+      ],
+      "confusableWith": [
+        "relied",
+        "replayed"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Maya replied to my text before the train entered the tunnel.",
+          "zh": "火車進入隧道前，Maya 回覆了我的訊息。",
+          "source": "daily"
+        },
+        {
+          "en": "The minister replied that the proposed subsidy would require legislative approval.",
+          "zh": "部長回答說，這項補助提案需要立法機關批准。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "communication-response",
+      "mnemonicHint": "reply 的 y 遇到過去式字尾 -ed 要變 i，形成 replied；想成「昨天已經回了，所以 y 變 i」。"
+    },
+    "report": {
+      "chinese": "報告；報導；通報",
+      "pos": "n/v",
+      "synonyms": [
+        "account",
+        "statement",
+        "document",
+        "announce"
+      ],
+      "antonyms": [
+        "conceal",
+        "suppress"
+      ],
+      "relatedWords": [
+        "reporter",
+        "reporting",
+        "reportedly"
+      ],
+      "confusableWith": [
+        "resort"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Please report the broken streetlight.",
+          "zh": "請通報故障的路燈。",
+          "source": "daily"
+        },
+        {
+          "en": "The report identifies major gaps in regional health care.",
+          "zh": "該報告指出區域醫療照護的主要缺口。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "language-communication",
+      "mnemonicHint": "re- 回 + port 帶：把消息帶回來就是報告。"
+    },
+    "reports": {
+      "chinese": "報告；報導；通報",
+      "pos": "n/v",
+      "synonyms": [
+        "accounts",
+        "statements",
+        "announces",
+        "documents"
+      ],
+      "antonyms": [
+        "conceals",
+        "suppresses"
+      ],
+      "relatedWords": [
+        "report",
+        "reporter",
+        "reporting"
+      ],
+      "confusableWith": [
+        "resorts"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The app reports how much water I use.",
+          "zh": "這個應用程式會回報我的用水量。",
+          "source": "daily"
+        },
+        {
+          "en": "Recent reports document a decline in biodiversity.",
+          "zh": "近期報告記錄了生物多樣性的下降。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "language-communication",
+      "mnemonicHint": "report 加 s，可指多份報告或單數主詞的通報動作。"
+    },
+    "reprimanded": {
+      "chinese": "被訓斥的",
+      "pos": "v",
+      "synonyms": [
+        "rebuked",
+        "scolded",
+        "admonished",
+        "chastised"
+      ],
+      "antonyms": [
+        "praised",
+        "commended",
+        "applauded"
+      ],
+      "relatedWords": [
+        "reprimand"
+      ],
+      "confusableWith": [
+        "demanded"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The employee was reprimanded for arriving late.",
+          "zh": "員工因遲到而被訓斥。",
+          "source": "daily"
+        },
+        {
+          "en": "Officials violating ethics codes may be publicly reprimanded.",
+          "zh": "違反道德準則的官員可能被公開訓斥。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "punishment-criticism",
+      "mnemonicHint": "re(back) + primand(press) → 往回施壓 → 訓斥"
+    },
+    "required": {
+      "chinese": "必需的；被要求的",
+      "pos": "adj",
+      "synonyms": [
+        "necessary",
+        "mandatory",
+        "obligatory"
+      ],
+      "antonyms": [
+        "optional",
+        "unnecessary"
+      ],
+      "relatedWords": [
+        "require",
+        "requirement"
+      ],
+      "confusableWith": [
+        "requested"
+      ],
+      "exampleSentences": [
+        {
+          "en": "A photo ID is required to pick up the package.",
+          "zh": "領取包裹時必須出示有照片的身分證件。",
+          "source": "daily"
+        },
+        {
+          "en": "Participants were required to complete the questionnaire without assistance.",
+          "zh": "參與者必須在無人協助下完成問卷。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "rules-obedience",
+      "mnemonicHint": "require 要求，required 表示被要求而必須"
+    },
+    "resemblance": {
+      "chinese": "相似",
+      "pos": "n",
+      "synonyms": [
+        "similarity",
+        "likeness",
+        "semblance",
+        "affinity"
+      ],
+      "antonyms": [
+        "difference",
+        "dissimilarity"
+      ],
+      "relatedWords": [
+        "resemble"
+      ],
+      "confusableWith": [
+        "remembrance"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The twins bear a striking resemblance to each other.",
+          "zh": "雙胞胎彼此有驚人的相似。",
+          "source": "daily"
+        },
+        {
+          "en": "Any resemblance to actual events is entirely coincidental.",
+          "zh": "與實際事件的相似純屬巧合。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "comparison-similarity",
+      "mnemonicHint": "re + sembl(similar) + ance → 看起來相同 → 相似"
+    },
+    "resides": {
+      "chinese": "居住；存在於（reside 的第三人稱單數）",
+      "pos": "v",
+      "synonyms": [
+        "lives",
+        "dwells",
+        "inhabits",
+        "is located"
+      ],
+      "antonyms": [
+        "departs",
+        "leaves",
+        "vacates"
+      ],
+      "relatedWords": [
+        "reside",
+        "resided",
+        "residing",
+        "resident",
+        "residence"
+      ],
+      "confusableWith": [
+        "residues",
+        "presides"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Our new dentist resides above the bakery on Pine Street.",
+          "zh": "我們的新牙醫住在松樹街那間麵包店樓上。",
+          "source": "daily"
+        },
+        {
+          "en": "Legal authority resides in the elected council rather than the appointed committee.",
+          "zh": "法定權力存在於民選議會，而非受任命的委員會。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "location-residence",
+      "mnemonicHint": "reside 可拆成 re- 加 side，聯想「固定待在某一 side（地方）」；resides 是主詞為 he、she、it 時加 -s 的形式。"
+    },
+    "residue": {
+      "chinese": "殘留物",
+      "pos": "n",
+      "synonyms": [
+        "remnant",
+        "remainder",
+        "traces",
+        "leftovers"
+      ],
+      "antonyms": [
+        "whole",
+        "entirety"
+      ],
+      "relatedWords": [
+        "residual"
+      ],
+      "confusableWith": [
+        "rescue"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Pesticide residue on vegetables can be harmful.",
+          "zh": "蔬菜上的農藥殘留可能有害。",
+          "source": "daily"
+        },
+        {
+          "en": "Chemical residue in water poses environmental threats.",
+          "zh": "水中的化學殘留物構成環境威脅。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "remainder-leftover",
+      "mnemonicHint": "re(back) + sid(sit) + ue → 留下的東西 → 殘留物"
+    },
+    "resigns": {
+      "chinese": "辭職；放棄職位（resign 的第三人稱單數）",
+      "pos": "v",
+      "synonyms": [
+        "quits",
+        "steps down",
+        "relinquishes office",
+        "withdraws"
+      ],
+      "antonyms": [
+        "remains",
+        "stays",
+        "continues in office"
+      ],
+      "relatedWords": [
+        "resign",
+        "resigned",
+        "resigning",
+        "resignation",
+        "resignee"
+      ],
+      "confusableWith": [
+        "re-signs",
+        "assigns"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Nora resigns from the café next Friday to begin nursing school.",
+          "zh": "Nora 下週五會辭去咖啡館的工作，開始就讀護理學校。",
+          "source": "daily"
+        },
+        {
+          "en": "A cabinet minister typically resigns when accepting responsibility for a serious policy failure.",
+          "zh": "內閣部長在為嚴重政策失誤承擔責任時，通常會辭職。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "employment-departure",
+      "mnemonicHint": "resign 裡的 sign 像是在辭呈上簽名；resigns 是第三人稱單數。注意 re-sign 是「再次簽署」，有連字號且意思完全不同。"
+    },
+    "resilience": {
+      "chinese": "韌性；恢復力",
+      "pos": "n",
+      "synonyms": [
+        "tenacity",
+        "perseverance",
+        "fortitude",
+        "endurance",
+        "robustness"
+      ],
+      "antonyms": [
+        "fragility",
+        "vulnerability",
+        "weakness"
+      ],
+      "relatedWords": [
+        "resilient",
+        "resiliency"
+      ],
+      "confusableWith": [
+        "resistance"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Her resilience after losing her job inspired everyone around her.",
+          "zh": "她失業後的韌性激勵了身邊所有人。",
+          "source": "daily"
+        },
+        {
+          "en": "Urban resilience requires infrastructure that can withstand natural disasters.",
+          "zh": "城市韌性需要能承受自然災害的基礎設施。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "strength-endurance",
+      "mnemonicHint": "re(back) + sil(spring) + ience → 像彈簧一樣彈回來 → 恢復力"
+    },
+    "resolute": {
+      "chinese": "堅決的",
+      "pos": "adj",
+      "synonyms": [
+        "determined",
+        "unwavering",
+        "steadfast",
+        "firm"
+      ],
+      "antonyms": [
+        "hesitant",
+        "indecisive",
+        "wavering"
+      ],
+      "relatedWords": [
+        "resolution",
+        "resolve"
+      ],
+      "confusableWith": [
+        "absolute"
+      ],
+      "exampleSentences": [
+        {
+          "en": "She remained resolute despite family pressure.",
+          "zh": "儘管家庭壓力，她仍然堅決。",
+          "source": "daily"
+        },
+        {
+          "en": "Resolute leadership is essential during crises.",
+          "zh": "危機期間堅決的領導力至關重要。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "strength-determination",
+      "mnemonicHint": "re + solute(solve) → 下定決心解決 → 堅決的"
+    },
+    "resonance": {
+      "chinese": "共鳴；深刻的感染力；共振",
+      "pos": "n",
+      "synonyms": [
+        "echo",
+        "reverberation",
+        "emotional echo",
+        "harmonic response"
+      ],
+      "antonyms": [
+        "dissonance",
+        "damping"
+      ],
+      "relatedWords": [
+        "resonate",
+        "resonated",
+        "resonating",
+        "resonant",
+        "resonantly"
+      ],
+      "confusableWith": [
+        "resemblance",
+        "dissonance"
+      ],
+      "exampleSentences": [
+        {
+          "en": "That childhood photograph has special resonance for everyone in our family.",
+          "zh": "那張童年照片對我們全家人都有特殊的共鳴。",
+          "source": "daily"
+        },
+        {
+          "en": "The novel gained political resonance as public concern about inequality intensified.",
+          "zh": "隨著大眾對不平等的憂慮加深，這本小說產生了政治上的共鳴。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "meaning-emotional-impact",
+      "mnemonicHint": "resonance 源自拉丁文 resonare「再次發聲」：聲音在空間回響，觀念也能在人心裡反覆回響，於是產生「共鳴」。"
+    },
+    "resource": {
+      "chinese": "資源；可利用的手段或資產",
+      "pos": "n",
+      "synonyms": [
+        "asset",
+        "supply",
+        "means",
+        "reserve"
+      ],
+      "antonyms": [
+        "liability",
+        "deficiency",
+        "scarcity"
+      ],
+      "relatedWords": [
+        "resources",
+        "resourceful",
+        "resourcefully",
+        "resourcefulness"
+      ],
+      "confusableWith": [
+        "recourse",
+        "source"
+      ],
+      "exampleSentences": [
+        {
+          "en": "This neighborhood library is a useful resource for parents seeking free tutoring.",
+          "zh": "這間社區圖書館是家長尋找免費家教資源的好去處。",
+          "source": "daily"
+        },
+        {
+          "en": "Fresh water becomes a strategic resource when prolonged drought reduces regional supplies.",
+          "zh": "長期乾旱使區域供水減少時，淡水便成為戰略資源。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "resources-assets",
+      "mnemonicHint": "re- 有「再次」之意，source 是「來源」；能一再從來源取用的東西就是 resource「資源」。別和 recourse「求助途徑」混淆。"
+    },
+    "resources": {
+      "chinese": "資源；財力；資料",
+      "pos": "n",
+      "synonyms": [
+        "assets",
+        "supplies",
+        "materials",
+        "means"
+      ],
+      "antonyms": [
+        "shortages",
+        "liabilities"
+      ],
+      "relatedWords": [
+        "resource",
+        "resourceful",
+        "resourcing"
+      ],
+      "confusableWith": [
+        "resorts"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The library has useful resources for job seekers.",
+          "zh": "圖書館有對求職者有用的資源。",
+          "source": "daily"
+        },
+        {
+          "en": "Limited resources force policymakers to establish clear priorities.",
+          "zh": "有限資源迫使政策制定者設定明確優先順序。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "substance-resource",
+      "mnemonicHint": "re- 再 + source 來源：可反覆取用的資源。"
+    },
+    "restoration": {
+      "chinese": "修復；復原；恢復原狀或原位",
+      "pos": "n",
+      "synonyms": [
+        "repair",
+        "rehabilitation",
+        "renewal",
+        "reinstatement"
+      ],
+      "antonyms": [
+        "destruction",
+        "deterioration",
+        "degradation"
+      ],
+      "relatedWords": [
+        "restore",
+        "restored",
+        "restoring",
+        "restorative",
+        "restorer"
+      ],
+      "confusableWith": [
+        "restitution",
+        "restorationism"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Careful restoration revealed the original blue paint beneath the cabinet's dark varnish.",
+          "zh": "細心修復後，櫥櫃深色清漆下原本的藍色油漆顯露出來。",
+          "source": "daily"
+        },
+        {
+          "en": "Wetland restoration can reduce flood damage while rebuilding habitats for native species.",
+          "zh": "濕地復育能在重建本土物種棲地的同時降低洪災損失。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "repair-restoration",
+      "mnemonicHint": "restore 是 re-「回到」加 store「保存」：把受損事物帶回保存良好的狀態；再加 -ation 就是修復這個過程。"
+    },
+    "restrained": {
+      "chinese": "克制的",
+      "pos": "adj",
+      "synonyms": [
+        "controlled",
+        "moderate",
+        "subdued",
+        "reserved"
+      ],
+      "antonyms": [
+        "unrestrained",
+        "extravagant",
+        "excessive"
+      ],
+      "relatedWords": [
+        "restrain",
+        "restraint"
+      ],
+      "confusableWith": [
+        "restricted"
+      ],
+      "exampleSentences": [
+        {
+          "en": "His restrained response impressed everyone.",
+          "zh": "他的克制反應讓大家印象深刻。",
+          "source": "daily"
+        },
+        {
+          "en": "Restrained fiscal policy helps prevent economic overheating.",
+          "zh": "克制的財政政策有助於防止經濟過熱。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "caution-restraint",
+      "mnemonicHint": "re(back) + strain(pull) + ed → 往回拉 → 克制的"
+    },
+    "resuscitation": {
+      "chinese": "復甦；急救使恢復呼吸或意識",
+      "pos": "n",
+      "synonyms": [
+        "revival",
+        "reanimation",
+        "revitalization"
+      ],
+      "antonyms": [
+        "death",
+        "expiration",
+        "cessation"
+      ],
+      "relatedWords": [
+        "resuscitate",
+        "resuscitated",
+        "resuscitating",
+        "resuscitative",
+        "resuscitator"
+      ],
+      "confusableWith": [
+        "restoration",
+        "recitation"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Prompt resuscitation by a lifeguard restored the swimmer's breathing before paramedics arrived.",
+          "zh": "救生員及時施行急救，在救護人員抵達前恢復了游泳者的呼吸。",
+          "source": "daily"
+        },
+        {
+          "en": "Cardiopulmonary resuscitation preserves blood flow to vital organs during cardiac arrest.",
+          "zh": "心肺復甦術能在心搏停止期間維持流向重要器官的血液。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "medical-revival",
+      "mnemonicHint": "詞根 suscit 表示「喚起」，re- 表示「再次」，-ation 表示過程；resuscitation 就是「再次喚起生命跡象」的復甦程序。"
+    },
+    "retorts": {
+      "chinese": "反駁；回嘴（retort 的第三人稱單數或複數）",
+      "pos": "v/n",
+      "synonyms": [
+        "counters",
+        "snaps back",
+        "rejoins",
+        "rebuts"
+      ],
+      "antonyms": [
+        "agrees",
+        "concedes",
+        "assents"
+      ],
+      "relatedWords": [
+        "retort",
+        "retorted",
+        "retorting",
+        "retorter"
+      ],
+      "confusableWith": [
+        "reports",
+        "resorts"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Whenever Leo retorts sharply, his sister pauses instead of continuing the argument.",
+          "zh": "每當 Leo 尖銳回嘴時，他姊姊就會停下來，不再繼續爭論。",
+          "source": "daily"
+        },
+        {
+          "en": "The author retorts that economic growth alone cannot measure social well-being.",
+          "zh": "作者反駁說，單靠經濟成長無法衡量社會福祉。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "communication-rebuttal",
+      "mnemonicHint": "retort 可聯想成把對方的話「扭轉回去」；retorts 作動詞是他／她回嘴，作名詞則是多次尖銳的反駁。"
+    },
+    "retreats": {
+      "chinese": "撤退；退縮；隱居處（retreat 的第三人稱單數或複數）",
+      "pos": "v/n",
+      "synonyms": [
+        "withdraws",
+        "recedes",
+        "falls back",
+        "backs away"
+      ],
+      "antonyms": [
+        "advances",
+        "approaches",
+        "confronts"
+      ],
+      "relatedWords": [
+        "retreat",
+        "retreated",
+        "retreating",
+        "retreater"
+      ],
+      "confusableWith": [
+        "retweets",
+        "retraces"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Our timid cat retreats under the sofa whenever the vacuum cleaner starts.",
+          "zh": "每當吸塵器啟動，我們那隻膽小的貓就會躲到沙發下。",
+          "source": "daily"
+        },
+        {
+          "en": "As coastal ice retreats, darker ocean water absorbs more solar radiation.",
+          "zh": "隨著沿岸海冰消退，較深色的海水會吸收更多太陽輻射。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "movement-withdrawal",
+      "mnemonicHint": "retreat 中 re- 有「往回」的感覺，treat 可想成前方的待遇太糟，只好往回撤；retreats 也可能是多個靜修地。"
+    },
+    "revenue": {
+      "chinese": "營收",
+      "pos": "n",
+      "synonyms": [
+        "income",
+        "earnings",
+        "proceeds",
+        "turnover"
+      ],
+      "antonyms": [
+        "expenditure",
+        "cost",
+        "expense"
+      ],
+      "relatedWords": [
+        "revenue stream"
+      ],
+      "confusableWith": [
+        "avenue"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The company's annual revenue exceeded expectations.",
+          "zh": "公司的年營收超出預期。",
+          "source": "daily"
+        },
+        {
+          "en": "Advertising revenue remains the primary income for social media platforms.",
+          "zh": "廣告收入仍是社群媒體平台的主要收入來源。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "finance-money",
+      "mnemonicHint": "re(back) + venue(come) → 回來的錢 → 營收"
+    },
+    "reverting": {
+      "chinese": "恢復原狀；回到先前狀態（revert 的現在分詞）",
+      "pos": "v",
+      "synonyms": [
+        "returning",
+        "regressing",
+        "relapsing",
+        "backsliding"
+      ],
+      "antonyms": [
+        "progressing",
+        "advancing",
+        "improving"
+      ],
+      "relatedWords": [
+        "revert",
+        "reverted",
+        "reversion",
+        "revertible",
+        "reversionary"
+      ],
+      "confusableWith": [
+        "reversing",
+        "diverting"
+      ],
+      "exampleSentences": [
+        {
+          "en": "After testing the update, Priya is reverting to the stable software version.",
+          "zh": "測試更新後，Priya 正在恢復使用穩定版軟體。",
+          "source": "daily"
+        },
+        {
+          "en": "Several schools are reverting to printed examinations after detecting widespread online cheating.",
+          "zh": "發現大規模線上作弊後，數所學校正恢復採用紙本考試。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "change-return-state",
+      "mnemonicHint": "re- 是「回」，vert 是「轉」；revert 就是「轉回原狀」。標準搭配是 revert to，不必再說 revert back，因為 re- 已含「回去」。"
+    },
+    "revolutionary": {
+      "chinese": "革命性的；革命者",
+      "pos": "adj/n",
+      "synonyms": [
+        "radical",
+        "groundbreaking",
+        "transformative"
+      ],
+      "antonyms": [
+        "conservative",
+        "conventional"
+      ],
+      "relatedWords": [
+        "revolution",
+        "revolutionize"
+      ],
+      "confusableWith": [
+        "evolutionary"
+      ],
+      "exampleSentences": [
+        {
+          "en": "My grandmother considered the robot vacuum revolutionary.",
+          "zh": "我祖母認為掃地機器人具有革命性。",
+          "source": "daily"
+        },
+        {
+          "en": "The revolutionary theory transformed the scientific understanding of heredity.",
+          "zh": "這項革命性的理論改變了科學界對遺傳的理解。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "change-transformation",
+      "mnemonicHint": "revolve 轉一圈，revolutionary 帶來翻轉"
+    },
+    "rhetoric": {
+      "chinese": "修辭",
+      "pos": "n",
+      "synonyms": [
+        "eloquence",
+        "oratory",
+        "discourse",
+        "persuasion"
+      ],
+      "antonyms": [
+        "silence",
+        "plainness"
+      ],
+      "relatedWords": [
+        "rhetorical",
+        "rhetorician"
+      ],
+      "confusableWith": [
+        "poetic"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The politician's rhetoric appealed to voters' emotions.",
+          "zh": "政治家的修辭訴諸選民的情感。",
+          "source": "daily"
+        },
+        {
+          "en": "Effective rhetoric requires a balance of logic and emotion.",
+          "zh": "有效的修辭需要邏輯和情感的平衡。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "language-communication",
+      "mnemonicHint": "rhet(speak) + oric → 說話的藝術 → 修辭"
+    },
+    "rigorous": {
+      "chinese": "嚴格的",
+      "pos": "adj",
+      "synonyms": [
+        "strict",
+        "thorough",
+        "meticulous",
+        "stringent"
+      ],
+      "antonyms": [
+        "lax",
+        "lenient",
+        "careless"
+      ],
+      "relatedWords": [
+        "rigor",
+        "rigorously"
+      ],
+      "confusableWith": [
+        "vigorous"
+      ],
+      "exampleSentences": [
+        {
+          "en": "The university has a rigorous admissions process.",
+          "zh": "該大學有嚴格的入學程序。",
+          "source": "daily"
+        },
+        {
+          "en": "Rigorous peer review ensures the quality of scientific publications.",
+          "zh": "嚴格的同儕審查確保科學出版物的品質。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "strictness-precision",
+      "mnemonicHint": "rigor(stiffness) + ous → 像鐵一樣硬的標準 → 嚴格的"
+    },
+    "robust": {
+      "chinese": "強健的；穩固耐用的",
+      "pos": "adj",
+      "synonyms": [
+        "strong",
+        "sturdy",
+        "resilient",
+        "vigorous"
+      ],
+      "antonyms": [
+        "fragile",
+        "weak",
+        "delicate"
+      ],
+      "relatedWords": [
+        "robustly",
+        "robustness"
+      ],
+      "confusableWith": [
+        "rugged",
+        "resilient"
+      ],
+      "exampleSentences": [
+        {
+          "en": "This robust backpack survived three rainy camping trips.",
+          "zh": "這個堅固的背包撐過了三次下雨的露營旅行。",
+          "source": "daily"
+        },
+        {
+          "en": "Researchers need robust evidence before drawing causal conclusions.",
+          "zh": "研究人員需要有力的證據，才能得出因果結論。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "strength-resilience",
+      "mnemonicHint": "把 robust 聯想成機器人 robot 加上強壯的 bust：像厚實機器人一樣強健、耐用；研究中的 robust evidence 則是經得起檢驗的有力證據。"
+    },
+    "roll": {
+      "chinese": "滾動；捲起；捲狀物",
+      "pos": "v/n",
+      "synonyms": [
+        "rotate",
+        "tumble",
+        "revolve",
+        "coil"
+      ],
+      "antonyms": [
+        "stop",
+        "unroll",
+        "remain still"
+      ],
+      "relatedWords": [
+        "rolls",
+        "rolled",
+        "rolling",
+        "roller"
+      ],
+      "confusableWith": [
+        "role",
+        "roam"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Please roll the poster carefully before packing it.",
+          "zh": "打包前請小心地把海報捲起來。",
+          "source": "daily"
+        },
+        {
+          "en": "Small droplets roll downhill as gravity overcomes surface resistance.",
+          "zh": "當重力克服表面阻力時，小水滴會向坡下滾動。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "rotation-movement",
+      "mnemonicHint": "roll 的兩個 l 像一對輪子，提示物體滾動；紙張跟著轉動會被捲起，因此也能表示捲起或一卷物品。"
+    },
+    "rolled": {
+      "chinese": "滾動；捲起；已滾動或捲起的",
+      "pos": "v/adj",
+      "synonyms": [
+        "turned",
+        "rotated",
+        "tumbled",
+        "coiled"
+      ],
+      "antonyms": [
+        "unrolled",
+        "stopped",
+        "flattened"
+      ],
+      "relatedWords": [
+        "roll",
+        "rolls",
+        "rolling",
+        "roller"
+      ],
+      "confusableWith": [
+        "roled",
+        "rolled-up"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Maya rolled the blanket into a compact bundle.",
+          "zh": "瑪雅把毯子捲成一個小巧的包裹。",
+          "source": "daily"
+        },
+        {
+          "en": "Molten material rolled across the surface and cooled rapidly.",
+          "zh": "熔融物質滾過表面後迅速冷卻。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "rotation-movement",
+      "mnemonicHint": "rolled 是 roll 加過去式字尾 -ed，表示已經滾動或捲起；看到 -ed 就想像一張已被捲好的地圖。"
+    },
+    "rolling": {
+      "chinese": "滾動中；起伏的；連續進行的",
+      "pos": "v/adj",
+      "synonyms": [
+        "turning",
+        "rotating",
+        "tumbling",
+        "undulating"
+      ],
+      "antonyms": [
+        "stationary",
+        "motionless",
+        "flat"
+      ],
+      "relatedWords": [
+        "roll",
+        "rolls",
+        "rolled",
+        "roller"
+      ],
+      "confusableWith": [
+        "roiling",
+        "ruling"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Tears were rolling down her cheeks after the farewell.",
+          "zh": "告別後，眼淚正沿著她的臉頰滑落。",
+          "source": "daily"
+        },
+        {
+          "en": "Across rolling hills, vegetation patterns vary with elevation.",
+          "zh": "在連綿起伏的丘陵間，植被型態會隨海拔而變化。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "rotation-movement",
+      "mnemonicHint": "rolling 是 roll 加 -ing，核心畫面是持續轉動；地形像波浪持續上下延伸時，rolling hills 就是連綿起伏的丘陵。"
+    },
+    "rolls": {
+      "chinese": "滾動；捲起；麵包捲（複數）",
+      "pos": "v/n",
+      "synonyms": [
+        "rotates",
+        "turns",
+        "tumbles",
+        "coils"
+      ],
+      "antonyms": [
+        "stops",
+        "unrolls",
+        "stays still"
+      ],
+      "relatedWords": [
+        "roll",
+        "rolled",
+        "rolling",
+        "roller"
+      ],
+      "confusableWith": [
+        "roles",
+        "roils"
+      ],
+      "exampleSentences": [
+        {
+          "en": "Our baker serves warm rolls with herb butter.",
+          "zh": "我們的麵包師傅供應搭配香草奶油的溫熱小餐包。",
+          "source": "daily"
+        },
+        {
+          "en": "Each marble rolls farther when friction is reduced.",
+          "zh": "當摩擦力降低時，每顆彈珠都會滾得更遠。",
+          "source": "exam-style"
+        }
+      ],
+      "semanticGroup": "rotation-movement",
+      "mnemonicHint": "rolls 可拆成 roll 加 -s：主詞是 he、she、it 時表示『滾動』，作名詞時則是多個捲狀物或小餐包；別和 roles（角色）混淆。"
+    }
+  }
+}

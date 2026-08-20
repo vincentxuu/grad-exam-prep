@@ -24,7 +24,9 @@
     "check:im-learning": "node scripts/build-im-mis-learning-artifacts.mjs --check && node scripts/build-im-stat-learning-artifacts.mjs --check && node scripts/validate-im-mis-learning-artifacts.mjs && node scripts/validate-im-stat-learning-artifacts.mjs && node scripts/sync-im-learning-subjects.mjs --check && node scripts/publish-im-curated-srs.mjs --check && npm run check:im-beginner-glossary",
     "generate:im-beginner-glossary": "node scripts/build-im-beginner-glossary.mjs",
     "check:im-beginner-glossary": "node scripts/build-im-beginner-glossary.mjs --check && node scripts/validate-im-beginner-glossary.mjs",
-    "check:papers": "node scripts/check-paper-integrity.js"
+    "check:papers": "node scripts/check-paper-integrity.js",
+    "generate:word-web": "node scripts/build-word-web-index.mjs --write",
+    "check:word-web": "node scripts/build-word-web-index.mjs --check"
   },
   "dependencies": {
     "@langchain/core": "^1.2.6",
