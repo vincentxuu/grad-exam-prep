@@ -67,6 +67,24 @@
             "申論要寫出 capability 與 business outcome 的中介機制，不只列工具",
             "KPI 必須能直接對應策略目標，例如差異化策略對應 NPS 或 retention rate",
             "alignment 不是一次性專案而是持續校準，環境變了對齊也要調整"
+          ],
+          "interactiveBlocks": [
+            {
+              "type": "quiz",
+              "prompt": "以下哪個因果鏈正確建立了 IT 價值主張？",
+              "options": [
+                {
+                  "label": "導入 CRM 系統 → 提升競爭力",
+                  "correct": false,
+                  "explanation": "太跳躍了！缺少中間機制。IT 本身不直接等於競爭力，必須說明改變了什麼流程、帶來什麼可衡量的結果。"
+                },
+                {
+                  "label": "CRM 改變客戶互動流程 → 提升 cross-selling accuracy → CLV 成長 15%",
+                  "correct": true,
+                  "explanation": "正確！因果鏈必須有「IT 改變了什麼 → 帶來什麼可衡量的中間成果 → 最終效益」三段。申論題的差距就在這裡。"
+                }
+              ]
+            }
           ]
         },
         {
@@ -78,6 +96,13 @@
             "同一套系統在不同組織產生不同結果，通常可以用互補性資產的差異解釋",
             "IT 投資有延遲效應（lag effect），短期 ROI 可能低估長期價值",
             "申論答題要建立因果鏈：缺什麼資產 → 造成什麼問題 → 如何改善"
+          ],
+          "interactiveBlocks": [
+            {
+              "type": "reveal",
+              "prompt": "一家公司花了大錢買 ERP，但員工不會用、流程沒重設。IT 投資會產生價值嗎？為什麼？",
+              "answer": "不會。缺乏互補性資產（complementary assets）：員工訓練、流程再造、管理制度都是讓 IT 發揮價值的必要條件。Brynjolfsson 的研究顯示，IT 投資報酬高度依賴組織能力配合。"
+            }
           ]
         },
         {
@@ -496,6 +521,29 @@
             "新模型上線用 shadow deployment 或 A/B test 驗證，不要直接切換",
             "Rollback 機制必須在部署前設計好——出問題時要能一鍵回退",
             "模型版本控制（model registry）記錄每個版本的超參數、訓練資料和評估結果"
+          ],
+          "interactiveBlocks": [
+            {
+              "type": "quiz",
+              "prompt": "醫院用 AI 篩檢癌症，漏診（FN）代價極高。應優先什麼指標？",
+              "options": [
+                {
+                  "label": "Precision — 確保判陽性的都是真的",
+                  "correct": false,
+                  "explanation": "Precision 控制的是「說有病的準不準」。但漏掉真正的病人（FN）不在 Precision 的分子分母裡。"
+                },
+                {
+                  "label": "Recall — 確保不漏掉真正的病人",
+                  "correct": true,
+                  "explanation": "正確！Recall = TP/(TP+FN)。提高 Recall 減少漏診。FN 代價極高的情境（癌症、詐騙），都應優先 Recall。"
+                },
+                {
+                  "label": "Accuracy — 整體判對率最高就好",
+                  "correct": false,
+                  "explanation": "癌症陽性率低（class imbalance），全部判陰性 Accuracy 也很高，但完全漏診。"
+                }
+              ]
+            }
           ]
         },
         {
@@ -902,6 +950,13 @@
             "辨識漂綠：指標是否可量化、基準是否合理、邊界是否一致、有無第三方驗證",
             "Scope 3 通常佔總碳排放 70-90%，包含雲端供應商的排放——最難控制也最常被忽略",
             "申論中不要把 IT 投資寫成「必然有利於 ESG」——要同時分析正面和負面影響"
+          ],
+          "interactiveBlocks": [
+            {
+              "type": "reveal",
+              "prompt": "某企業宣稱「已達碳中和」，但只計算 Scope 1（直接排放）和 Scope 2（外購電力）。這算漂綠嗎？",
+              "answer": "有漂綠疑慮。Scope 3（價值鏈排放）通常佔總排放 70-90%，只算 Scope 1-2 會嚴重低估碳足跡。ESG 報告應揭露計算範疇，否則「碳中和」宣稱缺乏完整性。檢驗標準：(1) 範疇是否完整 (2) 數據是否經第三方驗證 (3) 碳抵換品質 (4) 是否設定科學基礎減碳目標。"
+            }
           ]
         },
         {
@@ -913,6 +968,24 @@
             "降低 lock-in：抽象層架構、合約約定、中立技能培養、多供應商策略",
             "Coopetition（共競）：供應商既是 partner 也可能成為 competitor",
             "信任治理要求 transparency（model card）、accountability（責任歸屬）、redress（申訴機制）"
+          ],
+          "interactiveBlocks": [
+            {
+              "type": "quiz",
+              "prompt": "GDPR 要求「資料最小化原則」，這是指？",
+              "options": [
+                {
+                  "label": "蒐集的資料越少越好，最好不要蒐集",
+                  "correct": false,
+                  "explanation": "不是「不蒐集」，而是只蒐集達成特定目的所必要的資料。有明確目的時可以蒐集。"
+                },
+                {
+                  "label": "只蒐集與處理目的相關且必要的個人資料",
+                  "correct": true,
+                  "explanation": "正確！Data minimization 要求資料蒐集與特定、明確的處理目的「相稱且必要」。多蒐集「以防萬一」違反此原則。"
+                }
+              ]
+            }
           ]
         },
         {

@@ -46,6 +46,29 @@
             "Regression 預測連續數值，例如價格或需求量",
             "Clustering 是常見 unsupervised task，不需要預先提供每筆資料的正確群組",
             "Reinforcement learning 的 supervision 來自 reward signal，不是每一步的標準答案"
+          ],
+          "interactiveBlocks": [
+            {
+              "type": "quiz",
+              "prompt": "把顧客依消費行為自動分成幾個群組，屬於哪種學習？",
+              "options": [
+                {
+                  "label": "Supervised learning",
+                  "correct": false,
+                  "explanation": "Supervised 需要每筆資料都有正確標籤。分群沒有預先給定「正確群組」。"
+                },
+                {
+                  "label": "Unsupervised learning",
+                  "correct": true,
+                  "explanation": "正確！Clustering 是典型的 unsupervised task，從資料本身發現結構，不需要 target label。"
+                },
+                {
+                  "label": "Reinforcement learning",
+                  "correct": false,
+                  "explanation": "RL 是 agent 在環境中透過 reward signal 學習。顧客分群不涉及 action-reward 循環。"
+                }
+              ]
+            }
           ]
         },
         {
@@ -66,6 +89,13 @@
             "Underfitting 表示模型連 training pattern 都無法充分學到",
             "Data leakage 會讓離線評估過度樂觀",
             "評估資料分布應盡量代表模型實際部署情境"
+          ],
+          "interactiveBlocks": [
+            {
+              "type": "reveal",
+              "prompt": "模型在 training set 上 accuracy 99%，test set 上只有 60%。這是什麼問題？怎麼緩解？",
+              "answer": "Overfitting（過擬合）。模型記住了訓練資料的噪音。緩解方法：加 regularization（L1/L2）、增加訓練資料、early stopping、dropout、降低模型複雜度。"
+            }
           ]
         },
         {
@@ -76,6 +106,69 @@
             "False negative 會降低 recall",
             "Accuracy 的分母是全部案例，分子是 TP+TN",
             "沒有脫離情境永遠最好的單一 metric"
+          ],
+          "interactiveBlocks": [
+            {
+              "type": "slider",
+              "title": "調整 Confusion Matrix 四格，觀察 Precision / Recall / Accuracy 變化",
+              "sliders": [
+                {
+                  "id": "tp",
+                  "label": "TP (預測 positive 且正確)",
+                  "min": 0,
+                  "max": 100,
+                  "step": 1,
+                  "initial": 40
+                },
+                {
+                  "id": "fp",
+                  "label": "FP (預測 positive 但錯誤)",
+                  "min": 0,
+                  "max": 100,
+                  "step": 1,
+                  "initial": 10
+                },
+                {
+                  "id": "fn",
+                  "label": "FN (預測 negative 但錯誤)",
+                  "min": 0,
+                  "max": 100,
+                  "step": 1,
+                  "initial": 20
+                },
+                {
+                  "id": "tn",
+                  "label": "TN (預測 negative 且正確)",
+                  "min": 0,
+                  "max": 100,
+                  "step": 1,
+                  "initial": 30
+                }
+              ],
+              "formula": "tp / (tp + fp + 0.0001)",
+              "resultLabel": "Precision ="
+            },
+            {
+              "type": "quiz",
+              "prompt": "銀行詐騙偵測模型，漏掉一筆詐騙（FN）的代價遠大於誤判正常交易（FP）。應優先提高？",
+              "options": [
+                {
+                  "label": "Precision",
+                  "correct": false,
+                  "explanation": "Precision 關注「模型說是詐騙的案例中有多少真的是」。但漏掉詐騙（FN）不影響 Precision。"
+                },
+                {
+                  "label": "Recall",
+                  "correct": true,
+                  "explanation": "正確！Recall = TP/(TP+FN)，提高 Recall 就是減少漏掉的詐騙。FN 成本高時優先 Recall。"
+                },
+                {
+                  "label": "Accuracy",
+                  "correct": false,
+                  "explanation": "詐騙案例通常極少（class imbalance），Accuracy 會被大量 TN 撐高，掩蓋漏判問題。"
+                }
+              ]
+            }
           ]
         }
       ],
@@ -812,6 +905,29 @@
             "省略括號可能把其他 country 的 Kaohsiung rows 一併選入。",
             "逗號不能取代 WHERE 中的 Boolean operators。",
             "可用 IN ('Taipei','Kaohsiung') 表達同一組離散候選值。"
+          ],
+          "interactiveBlocks": [
+            {
+              "type": "quiz",
+              "prompt": "SQL：WHERE city = 'Taipei' OR city = 'Kaohsiung' AND dept = 'MIS'，會選出？",
+              "options": [
+                {
+                  "label": "台北或高雄的資管系學生",
+                  "correct": false,
+                  "explanation": "AND 優先於 OR！這其實等於 city='Taipei' OR (city='Kaohsiung' AND dept='MIS')，會選出所有台北人（不限科系）+ 高雄資管。"
+                },
+                {
+                  "label": "所有台北人 + 高雄的資管系學生",
+                  "correct": true,
+                  "explanation": "正確！AND 優先於 OR，所以 Kaohsiung AND MIS 先結合。要選「台北或高雄的資管」，必須加括號：(city='Taipei' OR city='Kaohsiung') AND dept='MIS'。"
+                },
+                {
+                  "label": "只有台北的資管系學生",
+                  "correct": false,
+                  "explanation": "OR 會把 Kaohsiung AND MIS 的結果也包含進來，不會只剩台北。"
+                }
+              ]
+            }
           ]
         },
         {
@@ -822,6 +938,24 @@
             "計算每個國家的客戶數：GROUP BY Country 搭配 COUNT。",
             "WHERE 在 grouping 前篩 rows；HAVING 在 grouping 後篩 groups。",
             "SELECT 中未 aggregate 的 columns 通常必須出現在 GROUP BY。"
+          ],
+          "interactiveBlocks": [
+            {
+              "type": "quiz",
+              "prompt": "想找「學生數超過 50 的科系」，篩選條件放在？",
+              "options": [
+                {
+                  "label": "WHERE COUNT(*) > 50",
+                  "correct": false,
+                  "explanation": "WHERE 在 GROUP BY 之前執行，此時還沒分組，不能用 aggregate function。"
+                },
+                {
+                  "label": "HAVING COUNT(*) > 50",
+                  "correct": true,
+                  "explanation": "正確！HAVING 在 GROUP BY 之後篩選分組結果。WHERE 篩個別 row，HAVING 篩 group。"
+                }
+              ]
+            }
           ]
         },
         {
@@ -832,6 +966,13 @@
             "缺少或寫錯 join condition 可能產生 Cartesian product 或錯誤配對。",
             "Table aliases 可縮短欄位引用並消除同名欄位歧義。",
             "選 INNER 或 OUTER JOIN 取決於未配對 rows 是否仍需保留。"
+          ],
+          "interactiveBlocks": [
+            {
+              "type": "reveal",
+              "prompt": "Student 有 5 筆，Department 有 3 筆。其中 1 個學生的 dept_id 不存在於 Department。INNER JOIN vs LEFT JOIN 各輸出幾筆？",
+              "answer": "INNER JOIN：4 筆（只留兩邊都匹配的）。LEFT JOIN：5 筆（左表全保留，那 1 個學生的 dept_name 為 NULL）。"
+            }
           ]
         }
       ],
@@ -1107,6 +1248,13 @@
             "只在 left > right 時交換，可保留相等元素的相對順序，因此標準 Bubble Sort 是 stable。",
             "每一趟結束後，至少一個極值進入最終位置。",
             "題目若說『若尚未排序才繼續』，通常暗示存在提前停止檢查。"
+          ],
+          "interactiveBlocks": [
+            {
+              "type": "reveal",
+              "prompt": "Bubble Sort 對已排序陣列 [1,2,3,4,5] 執行：有 swapped flag 時需要幾輪？沒有時呢？",
+              "answer": "有 flag：1 輪（掃一遍沒有交換就停）→ O(n)。沒有 flag：固定跑 n-1 = 4 輪 → O(n²)。差異在於 swapped flag 讓 best case 從 O(n²) 降到 O(n)。"
+            }
           ]
         },
         {
@@ -1117,6 +1265,24 @@
             "Randomized pivot 或較穩健的 pivot selection 可降低反覆極端切分的機率，但不消除理論 worst case。",
             "常見 in-place partition 會讓相等元素跨位置交換，因此 QuickSort 通常不 stable。",
             "QuickSort 是 divide-and-conquer；partition 正確性與遞迴邊界同樣重要。"
+          ],
+          "interactiveBlocks": [
+            {
+              "type": "quiz",
+              "prompt": "QuickSort 對已排序陣列一定會退化到 O(n²) 嗎？",
+              "options": [
+                {
+                  "label": "是，已排序必定 worst case",
+                  "correct": false,
+                  "explanation": "取決於 pivot 策略！如果用 randomized pivot 或 median-of-three，即使已排序也不一定退化。"
+                },
+                {
+                  "label": "不一定，取決於 pivot 選擇策略",
+                  "correct": true,
+                  "explanation": "正確！只有「固定選第一個/最後一個元素當 pivot」在已排序輸入時才退化。Randomized pivot 可避免。"
+                }
+              ]
+            }
           ]
         },
         {
@@ -1590,6 +1756,29 @@
             "Network address = IP address AND subnet mask",
             "同一 prefix 不代表應用程式一定可連線；防火牆、VLAN 與主機狀態仍可能阻擋通訊",
             "在一般 IPv4 subnet 中，host bits 全 0 是 network address、全 1 是 directed broadcast address；特殊 prefix 另有規則"
+          ],
+          "interactiveBlocks": [
+            {
+              "type": "quiz",
+              "prompt": "192.168.10.77/26 的 subnet mask 是？",
+              "options": [
+                {
+                  "label": "255.255.255.0",
+                  "correct": false,
+                  "explanation": "那是 /24。/26 表示前 26 bits 是 network，後 6 bits 是 host。26 = 24 + 2，所以最後一個 byte 是 11000000 = 192。"
+                },
+                {
+                  "label": "255.255.255.192",
+                  "correct": true,
+                  "explanation": "正確！/26 → 最後一個 byte 前 2 bits 為 1 → 11000000 = 192。可用主機 = 2⁶ - 2 = 62 台。"
+                },
+                {
+                  "label": "255.255.255.128",
+                  "correct": false,
+                  "explanation": "那是 /25（最後 byte 10000000 = 128）。/26 多借 1 bit，是 11000000 = 192。"
+                }
+              ]
+            }
           ]
         },
         {
@@ -1620,6 +1809,13 @@
             "TCP 的 reliable byte stream 不代表每個應用訊息只會對應一個 TCP segment",
             "UDP connectionless 且保留 datagram boundaries，但低 overhead 不等於永遠低 latency",
             "選 TCP 或 UDP 要依可靠性、延遲、訊息模型及應用程式能否自行處理遺失來決定"
+          ],
+          "interactiveBlocks": [
+            {
+              "type": "reveal",
+              "prompt": "DNS 查詢通常用 UDP，但 zone transfer 用 TCP。為什麼？",
+              "answer": "DNS 查詢封包小、需要快速回應，UDP 的低延遲合適。Zone transfer 傳輸整個 DNS 區域檔案，資料量大且需要可靠傳輸，所以用 TCP 的 reliable byte stream。"
+            }
           ]
         },
         {
@@ -2827,6 +3023,29 @@
             "公開金鑰可以公開，private key 必須由持有者保護",
             "RSA 安全性與大整數分解困難相關，但安全實作仍依賴正確 padding 與金鑰長度",
             "不要直接用 textbook RSA 加密任意大型使用者資料"
+          ],
+          "interactiveBlocks": [
+            {
+              "type": "quiz",
+              "prompt": "對稱式加密的核心問題是？",
+              "options": [
+                {
+                  "label": "加密速度太慢",
+                  "correct": false,
+                  "explanation": "對稱式（如 AES）反而比非對稱式快很多。速度是它的優勢。"
+                },
+                {
+                  "label": "金鑰如何安全傳送給對方",
+                  "correct": true,
+                  "explanation": "正確！雙方必須共享同一把 key，但傳送 key 的過程可能被截獲。這就是為什麼實務上用非對稱式加密來交換對稱式的 session key（混合式）。"
+                },
+                {
+                  "label": "容易被暴力破解",
+                  "correct": false,
+                  "explanation": "AES-256 的 key space 是 2²⁵⁶，暴力破解不可行。問題在於 key distribution，不在於強度。"
+                }
+              ]
+            }
           ]
         },
         {
@@ -2847,6 +3066,13 @@
             "憑證內有 public key；private key 留在持有者端，不隨憑證傳送",
             "受信第三方 CA 是公開 Web PKI 的部署慣例，不是建立 TLS 密文通道的唯一方式",
             "mTLS 是雙向憑證驗證，不等同一般網站的密碼登入"
+          ],
+          "interactiveBlocks": [
+            {
+              "type": "reveal",
+              "prompt": "TLS handshake 中，pre-master secret 用誰的 key 加密？為什麼？",
+              "answer": "用 server 的 public key 加密。因為只有 server 持有對應的 private key 才能解開，確保即使有人攔截 handshake 封包，也無法得到 pre-master secret。之後雙方用它推導出對稱式的 session key 進行實際通訊。"
+            }
           ]
         }
       ],
