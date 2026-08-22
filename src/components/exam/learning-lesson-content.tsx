@@ -1,5 +1,6 @@
 import { ArrowRight, Check, ChevronRight, TriangleAlert } from '@sketchyicons/react'
 import Link from 'next/link'
+import { InteractiveBlock } from '@/components/exam/interactive-block'
 import { LearningBeginnerGlossary } from '@/components/exam/learning-beginner-glossary'
 import { Badge } from '@/components/ui/badge'
 import type {
@@ -157,6 +158,9 @@ export function LearningLessonContent({ catalog, lesson, cards, sources }: Props
                 </li>
               ))}
             </ul>
+            {section.interactiveBlocks?.map((block, blockIndex) => (
+              <InteractiveBlock key={blockIndex} block={block} />
+            ))}
           </section>
         ))}
       </div>

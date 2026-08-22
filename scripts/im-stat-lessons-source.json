@@ -392,6 +392,17 @@
             "偏差 bias(θ̂) = E[θ̂] - θ，不偏時 bias = 0",
             "樣本平均 Ȳ = ΣYi/n 是 μ 的不偏估計量（wi = 1/n, Σwi = 1）",
             "不偏不代表精確——Var 大的不偏估計量可能每次都差很多"
+          ],
+          "interactiveBlocks": [
+            {
+              "type": "quiz",
+              "prompt": "θ̂ = (Y1 + Y2) / 3，Yi iid 且 E[Yi] = μ。θ̂ 是 μ 的不偏估計量嗎？",
+              "options": [
+                { "label": "是，因為它是 Y 的線性組合", "correct": false, "explanation": "光是線性組合不保證不偏。要看 Σwi：w1 = 1/3, w2 = 1/3，Σwi = 2/3 ≠ 1，所以 E[θ̂] = (2/3)μ ≠ μ。" },
+                { "label": "不是，因為 Σwi = 2/3 ≠ 1", "correct": true, "explanation": "正確！Σwi = 1/3 + 1/3 = 2/3 ≠ 1，所以 E[θ̂] = (2/3)μ ≠ μ，有偏差 bias = -(1/3)μ。" },
+                { "label": "不是，因為只用了兩個觀測值", "correct": false, "explanation": "用幾個觀測值不決定不偏性。例如 θ̂ = (Y1 + Y2)/2 只用兩個但 Σwi = 1，仍是不偏的。關鍵是 Σwi 是否等於 1。" }
+              ]
+            }
           ]
         },
         {
@@ -403,6 +414,24 @@
             "不獨立時要加 Cov 項：Var = σ²·Σwi² + 2·Σ_{i<j} wi·wj·Cov(Yi,Yj)",
             "Σwi² 可用 Cauchy-Schwarz 不等式得下界：Σwi² ≥ (Σwi)²/n = 1/n",
             "等權重 wi=1/n 使 Σwi² 最小 = 1/n → Var(Ȳ) = σ²/n 是所有等 σ² 不偏估計中最小的"
+          ],
+          "interactiveBlocks": [
+            {
+              "type": "slider",
+              "title": "拉拉看：調整三個權重，觀察 Σwi² 如何變化",
+              "sliders": [
+                { "id": "w1", "label": "w₁", "min": 0, "max": 1, "step": 0.01, "initial": 0.33 },
+                { "id": "w2", "label": "w₂", "min": 0, "max": 1, "step": 0.01, "initial": 0.33 },
+                { "id": "w3", "label": "w₃", "min": 0, "max": 1, "step": 0.01, "initial": 0.34 }
+              ],
+              "formula": "w1*w1 + w2*w2 + w3*w3",
+              "resultLabel": "Σwi² ="
+            },
+            {
+              "type": "reveal",
+              "prompt": "把 w₁ 調到 1.00、w₂ 和 w₃ 都調到 0，Σwi² 變多少？這代表什麼？",
+              "answer": "Σwi² = 1.00，代表只用一個觀測值的變異數是 σ²·1 = σ²，完全沒有靠「平均」來降低波動。等權重 (0.33, 0.33, 0.34) 的 Σwi² ≈ 0.33，變異數只有 σ²/3，穩定得多。"
+            }
           ]
         },
         {
@@ -414,6 +443,22 @@
             "兩變數快捷：θ̂ = wY1+(1-w)Y2，微分 dVar/dw=0 解 w",
             "非等 σ²：wi ∝ 1/σi²（精度加權），越穩定的觀測給越大權重",
             "最適權重不一定是等權重——只有 iid 時才恰好是"
+          ],
+          "interactiveBlocks": [
+            {
+              "type": "reveal",
+              "prompt": "θ̂ = w·Y₁ + (1-w)·Y₂，兩筆 iid 觀測。最小變異數的 w 是多少？",
+              "answer": "Var = σ²·[w² + (1-w)²]，微分 dVar/dw = σ²·(4w - 2) = 0 → w = 1/2。最小 Var = σ²/2。等權重！"
+            },
+            {
+              "type": "quiz",
+              "prompt": "如果 Var(Y₁) = 4, Var(Y₂) = 9（不同變異數），最適 w 會：",
+              "options": [
+                { "label": "還是 0.5，因為等權重永遠最好", "correct": false, "explanation": "等權重只在同變異數時最好。不同 σ² 時，最適權重是 wi ∝ 1/σi²。" },
+                { "label": "大於 0.5，多分給比較穩的 Y₁", "correct": true, "explanation": "正確！w = (1/4) / (1/4 + 1/9) = 9/13 ≈ 0.69。σ² 小的（更穩定的）分到更大的權重。" },
+                { "label": "小於 0.5，多分給比較不穩的 Y₂", "correct": false, "explanation": "應該反過來：越穩定（σ² 越小）的給越大權重，才能最小化整體波動。" }
+              ]
+            }
           ]
         },
         {
@@ -425,6 +470,17 @@
             "CRLB 是不偏估計量 Var 的下界，達到 CRLB 的叫 efficient estimator",
             "樣本平均 Ȳ 在常態母體下是 μ 的 UMVUE",
             "RE 只在兩者都不偏時有意義，有偏估計量要用 MSE = Var + Bias² 比較"
+          ],
+          "interactiveBlocks": [
+            {
+              "type": "quiz",
+              "prompt": "θ̂₁ = Ȳ (n=10), θ̂₂ = Y₁。RE(θ̂₁, θ̂₂) = ?",
+              "options": [
+                { "label": "RE = 10", "correct": true, "explanation": "Var(θ̂₂)/Var(θ̂₁) = σ² / (σ²/10) = 10。用 Y₁ 需要 10 倍樣本才能追上 Ȳ 的精度。" },
+                { "label": "RE = 1/10", "correct": false, "explanation": "分子分母反了。RE(θ̂₁, θ̂₂) = Var(θ̂₂)/Var(θ̂₁)，「好的」放分母。RE > 1 代表 θ̂₁ 更好。" },
+                { "label": "RE = 1", "correct": false, "explanation": "RE = 1 代表兩者一樣好。但 Var(Ȳ) = σ²/10 遠小於 Var(Y₁) = σ²，差很多。" }
+              ]
+            }
           ]
         }
       ],
