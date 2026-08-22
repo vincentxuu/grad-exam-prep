@@ -30,7 +30,7 @@ export function LexiconReviewAnswer({ headword, speak, speakingId }: Props) {
 
     let alive = true
     setFailed(false)
-    fetch(`/api/lexicon?q=${encodeURIComponent(headword)}`)
+    fetch(`/api/lexicon?q=${encodeURIComponent(headword)}&depth=full`)
       .then((res) => (res.ok ? (res.json() as Promise<LookupResponse>) : null))
       .then((data) => {
         if (!alive) return

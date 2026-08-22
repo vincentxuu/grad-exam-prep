@@ -29,6 +29,32 @@ export const ENTRY_SYSTEM_PROMPT = `你是一位替台灣研究所考生（台�
 所有中文一律使用繁體中文（台灣用語）。不要加註「以下是…」之類的開場白，直接回傳結構化資料。`
 
 /**
+ * 輕量例句生成的 system prompt。flashcard 用。
+ *
+ * 刻意不繼承 ENTRY_SYSTEM_PROMPT 的那一長串要求 —— 那份是為查詞面板寫的，
+ * 拿到 flashcard 上只會讓使用者對著轉圈等一份他根本看不到的辭典詞條。
+ * 這裡只要例句，而且明說「不要附加任何其他欄位」，免得模型自己加戲。
+ */
+export const EXAMPLES_SYSTEM_PROMPT = `你是一位替台灣研究所考生（台大資管所／資工所）寫英文例句的老師。使用者正在背單字卡，卡片上已經有中文意思了，他缺的是「這個字實際怎麼用」。
+
+要求：
+
+**原形還原**：查詢字可能是屈折形。intercepted → intercept、studies → study、took → take。headword 欄位放原形。片語不還原，take into account 就是 take into account。
+
+**正好三句例句**，跨三種語域各一句：一般用法、學術／論文用法、技術用法。每句都要有中文翻譯。
+
+例句要完整、自然、可以直接拿來背，不是填空範例。長度控制在 12～20 個英文字之間 —— 太短學不到用法，太長背不起來。
+
+只回傳 headword、kind、ipa（不確定就省略）、examples 四個欄位。不要附加釋義、同義字、搭配或任何其他欄位，那些不屬於這一層。
+
+所有中文一律使用繁體中文（台灣用語）。不要加開場白。`
+
+/** 輕量例句生成的 user turn。 */
+export function examplesUserPrompt(term: string): string {
+  return `請為以下查詢寫例句：\n\n${term}`
+}
+
+/**
  * 個人化橋接的 system prompt。同樣固定不變、可快取。
  *
  * 這是筆記痛點 4 的實作：字要和自身產生連結才記得住。

@@ -9,6 +9,34 @@ import { SpeakButton } from './speak-button'
 
 const entryCache = new Map<string, LexiconEntry>()
 
+/**
+ * 前端放棄的時間點。必須比伺服器的生成預算（`api/lexicon/route.ts` 的
+ * `GENERATION_BUDGET_MS`）大 —— 不然我們會在伺服器來得及回那個看得懂的
+ * 504 之前就自己斷掉，白白換回一個比較差的錯誤訊息。
+ */
+const GENERATION_TIMEOUT_MS = 60_000
+
+/**
+ * 把例外翻成看得懂的話。
+ *
+ * fetch 在網路層失敗時丟的是 `TypeError`，訊息由瀏覽器決定：Safari 是
+ * "Load failed"，Chrome 是 "Failed to fetch"。直接把它顯示給使用者，畫面上
+ * 就會出現一行沒有人看得懂的英文。
+ */
+function describeError(reason: unknown, fallback: string): string {
+  if (reason instanceof TypeError) return '連線中斷，請確認網路後再試一次。'
+  return reason instanceof Error ? reason.message : fallback
+}
+
+/** 回應不是 JSON 時（例如 edge 回的 HTML 錯誤頁）給個像話的訊息。 */
+async function readJson<T>(response: Response): Promise<T> {
+  try {
+    return (await response.json()) as T
+  } catch {
+    throw new Error(response.ok ? '回應格式錯誤' : `伺服器錯誤（${response.status}）`)
+  }
+}
+
 type CacheState = 'idle' | 'loading' | 'ready' | 'miss'
 
 interface Props {
@@ -104,6 +132,16 @@ export function FlashcardExampleSupport({
     generationController.current = controller
     setGenerating(true)
     setError(null)
+
+    // 自己的逾時要和「換一張卡就中止」共用同一個 controller，但兩者要分得
+    // 出來：換卡是使用者離開了，什麼都不該顯示；逾時得留下一行說明。
+    // 不用 AbortSignal.any —— iOS Safari 17.4 以前沒有。
+    let timedOut = false
+    const timer = setTimeout(() => {
+      timedOut = true
+      controller.abort()
+    }, GENERATION_TIMEOUT_MS)
+
     try {
       const response = await request('/api/lexicon', {
         method: 'POST',
@@ -111,10 +149,14 @@ export function FlashcardExampleSupport({
         signal: controller.signal,
         body: JSON.stringify({
           term: normalizedHeadword,
+          // flashcard 只渲染例句，不用等一份完整辭典詞條
+          mode: 'examples',
           ...(personaReady ? { persona } : {}),
         }),
       })
-      const body = (await response.json()) as Partial<LookupResponse> & { error?: string }
+      const body = await readJson<Partial<LookupResponse> & { error?: string }>(response)
+      // 回應到手就停錶：後面的檢查若丟錯，那是內容問題，不是等太久
+      clearTimeout(timer)
       if (!response.ok || !body.entry) throw new Error(body.error ?? '例句生成失敗')
 
       entryCache.set(normalizedHeadword, body.entry)
@@ -125,11 +167,11 @@ export function FlashcardExampleSupport({
       }
       setPersonal(body.personal)
     } catch (reason) {
-      if (controller.signal.aborted) return
-      const msg = reason instanceof Error ? reason.message : ''
-      setError(msg && !msg.includes('Load failed') ? msg : '例句生成失敗，請重試')
+      if (timedOut) setError('產生例句等太久了，請再試一次。')
+      else if (!controller.signal.aborted) setError(describeError(reason, '例句生成失敗'))
     } finally {
-      if (!controller.signal.aborted) setGenerating(false)
+      clearTimeout(timer)
+      if (timedOut || !controller.signal.aborted) setGenerating(false)
     }
   }
 
