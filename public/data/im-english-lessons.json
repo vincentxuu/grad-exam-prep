@@ -37,6 +37,18 @@
             "字義題看上下文的同位語（逗號後的解釋）、破折號後的重述、或 that is / in other words / namely 等訊號詞",
             "NOT true 題需要逐項比對原文，確認三個為真後剩下的才是答案。這種題最花時間，考試時如果卡住先跳過",
             "實戰技巧：用鉛筆在題幹的關鍵字下畫線，讀文章時碰到相同概念就在旁邊標題號，這樣回頭找答案的時候不用重讀"
+          ],
+          "interactiveBlocks": [
+            {
+              "type": "quiz",
+              "prompt": "題幹出現 'It can be inferred that...'，這屬於哪種閱讀題型？",
+              "options": [
+                { "label": "主旨題", "correct": false, "explanation": "主旨題的題幹是 'What is the main idea / primarily about'，問的是整篇文章的中心思想。" },
+                { "label": "細節題", "correct": false, "explanation": "細節題的題幹是 'According to the passage'，答案可以直接從原文定位到。" },
+                { "label": "推論題", "correct": true, "explanation": "正確！'It can be inferred that' 是推論題的標準句型，答案不在文字表面，而在因果關係或對比結構中。" },
+                { "label": "字義題", "correct": false, "explanation": "字義題的題幹是 'The word X most likely means'，問的是特定單字在上下文中的意思。" }
+              ]
+            }
           ]
         },
         {
@@ -48,6 +60,13 @@
             "轉折詞是結構地標，也是出題熱區：however / nevertheless / on the other hand / in contrast / despite / although。轉折前後的對比常出推論題",
             "結論段的 overall / in conclusion / the future of / it remains to be seen 包含作者立場，主旨題答案多在這裡",
             "練習方法：拿一篇科技文章，只讀每段第一句和最後一句，嘗試回答主旨題——如果能答對，說明你已經掌握了結構化閱讀"
+          ],
+          "interactiveBlocks": [
+            {
+              "type": "reveal",
+              "prompt": "科技文章的四段結構是什麼？試著先憑記憶回想。",
+              "answer": "① Hook + 背景（驚人數據開場）→ ② 技術說明（專有名詞 + 定義）→ ③ 轉折（however 標記風險或限制）→ ④ 結論或展望（overall / looking ahead）。掌握這個結構，即使有不認識的字也能快速判斷每段的功能。"
+            }
           ]
         },
         {
@@ -59,6 +78,18 @@
             "數字和百分比是細節題的高頻考點，例如 'a 37% increase' 或 'more than two-thirds'，讀到時在旁邊標記以便快速定位",
             "比較結構（more than / unlike / whereas / in contrast to）暗示推論題的方向，比較的兩方就是答案的候選範圍",
             "文化背景知識不足時，完全依靠文章內部線索推斷。考試的正確答案一定能從原文推導出來，不需要外部知識"
+          ],
+          "interactiveBlocks": [
+            {
+              "type": "quiz",
+              "prompt": "'Critics argue that AI will replace most jobs.' — 這句話代表誰的觀點？",
+              "options": [
+                { "label": "作者的觀點", "correct": false, "explanation": "'Critics argue that' 是歸屬語（attribution marker），標記這是 critics 的觀點，不是作者本人的立場。" },
+                { "label": "批評者 (Critics) 的觀點", "correct": true, "explanation": "正確！'Critics argue that' 明確標記了觀點的歸屬。作者自己的觀點通常不帶歸屬語，或用 indeed / clearly 等表態語。" },
+                { "label": "研究者的觀點", "correct": false, "explanation": "句中用的是 critics（批評者），不是 researchers。觀點歸屬要看句子裡明確標記的主體。" },
+                { "label": "無法判斷", "correct": false, "explanation": "可以判斷。歸屬語（according to / X argues / critics contend）後面的觀點屬於被引用的人，不是作者。" }
+              ]
+            }
           ]
         },
         {
@@ -70,6 +101,19 @@
             "閱讀題每篇文章先花 2 分鐘快速掃讀（每段首句 + 轉折詞 + 結論句），建立結構地圖後再逐題定位，比反覆重讀全文有效率",
             "最後 5 分鐘回頭檢查標記題，優先處理「我認識兩個選項可以刪」的題目，投資報酬率最高",
             "模擬練習時用手機倒數計時 80 分鐘，結束就停筆。慢慢訓練自己的速度感，目標是考前一個月能在 75 分鐘內做完"
+          ],
+          "interactiveBlocks": [
+            {
+              "type": "slider",
+              "title": "考試時間分配計算器",
+              "sliders": [
+                { "id": "vocab", "label": "字彙題數", "min": 15, "max": 30, "step": 1, "initial": 25 },
+                { "id": "grammar", "label": "文法題數", "min": 4, "max": 15, "step": 1, "initial": 10 },
+                { "id": "reading", "label": "閱讀題數", "min": 8, "max": 20, "step": 1, "initial": 15 }
+              ],
+              "formula": "vocab * 1 + grammar * 1.5 + reading * 2.5",
+              "resultLabel": "預估需要時間（分鐘）："
+            }
           ]
         }
       ],
@@ -111,6 +155,16 @@
             "A number of + 複數名詞 + 複數動詞（a number of = many）；The number of + 複數名詞 + 單數動詞（the number of = 那個數字）",
             "倒裝句的主詞在動詞後面：'Among the challenges (is/are) the lack of funding and the shortage of talent.' — 主詞是 lack and shortage（複數），用 are",
             "集合名詞的美式 vs 英式：team / committee / government 在美式英語當單數（The team is），在英式英語可以當複數（The team are）。資管所考試通常依美式用法"
+          ],
+          "interactiveBlocks": [
+            {
+              "type": "quiz",
+              "prompt": "'The deployment of cloud-based services across multiple agencies ______ concerns.' — 選 has 還是 have？",
+              "options": [
+                { "label": "has raised", "correct": true, "explanation": "正確！把介詞片語 'of cloud-based services across multiple agencies' 圈掉，剩下的主詞是 deployment（單數），所以用 has。" },
+                { "label": "have raised", "correct": false, "explanation": "主詞不是 services 或 agencies，而是 deployment（單數）。介詞片語只是修飾語，不影響動詞的單複數。" }
+              ]
+            }
           ]
         },
         {
@@ -122,6 +176,21 @@
             "假設語氣公式：與現在相反 → if + 過去式, would + 原形；與過去相反 → if + had pp, would have + pp",
             "suggest / recommend / insist / demand 後面的 that 子句用原形動詞（subjunctive mood）：'The auditor recommended that the firm (adopts → adopt) stronger controls.'",
             "常見考試陷阱：在 if 子句裡混用 would，例如 'If he would have known...' 是錯誤的，正確是 'If he had known...'"
+          ],
+          "interactiveBlocks": [
+            {
+              "type": "quiz",
+              "prompt": "'The company ______ heavily in AI since 2018.' — 選 has invested 還是 invested？",
+              "options": [
+                { "label": "has invested", "correct": true, "explanation": "正確！since 2018 表示從 2018 年延續到現在，需要現在完成式。since / for / so far / yet 都是完成式的時間線索。" },
+                { "label": "invested", "correct": false, "explanation": "since 2018 表示行為從過去延續到現在，不是已結束的時間點。如果是 'last year' 或 'in 2018' 才用過去簡單式。" }
+              ]
+            },
+            {
+              "type": "reveal",
+              "prompt": "假設語氣公式——與現在相反 vs 與過去相反，你記得差異嗎？",
+              "answer": "與現在相反：If + 過去式, would + 原形動詞。例：'If the company adopted MFA, breaches would decrease.'｜與過去相反：If + had pp, would have + pp。例：'If the company had adopted MFA earlier, the breach would not have occurred.' 關鍵差異：與過去相反用 had + pp，主句用 would have + pp。"
+            }
           ]
         },
         {
@@ -133,6 +202,16 @@
             "搭配記憶法：把常考動詞寫成句子記。不要記 'comply + with'，而是記 'Companies must comply with GDPR regulations.'",
             "容易搞混的介係詞：interested in（不是 interested at）/ capable of（不是 capable to）/ responsible for（不是 responsible of）/ familiar with（不是 familiar to）",
             "考試時如果不確定介係詞，默念整個語塊看哪個「聽起來」順——如果你有大量英文閱讀經驗，語感會幫你選對。沒有語感就靠背"
+          ],
+          "interactiveBlocks": [
+            {
+              "type": "quiz",
+              "prompt": "'The data breach resulted ______ a $50M fine.' — 選 in 還是 from？",
+              "options": [
+                { "label": "in", "correct": true, "explanation": "正確！result in = 導致某結果。資料外洩「導致」了罰款。result from = 源自某原因，方向相反。" },
+                { "label": "from", "correct": false, "explanation": "result from = 源自某原因。如果用 from，意思會變成「資料外洩源自罰款」，因果關係倒反了。正確是 result in（導致）。" }
+              ]
+            }
           ]
         },
         {
@@ -144,6 +223,16 @@
             "第三步檢查代名詞（佔 15%）：指代是否明確（this / that / it 指什麼？）、單複數是否對應、格是否正確（who vs whom / I vs me）",
             "第四步檢查平行結構（佔 15%）：and / or / not only...but also / both...and / either...or 連接的成分必須同類。名詞對名詞、動名詞對動名詞、不定詞對不定詞",
             "第五步檢查修飾語（佔 10%）：dangling modifier 是最難抓的。'After analyzing the data, the report was submitted.' — 誰分析了資料？報告不會分析，是人在分析。正確：'After analyzing the data, the team submitted the report.'"
+          ],
+          "interactiveBlocks": [
+            {
+              "type": "quiz",
+              "prompt": "'The new policy aims to reduce costs, ______ efficiency, and enhance security.' — 選 improving 還是 improve？",
+              "options": [
+                { "label": "improve", "correct": true, "explanation": "正確！平行結構：to reduce / improve / enhance 三個動詞必須同類。to 後面接原形動詞，所以第二個也要用原形 improve。" },
+                { "label": "improving", "correct": false, "explanation": "平行結構要求連接的成分同類。reduce 和 enhance 都是原形動詞，中間的也必須是原形 improve，不能用動名詞 improving。" }
+              ]
+            }
           ]
         }
       ],
@@ -184,6 +273,13 @@
             "核心動作詞根：-duct(引導 conduct/deduce) / -rupt(破裂 disrupt/corrupt) / -ject(投射 project/reject) / -mit(送 transmit/commit) / -vert(轉 convert/divert)",
             "詞性判斷字尾：-ous / -ive / -able / -ful / -less → 形容詞；-ment / -tion / -ness / -ity → 名詞；-ize / -ify / -ate → 動詞；-ly → 副詞",
             "實戰拆解練習：遇到不認識的字就拆。'unprecedented' = un(否定) + precedent(先例) + ed → 沒有先例的 → 前所未有的。'counterproductive' = counter(反) + productive(有生產力的) → 反而降低生產力的 → 適得其反的"
+          ],
+          "interactiveBlocks": [
+            {
+              "type": "reveal",
+              "prompt": "試著拆解 'circumvent' 這個字——你能從詞根推出意思嗎？",
+              "answer": "circum-（圍繞，像 circumference 圓周）+ vent（走，像 venture 冒險前往）= 繞著走 = 規避。考古題例句：'The new regulation was designed to circumvent existing loopholes.'（新法規旨在規避現有漏洞。）"
+            }
           ]
         },
         {
@@ -195,6 +291,16 @@
             "商業詞要注意一字多義：leverage 名詞是槓桿/影響力，動詞是利用；platform 在 IT 是平台，日常是月台；protocol 在 IT 是協定，外交是禮儀",
             "AI 詞群近年出題增加：algorithm / neural network / bias / dataset / inference / supervised learning / deep learning / generative / autonomous — 搭配計概 AI 課程一起記",
             "記憶策略：每個詞群選 5 個最核心的字，各造一個包含 2-3 個群內字的句子。重複讀句子比重複讀單字表有效"
+          ],
+          "interactiveBlocks": [
+            {
+              "type": "quiz",
+              "prompt": "在資安領域，authenticate 和 authorize 的差異是什麼？'The system must ______ users before granting access to files.'",
+              "options": [
+                { "label": "authenticate", "correct": true, "explanation": "正確！authenticate = 確認「你是誰」（帳號密碼、指紋驗證）。先驗證身份，才能決定權限。" },
+                { "label": "authorize", "correct": false, "explanation": "authorize = 決定「你能做什麼」（授權）。這句是在「授予存取權之前」，所以需要先確認身份（authenticate），不是授權。" }
+              ]
+            }
           ]
         },
         {
@@ -206,6 +312,18 @@
             "complement vs compliment：complement（互補，e 像 complete）/ compliment（讚美，i 像 I say something nice）",
             "principal vs principle：principal = 主要的/校長/本金（形容詞或人）；principle = 原則/原理（抽象概念）。'The principal reason is a matter of principle.'",
             "discrete vs discreet：discrete = 離散的/獨立的（IT 術語 discrete variables）；discreet = 謹慎低調的（人的行為）。考計概的人一定認識 discrete，但考英文時別跟 discreet 搞混"
+          ],
+          "interactiveBlocks": [
+            {
+              "type": "quiz",
+              "prompt": "'The company decided to ______ its business model in response to market disruption.' — 四個選項都有「改變」的意思，哪個最合語境？",
+              "options": [
+                { "label": "alter（小幅調整）", "correct": false, "explanation": "alter 是小幅調整，但搭配 market disruption（市場顛覆），暗示的是大規模變革，程度不夠。" },
+                { "label": "modify（修改）", "correct": false, "explanation": "modify 是技術性的修改，語境中的 disruption 暗示需要根本性的轉變，不只是修改。" },
+                { "label": "convert（轉換格式）", "correct": false, "explanation": "convert 用於格式或類型的轉換（如 convert PDF to Word），不搭配 business model。" },
+                { "label": "transform（根本轉變）", "correct": true, "explanation": "正確！transform 表示根本性轉變，搭配 business model 和 disruption 的語境——大規模變革需要 transform。" }
+              ]
+            }
           ]
         },
         {
@@ -217,6 +335,18 @@
             "第三步搭配判斷：'______ with regulations' → comply；'______ from experience' → benefit / learn / stem。搭配是比意思更強的線索",
             "第四步代入驗證：把 2 個候選答案分別代入，整句默讀一遍。如果你有每天讀英文新聞的習慣，語感會幫你選對。這步不是猜，是用你的被動語言知識做最後判斷",
             "練習方法：做完字彙題後，不只看答案對不對，還要分析為什麼其他三個選項不適合——是詞性不對、正負向不合、還是搭配不對。這個反思過程比多做新題有效"
+          ],
+          "interactiveBlocks": [
+            {
+              "type": "quiz",
+              "prompt": "語境推斷第一步是什麼？'The company achieved remarkable ______ in Q3.'",
+              "options": [
+                { "label": "判斷正負向", "correct": false, "explanation": "正負向判斷是第二步。第一步應該先確定空格需要什麼詞性，才能排除不可能的選項。" },
+                { "label": "判斷詞性", "correct": true, "explanation": "正確！前面有形容詞 remarkable，空格後是介詞片語 in Q3，所以空格填名詞。光靠詞性就能排除 1-2 個選項，把命中率從 25% 提高到 33-50%。" },
+                { "label": "判斷搭配", "correct": false, "explanation": "搭配判斷是第三步。四步流程是：① 判斷詞性 → ② 判斷正負向 → ③ 判斷搭配 → ④ 代入驗證。" },
+                { "label": "代入驗證", "correct": false, "explanation": "代入驗證是最後一步。先用前三步排除選項，最後把剩下的候選答案代入句子默讀確認。" }
+              ]
+            }
           ]
         }
       ],
@@ -259,6 +389,19 @@
             "閱讀題每篇文章的第一題通常是主旨或明確細節（最容易），最後一題通常是推論或 NOT true（最難）",
             "近年趨勢：科技相關閱讀（AI、資安、數位轉型）比例增加到 70%+，和計概/MIS 的學習內容有重疊，一石二鳥",
             "113-115 年的考卷結構最可能代表未來的出題方向，備考時這三年的考古題優先做"
+          ],
+          "interactiveBlocks": [
+            {
+              "type": "slider",
+              "title": "題型佔分比例計算器",
+              "sliders": [
+                { "id": "vocabQ", "label": "字彙題數（23-30）", "min": 15, "max": 35, "step": 1, "initial": 25 },
+                { "id": "grammarQ", "label": "文法題數（4-14）", "min": 0, "max": 20, "step": 1, "initial": 10 },
+                { "id": "readingQ", "label": "閱讀題數（15-19）", "min": 5, "max": 25, "step": 1, "initial": 15 }
+              ],
+              "formula": "Math.round(vocabQ / (vocabQ + grammarQ + readingQ) * 100)",
+              "resultLabel": "字彙題佔比（%）："
+            }
           ]
         },
         {
@@ -270,6 +413,16 @@
             "過度概括的破解：一般題中，always / never / only / all 通常是錯誤選項。但 NOT true / EXCEPT 題反過來",
             "當兩個選項意思非常接近時（如 hinder 和 impede 都表示阻礙），通常兩個都不是答案——因為出題者不會放兩個「都對」的選項",
             "陷阱辨識是最後手段。如果你認識所有選項，直接選語境最合的就好。只有在不確定的時候才需要分析出題者的意圖"
+          ],
+          "interactiveBlocks": [
+            {
+              "type": "quiz",
+              "prompt": "閱讀題中看到選項寫 'All companies that adopted AI saw productivity gains.'，而原文寫 'Many companies reported improvements.' — 這個選項是對還是錯？",
+              "options": [
+                { "label": "正確", "correct": false, "explanation": "原文用的是 Many（許多），選項用的是 All（全部）。這是過度概括陷阱——用極端用語替換了溫和表述，把 Many 誇大為 All。" },
+                { "label": "錯誤（過度概括陷阱）", "correct": true, "explanation": "正確！原文 Many ≠ All。含有 always / never / all / none / only 等極端用語的選項，在一般推論題中通常是錯誤的。但在 NOT true 題中邏輯反過來。" }
+              ]
+            }
           ]
         },
         {
@@ -281,6 +434,13 @@
             "「閱讀理解錯」的診斷法：回到原文，用螢光筆標記你漏看的轉折詞、歸屬語或限定詞。通常錯誤就藏在一個 however 或 some 裡",
             "備考里程碑：做 3 份考古題後統計三類錯誤的比例。如果「字不認識」超過 50%，先花 2 週背字彙再繼續做題。如果「選錯」超過 30%，加強搭配練習",
             "字彙弱 → 每天背 20 個新字 + 複習 30 個舊字（間隔重複法）。文法弱 → 整理自己的錯題清單（通常集中在 2-3 個考點）。閱讀弱 → 每天讀一篇 300 字英文科技新聞"
+          ],
+          "interactiveBlocks": [
+            {
+              "type": "reveal",
+              "prompt": "考古題錯題應該分成哪三類？每類的解法是什麼？",
+              "answer": "① 字不認識 → 用 CEFR 分級資料，專攻目前等級 +1 的字彙（B2 攻 C1，C1 攻 C2）。② 字認識但選錯 → 把正確答案連完整句子抄下來反覆讀，訓練搭配語感。③ 閱讀理解錯 → 回到原文用螢光筆標記漏看的轉折詞、歸屬語或限定詞，錯誤通常藏在一個 however 或 some 裡。"
+            }
           ]
         },
         {
@@ -292,6 +452,13 @@
             "第三階段（1 個月前）：嚴格 80 分鐘，模擬考場環境。用 113-115 年考古題，記錄各題型正確率追蹤進步曲線",
             "備考優先排序（時間有限時）：字彙 > 文法 > 閱讀。字彙佔 50% 題目，提升最快；文法考點有限，容易拿滿分；閱讀波動大，短期提升有限",
             "每份考古題做完後，不只看總分，還要分析：哪些題型的正確率在進步？哪些停滯？停滯的就是下一週要專攻的方向"
+          ],
+          "interactiveBlocks": [
+            {
+              "type": "reveal",
+              "prompt": "考前三階段練習計畫——每個階段的重點和時間限制分別是什麼？",
+              "answer": "第一階段（考前 3 個月）：不計時，每週 1 份，做 1 小時、檢討 2 小時，重點在累積字彙和建立題感。｜第二階段（考前 2 個月）：半計時 100 分鐘（多 20 分鐘），練習跳題策略和找到最佳答題順序。｜第三階段（考前 1 個月）：嚴格 80 分鐘模擬，用 113-115 年考古題，追蹤各題型正確率曲線。目標：字彙 70%+、文法 80%+、閱讀 60%+。"
+            }
           ]
         }
       ],
