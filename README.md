@@ -1,38 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
 
-## Getting Started
+# Grad Exam Prep
 
-First, run the development server:
+**研究所考試準備平台 —— 題庫、閃卡、SM-2 排程，以及跑在 Cloudflare Workers 上的 AI 英文查詞與對話練習。**
+
+[![CI](https://github.com/vincentxuu/grad-exam-prep/actions/workflows/checks.yml/badge.svg)](https://github.com/vincentxuu/grad-exam-prep/actions/workflows/checks.yml)
+
+[快速開始](#快速開始) · [功能一覽](#功能一覽) · [部署](#部署到-cloudflare) · [設定 LLM](#設定-llm-provider) · [內容管線](#內容管線) · [設計原則](#為什麼這樣設計) · [文件](#文件)
+
+</div>
+
+Grad Exam Prep 是一個 Next.js（App Router）站台，透過 [`@opennextjs/cloudflare`](https://opennext.js.org/cloudflare) 部署到 Cloudflare Workers。題庫、閃卡與複習排程存在 D1；英文查詞與對話練習由 LLM 生成，預設走 Workers AI binding，也可以在執行期切換到 Groq、Gemini、OpenAI 等外部 provider——不用重新部署。
+
+> [!IMPORTANT]
+> 查詞與對話都會消耗 LLM 配額（各有獨立每日上限）。AI 生成的詞條與對話內容可能出錯，重要觀念請以書本與考古題解答為準。API key 一律放 `wrangler secret`，**不要**寫進 `.env`、D1 或任何版控檔案。
+
+## 功能一覽
+
+| 頁面 | 功能 |
+| --- | --- |
+| `/[exam]/lookup` | 查單字與片語，管理單字庫與個人化情境 |
+| `/[exam]/reading` | 貼上文章 → 逐字可點查詞 → 一鍵加入單字庫 |
+| `/[exam]/questions/[id]` | 英文題目與題組文章逐字可點（只在英文科開啟） |
+| `/[exam]/chat` | 英文對話練習，把單字庫裡到期的字逼出來 |
+| `/[exam]/flashcards` | 收藏的字與既有閃卡共用同一個 SM-2 排程 |
+| `/settings/llm` | 換 provider／model、調額度、測試連線（需通關密語） |
+| 全站 header「加字」 | 快速加字（`Ctrl/⌘ + K`）—— 課堂、家教、app 上聽到的字 |
+
+詞條走兩層快取：通用詞條（`lexicon_entries`）全站共享，個人化例句
+（`lexicon_personal`）依 persona 分開存。查過的字全站免費，只有第一次
+生成會計入配額。
+
+對話會從 SRS 撈到期與不熟的字當練習目標，但**不會告訴使用者今天在練
+哪些字** —— 一旦講明就會照抄，而不是自己產出。結束時的總結可以一鍵把
+用出來的字記為熟悉，或把 AI 帶出來的新字加進單字庫；兩者都要手動按，
+不自動改複習排程。
+
+## 快速開始
+
+需求：Node.js 22+、npm。不需要任何 API key —— 預設直接使用 Cloudflare
+Workers AI binding。
 
 ```bash
+git clone https://github.com/vincentxuu/grad-exam-prep.git
+cd grad-exam-prep
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+開發前先套用 D1 migrations（本機）：
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npx wrangler d1 migrations apply grad-exam-prep-db --local
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+常用指令：
 
-## Learn More
+| 指令 | 用途 |
+| --- | --- |
+| `npm run dev` | 本機開發（`initOpenNextCloudflareForDev()` 會接上本地 Workers 環境） |
+| `npm run build` / `npm run start` | 一般 Next.js build / serve |
+| `npm run preview` | OpenNext build + 本機 Workers 預覽 |
+| `npm run lint` / `npm run typecheck` / `npm test` | Biome 檢查、TypeScript、Jest |
 
-To learn more about Next.js, take a look at the following resources:
+## 部署到 Cloudflare
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## 部署
-
-站台跑在 Cloudflare Workers 上（透過 `@opennextjs/cloudflare`），worker 名稱與設定在
-`wrangler.json`。
+站台跑在 Cloudflare Workers 上，worker 名稱與設定在 `wrangler.json`。
 
 **自動部署**：push 到 `main` 就會觸發 `.github/workflows/deploy.yml`，跑完 typecheck 與
 測試才部署。也可以在 Actions 頁面手動 `workflow_dispatch`。
@@ -46,11 +79,29 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 `account_id` 與 Workers AI 的 `AI` binding 已經寫在 `wrangler.json`。站內預設模型不需要
 另外建立推論用的 Cloudflare API token；上面的 repository secret 只供 GitHub Actions 部署。
 
+**手動部署**（本機）：
+
+```bash
+npm run deploy
+```
+
+D1 migrations 不在自動流程裡，schema 有變動時要自己跑：
+
+```bash
+npx wrangler d1 migrations apply grad-exam-prep-db --remote
+```
+
+查詞需要 `0003_lexicon.sql`、對話需要 `0004_chat.sql`，**部署前要先套用**，
+否則對應的 API 會因為找不到資料表而回 500。兩者互相獨立，可以只上其中一半。
+`0005_llm_config.sql` 不套用也不會壞 —— 讀不到表就整份設定當空的，全部
+回頭讀環境變數；想在線上改 provider 而不重新部署才需要它。
+
+## 設定 LLM provider
+
 ### 設定 API key
 
 **本機開發**：預設直接使用 Cloudflare Workers AI binding。若要改用外部 provider，
-複製範本後填入該 provider 的 key；`npm run dev` 會自動讀（`next.config.mjs` 有呼叫
-`initOpenNextCloudflareForDev()`）。
+複製範本後填入該 provider 的 key；`npm run dev` 會自動讀。
 
 ```bash
 cp .dev.vars.example .dev.vars
@@ -71,6 +122,39 @@ npx wrangler secret list                  # 確認寫進去了
 取得 key：[Groq Console](https://console.groq.com/keys)、
 [Google AI Studio](https://aistudio.google.com/apikey)（Gemini）、
 [OpenAI](https://platform.openai.com/api-keys)。
+
+### 換 provider 的順序
+
+換家要做兩件事，**順序不能顛倒**：
+
+```bash
+npx wrangler secret put GEMINI_API_KEY   # 1. key 進 secret
+npm run deploy                            # 2. 部署（secret 綁在 worker 上）
+```
+
+3. 到 `/settings/llm` 選 Google Gemini、填 model、按「測試連線」確認通了，再存檔。
+
+先改設定再給 key 的話，中間那段時間 provider 指向一家沒有 key 的服務，
+查詞會回 503。設定頁會先擋下來提醒，但腳本化的時候沒有人擋。
+
+程式碼由 `src/lib/llm/model.ts` 統一路由 provider。Cloudflare 透過一層薄轉接直接呼叫
+`env.AI.run(...)`；`openrouter` / `cerebras` / `ollama` 才走 OpenAI 相容端點。
+
+#### 用 Cloudflare Workers AI
+
+站台本來就在 Workers 上，因此預設直接使用 `wrangler.json` 的 Workers AI binding：
+
+```jsonc
+{
+  "ai": { "binding": "AI" }
+}
+```
+
+程式透過 `env.AI.run(...)` 推論、透過 `env.AI.models()` 取得模型清單，不需要
+推論用 API token。model 要帶 `@cf/` 前綴（例如
+`@cf/meta/llama-3.3-70b-instruct-fp8-fast`），可用清單見 Cloudflare 的
+Workers AI models 頁。若某個執行環境沒有 `AI` binding，設定頁會標成
+「未設 binding」，直接呼叫 `POST /api/lexicon` 則回 503。
 
 ### 執行期設定：`/settings/llm`
 
@@ -123,7 +207,7 @@ npx wrangler d1 execute grad-exam-prep-db --remote --command \
 
 ### 環境變數一覽
 
-查詞功能（`/api/lexicon`）會讀以下設定。標「可用表覆蓋」的欄位會先看
+查詢功能（`/api/lexicon`）會讀以下設定。標「可用表覆蓋」的欄位會先看
 `llm_config`，表裡沒設定才回頭讀環境變數：
 
 | 名稱 | 必要 | 用途 |
@@ -140,26 +224,15 @@ npx wrangler d1 execute grad-exam-prep-db --remote --command \
 | `CHAT_DAILY_QUOTA` | 否 | 每人每日對話訊息上限，預設 40。**與查詞額度分開計** —— 對話貴得多。可用表覆蓋。 |
 | `PASSPHRASE_HASH` | 否 | 既有的同步用密語。帶此 bearer token 的請求不受配額限制。 |
 
-### 預暖詞條快取
+### AI 輸出簡轉繁
 
-第一次查一個字要等十幾秒生成。必要字庫有數千筆，預暖腳本預設只處理前
-100 筆；要擴大範圍時務必先用 dry-run 與 `--limit` 估算：
+所有 provider 的 AI 輸出都會在共用 LLM 邊界經過 `opencc-js`，使用
+`cn → twp` 轉成臺灣繁體與慣用詞，例如「软件／鼠标／数据库」會變成
+「軟體／滑鼠／資料庫」。結構化資料會遞迴轉換字串值；對話串流會先緩衝到
+詞組安全邊界，避免模型把「软」和「件」拆成不同 chunk 時漏轉。舊的查詞快取
+與舊 AI 對話內容也會在讀取時正規化，不必直接改寫 D1 歷史資料。
 
-```bash
-# 先看會處理哪些字，不呼叫 API
-node scripts/warm-lexicon.js --dry-run
-
-# 實際暖機（會花錢，約 94 個字）
-BASE_URL=https://<your-worker>.workers.dev \
-PASSPHRASE_HASH=<與 worker secret 相同的雜湊> \
-node scripts/warm-lexicon.js
-
-# 明確確認成本後才允許處理整份字庫
-node scripts/warm-lexicon.js --all
-```
-
-腳本打的是已部署的 `/api/lexicon`，不是自己重寫一套生成邏輯 —— 這樣
-system prompt 與 schema 只有一份，不會走鐘。帶通關密語所以不受每日配額限制。
+## 內容管線
 
 ### 必要字庫與閃卡生成
 
@@ -184,89 +257,64 @@ python3 scripts/import-ecdict-im-vocab.py \
 生成器會原子替換 `im-english` 的卡片，其他科目的卡不動。內容驗證會要求每個
 curated target 恰好一張、ID 唯一、正面只有 headword，並拒絕選擇題或填空語法。
 
-### 換 LLM provider
+### 預暖詞條快取
 
-生成層用 **LangChain** 當抽象層（做法沿用 `vincentxuu/quidproquo` 的
-`src/lib/rag/model.ts`），換家要做兩件事，**順序不能顛倒**：
-
-```bash
-npx wrangler secret put GEMINI_API_KEY   # 1. key 進 secret
-npm run deploy                            # 2. 部署（secret 綁在 worker 上）
-```
-
-3. 到 `/settings/llm` 選 Google Gemini、填 model、按「測試連線」確認通了，再存檔。
-
-先改設定再給 key 的話，中間那段時間 provider 指向一家沒有 key 的服務，
-查詞會回 503。設定頁會先擋下來提醒，但腳本化的時候沒有人擋。
-
-程式碼由 `src/lib/llm/model.ts` 統一路由 provider。Cloudflare 透過一層薄轉接直接呼叫
-`env.AI.run(...)`；`openrouter` / `cerebras` / `ollama` 才走 OpenAI 相容端點。
-
-**寫錯的 provider 不會報錯。** 不在清單裡的值（打錯字、寫了沒支援的一家）
-會被當成沒設定，安靜地退到 env 再退到 Cloudflare。改完最好查一個沒查過的字確認。
-
-#### 用 Cloudflare Workers AI
-
-站台本來就在 Workers 上，因此預設直接使用 `wrangler.json` 的 Workers AI binding：
-
-```jsonc
-{
-  "ai": { "binding": "AI" }
-}
-```
-
-程式透過 `env.AI.run(...)` 推論、透過 `env.AI.models()` 取得模型清單，不需要
-推論用 API token。model 要帶 `@cf/` 前綴（例如
-`@cf/meta/llama-3.3-70b-instruct-fp8-fast`），可用清單見 Cloudflare 的
-Workers AI models 頁。若某個執行環境沒有 `AI` binding，設定頁會標成
-「未設 binding」，直接呼叫 `POST /api/lexicon` 則回 503。
-
-#### AI 輸出簡轉繁
-
-所有 provider 的 AI 輸出都會在共用 LLM 邊界經過 `opencc-js`，使用
-`cn → twp` 轉成臺灣繁體與慣用詞，例如「软件／鼠标／数据库」會變成
-「軟體／滑鼠／資料庫」。結構化資料會遞迴轉換字串值；對話串流會先緩衝到
-詞組安全邊界，避免模型把「软」和「件」拆成不同 chunk 時漏轉。舊的查詞快取
-與舊 AI 對話內容也會在讀取時正規化，不必直接改寫 D1 歷史資料。
-
-**手動部署**（本機）：
+第一次查一個字要等十幾秒生成。必要字庫有數千筆，預暖腳本預設只處理前
+100 筆；要擴大範圍時務必先用 dry-run 與 `--limit` 估算：
 
 ```bash
-npm run deploy
+# 先看會處理哪些字，不呼叫 API
+node scripts/warm-lexicon.js --dry-run
+
+# 實際暖機（會花錢，約 94 個字）
+BASE_URL=https://<your-worker>.workers.dev \
+PASSPHRASE_HASH=<與 worker secret 相同的雜湊> \
+node scripts/warm-lexicon.js
+
+# 明確確認成本後才允許處理整份字庫
+node scripts/warm-lexicon.js --all
 ```
 
-D1 migrations 不在自動流程裡，schema 有變動時要自己跑：
+腳本打的是已部署的 `/api/lexicon`，不是自己重寫一套生成邏輯 —— 這樣
+system prompt 與 schema 只有一份，不會走鐘。帶通關密語所以不受每日配額限制。
 
-```bash
-npx wrangler d1 migrations apply grad-exam-prep-db --remote
+## 為什麼這樣設計
+
+- **一份 prompt、一條路徑**：預暖腳本打的是正式的 `/api/lexicon`，system prompt 與 schema 不會因為腳本另起爐灶而走鐘。
+- **快取優先**：通用詞條全站共享，查詞成本隨快取變熱趨近於零；只有第一次生成計入配額。
+- **key 不落明文**：API key 只進 `wrangler secret`；D1 的 `llm_config` 只放洩漏了也不痛的非機密設定。
+- **換 provider 不用重新部署**：provider、model、額度都在 `/settings/llm` 執行期改，先測試連線再存檔。
+- **臺灣繁體輸出**：所有 provider 的輸出在共用邊界經 `opencc-js` 正規化，串流也按詞組安全邊界緩衝。
+- **排程只有一套**：查詞收藏的字與既有閃卡共用同一個 SM-2 排程，不自動改狀態。
+
+## 運作方式
+
+```text
+瀏覽器
+    |
+    v
+Next.js on Cloudflare Workers      @opennextjs/cloudflare，靜態與 SSR
+    |
+    +-- /api/lexicon               兩層快取：lexicon_entries（全站）→ lexicon_personal（persona）
+    +-- /api/chat                  SRS 到期字當練習目標的對話練習
+    +-- src/lib/llm/model.ts       provider 路由：Workers AI binding 或 LangChain 外部 provider
+    |                              輸出統一經 opencc-js 簡轉繁
+    +-- /settings/llm              執行期設定（D1 llm_config，每 isolate 快取 60 秒）
+    `-- D1                         題庫、閃卡、SRS 排程、詞條快取、llm_config、tts_cache
 ```
 
-查詞需要 `0003_lexicon.sql`、對話需要 `0004_chat.sql`，**部署前要先套用**，
-否則對應的 API 會因為找不到資料表而回 500。兩者互相獨立，可以只上其中一半。
+## 成本與限制
 
-`0005_llm_config.sql` 不套用也不會壞 —— 讀不到表就整份設定當空的，全部
-回頭讀環境變數。想在線上改 provider 而不重新部署才需要它。
+- **查詢與對話的成本結構不同**：查詞會隨快取變熱趨近於零，對話不會 ——
+  每則訊息都要送整段歷史。所以對話有獨立配額、單場 30 則上限、糾錯預設關閉。
+- **寫錯的 provider 不會報錯**：不在清單裡的值（打錯字、寫了沒支援的一家）
+  會被當成沒設定，安靜地退到 env 再退到 Cloudflare。改完最好查一個沒查過的字確認。
+- **AI 生成內容僅供參考**：詞條例句與對話糾錯都可能出錯，搭配考古題解答使用。
+- **配額是軟性保護**：`PASSPHRASE_HASH` 的 bearer token 不受配額限制，妥善保管。
 
-## 英文查詞與單字庫
+## 文件
 
-| 頁面 | 功能 |
-| --- | --- |
-| `/[exam]/lookup` | 查單字與片語，管理單字庫與個人化情境 |
-| `/[exam]/reading` | 貼上文章 → 逐字可點查詞 → 一鍵加入單字庫 |
-| `/[exam]/questions/[id]` | 英文題目與題組文章逐字可點（只在英文科開啟） |
-| `/[exam]/chat` | 英文對話練習，把單字庫裡到期的字逼出來 |
-| `/settings/llm` | 換 provider／model、調額度、測試連線（需通關密語） |
-| 全站 header「加字」 | 快速加字（`Ctrl/⌘ + K`）—— 課堂、家教、app 上聽到的字 |
-| `/[exam]/flashcards` | 收藏的字與既有閃卡共用同一個 SM-2 排程 |
-
-詞條走兩層快取：通用詞條（`lexicon_entries`）全站共享，個人化例句
-（`lexicon_personal`）依 persona 分開存。查過的字全站免費，只有第一次
-生成會計入配額。
-
-對話會從 SRS 撈到期與不熟的字當練習目標，但**不會告訴使用者今天在練
-哪些字** —— 一旦講明就會照抄，而不是自己產出。結束時的總結可以一鍵把
-用出來的字記為熟悉，或把 AI 帶出來的新字加進單字庫；兩者都要手動按，
-不自動改複習排程。
-
-**成本提醒**：查詞會隨快取變熱趨近於零，對話不會 —— 每則訊息都要送整段
-歷史。所以對話有獨立配額、單場 30 則上限、糾錯預設關閉。
+- [English vocab lookup 設計](docs/superpowers/specs/2026-08-12-english-vocab-lookup-design.md)
+- [Question bank learning 設計](docs/superpowers/specs/2026-06-03-question-bank-learning-design.md)
+- [考古題分析研究](docs/research/)
+- [第三方授權聲明](THIRD_PARTY_NOTICES.md)
