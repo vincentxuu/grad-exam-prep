@@ -1,6 +1,10 @@
 import { render, screen } from '@testing-library/react'
 import { VocabAnswer } from '@/components/flashcard/vocab-answer'
 
+jest.mock('@/hooks/use-word-web', () => ({
+  useWordWeb: () => ({ getWord: () => null, loading: false }),
+}))
+
 // Component behavior should not depend on a generated card ID that can be retired.
 const card = {
   id: 'fc-test-discrepancy',
@@ -11,7 +15,7 @@ const card = {
 describe('VocabAnswer（discrepancy 卡）', () => {
   beforeEach(() => {
     render(
-      <VocabAnswer cardId={card.id} answer={card.answer} speak={jest.fn()} speakingId={null} />
+      <VocabAnswer cardId={card.id} prompt="discrepancy" answer={card.answer} speak={jest.fn()} speakingId={null} />
     )
   })
 

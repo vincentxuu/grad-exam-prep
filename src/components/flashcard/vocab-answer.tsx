@@ -1,9 +1,12 @@
 'use client'
 
+import { useWordWeb } from '@/hooks/use-word-web'
 import { SpeakButton } from './speak-button'
+import { VocabMindMap } from './vocab-mind-map'
 
 interface VocabAnswerProps {
   cardId: string
+  prompt: string
   answer: string
   speak: (text: string, id?: string) => void
   speakingId: string | null
@@ -59,11 +62,22 @@ export function hasVocabExample(answer: string): boolean {
   return parseVocabAnswer(answer).example !== null
 }
 
-export function VocabAnswer({ cardId, answer, speak, speakingId }: VocabAnswerProps) {
+function extractWord(prompt: string): string {
+  const trimmed = prompt.trim()
+  if (!trimmed.includes(' ') && !trimmed.includes('\n')) return trimmed.toLowerCase()
+  const answerMatch = trimmed.match(/【答案】\s*\(?[A-E]\)?\s*(\w+)/i)
+  if (answerMatch) return answerMatch[1].toLowerCase()
+  return trimmed.split(/[\s\n]/)[0].toLowerCase()
+}
+
+export function VocabAnswer({ cardId, prompt, answer, speak, speakingId }: VocabAnswerProps) {
   const parsed = parseVocabAnswer(answer)
+  const { getWord } = useWordWeb()
+  const word = extractWord(prompt)
+  const wordWeb = getWord(word)
   const hasStructure = parsed.chinese || parsed.example || parsed.synonyms || parsed.antonyms
 
-  if (!hasStructure) {
+  if (!hasStructure && !wordWeb) {
     return <div className="text-sm whitespace-pre-line leading-relaxed">{answer}</div>
   }
 
@@ -130,6 +144,22 @@ export function VocabAnswer({ cardId, answer, speak, speakingId }: VocabAnswerPr
           {parsed.rest.map((line, i) => (
             <p key={i}>{line}</p>
           ))}
+        </div>
+      )}
+
+      {wordWeb && (
+        <div className="border-t pt-3 mt-3">
+          <VocabMindMap
+            word={word}
+            chinese={wordWeb.chinese}
+            synonyms={wordWeb.synonyms}
+            antonyms={wordWeb.antonyms}
+            relatedWords={wordWeb.relatedWords}
+            confusableWith={wordWeb.confusableWith}
+            exampleSentences={wordWeb.exampleSentences}
+            semanticGroup={wordWeb.semanticGroup}
+            mnemonicHint={wordWeb.mnemonicHint}
+          />
         </div>
       )}
     </div>

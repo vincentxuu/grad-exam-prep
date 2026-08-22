@@ -330,6 +330,7 @@ function FlashcardsContent({ params }: Props) {
                 ) : card && isVocabCard(card) ? (
                   <VocabAnswer
                     cardId={card.id}
+                    prompt={card.prompt}
                     answer={card.answer}
                     speak={speak}
                     speakingId={speakingId}
@@ -636,6 +637,7 @@ function CardRow({
             ) : vocab && card ? (
               <VocabAnswer
                 cardId={card.id}
+                prompt={card.prompt}
                 answer={card.answer}
                 speak={speak}
                 speakingId={speakingId}

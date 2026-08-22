@@ -16,6 +16,34 @@ export interface LearningScenario {
   examCues: string[]
 }
 
+export interface InteractiveQuizOption {
+  label: string
+  correct: boolean
+  explanation: string
+}
+
+export interface InteractiveQuiz {
+  type: 'quiz'
+  prompt: string
+  options: InteractiveQuizOption[]
+}
+
+export interface InteractiveReveal {
+  type: 'reveal'
+  prompt: string
+  answer: string
+}
+
+export interface InteractiveSlider {
+  type: 'slider'
+  title: string
+  sliders: Array<{ id: string; label: string; min: number; max: number; step: number; initial: number }>
+  formula: string
+  resultLabel: string
+}
+
+export type InteractiveBlock = InteractiveQuiz | InteractiveReveal | InteractiveSlider
+
 export interface LearningLesson {
   id: string
   subtopicId: string
@@ -27,7 +55,7 @@ export interface LearningLesson {
   minimumPastPaperRefs: number
   learningObjectives: string[]
   learningScenario?: LearningScenario
-  sections: Array<{ title: string; body: string; bullets: string[] }>
+  sections: Array<{ title: string; body: string; bullets: string[]; interactiveBlocks?: InteractiveBlock[] }>
   workedExamples: LearningWorkedExample[]
   commonPitfalls: string[]
   sourceRefs: string[]

@@ -3,6 +3,7 @@ import { type NextRequest, NextResponse } from 'next/server'
 import { authenticateRequest } from '@/lib/auth'
 import { generateEntry, generateExamplesEntry, generatePersonal } from '@/lib/lexicon/generate'
 import { normalizeTerm, personaHash } from '@/lib/lexicon/normalize'
+import { preservePersonaWording } from '@/lib/lexicon/persona-wording'
 import {
   checkAndIncrementQuota,
   type Db,
@@ -174,12 +175,14 @@ export async function POST(request: NextRequest) {
       personal = await getPersonal(db, entry.headword, hash)
       personalCached = !!personal
 
+      if (personal) personal = preservePersonaWording(personal, payload.persona)
+
       if (!personal) {
         await spend()
         const result = await generatePersonal(env, entry.headword, payload.persona, genOpts)
         // 個人化失敗不該讓整次查詢失敗 —— 詞條本身已經有了，先給使用者
         if (result.ok) {
-          personal = result.data
+          personal = preservePersonaWording(result.data, payload.persona)
           await putPersonal(db, personal, hash)
         }
       }

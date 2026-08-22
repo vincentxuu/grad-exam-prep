@@ -45,12 +45,28 @@ function responseText(output: unknown): string {
   if (typeof output === 'string') return output
   if (!output || typeof output !== 'object') return ''
   const obj = output as Record<string, unknown>
+
+  // Legacy: { response: "..." }
   if (typeof obj.response === 'string') return obj.response
+
+  // OpenAI-compatible: { choices: [{ message: { content, reasoning_content } }] }
   if (Array.isArray(obj.choices)) {
     const first = obj.choices[0] as Record<string, unknown> | undefined
     const msg = (first?.message ?? first?.delta) as Record<string, unknown> | undefined
     if (typeof msg?.content === 'string') return msg.content
+    // Reasoning models: content is null, answer may be in reasoning_content
+    if (msg?.content === null && typeof msg?.reasoning_content === 'string')
+      return msg.reasoning_content
   }
+
+  // Wrapped: { result: { ... } }
+  if (obj.result && typeof obj.result === 'object') {
+    const inner = responseText(obj.result)
+    if (inner) return inner
+  }
+
+  if (typeof obj.content === 'string') return obj.content
+
   return ''
 }
 
@@ -109,14 +125,58 @@ export class ChatCloudflareWorkersAI extends SimpleChatModel {
     options: this['ParsedCallOptions'],
     runManager?: CallbackManagerForLLMRun
   ): Promise<string> {
+    // Reasoning models need more tokens (reasoning + content both count).
+    // Give 3x the requested max to accommodate the thinking budget.
+    const effectiveMax = Math.max(this.maxTokens, 8192)
+
     const output = await this.ai.run(
       this.model,
       {
         messages: workersAiMessages(messages),
-        max_tokens: this.maxTokens,
-      },
+        max_tokens: effectiveMax,
+      } as Record<string, unknown>,
       options.signal ? { signal: options.signal } : undefined
     )
+
+    if (output instanceof ReadableStream) {
+      const reader = (output as ReadableStream).getReader()
+      const decoder = new TextDecoder()
+      const chunks: string[] = []
+      let done = false
+      while (!done) {
+        const result = await reader.read()
+        done = result.done
+        if (result.value) chunks.push(decoder.decode(result.value, { stream: !done }))
+      }
+      chunks.push(decoder.decode())
+      const raw = chunks.join('')
+
+      // Parse SSE or JSON
+      if (raw.includes('data:')) {
+        const parts: string[] = []
+        for (const line of raw.split('\n')) {
+          if (!line.startsWith('data:')) continue
+          const data = line.slice(5).trim()
+          if (!data || data === '[DONE]') continue
+          try {
+            parts.push(responseText(JSON.parse(data)))
+          } catch { /* skip */ }
+        }
+        const text = parts.filter(Boolean).join('')
+        if (text) await runManager?.handleLLMNewToken(text)
+        return text
+      }
+
+      try {
+        const text = responseText(JSON.parse(raw))
+        if (text) await runManager?.handleLLMNewToken(text)
+        return text
+      } catch {
+        if (raw) await runManager?.handleLLMNewToken(raw)
+        return raw
+      }
+    }
+
     const text = responseText(output)
     if (text) await runManager?.handleLLMNewToken(text)
     return text
@@ -127,13 +187,15 @@ export class ChatCloudflareWorkersAI extends SimpleChatModel {
     options: this['ParsedCallOptions'],
     runManager?: CallbackManagerForLLMRun
   ): AsyncGenerator<ChatGenerationChunk> {
+    const effectiveMax = Math.max(this.maxTokens, 8192)
+
     const stream = (await this.ai.run(
       this.model,
       {
         messages: workersAiMessages(messages),
-        max_tokens: this.maxTokens,
+        max_tokens: effectiveMax,
         stream: true,
-      },
+      } as Record<string, unknown>,
       options.signal ? { signal: options.signal } : undefined
     )) as unknown as ReadableStream
 

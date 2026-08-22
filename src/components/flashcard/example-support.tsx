@@ -113,7 +113,10 @@ export function FlashcardExampleSupport({
       .catch((reason: unknown) => {
         if (controller.signal.aborted) return
         setCacheState('miss')
-        setError(describeError(reason, '例句快取讀取失敗'))
+        const msg = reason instanceof Error ? reason.message : ''
+        if (msg && !msg.includes('Load failed') && !msg.includes('fetch')) {
+          setError(msg)
+        }
       })
 
     return () => controller.abort()
