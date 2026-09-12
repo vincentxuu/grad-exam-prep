@@ -1,5 +1,6 @@
 'use client'
 
+import { ArrowRight, X } from '@sketchyicons/react'
 import { notFound } from 'next/navigation'
 import { Suspense, use, useMemo, useState } from 'react'
 import { PageLoading } from '@/components/page-loading'
@@ -82,7 +83,7 @@ function QuestionsContent({ params }: Props) {
   return (
     <div className="space-y-4 max-w-3xl">
       <div>
-        <h1 className="text-2xl font-bold">{EXAM_LABELS[exam as ExamId]} — 題庫</h1>
+        <h1 className="text-2xl font-bold font-display">{EXAM_LABELS[exam as ExamId]} — 題庫</h1>
         <p className="text-muted-foreground text-sm mt-1">
           {totalFiltered} 題{isFiltered ? '（篩選後）' : ''} · 共 {allQuestions.length} 題
         </p>
@@ -99,7 +100,8 @@ function QuestionsContent({ params }: Props) {
             className="ml-auto h-7 text-xs shrink-0"
             onClick={() => setPaperFilter('all')}
           >
-            顯示全部 ✕
+            顯示全部
+            <X className="h-3.5 w-3.5" aria-hidden="true" />
           </Button>
         </div>
       )}
@@ -240,7 +242,8 @@ function QuestionCard({
             </Badge>
           )}
           <a href={drillHref} className="ml-auto text-xs text-primary hover:underline shrink-0">
-            練習 →
+            練習
+            <ArrowRight className="ml-1 inline h-3 w-3" aria-hidden="true" />
           </a>
         </div>
 

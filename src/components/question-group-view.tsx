@@ -1,9 +1,11 @@
 'use client'
 
+import { ArrowLeft, ArrowRight, Check, X } from '@sketchyicons/react'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import { LookupSheet } from '@/components/lexicon/lookup-sheet'
 import { PaperContentWarning } from '@/components/paper-content-warning'
+import { QuestionSelfReviewRubric } from '@/components/question-self-review-rubric'
 import { QuestionText } from '@/components/question-text'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -13,6 +15,7 @@ import { useWordLookup } from '@/hooks/use-word-lookup'
 import { getAnswer } from '@/lib/answers'
 import { parseQuestion } from '@/lib/question-parser'
 import { getQuestionPracticePolicy } from '@/lib/question-practice-policy'
+import { getQuestionReview } from '@/lib/question-review'
 import { getUserId } from '@/lib/user-id'
 import type { Question } from '@/types/content'
 import type { PracticeMode } from '@/types/practice'
@@ -136,7 +139,8 @@ export function QuestionGroupView({
           className="ml-auto text-xs text-muted-foreground h-7"
           onClick={() => router.push(completionHref ?? `/${exam}/questions`)}
         >
-          ← {returnsToLesson ? '返回課程' : '返回題庫'}
+          <ArrowLeft className="h-4 w-4" aria-hidden="true" />
+          {returnsToLesson ? '返回課程' : '返回題庫'}
         </Button>
       </div>
 
@@ -183,6 +187,12 @@ export function QuestionGroupView({
           {questions.map((q) => {
             const parsed = parseQuestion(q.text)
             const answerData = getAnswer(q.id)
+            const questionReview = getQuestionReview(q.id)
+            const referenceExplanation =
+              questionReview?.referenceExplanation ??
+              (questionReview?.allowLegacyExplanation === false
+                ? undefined
+                : answerData?.explanation)
             const practicePolicy = getQuestionPracticePolicy(q, answerData)
             const canAutoGrade = practicePolicy.gradingMode === 'auto'
             const selected = answers[q.id]
@@ -218,7 +228,11 @@ export function QuestionGroupView({
                       <span
                         className={`text-xs font-medium shrink-0 ${isCorrect ? 'text-[hsl(var(--success))]' : 'text-destructive'}`}
                       >
-                        {isCorrect ? '✓' : '✗'}
+                        {isCorrect ? (
+                          <Check className="inline h-4 w-4" aria-hidden="true" />
+                        ) : (
+                          <X className="inline h-4 w-4" aria-hidden="true" />
+                        )}
                         {!isCorrect && answerData && (
                           <span className="ml-1 uppercase">正解 {answerData.answer}</span>
                         )}
@@ -280,14 +294,24 @@ export function QuestionGroupView({
                   )}
 
                   {/* Explanation (after reveal) */}
-                  {revealed && answerData?.explanation && (
+                  {revealed && referenceExplanation && (
                     <>
                       <Separator />
                       <p className="text-xs text-muted-foreground leading-relaxed pl-5">
-                        {answerData.explanation}
+                        {referenceExplanation}
                       </p>
                     </>
                   )}
+
+                  {revealed && !referenceExplanation && questionReview?.rubricItems.length ? (
+                    <p className="text-xs leading-5 text-muted-foreground">
+                      舊詳解尚未完成技術審核，不在此顯示；請依下方 rubric 自評。
+                    </p>
+                  ) : null}
+
+                  {revealed && practicePolicy.gradingMode === 'self_review' ? (
+                    <QuestionSelfReviewRubric items={questionReview?.rubricItems ?? []} />
+                  ) : null}
                 </CardContent>
               </Card>
             )
@@ -318,10 +342,13 @@ export function QuestionGroupView({
               </Card>
               <Button onClick={handleNext} className="w-full" size="lg" disabled={submitting}>
                 {nextHref || nextQuestionId
-                  ? '下一組 →'
+                  ? '下一組'
                   : returnsToLesson
                     ? '返回課程'
                     : '返回題庫'}
+                {(nextHref || nextQuestionId) && (
+                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                )}
               </Button>
             </div>
           )}

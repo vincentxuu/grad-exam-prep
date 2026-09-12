@@ -1,0 +1,1666 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "im-mis",
+  "taxonomyMethod": "37 題逐題映射至 canonical MIS taxonomy；subquestions 依已驗證題面標籤保存。",
+  "answerPolicy": "所有答案非官方，僅 self-review；禁止自動計分與完整模擬考。",
+  "totalQuestions": 37,
+  "counts": {
+    "essay": 37,
+    "explicitSubquestions": 76,
+    "autoGradeEligible": 0
+  },
+  "questions": [
+    {
+      "questionId": "q-pp-im-mis-106-1",
+      "paperId": "pp-im-mis-106",
+      "topicId": "im-mis-strategy",
+      "primarySubtopicId": "im-mis-strategy-alignment-differentiation",
+      "secondaryTags": [
+        "competitive-strategy",
+        "it-business-alignment"
+      ],
+      "questionType": "essay",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "medium",
+      "taxonomyRationale": "依題幹主要作答任務歸入 mis-strategy-differentiation；跨域概念保留於 secondaryTags。",
+      "originQuestionTextSha256": "701608728187261ae68348211c7af49b8204b04c2c9c712e79ebef97761ca7b3",
+      "pdfEvidence": {
+        "pdfSha256": "8fa51bffff2c955afedacc11f4dea89fac81a8079737ab893038b3628d71e50a",
+        "auditedQuestionsSha256": "c8d2b26126d745a89d996b8b692d3cfb4636f55be7b512f12d02610ecc9fee81",
+        "auditArtifact": ".work/im-mis-pdf-audit-106-110.md"
+      },
+      "subquestions": [
+        {
+          "label": "1",
+          "rubricId": "rubric-q-pp-im-mis-106-1-1",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "2",
+          "rubricId": "rubric-q-pp-im-mis-106-1-2",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        }
+      ],
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": [
+          "非官方申論參考解析",
+          "需以 rubric 自評，不可機械判分"
+        ]
+      }
+    },
+    {
+      "questionId": "q-pp-im-mis-106-2",
+      "paperId": "pp-im-mis-106",
+      "topicId": "im-mis-platforms",
+      "primarySubtopicId": "im-mis-platforms-sharing-economy",
+      "secondaryTags": [
+        "trust",
+        "platform-governance"
+      ],
+      "questionType": "essay",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "medium",
+      "taxonomyRationale": "依題幹主要作答任務歸入 mis-platforms-sharing-economy；跨域概念保留於 secondaryTags。",
+      "originQuestionTextSha256": "90c9009e8ed035c5698a8a7818e9664568eaf4e439b17356ed35ce8b87e642c7",
+      "pdfEvidence": {
+        "pdfSha256": "8fa51bffff2c955afedacc11f4dea89fac81a8079737ab893038b3628d71e50a",
+        "auditedQuestionsSha256": "c8d2b26126d745a89d996b8b692d3cfb4636f55be7b512f12d02610ecc9fee81",
+        "auditArtifact": ".work/im-mis-pdf-audit-106-110.md"
+      },
+      "subquestions": [
+        {
+          "label": "1",
+          "rubricId": "rubric-q-pp-im-mis-106-2-1",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "2",
+          "rubricId": "rubric-q-pp-im-mis-106-2-2",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        }
+      ],
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": [
+          "非官方申論參考解析",
+          "需以 rubric 自評，不可機械判分"
+        ]
+      }
+    },
+    {
+      "questionId": "q-pp-im-mis-106-3",
+      "paperId": "pp-im-mis-106",
+      "topicId": "im-mis-data-architecture",
+      "primarySubtopicId": "im-mis-data-architecture-oss-licensing",
+      "secondaryTags": [
+        "oss",
+        "licensing",
+        "sourcing"
+      ],
+      "questionType": "essay",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "medium",
+      "taxonomyRationale": "依題幹主要作答任務歸入 mis-infrastructure-open-source-licensing；跨域概念保留於 secondaryTags。",
+      "originQuestionTextSha256": "10fc9abebf3a7c7681f1790cf07636cf491b40a90a9cf7708bbd90fb86a1d7ad",
+      "pdfEvidence": {
+        "pdfSha256": "8fa51bffff2c955afedacc11f4dea89fac81a8079737ab893038b3628d71e50a",
+        "auditedQuestionsSha256": "c8d2b26126d745a89d996b8b692d3cfb4636f55be7b512f12d02610ecc9fee81",
+        "auditArtifact": ".work/im-mis-pdf-audit-106-110.md"
+      },
+      "subquestions": [
+        {
+          "label": "1",
+          "rubricId": "rubric-q-pp-im-mis-106-3-1",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "2",
+          "rubricId": "rubric-q-pp-im-mis-106-3-2",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "3",
+          "rubricId": "rubric-q-pp-im-mis-106-3-3",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "4",
+          "rubricId": "rubric-q-pp-im-mis-106-3-4",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        }
+      ],
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": [
+          "非官方申論參考解析",
+          "需以 rubric 自評，不可機械判分"
+        ]
+      }
+    },
+    {
+      "questionId": "q-pp-im-mis-106-4",
+      "paperId": "pp-im-mis-106",
+      "topicId": "im-mis-data-architecture",
+      "primarySubtopicId": "im-mis-data-architecture-relational-nosql",
+      "secondaryTags": [
+        "database",
+        "acid",
+        "scalability"
+      ],
+      "questionType": "essay",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "medium",
+      "taxonomyRationale": "依題幹主要作答任務歸入 mis-data-relational-nosql；跨域概念保留於 secondaryTags。",
+      "originQuestionTextSha256": "4ac26a346a1268dc6aaecea73ebff64464f1036a0c8687ed5869932b2c4aac9a",
+      "pdfEvidence": {
+        "pdfSha256": "8fa51bffff2c955afedacc11f4dea89fac81a8079737ab893038b3628d71e50a",
+        "auditedQuestionsSha256": "c8d2b26126d745a89d996b8b692d3cfb4636f55be7b512f12d02610ecc9fee81",
+        "auditArtifact": ".work/im-mis-pdf-audit-106-110.md"
+      },
+      "subquestions": [
+        {
+          "label": "1",
+          "rubricId": "rubric-q-pp-im-mis-106-4-1",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "2",
+          "rubricId": "rubric-q-pp-im-mis-106-4-2",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "3",
+          "rubricId": "rubric-q-pp-im-mis-106-4-3",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        }
+      ],
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": [
+          "非官方申論參考解析",
+          "需以 rubric 自評，不可機械判分"
+        ]
+      }
+    },
+    {
+      "questionId": "q-pp-im-mis-107-1",
+      "paperId": "pp-im-mis-107",
+      "topicId": "im-mis-enterprise",
+      "primarySubtopicId": "im-mis-enterprise-knowledge-management",
+      "secondaryTags": [
+        "codification",
+        "personalization"
+      ],
+      "questionType": "essay",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "medium",
+      "taxonomyRationale": "依題幹主要作答任務歸入 mis-knowledge-management-strategies；跨域概念保留於 secondaryTags。",
+      "originQuestionTextSha256": "2828e2631301f15489c69d358408dad1ecefc9c5c6a99fef8760276108f4742a",
+      "pdfEvidence": {
+        "pdfSha256": "71d93b960e960b7af2e02ae5cf38384b86950bcf5b0b1f0946e35952f8486932",
+        "auditedQuestionsSha256": "99adcd9d8ca2d773b0400df15fec8ac37ee7241a1352a006bf4189e55d768248",
+        "auditArtifact": ".work/im-mis-pdf-audit-106-110.md"
+      },
+      "subquestions": [],
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": [
+          "非官方申論參考解析",
+          "需以 rubric 自評，不可機械判分"
+        ]
+      }
+    },
+    {
+      "questionId": "q-pp-im-mis-107-2",
+      "paperId": "pp-im-mis-107",
+      "topicId": "im-mis-strategy",
+      "primarySubtopicId": "im-mis-strategy-agility-environment",
+      "secondaryTags": [
+        "munificence",
+        "dynamism"
+      ],
+      "questionType": "essay",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "medium",
+      "taxonomyRationale": "依題幹主要作答任務歸入 mis-strategy-environmental-uncertainty；跨域概念保留於 secondaryTags。",
+      "originQuestionTextSha256": "aa9dfb9f9149f1a85f26edb15a3d0b6ad13a6db4e81f61120ba277b4433a0620",
+      "pdfEvidence": {
+        "pdfSha256": "71d93b960e960b7af2e02ae5cf38384b86950bcf5b0b1f0946e35952f8486932",
+        "auditedQuestionsSha256": "99adcd9d8ca2d773b0400df15fec8ac37ee7241a1352a006bf4189e55d768248",
+        "auditArtifact": ".work/im-mis-pdf-audit-106-110.md"
+      },
+      "subquestions": [
+        {
+          "label": "1",
+          "rubricId": "rubric-q-pp-im-mis-107-2-1",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "2",
+          "rubricId": "rubric-q-pp-im-mis-107-2-2",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        }
+      ],
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": [
+          "非官方申論參考解析",
+          "需以 rubric 自評，不可機械判分"
+        ]
+      }
+    },
+    {
+      "questionId": "q-pp-im-mis-107-3",
+      "paperId": "pp-im-mis-107",
+      "topicId": "im-mis-development",
+      "primarySubtopicId": "im-mis-development-acquisition-estimation",
+      "secondaryTags": [
+        "build-buy-outsource",
+        "staffing"
+      ],
+      "questionType": "essay",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "medium",
+      "taxonomyRationale": "依題幹主要作答任務歸入 mis-systems-acquisition-sourcing；跨域概念保留於 secondaryTags。",
+      "originQuestionTextSha256": "c74bd2a9e5ed18d3d2d582951af36031c5d1465f152763fb9209b51e263e2f3a",
+      "pdfEvidence": {
+        "pdfSha256": "71d93b960e960b7af2e02ae5cf38384b86950bcf5b0b1f0946e35952f8486932",
+        "auditedQuestionsSha256": "99adcd9d8ca2d773b0400df15fec8ac37ee7241a1352a006bf4189e55d768248",
+        "auditArtifact": ".work/im-mis-pdf-audit-106-110.md"
+      },
+      "subquestions": [],
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": [
+          "非官方申論參考解析",
+          "需以 rubric 自評，不可機械判分"
+        ]
+      }
+    },
+    {
+      "questionId": "q-pp-im-mis-107-4",
+      "paperId": "pp-im-mis-107",
+      "topicId": "im-mis-data-architecture",
+      "primarySubtopicId": "im-mis-data-architecture-sql-schema",
+      "secondaryTags": [
+        "sql",
+        "join",
+        "aggregation"
+      ],
+      "questionType": "essay",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "medium",
+      "taxonomyRationale": "依題幹主要作答任務歸入 mis-data-sql-schema；跨域概念保留於 secondaryTags。",
+      "originQuestionTextSha256": "3632fbdacc31fc2a9e0d6f4574b8d1608e237fe42e81d0760304f60d908c004b",
+      "pdfEvidence": {
+        "pdfSha256": "71d93b960e960b7af2e02ae5cf38384b86950bcf5b0b1f0946e35952f8486932",
+        "auditedQuestionsSha256": "99adcd9d8ca2d773b0400df15fec8ac37ee7241a1352a006bf4189e55d768248",
+        "auditArtifact": ".work/im-mis-pdf-audit-106-110.md"
+      },
+      "subquestions": [
+        {
+          "label": "1",
+          "rubricId": "rubric-q-pp-im-mis-107-4-1",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "2",
+          "rubricId": "rubric-q-pp-im-mis-107-4-2",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "3",
+          "rubricId": "rubric-q-pp-im-mis-107-4-3",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        }
+      ],
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": [
+          "非官方申論參考解析",
+          "需以 rubric 自評，不可機械判分"
+        ]
+      }
+    },
+    {
+      "questionId": "q-pp-im-mis-108-1",
+      "paperId": "pp-im-mis-108",
+      "topicId": "im-mis-strategy",
+      "primarySubtopicId": "im-mis-strategy-organization-economics",
+      "secondaryTags": [
+        "transaction-cost",
+        "agency-theory"
+      ],
+      "questionType": "essay",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "medium",
+      "taxonomyRationale": "依題幹主要作答任務歸入 mis-strategy-it-organization-size；跨域概念保留於 secondaryTags。",
+      "originQuestionTextSha256": "361dd8aa342b044d2a3de3b439548dcb974ff89b87fc392aca5a9573ef88a71a",
+      "pdfEvidence": {
+        "pdfSha256": "d2c616cbfc4f235a305fdf40b5038770f0395e0fac071b822914a2d18b9adb00",
+        "auditedQuestionsSha256": "0a8256525d62f9b89f04938ae0af76bc882215cc7ed9e8ab08cd51d7c5620144",
+        "auditArtifact": ".work/im-mis-pdf-audit-106-110.md"
+      },
+      "subquestions": [],
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": [
+          "非官方申論參考解析",
+          "需以 rubric 自評，不可機械判分"
+        ]
+      }
+    },
+    {
+      "questionId": "q-pp-im-mis-108-2",
+      "paperId": "pp-im-mis-108",
+      "topicId": "im-mis-data-ai",
+      "primarySubtopicId": "im-mis-data-ai-data-lifecycle",
+      "secondaryTags": [
+        "data-quality",
+        "privacy",
+        "decision-rights"
+      ],
+      "questionType": "essay",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "medium",
+      "taxonomyRationale": "依題幹主要作答任務歸入 mis-data-lifecycle-governance；跨域概念保留於 secondaryTags。",
+      "originQuestionTextSha256": "0fb37befde4b87b22a7e65d062647f3297760f557840c82c9efc91ba5b20e7b2",
+      "pdfEvidence": {
+        "pdfSha256": "d2c616cbfc4f235a305fdf40b5038770f0395e0fac071b822914a2d18b9adb00",
+        "auditedQuestionsSha256": "0a8256525d62f9b89f04938ae0af76bc882215cc7ed9e8ab08cd51d7c5620144",
+        "auditArtifact": ".work/im-mis-pdf-audit-106-110.md"
+      },
+      "subquestions": [
+        {
+          "label": "a",
+          "rubricId": "rubric-q-pp-im-mis-108-2-a",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "b",
+          "rubricId": "rubric-q-pp-im-mis-108-2-b",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        }
+      ],
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": [
+          "非官方申論參考解析",
+          "需以 rubric 自評，不可機械判分"
+        ]
+      }
+    },
+    {
+      "questionId": "q-pp-im-mis-108-3",
+      "paperId": "pp-im-mis-108",
+      "topicId": "im-mis-data-ai",
+      "primarySubtopicId": "im-mis-data-ai-model-evaluation-fairness",
+      "secondaryTags": [
+        "metrics",
+        "validation",
+        "class-imbalance"
+      ],
+      "questionType": "essay",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "medium",
+      "taxonomyRationale": "依題幹主要作答任務歸入 mis-ai-model-evaluation；跨域概念保留於 secondaryTags。",
+      "originQuestionTextSha256": "117e9995188ac769ced4df18993d8e66b1e3951f329ea2af01583a5bef3119b6",
+      "pdfEvidence": {
+        "pdfSha256": "d2c616cbfc4f235a305fdf40b5038770f0395e0fac071b822914a2d18b9adb00",
+        "auditedQuestionsSha256": "0a8256525d62f9b89f04938ae0af76bc882215cc7ed9e8ab08cd51d7c5620144",
+        "auditArtifact": ".work/im-mis-pdf-audit-106-110.md"
+      },
+      "subquestions": [
+        {
+          "label": "a",
+          "rubricId": "rubric-q-pp-im-mis-108-3-a",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "b",
+          "rubricId": "rubric-q-pp-im-mis-108-3-b",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "c",
+          "rubricId": "rubric-q-pp-im-mis-108-3-c",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "d",
+          "rubricId": "rubric-q-pp-im-mis-108-3-d",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        }
+      ],
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": [
+          "非官方申論參考解析",
+          "需以 rubric 自評，不可機械判分"
+        ]
+      }
+    },
+    {
+      "questionId": "q-pp-im-mis-108-4",
+      "paperId": "pp-im-mis-108",
+      "topicId": "im-mis-data-ai",
+      "primarySubtopicId": "im-mis-data-ai-model-evaluation-fairness",
+      "secondaryTags": [
+        "responsible-ai",
+        "classification"
+      ],
+      "questionType": "essay",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "medium",
+      "taxonomyRationale": "依題幹主要作答任務歸入 mis-ai-fairness；跨域概念保留於 secondaryTags。",
+      "originQuestionTextSha256": "f23e0f5106e1e0aa2e3a366d60b91a89c3e9b43d8005590bde5a0e417732f6bf",
+      "pdfEvidence": {
+        "pdfSha256": "d2c616cbfc4f235a305fdf40b5038770f0395e0fac071b822914a2d18b9adb00",
+        "auditedQuestionsSha256": "0a8256525d62f9b89f04938ae0af76bc882215cc7ed9e8ab08cd51d7c5620144",
+        "auditArtifact": ".work/im-mis-pdf-audit-106-110.md"
+      },
+      "subquestions": [
+        {
+          "label": "a",
+          "rubricId": "rubric-q-pp-im-mis-108-4-a",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "b",
+          "rubricId": "rubric-q-pp-im-mis-108-4-b",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "c",
+          "rubricId": "rubric-q-pp-im-mis-108-4-c",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "d",
+          "rubricId": "rubric-q-pp-im-mis-108-4-d",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "e",
+          "rubricId": "rubric-q-pp-im-mis-108-4-e",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        }
+      ],
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": [
+          "非官方申論參考解析",
+          "需以 rubric 自評，不可機械判分"
+        ]
+      }
+    },
+    {
+      "questionId": "q-pp-im-mis-109-1",
+      "paperId": "pp-im-mis-109",
+      "topicId": "im-mis-strategy",
+      "primarySubtopicId": "im-mis-strategy-organization-economics",
+      "secondaryTags": [
+        "cobb-douglas",
+        "tps",
+        "big-data"
+      ],
+      "questionType": "essay",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "medium",
+      "taxonomyRationale": "依題幹主要作答任務歸入 mis-strategy-it-productivity；跨域概念保留於 secondaryTags。",
+      "originQuestionTextSha256": "665a8644f4f0ab4a611e7b2dd700569d17620e202ffcaf99c3bf7be161e28c03",
+      "pdfEvidence": {
+        "pdfSha256": "152fb126bf833afc11f139580911f08997d3991b81acd7c3013da6d9103a5f5d",
+        "auditedQuestionsSha256": "35d4eacb2e69906d7d2f563a1b87fb76b50de1445cf61e096fa928d0a71b9d51",
+        "auditArtifact": ".work/im-mis-pdf-audit-106-110.md"
+      },
+      "subquestions": [
+        {
+          "label": "a",
+          "rubricId": "rubric-q-pp-im-mis-109-1-a",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "b",
+          "rubricId": "rubric-q-pp-im-mis-109-1-b",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        }
+      ],
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": [
+          "非官方申論參考解析",
+          "需以 rubric 自評，不可機械判分"
+        ]
+      }
+    },
+    {
+      "questionId": "q-pp-im-mis-109-2",
+      "paperId": "pp-im-mis-109",
+      "topicId": "im-mis-strategy",
+      "primarySubtopicId": "im-mis-strategy-investment-value",
+      "secondaryTags": [
+        "it-investment",
+        "organizational-change"
+      ],
+      "questionType": "essay",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "medium",
+      "taxonomyRationale": "依題幹主要作答任務歸入 mis-strategy-complementary-assets；跨域概念保留於 secondaryTags。",
+      "originQuestionTextSha256": "c8c9851307595eb19754375539e73f320b5b2c0d6e0782c4a24a87a4ef49aa94",
+      "pdfEvidence": {
+        "pdfSha256": "152fb126bf833afc11f139580911f08997d3991b81acd7c3013da6d9103a5f5d",
+        "auditedQuestionsSha256": "35d4eacb2e69906d7d2f563a1b87fb76b50de1445cf61e096fa928d0a71b9d51",
+        "auditArtifact": ".work/im-mis-pdf-audit-106-110.md"
+      },
+      "subquestions": [
+        {
+          "label": "a",
+          "rubricId": "rubric-q-pp-im-mis-109-2-a",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "b",
+          "rubricId": "rubric-q-pp-im-mis-109-2-b",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "c",
+          "rubricId": "rubric-q-pp-im-mis-109-2-c",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        }
+      ],
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": [
+          "非官方申論參考解析",
+          "需以 rubric 自評，不可機械判分"
+        ]
+      }
+    },
+    {
+      "questionId": "q-pp-im-mis-109-3",
+      "paperId": "pp-im-mis-109",
+      "topicId": "im-mis-platforms",
+      "primarySubtopicId": "im-mis-platforms-multisided-pricing",
+      "secondaryTags": [
+        "network-effects",
+        "food-delivery"
+      ],
+      "questionType": "essay",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "medium",
+      "taxonomyRationale": "依題幹主要作答任務歸入 mis-platforms-multisided-cross-subsidy；跨域概念保留於 secondaryTags。",
+      "originQuestionTextSha256": "9df1a60aaedd0b9c0e2f0484e26325bc3682058195e1505bced2ffe5b47951f0",
+      "pdfEvidence": {
+        "pdfSha256": "152fb126bf833afc11f139580911f08997d3991b81acd7c3013da6d9103a5f5d",
+        "auditedQuestionsSha256": "35d4eacb2e69906d7d2f563a1b87fb76b50de1445cf61e096fa928d0a71b9d51",
+        "auditArtifact": ".work/im-mis-pdf-audit-106-110.md"
+      },
+      "subquestions": [],
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": [
+          "非官方申論參考解析",
+          "需以 rubric 自評，不可機械判分"
+        ]
+      }
+    },
+    {
+      "questionId": "q-pp-im-mis-109-4",
+      "paperId": "pp-im-mis-109",
+      "topicId": "im-mis-data-ai",
+      "primarySubtopicId": "im-mis-data-ai-analytics-forecasting",
+      "secondaryTags": [
+        "latent-demand",
+        "feasibility",
+        "acceptability"
+      ],
+      "questionType": "essay",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "medium",
+      "taxonomyRationale": "依題幹主要作答任務歸入 mis-ai-demand-forecasting；跨域概念保留於 secondaryTags。",
+      "originQuestionTextSha256": "562db5ffc4d40875b79b82e4b466a9e2c3d4ad90dd754dba9624e7469c778580",
+      "pdfEvidence": {
+        "pdfSha256": "152fb126bf833afc11f139580911f08997d3991b81acd7c3013da6d9103a5f5d",
+        "auditedQuestionsSha256": "35d4eacb2e69906d7d2f563a1b87fb76b50de1445cf61e096fa928d0a71b9d51",
+        "auditArtifact": ".work/im-mis-pdf-audit-106-110.md"
+      },
+      "subquestions": [],
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": [
+          "非官方申論參考解析",
+          "需以 rubric 自評，不可機械判分"
+        ]
+      }
+    },
+    {
+      "questionId": "q-pp-im-mis-110-1",
+      "paperId": "pp-im-mis-110",
+      "topicId": "im-mis-platforms",
+      "primarySubtopicId": "im-mis-platforms-sharing-economy",
+      "secondaryTags": [
+        "sharing-platform",
+        "monetization"
+      ],
+      "questionType": "essay",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "medium",
+      "taxonomyRationale": "依題幹主要作答任務歸入 mis-platforms-business-model-transition；跨域概念保留於 secondaryTags。",
+      "originQuestionTextSha256": "d8151f04a4994f7c82e032848fbac5a070627be38fe7ad29fd481d5c0f04a9c4",
+      "pdfEvidence": {
+        "pdfSha256": "79d0ab55bb3696ef88fb136ce2cb588a168d3c556b5ea397a1b97b19191e95de",
+        "auditedQuestionsSha256": "9df14c045c94ae4103e52c327ed148e8cd508a15e9a42fda73a9ec6905bb196a",
+        "auditArtifact": ".work/im-mis-pdf-audit-106-110.md"
+      },
+      "subquestions": [
+        {
+          "label": "a",
+          "rubricId": "rubric-q-pp-im-mis-110-1-a",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "b",
+          "rubricId": "rubric-q-pp-im-mis-110-1-b",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        }
+      ],
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": [
+          "非官方申論參考解析",
+          "需以 rubric 自評，不可機械判分"
+        ]
+      }
+    },
+    {
+      "questionId": "q-pp-im-mis-110-2",
+      "paperId": "pp-im-mis-110",
+      "topicId": "im-mis-platforms",
+      "primarySubtopicId": "im-mis-platforms-digital-markets-commerce",
+      "secondaryTags": [
+        "information-asymmetry",
+        "switching-cost"
+      ],
+      "questionType": "essay",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "medium",
+      "taxonomyRationale": "依題幹主要作答任務歸入 mis-digital-market-frictions；跨域概念保留於 secondaryTags。",
+      "originQuestionTextSha256": "c57cc1efcea266d4b5252d114a3172a6ee2d519b8d7ba86199598683254fde24",
+      "pdfEvidence": {
+        "pdfSha256": "79d0ab55bb3696ef88fb136ce2cb588a168d3c556b5ea397a1b97b19191e95de",
+        "auditedQuestionsSha256": "9df14c045c94ae4103e52c327ed148e8cd508a15e9a42fda73a9ec6905bb196a",
+        "auditArtifact": ".work/im-mis-pdf-audit-106-110.md"
+      },
+      "subquestions": [
+        {
+          "label": "a",
+          "rubricId": "rubric-q-pp-im-mis-110-2-a",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "b",
+          "rubricId": "rubric-q-pp-im-mis-110-2-b",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        }
+      ],
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": [
+          "非官方申論參考解析",
+          "需以 rubric 自評，不可機械判分"
+        ]
+      }
+    },
+    {
+      "questionId": "q-pp-im-mis-110-3",
+      "paperId": "pp-im-mis-110",
+      "topicId": "im-mis-development",
+      "primarySubtopicId": "im-mis-development-agile-delivery",
+      "secondaryTags": [
+        "roles",
+        "artifacts",
+        "burndown"
+      ],
+      "questionType": "essay",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "medium",
+      "taxonomyRationale": "依題幹主要作答任務歸入 mis-development-scrum；跨域概念保留於 secondaryTags。",
+      "originQuestionTextSha256": "8cd8fe7cb2367bb56d0d370aeb344dd3d8d95d33bcbf13eaa1b5b43f47e4bdd3",
+      "pdfEvidence": {
+        "pdfSha256": "79d0ab55bb3696ef88fb136ce2cb588a168d3c556b5ea397a1b97b19191e95de",
+        "auditedQuestionsSha256": "9df14c045c94ae4103e52c327ed148e8cd508a15e9a42fda73a9ec6905bb196a",
+        "auditArtifact": ".work/im-mis-pdf-audit-106-110.md"
+      },
+      "subquestions": [
+        {
+          "label": "a",
+          "rubricId": "rubric-q-pp-im-mis-110-3-a",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "b",
+          "rubricId": "rubric-q-pp-im-mis-110-3-b",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "c",
+          "rubricId": "rubric-q-pp-im-mis-110-3-c",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "d",
+          "rubricId": "rubric-q-pp-im-mis-110-3-d",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        }
+      ],
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": [
+          "非官方申論參考解析",
+          "需以 rubric 自評，不可機械判分"
+        ]
+      }
+    },
+    {
+      "questionId": "q-pp-im-mis-110-4",
+      "paperId": "pp-im-mis-110",
+      "topicId": "im-mis-data-ai",
+      "primarySubtopicId": "im-mis-data-ai-analytics-forecasting",
+      "secondaryTags": [
+        "data-pipeline",
+        "deployment",
+        "use-case"
+      ],
+      "questionType": "essay",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "medium",
+      "taxonomyRationale": "依題幹主要作答任務歸入 mis-ai-traffic-prediction-system；跨域概念保留於 secondaryTags。",
+      "originQuestionTextSha256": "7f89758981cb709fa9c6ea815aee9bb3a732572ad7d62cd3ed6bd26cade85ae6",
+      "pdfEvidence": {
+        "pdfSha256": "79d0ab55bb3696ef88fb136ce2cb588a168d3c556b5ea397a1b97b19191e95de",
+        "auditedQuestionsSha256": "9df14c045c94ae4103e52c327ed148e8cd508a15e9a42fda73a9ec6905bb196a",
+        "auditArtifact": ".work/im-mis-pdf-audit-106-110.md"
+      },
+      "subquestions": [
+        {
+          "label": "a",
+          "rubricId": "rubric-q-pp-im-mis-110-4-a",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "b",
+          "rubricId": "rubric-q-pp-im-mis-110-4-b",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "c",
+          "rubricId": "rubric-q-pp-im-mis-110-4-c",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "d",
+          "rubricId": "rubric-q-pp-im-mis-110-4-d",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "e",
+          "rubricId": "rubric-q-pp-im-mis-110-4-e",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        }
+      ],
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": [
+          "非官方申論參考解析",
+          "需以 rubric 自評，不可機械判分"
+        ]
+      }
+    },
+    {
+      "questionId": "q-pp-im-mis-111-1",
+      "paperId": "pp-im-mis-111",
+      "topicId": "im-mis-strategy",
+      "primarySubtopicId": "im-mis-strategy-investment-value",
+      "secondaryTags": [
+        "capital-budgeting",
+        "benefit-risk"
+      ],
+      "questionType": "essay",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "medium",
+      "taxonomyRationale": "依題幹主要作答任務歸入 mis-strategy-it-portfolio；跨域概念保留於 secondaryTags。",
+      "originQuestionTextSha256": "6bb47976e9c114e0a97de0db12d8e2522ab80024ce7c6b626e850f8e035bc8df",
+      "pdfEvidence": {
+        "pdfSha256": "cd5a0902bab9bf5020f1917eb9b14d1673e84edc13cf189eab7004205b187640",
+        "auditedQuestionsSha256": "65c2a3044878f29fdd0d8780a2b2bd2910cf3a8964a98ae480900f85adbdf7d7",
+        "auditArtifact": ".work/im-mis-pdf-audit-111-115.md"
+      },
+      "subquestions": [
+        {
+          "label": "a",
+          "rubricId": "rubric-q-pp-im-mis-111-1-a",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "b",
+          "rubricId": "rubric-q-pp-im-mis-111-1-b",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "c",
+          "rubricId": "rubric-q-pp-im-mis-111-1-c",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        }
+      ],
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": [
+          "非官方申論參考解析",
+          "需以 rubric 自評，不可機械判分"
+        ]
+      }
+    },
+    {
+      "questionId": "q-pp-im-mis-111-2",
+      "paperId": "pp-im-mis-111",
+      "topicId": "im-mis-governance",
+      "primarySubtopicId": "im-mis-governance-privacy-security",
+      "secondaryTags": [
+        "privacy",
+        "smart-home",
+        "risk-controls"
+      ],
+      "questionType": "essay",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "medium",
+      "taxonomyRationale": "依題幹主要作答任務歸入 mis-governance-iot-privacy；跨域概念保留於 secondaryTags。",
+      "originQuestionTextSha256": "5e13c210d366b41901e3c1e7b599d1f54a23786ed5e9ec67c1c6dceacdbe85d5",
+      "pdfEvidence": {
+        "pdfSha256": "cd5a0902bab9bf5020f1917eb9b14d1673e84edc13cf189eab7004205b187640",
+        "auditedQuestionsSha256": "65c2a3044878f29fdd0d8780a2b2bd2910cf3a8964a98ae480900f85adbdf7d7",
+        "auditArtifact": ".work/im-mis-pdf-audit-111-115.md"
+      },
+      "subquestions": [
+        {
+          "label": "a",
+          "rubricId": "rubric-q-pp-im-mis-111-2-a",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "b",
+          "rubricId": "rubric-q-pp-im-mis-111-2-b",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        }
+      ],
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": [
+          "非官方申論參考解析",
+          "需以 rubric 自評，不可機械判分"
+        ]
+      }
+    },
+    {
+      "questionId": "q-pp-im-mis-111-3",
+      "paperId": "pp-im-mis-111",
+      "topicId": "im-mis-development",
+      "primarySubtopicId": "im-mis-development-testing-quality",
+      "secondaryTags": [
+        "unit-test",
+        "integration-test",
+        "uat",
+        "usability"
+      ],
+      "questionType": "essay",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "medium",
+      "taxonomyRationale": "依題幹主要作答任務歸入 mis-development-testing；跨域概念保留於 secondaryTags。",
+      "originQuestionTextSha256": "d652c50ad7d9e0f2a2676e44294a2394bda08104a2fe76713b991e24300ef3ba",
+      "pdfEvidence": {
+        "pdfSha256": "cd5a0902bab9bf5020f1917eb9b14d1673e84edc13cf189eab7004205b187640",
+        "auditedQuestionsSha256": "65c2a3044878f29fdd0d8780a2b2bd2910cf3a8964a98ae480900f85adbdf7d7",
+        "auditArtifact": ".work/im-mis-pdf-audit-111-115.md"
+      },
+      "subquestions": [],
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": [
+          "非官方申論參考解析",
+          "需以 rubric 自評，不可機械判分"
+        ]
+      }
+    },
+    {
+      "questionId": "q-pp-im-mis-111-4",
+      "paperId": "pp-im-mis-111",
+      "topicId": "im-mis-development",
+      "primarySubtopicId": "im-mis-development-requirements-ux",
+      "secondaryTags": [
+        "user-centered-design",
+        "ui-heuristics"
+      ],
+      "questionType": "essay",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "medium",
+      "taxonomyRationale": "依題幹主要作答任務歸入 mis-development-ucd-ux；跨域概念保留於 secondaryTags。",
+      "originQuestionTextSha256": "a3510a1a74d2db22cca60483b4707249bd8ad2b4554b9a8cd366c7a1fd0357e5",
+      "pdfEvidence": {
+        "pdfSha256": "cd5a0902bab9bf5020f1917eb9b14d1673e84edc13cf189eab7004205b187640",
+        "auditedQuestionsSha256": "65c2a3044878f29fdd0d8780a2b2bd2910cf3a8964a98ae480900f85adbdf7d7",
+        "auditArtifact": ".work/im-mis-pdf-audit-111-115.md"
+      },
+      "subquestions": [
+        {
+          "label": "a",
+          "rubricId": "rubric-q-pp-im-mis-111-4-a",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "b",
+          "rubricId": "rubric-q-pp-im-mis-111-4-b",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        }
+      ],
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": [
+          "非官方申論參考解析",
+          "需以 rubric 自評，不可機械判分"
+        ]
+      }
+    },
+    {
+      "questionId": "q-pp-im-mis-112-1",
+      "paperId": "pp-im-mis-112",
+      "topicId": "im-mis-enterprise",
+      "primarySubtopicId": "im-mis-enterprise-supply-chain",
+      "secondaryTags": [
+        "push-pull",
+        "information-sharing"
+      ],
+      "questionType": "essay",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "medium",
+      "taxonomyRationale": "依題幹主要作答任務歸入 mis-enterprise-supply-chain；跨域概念保留於 secondaryTags。",
+      "originQuestionTextSha256": "69d15a177b656ce28f9e253d7f5a36626b30eab62fc9eddb95d8272c83ca76cd",
+      "pdfEvidence": {
+        "pdfSha256": "9e406fa3ff0fdfecf830eb3b8fb4daee25d6fa31369e76c8c390354867120fe3",
+        "auditedQuestionsSha256": "fa0057b5c43abb895122dc0a6faf55285eef61de986617b94e905d40ac803ce6",
+        "auditArtifact": ".work/im-mis-pdf-audit-111-115.md"
+      },
+      "subquestions": [
+        {
+          "label": "a",
+          "rubricId": "rubric-q-pp-im-mis-112-1-a",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "b",
+          "rubricId": "rubric-q-pp-im-mis-112-1-b",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "c",
+          "rubricId": "rubric-q-pp-im-mis-112-1-c",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        }
+      ],
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": [
+          "非官方申論參考解析",
+          "需以 rubric 自評，不可機械判分"
+        ]
+      }
+    },
+    {
+      "questionId": "q-pp-im-mis-112-2",
+      "paperId": "pp-im-mis-112",
+      "topicId": "im-mis-strategy",
+      "primarySubtopicId": "im-mis-strategy-investment-value",
+      "secondaryTags": [
+        "benefits",
+        "market-risk",
+        "competitive-risk"
+      ],
+      "questionType": "essay",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "medium",
+      "taxonomyRationale": "依題幹主要作答任務歸入 mis-strategy-project-risk；跨域概念保留於 secondaryTags。",
+      "originQuestionTextSha256": "848cb4ef1eadc6f34148d7bcff1b98fd06131c7eb5310ebacb0bfb9669b8c745",
+      "pdfEvidence": {
+        "pdfSha256": "9e406fa3ff0fdfecf830eb3b8fb4daee25d6fa31369e76c8c390354867120fe3",
+        "auditedQuestionsSha256": "fa0057b5c43abb895122dc0a6faf55285eef61de986617b94e905d40ac803ce6",
+        "auditArtifact": ".work/im-mis-pdf-audit-111-115.md"
+      },
+      "subquestions": [
+        {
+          "label": "a",
+          "rubricId": "rubric-q-pp-im-mis-112-2-a",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "b",
+          "rubricId": "rubric-q-pp-im-mis-112-2-b",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "c",
+          "rubricId": "rubric-q-pp-im-mis-112-2-c",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        }
+      ],
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": [
+          "非官方申論參考解析",
+          "需以 rubric 自評，不可機械判分"
+        ]
+      }
+    },
+    {
+      "questionId": "q-pp-im-mis-112-3",
+      "paperId": "pp-im-mis-112",
+      "topicId": "im-mis-data-ai",
+      "primarySubtopicId": "im-mis-data-ai-ai-operations-governance",
+      "secondaryTags": [
+        "monitoring",
+        "drift",
+        "retraining"
+      ],
+      "questionType": "essay",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "medium",
+      "taxonomyRationale": "依題幹主要作答任務歸入 mis-ai-model-maintenance；跨域概念保留於 secondaryTags。",
+      "originQuestionTextSha256": "2ae020809ec755d8c85875b857f4f45a7a58cf188f9d1fb0746680e4359bdc3c",
+      "pdfEvidence": {
+        "pdfSha256": "9e406fa3ff0fdfecf830eb3b8fb4daee25d6fa31369e76c8c390354867120fe3",
+        "auditedQuestionsSha256": "fa0057b5c43abb895122dc0a6faf55285eef61de986617b94e905d40ac803ce6",
+        "auditArtifact": ".work/im-mis-pdf-audit-111-115.md"
+      },
+      "subquestions": [],
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": [
+          "非官方申論參考解析",
+          "需以 rubric 自評，不可機械判分"
+        ]
+      }
+    },
+    {
+      "questionId": "q-pp-im-mis-112-4",
+      "paperId": "pp-im-mis-112",
+      "topicId": "im-mis-development",
+      "primarySubtopicId": "im-mis-development-acquisition-estimation",
+      "secondaryTags": [
+        "function-point",
+        "cocomo",
+        "planning-poker"
+      ],
+      "questionType": "essay",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "medium",
+      "taxonomyRationale": "依題幹主要作答任務歸入 mis-development-cost-estimation；跨域概念保留於 secondaryTags。",
+      "originQuestionTextSha256": "f771dbc295e2de34d8baacbd1d29c72ef56986fa6ee37771348e34d2fc6317b8",
+      "pdfEvidence": {
+        "pdfSha256": "9e406fa3ff0fdfecf830eb3b8fb4daee25d6fa31369e76c8c390354867120fe3",
+        "auditedQuestionsSha256": "fa0057b5c43abb895122dc0a6faf55285eef61de986617b94e905d40ac803ce6",
+        "auditArtifact": ".work/im-mis-pdf-audit-111-115.md"
+      },
+      "subquestions": [
+        {
+          "label": "a",
+          "rubricId": "rubric-q-pp-im-mis-112-4-a",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "b",
+          "rubricId": "rubric-q-pp-im-mis-112-4-b",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        }
+      ],
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": [
+          "非官方申論參考解析",
+          "需以 rubric 自評，不可機械判分"
+        ]
+      }
+    },
+    {
+      "questionId": "q-pp-im-mis-113-1",
+      "paperId": "pp-im-mis-113",
+      "topicId": "im-mis-data-ai",
+      "primarySubtopicId": "im-mis-data-ai-analytics-forecasting",
+      "secondaryTags": [
+        "graph-analysis",
+        "evaluation-metrics"
+      ],
+      "questionType": "essay",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "medium",
+      "taxonomyRationale": "依題幹主要作答任務歸入 mis-analytics-community-detection；跨域概念保留於 secondaryTags。",
+      "originQuestionTextSha256": "ed3c721856f392079c41fd5fc31b08b298602b1dde981d3d747dc07cd0a08746",
+      "pdfEvidence": {
+        "pdfSha256": "0ac2d9a76e9a07fe053cb365a423f0e1a89ff641f1b23764e0e2191437331cd5",
+        "auditedQuestionsSha256": "3d1900349dbb28f0c474ca57f6f41ae0d3ddc4287478a6b3885f7e8d4bd0dabb",
+        "auditArtifact": ".work/im-mis-pdf-audit-111-115.md"
+      },
+      "subquestions": [
+        {
+          "label": "a",
+          "rubricId": "rubric-q-pp-im-mis-113-1-a",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "b",
+          "rubricId": "rubric-q-pp-im-mis-113-1-b",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        }
+      ],
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": [
+          "非官方申論參考解析",
+          "需以 rubric 自評，不可機械判分"
+        ]
+      }
+    },
+    {
+      "questionId": "q-pp-im-mis-113-2",
+      "paperId": "pp-im-mis-113",
+      "topicId": "im-mis-strategy",
+      "primarySubtopicId": "im-mis-strategy-agility-environment",
+      "secondaryTags": [
+        "erp",
+        "custom-systems",
+        "adaptation"
+      ],
+      "questionType": "essay",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "medium",
+      "taxonomyRationale": "依題幹主要作答任務歸入 mis-strategy-enterprise-agility；跨域概念保留於 secondaryTags。",
+      "originQuestionTextSha256": "883742602095aacad41467ef26af03de2c84c6a5a28a1f33c05f99bc1bad26d3",
+      "pdfEvidence": {
+        "pdfSha256": "0ac2d9a76e9a07fe053cb365a423f0e1a89ff641f1b23764e0e2191437331cd5",
+        "auditedQuestionsSha256": "3d1900349dbb28f0c474ca57f6f41ae0d3ddc4287478a6b3885f7e8d4bd0dabb",
+        "auditArtifact": ".work/im-mis-pdf-audit-111-115.md"
+      },
+      "subquestions": [
+        {
+          "label": "a",
+          "rubricId": "rubric-q-pp-im-mis-113-2-a",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "b",
+          "rubricId": "rubric-q-pp-im-mis-113-2-b",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "c",
+          "rubricId": "rubric-q-pp-im-mis-113-2-c",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        }
+      ],
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": [
+          "非官方申論參考解析",
+          "需以 rubric 自評，不可機械判分"
+        ]
+      }
+    },
+    {
+      "questionId": "q-pp-im-mis-113-3",
+      "paperId": "pp-im-mis-113",
+      "topicId": "im-mis-data-ai",
+      "primarySubtopicId": "im-mis-data-ai-ai-operations-governance",
+      "secondaryTags": [
+        "service-metrics",
+        "privacy",
+        "human-handoff"
+      ],
+      "questionType": "essay",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "medium",
+      "taxonomyRationale": "依題幹主要作答任務歸入 mis-ai-conversational-banking；跨域概念保留於 secondaryTags。",
+      "originQuestionTextSha256": "6de575c8f479e8a77fa2aaa189a6e29db707da2585d7a27fb5b0da5b5898d48e",
+      "pdfEvidence": {
+        "pdfSha256": "0ac2d9a76e9a07fe053cb365a423f0e1a89ff641f1b23764e0e2191437331cd5",
+        "auditedQuestionsSha256": "3d1900349dbb28f0c474ca57f6f41ae0d3ddc4287478a6b3885f7e8d4bd0dabb",
+        "auditArtifact": ".work/im-mis-pdf-audit-111-115.md"
+      },
+      "subquestions": [
+        {
+          "label": "a",
+          "rubricId": "rubric-q-pp-im-mis-113-3-a",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "b",
+          "rubricId": "rubric-q-pp-im-mis-113-3-b",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        }
+      ],
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": [
+          "非官方申論參考解析",
+          "需以 rubric 自評，不可機械判分"
+        ]
+      }
+    },
+    {
+      "questionId": "q-pp-im-mis-113-4",
+      "paperId": "pp-im-mis-113",
+      "topicId": "im-mis-governance",
+      "primarySubtopicId": "im-mis-governance-esg-accountability",
+      "secondaryTags": [
+        "sustainability",
+        "it-investment"
+      ],
+      "questionType": "essay",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "medium",
+      "taxonomyRationale": "依題幹主要作答任務歸入 mis-governance-esg；跨域概念保留於 secondaryTags。",
+      "originQuestionTextSha256": "d03103459ef211b0ae4221ac889e8e9fa0df9a9ccc0d3bc62d0ed1a2a5e5cd13",
+      "pdfEvidence": {
+        "pdfSha256": "0ac2d9a76e9a07fe053cb365a423f0e1a89ff641f1b23764e0e2191437331cd5",
+        "auditedQuestionsSha256": "3d1900349dbb28f0c474ca57f6f41ae0d3ddc4287478a6b3885f7e8d4bd0dabb",
+        "auditArtifact": ".work/im-mis-pdf-audit-111-115.md"
+      },
+      "subquestions": [
+        {
+          "label": "a",
+          "rubricId": "rubric-q-pp-im-mis-113-4-a",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "b",
+          "rubricId": "rubric-q-pp-im-mis-113-4-b",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        }
+      ],
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": [
+          "非官方申論參考解析",
+          "需以 rubric 自評，不可機械判分"
+        ]
+      }
+    },
+    {
+      "questionId": "q-pp-im-mis-114-1",
+      "paperId": "pp-im-mis-114",
+      "topicId": "im-mis-platforms",
+      "primarySubtopicId": "im-mis-platforms-digital-markets-commerce",
+      "secondaryTags": [
+        "firm-size",
+        "ai",
+        "vr"
+      ],
+      "questionType": "essay",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "medium",
+      "taxonomyRationale": "依題幹主要作答任務歸入 mis-platforms-live-commerce；跨域概念保留於 secondaryTags。",
+      "originQuestionTextSha256": "df79a990afd13769f6f39c4df6afa3239c940f16cc5e394b1acc9be905697a55",
+      "pdfEvidence": {
+        "pdfSha256": "bb31e0ec75ff9ca84715465de5f4cf2746bbac9e2eadf6ae9c9c7be9bb618a34",
+        "auditedQuestionsSha256": "6361134fac74560ebd126dc87118594e8c518432fa8ab09a6186e38282650fca",
+        "auditArtifact": ".work/im-mis-pdf-audit-111-115.md"
+      },
+      "subquestions": [
+        {
+          "label": "A",
+          "rubricId": "rubric-q-pp-im-mis-114-1-a",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "B",
+          "rubricId": "rubric-q-pp-im-mis-114-1-b",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        }
+      ],
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": [
+          "非官方申論參考解析",
+          "需以 rubric 自評，不可機械判分"
+        ]
+      }
+    },
+    {
+      "questionId": "q-pp-im-mis-114-2",
+      "paperId": "pp-im-mis-114",
+      "topicId": "im-mis-strategy",
+      "primarySubtopicId": "im-mis-strategy-investment-value",
+      "secondaryTags": [
+        "rbv",
+        "complementary-assets",
+        "productivity-paradox"
+      ],
+      "questionType": "essay",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "medium",
+      "taxonomyRationale": "依題幹主要作答任務歸入 mis-strategy-it-business-value；跨域概念保留於 secondaryTags。",
+      "originQuestionTextSha256": "f655e962a04bfdaf048ef6a1505348c2c847a76e4bed2ca100a8955b523d7dbd",
+      "pdfEvidence": {
+        "pdfSha256": "bb31e0ec75ff9ca84715465de5f4cf2746bbac9e2eadf6ae9c9c7be9bb618a34",
+        "auditedQuestionsSha256": "6361134fac74560ebd126dc87118594e8c518432fa8ab09a6186e38282650fca",
+        "auditArtifact": ".work/im-mis-pdf-audit-111-115.md"
+      },
+      "subquestions": [
+        {
+          "label": "A",
+          "rubricId": "rubric-q-pp-im-mis-114-2-a",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "B",
+          "rubricId": "rubric-q-pp-im-mis-114-2-b",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        }
+      ],
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": [
+          "非官方申論參考解析",
+          "需以 rubric 自評，不可機械判分"
+        ]
+      }
+    },
+    {
+      "questionId": "q-pp-im-mis-114-3",
+      "paperId": "pp-im-mis-114",
+      "topicId": "im-mis-development",
+      "primarySubtopicId": "im-mis-development-requirements-ux",
+      "secondaryTags": [
+        "user-story",
+        "use-case"
+      ],
+      "questionType": "essay",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "medium",
+      "taxonomyRationale": "依題幹主要作答任務歸入 mis-development-requirements；跨域概念保留於 secondaryTags。",
+      "originQuestionTextSha256": "733ebdf32361c753aaf68c1e03825f1b3be73b5e745d0033b423d035d11f45ea",
+      "pdfEvidence": {
+        "pdfSha256": "bb31e0ec75ff9ca84715465de5f4cf2746bbac9e2eadf6ae9c9c7be9bb618a34",
+        "auditedQuestionsSha256": "6361134fac74560ebd126dc87118594e8c518432fa8ab09a6186e38282650fca",
+        "auditArtifact": ".work/im-mis-pdf-audit-111-115.md"
+      },
+      "subquestions": [],
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": [
+          "非官方申論參考解析",
+          "需以 rubric 自評，不可機械判分"
+        ]
+      }
+    },
+    {
+      "questionId": "q-pp-im-mis-115-1",
+      "paperId": "pp-im-mis-115",
+      "topicId": "im-mis-data-ai",
+      "primarySubtopicId": "im-mis-data-ai-ai-operations-governance",
+      "secondaryTags": [
+        "fomo",
+        "project-failure",
+        "kpi"
+      ],
+      "questionType": "essay",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "medium",
+      "taxonomyRationale": "依題幹主要作答任務歸入 mis-ai-project-governance；跨域概念保留於 secondaryTags。",
+      "originQuestionTextSha256": "7cd04c3e94699cee710a3cce4a8729955256ad4892db4804d6f00af0a51d7ca8",
+      "pdfEvidence": {
+        "pdfSha256": "07ac6f84ecf5ca77c6338b5d7705d9e5c5915118f0a037946ebccda674476479",
+        "auditedQuestionsSha256": "742eac2a1ea53f160089f65151fc7a436bed569d6a2b5b7b100b92b5af5a29c1",
+        "auditArtifact": ".work/im-mis-pdf-audit-111-115.md"
+      },
+      "subquestions": [],
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": [
+          "非官方申論參考解析",
+          "需以 rubric 自評，不可機械判分"
+        ]
+      }
+    },
+    {
+      "questionId": "q-pp-im-mis-115-2",
+      "paperId": "pp-im-mis-115",
+      "topicId": "im-mis-governance",
+      "primarySubtopicId": "im-mis-governance-vendor-ai-governance",
+      "secondaryTags": [
+        "coopetition",
+        "vendor-dependency",
+        "privacy-by-design"
+      ],
+      "questionType": "essay",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "medium",
+      "taxonomyRationale": "依題幹主要作答任務歸入 mis-ai-vendor-governance；跨域概念保留於 secondaryTags。",
+      "originQuestionTextSha256": "c4394ef4a1a1456eb54c26fe7b0acf39db5e7513e050c835be4dadb50c29323f",
+      "pdfEvidence": {
+        "pdfSha256": "07ac6f84ecf5ca77c6338b5d7705d9e5c5915118f0a037946ebccda674476479",
+        "auditedQuestionsSha256": "742eac2a1ea53f160089f65151fc7a436bed569d6a2b5b7b100b92b5af5a29c1",
+        "auditArtifact": ".work/im-mis-pdf-audit-111-115.md"
+      },
+      "subquestions": [
+        {
+          "label": "A",
+          "rubricId": "rubric-q-pp-im-mis-115-2-a",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "B",
+          "rubricId": "rubric-q-pp-im-mis-115-2-b",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        },
+        {
+          "label": "C",
+          "rubricId": "rubric-q-pp-im-mis-115-2-c",
+          "scoringMode": "self_review",
+          "autoGradeEligible": false
+        }
+      ],
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": [
+          "非官方申論參考解析",
+          "需以 rubric 自評，不可機械判分"
+        ]
+      }
+    }
+  ]
+}

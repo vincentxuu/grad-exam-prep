@@ -9,19 +9,30 @@
         "id": "im-en-reading",
         "title": "閱讀測驗（含資訊科技相關題材）",
         "importance": 4,
-        "subtopics": ["長篇文章理解", "科技議題文章", "商業英文"]
+        "subtopics": [
+          "長篇文章理解",
+          "科技議題文章",
+          "商業英文"
+        ]
       },
       {
         "id": "im-en-grammar",
         "title": "文法選擇題",
         "importance": 3,
-        "subtopics": ["詞性判斷", "時態用法", "介係詞"]
+        "subtopics": [
+          "詞性判斷",
+          "時態用法",
+          "介係詞"
+        ]
       },
       {
         "id": "im-en-vocab",
         "title": "字彙",
         "importance": 3,
-        "subtopics": ["托福/GRE核心字彙", "資訊科技專業詞彙"]
+        "subtopics": [
+          "托福/GRE核心字彙",
+          "資訊科技專業詞彙"
+        ]
       }
     ],
     "materials": [
@@ -52,55 +63,96 @@
         "id": "im-it-arch",
         "title": "電腦架構基礎",
         "importance": 2,
-        "subtopics": ["進制轉換", "數值表示法", "布林代數"]
+        "subtopics": [
+          "進制轉換",
+          "數值表示法",
+          "布林代數"
+        ]
       },
       {
         "id": "im-it-prog",
         "title": "程式語言概念",
         "importance": 3,
-        "subtopics": ["Java/C++基礎語法", "OOP概念（封裝/繼承/多型）", "程式執行流程"]
+        "subtopics": [
+          "Java/C++基礎語法",
+          "OOP概念（封裝/繼承/多型）",
+          "程式執行流程"
+        ]
       },
       {
         "id": "im-it-ds",
         "title": "資料結構",
         "importance": 5,
-        "subtopics": ["Tree基本概念", "排序演算法", "Graph基礎", "Hash Table"]
+        "subtopics": [
+          "Tree基本概念",
+          "排序演算法",
+          "Graph基礎",
+          "Hash Table"
+        ]
       },
       {
         "id": "im-it-db",
         "title": "資料庫",
         "importance": 4,
-        "subtopics": ["SQL語法", "正規化（1NF/2NF/3NF）", "交易管理ACID", "ER Diagram"]
+        "subtopics": [
+          "SQL語法",
+          "正規化（1NF/2NF/3NF）",
+          "交易管理ACID",
+          "ER Diagram"
+        ]
       },
       {
         "id": "im-it-network",
         "title": "網路",
         "importance": 4,
-        "subtopics": ["OSI 7層模型", "TCP/IP協定", "HTTP/HTTPS", "DNS/DHCP"]
+        "subtopics": [
+          "OSI 7層模型",
+          "TCP/IP協定",
+          "HTTP/HTTPS",
+          "DNS/DHCP"
+        ]
       },
       {
         "id": "im-it-os",
         "title": "作業系統",
         "importance": 4,
-        "subtopics": ["Process與Thread", "Memory Management", "File System", "Scheduling"]
+        "subtopics": [
+          "Process與Thread",
+          "Memory Management",
+          "File System",
+          "Scheduling"
+        ]
       },
       {
         "id": "im-it-security",
         "title": "資安",
         "importance": 3,
-        "subtopics": ["加密技術（對稱/非對稱）", "防火牆", "常見攻擊（SQL Injection, XSS）"]
+        "subtopics": [
+          "加密技術（對稱/非對稱）",
+          "防火牆",
+          "常見攻擊（SQL Injection, XSS）"
+        ]
       },
       {
         "id": "im-it-ai",
         "title": "AI/ML（近年必考趨勢）",
         "importance": 5,
-        "subtopics": ["監督/非監督學習", "CNN/RNN/Transformer", "生成式AI原理", "LLM與ChatGPT", "AI應用倫理"]
+        "subtopics": [
+          "監督/非監督學習",
+          "CNN/RNN/Transformer",
+          "生成式AI原理",
+          "LLM與ChatGPT",
+          "AI應用倫理"
+        ]
       },
       {
         "id": "im-it-trends",
         "title": "資料分析與新興科技",
         "importance": 2,
-        "subtopics": ["Big Data 與資料分析", "Fintech、數位平台與新興應用"]
+        "subtopics": [
+          "Big Data 與資料分析",
+          "Fintech、數位平台與新興應用"
+        ]
       }
     ],
     "materials": [
@@ -179,34 +231,77 @@
     "weight": 100,
     "topics": [
       {
-        "id": "im-mis-theory",
-        "title": "MIS基礎理論",
-        "importance": 5,
-        "subtopics": ["系統生命週期SDLC", "ERP/CRM/SCM系統", "資訊系統分類", "決策支援系統DSS"]
-      },
-      {
         "id": "im-mis-strategy",
-        "title": "策略分析工具",
+        "title": "IT 策略、價值與組織能力",
         "importance": 5,
-        "subtopics": ["Porter 五力分析", "Porter 價值鏈（9大活動）", "PEST分析", "平衡計分卡BSC", "CSF關鍵成功因素", "SWOT分析"]
+        "subtopics": [
+          "IT-business alignment 與差異化",
+          "IT 投資、互補性資產與價值",
+          "環境不確定性與企業敏捷",
+          "IT 與組織邊界"
+        ]
       },
       {
-        "id": "im-mis-digital",
-        "title": "數位轉型與新興技術",
+        "id": "im-mis-platforms",
+        "title": "數位平台與電子商務",
         "importance": 4,
-        "subtopics": ["IoT物聯網", "Blockchain區塊鏈", "AI在企業中的應用", "雲端運算", "大數據分析"]
+        "subtopics": [
+          "共享經濟與信任機制",
+          "多邊平台、網路效應與定價",
+          "數位市場與直播商務"
+        ]
       },
       {
-        "id": "im-mis-management",
-        "title": "管理理論",
+        "id": "im-mis-enterprise",
+        "title": "企業系統、流程與知識",
         "importance": 4,
-        "subtopics": ["創新擴散理論", "平台策略與網路效應", "知識管理", "敏捷開發"]
+        "subtopics": [
+          "知識編碼與人際連結",
+          "企業系統與流程整合",
+          "推式與拉式供應鏈"
+        ]
       },
       {
-        "id": "im-mis-current",
-        "title": "時事申論題（每年必考）",
+        "id": "im-mis-data-ai",
+        "title": "資料、分析與負責任 AI",
         "importance": 5,
-        "subtopics": ["生成式AI與ChatGPT對MIS的影響", "ESG永續發展", "元宇宙與AR/VR應用", "Gartner科技趨勢", "資安治理"]
+        "subtopics": [
+          "資料生命週期與分析可行性",
+          "模型評估、公平與漂移",
+          "預測、社群分析與決策",
+          "AI 維運、導入與治理"
+        ]
+      },
+      {
+        "id": "im-mis-development",
+        "title": "系統取得、敏捷交付與 UX",
+        "importance": 4,
+        "subtopics": [
+          "系統取得與成本估算",
+          "Scrum 與敏捷交付",
+          "測試層級與品質風險",
+          "需求表達與使用者體驗"
+        ]
+      },
+      {
+        "id": "im-mis-data-architecture",
+        "title": "資料架構與數位基礎設施",
+        "importance": 4,
+        "subtopics": [
+          "關聯式資料庫與 NoSQL",
+          "SQL、schema 與查詢",
+          "開源軟體、授權與 sourcing"
+        ]
+      },
+      {
+        "id": "im-mis-governance",
+        "title": "數位治理、隱私與永續",
+        "importance": 5,
+        "subtopics": [
+          "IoT、資料與隱私風險",
+          "ESG、揭露與問責",
+          "AI 供應商、共競與信任治理"
+        ]
       }
     ],
     "materials": [
@@ -248,28 +343,43 @@
     "weight": null,
     "topics": [
       {
-        "id": "im-stat-descriptive",
-        "title": "描述性統計",
-        "importance": 4,
-        "subtopics": ["平均數/中位數/眾數", "標準差與變異數", "偏態與峰度", "直方圖與盒鬚圖"]
-      },
-      {
         "id": "im-stat-probability",
-        "title": "機率基礎",
+        "title": "機率與隨機變數",
         "importance": 4,
-        "subtopics": ["條件機率", "貝氏定理", "常見機率分佈（常態/二項/Poisson）"]
+        "subtopics": [
+          "期望值與變異數",
+          "聯合與邊際 PMF",
+          "離散變數轉換"
+        ]
       },
       {
-        "id": "im-stat-inference",
-        "title": "推論統計",
-        "importance": 5,
-        "subtopics": ["抽樣分佈與中央極限定理", "信賴區間", "假設檢定（t檢定/z檢定）", "卡方檢定", "ANOVA"]
+        "id": "im-stat-estimation",
+        "title": "估計量",
+        "importance": 4,
+        "subtopics": [
+          "不偏性",
+          "估計量變異數",
+          "最適權重與效率"
+        ]
       },
       {
         "id": "im-stat-regression",
-        "title": "迴歸分析",
+        "title": "迴歸與檢定",
+        "importance": 5,
+        "subtopics": [
+          "假設檢定共同流程",
+          "多元迴歸輸出",
+          "t 與聯合 F 檢定"
+        ]
+      },
+      {
+        "id": "im-stat-categorical",
+        "title": "類別資料分析",
         "importance": 4,
-        "subtopics": ["單元線性迴歸", "多元線性迴歸", "迴歸係數解釋", "R²與F檢定"]
+        "subtopics": [
+          "列聯表與期望次數",
+          "卡方獨立性檢定"
+        ]
       }
     ],
     "materials": [

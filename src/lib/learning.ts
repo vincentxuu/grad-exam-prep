@@ -16,17 +16,46 @@ export interface LearningScenario {
   examCues: string[]
 }
 
+export interface InteractiveQuizOption {
+  label: string
+  correct: boolean
+  explanation: string
+}
+
+export interface InteractiveQuiz {
+  type: 'quiz'
+  prompt: string
+  options: InteractiveQuizOption[]
+}
+
+export interface InteractiveReveal {
+  type: 'reveal'
+  prompt: string
+  answer: string
+}
+
+export interface InteractiveSlider {
+  type: 'slider'
+  title: string
+  sliders: Array<{ id: string; label: string; min: number; max: number; step: number; initial: number }>
+  formula: string
+  resultLabel: string
+}
+
+export type InteractiveBlock = InteractiveQuiz | InteractiveReveal | InteractiveSlider
+
 export interface LearningLesson {
   id: string
   subtopicId: string
   coveredSubtopicIds: string[]
   title: string
   summary: string
+  evidenceNote?: string
   estimatedMinutes: number
   minimumPastPaperRefs: number
   learningObjectives: string[]
   learningScenario?: LearningScenario
-  sections: Array<{ title: string; body: string; bullets: string[] }>
+  sections: Array<{ title: string; body: string; bullets: string[]; interactiveBlocks?: InteractiveBlock[] }>
   workedExamples: LearningWorkedExample[]
   commonPitfalls: string[]
   sourceRefs: string[]
@@ -46,12 +75,24 @@ export interface LearningConceptCard {
   reviewStatus: 'reviewed'
 }
 
+export interface LearningBeginnerGlossaryTerm {
+  id: string
+  subjectId: string
+  label: string
+  aliases: string[]
+  plainDefinition: string
+  everydayExample: string
+  confusionNote: string
+  lessonIds: string[]
+  reviewStatus: 'reviewed'
+}
+
 export interface LearningSource {
   id: string
   title: string
   author: string
   publisher?: string
-  type: 'book' | 'course' | 'documentation' | 'official-guidance'
+  type: 'book' | 'course' | 'documentation' | 'official-guidance' | 'official-exam'
   url: string
   scope: string[]
   usage: string
@@ -115,6 +156,9 @@ export interface LearningLessonCopy {
   practiceTitle: string
   practiceDescription: string
   practiceActionLabel: string
+  foundationPracticeTitle?: string
+  foundationPracticeDescription?: string
+  foundationPracticeActionLabel?: string
   sourcesTitle: string
 }
 
@@ -127,6 +171,7 @@ export interface LearningCatalogInput {
   lessons: LearningLesson[]
   cards: LearningConceptCard[]
   sources: LearningSource[]
+  beginnerGlossary?: LearningBeginnerGlossaryTerm[]
   overview?: LearningOverviewConfig
   lessonCopy: LearningLessonCopy
   getPracticeHref: (lesson: LearningLesson) => string
@@ -137,6 +182,7 @@ export interface LearningCatalog extends LearningCatalogInput {
   getLesson: (lessonId: string) => LearningLesson | undefined
   getCardsForLesson: (lessonId: string) => LearningConceptCard[]
   getSources: (sourceIds: string[]) => LearningSource[]
+  getBeginnerGlossaryForLesson: (lessonId: string) => LearningBeginnerGlossaryTerm[]
 }
 
 export function createLearningCatalog(input: LearningCatalogInput): LearningCatalog {
@@ -151,5 +197,7 @@ export function createLearningCatalog(input: LearningCatalogInput): LearningCata
       const ids = new Set(sourceIds)
       return input.sources.filter((source) => ids.has(source.id))
     },
+    getBeginnerGlossaryForLesson: (lessonId) =>
+      (input.beginnerGlossary ?? []).filter((term) => term.lessonIds.includes(lessonId)),
   }
 }

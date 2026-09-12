@@ -57,7 +57,7 @@ export async function POST(request: NextRequest, ctx: { params: Promise<{ id: st
   }
 
   try {
-    await spendChatQuota(db, userId, chatQuotaLimit(env, config), isUnlimited(request, env))
+    await spendChatQuota(db, userId, chatQuotaLimit(env, config), await isUnlimited(request, env))
   } catch (err) {
     if (err instanceof ChatQuotaExceeded) {
       return sseError(`今天的對話額度用完了（${err.used}/${err.limit}）。明天會重置。`, 429)

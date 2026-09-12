@@ -1,0 +1,276 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "im-it",
+  "status": "reviewed",
+  "batchId": "im-it-full-batch-a",
+  "totalCards": 20,
+  "cards": [
+    {
+      "id": "card-im-it-arch-number-systems-a1",
+      "lessonId": "lesson-im-it-arch-logic-circuits-01",
+      "subtopicId": "im-it-arch-number-systems",
+      "front": "十六進位與二進位為何可四位一組轉換？",
+      "back": "因為 16=2^4，一個十六進位數碼正好表示 4 bits 的 0–15。",
+      "explanation": "例如 A₁₆=1010₂，2D₁₆=0010 1101₂。",
+      "sourceRefs": [
+        "src-brookshear-13e"
+      ],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-arch-number-systems-a2",
+      "lessonId": "lesson-im-it-arch-logic-circuits-01",
+      "subtopicId": "im-it-arch-number-systems",
+      "front": "AND、OR、XOR 在 bit mask 中各常用來做什麼？",
+      "back": "AND 保留/清除指定位；OR 設定位；XOR 切換位或檢查不同。",
+      "explanation": "運算是逐 bit 套用，需先對齊位數。",
+      "sourceRefs": [
+        "src-brookshear-13e"
+      ],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-arch-boolean-logic-a1",
+      "lessonId": "lesson-im-it-arch-logic-circuits-01",
+      "subtopicId": "im-it-arch-boolean-logic",
+      "front": "De Morgan 定律如何否定 A AND B？",
+      "back": "NOT(A AND B)=NOT A OR NOT B。",
+      "explanation": "否定分配進去時，AND/OR 也要互換。",
+      "sourceRefs": [
+        "src-brookshear-13e"
+      ],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-arch-boolean-logic-a2",
+      "lessonId": "lesson-im-it-arch-logic-circuits-01",
+      "subtopicId": "im-it-arch-boolean-logic",
+      "front": "真值表能證明兩個 Boolean expressions 等價嗎？",
+      "back": "可以；若所有輸入組合的輸出都相同，兩者功能等價。",
+      "explanation": "n 個 Boolean inputs 有 2^n 組組合。",
+      "sourceRefs": [
+        "src-brookshear-13e"
+      ],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-arch-digital-circuits-a1",
+      "lessonId": "lesson-im-it-arch-logic-circuits-01",
+      "subtopicId": "im-it-arch-digital-circuits",
+      "front": "Combinational 與 sequential circuit 的核心差異？",
+      "back": "Combinational output 只由當前輸入決定；sequential output 還受已儲存狀態影響。",
+      "explanation": "Flip-flop/register 是常見狀態元件。",
+      "sourceRefs": [
+        "src-brookshear-13e"
+      ],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-arch-digital-circuits-a2",
+      "lessonId": "lesson-im-it-arch-logic-circuits-01",
+      "subtopicId": "im-it-arch-digital-circuits",
+      "front": "Adder、multiplexer、flip-flop 各自的主要功能？",
+      "back": "Adder 加法；multiplexer 選擇一路輸入；flip-flop 儲存 1 bit。",
+      "explanation": "三者分別對應算術、選擇與狀態。",
+      "sourceRefs": [
+        "src-brookshear-13e"
+      ],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-arch-io-performance-a1",
+      "lessonId": "lesson-im-it-arch-io-performance-01",
+      "subtopicId": "im-it-arch-io-performance",
+      "front": "Polling 與 interrupt-driven I/O 的主動方是誰？",
+      "back": "Polling 由 CPU 主動反覆查詢；interrupt 由 device 發訊號通知 CPU。",
+      "explanation": "Interrupt 仍有儲存狀態與執行 ISR 的成本。",
+      "sourceRefs": [
+        "src-brookshear-13e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-113-7"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-arch-io-performance-a2",
+      "lessonId": "lesson-im-it-arch-io-performance-01",
+      "subtopicId": "im-it-arch-io-performance",
+      "front": "DMA 為何適合 block transfer？",
+      "back": "DMA controller 可在 device 與 memory 間搬運大批資料，降低 CPU 逐字參與。",
+      "explanation": "CPU 仍負責設定並可在完成時處理 interrupt。",
+      "sourceRefs": [
+        "src-brookshear-13e"
+      ],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-prog-syntax-types-control-a1",
+      "lessonId": "lesson-im-it-prog-control-functions-memory-01",
+      "subtopicId": "im-it-prog-syntax-types-control",
+      "front": "Type system 在程式語言中的核心用途是什麼？",
+      "back": "替 values、variables、expressions 與 functions 指派或檢查型別規則，限制不合法操作並提早暴露錯誤。",
+      "explanation": "型別檢查發生時機依語言而異；本卡只陳述 type system 的共同目的。",
+      "sourceRefs": [
+        "src-oracle-java-language-basics"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-110-13"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-prog-syntax-types-control-a2",
+      "lessonId": "lesson-im-it-prog-control-functions-memory-01",
+      "subtopicId": "im-it-prog-syntax-types-control",
+      "front": "追蹤 loop 時最少要檢查哪三件事？",
+      "back": "初始狀態、繼續/停止條件、每輪狀態更新。",
+      "explanation": "建立逐輪表格可避免 off-by-one 誤判。",
+      "sourceRefs": [
+        "src-oracle-java-language-basics"
+      ],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-prog-functions-scope-a1",
+      "lessonId": "lesson-im-it-prog-control-functions-memory-01",
+      "subtopicId": "im-it-prog-functions-scope",
+      "front": "Scope 與 lifetime 有何不同？",
+      "back": "Scope 是名稱可見的程式區域；lifetime 是 object 在執行期存在的時間。",
+      "explanation": "Object 可在建立它的 local name 離開 scope 後仍被其他 reference 保留。",
+      "sourceRefs": [
+        "src-cpp-core-guidelines"
+      ],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-prog-functions-scope-a2",
+      "lessonId": "lesson-im-it-prog-control-functions-memory-01",
+      "subtopicId": "im-it-prog-functions-scope",
+      "front": "正確 recursion 的兩個必要條件？",
+      "back": "要有 base case，且 recursive step 要使問題逐步靠近 base case。",
+      "explanation": "否則可能無限呼叫並造成 stack overflow。",
+      "sourceRefs": [
+        "src-cpp-core-guidelines"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-114-1"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-prog-pointers-memory-a1",
+      "lessonId": "lesson-im-it-prog-control-functions-memory-01",
+      "subtopicId": "im-it-prog-pointers-memory",
+      "front": "Dangling pointer 與 memory leak 的差異？",
+      "back": "Dangling pointer 指向已失效 object；leak 是不再需要的配置無法被回收。",
+      "explanation": "前者可導致 invalid access，後者逐步消耗記憶體。",
+      "sourceRefs": [
+        "src-cpp-core-guidelines"
+      ],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-prog-pointers-memory-a2",
+      "lessonId": "lesson-im-it-prog-control-functions-memory-01",
+      "subtopicId": "im-it-prog-pointers-memory",
+      "front": "Stack 與 heap 的典型角色？",
+      "back": "Stack 常管理 calls 的 activation records；heap 常供生命週期不緊綁單一 call 的動態 objects。",
+      "explanation": "這是概念模型，精確配置取決於 compiler/runtime。",
+      "sourceRefs": [
+        "src-cpp-core-guidelines"
+      ],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-prog-language-runtime-a1",
+      "lessonId": "lesson-im-it-prog-runtime-quality-lifecycle-01",
+      "subtopicId": "im-it-prog-language-runtime",
+      "front": "GCC 驅動流程的 compilation、assembly、linking 各產生什麼？",
+      "back": "Compilation 產生 assembly，assembly 產生 object file，linking 組合 objects 與 libraries 成最終程式。",
+      "explanation": "這是 GCC Overall Options 描述的主要階段；其他語言工具鏈不一定相同。",
+      "sourceRefs": [
+        "src-gcc-overall-options"
+      ],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-prog-language-runtime-a2",
+      "lessonId": "lesson-im-it-prog-runtime-quality-lifecycle-01",
+      "subtopicId": "im-it-prog-language-runtime",
+      "front": "GCC 的 -E、-S、-c 分別在哪個階段停止？",
+      "back": "-E 停在 preprocessing；-S 停在 compilation 並輸出 assembly；-c 完成 assembly 產生 object file但不 linking。",
+      "explanation": "沒有這些停止選項時，GCC driver 通常繼續後續階段直到 linking。",
+      "sourceRefs": [
+        "src-gcc-overall-options"
+      ],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-prog-error-testing-a1",
+      "lessonId": "lesson-im-it-prog-runtime-quality-lifecycle-01",
+      "subtopicId": "im-it-prog-error-testing",
+      "front": "Exception、assertion、test 各自的角色？",
+      "back": "Exception 處理執行期異常；assertion 檢查內部假設；test 提供可重複輸入與 expected behavior。",
+      "explanation": "三者互補，不應相互取代。",
+      "sourceRefs": [
+        "src-cpp-core-guidelines",
+        "src-nist-ssdf-800-218"
+      ],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-prog-error-testing-a2",
+      "lessonId": "lesson-im-it-prog-runtime-quality-lifecycle-01",
+      "subtopicId": "im-it-prog-error-testing",
+      "front": "為什麼 testing、code review 與 automated analysis 要互補？",
+      "back": "三者觀察的缺陷面不同；單一 verification activity 通過，不能證明 software 沒有其他缺陷。",
+      "explanation": "SSDF 要求依風險規劃 verification 並處理發現，而不是只追求單一工具全綠。",
+      "sourceRefs": [
+        "src-nist-ssdf-800-218"
+      ],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-prog-software-lifecycle-a1",
+      "lessonId": "lesson-im-it-prog-runtime-quality-lifecycle-01",
+      "subtopicId": "im-it-prog-software-lifecycle",
+      "front": "NIST SSDF 的四組高階實務是什麼？",
+      "back": "Prepare the Organization、Protect the Software、Produce Well-Secured Software、Respond to Vulnerabilities。",
+      "explanation": "四組實務把安全責任整合到既有 SDLC，而不是只在 release 前做一次檢查。",
+      "sourceRefs": [
+        "src-nist-ssdf-800-218"
+      ],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-prog-software-lifecycle-a2",
+      "lessonId": "lesson-im-it-prog-runtime-quality-lifecycle-01",
+      "subtopicId": "im-it-prog-software-lifecycle",
+      "front": "為什麼 secure software lifecycle 必須包含 vulnerability response？",
+      "back": "Release 後仍可能發現漏洞；組織需接收、分析、修補並把根因回饋到後續開發實務。",
+      "explanation": "SSDF 的 Respond to Vulnerabilities 強調持續改善，release 不是安全責任終點。",
+      "sourceRefs": [
+        "src-nist-ssdf-800-218"
+      ],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    }
+  ]
+}

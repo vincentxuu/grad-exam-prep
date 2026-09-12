@@ -1,4 +1,4 @@
-import { fireEvent, render, screen, waitFor } from '@testing-library/react'
+import { act, fireEvent, render, screen, waitFor } from '@testing-library/react'
 import { FlashcardExampleSupport } from '@/components/flashcard/example-support'
 import type { LexiconEntry, LookupResponse } from '@/types/lexicon'
 
@@ -103,8 +103,101 @@ describe('FlashcardExampleSupport', () => {
     const payload = JSON.parse(fetchImpl.mock.calls[0][1]?.body as string)
     expect(payload).toEqual({
       term: 'mitigate-personal-test',
+      // flashcard 只渲染例句，不用等一份完整辭典詞條
+      mode: 'examples',
       persona: { work: '軟體工程師', interests: ['攀岩'], goal: '工作上使用' },
     })
+  })
+
+  it('網路層失敗時顯示看得懂的中文，不是瀏覽器的 "Load failed"', async () => {
+    // Safari 的 fetch 在連線被切斷時就是丟這個
+    const fetchImpl = jest.fn(async () => {
+      throw new TypeError('Load failed')
+    })
+
+    render(
+      <FlashcardExampleSupport
+        {...baseProps}
+        headword="mitigate-network-test"
+        hasEmbeddedExample
+        persona={{ work: '軟體工程師', interests: [] }}
+        fetchImpl={fetchImpl as unknown as typeof fetch}
+      />
+    )
+
+    fireEvent.click(screen.getByRole('button', { name: '用我的情境幫我記' }))
+
+    const alert = await screen.findByRole('alert')
+    expect(alert).toHaveTextContent('連線中斷')
+    expect(alert).not.toHaveTextContent('Load failed')
+    await waitFor(() =>
+      expect(screen.getByRole('button', { name: '用我的情境幫我記' })).toBeEnabled()
+    )
+  })
+
+  it('回應不是 JSON 時不會把解析錯誤丟到畫面上', async () => {
+    // edge 回 HTML 錯誤頁的情況
+    const fetchImpl = jest.fn(
+      async () =>
+        ({
+          ok: false,
+          status: 502,
+          json: async () => {
+            throw new SyntaxError('Unexpected token <')
+          },
+        }) as unknown as Response
+    )
+
+    render(
+      <FlashcardExampleSupport
+        {...baseProps}
+        headword="mitigate-html-test"
+        hasEmbeddedExample
+        persona={{ work: '軟體工程師', interests: [] }}
+        fetchImpl={fetchImpl as unknown as typeof fetch}
+      />
+    )
+
+    fireEvent.click(screen.getByRole('button', { name: '用我的情境幫我記' }))
+
+    expect(await screen.findByRole('alert')).toHaveTextContent('伺服器錯誤（502）')
+  })
+
+  it('等太久就自己放棄，並留下可重試的狀態', async () => {
+    jest.useFakeTimers()
+    try {
+      // 永遠不 resolve，但要能被 abort
+      const fetchImpl = jest.fn(
+        (_input: RequestInfo | URL, init?: RequestInit) =>
+          new Promise<Response>((_resolve, reject) => {
+            init?.signal?.addEventListener('abort', () =>
+              reject(new DOMException('Aborted', 'AbortError'))
+            )
+          })
+      )
+
+      render(
+        <FlashcardExampleSupport
+          {...baseProps}
+          headword="mitigate-timeout-test"
+          hasEmbeddedExample
+          persona={{ work: '軟體工程師', interests: [] }}
+          fetchImpl={fetchImpl as unknown as typeof fetch}
+        />
+      )
+
+      fireEvent.click(screen.getByRole('button', { name: '用我的情境幫我記' }))
+      expect(screen.getByRole('button', { name: '正在連結你的情境…' })).toBeDisabled()
+
+      await act(async () => {
+        jest.advanceTimersByTime(60_000)
+      })
+
+      expect(screen.getByRole('alert')).toHaveTextContent('等太久')
+      expect(screen.getByRole('button', { name: '用我的情境幫我記' })).toBeEnabled()
+    } finally {
+      jest.useRealTimers()
+    }
   })
 
   it('沒有 persona 時不會假裝個人化，並提供設定入口', async () => {

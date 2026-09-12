@@ -1,8 +1,11 @@
 import cardsRaw from '../../public/data/im-it-concept-cards.json'
 import conceptMasterRaw from '../../public/data/im-it-concept-master.json'
+import extTbAiRaw from '../../public/data/ext-tb-ai-question-metadata.json'
+import extTbItRaw from '../../public/data/ext-tb-it-question-metadata.json'
 import lessonsRaw from '../../public/data/im-it-lessons.json'
 import questionMetadataRaw from '../../public/data/im-it-question-metadata.json'
 import sourcesRaw from '../../public/data/im-it-source-registry.json'
+import { getBeginnerGlossaryForSubject } from './beginner-glossary'
 import {
   createLearningCatalog,
   type LearningConceptCard,
@@ -12,6 +15,7 @@ import {
   type LearningTopic,
   type LearningWorkedExample,
 } from './learning'
+import { mergeExternalQuestions } from './question-metadata'
 import { buildQuestionDrillHref } from './question-drill'
 
 export type ImItWorkedExample = LearningWorkedExample
@@ -29,6 +33,8 @@ const topicQuestionCounts: Record<string, number> = {}
 for (const question of questionMetadataRaw.questions) {
   topicQuestionCounts[question.topicId] = (topicQuestionCounts[question.topicId] ?? 0) + 1
 }
+mergeExternalQuestions(topicQuestionCounts, extTbAiRaw as never)
+mergeExternalQuestions(topicQuestionCounts, extTbItRaw as never)
 
 export const imItLearningCatalog = createLearningCatalog({
   examId: 'im',
@@ -39,6 +45,7 @@ export const imItLearningCatalog = createLearningCatalog({
   lessons,
   cards,
   sources,
+  beginnerGlossary: getBeginnerGlossaryForSubject('im-it'),
   overview: {
     topics,
     totalQuestions: questionMetadataRaw.totalQuestions,
@@ -87,10 +94,21 @@ export const imItLearningCatalog = createLearningCatalog({
     practiceTitle: '最後用考古題驗證',
     practiceDescription: '本課連結的題目都已通過可重現的技術覆核，可逐題練習與判分。',
     practiceActionLabel: '開始本課考古題練習',
+    foundationPracticeTitle: '再到題庫找辨識線索',
+    foundationPracticeDescription:
+      '這個基礎主題在現有考古題中沒有可確認的直接題，所以不會為了湊數量而硬連題目。可回到完整題庫，練習辨識它與相鄰概念的關係。',
+    foundationPracticeActionLabel: '瀏覽資訊科技概論題庫',
     sourcesTitle: '參考來源',
   },
-  getPracticeHref: (lesson) =>
-    buildQuestionDrillHref('im', lesson.pastPaperRefs, `/im/subjects/im-it/lessons/${lesson.id}`),
+  getPracticeHref: (lesson) => {
+    if (lesson.pastPaperRefs.length === 0) return '/im/questions?subject=im-it'
+
+    return buildQuestionDrillHref(
+      'im',
+      lesson.pastPaperRefs,
+      `/im/subjects/im-it/lessons/${lesson.id}`
+    )
+  },
 })
 
 export function getImItLessons() {

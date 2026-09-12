@@ -1,0 +1,861 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "im-mis",
+  "status": "candidate",
+  "publicationPolicy": "僅供後續 SRS 發布審核；不寫入 flashcards.json。通過提示去重、來源覆核與使用者負荷評估後才可發布。",
+  "totalCandidates": 48,
+  "candidates": [
+    {
+      "id": "srs-candidate-im-mis-strategy-alignment-differentiation-definition",
+      "lessonId": "lesson-im-mis-strategy-01",
+      "subtopicId": "im-mis-strategy-alignment-differentiation",
+      "front": "IT-business alignment 與差異化：答題時先定義什麼？",
+      "back": "先界定 IT-business alignment 與差異化 的分析單位、核心機制與適用條件。",
+      "explanation": "MIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。",
+      "sourceRefs": [
+        "src-im-mis-laudon-17e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-106-1"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-strategy-alignment-differentiation-tradeoff",
+      "lessonId": "lesson-im-mis-strategy-01",
+      "subtopicId": "im-mis-strategy-alignment-differentiation",
+      "front": "IT-business alignment 與差異化：完整申論至少要補哪三類內容？",
+      "back": "機制、條件／權衡、可觀察指標與限制。",
+      "explanation": "以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。",
+      "sourceRefs": [
+        "src-im-mis-laudon-17e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-106-1"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-strategy-investment-value-definition",
+      "lessonId": "lesson-im-mis-strategy-01",
+      "subtopicId": "im-mis-strategy-investment-value",
+      "front": "IT 投資、互補性資產與價值：答題時先定義什麼？",
+      "back": "先界定 IT 投資、互補性資產與價值 的分析單位、核心機制與適用條件。",
+      "explanation": "MIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。",
+      "sourceRefs": [
+        "src-im-mis-laudon-17e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-109-2",
+        "q-pp-im-mis-111-1",
+        "q-pp-im-mis-112-2",
+        "q-pp-im-mis-114-2"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-strategy-investment-value-tradeoff",
+      "lessonId": "lesson-im-mis-strategy-01",
+      "subtopicId": "im-mis-strategy-investment-value",
+      "front": "IT 投資、互補性資產與價值：完整申論至少要補哪三類內容？",
+      "back": "機制、條件／權衡、可觀察指標與限制。",
+      "explanation": "以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。",
+      "sourceRefs": [
+        "src-im-mis-laudon-17e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-109-2",
+        "q-pp-im-mis-111-1",
+        "q-pp-im-mis-112-2",
+        "q-pp-im-mis-114-2"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-strategy-agility-environment-definition",
+      "lessonId": "lesson-im-mis-strategy-01",
+      "subtopicId": "im-mis-strategy-agility-environment",
+      "front": "環境不確定性與企業敏捷：答題時先定義什麼？",
+      "back": "先界定 環境不確定性與企業敏捷 的分析單位、核心機制與適用條件。",
+      "explanation": "MIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。",
+      "sourceRefs": [
+        "src-im-mis-laudon-17e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-107-2",
+        "q-pp-im-mis-113-2"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-strategy-agility-environment-tradeoff",
+      "lessonId": "lesson-im-mis-strategy-01",
+      "subtopicId": "im-mis-strategy-agility-environment",
+      "front": "環境不確定性與企業敏捷：完整申論至少要補哪三類內容？",
+      "back": "機制、條件／權衡、可觀察指標與限制。",
+      "explanation": "以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。",
+      "sourceRefs": [
+        "src-im-mis-laudon-17e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-107-2",
+        "q-pp-im-mis-113-2"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-strategy-organization-economics-definition",
+      "lessonId": "lesson-im-mis-strategy-01",
+      "subtopicId": "im-mis-strategy-organization-economics",
+      "front": "IT 與組織邊界：答題時先定義什麼？",
+      "back": "先界定 IT 與組織邊界 的分析單位、核心機制與適用條件。",
+      "explanation": "MIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。",
+      "sourceRefs": [
+        "src-im-mis-laudon-17e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-108-1",
+        "q-pp-im-mis-109-1"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-strategy-organization-economics-tradeoff",
+      "lessonId": "lesson-im-mis-strategy-01",
+      "subtopicId": "im-mis-strategy-organization-economics",
+      "front": "IT 與組織邊界：完整申論至少要補哪三類內容？",
+      "back": "機制、條件／權衡、可觀察指標與限制。",
+      "explanation": "以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。",
+      "sourceRefs": [
+        "src-im-mis-laudon-17e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-108-1",
+        "q-pp-im-mis-109-1"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-platforms-sharing-economy-definition",
+      "lessonId": "lesson-im-mis-platforms-01",
+      "subtopicId": "im-mis-platforms-sharing-economy",
+      "front": "共享經濟與信任機制：答題時先定義什麼？",
+      "back": "先界定 共享經濟與信任機制 的分析單位、核心機制與適用條件。",
+      "explanation": "MIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。",
+      "sourceRefs": [
+        "src-im-mis-laudon-17e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-106-2",
+        "q-pp-im-mis-110-1"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-platforms-sharing-economy-tradeoff",
+      "lessonId": "lesson-im-mis-platforms-01",
+      "subtopicId": "im-mis-platforms-sharing-economy",
+      "front": "共享經濟與信任機制：完整申論至少要補哪三類內容？",
+      "back": "機制、條件／權衡、可觀察指標與限制。",
+      "explanation": "以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。",
+      "sourceRefs": [
+        "src-im-mis-laudon-17e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-106-2",
+        "q-pp-im-mis-110-1"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-platforms-multisided-pricing-definition",
+      "lessonId": "lesson-im-mis-platforms-01",
+      "subtopicId": "im-mis-platforms-multisided-pricing",
+      "front": "多邊平台、網路效應與定價：答題時先定義什麼？",
+      "back": "先界定 多邊平台、網路效應與定價 的分析單位、核心機制與適用條件。",
+      "explanation": "MIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。",
+      "sourceRefs": [
+        "src-im-mis-laudon-17e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-109-3"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-platforms-multisided-pricing-tradeoff",
+      "lessonId": "lesson-im-mis-platforms-01",
+      "subtopicId": "im-mis-platforms-multisided-pricing",
+      "front": "多邊平台、網路效應與定價：完整申論至少要補哪三類內容？",
+      "back": "機制、條件／權衡、可觀察指標與限制。",
+      "explanation": "以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。",
+      "sourceRefs": [
+        "src-im-mis-laudon-17e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-109-3"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-platforms-digital-markets-commerce-definition",
+      "lessonId": "lesson-im-mis-platforms-01",
+      "subtopicId": "im-mis-platforms-digital-markets-commerce",
+      "front": "數位市場與直播商務：答題時先定義什麼？",
+      "back": "先界定 數位市場與直播商務 的分析單位、核心機制與適用條件。",
+      "explanation": "MIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。",
+      "sourceRefs": [
+        "src-im-mis-laudon-17e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-110-2",
+        "q-pp-im-mis-114-1"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-platforms-digital-markets-commerce-tradeoff",
+      "lessonId": "lesson-im-mis-platforms-01",
+      "subtopicId": "im-mis-platforms-digital-markets-commerce",
+      "front": "數位市場與直播商務：完整申論至少要補哪三類內容？",
+      "back": "機制、條件／權衡、可觀察指標與限制。",
+      "explanation": "以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。",
+      "sourceRefs": [
+        "src-im-mis-laudon-17e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-110-2",
+        "q-pp-im-mis-114-1"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-enterprise-knowledge-management-definition",
+      "lessonId": "lesson-im-mis-enterprise-01",
+      "subtopicId": "im-mis-enterprise-knowledge-management",
+      "front": "知識編碼與人際連結：答題時先定義什麼？",
+      "back": "先界定 知識編碼與人際連結 的分析單位、核心機制與適用條件。",
+      "explanation": "MIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。",
+      "sourceRefs": [
+        "src-im-mis-laudon-17e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-107-1"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-enterprise-knowledge-management-tradeoff",
+      "lessonId": "lesson-im-mis-enterprise-01",
+      "subtopicId": "im-mis-enterprise-knowledge-management",
+      "front": "知識編碼與人際連結：完整申論至少要補哪三類內容？",
+      "back": "機制、條件／權衡、可觀察指標與限制。",
+      "explanation": "以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。",
+      "sourceRefs": [
+        "src-im-mis-laudon-17e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-107-1"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-enterprise-enterprise-processes-definition",
+      "lessonId": "lesson-im-mis-enterprise-01",
+      "subtopicId": "im-mis-enterprise-enterprise-processes",
+      "front": "企業系統與流程整合：答題時先定義什麼？",
+      "back": "先界定 企業系統與流程整合 的分析單位、核心機制與適用條件。",
+      "explanation": "MIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。",
+      "sourceRefs": [
+        "src-im-mis-laudon-17e"
+      ],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-enterprise-enterprise-processes-tradeoff",
+      "lessonId": "lesson-im-mis-enterprise-01",
+      "subtopicId": "im-mis-enterprise-enterprise-processes",
+      "front": "企業系統與流程整合：完整申論至少要補哪三類內容？",
+      "back": "機制、條件／權衡、可觀察指標與限制。",
+      "explanation": "以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。",
+      "sourceRefs": [
+        "src-im-mis-laudon-17e"
+      ],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-enterprise-supply-chain-definition",
+      "lessonId": "lesson-im-mis-enterprise-01",
+      "subtopicId": "im-mis-enterprise-supply-chain",
+      "front": "推式與拉式供應鏈：答題時先定義什麼？",
+      "back": "先界定 推式與拉式供應鏈 的分析單位、核心機制與適用條件。",
+      "explanation": "MIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。",
+      "sourceRefs": [
+        "src-im-mis-laudon-17e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-112-1"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-enterprise-supply-chain-tradeoff",
+      "lessonId": "lesson-im-mis-enterprise-01",
+      "subtopicId": "im-mis-enterprise-supply-chain",
+      "front": "推式與拉式供應鏈：完整申論至少要補哪三類內容？",
+      "back": "機制、條件／權衡、可觀察指標與限制。",
+      "explanation": "以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。",
+      "sourceRefs": [
+        "src-im-mis-laudon-17e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-112-1"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-data-ai-data-lifecycle-definition",
+      "lessonId": "lesson-im-mis-data-ai-01",
+      "subtopicId": "im-mis-data-ai-data-lifecycle",
+      "front": "資料生命週期與分析可行性：答題時先定義什麼？",
+      "back": "先界定 資料生命週期與分析可行性 的分析單位、核心機制與適用條件。",
+      "explanation": "MIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。",
+      "sourceRefs": [
+        "src-im-mis-google-ml-rules",
+        "src-im-mis-nist-privacy-framework"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-108-2"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-data-ai-data-lifecycle-tradeoff",
+      "lessonId": "lesson-im-mis-data-ai-01",
+      "subtopicId": "im-mis-data-ai-data-lifecycle",
+      "front": "資料生命週期與分析可行性：完整申論至少要補哪三類內容？",
+      "back": "機制、條件／權衡、可觀察指標與限制。",
+      "explanation": "以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。",
+      "sourceRefs": [
+        "src-im-mis-google-ml-rules",
+        "src-im-mis-nist-privacy-framework"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-108-2"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-data-ai-model-evaluation-fairness-definition",
+      "lessonId": "lesson-im-mis-data-ai-01",
+      "subtopicId": "im-mis-data-ai-model-evaluation-fairness",
+      "front": "模型評估、公平與漂移：答題時先定義什麼？",
+      "back": "先界定 模型評估、公平與漂移 的分析單位、核心機制與適用條件。",
+      "explanation": "MIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。",
+      "sourceRefs": [
+        "src-im-mis-google-ml-rules",
+        "src-im-mis-nist-ai-rmf"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-108-3",
+        "q-pp-im-mis-108-4"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-data-ai-model-evaluation-fairness-tradeoff",
+      "lessonId": "lesson-im-mis-data-ai-01",
+      "subtopicId": "im-mis-data-ai-model-evaluation-fairness",
+      "front": "模型評估、公平與漂移：完整申論至少要補哪三類內容？",
+      "back": "機制、條件／權衡、可觀察指標與限制。",
+      "explanation": "以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。",
+      "sourceRefs": [
+        "src-im-mis-google-ml-rules",
+        "src-im-mis-nist-ai-rmf"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-108-3",
+        "q-pp-im-mis-108-4"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-data-ai-analytics-forecasting-definition",
+      "lessonId": "lesson-im-mis-data-ai-01",
+      "subtopicId": "im-mis-data-ai-analytics-forecasting",
+      "front": "預測、社群分析與決策：答題時先定義什麼？",
+      "back": "先界定 預測、社群分析與決策 的分析單位、核心機制與適用條件。",
+      "explanation": "MIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。",
+      "sourceRefs": [
+        "src-im-mis-laudon-17e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-109-4",
+        "q-pp-im-mis-110-4",
+        "q-pp-im-mis-113-1"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-data-ai-analytics-forecasting-tradeoff",
+      "lessonId": "lesson-im-mis-data-ai-01",
+      "subtopicId": "im-mis-data-ai-analytics-forecasting",
+      "front": "預測、社群分析與決策：完整申論至少要補哪三類內容？",
+      "back": "機制、條件／權衡、可觀察指標與限制。",
+      "explanation": "以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。",
+      "sourceRefs": [
+        "src-im-mis-laudon-17e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-109-4",
+        "q-pp-im-mis-110-4",
+        "q-pp-im-mis-113-1"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-data-ai-ai-operations-governance-definition",
+      "lessonId": "lesson-im-mis-data-ai-01",
+      "subtopicId": "im-mis-data-ai-ai-operations-governance",
+      "front": "AI 維運、導入與治理：答題時先定義什麼？",
+      "back": "先界定 AI 維運、導入與治理 的分析單位、核心機制與適用條件。",
+      "explanation": "MIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。",
+      "sourceRefs": [
+        "src-im-mis-google-ml-rules",
+        "src-im-mis-nist-ai-rmf"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-112-3",
+        "q-pp-im-mis-113-3",
+        "q-pp-im-mis-115-1"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-data-ai-ai-operations-governance-tradeoff",
+      "lessonId": "lesson-im-mis-data-ai-01",
+      "subtopicId": "im-mis-data-ai-ai-operations-governance",
+      "front": "AI 維運、導入與治理：完整申論至少要補哪三類內容？",
+      "back": "機制、條件／權衡、可觀察指標與限制。",
+      "explanation": "以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。",
+      "sourceRefs": [
+        "src-im-mis-google-ml-rules",
+        "src-im-mis-nist-ai-rmf"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-112-3",
+        "q-pp-im-mis-113-3",
+        "q-pp-im-mis-115-1"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-development-acquisition-estimation-definition",
+      "lessonId": "lesson-im-mis-development-01",
+      "subtopicId": "im-mis-development-acquisition-estimation",
+      "front": "系統取得與成本估算：答題時先定義什麼？",
+      "back": "先界定 系統取得與成本估算 的分析單位、核心機制與適用條件。",
+      "explanation": "MIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。",
+      "sourceRefs": [
+        "src-im-mis-laudon-17e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-107-3",
+        "q-pp-im-mis-112-4"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-development-acquisition-estimation-tradeoff",
+      "lessonId": "lesson-im-mis-development-01",
+      "subtopicId": "im-mis-development-acquisition-estimation",
+      "front": "系統取得與成本估算：完整申論至少要補哪三類內容？",
+      "back": "機制、條件／權衡、可觀察指標與限制。",
+      "explanation": "以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。",
+      "sourceRefs": [
+        "src-im-mis-laudon-17e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-107-3",
+        "q-pp-im-mis-112-4"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-development-agile-delivery-definition",
+      "lessonId": "lesson-im-mis-development-01",
+      "subtopicId": "im-mis-development-agile-delivery",
+      "front": "Scrum 與敏捷交付：答題時先定義什麼？",
+      "back": "先界定 Scrum 與敏捷交付 的分析單位、核心機制與適用條件。",
+      "explanation": "MIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。",
+      "sourceRefs": [
+        "src-im-mis-scrum-guide-2020"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-110-3"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-development-agile-delivery-tradeoff",
+      "lessonId": "lesson-im-mis-development-01",
+      "subtopicId": "im-mis-development-agile-delivery",
+      "front": "Scrum 與敏捷交付：完整申論至少要補哪三類內容？",
+      "back": "機制、條件／權衡、可觀察指標與限制。",
+      "explanation": "以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。",
+      "sourceRefs": [
+        "src-im-mis-scrum-guide-2020"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-110-3"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-development-testing-quality-definition",
+      "lessonId": "lesson-im-mis-development-01",
+      "subtopicId": "im-mis-development-testing-quality",
+      "front": "測試層級與品質風險：答題時先定義什麼？",
+      "back": "先界定 測試層級與品質風險 的分析單位、核心機制與適用條件。",
+      "explanation": "MIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。",
+      "sourceRefs": [
+        "src-im-mis-laudon-17e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-111-3"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-development-testing-quality-tradeoff",
+      "lessonId": "lesson-im-mis-development-01",
+      "subtopicId": "im-mis-development-testing-quality",
+      "front": "測試層級與品質風險：完整申論至少要補哪三類內容？",
+      "back": "機制、條件／權衡、可觀察指標與限制。",
+      "explanation": "以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。",
+      "sourceRefs": [
+        "src-im-mis-laudon-17e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-111-3"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-development-requirements-ux-definition",
+      "lessonId": "lesson-im-mis-development-01",
+      "subtopicId": "im-mis-development-requirements-ux",
+      "front": "需求表達與使用者體驗：答題時先定義什麼？",
+      "back": "先界定 需求表達與使用者體驗 的分析單位、核心機制與適用條件。",
+      "explanation": "MIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。",
+      "sourceRefs": [
+        "src-im-mis-laudon-17e",
+        "src-im-mis-nielsen-heuristics"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-111-4",
+        "q-pp-im-mis-114-3"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-development-requirements-ux-tradeoff",
+      "lessonId": "lesson-im-mis-development-01",
+      "subtopicId": "im-mis-development-requirements-ux",
+      "front": "需求表達與使用者體驗：完整申論至少要補哪三類內容？",
+      "back": "機制、條件／權衡、可觀察指標與限制。",
+      "explanation": "以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。",
+      "sourceRefs": [
+        "src-im-mis-laudon-17e",
+        "src-im-mis-nielsen-heuristics"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-111-4",
+        "q-pp-im-mis-114-3"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-data-architecture-relational-nosql-definition",
+      "lessonId": "lesson-im-mis-data-architecture-01",
+      "subtopicId": "im-mis-data-architecture-relational-nosql",
+      "front": "關聯式資料庫與 NoSQL：答題時先定義什麼？",
+      "back": "先界定 關聯式資料庫與 NoSQL 的分析單位、核心機制與適用條件。",
+      "explanation": "MIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。",
+      "sourceRefs": [
+        "src-im-mis-laudon-17e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-106-4"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-data-architecture-relational-nosql-tradeoff",
+      "lessonId": "lesson-im-mis-data-architecture-01",
+      "subtopicId": "im-mis-data-architecture-relational-nosql",
+      "front": "關聯式資料庫與 NoSQL：完整申論至少要補哪三類內容？",
+      "back": "機制、條件／權衡、可觀察指標與限制。",
+      "explanation": "以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。",
+      "sourceRefs": [
+        "src-im-mis-laudon-17e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-106-4"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-data-architecture-sql-schema-definition",
+      "lessonId": "lesson-im-mis-data-architecture-01",
+      "subtopicId": "im-mis-data-architecture-sql-schema",
+      "front": "SQL、schema 與查詢：答題時先定義什麼？",
+      "back": "先界定 SQL、schema 與查詢 的分析單位、核心機制與適用條件。",
+      "explanation": "MIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。",
+      "sourceRefs": [
+        "src-im-mis-postgresql-sql"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-107-4"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-data-architecture-sql-schema-tradeoff",
+      "lessonId": "lesson-im-mis-data-architecture-01",
+      "subtopicId": "im-mis-data-architecture-sql-schema",
+      "front": "SQL、schema 與查詢：完整申論至少要補哪三類內容？",
+      "back": "機制、條件／權衡、可觀察指標與限制。",
+      "explanation": "以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。",
+      "sourceRefs": [
+        "src-im-mis-postgresql-sql"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-107-4"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-data-architecture-oss-licensing-definition",
+      "lessonId": "lesson-im-mis-data-architecture-01",
+      "subtopicId": "im-mis-data-architecture-oss-licensing",
+      "front": "開源軟體、授權與 sourcing：答題時先定義什麼？",
+      "back": "先界定 開源軟體、授權與 sourcing 的分析單位、核心機制與適用條件。",
+      "explanation": "MIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。",
+      "sourceRefs": [
+        "src-im-mis-apache-license-2",
+        "src-im-mis-gpl-3"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-106-3"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-data-architecture-oss-licensing-tradeoff",
+      "lessonId": "lesson-im-mis-data-architecture-01",
+      "subtopicId": "im-mis-data-architecture-oss-licensing",
+      "front": "開源軟體、授權與 sourcing：完整申論至少要補哪三類內容？",
+      "back": "機制、條件／權衡、可觀察指標與限制。",
+      "explanation": "以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。",
+      "sourceRefs": [
+        "src-im-mis-apache-license-2",
+        "src-im-mis-gpl-3"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-106-3"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-governance-privacy-security-definition",
+      "lessonId": "lesson-im-mis-governance-01",
+      "subtopicId": "im-mis-governance-privacy-security",
+      "front": "IoT、資料與隱私風險：答題時先定義什麼？",
+      "back": "先界定 IoT、資料與隱私風險 的分析單位、核心機制與適用條件。",
+      "explanation": "MIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。",
+      "sourceRefs": [
+        "src-im-mis-nist-privacy-framework"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-111-2"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-governance-privacy-security-tradeoff",
+      "lessonId": "lesson-im-mis-governance-01",
+      "subtopicId": "im-mis-governance-privacy-security",
+      "front": "IoT、資料與隱私風險：完整申論至少要補哪三類內容？",
+      "back": "機制、條件／權衡、可觀察指標與限制。",
+      "explanation": "以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。",
+      "sourceRefs": [
+        "src-im-mis-nist-privacy-framework"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-111-2"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-governance-esg-accountability-definition",
+      "lessonId": "lesson-im-mis-governance-01",
+      "subtopicId": "im-mis-governance-esg-accountability",
+      "front": "ESG、揭露與問責：答題時先定義什麼？",
+      "back": "先界定 ESG、揭露與問責 的分析單位、核心機制與適用條件。",
+      "explanation": "MIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。",
+      "sourceRefs": [
+        "src-im-mis-ifrs-sustainability"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-113-4"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-governance-esg-accountability-tradeoff",
+      "lessonId": "lesson-im-mis-governance-01",
+      "subtopicId": "im-mis-governance-esg-accountability",
+      "front": "ESG、揭露與問責：完整申論至少要補哪三類內容？",
+      "back": "機制、條件／權衡、可觀察指標與限制。",
+      "explanation": "以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。",
+      "sourceRefs": [
+        "src-im-mis-ifrs-sustainability"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-113-4"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-governance-vendor-ai-governance-definition",
+      "lessonId": "lesson-im-mis-governance-01",
+      "subtopicId": "im-mis-governance-vendor-ai-governance",
+      "front": "AI 供應商、共競與信任治理：答題時先定義什麼？",
+      "back": "先界定 AI 供應商、共競與信任治理 的分析單位、核心機制與適用條件。",
+      "explanation": "MIS 概念不能只背名詞；定義後必須說明它如何改變資訊、協調、成本、能力或風險。",
+      "sourceRefs": [
+        "src-im-mis-nist-privacy-framework",
+        "src-im-mis-nist-ai-rmf"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-115-2"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    },
+    {
+      "id": "srs-candidate-im-mis-governance-vendor-ai-governance-tradeoff",
+      "lessonId": "lesson-im-mis-governance-01",
+      "subtopicId": "im-mis-governance-vendor-ai-governance",
+      "front": "AI 供應商、共競與信任治理：完整申論至少要補哪三類內容？",
+      "back": "機制、條件／權衡、可觀察指標與限制。",
+      "explanation": "以「主張→因果機制→成立條件→案例／指標→限制」自我檢查，合理替代論點亦可接受。",
+      "sourceRefs": [
+        "src-im-mis-nist-privacy-framework",
+        "src-im-mis-nist-ai-rmf"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-mis-115-2"
+      ],
+      "reviewStatus": "reviewed",
+      "curationStatus": "candidate_reviewed",
+      "publishToSrs": false
+    }
+  ]
+}

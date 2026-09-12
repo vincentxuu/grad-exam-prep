@@ -1,0 +1,323 @@
+{
+  "subjectId": "im-stat",
+  "terms": [
+    {
+      "id": "im-stat-term-expected-value",
+      "label": "期望值",
+      "aliases": ["expected value", "expectation", "E(X)", "μ", "mu"],
+      "plainDefinition": "期望值是把每個可能結果乘上其機率後加總的長期平均；E(X) 讀作「X 的期望值」，μ 讀作「mu／繆」，常用來代表母體平均。",
+      "everydayExample": "一張彩券有不同獎金與中獎機率，把每種獎金乘上機率再相加，就是每買一張長期平均可拿回的金額。",
+      "confusionNote": "期望值不一定是實際可能出現的結果，也不是只做一次就一定會拿到的數字。",
+      "lessonIds": ["lesson-im-stat-prereq-expectation-variance"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-stat-term-variance",
+      "label": "變異數",
+      "aliases": ["variance", "Var(X)", "σ²", "sigma squared"],
+      "plainDefinition": "變異數把每個值離平均的距離平方後取平均，用來表示資料有多分散；Var(X) 讀作「X 的變異數」，σ² 讀作「sigma 平方」。",
+      "everydayExample": "兩班平均都考 70 分，但一班都在 65 至 75 分，另一班從 30 到 100 分，後一班的變異數較大。",
+      "confusionNote": "變異數的單位會被平方，因此不能直接把它當成原資料的典型差距。",
+      "lessonIds": ["lesson-im-stat-prereq-expectation-variance"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-stat-term-standard-deviation",
+      "label": "標準差",
+      "aliases": ["standard deviation", "SD", "σ", "sigma", "sqrt(Var(X))"],
+      "plainDefinition": "標準差是變異數開根號後的分散程度；σ 讀作「sigma」，與原資料使用相同單位。",
+      "everydayExample": "體重的標準差若是 3 公斤，可以直覺理解成讀值通常在平均附近相差幾公斤。",
+      "confusionNote": "標準差不是變異數本身，σ 與 σ² 分別代表標準差與變異數。",
+      "lessonIds": ["lesson-im-stat-prereq-expectation-variance"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-stat-term-covariance",
+      "label": "共變異數",
+      "aliases": ["covariance", "Cov(X,Y)", "cov"],
+      "plainDefinition": "共變異數描述兩個變數是否傾向一起高或一起低；Cov(X,Y) 讀作「X 與 Y 的共變異數」。",
+      "everydayExample": "天氣越熱時冷飲銷量通常越高，溫度與冷飲銷量會呈現正的共變異數。",
+      "confusionNote": "共變異數為 0 不一定代表兩變數完全獨立，而且數值大小會受單位影響。",
+      "lessonIds": ["lesson-im-stat-prereq-expectation-variance"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-stat-term-iid",
+      "label": "獨立同分布",
+      "aliases": ["iid", "i.i.d.", "independent and identically distributed"],
+      "plainDefinition": "獨立同分布表示每筆觀察彼此不影響，且都由同一套機率規則產生；iid 逐字母讀作「i-i-d」。",
+      "everydayExample": "每次都把公平硬幣重新拋一次，前一次結果不影響下一次，而且每次正面機率都相同。",
+      "confusionNote": "只要分布相同不代表獨立，只要獨立也不代表每筆資料的分布相同。",
+      "lessonIds": ["lesson-im-stat-prereq-expectation-variance"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-stat-term-null-alternative-hypotheses",
+      "label": "虛無假設與對立假設",
+      "aliases": ["null hypothesis", "alternative hypothesis", "H0", "H₀", "H1", "H₁"],
+      "plainDefinition": "H₀ 讀作「H 零」，是檢定暫時保留的基準說法；H₁ 讀作「H 一」，是資料足夠反對 H₀ 時所支持的方向。",
+      "everydayExample": "煙霧警報器先以「沒有火災」為 H₀，只有感測訊號夠異常才改採「可能有火災」的 H₁。",
+      "confusionNote": "未拒絕 H₀ 只代表證據不夠，不等於已經證明 H₀ 正確。",
+      "lessonIds": ["lesson-im-stat-prereq-hypothesis-workflow"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-stat-term-test-statistic-reference-distribution",
+      "label": "檢定統計量與參考分配",
+      "aliases": ["test statistic", "reference distribution", "sampling distribution"],
+      "plainDefinition": "檢定統計量把樣本證據濃縮成一個數字，參考分配則告訴我們在 H₀ 成立時這個數字通常會落在哪裡。",
+      "everydayExample": "警報器把溫度與煙霧濃度濃縮成警戒分數，再拿正常環境下的分數範圍作比較。",
+      "confusionNote": "不同資料型態與假設條件要用不同統計量和分配，不能看到數字大就一律判為顯著。",
+      "lessonIds": ["lesson-im-stat-prereq-hypothesis-workflow"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-stat-term-significance-level",
+      "label": "顯著水準",
+      "aliases": ["significance level", "α", "alpha", "α=0.05"],
+      "plainDefinition": "顯著水準 α 讀作「alpha」，是分析前設定的拒絕門檻，例如 α=0.05 表示願意承擔至多約 5% 的第一類錯誤風險。",
+      "everydayExample": "煙霧警報器把門檻調得越嚴格，越不容易誤報，但也可能更容易漏掉真正異常。",
+      "confusionNote": "α 不是 H₀ 為真的機率，也不該看完 p 值後才為了得到想要的結論而更改。",
+      "lessonIds": ["lesson-im-stat-prereq-hypothesis-workflow"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-stat-term-p-value",
+      "label": "p 值",
+      "aliases": ["p-value", "p value", "p"],
+      "plainDefinition": "p 值是在 H₀ 成立的前提下，得到目前這麼極端或更極端資料的機率；p 讀作英文字母「p」。",
+      "everydayExample": "若正常廚房幾乎不會出現目前這麼高的煙霧讀值，p 值就會很小。",
+      "confusionNote": "p 值不是 H₀ 為真的機率、不是結果由偶然造成的機率，也不表示效果大小。",
+      "lessonIds": ["lesson-im-stat-prereq-hypothesis-workflow"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-stat-term-statistical-significance",
+      "label": "統計顯著與未拒絕",
+      "aliases": ["statistical significance", "reject H0", "fail to reject H0", "p<α"],
+      "plainDefinition": "當 p<α（讀作「p 小於 alpha」）時稱結果達統計顯著並拒絕 H₀，否則只能說未能拒絕 H₀。",
+      "everydayExample": "警報響起代表訊號越過預設門檻，但仍要由人確認是否真的起火及原因為何。",
+      "confusionNote": "統計顯著不等於效果很大、實務上重要或已證明因果；未顯著也不等於兩者完全沒有差異。",
+      "lessonIds": ["lesson-im-stat-prereq-hypothesis-workflow"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-stat-term-joint-pmf",
+      "label": "聯合機率質量函數",
+      "aliases": ["joint PMF", "joint probability mass function", "p(X=x,Y=y)"],
+      "plainDefinition": "聯合 PMF 列出兩個離散變數每一組可能配對的機率；PMF 逐字母讀作「P-M-F」，p(X=x,Y=y) 讀作「X 等於 x 且 Y 等於 y 的機率」。",
+      "everydayExample": "同時記錄擲兩顆骰子的點數，表格每一格就是某一對點數一起出現的機率。",
+      "confusionNote": "聯合 PMF 用於可逐項列舉的離散結果；連續資料要談密度，單一點的機率通常為 0。",
+      "lessonIds": ["lesson-im-stat-pmf-transformations"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-stat-term-support",
+      "label": "可能值集合",
+      "aliases": ["support", "sample support", "possible-value set"],
+      "plainDefinition": "support 是隨機變數真正可能取到且需要納入計算的所有值或座標集合。",
+      "everydayExample": "一顆六面骰子的 support 是 1 到 6，不包含 0 或 7。",
+      "confusionNote": "support 不是目前樣本中剛好看見的值，而是模型允許出現的完整可能範圍。",
+      "lessonIds": ["lesson-im-stat-pmf-transformations"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-stat-term-normalizing-constant",
+      "label": "正規化常數",
+      "aliases": ["normalizing constant", "normalization constant", "c", "1/c"],
+      "plainDefinition": "正規化常數是把原始權重換成總和為 1 的機率所需的縮放數；c 讀作英文字母「c」，題目可能用除以 c 或乘上 c，須依公式判讀。",
+      "everydayExample": "籃子裡各色票共有 12 張，每色張數除以 12 後才是抽到該色的機率。",
+      "confusionNote": "若權重總和為 12，以「權重/c」表示時 c=12，以「c×權重」表示時則 c=1/12，不能只背固定答案。",
+      "lessonIds": ["lesson-im-stat-pmf-transformations"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-stat-term-mapping-preimage",
+      "label": "映射、像點與原像",
+      "aliases": ["mapping", "image", "preimage", "transformation", "Y=g(X)"],
+      "plainDefinition": "映射是依規則把舊值換成新值，像點是換完後的位置，原像則是所有會被換到該位置的舊值；Y=g(X) 讀作「Y 等於 g 作用在 X」。",
+      "everydayExample": "把不同郵遞區號分到同一行政區時，行政區是像點，所有屬於它的郵遞區號是原像。",
+      "confusionNote": "多個舊值可映到同一新值，此時新值的機率要把所有原像機率相加。",
+      "lessonIds": ["lesson-im-stat-pmf-transformations"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-stat-term-marginal-pmf",
+      "label": "邊際機率質量函數",
+      "aliases": ["marginal PMF", "marginal distribution", "marginalization", "邊際化", "Σy p(x,y)"],
+      "plainDefinition": "邊際 PMF 是只關心其中一個變數時，把另一個變數所有可能值的聯合機率加總；Σy p(x,y) 讀作「對所有 y，把 p(x,y) 加總」。",
+      "everydayExample": "表格同時記錄時段與商品，若只想知道各商品總銷量，就把每個商品跨所有時段的格子加起來。",
+      "confusionNote": "加總時要固定想保留的變數並消去另一維，方向弄反會得到不同邊際分配。",
+      "lessonIds": ["lesson-im-stat-pmf-transformations"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-stat-term-estimator-observation",
+      "label": "觀察值與估計量",
+      "aliases": ["observation", "sample", "estimator", "Yi", "Yᵢ", "m"],
+      "plainDefinition": "Yᵢ 讀作「Y 下標 i」，表示第 i 筆有隨機性的觀察；估計量則是把多筆觀察依規則合成、用來猜未知母體數值的公式。",
+      "everydayExample": "每支溫度計讀值是觀察，把多支讀值平均後得到的數字是估計真實溫度的估計量。",
+      "confusionNote": "估計量是抽樣前的計算規則，代入實際資料後得到的單一數字才叫估計值。",
+      "lessonIds": ["lesson-im-stat-unbiased-efficient-estimators"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-stat-term-unbiased-estimator",
+      "label": "不偏估計量",
+      "aliases": ["unbiased estimator", "unbiasedness", "E(m)=μ"],
+      "plainDefinition": "若重複抽樣時估計量的長期平均等於真正參數，就稱不偏；E(m)=μ 讀作「m 的期望值等於 mu」。",
+      "everydayExample": "一支秤有時高估、有時低估，但長期平均恰好等於真實重量，可視為不偏。",
+      "confusionNote": "不偏不代表每次都準，也不代表它比其他估計量波動更小。",
+      "lessonIds": ["lesson-im-stat-unbiased-efficient-estimators"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-stat-term-estimator-weights",
+      "label": "估計權重",
+      "aliases": ["weights", "wi", "wᵢ", "Σwi=1", "weighted mean"],
+      "plainDefinition": "wᵢ 讀作「w 下標 i」，表示第 i 筆資料占多大比重；Σwᵢ=1 讀作「所有 w 下標 i 的總和等於一」，在各觀察同平均時可讓加權平均維持不偏。",
+      "everydayExample": "綜合三支溫度計時給可靠儀器較高權重，但所有採信比例加起來仍是 100%。",
+      "confusionNote": "權重和為 1 只處理中心是否偏移，不保證變異數最小，也不保證權重都必須相同。",
+      "lessonIds": ["lesson-im-stat-unbiased-efficient-estimators"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-stat-term-estimator-variance-efficiency",
+      "label": "估計量變異數與效率",
+      "aliases": ["estimator variance", "efficiency", "minimum variance", "Var(m)=σ²Σwi²"],
+      "plainDefinition": "估計量變異數衡量答案在重複抽樣間有多晃，在同樣不偏的候選中變異數較小者稱較有效率；Var(m)=σ²Σwᵢ² 讀作「m 的變異數等於 sigma 平方乘權重平方和」。",
+      "everydayExample": "兩種溫度合併法都不會長期高估，但每次結果較穩定的那一種效率較高。",
+      "confusionNote": "只有在比較條件一致時才能只靠變異數談效率；資料相關或每筆誤差不同時公式也會改變。",
+      "lessonIds": ["lesson-im-stat-unbiased-efficient-estimators"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-stat-term-optimization-cauchy",
+      "label": "最小化、微分與柯西不等式",
+      "aliases": ["minimize", "optimization", "derivative", "Cauchy", "Cauchy–Schwarz inequality", "α"],
+      "plainDefinition": "最小化是在限制下找讓變異數最小的權重，可用微分找谷底或用柯西不等式比較下界；α 讀作「alpha」，在此只是可調權重參數。",
+      "everydayExample": "調整兩支溫度計的採信比例，尋找合成讀數晃動最小的位置。",
+      "confusionNote": "這裡的 α 是權重參數，不是假設檢定的顯著水準；兩者符號相同但角色不同。",
+      "lessonIds": ["lesson-im-stat-unbiased-efficient-estimators"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-stat-term-multiple-regression",
+      "label": "多元線性迴歸",
+      "aliases": ["multiple regression", "multiple linear regression", "多元迴歸", "outcome", "predictor", "intercept", "slope"],
+      "plainDefinition": "多元線性迴歸用一個截距與多個斜率，描述多個預測變數和一個結果變數之間的線性關係。",
+      "everydayExample": "同時用家庭人數、收入與居住面積來預測每週垃圾量。",
+      "confusionNote": "迴歸找的是在模型與資料條件下的關聯，單靠係數顯著不能證明某變數造成結果。",
+      "lessonIds": ["lesson-im-stat-regression-dashboard"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-stat-term-coefficient-standard-error-t",
+      "label": "迴歸係數、標準誤與 t 值",
+      "aliases": ["coefficient", "coef", "standard error", "std err", "SE", "t-statistic", "t=coef/SE"],
+      "plainDefinition": "係數是估計的影響方向與大小，標準誤 SE 是係數的不確定程度，t=coef/SE 讀作「t 等於係數除以標準誤」，表示效果相對噪音有多大。",
+      "everydayExample": "若收入係數是 7 而標準誤約 1，表示估計效果相對其不確定程度算大。",
+      "confusionNote": "t 值不是 p 值，係數大也不必然顯著，還要看標準誤與參考分配。",
+      "lessonIds": ["lesson-im-stat-regression-dashboard"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-stat-term-residual-degrees-freedom",
+      "label": "殘差與殘差自由度",
+      "aliases": ["residual", "error", "Df Residuals", "residual degrees of freedom", "df=n-k-1"],
+      "plainDefinition": "殘差是實際值減模型預測值，殘差自由度是扣掉估計參數後仍可用來估計誤差的獨立資訊量；df=n-k-1 讀作「自由度等於樣本數 n 減斜率數 k 再減一」。",
+      "everydayExample": "440 戶資料估計 3 個斜率加 1 個截距後，剩下 436 份殘差自由度。",
+      "confusionNote": "Df Model 通常是模型斜率數，不是殘差自由度；公式中的減一通常來自截距。",
+      "lessonIds": ["lesson-im-stat-regression-dashboard"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-stat-term-r-squared-adjusted",
+      "label": "決定係數與調整後決定係數",
+      "aliases": ["R²", "R-squared", "coefficient of determination", "adjusted R²", "Adj. R-squared"],
+      "plainDefinition": "R² 讀作「R 平方」，表示模型解釋結果變動的比例；adjusted R² 讀作「調整後 R 平方」，會對加入過多預測變數扣分。",
+      "everydayExample": "垃圾量模型的 R²=.17，可白話理解為樣本中約 17% 的垃圾量差異被模型解釋。",
+      "confusionNote": "R² 高不等於模型有因果性或預測一定準，adjusted R² 也不是所有模型品質的唯一標準。",
+      "lessonIds": ["lesson-im-stat-regression-dashboard"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-stat-term-joint-f-test",
+      "label": "整體 F 檢定",
+      "aliases": ["F-test", "joint F-test", "F-statistic", "Prob(F-statistic)"],
+      "plainDefinition": "整體 F 檢定把所有斜率同時為 0 當作 H₀，檢查整組預測變數是否共同提供解釋力；F 讀作英文字母「F」。",
+      "everydayExample": "不是逐一問每個旋鈕，而是一次問儀表板上的所有旋鈕合起來是否比完全不用更有用。",
+      "confusionNote": "F 檢定顯著只表示至少一個斜率可能非零，不會告訴你是哪一個，也不等於每一個都顯著。",
+      "lessonIds": ["lesson-im-stat-regression-dashboard"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-stat-term-categorical-contingency-table",
+      "label": "類別變數與列聯表",
+      "aliases": ["categorical variable", "contingency table", "cross-tabulation", "r×c table"],
+      "plainDefinition": "類別變數把人或物分組，列聯表則用列與欄記錄兩個類別變數各種組合的人數；r×c 讀作「r 乘 c 的表」。",
+      "everydayExample": "用列表示早中晚時段、欄表示飲料種類，每格填入購買人數就是一張列聯表。",
+      "confusionNote": "格子應放計數而非連續測量值；列聯表呈現關聯，不會自動說明原因。",
+      "lessonIds": ["lesson-im-stat-chi-square-independence"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-stat-term-observed-expected-count",
+      "label": "觀察次數與期望次數",
+      "aliases": ["observed count", "expected count", "O", "E", "row total×column total/grand total"],
+      "plainDefinition": "O 讀作「觀察次數」，是實際每格人數；E 讀作「期望次數」，是在兩變數獨立時由列合計乘欄合計再除總合計算出的每格預期人數。",
+      "everydayExample": "實際晚間買咖啡有 30 人是 O，若時段與飲料無關時按整體比例應有 22 人則是 E。",
+      "confusionNote": "這裡的 E 是期望次數，不是前面 E(X) 的期望值運算符；卡方公式的分母必須用 E。",
+      "lessonIds": ["lesson-im-stat-chi-square-independence"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-stat-term-pearson-chi-square",
+      "label": "皮爾森卡方統計量",
+      "aliases": ["Pearson chi-square", "χ²", "chi-square statistic", "Σ(O-E)²/E"],
+      "plainDefinition": "χ² 讀作「chi-square／卡方」，把每格觀察與期望的差平方後除以期望再全部加總，即 Σ(O-E)²/E 讀作「所有格的 O 減 E 平方除以 E 之和」。",
+      "everydayExample": "若多個時段與飲料格子的實際人數都明顯偏離獨立時預期人數，χ² 就會變大。",
+      "confusionNote": "χ² 不會是負數，數值大小要搭配自由度或 p 值判斷，不能用固定門檻套所有表格。",
+      "lessonIds": ["lesson-im-stat-chi-square-independence"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-stat-term-chi-square-df",
+      "label": "卡方檢定自由度",
+      "aliases": ["degrees of freedom", "df", "df=(r-1)(c-1)"],
+      "plainDefinition": "自由度 df 讀作「d-f」，表示固定列欄合計後還能獨立變動的格子資訊量；df=(r-1)(c-1) 讀作「r 減一乘 c 減一」。",
+      "everydayExample": "2×3 列聯表的自由度是 (2-1)(3-1)=2。",
+      "confusionNote": "自由度不是格子總數 rc，也不是樣本數；列欄合計帶來的限制必須扣除。",
+      "lessonIds": ["lesson-im-stat-chi-square-independence"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-stat-term-critical-value-independence",
+      "label": "臨界值與獨立性結論",
+      "aliases": ["critical value", "臨界值", "independence test", "獨立性", "reject independence", "association", "causation"],
+      "plainDefinition": "臨界值是在指定 α 與自由度下的拒絕界線，若 χ² 超過它就拒絕「兩類別變數獨立」的 H₀，只能說資料顯示有關聯。",
+      "everydayExample": "χ²=6.42 高於 df=2、α=.05 的臨界值 5.99，表示時段與商品選擇的分布不像完全無關。",
+      "confusionNote": "拒絕獨立不代表一個變數造成另一個；樣本不獨立、期望次數太小或抽樣偏誤也可能讓結論失真。",
+      "lessonIds": ["lesson-im-stat-chi-square-independence"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "im-stat-term-self-review-rubric",
+      "label": "逐項自評標準",
+      "aliases": ["rubric", "評分規準"],
+      "interfaceTerm": true,
+      "plainDefinition": "把完整推導拆成可以逐步核對的要點，幫你找到漏掉的條件或計算步驟。",
+      "everydayExample": "像算完帳後依序檢查金額、單位、公式與最後結論。",
+      "confusionNote": "它不是官方配分，也不會把合理但不同的推導方式判成錯誤。",
+      "lessonIds": [
+        "lesson-im-stat-prereq-expectation-variance",
+        "lesson-im-stat-prereq-hypothesis-workflow",
+        "lesson-im-stat-pmf-transformations",
+        "lesson-im-stat-unbiased-efficient-estimators",
+        "lesson-im-stat-regression-dashboard",
+        "lesson-im-stat-chi-square-independence"
+      ],
+      "reviewStatus": "reviewed"
+    }
+  ]
+}

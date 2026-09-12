@@ -10,6 +10,8 @@ import { Button } from '@/components/ui/button'
 import { EXAM_LABELS, getSubjectsByExam } from '@/lib/content'
 import { fromSavedWord } from '@/lib/review-card'
 import { daysUntilDue } from '@/lib/srs'
+import { isAuthenticated } from '@/lib/auth'
+import { removeSavedWordServer, setPreferencesServer } from '@/lib/server-storage'
 import { localStorageImpl } from '@/lib/storage'
 import { useFlashcardStore } from '@/store/flashcard'
 import type { ExamId } from '@/types/content'
@@ -56,11 +58,13 @@ function LookupContent({ params }: Props) {
   function updatePersona(next: PersonaProfile) {
     localStorageImpl.setPreferences({ persona: next })
     setPersona(next)
+    if (isAuthenticated()) setPreferencesServer({ persona: next }).catch(() => {})
   }
 
   function remove(headword: string) {
     localStorageImpl.removeSavedWord(headword)
     setSavedWords(localStorageImpl.getSavedWords())
+    if (isAuthenticated()) removeSavedWordServer(headword).catch(() => {})
   }
 
   const personaFilled = !!persona && (persona.work.trim() !== '' || persona.interests.length > 0)
@@ -68,7 +72,7 @@ function LookupContent({ params }: Props) {
   return (
     <div className="space-y-6 max-w-3xl">
       <div>
-        <h1 className="text-2xl font-bold">{EXAM_LABELS[exam as ExamId]} — 查詞</h1>
+        <h1 className="text-2xl font-bold font-display">{EXAM_LABELS[exam as ExamId]} — 查詞</h1>
         <p className="text-muted-foreground text-sm mt-1">
           單字與片語都查得到。查過的字可加入單字庫，進入閃卡的複習排程。
         </p>

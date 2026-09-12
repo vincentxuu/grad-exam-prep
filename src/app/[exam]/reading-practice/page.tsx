@@ -1,6 +1,6 @@
 'use client'
 
-import { ChevronDown, ChevronUp } from 'lucide-react'
+import { ArrowLeft, ArrowRight, Check, ChevronDown, ChevronUp, X } from '@sketchyicons/react'
 import { notFound } from 'next/navigation'
 import { Suspense, use, useState } from 'react'
 import { PageLoading } from '@/components/page-loading'
@@ -99,7 +99,7 @@ function ReadingPracticeContent({ params }: Props) {
     return (
       <div className="space-y-4 max-w-4xl">
         <div>
-          <h1 className="text-2xl font-bold">{EXAM_LABELS[exam as ExamId]} — 閱讀練習</h1>
+          <h1 className="text-2xl font-bold font-display">{EXAM_LABELS[exam as ExamId]} — 閱讀練習</h1>
           <p className="text-muted-foreground text-sm mt-1">
             從 BBC、Nature、MIT News 等來源精選的文章，練習閱讀理解
           </p>
@@ -161,7 +161,8 @@ function ReadingPracticeContent({ params }: Props) {
       <div className="space-y-4 max-w-3xl">
         <div className="flex items-center justify-between">
           <Button variant="ghost" size="sm" onClick={() => setPhase('browse')}>
-            ← 返回列表
+            <ArrowLeft className="h-4 w-4" aria-hidden="true" />
+            返回列表
           </Button>
           <span className="text-sm text-muted-foreground">
             {currentQIdx + 1} / {currentArticle.questions.length} 題
@@ -228,8 +229,15 @@ function ReadingPracticeContent({ params }: Props) {
               })}
             </div>
             {isRevealed && correctAnswer && (
-              <p className={`text-xs font-medium ${isCorrect ? 'text-green-600' : 'text-red-600'}`}>
-                {isCorrect ? '✓ 正確！' : `✗ 答錯了。正確答案是 (${correctAnswer})`}
+              <p
+                className={`flex items-center gap-1 text-xs font-medium ${isCorrect ? 'text-green-600' : 'text-red-600'}`}
+              >
+                {isCorrect ? (
+                  <Check className="h-4 w-4" aria-hidden="true" />
+                ) : (
+                  <X className="h-4 w-4" aria-hidden="true" />
+                )}
+                {isCorrect ? '正確！' : `答錯了。正確答案是 (${correctAnswer})`}
               </p>
             )}
             {isRevealed && !correctAnswer && (
@@ -246,7 +254,8 @@ function ReadingPracticeContent({ params }: Props) {
             disabled={currentQIdx === 0}
             onClick={() => setCurrentQIdx((i) => i - 1)}
           >
-            ← 上一題
+            <ArrowLeft className="h-4 w-4" aria-hidden="true" />
+            上一題
           </Button>
           {isLast ? (
             <Button onClick={finishArticle} className="flex-1">
@@ -254,7 +263,8 @@ function ReadingPracticeContent({ params }: Props) {
             </Button>
           ) : (
             <Button onClick={() => setCurrentQIdx((i) => i + 1)} className="flex-1">
-              下一題 →
+              下一題
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Button>
           )}
         </div>
@@ -269,11 +279,11 @@ function ReadingPracticeContent({ params }: Props) {
     const totalWithAnswer = currentArticle.questions.filter((q) => q.correctAnswer).length
     return (
       <div className="space-y-4 max-w-3xl">
-        <h2 className="text-xl font-bold">練習完成</h2>
+        <h2 className="text-xl font-bold font-display">練習完成</h2>
 
         <Card>
           <CardContent className="py-4 px-4 text-center space-y-1">
-            <p className="text-2xl font-bold">
+            <p className="text-2xl font-bold font-mono tabular-nums">
               {correctCount} / {totalWithAnswer} 題答對
             </p>
             <p className="text-muted-foreground text-sm">
@@ -290,7 +300,13 @@ function ReadingPracticeContent({ params }: Props) {
               <Card key={q.number} className={isRight ? 'border-green-200' : userAns ? 'border-red-200' : ''}>
                 <CardContent className="py-3 px-4 space-y-1">
                   <div className="flex gap-2 items-center text-sm">
-                    <span>{isRight ? '✓' : userAns ? '✗' : '—'}</span>
+                    {isRight ? (
+                      <Check className="h-4 w-4 text-green-600" aria-hidden="true" />
+                    ) : userAns ? (
+                      <X className="h-4 w-4 text-red-600" aria-hidden="true" />
+                    ) : (
+                      <span>—</span>
+                    )}
                     <span className="font-medium">Q{q.number}. {q.text}</span>
                   </div>
                   <p className="text-sm">

@@ -1,5 +1,6 @@
 'use client'
 
+import { X } from '@sketchyicons/react'
 import { useRef, useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -13,6 +14,11 @@ interface Msg {
 interface Props {
   provider: string
   model: string
+}
+
+interface MetaMessage {
+  message: string
+  error: boolean
 }
 
 const SUGGESTIONS = [
@@ -33,7 +39,7 @@ export function TrialChat({ provider, model }: Props) {
   const [messages, setMessages] = useState<Msg[]>([])
   const [input, setInput] = useState('')
   const [busy, setBusy] = useState(false)
-  const [meta, setMeta] = useState<string | null>(null)
+  const [meta, setMeta] = useState<MetaMessage | null>(null)
   const inputRef = useRef<HTMLInputElement>(null)
 
   async function send(text: string) {
@@ -61,15 +67,15 @@ export function TrialChat({ provider, model }: Props) {
       }
 
       if (!res.ok || !data.ok) {
-        setMeta(`✗ ${data.error ?? '呼叫失敗'}`)
+        setMeta({ message: data.error ?? '呼叫失敗', error: true })
         // 失敗時把使用者那則留著，方便直接改 model 再送一次
         return
       }
 
       setMessages([...next, { role: 'assistant', content: data.reply ?? '' }])
-      setMeta(`${data.route} · ${data.ms} ms`)
+      setMeta({ message: `${data.route} · ${data.ms} ms`, error: false })
     } catch {
-      setMeta('✗ 呼叫失敗')
+      setMeta({ message: '呼叫失敗', error: true })
     } finally {
       setBusy(false)
       inputRef.current?.focus()
@@ -150,9 +156,13 @@ export function TrialChat({ provider, model }: Props) {
 
       {meta && (
         <p
-          className={`text-xs ${meta.startsWith('✗') ? 'text-destructive' : 'text-muted-foreground'}`}
+          className={`flex items-center gap-1.5 text-xs ${
+            meta.error ? 'text-destructive' : 'text-muted-foreground'
+          }`}
+          role="status"
         >
-          {meta}
+          {meta.error && <X aria-hidden="true" className="size-3.5 shrink-0" />}
+          <span>{meta.message}</span>
         </p>
       )}
     </div>

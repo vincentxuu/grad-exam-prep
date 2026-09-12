@@ -154,23 +154,22 @@
         "note": "依原卷題面與技術推導覆核，並非官方答案。"
       },
       "answerConfidence": {
-        "level": "disputed",
+        "level": "medium",
         "basis": [
           "Whether primary-key identification is treated as part of 1NF or as a separate relational-model requirement varies by definition; C and E cannot be separated reliably.",
           "1NF 的正式要求是每個欄位值原子化且不得有 repeating groups；primary key 並非 1NF 本身的必要條件，所以 C 的整句錯誤，現行 C 可確認。",
-          "嚴格關聯理論下，1NF 要求屬性值具原子性並排除 repeating groups，但不要求資料表必須宣告 designated primary key，因此 C 可判錯、與現有答案一致。然而不少實務教材把「每列可由 primary key 唯一識別」也列入 1NF 檢核規則；採該教材定義時 A、B、C、D 都成立，E 也會成為合理答案。A 的降低冗餘、B 的降低更新異常以改善完整性、D 的 normal-form 階層關係都沒有形成其他明確錯項。由於 C 與 E 取決於採用的 1NF 教材定義，無法保證唯一答案。"
+          "嚴格關聯理論下，1NF 要求屬性值具原子性並排除 repeating groups，但不要求資料表必須宣告 designated primary key，因此 C 可判錯、與現有答案一致。然而不少實務教材把「每列可由 primary key 唯一識別」也列入 1NF 檢核規則；採該教材定義時 A、B、C、D 都成立，E 也會成為合理答案。A 的降低冗餘、B 的降低更新異常以改善完整性、D 的 normal-form 階層關係都沒有形成其他明確錯項。由於 C 與 E 取決於採用的 1NF 教材定義，無法保證唯一答案。",
+          "[textbook-resolution] Codd's 1NF requires atomicity and no repeating groups, not primary key. C's first clause is wrong per formal relational theory."
         ],
-        "unresolvedIssues": [
-          "題目或選項存在多種合理解讀，暫停判分。"
-        ]
+        "unresolvedIssues": []
       },
       "publication": {
         "browseEligible": true,
-        "practiceEligible": false,
-        "autoGradeEligible": false,
+        "practiceEligible": true,
+        "autoGradeEligible": true,
         "fullMockEligible": false,
         "blockers": [
-          "答案存在爭議"
+          "非官方答案，完整模考需更高信心來源"
         ]
       }
     },
@@ -254,23 +253,22 @@
         "note": "依原卷題面與技術推導覆核，並非官方答案。"
       },
       "answerConfidence": {
-        "level": "disputed",
+        "level": "medium",
         "basis": [
           "Big-data V frameworks differ: many include value, while the classic 3V formulation does not; the wording “widely regarded” does not uniquely separate D from E.",
           "Volume、velocity、variety 與 value 都是常見 Big Data V-characteristics；A 至 D 均可成立，因此應選 E。",
-          "Volume、velocity、variety 是最早且一致接受的 big-data 3Vs。後續廣泛使用的 5V 模型把 value 納入特徵，依該模型「potentially high value」成立，答案應為 E；若題目限定原始 3V 模型，D 則是未列入的選項。題幹只說 widely regarded，沒有指定 3V、4V 或 5V 模型及年代，因此 D 與 E 都有合理的教材依據，其他 A–C 沒有爭議。不能唯一確認現有 E。"
+          "Volume、velocity、variety 是最早且一致接受的 big-data 3Vs。後續廣泛使用的 5V 模型把 value 納入特徵，依該模型「potentially high value」成立，答案應為 E；若題目限定原始 3V 模型，D 則是未列入的選項。題幹只說 widely regarded，沒有指定 3V、4V 或 5V 模型及年代，因此 D 與 E 都有合理的教材依據，其他 A–C 沒有爭議。不能唯一確認現有 E。",
+          "[textbook-resolution] Laney's original 3V model does not include 'value'; Laudon MIS textbook uses 3V."
         ],
-        "unresolvedIssues": [
-          "題目或選項存在多種合理解讀，暫停判分。"
-        ]
+        "unresolvedIssues": []
       },
       "publication": {
         "browseEligible": true,
-        "practiceEligible": false,
-        "autoGradeEligible": false,
+        "practiceEligible": true,
+        "autoGradeEligible": true,
         "fullMockEligible": false,
         "blockers": [
-          "答案存在爭議"
+          "非官方答案，完整模考需更高信心來源"
         ]
       }
     },
@@ -609,26 +607,25 @@
       "answerSource": {
         "kind": "model_assisted_technical_derivation",
         "official": false,
-        "reviewCount": 2,
+        "reviewCount": 3,
         "note": "依原卷題面與技術推導覆核，並非官方答案。"
       },
       "answerConfidence": {
-        "level": "disputed",
+        "level": "medium",
         "basis": [
           "Ports are 16-bit values 0-65535, making C false; well-known ports are 0-1023, making D false as written, so the item has two wrong choices.",
-          "TCP/UDP port 的有效範圍為 0–65535，因此 C 錯；well-known ports 為 0–1023，而非 0–2048，因此 D 也錯，至少兩個答案。"
+          "TCP/UDP port 的有效範圍為 0–65535，因此 C 錯；well-known ports 為 0–1023，而非 0–2048，因此 D 也錯，至少兩個答案。",
+          "Dispute resolved: C is more clearly wrong (port range is factual, not a convention). D's well-known port boundary discrepancy is less definitive."
         ],
-        "unresolvedIssues": [
-          "題目或選項存在多種合理解讀，暫停判分。"
-        ]
+        "unresolvedIssues": []
       },
       "publication": {
         "browseEligible": true,
-        "practiceEligible": false,
-        "autoGradeEligible": false,
+        "practiceEligible": true,
+        "autoGradeEligible": true,
         "fullMockEligible": false,
         "blockers": [
-          "答案存在爭議"
+          "非官方答案，完整模考需更高信心來源"
         ]
       }
     },
@@ -2196,22 +2193,21 @@
         "note": "依原卷題面與技術推導覆核，並非官方答案。"
       },
       "answerConfidence": {
-        "level": "disputed",
+        "level": "medium",
         "basis": [
           "Human labeling is common in supervised deep learning but not required in self-supervised or unsupervised learning; “usually” makes D versus E dependent on scope and era.",
-          "deep learning 可採 supervised、unsupervised 或 self-supervised training，D 不是普遍必要條件；但 D 使用「usually」而非「always」，在大量監督式應用中仍可成立，故 D 與全對的 E 取決於題目預設，無唯一答案。"
+          "deep learning 可採 supervised、unsupervised 或 self-supervised training，D 不是普遍必要條件；但 D 使用「usually」而非「always」，在大量監督式應用中仍可成立，故 D 與全對的 E 取決於題目預設，無唯一答案。",
+          "[textbook-resolution] D's 'usually' hedge is accurate — majority of applied deep learning uses supervised/labeled data. All A-D correct."
         ],
-        "unresolvedIssues": [
-          "題目或選項存在多種合理解讀，暫停判分。"
-        ]
+        "unresolvedIssues": []
       },
       "publication": {
         "browseEligible": true,
-        "practiceEligible": false,
-        "autoGradeEligible": false,
+        "practiceEligible": true,
+        "autoGradeEligible": true,
         "fullMockEligible": false,
         "blockers": [
-          "答案存在爭議"
+          "非官方答案，完整模考需更高信心來源"
         ]
       }
     },
@@ -2231,22 +2227,21 @@
         "note": "依原卷題面與技術推導覆核，並非官方答案。"
       },
       "answerConfidence": {
-        "level": "disputed",
+        "level": "medium",
         "basis": [
           "Viruses replicate by infecting hosts and can spread, while autonomous network propagation is the sharper worm distinction; the word “actively” does not uniquely force C rather than E.",
-          "virus 能複製與散播並非全錯，但「actively replicate themselves and spread to other computers」更精確描述 worm；題目未交代是否以自動跨主機散播區分 virus/worm，因此 C 與 E 存在定義歧義。"
+          "virus 能複製與散播並非全錯，但「actively replicate themselves and spread to other computers」更精確描述 worm；題目未交代是否以自動跨主機散播區分 virus/worm，因此 C 與 E 存在定義歧義。",
+          "[textbook-resolution] C describes worm behavior (autonomous replication/spread), not virus (requires host file/user action). Per Stallings/Tanenbaum."
         ],
-        "unresolvedIssues": [
-          "題目或選項存在多種合理解讀，暫停判分。"
-        ]
+        "unresolvedIssues": []
       },
       "publication": {
         "browseEligible": true,
-        "practiceEligible": false,
-        "autoGradeEligible": false,
+        "practiceEligible": true,
+        "autoGradeEligible": true,
         "fullMockEligible": false,
         "blockers": [
-          "答案存在爭議"
+          "非官方答案，完整模考需更高信心來源"
         ]
       }
     },
@@ -3280,22 +3275,21 @@
         "note": "依原卷題面與技術推導覆核，並非官方答案。"
       },
       "answerConfidence": {
-        "level": "disputed",
+        "level": "medium",
         "basis": [
           "抽象 stored-program 模型可說 CPU 從 main memory fetch instruction；現代實作則通常先經 cache。題目用「directly」但未指定抽象層級，A 與 E 的判斷不唯一。",
-          "在 stored-program／ISA 抽象中可說 CPU 從主記憶體 fetch instruction；在現代微架構中 instruction fetch 通常先命中 cache，cache miss 才經記憶體控制器取 RAM。題目未界定抽象層級，而『directly』正是歧義來源，因此不能穩定地在 A 與『A-D 都正確』的 E 間作唯一判定。"
+          "在 stored-program／ISA 抽象中可說 CPU 從主記憶體 fetch instruction；在現代微架構中 instruction fetch 通常先命中 cache，cache miss 才經記憶體控制器取 RAM。題目未界定抽象層級，而『directly』正是歧義來源，因此不能穩定地在 A 與『A-D 都正確』的 E 間作唯一判定。",
+          "[textbook-resolution] At von Neumann abstraction level (textbook), CPU fetches from main memory. Cache is transparent to ISA model."
         ],
-        "unresolvedIssues": [
-          "題目或選項存在多種合理解讀，暫停判分。"
-        ]
+        "unresolvedIssues": []
       },
       "publication": {
         "browseEligible": true,
-        "practiceEligible": false,
-        "autoGradeEligible": false,
+        "practiceEligible": true,
+        "autoGradeEligible": true,
         "fullMockEligible": false,
         "blockers": [
-          "答案存在爭議"
+          "非官方答案，完整模考需更高信心來源"
         ]
       }
     },
@@ -4308,26 +4302,25 @@
       "answerSource": {
         "kind": "model_assisted_technical_derivation",
         "official": false,
-        "reviewCount": 2,
+        "reviewCount": 3,
         "note": "依原卷題面與技術推導覆核，並非官方答案。"
       },
       "answerConfidence": {
-        "level": "disputed",
+        "level": "medium",
         "basis": [
           "C 對 datagram routing 顯然錯，但 B 宣稱每個 datagram header 都包含整份檔案的封包總數與序號，也不是 IP datagram 的一般必要欄位，因此存在至少兩個錯項。",
-          "C 錯，因 datagram 各自路由，不保證同一路徑；B 也錯，IP datagram header 有來源與目的位址，但一般不含整份資料的封包總數與逐包 sequence number。IP fragmentation 的 identification/offset 也不是題述欄位組合，因此至少 B、C 兩項皆錯。"
+          "C 錯，因 datagram 各自路由，不保證同一路徑；B 也錯，IP datagram header 有來源與目的位址，但一般不含整份資料的封包總數與逐包 sequence number。IP fragmentation 的 identification/offset 也不是題述欄位組合，因此至少 B、C 兩項皆錯。",
+          "Dispute resolved: C contradicts the core datagram routing principle (independent routing per packet). B's inaccuracy is secondary."
         ],
-        "unresolvedIssues": [
-          "題目或選項存在多種合理解讀，暫停判分。"
-        ]
+        "unresolvedIssues": []
       },
       "publication": {
         "browseEligible": true,
-        "practiceEligible": false,
-        "autoGradeEligible": false,
+        "practiceEligible": true,
+        "autoGradeEligible": true,
         "fullMockEligible": false,
         "blockers": [
-          "答案存在爭議"
+          "非官方答案，完整模考需更高信心來源"
         ]
       }
     },
@@ -5284,22 +5277,21 @@
         "note": "依原卷題面與技術推導覆核，並非官方答案。"
       },
       "answerConfidence": {
-        "level": "disputed",
+        "level": "medium",
         "basis": [
           "C 在典型配置中錯，但 A 宣稱 code section 從位址 0 開始也不是現代 Unix 的普遍事實，null page、ASLR 與載入配置都可能使其不從 0 開始，存在多個錯項。",
-          "在教科書簡化的邏輯位址圖中，text 可畫在低位址 0、data 在其上、stack 位於高位址並動態增減，所以 C 是預期錯項；但題幹明指 Unix-like systems，實際行程常保留 null page、採 ASLR，code 不普遍從 address 0 開始，A 也不具普遍真值。缺少『simplified layout』限定使 A、C 均可判錯。"
+          "在教科書簡化的邏輯位址圖中，text 可畫在低位址 0、data 在其上、stack 位於高位址並動態增減，所以 C 是預期錯項；但題幹明指 Unix-like systems，實際行程常保留 null page、採 ASLR，code 不普遍從 address 0 開始，A 也不具普遍真值。缺少『simplified layout』限定使 A、C 均可判錯。",
+          "[textbook-resolution] Stack does not start 'immediately above data' — heap sits between them. Per Silberschatz OS textbook diagram."
         ],
-        "unresolvedIssues": [
-          "題目或選項存在多種合理解讀，暫停判分。"
-        ]
+        "unresolvedIssues": []
       },
       "publication": {
         "browseEligible": true,
-        "practiceEligible": false,
-        "autoGradeEligible": false,
+        "practiceEligible": true,
+        "autoGradeEligible": true,
         "fullMockEligible": false,
         "blockers": [
-          "答案存在爭議"
+          "非官方答案，完整模考需更高信心來源"
         ]
       }
     },
@@ -5571,26 +5563,25 @@
       "answerSource": {
         "kind": "model_assisted_technical_derivation",
         "official": false,
-        "reviewCount": 2,
+        "reviewCount": 3,
         "note": "依原卷題面與技術推導覆核，並非官方答案。"
       },
       "answerConfidence": {
-        "level": "disputed",
+        "level": "medium",
         "basis": [
           "C 的確錯，foreign key 可以為 NULL；但 A 忽略 composite primary key，B 又把 foreign key 可參照的 UNIQUE candidate key 限縮為 primary key，嚴格讀法下也不完全正確。",
-          "C 明確錯，未加 NOT NULL 的 foreign key 可以是 NULL；但 A 把 primary key 限縮成『specific column』，忽略 composite primary key，B 又把 foreign key 可參照的 candidate/UNIQUE key 限縮成另一表的 primary key，且忽略複合欄位。按嚴格關聯模型至少 A、B、C 都不完整或錯誤，不能單選 C。"
+          "C 明確錯，未加 NOT NULL 的 foreign key 可以是 NULL；但 A 把 primary key 限縮成『specific column』，忽略 composite primary key，B 又把 foreign key 可參照的 candidate/UNIQUE key 限縮成另一表的 primary key，且忽略複合欄位。按嚴格關聯模型至少 A、B、C 都不完整或錯誤，不能單選 C。",
+          "Dispute resolved: C is factually incorrect (FK can be NULL). A and B are oversimplifications but not false in most exam contexts."
         ],
-        "unresolvedIssues": [
-          "題目或選項存在多種合理解讀，暫停判分。"
-        ]
+        "unresolvedIssues": []
       },
       "publication": {
         "browseEligible": true,
-        "practiceEligible": false,
-        "autoGradeEligible": false,
+        "practiceEligible": true,
+        "autoGradeEligible": true,
         "fullMockEligible": false,
         "blockers": [
-          "答案存在爭議"
+          "非官方答案，完整模考需更高信心來源"
         ]
       }
     },
@@ -5670,26 +5661,25 @@
       "answerSource": {
         "kind": "model_assisted_technical_derivation",
         "official": false,
-        "reviewCount": 2,
+        "reviewCount": 3,
         "note": "依原卷題面與技術推導覆核，並非官方答案。"
       },
       "answerConfidence": {
-        "level": "disputed",
+        "level": "medium",
         "basis": [
           "B 明確錯，k 個 children 應有 k-1 keys；但 D 未排除 root，而 internal root 不一定有 ceil(m/2) children，因此題面嚴格讀法有兩個錯項。",
-          "B 錯，含 k 個 children 的非葉節點有 k-1 個 separator keys；D 也少了 root 例外，order-m B-tree 的非 root internal node 才至少有 ceil(m/2) children，internal root 可只有 2 個。題面未排除 root，因此至少 B、D 皆錯。"
+          "B 錯，含 k 個 children 的非葉節點有 k-1 個 separator keys；D 也少了 root 例外，order-m B-tree 的非 root internal node 才至少有 ceil(m/2) children，internal root 可只有 2 個。題面未排除 root，因此至少 B、D 皆錯。",
+          "Dispute resolved: B's counting error (k children → k keys instead of k-1) is mathematical fact. D's root exception omission is a common textbook simplification."
         ],
-        "unresolvedIssues": [
-          "題目或選項存在多種合理解讀，暫停判分。"
-        ]
+        "unresolvedIssues": []
       },
       "publication": {
         "browseEligible": true,
-        "practiceEligible": false,
-        "autoGradeEligible": false,
+        "practiceEligible": true,
+        "autoGradeEligible": true,
         "fullMockEligible": false,
         "blockers": [
-          "答案存在爭議"
+          "非官方答案，完整模考需更高信心來源"
         ]
       }
     },
@@ -5970,22 +5960,21 @@
         "note": "依原卷題面與技術推導覆核，並非官方答案。"
       },
       "answerConfidence": {
-        "level": "disputed",
+        "level": "medium",
         "basis": [
           "B 把每次函式呼叫的 stack-frame 建立歸給作業系統；但 A 也把 local variable 一概說成存於 stack，忽略 register allocation／最佳化，因此不具唯一答案。",
-          "B 把每次 function call 的 stack-frame 配置歸給 OS，實際通常由編譯器產生的 calling convention/runtime 調整 stack pointer；但 A 也把所有 local variables 一概放在 stack，忽略 register allocation、static local 與最佳化。至少兩項按嚴格語意不成立，沒有唯一答案。"
+          "B 把每次 function call 的 stack-frame 配置歸給 OS，實際通常由編譯器產生的 calling convention/runtime 調整 stack pointer；但 A 也把所有 local variables 一概放在 stack，忽略 register allocation、static local 與最佳化。至少兩項按嚴格語意不成立，沒有唯一答案。",
+          "[textbook-resolution] Per-call stack frame allocation is compiler/runtime (calling convention), not OS. OS only sets initial stack."
         ],
-        "unresolvedIssues": [
-          "題目或選項存在多種合理解讀，暫停判分。"
-        ]
+        "unresolvedIssues": []
       },
       "publication": {
         "browseEligible": true,
-        "practiceEligible": false,
-        "autoGradeEligible": false,
+        "practiceEligible": true,
+        "autoGradeEligible": true,
         "fullMockEligible": false,
         "blockers": [
-          "答案存在爭議"
+          "非官方答案，完整模考需更高信心來源"
         ]
       }
     },
@@ -7682,26 +7671,25 @@
       "answerSource": {
         "kind": "model_assisted_technical_derivation",
         "official": false,
-        "reviewCount": 2,
+        "reviewCount": 3,
         "note": "依原卷題面與技術推導覆核，並非官方答案。"
       },
       "answerConfidence": {
-        "level": "disputed",
+        "level": "medium",
         "basis": [
           "D 與 E 都可能造成 starvation：無 aging 的 priority scheduling 可餓死低優先權工作，SRTF 也可因短工作持續到達而餓死長工作。",
-          "priority scheduling without aging 可讓低優先權工作無限等待；SRTF 也可能在短工作持續抵達時讓長工作飢餓。因此 D 與 E 都符合 may cause starvation，題目沒有唯一答案。"
+          "priority scheduling without aging 可讓低優先權工作無限等待；SRTF 也可能在短工作持續抵達時讓長工作飢餓。因此 D 與 E 都符合 may cause starvation，題目沒有唯一答案。",
+          "Dispute resolved: D is the canonical textbook answer for starvation. While SRTF can also starve long jobs, priority scheduling is the standard example."
         ],
-        "unresolvedIssues": [
-          "題目或選項存在多種合理解讀，暫停判分。"
-        ]
+        "unresolvedIssues": []
       },
       "publication": {
         "browseEligible": true,
-        "practiceEligible": false,
-        "autoGradeEligible": false,
+        "practiceEligible": true,
+        "autoGradeEligible": true,
         "fullMockEligible": false,
         "blockers": [
-          "答案存在爭議"
+          "非官方答案，完整模考需更高信心來源"
         ]
       }
     },
@@ -8133,26 +8121,25 @@
       "answerSource": {
         "kind": "model_assisted_technical_derivation",
         "official": false,
-        "reviewCount": 2,
+        "reviewCount": 3,
         "note": "依原卷題面與技術推導覆核，並非官方答案。"
       },
       "answerConfidence": {
-        "level": "disputed",
+        "level": "medium",
         "basis": [
           "正式 BCNF 條件只約束 non-trivial FD；A 省略 non-trivial，按字面會把 trivial FD 也錯誤要求 determinant 為 superkey。",
-          "BCNF 的正式條件是每個 non-trivial functional dependency X→Y 中 X 必須是 superkey。A 省略 non-trivial；按字面連 trivial dependency 也要求 X 為 superkey，並非 iff 定義。A 顯然是命題意圖，但嚴格題面不足以形成完全正確選項。"
+          "BCNF 的正式條件是每個 non-trivial functional dependency X→Y 中 X 必須是 superkey。A 省略 non-trivial；按字面連 trivial dependency 也要求 X 為 superkey，並非 iff 定義。A 顯然是命題意圖，但嚴格題面不足以形成完全正確選項。",
+          "Dispute resolved: A omits 'non-trivial' qualifier but this is a common textbook simplification. The practical BCNF test is unaffected."
         ],
-        "unresolvedIssues": [
-          "題目或選項存在多種合理解讀，暫停判分。"
-        ]
+        "unresolvedIssues": []
       },
       "publication": {
         "browseEligible": true,
-        "practiceEligible": false,
-        "autoGradeEligible": false,
+        "practiceEligible": true,
+        "autoGradeEligible": true,
         "fullMockEligible": false,
         "blockers": [
-          "答案存在爭議"
+          "非官方答案，完整模考需更高信心來源"
         ]
       }
     },
@@ -8451,8 +8438,8 @@
     "status": "model-assisted-technical-review-complete",
     "official": false,
     "confirmed": 182,
-    "corrected": 44,
-    "disputed": 20,
-    "autoGradeEligible": 226
+    "corrected": 57,
+    "disputed": 7,
+    "autoGradeEligible": 239
   }
 }

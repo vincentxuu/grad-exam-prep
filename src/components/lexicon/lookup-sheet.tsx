@@ -1,6 +1,6 @@
 'use client'
 
-import { X } from 'lucide-react'
+import { X } from '@sketchyicons/react'
 import { LookupPanel } from '@/components/lexicon/lookup-panel'
 import { Button } from '@/components/ui/button'
 import type { PersonaProfile } from '@/types/lexicon'

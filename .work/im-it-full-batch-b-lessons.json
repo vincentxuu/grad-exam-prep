@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "im-it",
+  "status": "reviewed-fragment",
+  "scope": "IM-IT 61/61 Batch B",
+  "lessons": [
+    {
+      "id": "lesson-im-it-ds-linear-hashing-b01",
+      "subtopicId": "im-it-ds-linear-structures",
+      "coveredSubtopicIds": ["im-it-ds-linear-structures", "im-it-ds-hashing"],
+      "title": "線性結構與雜湊：依操作需求選容器",
+      "summary": "以 stack、queue、array、linked list 與 hash table 的操作契約為核心，從存取順序、更新成本、碰撞處理與 load factor 判斷資料結構；不把平均 O(1) 誤寫成最壞保證。",
+      "estimatedMinutes": 38,
+      "minimumPastPaperRefs": 3,
+      "learningObjectives": [
+        "依 LIFO、FIFO、索引存取與中間插刪需求選擇線性結構",
+        "用 stack trace 判斷巢狀括號是否合法",
+        "說明 hash function、bucket、collision 與 load factor 的關係",
+        "比較 chaining 與 open addressing，並區分平均與最壞複雜度"
+      ],
+      "sections": [
+        {
+          "title": "先看操作契約，不看名稱猜答案",
+          "body": "Array 支援 O(1) 索引定位，但中間插刪常需搬移元素；linked list 已知節點位置時能以指標改接完成插刪，但搜尋與第 k 個元素通常要走訪。Stack 只在同一端 push/pop，遵守 LIFO；queue 從尾端 enqueue、前端 dequeue，遵守 FIFO。題目應先辨識需要保留的順序與主要操作。",
+          "bullets": ["LIFO 對應最近加入者先取出", "FIFO 對應最早加入者先服務", "ADT 描述行為，不限定唯一底層實作", "複雜度要說明是否已知位置與採用何種實作"]
+        },
+        {
+          "title": "Stack 讓最近尚未配對的符號先被檢查",
+          "body": "掃描括號時，左括號 push；右括號必須和 stack top 的左括號種類相符後 pop。若右括號到來時 stack 已空、種類不符，或掃描結束後 stack 非空，都代表不平衡。這正利用巢狀結構的最後開啟、最先關閉。",
+          "bullets": ["不能只比較左右括號總數", "中途 pop 空 stack 立即失敗", "不同括號種類也要配對", "掃描完成仍有元素表示尚未關閉"]
+        },
+        {
+          "title": "Hash table 用函數把 key 導向 bucket",
+          "body": "Hash function 把 key 映射到有限 bucket；不同 key 可能碰撞。好的分布可讓搜尋、插入、刪除平均接近 O(1)，但碰撞集中或惡意輸入時可能退化。Load factor α=n/m 描述 n 個項目相對於 m 個 bucket 的壓力，通常越高碰撞越頻繁。",
+          "bullets": ["Hash table 實作 associative array 的 key-to-value mapping", "O(1) 是合理假設下的平均成本", "Rehash 會擴大表並重新映射既有 key", "Hash function 必須對相同 key 穩定產生相同位置"]
+        },
+        {
+          "title": "碰撞策略決定後續搜尋路徑",
+          "body": "Chaining 在每個 bucket 掛一個串列或其他容器，碰撞項目留在同一 bucket；open addressing 則把所有項目留在表內，依 probing sequence 找空格。Linear probing 容易 primary clustering；double hashing 用第二個 hash 決定步長，步長需能走遍整張表。",
+          "bullets": ["Chaining 可容許項目數超過 bucket 數", "Open addressing 的刪除常需要 tombstone", "Double hashing 仍不能消除所有碰撞", "表大小與 probe step 互質有助覆蓋全部 slots"]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "判斷字串 `([a+b]*c)` 是否括號平衡。",
+          "steps": ["讀到 `(` push", "讀到 `[` push", "讀到 `]` 與 top `[` 配對後 pop", "讀到 `)` 與 top `(` 配對後 pop", "掃描結束 stack 為空"],
+          "answer": "括號平衡；配對次序符合 LIFO。"
+        },
+        {
+          "prompt": "8 個 buckets 已存 6 個 keys，求 load factor；若大量 key 落在同一 bucket，能否仍保證 O(1)？",
+          "steps": ["α=n/m=6/8=0.75", "平均效能仍取決於 hash 分布與碰撞策略", "若全落同一 bucket，搜尋可能需檢查多個項目"],
+          "answer": "Load factor 為 0.75；不能由此保證最壞 O(1)，極端碰撞可退化到 O(n)。"
+        }
+      ],
+      "commonPitfalls": ["把 queue 誤當成 LIFO", "只數括號數量、不檢查巢狀順序", "把 hash table 的平均 O(1) 寫成無條件最壞 O(1)", "認為 collision 表示 hash function 失效", "open addressing 刪除後直接清空 slot，破壞 probe chain"],
+      "sourceRefs": ["src-mit-algorithms-6006"],
+      "pastPaperRefs": ["q-pp-im-it-115-4", "q-pp-im-it-110-22", "q-pp-im-it-115-1"],
+      "reviewStatus": "reviewed",
+      "learningScenario": {
+        "title": "園遊會寄物與取餐系統",
+        "hook": "園遊會同時要處理寄物、取餐叫號、姓名查找與巢狀置物箱。若所有需求都硬塞進同一種容器，尖峰時段就會順序錯亂或找不到物品。",
+        "predict": "最新放入的置物盒必須先取出，但餐點必須依到單順序交付；兩處該用同一結構嗎？姓名查找又該沿用哪一個？",
+        "mapping": [
+          {"everyday": "最後放上推車的箱子最先拿下", "technical": "Stack 與 LIFO"},
+          {"everyday": "取餐單依到達順序叫號", "technical": "Queue 與 FIFO"},
+          {"everyday": "依姓名算出寄物櫃區號", "technical": "Hash function 與 bucket"},
+          {"everyday": "兩個姓名算到同一櫃區後改掛清單或找下一格", "technical": "Chaining 與 open addressing"},
+          {"everyday": "櫃位越接近滿載，找空位越容易繞路", "technical": "Load factor、collision 與 rehash"}
+        ],
+        "boundary": "實體推車與櫃位只幫助理解存取規則；程式中的 stack、queue 與 hash table 可由 array 或 linked structure 實作。Hash table 的平均 O(1) 依賴合理分布與容量管理，不表示任何輸入都能常數時間完成。",
+        "examCues": ["看到 balanced parentheses：找 LIFO、push 左括號、右括號配 top。", "看到 first-come-first-served：優先考慮 queue；最近加入先處理則是 stack。", "看到 associative array 或 key-to-value：辨識 hash function 與 bucket。", "看到 average O(1)：同時檢查 collision、load factor 與最壞退化，別寫成絕對保證。"]
+      }
+    },
+    {
+      "id": "lesson-im-it-ds-graphs-design-b01",
+      "subtopicId": "im-it-ds-graphs",
+      "coveredSubtopicIds": ["im-it-ds-graphs", "im-it-ds-algorithm-design"],
+      "title": "圖演算法與設計策略：從相依關係到可證明步驟",
+      "summary": "用 BFS、DFS、topological sort、MST 與最短路徑建立圖問題辨識框架，再比較 greedy、divide-and-conquer 與 dynamic programming 的前提及正確性論證。",
+      "estimatedMinutes": 42,
+      "minimumPastPaperRefs": 1,
+      "evidenceNote": "im-it-ds-algorithm-design 在 canonical question metadata 中沒有 direct primary past-paper refs；im-it-ds-graphs 本課也只有 1 題內容完整且可直接使用的 topological-sort ref。112-26 題面破碎，已排除。其餘 graph 與 algorithm-design 內容是 reviewed MIT algorithms source 支撐的 foundational coverage，不宣稱歷屆高頻。",
+      "learningObjectives": ["依目標選擇 BFS、DFS 或 topological sort", "說明 spanning tree、MST 與 shortest path 的差異", "區分 greedy、divide-and-conquer 與 dynamic programming", "用 invariant、exchange argument 或 induction 描述正確性證據"],
+      "sections": [
+        {"title": "Graph 把物件與關係分開", "body": "Graph G=(V,E) 以 vertices 表示物件、edges 表示關係；邊可有方向與權重。BFS 逐層展開，適合無權圖最少邊數距離；DFS 沿一路深入後回溯，適合連通性、cycle 與結構探索。", "bullets": ["Directed edge 有方向", "Weighted edge 帶成本", "BFS 使用 queue", "DFS 常用 stack 或 recursion"]},
+        {"title": "Topological sort 只屬於 DAG", "body": "Topological order 讓每條 u→v 都滿足 u 出現在 v 前面。若有 directed cycle，環上每個工作都要求另一個先完成，無法形成線性順序。Kahn 方法反覆取 indegree 0 節點；DFS 方法依完成時間反向排列並偵測 back edge。", "bullets": ["不是所有 directed graph 都可排序", "答案可能不唯一", "若輸出節點少於 |V| 表示存在 cycle", "不要求圖 fully connected"]},
+        {"title": "MST 與 shortest path 回答不同問題", "body": "Spanning tree 連接全部 vertices 且無 cycle，n 個 vertices 有 n−1 條邊；MST 最小化整棵樹總權重。Shortest path 則最小化特定起終點路徑成本，不要求連接所有 vertices。Prim 依 cut property 安全加入跨 cut 的最輕邊。", "bullets": ["MST 需要 connected undirected graph", "最短路徑樹不一定是 MST", "權重相同時 MST 可能不唯一", "Dijkstra 不適用負權邊"]},
+        {"title": "先辨認子問題關係再選設計策略", "body": "Greedy 每步作局部安全選擇，需證明 greedy-choice property；divide-and-conquer 把問題拆成大致獨立子問題後合併；dynamic programming 適用 overlapping subproblems 與 optimal substructure，儲存狀態避免重算。", "bullets": ["看到最優問題不代表 greedy 一定正確", "Memoization 是 top-down DP", "Tabulation 是 bottom-up DP", "Merge sort 是典型 divide-and-conquer"]},
+        {"title": "複雜度之外還要證明答案正確", "body": "演算法答案至少說清楚 input、output、步驟、終止與 complexity。Loop invariant 可描述每輪前後維持的真命題；exchange argument 常證明 greedy 解可轉換成含某個 greedy choice 的最優解；induction 可沿輸入規模或 DP 狀態證明。", "bullets": ["測過範例不是 correctness proof", "Invariant 要有初始化、維持、終止", "Complexity 不等於 correctness", "反例可推翻不成立的 greedy rule"]}
+      ],
+      "workedExamples": [
+        {"prompt": "課程相依 A→C、B→C、C→D，給一個 topological order。", "steps": ["A、B indegree 為 0，可先任選", "取 A、B 後 C indegree 變 0", "最後取 D"], "answer": "A,B,C,D 或 B,A,C,D 均合法。"},
+        {"prompt": "找零問題硬幣 {1,3,4}、金額 6，永遠先取最大硬幣的 greedy 是否最佳？", "steps": ["Greedy 取 4+1+1，共 3 枚", "另一解為 3+3，共 2 枚", "出現反例，故此幣制下 greedy rule 不正確"], "answer": "不正確；可用 DP 求每個金額的最少硬幣數。"}
+      ],
+      "commonPitfalls": ["在有 cycle 的 directed graph 上要求 topological order", "把 BFS 與 DFS 的 queue/stack 對調", "把 MST 當成任意兩點 shortest path", "看到 optimal 就直接套 greedy", "只分析 Big-O、不說明演算法為何正確"],
+      "sourceRefs": ["src-mit-algorithms-6006"],
+      "pastPaperRefs": ["q-pp-im-it-115-6"],
+      "reviewStatus": "reviewed",
+      "learningScenario": {"title": "校園活動排程與網路佈線", "hook": "學生會要排有先修關係的活動、找校園各點的最低總佈線成本，還要設計在尖峰前完成的演算法。三個問題都畫成圖，卻不能用同一個答案。", "predict": "若活動相依圖出現 A 等 B、B 又等 A，排程表能否靠換順序解決？最低總佈線是否等於入口到禮堂的最短路？", "mapping": [{"everyday":"活動必須在其前置工作完成後開始","technical":"DAG 與 topological order"},{"everyday":"從入口逐層找最少轉乘站數","technical":"BFS 與無權 shortest path"},{"everyday":"讓所有校園據點連通且總線材最少","technical":"Minimum spanning tree"},{"everyday":"把大型活動拆成獨立小組後合併結果","technical":"Divide-and-conquer"},{"everyday":"記錄重複子排程的最佳成本避免重算","technical":"Dynamic programming"}], "boundary":"活動比喻不能取代圖的方向、權重與演算法前提。MST 最小化全體連通成本，不保證任意兩點距離最短；topological order 也只保證相依順序，不代表資源或工期最佳。", "examCues":["看到 prerequisite/order：先檢查 directed acyclic，cycle 使 topological sort 不存在。","看到 unweighted minimum edges：BFS；要深入探索 cycle/連通性常用 DFS。","看到 connect all vertices with minimum total weight：MST，不是 single-source shortest path。","看到 greedy/DP：要求局部選擇證明或 overlapping subproblems，並補 correctness 論證。"]}
+    },
+    {
+      "id": "lesson-im-it-db-er-normalization-b01",
+      "subtopicId": "im-it-db-er-modeling",
+      "coveredSubtopicIds": ["im-it-db-er-modeling", "im-it-db-normalization"],
+      "title": "ER 建模與正規化：從需求語句到穩定資料表",
+      "summary": "先用 entity、attribute、relationship、cardinality 建立概念模型，再以 functional dependency、1NF、2NF、3NF 分解冗餘與更新異常。",
+      "estimatedMinutes": 40,
+      "minimumPastPaperRefs": 5,
+      "learningObjectives": ["辨識 entity、attribute、relationship 與 cardinality", "把 ER 關係映射到 relational schema", "由 functional dependency 判斷 partial 與 transitive dependency", "說明 1NF、2NF、3NF 的目標及 lossless 分解的重要性"],
+      "sections": [
+        {"title":"ER model 是需求與資料表之間的概念橋梁","body":"Entity 是可獨立辨識的事物，attribute 描述其性質，relationship 表示 entities 間的關聯。傳統 ER 圖常用 rectangle 表 entity、oval 表 attribute、diamond 表 relationship；符號只是表達工具，真正要讀的是語意。","bullets":["Schema 描述資料庫邏輯結構","Key attribute 唯一辨識 entity","Weak entity 依賴 owner entity","Cardinality 描述 one-to-one、one-to-many、many-to-many"]},
+        {"title":"Cardinality 決定 foreign key 或關聯表位置","body":"一對多通常把一方的 primary key 放到多方作 foreign key；多對多需建立 junction relation，至少包含兩端 keys。若 relationship 自己有屬性，例如修課成績，應放在 junction relation。","bullets":["Foreign key 維護 referential integrity","Many-to-many 不能只在某一端放單一 foreign key","Optional participation 要考慮 null 或獨立 relation","Mapping 前先確認每一筆 relationship 的身份"]},
+        {"title":"Functional dependency 是正規化的判斷語言","body":"X→Y 表示兩筆 tuple 若 X 相同，Y 必須相同。Candidate key 能決定全部 attributes。Partial dependency 是 non-key attribute 只依賴 composite key 的一部分；transitive dependency 是 key 經另一 non-key attribute 間接決定第三者。","bullets":["FD 來自資料語意，不只看目前樣本巧合","Determinant 在箭頭左側","Superkey 可包含多餘 attributes","同一 relation 可能有多個 candidate keys"]},
+        {"title":"1NF 到 3NF 逐步移除不同異常來源","body":"1NF 要求每個 attribute value 在該 relational design 中為 atomic，不含 repeating group。2NF 在 1NF 上移除 non-prime attribute 對 candidate key 的 partial dependency。正式 3NF 判斷每個 non-trivial FD X→A：X 必須是 superkey，或 A 是 prime attribute；常見的『移除 non-key 間 transitive dependency』是便於入門的情境化口訣。","bullets":["單一欄位值是 atomic 是 1NF 核心","單一屬性 candidate key 不會有 partial dependency","3NF 不是表越少越好","分解要考慮 lossless join 與 dependency preservation"]}
+      ],
+      "workedExamples": [
+        {"prompt":"學生可選多門課，課程也有多名學生，且每次選課有 grade。如何映射？","steps":["建立 Student(student_id, ...)","建立 Course(course_id, ...)","many-to-many 另建 Enrollment(student_id, course_id, grade)","兩個 IDs 組成 key 並分別作 foreign keys"],"answer":"以 Enrollment junction relation 表示選課 relationship，grade 屬於該 relationship。"},
+        {"prompt":"Enrollment(student_id, course_id, student_name, course_title, grade)，key=(student_id,course_id)。指出 partial dependencies。","steps":["student_id→student_name，只依賴 composite key 一部分","course_id→course_title，也只依賴一部分","grade 依賴完整選課組合"],"answer":"拆成 Student、Course、Enrollment，可移除 student_name 與 course_title 的 partial dependencies。"}
+      ],
+      "commonPitfalls":["把 diamond 說成 attribute","把 many-to-many 直接塞成單一 foreign key","從幾筆樣本猜 FD，而忽略業務規則","把 primary key 要求誤當成 1NF 唯一定義","認為正規化就是表越多越好","分解後未檢查 lossless join"],
+      "sourceRefs":["src-brookshear-13e","src-jiege-database-course"],
+      "pastPaperRefs":["q-pp-im-it-110-24","q-pp-im-it-111-21","q-pp-im-it-114-16","q-pp-im-it-111-14","q-pp-im-it-114-13"],
+      "reviewStatus":"reviewed",
+      "learningScenario":{"title":"社團報名系統重建","hook":"社團原本把社員、活動、幹部與報名紀錄塞進同一張試算表；活動改名要改數十格，刪掉最後一位報名者竟連活動資訊也消失。","predict":"若一位學生可報多場活動，而每場活動也有多人參加，能否只在 Student 放一個 activity_id 就完整表示？","mapping":[{"everyday":"學生、活動是可獨立辨識的名詞","technical":"Entities"},{"everyday":"學生報名活動這件事","technical":"Relationship"},{"everyday":"一位學生多場活動、每場活動多人","technical":"Many-to-many cardinality"},{"everyday":"學號固定決定姓名","technical":"Functional dependency"},{"everyday":"拆出 Student、Activity、Registration","technical":"Normalization 與 junction relation"}],"boundary":"ER 圖符號幫助溝通需求，但不能自動保證 schema 正確；正規化依賴真實 business rules。分解也不是越細越好，仍要兼顧 lossless join、dependency preservation 與查詢需求。","examCues":["看到 diamond：傳統 ER notation 表 relationship；attribute 通常是 oval。","看到 many-to-many 且 relationship 有屬性：建立 junction relation。","看到 2NF：找 composite key 的 partial dependency；單一 key 不會有此問題。","看到 3NF：找 non-key 到 non-key 的 transitive dependency，不要答成增加重複資料。"]}
+    },
+    {
+      "id": "lesson-im-it-db-storage-indexing-b01",
+      "subtopicId": "im-it-db-storage-indexing",
+      "coveredSubtopicIds": ["im-it-db-storage-indexing"],
+      "title": "資料庫儲存與索引：等值、範圍與分析查詢",
+      "summary": "從 page I/O 與資料排列理解 heap file、B+ tree、hash index、多維分析結構及 optimizer 選擇，避免把所有索引都當成無條件加速器。",
+      "estimatedMinutes": 32,
+      "minimumPastPaperRefs": 3,
+      "learningObjectives":["說明索引以額外空間與維護成本換取讀取效率","比較 B+ tree 與 hash index 的等值及範圍能力","辨識 data warehouse/OLAP 與多維分析需求","解釋 selectivity 與 query plan 為何影響索引使用"],
+      "sections":[
+        {"title":"資料庫成本常由 page I/O 主導","body":"Records 儲存在 pages；heap file 不維持 key 順序，插入通常直接，但搜尋可能掃描多頁。Index 保存 search key 到 record/page 的導引，讓查詢少讀 pages，代價是額外空間與 INSERT/UPDATE/DELETE 維護。","bullets":["Index 不是資料本身的免費副本","Sequential scan 對大量結果可能更划算","更多 indexes 會增加寫入成本","Physical design 取決於 workload"]},
+        {"title":"B+ tree 保留排序，適合 range scan","body":"B+ tree 是高扇出的平衡搜尋樹，內部節點導引搜尋，葉節點依 key 排序並通常相連。等值查詢可沿 root-to-leaf，範圍查詢找到起點後沿葉節點順序掃描。","bullets":["所有資料 entries 位於葉層","樹高通常很低","葉節點排序支援 BETWEEN、<、>","平衡性讓搜尋成本穩定"]},
+        {"title":"Hash index 擅長 equality，會破壞順序","body":"Hash function 將相近 key 映射到可能完全不同 buckets，因此 `key = value` 可直接定位候選 bucket，但 `20 <= key <= 30` 沒有連續路徑可循。碰撞策略仍會影響等值查詢成本。","bullets":["Equality predicate 是 hash index 強項","Range predicate 通常不是","Hash collision 不等於查不到資料","Hash index 不保留 key ordering"]},
+        {"title":"OLAP 與 optimizer 看的是整體工作負載","body":"Data warehouse 常服務聚合、切片、鑽取等 OLAP 分析；多維資料庫或 cube 以 dimensions 與 measures 組織分析。Relational optimizer 會依符合比例、statistics、join cost 與預估 page I/O 選 scan 或 index，索引存在不代表一定使用。","bullets":["Highly selective predicate 通常只讓少量 rows 符合；用符合比例描述可避免 high/low selectivity 的教材歧義","Statistics 過期可能選錯 plan","Covering index 可減少回表","OLTP 與 OLAP 的 workload 不同"]}
+      ],
+      "workedExamples":[
+        {"prompt":"查詢 `age BETWEEN 20 AND 30`，B+ tree 與 hash index 何者較合適？","steps":["此條件需要 key order","B+ tree 找到 20 後沿葉節點掃到 30","Hash mapping 不保留 20 到 30 的連續關係"],"answer":"通常選 B+ tree；hash index 較適合 `age = 25`。"},
+        {"prompt":"一個查詢會讀取全表 70% rows，optimizer 為何可能不用現有 index？","steps":["走 index 需讀大量 index entries","還可能對每筆回表造成隨機 I/O","Sequential scan 可能以較少且連續的 page I/O 完成"],"answer":"索引不是必然較快；低選擇性的查詢可能以全表掃描成本更低。"}
+      ],
+      "commonPitfalls":["認為建 index 永遠加速所有操作","說 hash index 能自然支援 range query","把 B+ tree 與 binary tree 的扇出混為一談","忽略寫入維護與額外空間","認為 optimizer 一定使用已存在的 index"],
+      "sourceRefs":["src-brookshear-13e","src-jiege-database-course"],
+      "pastPaperRefs":["q-pp-im-it-107-6","q-pp-im-it-115-16","q-pp-im-it-115-18"],
+      "reviewStatus":"reviewed",
+      "learningScenario":{"title":"圖書館找書與月度分析","hook":"館員既要讓讀者用 ISBN 立刻找到一本書，也要查出版年份區間，月底還要分析各館別、月份與類別的借閱量。單一目錄結構不一定同時最佳。","predict":"把 2020、2021、2022 經 hash 後放進不同櫃位，是否仍能從 2020 的櫃位一路掃到 2022？","mapping":[{"everyday":"書架上的實體批次","technical":"Database pages 與 page I/O"},{"everyday":"依 ISBN 直接查櫃位","technical":"Equality lookup 與 hash index"},{"everyday":"沿年份排序目錄查一段區間","technical":"B+ tree leaf range scan"},{"everyday":"依月份、館別、類別切換報表","technical":"OLAP dimensions 與 measures"},{"everyday":"人太多時乾脆順著整排巡一次","technical":"Optimizer 選 sequential scan"}],"boundary":"圖書館目錄只是索引直覺；實際 DBMS 還要考慮 buffer pool、clustered layout、statistics、concurrency 與 storage device。索引存在不代表 optimizer 必須使用。","examCues":["看到 range query：優先想到保留排序且葉節點相連的 B+ tree。","看到 hash 不適合 range：理由是破壞 ordering，不是單純 storage 較大。","看到 warehouse、OLAP、slice/dice：辨識 multidimensional analysis。","看到『有 index 為何沒用』：檢查 selectivity、回表與 page I/O 成本。"]}
+    },
+    {
+      "id": "lesson-im-it-os-sync-deadlock-b01",
+      "subtopicId": "im-it-os-synchronization",
+      "coveredSubtopicIds": ["im-it-os-synchronization", "im-it-os-deadlocks"],
+      "title": "同步、互斥與死結：讓並行工作安全前進",
+      "summary": "從 race condition、critical section、mutex、semaphore 建立同步基本模型，再區分 deadlock、livelock、starvation 與 Banker's safety check。",
+      "estimatedMinutes": 38,
+      "minimumPastPaperRefs": 4,
+      "learningObjectives":["以 interleaving 說明 race condition","區分 mutual exclusion 與 broader synchronization","列出 deadlock 四個必要條件","區分 deadlock、livelock、starvation、busy waiting","說明 Banker's algorithm 檢查 safe state 的目的"],
+      "sections":[
+        {"title":"Race condition 來自結果依賴不可控 interleaving","body":"多個 threads 對 shared state 執行 read-modify-write，若操作非 atomic，不同 interleaving 可能產生不同結果。Critical section 是存取共享資源、需要控制同時進入的程式區段。","bullets":["Race 不要求真的同時執行","單核心也可因 context switch 發生","Atomic operation 不會被觀察到中間狀態","先找 shared mutable state"]},
+        {"title":"Mutex 與 semaphore 解決的問題不完全相同","body":"Mutex 通常有 ownership，同一時間只讓一個執行單元進 critical section。Semaphore 是整數同步原語，以 atomic wait/P 與 signal/V 調整 permits；binary semaphore 可做互斥，counting semaphore 可限制同時使用某類資源的數量或表達事件順序。","bullets":["Wait 在無 permit 時阻塞或等待","Signal 釋放 permit／通知進度","鎖範圍過大降低 concurrency","同步設計不當仍可能 deadlock、starvation 或 livelock"]},
+        {"title":"Deadlock 四條件同時成立才可能形成","body":"Coffman conditions 為 mutual exclusion、hold and wait、no preemption、circular wait。破壞任一必要條件可預防 deadlock；avoidance 則在每次配置前檢查是否仍能保持 safe state。Deadlock 中工作彼此等待，沒有任何一個能前進。","bullets":["必要條件不是單獨充分條件","固定 lock ordering 可破壞 circular wait","一次申請全部資源可破壞 hold and wait","允許搶占只適合可安全復原的資源"]},
+        {"title":"Livelock、starvation 與 busy waiting 要分開","body":"Livelock 中工作持續改變狀態、互相回應但沒有 useful progress；starvation 是特定工作長期得不到資源；busy waiting 是等待期間持續消耗 CPU 檢查條件。它們都影響 liveness，但機制不同。","bullets":["Deadlock 通常 blocked 且形成等待循環","Livelock 活動中但不前進","Fairness 可降低 starvation","Spinlock 是有目的的短期 busy waiting"]},
+        {"title":"Banker's algorithm 問的是安全序列，不是當下是否 deadlock","body":"Banker's algorithm 在 tentative allocation 後，檢查 available resources 是否能依某個順序滿足所有 processes 的 remaining maximum needs。存在 safe sequence 才核准配置；unsafe state 不等於已 deadlock，而是無法保證未來避免 deadlock。","bullets":["需要知道 maximum claim","Safe state 保證存在完成順序","Unsafe 不代表現在已僵住","這是 avoidance，不是 detection"]}
+      ],
+      "workedExamples":[
+        {"prompt":"x=0，兩 threads 都執行 temp=x; temp=temp+1; x=temp。為何結果可能是 1？","steps":["T1 與 T2 都先讀到 0","兩者各自在 temp 算成 1","兩次寫回都寫 1","其中一次 increment 被覆蓋"],"answer":"read-modify-write 非 atomic，發生 lost update race；應保護 critical section。"},
+        {"prompt":"P1 持有 A 等 B，P2 持有 B 等 A。辨識 deadlock 條件並給一種預防法。","steps":["A、B 互斥使用","兩者 hold and wait","資源不可強制搶占","等待形成 P1→B→P2→A→P1 cycle"],"answer":"四條件皆成立；可規定所有 processes 一律先鎖 A 再鎖 B，破壞 circular wait。"}
+      ],
+      "commonPitfalls":["把 mutual exclusion 與 synchronization 完全畫等號","認為用了 semaphore 就不可能 deadlock","把 livelock 說成 blocked 不動","把 unsafe state 直接說成已 deadlock","列出 Coffman conditions 卻說任何一條單獨就足夠"],
+      "sourceRefs":["src-brookshear-13e","src-nthu-os-course"],
+      "pastPaperRefs":["q-pp-im-it-113-9","q-pp-im-it-114-10","q-pp-im-it-111-17","q-pp-im-it-114-8"],
+      "reviewStatus":"reviewed",
+      "learningScenario":{"title":"共用廚房的兩組廚師","hook":"兩組廚師共用一把刀、一個爐台和有限烤盤。沒有規則時會重複改同一張訂單；鎖太多又可能各拿一件工具互等，或不斷互相禮讓卻沒人下鍋。","predict":"甲拿刀等爐、乙拿爐等刀；兩人都還在等待。這是一般排隊、starvation，還是 deadlock？若兩人不停互讓工具又立刻拿回呢？","mapping":[{"everyday":"兩人同時修改同一張訂單","technical":"Race condition"},{"everyday":"同一時間只准一人使用刀","technical":"Mutex 與 critical section"},{"everyday":"三個烤盤最多供三組使用","technical":"Counting semaphore"},{"everyday":"各持一件工具並等待對方手上的工具","technical":"Circular wait 與 deadlock"},{"everyday":"不停互讓但始終沒完成料理","technical":"Livelock"}],"boundary":"廚房工具能直觀看等待關係，但真實 synchronization 還涉及 memory ordering、atomic primitives、scheduler fairness 與 lock implementation。Semaphore 不一定具有 mutex ownership，unsafe state 也不等於當下已 deadlock。","examCues":["看到 shared read-modify-write 結果不穩：找 race condition 與 critical section。","看到 semaphore purpose：同步／控制 permits；binary 可互斥，counting 可管理多份資源。","看到 processes 持續回應卻無 useful work：livelock；被卡住互等才是 deadlock。","看到 Banker's algorithm：deadlock avoidance、safe-state check，不是 CPU scheduling 或 detection。"]}
+    }
+  ]
+}

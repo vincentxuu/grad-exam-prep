@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "im-it",
+  "status": "reviewed-fragment",
+  "scope": "IM-IT full-coverage supplemental card floor",
+  "totalCards": 3,
+  "cards": [
+    {
+      "id": "card-im-it-ds-complexity-tight-bound-s01",
+      "lessonId": "lesson-im-it-ds-complexity-sorting-searching-01",
+      "subtopicId": "im-it-ds-complexity-analysis",
+      "front": "何時可以把 T(n) 寫成 Θ(f(n))，而不只寫 O(f(n))？",
+      "back": "當 T(n) 同時具有漸近上界 O(f(n)) 與漸近下界 Ω(f(n)) 時，才能寫成緊確界 Θ(f(n))。",
+      "explanation": "O 只保證成長不會漸近超過某個上界，可能並不緊；Θ 則要求同一個 f(n) 同時夾住上界與下界，因此更精確描述成長階。",
+      "sourceRefs": [
+        "src-mit-algorithms-6006"
+      ],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-ds-complexity-analysis-contract-s02",
+      "lessonId": "lesson-im-it-ds-complexity-sorting-searching-01",
+      "subtopicId": "im-it-ds-complexity-analysis",
+      "front": "做複雜度分析前，為什麼要先定義 input size n 與基本操作？",
+      "back": "因為複雜度描述的是特定成本隨輸入規模成長的函數；n 的定義或被計數的操作不同，得到的成本函數也可能不同。",
+      "explanation": "例如圖演算法常同時使用 |V| 與 |E|，字串搜尋則可能分別使用文字與樣式長度。若未先說明 n 和成本單位，單寫 O(n) 無法形成可比較、可檢驗的分析。",
+      "sourceRefs": [
+        "src-mit-algorithms-6006"
+      ],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-ai-foundations-state-space-s01",
+      "lessonId": "lesson-im-it-ai-foundations-ml-evaluation-01",
+      "subtopicId": "im-it-ai-foundations-search",
+      "front": "用 state-space 描述 AI 搜尋問題時，最少要先定義哪些元素？",
+      "back": "至少要定義初始狀態、可用動作與狀態轉移，以及判斷是否到達目標的 goal test；若要比較解的優劣，還需定義 path cost 或評估準則。",
+      "explanation": "搜尋是在狀態空間中套用動作，尋找能通過 goal test 的路徑。Heuristic 可估計距離或成本以引導搜尋，但它不是 goal test，也不等於正確性證明。",
+      "sourceRefs": [
+        "src-brookshear-13e"
+      ],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    }
+  ]
+}

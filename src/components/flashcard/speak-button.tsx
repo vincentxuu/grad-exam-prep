@@ -1,6 +1,6 @@
 'use client'
 
-import { Volume2 } from 'lucide-react'
+import { Volume2 } from '@sketchyicons/react'
 import { Button } from '@/components/ui/button'
 
 interface SpeakButtonProps {

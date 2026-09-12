@@ -1,4 +1,3 @@
-import type { StorageState } from '@/types/storage'
 import { getAuthHeader } from './auth'
 
 async function apiFetch(path: string, options?: RequestInit) {
@@ -10,21 +9,6 @@ async function apiFetch(path: string, options?: RequestInit) {
       ...(options?.headers ?? {}),
     },
   })
-}
-
-export async function uploadState(state: StorageState): Promise<void> {
-  const res = await apiFetch('/api/sync', {
-    method: 'POST',
-    body: JSON.stringify(state),
-  })
-  if (!res.ok) throw new Error(`Sync upload failed: ${res.status}`)
-}
-
-export async function downloadState(): Promise<StorageState | null> {
-  const res = await apiFetch('/api/sync')
-  if (res.status === 404) return null
-  if (!res.ok) throw new Error(`Sync download failed: ${res.status}`)
-  return res.json()
 }
 
 export interface Note {

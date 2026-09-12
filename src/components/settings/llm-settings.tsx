@@ -1,5 +1,6 @@
 'use client'
 
+import { Check, X } from '@sketchyicons/react'
 import { useCallback, useEffect, useState } from 'react'
 import { ModelPicker } from '@/components/settings/model-picker'
 import { TrialChat } from '@/components/settings/trial-chat'
@@ -13,7 +14,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
-import { clearToken, getAuthHeader, hashPassphrase, isAuthenticated, storeToken } from '@/lib/auth'
+import { getAuthHeader } from '@/lib/auth'
+import { useAuth } from '@/lib/auth-context'
 import { PROVIDER_CATALOG, providerInfo } from '@/lib/llm/catalog'
 
 interface ConfigState {
@@ -39,6 +41,11 @@ interface PingResult {
   ms: number
 }
 
+interface StatusMessage {
+  tone: 'success' | 'error'
+  message: string
+}
+
 /** 表單全部用字串，送出時才轉型 —— 清空欄位要能表達「回到預設」。 */
 type Form = Record<
   'provider' | 'model' | 'fallbackProvider' | 'fallbackModel' | 'lexiconQuota' | 'chatQuota',
@@ -58,11 +65,10 @@ const EMPTY_FORM: Form = {
 }
 
 export function LlmSettings() {
-  const [authed, setAuthed] = useState(isAuthenticated)
-  const [passphrase, setPassphrase] = useState('')
+  const { user } = useAuth()
   const [loaded, setLoaded] = useState<LoadedConfig | null>(null)
   const [form, setForm] = useState<Form>(EMPTY_FORM)
-  const [status, setStatus] = useState<string | null>(null)
+  const [status, setStatus] = useState<StatusMessage | null>(null)
   const [ping, setPing] = useState<PingResult | null>(null)
   const [busy, setBusy] = useState<'load' | 'save' | 'test' | null>(null)
 
@@ -72,9 +78,7 @@ export function LlmSettings() {
     try {
       const res = await fetch('/api/llm-config', { headers: getAuthHeader() })
       if (res.status === 401) {
-        clearToken()
-        setAuthed(false)
-        setStatus('通關密語不正確，或伺服器沒有設定 PASSPHRASE_HASH')
+        setStatus({ tone: 'error', message: '未登入或權限不足' })
         return
       }
       if (!res.ok) throw new Error()
@@ -89,22 +93,15 @@ export function LlmSettings() {
         chatQuota: data.config.chatQuota?.toString() ?? '',
       })
     } catch {
-      setStatus('讀取失敗')
+      setStatus({ tone: 'error', message: '讀取失敗' })
     } finally {
       setBusy(null)
     }
   }, [])
 
   useEffect(() => {
-    if (authed) load()
-  }, [authed, load])
-
-  async function handleLogin() {
-    if (!passphrase.trim()) return
-    storeToken(await hashPassphrase(passphrase))
-    setPassphrase('')
-    setAuthed(true)
-  }
+    if (user) load()
+  }, [user, load])
 
   async function handleSave() {
     setBusy('save')
@@ -121,13 +118,16 @@ export function LlmSettings() {
       })
       const data = (await res.json()) as { error?: string }
       if (!res.ok) {
-        setStatus(data.error ?? '存檔失敗')
+        setStatus({ tone: 'error', message: data.error ?? '存檔失敗' })
         return
       }
-      setStatus('✓ 已存檔。既有的 worker isolate 最多一分鐘後換到新設定。')
+      setStatus({
+        tone: 'success',
+        message: '已存檔。既有的 worker isolate 最多一分鐘後換到新設定。',
+      })
       await load()
     } catch {
-      setStatus('存檔失敗')
+      setStatus({ tone: 'error', message: '存檔失敗' })
     } finally {
       setBusy(null)
     }
@@ -145,36 +145,23 @@ export function LlmSettings() {
       })
       const data = (await res.json()) as PingResult & { error?: string }
       if (!res.ok) {
-        setStatus(data.error ?? '測試失敗')
+        setStatus({ tone: 'error', message: data.error ?? '測試失敗' })
         return
       }
       setPing(data)
     } catch {
-      setStatus('測試失敗')
+      setStatus({ tone: 'error', message: '測試失敗' })
     } finally {
       setBusy(null)
     }
   }
 
-  if (!authed) {
+  if (!user) {
     return (
       <div className="space-y-3 rounded-lg border p-4">
         <p className="text-muted-foreground text-sm">
-          改的是全站設定，要通關密語。這是同步功能用的那一組。
+          請先登入才能修改 LLM 設定。點右上角「登入」按鈕。
         </p>
-        <div className="flex gap-2">
-          <Input
-            type="password"
-            value={passphrase}
-            onChange={(e) => setPassphrase(e.target.value)}
-            onKeyDown={(e) => e.key === 'Enter' && handleLogin()}
-            placeholder="通關密語"
-          />
-          <Button onClick={handleLogin} disabled={!passphrase.trim()}>
-            登入
-          </Button>
-        </div>
-        {status && <p className="text-destructive text-sm">{status}</p>}
       </div>
     )
   }
@@ -273,8 +260,13 @@ export function LlmSettings() {
                 : 'border-destructive/40 bg-destructive/10'
             }`}
           >
-            <p className="font-medium">
-              {ping.ok ? '✓ 通了' : '✗ 打不通'} —{' '}
+            <p className="flex items-center gap-1.5 font-medium">
+              {ping.ok ? (
+                <Check aria-hidden="true" className="size-4 shrink-0 text-green-700" />
+              ) : (
+                <X aria-hidden="true" className="size-4 shrink-0 text-destructive" />
+              )}
+              <span>{ping.ok ? '通了' : '打不通'} —</span>{' '}
               <code className="font-mono text-xs">{ping.route}</code>
               {ping.ok && <span className="text-muted-foreground"> · {ping.ms} ms</span>}
             </p>
@@ -367,20 +359,24 @@ export function LlmSettings() {
         <Button onClick={handleSave} disabled={busy !== null}>
           {busy === 'save' ? '存檔中…' : '存檔'}
         </Button>
-        <Button
-          variant="ghost"
-          onClick={() => {
-            clearToken()
-            setAuthed(false)
-            setLoaded(null)
-          }}
-        >
-          登出
-        </Button>
         {busy === 'load' && <Badge variant="secondary">讀取中</Badge>}
       </div>
 
-      {status && <p className="text-sm">{status}</p>}
+      {status && (
+        <p
+          className={`flex items-start gap-1.5 text-sm ${
+            status.tone === 'error' ? 'text-destructive' : 'text-green-700'
+          }`}
+          role="status"
+        >
+          {status.tone === 'success' ? (
+            <Check aria-hidden="true" className="mt-0.5 size-4 shrink-0" />
+          ) : (
+            <X aria-hidden="true" className="mt-0.5 size-4 shrink-0" />
+          )}
+          <span>{status.message}</span>
+        </p>
+      )}
 
       <p className="text-muted-foreground text-xs leading-relaxed">
         Cloudflare 直接使用部署設定裡的 AI binding。其他 provider 的 API key

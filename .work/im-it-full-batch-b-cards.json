@@ -1,0 +1,207 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "im-it",
+  "status": "reviewed-fragment",
+  "scope": "IM-IT 61/61 Batch B",
+  "totalCards": 18,
+  "cards": [
+    {
+      "id": "card-im-it-ds-linear-stack-lifo-b01",
+      "lessonId": "lesson-im-it-ds-linear-hashing-b01",
+      "subtopicId": "im-it-ds-linear-structures",
+      "front": "為什麼 balanced parentheses 適合用 stack？",
+      "back": "巢狀括號遵守最後開啟、最先關閉；stack 的 LIFO 讓每個右括號先和最近尚未配對的左括號比較。",
+      "explanation": "遇左括號 push，遇右括號檢查 top 後 pop；中途 stack 空、種類不符或結束後非空都表示不平衡。",
+      "sourceRefs": ["src-mit-algorithms-6006"],
+      "pastPaperRefs": ["q-pp-im-it-115-4"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-ds-linear-adt-choice-b02",
+      "lessonId": "lesson-im-it-ds-linear-hashing-b01",
+      "subtopicId": "im-it-ds-linear-structures",
+      "front": "選 stack、queue、array 或 linked list 時，第一個問題是什麼？",
+      "back": "先問需要保留什麼存取順序，以及主要操作是索引、頭尾操作、搜尋或中間插刪。",
+      "explanation": "ADT 描述行為；array/linked structure 是實作選擇。沒有脫離操作前提、永遠最快的結構。",
+      "sourceRefs": ["src-mit-algorithms-6006"],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-ds-hashing-average-b01",
+      "lessonId": "lesson-im-it-ds-linear-hashing-b01",
+      "subtopicId": "im-it-ds-hashing",
+      "front": "Hash table 的搜尋為何只能說平均 O(1)，不能說最壞 O(1)？",
+      "back": "平均 O(1) 依賴 hash 分布、容量與碰撞控制；大量 keys 碰撞時，搜尋可能要檢查 O(n) 個項目。",
+      "explanation": "Hash function 將 key 映射到 bucket，但有限 buckets 必然可能 collision。",
+      "sourceRefs": ["src-mit-algorithms-6006"],
+      "pastPaperRefs": ["q-pp-im-it-115-1"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-ds-hashing-collision-b02",
+      "lessonId": "lesson-im-it-ds-linear-hashing-b01",
+      "subtopicId": "im-it-ds-hashing",
+      "front": "Chaining 與 open addressing 如何處理 collision？",
+      "back": "Chaining 把同 bucket 的項目放入附屬容器；open addressing 依 probing sequence 在表內找其他 slot。",
+      "explanation": "Linear probing 可能 primary clustering；double hashing 用第二個 hash 決定步長。",
+      "sourceRefs": ["src-mit-algorithms-6006"],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-ds-graphs-topological-b01",
+      "lessonId": "lesson-im-it-ds-graphs-design-b01",
+      "subtopicId": "im-it-ds-graphs",
+      "front": "Topological sort 的必要圖形條件是什麼？",
+      "back": "必須是 directed acyclic graph（DAG）。有 directed cycle 就不存在能滿足所有先後關係的線性順序。",
+      "explanation": "圖不必 fully connected，合法 order 也可能不唯一。",
+      "sourceRefs": ["src-mit-algorithms-6006"],
+      "pastPaperRefs": ["q-pp-im-it-115-6"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-ds-graphs-mst-b02",
+      "lessonId": "lesson-im-it-ds-graphs-design-b01",
+      "subtopicId": "im-it-ds-graphs",
+      "front": "Minimum spanning tree 與 shortest path 的目標有何不同？",
+      "back": "MST 以最小總邊權連通全部 vertices；shortest path 最小化特定起終點的路徑成本。",
+      "explanation": "Connected graph 的 spanning tree 有 n−1 edges；最短路徑樹不必是 MST。",
+      "sourceRefs": ["src-mit-algorithms-6006"],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-ds-design-strategies-b01",
+      "lessonId": "lesson-im-it-ds-graphs-design-b01",
+      "subtopicId": "im-it-ds-algorithm-design",
+      "front": "如何區分 greedy、divide-and-conquer 與 dynamic programming？",
+      "back": "Greedy 逐步做可證安全的局部選擇；divide-and-conquer 合併大致獨立子問題；DP 儲存重疊子問題的狀態。",
+      "explanation": "DP 通常還需要 optimal substructure；最優化問題不代表 greedy 一定成立。",
+      "sourceRefs": ["src-mit-algorithms-6006"],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-ds-design-correctness-b02",
+      "lessonId": "lesson-im-it-ds-graphs-design-b01",
+      "subtopicId": "im-it-ds-algorithm-design",
+      "front": "分析出 Big-O 之後，為何仍需要 correctness proof？",
+      "back": "Big-O 只描述資源成長，不證明演算法輸出符合規格；還需 invariant、induction、exchange argument 等證據。",
+      "explanation": "測試數個 examples 也不能取代對所有合法 inputs 的正確性論證。",
+      "sourceRefs": ["src-mit-algorithms-6006"],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-db-er-symbols-b01",
+      "lessonId": "lesson-im-it-db-er-normalization-b01",
+      "subtopicId": "im-it-db-er-modeling",
+      "front": "傳統 ER diagram 中 rectangle、oval、diamond 各代表什麼？",
+      "back": "Rectangle 表 entity、oval 表 attribute、diamond 表 relationship。",
+      "explanation": "Weak entity 常用 double rectangle；符號需連同 cardinality 與 participation 語意判讀。",
+      "sourceRefs": ["src-jiege-database-course"],
+      "pastPaperRefs": ["q-pp-im-it-111-21", "q-pp-im-it-114-16"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-db-er-many-to-many-b02",
+      "lessonId": "lesson-im-it-db-er-normalization-b01",
+      "subtopicId": "im-it-db-er-modeling",
+      "front": "Many-to-many relationship 映射到 relational schema 時通常怎麼做？",
+      "back": "建立 junction relation，放入兩端的 keys 作 foreign keys，並承載 relationship 自己的 attributes。",
+      "explanation": "例如 Enrollment(student_id, course_id, grade)，grade 屬於選課關係。",
+      "sourceRefs": ["src-brookshear-13e", "src-jiege-database-course"],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-db-normalization-forms-b01",
+      "lessonId": "lesson-im-it-db-er-normalization-b01",
+      "subtopicId": "im-it-db-normalization",
+      "front": "1NF、2NF、3NF 分別主要排除什麼？",
+      "back": "1NF 要求 atomic values；2NF 排除 non-prime attribute 對 candidate key 的 partial dependency；3NF 要求每個 non-trivial FD X→A 中，X 是 superkey 或 A 是 prime attribute。",
+      "explanation": "『排除 non-key 間 transitive dependency』是常見入門口訣；正式判斷仍要考慮所有 candidate keys 與 prime attributes。正規化不是機械地增加 table 數量。",
+      "sourceRefs": ["src-jiege-database-course"],
+      "pastPaperRefs": ["q-pp-im-it-111-14", "q-pp-im-it-114-13"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-db-normalization-fd-b02",
+      "lessonId": "lesson-im-it-db-er-normalization-b01",
+      "subtopicId": "im-it-db-normalization",
+      "front": "Functional dependency X→Y 的精確含義是什麼？",
+      "back": "任何兩筆 tuples 若 X 值相同，其 Y 值也必須相同；X 決定 Y。",
+      "explanation": "FD 源自業務語意，不能只因目前 sample 恰好相同就斷定成立。",
+      "sourceRefs": ["src-brookshear-13e", "src-jiege-database-course"],
+      "pastPaperRefs": ["q-pp-im-it-111-14", "q-pp-im-it-114-13"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-db-indexing-bplus-b01",
+      "lessonId": "lesson-im-it-db-storage-indexing-b01",
+      "subtopicId": "im-it-db-storage-indexing",
+      "front": "B+ tree 為何適合 range query？",
+      "back": "Keys 在葉節點保持排序且葉節點相連；找到範圍起點後可順序掃描到終點。",
+      "explanation": "高扇出與平衡性也讓 root-to-leaf page I/O 維持低高度。",
+      "sourceRefs": ["src-jiege-database-course"],
+      "pastPaperRefs": ["q-pp-im-it-115-16"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-db-indexing-hash-range-b02",
+      "lessonId": "lesson-im-it-db-storage-indexing-b01",
+      "subtopicId": "im-it-db-storage-indexing",
+      "front": "Hash index 為何通常不適合 range query？",
+      "back": "Hash function 破壞 key 的排序關係，相鄰值可能落到完全不同 buckets，無法沿連續位置掃描。",
+      "explanation": "Hash index 通常適合 equality lookup，而非 BETWEEN、<、>。",
+      "sourceRefs": ["src-jiege-database-course"],
+      "pastPaperRefs": ["q-pp-im-it-115-18"],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-os-sync-race-b01",
+      "lessonId": "lesson-im-it-os-sync-deadlock-b01",
+      "subtopicId": "im-it-os-synchronization",
+      "front": "Race condition 的核心判斷是什麼？",
+      "back": "多個執行單元存取 shared mutable state，結果會因不可控的 execution interleaving 而不同。",
+      "explanation": "Read-modify-write 若非 atomic，可能發生 lost update；critical section 需受同步保護。",
+      "sourceRefs": ["src-nthu-os-course"],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-os-sync-semaphore-b02",
+      "lessonId": "lesson-im-it-os-sync-deadlock-b01",
+      "subtopicId": "im-it-os-synchronization",
+      "front": "Binary semaphore 與 counting semaphore 的用途差異？",
+      "back": "Binary semaphore 可控制單一 permit、常用於互斥；counting semaphore 追蹤多個 permits，可限制有限資源的同時使用量。",
+      "explanation": "Wait/P 與 signal/V 必須是 atomic；semaphore 也能表達事件順序。",
+      "sourceRefs": ["src-brookshear-13e", "src-nthu-os-course"],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-os-deadlock-coffman-b01",
+      "lessonId": "lesson-im-it-os-sync-deadlock-b01",
+      "subtopicId": "im-it-os-deadlocks",
+      "front": "Deadlock 的四個 Coffman necessary conditions 是什麼？",
+      "back": "Mutual exclusion、hold and wait、no preemption、circular wait。",
+      "explanation": "四者同時成立才可能 deadlock；破壞任一條件可用於 prevention。",
+      "sourceRefs": ["src-nthu-os-course"],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-os-deadlock-banker-b02",
+      "lessonId": "lesson-im-it-os-sync-deadlock-b01",
+      "subtopicId": "im-it-os-deadlocks",
+      "front": "Banker's algorithm 在配置資源前檢查什麼？",
+      "back": "檢查 tentative allocation 後是否仍存在讓所有 processes 完成的 safe sequence，只在 safe state 才核准。",
+      "explanation": "它是 deadlock avoidance；unsafe state 不表示當下已經 deadlock。",
+      "sourceRefs": ["src-brookshear-13e", "src-nthu-os-course"],
+      "pastPaperRefs": ["q-pp-im-it-114-8"],
+      "reviewStatus": "reviewed"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "version": "1.0",
+  "sourceType": "textbook",
+  "textbook": "Practice Questions (AI-generated)",
+  "url": null,
+  "license": null,
+  "totalQuestions": 3,
+  "questions": [
+    {
+      "id": "q-tb-mis-enterprise-1",
+      "examId": "im",
+      "subjectId": "im-mis",
+      "text": "一家跨國製造商計畫導入 ERP 系統取代各部門獨立運作的資訊系統（採購用 A 系統、倉儲用 B 系統、財務用 C 系統）。\n\n(a) 說明 ERP 如何透過「共享資料庫」與「跨部門流程標準化」降低資訊延遲與重複輸入，並舉一個具體的跨部門資料流範例。\n(b) 導入 ERP 可能帶來哪些組織挑戰？請從 fit-gap analysis、客製化成本、change management 三個面向各說明一項風險。\n(c) 如果該公司某事業部的業務流程高度獨特（例如客製化訂單佔營收 60%），你會建議該事業部也統一到同一套 ERP，還是保留獨立系統？請說明你的立場與至少兩個考量因素。",
+      "points": 25,
+      "hasImage": false,
+      "subQuestions": ["a", "b", "c"]
+    },
+    {
+      "id": "q-tb-mis-enterprise-2",
+      "examId": "im",
+      "subjectId": "im-mis",
+      "text": "某零售業者的線上訂單處理流程如下：顧客下單 → 客服人員手動確認庫存 → 倉儲人員收到 email 通知後揀貨 → 財務人員手動開立發票 → 物流部門安排出貨。該流程平均處理時間為 48 小時，錯誤率約 8%。\n\n(a) 從 BPR（Business Process Reengineering）的觀點，分析此流程中有哪些非增值活動（non-value-added activities）和不必要的 handoff？\n(b) 如果只是將現有流程「原封不動搬上線」（例如用系統發 email 取代手動發 email），這算是 automation 還是 transformation？說明兩者的差異。\n(c) 請重新設計此流程，使其處理時間降至 12 小時以內。說明你會整合或移除哪些步驟，以及需要什麼系統支援（例如 ERP 模組、自動化規則等）。",
+      "points": 25,
+      "hasImage": false,
+      "subQuestions": ["a", "b", "c"]
+    },
+    {
+      "id": "q-tb-mis-enterprise-3",
+      "examId": "im",
+      "subjectId": "im-mis",
+      "text": "比較 push 與 pull 供應鏈策略在以下兩種情境的適用性：\n\n情境 A：一家生產標準化罐頭食品的大型食品廠，產品保存期限長、需求穩定。\n情境 B：一家生產客製化婚禮蛋糕的烘焙坊，每筆訂單規格不同、前置時間短。\n\n(a) 分別說明情境 A 和情境 B 各適合 push 還是 pull 策略，並解釋原因（從需求可預測性、前置時間、庫存成本三個面向分析）。\n(b) 說明 bullwhip effect 的成因，以及為什麼情境 A 比情境 B 更容易受到 bullwhip effect 的影響。\n(c) 如果情境 A 的食品廠想在不大幅增加庫存的前提下提高對需求波動的反應速度，你會建議什麼策略？請從資訊共享（information sharing）和延遲策略（postponement）兩個方向各提出一項具體做法。",
+      "points": 25,
+      "hasImage": false,
+      "subQuestions": ["a", "b", "c"]
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "im-english",
+  "contentStatus": "reviewed",
+  "sourcePolicy": "英文策略課為考試技巧導向，不引用特定學術來源；字彙與文法規則依通用英語教學共識。",
+  "canonicalTopicIds": [
+    "im-en-reading",
+    "im-en-grammar",
+    "im-en-vocab"
+  ],
+  "publicationGates": [
+    "question metadata closure",
+    "auto grading for single-choice questions"
+  ],
+  "topics": [
+    {
+      "id": "im-en-reading",
+      "title": "閱讀測驗（含資訊科技相關題材）",
+      "importance": 4,
+      "status": "reviewed",
+      "learningObjectives": [
+        {
+          "id": "im-en-reading-lo-1",
+          "statement": "用定位式閱讀在時間壓力下完成科技長文理解"
+        },
+        {
+          "id": "im-en-reading-lo-2",
+          "statement": "辨識四種題型（主旨、細節、推論、字義）並選擇對應策略"
+        }
+      ],
+      "subtopics": [
+        {
+          "id": "im-en-reading-general",
+          "topicId": "im-en-reading",
+          "title": "長篇文章理解",
+          "keywords": ["main idea", "detail", "inference", "passage structure"],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-en-reading-tech",
+          "topicId": "im-en-reading",
+          "title": "科技議題文章",
+          "keywords": ["AI", "cybersecurity", "digital transformation", "cloud computing"],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-en-reading-business",
+          "topicId": "im-en-reading",
+          "title": "商業英文",
+          "keywords": ["management", "strategy", "revenue", "market analysis"],
+          "status": "reviewed"
+        }
+      ]
+    },
+    {
+      "id": "im-en-grammar",
+      "title": "文法選擇題",
+      "importance": 3,
+      "status": "reviewed",
+      "learningObjectives": [
+        {
+          "id": "im-en-grammar-lo-1",
+          "statement": "辨識高頻文法陷阱並用規則而非語感判斷"
+        },
+        {
+          "id": "im-en-grammar-lo-2",
+          "statement": "區分詞性、時態和介係詞的常見混淆模式"
+        }
+      ],
+      "subtopics": [
+        {
+          "id": "im-en-grammar-syntax",
+          "topicId": "im-en-grammar",
+          "title": "詞性判斷與句構",
+          "keywords": ["part of speech", "clause", "modifier", "subject-verb agreement"],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-en-grammar-tense",
+          "topicId": "im-en-grammar",
+          "title": "時態用法",
+          "keywords": ["present perfect", "past simple", "future", "conditional"],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-en-grammar-preposition",
+          "topicId": "im-en-grammar",
+          "title": "介係詞",
+          "keywords": ["in", "on", "at", "by", "with", "collocation"],
+          "status": "reviewed"
+        }
+      ]
+    },
+    {
+      "id": "im-en-vocab",
+      "title": "字彙",
+      "importance": 3,
+      "status": "reviewed",
+      "learningObjectives": [
+        {
+          "id": "im-en-vocab-lo-1",
+          "statement": "掌握資訊科技專業詞彙與核心學術字彙的區別和用法"
+        },
+        {
+          "id": "im-en-vocab-lo-2",
+          "statement": "用字根字首和上下文線索推測生字意思"
+        }
+      ],
+      "subtopics": [
+        {
+          "id": "im-en-vocab-core",
+          "topicId": "im-en-vocab",
+          "title": "托福/GRE 核心字彙",
+          "keywords": ["academic vocabulary", "GRE", "TOEFL", "word roots"],
+          "status": "reviewed"
+        },
+        {
+          "id": "im-en-vocab-tech",
+          "topicId": "im-en-vocab",
+          "title": "資訊科技專業詞彙",
+          "keywords": ["IT terminology", "MIS vocabulary", "technical English"],
+          "status": "reviewed"
+        }
+      ]
+    }
+  ]
+}

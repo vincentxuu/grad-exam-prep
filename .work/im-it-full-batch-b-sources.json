@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "im-it",
+  "batchId": "im-it-full-batch-b",
+  "status": "reviewed-fragment",
+  "sources": [],
+  "note": "Batch B only uses reviewed sources already present in the canonical registry."
+}

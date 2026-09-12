@@ -1,4 +1,7 @@
+import { ArrowRight, Check, ChevronRight, TriangleAlert } from '@sketchyicons/react'
 import Link from 'next/link'
+import { InteractiveBlock } from '@/components/exam/interactive-block'
+import { LearningBeginnerGlossary } from '@/components/exam/learning-beginner-glossary'
 import { Badge } from '@/components/ui/badge'
 import type {
   LearningCatalog,
@@ -16,7 +19,18 @@ interface Props {
 
 export function LearningLessonContent({ catalog, lesson, cards, sources }: Props) {
   const copy = catalog.lessonCopy
+  const beginnerGlossary = catalog.getBeginnerGlossaryForLesson(lesson.id)
   const practiceHref = catalog.getPracticeHref(lesson)
+  const hasDirectPastPaperEvidence = lesson.pastPaperRefs.length > 0
+  const practiceTitle = hasDirectPastPaperEvidence
+    ? copy.practiceTitle
+    : (copy.foundationPracticeTitle ?? copy.practiceTitle)
+  const practiceDescription = hasDirectPastPaperEvidence
+    ? copy.practiceDescription
+    : (copy.foundationPracticeDescription ?? copy.practiceDescription)
+  const practiceActionLabel = hasDirectPastPaperEvidence
+    ? copy.practiceActionLabel
+    : (copy.foundationPracticeActionLabel ?? copy.practiceActionLabel)
 
   return (
     <article className="space-y-8">
@@ -28,19 +42,24 @@ export function LearningLessonContent({ catalog, lesson, cards, sources }: Props
             {lesson.pastPaperRefs.length} {copy.pastPaperUnit}
           </span>
         </div>
-        <h1 className="text-balance text-2xl font-bold">{lesson.title}</h1>
-        <p className="text-pretty text-muted-foreground">{lesson.summary}</p>
+        <h1 className="text-balance text-2xl font-bold font-display">{lesson.title}</h1>
         <p className="text-pretty text-xs text-muted-foreground">{copy.contentNotice}</p>
+        {lesson.evidenceNote ? (
+          <p className="rounded-lg border border-amber-300 bg-amber-50 px-4 py-3 text-pretty text-sm leading-6 text-amber-950 dark:border-amber-700 dark:bg-amber-950/30 dark:text-amber-100">
+            <span className="font-semibold">考古題證據邊界：</span> {lesson.evidenceNote}
+          </p>
+        ) : null}
       </header>
 
+      <LearningBeginnerGlossary terms={beginnerGlossary} />
+
       <section className="rounded-lg border bg-muted/30 p-4">
+        <p className="mb-4 text-pretty text-sm leading-6 text-muted-foreground">{lesson.summary}</p>
         <h2 className="text-balance text-lg font-semibold">{copy.objectivesTitle}</h2>
         <ul className="mt-3 space-y-2">
           {lesson.learningObjectives.map((objective) => (
             <li key={objective} className="flex gap-2 text-pretty text-sm">
-              <span aria-hidden="true" className="text-primary">
-                ✓
-              </span>
+              <Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
               {objective}
             </li>
           ))}
@@ -112,9 +131,7 @@ export function LearningLessonContent({ catalog, lesson, cards, sources }: Props
             <ul className="mt-2 space-y-2">
               {lesson.learningScenario.examCues.map((cue) => (
                 <li key={cue} className="flex gap-2 text-pretty text-sm leading-6">
-                  <span aria-hidden="true" className="text-primary">
-                    →
-                  </span>
+                  <ArrowRight className="mt-1 h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
                   {cue}
                 </li>
               ))}
@@ -141,6 +158,9 @@ export function LearningLessonContent({ catalog, lesson, cards, sources }: Props
                 </li>
               ))}
             </ul>
+            {section.interactiveBlocks?.map((block, blockIndex) => (
+              <InteractiveBlock key={blockIndex} block={block} />
+            ))}
           </section>
         ))}
       </div>
@@ -175,7 +195,7 @@ export function LearningLessonContent({ catalog, lesson, cards, sources }: Props
         <ul className="space-y-2 rounded-lg border border-amber-200 bg-amber-50/50 p-4 dark:border-amber-900 dark:bg-amber-950/20">
           {lesson.commonPitfalls.map((pitfall) => (
             <li key={pitfall} className="flex gap-2 text-pretty text-sm leading-6">
-              <span aria-hidden="true">⚠</span>
+              <TriangleAlert className="mt-1 h-4 w-4 shrink-0" aria-hidden="true" />
               {pitfall}
             </li>
           ))}
@@ -193,9 +213,10 @@ export function LearningLessonContent({ catalog, lesson, cards, sources }: Props
               <summary className="flex min-h-12 cursor-pointer list-none items-center gap-3 px-4 py-3 marker:content-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-ring">
                 <span className="tabular-nums text-xs text-muted-foreground">{index + 1}</span>
                 <span className="flex-1 text-pretty text-sm font-medium">{card.front}</span>
-                <span aria-hidden="true" className="text-muted-foreground group-open:rotate-90">
-                  ›
-                </span>
+                <ChevronRight
+                  className="h-4 w-4 text-muted-foreground transition-transform group-open:rotate-90"
+                  aria-hidden="true"
+                />
               </summary>
               <div className="space-y-2 border-t px-4 py-3 text-sm">
                 <p className="text-pretty font-medium">{card.back}</p>
@@ -207,13 +228,14 @@ export function LearningLessonContent({ catalog, lesson, cards, sources }: Props
       </section>
 
       <section className="space-y-3 rounded-lg border p-4">
-        <h2 className="text-balance text-lg font-semibold">{copy.practiceTitle}</h2>
-        <p className="text-pretty text-sm text-muted-foreground">{copy.practiceDescription}</p>
+        <h2 className="text-balance text-lg font-semibold">{practiceTitle}</h2>
+        <p className="text-pretty text-sm text-muted-foreground">{practiceDescription}</p>
         <Link
           href={practiceHref}
           className="inline-flex min-h-10 items-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
         >
-          {copy.practiceActionLabel}
+          {practiceActionLabel}
+          <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
         </Link>
       </section>
 

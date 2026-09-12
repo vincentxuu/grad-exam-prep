@@ -59,9 +59,14 @@ export const PROVIDER_CATALOG: ProviderInfo[] = [
     id: 'cloudflare',
     label: 'Cloudflare Workers AI',
     envKeys: [],
-    sampleModel: '@cf/meta/llama-3.3-70b-instruct-fp8-fast',
-    fallbackModels: ['@cf/meta/llama-3.3-70b-instruct-fp8-fast', '@cf/openai/gpt-oss-120b'],
-    note: '預設。直接使用站台的 AI binding，不需要另外設定 API key。',
+    sampleModel: '@cf/qwen/qwen3-30b-a3b-fp8',
+    fallbackModels: [
+      '@cf/qwen/qwen3-30b-a3b-fp8',
+      '@cf/meta/llama-3.3-70b-instruct-fp8-fast',
+      '@cf/openai/gpt-oss-120b',
+      '@cf/ibm-granite/granite-4.0-h-micro',
+    ],
+    note: '預設。有 function calling、多語言。推理密集用 gpt-oss-120b，極省成本用 granite-4.0-h-micro。',
   },
   {
     id: 'openrouter',

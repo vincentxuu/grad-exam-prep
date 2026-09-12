@@ -2,13 +2,16 @@
 
 import {
   ArrowRight,
+  BookOpen,
   BookOpenCheck,
   Brain,
   CheckCircle2,
   CircleDot,
+  Clock,
   ListChecks,
   Repeat2,
-} from 'lucide-react'
+  Target,
+} from '@sketchyicons/react'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { type ReactNode, Suspense, use, useMemo, useState } from 'react'
@@ -23,12 +26,15 @@ import { useQueryState } from '@/hooks/use-query-state'
 import { EXAM_LABELS, getStudyPlan, getStudyPlans, getSubjectsByExam } from '@/lib/content'
 import { buildPhasesWithMeta, getExamDate, getPlanStartDate } from '@/lib/study-plan'
 import {
+  type RecommendedLesson,
   countScheduledDueCards,
   dailyLearningKey,
   findLatestTaskEvidence,
   getCurrentPhase,
   getPlanMonth,
+  getTaskLearningHref,
   getTodayFocusTasks,
+  getTodayRecommendedLessons,
   isTaskEvidencePassing,
   localDateKey,
   recommendedNewCardLimit,
@@ -97,6 +103,15 @@ function TodayContent({ params }: Props) {
   )
   const planHref = `/${exam}/plan?plan=${encodeURIComponent(plan.id)}`
 
+  const focusSubjects = useMemo(
+    () => [...new Set(focusTasks.map((t) => t.subjectTag).filter(Boolean))] as string[],
+    [focusTasks]
+  )
+  const recommended = useMemo(
+    () => getTodayRecommendedLessons(examId, today, focusSubjects.length > 0 ? focusSubjects : undefined),
+    [examId, focusSubjects]
+  )
+
   return (
     <div className="mx-auto max-w-5xl space-y-6 pb-12">
       <section className="overflow-hidden rounded-2xl border bg-card">
@@ -110,7 +125,7 @@ function TodayContent({ params }: Props) {
               })}
             </p>
             <div>
-              <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">今天只走一輪</h1>
+              <h1 className="text-2xl font-bold font-display tracking-tight sm:text-3xl">今天只走一輪</h1>
               <p className="mt-2 max-w-2xl text-sm leading-6 text-muted-foreground">
                 先把昨天的知識叫回來，再推進新內容。今天的完成不是「看過」，而是至少有一次不看資料的正確輸出。
               </p>
@@ -155,11 +170,24 @@ function TodayContent({ params }: Props) {
           </LearningStep>
 
           <LearningStep meta={STEP_META[1]}>
-            {focusTasks.length > 0 ? (
+            {recommended.length > 0 && (
               <div className="space-y-3">
+                <div className="flex items-center gap-2 mb-1">
+                  <Target className="h-3.5 w-3.5 text-primary" />
+                  <p className="text-xs font-semibold tracking-wide text-primary uppercase">今日推薦課程</p>
+                </div>
+                {recommended.map((rec) => (
+                  <RecommendedLessonCard key={rec.lesson.id} rec={rec} exam={exam} />
+                ))}
+              </div>
+            )}
+
+            {focusTasks.length > 0 && (
+              <div className="space-y-3 mt-4">
                 {focusTasks.map((task) => {
                   const latestEvidence = findLatestTaskEvidence(state.dailyLearning, task.id)
                   const isOpen = openTaskId === task.id
+                  const learningHref = getTaskLearningHref(examId, task.subjectTag)
                   return (
                     <div key={task.id} className="rounded-lg border bg-background p-3">
                       <div className="flex items-start justify-between gap-3">
@@ -194,14 +222,21 @@ function TodayContent({ params }: Props) {
                             ) : null}
                           </div>
                         </div>
-                        <Button
-                          type="button"
-                          size="sm"
-                          variant={latestEvidence ? 'outline' : 'default'}
-                          onClick={() => setOpenTaskId(isOpen ? null : task.id)}
-                        >
-                          {isOpen ? '收起' : latestEvidence ? '更新成果' : '記錄成果'}
-                        </Button>
+                        <div className="flex shrink-0 flex-col gap-2 sm:flex-row">
+                          {learningHref ? (
+                            <Button asChild type="button" size="sm" variant="outline">
+                              <Link href={learningHref}>開啟課程</Link>
+                            </Button>
+                          ) : null}
+                          <Button
+                            type="button"
+                            size="sm"
+                            variant={latestEvidence ? 'outline' : 'default'}
+                            onClick={() => setOpenTaskId(isOpen ? null : task.id)}
+                          >
+                            {isOpen ? '收起' : latestEvidence ? '更新成果' : '記錄成果'}
+                          </Button>
+                        </div>
                       </div>
                       {isOpen ? (
                         <TaskEvidenceForm
@@ -231,7 +266,9 @@ function TodayContent({ params }: Props) {
                   )
                 })}
               </div>
-            ) : (
+            )}
+
+            {recommended.length === 0 && focusTasks.length === 0 && (
               <div className="rounded-lg border border-dashed p-4 text-sm text-muted-foreground">
                 本階段任務已完成。今天不必硬開新進度，改做混合自測與錯題重測。
               </div>
@@ -239,7 +276,7 @@ function TodayContent({ params }: Props) {
           </LearningStep>
 
           <LearningStep meta={STEP_META[2]}>
-            <div className="space-y-2 text-sm leading-6 text-muted-foreground">
+            <div className="space-y-4 text-sm leading-6 text-muted-foreground">
               <p>從今天的主線挑一個概念，不看教材完成其中一種輸出：</p>
               <ul className="grid gap-2 sm:grid-cols-2">
                 <li className="rounded-lg bg-muted/50 px-3 py-2">白紙重建概念與因果鏈</li>
@@ -247,6 +284,22 @@ function TodayContent({ params }: Props) {
                 <li className="rounded-lg bg-muted/50 px-3 py-2">口頭解釋三分鐘並找出跳步</li>
                 <li className="rounded-lg bg-muted/50 px-3 py-2">做一題無提示的章節題</li>
               </ul>
+
+              {recommended.length > 0 && (
+                <div className="rounded-lg border border-primary/20 bg-primary/[0.04] p-3 space-y-2">
+                  <p className="text-xs font-semibold text-primary">用這些題目驗證今天學的：</p>
+                  <div className="flex flex-wrap gap-2">
+                    {recommended.map((rec) => (
+                      <Button key={rec.lesson.id} asChild size="sm" variant="outline">
+                        <Link href={rec.questionHref}>
+                          {rec.catalog.subjectLabel} 題庫
+                          <ArrowRight className="ml-1 h-3 w-3" />
+                        </Link>
+                      </Button>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           </LearningStep>
 
@@ -278,12 +331,33 @@ function TodayContent({ params }: Props) {
         </ol>
 
         <aside className="space-y-4 lg:sticky lg:top-20 lg:self-start">
+          {recommended.length > 0 && (
+            <section className="rounded-xl border border-primary/20 bg-primary/[0.04] p-4">
+              <h2 className="text-sm font-semibold flex items-center gap-2">
+                <BookOpen className="h-4 w-4 text-primary" />
+                今日科目
+              </h2>
+              <div className="mt-3 space-y-2">
+                {recommended.map((rec) => (
+                  <Link
+                    key={rec.catalog.subjectId}
+                    href={`/${exam}/subjects/${rec.catalog.subjectId}`}
+                    className="flex items-center justify-between rounded-lg border bg-background px-3 py-2 text-xs transition-colors hover:bg-muted/50"
+                  >
+                    <span className="font-medium">{rec.catalog.subjectLabel}</span>
+                    <span className="text-muted-foreground">{rec.catalog.lessons.length} 堂課</span>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
+
           <section className="rounded-xl border p-4">
             <div className="flex items-center gap-2">
               <ListChecks className="h-4 w-4 text-primary" />
               <h2 className="text-sm font-semibold">本階段進度</h2>
             </div>
-            <p className="mt-3 text-3xl font-bold tabular-nums">
+            <p className="mt-3 text-3xl font-bold font-mono tabular-nums">
               {currentPhase?.completionPct ?? 0}%
             </p>
             <p className="mt-1 text-xs text-muted-foreground">
@@ -310,6 +384,34 @@ function TodayContent({ params }: Props) {
             </ul>
           </section>
         </aside>
+      </div>
+    </div>
+  )
+}
+
+function RecommendedLessonCard({ rec, exam }: { rec: RecommendedLesson; exam: string }) {
+  return (
+    <div className="group rounded-lg border border-primary/20 bg-gradient-to-r from-primary/[0.04] to-transparent p-3 transition-colors hover:border-primary/40">
+      <div className="flex items-start justify-between gap-3">
+        <div className="min-w-0 space-y-1">
+          <div className="flex items-center gap-2">
+            <Badge variant="secondary" className="text-[10px] px-1.5 py-0">
+              {rec.catalog.subjectLabel}
+            </Badge>
+            <span className="flex items-center gap-1 text-xs text-muted-foreground">
+              <Clock className="h-3 w-3" />
+              {rec.lesson.estimatedMinutes} 分
+            </span>
+          </div>
+          <p className="text-sm font-medium leading-5">{rec.lesson.title}</p>
+          <p className="text-xs text-muted-foreground line-clamp-2">{rec.lesson.summary}</p>
+        </div>
+        <Button asChild size="sm" className="shrink-0">
+          <Link href={rec.href}>
+            開始
+            <ArrowRight className="ml-1 h-3.5 w-3.5" />
+          </Link>
+        </Button>
       </div>
     </div>
   )

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "im-stat",
+  "status": "reviewed",
+  "counts": {
+    "selfReviewOnly": 5,
+    "autoGradeEligible": 0
+  },
+  "questions": {
+    "q-pp-im-stat-114-4": {
+      "status": "self_review_only",
+      "practiceEligible": true,
+      "autoGradeEligible": false,
+      "fullMockEligible": false,
+      "note": "本題為申論／計算題；請先作答，再依非官方 worked solution 與步驟 rubric 自評。"
+    },
+    "q-pp-im-stat-114-5": {
+      "status": "self_review_only",
+      "practiceEligible": true,
+      "autoGradeEligible": false,
+      "fullMockEligible": false,
+      "note": "本題為申論／計算題；請先作答，再依非官方 worked solution 與步驟 rubric 自評。"
+    },
+    "q-pp-im-stat-115-3": {
+      "status": "self_review_only",
+      "practiceEligible": true,
+      "autoGradeEligible": false,
+      "fullMockEligible": false,
+      "note": "本題為申論／計算題；請先作答，再依非官方 worked solution 與步驟 rubric 自評。"
+    },
+    "q-pp-im-stat-115-4": {
+      "status": "self_review_only",
+      "practiceEligible": true,
+      "autoGradeEligible": false,
+      "fullMockEligible": false,
+      "note": "本題為申論／計算題；請先作答，再依非官方 worked solution 與步驟 rubric 自評。"
+    },
+    "q-pp-im-stat-115-5": {
+      "status": "self_review_only",
+      "practiceEligible": true,
+      "autoGradeEligible": false,
+      "fullMockEligible": false,
+      "note": "本題為申論／計算題；請先作答，再依非官方 worked solution 與步驟 rubric 自評。"
+    }
+  }
+}

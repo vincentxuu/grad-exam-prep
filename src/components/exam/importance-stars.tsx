@@ -1,3 +1,4 @@
+import { Star } from '@sketchyicons/react'
 import { cn } from '@/lib/utils'
 import type { ImportanceRating } from '@/types/content'
 
@@ -21,12 +22,12 @@ export function ImportanceStars({ rating, className }: ImportanceStarsProps) {
       title={`重要度：${LABELS[rating]}`}
     >
       {Array.from({ length: 5 }).map((_, i) => (
-        <span
+        <Star
           key={i}
-          className={cn('text-xs', i < rating ? 'text-amber-400' : 'text-muted-foreground/30')}
-        >
-          ★
-        </span>
+          className={cn('h-3 w-3', i < rating ? 'text-amber-400' : 'text-muted-foreground/30')}
+          fill="currentColor"
+          aria-hidden="true"
+        />
       ))}
       {rating === 5 && (
         <span className="ml-1 text-xs font-medium text-amber-600 dark:text-amber-400">必考</span>

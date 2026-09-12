@@ -15,8 +15,8 @@ interface Props {
  */
 export function PersonalBridge({ bridge, speak, speakingId }: Props) {
   return (
-    <div className="rounded-md border-l-4 border-violet-400 dark:border-violet-600 bg-violet-50/60 dark:bg-violet-950/20 p-3 space-y-2">
-      <h3 className="text-xs font-medium text-violet-800 dark:text-violet-300">跟你的連結</h3>
+    <div className="rounded-lg border bg-muted/40 p-3 space-y-2">
+      <h3 className="text-xs font-medium text-muted-foreground">跟你的連結</h3>
 
       {bridge.examples.map((ex, i) => (
         <div key={ex.en} className="space-y-0.5">
@@ -35,7 +35,7 @@ export function PersonalBridge({ bridge, speak, speakingId }: Props) {
       ))}
 
       {bridge.mnemonic && (
-        <p className="text-sm leading-relaxed border-t border-violet-200 dark:border-violet-900 pt-2">
+        <p className="text-sm leading-relaxed border-t pt-2">
           <span className="text-xs text-muted-foreground">記憶連結：</span>
           {bridge.mnemonic}
         </p>

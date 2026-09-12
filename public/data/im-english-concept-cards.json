@@ -1,0 +1,185 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "im-english",
+  "status": "reviewed",
+  "generationPolicy": "針對英文考試策略產生的概念卡，幫助快速回憶解題技巧。",
+  "totalCards": 16,
+  "cards": [
+    {
+      "id": "card-im-en-reading-scan-then-read",
+      "lessonId": "lesson-im-en-reading-strategy-01",
+      "subtopicId": "im-en-reading-general",
+      "front": "閱讀測驗的第一步應該做什麼？",
+      "back": "先掃過所有題目的題幹（不看選項），標記關鍵字，再帶著目標回到文章定位。",
+      "explanation": "scan-then-read 策略比從頭讀到尾省 30-40% 的時間，因為你帶著明確目標閱讀。",
+      "sourceRefs": [],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-en-reading-inference",
+      "lessonId": "lesson-im-en-reading-strategy-01",
+      "subtopicId": "im-en-reading-general",
+      "front": "推論題 (It can be inferred that...) 的答案通常在哪裡找？",
+      "back": "在因果關係或對比結構中。看到 because, therefore, however, in contrast 等轉折/因果詞就標記。",
+      "explanation": "推論題的答案不在文字表面，而是需要從上下文的邏輯關係中推導出來。",
+      "sourceRefs": [],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-en-reading-tech-structure",
+      "lessonId": "lesson-im-en-reading-strategy-01",
+      "subtopicId": "im-en-reading-tech",
+      "front": "科技類文章通常有什麼四段結構？",
+      "back": "1. Hook + 背景數據 → 2. 技術說明 → 3. However 轉折（風險/限制）→ 4. 結論/展望",
+      "explanation": "掌握這個結構後，即使有不認識的字，也能判斷每段的功能。轉折詞是出題熱區。",
+      "sourceRefs": [],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-en-reading-not-true",
+      "lessonId": "lesson-im-en-reading-strategy-01",
+      "subtopicId": "im-en-reading-business",
+      "front": "遇到 'Which of the following is NOT true?' 題型，怎麼做最保險？",
+      "back": "逐項比對原文，確認三個選項為真後，剩下的才是答案。不能只找到一個錯的就選。",
+      "explanation": "NOT true 題是最耗時的題型。如果卡住超過 2 分鐘，先標記跳過，回頭再做。",
+      "sourceRefs": [],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-en-grammar-sv-agreement",
+      "lessonId": "lesson-im-en-grammar-traps-01",
+      "subtopicId": "im-en-grammar-syntax",
+      "front": "'The number of users (is/are) increasing.' 選哪個？為什麼？",
+      "back": "is。'The number of' 主詞是 number（單數）。注意區分 'A number of users are...'（複數）。",
+      "explanation": "The number of = 數量（單數），A number of = 許多（複數）。這是考試高頻陷阱。",
+      "sourceRefs": [],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-en-grammar-dangling",
+      "lessonId": "lesson-im-en-grammar-traps-01",
+      "subtopicId": "im-en-grammar-syntax",
+      "front": "'Walking down the street, the rain started.' 這句話哪裡錯？",
+      "back": "懸垂分詞（dangling modifier）：Walking 的主詞應該是人，但主句主詞是 the rain。",
+      "explanation": "分詞構句的主詞必須和主句一致。正確寫法：Walking down the street, I got caught in the rain.",
+      "sourceRefs": [],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-en-grammar-tense-pair",
+      "lessonId": "lesson-im-en-grammar-traps-01",
+      "subtopicId": "im-en-grammar-tense",
+      "front": "'Since 2020, the company (launched/has launched) three products.' 選哪個？",
+      "back": "has launched。since + 過去時間點 → 現在完成式。這是最常見的時態陷阱。",
+      "explanation": "since/for/so far/over the past decade 都是現在完成式的信號詞。",
+      "sourceRefs": [],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-en-grammar-preposition",
+      "lessonId": "lesson-im-en-grammar-traps-01",
+      "subtopicId": "im-en-grammar-preposition",
+      "front": "'The system is capable (of/for/to) handling large datasets.' 選哪個？",
+      "back": "of。capable of + V-ing 是固定搭配。不能用 capable to 或 capable for。",
+      "explanation": "介係詞搭配沒有邏輯可推導，只能靠記憶。高頻考點：capable of, comply with, result in, contribute to。",
+      "sourceRefs": [],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-en-vocab-word-root",
+      "lessonId": "lesson-im-en-vocab-tech-01",
+      "subtopicId": "im-en-vocab-core",
+      "front": "遇到完全不認識的單字，最快的猜測方法是什麼？",
+      "back": "拆字根字首：un- (否定), re- (再次), pre- (預先), -tion (名詞), -ive (形容詞), -ize (動詞化)。",
+      "explanation": "例如 interoperability：inter (之間) + oper (運作) + ability (能力) = 系統間互通的能力。",
+      "sourceRefs": [],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-en-vocab-auth",
+      "lessonId": "lesson-im-en-vocab-tech-01",
+      "subtopicId": "im-en-vocab-tech",
+      "front": "Authentication 和 Authorization 有什麼區別？",
+      "back": "Authentication = 驗證你是誰（登入）。Authorization = 驗證你能做什麼（權限）。",
+      "explanation": "考試常考的 IT 混淆詞對。記法：authentication 有 'then' = 先驗證身份，然後才 authorize 權限。",
+      "sourceRefs": [],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-en-vocab-confuse",
+      "lessonId": "lesson-im-en-vocab-tech-01",
+      "subtopicId": "im-en-vocab-tech",
+      "front": "Scalability 和 Elasticity 有什麼區別？",
+      "back": "Scalability = 系統能處理增長的能力（長期規劃）。Elasticity = 系統能自動伸縮的能力（短期反應）。",
+      "explanation": "雲端考題常考。Scalability 是設計目標，Elasticity 是雲端平台的實作特性（如 auto-scaling）。",
+      "sourceRefs": [],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-en-vocab-context-clue",
+      "lessonId": "lesson-im-en-vocab-tech-01",
+      "subtopicId": "im-en-vocab-core",
+      "front": "閱讀中遇到生字，上下文的哪些線索最可靠？",
+      "back": "同位語（逗號後解釋）、破折號重述、that is / in other words / namely 等信號詞。",
+      "explanation": "字義題的答案幾乎都藏在這些結構裡。看到這些信號詞就停下來——定義就在旁邊。",
+      "sourceRefs": [],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-en-exam-time-allocation",
+      "lessonId": "lesson-im-en-exam-patterns-01",
+      "subtopicId": "im-en-reading-general",
+      "front": "資管所英文考試 80 分鐘，建議的時間分配是什麼？",
+      "back": "字彙 15 分鐘 → 文法 15 分鐘 → 閱讀 40 分鐘 → 檢查 10 分鐘。閱讀最多但要最後做。",
+      "explanation": "字彙和文法是快速得分區，先做完鎖定分數。閱讀最花時間但也最有彈性，可以策略性跳題。",
+      "sourceRefs": [],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-en-exam-trap-pattern",
+      "lessonId": "lesson-im-en-exam-patterns-01",
+      "subtopicId": "im-en-reading-tech",
+      "front": "考古題選項中最常見的陷阱模式是什麼？",
+      "back": "部分正確：選項前半句對但後半句偷換概念。以及過度概括：用 all / always / never 的極端表述。",
+      "explanation": "碰到絕對用語的選項先存疑。正確答案通常用 generally / mostly / tend to 等留餘地的措辭。",
+      "sourceRefs": [],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-en-exam-skip-strategy",
+      "lessonId": "lesson-im-en-exam-patterns-01",
+      "subtopicId": "im-en-vocab-core",
+      "front": "考試中卡在某題超過多久應該跳過？",
+      "back": "超過 90 秒沒有把握就跳，標記後回頭做。每題平均只有 1.5-2 分鐘。",
+      "explanation": "考試是比總分。花 4 分鐘硬解一題 vs 用同樣時間做完兩題簡單的，後者期望值更高。",
+      "sourceRefs": [],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-en-exam-recent-trend",
+      "lessonId": "lesson-im-en-exam-patterns-01",
+      "subtopicId": "im-en-grammar-syntax",
+      "front": "近三年（113-115）英文考古題有什麼出題趨勢變化？",
+      "back": "閱讀文章主題更偏 AI 和資安；字彙題增加 IT 專業詞彙比例；文法題難度穩定。",
+      "explanation": "這代表準備字彙時要額外注意 AI/cybersecurity 相關英文術語，不能只靠 GRE 單字。",
+      "sourceRefs": [],
+      "pastPaperRefs": [],
+      "reviewStatus": "reviewed"
+    }
+  ]
+}

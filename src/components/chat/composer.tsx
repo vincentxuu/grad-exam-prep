@@ -1,6 +1,6 @@
 'use client'
 
-import { Mic, Send } from 'lucide-react'
+import { Mic, Send } from '@sketchyicons/react'
 import { useEffect, useRef, useState } from 'react'
 import { Button } from '@/components/ui/button'
 

@@ -1,13 +1,15 @@
 'use client'
 
-import { Loader2, Search } from 'lucide-react'
+import { Check, Loader2, Search } from '@sketchyicons/react'
 import { useCallback, useEffect, useState } from 'react'
 import { EntryCard } from '@/components/lexicon/entry-card'
 import { PersonalBridge } from '@/components/lexicon/personal-bridge'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { useSpeech } from '@/hooks/use-speech'
+import { isAuthenticated } from '@/lib/auth'
 import { lexiconCardId } from '@/lib/lexicon/normalize'
+import { addSavedWordServer, removeSavedWordServer } from '@/lib/server-storage'
 import { localStorageImpl } from '@/lib/storage'
 import type { LookupResponse, PersonaProfile } from '@/types/lexicon'
 import type { WordSource } from '@/types/storage'
@@ -51,7 +53,7 @@ export function LookupPanel({ term, persona, source, showInput = true, onSaveCha
       if (!forceGenerate && !persona) {
         setState({ status: 'loading', stage: 'cache' })
         try {
-          const res = await fetch(`/api/lexicon?q=${encodeURIComponent(q)}`)
+          const res = await fetch(`/api/lexicon?q=${encodeURIComponent(q)}&depth=full`)
           if (res.ok) {
             setState({ status: 'done', data: (await res.json()) as LookupResponse })
             return
@@ -91,20 +93,23 @@ export function LookupPanel({ term, persona, source, showInput = true, onSaveCha
   }, [term, lookup])
 
   function save(headword: string) {
-    localStorageImpl.addSavedWord({
+    const word = {
       headword,
       cardId: lexiconCardId(headword),
       addedAt: Date.now(),
-      source: source ?? { kind: 'manual' },
-    })
+      source: source ?? { kind: 'manual' as const },
+    }
+    localStorageImpl.addSavedWord(word)
     setSavedWords((prev) => [...prev, headword])
     onSaveChange?.()
+    if (isAuthenticated()) addSavedWordServer(word).catch(() => {})
   }
 
   function unsave(headword: string) {
     localStorageImpl.removeSavedWord(headword)
     setSavedWords((prev) => prev.filter((h) => h !== headword))
     onSaveChange?.()
+    if (isAuthenticated()) removeSavedWordServer(headword).catch(() => {})
   }
 
   return (
@@ -164,7 +169,10 @@ export function LookupPanel({ term, persona, source, showInput = true, onSaveCha
           <div className="flex items-center gap-2 flex-wrap border-t pt-3">
             {savedWords.includes(state.data.entry.headword) ? (
               <>
-                <span className="text-xs text-muted-foreground">✓ 已在單字庫</span>
+                <span className="inline-flex items-center gap-1 text-xs text-muted-foreground">
+                  <Check className="h-3 w-3" aria-hidden="true" />
+                  已在單字庫
+                </span>
                 <Button
                   variant="ghost"
                   size="sm"

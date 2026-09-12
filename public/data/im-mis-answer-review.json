@@ -1,0 +1,4387 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "im-mis",
+  "officialAnswerKeyAvailable": false,
+  "reviewMethod": "以目前 main 的已驗證題面與非官方 explanation 建立自評 rubric；未使用 dirty worktree 的錯置 answers。",
+  "confidencePolicy": "rubric 是答題結構與概念檢核，不代表唯一標準答案；合理替代論證可接受。",
+  "totalQuestions": 37,
+  "counts": {
+    "selfReviewOnly": 37,
+    "rubricReviewed": 37,
+    "explanationTechnicalReviewed": 1,
+    "autoGradeEligible": 0
+  },
+  "questions": [
+    {
+      "questionId": "q-pp-im-mis-106-1",
+      "answerMarker": "N/A",
+      "explanationPresent": true,
+      "explanationSha256": "41968b6f0b3e60e09bbccf8218edb8f83c28c9f70fcff7b4c733499aa4b8a8e1",
+      "explanationDisposition": "unofficial_draft_for_self_review",
+      "decision": "self_review_only",
+      "answerSource": {
+        "kind": "existing_origin_main_explanation",
+        "official": false,
+        "reviewCount": 0,
+        "provenance": [
+          "public/data/questions.json",
+          "public/data/answers.json",
+          "NTU original examination PDF audit"
+        ],
+        "note": "PDF audit 僅確認題面 fidelity；現有 explanation 未獲本次獨立技術覆核批准。Reviewed sources 只支撐 rubric 概念邊界。",
+        "reviewers": []
+      },
+      "confidence": {
+        "level": "unreviewed",
+        "basis": [
+          "題目與子題結構已逐頁 PDF audit。",
+          "現有 explanation 無官方答案或獨立人工審查紀錄。",
+          "Rubric 的概念檢核已逐題映射至 primary subtopic 的 reviewed sources。"
+        ],
+        "unresolvedIssues": [
+          "未完成逐小題雙審",
+          "策略題可能存在多個合理答案"
+        ]
+      },
+      "rubricItems": [
+        {
+          "rubricId": "rubric-q-pp-im-mis-106-1-1",
+          "label": "1",
+          "points": 10,
+          "criteria": [
+            "建立清楚的比較維度，逐項比較並說明選擇條件。",
+            "提供與題意相符的具體情境、例子或可執行做法。",
+            "提出具體作法，並解釋其如何對應題目中的問題或目標。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。",
+            "常見缺陷：例子未回扣題意，或只寫品牌名稱而沒有說明機制。",
+            "常見缺陷：只描述其中一方，沒有使用一致維度完成比較。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-106-1-2",
+          "label": "2",
+          "points": 15,
+          "criteria": [
+            "建立清楚的比較維度，逐項比較並說明選擇條件。",
+            "提出具體作法，並解釋其如何對應題目中的問題或目標。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。",
+            "常見缺陷：只描述其中一方，沒有使用一致維度完成比較。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        }
+      ],
+      "eligibility": {
+        "browseEligible": true,
+        "selfReviewEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false
+      },
+      "rubricReview": {
+        "status": "reviewed",
+        "reviewCount": 1,
+        "reviewers": [
+          "independent-technical-review-2026-08-16"
+        ],
+        "reviewedAt": "2026-08-16",
+        "sourceRefs": [
+          "src-im-mis-laudon-17e"
+        ],
+        "note": "獨立覆核只核准 rubric 的題目分解、配分、概念範圍、合理替代答案、來源範圍與安全 eligibility；不等於核准 answers.json 的 explanation。"
+      },
+      "official": false,
+      "practiceEligible": true,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-mis-106-2",
+      "answerMarker": "N/A",
+      "explanationPresent": true,
+      "explanationSha256": "6664cee1596051c309d54996819714fe92618a2f48fb8486ede8e14ee5e34ec9",
+      "explanationDisposition": "unofficial_draft_for_self_review",
+      "decision": "self_review_only",
+      "answerSource": {
+        "kind": "existing_origin_main_explanation",
+        "official": false,
+        "reviewCount": 0,
+        "provenance": [
+          "public/data/questions.json",
+          "public/data/answers.json",
+          "NTU original examination PDF audit"
+        ],
+        "note": "PDF audit 僅確認題面 fidelity；現有 explanation 未獲本次獨立技術覆核批准。Reviewed sources 只支撐 rubric 概念邊界。",
+        "reviewers": []
+      },
+      "confidence": {
+        "level": "unreviewed",
+        "basis": [
+          "題目與子題結構已逐頁 PDF audit。",
+          "現有 explanation 無官方答案或獨立人工審查紀錄。",
+          "Rubric 的概念檢核已逐題映射至 primary subtopic 的 reviewed sources。"
+        ],
+        "unresolvedIssues": [
+          "現有解析把區塊鏈身分／評價系統當成主要解法，尚未比較較低成本的中心化信任與申訴機制。",
+          "未完成逐小題雙審",
+          "策略題可能存在多個合理答案"
+        ]
+      },
+      "rubricItems": [
+        {
+          "rubricId": "rubric-q-pp-im-mis-106-2-1",
+          "label": "1",
+          "points": 12,
+          "criteria": [
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-106-2-2",
+          "label": "2",
+          "points": 13,
+          "criteria": [
+            "提出具體作法，並解釋其如何對應題目中的問題或目標。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        }
+      ],
+      "eligibility": {
+        "browseEligible": true,
+        "selfReviewEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false
+      },
+      "rubricReview": {
+        "status": "reviewed",
+        "reviewCount": 1,
+        "reviewers": [
+          "independent-technical-review-2026-08-16"
+        ],
+        "reviewedAt": "2026-08-16",
+        "sourceRefs": [
+          "src-im-mis-laudon-17e"
+        ],
+        "note": "獨立覆核只核准 rubric 的題目分解、配分、概念範圍、合理替代答案、來源範圍與安全 eligibility；不等於核准 answers.json 的 explanation。"
+      },
+      "official": false,
+      "practiceEligible": true,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-mis-106-3",
+      "answerMarker": "N/A",
+      "explanationPresent": true,
+      "explanationSha256": "745053654ca9631bd1fc80a163a8517b0fb6fca331ca73fef63052d8dec44748",
+      "explanationDisposition": "unofficial_draft_for_self_review",
+      "decision": "self_review_only",
+      "answerSource": {
+        "kind": "existing_origin_main_explanation",
+        "official": false,
+        "reviewCount": 0,
+        "provenance": [
+          "public/data/questions.json",
+          "public/data/answers.json",
+          "NTU original examination PDF audit"
+        ],
+        "note": "PDF audit 僅確認題面 fidelity；現有 explanation 未獲本次獨立技術覆核批准。Reviewed sources 只支撐 rubric 概念邊界。",
+        "reviewers": []
+      },
+      "confidence": {
+        "level": "unreviewed",
+        "basis": [
+          "題目與子題結構已逐頁 PDF audit。",
+          "現有 explanation 無官方答案或獨立人工審查紀錄。",
+          "Rubric 的概念檢核已逐題映射至 primary subtopic 的 reviewed sources。"
+        ],
+        "unresolvedIssues": [
+          "GPL、Apache 與衍生作品義務的描述需要依實際授權版本、散布方式與法律來源複核。",
+          "未完成逐小題雙審",
+          "策略題可能存在多個合理答案"
+        ]
+      },
+      "rubricItems": [
+        {
+          "rubricId": "rubric-q-pp-im-mis-106-3-1",
+          "label": "1",
+          "points": 5,
+          "criteria": [
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-apache-license-2",
+            "src-im-mis-gpl-3"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-106-3-2",
+          "label": "2",
+          "points": 7,
+          "criteria": [
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-apache-license-2",
+            "src-im-mis-gpl-3"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-106-3-3",
+          "label": "3",
+          "points": 7,
+          "criteria": [
+            "建立清楚的比較維度，逐項比較並說明選擇條件。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-apache-license-2",
+            "src-im-mis-gpl-3"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-106-3-4",
+          "label": "4",
+          "points": 6,
+          "criteria": [
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-apache-license-2",
+            "src-im-mis-gpl-3"
+          ]
+        }
+      ],
+      "eligibility": {
+        "browseEligible": true,
+        "selfReviewEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false
+      },
+      "rubricReview": {
+        "status": "reviewed",
+        "reviewCount": 1,
+        "reviewers": [
+          "independent-technical-review-2026-08-16"
+        ],
+        "reviewedAt": "2026-08-16",
+        "sourceRefs": [
+          "src-im-mis-apache-license-2",
+          "src-im-mis-gpl-3"
+        ],
+        "note": "獨立覆核只核准 rubric 的題目分解、配分、概念範圍、合理替代答案、來源範圍與安全 eligibility；不等於核准 answers.json 的 explanation。"
+      },
+      "official": false,
+      "practiceEligible": true,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-mis-106-4",
+      "answerMarker": "N/A",
+      "explanationPresent": true,
+      "explanationSha256": "c8d04791bf9df1c16a54df4b31f504c32ef3c225ae0f2173e7740f1f409b8011",
+      "explanationDisposition": "unofficial_draft_for_self_review",
+      "decision": "self_review_only",
+      "answerSource": {
+        "kind": "existing_origin_main_explanation",
+        "official": false,
+        "reviewCount": 0,
+        "provenance": [
+          "public/data/questions.json",
+          "public/data/answers.json",
+          "NTU original examination PDF audit"
+        ],
+        "note": "PDF audit 僅確認題面 fidelity；現有 explanation 未獲本次獨立技術覆核批准。Reviewed sources 只支撐 rubric 概念邊界。",
+        "reviewers": []
+      },
+      "confidence": {
+        "level": "unreviewed",
+        "basis": [
+          "題目與子題結構已逐頁 PDF audit。",
+          "現有 explanation 無官方答案或獨立人工審查紀錄。",
+          "Rubric 的概念檢核已逐題映射至 primary subtopic 的 reviewed sources。"
+        ],
+        "unresolvedIssues": [
+          "現有解析將 relational=ACID、NoSQL=BASE 作過度二分；不同產品可提供不同一致性與交易保證。",
+          "未完成逐小題雙審",
+          "策略題可能存在多個合理答案"
+        ]
+      },
+      "rubricItems": [
+        {
+          "rubricId": "rubric-q-pp-im-mis-106-4-1",
+          "label": "1",
+          "points": 11,
+          "criteria": [
+            "建立清楚的比較維度，逐項比較並說明選擇條件。",
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。",
+            "常見缺陷：只描述其中一方，沒有使用一致維度完成比較。",
+            "常見缺陷：遺漏 JOIN 條件、GROUP BY／HAVING，或排序方向不符題意。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-106-4-2",
+          "label": "2",
+          "points": 7,
+          "criteria": [
+            "建立清楚的比較維度，逐項比較並說明選擇條件。",
+            "提供與題意相符的具體情境、例子或可執行做法。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。",
+            "常見缺陷：例子未回扣題意，或只寫品牌名稱而沒有說明機制。",
+            "常見缺陷：遺漏 JOIN 條件、GROUP BY／HAVING，或排序方向不符題意。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-106-4-3",
+          "label": "3",
+          "points": 7,
+          "criteria": [
+            "建立清楚的比較維度，逐項比較並說明選擇條件。",
+            "提供與題意相符的具體情境、例子或可執行做法。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。",
+            "常見缺陷：例子未回扣題意，或只寫品牌名稱而沒有說明機制。",
+            "常見缺陷：遺漏 JOIN 條件、GROUP BY／HAVING，或排序方向不符題意。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        }
+      ],
+      "eligibility": {
+        "browseEligible": true,
+        "selfReviewEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false
+      },
+      "rubricReview": {
+        "status": "reviewed",
+        "reviewCount": 1,
+        "reviewers": [
+          "independent-technical-review-2026-08-16"
+        ],
+        "reviewedAt": "2026-08-16",
+        "sourceRefs": [
+          "src-im-mis-laudon-17e"
+        ],
+        "note": "獨立覆核只核准 rubric 的題目分解、配分、概念範圍、合理替代答案、來源範圍與安全 eligibility；不等於核准 answers.json 的 explanation。"
+      },
+      "official": false,
+      "practiceEligible": true,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-mis-107-1",
+      "answerMarker": "N/A",
+      "explanationPresent": true,
+      "explanationSha256": "a4ea7c5b990e3efa321171abcd5b2fb87036d1a8f74c9c533c039b7e223680b9",
+      "explanationDisposition": "unofficial_draft_for_self_review",
+      "decision": "self_review_only",
+      "answerSource": {
+        "kind": "existing_origin_main_explanation",
+        "official": false,
+        "reviewCount": 0,
+        "provenance": [
+          "public/data/questions.json",
+          "public/data/answers.json",
+          "NTU original examination PDF audit"
+        ],
+        "note": "PDF audit 僅確認題面 fidelity；現有 explanation 未獲本次獨立技術覆核批准。Reviewed sources 只支撐 rubric 概念邊界。",
+        "reviewers": []
+      },
+      "confidence": {
+        "level": "unreviewed",
+        "basis": [
+          "題目與子題結構已逐頁 PDF audit。",
+          "現有 explanation 無官方答案或獨立人工審查紀錄。",
+          "Rubric 的概念檢核已逐題映射至 primary subtopic 的 reviewed sources。"
+        ],
+        "unresolvedIssues": [
+          "未完成逐小題雙審",
+          "策略題可能存在多個合理答案"
+        ]
+      },
+      "rubricItems": [
+        {
+          "rubricId": "rubric-q-pp-im-mis-107-1-whole",
+          "label": "whole",
+          "points": 20,
+          "criteria": [
+            "建立清楚的比較維度，逐項比較並說明選擇條件。",
+            "提出具體作法，並解釋其如何對應題目中的問題或目標。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。",
+            "常見缺陷：只描述其中一方，沒有使用一致維度完成比較。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        }
+      ],
+      "eligibility": {
+        "browseEligible": true,
+        "selfReviewEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false
+      },
+      "rubricReview": {
+        "status": "reviewed",
+        "reviewCount": 1,
+        "reviewers": [
+          "independent-technical-review-2026-08-16"
+        ],
+        "reviewedAt": "2026-08-16",
+        "sourceRefs": [
+          "src-im-mis-laudon-17e"
+        ],
+        "note": "獨立覆核只核准 rubric 的題目分解、配分、概念範圍、合理替代答案、來源範圍與安全 eligibility；不等於核准 answers.json 的 explanation。"
+      },
+      "official": false,
+      "practiceEligible": true,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-mis-107-2",
+      "answerMarker": "N/A",
+      "explanationPresent": true,
+      "explanationSha256": "75c189db48a6b11646cef88286bffaadbef67e043b0300b737ce4103a38509b6",
+      "explanationDisposition": "unofficial_draft_for_self_review",
+      "decision": "self_review_only",
+      "answerSource": {
+        "kind": "existing_origin_main_explanation",
+        "official": false,
+        "reviewCount": 0,
+        "provenance": [
+          "public/data/questions.json",
+          "public/data/answers.json",
+          "NTU original examination PDF audit"
+        ],
+        "note": "PDF audit 僅確認題面 fidelity；現有 explanation 未獲本次獨立技術覆核批准。Reviewed sources 只支撐 rubric 概念邊界。",
+        "reviewers": []
+      },
+      "confidence": {
+        "level": "unreviewed",
+        "basis": [
+          "題目與子題結構已逐頁 PDF audit。",
+          "現有 explanation 無官方答案或獨立人工審查紀錄。",
+          "Rubric 的概念檢核已逐題映射至 primary subtopic 的 reviewed sources。"
+        ],
+        "unresolvedIssues": [
+          "環境豐裕／動態性與 IT 策略的關係不是單一路徑，現有建議仍需理論來源與邊界。",
+          "未完成逐小題雙審",
+          "策略題可能存在多個合理答案"
+        ]
+      },
+      "rubricItems": [
+        {
+          "rubricId": "rubric-q-pp-im-mis-107-2-1",
+          "label": "1",
+          "points": 15,
+          "criteria": [
+            "提出具體作法，並解釋其如何對應題目中的問題或目標。",
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-107-2-2",
+          "label": "2",
+          "points": 15,
+          "criteria": [
+            "提出具體作法，並解釋其如何對應題目中的問題或目標。",
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        }
+      ],
+      "eligibility": {
+        "browseEligible": true,
+        "selfReviewEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false
+      },
+      "rubricReview": {
+        "status": "reviewed",
+        "reviewCount": 1,
+        "reviewers": [
+          "independent-technical-review-2026-08-16"
+        ],
+        "reviewedAt": "2026-08-16",
+        "sourceRefs": [
+          "src-im-mis-laudon-17e"
+        ],
+        "note": "獨立覆核只核准 rubric 的題目分解、配分、概念範圍、合理替代答案、來源範圍與安全 eligibility；不等於核准 answers.json 的 explanation。"
+      },
+      "official": false,
+      "practiceEligible": true,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-mis-107-3",
+      "answerMarker": "N/A",
+      "explanationPresent": true,
+      "explanationSha256": "d814d30308a7c26f196384caf4629d41d93c207311c89efd095639243b224159",
+      "explanationDisposition": "unofficial_draft_for_self_review",
+      "decision": "self_review_only",
+      "answerSource": {
+        "kind": "existing_origin_main_explanation",
+        "official": false,
+        "reviewCount": 0,
+        "provenance": [
+          "public/data/questions.json",
+          "public/data/answers.json",
+          "NTU original examination PDF audit"
+        ],
+        "note": "PDF audit 僅確認題面 fidelity；現有 explanation 未獲本次獨立技術覆核批准。Reviewed sources 只支撐 rubric 概念邊界。",
+        "reviewers": []
+      },
+      "confidence": {
+        "level": "unreviewed",
+        "basis": [
+          "題目與子題結構已逐頁 PDF audit。",
+          "現有 explanation 無官方答案或獨立人工審查紀錄。",
+          "Rubric 的概念檢核已逐題映射至 primary subtopic 的 reviewed sources。"
+        ],
+        "unresolvedIssues": [
+          "未完成逐小題雙審",
+          "策略題可能存在多個合理答案"
+        ]
+      },
+      "rubricItems": [
+        {
+          "rubricId": "rubric-q-pp-im-mis-107-3-whole",
+          "label": "whole",
+          "points": 25,
+          "criteria": [
+            "項目數量須符合題目要求，且各項不可只是同義改寫。",
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        }
+      ],
+      "eligibility": {
+        "browseEligible": true,
+        "selfReviewEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false
+      },
+      "rubricReview": {
+        "status": "reviewed",
+        "reviewCount": 1,
+        "reviewers": [
+          "independent-technical-review-2026-08-16"
+        ],
+        "reviewedAt": "2026-08-16",
+        "sourceRefs": [
+          "src-im-mis-laudon-17e"
+        ],
+        "note": "獨立覆核只核准 rubric 的題目分解、配分、概念範圍、合理替代答案、來源範圍與安全 eligibility；不等於核准 answers.json 的 explanation。"
+      },
+      "official": false,
+      "practiceEligible": true,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-mis-107-4",
+      "answerMarker": "N/A",
+      "explanationPresent": true,
+      "explanationSha256": "748a76596f620023113b4d25310274c140fe94a08c68ac076e22ac27c7facddc",
+      "explanationDisposition": "unofficial_draft_for_self_review",
+      "decision": "self_review_only",
+      "answerSource": {
+        "kind": "existing_origin_main_explanation",
+        "official": false,
+        "reviewCount": 1,
+        "provenance": [
+          "public/data/questions.json",
+          "public/data/answers.json",
+          "NTU original examination PDF audit"
+        ],
+        "note": "獨立技術覆核確認 SQL 與題目提供的 schema、連接鍵、篩選、分組、HAVING 及排序一致；仍非官方答案。",
+        "reviewers": [
+          "independent-technical-review-2026-08-16"
+        ]
+      },
+      "confidence": {
+        "level": "medium",
+        "basis": [
+          "題目與子題結構已逐頁 PDF audit。",
+          "現有 explanation 無官方答案或獨立人工審查紀錄。",
+          "Rubric 的概念檢核已逐題映射至 primary subtopic 的 reviewed sources。",
+          "SQL 解析已完成一輪獨立技術覆核。"
+        ],
+        "unresolvedIssues": [
+          "策略題可能存在多個合理答案"
+        ]
+      },
+      "rubricItems": [
+        {
+          "rubricId": "rubric-q-pp-im-mis-107-4-1",
+          "label": "1",
+          "points": 8,
+          "criteria": [
+            "提出具體作法，並解釋其如何對應題目中的問題或目標。",
+            "SQL 必須使用正確資料表、連接鍵、篩選條件，以及題目要求的分組、HAVING 或排序。",
+            "項目數量須符合題目要求，且各項不可只是同義改寫。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。",
+            "常見缺陷：遺漏 JOIN 條件、GROUP BY／HAVING，或排序方向不符題意。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-postgresql-sql"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-107-4-2",
+          "label": "2",
+          "points": 9,
+          "criteria": [
+            "SQL 必須使用正確資料表、連接鍵、篩選條件，以及題目要求的分組、HAVING 或排序。",
+            "項目數量須符合題目要求，且各項不可只是同義改寫。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。",
+            "常見缺陷：遺漏 JOIN 條件、GROUP BY／HAVING，或排序方向不符題意。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-postgresql-sql"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-107-4-3",
+          "label": "3",
+          "points": 8,
+          "criteria": [
+            "SQL 必須使用正確資料表、連接鍵、篩選條件，以及題目要求的分組、HAVING 或排序。",
+            "項目數量須符合題目要求，且各項不可只是同義改寫。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。",
+            "常見缺陷：遺漏 JOIN 條件、GROUP BY／HAVING，或排序方向不符題意。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-postgresql-sql"
+          ]
+        }
+      ],
+      "eligibility": {
+        "browseEligible": true,
+        "selfReviewEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false
+      },
+      "rubricReview": {
+        "status": "reviewed",
+        "reviewCount": 1,
+        "reviewers": [
+          "independent-technical-review-2026-08-16"
+        ],
+        "reviewedAt": "2026-08-16",
+        "sourceRefs": [
+          "src-im-mis-postgresql-sql"
+        ],
+        "note": "獨立覆核只核准 rubric 的題目分解、配分、概念範圍、合理替代答案、來源範圍與安全 eligibility；不等於核准 answers.json 的 explanation。"
+      },
+      "official": false,
+      "practiceEligible": true,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-mis-108-1",
+      "answerMarker": "N/A",
+      "explanationPresent": true,
+      "explanationSha256": "5cbdef328867c36b3d20f000985141bae3614a6b8666eb19080990b9d4c84344",
+      "explanationDisposition": "unofficial_draft_for_self_review",
+      "decision": "self_review_only",
+      "answerSource": {
+        "kind": "existing_origin_main_explanation",
+        "official": false,
+        "reviewCount": 0,
+        "provenance": [
+          "public/data/questions.json",
+          "public/data/answers.json",
+          "NTU original examination PDF audit"
+        ],
+        "note": "PDF audit 僅確認題面 fidelity；現有 explanation 未獲本次獨立技術覆核批准。Reviewed sources 只支撐 rubric 概念邊界。",
+        "reviewers": []
+      },
+      "confidence": {
+        "level": "unreviewed",
+        "basis": [
+          "題目與子題結構已逐頁 PDF audit。",
+          "現有 explanation 無官方答案或獨立人工審查紀錄。",
+          "Rubric 的概念檢核已逐題映射至 primary subtopic 的 reviewed sources。"
+        ],
+        "unresolvedIssues": [
+          "未完成逐小題雙審",
+          "策略題可能存在多個合理答案"
+        ]
+      },
+      "rubricItems": [
+        {
+          "rubricId": "rubric-q-pp-im-mis-108-1-whole",
+          "label": "whole",
+          "points": 20,
+          "criteria": [
+            "建立清楚的比較維度，逐項比較並說明選擇條件。",
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。",
+            "常見缺陷：只描述其中一方，沒有使用一致維度完成比較。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        }
+      ],
+      "eligibility": {
+        "browseEligible": true,
+        "selfReviewEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false
+      },
+      "rubricReview": {
+        "status": "reviewed",
+        "reviewCount": 1,
+        "reviewers": [
+          "independent-technical-review-2026-08-16"
+        ],
+        "reviewedAt": "2026-08-16",
+        "sourceRefs": [
+          "src-im-mis-laudon-17e"
+        ],
+        "note": "獨立覆核只核准 rubric 的題目分解、配分、概念範圍、合理替代答案、來源範圍與安全 eligibility；不等於核准 answers.json 的 explanation。"
+      },
+      "official": false,
+      "practiceEligible": true,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-mis-108-2",
+      "answerMarker": "N/A",
+      "explanationPresent": true,
+      "explanationSha256": "2a7735afdfde807bc50d18d70f0d03f0df9d7a1e0a593ab29405ef2aa9927974",
+      "explanationDisposition": "unofficial_draft_for_self_review",
+      "decision": "self_review_only",
+      "answerSource": {
+        "kind": "existing_origin_main_explanation",
+        "official": false,
+        "reviewCount": 0,
+        "provenance": [
+          "public/data/questions.json",
+          "public/data/answers.json",
+          "NTU original examination PDF audit"
+        ],
+        "note": "PDF audit 僅確認題面 fidelity；現有 explanation 未獲本次獨立技術覆核批准。Reviewed sources 只支撐 rubric 概念邊界。",
+        "reviewers": []
+      },
+      "confidence": {
+        "level": "unreviewed",
+        "basis": [
+          "題目與子題結構已逐頁 PDF audit。",
+          "現有 explanation 無官方答案或獨立人工審查紀錄。",
+          "Rubric 的概念檢核已逐題映射至 primary subtopic 的 reviewed sources。"
+        ],
+        "unresolvedIssues": [
+          "集中或分散的資料決策權可能採 federated governance；現有解析不宜把集中式寫成唯一答案。",
+          "未完成逐小題雙審",
+          "策略題可能存在多個合理答案"
+        ]
+      },
+      "rubricItems": [
+        {
+          "rubricId": "rubric-q-pp-im-mis-108-2-a",
+          "label": "a",
+          "points": 20,
+          "criteria": [
+            "提供與題意相符的具體情境、例子或可執行做法。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "項目數量須符合題目要求，且各項不可只是同義改寫。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。",
+            "常見缺陷：例子未回扣題意，或只寫品牌名稱而沒有說明機制。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-google-ml-rules",
+            "src-im-mis-nist-privacy-framework"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-108-2-b",
+          "label": "b",
+          "points": 10,
+          "criteria": [
+            "建立清楚的比較維度，逐項比較並說明選擇條件。",
+            "提供與題意相符的具體情境、例子或可執行做法。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。",
+            "常見缺陷：例子未回扣題意，或只寫品牌名稱而沒有說明機制。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-google-ml-rules",
+            "src-im-mis-nist-privacy-framework"
+          ]
+        }
+      ],
+      "eligibility": {
+        "browseEligible": true,
+        "selfReviewEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false
+      },
+      "rubricReview": {
+        "status": "reviewed",
+        "reviewCount": 1,
+        "reviewers": [
+          "independent-technical-review-2026-08-16"
+        ],
+        "reviewedAt": "2026-08-16",
+        "sourceRefs": [
+          "src-im-mis-google-ml-rules",
+          "src-im-mis-nist-privacy-framework"
+        ],
+        "note": "獨立覆核只核准 rubric 的題目分解、配分、概念範圍、合理替代答案、來源範圍與安全 eligibility；不等於核准 answers.json 的 explanation。"
+      },
+      "official": false,
+      "practiceEligible": true,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-mis-108-3",
+      "answerMarker": "N/A",
+      "explanationPresent": true,
+      "explanationSha256": "22b726190cd927febaf6fed2133528efcc3f6ceecaf564b21ecb9d84073bf00c",
+      "explanationDisposition": "unofficial_draft_for_self_review",
+      "decision": "self_review_only",
+      "answerSource": {
+        "kind": "existing_origin_main_explanation",
+        "official": false,
+        "reviewCount": 0,
+        "provenance": [
+          "public/data/questions.json",
+          "public/data/answers.json",
+          "NTU original examination PDF audit"
+        ],
+        "note": "PDF audit 僅確認題面 fidelity；現有 explanation 未獲本次獨立技術覆核批准。Reviewed sources 只支撐 rubric 概念邊界。",
+        "reviewers": []
+      },
+      "confidence": {
+        "level": "unreviewed",
+        "basis": [
+          "題目與子題結構已逐頁 PDF audit。",
+          "現有 explanation 無官方答案或獨立人工審查紀錄。",
+          "Rubric 的概念檢核已逐題映射至 primary subtopic 的 reviewed sources。"
+        ],
+        "unresolvedIssues": [
+          "模型評估需依類別分布、決策成本與 validation design 判讀，不能只核對單一 accuracy 數值。",
+          "未完成逐小題雙審",
+          "策略題可能存在多個合理答案"
+        ]
+      },
+      "rubricItems": [
+        {
+          "rubricId": "rubric-q-pp-im-mis-108-3-a",
+          "label": "a",
+          "points": 6,
+          "criteria": [
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "列出可操作的評估指標，說明計算／比較方式與驗證程序。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。",
+            "常見缺陷：只列指標名稱，未說明如何計算、何時使用或如何驗證。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-google-ml-rules",
+            "src-im-mis-nist-ai-rmf"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-108-3-b",
+          "label": "b",
+          "points": 7,
+          "criteria": [
+            "列出可操作的評估指標，說明計算／比較方式與驗證程序。",
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。",
+            "常見缺陷：只列指標名稱，未說明如何計算、何時使用或如何驗證。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-google-ml-rules",
+            "src-im-mis-nist-ai-rmf"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-108-3-c",
+          "label": "c",
+          "points": 6,
+          "criteria": [
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-google-ml-rules",
+            "src-im-mis-nist-ai-rmf"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-108-3-d",
+          "label": "d",
+          "points": 6,
+          "criteria": [
+            "提出具體作法，並解釋其如何對應題目中的問題或目標。",
+            "列出可操作的評估指標，說明計算／比較方式與驗證程序。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。",
+            "常見缺陷：只列指標名稱，未說明如何計算、何時使用或如何驗證。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-google-ml-rules",
+            "src-im-mis-nist-ai-rmf"
+          ]
+        }
+      ],
+      "eligibility": {
+        "browseEligible": true,
+        "selfReviewEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false
+      },
+      "rubricReview": {
+        "status": "reviewed",
+        "reviewCount": 1,
+        "reviewers": [
+          "independent-technical-review-2026-08-16"
+        ],
+        "reviewedAt": "2026-08-16",
+        "sourceRefs": [
+          "src-im-mis-google-ml-rules",
+          "src-im-mis-nist-ai-rmf"
+        ],
+        "note": "獨立覆核只核准 rubric 的題目分解、配分、概念範圍、合理替代答案、來源範圍與安全 eligibility；不等於核准 answers.json 的 explanation。"
+      },
+      "official": false,
+      "practiceEligible": true,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-mis-108-4",
+      "answerMarker": "N/A",
+      "explanationPresent": true,
+      "explanationSha256": "50e99ae65458087259a14d108b5550c15356a773c59141cf8fd0104ad7255102",
+      "explanationDisposition": "unofficial_draft_for_self_review",
+      "decision": "self_review_only",
+      "answerSource": {
+        "kind": "existing_origin_main_explanation",
+        "official": false,
+        "reviewCount": 0,
+        "provenance": [
+          "public/data/questions.json",
+          "public/data/answers.json",
+          "NTU original examination PDF audit"
+        ],
+        "note": "PDF audit 僅確認題面 fidelity；現有 explanation 未獲本次獨立技術覆核批准。Reviewed sources 只支撐 rubric 概念邊界。",
+        "reviewers": []
+      },
+      "confidence": {
+        "level": "unreviewed",
+        "basis": [
+          "題目與子題結構已逐頁 PDF audit。",
+          "現有 explanation 無官方答案或獨立人工審查紀錄。",
+          "Rubric 的概念檢核已逐題映射至 primary subtopic 的 reviewed sources。"
+        ],
+        "unresolvedIssues": [
+          "未完成逐小題雙審",
+          "策略題可能存在多個合理答案"
+        ]
+      },
+      "rubricItems": [
+        {
+          "rubricId": "rubric-q-pp-im-mis-108-4-a",
+          "label": "a",
+          "points": 5,
+          "criteria": [
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-google-ml-rules",
+            "src-im-mis-nist-ai-rmf"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-108-4-b",
+          "label": "b",
+          "points": 5,
+          "criteria": [
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-google-ml-rules",
+            "src-im-mis-nist-ai-rmf"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-108-4-c",
+          "label": "c",
+          "points": 5,
+          "criteria": [
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-google-ml-rules",
+            "src-im-mis-nist-ai-rmf"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-108-4-d",
+          "label": "d",
+          "points": 5,
+          "criteria": [
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-google-ml-rules",
+            "src-im-mis-nist-ai-rmf"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-108-4-e",
+          "label": "e",
+          "points": 5,
+          "criteria": [
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-google-ml-rules",
+            "src-im-mis-nist-ai-rmf"
+          ]
+        }
+      ],
+      "eligibility": {
+        "browseEligible": true,
+        "selfReviewEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false
+      },
+      "rubricReview": {
+        "status": "reviewed",
+        "reviewCount": 1,
+        "reviewers": [
+          "independent-technical-review-2026-08-16"
+        ],
+        "reviewedAt": "2026-08-16",
+        "sourceRefs": [
+          "src-im-mis-google-ml-rules",
+          "src-im-mis-nist-ai-rmf"
+        ],
+        "note": "獨立覆核只核准 rubric 的題目分解、配分、概念範圍、合理替代答案、來源範圍與安全 eligibility；不等於核准 answers.json 的 explanation。"
+      },
+      "official": false,
+      "practiceEligible": true,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-mis-109-1",
+      "answerMarker": "N/A",
+      "explanationPresent": true,
+      "explanationSha256": "3dbfbd65770064423c9f804a1224a260b1bda83d41b7be19a1d79e785599e402",
+      "explanationDisposition": "unofficial_draft_for_self_review",
+      "decision": "self_review_only",
+      "answerSource": {
+        "kind": "existing_origin_main_explanation",
+        "official": false,
+        "reviewCount": 0,
+        "provenance": [
+          "public/data/questions.json",
+          "public/data/answers.json",
+          "NTU original examination PDF audit"
+        ],
+        "note": "PDF audit 僅確認題面 fidelity；現有 explanation 未獲本次獨立技術覆核批准。Reviewed sources 只支撐 rubric 概念邊界。",
+        "reviewers": []
+      },
+      "confidence": {
+        "level": "unreviewed",
+        "basis": [
+          "題目與子題結構已逐頁 PDF audit。",
+          "現有 explanation 無官方答案或獨立人工審查紀錄。",
+          "Rubric 的概念檢核已逐題映射至 primary subtopic 的 reviewed sources。"
+        ],
+        "unresolvedIssues": [
+          "未完成逐小題雙審",
+          "策略題可能存在多個合理答案"
+        ]
+      },
+      "rubricItems": [
+        {
+          "rubricId": "rubric-q-pp-im-mis-109-1-a",
+          "label": "a",
+          "points": 12,
+          "criteria": [
+            "提出具體作法，並解釋其如何對應題目中的問題或目標。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-109-1-b",
+          "label": "b",
+          "points": 12,
+          "criteria": [
+            "提出具體作法，並解釋其如何對應題目中的問題或目標。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        }
+      ],
+      "eligibility": {
+        "browseEligible": true,
+        "selfReviewEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false
+      },
+      "rubricReview": {
+        "status": "reviewed",
+        "reviewCount": 1,
+        "reviewers": [
+          "independent-technical-review-2026-08-16"
+        ],
+        "reviewedAt": "2026-08-16",
+        "sourceRefs": [
+          "src-im-mis-laudon-17e"
+        ],
+        "note": "獨立覆核只核准 rubric 的題目分解、配分、概念範圍、合理替代答案、來源範圍與安全 eligibility；不等於核准 answers.json 的 explanation。"
+      },
+      "official": false,
+      "practiceEligible": true,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-mis-109-2",
+      "answerMarker": "N/A",
+      "explanationPresent": true,
+      "explanationSha256": "77b4895c0a721636526ce9e1801d427f8ea0a773a76823e887ac7bb53197b119",
+      "explanationDisposition": "unofficial_draft_for_self_review",
+      "decision": "self_review_only",
+      "answerSource": {
+        "kind": "existing_origin_main_explanation",
+        "official": false,
+        "reviewCount": 0,
+        "provenance": [
+          "public/data/questions.json",
+          "public/data/answers.json",
+          "NTU original examination PDF audit"
+        ],
+        "note": "PDF audit 僅確認題面 fidelity；現有 explanation 未獲本次獨立技術覆核批准。Reviewed sources 只支撐 rubric 概念邊界。",
+        "reviewers": []
+      },
+      "confidence": {
+        "level": "unreviewed",
+        "basis": [
+          "題目與子題結構已逐頁 PDF audit。",
+          "現有 explanation 無官方答案或獨立人工審查紀錄。",
+          "Rubric 的概念檢核已逐題映射至 primary subtopic 的 reviewed sources。"
+        ],
+        "unresolvedIssues": [
+          "未完成逐小題雙審",
+          "策略題可能存在多個合理答案"
+        ]
+      },
+      "rubricItems": [
+        {
+          "rubricId": "rubric-q-pp-im-mis-109-2-a",
+          "label": "a",
+          "points": 9,
+          "criteria": [
+            "建立清楚的比較維度，逐項比較並說明選擇條件。",
+            "項目數量須符合題目要求，且各項不可只是同義改寫。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。",
+            "常見缺陷：只描述其中一方，沒有使用一致維度完成比較。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-109-2-b",
+          "label": "b",
+          "points": 9,
+          "criteria": [
+            "提出具體作法，並解釋其如何對應題目中的問題或目標。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-109-2-c",
+          "label": "c",
+          "points": 8,
+          "criteria": [
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        }
+      ],
+      "eligibility": {
+        "browseEligible": true,
+        "selfReviewEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false
+      },
+      "rubricReview": {
+        "status": "reviewed",
+        "reviewCount": 1,
+        "reviewers": [
+          "independent-technical-review-2026-08-16"
+        ],
+        "reviewedAt": "2026-08-16",
+        "sourceRefs": [
+          "src-im-mis-laudon-17e"
+        ],
+        "note": "獨立覆核只核准 rubric 的題目分解、配分、概念範圍、合理替代答案、來源範圍與安全 eligibility；不等於核准 answers.json 的 explanation。"
+      },
+      "official": false,
+      "practiceEligible": true,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-mis-109-3",
+      "answerMarker": "N/A",
+      "explanationPresent": true,
+      "explanationSha256": "c84718ead440d8c9f073d8d6338eadadf81a1f89eeca5aef2b60e7357b5f331c",
+      "explanationDisposition": "unofficial_draft_for_self_review",
+      "decision": "self_review_only",
+      "answerSource": {
+        "kind": "existing_origin_main_explanation",
+        "official": false,
+        "reviewCount": 0,
+        "provenance": [
+          "public/data/questions.json",
+          "public/data/answers.json",
+          "NTU original examination PDF audit"
+        ],
+        "note": "PDF audit 僅確認題面 fidelity；現有 explanation 未獲本次獨立技術覆核批准。Reviewed sources 只支撐 rubric 概念邊界。",
+        "reviewers": []
+      },
+      "confidence": {
+        "level": "unreviewed",
+        "basis": [
+          "題目與子題結構已逐頁 PDF audit。",
+          "現有 explanation 無官方答案或獨立人工審查紀錄。",
+          "Rubric 的概念檢核已逐題映射至 primary subtopic 的 reviewed sources。"
+        ],
+        "unresolvedIssues": [
+          "未完成逐小題雙審",
+          "策略題可能存在多個合理答案"
+        ]
+      },
+      "rubricItems": [
+        {
+          "rubricId": "rubric-q-pp-im-mis-109-3-whole",
+          "label": "whole",
+          "points": 25,
+          "criteria": [
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        }
+      ],
+      "eligibility": {
+        "browseEligible": true,
+        "selfReviewEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false
+      },
+      "rubricReview": {
+        "status": "reviewed",
+        "reviewCount": 1,
+        "reviewers": [
+          "independent-technical-review-2026-08-16"
+        ],
+        "reviewedAt": "2026-08-16",
+        "sourceRefs": [
+          "src-im-mis-laudon-17e"
+        ],
+        "note": "獨立覆核只核准 rubric 的題目分解、配分、概念範圍、合理替代答案、來源範圍與安全 eligibility；不等於核准 answers.json 的 explanation。"
+      },
+      "official": false,
+      "practiceEligible": true,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-mis-109-4",
+      "answerMarker": "N/A",
+      "explanationPresent": true,
+      "explanationSha256": "b02e24867fa83f0336598035c7add7ee1653b4e22ced98c4bc367d3d99a0b14d",
+      "explanationDisposition": "unofficial_draft_for_self_review",
+      "decision": "self_review_only",
+      "answerSource": {
+        "kind": "existing_origin_main_explanation",
+        "official": false,
+        "reviewCount": 0,
+        "provenance": [
+          "public/data/questions.json",
+          "public/data/answers.json",
+          "NTU original examination PDF audit"
+        ],
+        "note": "PDF audit 僅確認題面 fidelity；現有 explanation 未獲本次獨立技術覆核批准。Reviewed sources 只支撐 rubric 概念邊界。",
+        "reviewers": []
+      },
+      "confidence": {
+        "level": "unreviewed",
+        "basis": [
+          "題目與子題結構已逐頁 PDF audit。",
+          "現有 explanation 無官方答案或獨立人工審查紀錄。",
+          "Rubric 的概念檢核已逐題映射至 primary subtopic 的 reviewed sources。"
+        ],
+        "unresolvedIssues": [
+          "潛在需求估計的可行性、可接受性與因果限制需要方法層級複核。",
+          "未完成逐小題雙審",
+          "策略題可能存在多個合理答案"
+        ]
+      },
+      "rubricItems": [
+        {
+          "rubricId": "rubric-q-pp-im-mis-109-4-whole",
+          "label": "whole",
+          "points": 25,
+          "criteria": [
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        }
+      ],
+      "eligibility": {
+        "browseEligible": true,
+        "selfReviewEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false
+      },
+      "rubricReview": {
+        "status": "reviewed",
+        "reviewCount": 1,
+        "reviewers": [
+          "independent-technical-review-2026-08-16"
+        ],
+        "reviewedAt": "2026-08-16",
+        "sourceRefs": [
+          "src-im-mis-laudon-17e"
+        ],
+        "note": "獨立覆核只核准 rubric 的題目分解、配分、概念範圍、合理替代答案、來源範圍與安全 eligibility；不等於核准 answers.json 的 explanation。"
+      },
+      "official": false,
+      "practiceEligible": true,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-mis-110-1",
+      "answerMarker": "N/A",
+      "explanationPresent": true,
+      "explanationSha256": "09b7dceeff228b82f9919f5c1e22aafe7095a85d1e4c2a42cfafbbc0424cd383",
+      "explanationDisposition": "unofficial_draft_for_self_review",
+      "decision": "self_review_only",
+      "answerSource": {
+        "kind": "existing_origin_main_explanation",
+        "official": false,
+        "reviewCount": 0,
+        "provenance": [
+          "public/data/questions.json",
+          "public/data/answers.json",
+          "NTU original examination PDF audit"
+        ],
+        "note": "PDF audit 僅確認題面 fidelity；現有 explanation 未獲本次獨立技術覆核批准。Reviewed sources 只支撐 rubric 概念邊界。",
+        "reviewers": []
+      },
+      "confidence": {
+        "level": "unreviewed",
+        "basis": [
+          "題目與子題結構已逐頁 PDF audit。",
+          "現有 explanation 無官方答案或獨立人工審查紀錄。",
+          "Rubric 的概念檢核已逐題映射至 primary subtopic 的 reviewed sources。"
+        ],
+        "unresolvedIssues": [
+          "未完成逐小題雙審",
+          "策略題可能存在多個合理答案"
+        ]
+      },
+      "rubricItems": [
+        {
+          "rubricId": "rubric-q-pp-im-mis-110-1-a",
+          "label": "a",
+          "points": 13,
+          "criteria": [
+            "項目數量須符合題目要求，且各項不可只是同義改寫。",
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-110-1-b",
+          "label": "b",
+          "points": 13,
+          "criteria": [
+            "提出具體作法，並解釋其如何對應題目中的問題或目標。",
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        }
+      ],
+      "eligibility": {
+        "browseEligible": true,
+        "selfReviewEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false
+      },
+      "rubricReview": {
+        "status": "reviewed",
+        "reviewCount": 1,
+        "reviewers": [
+          "independent-technical-review-2026-08-16"
+        ],
+        "reviewedAt": "2026-08-16",
+        "sourceRefs": [
+          "src-im-mis-laudon-17e"
+        ],
+        "note": "獨立覆核只核准 rubric 的題目分解、配分、概念範圍、合理替代答案、來源範圍與安全 eligibility；不等於核准 answers.json 的 explanation。"
+      },
+      "official": false,
+      "practiceEligible": true,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-mis-110-2",
+      "answerMarker": "N/A",
+      "explanationPresent": true,
+      "explanationSha256": "78abec9f6b070f28e8de367b0bb7f2841534ee3240f3cc2f8d137ca733f62d9c",
+      "explanationDisposition": "unofficial_draft_for_self_review",
+      "decision": "self_review_only",
+      "answerSource": {
+        "kind": "existing_origin_main_explanation",
+        "official": false,
+        "reviewCount": 0,
+        "provenance": [
+          "public/data/questions.json",
+          "public/data/answers.json",
+          "NTU original examination PDF audit"
+        ],
+        "note": "PDF audit 僅確認題面 fidelity；現有 explanation 未獲本次獨立技術覆核批准。Reviewed sources 只支撐 rubric 概念邊界。",
+        "reviewers": []
+      },
+      "confidence": {
+        "level": "unreviewed",
+        "basis": [
+          "題目與子題結構已逐頁 PDF audit。",
+          "現有 explanation 無官方答案或獨立人工審查紀錄。",
+          "Rubric 的概念檢核已逐題映射至 primary subtopic 的 reviewed sources。"
+        ],
+        "unresolvedIssues": [
+          "未完成逐小題雙審",
+          "策略題可能存在多個合理答案"
+        ]
+      },
+      "rubricItems": [
+        {
+          "rubricId": "rubric-q-pp-im-mis-110-2-a",
+          "label": "a",
+          "points": 12,
+          "criteria": [
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-110-2-b",
+          "label": "b",
+          "points": 12,
+          "criteria": [
+            "項目數量須符合題目要求，且各項不可只是同義改寫。",
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        }
+      ],
+      "eligibility": {
+        "browseEligible": true,
+        "selfReviewEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false
+      },
+      "rubricReview": {
+        "status": "reviewed",
+        "reviewCount": 1,
+        "reviewers": [
+          "independent-technical-review-2026-08-16"
+        ],
+        "reviewedAt": "2026-08-16",
+        "sourceRefs": [
+          "src-im-mis-laudon-17e"
+        ],
+        "note": "獨立覆核只核准 rubric 的題目分解、配分、概念範圍、合理替代答案、來源範圍與安全 eligibility；不等於核准 answers.json 的 explanation。"
+      },
+      "official": false,
+      "practiceEligible": true,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-mis-110-3",
+      "answerMarker": "N/A",
+      "explanationPresent": true,
+      "explanationSha256": "2fa82c20669c3f996c531e081b84afbe1877ff52a29440fc5f5a266f8f2ac367",
+      "explanationDisposition": "unofficial_draft_for_self_review",
+      "decision": "self_review_only",
+      "answerSource": {
+        "kind": "existing_origin_main_explanation",
+        "official": false,
+        "reviewCount": 0,
+        "provenance": [
+          "public/data/questions.json",
+          "public/data/answers.json",
+          "NTU original examination PDF audit"
+        ],
+        "note": "PDF audit 僅確認題面 fidelity；現有 explanation 未獲本次獨立技術覆核批准。Reviewed sources 只支撐 rubric 概念邊界。",
+        "reviewers": []
+      },
+      "confidence": {
+        "level": "unreviewed",
+        "basis": [
+          "題目與子題結構已逐頁 PDF audit。",
+          "現有 explanation 無官方答案或獨立人工審查紀錄。",
+          "Rubric 的概念檢核已逐題映射至 primary subtopic 的 reviewed sources。"
+        ],
+        "unresolvedIssues": [
+          "未完成逐小題雙審",
+          "策略題可能存在多個合理答案"
+        ]
+      },
+      "rubricItems": [
+        {
+          "rubricId": "rubric-q-pp-im-mis-110-3-a",
+          "label": "a",
+          "points": 7,
+          "criteria": [
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-scrum-guide-2020"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-110-3-b",
+          "label": "b",
+          "points": 6,
+          "criteria": [
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-scrum-guide-2020"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-110-3-c",
+          "label": "c",
+          "points": 6,
+          "criteria": [
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-scrum-guide-2020"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-110-3-d",
+          "label": "d",
+          "points": 6,
+          "criteria": [
+            "圖表或模型需標示必要角色、關係、流程或座標，並與文字說明一致。",
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-scrum-guide-2020"
+          ]
+        }
+      ],
+      "eligibility": {
+        "browseEligible": true,
+        "selfReviewEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false
+      },
+      "rubricReview": {
+        "status": "reviewed",
+        "reviewCount": 1,
+        "reviewers": [
+          "independent-technical-review-2026-08-16"
+        ],
+        "reviewedAt": "2026-08-16",
+        "sourceRefs": [
+          "src-im-mis-scrum-guide-2020"
+        ],
+        "note": "獨立覆核只核准 rubric 的題目分解、配分、概念範圍、合理替代答案、來源範圍與安全 eligibility；不等於核准 answers.json 的 explanation。"
+      },
+      "official": false,
+      "practiceEligible": true,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-mis-110-4",
+      "answerMarker": "N/A",
+      "explanationPresent": true,
+      "explanationSha256": "948b639687f8c8285501235af5eb2e04d8f1c14f89ae814346ec8fb86d83384d",
+      "explanationDisposition": "unofficial_draft_for_self_review",
+      "decision": "self_review_only",
+      "answerSource": {
+        "kind": "existing_origin_main_explanation",
+        "official": false,
+        "reviewCount": 0,
+        "provenance": [
+          "public/data/questions.json",
+          "public/data/answers.json",
+          "NTU original examination PDF audit"
+        ],
+        "note": "PDF audit 僅確認題面 fidelity；現有 explanation 未獲本次獨立技術覆核批准。Reviewed sources 只支撐 rubric 概念邊界。",
+        "reviewers": []
+      },
+      "confidence": {
+        "level": "unreviewed",
+        "basis": [
+          "題目與子題結構已逐頁 PDF audit。",
+          "現有 explanation 無官方答案或獨立人工審查紀錄。",
+          "Rubric 的概念檢核已逐題映射至 primary subtopic 的 reviewed sources。"
+        ],
+        "unresolvedIssues": [
+          "未完成逐小題雙審",
+          "策略題可能存在多個合理答案"
+        ]
+      },
+      "rubricItems": [
+        {
+          "rubricId": "rubric-q-pp-im-mis-110-4-a",
+          "label": "a",
+          "points": 5,
+          "criteria": [
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-110-4-b",
+          "label": "b",
+          "points": 5,
+          "criteria": [
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-110-4-c",
+          "label": "c",
+          "points": 5,
+          "criteria": [
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-110-4-d",
+          "label": "d",
+          "points": 5,
+          "criteria": [
+            "圖表或模型需標示必要角色、關係、流程或座標，並與文字說明一致。",
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-110-4-e",
+          "label": "e",
+          "points": 5,
+          "criteria": [
+            "圖表或模型需標示必要角色、關係、流程或座標，並與文字說明一致。",
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        }
+      ],
+      "eligibility": {
+        "browseEligible": true,
+        "selfReviewEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false
+      },
+      "rubricReview": {
+        "status": "reviewed",
+        "reviewCount": 1,
+        "reviewers": [
+          "independent-technical-review-2026-08-16"
+        ],
+        "reviewedAt": "2026-08-16",
+        "sourceRefs": [
+          "src-im-mis-laudon-17e"
+        ],
+        "note": "獨立覆核只核准 rubric 的題目分解、配分、概念範圍、合理替代答案、來源範圍與安全 eligibility；不等於核准 answers.json 的 explanation。"
+      },
+      "official": false,
+      "practiceEligible": true,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-mis-111-1",
+      "answerMarker": "N/A",
+      "explanationPresent": true,
+      "explanationSha256": "3ee8a8e640f32c8d19928ee6e110b31f69f8ef6a8864caa161ba336189a60cbf",
+      "explanationDisposition": "unofficial_draft_for_self_review",
+      "decision": "self_review_only",
+      "answerSource": {
+        "kind": "existing_origin_main_explanation",
+        "official": false,
+        "reviewCount": 0,
+        "provenance": [
+          "public/data/questions.json",
+          "public/data/answers.json",
+          "NTU original examination PDF audit"
+        ],
+        "note": "PDF audit 僅確認題面 fidelity；現有 explanation 未獲本次獨立技術覆核批准。Reviewed sources 只支撐 rubric 概念邊界。",
+        "reviewers": []
+      },
+      "confidence": {
+        "level": "unreviewed",
+        "basis": [
+          "題目與子題結構已逐頁 PDF audit。",
+          "現有 explanation 無官方答案或獨立人工審查紀錄。",
+          "Rubric 的概念檢核已逐題映射至 primary subtopic 的 reviewed sources。"
+        ],
+        "unresolvedIssues": [
+          "未完成逐小題雙審",
+          "策略題可能存在多個合理答案"
+        ]
+      },
+      "rubricItems": [
+        {
+          "rubricId": "rubric-q-pp-im-mis-111-1-a",
+          "label": "a",
+          "points": 8,
+          "criteria": [
+            "提供與題意相符的具體情境、例子或可執行做法。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "列出可操作的評估指標，說明計算／比較方式與驗證程序。",
+            "項目數量須符合題目要求，且各項不可只是同義改寫。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。",
+            "常見缺陷：例子未回扣題意，或只寫品牌名稱而沒有說明機制。",
+            "常見缺陷：只列指標名稱，未說明如何計算、何時使用或如何驗證。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-111-1-b",
+          "label": "b",
+          "points": 9,
+          "criteria": [
+            "提出具體作法，並解釋其如何對應題目中的問題或目標。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-111-1-c",
+          "label": "c",
+          "points": 9,
+          "criteria": [
+            "提出具體作法，並解釋其如何對應題目中的問題或目標。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        }
+      ],
+      "eligibility": {
+        "browseEligible": true,
+        "selfReviewEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false
+      },
+      "rubricReview": {
+        "status": "reviewed",
+        "reviewCount": 1,
+        "reviewers": [
+          "independent-technical-review-2026-08-16"
+        ],
+        "reviewedAt": "2026-08-16",
+        "sourceRefs": [
+          "src-im-mis-laudon-17e"
+        ],
+        "note": "獨立覆核只核准 rubric 的題目分解、配分、概念範圍、合理替代答案、來源範圍與安全 eligibility；不等於核准 answers.json 的 explanation。"
+      },
+      "official": false,
+      "practiceEligible": true,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-mis-111-2",
+      "answerMarker": "N/A",
+      "explanationPresent": true,
+      "explanationSha256": "40234abc1c0f7d9e7bec62af4938887280a4bb18a0eb79742eecfb6a579862fd",
+      "explanationDisposition": "unofficial_draft_for_self_review",
+      "decision": "self_review_only",
+      "answerSource": {
+        "kind": "existing_origin_main_explanation",
+        "official": false,
+        "reviewCount": 0,
+        "provenance": [
+          "public/data/questions.json",
+          "public/data/answers.json",
+          "NTU original examination PDF audit"
+        ],
+        "note": "PDF audit 僅確認題面 fidelity；現有 explanation 未獲本次獨立技術覆核批准。Reviewed sources 只支撐 rubric 概念邊界。",
+        "reviewers": []
+      },
+      "confidence": {
+        "level": "unreviewed",
+        "basis": [
+          "題目與子題結構已逐頁 PDF audit。",
+          "現有 explanation 無官方答案或獨立人工審查紀錄。",
+          "Rubric 的概念檢核已逐題映射至 primary subtopic 的 reviewed sources。"
+        ],
+        "unresolvedIssues": [
+          "未完成逐小題雙審",
+          "策略題可能存在多個合理答案"
+        ]
+      },
+      "rubricItems": [
+        {
+          "rubricId": "rubric-q-pp-im-mis-111-2-a",
+          "label": "a",
+          "points": 12,
+          "criteria": [
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "建立清楚的比較維度，逐項比較並說明選擇條件。",
+            "提供與題意相符的具體情境、例子或可執行做法。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。",
+            "常見缺陷：例子未回扣題意，或只寫品牌名稱而沒有說明機制。",
+            "常見缺陷：只描述其中一方，沒有使用一致維度完成比較。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-nist-privacy-framework"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-111-2-b",
+          "label": "b",
+          "points": 12,
+          "criteria": [
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "建立清楚的比較維度，逐項比較並說明選擇條件。",
+            "提供與題意相符的具體情境、例子或可執行做法。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。",
+            "常見缺陷：例子未回扣題意，或只寫品牌名稱而沒有說明機制。",
+            "常見缺陷：只描述其中一方，沒有使用一致維度完成比較。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-nist-privacy-framework"
+          ]
+        }
+      ],
+      "eligibility": {
+        "browseEligible": true,
+        "selfReviewEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false
+      },
+      "rubricReview": {
+        "status": "reviewed",
+        "reviewCount": 1,
+        "reviewers": [
+          "independent-technical-review-2026-08-16"
+        ],
+        "reviewedAt": "2026-08-16",
+        "sourceRefs": [
+          "src-im-mis-nist-privacy-framework"
+        ],
+        "note": "獨立覆核只核准 rubric 的題目分解、配分、概念範圍、合理替代答案、來源範圍與安全 eligibility；不等於核准 answers.json 的 explanation。"
+      },
+      "official": false,
+      "practiceEligible": true,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-mis-111-3",
+      "answerMarker": "N/A",
+      "explanationPresent": true,
+      "explanationSha256": "d0335f0695f67ba4d7252566d30f20ca913c7a285ee47783b5d4d732b93dfe15",
+      "explanationDisposition": "unofficial_draft_for_self_review",
+      "decision": "self_review_only",
+      "answerSource": {
+        "kind": "existing_origin_main_explanation",
+        "official": false,
+        "reviewCount": 0,
+        "provenance": [
+          "public/data/questions.json",
+          "public/data/answers.json",
+          "NTU original examination PDF audit"
+        ],
+        "note": "PDF audit 僅確認題面 fidelity；現有 explanation 未獲本次獨立技術覆核批准。Reviewed sources 只支撐 rubric 概念邊界。",
+        "reviewers": []
+      },
+      "confidence": {
+        "level": "unreviewed",
+        "basis": [
+          "題目與子題結構已逐頁 PDF audit。",
+          "現有 explanation 無官方答案或獨立人工審查紀錄。",
+          "Rubric 的概念檢核已逐題映射至 primary subtopic 的 reviewed sources。"
+        ],
+        "unresolvedIssues": [
+          "未完成逐小題雙審",
+          "策略題可能存在多個合理答案"
+        ]
+      },
+      "rubricItems": [
+        {
+          "rubricId": "rubric-q-pp-im-mis-111-3-whole",
+          "label": "whole",
+          "points": 25,
+          "criteria": [
+            "建立清楚的比較維度，逐項比較並說明選擇條件。",
+            "提供與題意相符的具體情境、例子或可執行做法。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。",
+            "常見缺陷：例子未回扣題意，或只寫品牌名稱而沒有說明機制。",
+            "常見缺陷：只描述其中一方，沒有使用一致維度完成比較。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        }
+      ],
+      "eligibility": {
+        "browseEligible": true,
+        "selfReviewEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false
+      },
+      "rubricReview": {
+        "status": "reviewed",
+        "reviewCount": 1,
+        "reviewers": [
+          "independent-technical-review-2026-08-16"
+        ],
+        "reviewedAt": "2026-08-16",
+        "sourceRefs": [
+          "src-im-mis-laudon-17e"
+        ],
+        "note": "獨立覆核只核准 rubric 的題目分解、配分、概念範圍、合理替代答案、來源範圍與安全 eligibility；不等於核准 answers.json 的 explanation。"
+      },
+      "official": false,
+      "practiceEligible": true,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-mis-111-4",
+      "answerMarker": "N/A",
+      "explanationPresent": true,
+      "explanationSha256": "47c9804b4453cb770b55118cdb4c6442770d99e26d20451f387df29c5e1666e0",
+      "explanationDisposition": "unofficial_draft_for_self_review",
+      "decision": "self_review_only",
+      "answerSource": {
+        "kind": "existing_origin_main_explanation",
+        "official": false,
+        "reviewCount": 0,
+        "provenance": [
+          "public/data/questions.json",
+          "public/data/answers.json",
+          "NTU original examination PDF audit"
+        ],
+        "note": "PDF audit 僅確認題面 fidelity；現有 explanation 未獲本次獨立技術覆核批准。Reviewed sources 只支撐 rubric 概念邊界。",
+        "reviewers": []
+      },
+      "confidence": {
+        "level": "unreviewed",
+        "basis": [
+          "題目與子題結構已逐頁 PDF audit。",
+          "現有 explanation 無官方答案或獨立人工審查紀錄。",
+          "Rubric 的概念檢核已逐題映射至 primary subtopic 的 reviewed sources。"
+        ],
+        "unresolvedIssues": [
+          "未完成逐小題雙審",
+          "策略題可能存在多個合理答案"
+        ]
+      },
+      "rubricItems": [
+        {
+          "rubricId": "rubric-q-pp-im-mis-111-4-a",
+          "label": "a",
+          "points": 10,
+          "criteria": [
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e",
+            "src-im-mis-nielsen-heuristics"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-111-4-b",
+          "label": "b",
+          "points": 15,
+          "criteria": [
+            "項目數量須符合題目要求，且各項不可只是同義改寫。",
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e",
+            "src-im-mis-nielsen-heuristics"
+          ]
+        }
+      ],
+      "eligibility": {
+        "browseEligible": true,
+        "selfReviewEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false
+      },
+      "rubricReview": {
+        "status": "reviewed",
+        "reviewCount": 1,
+        "reviewers": [
+          "independent-technical-review-2026-08-16"
+        ],
+        "reviewedAt": "2026-08-16",
+        "sourceRefs": [
+          "src-im-mis-laudon-17e",
+          "src-im-mis-nielsen-heuristics"
+        ],
+        "note": "獨立覆核只核准 rubric 的題目分解、配分、概念範圍、合理替代答案、來源範圍與安全 eligibility；不等於核准 answers.json 的 explanation。"
+      },
+      "official": false,
+      "practiceEligible": true,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-mis-112-1",
+      "answerMarker": "N/A",
+      "explanationPresent": true,
+      "explanationSha256": "eabb77a1d8bb2973214011303da9966f57e4e75ecd97c032882191ec62a049f4",
+      "explanationDisposition": "unofficial_draft_for_self_review",
+      "decision": "self_review_only",
+      "answerSource": {
+        "kind": "existing_origin_main_explanation",
+        "official": false,
+        "reviewCount": 0,
+        "provenance": [
+          "public/data/questions.json",
+          "public/data/answers.json",
+          "NTU original examination PDF audit"
+        ],
+        "note": "PDF audit 僅確認題面 fidelity；現有 explanation 未獲本次獨立技術覆核批准。Reviewed sources 只支撐 rubric 概念邊界。",
+        "reviewers": []
+      },
+      "confidence": {
+        "level": "unreviewed",
+        "basis": [
+          "題目與子題結構已逐頁 PDF audit。",
+          "現有 explanation 無官方答案或獨立人工審查紀錄。",
+          "Rubric 的概念檢核已逐題映射至 primary subtopic 的 reviewed sources。"
+        ],
+        "unresolvedIssues": [
+          "未完成逐小題雙審",
+          "策略題可能存在多個合理答案"
+        ]
+      },
+      "rubricItems": [
+        {
+          "rubricId": "rubric-q-pp-im-mis-112-1-a",
+          "label": "a",
+          "points": 8,
+          "criteria": [
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-112-1-b",
+          "label": "b",
+          "points": 8,
+          "criteria": [
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-112-1-c",
+          "label": "c",
+          "points": 10,
+          "criteria": [
+            "項目數量須符合題目要求，且各項不可只是同義改寫。",
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        }
+      ],
+      "eligibility": {
+        "browseEligible": true,
+        "selfReviewEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false
+      },
+      "rubricReview": {
+        "status": "reviewed",
+        "reviewCount": 1,
+        "reviewers": [
+          "independent-technical-review-2026-08-16"
+        ],
+        "reviewedAt": "2026-08-16",
+        "sourceRefs": [
+          "src-im-mis-laudon-17e"
+        ],
+        "note": "獨立覆核只核准 rubric 的題目分解、配分、概念範圍、合理替代答案、來源範圍與安全 eligibility；不等於核准 answers.json 的 explanation。"
+      },
+      "official": false,
+      "practiceEligible": true,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-mis-112-2",
+      "answerMarker": "N/A",
+      "explanationPresent": true,
+      "explanationSha256": "fd9fd13a52d395d242de5d4977fd97b6be89f44c9c9e511f077fef3047b348b7",
+      "explanationDisposition": "unofficial_draft_for_self_review",
+      "decision": "self_review_only",
+      "answerSource": {
+        "kind": "existing_origin_main_explanation",
+        "official": false,
+        "reviewCount": 0,
+        "provenance": [
+          "public/data/questions.json",
+          "public/data/answers.json",
+          "NTU original examination PDF audit"
+        ],
+        "note": "PDF audit 僅確認題面 fidelity；現有 explanation 未獲本次獨立技術覆核批准。Reviewed sources 只支撐 rubric 概念邊界。",
+        "reviewers": []
+      },
+      "confidence": {
+        "level": "unreviewed",
+        "basis": [
+          "題目與子題結構已逐頁 PDF audit。",
+          "現有 explanation 無官方答案或獨立人工審查紀錄。",
+          "Rubric 的概念檢核已逐題映射至 primary subtopic 的 reviewed sources。"
+        ],
+        "unresolvedIssues": [
+          "市場風險或競爭風險的優先性取決於假設；現有解析的單一判定不是官方結論。",
+          "未完成逐小題雙審",
+          "策略題可能存在多個合理答案"
+        ]
+      },
+      "rubricItems": [
+        {
+          "rubricId": "rubric-q-pp-im-mis-112-2-a",
+          "label": "a",
+          "points": 8,
+          "criteria": [
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "項目數量須符合題目要求，且各項不可只是同義改寫。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-112-2-b",
+          "label": "b",
+          "points": 8,
+          "criteria": [
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-112-2-c",
+          "label": "c",
+          "points": 8,
+          "criteria": [
+            "提出具體作法，並解釋其如何對應題目中的問題或目標。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        }
+      ],
+      "eligibility": {
+        "browseEligible": true,
+        "selfReviewEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false
+      },
+      "rubricReview": {
+        "status": "reviewed",
+        "reviewCount": 1,
+        "reviewers": [
+          "independent-technical-review-2026-08-16"
+        ],
+        "reviewedAt": "2026-08-16",
+        "sourceRefs": [
+          "src-im-mis-laudon-17e"
+        ],
+        "note": "獨立覆核只核准 rubric 的題目分解、配分、概念範圍、合理替代答案、來源範圍與安全 eligibility；不等於核准 answers.json 的 explanation。"
+      },
+      "official": false,
+      "practiceEligible": true,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-mis-112-3",
+      "answerMarker": "N/A",
+      "explanationPresent": true,
+      "explanationSha256": "b2503685848877c3f013b242bf462b6d76e766f1adde009d459de6119c401285",
+      "explanationDisposition": "unofficial_draft_for_self_review",
+      "decision": "self_review_only",
+      "answerSource": {
+        "kind": "existing_origin_main_explanation",
+        "official": false,
+        "reviewCount": 0,
+        "provenance": [
+          "public/data/questions.json",
+          "public/data/answers.json",
+          "NTU original examination PDF audit"
+        ],
+        "note": "PDF audit 僅確認題面 fidelity；現有 explanation 未獲本次獨立技術覆核批准。Reviewed sources 只支撐 rubric 概念邊界。",
+        "reviewers": []
+      },
+      "confidence": {
+        "level": "unreviewed",
+        "basis": [
+          "題目與子題結構已逐頁 PDF audit。",
+          "現有 explanation 無官方答案或獨立人工審查紀錄。",
+          "Rubric 的概念檢核已逐題映射至 primary subtopic 的 reviewed sources。"
+        ],
+        "unresolvedIssues": [
+          "未完成逐小題雙審",
+          "策略題可能存在多個合理答案"
+        ]
+      },
+      "rubricItems": [
+        {
+          "rubricId": "rubric-q-pp-im-mis-112-3-whole",
+          "label": "whole",
+          "points": 25,
+          "criteria": [
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "提供與題意相符的具體情境、例子或可執行做法。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。",
+            "常見缺陷：例子未回扣題意，或只寫品牌名稱而沒有說明機制。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-google-ml-rules",
+            "src-im-mis-nist-ai-rmf"
+          ]
+        }
+      ],
+      "eligibility": {
+        "browseEligible": true,
+        "selfReviewEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false
+      },
+      "rubricReview": {
+        "status": "reviewed",
+        "reviewCount": 1,
+        "reviewers": [
+          "independent-technical-review-2026-08-16"
+        ],
+        "reviewedAt": "2026-08-16",
+        "sourceRefs": [
+          "src-im-mis-google-ml-rules",
+          "src-im-mis-nist-ai-rmf"
+        ],
+        "note": "獨立覆核只核准 rubric 的題目分解、配分、概念範圍、合理替代答案、來源範圍與安全 eligibility；不等於核准 answers.json 的 explanation。"
+      },
+      "official": false,
+      "practiceEligible": true,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-mis-112-4",
+      "answerMarker": "N/A",
+      "explanationPresent": true,
+      "explanationSha256": "ca4be59513131c7d042e595b4fb9dcca1410812b17a18d8fec625b2113515642",
+      "explanationDisposition": "unofficial_draft_for_self_review",
+      "decision": "self_review_only",
+      "answerSource": {
+        "kind": "existing_origin_main_explanation",
+        "official": false,
+        "reviewCount": 0,
+        "provenance": [
+          "public/data/questions.json",
+          "public/data/answers.json",
+          "NTU original examination PDF audit"
+        ],
+        "note": "PDF audit 僅確認題面 fidelity；現有 explanation 未獲本次獨立技術覆核批准。Reviewed sources 只支撐 rubric 概念邊界。",
+        "reviewers": []
+      },
+      "confidence": {
+        "level": "unreviewed",
+        "basis": [
+          "題目與子題結構已逐頁 PDF audit。",
+          "現有 explanation 無官方答案或獨立人工審查紀錄。",
+          "Rubric 的概念檢核已逐題映射至 primary subtopic 的 reviewed sources。"
+        ],
+        "unresolvedIssues": [
+          "未完成逐小題雙審",
+          "策略題可能存在多個合理答案"
+        ]
+      },
+      "rubricItems": [
+        {
+          "rubricId": "rubric-q-pp-im-mis-112-4-a",
+          "label": "a",
+          "points": 10,
+          "criteria": [
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-112-4-b",
+          "label": "b",
+          "points": 15,
+          "criteria": [
+            "建立清楚的比較維度，逐項比較並說明選擇條件。",
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。",
+            "常見缺陷：只描述其中一方，沒有使用一致維度完成比較。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        }
+      ],
+      "eligibility": {
+        "browseEligible": true,
+        "selfReviewEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false
+      },
+      "rubricReview": {
+        "status": "reviewed",
+        "reviewCount": 1,
+        "reviewers": [
+          "independent-technical-review-2026-08-16"
+        ],
+        "reviewedAt": "2026-08-16",
+        "sourceRefs": [
+          "src-im-mis-laudon-17e"
+        ],
+        "note": "獨立覆核只核准 rubric 的題目分解、配分、概念範圍、合理替代答案、來源範圍與安全 eligibility；不等於核准 answers.json 的 explanation。"
+      },
+      "official": false,
+      "practiceEligible": true,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-mis-113-1",
+      "answerMarker": "N/A",
+      "explanationPresent": true,
+      "explanationSha256": "970ef6b89a35dc4e419f1be120eb50fa7c45518cf0b1e25cf07b7de66b02f056",
+      "explanationDisposition": "unofficial_draft_for_self_review",
+      "decision": "self_review_only",
+      "answerSource": {
+        "kind": "existing_origin_main_explanation",
+        "official": false,
+        "reviewCount": 0,
+        "provenance": [
+          "public/data/questions.json",
+          "public/data/answers.json",
+          "NTU original examination PDF audit"
+        ],
+        "note": "PDF audit 僅確認題面 fidelity；現有 explanation 未獲本次獨立技術覆核批准。Reviewed sources 只支撐 rubric 概念邊界。",
+        "reviewers": []
+      },
+      "confidence": {
+        "level": "unreviewed",
+        "basis": [
+          "題目與子題結構已逐頁 PDF audit。",
+          "現有 explanation 無官方答案或獨立人工審查紀錄。",
+          "Rubric 的概念檢核已逐題映射至 primary subtopic 的 reviewed sources。"
+        ],
+        "unresolvedIssues": [
+          "community detection 指標與比較方法需區分有無 ground truth，且演算法例子需技術覆核。",
+          "未完成逐小題雙審",
+          "策略題可能存在多個合理答案"
+        ]
+      },
+      "rubricItems": [
+        {
+          "rubricId": "rubric-q-pp-im-mis-113-1-a",
+          "label": "a",
+          "points": 10,
+          "criteria": [
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "提供與題意相符的具體情境、例子或可執行做法。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。",
+            "常見缺陷：例子未回扣題意，或只寫品牌名稱而沒有說明機制。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-113-1-b",
+          "label": "b",
+          "points": 12,
+          "criteria": [
+            "列出可操作的評估指標，說明計算／比較方式與驗證程序。",
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。",
+            "常見缺陷：只列指標名稱，未說明如何計算、何時使用或如何驗證。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        }
+      ],
+      "eligibility": {
+        "browseEligible": true,
+        "selfReviewEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false
+      },
+      "rubricReview": {
+        "status": "reviewed",
+        "reviewCount": 1,
+        "reviewers": [
+          "independent-technical-review-2026-08-16"
+        ],
+        "reviewedAt": "2026-08-16",
+        "sourceRefs": [
+          "src-im-mis-laudon-17e"
+        ],
+        "note": "獨立覆核只核准 rubric 的題目分解、配分、概念範圍、合理替代答案、來源範圍與安全 eligibility；不等於核准 answers.json 的 explanation。"
+      },
+      "official": false,
+      "practiceEligible": true,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-mis-113-2",
+      "answerMarker": "N/A",
+      "explanationPresent": true,
+      "explanationSha256": "1bc2b5c21c74f71e69c3128fb30797a5ac979e49c22e8847e86eb25c246e73d2",
+      "explanationDisposition": "unofficial_draft_for_self_review",
+      "decision": "self_review_only",
+      "answerSource": {
+        "kind": "existing_origin_main_explanation",
+        "official": false,
+        "reviewCount": 0,
+        "provenance": [
+          "public/data/questions.json",
+          "public/data/answers.json",
+          "NTU original examination PDF audit"
+        ],
+        "note": "PDF audit 僅確認題面 fidelity；現有 explanation 未獲本次獨立技術覆核批准。Reviewed sources 只支撐 rubric 概念邊界。",
+        "reviewers": []
+      },
+      "confidence": {
+        "level": "unreviewed",
+        "basis": [
+          "題目與子題結構已逐頁 PDF audit。",
+          "現有 explanation 無官方答案或獨立人工審查紀錄。",
+          "Rubric 的概念檢核已逐題映射至 primary subtopic 的 reviewed sources。"
+        ],
+        "unresolvedIssues": [
+          "現有解析斷言自建系統必然比 ERP 敏捷，忽略模組化、配置能力、技術債與組織能力等條件。",
+          "未完成逐小題雙審",
+          "策略題可能存在多個合理答案"
+        ]
+      },
+      "rubricItems": [
+        {
+          "rubricId": "rubric-q-pp-im-mis-113-2-a",
+          "label": "a",
+          "points": 10,
+          "criteria": [
+            "提供與題意相符的具體情境、例子或可執行做法。",
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。",
+            "常見缺陷：例子未回扣題意，或只寫品牌名稱而沒有說明機制。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-113-2-b",
+          "label": "b",
+          "points": 10,
+          "criteria": [
+            "提供與題意相符的具體情境、例子或可執行做法。",
+            "提出具體作法，並解釋其如何對應題目中的問題或目標。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。",
+            "常見缺陷：例子未回扣題意，或只寫品牌名稱而沒有說明機制。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-113-2-c",
+          "label": "c",
+          "points": 8,
+          "criteria": [
+            "提供與題意相符的具體情境、例子或可執行做法。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。",
+            "常見缺陷：例子未回扣題意，或只寫品牌名稱而沒有說明機制。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        }
+      ],
+      "eligibility": {
+        "browseEligible": true,
+        "selfReviewEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false
+      },
+      "rubricReview": {
+        "status": "reviewed",
+        "reviewCount": 1,
+        "reviewers": [
+          "independent-technical-review-2026-08-16"
+        ],
+        "reviewedAt": "2026-08-16",
+        "sourceRefs": [
+          "src-im-mis-laudon-17e"
+        ],
+        "note": "獨立覆核只核准 rubric 的題目分解、配分、概念範圍、合理替代答案、來源範圍與安全 eligibility；不等於核准 answers.json 的 explanation。"
+      },
+      "official": false,
+      "practiceEligible": true,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-mis-113-3",
+      "answerMarker": "N/A",
+      "explanationPresent": true,
+      "explanationSha256": "8f98bb005b5b7931dd9033d28bd574ad8b788b5e331ce720025575a2bec34d90",
+      "explanationDisposition": "unofficial_draft_for_self_review",
+      "decision": "self_review_only",
+      "answerSource": {
+        "kind": "existing_origin_main_explanation",
+        "official": false,
+        "reviewCount": 0,
+        "provenance": [
+          "public/data/questions.json",
+          "public/data/answers.json",
+          "NTU original examination PDF audit"
+        ],
+        "note": "PDF audit 僅確認題面 fidelity；現有 explanation 未獲本次獨立技術覆核批准。Reviewed sources 只支撐 rubric 概念邊界。",
+        "reviewers": []
+      },
+      "confidence": {
+        "level": "unreviewed",
+        "basis": [
+          "題目與子題結構已逐頁 PDF audit。",
+          "現有 explanation 無官方答案或獨立人工審查紀錄。",
+          "Rubric 的概念檢核已逐題映射至 primary subtopic 的 reviewed sources。"
+        ],
+        "unresolvedIssues": [
+          "未完成逐小題雙審",
+          "策略題可能存在多個合理答案"
+        ]
+      },
+      "rubricItems": [
+        {
+          "rubricId": "rubric-q-pp-im-mis-113-3-a",
+          "label": "a",
+          "points": 16,
+          "criteria": [
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "列出可操作的評估指標，說明計算／比較方式與驗證程序。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。",
+            "常見缺陷：只列指標名稱，未說明如何計算、何時使用或如何驗證。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-google-ml-rules",
+            "src-im-mis-nist-ai-rmf"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-113-3-b",
+          "label": "b",
+          "points": 16,
+          "criteria": [
+            "提出具體作法，並解釋其如何對應題目中的問題或目標。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "項目數量須符合題目要求，且各項不可只是同義改寫。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-google-ml-rules",
+            "src-im-mis-nist-ai-rmf"
+          ]
+        }
+      ],
+      "eligibility": {
+        "browseEligible": true,
+        "selfReviewEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false
+      },
+      "rubricReview": {
+        "status": "reviewed",
+        "reviewCount": 1,
+        "reviewers": [
+          "independent-technical-review-2026-08-16"
+        ],
+        "reviewedAt": "2026-08-16",
+        "sourceRefs": [
+          "src-im-mis-google-ml-rules",
+          "src-im-mis-nist-ai-rmf"
+        ],
+        "note": "獨立覆核只核准 rubric 的題目分解、配分、概念範圍、合理替代答案、來源範圍與安全 eligibility；不等於核准 answers.json 的 explanation。"
+      },
+      "official": false,
+      "practiceEligible": true,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-mis-113-4",
+      "answerMarker": "N/A",
+      "explanationPresent": true,
+      "explanationSha256": "57432667f0124392b5d343112dea155e2e081bb47c986ec53f9b8b4cadee0265",
+      "explanationDisposition": "unofficial_draft_for_self_review",
+      "decision": "self_review_only",
+      "answerSource": {
+        "kind": "existing_origin_main_explanation",
+        "official": false,
+        "reviewCount": 0,
+        "provenance": [
+          "public/data/questions.json",
+          "public/data/answers.json",
+          "NTU original examination PDF audit"
+        ],
+        "note": "PDF audit 僅確認題面 fidelity；現有 explanation 未獲本次獨立技術覆核批准。Reviewed sources 只支撐 rubric 概念邊界。",
+        "reviewers": []
+      },
+      "confidence": {
+        "level": "unreviewed",
+        "basis": [
+          "題目與子題結構已逐頁 PDF audit。",
+          "現有 explanation 無官方答案或獨立人工審查紀錄。",
+          "Rubric 的概念檢核已逐題映射至 primary subtopic 的 reviewed sources。"
+        ],
+        "unresolvedIssues": [
+          "現有解析聲稱 IT 對 ESG 有較一致的正向支持，但未提供來源，且可能忽略反彈效應與治理風險。",
+          "未完成逐小題雙審",
+          "策略題可能存在多個合理答案"
+        ]
+      },
+      "rubricItems": [
+        {
+          "rubricId": "rubric-q-pp-im-mis-113-4-a",
+          "label": "a",
+          "points": 6,
+          "criteria": [
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "項目數量須符合題目要求，且各項不可只是同義改寫。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-ifrs-sustainability"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-113-4-b",
+          "label": "b",
+          "points": 12,
+          "criteria": [
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "列出可操作的評估指標，說明計算／比較方式與驗證程序。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。",
+            "常見缺陷：只列指標名稱，未說明如何計算、何時使用或如何驗證。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-ifrs-sustainability"
+          ]
+        }
+      ],
+      "eligibility": {
+        "browseEligible": true,
+        "selfReviewEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false
+      },
+      "rubricReview": {
+        "status": "reviewed",
+        "reviewCount": 1,
+        "reviewers": [
+          "independent-technical-review-2026-08-16"
+        ],
+        "reviewedAt": "2026-08-16",
+        "sourceRefs": [
+          "src-im-mis-ifrs-sustainability"
+        ],
+        "note": "獨立覆核只核准 rubric 的題目分解、配分、概念範圍、合理替代答案、來源範圍與安全 eligibility；不等於核准 answers.json 的 explanation。"
+      },
+      "official": false,
+      "practiceEligible": true,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-mis-114-1",
+      "answerMarker": "N/A",
+      "explanationPresent": true,
+      "explanationSha256": "ce3934ea22ef23485255b8eba76014ea687417ea9cea835f1f15a31f911e66f2",
+      "explanationDisposition": "unofficial_draft_for_self_review",
+      "decision": "self_review_only",
+      "answerSource": {
+        "kind": "existing_origin_main_explanation",
+        "official": false,
+        "reviewCount": 0,
+        "provenance": [
+          "public/data/questions.json",
+          "public/data/answers.json",
+          "NTU original examination PDF audit"
+        ],
+        "note": "PDF audit 僅確認題面 fidelity；現有 explanation 未獲本次獨立技術覆核批准。Reviewed sources 只支撐 rubric 概念邊界。",
+        "reviewers": []
+      },
+      "confidence": {
+        "level": "unreviewed",
+        "basis": [
+          "題目與子題結構已逐頁 PDF audit。",
+          "現有 explanation 無官方答案或獨立人工審查紀錄。",
+          "Rubric 的概念檢核已逐題映射至 primary subtopic 的 reviewed sources。"
+        ],
+        "unresolvedIssues": [
+          "未完成逐小題雙審",
+          "策略題可能存在多個合理答案"
+        ]
+      },
+      "rubricItems": [
+        {
+          "rubricId": "rubric-q-pp-im-mis-114-1-a",
+          "label": "A",
+          "points": 10,
+          "criteria": [
+            "建立清楚的比較維度，逐項比較並說明選擇條件。",
+            "提供與題意相符的具體情境、例子或可執行做法。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。",
+            "常見缺陷：例子未回扣題意，或只寫品牌名稱而沒有說明機制。",
+            "常見缺陷：只描述其中一方，沒有使用一致維度完成比較。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-114-1-b",
+          "label": "B",
+          "points": 10,
+          "criteria": [
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        }
+      ],
+      "eligibility": {
+        "browseEligible": true,
+        "selfReviewEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false
+      },
+      "rubricReview": {
+        "status": "reviewed",
+        "reviewCount": 1,
+        "reviewers": [
+          "independent-technical-review-2026-08-16"
+        ],
+        "reviewedAt": "2026-08-16",
+        "sourceRefs": [
+          "src-im-mis-laudon-17e"
+        ],
+        "note": "獨立覆核只核准 rubric 的題目分解、配分、概念範圍、合理替代答案、來源範圍與安全 eligibility；不等於核准 answers.json 的 explanation。"
+      },
+      "official": false,
+      "practiceEligible": true,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-mis-114-2",
+      "answerMarker": "N/A",
+      "explanationPresent": true,
+      "explanationSha256": "43a73ea82b8e99969e985adb82babaf9236a4113984273cb60477e8f3607cddd",
+      "explanationDisposition": "unofficial_draft_for_self_review",
+      "decision": "self_review_only",
+      "answerSource": {
+        "kind": "existing_origin_main_explanation",
+        "official": false,
+        "reviewCount": 0,
+        "provenance": [
+          "public/data/questions.json",
+          "public/data/answers.json",
+          "NTU original examination PDF audit"
+        ],
+        "note": "PDF audit 僅確認題面 fidelity；現有 explanation 未獲本次獨立技術覆核批准。Reviewed sources 只支撐 rubric 概念邊界。",
+        "reviewers": []
+      },
+      "confidence": {
+        "level": "unreviewed",
+        "basis": [
+          "題目與子題結構已逐頁 PDF audit。",
+          "現有 explanation 無官方答案或獨立人工審查紀錄。",
+          "Rubric 的概念檢核已逐題映射至 primary subtopic 的 reviewed sources。"
+        ],
+        "unresolvedIssues": [
+          "未完成逐小題雙審",
+          "策略題可能存在多個合理答案"
+        ]
+      },
+      "rubricItems": [
+        {
+          "rubricId": "rubric-q-pp-im-mis-114-2-a",
+          "label": "A",
+          "points": 15,
+          "criteria": [
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-114-2-b",
+          "label": "B",
+          "points": 15,
+          "criteria": [
+            "提供與題意相符的具體情境、例子或可執行做法。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。",
+            "常見缺陷：例子未回扣題意，或只寫品牌名稱而沒有說明機制。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e"
+          ]
+        }
+      ],
+      "eligibility": {
+        "browseEligible": true,
+        "selfReviewEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false
+      },
+      "rubricReview": {
+        "status": "reviewed",
+        "reviewCount": 1,
+        "reviewers": [
+          "independent-technical-review-2026-08-16"
+        ],
+        "reviewedAt": "2026-08-16",
+        "sourceRefs": [
+          "src-im-mis-laudon-17e"
+        ],
+        "note": "獨立覆核只核准 rubric 的題目分解、配分、概念範圍、合理替代答案、來源範圍與安全 eligibility；不等於核准 answers.json 的 explanation。"
+      },
+      "official": false,
+      "practiceEligible": true,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-mis-114-3",
+      "answerMarker": "N/A",
+      "explanationPresent": true,
+      "explanationSha256": "394f27398556f1f484c23335a835ea99bd143a937e36cd6c051aefe49517600e",
+      "explanationDisposition": "unofficial_draft_for_self_review",
+      "decision": "self_review_only",
+      "answerSource": {
+        "kind": "existing_origin_main_explanation",
+        "official": false,
+        "reviewCount": 0,
+        "provenance": [
+          "public/data/questions.json",
+          "public/data/answers.json",
+          "NTU original examination PDF audit"
+        ],
+        "note": "PDF audit 僅確認題面 fidelity；現有 explanation 未獲本次獨立技術覆核批准。Reviewed sources 只支撐 rubric 概念邊界。",
+        "reviewers": []
+      },
+      "confidence": {
+        "level": "unreviewed",
+        "basis": [
+          "題目與子題結構已逐頁 PDF audit。",
+          "現有 explanation 無官方答案或獨立人工審查紀錄。",
+          "Rubric 的概念檢核已逐題映射至 primary subtopic 的 reviewed sources。"
+        ],
+        "unresolvedIssues": [
+          "未完成逐小題雙審",
+          "策略題可能存在多個合理答案"
+        ]
+      },
+      "rubricItems": [
+        {
+          "rubricId": "rubric-q-pp-im-mis-114-3-whole",
+          "label": "whole",
+          "points": 15,
+          "criteria": [
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "建立清楚的比較維度，逐項比較並說明選擇條件。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。",
+            "常見缺陷：只描述其中一方，沒有使用一致維度完成比較。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-laudon-17e",
+            "src-im-mis-nielsen-heuristics"
+          ]
+        }
+      ],
+      "eligibility": {
+        "browseEligible": true,
+        "selfReviewEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false
+      },
+      "rubricReview": {
+        "status": "reviewed",
+        "reviewCount": 1,
+        "reviewers": [
+          "independent-technical-review-2026-08-16"
+        ],
+        "reviewedAt": "2026-08-16",
+        "sourceRefs": [
+          "src-im-mis-laudon-17e",
+          "src-im-mis-nielsen-heuristics"
+        ],
+        "note": "獨立覆核只核准 rubric 的題目分解、配分、概念範圍、合理替代答案、來源範圍與安全 eligibility；不等於核准 answers.json 的 explanation。"
+      },
+      "official": false,
+      "practiceEligible": true,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-mis-115-1",
+      "answerMarker": "N/A",
+      "explanationPresent": true,
+      "explanationSha256": "3504d19400f3d6c0e0bf2183d4f9e4ddf45d304fbe638aa51126ae1394f077d4",
+      "explanationDisposition": "unofficial_draft_for_self_review",
+      "decision": "self_review_only",
+      "answerSource": {
+        "kind": "existing_origin_main_explanation",
+        "official": false,
+        "reviewCount": 0,
+        "provenance": [
+          "public/data/questions.json",
+          "public/data/answers.json",
+          "NTU original examination PDF audit"
+        ],
+        "note": "PDF audit 僅確認題面 fidelity；現有 explanation 未獲本次獨立技術覆核批准。Reviewed sources 只支撐 rubric 概念邊界。",
+        "reviewers": []
+      },
+      "confidence": {
+        "level": "unreviewed",
+        "basis": [
+          "題目與子題結構已逐頁 PDF audit。",
+          "現有 explanation 無官方答案或獨立人工審查紀錄。",
+          "Rubric 的概念檢核已逐題映射至 primary subtopic 的 reviewed sources。"
+        ],
+        "unresolvedIssues": [
+          "題幹中的失敗率與研究歸因具時效性；解析只能採用穩定的專案治理概念，案例數字需另行查證。",
+          "未完成逐小題雙審",
+          "策略題可能存在多個合理答案"
+        ]
+      },
+      "rubricItems": [
+        {
+          "rubricId": "rubric-q-pp-im-mis-115-1-whole",
+          "label": "whole",
+          "points": 20,
+          "criteria": [
+            "提出具體作法，並解釋其如何對應題目中的問題或目標。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "項目數量須符合題目要求，且各項不可只是同義改寫。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-google-ml-rules",
+            "src-im-mis-nist-ai-rmf"
+          ]
+        }
+      ],
+      "eligibility": {
+        "browseEligible": true,
+        "selfReviewEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false
+      },
+      "rubricReview": {
+        "status": "reviewed",
+        "reviewCount": 1,
+        "reviewers": [
+          "independent-technical-review-2026-08-16"
+        ],
+        "reviewedAt": "2026-08-16",
+        "sourceRefs": [
+          "src-im-mis-google-ml-rules",
+          "src-im-mis-nist-ai-rmf"
+        ],
+        "note": "獨立覆核只核准 rubric 的題目分解、配分、概念範圍、合理替代答案、來源範圍與安全 eligibility；不等於核准 answers.json 的 explanation。"
+      },
+      "official": false,
+      "practiceEligible": true,
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-mis-115-2",
+      "answerMarker": "N/A",
+      "explanationPresent": true,
+      "explanationSha256": "a1256dd220d836039c79c6f12484028abc80894ac99ce951c970fc9c2048aafd",
+      "explanationDisposition": "unofficial_draft_for_self_review",
+      "decision": "self_review_only",
+      "answerSource": {
+        "kind": "existing_origin_main_explanation",
+        "official": false,
+        "reviewCount": 0,
+        "provenance": [
+          "public/data/questions.json",
+          "public/data/answers.json",
+          "NTU original examination PDF audit"
+        ],
+        "note": "PDF audit 僅確認題面 fidelity；現有 explanation 未獲本次獨立技術覆核批准。Reviewed sources 只支撐 rubric 概念邊界。",
+        "reviewers": []
+      },
+      "confidence": {
+        "level": "unreviewed",
+        "basis": [
+          "題目與子題結構已逐頁 PDF audit。",
+          "現有 explanation 無官方答案或獨立人工審查紀錄。",
+          "Rubric 的概念檢核已逐題映射至 primary subtopic 的 reviewed sources。"
+        ],
+        "unresolvedIssues": [
+          "Apple/Gemini 案例具時效性，且架構、資料流與合約條款不能由題幹外推為已證實事實。",
+          "未完成逐小題雙審",
+          "策略題可能存在多個合理答案"
+        ]
+      },
+      "rubricItems": [
+        {
+          "rubricId": "rubric-q-pp-im-mis-115-2-a",
+          "label": "A",
+          "points": 10,
+          "criteria": [
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-nist-privacy-framework",
+            "src-im-mis-nist-ai-rmf"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-115-2-b",
+          "label": "B",
+          "points": 10,
+          "criteria": [
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-nist-privacy-framework",
+            "src-im-mis-nist-ai-rmf"
+          ]
+        },
+        {
+          "rubricId": "rubric-q-pp-im-mis-115-2-c",
+          "label": "C",
+          "points": 10,
+          "criteria": [
+            "提出具體作法，並解釋其如何對應題目中的問題或目標。",
+            "先明確定義題目中的核心概念，避免只列舉名詞。",
+            "說明概念如何影響組織、流程、技術或績效的因果機制。",
+            "交代成立條件、限制、風險或替代方案，不把策略性判斷寫成唯一答案。"
+          ],
+          "reasoningSteps": [
+            "辨識題目動詞、分析單位與限制條件。",
+            "用定義或理論建立答題架構，再逐項回應題目要求。",
+            "以案例、機制、比較、計算或技術產物支持主張。",
+            "補充權衡與適用邊界，最後檢查項目數及配分比例。"
+          ],
+          "reasonableAlternatives": [
+            "允許不同案例、框架或策略結論，只要定義正確、論證連貫且明確回扣題幹。",
+            "若題目要求判斷立場，可採相反結論，但必須清楚交代假設、風險與證據。"
+          ],
+          "limitations": [
+            "常見缺陷：只堆疊術語，沒有解釋概念間的關係或適用條件。"
+          ],
+          "sourceRefs": [
+            "src-im-mis-nist-privacy-framework",
+            "src-im-mis-nist-ai-rmf"
+          ]
+        }
+      ],
+      "eligibility": {
+        "browseEligible": true,
+        "selfReviewEligible": true,
+        "autoGradeEligible": false,
+        "fullMockEligible": false
+      },
+      "rubricReview": {
+        "status": "reviewed",
+        "reviewCount": 1,
+        "reviewers": [
+          "independent-technical-review-2026-08-16"
+        ],
+        "reviewedAt": "2026-08-16",
+        "sourceRefs": [
+          "src-im-mis-nist-privacy-framework",
+          "src-im-mis-nist-ai-rmf"
+        ],
+        "note": "獨立覆核只核准 rubric 的題目分解、配分、概念範圍、合理替代答案、來源範圍與安全 eligibility；不等於核准 answers.json 的 explanation。"
+      },
+      "official": false,
+      "practiceEligible": true,
+      "autoGradeEligible": false
+    }
+  ]
+}

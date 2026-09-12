@@ -246,7 +246,7 @@ function ChatContent({ params }: Props) {
     return (
       <div className="space-y-5 max-w-2xl">
         <div>
-          <h1 className="text-2xl font-bold">{EXAM_LABELS[exam as ExamId]} — 對話練習</h1>
+          <h1 className="text-2xl font-bold font-display">{EXAM_LABELS[exam as ExamId]} — 對話練習</h1>
           <p className="text-muted-foreground text-sm mt-1">
             用英文聊天，順便把單字庫裡到期的字逼出來。查過的字用出來才算真的記住。
           </p>

@@ -1,0 +1,386 @@
+{
+  "version": "1.0",
+  "sourceType": "textbook",
+  "textbook": "Practice Questions (AI-generated)",
+  "totalQuestions": 27,
+  "questions": [
+    {
+      "id": "q-tb-it-cnn-1",
+      "examId": "im",
+      "subjectId": "im-it",
+      "text": "在卷積神經網路（CNN）中，卷積層（convolutional layer）的主要功能是什麼？",
+      "options": [
+        { "label": "A", "text": "將輸入資料展平為一維向量" },
+        { "label": "B", "text": "透過可學習的 filter 偵測局部特徵（如邊緣、紋理）" },
+        { "label": "C", "text": "隨機丟棄部分神經元以防止 overfitting" },
+        { "label": "D", "text": "將所有特徵圖合併為單一輸出類別" }
+      ],
+      "answer": "B",
+      "hasImage": false
+    },
+    {
+      "id": "q-tb-it-cnn-2",
+      "examId": "im",
+      "subjectId": "im-it",
+      "text": "CNN 中的 pooling layer（池化層）最常見的作用是什麼？",
+      "options": [
+        { "label": "A", "text": "增加特徵圖的空間解析度" },
+        { "label": "B", "text": "對特徵圖進行降維，保留主要特徵並減少計算量" },
+        { "label": "C", "text": "學習新的 filter 參數" },
+        { "label": "D", "text": "將 RGB 影像轉換為灰階影像" }
+      ],
+      "answer": "B",
+      "hasImage": false
+    },
+    {
+      "id": "q-tb-it-cnn-3",
+      "examId": "im",
+      "subjectId": "im-it",
+      "text": "下列關於 RNN（Recurrent Neural Network）的敘述，何者正確？",
+      "options": [
+        { "label": "A", "text": "RNN 無法處理不同長度的輸入序列" },
+        { "label": "B", "text": "RNN 的隱藏狀態會在每個時間步重新隨機初始化" },
+        { "label": "C", "text": "RNN 透過隱藏狀態將前面時間步的資訊傳遞到後面的時間步" },
+        { "label": "D", "text": "RNN 只能用於影像辨識任務" }
+      ],
+      "answer": "C",
+      "hasImage": false
+    },
+    {
+      "id": "q-tb-it-ethics-1",
+      "examId": "im",
+      "subjectId": "im-it",
+      "text": "某公司使用 AI 模型進行履歷篩選，發現模型對女性應徵者的錄取率顯著低於男性。這最可能反映了 AI 的哪個倫理問題？",
+      "options": [
+        { "label": "A", "text": "模型的 overfitting" },
+        { "label": "B", "text": "訓練資料中的歷史偏差（historical bias）導致演算法歧視" },
+        { "label": "C", "text": "模型的運算效率不足" },
+        { "label": "D", "text": "模型缺乏足夠的隱藏層數" }
+      ],
+      "answer": "B",
+      "hasImage": false
+    },
+    {
+      "id": "q-tb-it-ethics-2",
+      "examId": "im",
+      "subjectId": "im-it",
+      "text": "歐盟《人工智慧法案》（EU AI Act）將 AI 系統依風險分級管理。下列哪種應用最可能被歸類為「高風險」？",
+      "options": [
+        { "label": "A", "text": "電子郵件的垃圾信過濾" },
+        { "label": "B", "text": "影片串流平台的推薦系統" },
+        { "label": "C", "text": "用於司法判決量刑的 AI 評估工具" },
+        { "label": "D", "text": "手機相機的美顏濾鏡" }
+      ],
+      "answer": "C",
+      "hasImage": false
+    },
+    {
+      "id": "q-tb-it-ethics-3",
+      "examId": "im",
+      "subjectId": "im-it",
+      "text": "「可解釋性（Explainability）」在 AI 倫理中的重要性主要是因為：",
+      "options": [
+        { "label": "A", "text": "可解釋的模型一定比黑箱模型準確" },
+        { "label": "B", "text": "使用者和監管機構需要理解 AI 決策依據，以確保問責與信任" },
+        { "label": "C", "text": "可解釋性可以完全消除模型的偏差" },
+        { "label": "D", "text": "法律規定所有 AI 模型必須使用決策樹" }
+      ],
+      "answer": "B",
+      "hasImage": false
+    },
+    {
+      "id": "q-tb-it-boolean-1",
+      "examId": "im",
+      "subjectId": "im-it",
+      "text": "布林運算式 A·(A+B) 化簡後等於：",
+      "options": [
+        { "label": "A", "text": "A+B" },
+        { "label": "B", "text": "A·B" },
+        { "label": "C", "text": "A" },
+        { "label": "D", "text": "B" }
+      ],
+      "answer": "C",
+      "hasImage": false
+    },
+    {
+      "id": "q-tb-it-boolean-2",
+      "examId": "im",
+      "subjectId": "im-it",
+      "text": "根據迪摩根定理（De Morgan's Theorem），NOT(A AND B) 等於：",
+      "options": [
+        { "label": "A", "text": "(NOT A) AND (NOT B)" },
+        { "label": "B", "text": "(NOT A) OR (NOT B)" },
+        { "label": "C", "text": "A OR B" },
+        { "label": "D", "text": "NOT A" }
+      ],
+      "answer": "B",
+      "hasImage": false
+    },
+    {
+      "id": "q-tb-it-boolean-3",
+      "examId": "im",
+      "subjectId": "im-it",
+      "text": "下列哪個布林運算式恆為 1（TRUE）？",
+      "options": [
+        { "label": "A", "text": "A AND (NOT A)" },
+        { "label": "B", "text": "A OR (NOT A)" },
+        { "label": "C", "text": "A XOR A" },
+        { "label": "D", "text": "(NOT A) AND A" }
+      ],
+      "answer": "B",
+      "hasImage": false
+    },
+    {
+      "id": "q-tb-it-circuit-1",
+      "examId": "im",
+      "subjectId": "im-it",
+      "text": "下列哪個邏輯閘（logic gate）的功能是：只有當兩個輸入都為 1 時，輸出才為 1？",
+      "options": [
+        { "label": "A", "text": "OR gate" },
+        { "label": "B", "text": "AND gate" },
+        { "label": "C", "text": "XOR gate" },
+        { "label": "D", "text": "NOR gate" }
+      ],
+      "answer": "B",
+      "hasImage": false
+    },
+    {
+      "id": "q-tb-it-circuit-2",
+      "examId": "im",
+      "subjectId": "im-it",
+      "text": "半加器（half adder）由哪兩個邏輯閘組成？",
+      "options": [
+        { "label": "A", "text": "AND 和 OR" },
+        { "label": "B", "text": "XOR 和 AND" },
+        { "label": "C", "text": "NAND 和 NOR" },
+        { "label": "D", "text": "OR 和 NOT" }
+      ],
+      "answer": "B",
+      "hasImage": false
+    },
+    {
+      "id": "q-tb-it-circuit-3",
+      "examId": "im",
+      "subjectId": "im-it",
+      "text": "正反器（flip-flop）在數位電路中的主要功能是：",
+      "options": [
+        { "label": "A", "text": "執行算術運算" },
+        { "label": "B", "text": "儲存 1 bit 的資料" },
+        { "label": "C", "text": "將類比訊號轉換為數位訊號" },
+        { "label": "D", "text": "放大電流" }
+      ],
+      "answer": "B",
+      "hasImage": false
+    },
+    {
+      "id": "q-tb-it-numsys-1",
+      "examId": "im",
+      "subjectId": "im-it",
+      "text": "十進位數 156 轉換為十六進位（hexadecimal）為何？",
+      "options": [
+        { "label": "A", "text": "9A" },
+        { "label": "B", "text": "9C" },
+        { "label": "C", "text": "A6" },
+        { "label": "D", "text": "F6" }
+      ],
+      "answer": "B",
+      "hasImage": false
+    },
+    {
+      "id": "q-tb-it-numsys-2",
+      "examId": "im",
+      "subjectId": "im-it",
+      "text": "二進位數 11011010 轉換為十進位為何？",
+      "options": [
+        { "label": "A", "text": "214" },
+        { "label": "B", "text": "218" },
+        { "label": "C", "text": "222" },
+        { "label": "D", "text": "226" }
+      ],
+      "answer": "B",
+      "hasImage": false
+    },
+    {
+      "id": "q-tb-it-numsys-3",
+      "examId": "im",
+      "subjectId": "im-it",
+      "text": "在 8-bit 二補數（two's complement）表示法中，能表示的整數範圍是：",
+      "options": [
+        { "label": "A", "text": "0 到 255" },
+        { "label": "B", "text": "-127 到 127" },
+        { "label": "C", "text": "-128 到 127" },
+        { "label": "D", "text": "-128 到 128" }
+      ],
+      "answer": "C",
+      "hasImage": false
+    },
+    {
+      "id": "q-tb-it-algodesign-1",
+      "examId": "im",
+      "subjectId": "im-it",
+      "text": "Greedy algorithm（貪婪演算法）的特性是：",
+      "options": [
+        { "label": "A", "text": "在每一步做出當下最佳選擇，但不保證全域最佳解" },
+        { "label": "B", "text": "窮舉所有可能的解，保證找到最佳解" },
+        { "label": "C", "text": "將問題分成子問題並儲存結果，避免重複計算" },
+        { "label": "D", "text": "隨機選擇解，重複多次後取最佳結果" }
+      ],
+      "answer": "A",
+      "hasImage": false
+    },
+    {
+      "id": "q-tb-it-algodesign-2",
+      "examId": "im",
+      "subjectId": "im-it",
+      "text": "Dynamic programming（動態規劃）與 divide and conquer（分治法）的主要差異是：",
+      "options": [
+        { "label": "A", "text": "Dynamic programming 只能用於排序問題" },
+        { "label": "B", "text": "Dynamic programming 利用 memoization 或 tabulation 避免重複計算重疊子問題" },
+        { "label": "C", "text": "Divide and conquer 一定比 dynamic programming 慢" },
+        { "label": "D", "text": "Dynamic programming 不需要將問題分解為子問題" }
+      ],
+      "answer": "B",
+      "hasImage": false
+    },
+    {
+      "id": "q-tb-it-algodesign-3",
+      "examId": "im",
+      "subjectId": "im-it",
+      "text": "下列哪個問題最適合用 divide and conquer 策略來解決？",
+      "options": [
+        { "label": "A", "text": "找零錢問題（coin change problem）" },
+        { "label": "B", "text": "Merge sort（合併排序）" },
+        { "label": "C", "text": "最短路徑問題（shortest path）" },
+        { "label": "D", "text": "背包問題（knapsack problem）" }
+      ],
+      "answer": "B",
+      "hasImage": false
+    },
+    {
+      "id": "q-tb-it-complexity-1",
+      "examId": "im",
+      "subjectId": "im-it",
+      "text": "下列時間複雜度由小到大的正確排列是：",
+      "options": [
+        { "label": "A", "text": "O(n log n) < O(n²) < O(log n) < O(2ⁿ)" },
+        { "label": "B", "text": "O(log n) < O(n) < O(n log n) < O(n²)" },
+        { "label": "C", "text": "O(n) < O(log n) < O(n²) < O(n log n)" },
+        { "label": "D", "text": "O(1) < O(n²) < O(n) < O(log n)" }
+      ],
+      "answer": "B",
+      "hasImage": false
+    },
+    {
+      "id": "q-tb-it-complexity-2",
+      "examId": "im",
+      "subjectId": "im-it",
+      "text": "Binary search（二元搜尋）在已排序陣列中搜尋一個元素的時間複雜度為：",
+      "options": [
+        { "label": "A", "text": "O(1)" },
+        { "label": "B", "text": "O(log n)" },
+        { "label": "C", "text": "O(n)" },
+        { "label": "D", "text": "O(n log n)" }
+      ],
+      "answer": "B",
+      "hasImage": false
+    },
+    {
+      "id": "q-tb-it-complexity-3",
+      "examId": "im",
+      "subjectId": "im-it",
+      "text": "一個巢狀迴圈的虛擬碼如下：\nfor i = 1 to n\n  for j = 1 to n\n    print(i, j)\n\n請問 print 總共執行幾次？時間複雜度為何？",
+      "options": [
+        { "label": "A", "text": "n 次，O(n)" },
+        { "label": "B", "text": "n² 次，O(n²)" },
+        { "label": "C", "text": "2n 次，O(n)" },
+        { "label": "D", "text": "n log n 次，O(n log n)" }
+      ],
+      "answer": "B",
+      "hasImage": false
+    },
+    {
+      "id": "q-tb-it-errtest-1",
+      "examId": "im",
+      "subjectId": "im-it",
+      "text": "軟體測試中，「黑箱測試（black-box testing）」的特點是：",
+      "options": [
+        { "label": "A", "text": "測試者需要查看程式碼的內部邏輯" },
+        { "label": "B", "text": "只根據輸入與預期輸出來驗證功能，不需要了解內部實作" },
+        { "label": "C", "text": "只能由開發者本人執行" },
+        { "label": "D", "text": "只用於單元測試（unit testing）" }
+      ],
+      "answer": "B",
+      "hasImage": false
+    },
+    {
+      "id": "q-tb-it-errtest-2",
+      "examId": "im",
+      "subjectId": "im-it",
+      "text": "在例外處理（exception handling）中，try-catch 機制的主要目的是：",
+      "options": [
+        { "label": "A", "text": "提高程式的執行速度" },
+        { "label": "B", "text": "在程式執行時期偵測並處理錯誤，避免程式非預期終止" },
+        { "label": "C", "text": "在編譯時期檢查語法錯誤" },
+        { "label": "D", "text": "自動修復程式中的邏輯錯誤" }
+      ],
+      "answer": "B",
+      "hasImage": false
+    },
+    {
+      "id": "q-tb-it-errtest-3",
+      "examId": "im",
+      "subjectId": "im-it",
+      "text": "下列軟體測試層級由小到大的正確順序是：",
+      "options": [
+        { "label": "A", "text": "系統測試 → 整合測試 → 單元測試 → 驗收測試" },
+        { "label": "B", "text": "單元測試 → 整合測試 → 系統測試 → 驗收測試" },
+        { "label": "C", "text": "驗收測試 → 系統測試 → 單元測試 → 整合測試" },
+        { "label": "D", "text": "整合測試 → 單元測試 → 驗收測試 → 系統測試" }
+      ],
+      "answer": "B",
+      "hasImage": false
+    },
+    {
+      "id": "q-tb-it-pointer-1",
+      "examId": "im",
+      "subjectId": "im-it",
+      "text": "在 C 語言中，指標（pointer）儲存的是：",
+      "options": [
+        { "label": "A", "text": "變數的值" },
+        { "label": "B", "text": "變數在記憶體中的位址" },
+        { "label": "C", "text": "變數的資料型別" },
+        { "label": "D", "text": "變數的名稱" }
+      ],
+      "answer": "B",
+      "hasImage": false
+    },
+    {
+      "id": "q-tb-it-pointer-2",
+      "examId": "im",
+      "subjectId": "im-it",
+      "text": "程式中使用 malloc() 配置記憶體後未呼叫 free()，最可能造成什麼問題？",
+      "options": [
+        { "label": "A", "text": "編譯錯誤（compile error）" },
+        { "label": "B", "text": "記憶體洩漏（memory leak）" },
+        { "label": "C", "text": "堆疊溢位（stack overflow）" },
+        { "label": "D", "text": "型別不相容（type mismatch）" }
+      ],
+      "answer": "B",
+      "hasImage": false
+    },
+    {
+      "id": "q-tb-it-pointer-3",
+      "examId": "im",
+      "subjectId": "im-it",
+      "text": "在記憶體管理中，stack 與 heap 的主要差異，下列敘述何者正確？",
+      "options": [
+        { "label": "A", "text": "Stack 用於動態配置，heap 用於區域變數" },
+        { "label": "B", "text": "Stack 的配置與釋放由系統自動管理，heap 需要程式設計師手動管理" },
+        { "label": "C", "text": "Stack 的容量通常比 heap 大" },
+        { "label": "D", "text": "Heap 遵循 LIFO（後進先出）原則" }
+      ],
+      "answer": "B",
+      "hasImage": false
+    }
+  ]
+}

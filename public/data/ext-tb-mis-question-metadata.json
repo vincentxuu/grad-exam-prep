@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "im-mis",
+  "sourceType": "textbook",
+  "sourceLabel": "MIS 教材練習題",
+  "textbook": "Practice Questions (AI-generated)",
+  "textbookUrl": null,
+  "license": null,
+  "status": "active",
+  "totalQuestions": 3,
+  "topicCoverage": {
+    "im-mis-enterprise": 3
+  },
+  "questions": [
+    {
+      "questionId": "q-tb-mis-enterprise-1",
+      "topicId": "im-mis-enterprise",
+      "primarySubtopicId": "im-mis-enterprise-enterprise-processes",
+      "secondaryTags": ["ERP", "process-integration", "fit-gap", "change-management"],
+      "conceptIds": ["im-mis-enterprise-enterprise-processes"],
+      "questionType": "essay",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "考 ERP 導入的資料整合機制、組織挑戰與客製化決策。",
+      "source": {
+        "type": "textbook",
+        "institution": null,
+        "department": null,
+        "textbook": "Practice Questions (AI-generated)",
+        "chapter": "Enterprise Systems, Q1",
+        "year": null,
+        "paperId": "tb-mis-practice",
+        "difficultyVsNtuIm": "similar",
+        "answerAuthority": "model-derived"
+      },
+      "answerSource": { "kind": "model_generated_practice", "official": false, "reviewCount": 0, "note": "AI 產生的練習題，答案為參考解析，非教材或官方來源。" },
+      "answerConfidence": { "level": "medium", "basis": ["AI-generated practice question based on standard MIS curriculum"], "unresolvedIssues": [] },
+      "publication": { "browseEligible": true, "practiceEligible": true, "autoGradeEligible": false, "fullMockEligible": false, "blockers": ["AI 產生的練習題，非考古題"] }
+    },
+    {
+      "questionId": "q-tb-mis-enterprise-2",
+      "topicId": "im-mis-enterprise",
+      "primarySubtopicId": "im-mis-enterprise-enterprise-processes",
+      "secondaryTags": ["BPR", "automation-vs-transformation", "process-redesign", "non-value-added"],
+      "conceptIds": ["im-mis-enterprise-enterprise-processes"],
+      "questionType": "essay",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "考 BPR 流程分析、automation 與 transformation 區分、流程重設計。",
+      "source": {
+        "type": "textbook",
+        "institution": null,
+        "department": null,
+        "textbook": "Practice Questions (AI-generated)",
+        "chapter": "Enterprise Systems, Q2",
+        "year": null,
+        "paperId": "tb-mis-practice",
+        "difficultyVsNtuIm": "similar",
+        "answerAuthority": "model-derived"
+      },
+      "answerSource": { "kind": "model_generated_practice", "official": false, "reviewCount": 0, "note": "AI 產生的練習題，答案為參考解析，非教材或官方來源。" },
+      "answerConfidence": { "level": "medium", "basis": ["AI-generated practice question based on standard MIS curriculum"], "unresolvedIssues": [] },
+      "publication": { "browseEligible": true, "practiceEligible": true, "autoGradeEligible": false, "fullMockEligible": false, "blockers": ["AI 產生的練習題，非考古題"] }
+    },
+    {
+      "questionId": "q-tb-mis-enterprise-3",
+      "topicId": "im-mis-enterprise",
+      "primarySubtopicId": "im-mis-enterprise-enterprise-processes",
+      "secondaryTags": ["push-pull", "supply-chain", "bullwhip-effect", "postponement", "information-sharing"],
+      "conceptIds": ["im-mis-enterprise-enterprise-processes", "im-mis-enterprise-supply-chain"],
+      "questionType": "essay",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "考 push/pull 供應鏈策略比較、bullwhip effect 與資訊共享/延遲策略。",
+      "source": {
+        "type": "textbook",
+        "institution": null,
+        "department": null,
+        "textbook": "Practice Questions (AI-generated)",
+        "chapter": "Enterprise Systems, Q3",
+        "year": null,
+        "paperId": "tb-mis-practice",
+        "difficultyVsNtuIm": "similar",
+        "answerAuthority": "model-derived"
+      },
+      "answerSource": { "kind": "model_generated_practice", "official": false, "reviewCount": 0, "note": "AI 產生的練習題，答案為參考解析，非教材或官方來源。" },
+      "answerConfidence": { "level": "medium", "basis": ["AI-generated practice question based on standard MIS curriculum"], "unresolvedIssues": [] },
+      "publication": { "browseEligible": true, "practiceEligible": true, "autoGradeEligible": false, "fullMockEligible": false, "blockers": ["AI 產生的練習題，非考古題"] }
+    }
+  ]
+}

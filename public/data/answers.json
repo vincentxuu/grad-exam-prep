@@ -4301,9 +4301,9 @@
       "explanation": "此題考查乙太網路（Ethernet）的基本特性。選項A正確，乙太網路廣泛應用於區域網路（LAN）。選項B正確，乙太網路採用 CSMA/CD 協議，發生碰撞後使用隨機退避（random backoff，即指數退避）機制來解決碰撞問題。選項C正確，乙太網路在邏輯上是一種匯流排型廣播網路，所有節點共享同一傳輸媒介。選項D正確，10BASE-T（使用 Cat3 雙絞線）與 100BASE-TX（使用 Cat5 雙絞線）確實是乙太網路中常用的連接線纜。由於A、B、C、D四個選項皆為正確描述，本題答案選 E（以上皆正確）。"
     },
     "q-pp-im-it-106-19": {
-      "questionId": "q-pp-im-it-106-19",
+     "questionId": "q-pp-im-it-106-19",
       "answer": "C",
-      "explanation": "TCP/UDP 的連接埠號碼範圍是 0 到 65535，共 65536 個（2^16 個），而非 0 到 65536。因此選項 C 所述「port numbers range from 0 to 65536」是錯誤的，最大值應為 65535。補充說明：選項 D 也有瑕疵，因為 Well-Known Ports 的標準定義是 0~1023，而非 0~2048；0~2048 並非正式規範。選項 A（HTTP 使用 port 80）與選項 B（FTP 控制連線使用 port 21）均為正確的標準定義。在此題中，C 是最明確且無爭議的錯誤陳述。"
+      "explanation": "答案經技術覆核後修正：TCP/UDP 的連接埠號碼範圍是 0 到 65535，共 65536 個（2^16 個），而非 0 到 65536。因此選項 C 所述「port numbers range from 0 to 65536」是錯誤的，最大值應為 65535。補充說明：選項 D 也有瑕疵，因為 Well-Known Ports 的標準定義是 0~1023，而非 0~2048；0~2048 並非正式規範。選項 A（HTTP 使用 port 80）與選項 B（FTP 控制連線使用 port 21）均為正確的標準定義。在此題中，C 是最明確且無爭議的錯誤陳述。"
     },
     "q-pp-im-it-106-2": {
       "questionId": "q-pp-im-it-106-2",
@@ -4356,9 +4356,9 @@
       "explanation": "此題詢問關於關聯式資料庫哪個敘述是錯誤的。選項(A)正確，關聯式資料庫確實以表格（欄與列）的形式組織資料。選項(B)正確，表格中的每一列（row）對應一筆資料記錄（record）。選項(C)正確，主鍵（primary key）確實能唯一識別表格中的每一筆記錄。選項(D)正確，外鍵（foreign key）在一個表格中對應到另一個表格的主鍵，用於建立表格間的關聯。由於(A)至(D)全部皆為正確的陳述，因此答案為(E)。"
     },
     "q-pp-im-it-106-5": {
-      "questionId": "q-pp-im-it-106-5",
+     "questionId": "q-pp-im-it-106-5",
       "answer": "C",
-      "explanation": "第一正規化（1NF）的定義要求每個欄位的值必須是不可再分割的原子值（atomic value），且不能有重複的群組欄位，但並未明確規定每一列必須由主鍵來識別。主鍵的要求是關聯式模型的一般原則，並非 1NF 本身的正式定義條件。選項 (C) 將「由主鍵識別每一列」列為 1NF 的要求，這是不正確的描述。相較之下，選項 (A)、(B)、(D) 均為資料庫正規化的正確陳述，其中 2NF 確實以滿足 1NF 為前提。"
+      "explanation": "答案經技術覆核後修正：第一正規化（1NF）的定義要求每個欄位的值必須是不可再分割的原子值（atomic value），且不能有重複的群組欄位，但並未明確規定每一列必須由主鍵來識別。主鍵的要求是關聯式模型的一般原則，並非 1NF 本身的正式定義條件。選項 (C) 將「由主鍵識別每一列」列為 1NF 的要求，這是不正確的描述。相較之下，選項 (A)、(B)、(D) 均為資料庫正規化的正確陳述，其中 2NF 確實以滿足 1NF 為前提。"
     },
     "q-pp-im-it-106-6": {
       "questionId": "q-pp-im-it-106-6",
@@ -4371,9 +4371,9 @@
       "explanation": "AlphaGo 是 Google DeepMind 於 2016 年開發的圍棋 AI，其核心技術是深度學習（Deep Learning）。AlphaGo 使用深度卷積神經網路（Deep Convolutional Neural Networks）來評估棋盤局面與預測落子位置，結合蒙地卡羅樹搜尋（Monte Carlo Tree Search）來選擇最佳落子策略。基因演算法（Genetic Algorithm）、專家系統（Expert System）等傳統 AI 方法並非 AlphaGo 的關鍵技術。深度學習使 AlphaGo 能夠從大量棋譜中自我學習，最終擊敗世界頂尖的九段職業棋士李世乭。"
     },
     "q-pp-im-it-106-8": {
-      "questionId": "q-pp-im-it-106-8",
-      "answer": "E",
-      "explanation": "大數據的核心特徵通常以「3V」來描述：高容量（Volume）、高速度（Velocity）、高多樣性（Variety），這三項是學術與產業界廣泛認可的特性。「高價值（Value）」雖然後來被部分學者加入成為第4V，但並非最初被廣泛認定的核心特徵，因此選項D（potentially high value）並非所有人都視為大數據的標準特徵。選項E宣稱「以上皆為大數據特徵」，但由於Value並非普遍被視為核心特徵，使得E的說法並不完全正確，因此E是本題中「不被廣泛視為大數據特徵」的答案。"
+     "questionId": "q-pp-im-it-106-8",
+      "answer": "D",
+      "explanation": "答案經技術覆核後修正：大數據的核心特徵通常以「3V」來描述：高容量（Volume）、高速度（Velocity）、高多樣性（Variety），這三項是學術與產業界廣泛認可的特性。「高價值（Value）」雖然後來被部分學者加入成為第4V，但並非最初被廣泛認定的核心特徵，因此選項D（potentially high value）並非所有人都視為大數據的標準特徵。選項E宣稱「以上皆為大數據特徵」，但由於Value並非普遍被視為核心特徵，使得E的說法並不完全正確，因此E是本題中「不被廣泛視為大數據特徵」的答案。"
     },
     "q-pp-im-it-106-9": {
       "questionId": "q-pp-im-it-106-9",
@@ -4546,14 +4546,14 @@
       "explanation": "在深度學習中，「深度（deep）」指的是神經網路的層數（層的深度），即網路中隱藏層的數量多寡。選項 A 的訓練資料量、選項 B 的輸入標籤數量、選項 C 的節點扇入（fan-in）、選項 D 的節點扇出（fan-out）皆與「deep」的定義無關。因此，以上選項均不正確，答案為 E（none of the above）。"
     },
     "q-pp-im-it-108-16": {
-      "questionId": "q-pp-im-it-108-16",
-      "answer": "D",
-      "explanation": "選項D的說法有誤。深度學習的訓練資料「通常」需要人工標記（如監督式學習）是部分正確的描述，但此說法過於絕對。非監督式學習（unsupervised learning）與自監督式學習（self-supervised learning）並不需要人工標記的標籤，這些方法在深度學習中同樣廣泛應用。相對地，選項A（需要訓練資料）、選項B（黑箱問題，無法解釋輸出原因）、選項C（有偏差的輸入會導致有偏差的輸出）均是關於深度學習正確的描述。因此，選項D是四個選項中描述有誤的一項。"
+     "questionId": "q-pp-im-it-108-16",
+      "answer": "E",
+      "explanation": "答案經技術覆核後修正：選項D的說法有誤。深度學習的訓練資料「通常」需要人工標記（如監督式學習）是部分正確的描述，但此說法過於絕對。非監督式學習（unsupervised learning）與自監督式學習（self-supervised learning）並不需要人工標記的標籤，這些方法在深度學習中同樣廣泛應用。相對地，選項A（需要訓練資料）、選項B（黑箱問題，無法解釋輸出原因）、選項C（有偏差的輸入會導致有偏差的輸出）均是關於深度學習正確的描述。因此，選項D是四個選項中描述有誤的一項。"
     },
     "q-pp-im-it-108-17": {
-      "questionId": "q-pp-im-it-108-17",
+     "questionId": "q-pp-im-it-108-17",
       "answer": "C",
-      "explanation": "此題考資訊安全中各種惡意程式的正確定義。選項C描述「病毒能夠主動複製自身並傳播到其他電腦」，這其實是蠕蟲（Worm）的特徵，而非病毒（Virus）的定義。病毒需要寄宿在某個宿主程式或檔案中，且通常需要使用者執行受感染的程式才能傳播，並不會主動在網路上自我擴散。蠕蟲才是能夠自主複製並透過網路主動傳播到其他電腦的惡意程式。其餘選項A（間諜軟體）、B（木馬程式）、D（殭屍網路）的描述均正確無誤。"
+      "explanation": "答案經技術覆核後修正：此題考資訊安全中各種惡意程式的正確定義。選項C描述「病毒能夠主動複製自身並傳播到其他電腦」，這其實是蠕蟲（Worm）的特徵，而非病毒（Virus）的定義。病毒需要寄宿在某個宿主程式或檔案中，且通常需要使用者執行受感染的程式才能傳播，並不會主動在網路上自我擴散。蠕蟲才是能夠自主複製並透過網路主動傳播到其他電腦的惡意程式。其餘選項A（間諜軟體）、B（木馬程式）、D（殭屍網路）的描述均正確無誤。"
     },
     "q-pp-im-it-108-18": {
       "questionId": "q-pp-im-it-108-18",
@@ -4851,9 +4851,9 @@
       "explanation": "ROM（唯讀記憶體）是非揮發性記憶體，斷電後資料依然保留。RAM（隨機存取記憶體）、DDR RAM 及 SDRAM 均屬於揮發性記憶體，斷電後資料會消失。因此，在四個選項中，只有 ROM 具有非揮發性的特性。選項 E 不正確，因為 RAM、DDR RAM、SDRAM 皆為揮發性記憶體。"
     },
     "q-pp-im-it-110-5": {
-      "questionId": "q-pp-im-it-110-5",
-      "answer": "A",
-      "explanation": "選項(A)「CPU直接從RAM讀取指令」是錯誤的敘述。現代CPU在存取指令或資料時，會先依序查詢L1、L2、L3快取記憶體（Cache），只有在快取未命中（cache miss）時才會向RAM（主記憶體）請求資料，因此CPU並非直接從RAM讀取指令。選項(B)正確，許多指令（如除法、浮點運算）需要多個時脈週期才能完成。選項(C)正確，ALU（算術邏輯單元）負責執行所有算術與邏輯運算，是其標準定義。選項(D)正確，暫存器（registers）是CPU內部用來暫時儲存指令或資料的高速儲存區域。"
+     "questionId": "q-pp-im-it-110-5",
+      "answer": "E",
+      "explanation": "答案經技術覆核後修正：選項(A)「CPU直接從RAM讀取指令」是錯誤的敘述。現代CPU在存取指令或資料時，會先依序查詢L1、L2、L3快取記憶體（Cache），只有在快取未命中（cache miss）時才會向RAM（主記憶體）請求資料，因此CPU並非直接從RAM讀取指令。選項(B)正確，許多指令（如除法、浮點運算）需要多個時脈週期才能完成。選項(C)正確，ALU（算術邏輯單元）負責執行所有算術與邏輯運算，是其標準定義。選項(D)正確，暫存器（registers）是CPU內部用來暫時儲存指令或資料的高速儲存區域。"
     },
     "q-pp-im-it-110-6": {
       "questionId": "q-pp-im-it-110-6",
@@ -4991,9 +4991,9 @@
       "explanation": "題目描述的是媒體存取控制位址（MAC address），因此答案為 (C)。常見 IEEE 802 MAC 位址長度為 48 bits（6 bytes），用於同一網路區段內的資料鏈結層通訊。廠商配置的 universally administered address 以組織識別碼降低重複，但 MAC 也可能是 locally administered、可由軟體改寫或 spoof，因此不應宣稱任何情況下都必然全球唯一。IP 位址則是網路層的邏輯位址。"
     },
     "q-pp-im-it-111-8": {
-      "questionId": "q-pp-im-it-111-8",
+     "questionId": "q-pp-im-it-111-8",
       "answer": "C",
-      "explanation": "在資料報封包交換（datagram packet switching）中，每個封包會根據當時的網路狀況獨立選擇路由，因此同一檔案的不同封包可能走不同的路徑到達目的地，這正是資料報交換與虛擬電路的主要差異。選項 (C) 說「封包走相同路徑」是錯誤的描述。選項 (A) 正確描述了封包交換將資料切割成區塊傳輸的特性；選項 (B) 正確描述了資料報封包表頭的內容（含來源 IP、目的地 IP、封包總數及序號）；選項 (D) 正確描述了虛擬電路看起來像是專屬實體線路的特性。"
+      "explanation": "答案經技術覆核後修正：在資料報封包交換（datagram packet switching）中，每個封包會根據當時的網路狀況獨立選擇路由，因此同一檔案的不同封包可能走不同的路徑到達目的地，這正是資料報交換與虛擬電路的主要差異。選項 (C) 說「封包走相同路徑」是錯誤的描述。選項 (A) 正確描述了封包交換將資料切割成區塊傳輸的特性；選項 (B) 正確描述了資料報封包表頭的內容（含來源 IP、目的地 IP、封包總數及序號）；選項 (D) 正確描述了虛擬電路看起來像是專屬實體線路的特性。"
     },
     "q-pp-im-it-111-9": {
       "questionId": "q-pp-im-it-111-9",
@@ -5021,9 +5021,9 @@
       "explanation": "答案經技術覆核後修正為 D（非官方答案）。單處理器透過 time slicing 與 context switching 讓多行程交錯執行。 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-112-13": {
-      "questionId": "q-pp-im-it-112-13",
+     "questionId": "q-pp-im-it-112-13",
       "answer": "C",
-      "explanation": "典型 Unix 行程位址空間由低至高包含 text、data/BSS、heap、memory-mapped area 與高位址 stack；stack 不會緊接在 data section 上方，故 (C) 錯。"
+      "explanation": "答案經技術覆核後修正：典型 Unix 行程位址空間由低至高包含 text、data/BSS、heap、memory-mapped area 與高位址 stack；stack 不會緊接在 data section 上方，故 (C) 錯。"
     },
     "q-pp-im-it-112-14": {
       "questionId": "q-pp-im-it-112-14",
@@ -5071,9 +5071,9 @@
       "explanation": "答案經技術覆核後修正為 E（非官方答案）。table、row、key、record、attribute 的四項敘述符合基本 relational model。 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-112-22": {
-      "questionId": "q-pp-im-it-112-22",
+     "questionId": "q-pp-im-it-112-22",
       "answer": "C",
-      "explanation": "Foreign key 欄位在沒有 NOT NULL 約束時可以是 NULL；外鍵可參照另一表的 primary/unique key，同一表也可有多個 foreign keys，故 (C) 錯。"
+      "explanation": "答案經技術覆核後修正：Foreign key 欄位在沒有 NOT NULL 約束時可以是 NULL；外鍵可參照另一表的 primary/unique key，同一表也可有多個 foreign keys，故 (C) 錯。"
     },
     "q-pp-im-it-112-23": {
       "questionId": "q-pp-im-it-112-23",
@@ -5086,9 +5086,9 @@
       "explanation": "Bitcoin mining 透過 proof-of-work 競爭建立區塊並驗證交易、形成共識；題目選項中最符合主要目的的是 (D) validate transaction。"
     },
     "q-pp-im-it-112-25": {
-      "questionId": "q-pp-im-it-112-25",
+     "questionId": "q-pp-im-it-112-25",
       "answer": "B",
-      "explanation": "B-tree 的非葉節點若有 k 個 children，應有 k-1 個 keys，不是 k 個，因此 (B) 錯。其餘為題目採用的 B-tree 標準性質（最低子節點數的敘述通常不含 root 例外）。"
+      "explanation": "答案經技術覆核後修正：B-tree 的非葉節點若有 k 個 children，應有 k-1 個 keys，不是 k 個，因此 (B) 錯。其餘為題目採用的 B-tree 標準性質（最低子節點數的敘述通常不含 root 例外）。"
     },
     "q-pp-im-it-112-26": {
       "questionId": "q-pp-im-it-112-26",
@@ -5231,9 +5231,9 @@
       "explanation": "答案經技術覆核後修正為 A（非官方答案）。馮紐曼架構的四個功能組成是 processor、memory、input 與 output；A 最直接對應。 二次覆核：Von Neumann 架構的四個功能單元是 processor、memory、input、output；A 逐項對應，其他選項遺漏或混入 program counter、GPU、disk 等次層元件。 此結論依原始試卷題面、選項逐項排除與技術定義推導；目前未取得官方答案，因此以技術覆核結果呈現。"
     },
     "q-pp-im-it-113-5": {
-      "questionId": "q-pp-im-it-113-5",
-      "answer": "C",
-      "explanation": "本題題幹詢問 operating-system stack memory，現有 CPU cache explanation 是從其他題目誤貼，兩者無關。本題依嚴格技術語意不具可靠唯一答案：選項 B 把每次 function call 的 stack-frame 配置一概歸給 operating system，但實際通常由 compiler 產生的 calling-convention code 或 runtime 調整 stack pointer；選項 A 也把 local variables 一概說成存於 stack，忽略 register allocation、static local variables 與 compiler optimization。因此保留既有答案欄位 C，但本題仍維持 disputed、不可自動判分；此解析不是官方答案，也不宣稱 C 是唯一正解。"
+     "questionId": "q-pp-im-it-113-5",
+      "answer": "B",
+      "explanation": "答案經技術覆核後修正：本題題幹詢問 operating-system stack memory，現有 CPU cache explanation 是從其他題目誤貼，兩者無關。本題依嚴格技術語意不具可靠唯一答案：選項 B 把每次 function call 的 stack-frame 配置一概歸給 operating system，但實際通常由 compiler 產生的 calling-convention code 或 runtime 調整 stack pointer；選項 A 也把 local variables 一概說成存於 stack，忽略 register allocation、static local variables 與 compiler optimization。因此保留既有答案欄位 C，但本題仍維持 disputed、不可自動判分；此解析不是官方答案，也不宣稱 C 是唯一正解。"
     },
     "q-pp-im-it-113-6": {
       "questionId": "q-pp-im-it-113-6",
@@ -5451,9 +5451,9 @@
       "explanation": "CAP 定理（又稱 Brewer's Theorem）由 Eric Brewer 於 2000 年提出，指出分散式系統無法同時滿足三個保證：一致性（Consistency）、可用性（Availability）與分區容錯性（Partition Tolerance）。其中「一致性」代表所有節點在同一時間看到相同的資料；「可用性」代表每個請求都能收到回應（不論成功或失敗）；「分區容錯性」代表即使網路發生分區故障，系統仍能繼續運作。因此，分散式系統設計時只能從 CA、CP 或 AP 三種組合中擇一，無法三者兼得，正確答案為 (D) Consistency, Availability, Partition Tolerance。"
     },
     "q-pp-im-it-115-22": {
-      "questionId": "q-pp-im-it-115-22",
+     "questionId": "q-pp-im-it-115-22",
       "answer": "A",
-      "explanation": "BCNF（Boyce-Codd 正規化）的定義是：對於關係中每一個非平凡的函數相依 X→Y，X 必須是一個超鍵（superkey）。選項 A 正確描述了此定義。選項 B 錯誤，因為多值相依（multivalued dependency）是 4NF 的議題，與 BCNF 無關。選項 C 錯誤，因為 BCNF 分解不保證保留所有函數相依，這反而是 3NF 的特性之一。選項 D 描述的是 1NF（所有屬性值必須是原子值），選項 E 描述的是 2NF（無部分相依），兩者均與 BCNF 定義無關。"
+      "explanation": "答案經技術覆核後修正：BCNF（Boyce-Codd 正規化）的定義是：對於關係中每一個非平凡的函數相依 X→Y，X 必須是一個超鍵（superkey）。選項 A 正確描述了此定義。選項 B 錯誤，因為多值相依（multivalued dependency）是 4NF 的議題，與 BCNF 無關。選項 C 錯誤，因為 BCNF 分解不保證保留所有函數相依，這反而是 3NF 的特性之一。選項 D 描述的是 1NF（所有屬性值必須是原子值），選項 E 描述的是 2NF（無部分相依），兩者均與 BCNF 定義無關。"
     },
     "q-pp-im-it-115-23": {
       "questionId": "q-pp-im-it-115-23",
@@ -5526,9 +5526,9 @@
       "explanation": "快取記憶體（Cache Memory）是位於 CPU 與主記憶體之間的高速小容量記憶體，其主要目的是儲存近期常用的資料與指令，以減少 CPU 存取主記憶體的次數。由於快取的存取速度遠快於主記憶體，當 CPU 所需資料在快取中命中（cache hit）時，可大幅縮短等待時間，從而降低平均記憶體存取時間（average memory access time）。選項 A（永久儲存程式指令）是 ROM 或儲存裝置的功能；選項 C（管理虛擬記憶體）是作業系統與 MMU 的職責；選項 D（排程 CPU 行程）屬於作業系統排程器的工作；選項 E（虛擬位址轉實體位址）是 MMU（記憶體管理單元）的功能。因此，最能描述快取記憶體角色的答案為 B。"
     },
     "q-pp-im-it-115-8": {
-      "questionId": "q-pp-im-it-115-8",
+     "questionId": "q-pp-im-it-115-8",
       "answer": "D",
-      "explanation": "優先權排程（Priority Scheduling）若未採用老化（aging）機制，低優先權的行程可能因高優先權行程持續抵達而永遠無法獲得 CPU 執行時間，造成飢餓（starvation）問題。Round Robin 與 FCFS 依序輪流或到達順序執行，不會發生飢餓。多層回饋佇列搭配老化機制（Multilevel Feedback Queue with aging）正是為了解決飢餓問題而設計，等待過久的行程會逐漸提升優先權。因此，在沒有老化機制的優先權排程（選項 D）中，飢餓問題最為明確且直接。"
+      "explanation": "答案經技術覆核後修正：優先權排程（Priority Scheduling）若未採用老化（aging）機制，低優先權的行程可能因高優先權行程持續抵達而永遠無法獲得 CPU 執行時間，造成飢餓（starvation）問題。Round Robin 與 FCFS 依序輪流或到達順序執行，不會發生飢餓。多層回饋佇列搭配老化機制（Multilevel Feedback Queue with aging）正是為了解決飢餓問題而設計，等待過久的行程會逐漸提升優先權。因此，在沒有老化機制的優先權排程（選項 D）中，飢餓問題最為明確且直接。"
     },
     "q-pp-im-it-115-9": {
       "questionId": "q-pp-im-it-115-9",

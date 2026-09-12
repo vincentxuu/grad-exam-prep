@@ -1,6 +1,6 @@
 'use client'
 
-import { Languages } from 'lucide-react'
+import { Languages } from '@sketchyicons/react'
 import {
   Select,
   SelectContent,

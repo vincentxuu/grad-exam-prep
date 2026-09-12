@@ -47,6 +47,11 @@ jobs:
       # 不帶 --env，對應 wrangler.json 最外層的 name: grad-exam-prep，
       # 也就是 grad-exam-prep.<subdomain>.workers.dev 這個線上站台。
       # account_id 已寫在 wrangler.json，所以只需要 API token 這一個 secret。
+      - name: Apply D1 migrations
+        run: npx wrangler d1 migrations apply grad-exam-prep-db --remote
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+
       - name: Deploy
         run: npm run deploy
         env:

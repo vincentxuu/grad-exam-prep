@@ -1,5 +1,6 @@
 'use client'
 
+import { Check } from '@sketchyicons/react'
 import { CorrectionBlock } from '@/components/chat/correction-block'
 import { SpeakButton } from '@/components/flashcard/speak-button'
 import { TappableText, type WordMark } from '@/components/lexicon/tappable-text'
@@ -65,7 +66,8 @@ export function MessageBubble({
                 variant="outline"
                 className="text-xs border-green-500 text-green-700 dark:text-green-400"
               >
-                ✓ {w}
+                <Check className="h-3 w-3" aria-hidden="true" />
+                {w}
               </Badge>
             ))}
           </div>

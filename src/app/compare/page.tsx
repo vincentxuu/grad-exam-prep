@@ -1,3 +1,4 @@
+import { Check } from '@sketchyicons/react'
 import type { Metadata } from 'next'
 import { exams, getSubjectsByExam } from '@/lib/content'
 
@@ -56,11 +57,25 @@ export default function ComparePage() {
   const csExam = exams.find((e) => e.id === 'cs')!
   const imSubjects = getSubjectsByExam('im')
   const csSubjects = getSubjectsByExam('cs')
+  const imFit = [
+    '有管理或商管背景',
+    '擅長記憶與文字表達',
+    '對MIS、數位轉型感興趣',
+    '可以接受口試評分機制',
+    '目標企業管理顧問或PM職涯',
+  ]
+  const csFit = [
+    '有扎實的CS/數學基礎',
+    '擅長推導與程式設計',
+    '對演算法、系統軟體感興趣',
+    '不喜歡口試不確定性',
+    '目標系統工程師或研究職涯',
+  ]
 
   return (
     <div className="space-y-6 max-w-4xl">
       <div>
-        <h1 className="text-2xl font-bold">兩所比較</h1>
+        <h1 className="text-2xl font-bold font-display">兩所比較</h1>
         <p className="text-muted-foreground text-sm mt-1">
           台大資管所 vs 台大資工所 — 考試形式、難度、備考策略全面對比
         </p>
@@ -99,11 +114,12 @@ export default function ComparePage() {
             適合報考資管所，如果你⋯
           </h2>
           <ul className="text-sm space-y-1 text-muted-foreground">
-            <li>✓ 有管理或商管背景</li>
-            <li>✓ 擅長記憶與文字表達</li>
-            <li>✓ 對MIS、數位轉型感興趣</li>
-            <li>✓ 可以接受口試評分機制</li>
-            <li>✓ 目標企業管理顧問或PM職涯</li>
+            {imFit.map((item) => (
+              <li key={item} className="flex items-start gap-1.5">
+                <Check className="mt-0.5 h-4 w-4 shrink-0 text-blue-600" aria-hidden="true" />
+                {item}
+              </li>
+            ))}
           </ul>
         </div>
         <div className="rounded-lg border p-4 space-y-2">
@@ -111,11 +127,12 @@ export default function ComparePage() {
             適合報考資工所，如果你⋯
           </h2>
           <ul className="text-sm space-y-1 text-muted-foreground">
-            <li>✓ 有扎實的CS/數學基礎</li>
-            <li>✓ 擅長推導與程式設計</li>
-            <li>✓ 對演算法、系統軟體感興趣</li>
-            <li>✓ 不喜歡口試不確定性</li>
-            <li>✓ 目標系統工程師或研究職涯</li>
+            {csFit.map((item) => (
+              <li key={item} className="flex items-start gap-1.5">
+                <Check className="mt-0.5 h-4 w-4 shrink-0 text-violet-600" aria-hidden="true" />
+                {item}
+              </li>
+            ))}
           </ul>
         </div>
       </div>

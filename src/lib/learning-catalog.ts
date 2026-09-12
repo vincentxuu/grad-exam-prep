@@ -1,7 +1,15 @@
+import { imEnglishLearningCatalog } from './im-english-learning'
 import { imItLearningCatalog } from './im-it-learning'
+import { imMisLearningCatalog } from './im-mis-learning'
+import { imStatLearningCatalog } from './im-stat-learning'
 import type { LearningCatalog } from './learning'
 
-const learningCatalogs: LearningCatalog[] = [imItLearningCatalog]
+const learningCatalogs: LearningCatalog[] = [
+  imItLearningCatalog,
+  imMisLearningCatalog,
+  imStatLearningCatalog,
+  imEnglishLearningCatalog,
+]
 
 export function getLearningCatalog(examId: string, subjectId: string) {
   return learningCatalogs.find(

@@ -1,10 +1,13 @@
 'use client'
 
+import { Check, Plus } from '@sketchyicons/react'
 import { useState } from 'react'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
+import { getAuthHeader, isAuthenticated } from '@/lib/auth'
 import { lexiconCardId } from '@/lib/lexicon/normalize'
 import { reviewCard as applySrs } from '@/lib/srs'
+import { addSavedWordServer } from '@/lib/server-storage'
 import { localStorageImpl } from '@/lib/storage'
 import { CORRECTION_KIND_LABEL, type Correction, type SessionSummary } from '@/types/chat'
 
@@ -35,20 +38,29 @@ export function SessionSummaryView({ summary, onRestart }: Props) {
     const cardId = lexiconCardId(headword)
     const existing = localStorageImpl.getSRSCard(cardId)
     if (existing) {
-      // 評為「熟悉」（rating 2），與在閃卡頁按下那顆按鈕等價
-      localStorageImpl.updateSRSCard(cardId, applySrs(existing, 2))
+      const updated = applySrs(existing, 2)
+      localStorageImpl.updateSRSCard(cardId, updated)
+      if (isAuthenticated()) {
+        fetch('/api/srs/review', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', ...getAuthHeader() },
+          body: JSON.stringify({ cardId, rating: 2 }),
+        }).catch(() => {})
+      }
     }
     setPromoted((p) => [...p, headword])
   }
 
   function addWord(headword: string) {
-    localStorageImpl.addSavedWord({
+    const word = {
       headword,
       cardId: lexiconCardId(headword),
       addedAt: Date.now(),
-      source: { kind: 'chat' },
-    })
+      source: { kind: 'chat' as const },
+    }
+    localStorageImpl.addSavedWord(word)
     setAdded((a) => [...a, headword])
+    if (isAuthenticated()) addSavedWordServer(word).catch(() => {})
   }
 
   const grouped = groupByKind(summary.corrections)
@@ -73,7 +85,10 @@ export function SessionSummaryView({ summary, onRestart }: Props) {
               <div key={w} className="flex items-center gap-2 rounded-md border px-3 py-2 text-sm">
                 <span className="font-medium">{w}</span>
                 {promoted.includes(w) ? (
-                  <span className="text-xs text-muted-foreground ml-auto">✓ 已記為熟悉</span>
+                  <span className="ml-auto inline-flex items-center gap-1 text-xs text-muted-foreground">
+                    <Check className="h-3 w-3" aria-hidden="true" />
+                    已記為熟悉
+                  </span>
                 ) : (
                   <Button
                     size="sm"
@@ -133,8 +148,9 @@ export function SessionSummaryView({ summary, onRestart }: Props) {
           <div className="flex flex-wrap gap-1.5">
             {summary.newWords.map((w) =>
               added.includes(w) ? (
-                <Badge key={w} variant="secondary" className="text-xs">
-                  ✓ {w}
+                <Badge key={w} variant="secondary" className="gap-1 text-xs">
+                  <Check className="h-3 w-3" aria-hidden="true" />
+                  {w}
                 </Badge>
               ) : (
                 <Button
@@ -144,7 +160,8 @@ export function SessionSummaryView({ summary, onRestart }: Props) {
                   className="h-7 text-xs"
                   onClick={() => addWord(w)}
                 >
-                  + {w}
+                  <Plus className="h-3 w-3" aria-hidden="true" />
+                  {w}
                 </Button>
               )
             )}

@@ -6,6 +6,7 @@ import {
   findLatestTaskEvidence,
   getCurrentPhase,
   getPlanMonth,
+  getTaskLearningHref,
   getTodayFocusTasks,
   isTaskEvidencePassing,
   localDateKey,
@@ -104,6 +105,11 @@ describe('today learning selectors', () => {
     expect(getPlanMonth(start, new Date('2026-08-31T23:59:00+08:00'), 3)).toBe(1)
     expect(getPlanMonth(start, new Date('2026-09-01T00:00:00+08:00'), 3)).toBe(2)
     expect(getPlanMonth(start, new Date('2027-02-01T00:00:00+08:00'), 3)).toBe(3)
+  })
+
+  it('links subject tasks to their learning overview without loading a catalog in the client', () => {
+    expect(getTaskLearningHref('im', 'im-mis')).toBe('/im/subjects/im-mis')
+    expect(getTaskLearningHref('im', null)).toBeUndefined()
   })
 
   it('uses Taipei calendar boundaries regardless of the runtime timezone', () => {

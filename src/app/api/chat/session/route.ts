@@ -44,7 +44,7 @@ export async function POST(request: NextRequest) {
   const db = env.DB as unknown as Db
   const config = await loadConfig(db)
   const userId = getUserId(request)
-  const unlimited = isUnlimited(request, env)
+  const unlimited = await isUnlimited(request, env)
 
   const session: ChatSession = {
     id: crypto.randomUUID(),

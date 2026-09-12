@@ -111,3 +111,21 @@
 - 工作線 2：建立 open-ended response/grading guard 與 tests；不碰 lesson UI。
 - 工作線 3：只建立 `cs-arch` Pipeline 的內容 artifacts 草稿與 validator；不改共用元件。
 - 主線：整合、處理衝突、跑完整測試與 build，確認 IM-IT 沒有回歸。
+
+## 2026-08-16 整合結果
+
+- 已在 `origin/main@0cd1f91` 建立乾淨整合分支 `agent/multi-subject-learning`，未覆蓋舊工作樹的未提交檔案。
+- 已泛化 learning types、靜態 catalog、overview、lesson component 與 lesson route；目前 catalog 只發布既有 IM-IT。
+- IM-IT 維持 20 lessons、122 cards、28/61 covered subtopics，既有相容 exports 與 URL 不變。
+- 已建立通用 question practice policy；open-ended、`N/A`、結構化子題與未核准題不再產生人工 A–E，也不進完整模擬考。
+- 已建立 `cs-arch` Pipeline draft：1 lesson、8 cards、6 candidate refs、3 sources；全部 `publishEligible=false`、`autoGradeEligible=false`，尚未接入公開 catalog。
+- Next 15 production build 發現 page 不允許額外 named export，已將 `SingleQuestionView` 抽到獨立 component 修復。
+
+### 驗證
+
+- Jest：33 suites、309 tests passed。
+- TypeScript：`tsc --noEmit` passed。
+- Biome：所有本次相關檔案 passed。
+- Content validator：passed；382 個既有 taxonomy warnings 保留，沒有新增 failure。
+- Paper integrity：61 papers、1475 questions，沒有新增 finding。
+- Next production build：54 static pages generated，exit 0。

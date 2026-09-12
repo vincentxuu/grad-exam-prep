@@ -1,5 +1,6 @@
 'use client'
 
+import { ExternalLink } from '@sketchyicons/react'
 import { Suspense } from 'react'
 import { PageLoading } from '@/components/page-loading'
 import { Badge } from '@/components/ui/badge'
@@ -26,7 +27,7 @@ function GuidesContent() {
   return (
     <div className="space-y-6 max-w-3xl">
       <div>
-        <h1 className="text-2xl font-bold">上榜心得導讀</h1>
+        <h1 className="text-2xl font-bold font-display">上榜心得導讀</h1>
         <p className="text-muted-foreground text-sm mt-1">
           這裡只說明每篇心得涵蓋哪些主題，方便你決定要不要點進去。內容請至原文閱讀，著作權屬各原作者所有。
         </p>
@@ -93,7 +94,8 @@ function GuidesContent() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1 rounded-md bg-primary px-3 py-1.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
               >
-                到 {guide.source.platform.split(' ')[0]} 閱讀原文 →
+                到 {guide.source.platform.split(' ')[0]} 閱讀原文
+                <ExternalLink className="h-4 w-4" aria-hidden="true" />
               </a>
             </div>
           </article>
