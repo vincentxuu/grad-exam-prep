@@ -1,0 +1,66 @@
+{
+  "approved": true,
+  "reviewerScope": "修後獨立回歸 im-it-lessons-batch4-trends-nosql.json、對應 audit、11 個 proposedSourceRegistryEntries、兩堂 learningScenario、origin/main authority、batch4 taxonomy moves、lesson/card refs、threshold、非官方揭露、技術內容與可重現 examples。",
+  "summary": {
+    "decision": "approved",
+    "blockingCount": 0,
+    "majorCount": 0,
+    "minorCount": 0,
+    "taxonomyAndRefsAssessment": "兩堂 lesson 共 11 個 unique refs，全部存在於 origin/main、publication.autoGradeEligible=true，且套用 batch4 taxonomy moves 後仍落於各 lesson 的 coveredSubtopicIds。Emerging lesson 未引用 q109-7；Big Data/NoSQL lesson 未引用 disputed q106-8、OCR 破損 q112-20；q111-24、q112-24、q115-25 三個 blockchain refs 均未出現在 lesson 或 card。",
+    "contentAssessment": "Fintech/crowdfunding、voice-only smart speaker、自動駕駛 perception/localization、digital twin、Big Data V、NoSQL models、sharding/replication 與 CAP 的技術敘述整體正確且有必要限定。8 個 worked examples 的輸入、步驟與答案均可重現。兩堂 summary 都明示考古題答案是非官方技術覆核。",
+    "sourceAssessment": "11 個 proposed entries 的 URL 均已由 stealth_fetch 驗證可取得，type 全部屬現有 union 的 documentation 或 official-guidance，IDs 唯一，lesson/card sourceRefs 無 dangling refs。src-mooc-org-edx 僅保留為 edX platform example；新增 src-futurelearn-what-is-a-mooc 的 live page 明確展開 MOOC 為 massive open online course 並解釋其核心形式，lesson/card 已正確引用，前次 major 已清除。",
+    "scenarioAssessment": "兩堂 learningScenario 都採單一主要情境，predict 是 string，mapping 各 5 列且為 everyday/technical 一一映射，examCues 各 4 strings。Emerging scenario 明示產品年代、voice-only 與 perception/localization 邊界；Big Data/NoSQL scenario 明示資料量不必然要求 NoSQL、sharding/replication 差異與 CAP 僅在 partition 下的保證取捨，沒有引入原課未支持的技術主張。"
+  },
+  "issues": [],
+  "checks": {
+    "authorityCommit": "6be3e75302159b1f4801d335916567f7e62f9ba8",
+    "lessonCount": 2,
+    "cardCount": 12,
+    "workedExampleCount": 8,
+    "lessonRefs": {
+      "lesson-im-it-trends-emerging-digital-applications-01": {
+        "minimumPastPaperRefs": 6,
+        "uniquePastPaperRefs": 6,
+        "eligibleAfterMoves": 6,
+        "thresholdMet": true
+      },
+      "lesson-im-it-data-big-data-nosql-01": {
+        "minimumPastPaperRefs": 5,
+        "uniquePastPaperRefs": 5,
+        "eligibleAfterMoves": 5,
+        "thresholdMet": true
+      }
+    },
+    "invalidLessonRefCount": 0,
+    "invalidCardRelationshipCount": 0,
+    "excludedRefsPresent": [],
+    "requiredExclusions": {
+      "q-pp-im-it-109-7": "excluded",
+      "q-pp-im-it-106-8": "excluded_disputed",
+      "q-pp-im-it-112-20": "excluded_ocr_broken",
+      "q-pp-im-it-111-24": "excluded_blockchain_and_disputed",
+      "q-pp-im-it-112-24": "excluded_blockchain",
+      "q-pp-im-it-115-25": "excluded_blockchain"
+    },
+    "blockchainRefsInNoSqlLesson": 0,
+    "nonOfficialDisclosurePresentInBothLessons": true,
+    "proposedSourceEntryCount": 11,
+    "proposedSourceIdsUnique": true,
+    "invalidProposedSourceTypeCount": 0,
+    "allowedProposedSourceTypes": [
+      "documentation",
+      "official-guidance"
+    ],
+    "danglingLessonSourceRefCount": 0,
+    "danglingCardSourceRefCount": 0,
+    "stealthFetchedSourceUrlCount": 11,
+    "stealthFetchFailedSourceUrlCount": 0,
+    "sourceCoverageMajorCount": 0,
+    "moocDefinitionSourceSupported": true,
+    "learningScenarioCount": 2,
+    "learningScenarioSchemaErrors": 0,
+    "learningScenarioMappingRows": [5, 5],
+    "learningScenarioExamCueRows": [4, 4],
+    "draftReviewStatusesPreserved": true
+  }
+}

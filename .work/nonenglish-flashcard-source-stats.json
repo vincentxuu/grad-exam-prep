@@ -1,0 +1,488 @@
+{
+  "im-it": {
+    "topics": [
+      {
+        "id": "im-it-arch",
+        "title": "電腦架構基礎",
+        "importance": 2,
+        "subtopics": [
+          "進制轉換",
+          "數值表示法",
+          "布林代數"
+        ]
+      },
+      {
+        "id": "im-it-prog",
+        "title": "程式語言概念",
+        "importance": 3,
+        "subtopics": [
+          "Java/C++基礎語法",
+          "OOP概念（封裝/繼承/多型）",
+          "程式執行流程"
+        ]
+      },
+      {
+        "id": "im-it-ds",
+        "title": "資料結構",
+        "importance": 5,
+        "subtopics": [
+          "Tree基本概念",
+          "排序演算法",
+          "Graph基礎",
+          "Hash Table"
+        ]
+      },
+      {
+        "id": "im-it-db",
+        "title": "資料庫",
+        "importance": 4,
+        "subtopics": [
+          "SQL語法",
+          "正規化（1NF/2NF/3NF）",
+          "交易管理ACID",
+          "ER Diagram"
+        ]
+      },
+      {
+        "id": "im-it-network",
+        "title": "網路",
+        "importance": 4,
+        "subtopics": [
+          "OSI 7層模型",
+          "TCP/IP協定",
+          "HTTP/HTTPS",
+          "DNS/DHCP"
+        ]
+      },
+      {
+        "id": "im-it-os",
+        "title": "作業系統",
+        "importance": 4,
+        "subtopics": [
+          "Process與Thread",
+          "Memory Management",
+          "File System",
+          "Scheduling"
+        ]
+      },
+      {
+        "id": "im-it-security",
+        "title": "資安",
+        "importance": 3,
+        "subtopics": [
+          "加密技術（對稱/非對稱）",
+          "防火牆",
+          "常見攻擊（SQL Injection, XSS）"
+        ]
+      },
+      {
+        "id": "im-it-ai",
+        "title": "AI/ML（近年必考趨勢）",
+        "importance": 5,
+        "subtopics": [
+          "監督/非監督學習",
+          "CNN/RNN/Transformer",
+          "生成式AI原理",
+          "LLM與ChatGPT",
+          "AI應用倫理"
+        ]
+      }
+    ],
+    "cards": 60,
+    "topicCounts": {
+      "im-it-arch": 0,
+      "im-it-prog": 0,
+      "im-it-ds": 0,
+      "im-it-db": 0,
+      "im-it-network": 0,
+      "im-it-os": 3,
+      "im-it-security": 7,
+      "im-it-ai": 0
+    },
+    "duplicatePrompts": 0,
+    "cardSamples": [
+      {
+        "id": "fc-im-it-001",
+        "topicId": "im-it-data-structures",
+        "prompt": "Hash Table 的平均時間複雜度為何？在什麼情況下會退化為最壞情況？",
+        "answer": "Hash Table 對插入、刪除、搜尋的平均時間複雜度均為 O(1)。當發生大量碰撞（collision）時會退化：若所有 key 都被 hash 到同一個 bucket，時間複雜度退化為 O(n)。解決碰撞的方法有兩種：(1) Chaining（鏈結法）：每個 bucket 維護一個 linked list；(2) Open Addressing（開放定址法）：包含 linear probing、quadratic probing、double hashing。Load factor（載入因子）= 元素數 / ",
+        "pastPaperRef": null
+      },
+      {
+        "id": "fc-im-it-002",
+        "topicId": "im-it-data-structures",
+        "prompt": "Binary Heap 的插入與刪除操作時間複雜度為何？請說明 heapify 過程。",
+        "answer": "Binary Heap（二元堆積）插入與刪除（extract-min/max）的時間複雜度均為 O(log n)。插入過程：將新元素加到末端，再執行 sift-up（bubble-up），與父節點比較並交換直到滿足堆積性質。刪除（extract root）過程：移除根節點，將末端元素移至根，再執行 sift-down（heapify-down），與子節點中較小（min-heap）或較大（max-heap）者交換，直到滿足堆積性質。建立 n 個元素的 heap 可使用 Floyd 演算法，時間複雜度為 O(n)，比逐",
+        "pastPaperRef": null
+      },
+      {
+        "id": "fc-im-it-003",
+        "topicId": "im-it-data-structures",
+        "prompt": "Stack 與 Queue 的主要差異為何？各自適合解決哪類問題？",
+        "answer": "Stack（堆疊）遵循 LIFO（Last In First Out）原則，操作包含 push（推入）與 pop（彈出），均在頂端進行。Queue（佇列）遵循 FIFO（First In First Out）原則，enqueue 在尾端，dequeue 在首端。Stack 適合：函式呼叫堆疊（call stack）、括號匹配檢查、深度優先搜尋（DFS）、運算式求值（中序轉後序）。Queue 適合：廣度優先搜尋（BFS）、CPU 排程、印表機佇列、事件處理。變體：Deque（雙端佇列）兩端均可插入與刪除；Priori",
+        "pastPaperRef": null
+      },
+      {
+        "id": "fc-im-it-004",
+        "topicId": "im-it-algorithms",
+        "prompt": "QuickSort 的平均與最壞時間複雜度為何？如何避免最壞情況？",
+        "answer": "QuickSort 平均時間複雜度為 O(n log n)，最壞情況為 O(n²)，發生在每次 pivot 選到最小或最大值（如已排序陣列使用固定首/尾 pivot）。空間複雜度：遞迴堆疊平均 O(log n)，最壞 O(n)。避免最壞情況的策略：(1) Randomized QuickSort：隨機選 pivot；(2) Median-of-three：取首、中、尾三者中位數作為 pivot；(3) Introsort：結合 QuickSort、HeapSort 與 Insertion Sort，當遞迴深度超過閾",
+        "pastPaperRef": null
+      },
+      {
+        "id": "fc-im-it-005",
+        "topicId": "im-it-algorithms",
+        "prompt": "說明 Topological Sort（拓撲排序）的前提條件與兩種主要演算法。",
+        "answer": "拓撲排序的前提：圖必須是有向無環圖（DAG, Directed Acyclic Graph）。若圖中存在環（cycle），則無法進行拓撲排序。兩種主要演算法：(1) Kahn's Algorithm（BFS 法）：計算所有節點的入度（in-degree），將入度為 0 的節點加入 queue，逐一取出並將其鄰居入度減 1，入度變 0 者加入 queue，重複直到 queue 為空。若最終處理節點數不等於總節點數，表示圖中有環。(2) DFS 法：對每個未訪問節點執行 DFS，在 DFS 返回時將節點加入 stack",
+        "pastPaperRef": null
+      },
+      {
+        "id": "fc-im-it-006",
+        "topicId": "im-it-algorithms",
+        "prompt": "比較 BFS 與 DFS 的特性，各自適合解決哪類圖論問題？",
+        "answer": "BFS（廣度優先搜尋）使用 Queue，逐層探索，找到的路徑是最短路徑（邊數最少）。空間複雜度 O(V)，適合：最短路徑（無權圖）、層次遍歷、二部圖判斷、網路爬蟲。DFS（深度優先搜尋）使用 Stack（或遞迴），沿著一條路徑深入到底再回溯。空間複雜度 O(V)，適合：拓撲排序、強連通分量（SCC）、找環、迷宮求解、回溯法（Backtracking）。兩者時間複雜度均為 O(V+E)（鄰接表）或 O(V²)（鄰接矩陣）。關鍵差異：BFS 保證最短路徑但記憶體用量較大（當圖很寬時）；DFS 記憶體用量較小（當圖很深時",
+        "pastPaperRef": null
+      }
+    ],
+    "papers": 10,
+    "verifiedPapers": 10,
+    "unreliablePapers": [],
+    "questions": 260,
+    "reliableQuestions": 260,
+    "reliableQuestionsWithExplanation": 257,
+    "years": [
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115
+    ],
+    "questionSamples": [
+      {
+        "id": "q-pp-im-it-106-1",
+        "year": 106,
+        "text": "Which of the following design is better (although not the best) than the others?\n(A) A single table containing all fields of data needed for the database.\n(B) Two tables, one contains students' profiles (Student_ID, Student_Name, Student_Address), while the other contains all the other fields.\n(C) Three tables, the 1st",
+        "explanation": "選項D將資料庫分為四張表：學生基本資料表、選課與成績表（Student_ID, Course_ID, GRADE）、教師表（Instructor_ID, Instructor_Name, Course_ID）以及教室表（Classroom, Course_ID, Course_Schedule），符合第三正規化（3NF）的設計原則，各表有明確的主鍵且減少了資料重複。選項A將所有欄位放在同一張表中，造成大量資料冗餘，設計最差。選項B雖然拆出學生基本資料，但其餘所有欄位仍混在一張表中，仍有嚴重的正規化問題。選項C的第二張表混合了課程、教師與成績資訊，存在部分函數相依與遞移相依的問題。選項E以Student_Name（非唯一）作為多張表的"
+      },
+      {
+        "id": "q-pp-im-it-106-2",
+        "year": 106,
+        "text": "Suppose we wish to have a table for each course containing the grade of each registered student. Which of the following design is better than the others? (A) The table contains just two fields: Student_Name, Grade. (B) The table contains just two fields: Student_ID, Grade. (C) The table contains three fields: Student_I",
+        "explanation": "此題設計的是每門課程的成績表，課程本身已由資料表隱含表示，因此只需記錄學生識別碼與成績。選項(B)僅包含 Student_ID 與 Grade 兩個欄位，Student_ID 作為主鍵可唯一識別學生，Grade 是需要記錄的事實，設計簡潔且符合正規化原則。選項(A)以 Student_Name 作為識別欄位，但姓名不具唯一性且可能重複，不適合作為主鍵。選項(C)(E)將 Student_Name 納入，造成遞移相依（Student_Name 依賴 Student_ID），違反第三正規化（3NF），產生資料冗餘。選項(D)(E)包含 Instructor_ID，但授課教師屬於課程資料，應存放於課程表而非成績表，放在此處違反資料庫設計原"
+      },
+      {
+        "id": "q-pp-im-it-106-3",
+        "year": 106,
+        "text": "Which of the following SQL command selects all the records in the \"Customers\" table whose \"Country\" field is \"Taiwan\" and \"City\" field is either \"Taipei\" or \"Kaohsiung\"?\n(A) SELECT * FROM Customers WHERE Country='Taiwan' AND (City='Taipei' OR City='Kaohsiung');\n(B) SELECT ALL FROM Customers WITH Country='Taiwan' AND (C",
+        "explanation": "此題考 SQL 的基本語法。選項 (A) 使用了正確的 SQL 語法：SELECT * 選取所有欄位，FROM 指定資料表，WHERE 加上條件，並以 AND 連接兩個條件，同時用括號將 OR 條件正確包覆，語法完全符合標準 SQL。選項 (B) 使用了不合法的 SELECT ALL 及 WITH 關鍵字，這在標準 SQL 中是錯誤的寫法。選項 (C) 使用逗號分隔條件且 OR 後面只寫 'Kaohsiung' 而缺少欄位名稱，語法不正確。選項 (D) 同樣使用不合法的 SELECT ALL，且缺少必要的 WHERE 關鍵字。因此唯一語法正確的答案是 (A)。"
+      },
+      {
+        "id": "q-pp-im-it-106-4",
+        "year": 106,
+        "text": "Which of the following about relational databases is wrong? (A) the model organizes data into one or more tables of columns and rows (B) a row in a table corresponds to a record of data (C) a primary key uniquely identifies each record in a table (D) a foreign key in one table corresponds to a primary key in another ta",
+        "explanation": "此題詢問關於關聯式資料庫哪個敘述是錯誤的。選項(A)正確，關聯式資料庫確實以表格（欄與列）的形式組織資料。選項(B)正確，表格中的每一列（row）對應一筆資料記錄（record）。選項(C)正確，主鍵（primary key）確實能唯一識別表格中的每一筆記錄。選項(D)正確，外鍵（foreign key）在一個表格中對應到另一個表格的主鍵，用於建立表格間的關聯。由於(A)至(D)全部皆為正確的陳述，因此答案為(E)。"
+      }
+    ]
+  },
+  "im-mis": {
+    "topics": [
+      {
+        "id": "im-mis-theory",
+        "title": "MIS基礎理論",
+        "importance": 5,
+        "subtopics": [
+          "系統生命週期SDLC",
+          "ERP/CRM/SCM系統",
+          "資訊系統分類",
+          "決策支援系統DSS"
+        ]
+      },
+      {
+        "id": "im-mis-strategy",
+        "title": "策略分析工具",
+        "importance": 5,
+        "subtopics": [
+          "Porter 五力分析",
+          "Porter 價值鏈（9大活動）",
+          "PEST分析",
+          "平衡計分卡BSC",
+          "CSF關鍵成功因素",
+          "SWOT分析"
+        ]
+      },
+      {
+        "id": "im-mis-digital",
+        "title": "數位轉型與新興技術",
+        "importance": 4,
+        "subtopics": [
+          "IoT物聯網",
+          "Blockchain區塊鏈",
+          "AI在企業中的應用",
+          "雲端運算",
+          "大數據分析"
+        ]
+      },
+      {
+        "id": "im-mis-management",
+        "title": "管理理論",
+        "importance": 4,
+        "subtopics": [
+          "創新擴散理論",
+          "平台策略與網路效應",
+          "知識管理",
+          "敏捷開發"
+        ]
+      },
+      {
+        "id": "im-mis-current",
+        "title": "時事申論題（每年必考）",
+        "importance": 5,
+        "subtopics": [
+          "生成式AI與ChatGPT對MIS的影響",
+          "ESG永續發展",
+          "元宇宙與AR/VR應用",
+          "Gartner科技趨勢",
+          "資安治理"
+        ]
+      }
+    ],
+    "cards": 50,
+    "topicCounts": {
+      "im-mis-theory": 0,
+      "im-mis-strategy": 0,
+      "im-mis-digital": 0,
+      "im-mis-management": 0,
+      "im-mis-current": 0
+    },
+    "duplicatePrompts": 0,
+    "cardSamples": [
+      {
+        "id": "fc-im-mis-001",
+        "topicId": "im-mis-porter-five-forces",
+        "prompt": "Porter Five Forces（波特五力分析）的五力是什麼？各力如何影響產業獲利潛力？",
+        "answer": "Porter五力分析評估產業競爭強度與獲利能力，五力為：\n\n1. **既有競爭者的威脅**：同業競爭激烈程度，受產業成長率、固定成本、差異化程度影響。\n2. **新進者的威脅**：進入障礙高低（規模經濟、品牌忠誠度、資本需求、政府法規）決定潛在競爭壓力。\n3. **替代品的威脅**：功能相似的替代產品存在，限制訂價上限（如串流影音取代光碟）。\n4. **買方的議價能力**：買方集中、轉換成本低、採購量大時，議價力強，壓縮利潤。\n5. **供應商的議價能力**：供應商集中、無替代投入、供應品為關鍵資源時，議價力強。\n",
+        "pastPaperRef": null
+      },
+      {
+        "id": "fc-im-mis-002",
+        "topicId": "im-mis-porter-five-forces",
+        "prompt": "資訊系統如何影響 Porter Five Forces？請舉例說明 IT 如何改變競爭態勢。",
+        "answer": "資訊系統（IS）能改變五力結構，創造競爭優勢：\n\n1. **降低新進者威脅**：建立高轉換成本系統（如 ERP 深度整合），使新進者難以競爭。\n2. **降低替代品威脅**：透過數位化服務差異化，如 Netflix 演算法推薦強化黏著度。\n3. **降低買方議價力**：CRM 系統累積顧客忠誠度與個人化服務，提高轉換成本。\n4. **降低供應商議價力**：SCM 系統串聯多家供應商，增加採購選項與透明度。\n5. **改變既有競爭**：線上銷售平台（如電商）改變競爭地理範圍，壓低邊際成本。\n\n**關鍵概念**：資訊系",
+        "pastPaperRef": null
+      },
+      {
+        "id": "fc-im-mis-003",
+        "topicId": "im-mis-value-chain",
+        "prompt": "Porter Value Chain（價值鏈）分析中，主要活動（Primary Activities）與支援活動（Support Activities）各包含哪些？",
+        "answer": "Porter價值鏈將企業活動分為創造顧客價值的兩類：\n\n**主要活動（5項）**：\n1. **進料後勤（Inbound Logistics）**：原料接收、倉儲、庫存管理\n2. **生產作業（Operations）**：將投入轉化為產品\n3. **出貨後勤（Outbound Logistics）**：成品倉儲、配送\n4. **行銷與銷售（Marketing & Sales）**：廣告、定價、通路管理\n5. **服務（Service）**：售後服務、維修、客訴處理\n\n**支援活動（4項）**：\n1. **企業基礎設施",
+        "pastPaperRef": null
+      },
+      {
+        "id": "fc-im-mis-004",
+        "topicId": "im-mis-value-chain",
+        "prompt": "如何用 Value Chain 分析找出 IT 投資的優先項目？",
+        "answer": "步驟如下：\n\n1. **繪製企業價值鏈**：列出所有主要與支援活動，標示各活動的成本與差異化貢獻度。\n\n2. **識別痛點與瓶頸**：哪些活動成本最高？哪些最影響顧客滿意度？（如出貨後勤延誤導致客訴）\n\n3. **評估 IT 介入可行性**：\n   - 標準化、重複性高的活動 → 適合 ERP/自動化\n   - 顧客互動密集的活動 → 適合 CRM\n   - 跨企業協作的活動 → 適合 SCM\n\n4. **計算 ROI**：比較 IT 投入成本 vs. 降低成本或增加營收的預期效益。\n\n5. **與競爭者比較**：",
+        "pastPaperRef": null
+      },
+      {
+        "id": "fc-im-mis-005",
+        "topicId": "im-mis-erp",
+        "prompt": "ERP（Enterprise Resource Planning）系統的核心概念、主要模組，以及導入的主要挑戰為何？",
+        "answer": "**核心概念**：ERP 是整合企業所有職能（財務、製造、HR、供應鏈、銷售）於單一共享資料庫的資訊系統，消除資訊孤島，實現即時跨部門資訊流通。\n\n**主要模組**：\n- 財務會計（Financial Accounting）\n- 採購與庫存管理（MM）\n- 銷售與配送（SD）\n- 生產規劃（PP）\n- 人力資源（HCM）\n- 專案管理（PM）\n\n**主要挑戰**：\n1. **高成本**：授權費、顧問費、客製化費用龐大\n2. **業務流程再造（BPR）**：需配合系統調整既有流程，阻力大\n3. **變革管理**：員工",
+        "pastPaperRef": null
+      },
+      {
+        "id": "fc-im-mis-006",
+        "topicId": "im-mis-erp",
+        "prompt": "ERP 導入策略有哪幾種？Big Bang、Phased、Parallel 各有何優缺點？",
+        "answer": "ERP 導入有三種主要策略：\n\n**1. Big Bang（一次全上）**\n- 優點：快速完成、無需長期維護雙系統、成本較低\n- 缺點：風險最高、上線當天若出問題影響全業務、員工壓力大\n- 適用：小型企業或業務單純者\n\n**2. Phased（分階段）**\n- 優點：風險分散、每階段可學習改善、員工適應時間充裕\n- 缺點：導入期長、期間需維護新舊系統介面、整合複雜度高\n- 適用：大型、多事業單位企業\n\n**3. Parallel（並行）**\n- 優點：可驗證新系統正確性（與舊系統比對輸出）、回退容易\n- 缺點：需同",
+        "pastPaperRef": null
+      }
+    ],
+    "papers": 10,
+    "verifiedPapers": 10,
+    "unreliablePapers": [],
+    "questions": 37,
+    "reliableQuestions": 37,
+    "reliableQuestionsWithExplanation": 37,
+    "years": [
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115
+    ],
+    "questionSamples": [
+      {
+        "id": "q-pp-im-mis-106-1",
+        "year": 106,
+        "text": "Competitive strategies that firms can employ to deal with competitive forces include cost leadership strategy, differentiation strategy, innovation strategy, etc.\n(1) Please give two examples to explain how firms can use information systems (IS) or information technologies (IT) to support the differentiation strategy. ",
+        "explanation": "此題為問答題，無選擇題選項。(1) 差異化策略的IS/IT應用範例：①企業可利用CRM系統（顧客關係管理系統）蒐集並分析顧客行為與偏好，提供個人化服務與推薦，使顧客感受到與眾不同的體驗，如Amazon的推薦引擎；②企業可透過ERP整合供應鏈與生產資訊，搭配IoT感測器即時監控產品品質，確保高品質產品一致性，如Apple透過精密的供應鏈管理系統保持產品品質差異化。(2) 針對採用差異化策略的企業，IT策略與管理建議：企業應將IT投資集中在能強化獨特價值主張的系統上，例如客製化平台、數據分析與AI能力；應建立靈活的IT架構（如微服務、雲端平台），以快速回應市場變化並持續創新；IT治理上需強調IT與業務策略的高度對齊（IT-Busines"
+      },
+      {
+        "id": "q-pp-im-mis-106-2",
+        "year": 106,
+        "text": "Sharing economy refers to \"peer-to-peer-based activities of obtaining, giving, or sharing the access to goods and services, coordinated through community-based online services.\" Uber and AirBnB represent two famous examples of the sharing economy.\n(1) What are the major challenges for the sharing economy? (12%)\n(2) Ple",
+        "explanation": "本題為論述題，無標準選項，以下提供參考答案。共享經濟的主要挑戰包括：(1) 信任與安全問題：陌生人之間交易缺乏信任基礎，存在詐欺、人身安全或財產損失風險；(2) 監管與法律問題：現行法規多針對傳統產業設計，共享經濟的服務提供者（如 Uber 司機、Airbnb 房東）常處於法律灰色地帶；(3) 品質不一致問題：服務品質因個人提供者而異，缺乏標準化機制難以保障消費者體驗；(4) 保險與責任歸屬問題：發生意外時，責任歸屬於平台、提供者或使用者不明確。針對信任問題，可開發一套基於區塊鏈的去中心化評價與身分驗證系統：將每位用戶的交易紀錄、評價與身分資訊儲存於不可竄改的區塊鏈上，並結合政府數位身分（eID）驗證真實身份，使雙方在交易前即可查閱"
+      },
+      {
+        "id": "q-pp-im-mis-106-3",
+        "year": 106,
+        "text": "The rise of Android platform signals the business value and strategic importance of open source software (OSS). While OSS can greatly reduce system development barrier, its license restricts the use of OSS software, and is an important consideration when adopting OSS in system development. Answer the following question",
+        "explanation": "本題為問答題，無選項，以下為各小題解答摘要。(1) 開放原始碼軟體（OSS）是指原始碼公開、任何人均可自由使用、修改與散布的軟體，通常由社群共同維護與開發。(2) GPL授權的核心條款包含：必須公開修改後的原始碼（Copyleft原則）、衍生作品必須同樣採用GPL授權、散布時必須附上原始碼或提供取得方式，確保軟體的自由性得以延續。(3) 當開發者希望允許商業公司將程式碼納入閉源專有軟體中使用，或希望吸引更多企業採用而不強制要求公開衍生作品原始碼時，應選擇Apache License而非GPL，因為Apache License屬於寬鬆型授權（permissive license），不具有Copyleft的「傳染性」要求。(4) 企業參"
+      },
+      {
+        "id": "q-pp-im-mis-106-4",
+        "year": 106,
+        "text": "In addition to relational database, we have witness the raise of the so called No-SQL database. Answer the following questions regarding the No-SQL database.\n(1) How are relational database and No-SQL database different in terms of the ACID (Atomicity, Consistency, Isolation, Durability) properties, schema, and scalabi",
+        "explanation": "此題為開放式問答題，無選擇題選項。(1) ACID特性方面：關聯式資料庫嚴格遵守ACID，確保每筆交易的原子性、一致性、隔離性與持久性；NoSQL資料庫通常採用BASE模型（Basically Available, Soft state, Eventually consistent），為了高可用性與水平擴展而放寬一致性要求。Schema方面：關聯式資料庫採用固定schema，資料結構須預先定義；NoSQL則為schema-less或schema-flexible，允許儲存非結構化或半結構化資料。可擴展性方面：關聯式資料庫主要採垂直擴展（scale-up），NoSQL設計上支援水平擴展（scale-out），更容易應對大規模分散式環境"
+      }
+    ]
+  },
+  "im-stat": {
+    "topics": [
+      {
+        "id": "im-stat-descriptive",
+        "title": "描述性統計",
+        "importance": 4,
+        "subtopics": [
+          "平均數/中位數/眾數",
+          "標準差與變異數",
+          "偏態與峰度",
+          "直方圖與盒鬚圖"
+        ]
+      },
+      {
+        "id": "im-stat-probability",
+        "title": "機率基礎",
+        "importance": 4,
+        "subtopics": [
+          "條件機率",
+          "貝氏定理",
+          "常見機率分佈（常態/二項/Poisson）"
+        ]
+      },
+      {
+        "id": "im-stat-inference",
+        "title": "推論統計",
+        "importance": 5,
+        "subtopics": [
+          "抽樣分佈與中央極限定理",
+          "信賴區間",
+          "假設檢定（t檢定/z檢定）",
+          "卡方檢定",
+          "ANOVA"
+        ]
+      },
+      {
+        "id": "im-stat-regression",
+        "title": "迴歸分析",
+        "importance": 4,
+        "subtopics": [
+          "單元線性迴歸",
+          "多元線性迴歸",
+          "迴歸係數解釋",
+          "R²與F檢定"
+        ]
+      }
+    ],
+    "cards": 50,
+    "topicCounts": {
+      "im-stat-descriptive": 3,
+      "im-stat-probability": 2,
+      "im-stat-inference": 0,
+      "im-stat-regression": 12
+    },
+    "duplicatePrompts": 0,
+    "cardSamples": [
+      {
+        "id": "fc-im-stat-001",
+        "topicId": "im-stat-descriptive",
+        "prompt": "樣本變異數 (sample variance) 的公式為何？為何除以 n−1 而非 n？",
+        "answer": "公式：S² = Σ(xᵢ − x̄)² / (n−1)\n\n除以 n−1（Bessel's correction）是為了使 S² 成為母體變異數 σ² 的不偏估計量（unbiased estimator）。\n\n若除以 n，E[S²] = (n−1)/n · σ² ≠ σ²，存在向下偏誤。\n\n直觀解釋：計算樣本偏差時已用掉 x̄，等於消耗了 1 個自由度，故有效自由度僅剩 n−1。\n\n使用時機：從樣本估計母體變異數、進行 t 檢定或 F 檢定時。",
+        "pastPaperRef": null
+      },
+      {
+        "id": "fc-im-stat-002",
+        "topicId": "im-stat-descriptive",
+        "prompt": "偏度 (skewness) 與峰度 (kurtosis) 的定義及意義為何？",
+        "answer": "偏度：γ₁ = E[(X−μ)³] / σ³\n- γ₁ > 0：右偏（正偏），尾巴向右延伸，均值 > 中位數 > 眾數\n- γ₁ < 0：左偏（負偏），尾巴向左延伸\n- γ₁ = 0：對稱分配\n\n峰度：γ₂ = E[(X−μ)⁴] / σ⁴\n- 常態分配的峰度 = 3\n- 超額峰度（excess kurtosis）= γ₂ − 3\n- > 0 (leptokurtic)：尖峰厚尾；< 0 (platykurtic)：低峰薄尾\n\n使用時機：描述資料分佈形狀、檢驗常態性假設前的初步分析。",
+        "pastPaperRef": null
+      },
+      {
+        "id": "fc-im-stat-003",
+        "topicId": "im-stat-descriptive",
+        "prompt": "Chebyshev 不等式的內容為何？與常態分配的比較？",
+        "answer": "Chebyshev 不等式：對任意分配（只要有限變異數），\nP(|X − μ| ≥ kσ) ≤ 1/k²\n等價地：P(|X − μ| < kσ) ≥ 1 − 1/k²\n\n常見數值：\n- k=2：P ≥ 75%（常態分配為 95.44%）\n- k=3：P ≥ 88.9%（常態分配為 99.73%）\n\n特點：\n- 適用於任何分配，是通用下界\n- 界限較寬鬆，實際機率往往更大\n- 無需知道分配形狀\n\n使用時機：母體分配未知時，保守估計資料落在均值附近某範圍的機率。",
+        "pastPaperRef": null
+      },
+      {
+        "id": "fc-im-stat-004",
+        "topicId": "im-stat-probability",
+        "prompt": "說明條件機率 (conditional probability) 與 Bayes' theorem 的公式及應用。",
+        "answer": "條件機率：P(A|B) = P(A∩B) / P(B)，P(B) > 0\n\nBayes' theorem：\nP(A|B) = P(B|A) · P(A) / P(B)\n\n全機率公式展開分母：\nP(B) = Σᵢ P(B|Aᵢ) · P(Aᵢ)\n\n其中 {A₁,...,Aₙ} 為樣本空間的分割。\n\n術語：\n- P(A)：先驗機率 (prior)\n- P(A|B)：後驗機率 (posterior)\n- P(B|A)：概似函數 (likelihood)\n\n使用時機：疾病篩檢（已知陽性結果，求真正患病機率）、垃圾郵件過濾、",
+        "pastPaperRef": null
+      },
+      {
+        "id": "fc-im-stat-005",
+        "topicId": "im-stat-probability",
+        "prompt": "隨機變數 X 的期望值 E[X] 與 Var(X) 的基本性質（線性運算規則）。",
+        "answer": "期望值性質：\n- E[c] = c（常數）\n- E[cX] = c·E[X]\n- E[X+Y] = E[X] + E[Y]（無論獨立與否）\n- E[XY] = E[X]·E[Y]（X, Y 獨立時）\n\n變異數性質：\n- Var(X) = E[X²] − (E[X])²\n- Var(c) = 0\n- Var(cX) = c²·Var(X)\n- Var(X+Y) = Var(X) + Var(Y) + 2Cov(X,Y)\n- Var(X+Y) = Var(X) + Var(Y)（X, Y 獨立時）\n- Var(X−Y)",
+        "pastPaperRef": null
+      },
+      {
+        "id": "fc-im-stat-006",
+        "topicId": "im-stat-distribution-normal",
+        "prompt": "常態分配 N(μ, σ²) 的 PDF、特性，以及標準化公式。",
+        "answer": "PDF：f(x) = (1/√(2πσ²)) · exp[−(x−μ)²/(2σ²)]，x ∈ (−∞, +∞)\n\n標準化：Z = (X − μ) / σ ~ N(0,1)\n\n主要特性：\n- 對稱於均值 μ，單峰\n- 均值 = 中位數 = 眾數 = μ\n- 偏度 = 0，峰度 = 3\n- 68-95-99.7 法則：μ±σ 含 68.27%，μ±2σ 含 95.44%，μ±3σ 含 99.73%\n- 線性組合仍為常態：若 X~N(μ₁,σ₁²)，Y~N(μ₂,σ₂²) 獨立，則 X+Y~N(μ₁+μ₂, σ₁²+σ",
+        "pastPaperRef": null
+      }
+    ],
+    "papers": 10,
+    "verifiedPapers": 2,
+    "unreliablePapers": [],
+    "questions": 5,
+    "reliableQuestions": 5,
+    "reliableQuestionsWithExplanation": 5,
+    "years": [
+      114,
+      115
+    ],
+    "questionSamples": [
+      {
+        "id": "q-pp-im-stat-114-4",
+        "year": 114,
+        "text": "Amy analyzes the factors that determine how much garbage a family produces per week. Factors including the size of the house, the number of children, and the number of adults who are usually home during the day are considered. Below is the report produced by a regression routine. Answer the following questions. You sho",
+        "explanation": "本題為多元線性迴歸的計算與假設檢定題，無選項，以A代表完整解答。(1) 調整後R²公式為 Adj R² = 1 − (1 − R²)×(n−1)/(n−k−1)，代入 n=440、k=3、R²=0.170，得 Adj R² = 1 − 0.830×(439/436) ≈ 0.1643。(2) 殘差自由度 Df Residuals = n − k − 1 = 440 − 3 − 1 = 436；截距的 t 值 = 係數/標準誤 = 7.1943/1.092 ≈ 6.59。(3) 對所有自變數係數是否聯合為零進行F檢定：F統計量為29.80，對應p值為1.52×10⁻¹⁷，遠小於顯著水準0.05，故拒絕虛無假設H₀，結論為至少一個自變數"
+      },
+      {
+        "id": "q-pp-im-stat-114-5",
+        "year": 114,
+        "text": "Let Y₁, Y₂, ..., Yₜ be an identical and independent sample from population Z with mean μ and variance σ². T is a multiple of 5. Define estimator m as:\n\nm = (1/T) Σ g(i) · Yᵢ\n\nwhere g(i) = 1 + (i mod 5) and mod is the modular operator.\n\n(1) Prove that m is an unbiased estimator for μ. (10%)\n\n(2) What is the variance of ",
+        "explanation": "本題為論述/計算題，並無選項可選，以下提供兩小題的解答說明。(1) 無偏性證明：由於 T 為 5 的倍數，g(i) = 1 + (i mod 5) 在每一個週期（i=1~5）的值依序為 2, 3, 4, 5, 1，總和為 15，故 Σg(i) = (T/5)·15 = 3T。因此 E[m] = (1/T)·Σg(i)·E[Yᵢ] = (1/T)·3T·μ = 3μ，此結果顯示 m 並非 μ 的無偏估計量，除非題目中有額外的正規化條件；若題意要求 m 為無偏估計量，則可能係數應調整為 (1/3T) 或 g(i) 另有定義。(2) 變異數計算：假設原始定義，Var(m) = (1/T²)·Σ[g(i)]²·σ²，在 T/5 個週期內 Σ"
+      },
+      {
+        "id": "q-pp-im-stat-115-3",
+        "year": 115,
+        "text": "Let X₁ and X₂ have the joint probability mass function\n\nf(x₁, x₂) = c(|x₁| + |x₂| + |x₁ + x₂|) / (1+|x₁|)(1+|x₂|)(1+|x₁+x₂|),  x₁ ∈ {-1, 0, 1}, x₂ ∈ {0, 1}\n             0,  otherwise\n\n(A). Determine the normalizing constant c. (5%)\n(B). Find the joint probability mass function of Y₁ = X₁ + X₂ and Y₂ = X₁ - X₂. (5%)\n(C)",
+        "explanation": "此題為計算題，(A)(B)(C) 為子題而非選項。(A) 求正規化常數 c：列出六個點的函數值後加總，c·(1/2+0+1/2+1/2+1/2+1/3)=c·7/3=1，故 c=3/7。(B) 令 Y₁=X₁+X₂、Y₂=X₁-X₂，逐一對應六個點得到聯合 PMF：P(Y₁=-1,Y₂=-1)=3/14、P(Y₁=0,Y₂=0)=0、P(Y₁=1,Y₂=1)=3/14、P(Y₁=0,Y₂=-2)=3/14、P(Y₁=1,Y₂=-1)=3/14、P(Y₁=2,Y₂=0)=1/7。(C) Y₁ 的邊際 PMF 為 P(Y₁=-1)=3/14、P(Y₁=0)=3/14、P(Y₁=1)=3/7、P(Y₁=2)=1/7，總和驗算為 1，結果正"
+      },
+      {
+        "id": "q-pp-im-stat-115-4",
+        "year": 115,
+        "text": "Let Y₁, Y₂, and Y₃ be an independent and identically distributed random sample from a distribution with mean μ and variance σ² < ∞. Consider the following estimators for μ:\n\nm₁ = Y₁,  m₂ = (Y₁ + αY₂) / (1 + α),  m₃ = (Y₁ + 2Y₂ + βY₃) / (1 + 2 + β),  where α > 0 and β > 0.\n\n(A). Determine which of the estimators m₁, m₂,",
+        "explanation": "(A) 三個估計量 m₁、m₂、m₃ 皆為 μ 的不偏估計量：E[m₁]=μ；E[m₂]=(μ+αμ)/(1+α)=μ（對任意 α>0 成立）；E[m₃]=(μ+2μ+βμ)/(3+β)=μ（對任意 β>0 成立）。(B) Var(m₂)=σ²(1+α²)/(1+α)²，對 α 微分並令其為零，解得 2α−2=0，故 α=1 時變異數最小，此時 m₂=(Y₁+Y₂)/2 為最有效。(C) Var(m₃)=σ²(5+β²)/(3+β)²，對 β 微分並令其為零，解得 6β−10=0，故 β=5/3 時變異數最小，此時各觀測值的權重與其係數平方和最小化。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,642 @@
+[
+  {
+    "id": "q-pp-im-it-110-1",
+    "year": 110,
+    "number": 1,
+    "text": "Which of the following is wrong about the PCs you can buy nowadays? (A) floppy disc drive is typically not equipped (B) hard disc is typically in the range of 500GB-4TB (C) CPU clock ranges in 2-4 MHz (D) RAM is typically in the range of 4-16GB (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "C",
+    "explanation": "選項 C 的敘述是錯誤的，因為現代 CPU 的時脈頻率應以 GHz（十億赫茲）為單位，通常介於 2-4 GHz，而非 2-4 MHz（百萬赫茲）。2-4 MHz 的時脈速度是 1970 至 1980 年代早期電腦（如 Apple II、早期 IBM PC）的規格，與現代處理器相差約一千倍。其他選項皆為正確描述：現代電腦確實不再配備軟碟機（A）、硬碟容量通常在 500GB 至 4TB 之間（B）、RAM 通常介於 4-16GB（D）。"
+  },
+  {
+    "id": "q-pp-im-it-110-2",
+    "year": 110,
+    "number": 2,
+    "text": "Which of the following is wrong about file extension? (A) .py is a Python file (B) .bin is a Binary disc image (C) .iso is an ISO disc image (D) .tar is a UNIX-based archive file (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "B",
+    "explanation": "此題問哪個關於副檔名的敘述是錯誤的。選項 (A) .py 是 Python 程式檔，(C) .iso 是 ISO 光碟映像檔，(D) .tar 是 UNIX 系統的封存檔，這三個描述均正確。選項 (B) 說 .bin 是「Binary disc image（二進位光碟映像）」，此敘述不正確：.bin 是一種泛用的二進位檔案格式，可代表執行檔、韌體或任意二進位資料，並非專指光碟映像。雖然 .bin 搭配 .cue 可用來表示 CD 映像，但單獨的 .bin 副檔名並不專屬於光碟映像，因此選項 (B) 的說法有誤。"
+  },
+  {
+    "id": "q-pp-im-it-110-3",
+    "year": 110,
+    "number": 3,
+    "text": "Which of the following is not a file format for storing images? (A) JPEG (B) PNG (C) BMP (D) TIFF (E) all the above are image file format (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "E",
+    "explanation": "JPEG、PNG、BMP 與 TIFF 皆為常見的影像檔案格式，因此選項 A 至 D 都是合法的圖片格式，沒有任何一個「不是」圖片格式。題目要求選出「不是圖片格式」的選項，但四個選項全部都是圖片格式，符合題目說明中「若以上皆無法選擇時才選此項」的條件。因此正確答案為 (E)，表示以上所列皆為圖片檔案格式。"
+  },
+  {
+    "id": "q-pp-im-it-110-4",
+    "year": 110,
+    "number": 4,
+    "text": "Which of the following storage is non-volatile? (A) ROM (B) RAM (C) DDR RAM (D) SDRAM (E) all the above are non-volatile (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "A",
+    "explanation": "ROM（唯讀記憶體）是非揮發性記憶體，斷電後資料依然保留。RAM（隨機存取記憶體）、DDR RAM 及 SDRAM 均屬於揮發性記憶體，斷電後資料會消失。因此，在四個選項中，只有 ROM 具有非揮發性的特性。選項 E 不正確，因為 RAM、DDR RAM、SDRAM 皆為揮發性記憶體。"
+  },
+  {
+    "id": "q-pp-im-it-110-5",
+    "year": 110,
+    "number": 5,
+    "text": "Which of the following is wrong about CPUs? (A) CPU fetches instructions directly from RAM (B) an instruction may take several clock cycles to execute (C) ALU is the electronic circuitry that executes all arithmetic and logical operations (D) inside CPU, registers are temporary storage areas for instructions or data (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "A",
+    "explanation": "選項(A)「CPU直接從RAM讀取指令」是錯誤的敘述。現代CPU在存取指令或資料時，會先依序查詢L1、L2、L3快取記憶體（Cache），只有在快取未命中（cache miss）時才會向RAM（主記憶體）請求資料，因此CPU並非直接從RAM讀取指令。選項(B)正確，許多指令（如除法、浮點運算）需要多個時脈週期才能完成。選項(C)正確，ALU（算術邏輯單元）負責執行所有算術與邏輯運算，是其標準定義。選項(D)正確，暫存器（registers）是CPU內部用來暫時儲存指令或資料的高速儲存區域。"
+  },
+  {
+    "id": "q-pp-im-it-110-6",
+    "year": 110,
+    "number": 6,
+    "text": "Which of the following is wrong? (A) screen resolution is measured in \"dpi\" (B) printer resolution is measured in \"dpi\" (C) Full HD refers to a resolution of 1920x1080 pixels (D) Ultra HD refers to a screen resolution of 3840x2160 pixels (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "A",
+    "explanation": "螢幕解析度通常以像素數量（如 1920×1080）來表示，而不是以「dpi（每英寸點數）」衡量，因此選項 (A) 的說法是錯誤的。dpi 是用來衡量印表機或掃描器等輸出裝置的解析度單位，代表每英寸可輸出的墨點數量，故選項 (B) 正確。Full HD 確實代表 1920×1080 像素的解析度，Ultra HD（4K）也確實代表 3840×2160 像素，因此選項 (C) 與 (D) 均正確。綜合以上分析，唯一錯誤的敘述為選項 (A)。"
+  },
+  {
+    "id": "q-pp-im-it-110-7",
+    "year": 110,
+    "number": 7,
+    "text": "Which of the following device allows the communication between dissimilar networks? (A) bridge (B) gateway (C) switch (D) hub (E) router.",
+    "currentAnswer": "B",
+    "explanation": "Gateway（閘道器）是負責連接異質網路（dissimilar networks）的裝置，能夠在使用不同協定或架構的網路之間進行轉換與通訊。Bridge（橋接器）和 Switch（交換器）主要用於連接相同類型的網路區段，操作於資料連結層。Hub（集線器）是實體層裝置，僅負責訊號廣播，不具備網路轉換功能。Router（路由器）雖然能連接多個網路，但主要針對相同協定（如 IP）的網路進行封包轉送，而 Gateway 才是專門處理異質網路間協定轉換的裝置。"
+  },
+  {
+    "id": "q-pp-im-it-110-8",
+    "year": 110,
+    "number": 8,
+    "text": "Which of the following extends a private network across a public network and enables users to send and receive data across shared or public networks as if their computing devices were directly connected to the private network? (A) Broadband Global Area Network (B) virtual private network (VPN) (C) Extranet (D) Intranet (E) none of the above.",
+    "currentAnswer": "B",
+    "explanation": "VPN（Virtual Private Network，虛擬私人網路）的核心功能就是將私有網路延伸至公共網路上，讓使用者可以透過公共網路傳送與接收資料，同時感覺如同直接連接在私有網路中。Broadband Global Area Network（BGAN）是一種衛星寬頻服務，並非此用途。Extranet 是允許外部夥伴存取部分內部網路的延伸網路，Intranet 則是企業內部私有網路，兩者都不具備「跨公共網路延伸私有網路」的特性。因此，符合題目描述的正確答案是 (B) VPN。"
+  },
+  {
+    "id": "q-pp-im-it-110-9",
+    "year": 110,
+    "number": 9,
+    "text": "Compared to 4G technology standard for broadband cellular networks, which of the following is not a major advantage of 5G? (A) higher data speeds (B) higher latency (C) massive network capacity (D) increased availability (E) lower network energy usage.",
+    "currentAnswer": "B",
+    "explanation": "5G相較於4G的主要優勢包括：更高的資料傳輸速度、龐大的網路容量、更廣泛的可用性，以及更低的網路能源消耗。然而，「更高的延遲（higher latency）」並非5G的優勢，恰恰相反，5G的重要特點之一是極低的延遲（ultra-low latency），這與選項B所述相反。因此，選項B「更高的延遲」不是5G的優勢，而是一個缺點描述，故為正確答案。"
+  },
+  {
+    "id": "q-pp-im-it-110-10",
+    "year": 110,
+    "number": 10,
+    "text": "Which of the following is a general-purpose, developmental, modeling language in the field of software engineering that is intended to provide a standard way to visualize the design of a system? (A) Smalltalk (B) Object-oriented programming (C) JavaScript (D) UML (E) Perl.",
+    "currentAnswer": "D",
+    "explanation": "UML（統一塑模語言，Unified Modeling Language）是軟體工程領域中用來視覺化系統設計的標準通用建模語言。它提供了一套標準的圖形符號與符號，用來描述軟體系統的結構、行為和架構。Smalltalk、JavaScript 和 Perl 都是程式語言，而非建模語言；Object-oriented programming（物件導向程式設計）是一種程式設計典範，並非建模語言。因此，符合題意「用於視覺化系統設計的通用建模語言」的答案是 UML，即選項 D。"
+  },
+  {
+    "id": "q-pp-im-it-110-11",
+    "year": 110,
+    "number": 11,
+    "text": "Which of the following is wrong? (A) assembly code is used to directly control a computer's CPU (B) pseudocode is a plain language description of the steps in an algorithm (C) an interpreter is a computer program that directly executes instructions written in a programming language (D) a scripting language is used to write a series of commands that are interpreted one by one at runtime (E) all of the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "E",
+    "explanation": "本題詢問哪一個敘述是「錯誤的」。選項(A)組合語言（assembly code）確實是用來直接控制CPU的低階語言，敘述正確。選項(B)虛擬碼（pseudocode）是以自然語言描述演算法步驟的非正式表達方式，敘述正確。選項(C)直譯器（interpreter）確實是直接執行以某種程式語言撰寫之指令的程式，無需事先編譯，敘述正確。選項(D)腳本語言（scripting language）確實是用來撰寫一系列在執行期間逐一被解讀執行的指令，敘述正確。由於(A)(B)(C)(D)皆為正確敘述，沒有任何一項是錯誤的，故應選(E)。"
+  },
+  {
+    "id": "q-pp-im-it-110-12",
+    "year": 110,
+    "number": 12,
+    "text": "Which of the following is wrong? (A) imperative programming is a programming paradigm that uses statements that change a program's state (B) functional programming is a programming paradigm where programs are constructed by applying and composing functions (C) C++ belongs to imperative programming paradigm (D) Python belongs to imperative programming paradigm (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "E",
+    "explanation": "本題要求選出錯誤的敘述。(A) 命令式程式設計（imperative programming）透過改變程式狀態的陳述句來執行，此敘述正確。(B) 函式式程式設計（functional programming）透過套用與組合函式來建構程式，此敘述正確。(C) C++ 屬於命令式程式設計典範，此敘述正確。(D) Python 雖然是多典範語言，但其核心仍支援並屬於命令式程式設計典範，此敘述亦正確。由於 A、B、C、D 四個選項皆為正確敘述，沒有任何一項是錯誤的，因此依照題目指示應選 (E)。"
+  },
+  {
+    "id": "q-pp-im-it-110-13",
+    "year": 110,
+    "number": 13,
+    "text": "In programming languages, a(n) __________ refers to a collection of rules that assign a property to various constructs in a computer program, such as variables, expressions, functions or modules, with the end goal of reducing the number of bugs by verifying that data is represented properly throughout a program. (A) variable system (B) type system (C) formal system (D) logical model (E) inference system.",
+    "currentAnswer": "B",
+    "explanation": "型別系統（type system）是程式語言中一套規則集合，用於對程式中的各種構造（如變數、運算式、函式、模組）指派型別屬性。其核心目標是透過確保資料在整個程式中被正確表示，來減少程式錯誤（bugs）的數量。型別系統可在編譯期或執行期進行型別檢查，例如靜態型別語言（Java、C++）在編譯時就能捕捉型別不匹配的錯誤。選項中，variable system、formal system、logical model 及 inference system 均非描述此概念的標準術語，唯有 type system 完全符合題目所描述的定義。"
+  },
+  {
+    "id": "q-pp-im-it-110-14",
+    "year": 110,
+    "number": 14,
+    "text": "__________ is a basic and commonly used type of predictive analysis that attempts to model the relationship between one dependent variable and a series of other variables by fitting a linear equation to observed data. (A) trend estimation (B) normal equations (C) linear regression (D) decision tree (E) multivariate normal distribution.",
+    "currentAnswer": "C",
+    "explanation": "線性回歸（Linear Regression）是一種基本且常用的預測分析方法，透過將線性方程式擬合到觀測資料來建立一個依變數與一系列其他變數之間的關係模型。趨勢估計（trend estimation）雖與預測相關，但不強調依變數與多個變數的關係建模。正規方程式（normal equations）是求解線性回歸參數的數學工具，本身不是分析類型。決策樹（decision tree）是非線性的分類與回歸方法，與題目描述不符。因此正確答案為線性回歸（C）。"
+  },
+  {
+    "id": "q-pp-im-it-110-15",
+    "year": 110,
+    "number": 15,
+    "text": "In confusion matrix, let TP be the number of true positives, FP be the number of false positive, FN be the number of false negative, and TN be the number of true negative. Then, precision refers to (A) TP/(TP+FP) (B) TN/(TP+FP) (C) TP/(TP+FN) (D) TN/(TN+FN) (E) TP/(TN+FN).",
+    "currentAnswer": "A",
+    "explanation": "Precision（精確率）是混淆矩陣中衡量模型預測正確性的指標，其定義為所有被預測為正例中，實際上真正是正例的比例。公式為 TP / (TP + FP)，其中 TP 是真正例（正確預測為正），FP 是假正例（錯誤預測為正）。與 Recall（召回率）不同，Precision 關注的是「預測為正的樣本中有多少是真的正」，而非「所有真正正例中有多少被找到」。Recall 的公式為 TP / (TP + FN)，兩者容易混淆，需特別區分。因此本題答案為 (A) TP/(TP+FP)。"
+  },
+  {
+    "id": "q-pp-im-it-110-16",
+    "year": 110,
+    "number": 16,
+    "text": "Continuous from the above question. Accuracy refers to (A) (TP+TN)/(TP+FP+TN+FN) (B) (TN+FP)/(TP+FP+TN+FN) (C) (TP+FN)/(TP+FP+TN+FN) (D) (TN+FN)/(TP+FP+TN+FN) (E) (TP+FP)/(TP+FP+TN+FN).",
+    "currentAnswer": "A",
+    "explanation": "Accuracy（準確率）是衡量分類模型整體正確性的指標，定義為所有正確分類的樣本數除以總樣本數。在混淆矩陣中，TP（True Positive）表示正確預測為正類，TN（True Negative）表示正確預測為負類，FP（False Positive）表示誤判為正類，FN（False Negative）表示誤判為負類。因此 Accuracy 的公式為 (TP+TN)/(TP+FP+TN+FN)，即正確分類的總數（TP+TN）除以所有樣本的總數（TP+FP+TN+FN）。選項 B、C、D、E 的分子分別包含了錯誤分類的項目，並非正確的 Accuracy 公式，故正確答案為 A。"
+  },
+  {
+    "id": "q-pp-im-it-110-17",
+    "year": 110,
+    "number": 17,
+    "text": "The primary purpose of a digital certificate is to prove the ownership of a __________ (A) public key (B) private key (C) secret key (D) security level (E) signature.",
+    "currentAnswer": "A",
+    "explanation": "數位憑證（digital certificate）的主要目的是證明某個實體（個人、組織或伺服器）對特定公鑰（public key）的所有權。憑證由受信任的憑證授權機構（CA）簽發，將持有者的身份資訊與其公鑰綁定在一起，並以CA的數位簽章加以認證。私鑰（private key）必須由持有者自行保管且絕不對外公開，因此不需要憑證來證明；秘密金鑰（secret key）屬於對稱加密，也不是憑證所要證明的對象。因此，數位憑證證明的是公鑰的所有權，答案為(A)。"
+  },
+  {
+    "id": "q-pp-im-it-110-18",
+    "year": 110,
+    "number": 18,
+    "text": "Which of the following is wrong about HTTP cookies? (A) they are stored at server side (B) they can be used to record last session established (C) they can be used to remember pieces of information that users previously entered in a form (D) they can be used to authenticate users (E) all of the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "A",
+    "explanation": "HTTP Cookie 是儲存在客戶端（瀏覽器）的小型文字資料，而非儲存在伺服器端，因此選項 A 的描述是錯誤的。Cookie 可以用來記錄上次的 Session 資訊（選項 B 正確），也可以記住使用者在表單中曾輸入的資料（選項 C 正確）。此外，Cookie 也常被用於使用者身分驗證，例如儲存 session token（選項 D 正確）。因此，唯一錯誤的敘述是選項 A。"
+  },
+  {
+    "id": "q-pp-im-it-110-19",
+    "year": 110,
+    "number": 19,
+    "text": "The key to a content delivery network is to geographically distribute many __________ so that data can be accessed close to users. (A) load balance servers (B) proxy servers (C) routing servers (D) database servers (E) file servers.",
+    "currentAnswer": "B",
+    "explanation": "CDN（內容傳遞網路）的核心概念是將內容分散式地部署在靠近使用者的地理位置，以減少存取延遲。CDN 使用的是代理伺服器（proxy servers），又稱為邊緣伺服器或快取伺服器，它們會快取原始伺服器的內容，讓使用者可以從地理上最近的節點取得資料。負載平衡伺服器（load balance servers）的功能是分配流量，並非 CDN 地理分散部署的核心元件。路由伺服器（routing servers）負責路由決策，資料庫伺服器（database servers）儲存結構化資料，檔案伺服器（file servers）提供檔案存取，這三者均不是 CDN 分散快取的主角。因此，正確答案為 proxy servers。"
+  },
+  {
+    "id": "q-pp-im-it-110-20",
+    "year": 110,
+    "number": 20,
+    "text": "__________ refers to a method of breaking into a password-protected computer or server by systematically entering every word in a dictionary as a password. (A) exhaustive attack (B) brute-force attack (C) dictionary attack (D) alphabet attack (E) verbose attack.",
+    "currentAnswer": "C",
+    "explanation": "字典攻擊（Dictionary Attack）是一種密碼破解方法，攻擊者會系統性地將字典中的每一個單字逐一嘗試作為密碼，直到找到正確的密碼為止。暴力破解（Brute-force Attack）雖然相似，但它是嘗試所有可能的字元組合，而非僅使用字典中的單字。窮舉攻擊（Exhaustive Attack）通常與暴力破解同義，也不特指使用字典。題目明確指出「系統性地輸入字典中的每個單字」，這正是字典攻擊的定義特徵，因此正確答案為 (C) dictionary attack。"
+  },
+  {
+    "id": "q-pp-im-it-110-21",
+    "year": 110,
+    "number": 21,
+    "text": "In information security, the 'C' in the \"CIA triad\" refers to (A) Consistency (B) Certification (C) Confidence (D) Confidentiality (E) Constancy.",
+    "currentAnswer": "D",
+    "explanation": "資訊安全中的「CIA 三元組」代表三個核心原則：機密性（Confidentiality）、完整性（Integrity）與可用性（Availability）。其中「C」代表的是 Confidentiality（機密性），意指確保資訊只能被授權的人員存取，防止未授權的資訊揭露。選項 A（Consistency）、B（Certification）、C（Confidence）、E（Constancy）均非 CIA 三元組的組成要素。因此正確答案為 D（Confidentiality）。"
+  },
+  {
+    "id": "q-pp-im-it-110-22",
+    "year": 110,
+    "number": 22,
+    "text": "Which of the following functions is often used in a data structure that implements an associative array that maps keys to values? (A) bin (B) point spread (C) hash (D) deconvolution (E) filter.",
+    "currentAnswer": "C",
+    "explanation": "關聯陣列（associative array）是一種將鍵（key）對應到值（value）的抽象資料結構，最常見的實作方式是雜湊表（hash table）。雜湊表使用雜湊函數（hash function）將鍵轉換為陣列索引（即桶的位置），從而實現接近 O(1) 的平均查詢、插入與刪除效率。雜湊函數的設計目標是將鍵均勻分散到各桶中，以減少碰撞（collision）的發生。其他選項如 bin（分箱）、point spread（點差）、deconvolution（反捲積）、filter（濾波）均非關聯陣列核心操作所使用的函數，因此正確答案為 (C) hash。"
+  },
+  {
+    "id": "q-pp-im-it-110-23",
+    "year": 110,
+    "number": 23,
+    "text": "Compared to file systems, which of the following is not an advantage of database? (A) separation of data definition and the problem (B) efficient access (C) data integrity (D) reduce redundancy (E) all the above are advantage.",
+    "currentAnswer": "A",
+    "explanation": "相較於檔案系統，資料庫的優勢包括：有效率的資料存取（efficient access）、資料完整性（data integrity）、以及減少資料冗餘（reduce redundancy）。然而，「資料定義與問題的分離（separation of data definition and the problem）」這個描述並非資料庫的標準優勢，正確的資料庫優勢應為「資料定義與應用程式的分離（data independence）」，亦即程式獨立性。因此，選項 A 的描述措辭不正確，不屬於資料庫相對於檔案系統的優勢，故答案為 A。"
+  },
+  {
+    "id": "q-pp-im-it-110-24",
+    "year": 110,
+    "number": 24,
+    "text": "The logical structure of a database is referred to as (A) schema (B) data dictionary (C) template (D) data layout (E) data relation.",
+    "currentAnswer": "A",
+    "explanation": "資料庫的邏輯結構稱為「綱要」（schema），它定義了資料庫中資料的組織方式與各資料表之間的關聯結構。Data dictionary（資料字典）是儲存資料庫元數據的系統，與邏輯結構不同。Template（模板）是一種樣板或範本，Data layout（資料配置）通常指實體儲存的排列方式，Data relation（資料關聯）則指資料表之間的特定關係。因此，描述資料庫邏輯結構最正確的術語是 schema（綱要）。"
+  },
+  {
+    "id": "q-pp-im-it-110-25",
+    "year": 110,
+    "number": 25,
+    "text": "In the context of transaction processing, the acronym ACID refers to the four key properties for a database management system to have a valid transaction mechanism even in the event of failures. In the acronym, 'A' refers to (A) anonymity (B) availability (C) asynchrony (D) atomicity (E) none of the above.",
+    "currentAnswer": "D",
+    "explanation": "在資料庫交易處理中，ACID 是四個關鍵屬性的縮寫，分別代表 Atomicity（原子性）、Consistency（一致性）、Isolation（隔離性）與 Durability（持久性）。其中「A」代表的是 Atomicity（原子性），意指一個交易中的所有操作必須全部成功完成，或者在發生失敗時全部回滾，不允許只執行部分操作。原子性確保交易是不可分割的最小工作單元，從而保護資料庫在系統故障時仍能維持一致的狀態。選項中的 anonymity（匿名性）、availability（可用性）、asynchrony（非同步性）均與 ACID 無關，因此答案為 D。"
+  },
+  {
+    "id": "q-pp-im-it-110-26",
+    "year": 110,
+    "number": 26,
+    "text": "Which of the following is the primary purpose of mining in blockchain-based cryptocurrency? (A) mint coins (B) store transactions (C) compress transactions (D) validate transactions (E) encrypt transactions.",
+    "currentAnswer": "D",
+    "explanation": "在區塊鏈加密貨幣中，挖礦（mining）的主要目的是驗證交易（validate transactions）。礦工透過競爭解決複雜的密碼學難題（工作量證明），以決定誰有資格將新的交易區塊加入鏈上，從而確保交易的合法性與防止雙重支付。雖然挖礦成功後礦工會獲得新鑄造的加密貨幣作為獎勵（mint coins），但這是激勵機制而非核心目的。交易的儲存（store）由整個節點網路負責，加密（encrypt）則由公私鑰體系處理，皆非挖礦的主要功能。"
+  },
+  {
+    "id": "q-pp-im-it-110-27",
+    "year": 110,
+    "number": 27,
+    "text": "In cloud computing, the service model of Microsoft Azure is best characterized as a (A) Infrastructure as a service (IaaS) (B) Platform as a service (PaaS) (C) Software as a Service (SaaS) (D) Everything as a Service (E) Data as a Service.",
+    "currentAnswer": "B",
+    "explanation": "Microsoft Azure 的服務模式最主要被定位為平台即服務（PaaS），這也是 Azure 最初推出時的核心定位。PaaS 提供開發者一個完整的平台環境，讓他們可以在不需要管理底層硬體或作業系統的情況下，開發、部署及管理應用程式。Azure 提供如 Azure App Service、Azure SQL Database 等典型的 PaaS 服務，讓開發者專注於應用邏輯而非基礎架構。雖然 Azure 也提供 IaaS（如虛擬機器）等服務，但其最具代表性與核心的定位仍是 PaaS。因此，最能描述 Microsoft Azure 服務模式的選項為 (B) Platform as a Service。"
+  },
+  {
+    "id": "q-pp-im-it-110-28",
+    "year": 110,
+    "number": 28,
+    "text": "If a company uses both its computer infrastructure and Amazon's AWS to deliver services, then this type of cloud deployment model belongs to (A) Diverse Cloud (B) Community Cloud (C) Public Cloud (D) Hybrid Cloud (E) Distributed Cloud.",
+    "currentAnswer": "D",
+    "explanation": "混合雲（Hybrid Cloud）是指同時使用企業自有的私有雲或本地基礎設施，以及第三方公有雲服務（如 Amazon AWS）所組成的部署模型。當公司將自己的電腦基礎設施與 AWS 結合使用時，正是混合雲的典型應用情境。混合雲讓企業可以將敏感資料保留在私有環境，同時利用公有雲的彈性擴展能力。相較之下，社群雲（Community Cloud）由特定社群共用，公有雲（Public Cloud）完全依賴第三方服務商，分散式雲（Distributed Cloud）則強調跨地理分布，均不符合此題描述。"
+  },
+  {
+    "id": "q-pp-im-it-111-1",
+    "year": 111,
+    "number": 1,
+    "text": "Which of the following is wrong about OSI Model? (A) layer 8 is Application (B) layer 5 is Session (C) layer 4 is Transport (D) layer 2 is Data Link (E) all of the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "A",
+    "explanation": "OSI 模型共有 7 層，由下至上分別是：實體層（1）、資料連結層（2）、網路層（3）、傳輸層（4）、會話層（5）、表現層（6）、應用層（7）。選項 A 宣稱「第 8 層是應用層」是錯誤的，因為 OSI 模型根本沒有第 8 層，應用層是第 7 層。選項 B（第 5 層為會話層）、C（第 4 層為傳輸層）、D（第 2 層為資料連結層）均正確無誤。因此本題答案為 A。"
+  },
+  {
+    "id": "q-pp-im-it-111-2",
+    "year": 111,
+    "number": 2,
+    "text": "Which of the following is the industry standard protocol for email sending? (A) Simple Mail Transfer Protocol (SMTP) (B) Internet Message Access Protocol (IMAP) (C) Post Office Protocol (D) Post Office Protocol 3 (POP3) (E) none of the above.",
+    "currentAnswer": "A",
+    "explanation": "SMTP（Simple Mail Transfer Protocol，簡單郵件傳輸協定）是業界標準的電子郵件發送協定，負責在郵件伺服器之間傳遞郵件，以及從客戶端將郵件送出至伺服器。IMAP（Internet Message Access Protocol）和 POP3（Post Office Protocol 3）都是用於接收郵件的協定，而非發送。POP（Post Office Protocol）是 POP3 的前身版本，同樣屬於接收協定。因此，電子郵件發送的業界標準協定是 SMTP，答案為 A。"
+  },
+  {
+    "id": "q-pp-im-it-111-3",
+    "year": 111,
+    "number": 3,
+    "text": "Which of the following technique is used in data link layer for reliable and sequential delivery of data packets while allowing multiple packets to be sent at a time to improve efficiency? (A) automatic repeat request protocol (B) sliding window protocol (C) request and acknowledgment protocol (D) multicast (E) none of the above.",
+    "currentAnswer": "B",
+    "explanation": "滑動視窗協定（Sliding Window Protocol）是資料鏈結層中用於可靠且有序傳遞資料封包的技術，同時允許傳送端在未收到確認之前持續傳送多個封包，藉此提升傳輸效率。自動重複請求協定（ARQ）雖然也提供可靠傳輸，但它是錯誤控制的廣泛概念，而滑動視窗才是具體實現同時傳送多封包的機制。滑動視窗協定透過維護一個「視窗」來控制傳送中但尚未被確認的封包數量，接收方確認後視窗才向前滑動，確保封包按序遞送。此協定廣泛應用於 HDLC、LAPB 等資料鏈結層協定，是同時達成可靠性、有序性與高效率的標準做法。因此正確答案為 (B) sliding window protocol。"
+  },
+  {
+    "id": "q-pp-im-it-111-4",
+    "year": 111,
+    "number": 4,
+    "text": "Which of the following is wrong about Dynamic Host Configuration Protocol (DHCP)? (A) it is used on Internet Protocol (IP) networks (B) it uses a client-server architecture (C) it allows the automatic management of IP addresses (D) it offers great benefit to mobile users as valid configuration parameters are automatically obtained from the new network (E) all of the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "E",
+    "explanation": "此題詢問關於 DHCP 哪個敘述是錯誤的。選項 (A) DHCP 用於 IP 網路，正確；選項 (B) DHCP 採用客戶端-伺服器架構，正確；選項 (C) DHCP 允許自動管理 IP 位址，正確；選項 (D) DHCP 對行動用戶非常有益，因為它能在連接新網路時自動取得有效的設定參數，正確。由於 A 至 D 所有敘述皆為正確，沒有任何一項是錯誤的，因此依題目指示應選 (E)「以上皆正確」。"
+  },
+  {
+    "id": "q-pp-im-it-111-5",
+    "year": 111,
+    "number": 5,
+    "text": "Which of the following is wrong about virtualization technology? (A) network virtualization divides one physical network into separate, independent virtual networks (B) network virtualization can combine multiple physical networks to one virtual, software-based network (C) CPU virtualization allows a single processor to act as if it was multiple individual CPUs (D) CPU virtualization allows one to run multiple different operating systems on one machine (E) all of the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "E",
+    "explanation": "本題詢問關於虛擬化技術哪一項敘述是錯誤的。選項A說明網路虛擬化可以將一個實體網路分割成多個獨立的虛擬網路（如VLAN技術），此為正確敘述。選項B說明網路虛擬化也可以將多個實體網路合併成一個虛擬網路（如覆疊網路技術），同樣正確。選項C說明CPU虛擬化讓單一處理器能模擬成多個獨立CPU運作，此為CPU虛擬化的核心概念，屬於正確敘述。選項D說明CPU虛擬化允許在同一台機器上執行多個不同的作業系統（如透過VMware、Hyper-V等虛擬機器監視器），亦為正確敘述。由於A、B、C、D皆正確，因此應選E（以上皆正確）。"
+  },
+  {
+    "id": "q-pp-im-it-111-6",
+    "year": 111,
+    "number": 6,
+    "text": "Which of the following is wrong about Virtual machines (VMs)? (A) a VM is a compute resource that uses software instead of a physical computer to run programs and deploy apps (B) when more than one VMs run on a physical host machine, each virtual machine runs its own operating system and functions separately from the other VMs (C) benefits of VMs include easy provisioning and maintainability, and high availability (D) a software called hypervisor sits between the VMs and the host and is responsible for allocating the computing resources of the host to VMs (E) all of the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "E",
+    "explanation": "此題問哪個敘述關於虛擬機器（VM）是「錯誤的」。選項A正確描述了VM是以軟體取代實體電腦來執行程式；選項B正確說明每個VM各自運行獨立的作業系統；選項C正確列舉了VM的優點包含易於佈建、維護及高可用性；選項D正確說明了hypervisor（超管理程式）位於VM與主機之間並負責分配運算資源。由於A、B、C、D四個選項的描述均正確，沒有任何一項是錯誤的，因此答案選（E）「以上皆正確」。"
+  },
+  {
+    "id": "q-pp-im-it-111-7",
+    "year": 111,
+    "number": 7,
+    "text": "_____ is a unique identifier assigned to a network interface controller for use as a network address in communications within a network segment. It is used in most IEEE 802 networking technologies, including Ethernet, Wi-Fi, and Bluetooth. (A) globally unique identifier (B) IP address (C) media access control address (D) transmission control address (E) none of the above.",
+    "currentAnswer": "C",
+    "explanation": "題目描述的是一種分配給網路介面控制器（NIC）的唯一識別碼，用於在網路段內作為網路位址進行通訊，並被大多數 IEEE 802 網路技術（包括乙太網路、Wi-Fi 和藍牙）所使用。這正是媒體存取控制位址（MAC address，媒體存取控制位址）的定義。MAC 位址通常由 48 位元組成，燒錄於網路介面卡的韌體中，具有全球唯一性。IP 位址（B）是網路層的邏輯位址，而非與硬體綁定的唯一識別碼；全球唯一識別碼（GUID，A）則是軟體層面的識別碼，非針對網路硬體介面。因此正確答案為 (C) media access control address。"
+  },
+  {
+    "id": "q-pp-im-it-111-8",
+    "year": 111,
+    "number": 8,
+    "text": "Which of the following is wrong about packet switching? (A) packet switching transmits data across digital networks by breaking it down into blocks (B) in datagram packet switching, each packet has a header that includes the origin IP address, the destination IP address, the number of packets in the entire data file, and the sequence number (C) in datagram packet switching, the packets of a file go through the same route (D) in a virtual circuit, the connection appears to be a dedicated physical circuit (E) all of the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "C",
+    "explanation": "在資料報封包交換（datagram packet switching）中，每個封包會根據當時的網路狀況獨立選擇路由，因此同一檔案的不同封包可能走不同的路徑到達目的地，這正是資料報交換與虛擬電路的主要差異。選項 (C) 說「封包走相同路徑」是錯誤的描述。選項 (A) 正確描述了封包交換將資料切割成區塊傳輸的特性；選項 (B) 正確描述了資料報封包表頭的內容（含來源 IP、目的地 IP、封包總數及序號）；選項 (D) 正確描述了虛擬電路看起來像是專屬實體線路的特性。"
+  },
+  {
+    "id": "q-pp-im-it-111-9",
+    "year": 111,
+    "number": 9,
+    "text": "_____ is a network multiple access method in which carrier sensing is used, but nodes attempt to avoid collisions by beginning transmission only after the channel is sensed to be \"idle\". (A) carrier-sense multiple access with collision avoidance (CSMA/CA) (B) carrier-sense multiple access with collision detection (CSMA/CD) (C) carrier-sense multiple access with collision reduction (CSMA/CR) (D) carrier-sense multiple access with channel idling (CSMA/CI) (E) none of the above.",
+    "currentAnswer": "A",
+    "explanation": "CSMA/CA（Carrier-Sense Multiple Access with Collision Avoidance，載波感測多重存取／碰撞避免）是一種網路多重存取方法，節點在感測到通道為「閒置」狀態後才開始傳送資料，藉此主動避免碰撞的發生。題目描述「使用載波感測，且節點在通道閒置後才嘗試傳送以避免碰撞」，完全符合 CSMA/CA 的定義。CSMA/CD（選項B）是碰撞「偵測」，用於有線乙太網路，與避免碰撞不同。選項C（CSMA/CR）與選項D（CSMA/CI）並非標準通訊協定名稱，因此正確答案為A。"
+  },
+  {
+    "id": "q-pp-im-it-111-10",
+    "year": 111,
+    "number": 10,
+    "text": "Which of the following is wrong about information security? (A) in the CIA triad, C stands for Confidentiality (B) in the CIA triad, I stands for Integrity (C) in the CIA triad, A stands for Accessibility (D) Confidentiality means that only authorized individuals/systems can view sensitive or classified information (E) all of the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "C",
+    "explanation": "CIA 三要素（CIA Triad）中，A 代表的是 Availability（可用性），而非題目選項 C 所述的 Accessibility（可存取性），因此選項 C 的說法是錯誤的。Confidentiality（機密性）確保只有授權的人員或系統才能存取敏感資訊，選項 A 與 D 均正確描述了此概念。Integrity（完整性）確保資料在傳輸或儲存過程中不被未授權竄改，選項 B 的描述也是正確的。可用性（Availability）則確保授權使用者在需要時能夠存取系統與資料，與「可存取性」在語意上有所不同，故本題答案為 C。"
+  },
+  {
+    "id": "q-pp-im-it-111-11",
+    "year": 111,
+    "number": 11,
+    "text": "In information security, _____ refers to the type of attacks when a communication between two systems or people is intercepted by an unauthorized party. The person intercepting attempts to either eavesdrop on the exchange or impersonate one of the authorized parties. (A) third-party attack (B) DNS Tunneling (C) Phishing (D) Zero-day exploit (E) none of the above.",
+    "currentAnswer": "E",
+    "explanation": "題目描述的是攻擊者攔截兩方通訊，並試圖竊聽或冒充其中一方的攻擊手法，這正是中間人攻擊（Man-in-the-Middle Attack, MITM）的定義。選項 (A) 第三方攻擊（third-party attack）並非資安領域的標準術語；選項 (B) DNS 隧道（DNS Tunneling）是利用 DNS 協定傳輸非 DNS 流量的技術；選項 (C) 網路釣魚（Phishing）是透過偽裝成可信實體來騙取敏感資訊；選項 (D) 零時差漏洞利用（Zero-day exploit）是針對尚未修補的軟體漏洞進行攻擊。由於選項中沒有「中間人攻擊」，因此正確答案為 (E) none of the above。"
+  },
+  {
+    "id": "q-pp-im-it-111-12",
+    "year": 111,
+    "number": 12,
+    "text": "Which of the following is wrong? (A) RSA algorithm is an asymmetric cryptography algorithm (B) RSA is based on the fact that it is difficult to factorize a large integer (C) in a public-key cryptosystem, the encryption key is private (D) RSA is not meant to be used to directly encrypt user data. (E) all of the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "C",
+    "explanation": "在公開金鑰密碼系統（public-key cryptosystem）中，加密金鑰（encryption key）是公開的（public），而非私密的（private），任何人都可以使用公鑰來加密訊息，只有持有對應私鑰的人才能解密，因此選項 C 的說法是錯誤的。選項 A 正確，RSA 確實是非對稱加密演算法，使用一對公私金鑰。選項 B 正確，RSA 的安全性建立在大整數質因數分解（integer factorization）困難性的基礎上。選項 D 也正確，RSA 因運算效率較低，通常不直接用來加密大量的使用者資料，而是用來加密對稱式加密的會話金鑰（session key）。"
+  },
+  {
+    "id": "q-pp-im-it-111-13",
+    "year": 111,
+    "number": 13,
+    "text": "Which of the following is wrong in the context of transaction processing? (A) A in the acronym ACID refers to atomicity (B) C in the acronym ACID refers to consistency (C) I in the acronym ACID refers to integrity (D) D in the acronym ACID refers to durability (E) all of the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "C",
+    "explanation": "在 ACID 特性中，I 代表的是 Isolation（隔離性），而非 Integrity（完整性）。Isolation 確保多筆並行的交易彼此不互相干擾，每筆交易的執行結果就如同在獨立環境中執行一樣。選項 (A) A 代表 Atomicity（原子性）、選項 (B) C 代表 Consistency（一致性）、選項 (D) D 代表 Durability（持久性），這三個描述均正確。因此，唯一錯誤的敘述是選項 (C)，答案為 C。"
+  },
+  {
+    "id": "q-pp-im-it-111-14",
+    "year": 111,
+    "number": 14,
+    "text": "Which of the following is wrong about database normalization? (A) to satisfy 1st normal form, each column of a table must have a single value (B) in 2nd normal form, all non-key attributes are fully functional dependent on the primary key (C) 3rd normal form is used to reduce the data duplication (D) 3rd normal form does not allow transitive dependency for non-prime attributes (E) all of the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "E",
+    "explanation": "資料庫正規化的各項描述均正確：第一正規形式（1NF）要求每欄只能存放單一不可分割的值（A正確）；第二正規形式（2NF）要求所有非鍵屬性必須完全函數相依於主鍵，消除部分相依（B正確）；第三正規形式（3NF）確實可減少資料重複，因為它消除了遞移相依所導致的冗餘（C正確）；3NF不允許非主要屬性之間存在遞移相依，這是3NF的標準定義（D正確）。由於選項A到D皆為正確描述，沒有任何一項是錯誤的，因此應選E。"
+  },
+  {
+    "id": "q-pp-im-it-111-15",
+    "year": 111,
+    "number": 15,
+    "text": "_____ refers to the mechanism used in DBMS to allow removal of all the previous transaction logs from the system and permanently stored them in the storage disk. (A) backlogging (B) checkpoint (C) serialization (D) two-phase commit (E) none of the above.",
+    "currentAnswer": "B",
+    "explanation": "Checkpoint（檢查點）是 DBMS 中用來將緩衝區中的髒頁（dirty pages）強制寫入磁碟，並在日誌中記錄一個安全點的機制。一旦建立 checkpoint，系統即可移除該時間點之前的交易日誌，因為這些資料已永久儲存於磁碟，不再需要用於故障復原。Backlogging 指積壓待處理的工作，與此無關；Serialization 是交易排程的可序列化性概念；Two-phase commit 是分散式交易的提交協定。因此正確答案為 checkpoint（B）。"
+  },
+  {
+    "id": "q-pp-im-it-111-16",
+    "year": 111,
+    "number": 16,
+    "text": "Which of the following is wrong? (A) a process is an execution of a specific program (B) a process can have multiple threads (C) compared to threads, processes are more lightweight (D) in terms of memory sharing, processes are isolated (E) all of the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "C",
+    "explanation": "此題考察行程（Process）與執行緒（Thread）的基本概念。選項A正確，行程確實是特定程式的一次執行實體。選項B正確，一個行程可以包含多個執行緒，此為多執行緒的基本概念。選項C錯誤：比起行程，執行緒才是較輕量（lightweight）的執行單位，因為執行緒共享同一行程的記憶體空間與資源，建立與切換的開銷遠小於行程；反觀行程擁有獨立的記憶體空間與系統資源，是較重量級的單位。選項D正確，行程之間的記憶體空間是相互隔離的，一個行程無法直接存取另一個行程的記憶體，這也是行程間通訊（IPC）存在的原因。"
+  },
+  {
+    "id": "q-pp-im-it-111-17",
+    "year": 111,
+    "number": 17,
+    "text": "In operating system, _____ refers to the situation in which two or more processes continually repeat the same interaction in response to changes in the other processes without doing any useful work? (A) deadlock (B) livelock (C) starvation (D) busy waiting (E) none of the above.",
+    "currentAnswer": "B",
+    "explanation": "此題描述的是 Livelock（活結鎖）的情況。Livelock 指兩個或多個行程持續對彼此的狀態變化做出回應，不斷改變自身狀態，但始終無法向前推進、完成任何有用的工作。與 Deadlock（死結）不同，Livelock 中的行程並未被阻塞，仍在執行，但因為互相禮讓或互相干擾而陷入無限迴圈。Starvation（飢餓）是指某行程長期無法取得所需資源，Busy Waiting（忙碌等待）則是行程持續輪詢某條件而非釋放 CPU，均與題目描述不符。因此正確答案為 (B) livelock。"
+  },
+  {
+    "id": "q-pp-im-it-111-18",
+    "year": 111,
+    "number": 18,
+    "text": "Which of the following is a typical objective for CPU scheduling in operating systems? (A) max CPU utilization (B) max throughput (C) min waiting time (D) fair allocation of CPU (E) all of the above are typical objectives.",
+    "currentAnswer": "E",
+    "explanation": "CPU 排程的典型目標涵蓋多個面向：最大化 CPU 使用率（max CPU utilization）確保 CPU 不閒置；最大化吞吐量（max throughput）提升單位時間內完成的行程數；最小化等待時間（min waiting time）減少行程在就緒佇列中等待的時間。此外，公平分配 CPU（fair allocation）確保每個行程都能合理地獲得 CPU 時間，避免飢餓現象。由於上述四個選項（A、B、C、D）都是作業系統 CPU 排程的標準目標，因此答案為 E（以上皆是）。"
+  },
+  {
+    "id": "q-pp-im-it-111-19",
+    "year": 111,
+    "number": 19,
+    "text": "Which of the following CPU scheduling algorithm is starvation-free? (A) Shortest-Job-First (B) Priority Scheduling (C) Round Robin (D) all of the above (E) none of the above.",
+    "currentAnswer": "C",
+    "explanation": "Round Robin（循環排程）是唯一不會造成飢餓（starvation）的排程演算法，因為每個行程都會依序獲得固定的時間片（time quantum），確保所有行程最終都能執行。最短工作優先（SJF）可能造成飢餓，因為若不斷有短工作到達，長工作可能永遠無法取得CPU。優先權排程（Priority Scheduling）同樣可能造成飢餓，低優先權的行程若持續被高優先權行程搶先，可能長期無法執行。因此只有 Round Robin 保證每個行程都能公平地輪流取得CPU時間，不會發生飢餓現象。"
+  },
+  {
+    "id": "q-pp-im-it-111-20",
+    "year": 111,
+    "number": 20,
+    "text": "In operating systems, _____ refers to the technique for mediating between a computer application and a slow peripheral, such as a printer, that allows programs to \"hand off\" work to be done by the peripheral and then proceed to other tasks. (A) buffering (B) spooling (C) preemptive scheduling (D) non-preemptive scheduling (E) heap.",
+    "currentAnswer": "B",
+    "explanation": "Spooling（Simultaneous Peripheral Operations On-Line）是指將程式要輸出至慢速週邊設備（如印表機）的資料先存入緩衝區或佇列，讓程式可以立即「交付」工作後繼續執行其他任務，不必等待週邊完成。這與 Buffering 的區別在於，Buffering 只是暫存傳輸中的資料，程式仍需等待，而 Spooling 允許程式完全脫手並繼續運行。Preemptive 與 Non-preemptive Scheduling 是 CPU 排程策略，與週邊設備的 I/O 管理無關。Heap 則是記憶體管理的資料結構，亦與本題無關。因此本題正確答案為 (B) spooling。"
+  },
+  {
+    "id": "q-pp-im-it-111-21",
+    "year": 111,
+    "number": 21,
+    "text": "Which of the following is wrong about ER model? (A) it is a high-level data model (B) an entity may be any object, class, person or place (C) attribute is used to describe the property of an entity (D) diamond shape is used to represent attribute (E) all of the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "D",
+    "explanation": "在 ER 模型（實體關係模型）中，菱形（diamond shape）用來表示「關係（relationship）」，而非屬性。屬性（attribute）是以橢圓形（ellipse/oval）來表示。選項 D 錯誤地將菱形對應到屬性，因此是錯誤的敘述。其餘選項均正確：ER 模型確實是高階資料模型（high-level data model）、實體可以是任何物件、類別、人或地點，且屬性用來描述實體的特性。"
+  },
+  {
+    "id": "q-pp-im-it-111-22",
+    "year": 111,
+    "number": 22,
+    "text": "_____ refers to the part of an operating system that loads and links the shared libraries needed by an executable when it is executed at run time, by copying the content of libraries from persistent storage to RAM, filling jump tables and relocating pointers. (A) code generation (B) code loader (C) assembler (D) dynamic linker (E) none of the above.",
+    "currentAnswer": "D",
+    "explanation": "動態連結器（dynamic linker）是作業系統的一部分，負責在程式執行時期載入並連結所需的共享函式庫（shared libraries）。它的工作包括將函式庫內容從持久性儲存（如硬碟）複製到 RAM、填寫跳躍表（jump tables）以及重定位指標（relocating pointers）。這與靜態連結不同，靜態連結在編譯期就將函式庫整合進執行檔，而動態連結則延遲到執行時期才進行。code loader 雖然負責載入可執行檔本身，但不處理共享函式庫的連結；assembler 負責將組合語言轉換為機器碼；code generation 是編譯器的一個階段，均與題意不符。因此正確答案為 (D) dynamic linker。"
+  },
+  {
+    "id": "q-pp-im-it-111-23",
+    "year": 111,
+    "number": 23,
+    "text": "Which of the following is wrong about \"metaverse\"? (A) it envisions a future of social connection in a 2D virtual world (B) VR is a key technology in metaverse (C) Facebook changed its name to \"meta\" to usher in the metaverse (D) blockchain is a key technology in metaverse to offer digital proof of ownership for assets in the metaverse (E) all of the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "A",
+    "explanation": "元宇宙（metaverse）的核心願景是建立一個沉浸式的三維（3D）虛擬世界，而非二維（2D）的虛擬空間，因此選項 A 所述的「2D virtual world」是錯誤的描述。VR（虛擬實境）確實是元宇宙的關鍵技術，能提供沉浸式的 3D 體驗，選項 B 正確。Facebook 確實在 2021 年將公司更名為「Meta」，以展現對元宇宙的投入，選項 C 正確。區塊鏈技術也是元宇宙的重要基礎，可透過 NFT 等機制提供元宇宙內數位資產的所有權證明，選項 D 正確。因此，唯一錯誤的陳述是選項 A。"
+  },
+  {
+    "id": "q-pp-im-it-111-24",
+    "year": 111,
+    "number": 24,
+    "text": "Which of the following is wrong about non-fungible token (NFT)? (A) NFTs can be associated with digital files such as photos, videos, and audio to show ownerships (B) NFT is a unique and non-interchangeable unit of data stored on a blockchain (C) two copies of a digital file can be associated with two different NFTs (D) assets in the metaverse can be traded as NFTs (E) all of the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "E",
+    "explanation": "本題詢問關於非同質化代幣（NFT）何者敘述有誤。選項A正確，NFT確實可與數位檔案（照片、影片、音訊等）關聯，以證明所有權。選項B正確，NFT的核心定義即為儲存於區塊鏈上、唯一且不可互換的資料單位。選項C正確，同一數位檔案可被鑄造（mint）為多個不同的NFT，兩份副本對應兩個不同NFT是可行的。選項D正確，元宇宙中的虛擬資產確實可以NFT形式進行交易。由於A、B、C、D皆為正確敘述，沒有任何一項是錯誤的，故應選E。"
+  },
+  {
+    "id": "q-pp-im-it-112-1",
+    "year": 112,
+    "number": 1,
+    "text": "Which of the following is wrong about Von Neumann architecture? (A) it has four main units: CPU, memory, input, and output (B) memory is simply a linear array of storage locations (C) data and instructions are separated into different memory (D) a central processing unit has a control unit and an arithmetic/logic unit (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "C",
+    "explanation": "Von Neumann 架構採 stored-program concept，資料與指令共用同一記憶體；(C) 描述的是 Harvard 架構。其餘敘述皆為典型 Von Neumann 架構特徵。"
+  },
+  {
+    "id": "q-pp-im-it-112-2",
+    "year": 112,
+    "number": 2,
+    "text": "Which of the following is wrong about process architecture? (A) in general, program compiled in CISC architecture has fewer instructions than that compiled in RISC architecture (B) the CISC approach tries to make each instruction more powerful (C) in general, instructions in a CISC approach will need more clock cycles to execute than in a RISC approach (D) in general, the instruction set in a CISC approach is typically smaller than the instruction set in a RISC approach (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "D",
+    "explanation": "CISC 指令功能通常較複雜，完成相同工作時程式的動態指令數可能少於 RISC，單一指令也常需較多時脈；但 CISC 的指令集通常比 RISC 大，不是更小，因此 (D) 錯。"
+  },
+  {
+    "id": "q-pp-im-it-112-3",
+    "year": 112,
+    "number": 3,
+    "text": "Which of the following is wrong about computer architecture? (A) A processor with 32-bit address buses can access at most 2^32 bytes of memory (B) in memory-mapped I/O, I/O devices use the same address space as memory devices (C) in memory-mapped I/O, the same instructions are used to access I/O devices and memory devices (D) the internal data storage of a processor is known as its registers (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "E",
+    "explanation": "32 位元位址匯流排在 byte-addressable 系統可表示 2^32 個位址；memory-mapped I/O 與記憶體共用位址空間及存取指令；處理器內部儲存稱為 registers。A-D 皆正確，故選 (E)。"
+  },
+  {
+    "id": "q-pp-im-it-112-4",
+    "year": 112,
+    "number": 4,
+    "text": "Which of the following is wrong about Input/Output in a computer system? (A) in interrupt-driven I/O, an external device interrupts the processor to execute an interrupt service routine (B) an external device interrupts the processor by triggering an interrupt signal to the processor (C) Direct Memory Access (DMA) allows data to be transferred from I/O devices to memory directly without the continuous involvement of the processor (D) a hardware device is needed to allow I/O devices to directly access memory with less participation of the processor (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "E",
+    "explanation": "中斷驅動 I/O 由外部裝置送出中斷訊號，使 CPU 暫停目前工作並執行 interrupt service routine；DMA 則透過專用硬體讓裝置與記憶體直接傳輸，減少 CPU 持續搬移資料的負擔。因此 (A) 至 (D) 都是正確描述，題目問錯誤者時應選代表皆正確的 (E)。"
+  },
+  {
+    "id": "q-pp-im-it-112-5",
+    "year": 112,
+    "number": 5,
+    "text": "Which of the following is wrong about CPU cache? (A) register in CPU is usually faster than L1 cache (B) number of registers in CPU is smaller than the size of L1 cache (C) the size of L1 cache in current CPUs typically ranges in dozens to hundreds bytes (D) the size of L2 cache is typically much bigger than L1 cache (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "C",
+    "explanation": "現代 CPU 的 L1 cache 通常以數十 KB 計，而不是數十至數百 bytes，因此 (C) 錯。暫存器延遲通常低於 L1，容量也遠小於 L1；L2 通常大於 L1。"
+  },
+  {
+    "id": "q-pp-im-it-112-6",
+    "year": 112,
+    "number": 6,
+    "text": "Which of the following is not a major functionality of operating systems? (A) Resource Management (B) Process Management (C) Memory Management (D) Security Management (E) all the above are major functionalities.",
+    "currentAnswer": "E",
+    "explanation": "作業系統負責協調處理器、儲存與周邊等資源，也管理行程生命週期、記憶體配置及存取安全。(A) Resource Management、(B) Process Management、(C) Memory Management、(D) Security Management 全都是主要功能，沒有一項符合題目的 not，故選 (E)。"
+  },
+  {
+    "id": "q-pp-im-it-112-7",
+    "year": 112,
+    "number": 7,
+    "text": "Operating systems divide virtual and physical memory into fixed-sized chunks called pages. Which of the following page size is currently most common than the others? (A) 128 bytes (B) 512 bytes (C) 4KB (D) 128KB (E) 512KB.",
+    "currentAnswer": "C",
+    "explanation": "虛擬記憶體把位址空間與實體記憶體切成固定大小的 page/frame。在 x86、x86-64 與多數主流作業系統中，4KB 是最常見的基本 page size；系統雖可能另支援 large pages，但 128 bytes、512 bytes、128KB 與 512KB 都不是一般預設基本頁面大小，因此選 (C)。"
+  },
+  {
+    "id": "q-pp-im-it-112-8",
+    "year": 112,
+    "number": 8,
+    "text": "Which of the following is wrong for applications running in an operating system? (A) user applications usually run in user-mode (B) applications running in user-mode shares a virtual address space (C) a process running in user mode can't access virtual addresses that are reserved for the operating system (D) core operating system components run in kernel mode (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "B",
+    "explanation": "每個行程通常有彼此隔離的虛擬位址空間，並非所有 user-mode 應用程式共享同一個空間，因此 (B) 錯。A、C、D 都是 user/kernel mode 的正確敘述。"
+  },
+  {
+    "id": "q-pp-im-it-112-9",
+    "year": 112,
+    "number": 9,
+    "text": "Which of the following is wrong about computer clusters? (A) nodes in a cluster are typically independent and connected by a high-speed LAN (B) clustering computers can increase computing power (C) clustering computers can prevent security attacks (D) clustering computers can improve fault tolerance (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "C",
+    "explanation": "電腦叢集通常由可獨立運作的節點透過高速區域網路連接，可分散工作以增加運算能力，也可藉由備援改善 fault tolerance；但把多台電腦組成 cluster 並不會自動防止惡意入侵或其他資安攻擊，仍需另外的安全控制。因此錯誤敘述是 (C)。"
+  },
+  {
+    "id": "q-pp-im-it-112-10",
+    "year": 112,
+    "number": 10,
+    "text": "With regard to process management, which of the following is generally not the responsibility of operating systems (OS)? (A) creating and deleting user processes (B) suspending and resuming processes (C) process synchronization (D) deadlock handling (E) all the above are OS's responsibility.",
+    "currentAnswer": "E",
+    "explanation": "作業系統的 process management 涵蓋建立與刪除 user/system processes、暫停與恢復行程、提供 process synchronization 機制，以及偵測、避免或處理 deadlock。因此 (A) 至 (D) 都是作業系統的一般責任，題目問哪一項不是時，應選表示全部皆屬其責任的 (E)。"
+  },
+  {
+    "id": "q-pp-im-it-112-11",
+    "year": 112,
+    "number": 11,
+    "text": "With regard to storage management, which of the following is generally not the responsibility of operating systems? (A) creating and deleting files (B) file integrity check (C) disk scheduling (D) backing up files onto stable permanent storage media (E) supporting primitives for manipulating files and directories.",
+    "currentAnswer": "D",
+    "explanation": "OS 會提供檔案建立刪除、完整性支援、磁碟排程與檔案/目錄操作原語；把檔案備份到永久媒體通常是備份工具或管理作業的責任，不是 OS 核心儲存管理職責，故選 (D)。"
+  },
+  {
+    "id": "q-pp-im-it-112-12",
+    "year": 112,
+    "number": 12,
+    "text": "A uniprocessor system achieves multiprogramming by _____ in CPU scheduling. (A) dynamic allocation (B) process rotating (C) pipelining (D) time slicing (E) none of the above.",
+    "currentAnswer": "D",
+    "explanation": "單處理器在任一瞬間只能執行一個行程，但排程器可把 CPU 時間切成短小的 time slices，在多個 ready processes 之間快速切換，使多個程式看似並行並維持 CPU 使用率。這種 CPU scheduling 方法是 time slicing，不是 dynamic allocation、process rotating 或指令 pipelining，因此選 (D)。"
+  },
+  {
+    "id": "q-pp-im-it-112-13",
+    "year": 112,
+    "number": 13,
+    "text": "When a process is running in Unix-like systems, which of the following is wrong about its memory layout? (A) the code section starts at location 0 (B) the data section starts immediately above code section (C) the stack section starts immediately above the data section (D) the stack section can grow and shrink dynamically during process life cycle (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "C",
+    "explanation": "典型 Unix 行程位址空間由低至高包含 text、data/BSS、heap、memory-mapped area 與高位址 stack；stack 不會緊接在 data section 上方，故 (C) 錯。"
+  },
+  {
+    "id": "q-pp-im-it-112-14",
+    "year": 112,
+    "number": 14,
+    "text": "In Ethernet, which of the following algorithm is used to resolve collision? (A) Carrier Sense (B) Exponential Backoff (C) Collision Avoidance (D) Request to Send/Clear to Send (RTS/CTS) (E) Round Robin.",
+    "currentAnswer": "B",
+    "explanation": "傳統共享式 Ethernet 的 CSMA/CD 在偵測到碰撞後使用 binary exponential backoff 決定重傳等待時間，因此答案是 (B)。RTS/CTS 與 collision avoidance 主要屬無線網路機制。"
+  },
+  {
+    "id": "q-pp-im-it-112-15",
+    "year": 112,
+    "number": 15,
+    "text": "We can apply tags to network frames and handling these tags in a local area network to create the appearance and functionality of network traffic that is physically on a single network but acts as if it is split between separate networks. This effectively creates ______ (A) virtual LANs (B) VPN (C) domains (D) subdomains (E) private LANs.",
+    "currentAnswer": "A",
+    "explanation": "交換器可依 IEEE 802.1Q 在 Ethernet frame 加入 VLAN tag，將同一套實體交換網路劃分成不同的廣播網域。不同標籤的流量在邏輯上如同位於彼此分離的 LAN，這正是 Virtual LAN 的用途；VPN 則通常是在不受信任網路上建立加密通道，概念不同，因此選 (A)。"
+  },
+  {
+    "id": "q-pp-im-it-112-16",
+    "year": 112,
+    "number": 16,
+    "text": "In router-table construction, which of the following algorithms let routers build up their routing tables by periodically exchanging information with their immediately neighboring? (A) adaptive (B) link-state (C) distance-vector (D) incremental update (E) none of the above.",
+    "currentAnswer": "C",
+    "explanation": "Distance-vector routing 由每台路由器週期性向直接鄰居交換距離/下一跳資訊並更新路由表，故選 (C)。Link-state 則向整個 routing domain flooding 鏈路狀態。"
+  },
+  {
+    "id": "q-pp-im-it-112-17",
+    "year": 112,
+    "number": 17,
+    "text": "Which of the following is wrong about TCP? (A) it uses 2-way handshake to establish a connection (B) TCP is stream-oriented (C) TCP uses sliding window for flow control (D) TCP uses sequence numbers to ensure the correct order of delivery (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "A",
+    "explanation": "TCP 建立連線使用 three-way handshake，不是 two-way handshake，因此 (A) 錯。stream-oriented、sliding-window flow control 與 sequence-number ordering 均正確。"
+  },
+  {
+    "id": "q-pp-im-it-112-18",
+    "year": 112,
+    "number": 18,
+    "text": "Which of the following is wrong about security attacks? (A) In Man-in-the-Middle attack, an attacker intercepts messages between two parties, and then steals and manipulates data between them (B) In buffer overflow attack, the attacker crafts an oversized input string which, when read by the server and stored in memory, overflows the buffer and overwrites subsequent portions of memory, typically containing the stack-frame pointers. (C) In SQL Injections, an attacker inserts malicious code into a server using server query language, forcing the server to deliver protected information (D) In First-day attack, an attacker exploits a network vulnerability before a patch is released and/or implemented. (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "D",
+    "explanation": "「在修補程式發布或部署前利用未知弱點」通常稱為 zero-day attack，而不是 first-day attack，因此 (D) 錯；A-C 分別正確描述 MITM、buffer overflow 與 SQL injection。"
+  },
+  {
+    "id": "q-pp-im-it-112-19",
+    "year": 112,
+    "number": 19,
+    "text": "Which of the following is wrong about program compilation? (A) assembler takes as input the assembly code and translates it into relocatable machine code (B) it is the linker's job to make sure all cross-file dependencies are resolved properly (C) programs can be linked either statically or dynamically (D) lexical and syntax analysis is done at compiling stage (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "E",
+    "explanation": "Assembler 產生 relocatable machine code；linker 解決跨檔案符號；可採 static/dynamic linking；lexical 與 syntax analysis 皆在編譯階段。A-D 皆正確，故選 (E)。"
+  },
+  {
+    "id": "q-pp-im-it-112-20",
+    "year": 112,
+    "number": 20,
+    "text": "Which of the following is wrong about NoSQL databases? (A) in column-oriented structure, data is stored in cells grouped in a pre-defined number of columns (B) key-value stores use an associative array as their data mode (C) document stores use documents (e.g., XML, YAML, JSON) to hold and encode data in standard formats (D) graph databases represent data on a graph that shows how different sets of data relate to each other (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "A",
+    "explanation": "Wide-column/column-family NoSQL 通常允許稀疏、動態欄位，並非固定「預先定義數量的 columns」；B-D 是 key-value、document 與 graph store 的合理描述，故選 (A)。"
+  },
+  {
+    "id": "q-pp-im-it-112-21",
+    "year": 112,
+    "number": 21,
+    "text": "Which of the following is wrong about relational databases? (A) data are organized into tables of columns and rows (B) a unique key is used to identify each row (C) each row represents a data record (D) columns correspond to attributes of records (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "E",
+    "explanation": "關聯式資料庫以 rows/columns 組成 tables，key 唯一識別 row，row 表示 record，column 表示 attribute；A-D 皆正確，故選 (E)。"
+  },
+  {
+    "id": "q-pp-im-it-112-22",
+    "year": 112,
+    "number": 22,
+    "text": "Which of the following is wrong about relational databases? (A) a primary key is used to ensure data in the specific column is unique (B) a foreign key refers to the field in a table which is the primary key of another table (C) foreign key does not allow NULL value (D) more than one foreign key are allowed in a table (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "C",
+    "explanation": "Foreign key 欄位在沒有 NOT NULL 約束時可以是 NULL；外鍵可參照另一表的 primary/unique key，同一表也可有多個 foreign keys，故 (C) 錯。"
+  },
+  {
+    "id": "q-pp-im-it-112-23",
+    "year": 112,
+    "number": 23,
+    "text": "The term ______ has been coined to represent a digital counterpart of a real-world object for use such as simulation, integration, testing, monitoring, and maintenance. (A) avatar (B) digital twin (C) virtual reality (D) cloud object (E) none of the above.",
+    "currentAnswer": "B",
+    "explanation": "Digital twin 是實體物件、設備或系統在數位環境中的對應模型，並可隨真實世界資料更新，用於 simulation、integration、testing、monitoring 與 maintenance。Avatar 側重使用者化身，virtual reality 是沉浸式環境，cloud object 也不是題述術語，因此選 (B)。"
+  },
+  {
+    "id": "q-pp-im-it-112-24",
+    "year": 112,
+    "number": 24,
+    "text": "In blockchain technology like that used in Bitcoin, the process \"mining\" is designed mainly to (A) enforce concurrency control of transactions (B) ensure atomicity (C) distribute transaction (D) validate transaction (E) none of the above.",
+    "currentAnswer": "D",
+    "explanation": "Bitcoin mining 透過 proof-of-work 競爭建立區塊並驗證交易、形成共識；題目選項中最符合主要目的的是 (D) validate transaction。"
+  },
+  {
+    "id": "q-pp-im-it-112-25",
+    "year": 112,
+    "number": 25,
+    "text": "Which of the following is wrong about B-tree? (A) B-tree is self-balancing (B) A non-leaf node with k children contains k keys (C) a B-tree of order m has at most m children (D) every internal node has at least ceil(m/2) children (E) all leaves appear on the same level.",
+    "currentAnswer": "B",
+    "explanation": "B-tree 的非葉節點若有 k 個 children，應有 k-1 個 keys，不是 k 個，因此 (B) 錯。其餘為題目採用的 B-tree 標準性質（最低子節點數的敘述通常不含 root 例外）。"
+  },
+  {
+    "id": "q-pp-im-it-112-26",
+    "year": 112,
+    "number": 26,
+    "text": "Which of the following is wrong about spanning trees? (A) if all of the edges of a graph G are also edges of a spanning tree T of G, then G is a tree (B) if all of the edges of a graph G are also edges of a spanning tree T of G, then G is identical to T (C) if T is a spanning tree of G, and e is an edge of G that is not in T, then adding e to T will create a cycle (D) a graph may have more than one spanning trees (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "E",
+    "explanation": "若 G 的所有邊都也在其 spanning tree T 中，由於 T 的邊本來就是 G 的子集，兩者邊集相同，所以 G=T 且 G 為樹；向 T 加入非樹邊必產生 cycle；圖也可能有多棵 spanning trees。A-D 皆正確，故選 (E)。"
+  },
+  {
+    "id": "q-pp-im-it-112-27",
+    "year": 112,
+    "number": 27,
+    "text": "Recall that a min heap is a complete binary tree such that the key stored in each node is greater than or equal to the keys in the node's children. Then, the time complexity for inserting a key into a min heap of n nodes can be done in (A) O(1) (B) O(log n) (C) O(n) (D) O(n log n) (E) none of the above.",
+    "currentAnswer": "B",
+    "explanation": "Binary heap 插入先放在完全二元樹末端，再沿父鏈 sift up；樹高為 O(log n)，故最壞時間為 O(log n)，選 (B)。題幹把 min-heap 的不等號方向印反，但不影響插入的漸近複雜度。"
+  },
+  {
+    "id": "q-pp-im-it-112-28",
+    "year": 112,
+    "number": 28,
+    "text": "The time complexity for finding an arbitrary element in a min heap of n nodes can be done in (A) O(1) (B) O(log n) (C) O(n) (D) O(n log n) (E) none of the above.",
+    "currentAnswer": "C",
+    "explanation": "Min heap 只保證每個父節點的鍵值不大於其子節點，兄弟節點及不同子樹之間沒有完整排序。除了根節點最小值可在 O(1) 取得外，搜尋任意指定元素時不能像 binary search tree 一樣依比較結果排除整個子樹；最壞情況必須檢查全部 n 個節點，所以時間複雜度為 O(n)，選 (C)。"
+  }
+]

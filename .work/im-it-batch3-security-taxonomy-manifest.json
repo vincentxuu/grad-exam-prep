@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "im-it",
+  "topicId": "im-it-security",
+  "proposedSubtopics": [
+    {
+      "id": "im-it-security-blockchain",
+      "topicId": "im-it-security",
+      "title": "區塊鏈與分散式帳本",
+      "keywords": ["blockchain", "Bitcoin", "mining", "distributed ledger", "consensus"],
+      "reason": "Bitcoin ledger 與 mining 題考分散式帳本及交易驗證，不是 AES、RSA、PKI 或 TLS 的核心密碼學題。",
+      "status": "reviewed"
+    }
+  ],
+  "moves": [
+    {
+      "questionId": "q-pp-im-it-107-18",
+      "fromSubtopicId": "im-it-security-cryptography",
+      "toSubtopicId": "im-it-security-blockchain",
+      "reason": "題目考 Bitcoin mining、發幣與去中心化角色，主軸是 blockchain system。"
+    },
+    {
+      "questionId": "q-pp-im-it-107-19",
+      "fromSubtopicId": "im-it-security-cryptography",
+      "toSubtopicId": "im-it-security-blockchain",
+      "reason": "題目考 Bitcoin ledger 與不可竄改性，屬分散式帳本架構；答案仍維持 disputed。"
+    },
+    {
+      "questionId": "q-pp-im-it-110-26",
+      "fromSubtopicId": "im-it-security-cryptography",
+      "toSubtopicId": "im-it-security-blockchain",
+      "reason": "題目考 cryptocurrency mining 的交易驗證目的，屬 blockchain consensus。"
+    },
+    {
+      "questionId": "q-pp-im-it-107-22",
+      "fromSubtopicId": "im-it-security-application-attacks",
+      "toSubtopicId": "im-it-security-network-defense",
+      "reason": "IoT botnet DDoS 的攻擊面與緩解屬網路防禦，不是 Web application vulnerability。"
+    },
+    {
+      "questionId": "q-pp-im-it-108-17",
+      "fromSubtopicId": "im-it-security-application-attacks",
+      "toSubtopicId": "im-it-security-malware-social",
+      "reason": "題目辨識 virus、Trojan、spyware 與 botnet，屬 malware taxonomy；答案仍維持 disputed。"
+    },
+    {
+      "questionId": "q-pp-im-it-108-18",
+      "fromSubtopicId": "im-it-security-application-attacks",
+      "toSubtopicId": "im-it-security-malware-social",
+      "reason": "題目直接考 social engineering，應歸入惡意程式與社交工程。"
+    },
+    {
+      "questionId": "q-pp-im-it-110-20",
+      "fromSubtopicId": "im-it-security-application-attacks",
+      "toSubtopicId": "im-it-security-auth-access",
+      "reason": "Dictionary attack 針對 password authentication，歸入身分驗證與存取控制。"
+    }
+  ],
+  "applyStatus": "approved_for_application"
+}

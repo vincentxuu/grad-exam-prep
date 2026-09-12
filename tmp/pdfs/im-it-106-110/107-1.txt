@@ -1,0 +1,56 @@
+題 號 : 386 國 立 臺 灣 大 學 107 學 年 度 碩士 班 招生 考試 試題
+科目 : 資訊 科 技 概論 題 號 : 386
+fick: 6 #3 頁 之 第 / 頁
+
+一 、 選 擇 題 (PH) 24 題 , 每 題 2.5 分 , 共 60 分, 請 在 每 題 的 選項 內 選擇 最 適當 的 答案 。
+
+注意 : 答 錯 倒 扣 1 分 , 扣 至 零 分 為 止 。( 不 答 不 倒 扣 )
+
+※ 注意 : 請 用 28 鉛筆 作答 於 答案 卡 , 並 先 詳 閱 答案 卡 上 之 「 畫 記 說 明 1。
+
+1. Which of the following technology is not used in Amazon Echo or Google Home? (A) speech recognition
+(B) image recognition (C) natural language processing (D) control of room devices (E) speech synthesis.
+
+2. Which of the following is wrong about object-oriented databases? (A) object-oriented databases are the most
+widely used database model today (B) object databases store objects rather than data such as integers, strings
+or real numbers (C) objects basically consist of attributes and methods (D) objects contain both executable
+code and data (E) all of the above are correct (choose this only if none of the above can be chosen).
+
+3. Which of the following is wrong about relational databases? (A) relational databases store data in tables (B)
+tables consist of rows and columns (C) all table columns depend on a primary key to identify the column (D)
+a table corresponds to a relation (E) all of the above are correct (choose this only if none of the above can be
+chosen).
+
+4. Which of the following SQL commands returns the number of countries of the records in the “Customers”
+table (see Table 1)?
+
+(A) SELECT NUMBER (*) FROM Customers;
+
+(B) SELECT COUNT (ALL country) FROM Customers;
+
+(C) SELECT COUNT (DISTINCT country) FROM Customers;
+
+(D) SELECT NUMBER (ALL country) FROM Customers;
+
+(£) SELECT NUMBER (DISTINCT * country) FROM Customers;
+Table | “Customers”:
+Jay Liang Jay@gmail.com
+Shiao Wang | swong@gmail.com
+
+5. Which of the following SQL commands lists the number of customers in each country from the “Customers”
+table (see Table 1)?
+
+(A) SELECT NUMBER (id), country FROM Customers GROUP BY country;
+(B) SELECT NUMBER (id), country FROM Customers ORDER BY country;
+(C) SELECT COUNT (id), country FROM Customers GROUP BY country;
+(D) SELECT COUNT (id), country FROM Customers ASSEMBLY BY country;
+(E) none of the above.
+
+6. Which of the following types of databases has been optimized for data warehousing and OLAP (online
+analytical processing) for complex analytical and ad hoc queries with a rapid execution time? (A) object-
+oriented databases (B) multidimensional databases (C) crossed relational databases (D) relational object-
+oriented databases (5) distributed databases,
+
+7. In database terminology, a read of uncommitted data is referred to as a (A) phantom read (B) dirty read (C)
+
+LAD

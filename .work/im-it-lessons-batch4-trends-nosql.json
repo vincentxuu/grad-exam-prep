@@ -1,0 +1,592 @@
+{
+  "proposedSourceRegistryEntries": [
+    {
+      "id": "src-world-bank-fintech-future-finance",
+      "title": "Fintech and the Future of Finance",
+      "author": "World Bank Group",
+      "publisher": "World Bank Group",
+      "type": "official-guidance",
+      "url": "https://www.worldbank.org/en/publication/fintech-and-the-future-of-finance",
+      "scope": ["emerging-digital-applications", "fintech", "digital-financial-services", "payments", "crowdfunding"],
+      "usage": "terminology-and-concept-check",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-kickstarter-about",
+      "title": "About Kickstarter",
+      "author": "Kickstarter",
+      "publisher": "Kickstarter, PBC",
+      "type": "documentation",
+      "url": "https://www.kickstarter.com/about",
+      "scope": ["emerging-digital-applications", "crowdfunding"],
+      "usage": "platform-example-check",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-mooc-org-edx",
+      "title": "MOOC.org / edX Course Platform",
+      "author": "edX",
+      "publisher": "edX LLC",
+      "type": "documentation",
+      "url": "https://www.mooc.org/",
+      "scope": ["emerging-digital-applications", "online-learning", "mooc"],
+      "usage": "platform-example-check",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-futurelearn-what-is-a-mooc",
+      "title": "What is a MOOC?",
+      "author": "FutureLearn",
+      "publisher": "FutureLearn",
+      "type": "documentation",
+      "url": "https://www.futurelearn.com/info/blog/what-is-a-mooc",
+      "scope": ["emerging-digital-applications", "online-learning", "mooc"],
+      "usage": "definition-and-terminology-check",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-amazon-alexa-voice-service",
+      "title": "Alexa Built-in Devices and Alexa Voice Service",
+      "author": "Amazon Developer",
+      "publisher": "Amazon",
+      "type": "documentation",
+      "url": "https://developer.amazon.com/en-US/alexa/alexa-voice-service",
+      "scope": ["emerging-digital-applications", "smart-speaker", "voice-interface"],
+      "usage": "device-input-output-and-platform-check",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-synopsys-autonomous-car",
+      "title": "What is an Autonomous Car?",
+      "author": "Synopsys",
+      "publisher": "Synopsys",
+      "type": "documentation",
+      "url": "https://www.synopsys.com/automotive/what-is-autonomous-car.html",
+      "scope": ["emerging-digital-applications", "autonomous-vehicle", "sensors", "perception"],
+      "usage": "sensor-role-concept-check",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-nist-ir-8356-digital-twin",
+      "title": "Security and Trust Considerations for Digital Twin Technology",
+      "author": "Jeffrey Voas, Peter Mell, Phillip Laplante, Vartan Piroumian",
+      "publisher": "National Institute of Standards and Technology",
+      "type": "official-guidance",
+      "url": "https://csrc.nist.gov/pubs/ir/8356/final",
+      "scope": ["emerging-digital-applications", "digital-twin", "monitoring", "simulation"],
+      "usage": "definition-and-operational-use-check",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-ibm-big-data",
+      "title": "What is big data?",
+      "author": "IBM Think",
+      "publisher": "IBM",
+      "type": "documentation",
+      "url": "https://www.ibm.com/think/topics/big-data",
+      "scope": ["big-data", "big-data-analytics", "data-quality", "distributed-processing"],
+      "usage": "terminology-and-concept-check",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-mongodb-nosql-explained",
+      "title": "What is NoSQL?",
+      "author": "MongoDB",
+      "publisher": "MongoDB, Inc.",
+      "type": "documentation",
+      "url": "https://www.mongodb.com/resources/basics/databases/nosql-explained",
+      "scope": ["databases", "nosql", "document-store", "key-value", "wide-column", "graph"],
+      "usage": "data-model-and-terminology-check",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-mongodb-sharding",
+      "title": "Sharding",
+      "author": "MongoDB Documentation",
+      "publisher": "MongoDB, Inc.",
+      "type": "documentation",
+      "url": "https://www.mongodb.com/docs/manual/sharding/",
+      "scope": ["databases", "distributed-databases", "sharding", "horizontal-scaling", "replication"],
+      "usage": "architecture-and-worked-example-check",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-ibm-cap-theorem",
+      "title": "What is the CAP theorem?",
+      "author": "IBM Think",
+      "publisher": "IBM",
+      "type": "documentation",
+      "url": "https://www.ibm.com/think/topics/cap-theorem",
+      "scope": ["distributed-systems", "distributed-databases", "cap-theorem", "network-partition"],
+      "usage": "terminology-and-tradeoff-check",
+      "status": "reviewed"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "lesson-im-it-trends-emerging-digital-applications-01",
+      "subtopicId": "im-it-trends-emerging-digital-applications",
+      "coveredSubtopicIds": [
+        "im-it-trends-emerging-digital-applications"
+      ],
+      "title": "新興科技與數位應用：從服務分類到感知與數位分身",
+      "summary": "以應用要解決的問題區分 Fintech、crowdfunding、MOOC 與 mobile payment，再拆解原始 voice-only smart speaker、自動駕駛與 digital twin 的輸入、處理與輸出。對應考古題答案均為非官方技術覆核；產品能力以題目所述年代與裝置範圍為準。",
+      "estimatedMinutes": 34,
+      "minimumPastPaperRefs": 6,
+      "learningObjectives": [
+        "依服務目的區分 Fintech、mobile payment、crowdfunding 與 MOOC。",
+        "以輸入、處理、輸出描述 voice-only smart speaker 的語音互動流程。",
+        "區分自動駕駛中的環境感知、定位與決策功能。",
+        "說明 digital twin 如何以實體狀態更新電子表示並支援監控、模擬與維護。"
+      ],
+      "sections": [
+        {
+          "title": "先辨識服務目的，再辨識使用的技術",
+          "body": "新興數位應用不等於單一底層技術。Fintech 是把數位技術應用於金融服務；mobile payment 是其中聚焦付款流程的一類服務。Crowdfunding 平台讓許多支持者共同資助專案，MOOC 則以網路大規模提供開放式課程。判題時先問服務解決什麼問題，不要因為都使用網站或手機就歸為同一類。",
+          "bullets": [
+            "Fintech 的範圍可包含支付、借貸、保險、投資與監理科技，不只 mobile payment。",
+            "Mobile payment 的核心是啟動、授權或完成付款，不是所有募集資金網站都屬於支付服務。",
+            "Crowdfunding 的核心是由群眾對專案提供資金；Kickstarter 是典型平台。",
+            "MOOC 是 Massive Open Online Course；Udacity、Coursera 與 edX 常作為此類線上學習平台的例子。"
+          ]
+        },
+        {
+          "title": "Voice-only smart speaker 的語音處理鏈",
+          "body": "原始 voice-only smart speaker 由 microphone 接收聲音，經 speech recognition 轉成可處理的文字或語意表示，再以 natural language processing 判斷意圖，執行查詢或裝置控制，最後可用 speech synthesis 回覆。若題目明確限定只有 microphone 與 speaker 的產品，image recognition 不在完成這條語音流程的必要技術中。",
+          "bullets": [
+            "Speech recognition 處理聲音到詞語或文字的轉換。",
+            "Natural language processing 用於理解使用者意圖與參數。",
+            "Speech synthesis 把系統回覆轉成可播放語音。",
+            "後來帶螢幕或 camera 的產品可能使用影像技術，不能把歷史題目的 voice-only 限定外推到所有新型裝置。"
+          ]
+        },
+        {
+          "title": "自動駕駛要分開看感知、定位與決策",
+          "body": "自動駕駛系統需要知道周遭有什麼、車輛位於何處，以及下一步如何控制。Camera/computer vision、radar 與 lidar 可提供周遭物體或距離等環境觀測；衛星導航主要提供位置與時間資訊。GPS 因此屬定位的重要輸入，但不是直接觀察附近行人、車輛輪廓或障礙物的感測器。",
+          "bullets": [
+            "Perception 將 sensor observations 轉成物體、車道或可通行空間等估計。",
+            "Localization 估計車輛在地圖或座標系中的位置，通常融合多種訊號。",
+            "Planning 根據目標、道路與障礙物選擇路徑或動作。",
+            "Control 把規劃結果轉成轉向、煞車與加速命令；任一感測來源都不應被當成整套自動駕駛。"
+          ]
+        },
+        {
+          "title": "Digital twin 是會隨實體狀態更新的電子表示",
+          "body": "Digital twin 是現實實體或系統的電子表示，可透過量測資料觀察其狀態與狀態轉換。它可支援 real-time monitoring、simulation、testing 與 maintenance，但不代表只建立一次且不再更新的 3D 圖，也不保證模擬結果必然正確；模型、感測資料與同步機制仍會帶來誤差。",
+          "bullets": [
+            "Physical entity 是被表示的設備、流程或系統。",
+            "Sensors/records 把實體狀態送入資料流程，更新 electronic representation。",
+            "Simulation 可比較不同操作條件，monitoring 可追蹤目前狀態。",
+            "Digital model 若沒有與實體狀態連結或更新，不一定符合課程所用的 digital twin 定義。"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "將下列服務分類：①以手機完成商店付款；②由 2,000 名支持者共同資助一項桌遊專案；③向大量網路學習者開放的大學課程；④用演算法改善貸款風險評估。",
+          "steps": [
+            "① 的核心是完成付款，屬 mobile payment，也可位於廣義 Fintech 範圍。",
+            "② 的資金來自許多專案支持者，屬 crowdfunding。",
+            "③ 是大規模、開放、線上課程，屬 MOOC。",
+            "④ 把數位技術應用於金融服務，屬 Fintech，但不是 mobile payment。"
+          ],
+          "answer": "① mobile payment（亦屬廣義 Fintech）；② crowdfunding；③ MOOC；④ Fintech。"
+        },
+        {
+          "prompt": "某原始 voice-only smart speaker 只有 microphone 與 speaker。使用者說『把客廳燈打開』後，系統需辨識語音、理解意圖、控制燈具並語音回覆。speech recognition、NLP、speech synthesis、image recognition 中，哪一項不是完成此流程的必要技術？",
+          "steps": [
+            "Microphone 收到的語音需由 speech recognition 轉成可處理內容。",
+            "NLP 判斷『打開』動作與『客廳燈』目標。",
+            "系統執行裝置控制，speech synthesis 可產生語音回覆。",
+            "題面沒有 camera 或影像輸入，image recognition 不在這條 voice-only 流程中。"
+          ],
+          "answer": "Image recognition。此結論只針對題面限定的原始 voice-only 裝置，不外推到帶 camera 的產品。"
+        },
+        {
+          "prompt": "自動駕駛車收到四項資料：camera frame、radar range、lidar point cloud、GPS coordinates。若問題是『哪一項主要提供全域定位，而非直接觀察附近物體』，應選哪一項？",
+          "steps": [
+            "Camera frame 可由 computer vision 辨識車道、車輛或行人。",
+            "Radar range 與 lidar point cloud 可提供周遭物體距離或幾何觀測。",
+            "GPS coordinates 描述車輛位置，屬 localization input。",
+            "因此在題面四項中，GPS 最符合『定位而非直接環境感知』。"
+          ],
+          "answer": "GPS coordinates；它提供定位資訊，周遭物體仍需其他 sensors/perception 方法觀察。"
+        },
+        {
+          "prompt": "工廠每分鐘把馬達溫度送到電子模型，模型顯示目前狀態，並模擬若轉速提高 10% 時的溫度。這是否符合 digital twin？若只有一張從不更新的 3D 圖呢？",
+          "steps": [
+            "電子模型代表一個真實馬達。",
+            "感測資料持續更新模型狀態，建立實體與電子表示的連結。",
+            "模型同時支援 monitoring 與 what-if simulation，因此符合本課 digital twin 特徵。",
+            "不更新的 3D 圖缺少狀態同步，只能稱為靜態 digital model，不能僅憑外觀認定為 twin。"
+          ],
+          "answer": "持續接收實體狀態並支援監控／模擬者符合 digital twin；從不更新的 3D 圖不符合本課定義。"
+        }
+      ],
+      "commonPitfalls": [
+        "把 Fintech 縮小成只有 mobile payment，或把所有手機服務都稱為 Fintech。",
+        "把 crowdfunding 平台誤當成一般 mobile payment provider。",
+        "看到 smart speaker 就一律說需要 image recognition，忽略題面的 voice-only 與年代限定。",
+        "把 GPS 當成能直接偵測附近障礙物形狀的環境感測器。",
+        "把任何 3D model 都稱為 digital twin，忽略實體狀態連結與更新。",
+        "把產品例子當成永遠不變的定義；品牌功能會隨版本與年代改變。"
+      ],
+      "learningScenario": {
+        "title": "逛一圈智慧城市體驗館",
+        "hook": "你走進一座智慧城市體驗館：入口用手機付款，創作者攤位邀請群眾資助新產品，學習區開放線上課程，語音導覽柱只靠麥克風與喇叭互動，戶外接駁車融合多種感測資訊，中央控制室則用會隨實體設備更新的模型監看整座館。看似都叫新科技，分類時仍要先看每一站解決的問題與資料流。",
+        "predict": "接駁車同時收到 camera、radar、lidar 與 GPS 資料；若題目問『哪一項主要提供全域定位，而不是直接觀察附近物體』，你會選哪一項？",
+        "mapping": [
+          {
+            "everyday": "入口用手機完成付款；創作者則向許多支持者募集專案資金",
+            "technical": "Mobile payment 是 Fintech 的支付應用；由群眾共同資助專案是 crowdfunding，應依服務目的區分"
+          },
+          {
+            "everyday": "學習區讓大量學習者透過網路參與開放式課程",
+            "technical": "MOOC 是 Massive Open Online Course；edX、Coursera、Udacity 是常見平台例子，不是 MOOC 定義本身"
+          },
+          {
+            "everyday": "Voice-only 導覽柱聽見問題、理解意圖，再用聲音回答",
+            "technical": "Microphone input → speech recognition → NLP/intent → action → speech synthesis；沒有影像輸入時 image recognition 不是必要步驟"
+          },
+          {
+            "everyday": "接駁車用 camera、radar、lidar 觀察附近物體，用 GPS 協助判斷所在位置",
+            "technical": "Perception 與 localization 是不同功能；GPS 主要提供定位資訊，不等於直接感知障礙物"
+          },
+          {
+            "everyday": "控制室的電子館舍會接收實體設備狀態，並用來監控與模擬",
+            "technical": "Digital twin 以會更新的 electronic representation 連結 real-world entity；不更新的 3D model 不必然是 twin"
+          }
+        ],
+        "boundary": "體驗館只是把多種應用放進同一場景，不表示 Fintech、MOOC、語音助手、自動駕駛與 digital twin 必須整合成同一系統。產品功能會隨年代與型號改變；voice-only 的 image-recognition 判斷只適用於題面限定，GPS 不直接感知附近物體也不代表它對自動駕駛不重要。Digital twin 仍受感測資料、同步與模型誤差限制。",
+        "examCues": [
+          "看到付款、募資或線上課程：先問服務目的；付款是 mobile payment，群眾資助專案是 crowdfunding，MOOC 是 massive open online course。",
+          "看到原始 voice-only smart speaker：沿 microphone、speech recognition、NLP、speech synthesis 檢查，別把後來的 camera 功能倒推回去。",
+          "看到 autonomous car 感知題：camera／radar／lidar 對應周遭觀測，GPS 主要對應 localization。",
+          "看到 monitoring、simulation、real-world counterpart：先想到 digital twin，並檢查是否有實體狀態連結與更新。"
+        ]
+      },
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-world-bank-fintech-future-finance",
+        "src-kickstarter-about",
+        "src-mooc-org-edx",
+        "src-futurelearn-what-is-a-mooc",
+        "src-amazon-alexa-voice-service",
+        "src-synopsys-autonomous-car",
+        "src-nist-ir-8356-digital-twin"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-106-6",
+        "q-pp-im-it-106-16",
+        "q-pp-im-it-106-17",
+        "q-pp-im-it-107-1",
+        "q-pp-im-it-108-8",
+        "q-pp-im-it-112-23"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "lesson-im-it-data-big-data-nosql-01",
+      "subtopicId": "im-it-trends-big-data-analytics",
+      "coveredSubtopicIds": [
+        "im-it-trends-big-data-analytics",
+        "im-it-db-distributed-nosql"
+      ],
+      "title": "Big Data 與 NoSQL：從資料特性到水平擴充與 CAP",
+      "summary": "由 volume、velocity、variety、veracity 與分析用途判斷 Big Data 問題，再依資料存取形狀選擇 document、key-value、wide-column 或 graph model，最後區分 sharding、replication、horizontal scaling 與 CAP 取捨。對應考古題答案均為非官方技術覆核；disputed 或 OCR 破損題不列入 refs。",
+      "estimatedMinutes": 38,
+      "minimumPastPaperRefs": 5,
+      "learningObjectives": [
+        "解釋 Big Data 的 volume、velocity、variety、veracity 與可行分析用途。",
+        "依資料形狀與查詢需求比較四類常見 NoSQL data models。",
+        "區分 vertical/horizontal scaling、sharding 與 replication。",
+        "正確解釋 CAP 的 consistency、availability、partition tolerance 與 network partition 下的取捨。"
+      ],
+      "sections": [
+        {
+          "title": "Big Data 的 V 是問題特性，不是固定產品清單",
+          "body": "Big Data 指傳統資料管理方式難以有效處理的大型、複雜資料集合。Volume 描述資料量，velocity 描述產生與流入速度，variety 描述格式與來源多樣性，veracity 描述資料準確性與可信度。不同教材可能再加入 value 等 V，因此題目若未指定 3V、4V 或 5V framework，不應把 framework 差異當成唯一答案依據。",
+          "bullets": [
+            "Volume 大不只指檔案數量，也涉及儲存與平行處理需求。",
+            "Velocity 會影響 batch 或 stream processing 的選擇。",
+            "Variety 可包含 structured、semi-structured 與 unstructured data。",
+            "Veracity 不代表資料必須完美，而是分析時需處理 noise、missing values 與可信度。"
+          ]
+        },
+        {
+          "title": "分析用途跨領域，但仍需可驗證的問題與資料",
+          "body": "Big-data analytics 可支援 decision making、forecast/prediction、security vulnerability assessment 與 public governance；是否有效仍取決於資料品質、代表性、方法與驗證。資料量大本身不會自動產生價值，也不能把 correlation 直接當 causation。先寫清楚 decision target、可用 features、時間範圍與 evaluation criterion，才能判斷資料與方法是否適用。",
+          "bullets": [
+            "Decision making 把分析結果連結到可選行動。",
+            "Forecast 使用過去與目前資料估計未來，但需評估 distribution shift。",
+            "Vulnerability assessment 可從大量 logs/events 找異常或風險訊號。",
+            "Government governance 可分析公共服務需求，但需同時處理 privacy、bias 與 accountability。"
+          ]
+        },
+        {
+          "title": "NoSQL 依資料模型與 access pattern 選擇",
+          "body": "NoSQL 不是『完全不能使用 SQL』的單一產品類別，而是多種非關聯式資料管理方法的統稱。常見 models 包含 document、key-value、wide-column 與 graph。它們常提供較彈性的 schema，適合特定大規模或半結構化 workload，但不表示一定比 relational database 快、完全沒有 schema、不能建立 indexes 或不能支援 transactions。",
+          "bullets": [
+            "Document store 以 JSON-like documents 保存欄位、陣列與巢狀結構。",
+            "Key-value store 以 unique key 找 value，適合 session、cache 等直接 lookup。",
+            "Wide-column store 允許 rows 有不同或稀疏 columns，適合大規模分散資料。",
+            "Graph database 以 nodes 與 edges 表示高度連結關係，適合 traversal 與 relationship queries。"
+          ]
+        },
+        {
+          "title": "Horizontal scaling、sharding 與 replication 不同",
+          "body": "Vertical scaling 增強單一 server；horizontal scaling 增加 nodes，讓資料或負載分散。Sharding 依 shard key 把不同資料分區放到不同 shards，主要擴充分散的容量與吞吐；replication 則保存資料副本以支援 availability、讀取或故障復原。兩者可以同時使用，但複製同一資料不是 sharding，把資料切開也不自動產生備援。",
+          "bullets": [
+            "好的 shard key 應避免所有 writes 集中到單一 hot shard。",
+            "不含 shard key 的查詢可能需要 scatter/gather 到多個 shards。",
+            "Replication 會帶來 replica lag、failover 與一致性選擇。",
+            "Horizontal scaling 增加協調與維運複雜度，不是免費的無限擴充。"
+          ]
+        },
+        {
+          "title": "CAP 描述 network partition 發生時的保證取捨",
+          "body": "CAP 的 C 是 consistency：所有成功讀取看到符合單一一致視圖的資料；A 是 availability：每個送達未失效節點的請求都得到非錯誤回應；P 是 partition tolerance：節點間訊息遺失或延遲形成分區時系統仍運作。網路分區發生時，系統無法同時保證 C 與 A：可拒絕部分請求維持一致性，或持續回應但允許讀到較舊／分歧資料。CAP 不是日常狀況下任意『三選二』的效能口號。",
+          "bullets": [
+            "選 CP 表示 partition 時可能犧牲部分 availability 以避免不一致結果。",
+            "選 AP 表示 partition 時持續回應，但必須容許暫時不一致並在之後協調。",
+            "Partition tolerance 是分散式部署必須面對的故障條件，不等於資料分區 sharding。",
+            "CAP 不直接宣稱所有 NoSQL 都是 eventual consistency；具體保證依系統與設定而異。"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "某系統每秒接收 50,000 筆 IoT readings，來源包含數字、JSON 與影像 metadata，其中 3% readings 缺少校正資訊。分別指出最直接對應的 volume、velocity、variety、veracity 證據。",
+          "steps": [
+            "大量累積 readings 對應 volume。",
+            "每秒 50,000 筆的流入速率對應 velocity。",
+            "數字、JSON、影像 metadata 等不同格式對應 variety。",
+            "缺少校正資訊會影響可信度與品質，對應 veracity。"
+          ],
+          "answer": "Volume＝大量累積資料；velocity＝50,000 筆/秒；variety＝多種格式；veracity＝3% 缺校正資訊所造成的品質疑慮。"
+        },
+        {
+          "prompt": "為四個需求選 data model：①sessionId→session；②每位使用者有不同 optional profile fields；③查詢朋友的朋友；④每台設備每天產生稀疏且不同的 metrics columns。",
+          "steps": [
+            "① 是以唯一 key 直接取 value，選 key-value。",
+            "② 是欄位可變且含巢狀結構的實體，選 document。",
+            "③ 重點是 entities 間的 edges 與 traversal，選 graph。",
+            "④ 各 rows 的 columns 稀疏且可能不同，選 wide-column。"
+          ],
+          "answer": "① key-value；② document；③ graph；④ wide-column。這是依 access pattern 的配對，不代表其他模型絕對做不到。"
+        },
+        {
+          "prompt": "以 hash(userId) mod 3 分配 shard。userId 10、11、14 各落在哪個 shard？新增每筆資料的第二份副本後，這個動作是 sharding 還是 replication？",
+          "steps": [
+            "10 mod 3=1，因此 userId 10 到 shard 1。",
+            "11 mod 3=2，因此 userId 11 到 shard 2。",
+            "14 mod 3=2，因此 userId 14 也到 shard 2。",
+            "依 key 分散不同 records 是 sharding；保存第二份相同資料是 replication。"
+          ],
+          "answer": "10→shard 1，11→shard 2，14→shard 2；第二份副本屬 replication。"
+        },
+        {
+          "prompt": "兩個 replicas 因 network partition 無法互通。方案 X 暫停其中一側寫入，直到能確認最新版本；方案 Y 兩側都繼續接受 writes，稍後合併。CAP 下 X、Y 各偏向哪種取捨？",
+          "steps": [
+            "Partition 已發生，P 是必須處理的故障條件。",
+            "X 拒絕部分請求以避免兩側同時產生無法排序的更新，偏向維持 consistency。",
+            "X 因此犧牲 partition 期間部分 availability，屬 CP 取向。",
+            "Y 持續回應但容許暫時分歧，偏向 availability，屬 AP 取向。"
+          ],
+          "answer": "X 偏 CP；Y 偏 AP。AP 不代表永遠不一致，而是 partition 期間允許暫時分歧並需後續 reconciliation。"
+        }
+      ],
+      "commonPitfalls": [
+        "把不同 Big Data V frameworks 混成唯一不變定義，忽略題目是否指定版本。",
+        "認為資料量夠大就自然能產生正確決策，忽略品質、偏差與驗證。",
+        "把 NoSQL 解讀成完全沒有 schema、indexes 或 transactions。",
+        "看到 JSON 就一定選 document store，不先看實際 access pattern。",
+        "混淆 sharding 與 replication，或認為 horizontal scaling 沒有協調成本。",
+        "把 CAP 簡化為任何時候都能自由三選二，忽略 network partition 情境。",
+        "宣稱所有 NoSQL 都犧牲 consistency；實際保證取決於產品與設定。"
+      ],
+      "learningScenario": {
+        "title": "連鎖超商的即時營運平台",
+        "hook": "一間連鎖超商每秒收到大量門市交易、感測器 readings、JSON 商品資料與顧客回饋。團隊既想預測補貨，也要把不同資料模型分散到多台 servers；如果分店網路中斷，還得決定要暫停部分操作維持一致，或先持續服務、稍後再協調。這個平台把 Big Data 的資料特性、NoSQL 選型、sharding 與 CAP 放在同一條營運流程中。",
+        "predict": "兩個資料副本因 network partition 無法互通：方案甲暫停其中一側寫入以避免分歧，方案乙讓兩側繼續接受寫入、之後再合併。哪個偏 CP，哪個偏 AP？",
+        "mapping": [
+          {
+            "everyday": "大量資料持續高速湧入，格式包含交易表、JSON、文字與感測 readings，部分資料還缺校正資訊",
+            "technical": "Volume、velocity、variety、veracity 分別描述資料量、流速、多樣性與可信度；V framework 版本須依題目限定"
+          },
+          {
+            "everyday": "團隊用資料做補貨決策、需求預測、異常偵測與公共服務分析",
+            "technical": "Big-data analytics 可支援 decision making、forecast、vulnerability assessment 與 governance，但資料量不保證結論正確"
+          },
+          {
+            "everyday": "Session 依唯一 key 取值、商品資料有彈性欄位、社交關係要走訪、設備 metrics 欄位稀疏",
+            "technical": "依 access pattern 對應 key-value、document、graph、wide-column；NoSQL 不等於完全沒有 schema、index 或 transaction"
+          },
+          {
+            "everyday": "不同顧客資料依 userId 分到不同 servers，同一份重要資料再保存副本",
+            "technical": "Sharding 分散不同資料以水平擴充；replication 保存相同資料的 copies 以支援 availability、讀取或復原"
+          },
+          {
+            "everyday": "網路分區時，一側拒絕部分請求避免資料分歧，或兩側都回應並容許暫時不一致",
+            "technical": "Partition 下拒絕部分請求偏 CP；持續回應並稍後 reconciliation 偏 AP，CAP 不是平時任意三選二的效能口號"
+          }
+        ],
+        "boundary": "超商情境不表示資料一多就必須用 NoSQL，也不表示所有 NoSQL 都採 eventual consistency。資料模型應依 access pattern 與所需保證選擇；sharding、replication 與 partition tolerance 是不同概念。CAP 描述 network partition 下 consistency 與 availability 的保證取捨，不能用它直接推論平時 latency、transaction 能力或某產品一定較快。",
+        "examCues": [
+          "看到 Big Data 的 V：volume 是量、velocity 是速度、variety 是格式來源、veracity 是可信度；先確認題目採 3V、4V 或 5V。",
+          "看到 NoSQL model：直接 key lookup 想 key-value，彈性巢狀資料想 document，關係走訪想 graph，稀疏欄位想 wide-column。",
+          "看到 scale out、shard key、replica：增加 nodes 是 horizontal scaling；切不同資料是 sharding；保存副本是 replication。",
+          "看到 CAP：C/A/P 是 consistency、availability、partition tolerance；真正的 C/A 取捨發生在 partition 情境。"
+        ]
+      },
+      "sourceRefs": [
+        "src-ibm-big-data",
+        "src-mongodb-nosql-explained",
+        "src-mongodb-sharding",
+        "src-ibm-cap-theorem"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-108-10",
+        "q-pp-im-it-108-11",
+        "q-pp-im-it-114-15",
+        "q-pp-im-it-115-21",
+        "q-pp-im-it-115-26"
+      ],
+      "reviewStatus": "draft"
+    }
+  ],
+  "cards": [
+    {
+      "id": "card-im-it-trends-emerging-digital-applications-01",
+      "lessonId": "lesson-im-it-trends-emerging-digital-applications-01",
+      "subtopicId": "im-it-trends-emerging-digital-applications",
+      "front": "Fintech、mobile payment 與 crowdfunding 如何區分？",
+      "back": "Fintech 是數位技術應用於金融服務的廣義類別；mobile payment 聚焦付款；crowdfunding 由群眾共同資助專案。",
+      "explanation": "Mobile payment 可是 Fintech 子類，但 crowdfunding 平台的主要服務目的不是替商店完成付款。",
+      "sourceRefs": ["src-world-bank-fintech-future-finance", "src-kickstarter-about"],
+      "pastPaperRefs": ["q-pp-im-it-106-6", "q-pp-im-it-106-16"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-trends-emerging-digital-applications-02",
+      "lessonId": "lesson-im-it-trends-emerging-digital-applications-01",
+      "subtopicId": "im-it-trends-emerging-digital-applications",
+      "front": "MOOC 的全名與核心形式是什麼？",
+      "back": "Massive Open Online Course；以網路向大量學習者提供開放式課程。",
+      "explanation": "Udacity、Coursera 與 edX 常作為 MOOC 平台例子；平台也可能同時提供不完全開放或付費的其他課程形式。",
+      "sourceRefs": ["src-futurelearn-what-is-a-mooc", "src-mooc-org-edx"],
+      "pastPaperRefs": ["q-pp-im-it-106-17"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-trends-emerging-digital-applications-03",
+      "lessonId": "lesson-im-it-trends-emerging-digital-applications-01",
+      "subtopicId": "im-it-trends-emerging-digital-applications",
+      "front": "原始 voice-only smart speaker 的基本處理鏈是什麼？",
+      "back": "Microphone input → speech recognition → NLP/intent → service 或 device action → speech synthesis/output。",
+      "explanation": "若題面限定只有 microphone 與 speaker，image recognition 不是這條語音流程的必要技術；不能外推到後來帶 camera 的產品。",
+      "sourceRefs": ["src-brookshear-13e", "src-amazon-alexa-voice-service"],
+      "pastPaperRefs": ["q-pp-im-it-107-1"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-trends-emerging-digital-applications-04",
+      "lessonId": "lesson-im-it-trends-emerging-digital-applications-01",
+      "subtopicId": "im-it-trends-emerging-digital-applications",
+      "front": "自動駕駛中 GPS 與 lidar/radar/camera 的角色差異為何？",
+      "back": "GPS 主要提供定位；lidar、radar、camera 則提供周遭環境觀測，供 perception 使用。",
+      "explanation": "完整系統會融合來源；『GPS 不直接感知附近物體』不等於 GPS 對自動駕駛不重要。",
+      "sourceRefs": ["src-synopsys-autonomous-car"],
+      "pastPaperRefs": ["q-pp-im-it-108-8"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-trends-emerging-digital-applications-05",
+      "lessonId": "lesson-im-it-trends-emerging-digital-applications-01",
+      "subtopicId": "im-it-trends-emerging-digital-applications",
+      "front": "Digital twin 與不更新的 3D model 有何差異？",
+      "back": "Digital twin 以電子表示連結實體，能觀察實體狀態及狀態轉換；靜態 3D model 不一定有此同步關係。",
+      "explanation": "Digital twin 可支援 monitoring、simulation、testing 與 maintenance，但準確度仍受資料與模型限制。",
+      "sourceRefs": ["src-nist-ir-8356-digital-twin"],
+      "pastPaperRefs": ["q-pp-im-it-112-23"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-trends-emerging-digital-applications-06",
+      "lessonId": "lesson-im-it-trends-emerging-digital-applications-01",
+      "subtopicId": "im-it-trends-emerging-digital-applications",
+      "front": "判斷新興數位應用時，為何要先問『服務目的』？",
+      "back": "相同底層技術可支援不同服務；先辨認付款、募資、學習、感知或模擬等目的，才能正確分類。",
+      "explanation": "網站、手機、AI 都只是可能的 delivery/enabling technology，不能單獨決定應用類別。",
+      "sourceRefs": ["src-world-bank-fintech-future-finance", "src-nist-ir-8356-digital-twin"],
+      "pastPaperRefs": ["q-pp-im-it-106-6", "q-pp-im-it-112-23"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-data-big-data-nosql-01",
+      "lessonId": "lesson-im-it-data-big-data-nosql-01",
+      "subtopicId": "im-it-trends-big-data-analytics",
+      "front": "Big Data 的 volume、velocity、variety、veracity 分別描述什麼？",
+      "back": "資料量、資料流入/處理速度、資料格式與來源多樣性、資料準確性與可信度。",
+      "explanation": "教材另可能加入 value；題目必須說明採用哪個 V framework，不能把版本差異硬當唯一答案。",
+      "sourceRefs": ["src-ibm-big-data"],
+      "pastPaperRefs": ["q-pp-im-it-108-10"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-data-big-data-nosql-02",
+      "lessonId": "lesson-im-it-data-big-data-nosql-01",
+      "subtopicId": "im-it-trends-big-data-analytics",
+      "front": "Big-data analytics 可支援哪些類型的應用？",
+      "back": "可支援 decision making、forecast/prediction、vulnerability assessment 與 government governance 等，但需驗證資料與方法。",
+      "explanation": "『可應用』不表示任何大型資料都能產生可靠結論；品質、代表性、privacy 與 evaluation 仍不可省略。",
+      "sourceRefs": ["src-ibm-big-data"],
+      "pastPaperRefs": ["q-pp-im-it-108-11"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-data-big-data-nosql-03",
+      "lessonId": "lesson-im-it-data-big-data-nosql-01",
+      "subtopicId": "im-it-db-distributed-nosql",
+      "front": "四類常見 NoSQL data models 是什麼？",
+      "back": "Document、key-value、wide-column 與 graph。",
+      "explanation": "應依 data shape 與 access pattern 選擇；NoSQL 不表示完全沒有 schema、indexes、queries 或 transactions。",
+      "sourceRefs": ["src-mongodb-nosql-explained"],
+      "pastPaperRefs": ["q-pp-im-it-114-15", "q-pp-im-it-115-26"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-data-big-data-nosql-04",
+      "lessonId": "lesson-im-it-data-big-data-nosql-01",
+      "subtopicId": "im-it-db-distributed-nosql",
+      "front": "Horizontal scaling 與 vertical scaling 有何差異？",
+      "back": "Horizontal scaling 增加 nodes 並分散資料/負載；vertical scaling 提升單一 server 的 CPU、RAM 或 storage。",
+      "explanation": "NoSQL 常針對水平擴充設計，但新增 nodes 會增加 routing、coordination 與 operations 複雜度。",
+      "sourceRefs": ["src-mongodb-sharding"],
+      "pastPaperRefs": ["q-pp-im-it-114-15", "q-pp-im-it-115-26"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-data-big-data-nosql-05",
+      "lessonId": "lesson-im-it-data-big-data-nosql-01",
+      "subtopicId": "im-it-db-distributed-nosql",
+      "front": "Sharding 與 replication 的目的有何差異？",
+      "back": "Sharding 把不同資料分散到 shards 以擴充容量/吞吐；replication 保存副本以支援 availability、讀取或復原。",
+      "explanation": "兩者可並用；資料分區不自動產生備援，建立副本也不等於把 dataset 切開。",
+      "sourceRefs": ["src-mongodb-sharding"],
+      "pastPaperRefs": ["q-pp-im-it-114-15"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-data-big-data-nosql-06",
+      "lessonId": "lesson-im-it-data-big-data-nosql-01",
+      "subtopicId": "im-it-db-distributed-nosql",
+      "front": "CAP 的 C、A、P 是什麼？真正的取捨情境為何？",
+      "back": "Consistency、availability、partition tolerance；network partition 發生時，無法同時保證 C 與 A。",
+      "explanation": "CP 可能拒絕部分請求以維持一致性；AP 持續回應但容許暫時分歧。CAP 不是所有時候任意『三選二』。",
+      "sourceRefs": ["src-ibm-cap-theorem"],
+      "pastPaperRefs": ["q-pp-im-it-115-21"],
+      "reviewStatus": "draft"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "reviewerScope": "獨立審核 .work/im-it-lessons-network.json 的 2 lessons 與 12 cards；檢查技術正確性、答案來源措辭、worked example 可重現性、card front/back 歧義、source registry、past-paper existence/subtopic/auto-grade eligibility，以及 card-to-lesson refs 關係。未修改受審原檔。",
+  "approved": true,
+  "lessonReviews": [
+    {
+      "lessonId": "lesson-im-it-network-models-encapsulation",
+      "approved": true,
+      "issues": []
+    },
+    {
+      "lessonId": "lesson-im-it-network-application-protocols",
+      "approved": true,
+      "issues": []
+    }
+  ],
+  "cardIssues": [],
+  "summary": {
+    "decision": "approved",
+    "blockingCount": 0,
+    "majorCount": 0,
+    "minorCount": 0,
+    "technicalAssessment": "OSI/TCP-IP 分層、封裝、位址範圍、DNS/DHCP、郵件協定、proxy/CDN 等核心敘述正確；兩堂各有 3 個可依步驟重現的 worked examples。12 張 cards 的 front/back 可獨立理解，未發現阻擋發布的答案歧義。",
+    "provenanceAssessment": "內容沒有把非官方考古題答案宣稱為官方，也沒有宣稱 source registry 提供官方答案。兩個 sourceRefs 均存在且 status=reviewed、scope=networking。",
+    "referenceAssessment": "全部 pastPaperRefs 都存在、與 metadata subtopic 相符且目前 autoGradeEligible；所有 card refs 都是所屬 lesson refs 的子集。先前 4 個未被課文支撐的 wireless/IoT refs 已移除。",
+    "approvalRule": "複查後 blocking=0、major=0，符合 approved=true 規則。"
+  }
+}

@@ -1,0 +1,50 @@
+‘ |
+題 號 : 324 國 立 臺 灣 大 學 112 學 年 度 碩士 班 招生 考試 試題
+科目 : 疼 訊 科技 概論 二 題 號 : 324
+ck: 6 共 > 頁 之 第 之 頁 |
+
+7. [| Operating systems divide virtual and physical memory into fixed-sized chunks called pages.
+Which of the following page size is currently most common than the others? (A) 128 bytes (B) 512
+bytes (C) 4KB (D) 128KB (£) 512KB.
+
+8. | Which of the following is wrong for applications running in an operating system? (A) user
+applications usually run in user-mode (B) applications running in user-mode shares a virtual address
+space (C) a process running in user mode can’t access virtual addresses that are reserved for the
+operating system (Dj core operating system components run in kernel mode (E) all the above are
+correct (choose this one only if none of the above can be chosen).
+
+9. [| Which of the following is wrong about computer clusters? (A) nodes in a cluster are typically
+independent and connected by a high-speed LAN (B) clustering computers can increase computing
+power (C) clustering computers can prevent security attacks (D) clustering computers can improve fault
+tolerance (E) all the above are correct (choose this one only if none of the above can be chosen).
+
+10. Cc] With regard to process management, which of the following is generally not the
+responsibility of operating systems (OS)? (A) creating and deleting user processes (B) suspending and
+resuming processes (C) process synchronization (D) deadlock handling (E) all the above are OS’s
+responsibility. :
+
+11. td] With regard to storage management, which of the following is generally not the
+responsibility of operating systems? (A) creating and deleting files (B) file integrity check (C) disk
+scheduling (D) backing up files onto stable permanent storage media (E) supporting primitives for
+manipulating files and directories.
+
+12. | A uniprocessor system achieves multiprogramming by in CPU scheduling. (A) dynamic
+allocation (8) process rotating (C) pipelining (D) time slicing (E) none of the above.
+
+13. ‘| When a process is running in Unix-tike systems, which of the following is wrong about its
+memory layout? (A) the code section starts at location 0 (B) the data section starts immediately above
+code section (C) the stack section starts immediately above the data section (Dj the stack section can
+grow and shrink dynamically during process life cycle (E) all the above are correct (choose this one only
+if none of the above can be chosen).
+
+14. [| In Ethernet, which of the following algorithm is used to resolve collision? (A) Carrier Sense
+(B) Exponential Backoff (C) Collision Avoidance (D) Request to Send/Clear to Send (RTS/CTS) (E) Round
+Robin.
+
+15. ‘| We can apply tags to network frames and handling these tags in a local area network to
+create the appearance and functionality of network traffic that is physically on a single network but
+acts as if it is split between separate networks. This effectively creates (A) virtual LANs (B)
+VPN (CO domains (D) subdomains (E) private LANs.
+
+8,
+接 次 頁

@@ -1,0 +1,65 @@
+題 號 : 343 國立 臺 灣 大 學 111 學 年 度 碩士 班 招生 考試 試題
+科目 : 資 訊 科技 概 論 題 號 :343
+BR: 6 共 4 頁 之 第 2 頁
+(A) carrier-sense multiple access with collision avoidance (CSMA/CA) (B) carrier-sense multiple
+access with collision detection (CSMA/CD) (C) carrier-sense multiple access with collision
+reduction (CSMA/CR) (D) carrier-sense multiple access with channel idling (CSMA/CI (E) none
+of the above.
+
+10, [7] Which of the following is wrong about information security? (A) in the CIA triad, C
+stands for Confidentiality (B) in the CIA triad, I stands for Integrity (C) in the CIA triad, A stands
+for Accessibility (D) Confidentiality means that only authorized individuals/systems can view
+sensitive or classified information (E) all of the above are correct (choose this one only if none of
+the above can be chosen),
+
+11. [_—_] in information security, tefers to the type of attacks when a communication
+between two systems or people is intercepted by an unauthorized party. The person intercepting
+attempts to either eavesdrop on the exchange or impersonate one of the authorized parties. (A)
+third-party attack (B) DNS Tunneling (C) Phishing (D) Zero-day exploit (E) none of the above.
+
+12. [____] Which of the following is wrong? (A) RSA algorithm is an asymmetric cryptography
+algorithm (B) RSA is based on the fact that it is difficult to factorize a large integer (C) ina .
+public-key cryptosystem, the encryption key is private (D) RSA is not meant to be used to directly
+encrypt user data. (E) all of the above are correct (choose this one only if none of the above can be
+chosen). .
+
+13. 上] Which of the following is wrong in the context of transaction processing? (A) A in the
+acronym ACID refers to atomicity (B) C in the acronym ACID refers to consistency (C) I in the
+acronym ACID refers to integrity (D) D in the acronym ACID refers to durability (E) all of the
+above are correct (choose this one only if none of the above can be chosen).
+
+14. [上] Which of the following is wrong about database normalization? (A) to satisfy Ist
+normal form, each column of a table must have a single value (B) in 2" normal form, all non-key
+attributes are fully functional dependent on the primary key (C) 3“ normal form is used to reduce
+the data duplication (D) 3" normal form does not allow transitive dependency for non-prime
+attributes (E) all of the above are correct (choose this one only if none of the above can be
+chosen).
+
+is. | Tefers to the mechanism used in DBMS to allow removal of all the previous
+transaction logs from the system and permanently stored them in the storage disk (A) backlogging
+(B) checkpoint (C) serialization (D) two-phase commit (E) none of the above.
+
+16. [____] Which of the following is wrong? (A) a process is an execution of a specific program
+(B) a process can have multiple threads (C) compared to threads, processes are more lightweight :
+(D) in terms of memory sharing, processes are isolated (E) all of the above are correct (choose this
+one only if none of the above can be chosen).
+
+17. (__] In operating system, refers to the situation in which two or mote processes
+continually repeat the same interaction in response to changes in the other processes without doing
+any useful work? (A) deadlock (B) livelock (C) starvation (D) busy waiting (E) none of the above.
+
+18. [____] Which of the following is a typical objective for CPU scheduling in operating systems?
+(A) max CPU utilization (B) max throughput (C) min waiting time (D) fair allocation of CPU (E)
+all of the above are typical objectives. .
+
+19. [____] Which of the following CPU scheduling algorithm is starvation-free? (A) Shortest-Job-
+First (B) Priority Scheduling (C) Round Robin (D) ali of the above (E) none of the above.
+
+20. | In operating systems, refers to the technique for mediating between a computer
+application and a slow peripheral, such as a printer, that allows programs to “hand off” work to be
+done by the peripheral and then proceed to other tasks. (A) buffering (B) spooling (C) preemptive
+scheduling (D) non-preemptive scheduling (E) heap.
+
+21. [-___] Which of the following is wrong about ER model? (A) it is a high-level data model (B)
+
+BAR

@@ -1,0 +1,229 @@
+{
+  "all": {
+    "total": 5056,
+    "vocabulary": 4736,
+    "withExample": 1834,
+    "missing": 3222
+  },
+  "bySubject": {
+    "cs-english": {
+      "total": 80,
+      "withExample": 49,
+      "missing": 31
+    },
+    "cs-math": {
+      "total": 80,
+      "withExample": 0,
+      "missing": 80
+    },
+    "cs-arch": {
+      "total": 80,
+      "withExample": 0,
+      "missing": 80
+    },
+    "cs-algo": {
+      "total": 80,
+      "withExample": 0,
+      "missing": 80
+    },
+    "im-english": {
+      "total": 4736,
+      "withExample": 1785,
+      "missing": 2951
+    }
+  },
+  "imEnglish": {
+    "total": 4736,
+    "withExample": 1785,
+    "missing": 2951,
+    "missingPercent": 62.31,
+    "byTier": {
+      "must_know": {
+        "total": 17,
+        "withExample": 1,
+        "missing": 16
+      },
+      "important": {
+        "total": 302,
+        "withExample": 22,
+        "missing": 280
+      },
+      "worth_studying": {
+        "total": 2046,
+        "withExample": 1127,
+        "missing": 919
+      },
+      "domain": {
+        "total": 2371,
+        "withExample": 635,
+        "missing": 1736
+      }
+    },
+    "byMasterSource": {
+      "both": {
+        "total": 524,
+        "withExample": 402,
+        "missing": 122
+      },
+      "english-exam": {
+        "total": 1396,
+        "withExample": 741,
+        "missing": 655
+      },
+      "domain": {
+        "total": 2376,
+        "withExample": 636,
+        "missing": 1740
+      },
+      "unknown": {
+        "total": 9,
+        "withExample": 1,
+        "missing": 8
+      },
+      "toefl-supplement": {
+        "total": 2,
+        "withExample": 0,
+        "missing": 2
+      },
+      "gre-supplement": {
+        "total": 241,
+        "withExample": 1,
+        "missing": 240
+      },
+      "vocab-power-supplement": {
+        "total": 5,
+        "withExample": 0,
+        "missing": 5
+      },
+      "gre-online": {
+        "total": 109,
+        "withExample": 3,
+        "missing": 106
+      },
+      "verbal-advantage": {
+        "total": 74,
+        "withExample": 1,
+        "missing": 73
+      }
+    },
+    "exampleSourceKind": {
+      "authenticPastPaper": 1785,
+      "curatedOverride": 3,
+      "withExampleUnknown": 0,
+      "none": 2951
+    },
+    "masterLookupMisses": [
+      "Cinematographe",
+      "rational choice",
+      "video editing",
+      "Bitcoin",
+      "NoSQL",
+      "ETag",
+      "KMP",
+      "MLPerf",
+      "SJF"
+    ],
+    "missingSample": [
+      {
+        "word": "indifferent",
+        "tier": "must_know",
+        "source": "both"
+      },
+      {
+        "word": "mitigate",
+        "tier": "must_know",
+        "source": "both"
+      },
+      {
+        "word": "exacerbate",
+        "tier": "must_know",
+        "source": "english-exam"
+      },
+      {
+        "word": "circumspect",
+        "tier": "must_know",
+        "source": "english-exam"
+      },
+      {
+        "word": "commemorate",
+        "tier": "must_know",
+        "source": "english-exam"
+      },
+      {
+        "word": "confiscate",
+        "tier": "must_know",
+        "source": "english-exam"
+      },
+      {
+        "word": "corroborate",
+        "tier": "must_know",
+        "source": "english-exam"
+      },
+      {
+        "word": "credulous",
+        "tier": "must_know",
+        "source": "english-exam"
+      },
+      {
+        "word": "delineate",
+        "tier": "must_know",
+        "source": "english-exam"
+      },
+      {
+        "word": "detrimental",
+        "tier": "must_know",
+        "source": "english-exam"
+      },
+      {
+        "word": "parsimonious",
+        "tier": "must_know",
+        "source": "english-exam"
+      },
+      {
+        "word": "pervasive",
+        "tier": "must_know",
+        "source": "english-exam"
+      },
+      {
+        "word": "substantiate",
+        "tier": "must_know",
+        "source": "english-exam"
+      },
+      {
+        "word": "tenacious",
+        "tier": "must_know",
+        "source": "english-exam"
+      },
+      {
+        "word": "unprecedented",
+        "tier": "must_know",
+        "source": "english-exam"
+      },
+      {
+        "word": "resolute",
+        "tier": "must_know",
+        "source": "english-exam"
+      },
+      {
+        "word": "alternative",
+        "tier": "important",
+        "source": "both"
+      },
+      {
+        "word": "reform",
+        "tier": "important",
+        "source": "both"
+      },
+      {
+        "word": "deliberate",
+        "tier": "important",
+        "source": "english-exam"
+      },
+      {
+        "word": "disapproving",
+        "tier": "important",
+        "source": "english-exam"
+      }
+    ]
+  }
+}

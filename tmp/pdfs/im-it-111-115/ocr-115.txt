@@ -1,0 +1,179 @@
+題 號 : 258 國 立 臺 灣 大 學 115 學 年 度 碩士 班 招生 考試 試題
+
+AB: 資訊 科技 概論 MH 1 258
+a: 6 共 4 頁 之 第 1 頁
+> RAM ( 單 選 ) 30 題 , 每 題 2 分 , 共 0 分, 請 在 每 題 的 選項 內 選擇 最 適當 的 答案 。
+
+ee: 答 錯 倒 扣 0.5 分 , 扣 至 零 分 為 止 。( 不 答 不 倒 扣 )
+
+※ 注意 WA 2 急 筆 作答 於 答案 卡 , 並 先 詳 閥 答案 卡 上 之 「 畫 記 說 明 」*
+
+ih. [|] Which of the following data structures provides O(1) average-time complexity for insertion, deletion, and search? (A)
+Binary search tree (B) Balanced binary search tree (C) Hash table (D) Sorted array (E) Heap.
+
+b. [|] Which of the following best describes the worst-case time complexity of QuickSort? (A) O(n) (B) O(n log n) (C)
+O(log n) (D) O(n?) (E) O(n).
+
+b. [|] Whatis the time complexity of inserting an element into a binary heap? (A) O(1) (B) O(n) (C) O(log n) (D) O(n log n)
+{E) O(n)
+
+4. [____] Which data structure is most appropriate for checking if an expression has balanced parentheses (e.g., ( (a+b) *c) )?
+(A) Queue (B) Stack (C) Binary Search Tree (D) Hash Table (E) Graph.
+
+. [ __] Which of the following sorting algorithms is not stable? (Meaning relative order of equal elements is not guaranteed to
+be preserved). (A) Insertion Sort (B) Merge Sort (C) Bubble Sort (D) QuickSort (E) none of the above.
+
+6. “[_____] What is the prerequisite for performing a Topological Sort on a graph? (A) The graph must be undirected. (B) The
+graph must be a tree. (C) The graph must be a Directed Acyclic Graph (DAG). (D) The graph must be fully connected. (E) The
+graph must have non-negative edge weights.
+
+. [____] Which of the following best describes the role of a cache memory in a computer system? (A) To permanently store
+program instructions (B) To reduce average memory access time (C) To manage virtual memory (D) To schedule CPU processes
+(E) To translate virtual addresses to physical addresses.
+
+ls. [-____] Which of the following CPU scheduling algorithms may cause starvation? (A) Round Robin (B) First-Come,
+First-Served (C) Multilevel feedback queue (with aging) (D) Priority scheduling without aging (E) Shortest remaining time first.
+
+9, [|] Which of the following best describes a context switch? (A) Switching between CPU cores (B) Changing page tables
+(C) Reloading cache blocks (D) Switching from kernel mode to user mode (E) Saving and restoring process execution state
+
+lo. [____] ina pipelined processor, which situation most directly leads to a pipeline stall? (A) Instruction prefetching (B) Data
+hazard due to operand dependency (C) Branch prediction hit (D) Cache hit (E) Register renaming
+
+LE. | Which CPU scheduling algorithm has the smallest average waiting time for a given set of processes? (A) First-Come,
+
+| Fisst-Served (FCFS) (B) Shortest Job First (SJF) (C) Round Robin (RR) (D) Multilevel Queue (E) Priority Scheduling.
+
+12. 呈 ‘What is the phenomenon called “Thrashing” in a virtual memory system? (A) The system spends more time paging
+(swapping pages in and out) than executing processes, (B) The hard disk fails due to excessive read/write operations. (C) A
+process enters an infinite loop. (D) Multiple processes are deadlocked waiting for resources. (E) The CPU pipeline is constantly
+flushed due to branch mispredictions.
+
+13. [|] What is the primary function of the Time to Live (TTL) field in an IPv4 header? (A) To determine the timestamp of
+when the packet was created. (B) To prioritize the packet for Quality of Service (QoS). (C) To ensure the packet is reassembled
+in the correct order. (D) To prevent packets from circulating indefinitely in a routing loop. (E) none of the above.
+
+. 14. [_____] Which of the following is a characteristic of UDP (User Datagram Protocol) compared to TCP? (A) It guarantees
+RAR: 258 國 立 臺灣 大 學 115 學 年 度 碩士 班 招生 考試 試題
+
+科目 : 資訊 科技 概論 eR 258
+
+a) 共 4 頁 之 第 2 頁
+delivery of data. (B) It provides flow control and congestion control mechanisms, (C) It is connectionless and has a smaller
+header overhead. (D) It sequences packets to ensure they arrive in order. (E) It performs a three-way handshake before sending
+data.
+
+1's. [_] In TCP congestion control, what is the main purpose of the slow start phase? (A) To avoid retransmissions entirely (B)
+To probe available network capacity exponentially (C) To maintain a constant congestion window (D) To prioritize
+latency-sensitive flows (E) To prevent receiver buffer overflow.
+
+16. [___] Which index structure is most used in relational databases to support range queries efficiently? (A) Hash index (B)
+Bitmap index (C) B+ tree (D) Inverted index (E) Heap file.
+
+17. [—~] Which of the following concurrency control techniques may result in deadlocks? (A) Timestamp ordering (B)
+Two-phase locking (2PL) (C) Optimistic concurrency control (D) Multiversion concurrency control (MVCC) (E) Snapshot
+isolation.
+
+18. [__]} Which of the following best explains why hash-based indexing is generally unsuitable for range queries? (A) Hash
+functions destroy ordering information (B) Hash indexes require more storage (C) Hash collisions slow down inserts (D) Hash
+indexes cannot support equality queries (E) Hashing increases /O operations,
+
+19. [_] In write-ahead logging (WAL), which rule must be satisfied to ensure database recovery correctness? (A) Data pages
+must be written before log records (B) Log records are optional for read-only transactions (C) Checkpoints eliminate the need for
+redo (D) Log records must be written to stable storage before data pages (E) Logs are only needed for undo operations.
+
+po. 上 | Which statement best captures a fundamental trade-off in database system design? (A) Strong consistency always
+improves performance (B) Indexing eliminates the need for query optimization (C) Higher isolation levels can reduce
+concurrency (D} Normalization always improves query speed (E) Replication removes the need for recovery mechanisms,
+
+21. [____] In the context of Distributed Database Systems, the CAP Theorem states that a distributed system can only
+simultaneously provide two out of which three guarantees? (A) Concurrency, Availability, Performance (B) Consistency,
+Atomicity, Partition Tolerance (C) Consistency, Authenticity, Persistence (D) Consistency, Availability, Partition Tolerance (E)
+Concurrency, Accuracy, Performance.
+
+p2. 上] A relation R is in Boyce-Codd Normal Form (BCNF) if and only if: (A) For every functional dependency XY, X isa
+superkey. (B) It is in 3NF and has no multivalued dependencies. (C) It is in 3NF and preserves all functional dependencies. (D) It
+contains atomic values only. (E) There are no partial dependencies.
+
+p3. [__] Which of the following is a key advantage of containerization (e.g., Docker) compared to virtual machines? (A) Lower
+overhead due to sharing the host OS kernel (B) Stronger hardware-level isolation (C) No dependency on the host operating
+system (D) Elimination of resource contention (E) Guaranteed real-time performance.
+
+p4. [| Which of the following best describes the role of edge computing? (A) Centralizing all computation in large data
+centers (B) Replacing cloud computing entirely (C) Increasing storage capacity (D) Processing data closer to data sources to
+reduce latency (E) Encrypting data before transmission.
+
+25. [____] Which technology enables immutable and verifiable transaction records without relying on a central authority? (A)
+Distributed databases (B) Blockchain (C) Content delivery networks (D) Peer-to-peer file sharing (E) Federated learning.
+
+6. [____] Why are NoSQL databases often preferred in large-scale distributed applications? (A) They provide flexible schemas
+and horizontal scalability (B) They strictly enforce ACID properties (C) They eliminate network partitions (D) They guarantee.
+strong consistency (E) They require less storage than relational databases.
+
+b7. [______] In the context of Large Language Models (LLMs) like GPT, what is the primary function of the “Self-Attention”
+
+HAR
+題 號 : 258 國 立 臺灣 大 學 115 學 年 度 碩士 班 招生 考試 試題
+
+Aa: 資訊 科技 概論 eR | 258
+
+Rr: 6 共 4 頁 之 第 3 頁
+mechanism in the Transformer architecture? (A) To compress the input data into a smaller vector. (B) To allow the model to
+weigh the importance of different words in a sequence relative to each other, regardless of their distance. (C) To generate random
+variations of the output to increase creativity. (D) To convert text into speech. (E) To store long-term memory of previous
+conversations on a hard drive.
+
+ps. [___] What is the core principle of the “Zero Trust” security architecture? (A) “Never trust, always verify”’—no user or
+
+device is trusted by default, even if inside the corporate network. (B) All internat traffic is trusted, but external traffic is blocked.
+(C) Using only biometric authentication for all access. (D) Isolating the network from the internet completely. (E) Relying solely
+on firewalls to protect the network perimeter.
+
+po. [__] What is the defining characteristic of “Serverless Computing” (e.g., AWS Lambda)? (A) There are physically no
+
+servers involved in the process. (B) The developer must manually patch and manage the operating system of the server. (C) The
+cloud provider dynamically manages the allocation of machine resources, and pricing is based on the actual amount of resources
+consumed by an application execution, not pre-purchased capacity. (D) It is a peer-to-peer network where every client is also a
+server. (E) Use commodity-grade PCs to replace high-cost servers.
+
+bo. [__"] In the field of Generative AL what does “RAG” (Retrieval-Augmented Generation) refer to? (A) A method to generate
+
+random answers to prevent overfitting. (B) A technique to reduce the size of the model by removing unused neurons. (C) A
+training process that relies solely on reinforcement leaming from human feedback. (D) A technique that optimizes the output of
+an LLM by referencing an authoritative knowledge base outside its training data before generating a response. (E) An AI agent
+1earms to make decisions by interacting with an environment, taking actions, and receiving rewards or penalties.
+
+=> MBSR 40 Fo
+
+※ AAMAS "IRAE SE | ARATE»
+
+1. The following shows an array-based implementation of ADT Stack that stores non-duplicated integers. NOTE: The stack
+class has NO member function of data swapping!! All item switching or swapping operations must be implemented by
+yourself!
+
+const int MAXSIZE = 20; // the maximal stack size
+class Stack
+{
+public:
+// insert an integer into the stack
+int push(int data);
+// reverse the order of the integers in the stack
+void reverse();
+// rank the integers in the stack in ascending order
+void rank(); 全 :
+private:
+int items (MAXSIZE]; // the array of the stacked integers
+int top; // the index of the top item, the initial is -1
+ye
+
+(2) (10 points) Write the stack: :push () function that inserts an integer into the stack. Note that the function returns -1 if either the
+
+‘Stack is full or the input integer has already existed in the stack; otherwise, it returns 0.
+AAR: 258 國 立 臺 灣 大 學 115 學 年 度 碩士 班 招生 考試 試題
+科目 : 資訊 科技 概論 Me: 258
+BA: 6 共 4 頁 之 第 4 頁
+b) (10 points) Write the Stack: : reverse () function that reverses the sequence of the stacked integers.
+(c) (20 points) Write the Stack: : rank () function that ranks the stacked integers in ascending order. In other words, the top is the
+smallest integer. You MUST employ the bubble sort algorithm to rank the data!!
+2k 3
+試題 隨 卷 繳 回

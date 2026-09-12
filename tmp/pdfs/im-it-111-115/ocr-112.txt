@@ -1,0 +1,210 @@
+題 號 : 324 國 立 臺灣 大 學 112 學 年 度 碩士 班 招生 考試 試題
+科目 : 資訊 科 技 概論 大 號 : 324
+Hak: 6 共 5 頁 之 第 1-8
+
+一 、 選 擇 題 ( 單 選 )28 題 , 每 題 2.5 分, 共 70 分 , 請 在 每 超 的 選項 內 選擇 最 適當 的 答案 。
+
+BE: 答 錯 倒 扣 1 分 。, 折 至 零 分 為 止 。( 不 答 不 倒 扣 )
+
+請 用 人 8 鉛筆 作答 於 答案 卡 , 並 先 詳 閱 答案 卡 上 之 「 畫 記 說 明 1。
+
+1 | Which of the following is wrong about Von Neumann architecture? (A) it has four main units:
+CPU, memory, input, and output (B) memory is simply a linear array of storage locations (C) data and
+instructions are separated into different memory (D) a central processing unit has a control unit and an
+arithmetic/login unit (E) all the above are correct (choose this one only if none of the above can be
+chosen).
+
+2. C7] Which of the following is wrong about process architecture? (A) in general, program
+compiled in CISC architecture has fewer instructions than that compiled in RISC architecture (B) the
+CISC approach tries to make each instruction more powerful (C) in general, instructions in a CISC
+approach will need more clock cycles to execute than in a RISC approach (D) in general, the instruction
+set in a CISC approach is typically smaller than the instruction set in a RISC approach (E) all the above
+are correct (choose this one only if none of the above can be chosen).
+
+3. [7] which of the following is wrong about computer architecture? (A) A processor with 32-bit
+address buses can access at most 222 bytes of memory (8) in memory-mapped I/O, I/O devices use the
+same address space as memory devices (C) in memory-mapped I/O, the same instructions are used to
+access I/O devices and memory devices (D) the internal data storage of a processor is known as its
+registers (E) all the above are correct (choose this one only if none of the above can be chosen).
+
+4. Ce] Which of the following is wrong about Input/Output in a computer system? (A) in interrupt-
+driven 1/0, an external device interrupts the Processor to execute an interrupt service routine (B) an
+external device interrupts the processor by triggering an interrupt signal to the processor (C) Direct
+Memory Access (DMA) allows data to be transferred from I/O devices to memory directly without the
+continuous involvement of the processor (D) a hardware device is needed to allow 1/0 devices to
+directly access memory with less participation of the processor (E) all the above are correct (choose
+this one only if none of the above can be chosen).
+
+5. [7 Which of the following is wrong about CPU cache? {A) register in CPU is usually faster than L1
+cache (B) number of registers in CPU is smaller than the size of L1 cache (C) the size of Li cache in
+current CPUs typically ranges in dozens to hundreds bytes (D) the size of L2 cache is typically much
+bigger than L1 cache {E) all the above are correct (choose this one only if none of the above can be
+
+chosen).
+
+6. [7 Which of the following is not a major functionality of operating systems? (A) Resource
+Management (8) Process Management (C) Memory Management (D) Security Management (E) all the .
+above are major functionalities,
+|
+題 號 : 324 國 立 臺灣 大 學 112 學 年 度 碩士 班 招生 考試 試題
+科目 : 資訊 科技 概論 we: 394
+HA: 6 共 SRE 之 頁 |
+
+7. Cc] Operating systems divide virtual and physical memory into fixed-sized chunks called Pages.
+Which of the following page size is currently most common than the others? (A) 128 bytes (B) 512
+bytes (C) 4KB (D) 128KB (E} 512KB.
+
+8. | Which of the following is wrong for applications running in an operating system? (A) user
+applications usually run in user-mode {B) applications running in user-mode shares a virtual address
+space (C) a process running in user mode can’t access virtual addresses that are reserved for the
+operating system (D) core operating system components run in kernel mode (E) all the above are
+correct (choose this one only if none of the above can be chosen).
+
+9. [____] Which of the following is wrong about computer clusters? (A) nodes in a cluster are typically
+independent and connected by a high-speed LAN (8) clustering computers can increase computing
+power (C) clustering computers can prevent security attacks (D) clustering computers can improve fault
+tolerance (E) all the above are correct (choose this one only if none of the above can be chosen).
+
+10. [____] With regard to process management, which of the following is generally not the
+responsibility of operating systems (OS)? (A) creating and deleting user processes (B) suspending and
+resuming processes (C) process synchronization (D) deadlock handling (E) all the above are OS's
+responsibility.
+
+11. C7 With regard to storage management, which of the following is generally not the
+responsibility of operating systems? (A) creating and deleting files (B) file integrity check (C) disk
+scheduling (D) backing up files onto stable permanent storage media (E) supporting primitives for
+manipulating files and directories.
+
+12. | A uniprocessor system achieves multiprogramming by in CPU scheduling. (A) dynamic
+allocation (B) process rotating (C) pipelining (D) time slicing (E) none of the above.
+
+13. | When a process is running in Unix-like systems, which of the following is wrong about its
+memory layout? (A) the code section starts at location 0 (B) the data section starts immediately above
+code section (C} the stack section starts immediately above the data section (D) the stack section can
+grow and shrink dynamically during process life cycle (E) all the above are correct (choose this one only
+if none of the above can be chosen).
+
+14. C77 In Ethernet, which of the following algorithm is used to resolve collision? (A) Carrier Sense
+(B) Exponential Backoff (C) Collision Avoidance (D} Request to Send/Clear to Send (RTS/CTS) (E) Round
+Robin.
+
+15. 上] We can apply tags to network frames and handling these tags in a local area network to
+create the appearance and functionality of network traffic that is physically on a single network but
+acts as if it is split between separate networks. This effectively creates (A) virtual LANs (B)
+VPN (C) domains (D) subdomains (E) private LANs.
+
+BAR
+題 號 : 324 國 立 臺 灣 大 學 112 學 年 度 碩士 班 招生 考試 試題
+科目 : 資 訊 科技 概論 HAR: 324
+Hick: 6 共 『y 頁 之 第 3 頁
+16. CL] In router-table construction, which of the following algorithms let routers build up their
+routing tables by periodically exchanging information with their immediately neighboring? (A) adaptive
+{B) tink-state (C) distance-vector (D) incremental update (E) none of the above.
+a7, 7 Which of the following is wrong about TCP? (A) it uses 2-way handshake to establish a
+connection (B) TCP is stream-oriented (C) TCP uses sliding window for flow control (D) TCP uses
+sequence numbers to ensure the correct order of delivery (E) all the above are correct (choose this one
+only if none of the above can be chosen).
+
+18. LJ Which of the following is wrong about security attacks? (A) In Man-in-the-Middle attack, an
+attacker intercepts messages between two parties, and then steals and manipulates data between
+‘them (B) In buffer overflow attack, the attacker crafts an oversized input string which, when read by the
+
+. server and stored in memory, overflows the buffer and overwrites subsequent portions of memory,
+typically containing the stack-frame pointers. (C) In SQL Injections, an attacker inserts malicious code
+into a server using server query language, forcing the server to deliver protected information (D) In
+First-day attack, an attacker exploits a network vulnerability before a patch is released and/or
+implemented. (E) all the above are correct (choose this one only if none of the above can be chosen).
+
+19. | Which of the following is wrong about program compilation? (A) assembler takes as input
+the assembly code and translates it into relocatable machine code (B) it is the linker’s job to make sure
+all cross-file dependencies are resolved properly (C) programs can be linked either statically or
+dynamically (D) lexical and syntax analysis is done at compiling stage (E) all the above are correct
+(choose this one only if none of the above can be chosen).
+
+20. | Which of the following is wrong about NoSQL databases? (A) in column-oriented structure,
+data is stored in cells grouped in a pre-defined number of columns (B) key-value stores use an
+associative array as their data mode (C) dacument stores use documents {e.g., XML, YAML, JSON) to
+hold and encode data in standard formats (D) graph databases represent data on a graph that shows
+how different sets of data relate to each other (E) all the above are correct (choose this one only if
+none of the above can be chosen).
+
+21. [7 Which of the following is wrong about relational databases? (A) data are organized into
+tables of columns and rows (B) a unique key is used to identify each row (C) each row represents a data
+record (D) columns correspond to attributes of records (E) all the above are correct (choose this one
+only if none of the above can be chosen).
+
+22. Co) Which of the following is wrong about relational databases? (A) a primary key is used to
+ensure data in the specific column is unique (B) a foreign key refers to the field in a table which is the
+primary key of another table (C) foreign key does not allow NULL value (D) more than one foreign key
+are allowed in a table (E) all the above are correct (choose this one only if none of the above can be
+chosen).
+
+見 背 面
+FAR > 324 圈 立 臺灣 大 學 112 學 年 度 碩士 班 招生 考試 試題
+科目 : 資 訊 科技 概論 HAR: 324
+BA: 6 共 頁 之 第 AR
+23. 上 The term has been coined to represent a digital counterpart of a real-world object
+for use such as simulation, integration, testing, monitoring, and maintenance. (A) avatar (B) digital twin
+(C) virtual reality (D) cloud object (E) none of the above.
+24, [___] Inblockchain technology like that used in Bitcoin, the process “mining” is designed mainly to
+(A) enforce concurrency control of transactions (B) ensure atomicity (C) distribute transaction (D)
+validate transaction (E) none of the above.
+25. [_____] Which of the following is wrong about B-tree? (A) B-tree is self-balancing (B) A non-leaf node
+with k children contains k keys (C) a B-tree of order m has at most m children (D) every internal node
+has at least [m/2] children (E) alf leaves appear on the same level.
+26. C7 Which of the following is wrong about spanning trees? (A) if all of ‘the edges of a graph G are
+also edges of a spanning tree T of G, then G is a tree (B) if all of the edges of a graph G are also edges of |
+a spanning tree T of G, then G is identical to T (C) if T is a spanning tree of G, and eis an edge of G that
+is not in T, then adding e to T will create a cycle (D) a graph may have more than one Spanning trees (E)
+all the above are correct (choose this one only if none of the above can be chosen).
+27. [____] Recall that a min heap is a complete binary tree such that the key stored in each node is
+greater than or equal to the keys in the node's children. Then, the time complexity for inserting a key
+into a min heap of n nodes can be done in (A) O(1) (B) O(log n) (C) O(n) (D) O(n log n) (E) none of the above.
+28. | The time complexity for finding an arbitrary element in a min heap of n nodes can be done in
+(A) O(4) (B) O(log n) (C) O(n) (D) O(n log n) (E) none of the above.
+RAR
+5 |
+題 號 : 324 國 立 臺 灣 大 學 112 學 年 度 碩士 班 招生 考試 試題
+科目 : 資 訊 科技 概論 是 號: 324
+Hk: 6 4-5 頁 之 第 5 頁
+二 、 問 答題 , 共 30 分 。
+3K 本 大 題 (ta)、(b)、(c) 3 小 題 ) 請 於 試卷 內 之 「 非 選擇 題 作答 區 | 樑 明 題 號 依 序 作答 。
+Consider the following C++ code.
+#include <bits/stdctt+.h>
+using namespace std;
+# define NO_OF_CHARS 256
+void PREPROCESS (string str, int size, int badchar[NO_OF_CHARS])
+{
+int i;
+for (i = 0; i < NO_OF_CHARS; i++)
+badchar[i] = -1;
+for (i = 0; i < size; i++)
+badchar[(int) strf{i]] = i;
+) :
+void search(string txt, string pat)
+{
+int m = pat.size();
+int n = txt.size();
+int badchar[NO_OF_CHARS];
+PREPROCESS (pat, m, badchar);
+int s = 0;
+while(s <= (n - m))
+{
+int j=m- 1;
+while(j >= 0 && pat[j] == txt[s + j])
+j--7
+if (j < 0)
+{
+cout << “pattern occurs at " << s << endl;
+s += (s +m <n)? m-badchar[txt[s + m}] : 1;
+}
+else
+s += max(1, j - badchar[txt[s + j]])s
+}
+}
+(a)(15 points) When given the two strings txt = "ABAAABCDABC" and pat = "ABC", what is the
+output of search (txt, pat) ?
+(b) (8 points) If the lengths of txt and pat are n and m tespectively, what is the worst case time
+complexity of search (txt, pat)? Briefly explain your answer. ,
+(©) (7 points) Continue from above. What is the best case time complexity of search (txt, pat)?
+Briefly explain your answer.

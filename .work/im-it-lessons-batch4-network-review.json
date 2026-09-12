@@ -1,0 +1,52 @@
+{
+  "approved": true,
+  "summary": "修後回歸結果：blocking=0、major=0、minor=0，因此核准。唯一 lesson 已加入正式 learningScenario，郵政／轉運情境一一映射 IP destination、longest-prefix match、IPv4 TTL、TCP 與 UDP，並在 boundary 明示 IP 不保證送達、TTL 不是時鐘、TCP 不保留 message boundaries、UDP 可由應用層補機制，以及 route/window 的現實限制。前次三項 minor 均已修正：RFC 791 canonical author 改為 J. Postel；RFC 4632 補齊完整 canonical title；rwnd/cwnd 內容改成窗口固定時的新資料／outstanding 簡化上限，並明示 cwnd 驟降後既有 flight size 可暫時超過新 cwnd。origin/main refs eligibility/relevance、threshold、examples、cards 與 source/ref subsets 仍全部通過。",
+  "checks": {
+    "authority": "origin/main@6be3e75302159b1f4801d335916567f7e62f9ba8",
+    "lessonCount": 1,
+    "sectionCount": 5,
+    "workedExampleCount": 4,
+    "cardCount": 6,
+    "minimumPastPaperRefs": 7,
+    "actualUniquePastPaperRefs": 7,
+    "eligibleRelevantPastPaperRefs": 7,
+    "proposedSourceCount": 6,
+    "stealthFetchedSourceCount": 6,
+    "nonOfficialDisclosurePresent": true,
+    "cardRefSubsetPassed": true,
+    "cardSourceSubsetPassed": true,
+    "excludedQ11217Reasonable": true,
+    "learningScenario": {
+      "present": true,
+      "mappingRows": 5,
+      "examCueRows": 4,
+      "coversIpRouting": true,
+      "coversTcpUdp": true,
+      "boundaryPresent": true
+    },
+    "recomputedExamples": {
+      "cidr": "192.168.10.77/26 => mask 255.255.255.192, network .64, broadcast .127, hosts .65-.126; .120 same, .130 different",
+      "routingAndTtl": "10.20.30.77 selects /24 R3; TTL 2 becomes 1 at current router and 0 at next forwarding router, then discard",
+      "routingClassification": "neighbor distance exchange=distance-vector; topology database plus shortest-path tree=link-state; OSPF=link-state",
+      "tcp": "min(12,4)=4 MSS in the prompt's fixed-window no-other-limit scenario; simplified no-loss per-segment-ACK slow start 1->2->4->8 after three RTTs"
+    }
+  },
+  "resolvedIssues": [
+    {
+      "formerSeverity": "minor",
+      "location": "proposedSourceRegistryEntries[src-ietf-rfc791-ipv4].author",
+      "resolution": "已由承作機構名稱改為 RFC Editor canonical author `J. Postel`。"
+    },
+    {
+      "formerSeverity": "minor",
+      "location": "proposedSourceRegistryEntries[src-ietf-rfc4632-cidr].title",
+      "resolution": "已補成完整 canonical title `RFC 4632: Classless Inter-domain Routing (CIDR): The Internet Address Assignment and Aggregation Plan`。"
+    },
+    {
+      "formerSeverity": "minor",
+      "location": "lesson-im-it-network-ip-routing-transport-01.sections[4].body / bullets[2]",
+      "resolution": "已限定 min(rwnd,cwnd) 為窗口固定、沒有 cwnd 驟降留下較大既有 flight 的簡化題型，並補充驟降後 flight size 可暫時超過新 cwnd、sender 應等待 ACK 而不再增加在途資料。"
+    }
+  ],
+  "issues": []
+}

@@ -1,0 +1,44 @@
+題 號 : 324 國 立 臺 灣 大 學 112 學 年 度 碩士 班 招生 考試 試題
+科目 : 資 訊 科技 概論 是 號: 324
+Hk: 6 4-5 頁 之 第 5 頁
+二 、 問 答題 , 共 30 分 。
+3K 本 大 題 (ta)、(b)、(c) 3 小 題 ) 請 於 試卷 內 之 「 非 選擇 題 作答 區 | 樑 明 題 號 依 序 作答 。
+Consider the following C++ code.
+#include <bits/stdctt+.h>
+using namespace std;
+# define NO_OF_CHARS 256
+void PREPROCESS (string str, int size, int badchar[NO_OF_CHARS])
+{
+int i;
+for (i = 0; i < NO_OF_CHARS; i++)
+badchar[i] = -1;
+for (i = 0; i < size; i++)
+badchar[(int) strf{i]] = i;
+) :
+void search(string txt, string pat)
+{
+int m = pat.size();
+int n = txt.size();
+int badchar[NO_OF_CHARS];
+PREPROCESS (pat, m, badchar);
+int s = 0;
+while(s <= (n - m))
+{
+int j=m- 1;
+while(j >= 0 && pat[j] == txt[s + j])
+j--7
+if (j < 0)
+{
+cout << “pattern occurs at " << s << endl;
+s += (s +m <n)? m-badchar[txt[s + m}] : 1;
+}
+else
+s += max(1, j - badchar[txt[s + j]])s
+}
+}
+(a)(15 points) When given the two strings txt = "ABAAABCDABC" and pat = "ABC", what is the
+output of search (txt, pat) ?
+(b) (8 points) If the lengths of txt and pat are n and m tespectively, what is the worst case time
+complexity of search (txt, pat)? Briefly explain your answer. ,
+(©) (7 points) Continue from above. What is the best case time complexity of search (txt, pat)?
+Briefly explain your answer.

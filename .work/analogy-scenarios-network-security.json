@@ -1,0 +1,138 @@
+{
+  "lesson-im-it-network-application-protocols": {
+    "title": "第一次走進大型展覽館",
+    "hook": "你剛到一座陌生展覽館：先到報到處領取攤位號、出口路線與服務台電話，再查目錄找到攤位位置，向櫃台提出需求。櫃台給你一張取件牌，讓你稍後回來時能接續同一筆服務。這些步驟看起來都在『逛展』，但每個窗口解決的問題不同。",
+    "predict": "如果你只知道攤位名稱、還不知道它在哪裡，應先去查目錄，還是直接拿取件牌要求櫃台交貨？為什麼？",
+    "mapping": [
+      {
+        "everyday": "報到處發給新訪客攤位號、出口路線與服務台資訊",
+        "technical": "DHCP 配置 IP address、subnet mask、default gateway 與 DNS server"
+      },
+      {
+        "everyday": "依攤位名稱查展場目錄，取得攤位位置",
+        "technical": "DNS 將 domain name 查成 IP 等名稱紀錄"
+      },
+      {
+        "everyday": "訪客向服務櫃台提出一項需求，櫃台回覆結果",
+        "technical": "HTTP client request 與 server response"
+      },
+      {
+        "everyday": "訪客保存櫃台發的取件牌，回訪時主動出示以接續服務",
+        "technical": "Browser 保存 Cookie，之後依作用域規則附在 request；常攜帶 session identifier"
+      },
+      {
+        "everyday": "公司員工不直接去外場，而由公司跑腿窗口代表他們辦事",
+        "technical": "Forward proxy 代表 clients 對外發出 application requests"
+      }
+    ],
+    "boundary": "展場比喻只用來區分服務責任：真實 DHCP 與 DNS 有網路交換及作用範圍，Cookie 受 Domain、Path、Secure、HttpOnly、SameSite 等規則限制，也不等於完整 session 資料。Reverse proxy 是站在 server 前方接外部請求，不能與代表訪客的 forward proxy 對調；SMTP、IMAP、POP3、LDAP 與 CDN 仍須依原課定義判斷，不能硬塞成同一個展場窗口。",
+    "examCues": [
+      "新主機取得 IP、mask、gateway、DNS server：先想到 DHCP；名稱查位址：想到 DNS。",
+      "Web request/response：想到 HTTP；靠識別碼延續互動：檢查 Cookie 與 server-side session 的分工。",
+      "送出與 mail-server relay：想到 SMTP；多裝置信箱同步：想到 IMAP；偏下載：想到 POP3。",
+      "代表 client 對外：forward proxy；站在 origin 前接請求：reverse proxy；靠近使用者快取內容：CDN edge。"
+    ]
+  },
+  "lesson-im-it-network-link-lan-01": {
+    "title": "物流包裹在園區內換轉運籃",
+    "hook": "一件要送到外地的包裹，內層寫著最終收件地址，但在目前物流園區內，還要放進貼有『下一個月台』標籤的轉運籃。分揀台只看這一段的月台標籤；若不知道下一站該送哪個月台，就先查園區的本地對照表。",
+    "predict": "目的主機在另一個 subnet 時，送端應查遠端主機的 MAC，還是 default gateway 的 MAC？到了下一個 router 後，原本的 MAC 標籤會不會繼續沿用？",
+    "mapping": [
+      {
+        "everyday": "包裹內層標示的最終收件地址",
+        "technical": "IP address，用於跨網路識別與遞送目的端"
+      },
+      {
+        "everyday": "目前園區轉運籃上的來源與下一站月台標籤",
+        "technical": "Ethernet frame 的 source/destination MAC，只服務當前鏈路"
+      },
+      {
+        "everyday": "本地收發室依下一站代號查到對應月台",
+        "technical": "ARP 在 IPv4 local broadcast domain 解析 next-hop IP 對應的 MAC"
+      },
+      {
+        "everyday": "分揀台記住包裹從哪個入口進來，之後把同一月台的貨送往正確出口",
+        "technical": "Switch 從 source MAC 學習 MAC-to-port mapping，再依 destination MAC forwarding"
+      },
+      {
+        "everyday": "同一條運輸走廊用不同顏色封條隔離兩個部門的貨，跨色轉送須經管理站",
+        "technical": "802.1Q trunk 承載多個 VLAN；VLAN 是分離的 broadcast domains，跨 VLAN 需 layer-3 routing"
+      }
+    ],
+    "boundary": "物流標籤不是實際封包格式，也無法完整呈現 broadcast、frame checksum、timing 或無線干擾。MAC 不保證全球永久唯一或不可偽造；VLAN 顏色只表示邏輯隔離，不代表 encryption 或 VPN。Shared half-duplex Ethernet 的 collision 與 CSMA/CD、Wi-Fi 的 CSMA/CA 仍要依媒體情境判斷，不能用『物流人員會協調』推論網路一定不碰撞。",
+    "examCues": [
+      "同 subnet 且缺 MAC：ARP 查目的主機；跨 subnet：ARP 查 default gateway 的 MAC。",
+      "Hub/shared half-duplex、碰撞後重傳：CSMA/CD 與 binary exponential backoff；switch/full-duplex 通常不使用。",
+      "無線媒體先等待並隨機 backoff、可搭 RTS/CTS：CSMA/CA；它降低而非保證消除碰撞。",
+      "同實體 switch 仍分開 broadcast domains：VLAN；trunk 可承載多 VLAN，跨 VLAN 需要 routing。"
+    ]
+  },
+  "lesson-im-it-network-models-encapsulation": {
+    "title": "網購商品的多層包裝與轉運",
+    "hook": "商家先準備商品與訂單內容，再貼上收件部門編號，放進寫有最終地址的運輸箱，最後由當地物流站套上只適用這一段路的轉運標籤。每到一個轉運中心，外層的本地標籤會換掉，但箱內的最終目的資訊通常繼續往前。",
+    "predict": "包裹經過 router 換到下一條鏈路時，port、IP 與 MAC 中哪一種識別最像會被重建的『本地轉運標籤』？哪一些通常仍描述原本的端點？",
+    "mapping": [
+      {
+        "everyday": "商家真正要交付的商品與訂單內容",
+        "technical": "Application message/data"
+      },
+      {
+        "everyday": "標示收件單位或服務窗口的內層作業單",
+        "technical": "Transport segment/datagram 與 port，用來識別端點上的 application"
+      },
+      {
+        "everyday": "寫有來源與最終收件地址的運輸箱",
+        "technical": "IP packet 與 source/destination IP，用於跨網路 routing"
+      },
+      {
+        "everyday": "只適用目前一段路的物流轉運標籤與外籃",
+        "technical": "Data-link frame 與 source/destination MAC，用於當前鏈路 delivery"
+      },
+      {
+        "everyday": "轉運中心拆掉舊的本地外籃，為下一段路重新貼標",
+        "technical": "Router 移除 incoming frame、更新必要 IP 欄位，再建立 next-link frame"
+      }
+    ],
+    "boundary": "封裝不是實體盒子套盒子，而是各層把上層資料當 payload 並加入控制資訊；segment、packet、frame 的名稱也依協定與教材語境而異。Port 與端點 IP 只是『通常』維持，NAT 等中介功能可能改寫它們；IPv4 TTL 會逐跳更新。OSI/TCP-IP 是責任模型，一台真實設備也可能同時處理多層，不能由設備名稱斷言它只屬單一層。",
+    "examCues": [
+      "Port、TCP、UDP：傳輸層；IP 與跨網路 routing：網路層；MAC/frame：資料鏈結層。",
+      "送端由上往下加 headers、收端由下往上移除：encapsulation／decapsulation。",
+      "經 router 後 MAC/frame 重建，端點 IP 通常保留但 TTL 等逐跳欄位更新。",
+      "Client-server 是角色互動架構，不等同某個固定 OSI layer；先看題目問功能還是層級。"
+    ]
+  },
+  "lesson-im-it-security-cryptography-01": {
+    "title": "寄送一只上鎖的大行李箱",
+    "hook": "Alice 要把 500 MB 檔案交給 Bob。她不會用昂貴的身分驗證程序逐頁處理整箱內容，而是先用一把短期行李箱鑰匙快速鎖好大量資料，再用 Bob 可公開取得、但只有 Bob 能解開的機制保護這把短期鑰匙；同時附上可驗證是 Alice 所做的簽章。",
+    "predict": "若 Alice 只把檔案加密，Bob 是否就能確定寄件者一定是 Alice？若只附上一個任何人都能重算的 hash，又能否阻止攻擊者同時替換檔案與 hash？",
+    "mapping": [
+      {
+        "everyday": "Alice 與 Bob 用同一把短期行李箱鑰匙快速鎖、開大量內容",
+        "technical": "AES session key 與 symmetric authenticated encryption 處理 bulk data"
+      },
+      {
+        "everyday": "任何人都能使用 Bob 公開的投遞鎖，但只有 Bob 保管的鑰匙能取出內容",
+        "technical": "用 Bob 的 public-key mechanism 保護 session key，由 Bob 的 private key 解開"
+      },
+      {
+        "everyday": "對內容計算一個固定長度的指紋，內容一改指紋通常就不同",
+        "technical": "Cryptographic hash 用於 integrity evidence，但本身沒有秘密，不能單獨驗證寄件者"
+      },
+      {
+        "everyday": "Alice 加上只有她能製作、他人可核對的簽名封條",
+        "technical": "Alice private key 產生 digital signature，Alice public key 驗證來源與內容完整性"
+      },
+      {
+        "everyday": "可信證件中心在證件上簽章，證明某姓名確實對應某把公開驗證工具",
+        "technical": "CA-signed X.509 certificate 將 subject identity 綁到 public key；RA 可先核驗申請者"
+      }
+    ],
+    "boundary": "實體鎖沒有公開金鑰密碼學的數學性質，不能拿『同一把鎖』推導 RSA 的所有操作；現代 TLS 也不保證直接用 RSA 加密 session key，課程只主張以合適 public-key mechanism 建立或保護共享祕密。Encryption 主要保密，不自動提供 sender authentication；hash 沒有秘密，digital signature 才使用簽署者 private key。憑證不含 private key，CA 信任也可能來自 public、private 或預先配置的 trust store。",
+    "examCues": [
+      "大量資料、效率：AES 等 symmetric encryption；public/private key、RSA：asymmetric role，不直接處理任意大型資料。",
+      "固定長度單向摘要：hash；要驗證來源與防替換：找 MAC 或 digital signature，不能只靠裸 hash。",
+      "Subject、issuer、serial、public key：certificate；RA 核驗申請，CA 簽發與簽章，private key 不放進憑證。",
+      "HTTPS＝HTTP over TLS；一般網站驗 server，雙方都出示 client/server certificate 才是 mutual TLS。"
+    ]
+  }
+}

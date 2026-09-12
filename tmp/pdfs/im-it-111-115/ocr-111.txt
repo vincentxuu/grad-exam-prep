@@ -1,0 +1,191 @@
+a
+
+題 號 : 343 國 立 臺 灣 大 學 111 學 年 度 碩士 班 招生 考試 試題 am ia
+科目 : 商 訊 科技 概論 共 4 頁 之 第 1 OE
+HR: 6 -
+
+一 、 選 擇 題 ( 單 選 ) 24 十, 每 題 2.5 分 , 共 60 分 , 請 在 每 題 的 選項 內 選擇 最 適當 的 答案 。
+
+1 上] Which of the following is wrong about OSI Model? (A) layer 8 is Application (B) layer
+5 is Session (C) layer 4 is Transport (D) layer 2 is Data Link (B) all of the above are correct
+(choose this one only if none of the above can be chosen).
+
+2. [___] Which of the following is the industry standard protocol for email sending? (A) Simple
+Mail Transfer Protocol (SMTP) (B) Internet Message Access Protocol (IMAP) (C) Post Office
+Protocol (D) Post Office Protocol 3 (POP3) (E) none of the above.
+
+3. [___] Which of the following technique is used in data link layer for reliable and sequential
+delivery of data packets while allowing multiple packets to be sent at a time to improve
+efficiency? (A) automatic repeat request protocol (B) sliding window protocol (C) request and
+acknowledgment protocol (D) multicast (E) none of the above.
+
+4. [上] Which of the following is wrong about Dynamic Host Configuration Protocol (DHCP)?
+(A) it is used on Internet Protocol (IP) networks (B) it uses a client-server architecture (C)it
+allows the automatic management of IP addresses (D) it offers great benefit to mobile users as
+valid configuration parameters are automatically obtained from the new network ©) all of the
+above are correct (choose this one only if none of the above can be chosen).
+
+5. [____] Which of the following is wrong about virtualization technology? (A) network
+virtualization divides one physical network into separate, independent virtual networks (B)
+network virtualization can combine multiple physical networks to one virtual, software-based
+network (C) CPU virtualization allows a single processor to act as if it was multiple individual
+CPUs (D) CPU virtualization allows one to run multiple different operating systems on one
+machine (E) all of the above are correct (choose this one only if none of the above can be chosen).
+
+6. [___] Which of the following is wrong about Virtual machines (VMs)? (A) a VM isa
+compute resource that uses software instead of a physical computer to run programs and deploy
+apps (B) when more than one VMs run on a physical host machine, each virtual machine runs its
+own operating system and functions separately from the other VMs (C) benefits of VMs include .
+easy provisioning and maintainability, and high availability (D) a software cailed hypervisor sits
+between the VMs and the host and is responsible for allocating the computing resources of the
+host to VMs (E) all of the above are correct (choose this one only if none of the above can be
+chosen).
+
+7. | is a unique identifier assigned to a network interface controller for use as a
+network address in communications within a network segment. It is used in most IEEE 802
+networking technologies, including Ethemet, Wi-Fi, and Bluetooth, (A) globally unique identifier
+(B) IP address (C) media access control address (D) transmission control address (E) none of the
+above.
+
+8. [上 Which of the following is wrong about packet switching? (A) packet switching
+transmits data across digital networks by breaking it down into blocks (B) in datagram packet
+switching, each packet has a header that includes the origin IP address, the destination IP address,
+the number of packets in the entire data file, and the sequence number (C) in datagram packet
+switching, the packets of a file go through the same route (D) in a virtual circuit, the connection
+appears to be a dedicated physical circuit (E) all of the above are correct (choose this one only if
+none of the above can be chosen).
+
+9 C7) is a network multiple access method in which carrier sensing is used, but nodes
+attempt to avoid collisions by beginning transmission only after the channel is sensed to be “idle”
+題 號 : 343 國立 臺 灣 大 學 111 學 年 度 碩士 班 招生 考試 試題
+科目 : 資 訊 科技 概 論 題 號 :343
+BR: 6 共 4 頁 之 第 2 頁
+(A) carrier-sense multiple access with collision avoidance (CSMA/CA) (B) carrier-sense multiple
+access with collision detection (CSMA/CD) (C) carrier-sense multiple access with collision
+reduction (CSMA/CR) (D) carrier-sense multiple access with channel idling (CSMA/CI (E) none
+of the above.
+
+10, [7] Which of the following is wrong about information security? (A) in the CIA triad, C
+stands for Confidentiality (B) in the CIA triad, I stands for Integrity (C) in the CIA triad, A stands
+for Accessibility (D) Confidentiality means that only authorized individuals/systems can view
+sensitive or classified information (E) all of the above are correct (choose this one only if none of
+the above can be chosen),
+
+11. [_—_] in information security, tefers to the type of attacks when a communication
+between two systems or people is intercepted by an unauthorized party. The person intercepting
+attempts to either eavesdrop on the exchange or impersonate one of the authorized parties. (A)
+third-party attack (B) DNS Tunneling (C) Phishing (D) Zero-day exploit (E) none of the above.
+
+12. [____] Which of the following is wrong? (A) RSA algorithm is an asymmetric cryptography
+algorithm (B) RSA is based on the fact that it is difficult to factorize a large integer (C) ina .
+public-key cryptosystem, the encryption key is private (D) RSA is not meant to be used to directly
+encrypt user data. (E) all of the above are correct (choose this one only if none of the above can be
+chosen). .
+
+13. 上] Which of the following is wrong in the context of transaction processing? (A) A in the
+acronym ACID refers to atomicity (B) C in the acronym ACID refers to consistency (C) I in the
+acronym ACID refers to integrity (D) D in the acronym ACID refers to durability (E) all of the
+above are correct (choose this one only if none of the above can be chosen).
+
+14. [上] Which of the following is wrong about database normalization? (A) to satisfy Ist
+normal form, each column of a table must have a single value (B) in 2" normal form, all non-key
+attributes are fully functional dependent on the primary key (C) 3“ normal form is used to reduce
+the data duplication (D) 3" normal form does not allow transitive dependency for non-prime
+attributes (E) all of the above are correct (choose this one only if none of the above can be
+chosen).
+
+is. | Tefers to the mechanism used in DBMS to allow removal of all the previous
+transaction logs from the system and permanently stored them in the storage disk (A) backlogging
+(B) checkpoint (C) serialization (D) two-phase commit (E) none of the above.
+
+16. [____] Which of the following is wrong? (A) a process is an execution of a specific program
+(B) a process can have multiple threads (C) compared to threads, processes are more lightweight :
+(D) in terms of memory sharing, processes are isolated (E) all of the above are correct (choose this
+one only if none of the above can be chosen).
+
+17. (__] In operating system, refers to the situation in which two or mote processes
+continually repeat the same interaction in response to changes in the other processes without doing
+any useful work? (A) deadlock (B) livelock (C) starvation (D) busy waiting (E) none of the above.
+
+18. [____] Which of the following is a typical objective for CPU scheduling in operating systems?
+(A) max CPU utilization (B) max throughput (C) min waiting time (D) fair allocation of CPU (E)
+all of the above are typical objectives. .
+
+19. [____] Which of the following CPU scheduling algorithm is starvation-free? (A) Shortest-Job-
+First (B) Priority Scheduling (C) Round Robin (D) ali of the above (E) none of the above.
+
+20. | In operating systems, refers to the technique for mediating between a computer
+application and a slow peripheral, such as a printer, that allows programs to “hand off” work to be
+done by the peripheral and then proceed to other tasks. (A) buffering (B) spooling (C) preemptive
+scheduling (D) non-preemptive scheduling (E) heap.
+
+21. [-___] Which of the following is wrong about ER model? (A) it is a high-level data model (B)
+
+BAR
+a
+
+x
+
+題 號 : 343 國 立 臺灣 大 學 111 學 年 度 碩士 班 招生 考試 試題
+
+科目 : 資訊 科技 概論 FAR + 343
+
+Mick: 6 共 4 頁 之 第 3 頁
+an entity may be any object, class, person or place (C) attribute is used to describe the property of
+an entity (D) diamond shape is used to represent attribute (E) all of the above are correct (choose
+this one only if none of the above can be chosen).
+
+2.[ refers to the part of an operating system that loads and links the shared libraries
+needed by an executable when it is executed at run time, by copying the content of libraries from
+persistent storage to RAM, filling jump tables and relocating pointers, (A) code generation (B)
+code loader (C) assembler (D) dynamic linker (E) none of the above.
+
+23. [| Which of the following is wrong about “metaverse”? (A) it envisions a future of social
+connection in a 2D virtual world (B) VR is a key technology in metaverse (C) Facebook changed
+its name to “meta” to usher in the metaverse (D) blockchain is a key technology in metaverse to
+offer digital proof of ownership for assets in the metaverse (E) all of the above are correct (choose
+this one only if none of the above can be chosen).
+
+24. [__] Which of the following is wrong about non-fungible token (NFT)? (A) NFTs can be
+associated with digital files such as photos, videos, and audio to show ownerships (B) NFT is a unique
+and non-interchangeable unit of data stored on a blockchain (C) two copies of a digital file can be
+associated with two different NFTs (D) assets in the metaverse case be traded as NFTs (E) all of
+the above are correct (choose this one only if none of the above can be chosen).
+>
+Ss
+題 號 : 343 圈 立 臺灣 大 學 111 學 年 度 碩士 班 招生 考試 試題
+科目 : 資訊 科 技 概論 題 號 :343
+節 次 :6 共 4 頁 之 第 4 頁
+※ 注意 : 請 於 試卷 內 之 「 非 選擇 題 作答 區 」 標 明 題 號 依 序 作答 。
+The following C++ code fragment shows the class definition of an ADT hash table that
+stores student information. In this implementation, the chaining approach is adopted to
+resolve collisions.
+class ChainStudentNode
+{
+private:
+int studentID; // the ID (key) of a student
+string name; // the name of a student
+string dept; // the department. name of a student
+ChainStudentNode *next;
+friend class StudentHashTable;
+yi // end ChainStudentNode
+class StudentHashTable
+{
+public:
+void insertStudent (int sID, string sName, string sDept);
+string retrieveName(int sID);
+protected:
+int hashindex(int sID);
+// hash function; return the location of a student ID
+private:
+static const int HASH_TABLE_SIZE = 101;
+ChainStudentNode *table[HASH_TABLE SIZE]; // Hash table
+yi
+(a) (15 points) Write the insert Student () function that inserts a student’s record
+into the hash table. Here, we assume the inserted-student is never duplicated.
+(b) (15 points) Write the retrieveName()} function that returns the name of a
+student given the student’s ID. Note that the function returns an empty string if no .
+stored student matches the given ID.
+(c) (10 points) Write the hashIndex() function that generates the location (table
+index) by taking the modulo of the last three student ID digits. For example, the
+location of student ID 11725935 is 935%101 = 26.

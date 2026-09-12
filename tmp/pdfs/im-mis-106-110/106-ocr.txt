@@ -1,0 +1,37 @@
+AAR: 382 國 立 臺灣 大 學 106 學 年 度 碩士 班 招生 考試 試題
+科目 : 資 訊 管理 導論 ASE: 382
+His: 7 共 | 頁 之 第 | 頁
+請 於 答案 卷 上 依 序 作答 ‧ 並 註明 作答 的 題 號
+試卷 共 四 大 題
+1. Competitive strategies that firms can employ to deal with competitive forces include cost leadership strategy,
+differentiation strategy, innovation strategy, etc. . .
+(1) Please give two examples to explain how firms can use information systems (1S) or information
+technologies (IT) to support the differentiation strategy. (10%)
+(2) For firms that adopt the differentiation strategy, what recommendations will you suggest to the firms
+about their IT strategy and management? (15%)
+2. Sharing economy refers to “peer-to-peer-based activities of obtaining, giving, or sharing the access to goods
+and services, coordinated through community-based online services.” Uber and AirBnB represent two famous
+examples of the sharing economy.
+(1) What are the major challenges for the sharing economy? (12%)
+{2) Please select one challenge that you just answer in (1) and describe (or develop) an information
+system/technology solution to address this challenge. (13%)
+3. The rise of Android platform signals the business value and strategic importance of open source software
+(OSS). While OSS can greatly reduce system development barrier, its license restricts the use of OSS software, :
+and is an important consideration when adopting OSS in system development. Answer the following
+questions regarding OSS.
+(1) What is open source software? (5%)
+(2) About 85% of open source software adopts the General Public License (GPL). What are the key terms of a
+GPLlicense? (7%) - Se
+(3) Apache License is also quite popular in open source community. Explain the reason when the Apache
+License should be selected over the GPL license for an open source project. (7%) :
+(4) What are the strategic advantages for a business to be involved in open source software development
+projects? (6%)
+4. In addition to relational database, we have witness the raise of the so called No-SQL database. Answer the
+following questions regarding the No-SOL database.
+(1) How are relational database and No-SQL database different in terms of the ACID (Atomicity, Consistency,
+isolation, Durability) properties, schema, and scalability? (11%)
+(2) Provide one scenario when a relational database should be selected over a No-SQL database. You should
+provide the underlying reasoning for the choice. (7%)
+(3) Provide one scenario when a No-SQL database should be selected over a relational database. You should
+provide the underlying reasoning for the choice. (7%)
+試題 隨 卷 繳 回

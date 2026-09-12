@@ -1,0 +1,44 @@
+{
+  "reviewerScope": "複查修訂後 .work/im-it-lessons-db.json 的 2 個 lessons 與 12 張 cards；重新檢查技術正確性、非官方答案表述、worked example 可重現性、front/back 歧義及 sourceRefs／pastPaperRefs。未修改原 lesson 檔。",
+  "approved": true,
+  "lessonReviews": [
+    {
+      "lessonId": "lesson-im-it-db-relational-model-01",
+      "approved": true,
+      "issues": [
+        {
+          "severity": "minor",
+          "location": "pastPaperRefs: q-pp-im-it-109-19",
+          "problem": "該題只辨識 MariaDB 是 MySQL 相容的關聯式 DBMS，與本 lesson 的 schema、keys、constraints、完整性或 DBMS-vs-file-system 推理沒有直接連結。",
+          "suggestedFix": "若保留，標為延伸辨識題；核心練習優先使用直接測關聯結構或鍵的題目。"
+        }
+      ]
+    },
+    {
+      "lessonId": "lesson-im-it-db-transactions-01",
+      "approved": true,
+      "issues": []
+    }
+  ],
+  "cardIssues": [
+    {
+      "severity": "minor",
+      "location": "card-im-it-db-relational-model-02.pastPaperRefs",
+      "problem": "更新後的 q-pp-im-it-106-2 考成績表欄位設計，q-pp-im-it-114-18 考 composite key；兩者都沒有直接檢驗 superkey 與 candidate key 的最小性差異。",
+      "suggestedFix": "若無直接且已核准的題目，可將它們標為相關鍵概念練習，不應暗示是 front 的精準測驗。"
+    },
+    {
+      "severity": "minor",
+      "location": "card-im-it-db-relational-model-03.pastPaperRefs",
+      "problem": "q-pp-im-it-106-4 只陳述 foreign key 對應另一表 primary key，沒有測試 foreign key 是否可為 NULL。",
+      "suggestedFix": "若無無爭議且 auto-grade eligible 的精準題，可保留為背景題，但應區分『相關』與『直接測量』。"
+    },
+    {
+      "severity": "minor",
+      "location": "card-im-it-db-relational-model-05.pastPaperRefs",
+      "problem": "q-pp-im-it-110-23 比較 DBMS 與檔案系統優勢，只能間接連到 data-definition separation，沒有直接比較 schema 與 data dictionary。",
+      "suggestedFix": "若無精準題目可用，將此 ref 標為延伸背景題。"
+    }
+  ],
+  "summary": "最終回歸複查通過：blocking=0、major=0，可 approved。Relational-model 第一個 worked example 已明訂 Student.sid 與 Course.cid 的 PRIMARY KEY、email UNIQUE NOT NULL、Enrollment 的兩個 REFERENCES 與 composite PRIMARY KEY，現在候選鍵、主鍵與外鍵結論皆可由 prompt 唯一重現；第二個 example 的參照與 NULL 條件也完整。Transactions lesson、12 張 cards、技術內容與非官方答案表述均無 blocking/major。仍保留 4 個不阻擋核准的 minor：一個 lesson 延伸題與三張 card 的 past-paper 對應較間接。"
+}

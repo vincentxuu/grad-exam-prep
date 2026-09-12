@@ -1,0 +1,55 @@
+“是 號 : 294 國 立 臺灣 大 學 113 學 年 度 碩士 班 招生 考試 試題
+科目 : 資訊 科技 概論 mw #204
+Ra: 6 共 4 頁 之 第 1 頁
+
+一 、 選 擇 題 (BE) 24 題 , 每 題 2.5 分 , 共 60 分 , 請 在 每 題 的 選項 內 選擇 最 適當 的 答案 。
+
+注意 : 答 錯 倒 扣 1 分 , 扣 至 零 分 為 止 。( 不 答 不 倒 扣 )
+
+請 用 人 pi 鉛筆 作答 於 答案 卡 , 並 先 詳 閱 答 實 卡 上 之 「 畫 記 說 明 」
+
+i. | Which of the following is not a popularly used file system? (A) FAT32 (B) exFAT (C) NTFS (D) APFS (E) all the
+above are popular file systems (choose this one only if none of the above can be chosen).
+
+2. 上] Which of the following is wrong? (A) multiprocessing allows simultaneous execution of processes on separate cores or
+processors (B) in multiprocessing, two processes spawned by a parent process share their memory, stack, and program counter
+(C) processes in multiprocessing can communicate through mechanisms like shared memory or message passing (D) the main
+purpose of multiprocessing is to improve system throughput and performance (E) all of the above are correct (choose this one
+only if none of the above can be chosen).
+
+。 | ‘Which of the following is wrong? (A) a thread represents an independent path of execution within a program (B)
+multiple threads can run simultaneously within a single process (C) communication between threads is more lightweight and
+efficient than communication between processes (D) threads within a process sharing the same memory space (E) all the above
+are correct (choose this one only if none of the above can be chosen).
+
+4. [| A von Neumann architecture consists of four main components, which are: (A) input, output, memory, processing (B)
+input, output, CPU, program counter (C) arithmetic control, logic.control, register, program counter (D) CPU, GPU, RAM, hard
+disk (E) /O, RAM, CPU, storage
+
+5, Cc] Which of the following about stack memory in operating system is wrong? (A) local variables of a program are stored
+in stack (B) every time a function is called, the operating system allocates some stack memory for it (C) during a program’s
+execution, allocation and deallocation for stack memory is automatically done (D) a stack overflow occurs when a program tries
+to use more memory space in the call stack than has been allocated (E) all the above are correct (choose this one only if none of
+the above can be chosen).
+
+6. [____] Which of the following about heap memory in operating system is wrong? (A) objects dynamically created by a
+program are stored in the heap memory (B) the heap segment can suffer from fragmentation (C) memory allocated on the heap
+persists until explicitly deallocated by the programmer (D) garbage collection is invoked to clean up objects in the heap that are
+no longer being referenced (E) all the above are correct (choose this one only if none of the above can be chosen).
+
+和 區 Which ofthe following about interrupt in a computer is wrong? (A) an interrupt is a signal to the processor that an
+event has occurred, requiring its attention (B) when an interrupt occurs, the usual procedure is for the processor to save its state
+by pushing its registers and program counter onto the stack (C) in a polled interrupt system, the interrupting device directs the
+processor to the appropriate interrupt service routine (D) interrupts can be assigned priorities to allow a higher priority one to
+“interrupt” lower priorities (E) all of the above are correct (choose this one only if none of the above can be chosen).
+
+8. | Amdaht’s law is used in parallel computing to formulate the theoretical speedup when using multiple processors. Let p
+be the fraction of a task that is unaffected by adding more processors, and n is the number of processors used to speed up the task.
+Then the theoretical speedup of the execution of the whole task is (A) 一 二 一 oo MEP
+
+說 up 0 ion 03 ‘Whole 1s ——“Ti-p) ~~... p 二
+eee p+ SP" (a-p)4h np 同
+none of the above. ‘ .
+9. [|] Which of the following is wrong about mutual exclusion in operating system? (A) mutual exclusion is used to ensure
+2
+LG

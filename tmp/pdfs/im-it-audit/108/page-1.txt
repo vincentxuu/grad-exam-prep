@@ -1,0 +1,60 @@
+題 號 : 383 國 立 臺灣 大 學 108 學 年 度 碩士 班 招生 考試 試題
+科目 : 資訊 科技 概論 MR: 383
+fick: 6 共 2 頁 之 第 / 頁
+
+一 、 選 擇 是 ( 單 選 ) 20M, 每 題 2.5 分 , 共 50 分 , 請 在 每 題 的 選項 內 選擇 最 適當 的 答案 。
+
+注意 : 答 錯 倒 扣 1 分 , 扣 至 零 分 為 止 。( 不 答 不 倒 扣 )
+
+請 作答 於 答案 卡 上 , 否則 不 予以 計 分 。
+
+1. [____] Which of the following is not an image file format? (A) JPEG (B) MPEG (C) GIF (D)
+BMP (E) all of the above are image file formats.
+
+2. L._] Which of the following refers to a small piece of data sent from a website and stored on
+the user’s computer by the user’s web browser while the user is browsing so as to remember
+stateful information? (A) proxy (B) cookie (C) etag (D) http hash (E) cache.
+
+3. [____] How many distinct Internet addresses can IPv6 facilitate? (A) 2°? (B) 2% (C) 2 (D) 2!8
+(E) 9256
+
+4, | Which of the following (suite of) communication protocols are the foundation protocols
+used to interconnect network devices on the Internet? (A) TCP/IP (B) UDP/TCP (C) HTTP (D)
+HTTP/HTTPS (E) DNS.
+
+5. [| Which of the following is typically not a task of an operating system? (A) CPU
+scheduling (B) storage management (C) memory allocation (D) I/O management (E) all of the
+above are common tasks of an operating system.
+
+6. | Which of the following is wrong? (A) Linux is open source (B) Linux is Unix-like (C)
+Android is based on Linux (D) Android is open source (E) all of the above are correct (choose this
+one only if none of the above can be chosen).
+
+7. | Which of the following technologies is best used for tracking objects ? (A) smart card
+(B) beacon (C) RFID (D) NFC (E) IoT.
+
+8. [_____] Which of the following technologies is seldom used in autonomous cars to perceive
+their surroundings? (A) Lidar (B) radar (C) computer vision (D) GPS (E) all of the above are
+commonly used technologies. :
+
+9. 中 Which of the following is an EU regulation on data protection and privacy for all
+individuals within the EU that replaces the 1995 EU Data Protection Directive and goes into force
+in May 2018? (A) International Safe Harbor Privacy Principles (B) Digital Millennium Copyright
+Act (DMCA) (C) Digital Transition Content Security Act (D) General Data Protection Regulation
+(E) none of the above.
+
+10. [___] Which of the following is not considered as a specific attribute that defines big data?
+
+(A) volume (B) velocity (C) variety (D) veracity (E) all of the above are specific attributes that
+define big data.
+
+11. | Which of the following is not an application of big data? (A) Decision making (B)
+Forecast and Prediction (C) Vulnerability Assessment (D) Government Governance (E) all of the
+above can be applications of big data.
+
+12. | The use of CAPTCHA (which requires user to type the letters of a distorted image,
+sometimes with the addition of an obscured sequence of letters or digits that appears on the
+screen) is an example of that is meant to determine whether or not the user is human. (A) ;
+Turing Test (B) Alan Test (C) Interactive Test (D) AI Test (E) Awareness Test.
+
+LAG

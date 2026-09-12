@@ -1,0 +1,242 @@
+{
+  "lesson-im-it-ai-foundations-ml-evaluation-01": {
+    "title": "園遊會的智慧助手試營運",
+    "hook": "學校想在園遊會啟用一個智慧助手：它要能回答訪客、把攤位資料分組、預估備料量，還要判斷哪些人需要服務台協助。與其先問它『到底聰不聰明』，籌備組先設計可觀察的任務、不同形式的回饋，以及最後一次不偷看的驗收。",
+    "predict": {
+      "prompt": "助手在籌備資料上幾乎全對，但正式園遊會常判錯。下列哪個動作最能公平檢查它能否面對新情況？",
+      "options": [
+        "繼續用同一批籌備資料反覆調整，直到全對",
+        "保留一批未參與訓練與調整、且接近正式情境的資料，最後才評估",
+        "只看整體 accuracy，不看錯誤落在哪一類"
+      ],
+      "answer": "保留一批未參與訓練與調整、且接近正式情境的資料，最後才評估。",
+      "why": "反覆拿 test data 調整會造成 evaluation leakage；只看 training performance 也可能看不出 overfitting。"
+    },
+    "mapping": [
+      {
+        "scenarioElement": "訪客只透過對話窗口評估助手，無法查看它內部怎麼運作",
+        "concept": "Turing test 的可觀察行為",
+        "mappingReason": "評估的是外在回應是否難以和人類區分，不是直接證明意識、情感或全面智慧。"
+      },
+      {
+        "scenarioElement": "拿附有『垃圾／回收』答案的照片教分類；另把沒有答案的攤位依消費型態自動分群；遊戲助手則依得分調整策略",
+        "concept": "Supervised、unsupervised、reinforcement learning",
+        "mappingReason": "三者分別對應標籤、無指定 target 的結構探索，以及由 reward 學習 policy；判斷依據是回饋形式。"
+      },
+      {
+        "scenarioElement": "籌備組用『固定基本量＋每增加一名預估訪客所增加的飲料杯數』估算需求",
+        "concept": "Linear regression 的 intercept、slope 與 prediction",
+        "mappingReason": "可對應 y-hat=b0+b1x；slope 描述模型中的預測變化，不等於訪客增加必然造成同樣幅度的真實變化。"
+      },
+      {
+        "scenarioElement": "舊資料用來練習、另一批資料用來挑設定，封存資料只在最後驗收",
+        "concept": "Training、validation、test 與泛化",
+        "mappingReason": "分開資料角色可降低把驗收答案洩漏進模型選擇的風險，也能看出只記住舊資料的 overfitting。"
+      },
+      {
+        "scenarioElement": "服務台把『需要協助／不需協助』的預測與實際狀況交叉記成四格表",
+        "concept": "TP、FP、FN、TN 與 precision、recall、accuracy",
+        "mappingReason": "Precision 看被叫來服務台的人有多少真的需要；recall 看所有真的需要者找到了多少；accuracy 看全部判對比例。"
+      }
+    ],
+    "boundary": "這個園遊會只是把同一課的概念放進共同情境，不表示 Turing test、三種 learning paradigms、linear regression 與 confusion matrix 必須由同一個系統同時使用。『附答案練習』『分群』『得分』只映射回饋形式，不等於描述實際訓練演算法；四格表也只適用於此處的 binary classification。高 accuracy、通過對話測試或在封存資料表現良好，都不能單獨證明意識、因果關係或所有部署情境都可靠。",
+    "examCues": [
+      {
+        "cue": "題目問 Turing test 或 CAPTCHA",
+        "recall": "先抓 human-versus-machine 的可觀察行為；不要推論 consciousness 或 AGI。"
+      },
+      {
+        "cue": "題目要分 supervised／unsupervised／reinforcement",
+        "recall": "找 label、沒有 target、或 reward；不要只看應用名稱。"
+      },
+      {
+        "cue": "看到 y-hat=b0+b1x 或問 slope",
+        "recall": "代入計算 prediction；slope 是其他條件假設下 x 每增一單位的預測變化，不是因果證明。"
+      },
+      {
+        "cue": "看到 TP、FP、FN、TN",
+        "recall": "Precision 分母是 TP+FP，recall 分母是 TP+FN，accuracy 分子是 TP+TN；類別不平衡時別只看 accuracy。"
+      }
+    ]
+  },
+  "lesson-im-it-ds-complexity-sorting-searching-01": {
+    "title": "圖書館閉館前的還書大整理",
+    "hook": "閉館前，館員要把 n 本還書依索書號排回推車。有人逐本比較相鄰書，有人挑一本當分界把書分到兩側；整理完後，讀者還想快速找到指定索書號。真正決定成本的，不只是『哪個方法聽起來快』，而是輸入原本的形狀、分界怎麼選，以及書是否已按同一規則排好。",
+    "predict": {
+      "prompt": "推車上的書早已依索書號排好。相鄰比較法若每一趟都記錄是否交換，第一趟完全沒交換後應怎麼做？",
+      "options": [
+        "立即停止，這次只需線性次比較",
+        "仍固定做完所有趟，所以一定是平方次比較",
+        "直接改用 binary search，因為 search 也能完成 sorting"
+      ],
+      "answer": "立即停止，這個有 swapped flag 的版本在已排序輸入上只需一趟，best case 為 Theta(n)。",
+      "why": "若實作沒有提前停止，結論會不同；複雜度必須連同演算法版本與 input case 一起說。"
+    },
+    "mapping": [
+      {
+        "scenarioElement": "還書數量是 n，館員把一次索書號比較或交換當成要計數的工作",
+        "concept": "Input size、基本操作與漸近界",
+        "mappingReason": "先定義 n 與操作，才能討論 Big-O 上界、Omega 下界與 Theta 同階界；case 則描述同一 n 下的輸入形狀。"
+      },
+      {
+        "scenarioElement": "館員反覆比較相鄰兩本，順序相反就交換；一整趟沒交換便停止",
+        "concept": "Optimized Bubble Sort",
+        "mappingReason": "逆序時比較與交換累積成 Theta(n²)；已排序且有 swapped flag 時只掃一趟，為 Theta(n)。"
+      },
+      {
+        "scenarioElement": "館員挑一本分界書，把較小與較大的書分到兩車後繼續處理",
+        "concept": "QuickSort partition 與 pivot quality",
+        "mappingReason": "切分大致平衡時每層總工作約 n、深度約 log n；每次挑到極端值會形成 n-1 子問題並退化為 Theta(n²)。"
+      },
+      {
+        "scenarioElement": "兩本索書號相同的預約書貼有『先到 A』『後到 B』，整理後仍保留 A 在 B 前",
+        "concept": "Stable sort",
+        "mappingReason": "穩定性只要求 equal keys 維持原相對順序，不表示排序比較少或所有元素位置不變。"
+      },
+      {
+        "scenarioElement": "書確實按索書號排列後，館員每次查看中間一本並排除一半範圍",
+        "concept": "Binary search 的前置條件",
+        "mappingReason": "O(log n) 的排除成立於資料已依同一比較規則排序且可依 index 取得中點；未排序時不能套用。"
+      }
+    ],
+    "boundary": "搬書動作只是 comparison、swap、partition 與 indexing 的比喻，不代表現實館員的走路距離、推車容量或多人協作成本已納入。Bubble Sort 的線性 best case 只適用於有提前停止的版本；已排序資料是否讓 QuickSort 退化取決於 pivot／partition 策略；相同索書號的貼紙只說明 stability，不代表演算法一定 in-place。Binary search 也不是 sorting 方法。",
+    "examCues": [
+      {
+        "cue": "題目只寫 O(n²) 或問 best/worst case",
+        "recall": "先確認 n、基本操作、輸入形狀與實作版本；case 與 O/Omega/Theta 不是同義詞。"
+      },
+      {
+        "cue": "Bubble Sort 題目出現『已排序』『沒有交換就停止』",
+        "recall": "有 swapped flag 才能推出 best-case Theta(n)；固定輪數版本不能。"
+      },
+      {
+        "cue": "QuickSort 遇到已排序輸入",
+        "recall": "檢查 pivot selection；每次選極端值才會一路切成 0 與 n-1。"
+      },
+      {
+        "cue": "題目問 stable 或 binary search",
+        "recall": "Stable 只管 equal keys 的相對順序；binary search 先驗證排序與 random/indexed access 前提。"
+      }
+    ]
+  },
+  "lesson-im-it-ds-trees-heaps-01": {
+    "title": "醫院資訊台的兩套名單",
+    "hook": "醫院同時維護兩種看似都是『樹』的名單：病歷索引用姓名大小關係決定往左或往右找；急診候診表則只要求最高優先者在最前面，方便下一位立即取出。外形相似不代表規則相同——能不能排除一整側、能不能快速找任意名字，取決於名單維持的是 BST 全域順序，還是 heap 的局部 parent-child 順序。",
+    "predict": {
+      "prompt": "Min-heap 的 root 是最小值。現在要找一個很大的指定號碼，和 root 比較後能否像 BST 一樣只搜尋其中一個 child subtree？",
+      "options": [
+        "可以，因為 heap 也是 binary tree",
+        "不可以；兩側都可能含有該大值，worst case 可能檢查全部節點",
+        "可以，而且一定是 O(1)"
+      ],
+      "answer": "不可以；min-heap 只保證 parent≤children，不保證左右 branches 的全域順序，arbitrary search worst case 是 O(n)。",
+      "why": "Root 極值可 O(1) peek，但這個優勢不能外推到任意 key 搜尋。"
+    },
+    "mapping": [
+      {
+        "scenarioElement": "院區、部門與服務站以一對多的上下層關係畫成組織圖",
+        "concept": "Tree 的 root、parent、child、leaf、depth、height",
+        "mappingReason": "層級關係可對應樹術語；depth 從 root 往下數邊，height 往最深 leaf 數邊，使用時仍要確認 convention。"
+      },
+      {
+        "scenarioElement": "急診候診位置逐層由左到右填滿，並依序編入緊密 array",
+        "concept": "Complete binary tree 與 array mapping",
+        "mappingReason": "Zero-based index 下 parent=floor((i-1)/2)、children=2i+1 與 2i+2；complete shape 讓位置不留大片空洞。"
+      },
+      {
+        "scenarioElement": "病歷索引每到一個名字，就依比較結果只往左側較小區或右側較大區",
+        "concept": "BST ordering、search 與 inorder traversal",
+        "mappingReason": "全域左右順序讓搜尋可排除一側；distinct keys 的 inorder 會得到遞增序列，但成本仍取決於 tree height。"
+      },
+      {
+        "scenarioElement": "急診表只保證每位 parent 的優先序不低於 children，最急者放在 root",
+        "concept": "Max-heap 與 priority queue",
+        "mappingReason": "Root 可 O(1) peek；候診表不保證 siblings 或不同 branches 已完整排序，也不等於 BST。"
+      },
+      {
+        "scenarioElement": "新病人先放下一個空位，再沿 parent chain 上調；取走 root 後用最後一人補位並向下調整",
+        "concept": "Heap insert、extract 與 sift",
+        "mappingReason": "Complete tree 的 height 是 O(log n)，所以 sift-up/down 最壞移動 O(log n) 層；找任意病歷號仍可能 O(n)。"
+      }
+    ],
+    "boundary": "真實急診優先序會重新評估且涉及臨床規範，本比喻只映射 priority queue 的資料結構操作，不能用 heap property 推導醫療決策。BST 名字比較也是假設存在一致 ordering；若插入使樹嚴重偏斜，search/insert 可退化成 O(n)。Complete、BST、heap 是不同約束，組織圖更不保證是 binary 或 complete tree。",
+    "examCues": [
+      {
+        "cue": "看到 complete binary tree 的 array index",
+        "recall": "Zero-based：parent=floor((i-1)/2)，left=2i+1，right=2i+2；root 沒有 parent。"
+      },
+      {
+        "cue": "題目問 BST inorder 或搜尋成本",
+        "recall": "Distinct-key inorder 產生遞增序列；平衡時 O(log n)，偏斜 worst case O(n)。"
+      },
+      {
+        "cue": "題目寫 min-heap／max-heap 不等號",
+        "recall": "Min：parent≤children；max：parent≥children。只保證局部順序。"
+      },
+      {
+        "cue": "題目問 heap insert、peek 或 arbitrary search",
+        "recall": "Insert/extract O(log n)，peek root O(1)，找任意 key worst case O(n)。"
+      }
+    ]
+  },
+  "lesson-im-it-prog-object-oriented": {
+    "title": "連鎖飲料店的點單系統",
+    "hook": "總公司要讓不同分店都能販售飲料，但不能讓任何收銀員直接把庫存或餘額改成非法值。每一杯飲料有自己的甜度與容量，所有杯子又共享品牌規則；結帳畫面只想呼叫同一個 prepare()，不想為紅茶、拿鐵逐一寫 if。這正好把 class、object、encapsulation、共享狀態與 polymorphism 放進同一個責任邊界。",
+    "predict": {
+      "prompt": "系統規定庫存不能小於 0。下列哪種設計最能維持這個 invariant？",
+      "options": [
+        "把 stock 公開，讓任何程式碼直接寫入",
+        "把 stock 放在受控邊界內，只允許會檢查數量的 restock() 與 sell() 修改",
+        "只把欄位命名成 privateStock，但仍允許外部任意改值"
+      ],
+      "answer": "把 stock 放在受控邊界內，只允許會檢查數量的 methods 修改。",
+      "why": "Private 是常見手段；encapsulation 的真正目的，是讓狀態改變都經過能維護 invariant 的介面。"
+    },
+    "mapping": [
+      {
+        "scenarioElement": "『飲料』規格描述容量、甜度與 prepare()；今天做出的 A 杯、B 杯各有實際狀態",
+        "concept": "Class、object、state、behavior",
+        "mappingReason": "Class 描述一類 objects 的 fields 與 methods；每個 object 是具體 instance，可保有自己的 state。"
+      },
+      {
+        "scenarioElement": "庫存只能透過 sell()、restock() 修改，methods 會拒絕負數或超賣",
+        "concept": "Encapsulation 與 invariant",
+        "mappingReason": "外部依賴 public interface，內部集中驗證狀態；資料隱藏是保護責任邊界的手段。"
+      },
+      {
+        "scenarioElement": "每杯的甜度各自保存；全店共用 createdCount；一次結帳中的 change 只在該 method 執行期間存在",
+        "concept": "Instance、class/static、local variables",
+        "mappingReason": "三者分別對應每個 object 的 copy、class 共享狀態，以及 method/block scope 的暫時變數。"
+      },
+      {
+        "scenarioElement": "抽象 Drink 提供共同概念，Tea 與 Latte 擴充它；Java 系統再用 access modifiers 控制可見性",
+        "concept": "Inheritance、abstract class 與 access control",
+        "mappingReason": "Subclass 可重用或擴充契約，但不能假設能直接存取 superclass 所有 members；Java protected、private 與 class inheritance 有語言特定規則。"
+      },
+      {
+        "scenarioElement": "收銀畫面持有 Drink 介面，只呼叫 prepare()；實際杯子是 Tea 或 Latte 時執行各自 override",
+        "concept": "Subtype polymorphism 與 dynamic dispatch",
+        "mappingReason": "呼叫端依賴共同契約，runtime object type 決定 override；主要價值是抽象責任，不只是複製程式碼。"
+      }
+    ],
+    "boundary": "飲料配方只是 class/object 的比喻，不代表現實配方天然形成合理 inheritance；若只有程式碼相似而沒有 is-a 關係，composition 可能更合適。Access modifiers、protected 與 multiple inheritance 的精確語意必須依語言判斷，本課只把相關細節限於 Java。『共用品牌規則』只有在明確建模為 class/static state 時才對應共享變數，不能推論所有 objects 自動共享 fields。",
+    "examCues": [
+      {
+        "cue": "題目混用 class、object、state、behavior",
+        "recall": "Class 是描述；object 是 instance；fields 表 state，methods 表 behavior。"
+      },
+      {
+        "cue": "題目問 member、instance、static/class 或 local variable",
+        "recall": "Instance 每物件一份；static/class 由 class 共享；local 在 method/block scope，不是持久 object state。"
+      },
+      {
+        "cue": "看到 subclass 一定能存取所有 superclass members，或 protected 適用所有語言",
+        "recall": "否定全稱；private、constructor 與 protected 規則都需依目標語言，本課採 Java 語意。"
+      },
+      {
+        "cue": "題目問 polymorphism 的目的或執行哪個 override",
+        "recall": "共同 interface/base type 提供契約，runtime object type 透過 dynamic dispatch 選具體實作；不等於 multiple inheritance。"
+      }
+    ]
+  }
+}

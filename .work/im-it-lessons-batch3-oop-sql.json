@@ -1,0 +1,375 @@
+{
+  "lessons": [
+    {
+      "id": "lesson-im-it-prog-object-oriented",
+      "subtopicId": "im-it-prog-object-oriented",
+      "coveredSubtopicIds": ["im-it-prog-object-oriented"],
+      "title": "物件導向：封裝、繼承與多型的責任邊界",
+      "summary": "以 class、object 與對外介面建立 OOP 基礎，區分 encapsulation、inheritance、polymorphism、instance/class variables 與 access control。存取控制與繼承細節以本課來源涵蓋的 Java 語意為準，避免把特定語言規則誤當成所有 OOP 語言的共同定律。對應考古題答案均為非官方技術覆核。",
+      "estimatedMinutes": 34,
+      "minimumPastPaperRefs": 6,
+      "learningObjectives": [
+        "說明 class、object、state、behavior 與 encapsulation 的關係。",
+        "區分 instance variable、class variable 與 local variable 的生命週期與共享範圍。",
+        "分析 inheritance、abstract class 與 access modifier 的語言相依規則。",
+        "使用共同介面與動態派發解釋 polymorphism。"
+      ],
+      "sections": [
+        {
+          "title": "Class、Object 與 Encapsulation",
+          "body": "Class 描述一類 objects 的 state 與 behavior；object 是該 class 的具體實例。Encapsulation 把資料與操作資料的方法組成一個單位，並以受控介面保護 invariant。它不是把所有欄位一律設成 private 就完成，而是讓外部只能透過能維持有效狀態的操作互動。",
+          "bullets": [
+            "State 常由 fields/member variables 表示，behavior 常由 methods/member functions 表示。",
+            "Public interface 說明外部可做什麼；implementation details 說明內部如何完成。",
+            "資料隱藏是 encapsulation 的常見手段，但目的在維護責任與 invariant。",
+            "Abstraction 強調保留重要特徵；encapsulation 強調把狀態與操作包在受控邊界內。"
+          ]
+        },
+        {
+          "title": "Instance、Class 與 Local Variables",
+          "body": "Instance variable 屬於特定 object，每個實例通常有自己的 copy；class/static variable 屬於 class 本身，通常由所有 instances 共用。Local variable 宣告在 method 或 block 內，只在該執行範圍有效。『member variable 必須宣告在 method body』把 member 與 local 的位置顛倒。",
+          "bullets": [
+            "兩個 objects 可有不同 instance state。",
+            "Class/static state 的更新會被所有透過同一 class state 的 instances 看見。",
+            "Member accessibility 受 language、modifier 與呼叫位置影響，不能一概說所有 methods 都能跨 class 存取。",
+            "Local variable 通常不屬於 object 的持久 state。"
+          ]
+        },
+        {
+          "title": "Inheritance、Abstract Class 與 Access Control",
+          "body": "Inheritance 建立 base/superclass 與 derived/subclass 關係，讓 subclass 重用或擴充既有介面與實作。Subclass 不保證能直接存取 superclass 的所有 members；private、constructor 與語言特定規則都可能限制可見性。Abstract class 用於提供不能直接完整實例化的共同概念，但可包含 concrete behavior。",
+          "bullets": [
+            "在 Java 中，protected 允許 same-package access，並在符合規格條件時供 subclass 存取。",
+            "Private member 的資料可能仍構成 object state，但 subclass 通常不能直接以名稱存取。",
+            "Java class 不支援多重 class inheritance，但可實作多個 interfaces；這是 Java 的語言規則，不是 OOP 的普遍定義。",
+            "優先確認 is-a 關係；只為重用程式碼而繼承常造成不合理耦合。"
+          ]
+        },
+        {
+          "title": "Polymorphism 是共同介面，不是單純複製程式碼",
+          "body": "Polymorphism 讓呼叫端透過共同 interface 操作不同 concrete implementations。當實際呼叫哪個 override 由 runtime object type 決定時，形成常見的 dynamic dispatch。Inheritance 可協助 code reuse，但 polymorphism 的主要價值是讓使用端依賴抽象契約，而非知道每一種具體 class。",
+          "bullets": [
+            "相同 method call 可由不同 object 執行不同實作。",
+            "Interface/base type 定義契約，concrete class 實作契約。",
+            "Code reuse 也可透過 composition、delegation 或 generic functions，不只 inheritance。",
+            "Overloading 與 overriding 都可能被稱為 polymorphism，但規則與 dispatch 時機不同。"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "BankAccount 必須禁止餘額變成負數。為何把 balance 設為 private，並只提供 deposit(amount) 與 withdraw(amount)，比公開 balance 更能維持 invariant？",
+          "steps": [
+            "先定義 invariant：balance 不得小於 0。",
+            "若 balance 公開，外部可直接寫入 -100，class 無法攔截。",
+            "deposit 可拒絕非正數；withdraw 可先檢查餘額是否足夠。",
+            "所有狀態改變經受控 methods，class 才能集中維護規則。"
+          ],
+          "answer": "Encapsulation 讓外部依賴受控介面而非直接改 state；private 本身是手段，真正價值是 methods 能維持 balance invariant。"
+        },
+        {
+          "prompt": "Counter class 的 instance variable value 初值為 0，class/static variable createdCount 初值為 0；constructor 每建立一個 instance 就執行 createdCount++。建立 A、B 後再將 A.value 加 1，三個值各是多少？",
+          "steps": [
+            "A 與 B 各有自己的 value copy。",
+            "只增加 A.value，不改變 B.value。",
+            "createdCount 屬於 class，每建立一個 instance 時共同累加。",
+            "建立 A、B 後，兩者觀察到的是同一份 createdCount=2。"
+          ],
+          "answer": "A.value 與 B.value 分離；createdCount 共用。操作後 A.value=1、B.value=0、createdCount=2。"
+        },
+        {
+          "prompt": "Shape 定義 area()，Circle 與 Rectangle 各自 override。函式 totalArea(shapes) 只呼叫每個元素的 area()，為何不需判斷具體 class？",
+          "steps": [
+            "Shape 提供共同 area() 契約。",
+            "Circle 與 Rectangle 各自實作計算公式。",
+            "集合以共同 base/interface type 保存 objects。",
+            "呼叫 area() 時由 dynamic dispatch 選擇實際 object 的 override。"
+          ],
+          "answer": "這是 subtype polymorphism：呼叫端依賴 Shape 契約，runtime 選出 Circle 或 Rectangle 的實作。"
+        },
+        {
+          "prompt": "某敘述說『protected 在所有 OOP 語言中都只允許目前 class 與 subclasses 存取』。如何判斷？",
+          "steps": [
+            "先辨認 access modifier 是 language-specific semantics。",
+            "許多語言確實讓 subclasses 存取 protected members。",
+            "Java protected 也允許 same-package access；其他語言的精確規則必須另查其規格。",
+            "因此含『所有語言』『只』的全稱敘述不成立。"
+          ],
+          "answer": "不能跨語言一概而論；protected 的精確可見性必須依目標語言規格判斷。"
+        }
+      ],
+      "commonPitfalls": [
+        "把 encapsulation 與 abstraction 當成完全相同概念。",
+        "把 member variable 說成必須宣告在 method body；那通常是 local variable。",
+        "認為 subclass 一定能直接存取 superclass 的所有 attributes 與 methods。",
+        "把 protected、private 或 multiple inheritance 的某一語言規則套到所有 OOP 語言。",
+        "把 polymorphism 的主要目的說成 multiple inheritance 或單純 code reuse。",
+        "只因兩個 classes 有共同程式碼就建立 inheritance，忽略 is-a 關係與 composition。"
+      ],
+      "sourceRefs": ["src-oracle-oop-concepts"],
+      "pastPaperRefs": [
+        "q-pp-im-it-106-21",
+        "q-pp-im-it-109-1",
+        "q-pp-im-it-109-2",
+        "q-pp-im-it-113-21",
+        "q-pp-im-it-113-22",
+        "q-pp-im-it-114-2"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "lesson-im-it-db-sql-querying",
+      "subtopicId": "im-it-db-sql-querying",
+      "coveredSubtopicIds": ["im-it-db-sql-querying"],
+      "title": "SQL 查詢：從條件篩選到分組與 JOIN",
+      "summary": "以可重現的小型資料表練習 CREATE TABLE、SELECT、WHERE、COUNT、DISTINCT、GROUP BY、HAVING 與 JOIN。重點是依 SQL 的處理層次判斷條件放置位置，並用括號消除 AND/OR 的優先順序歧義。對應考古題答案均為非官方技術覆核。",
+      "estimatedMinutes": 36,
+      "minimumPastPaperRefs": 6,
+      "learningObjectives": [
+        "寫出基本 CREATE TABLE 與 SELECT-FROM-WHERE 語句。",
+        "使用括號正確組合 AND 與 OR 條件。",
+        "區分 COUNT、DISTINCT、GROUP BY 與 HAVING 的用途。",
+        "依 related columns 使用 JOIN 組合多個 tables。"
+      ],
+      "sections": [
+        {
+          "title": "Table Definition 與基本查詢骨架",
+          "body": "CREATE TABLE 建立 table schema，欄位定義放在括號內；CREATE DATABASE 建立的是 database，不會用同樣語法直接定義 Customers 的 columns。讀取資料則使用 SELECT 指定輸出 expressions、FROM 指定來源 tables，必要時以 WHERE 過濾 rows。",
+          "bullets": [
+            "CREATE TABLE Customers (CustomerID INT, CustomerName VARCHAR(255)); 是基本 DDL 形式。",
+            "SELECT * 代表選取目前來源中所有 columns，不等於不過濾 rows。",
+            "SQL keywords 常不區分大小寫，但字串 literal 與 identifier 規則依 DBMS 而異。",
+            "DDL 定義結構；SELECT 屬查詢，兩者目的不同。"
+          ]
+        },
+        {
+          "title": "WHERE、AND/OR 與括號",
+          "body": "WHERE 對分組前的 individual rows 套用條件。一般 SQL 中 AND 的優先順序高於 OR，但只靠記憶優先順序容易讓需求與語句不一致；把同一邏輯群組放進括號更清楚。要找 Country 為 Taiwan，且 City 是 Taipei 或 Kaohsiung，城市條件必須形成一組。",
+          "bullets": [
+            "正確邏輯是 Country='Taiwan' AND (City='Taipei' OR City='Kaohsiung')。",
+            "省略括號可能把其他 country 的 Kaohsiung rows 一併選入。",
+            "逗號不能取代 WHERE 中的 Boolean operators。",
+            "可用 IN ('Taipei','Kaohsiung') 表達同一組離散候選值。"
+          ]
+        },
+        {
+          "title": "Aggregate、DISTINCT、GROUP BY 與 HAVING",
+          "body": "Aggregate function 把多個 rows 彙整成統計值。COUNT(*) 計算 rows；COUNT(column) 忽略該 column 為 NULL 的 rows；COUNT(DISTINCT column) 計算不同且非 NULL 的 values。GROUP BY 先依 key 形成 groups，再對每組計算 aggregate；HAVING 則篩選 aggregate 後的 groups。",
+          "bullets": [
+            "計算不同國家數：COUNT(DISTINCT Country)。",
+            "計算每個國家的客戶數：GROUP BY Country 搭配 COUNT。",
+            "WHERE 在 grouping 前篩 rows；HAVING 在 grouping 後篩 groups。",
+            "SELECT 中未 aggregate 的 columns 通常必須出現在 GROUP BY。"
+          ]
+        },
+        {
+          "title": "JOIN 依關聯欄位組合資料",
+          "body": "JOIN 把兩個或更多 tables 的 rows 依 join condition 組合，讓查詢同時輸出不同 tables 的 columns。INNER JOIN 只保留符合條件的配對；LEFT JOIN 保留左表所有 rows，右表沒有配對時以 NULL 補足。JOIN 不等於永久建立新 table，也不自動移除 duplicates。",
+          "bullets": [
+            "常見條件是 foreign key 對應 referenced key，例如 Orders.CustomerID = Customers.CustomerID。",
+            "缺少或寫錯 join condition 可能產生 Cartesian product 或錯誤配對。",
+            "Table aliases 可縮短欄位引用並消除同名欄位歧義。",
+            "選 INNER 或 OUTER JOIN 取決於未配對 rows 是否仍需保留。"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "Customers 有 (Taiwan,Taipei)、(Taiwan,Tainan)、(Japan,Kaohsiung)、(Taiwan,Kaohsiung) 四列。請查出台灣且城市為 Taipei 或 Kaohsiung 的 rows。",
+          "steps": [
+            "先固定 Country='Taiwan'。",
+            "把兩個城市條件以 OR 組成同一群組。",
+            "用 AND 把 country 條件與城市群組連接。",
+            "逐列代入可得第 1 與第 4 列。"
+          ],
+          "answer": "SELECT * FROM Customers WHERE Country='Taiwan' AND (City='Taipei' OR City='Kaohsiung');"
+        },
+        {
+          "prompt": "Customers.Country 依序是 Taiwan、Taiwan、Japan、NULL、Japan。求不同非 NULL 國家數，並列出每國 row 數。",
+          "steps": [
+            "COUNT(DISTINCT Country) 忽略 NULL 並去重，得到 Taiwan、Japan。",
+            "不同非 NULL 國家數是 2。",
+            "以 Country GROUP BY 後，Taiwan 有 2、Japan 有 2；NULL 也可能形成一組，依查詢是否先排除 NULL 而定。",
+            "若只要非 NULL groups，可在 grouping 前加 WHERE Country IS NOT NULL。"
+          ],
+          "answer": "不同國家數：SELECT COUNT(DISTINCT Country) FROM Customers; 每國數量：SELECT Country, COUNT(*) FROM Customers WHERE Country IS NOT NULL GROUP BY Country;"
+        },
+        {
+          "prompt": "Customers(CustomerID, CustomerName) 有 (1,'Mei')、(2,'Bo')；Orders(OrderID, CustomerID) 有 (101,1)、(102,1)、(103,3)，且 Customers.CustomerID 唯一。請用 INNER JOIN 列出有合法 customer 配對的訂單與姓名。",
+          "steps": [
+            "Customers.CustomerID 是 customer 識別欄位。",
+            "Orders.CustomerID 是 join key。",
+            "101、102 的 CustomerID=1，可與 Mei 配對。",
+            "103 的 CustomerID=3 在 Customers 沒有配對，INNER JOIN 不輸出。"
+          ],
+          "answer": "SELECT o.OrderID, c.CustomerName FROM Orders AS o INNER JOIN Customers AS c ON o.CustomerID=c.CustomerID; 結果為 (101,'Mei')、(102,'Mei')。"
+        },
+        {
+          "prompt": "要找出客戶數至少 2 人的國家，條件應放 WHERE 還是 HAVING？",
+          "steps": [
+            "先依 Country GROUP BY。",
+            "每組以 COUNT(*) 得到客戶數。",
+            "『至少 2 人』依 aggregate 結果判斷，不是單一 row 屬性。",
+            "因此使用 HAVING COUNT(*) >= 2。"
+          ],
+          "answer": "SELECT Country, COUNT(*) FROM Customers GROUP BY Country HAVING COUNT(*) >= 2;"
+        }
+      ],
+      "commonPitfalls": [
+        "用 CREATE DATABASE 或不存在的 BUILD TABLE 代替 CREATE TABLE。",
+        "混用 AND/OR 卻不加括號，讓 city 條件脫離 country 限制。",
+        "把 COUNT(column) 當成一定等於 COUNT(*)，忽略 NULL。",
+        "用 WHERE 篩選 aggregate 結果；分組後條件應使用 HAVING。",
+        "SELECT 未 aggregate column 卻沒有放入 GROUP BY。",
+        "JOIN 遺漏 ON condition，意外產生 Cartesian product。"
+      ],
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-jiege-database-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-106-3",
+        "q-pp-im-it-107-4",
+        "q-pp-im-it-107-5",
+        "q-pp-im-it-109-18",
+        "q-pp-im-it-114-12",
+        "q-pp-im-it-114-14"
+      ],
+      "reviewStatus": "draft"
+    }
+  ],
+  "cards": [
+    {
+      "id": "card-im-it-prog-object-oriented-01",
+      "lessonId": "lesson-im-it-prog-object-oriented",
+      "subtopicId": "im-it-prog-object-oriented",
+      "front": "Encapsulation 的核心目的為何？",
+      "back": "把 state 與操作 state 的 behavior 放進受控邊界，讓外部透過能維持 invariant 的介面互動。",
+      "explanation": "Private fields 是常見手段，但真正目的不是單純隱藏，而是維護責任與有效狀態。",
+      "sourceRefs": ["src-oracle-oop-concepts"],
+      "pastPaperRefs": ["q-pp-im-it-106-21", "q-pp-im-it-109-1"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-prog-object-oriented-02",
+      "lessonId": "lesson-im-it-prog-object-oriented",
+      "subtopicId": "im-it-prog-object-oriented",
+      "front": "Instance variable、class/static variable、local variable 如何區分？",
+      "back": "Instance variable 每個 object 各有一份；class/static variable 由 class 層級共享；local variable 只存在 method/block 執行範圍。",
+      "explanation": "Member variable 宣告在 class 內；宣告於 method body 的通常是 local variable。",
+      "sourceRefs": ["src-oracle-oop-concepts"],
+      "pastPaperRefs": ["q-pp-im-it-113-22"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-prog-object-oriented-03",
+      "lessonId": "lesson-im-it-prog-object-oriented",
+      "subtopicId": "im-it-prog-object-oriented",
+      "front": "Protected 是否在所有語言都代表『只有 class 與 subclasses 可存取』？",
+      "back": "不是；protected 的精確規則依語言而異，例如 Java 還包含 same-package access。",
+      "explanation": "考題若出現『sometimes same-package』通常是在描述 Java 類型的 protected semantics。",
+      "sourceRefs": ["src-oracle-oop-concepts"],
+      "pastPaperRefs": ["q-pp-im-it-109-2"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-prog-object-oriented-04",
+      "lessonId": "lesson-im-it-prog-object-oriented",
+      "subtopicId": "im-it-prog-object-oriented",
+      "front": "Subclass 是否一定能直接存取 superclass 的所有 members？",
+      "back": "不一定；private members、constructors 與語言規則都可能限制繼承或直接存取。",
+      "explanation": "Inheritance 建立 is-a 關係與可重用契約，不等於取消 access control。",
+      "sourceRefs": ["src-oracle-oop-concepts"],
+      "pastPaperRefs": ["q-pp-im-it-113-21"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-prog-object-oriented-05",
+      "lessonId": "lesson-im-it-prog-object-oriented",
+      "subtopicId": "im-it-prog-object-oriented",
+      "front": "Polymorphism 的主要價值是什麼？",
+      "back": "讓呼叫端透過共同 interface 使用不同 implementations，而不需知道每個 concrete class。",
+      "explanation": "Dynamic dispatch 會依 runtime object 選擇 override；這不同於只為 code reuse 而 inheritance。",
+      "sourceRefs": ["src-oracle-oop-concepts"],
+      "pastPaperRefs": ["q-pp-im-it-106-21", "q-pp-im-it-114-2"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-prog-object-oriented-06",
+      "lessonId": "lesson-im-it-prog-object-oriented",
+      "subtopicId": "im-it-prog-object-oriented",
+      "front": "Multiple inheritance 是所有 OOP 語言的共同能力嗎？",
+      "back": "不是；Java class 不支援多重 class inheritance，但可實作多個 interfaces。",
+      "explanation": "Multiple inheritance 是語言設計選擇，不是 OOP 的必要條件。本課只主張來源可驗證的 Java 規則。",
+      "sourceRefs": ["src-oracle-oop-concepts"],
+      "pastPaperRefs": ["q-pp-im-it-113-21"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-db-sql-querying-01",
+      "lessonId": "lesson-im-it-db-sql-querying",
+      "subtopicId": "im-it-db-sql-querying",
+      "front": "建立 Customers(CustomerID INT, CustomerName VARCHAR(255)) 的基本 SQL 是什麼？",
+      "back": "CREATE TABLE Customers (CustomerID INT, CustomerName VARCHAR(255));",
+      "explanation": "CREATE DATABASE 建立 database，不會用這個 column-definition 形式直接建立 table。",
+      "sourceRefs": ["src-brookshear-13e", "src-jiege-database-course"],
+      "pastPaperRefs": ["q-pp-im-it-109-18"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-db-sql-querying-02",
+      "lessonId": "lesson-im-it-db-sql-querying",
+      "subtopicId": "im-it-db-sql-querying",
+      "front": "為何混用 AND 與 OR 時應明確加括號？",
+      "back": "括號明示需求的 Boolean grouping，避免 OR 條件脫離其他限制，即使知道 AND 通常優先也更安全可讀。",
+      "explanation": "Taiwan 且城市二選一應寫 Country='Taiwan' AND (City='Taipei' OR City='Kaohsiung')。",
+      "sourceRefs": ["src-brookshear-13e", "src-jiege-database-course"],
+      "pastPaperRefs": ["q-pp-im-it-106-3"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-db-sql-querying-03",
+      "lessonId": "lesson-im-it-db-sql-querying",
+      "subtopicId": "im-it-db-sql-querying",
+      "front": "COUNT(*)、COUNT(column)、COUNT(DISTINCT column) 有何不同？",
+      "back": "COUNT(*) 數 rows；COUNT(column) 數非 NULL values；COUNT(DISTINCT column) 數不同的非 NULL values。",
+      "explanation": "是否忽略 NULL、是否去重，是三者最重要的差異。",
+      "sourceRefs": ["src-brookshear-13e", "src-jiege-database-course"],
+      "pastPaperRefs": ["q-pp-im-it-107-4"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-db-sql-querying-04",
+      "lessonId": "lesson-im-it-db-sql-querying",
+      "subtopicId": "im-it-db-sql-querying",
+      "front": "GROUP BY 與 HAVING 分別做什麼？",
+      "back": "GROUP BY 依 key 形成 groups；HAVING 依 aggregate 或 group-level 條件篩選形成後的 groups。",
+      "explanation": "Individual-row 條件通常放 WHERE，aggregate 結果條件放 HAVING。",
+      "sourceRefs": ["src-brookshear-13e", "src-jiege-database-course"],
+      "pastPaperRefs": ["q-pp-im-it-107-5", "q-pp-im-it-114-12"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-db-sql-querying-05",
+      "lessonId": "lesson-im-it-db-sql-querying",
+      "subtopicId": "im-it-db-sql-querying",
+      "front": "SQL JOIN 的主要用途是什麼？",
+      "back": "依 related columns 組合兩個或更多 tables 的 rows 與 columns。",
+      "explanation": "JOIN 是查詢運算，不等於永久建立 table，也不會自動去除 duplicates。",
+      "sourceRefs": ["src-brookshear-13e", "src-jiege-database-course"],
+      "pastPaperRefs": ["q-pp-im-it-114-14"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-db-sql-querying-06",
+      "lessonId": "lesson-im-it-db-sql-querying",
+      "subtopicId": "im-it-db-sql-querying",
+      "front": "INNER JOIN 與 LEFT JOIN 對未配對 rows 的處理有何不同？",
+      "back": "INNER JOIN 只保留配對 rows；LEFT JOIN 保留左表全部 rows，右表未配對 columns 以 NULL 表示。",
+      "explanation": "選擇 join type 前，先問是否需要保留左側沒有關聯資料的 records。",
+      "sourceRefs": ["src-brookshear-13e", "src-jiege-database-course"],
+      "pastPaperRefs": ["q-pp-im-it-114-14"],
+      "reviewStatus": "draft"
+    }
+  ]
+}

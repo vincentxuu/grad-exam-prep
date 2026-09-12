@@ -1,0 +1,129 @@
+[
+  {
+    "questionId": "q-pp-im-mis-111-1",
+    "answer": "N/A",
+    "explanation": "本題為申論題，無選項，以下為各小題解析。(a) 資本預算方法的四項主要缺點：第一，忽略無形效益（如提升顧客滿意度、組織學習等）；第二，以短期財務指標衡量，無法反映長期策略價值；第三，難以量化資訊系統投資帶來的競爭優勢；第四，回收期法等方法未考慮資金時間價值，且對現金流量的預估本身即存在不確定性。(b) 採取成本領導策略的企業應優先投資「例行性專案（Routine Projects）」類別，因為這類專案風險低且效益穩定，有助於降低營運成本、提升流程效率，符合成本領導策略強調控制成本與規模經濟的核心目標；同時也可適度投入「謹慎審視（Cautiously Examine）」類高效益專案，以在可控風險下追求顯著的成本節省效果。(c) 資訊密集型產業（如金融業）的資料量龐大、業務流程高度依賴資訊系統，因此高風險高效益的IT專案一旦成功，便能帶來顯著的差異化競爭優勢；加上此類產業的競爭者也積極導入創新科技，若不投資高效益專案則可能喪失市場地位，故需承擔較高風險以維持競爭力。",
+    "evidencePages": [
+      1,
+      2
+    ],
+    "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
+  },
+  {
+    "questionId": "q-pp-im-mis-111-3",
+    "answer": "N/A",
+    "explanation": "此題為問答題，要求比較 SDLC 各階段的測試類型。單元測試（Unit Testing）在編碼階段進行，由開發人員負責，目的是驗證個別模組或函式的邏輯正確性，執行環境為開發機器或 CI 環境，範圍最小且執行最快。整合測試（Integration Testing）在多個模組合併後進行，由開發人員或測試工程師負責，目的是確認模組間介面與資料流的正確性，執行於測試環境，範圍涵蓋模組間的互動。使用者驗收測試（User Acceptance Testing, UAT）在系統接近上線前進行，由客戶或終端使用者負責，目的是確認系統符合業務需求與合約規格，通常在模擬正式環境或 staging 環境中執行。易用性測試（Usability Testing）可在原型或系統完成後進行，由使用者體驗（UX）研究人員主導並邀請真實使用者參與，目的是評估系統的易學性、效率與使用者滿意度，著重於人機互動品質而非功能正確性。",
+    "evidencePages": [
+      2
+    ],
+    "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
+  },
+  {
+    "questionId": "q-pp-im-mis-111-4",
+    "answer": "N/A",
+    "explanation": "(a) 以使用者為中心的設計（User-Centered Design, UCD）是一種將使用者的需求、目標與限制置於設計流程核心的設計哲學與方法論。其原則包括：在設計各階段積極了解使用者需求（早期且持續地關注使用者）、透過迭代設計與評估反覆改進（原型測試→回饋→修正的循環）、讓使用者直接參與設計過程（參與式設計），以及跨領域團隊協作確保多角度考量。(b) 常見的使用者體驗與介面設計啟發原則（Heuristics）至少四項如下：一、系統狀態可見性（Visibility of System Status）：系統應隨時透過適當回饋讓使用者知道目前發生了什麼，例如進度條或載入動畫。二、系統與真實世界的匹配（Match Between System and the Real World）：系統應使用使用者熟悉的語言、詞彙與概念，而非以系統內部術語呈現。三、使用者的控制權與自由度（User Control and Freedom）：使用者常誤觸操作，系統應提供明顯的「復原」與「重做」功能，讓使用者可自由離開不想要的狀態。四、一致性與標準（Consistency and Standards）：同一系統中相同操作應有相同結果，遵循平台慣例，避免讓使用者猜測不同詞彙或動作是否代表同一件事。五、錯誤預防（Error Prevention）：比好的錯誤訊息更重要的是從設計上防止問題發生，例如刪除前的確認對話框或自動檢查輸入格式。",
+    "evidencePages": [
+      2
+    ],
+    "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
+  },
+  {
+    "questionId": "q-pp-im-mis-112-1",
+    "answer": "N/A",
+    "explanation": "本題為問答題，無單選答案。(a) 拉式供應鏈（Pull-based）是依據實際顧客需求來驅動生產與補貨，需求訊號由下游往上游傳遞，代表性系統為豐田的看板（Kanban）制度；推式供應鏈（Push-based）則依據需求預測提前生產與備料，產品在未收到實際訂單前便被推送至各通路。(b) 拉式的優點在於降低存貨風險、減少過剩產能與牛鞭效應（Bullwhip Effect）；推式的優點在於可享規模經濟、提前備料以應對大量或季節性需求，並縮短顧客等待時間。(c) 企業選擇供應鏈模式時，應考量公司層面（產品種類多樣性、前置時間長短、預測準確度）、產業層面（產品生命週期、競爭強度、供應商集中度）及總體環境層面（市場需求波動性、法規環境、全球化程度），多數企業實務上採用混合式（Push-Pull）策略以兼顧效率與彈性。",
+    "evidencePages": [
+      1
+    ],
+    "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
+  },
+  {
+    "questionId": "q-pp-im-mis-112-3",
+    "answer": "N/A",
+    "explanation": "本題為申論題，詢問已部署深度學習模型的維護步驟與影響因素。維護步驟通常包含：(1) 監控模型效能（monitoring），持續追蹤預測準確率、資料分佈等指標；(2) 偵測模型退化（model drift detection），包括資料漂移（data drift）與概念漂移（concept drift）；(3) 重新訓練（retraining）或微調（fine-tuning），使用新資料更新模型參數；(4) 版本管理與 A/B 測試，確保新模型上線後效能優於舊版本；(5) 回滾機制（rollback），當新模型表現不佳時可快速切換回穩定版本。影響模型維護的因素包括：輸入資料分佈的變化（如使用者行為改變）、標籤資料取得的難易度、運算資源成本、模型可解釋性需求，以及業務目標的演進。以題目中的虛擬試妝工具為例，季節流行趨勢改變會造成概念漂移，需定期以新妝容資料重新訓練模型；手寫表單辨識系統則需應對不同用戶筆跡風格的變化，維護挑戰在於持續收集具代表性的多樣化訓練樣本。",
+    "evidencePages": [
+      1
+    ],
+    "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
+  },
+  {
+    "questionId": "q-pp-im-mis-113-1",
+    "answer": "N/A",
+    "explanation": "(a) 社群偵測（Community Detection）是在網路（graph）中找出具有高度內部連結、低度外部連結的節點群組的技術。在社群媒體分析中，一個應用案例是偵測 Twitter 或 Facebook 上具有相似興趣或互動頻繁的使用者群體，例如識別特定話題的意見領袖社群或假訊息傳播群組，從而進行精準行銷或輿情監控。(b) 評估社群偵測方法的效果可使用模組度（Modularity, Q值）作為無監督指標，Q值介於-1到1之間，數值愈高代表社群內部連結愈密集、社群間連結愈稀疏。若有已知的真實社群標籤（ground truth），則可使用標準化互信息（Normalized Mutual Information, NMI）或調整蘭德指數（Adjusted Rand Index, ARI）來衡量演算法輸出與真實社群的吻合程度。評估流程上，先在具有已知社群結構的基準資料集（如 Karate Club、LFR benchmark graph）上執行演算法，再計算上述指標，並與其他方法（如 Louvain、DBSCAN、Spectral Clustering）進行比較，以全面評估方法的準確性與穩定性。",
+    "evidencePages": [
+      1
+    ],
+    "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
+  },
+  {
+    "questionId": "q-pp-im-mis-113-2",
+    "answer": "N/A",
+    "explanation": "此題為申論題，共三小題，無選項設計，故以最具代表性的核心論點（第(c)小題）作為答案依據。在相同條件下，採用自建資訊系統的公司B（Company B）會比導入ERP系統的公司A（Company A）擁有更高的企業敏捷性。ERP系統雖整合了各業務流程，但其高度標準化與模組耦合的特性，使得企業難以快速修改系統以因應外部環境變化，客製化成本高且週期長。相對地，自建系統雖初期建置成本較高，但企業擁有完整的系統控制權，可依需求快速調整、擴充或重構特定模組，反應速度更快。因此，自建系統在面對動態商業環境時，能提供更高的彈性與適應能力，從而支援更強的企業敏捷性。",
+    "evidencePages": [
+      1
+    ],
+    "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
+  },
+  {
+    "questionId": "q-pp-im-mis-113-3",
+    "answer": "N/A",
+    "explanation": "本題為問答題，無選項，以下提供完整解析。(a) 對話式AI在銀行客服中心的效益：可全天24小時不間斷服務、大幅降低人力成本、縮短客戶等待時間、提升一致性服務品質；績效評估指標包括首次解決率（First Call Resolution Rate）、客戶滿意度（CSAT）、平均處理時間（AHT）、轉接人工客服比率及自動化解決率等。(b) 挑戰與解決方案：主要挑戰包括自然語言理解準確度不足（尤其是方言或專業術語）、資安與隱私疑慮、客戶接受度低以及系統整合複雜度高；對應解法為持續訓練語言模型並導入領域特定語料、採用端對端加密與符合法規的資料處理流程、設計順暢的人機切換機制以提升信任感，以及採用API中介層降低後端系統整合難度。",
+    "evidencePages": [
+      1
+    ],
+    "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
+  },
+  {
+    "questionId": "q-pp-im-mis-113-4",
+    "answer": "N/A",
+    "explanation": "本題為申論題，無標準選項，以下提供參考解答。(a) ESG 三個面向：Environmental（環境）指企業對自然環境的影響，如碳排放、能源使用與廢棄物管理；Social（社會）指企業與員工、供應鏈、社區的互動關係，如勞工權益與多元包容；Governance（治理）指企業的管理架構與透明度，如董事會組成、反腐機制與股東權益保護。(b) IT 投資會正向影響企業 ESG 績效。在環境面，IT 系統（如智慧能源管理、供應鏈透明化平台）可降低碳排放與資源浪費；在社會面，數位化工具可改善員工安全監控與勞工管理，並提升客戶資料保護；在治理面，ERP、區塊鏈與資料分析工具能強化財務透明度與合規管理，降低舞弊風險。因此，雖然 IT 投資對財務績效的影響在文獻中結果不一，但對 ESG 整體表現的提升效果有較一致的理論支持。",
+    "evidencePages": [
+      2
+    ],
+    "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
+  },
+  {
+    "questionId": "q-pp-im-mis-114-1",
+    "answer": "N/A",
+    "explanation": "本題為問答題，無標準選項。第A題：大型企業可藉由直播平台打造品牌旗艦直播間，結合大數據精準投放廣告並邀請知名網紅合作，例如美妝品牌進行限量新品發布直播；中小企業則可利用低成本的社群平台直播（如Facebook Live、Instagram Live）快速建立與粉絲的直接溝通管道，以個人化服務和即時互動彌補品牌知名度不足的劣勢。第B題：人工智慧可應用於即時商品推薦、觀眾情緒分析與個人化內容呈現，大幅提升轉換率；虛擬實境（VR）技術則可打造沉浸式購物體驗，讓消費者在直播中「試穿」或「試用」商品，突破實體限制並降低退貨率，進一步提升直播電商的商業價值。",
+    "evidencePages": [
+      1
+    ],
+    "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
+  },
+  {
+    "questionId": "q-pp-im-mis-114-2",
+    "answer": "N/A",
+    "explanation": "此題為申論題，探討為何相同的資訊科技（IT）投資在不同企業間會產生不同的績效結果。Part A 的關鍵因素包括：互補性資產（如組織文化、流程再造、人力資本）、管理能力與IT治理品質、企業IT吸收能力（absorptive capacity），以及產業競爭結構差異。Part B 可引用資源基礎理論（Resource-Based View）說明IT本身易被模仿，但與企業獨特能力結合後才能創造持久競爭優勢；亦可以IT生產力悖論（IT Productivity Paradox）為例，說明短期投資與長期績效之間的落差。Brynjolfsson 與 Hitt 的研究指出，IT投資的效益高度依賴組織變革與互補性投資，缺乏配套的企業即使投入相同金額也難以獲得相同回報。因此，IT投資的差異化結果本質上反映了企業在組織能力與策略執行上的根本差異。",
+    "evidencePages": [
+      1
+    ],
+    "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
+  },
+  {
+    "questionId": "q-pp-im-mis-114-3",
+    "answer": "N/A",
+    "explanation": "User Story 是敏捷開發中常用的需求描述工具，格式通常為「作為一個＜角色＞，我想要＜功能＞，以便＜目的＞」，著重於使用者價值與商業目標，語言簡短易懂，適合與非技術利害關係人溝通。Use Case 則源自物件導向分析（UML），描述系統與外部執行者之間的互動流程，包含主要流程、替代流程與例外流程，結構較為正式且詳細。兩者最大差異在於：User Story 聚焦於「為什麼」和「目標」，Use Case 聚焦於「如何」和「互動步驟」；User Story 適合需求發現與溝通階段，Use Case 適合需求規格化與系統設計階段。此外，User Story 通常較小且可獨立開發，Use Case 則涵蓋完整的業務場景與多種情境分支。兩者可互補使用：先以 User Story 收集高層次需求，再以 Use Case 細化複雜互動流程。",
+    "evidencePages": [
+      1
+    ],
+    "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
+  },
+  {
+    "questionId": "q-pp-im-mis-115-1",
+    "answer": "N/A",
+    "explanation": "本題為申論題，無標準選項，以下提供解析內容。根據RAND Corporation與IBM等機構研究，AI專案失敗率高達70-80%，三大關鍵原因如下：一、FOMO驅動的盲目跟風（缺乏明確目標）：組織因害怕落後競爭對手而倉促導入AI，未釐清具體業務問題與可衡量的成功指標，導致專案缺乏方向；二、資料品質與治理不足：AI模型的效能高度依賴資料，但許多組織在未建立完善資料基礎設施（資料清理、標註、治理機制）的情況下就貿然啟動專案，造成「垃圾進、垃圾出」的困境；三、人才缺口與變革管理失敗：組織缺乏具備AI專業知識的人才，同時忽略員工對技術變革的抗拒，未能有效推動組織文化轉型。改善策略（針對第一項）：建議採用「AI機會評估框架」，在啟動任何AI專案前，要求提出明確的業務痛點、量化KPI、ROI估算及資料可用性評估報告，以確保投資決策基於實際需求而非市場FOMO壓力。",
+    "evidencePages": [
+      1
+    ],
+    "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
+  },
+  {
+    "questionId": "q-pp-im-mis-115-2",
+    "answer": "N/A",
+    "explanation": "此題為申論題，包含三個子題（A、B、C），各佔10分，無單一選擇題答案。子題A分析蘋果採用外部AI模型（Google Gemini）如何維持競爭優勢：蘋果的核心競爭力在於生態系鎖定與卓越的使用者體驗，透過整合Gemini可快速補強AI能力缺口，同時將底層技術商品化，讓自身專注於介面設計與隱私保護等差異化層面。子題B探討共競（co-opetition）關係：Google同時是iOS生態夥伴與Android平台競爭者，蘋果面臨技術依賴風險（如API政策變動、資料外洩），但也可縮短開發時程並降低研發成本，需以合約機制管控風險。子題C分析隱私競爭優勢的維持：蘋果應採用「裝置端推論優先、最小化資料傳輸」的架構設計，並透過透明的隱私標籤與使用者溝通，確保Gemini整合不損及「Privacy by Design」的品牌定位。",
+    "evidencePages": [
+      1
+    ],
+    "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
+  }
+]

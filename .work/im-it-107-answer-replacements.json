@@ -1,0 +1,37 @@
+[
+  {
+    "questionId": "q-pp-im-it-107-1",
+    "answer": "B",
+    "explanation": "Amazon Echo 與 Google Home 是以語音為核心的智慧音箱，會使用語音辨識、自然語言處理、語音合成，也能控制室內裝置（control of room devices）。影像辨識需要視覺輸入，並非題述裝置的核心技術，因此答案為 (B)。"
+  },
+  {
+    "questionId": "q-pp-im-it-107-4",
+    "answer": "C",
+    "explanation": "題目要求計算 Customers 表中不重複國家的數量。COUNT(DISTINCT country) 會先去除重複的 country 值再計數，因此 (C) 正確。NUMBER() 不是標準 SQL 聚合函數，所以 (A)、(D)、(E) 不正確；COUNT(ALL country) 則會計算所有非 NULL 值而包含重複國家。"
+  },
+  {
+    "questionId": "q-pp-im-it-107-10",
+    "answer": "D",
+    "explanation": "HTTPS 透過 TLS 提供伺服器身分驗證、通訊機密性與完整性，因而也可防範中間人攻擊與通訊遭竄改。容錯性（fault tolerance）屬於系統可靠性與可用性設計，不是 HTTPS 協定的主要關注，因此原卷答案為 (D)。"
+  },
+  {
+    "questionId": "q-pp-im-it-107-12",
+    "answer": "E",
+    "explanation": "SSO 可減少使用者管理多組帳號密碼的負擔與重複輸入密碼的時間；使用 Facebook 或 Google 帳號登入第三方服務都是聯合身分驗證／SSO 的常見例子。因此 (A) 至 (D) 皆正確，題目問錯誤敘述時應選 (E)。"
+  },
+  {
+    "questionId": "q-pp-im-it-107-17",
+    "answer": "C",
+    "explanation": "建立電腦硬體平台、儲存裝置與網路資源之虛擬版本的行為稱為虛擬化（virtualization），所以原卷答案為 (C)。Hypervisor 是實作與管理虛擬化的軟體層，不是該行為本身。"
+  },
+  {
+    "questionId": "q-pp-im-it-107-19",
+    "answer": "B",
+    "explanation": "依此題採用的單選答案，(B) 錯在聲稱區塊可分散到不同節點，因而任何節點都不必維護完整區塊清單；典型比特幣完整節點會保存並驗證完整區塊鏈。需注意原卷 (C) 的『交易皆保持匿名且加密』也不嚴謹：比特幣交易為假名制且交易資料公開可查，並非內容全部加密。此題原卷本身可能具有多個可爭議選項，答案沿用既有 (B)，但解析必須揭露歧義。"
+  },
+  {
+    "questionId": "q-pp-im-it-107-20",
+    "answer": "E",
+    "explanation": "CIA 三元組代表 Confidentiality（機密性）、Integrity（完整性）與 Availability（可用性）。因此只有 (E)『A refers to Availability』正確；原卷 (D) 的字樣是 Anonymous，而非題庫原先誤植的 Anonymouse。"
+  }
+]

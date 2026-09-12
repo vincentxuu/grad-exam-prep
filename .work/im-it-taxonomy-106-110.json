@@ -1,0 +1,1002 @@
+[
+  {
+    "questionId": "q-pp-im-it-106-1",
+    "topicId": "im-it-db",
+    "subtopicId": "relational-design",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考資料表拆分與關聯設計。"
+  },
+  {
+    "questionId": "q-pp-im-it-106-2",
+    "topicId": "im-it-db",
+    "subtopicId": "relational-design",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考主鍵與成績表欄位設計。"
+  },
+  {
+    "questionId": "q-pp-im-it-106-3",
+    "topicId": "im-it-db",
+    "subtopicId": "sql",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 SQL 條件查詢。"
+  },
+  {
+    "questionId": "q-pp-im-it-106-4",
+    "topicId": "im-it-db",
+    "subtopicId": "relational-model",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考關聯式資料庫基本概念。"
+  },
+  {
+    "questionId": "q-pp-im-it-106-5",
+    "topicId": "im-it-db",
+    "subtopicId": "normalization",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考正規化目的與 1NF。"
+  },
+  {
+    "questionId": "q-pp-im-it-106-6",
+    "topicId": "im-it-ai",
+    "subtopicId": "emerging-technology",
+    "questionType": "multiple-choice",
+    "confidence": "medium",
+    "rationale": "Fintech 不在正式細項，歸入新興科技。"
+  },
+  {
+    "questionId": "q-pp-im-it-106-7",
+    "topicId": "im-it-ai",
+    "subtopicId": "neural-networks",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 AlphaGo 的深度學習。"
+  },
+  {
+    "questionId": "q-pp-im-it-106-8",
+    "topicId": "im-it-ai",
+    "subtopicId": "data-analytics",
+    "questionType": "multiple-choice",
+    "confidence": "medium",
+    "rationale": "Big Data 不在正式細項，歸入資料分析。"
+  },
+  {
+    "questionId": "q-pp-im-it-106-9",
+    "topicId": "im-it-network",
+    "subtopicId": "streaming",
+    "questionType": "multiple-choice",
+    "confidence": "medium",
+    "rationale": "串流媒體跨應用與網路，取網路傳輸。"
+  },
+  {
+    "questionId": "q-pp-im-it-106-10",
+    "topicId": "im-it-network",
+    "subtopicId": "digital-divide",
+    "questionType": "multiple-choice",
+    "confidence": "medium",
+    "rationale": "數位落差不在正式細項，取 ICT 網路議題。"
+  },
+  {
+    "questionId": "q-pp-im-it-106-11",
+    "topicId": "im-it-arch",
+    "subtopicId": "numeric-representation",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 parity bit 錯誤偵測。"
+  },
+  {
+    "questionId": "q-pp-im-it-106-12",
+    "topicId": "im-it-arch",
+    "subtopicId": "memory-hierarchy",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 cache replacement。"
+  },
+  {
+    "questionId": "q-pp-im-it-106-13",
+    "topicId": "im-it-arch",
+    "subtopicId": "computer-boot",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 BIOS 與開機初始化。"
+  },
+  {
+    "questionId": "q-pp-im-it-106-14",
+    "topicId": "im-it-os",
+    "subtopicId": "memory-management",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考虛擬記憶體分頁。"
+  },
+  {
+    "questionId": "q-pp-im-it-106-15",
+    "topicId": "im-it-arch",
+    "subtopicId": "storage-systems",
+    "questionType": "multiple-choice",
+    "confidence": "medium",
+    "rationale": "RAID 跨硬體與 OS，取儲存架構。"
+  },
+  {
+    "questionId": "q-pp-im-it-106-16",
+    "topicId": "im-it-ai",
+    "subtopicId": "emerging-technology",
+    "questionType": "multiple-choice",
+    "confidence": "medium",
+    "rationale": "群眾募資不在正式細項，歸入新興科技。"
+  },
+  {
+    "questionId": "q-pp-im-it-106-17",
+    "topicId": "im-it-ai",
+    "subtopicId": "emerging-technology",
+    "questionType": "multiple-choice",
+    "confidence": "medium",
+    "rationale": "MOOC 不在正式細項，歸入新興科技。"
+  },
+  {
+    "questionId": "q-pp-im-it-106-18",
+    "topicId": "im-it-network",
+    "subtopicId": "tcp-ip",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 Ethernet LAN。"
+  },
+  {
+    "questionId": "q-pp-im-it-106-19",
+    "topicId": "im-it-network",
+    "subtopicId": "tcp-ip",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 TCP/UDP port。"
+  },
+  {
+    "questionId": "q-pp-im-it-106-20",
+    "topicId": "im-it-network",
+    "subtopicId": "osi",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 OSI 分層與協定。"
+  },
+  {
+    "questionId": "q-pp-im-it-106-21",
+    "topicId": "im-it-prog",
+    "subtopicId": "oop",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 OOP 與 code reuse。"
+  },
+  {
+    "questionId": "q-pp-im-it-106-22",
+    "topicId": "im-it-os",
+    "subtopicId": "os-concepts",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考作業系統家族。"
+  },
+  {
+    "questionId": "q-pp-im-it-106-23",
+    "topicId": "im-it-prog",
+    "subtopicId": "software-engineering",
+    "questionType": "multiple-choice",
+    "confidence": "medium",
+    "rationale": "系統開發工具跨軟工，取程式設計概念。"
+  },
+  {
+    "questionId": "q-pp-im-it-106-24",
+    "topicId": "im-it-network",
+    "subtopicId": "network-technologies",
+    "questionType": "multiple-choice",
+    "confidence": "medium",
+    "rationale": "NFC/RFID/DSRC 跨 IoT，取網路技術。"
+  },
+  {
+    "questionId": "q-pp-im-it-106-25",
+    "topicId": "im-it-ds",
+    "subtopicId": "tree",
+    "questionType": "programming",
+    "confidence": "high",
+    "rationale": "實作 BST inorder successor。"
+  },
+  {
+    "questionId": "q-pp-im-it-106-26",
+    "topicId": "im-it-ds",
+    "subtopicId": "tree",
+    "questionType": "open-response",
+    "confidence": "high",
+    "rationale": "建構平衡搜尋樹並證明高度。"
+  },
+  {
+    "questionId": "q-pp-im-it-107-1",
+    "topicId": "im-it-ai",
+    "subtopicId": "ai-applications",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考語音助理使用的 AI 技術。"
+  },
+  {
+    "questionId": "q-pp-im-it-107-2",
+    "topicId": "im-it-db",
+    "subtopicId": "relational-model",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考物件資料庫。"
+  },
+  {
+    "questionId": "q-pp-im-it-107-3",
+    "topicId": "im-it-db",
+    "subtopicId": "relational-model",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考關聯式資料表與主鍵。"
+  },
+  {
+    "questionId": "q-pp-im-it-107-4",
+    "topicId": "im-it-db",
+    "subtopicId": "sql",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 COUNT DISTINCT。"
+  },
+  {
+    "questionId": "q-pp-im-it-107-5",
+    "topicId": "im-it-db",
+    "subtopicId": "sql",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 GROUP BY 聚合。"
+  },
+  {
+    "questionId": "q-pp-im-it-107-6",
+    "topicId": "im-it-db",
+    "subtopicId": "data-warehousing",
+    "questionType": "multiple-choice",
+    "confidence": "medium",
+    "rationale": "OLAP 不在正式細項，歸入資料庫。"
+  },
+  {
+    "questionId": "q-pp-im-it-107-7",
+    "topicId": "im-it-db",
+    "subtopicId": "acid",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 dirty read 與交易隔離。"
+  },
+  {
+    "questionId": "q-pp-im-it-107-8",
+    "topicId": "im-it-network",
+    "subtopicId": "osi",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 OSI 分層。"
+  },
+  {
+    "questionId": "q-pp-im-it-107-9",
+    "topicId": "im-it-security",
+    "subtopicId": "authentication",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 Kerberos 認證。"
+  },
+  {
+    "questionId": "q-pp-im-it-107-10",
+    "topicId": "im-it-security",
+    "subtopicId": "network-security",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 HTTPS 安全目標。"
+  },
+  {
+    "questionId": "q-pp-im-it-107-11",
+    "topicId": "im-it-security",
+    "subtopicId": "cryptography",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考數位憑證欄位。"
+  },
+  {
+    "questionId": "q-pp-im-it-107-12",
+    "topicId": "im-it-security",
+    "subtopicId": "authentication",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 Single Sign-On。"
+  },
+  {
+    "questionId": "q-pp-im-it-107-13",
+    "topicId": "im-it-network",
+    "subtopicId": "network-security",
+    "questionType": "multiple-choice",
+    "confidence": "medium",
+    "rationale": "VPN 跨網路與資安，取安全連線。"
+  },
+  {
+    "questionId": "q-pp-im-it-107-14",
+    "topicId": "im-it-os",
+    "subtopicId": "file-system",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "辨識檔案系統。"
+  },
+  {
+    "questionId": "q-pp-im-it-107-15",
+    "topicId": "im-it-os",
+    "subtopicId": "device-management",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 device driver。"
+  },
+  {
+    "questionId": "q-pp-im-it-107-16",
+    "topicId": "im-it-arch",
+    "subtopicId": "cpu-architecture",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 RISC/CISC 與 instruction pipeline。"
+  },
+  {
+    "questionId": "q-pp-im-it-107-17",
+    "topicId": "im-it-os",
+    "subtopicId": "virtualization",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考虛擬化。"
+  },
+  {
+    "questionId": "q-pp-im-it-107-18",
+    "topicId": "im-it-security",
+    "subtopicId": "cryptography",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 Bitcoin 挖礦與密碼貨幣。"
+  },
+  {
+    "questionId": "q-pp-im-it-107-19",
+    "topicId": "im-it-security",
+    "subtopicId": "cryptography",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 blockchain 不可竄改性。"
+  },
+  {
+    "questionId": "q-pp-im-it-107-20",
+    "topicId": "im-it-security",
+    "subtopicId": "security-principles",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 CIA triad。"
+  },
+  {
+    "questionId": "q-pp-im-it-107-21",
+    "topicId": "im-it-security",
+    "subtopicId": "cryptography",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "辨識對稱與非對稱加密。"
+  },
+  {
+    "questionId": "q-pp-im-it-107-22",
+    "topicId": "im-it-security",
+    "subtopicId": "common-attacks",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 IoT DDoS。"
+  },
+  {
+    "questionId": "q-pp-im-it-107-23",
+    "topicId": "im-it-security",
+    "subtopicId": "security-governance",
+    "questionType": "multiple-choice",
+    "confidence": "medium",
+    "rationale": "ISO 27001 不在正式細項，取資安治理。"
+  },
+  {
+    "questionId": "q-pp-im-it-107-24",
+    "topicId": "im-it-db",
+    "subtopicId": "acid",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 ACID Durability。"
+  },
+  {
+    "questionId": "q-pp-im-it-107-25",
+    "topicId": "im-it-ds",
+    "subtopicId": "sorting",
+    "questionType": "programming",
+    "confidence": "high",
+    "rationale": "設計 Dutch national flag 分割演算法。"
+  },
+  {
+    "questionId": "q-pp-im-it-107-26",
+    "topicId": "im-it-ds",
+    "subtopicId": "graph",
+    "questionType": "open-response",
+    "confidence": "high",
+    "rationale": "證明 Prim MST cut property。"
+  },
+  {
+    "questionId": "q-pp-im-it-108-1",
+    "topicId": "im-it-arch",
+    "subtopicId": "file-formats",
+    "questionType": "multiple-choice",
+    "confidence": "medium",
+    "rationale": "檔案格式不在正式細項，取電腦基礎。"
+  },
+  {
+    "questionId": "q-pp-im-it-108-2",
+    "topicId": "im-it-network",
+    "subtopicId": "http-https",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 HTTP cookie。"
+  },
+  {
+    "questionId": "q-pp-im-it-108-3",
+    "topicId": "im-it-network",
+    "subtopicId": "tcp-ip",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 IPv6 位址空間。"
+  },
+  {
+    "questionId": "q-pp-im-it-108-4",
+    "topicId": "im-it-network",
+    "subtopicId": "tcp-ip",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 Internet protocol suite。"
+  },
+  {
+    "questionId": "q-pp-im-it-108-5",
+    "topicId": "im-it-os",
+    "subtopicId": "os-concepts",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 OS 主要職責。"
+  },
+  {
+    "questionId": "q-pp-im-it-108-6",
+    "topicId": "im-it-os",
+    "subtopicId": "os-concepts",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 Linux 與 Android。"
+  },
+  {
+    "questionId": "q-pp-im-it-108-7",
+    "topicId": "im-it-network",
+    "subtopicId": "network-technologies",
+    "questionType": "multiple-choice",
+    "confidence": "medium",
+    "rationale": "RFID 物件追蹤屬網路/IoT 技術。"
+  },
+  {
+    "questionId": "q-pp-im-it-108-8",
+    "topicId": "im-it-ai",
+    "subtopicId": "ai-applications",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考自駕車感知技術。"
+  },
+  {
+    "questionId": "q-pp-im-it-108-9",
+    "topicId": "im-it-security",
+    "subtopicId": "security-governance",
+    "questionType": "multiple-choice",
+    "confidence": "medium",
+    "rationale": "GDPR 不在正式細項，取隱私治理。"
+  },
+  {
+    "questionId": "q-pp-im-it-108-10",
+    "topicId": "im-it-ai",
+    "subtopicId": "data-analytics",
+    "questionType": "multiple-choice",
+    "confidence": "medium",
+    "rationale": "Big Data 屬資料分析延伸。"
+  },
+  {
+    "questionId": "q-pp-im-it-108-11",
+    "topicId": "im-it-ai",
+    "subtopicId": "data-analytics",
+    "questionType": "multiple-choice",
+    "confidence": "medium",
+    "rationale": "考 Big Data 應用。"
+  },
+  {
+    "questionId": "q-pp-im-it-108-12",
+    "topicId": "im-it-ai",
+    "subtopicId": "ai-concepts",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 CAPTCHA 與圖靈測試。"
+  },
+  {
+    "questionId": "q-pp-im-it-108-13",
+    "topicId": "im-it-network",
+    "subtopicId": "dns-dhcp",
+    "questionType": "multiple-choice",
+    "confidence": "medium",
+    "rationale": "LDAP 非 DNS/DHCP，取最近的目錄解析服務。"
+  },
+  {
+    "questionId": "q-pp-im-it-108-14",
+    "topicId": "im-it-security",
+    "subtopicId": "network-security",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 SSH 安全遠端連線。"
+  },
+  {
+    "questionId": "q-pp-im-it-108-15",
+    "topicId": "im-it-ai",
+    "subtopicId": "neural-networks",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考深度神經網路的深度。"
+  },
+  {
+    "questionId": "q-pp-im-it-108-16",
+    "topicId": "im-it-ai",
+    "subtopicId": "neural-networks",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考深度學習限制。"
+  },
+  {
+    "questionId": "q-pp-im-it-108-17",
+    "topicId": "im-it-security",
+    "subtopicId": "common-attacks",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "辨識病毒與蠕蟲。"
+  },
+  {
+    "questionId": "q-pp-im-it-108-18",
+    "topicId": "im-it-security",
+    "subtopicId": "common-attacks",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 social engineering。"
+  },
+  {
+    "questionId": "q-pp-im-it-108-19",
+    "topicId": "im-it-security",
+    "subtopicId": "firewall",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 firewall。"
+  },
+  {
+    "questionId": "q-pp-im-it-108-20",
+    "topicId": "im-it-network",
+    "subtopicId": "tcp-ip",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 client-server architecture。"
+  },
+  {
+    "questionId": "q-pp-im-it-108-21",
+    "topicId": "im-it-ds",
+    "subtopicId": "tree",
+    "questionType": "programming",
+    "confidence": "high",
+    "rationale": "實作 max-heap 操作。"
+  },
+  {
+    "questionId": "q-pp-im-it-108-22",
+    "topicId": "im-it-ds",
+    "subtopicId": "hash-table",
+    "questionType": "open-response",
+    "confidence": "high",
+    "rationale": "分析 double hashing。"
+  },
+  {
+    "questionId": "q-pp-im-it-109-1",
+    "topicId": "im-it-prog",
+    "subtopicId": "oop",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 encapsulation。"
+  },
+  {
+    "questionId": "q-pp-im-it-109-2",
+    "topicId": "im-it-prog",
+    "subtopicId": "oop",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 access modifier。"
+  },
+  {
+    "questionId": "q-pp-im-it-109-3",
+    "topicId": "im-it-prog",
+    "subtopicId": "language-concepts",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 Python programming paradigms。"
+  },
+  {
+    "questionId": "q-pp-im-it-109-4",
+    "topicId": "im-it-prog",
+    "subtopicId": "language-concepts",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 Python 型別與執行方式。"
+  },
+  {
+    "questionId": "q-pp-im-it-109-5",
+    "topicId": "im-it-network",
+    "subtopicId": "cloud-computing",
+    "questionType": "multiple-choice",
+    "confidence": "medium",
+    "rationale": "雲端服務不在正式細項，取網路服務。"
+  },
+  {
+    "questionId": "q-pp-im-it-109-6",
+    "topicId": "im-it-network",
+    "subtopicId": "cloud-computing",
+    "questionType": "multiple-choice",
+    "confidence": "medium",
+    "rationale": "考 Google App Engine 服務模型。"
+  },
+  {
+    "questionId": "q-pp-im-it-109-7",
+    "topicId": "im-it-ai",
+    "subtopicId": "emerging-technology",
+    "questionType": "multiple-choice",
+    "confidence": "medium",
+    "rationale": "行動支付不在正式細項，歸入新興科技。"
+  },
+  {
+    "questionId": "q-pp-im-it-109-8",
+    "topicId": "im-it-network",
+    "subtopicId": "mobile-networks",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 5G 速率。"
+  },
+  {
+    "questionId": "q-pp-im-it-109-9",
+    "topicId": "im-it-network",
+    "subtopicId": "network-services",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 proxy server。"
+  },
+  {
+    "questionId": "q-pp-im-it-109-10",
+    "topicId": "im-it-network",
+    "subtopicId": "dns-dhcp",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 DNS 名稱解析。"
+  },
+  {
+    "questionId": "q-pp-im-it-109-11",
+    "topicId": "im-it-network",
+    "subtopicId": "tcp-ip",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 IPv4/IPv6。"
+  },
+  {
+    "questionId": "q-pp-im-it-109-12",
+    "topicId": "im-it-network",
+    "subtopicId": "tcp-ip",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 Ethernet。"
+  },
+  {
+    "questionId": "q-pp-im-it-109-13",
+    "topicId": "im-it-arch",
+    "subtopicId": "numeric-representation",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 parity bit。"
+  },
+  {
+    "questionId": "q-pp-im-it-109-14",
+    "topicId": "im-it-network",
+    "subtopicId": "network-technologies",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 Bluetooth 應用。"
+  },
+  {
+    "questionId": "q-pp-im-it-109-15",
+    "topicId": "im-it-arch",
+    "subtopicId": "storage-systems",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考揮發與非揮發記憶體。"
+  },
+  {
+    "questionId": "q-pp-im-it-109-16",
+    "topicId": "im-it-security",
+    "subtopicId": "security-governance",
+    "questionType": "multiple-choice",
+    "confidence": "medium",
+    "rationale": "ISO 27001 歸入資安治理。"
+  },
+  {
+    "questionId": "q-pp-im-it-109-17",
+    "topicId": "im-it-security",
+    "subtopicId": "security-principles",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 CIA triad。"
+  },
+  {
+    "questionId": "q-pp-im-it-109-18",
+    "topicId": "im-it-db",
+    "subtopicId": "sql",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 CREATE TABLE。"
+  },
+  {
+    "questionId": "q-pp-im-it-109-19",
+    "topicId": "im-it-db",
+    "subtopicId": "relational-model",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 MariaDB/MySQL。"
+  },
+  {
+    "questionId": "q-pp-im-it-109-20",
+    "topicId": "im-it-network",
+    "subtopicId": "network-technologies",
+    "questionType": "multiple-choice",
+    "confidence": "medium",
+    "rationale": "IoT 裝置規模跨新興科技，取網路。"
+  },
+  {
+    "questionId": "q-pp-im-it-109-21",
+    "topicId": "im-it-ds",
+    "subtopicId": "list",
+    "questionType": "programming",
+    "confidence": "high",
+    "rationale": "實作 array-based ADT List。"
+  },
+  {
+    "questionId": "q-pp-im-it-109-22",
+    "topicId": "im-it-ds",
+    "subtopicId": "tree",
+    "questionType": "programming",
+    "confidence": "high",
+    "rationale": "實作 max-heap priority update。"
+  },
+  {
+    "questionId": "q-pp-im-it-110-1",
+    "topicId": "im-it-arch",
+    "subtopicId": "computer-hardware",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 PC 硬體規格。"
+  },
+  {
+    "questionId": "q-pp-im-it-110-2",
+    "topicId": "im-it-arch",
+    "subtopicId": "file-formats",
+    "questionType": "multiple-choice",
+    "confidence": "medium",
+    "rationale": "副檔名不在正式細項，取電腦基礎。"
+  },
+  {
+    "questionId": "q-pp-im-it-110-3",
+    "topicId": "im-it-arch",
+    "subtopicId": "file-formats",
+    "questionType": "multiple-choice",
+    "confidence": "medium",
+    "rationale": "辨識影像檔案格式。"
+  },
+  {
+    "questionId": "q-pp-im-it-110-4",
+    "topicId": "im-it-arch",
+    "subtopicId": "storage-systems",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考非揮發性儲存。"
+  },
+  {
+    "questionId": "q-pp-im-it-110-5",
+    "topicId": "im-it-arch",
+    "subtopicId": "cpu-architecture",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 CPU、RAM 與 ALU。"
+  },
+  {
+    "questionId": "q-pp-im-it-110-6",
+    "topicId": "im-it-arch",
+    "subtopicId": "io-devices",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考顯示器與印表機解析度。"
+  },
+  {
+    "questionId": "q-pp-im-it-110-7",
+    "topicId": "im-it-network",
+    "subtopicId": "osi",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 gateway 跨網路連接。"
+  },
+  {
+    "questionId": "q-pp-im-it-110-8",
+    "topicId": "im-it-network",
+    "subtopicId": "network-security",
+    "questionType": "multiple-choice",
+    "confidence": "medium",
+    "rationale": "VPN 跨網路與資安，取安全連線。"
+  },
+  {
+    "questionId": "q-pp-im-it-110-9",
+    "topicId": "im-it-network",
+    "subtopicId": "mobile-networks",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "比較 4G/5G。"
+  },
+  {
+    "questionId": "q-pp-im-it-110-10",
+    "topicId": "im-it-prog",
+    "subtopicId": "software-engineering",
+    "questionType": "multiple-choice",
+    "confidence": "medium",
+    "rationale": "UML 跨軟工，取程式設計概念。"
+  },
+  {
+    "questionId": "q-pp-im-it-110-11",
+    "topicId": "im-it-prog",
+    "subtopicId": "execution-flow",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 assembly、interpreter、compiler。"
+  },
+  {
+    "questionId": "q-pp-im-it-110-12",
+    "topicId": "im-it-prog",
+    "subtopicId": "language-concepts",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考程式設計典範。"
+  },
+  {
+    "questionId": "q-pp-im-it-110-13",
+    "topicId": "im-it-prog",
+    "subtopicId": "language-concepts",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 type system。"
+  },
+  {
+    "questionId": "q-pp-im-it-110-14",
+    "topicId": "im-it-ai",
+    "subtopicId": "supervised-unsupervised",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考線性迴歸。"
+  },
+  {
+    "questionId": "q-pp-im-it-110-15",
+    "topicId": "im-it-ai",
+    "subtopicId": "supervised-unsupervised",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 precision。"
+  },
+  {
+    "questionId": "q-pp-im-it-110-16",
+    "topicId": "im-it-ai",
+    "subtopicId": "supervised-unsupervised",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 accuracy。"
+  },
+  {
+    "questionId": "q-pp-im-it-110-17",
+    "topicId": "im-it-security",
+    "subtopicId": "cryptography",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考數位憑證與公鑰。"
+  },
+  {
+    "questionId": "q-pp-im-it-110-18",
+    "topicId": "im-it-network",
+    "subtopicId": "http-https",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 HTTP cookie 儲存位置。"
+  },
+  {
+    "questionId": "q-pp-im-it-110-19",
+    "topicId": "im-it-network",
+    "subtopicId": "http-https",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 CDN proxy。"
+  },
+  {
+    "questionId": "q-pp-im-it-110-20",
+    "topicId": "im-it-security",
+    "subtopicId": "common-attacks",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 dictionary attack。"
+  },
+  {
+    "questionId": "q-pp-im-it-110-21",
+    "topicId": "im-it-security",
+    "subtopicId": "security-principles",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 CIA Confidentiality。"
+  },
+  {
+    "questionId": "q-pp-im-it-110-22",
+    "topicId": "im-it-ds",
+    "subtopicId": "hash-table",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 hash function。"
+  },
+  {
+    "questionId": "q-pp-im-it-110-23",
+    "topicId": "im-it-db",
+    "subtopicId": "relational-model",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "比較資料庫與檔案系統。"
+  },
+  {
+    "questionId": "q-pp-im-it-110-24",
+    "topicId": "im-it-db",
+    "subtopicId": "er-diagram",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 database schema。"
+  },
+  {
+    "questionId": "q-pp-im-it-110-25",
+    "topicId": "im-it-db",
+    "subtopicId": "acid",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 ACID Atomicity。"
+  },
+  {
+    "questionId": "q-pp-im-it-110-26",
+    "topicId": "im-it-security",
+    "subtopicId": "cryptography",
+    "questionType": "multiple-choice",
+    "confidence": "high",
+    "rationale": "考 blockchain mining 驗證。"
+  },
+  {
+    "questionId": "q-pp-im-it-110-27",
+    "topicId": "im-it-network",
+    "subtopicId": "cloud-computing",
+    "questionType": "multiple-choice",
+    "confidence": "medium",
+    "rationale": "PaaS 不在正式細項，取網路服務。"
+  },
+  {
+    "questionId": "q-pp-im-it-110-28",
+    "topicId": "im-it-network",
+    "subtopicId": "cloud-computing",
+    "questionType": "multiple-choice",
+    "confidence": "medium",
+    "rationale": "Hybrid cloud 不在正式細項，取網路服務。"
+  },
+  {
+    "questionId": "q-pp-im-it-110-29",
+    "topicId": "im-it-ds",
+    "subtopicId": "tree",
+    "questionType": "programming",
+    "confidence": "high",
+    "rationale": "實作 array-based binary tree。"
+  }
+]

@@ -1,0 +1,376 @@
+{
+  "lessons": [
+    {
+      "id": "lesson-im-it-arch-cpu-organization",
+      "subtopicId": "im-it-arch-cpu-organization",
+      "title": "CPU 與指令架構：從開機到管線執行",
+      "summary": "以 stored-program 架構為起點，串起 CPU 組成、instruction cycle、ISA、RISC/CISC、pipeline hazard 與平行加速上限。重點是分清抽象層級，避免把韌體、作業系統、指令集與微架構混在一起。對應考古題答案均為非官方技術覆核。",
+      "estimatedMinutes": 36,
+      "learningObjectives": [
+        "說明 Von Neumann stored-program 架構的主要功能單元與 CPU 內部角色。",
+        "依 fetch、decode、execute、write-back 流程追蹤一條指令的執行。",
+        "比較 RISC 與 CISC 的設計取向，而不把名稱誤解為絕對效能排名。",
+        "判斷 pipeline hazard，並用 Amdahl's law 計算平行化加速上限。"
+      ],
+      "sections": [
+        {
+          "title": "Stored-program 與開機邊界",
+          "body": "Von Neumann 架構把 processor、memory、input、output 視為四個功能單元，指令與資料位於同一可定址記憶體模型。電源開啟後，CPU 需要先從預定位置開始執行韌體；傳統 PC 以 BIOS、現代系統常以 UEFI 完成硬體初始化並把控制權交給後續 boot loader。這個階段不同於作業系統 kernel 已經開始提供完整服務。",
+          "bullets": [
+            "CPU 主要包含 control unit、ALU 與 registers；memory 保存待執行指令與資料。",
+            "program counter 保存下一條預計取出的指令位置。",
+            "BIOS/UEFI 是 firmware；CMOS/非揮發設定儲存區保存部分設定，不是執行初始化流程的韌體名稱。",
+            "Von Neumann 與 Harvard 的核心差別之一，是指令與資料的記憶體／通路是否在架構模型上分離。"
+          ]
+        },
+        {
+          "title": "Instruction cycle 與時脈",
+          "body": "在簡化模型中，CPU 重複 fetch、decode、execute，再把結果寫回 register 或 memory。時脈提供狀態更新節奏，但 GHz 只表示每秒 clock cycles 的量級，不等於每秒完成相同數量的程式指令。每指令週期數、同時在途的指令、cache miss 與 branch 行為都會影響實際效能。",
+          "bullets": [
+            "fetch 依 program counter 取得 instruction，並準備下一個位址。",
+            "decode 判讀 opcode、operands 與所需執行資源。",
+            "execute 可能使用 ALU、存取 memory、改變控制流程或執行 I/O 相關操作。",
+            "MHz 是每秒百萬 cycles，GHz 是每秒十億 cycles；不能把單位差一千倍的規格視為近似。"
+          ]
+        },
+        {
+          "title": "ISA、RISC 與 CISC",
+          "body": "Instruction Set Architecture 是 software 可見的硬體契約，包含 instructions、registers、data types、addressing modes 與 exception 等。RISC 傾向較規則、較簡單且便於 pipeline 的 instructions；CISC 傾向提供更多或更複雜的 instructions，可能用較少的 assembly instructions 表達工作。這是設計取向，不代表所有實作都符合簡單二分。",
+          "bullets": [
+            "x86 通常歸為 CISC，ARM 通常歸為 RISC，但現代內部實作可能把 instructions 轉成較細的 operations。",
+            "較少的動態 instruction count 不必然代表較少 cycles 或較短執行時間。",
+            "RISC/CISC 比較應同時看 instruction complexity、encoding、compiler 與 microarchitecture。",
+            "ISA 是可見契約；pipeline depth、cache 與 execution units 屬 microarchitecture 實作。"
+          ]
+        },
+        {
+          "title": "Pipeline hazard 與平行加速上限",
+          "body": "Pipeline 讓多條 instructions 處於不同階段，以提升 throughput。若後一條指令需要前一條尚未產生的 operand，就形成 data hazard；硬體可用 forwarding、stall 或重新排程處理。即使增加 processors，程式中不可平行部分仍限制整體 speedup，這可由 Amdahl's law 量化。",
+          "bullets": [
+            "data hazard 來自資料相依；control hazard 常由 branch 的下一個 PC 尚未確定造成。",
+            "stall 插入等待週期，會降低 pipeline 的有效 throughput。",
+            "branch prediction hit 與 cache hit 通常減少等待，不是最直接造成 stall 的事件。",
+            "若不可平行比例為 p、processors 為 n，理想 speedup 為 1 / (p + (1-p)/n)。"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "簡化 CPU 依序執行 LOAD R1,[100]、ADD R3,R1,R2、STORE [104],R3。請追蹤每條指令的主要工作。",
+          "steps": [
+            "LOAD 經 fetch/decode 後讀取位址 100，將值寫入 R1。",
+            "ADD 讀取 R1 與 R2，交由 ALU 相加，再把結果寫入 R3。",
+            "STORE 讀取 R3，將結果寫到記憶體位址 104。",
+            "program counter 在每次順序 fetch 後前進；若沒有 branch，不需改成非連續目標。"
+          ],
+          "answer": "三條指令分別完成 memory-to-register、register arithmetic、register-to-memory；control unit 協調流程，ALU 執行加法。"
+        },
+        {
+          "prompt": "在五階段 pipeline 中，I1: ADD R1,R2,R3 緊接 I2: SUB R4,R1,R5。為何 I2 可能等待？",
+          "steps": [
+            "I2 的來源 operand 包含 R1。",
+            "R1 是 I1 計算後才產生的結果。",
+            "若 I2 需要 R1 時，I1 尚未把結果送到可用位置，就形成 RAW data hazard。",
+            "有 forwarding 時可提早轉送結果；否則控制邏輯需插入 stall。"
+          ],
+          "answer": "I2 依賴 I1 尚未完成的 R1，形成 read-after-write data hazard；以 forwarding 或 stall 解決。"
+        },
+        {
+          "prompt": "某程式有 20% 執行時間無法平行，其餘 80% 可平均分給 4 個 processors。理想 speedup 是多少？",
+          "steps": [
+            "設定不可平行比例 p=0.2，processor 數 n=4。",
+            "平行後正規化時間為 p+(1-p)/n。",
+            "代入得到 0.2+0.8/4=0.4。",
+            "speedup 是原時間 1 除以新時間 0.4。"
+          ],
+          "answer": "理想 speedup 為 1/0.4=2.5 倍；不是 4 倍，因為 20% serial fraction 仍存在。"
+        },
+        {
+          "prompt": "規格表把現代 CPU clock 寫成 3 MHz。若原意是 3 GHz，兩者相差多少？",
+          "steps": [
+            "1 MHz 等於 10^6 Hz。",
+            "1 GHz 等於 10^9 Hz。",
+            "3 GHz / 3 MHz = 10^9 / 10^6。"
+          ],
+          "answer": "相差 1000 倍；3 GHz 是每秒 30 億 cycles，3 MHz 是每秒 300 萬 cycles。"
+        }
+      ],
+      "commonPitfalls": [
+        "把 BIOS/UEFI、CMOS 設定儲存區、boot loader 與 OS kernel 當成同一層。",
+        "認為 Von Neumann 架構把指令與資料放在不同記憶體；那更接近 Harvard 模型。",
+        "用 clock frequency 單獨判定整體程式效能，忽略 CPI、cache 與 pipeline。",
+        "把 RISC 解讀成一定比 CISC 快，或把 instruction count 直接當 execution time。",
+        "把 data hazard 與 branch prediction hit、cache hit 混淆。",
+        "套 Amdahl's law 時把 p 誤當可平行比例，導致公式兩部分對調。"
+      ],
+      "sourceRefs": [
+        "src-brookshear-13e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-106-13",
+        "q-pp-im-it-107-16",
+        "q-pp-im-it-110-1",
+        "q-pp-im-it-112-1",
+        "q-pp-im-it-112-2",
+        "q-pp-im-it-113-4",
+        "q-pp-im-it-113-8",
+        "q-pp-im-it-115-10"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "lesson-im-it-os-file-storage-io",
+      "subtopicId": "im-it-os-file-storage-io",
+      "title": "檔案、儲存與 I/O：從 inode 到 buffering",
+      "summary": "從作業系統提供的 file abstraction 出發，理解 directory、inode、device driver、buffering、spooling 與 dynamic linking 的角色。完成後能判斷資料放在哪裡、誰負責控制裝置，以及慢速 I/O 如何與程式執行解耦。對應考古題答案均為非官方技術覆核。",
+      "estimatedMinutes": 34,
+      "learningObjectives": [
+        "說明 file system 如何以 directory entry、metadata 與 data blocks 組織檔案。",
+        "區分 device driver、firmware 與一般 application 的責任。",
+        "比較 buffering 與 spooling 的資料流與適用情境。",
+        "追蹤 executable 啟動時 loader 與 dynamic linker 使用持久儲存和 RAM 的流程。"
+      ],
+      "sections": [
+        {
+          "title": "File abstraction 與常見 file systems",
+          "body": "作業系統把持久儲存裝置抽象成 files 與 directories，讓應用程式透過一致介面讀寫，不必直接操作磁碟區塊。FAT32、exFAT、NTFS、APFS、HFS 與 ext3 都是 file system 或其家族成員；MS-DOS 則是 operating system 名稱，不能只因名稱含 Disk 就視為 file system。",
+          "bullets": [
+            "file system 定義命名、metadata、空間配置與存取規則。",
+            "directory 建立名稱到檔案識別資訊的對應，不等於保存全部檔案內容。",
+            "不同 file systems 支援的權限、journal、容量與平台相容性不同。",
+            "『常見』會隨平台改變；作答應先辨認候選項是否確實是 file system。"
+          ]
+        },
+        {
+          "title": "inode、metadata 與 data blocks",
+          "body": "在 Unix-like file systems 中，inode 保存檔案類型、權限、owner、size、timestamps 與指向 data blocks 的資訊；檔名通常位於 directory entry。inode 不直接等同檔案內容，也不保存一般意義下的檔名。讀取路徑時，系統逐層查 directory entries，找到對應 inode，再定位資料區塊。",
+          "bullets": [
+            "metadata 描述檔案；data blocks 保存實際 bytes。",
+            "多個 hard links 可讓不同 directory entries 指向同一 inode。",
+            "刪除一個名稱不一定立刻刪除內容，仍取決於 link count 與開啟參照。",
+            "inode 是 Unix-like 設計概念，不應硬套成所有 file systems 的相同內部結構。"
+          ]
+        },
+        {
+          "title": "Device driver 與 storage management 責任",
+          "body": "Device driver 是與特定裝置及作業系統介面相配合的軟體，將核心的通用 I/O requests 轉成裝置可執行的操作。Firmware 通常在裝置或主機板環境中執行；driver 則在 OS 軟體堆疊中協調裝置。標準教材常把 files/directories primitives、空間管理、disk scheduling 與備份到穩定儲存媒體列為 storage management 工作；相較之下，file integrity check 不在該典型責任清單。",
+          "bullets": [
+            "application 呼叫系統提供的 I/O API，不需知道裝置暫存器細節。",
+            "driver 處理裝置命令、interrupt 與資料傳輸協調。",
+            "disk scheduling 決定等待中的 storage requests 如何服務。",
+            "備份到 stable storage 可列入 OS storage management；不要與 file integrity check 混淆。"
+          ]
+        },
+        {
+          "title": "Buffering、spooling 與載入共享程式庫",
+          "body": "Buffering 以記憶體中的暫存區吸收 producer/consumer 速度或資料單位差異；spooling 則把完整 jobs 排入持久或較大的 queue，讓慢速且通常一次服務一個工作的裝置依序處理。Executable 啟動時，loader 建立 process image；若使用 shared libraries，dynamic linker 會映射或載入需要的 library code、處理 relocations 與 symbols。",
+          "bullets": [
+            "streaming read/write 常以 buffers 減少小量 I/O 次數與速度落差。",
+            "printer spool 讓 application 提交 job 後繼續執行，printer 再依 queue 處理。",
+            "buffer 通常服務正在進行的資料流；spool 通常保存可獨立排程的完整 jobs。",
+            "dynamic linker 在 runtime 解析 shared-library dependencies；它不是 assembler，也不是產生 source code 的工具。"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "路徑 /home/mei/report.txt 已存在。請用 inode 模型說明系統如何找到檔案內容。",
+          "steps": [
+            "從 root directory 的 entry 找到 home 對應的檔案系統識別資訊。",
+            "依序查 home 與 mei directories 的 entries。",
+            "由 report.txt 的 directory entry 取得對應 inode。",
+            "讀取 inode 的權限、size 與 data-block pointers，再從 blocks 取得內容。"
+          ],
+          "answer": "directory entries 負責名稱解析，inode 提供 metadata 與資料區塊位置，實際內容位於 data blocks。"
+        },
+        {
+          "prompt": "音訊播放程式先讀入一小段資料再持續播放；列印程式把 200 頁工作交出後立刻返回。兩者分別較像 buffering 還是 spooling？",
+          "steps": [
+            "音訊是持續資料流，需要暫存一段資料吸收讀取與播放速度差。",
+            "這符合 buffering。",
+            "列印工作可作為完整 job 排隊，由單一慢速裝置稍後處理。",
+            "這符合 spooling。"
+          ],
+          "answer": "音訊使用 buffering；列印工作使用 spooling。前者平滑資料流，後者排程完整 jobs。"
+        },
+        {
+          "prompt": "程式啟動時宣告缺少 libcalc.so。請從 persistent storage 到執行前說明 dynamic linker 原本應做的事。",
+          "steps": [
+            "loader 先建立 executable 的 process image。",
+            "dynamic linker 讀取 executable 記錄的 shared-library dependencies。",
+            "它尋找 libcalc.so，將必要 pages 映射或載入 RAM。",
+            "接著解析 symbols、處理必要 relocations；找不到 library 時啟動失敗。"
+          ],
+          "answer": "dynamic linker 必須找到並映射 shared library，再完成 symbol resolution/relocation；缺少 library 使相依關係無法滿足。"
+        },
+        {
+          "prompt": "兩個 hard links，/a/report 與 /b/archive，指向同一 inode。刪除 /a/report 後資料是否必然立即消失？",
+          "steps": [
+            "兩個 directory entries 指向同一 inode。",
+            "刪除 /a/report 只移除其中一個名稱並降低 link count。",
+            "/b/archive 仍指向同一 inode。",
+            "只要仍有 link 或開啟參照，檔案內容通常不會被回收。"
+          ],
+          "answer": "不會必然立即消失；/b/archive 仍可存取同一 inode 與資料，直到 links 與相關開啟參照都釋放。"
+        }
+      ],
+      "commonPitfalls": [
+        "看到名稱含 Disk 就把 MS-DOS 當成 file system；它是 operating system。",
+        "把 inode 說成保存檔名或完整檔案內容；檔名通常在 directory entry，內容在 data blocks。",
+        "把 firmware 與 device driver 混為一談，忽略 driver 與 OS 介面的角色。",
+        "把所有 temporary storage 都叫 spooling；一般資料流暫存較接近 buffering。",
+        "把 file integrity check 當成標準 OS storage-management 責任清單項目；典型清單反而包含備份到 stable storage。",
+        "把 dynamic linker 誤認為 compiler、assembler 或一般 code generator。"
+      ],
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-os-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-107-14",
+        "q-pp-im-it-107-15",
+        "q-pp-im-it-111-20",
+        "q-pp-im-it-111-22",
+        "q-pp-im-it-112-11",
+        "q-pp-im-it-113-1",
+        "q-pp-im-it-113-10",
+        "q-pp-im-it-114-7"
+      ],
+      "reviewStatus": "draft"
+    }
+  ],
+  "cards": [
+    {
+      "id": "card-im-it-arch-cpu-organization-01",
+      "lessonId": "lesson-im-it-arch-cpu-organization",
+      "subtopicId": "im-it-arch-cpu-organization",
+      "front": "Von Neumann stored-program 架構的四個功能單元是什麼？",
+      "back": "Processor、memory、input、output；在此模型中，指令與資料共用可定址記憶體。",
+      "explanation": "CPU 內再包含 control unit、ALU 與 registers；不要把次層元件誤列成四大功能單元。",
+      "sourceRefs": ["src-brookshear-13e"],
+      "pastPaperRefs": ["q-pp-im-it-112-1", "q-pp-im-it-113-4"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-arch-cpu-organization-02",
+      "lessonId": "lesson-im-it-arch-cpu-organization",
+      "subtopicId": "im-it-arch-cpu-organization",
+      "front": "BIOS/UEFI、設定儲存區與 OS kernel 的角色如何區分？",
+      "back": "BIOS/UEFI 是開機韌體，負責早期硬體初始化；設定儲存區保存配置；kernel 在後續接手並提供作業系統服務。",
+      "explanation": "三者位於不同啟動階段，不能因都參與開機就視為同一類軟體。",
+      "sourceRefs": ["src-brookshear-13e"],
+      "pastPaperRefs": ["q-pp-im-it-106-13"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-arch-cpu-organization-03",
+      "lessonId": "lesson-im-it-arch-cpu-organization",
+      "subtopicId": "im-it-arch-cpu-organization",
+      "front": "為什麼現代 CPU 規格中的 3 MHz 很可能是單位錯誤？",
+      "back": "現代個人電腦 CPU 時脈通常以 GHz 表示；3 GHz 是 3000 MHz，與 3 MHz 相差 1000 倍。",
+      "explanation": "Clock rate 不是整體效能的唯一指標，但 MHz/GHz 的量級仍可用來排除明顯不合理的規格敘述。",
+      "sourceRefs": ["src-brookshear-13e"],
+      "pastPaperRefs": ["q-pp-im-it-110-1"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-arch-cpu-organization-04",
+      "lessonId": "lesson-im-it-arch-cpu-organization",
+      "subtopicId": "im-it-arch-cpu-organization",
+      "front": "RISC 與 CISC 的典型設計取向有何差異？",
+      "back": "RISC 傾向規則、較簡單且利於 pipeline 的 instructions；CISC 傾向更多或較複雜的 instructions，以較少指令表達工作。",
+      "explanation": "這是取向而非絕對效能結論；實際效能還受 compiler、CPI 與 microarchitecture 影響。",
+      "sourceRefs": ["src-brookshear-13e"],
+      "pastPaperRefs": ["q-pp-im-it-107-16", "q-pp-im-it-112-2"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-arch-cpu-organization-05",
+      "lessonId": "lesson-im-it-arch-cpu-organization",
+      "subtopicId": "im-it-arch-cpu-organization",
+      "front": "什麼是 pipeline data hazard？",
+      "back": "後續指令需要的 operand 尚未由前一指令產生或變得可用，因而需要 forwarding、stall 或重新排程。",
+      "explanation": "典型例子是後一條 instruction 立即讀取前一條尚未寫回的 register。",
+      "sourceRefs": ["src-brookshear-13e"],
+      "pastPaperRefs": ["q-pp-im-it-115-10"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-arch-cpu-organization-06",
+      "lessonId": "lesson-im-it-arch-cpu-organization",
+      "subtopicId": "im-it-arch-cpu-organization",
+      "front": "Amdahl's law 如何表示 n 個 processors 的理想 speedup？",
+      "back": "若不可平行比例為 p，speedup = 1 / (p + (1-p)/n)。",
+      "explanation": "即使 n 持續增加，不可平行部分 p 仍構成上限；n 趨近無限時 speedup 上限為 1/p。",
+      "sourceRefs": ["src-brookshear-13e"],
+      "pastPaperRefs": ["q-pp-im-it-113-8"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-os-file-storage-io-01",
+      "lessonId": "lesson-im-it-os-file-storage-io",
+      "subtopicId": "im-it-os-file-storage-io",
+      "front": "File system 與 operating system 有何差別？",
+      "back": "File system 是命名、metadata 與儲存配置的資料組織規則；operating system 是管理 CPU、memory、I/O 等資源的整體系統。",
+      "explanation": "NTFS、exFAT、APFS、ext3 是 file systems；MS-DOS 是 operating system。",
+      "sourceRefs": ["src-brookshear-13e", "src-nthu-os-course"],
+      "pastPaperRefs": ["q-pp-im-it-107-14", "q-pp-im-it-113-1"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-os-file-storage-io-02",
+      "lessonId": "lesson-im-it-os-file-storage-io",
+      "subtopicId": "im-it-os-file-storage-io",
+      "front": "Unix-like file system 的 inode 主要保存什麼？",
+      "back": "檔案類型、權限、owner、size、timestamps，以及定位 data blocks 所需的資訊。",
+      "explanation": "檔名通常位於 directory entry；實際檔案 bytes 位於 data blocks。",
+      "sourceRefs": ["src-brookshear-13e", "src-nthu-os-course"],
+      "pastPaperRefs": ["q-pp-im-it-114-7"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-os-file-storage-io-03",
+      "lessonId": "lesson-im-it-os-file-storage-io",
+      "subtopicId": "im-it-os-file-storage-io",
+      "front": "Device driver 與 firmware 的角色如何區分？",
+      "back": "Driver 在 OS 軟體堆疊中把通用 I/O request 轉成裝置操作；firmware 通常在裝置或平台環境中直接控制較底層硬體。",
+      "explanation": "Driver 需符合裝置與 OS 介面，因此常同時具有 hardware-dependent 與 OS-specific 特性。",
+      "sourceRefs": ["src-brookshear-13e", "src-nthu-os-course"],
+      "pastPaperRefs": ["q-pp-im-it-107-15"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-os-file-storage-io-04",
+      "lessonId": "lesson-im-it-os-file-storage-io",
+      "subtopicId": "im-it-os-file-storage-io",
+      "front": "Buffering 與 spooling 的核心差異是什麼？",
+      "back": "Buffering 暫存進行中的資料流以吸收速度／單位差；spooling 將完整 jobs 排隊，交由慢速或獨占裝置稍後處理。",
+      "explanation": "音訊串流常用 buffer；列印工作 queue 是典型 spool。",
+      "sourceRefs": ["src-brookshear-13e", "src-nthu-os-course"],
+      "pastPaperRefs": ["q-pp-im-it-111-20", "q-pp-im-it-113-10"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-os-file-storage-io-05",
+      "lessonId": "lesson-im-it-os-file-storage-io",
+      "subtopicId": "im-it-os-file-storage-io",
+      "front": "Dynamic linker 在 executable 啟動時做什麼？",
+      "back": "找到並映射所需 shared libraries，解析 symbols，並處理必要 relocations，使程式能呼叫 library code。",
+      "explanation": "它在 runtime 連結相依元件，不是 assembler 或 source-code generator。",
+      "sourceRefs": ["src-brookshear-13e", "src-nthu-os-course"],
+      "pastPaperRefs": ["q-pp-im-it-111-22"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-os-file-storage-io-06",
+      "lessonId": "lesson-im-it-os-file-storage-io",
+      "subtopicId": "im-it-os-file-storage-io",
+      "front": "哪些 storage-management 工作通常屬於 OS 核心責任？",
+      "back": "Files/directories 的建立刪除與操作 primitives、空間管理、disk scheduling，以及備份到 stable storage；file integrity check 不在典型責任清單。",
+      "explanation": "這是標準教材式的責任分類；實際系統仍可能由不同 utilities、services 或管理政策執行具體備份工作。",
+      "sourceRefs": ["src-brookshear-13e", "src-nthu-os-course"],
+      "pastPaperRefs": ["q-pp-im-it-112-11"],
+      "reviewStatus": "draft"
+    }
+  ]
+}

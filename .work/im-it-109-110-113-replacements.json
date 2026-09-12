@@ -1,0 +1,142 @@
+{
+  "version": 1,
+  "authority": "rendered original PDFs",
+  "replacements": [
+    {
+      "id": "q-pp-im-it-109-7",
+      "paperId": "pp-im-it-109",
+      "examId": "im",
+      "subjectId": "im-it",
+      "year": 109,
+      "number": 7,
+      "text": "Which of the following is generally not characterized as a mobile payment service? (A) LINE Pay (B) Pi 錢包 (C) 街口 (D) 台灣 Pay (E) 嘖嘖.",
+      "points": 2.5,
+      "hasImage": false,
+      "subQuestions": []
+    },
+    {
+      "id": "q-pp-im-it-109-15",
+      "paperId": "pp-im-it-109",
+      "examId": "im",
+      "subjectId": "im-it",
+      "year": 109,
+      "number": 15,
+      "text": "Which of the following is not a non-volatile memory/storage? (A) Solid-state drive (SSD) (B) DDR4 (C) read-only memory (ROM) (D) Flash memory (E) all of the above are non-volatile.",
+      "points": 2.5,
+      "hasImage": false,
+      "subQuestions": []
+    },
+    {
+      "id": "q-pp-im-it-109-21",
+      "paperId": "pp-im-it-109",
+      "examId": "im",
+      "subjectId": "im-it",
+      "year": 109,
+      "number": 21,
+      "text": "An ADT LIST contains items of the same type. The following C++ code fragment shows the class definition of an array-based implementation of ADT LIST that contains a list of integers.\n\nclass List\n{\npublic:\n    // value: the integer to remove\n    // success: whether the removal is successful or not\n    void remove(int value, bool& success);\nprivate:\n    // double the size of the array pointed by p_items\n    void doubleArraySize();\n    // pointing to an integer array that stores integers\n    // initialized as p_items = new int[arraySize];\n    int *p_items;\n    // size of item array\n    int arraySize; // default 20\n    // number of list items\n    int itemCount; //default 0\n};",
+      "points": 30,
+      "hasImage": false,
+      "subQuestions": [
+        {
+          "label": "(a)",
+          "text": "(15 points) Write the List::remove(int value, bool& success) function that removes value from the list. Note that the integers in the array are sorted in ascending order and the list has NO duplicate items.",
+          "points": 15
+        },
+        {
+          "label": "(b)",
+          "text": "(15 points) If the array pointed by p_items is full, the list must resize it in order to add integers to the list. Write the function List::doubleArraySize() that doubles the size of the integer array.",
+          "points": 15
+        }
+      ]
+    },
+    {
+      "id": "q-pp-im-it-109-22",
+      "paperId": "pp-im-it-109",
+      "examId": "im",
+      "subjectId": "im-it",
+      "year": 109,
+      "number": 22,
+      "text": "HEAP is a complete binary tree that provides an efficient implementation of priority queues. Suppose we use a heap to manage a list of positive integers that large values mean high priority. The following C++ code fragment shows the class definition of the heap.\n\nclass HEAP\n{\npublic:\n    ...\n    // boost items[i]'s priority\n    void boostPriority(int i, int newPriorityValue)\nprivate:\n    ...\n    int itemCount;   // number of heap items\n    int items[100];  // array of heap items\n};",
+      "points": 20,
+      "hasImage": false,
+      "subQuestions": [
+        {
+          "label": "(a)",
+          "text": "(20 points) Complete the following C++ function that boosts the priority value of element HEAP::items[i].\n\n// assume 0 <= i < itemCount,\n// and newPriorityValue > items[i]\nvoid Heap::boostPriority(int i, int newPriorityValue)\n{\n\n}",
+          "points": 20
+        }
+      ]
+    },
+    {
+      "id": "q-pp-im-it-110-29",
+      "paperId": "pp-im-it-110",
+      "examId": "im",
+      "subjectId": "im-it",
+      "year": 110,
+      "number": 29,
+      "text": "The following C++ code fragment shows the class definition of an array-based implementation of ADT Binary Tree that stores a list of person names.\n\nconst int MAX_NODES = 100;\n\nclass TreeNode\n{\npublic:\n    ...\nprivate:\n    ...\n    string name;              // node data — person name\n    int leftchild_index;      // index to left child, -1 if no left child\n    int rightchild_index;     // index to right child, -1 if no right child\n    friend class BinaryTree;\n};\n\nclass BinaryTree\n{\npublic:\n    ...\n    void removeAllLeaf();\nprotected:\n    void recurRemoveLeaf(int parent_id, int node_id, int left_or_right);\n    // parent_id: parent node id\n    // node_id: visited node id\n    // left_or_right: 0 if node_id is the left child of parent_id; 1 otherwise.\nprivate:\n    ...\n    TreeNode tree[MAX_NODES]; // array of tree nodes\n    int root_index;           // index of root, -1 if the tree is empty\n    int free_index;           // index to the first free node\n                              // free nodes are chained by rightchild_index\n};\n\nroot_index: 0\nfree_index: 6\n\ntree:\nindex  name   leftchild_index  rightchild_index\n0      Jane    1                3\n1      Bob    -1                4\n2      Tom    -1               -1\n3      Alan   -1                5\n4      Ellen   2               -1\n5      Nancy  -1               -1\n6      ?      -1                7\n7      ?      -1                8\n8      ?      -1                9\n...    ...    ...              ...",
+      "points": 30,
+      "hasImage": true,
+      "subQuestions": [
+        {
+          "label": "(a)",
+          "text": "(10 points) Show the tree structure given the data content above.",
+          "points": 10
+        },
+        {
+          "label": "(b)",
+          "text": "(20 points) Write the BinaryTree::removeAllLeaf() that removes ALL leaf nodes from a binary tree. Note that you also need to implement the protected function BinaryTree::recurRemoveLeaf() called by removeAllLeaf() that recursively traverses the tree to delete all the leaf nodes.",
+          "points": 20
+        }
+      ]
+    },
+    {
+      "id": "q-pp-im-it-113-9",
+      "paperId": "pp-im-it-113",
+      "examId": "im",
+      "subjectId": "im-it",
+      "year": 113,
+      "number": 9,
+      "text": "Which of the following is wrong about mutual exclusion in operating system? (A) mutual exclusion is used to ensure that a shared resource can be accessed by only one process at a time (B) if not designed properly, a mutual exclusion mechanism may result in starvation (C) if not designed properly, a mutual exclusion mechanism may result in deadlock (D) if not designed properly, a mutual exclusion mechanism may result in livelock (E) all of the above are correct (choose this one only if none of the above can be chosen).",
+      "points": 2.5,
+      "hasImage": false,
+      "subQuestions": []
+    },
+    {
+      "id": "q-pp-im-it-113-12",
+      "paperId": "pp-im-it-113",
+      "examId": "im",
+      "subjectId": "im-it",
+      "year": 113,
+      "number": 12,
+      "text": "Which of the following is wrong about Domain Name System (DNS)? (A) DNS is a hierarchical naming system (B) DNS is a centralized naming system (C) DNS translates human readable names (for example, www.im.ntu.tw) to machine readable IP addresses (D) .tw is a top-level domain (E) all the above are correct (choose this one only if none of the above can be chosen).",
+      "points": 2.5,
+      "hasImage": false,
+      "subQuestions": []
+    },
+    {
+      "id": "q-pp-im-it-113-19",
+      "paperId": "pp-im-it-113",
+      "examId": "im",
+      "subjectId": "im-it",
+      "year": 113,
+      "number": 19,
+      "text": "___ is a constraint that determines the relation of one attribute to another in a DBMS, and thus helps to maintain the quality of data in the database. (A) inclusion dependency (B) column dependency (C) functional dependency (D) join dependency (E) none of the above.",
+      "points": 2.5,
+      "hasImage": false,
+      "subQuestions": []
+    },
+    {
+      "id": "q-pp-im-it-113-25",
+      "paperId": "pp-im-it-113",
+      "examId": "im",
+      "subjectId": "im-it",
+      "year": 113,
+      "number": 25,
+      "text": "二、問答題，共 40 分。\n\nThe following C++ code fragment shows the class definition of a pointer-based implementation of ADT Binary Search Tree that stores employee information of a company. Each tree node stands for an employee. The employeeID is the key and it cannot be duplicated!!\n\nclass TreeNode\n{\npublic:\n  ...\nprivate:\n  int employeeID;       // employee ID, key value, never duplicated!!\n  string employeeName;  // employee name\n  int age;              // employee age\n  TreeNode *leftChildPtr;   // pointer to the left child\n  TreeNode *rightChildPtr;  // pointer to the right child\n  friend class BinarySearchTree;\n};\n\nclass BinarySearchTree\n{\npublic:\n  ...\n  int InsertNewEmployee(int newID, string newName, int newAge);\n  // return 1 if the insertion is successful; otherwise return 0\n\n  void ListAllEmployee();\n  // print all employee info in sorted order\n\nprotected:\n  void inorder(TreeNode *treePtr);\n  // a RECURSIVE inorder traversal that prints (ID, name, age) of all employees\n\nprivate:\n  TreeNode *rootPtr; // pointer to the root of tree, NULL if the tree is empty\n};\n\n(a) (20 points) Write the BinarySearchTree::InsertNewEmployee() that inserts a new employee into the binary search tree. Here, we assume the employee ID is never duplicated; and the ID is the key of a tree node.\n\n(b) (20 points) Write the BinarySearchTree::ListAllEmployee() that prints all employee information in ascending order in accordance with employeeID. Note that you also need to implement the protected function BinarySearchTree::inorder() called by ListAllEmployee() that recursively traverses the tree for printing all employee information.",
+      "points": 40,
+      "hasImage": false,
+      "subQuestions": []
+    }
+  ]
+}

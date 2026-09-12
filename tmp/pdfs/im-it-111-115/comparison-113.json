@@ -1,0 +1,152 @@
+[
+  {
+    "id": "q-pp-im-it-113-1",
+    "text": "Which of the following is not a popularly used file system? (A) FAT32 (B) exFAT (C) NTFS (D) APFS (E) all the above are popular file systems (choose this one only if none of the above can be chosen).",
+    "score": 0.967,
+    "ocr_window": ", 並 先 詳 閱 答 實 卡 上 之 「 畫 記 說 明 」 i. | Which of the following is not a popularly used file system? (A) FAT32 (B) exFAT (C) NTFS (D) APFS (E) all the above are popular file systems (choose this one only if none of the above"
+  },
+  {
+    "id": "q-pp-im-it-113-2",
+    "text": "Which of the following is wrong? (A) multiprocessing allows simultaneous execution of processes on separate cores or processors (B) in multiprocessing, two processes spawned by a parent process share their memory, stack, and program counter (C) processes in multiprocessing can communicate through mechanisms like shared memory or message passing (D) the main purpose of multiprocessing is to improve system throughput and performance (E) all of the above are correct (choose this one only if none of the above can be chosen).",
+    "score": 0.934,
+    "ocr_window": "one only if none of the above can be chosen). 2. 上] Which of the following is wrong? (A) multiprocessing allows simultaneous execution of processes on separate cores or processors (B) in multiprocessing, two processes sp"
+  },
+  {
+    "id": "q-pp-im-it-113-3",
+    "text": "Which of the following is wrong? (A) a thread represents an independent path of execution within a program (B) multiple threads can run simultaneously within a single process (C) communication between threads is more lightweight and efficient than communication between processes (D) threads within a process sharing the same memory space (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "score": 0.895,
+    "ocr_window": "the above are correct (choose this one only if none of the above can be chosen). 。 | ‘Which of the following is wrong? (A) a thread represents an independent path of execution within a program (B) multiple threads can ru"
+  },
+  {
+    "id": "q-pp-im-it-113-4",
+    "text": "A von Neumann architecture consists of four main components, which are: (A) input, output, memory, processing (B) input, output, CPU, program counter (C) arithmetic control, logic control, register, program counter (D) CPU, GPU, RAM, hard disk (E) I/O, RAM, CPU, storage",
+    "score": 0.7,
+    "ocr_window": "space (E) all the above are correct (choose this one only if none of the above can be chosen). 4. [| A von Neumann architecture consists of four main components, which are: (A) input, output, memory, processing (B) input"
+  },
+  {
+    "id": "q-pp-im-it-113-5",
+    "text": "Which of the following about stack memory in operating system is wrong? (A) local variables of a program are stored in stack (B) every time a function is called, the operating system allocates some stack memory for it (C) during a program's execution, allocation and deallocation for stack memory is automatically done (D) a stack overflow occurs when a program tries to use more memory space in the call stack than has been allocated (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "score": 0.901,
+    "ocr_window": "Cc] Which of the following about stack memory in operating system is wrong? (A) local variables of a program are stored in stack (B) every time a function is called, the operating system allocates some stack memory for i"
+  },
+  {
+    "id": "q-pp-im-it-113-6",
+    "text": "Which of the following about heap memory in operating system is wrong? (A) objects dynamically created by a program are stored in the heap memory (B) the heap segment can suffer from fragmentation (C) memory allocated on the heap persists until explicitly deallocated by the programmer (D) garbage collection is invoked to clean up objects in the heap that are no longer being referenced (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "score": 0.953,
+    "ocr_window": "are correct (choose this one only if none of the above can be chosen). 6. [____] Which of the following about heap memory in operating system is wrong? (A) objects dynamically created by a program are stored in the heap "
+  },
+  {
+    "id": "q-pp-im-it-113-7",
+    "text": "Which of the following about interrupt in a computer is wrong? (A) an interrupt is a signal to the processor that an event has occurred, requiring its attention (B) when an interrupt occurs, the usual procedure is for the processor to save its state by pushing its registers and program counter onto the stack (C) in a polled interrupt system, the interrupting device directs the processor to the appropriate interrupt service routine (D) interrupts can be assigned priorities to allow a higher priority one to \"interrupt\" lower priorities (E) all of the above are correct (choose this one only if none of the above can be chosen).",
+    "score": 0.944,
+    "ocr_window": "above are correct (choose this one only if none of the above can be chosen). 和 區 Which ofthe following about interrupt in a computer is wrong? (A) an interrupt is a signal to the processor that an event has occurred, req"
+  },
+  {
+    "id": "q-pp-im-it-113-8",
+    "text": "Amdahl's law is used in parallel computing to formulate the theoretical speedup when using multiple processors. Let p be the fraction of a task that is unaffected by adding more processors, and n is the number of processors used to speed up the task. Then the theoretical speedup of the execution of the whole task is (A) 1/(p + (1-p)/n) (B) 1/((1-p) + p/n) (C) (1-p)/(np) (D) n(1-p)/p (E) none of the above.",
+    "score": 0.69,
+    "ocr_window": "this one only if none of the above can be chosen). 8. | Amdaht’s law is used in parallel computing to formulate the theoretical speedup when using multiple processors. Let p be the fraction of a task that is unaffected b"
+  },
+  {
+    "id": "q-pp-im-it-113-9",
+    "text": "Which of the following is wrong about mutual exclusion in operating system? (A) mutual exclusion is used to ensure that a shared resource can be accessed by only one process at a time (B) if not designed properly, a mutual exclusion mechanism may result in starvation (C) if not designed properly, a mutual exclusion mechanism may result in deadlock (D) if not designed properly, a mutual exclusion mechanism may result in livelock (E) all of the above are correct (choose this one only if none of the above can be chosen).",
+    "score": 0.814,
+    "ocr_window": "is wrong about mutual exclusion in operating system? (A) mutual exclusion is used to ensure 2 LG AAR: 294 國 立 臺 灣 大 學 113 學 年 度 碩士 班 招生 考試 試題 科目 : 資訊 科技 概論 RAM | 204 Ra: 6 ; 共 4 頁 之 第 2 頁 that a shared resource can be ac"
+  },
+  {
+    "id": "q-pp-im-it-113-10",
+    "text": "___ refers to the process of temporary storage of data for use and execution by a device, program, or system. Data is sent to and stored in main memory or other storage until it is requested for execution by a program or computer. (A) pipelining (B) spooling (C) buffering (D) stacking (E) none of the above.",
+    "score": 0.734,
+    "ocr_window": "result in livelock (E) all of the above are correct (choose this one only if none of the above can be chosen). Or a refers to the process of temporary storage of data for use and execution by a device, program, or system"
+  },
+  {
+    "id": "q-pp-im-it-113-11",
+    "text": "Which of the following is wrong about cookies? (A) cookie is stored both on user's computer and host website (B) cookies are created and updated when user visit websites (C) first-party cookies are generated by the visited website (D) third-party cookies are generated by domains separate from the primary website visited (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "score": 0.864,
+    "ocr_window": "(D) stacking (E) none of the above. hit. [__] Which of the following is wrong about cookies? (A) cookie is stored both on user’s computer and host website (B) cookies are created and updated when user visit websites (C) "
+  },
+  {
+    "id": "q-pp-im-it-113-12",
+    "text": "Which of the following is wrong about Domain Name System (DNS)? (A) DNS is a hierarchical naming system (B) DNS is a centralized naming system (C) DNS translates human readable names (for example, www.im.ntu.tw) to machine readable IP addresses (D) .tw is a top-level domain (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "score": 0.919,
+    "ocr_window": "(choose this one only if none of the above can be chosen). . 12. [___] Which of the following is wrong about Domain Name System (DNS)? (A) DNS is a hierarchical naming system GB) DNS is a centralized naming system (C) DN"
+  },
+  {
+    "id": "q-pp-im-it-113-13",
+    "text": "Which of the following is wrong about proxy servers? (A) it can help prevent cyber attacks (B) it can help improve performance (C) proxy servers can serve as content filtering (D) a forward proxy shields servers by handling client requests, ensuring they reach the right server, and returning the results to clients, who are unaware of the server's direct involvement (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "score": 0.95,
+    "ocr_window": "are correct (choose this one only if none of the above can be chosen). 13. CE} Which of the following is wrong about proxy servers? (A) it can help prevent cyber attacks (B) it can help improve performance (C) Proxy serv"
+  },
+  {
+    "id": "q-pp-im-it-113-14",
+    "text": "Which of the following is wrong about information security? (A) 'C' in CIA triad refers to confidentiality (B) 'A' in CIA triad refers to availability (C) information security management describes the set of policies and procedural controls that IT and business organizations implement to secure their informational assets against threats and vulnerabilities (D) ISO/IEC 27000-series provides best practice recommendations on information security management (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "score": 0.951,
+    "ocr_window": "if none of the above can be chosen). 4. 上 | Which of the following is wrong about information security? (A) <C in CIA triad refers to confidentiality (B) ‘A’ in CIA triad refers to availability (C) information security m"
+  },
+  {
+    "id": "q-pp-im-it-113-15",
+    "text": "Which of the following is wrong about access control in information security? (A) identification is an assertion of who someone is or what something is (B) authentication is the act of verifying a claim of identity (C) accountability determines what informational resources a user is permitted to access and what actions he/she will be allowed to perform (D) role-based access control assigns permissions to users based on their role within an organization (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "score": 0.948,
+    "ocr_window": "security management (E) all the above are correct (choose this one only if none of the above can be chosen). 15. [____] Which of the following is wrong about access control in information security? (A) identification is "
+  },
+  {
+    "id": "q-pp-im-it-113-16",
+    "text": "Which of the following is wrong about public key infrastructure (PKI)? (A) PKI uses public-key encryption (B) a registration authority stores, issues, and signs the digital certificates (C) digital certificate is used to prove the validity of a public key (D) RSA is an asymmetric encryption (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "score": 0.931,
+    "ocr_window": "above are correct (choose this one only ifnone of the above can be chosen). 16. [~___] Which of the foliowing is wrong about public key infrastructure (PKI)? (A) PKI uses public-key encryption (B) a registration authorit"
+  },
+  {
+    "id": "q-pp-im-it-113-17",
+    "text": "Which of the following is wrong about Hypertext Transfer Protocol Secure (HTTPS)? (A) Transport Layer Security (TLS) is a cryptographic protocol designed to provide secure communication over a computer network (B) HTTPS is basically an HTTP over TLS (C) HTTPS requires a trusted third party to sign server-side digital certificates (D) HTTPS supports a mutual authentication mode, allowing both server and client to authenticate each other (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "score": 0.978,
+    "ocr_window": "are correct (choose this one only if none of the above can be chosen). 17. [|] Which of the following is wrong about Hypertext Transfer Protocol Secure (HTTPS)? (A) Transport Layer Security (TLS) is a cryptographic proto"
+  },
+  {
+    "id": "q-pp-im-it-113-18",
+    "text": "Which of the following is wrong about ACID Properties in Database Management System (DBMS)? (A) 'A' stands for availability (B) 'C' stands for consistency (C) 'I' stands for isolation (D) 'D' stands for durability (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "score": 0.947,
+    "ocr_window": "(choose this one only if none of the above can be chosen). : . is. [~~] Which of the following is wrong about ACID Properties in Database Management System (DBMS)? (A) ‘A’ stands for availability (B) ‘C’ stands for consi"
+  },
+  {
+    "id": "q-pp-im-it-113-19",
+    "text": "___ is a constraint that determines the relation of one attribute to another in a DBMS, and thus helps to maintain the quality of data in the database. (A) inclusion dependency (B) column dependency (C) functional dependency (D) join dependency (E) none of the above.",
+    "score": 0.924,
+    "ocr_window": "學 年 度 碩士 班 招生 考試 試題 科目 : 資訊 科技 概論 FAM + 204 RR: 6 共 4 頁 之 第 3 頁 ho. is a constraint that determines the relation of one attribute to another in a DBMS, and thus helps to maintain the quality of data in the database. (A) "
+  },
+  {
+    "id": "q-pp-im-it-113-20",
+    "text": "A relation is in ___ normal form if and only if no attribute domain has relations as elements. (A) first (B) second (C) third (D) closed (E) none of the above.",
+    "score": 0.636,
+    "ocr_window": "of data in the database. (A) inclusion dependency (B) column dependency (C) functional dependency (D) join dependency (E) none of the above. 20. [|] Arelation is in normal form if and only if no attribute domain has rela"
+  },
+  {
+    "id": "q-pp-im-it-113-21",
+    "text": "Which of the following is wrong about Object-Oriented Programming (OOP)? (A) encapsulation describes the bundling of data and methods operating on this data into one unit (B) a class that inherits from another class shares all the attributes and methods of the referenced class (C) multiple inheritance allows a subclass to inherit from two or more superclasses (D) abstract classes cannot be instantiated into objects (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "score": 0.902,
+    "ocr_window": "(C) third (D) closed (E) none of the above. bi. [ __] Which of the following is wrong about Object-Oriented Programming (OOP)? (A) encapsulation describes the bundling of data and methods operating on this data into one "
+  },
+  {
+    "id": "q-pp-im-it-113-22",
+    "text": "Which of the following is wrong about variables in OOP? (A) a member variable is a variable that is associated with a particular object and accessible from all of its methods (B) a member variable must be declared within the body of a method (C) there is only one copy of each class variable (D) an instance variable is a variable defined in a class for which each instantiated object of the class has a separate copy (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "score": 0.883,
+    "ocr_window": "superclasses (D) abstract classes cannot be instantiated into objects (E) all the above are correct (choose this one only if none of the above can be chosen). b2. [___] Which of the following is wrong about variables in "
+  },
+  {
+    "id": "q-pp-im-it-113-23",
+    "text": "GPT is the large language model behind ChatGPT. 'GPT' stands for (A) Generative Proficiency in Text (B) Grasping the Paradigm of Texts (C) Generative Prowess in Text (D) Generative Pathfinding Transformer (E) none of the above.",
+    "score": 0.705,
+    "ocr_window": "copy (E) all the above are correct (choose this one only if none of the above can be chosen). 23. {____] GPT is the large language model behind ChatGPT. “GPT” stands for (A) Generative Proficiency in Text (B) Grasping th"
+  },
+  {
+    "id": "q-pp-im-it-113-24",
+    "text": "Which of the following refers to an assessment to determine whether a machine can exhibit the same intelligence as a human? (A) artificial general intelligence (AGI) (B) Turing complete (C) Chinese room argument (D) Turing test (E) none of the above.",
+    "score": 0.906,
+    "ocr_window": "the above. b4. [____] Which of the following refers to an assessment to determine whether a machine can exhibit the same intelligence as a human? (A) artificial general intelligence (AGI) (B) Turing complete (C) Chinese "
+  },
+  {
+    "id": "q-pp-im-it-113-25",
+    "text": "The following C++ code fragment shows the class definition of a pointer-based implementation of ADT Binary Search Tree that stores employee information of a company. Each tree node stands for an employee. The employeeID is the key and it cannot be duplicated!!\n\nclass TreeNode {\npublic: ...\nprivate: ...\n  int employeeID;\n  string employeeName;\n  int age;\n  TreeNode *leftChildPtr;\n  TreeNode *rightChildPtr;\n  friend class BinarySearchTree;\n};\n\nclass BinarySearchTree {\npublic: ...\n  int InsertNewEmployee(int newID, string newName, int newAge);\n  void ListAllEmployee();\nprotected:\n  void inorder(TreeNode *treePtr);\nprivate: ...\n  TreeNode *rootPtr;\n};\n\n(a) (20 points) Write the BinarySearchTree::InsertNewEmployee() that inserts a new employee into the binary search tree. Here, we assume the employee ID is never duplicated; and the ID is the key of a tree node.\n(b) (20 points) Write the BinarySearchTree::ListAllEmployee() that prints all employee information in ascending order in accordance with employeeID. Note that you also need to implement the protected function BinarySearchTree::inorder() called by ListAllEmployee() that recursively traverses the tree for printing all employee information.",
+    "score": 0.585,
+    "ocr_window": "頁 之 第 4 頁 protected: void inorder (TreeNode *treePtr) ; // a RECURSIVE inorder traversal that prints (ID, name, age) of all employees private: TreeNode *rootPtr; // pointer to the root of tree, NULL if the tree is empty "
+  }
+]

@@ -1,0 +1,439 @@
+{
+  "lessons": [
+    {
+      "id": "lesson-im-it-arch-memory-data-representation-01",
+      "subtopicId": "im-it-arch-memory-hierarchy",
+      "coveredSubtopicIds": [
+        "im-it-arch-memory-hierarchy",
+        "im-it-arch-data-representation"
+      ],
+      "title": "記憶體階層與資料表示：從位元正確性到存取延遲",
+      "summary": "先用 bit、byte、parity 與常見媒體格式建立資料表示觀念，再比較 register、cache、RAM、ROM 與 secondary storage 的容量、速度和揮發性，最後以 locality 與 average memory access time 串起快取的作用。所引用考古題答案皆為非官方技術覆核；本課只納入可自動判分且與兩個子主題直接相關的題目。",
+      "estimatedMinutes": 34,
+      "minimumPastPaperRefs": 8,
+      "learningObjectives": [
+        "以 parity 規則判斷能偵測與不能偵測的位元錯誤",
+        "區分靜態影像、動態影像與其常見檔案格式",
+        "依容量、速度、成本與揮發性比較 register、cache、RAM、ROM、flash 與 SSD",
+        "利用 temporal locality、spatial locality 與命中率解釋 cache 如何降低平均存取時間"
+      ],
+      "learningScenario": {
+        "title": "值班員的桌面、抽屜與遠端倉庫",
+        "hook": "想像一位值班員處理一疊表單：眼前立刻要用的數字握在手上，近期反覆查的表單放桌面，較多資料收進抽屜，整批工作資料放在辦公區，長期保存的檔案才送往遠端倉庫。越靠近手邊通常拿得越快，但能放的東西越少；常重看同一張或接著看相鄰頁面時，把它們留在近處最有價值。",
+        "predict": "值班員剛查過表單第 20 頁，接著很可能再查第 20 頁或第 21 頁。哪些行為分別對應 temporal locality 與 spatial locality？為什麼把近期頁面留在桌面能降低平均取用時間？",
+        "mapping": [
+          {
+            "everyday": "值班員手上正拿著、立即參與計算的少量數字",
+            "technical": "CPU registers 保存執行單元目前直接使用的少量 operands 與結果"
+          },
+          {
+            "everyday": "桌面上容量很小、伸手就能拿到的近期表單",
+            "technical": "L1 cache 容量較小且通常比下層 cache 更快"
+          },
+          {
+            "everyday": "桌下抽屜可放更多表單，但拿取比桌面多一步",
+            "technical": "L2／L3 cache 通常容量較大、存取延遲也高於 L1"
+          },
+          {
+            "everyday": "辦公區內保存目前整批工作的資料架",
+            "technical": "DRAM 作為容量較大的 main memory，典型存取速度慢於 CPU caches"
+          },
+          {
+            "everyday": "遠端倉庫保存大量、短期內不一定使用的檔案",
+            "technical": "SSD 等 secondary storage 提供較大且 non-volatile 的持久儲存，典型延遲高於 DRAM"
+          }
+        ],
+        "boundary": "這個場景只對應典型的距離感、容量、延遲與 locality，不代表所有處理器都有固定相同的 cache 大小或層數。實體桌面與抽屜斷電後不會清空，但 registers、cache 與 DRAM 通常是 volatile；SSD 才對應持久儲存。Cache 由硬體以 blocks／lines 管理，不是使用者手動挑單張表單；parity、image formats 與 RAID 也必須回到各自定義，不能由桌面位置推論。",
+        "examCues": [
+          "Parity check 通過只表示未偵測到錯誤；奇數個 bit flips 可被偵測，偶數個可能漏過。",
+          "JPEG、PNG、GIF、BMP、TIFF 常見於靜態影像；MPEG 主要是影音編碼標準家族。",
+          "典型速度由快到慢先想 register、L1、L2／L3、DRAM、SSD；ROM、flash、SSD 是 non-volatile，DDR RAM 不是。",
+          "Cache 利用 temporal／spatial locality 降低 AMAT；簡化公式為 hit time + miss rate × miss penalty。"
+        ]
+      },
+      "sections": [
+        {
+          "title": "資料表示從 bit pattern 與解讀規則開始",
+          "body": "電腦儲存的是 bit pattern；相同位元串必須搭配編碼或格式規格，才知道它代表整數、文字、像素或指令。Byte 通常是 8 bits，但資料意義不是由位元本身自動決定。題目遇到 JPEG、PNG、GIF、BMP、TIFF 或 MPEG 時，要分清靜態 image format 與影音壓縮／容器語境，不要因名稱都與媒體有關便視為同一類。",
+          "bullets": [
+            "格式規格定義 bit pattern 的結構與解碼方式",
+            "JPEG、PNG、GIF、BMP、TIFF 常作為靜態影像格式辨識",
+            "MPEG 是影音編碼標準家族，考題若問靜態 image file format 通常不是答案",
+            "副檔名是線索，不等於內容一定符合該格式"
+          ]
+        },
+        {
+          "title": "Parity 能偵錯，但不能保證資料正確",
+          "body": "Even parity 讓資料位元加上 parity bit 後的 1 總數為偶數；odd parity 則為奇數。接收端若 parity 不符，可確定傳輸中至少發生了某種錯誤；若 parity 符合，只代表沒有偵測到錯誤。單一 parity bit 能偵測任何奇數個 bit flips，卻會漏掉偶數個 bit flips，因此不是 error correction，也不能證明資料絕對正確。",
+          "bullets": [
+            "先數完整 codeword 中 1 的個數，再套用 even 或 odd 規則",
+            "Parity mismatch 表示偵測到錯誤",
+            "Parity match 不代表一定沒有錯誤",
+            "Parity bit 通常只能偵錯，無法指出哪一位錯誤"
+          ]
+        },
+        {
+          "title": "記憶體階層是速度、容量與成本的折衷",
+          "body": "越靠近 CPU 的 register 與 L1 cache 通常越快、容量越小、每 bit 成本越高；往下經 L2／L3 cache、DRAM 到 SSD 或磁碟，容量通常增加而延遲也增加。這是概念上的典型趨勢，不應背成所有產品都具有固定容量。RAM、DDR RAM 與 SDRAM 通常是 volatile；ROM、flash 與 SSD 在斷電後仍保留資料，屬 non-volatile。多顆 secondary-storage devices 還可組成 RAID，以 striping、mirroring 或 parity 等方式追求容量、效能或故障容忍；RAID 本身不等於加密、存取控制或完整備份。",
+          "bullets": [
+            "Register 由指令直接使用，容量遠小於 cache",
+            "L1 通常比 L2 小且快；L2 通常較大且較慢",
+            "DRAM 作為主記憶體，斷電後內容消失",
+            "ROM、flash 與 SSD 是 non-volatile，但用途和可寫入方式不同",
+            "RAID 的 redundancy 可處理特定磁碟故障，但不直接提供 confidentiality，也不能取代備份"
+          ]
+        },
+        {
+          "title": "Cache 利用 locality 降低平均存取時間",
+          "body": "Cache 保留近期或鄰近使用的資料與指令。Temporal locality 表示最近用過的項目可能很快再用；spatial locality 表示鄰近位址可能接著被用。Cache hit 可用較短延遲取得資料，miss 則需往較慢層級查找並付出 miss penalty。簡化的 average memory access time 可寫成 hit time + miss rate × miss penalty。",
+          "bullets": [
+            "Hit rate 與 miss rate 相加為 1",
+            "較高 hit rate 通常可降低平均存取時間",
+            "Cache 不負責永久保存程式，也不是 CPU scheduler",
+            "虛擬位址轉換主要由 MMU、TLB 與 page table 機制處理，勿與一般 data cache 的核心角色混淆"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "使用 even parity 傳送資料 1011001。應加上的 parity bit 是多少？若接收成 10110010，能否判定沒有錯誤？",
+          "steps": [
+            "資料 1011001 含有 4 個 1，已是偶數。",
+            "為維持 even parity，parity bit 應為 0，形成 10110010。",
+            "接收端數到 4 個 1，parity check 通過。",
+            "但若傳輸途中恰有 2 個 bits 同時翻轉，1 的奇偶性仍可能不變。"
+          ],
+          "answer": "Parity bit 為 0；通過檢查只能說未偵測到錯誤，不能保證資料一定正確。"
+        },
+        {
+          "prompt": "將 register、L1 cache、L2 cache、DRAM、SSD 依典型存取速度由快到慢排列，並指出哪些通常在斷電後保留資料。",
+          "steps": [
+            "CPU register 最靠近執行單元，典型延遲最低。",
+            "L1 cache 通常比 L2 cache 小而快。",
+            "DRAM 比 cache 慢，但作為容量較大的主記憶體。",
+            "SSD 屬 secondary storage，典型延遲高於 DRAM。",
+            "Register、cache 與 DRAM 通常是 volatile；SSD 是 non-volatile。"
+          ],
+          "answer": "典型順序為 register → L1 → L2 → DRAM → SSD；其中 SSD 通常可在斷電後保留資料。"
+        },
+        {
+          "prompt": "某 cache 的 hit time 為 2 ns、miss rate 為 5%，miss penalty 為 80 ns。用簡化公式計算 average memory access time。",
+          "steps": [
+            "套用 AMAT = hit time + miss rate × miss penalty。",
+            "把 5% 寫成 0.05。",
+            "計算 2 + 0.05 × 80 = 2 + 4。"
+          ],
+          "answer": "Average memory access time 為 6 ns。"
+        }
+      ],
+      "commonPitfalls": [
+        "Parity 通過就宣稱資料絕對沒有錯誤",
+        "把 parity 當成可以定位並修正錯誤的 error-correcting code",
+        "把 MPEG 與所有靜態影像格式混為一談",
+        "把 RAM、DDR RAM 或 SDRAM 誤認為 non-volatile",
+        "背誦特定 cache 容量數字，忽略題目真正比較的是典型階層關係",
+        "把 cache 的核心功能誤寫成永久儲存或虛擬位址映射",
+        "把 RAID 的 fault tolerance 誤當成資料加密或完整備份"
+      ],
+      "sourceRefs": [
+        "src-brookshear-13e"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-106-11",
+        "q-pp-im-it-108-1",
+        "q-pp-im-it-106-15",
+        "q-pp-im-it-110-3",
+        "q-pp-im-it-109-15",
+        "q-pp-im-it-110-4",
+        "q-pp-im-it-112-5",
+        "q-pp-im-it-115-7"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "lesson-im-it-os-scheduling-memory-management-01",
+      "subtopicId": "im-it-os-cpu-scheduling",
+      "coveredSubtopicIds": [
+        "im-it-os-cpu-scheduling",
+        "im-it-os-memory-management"
+      ],
+      "title": "CPU 排程與虛擬記憶體：時間與空間的資源分配",
+      "summary": "以 ready queue、waiting time、throughput 與 fairness 比較 FCFS、SJF、Round Robin、Priority 和 MLFQ，再由 paging、page table、page fault、working set 與 thrashing 理解虛擬記憶體。所引用考古題答案皆為非官方技術覆核；爭議題與題面不完整題均不列入 refs。",
+      "estimatedMinutes": 38,
+      "minimumPastPaperRefs": 8,
+      "learningObjectives": [
+        "區分 CPU scheduling 的 utilization、throughput、waiting time、response time 與 fairness 目標",
+        "比較 FCFS、SJF、Round Robin、Priority 與 multilevel feedback queue 的選擇規則和風險",
+        "將 virtual page number 經 page table 映射成 physical frame number",
+        "說明 page fault、working set 與 thrashing 的因果關係"
+      ],
+      "learningScenario": {
+        "title": "診所同時安排看診順序與診間門牌",
+        "hook": "一間診所只有一位當班醫師與有限診間。櫃檯一方面要從候診名單決定下一位病人，另一方面要把掛號單上的邏輯門牌查表映射到實際診間。短診先看可能降低平均等待，固定時間輪流看能避免某位持續候診者永久被略過；若可用診間不足，工作人員反覆把病歷送進送出，反而沒時間真正看診。",
+        "predict": "三位病人同時到達，預估看診時間是 6、2、4 分鐘；若時間估計可靠，哪種順序會降低這三人的平均等待時間？若改成每人固定看 2 分鐘再輪到下一位，又對應哪種排程？",
+        "mapping": [
+          {
+            "everyday": "已報到並等待醫師服務的候診病人",
+            "technical": "ready queue 中等待 CPU 的 processes"
+          },
+          {
+            "everyday": "櫃檯依政策選出下一位進診間的病人",
+            "technical": "CPU scheduler 從 ready processes 選擇下一個執行者"
+          },
+          {
+            "everyday": "每位病人先取得固定 2 分鐘，看完一段就回隊尾輪候",
+            "technical": "Round Robin 讓 processes 依序取得固定 time quantum"
+          },
+          {
+            "everyday": "掛號單上的邏輯門牌由櫃檯目錄查到實際診間，門內位置編號保持不變",
+            "technical": "Page table 將 virtual page number 映射到 physical frame number，page offset 在轉換後不變"
+          },
+          {
+            "everyday": "診間不足時不斷搬入搬出目前需要的病歷，搬運時間多於實際看診",
+            "technical": "Active working sets 超過可用 frames 時，頻繁 page faults／paging 可能形成 thrashing"
+          }
+        ],
+        "boundary": "病人不是可任意暫停且無成本保存狀態的 process，實際 burst time 也通常不能事先精確知道；因此診所故事不能證明 SJF 在所有動態 workload 都最佳。掛號門牌只是 address translation 的提示：真正 paging 使用固定大小 pages／frames 與位元 offset，page fault 也可能是合法頁面尚未駐留，不等於走錯診間。Thrashing 特指 paging 壓倒有效執行，不是一般候診壅塞；MLFQ 的跨 queue 移動與 priority boost 仍須依正式政策理解。",
+        "examCues": [
+          "提高 utilization／throughput、降低 waiting／response time、兼顧 fairness 都是 scheduling 目標，彼此可能衝突。",
+          "Burst 已知等前提下 SJF 可最小化平均等待；Round Robin 依 time quantum 輪流，MLFQ 則允許 process 跨 queues 移動。",
+          "Virtual address 拆成 page number 與 offset；page table 把 page number 映射到 frame number，offset 保持不變。",
+          "合法 page 尚未在 memory 也會 page fault；頻繁換頁且 paging 多於有效執行才是 thrashing。"
+        ]
+      },
+      "sections": [
+        {
+          "title": "排程器在互相衝突的目標間取捨",
+          "body": "CPU scheduler 從 ready processes 中選擇下一個執行者。常見目標包含提高 CPU utilization 與 throughput、降低 waiting／turnaround／response time，以及公平分配 CPU。這些目標可能衝突：互動系統重視 response time，批次工作可能更在意 throughput；因此沒有脫離 workload 與政策假設、永遠最好的單一演算法。",
+          "bullets": [
+            "Waiting time 是 process 在 ready queue 等待的總時間",
+            "Turnaround time 是完成時間減到達時間",
+            "Response time 是到達後首次獲得回應的時間",
+            "Fairness 與 starvation avoidance 也是典型排程考量"
+          ]
+        },
+        {
+          "title": "用選擇規則辨認排程演算法",
+          "body": "FCFS 依到達順序，簡單但可能出現 convoy effect。若所有 CPU burst 已知，non-preemptive SJF 可最小化該組工作的平均等待時間，但長工作可能 starvation。Priority scheduling 也可能讓低優先序工作長期等候，可用 aging 緩解。Round Robin 讓 ready processes 依序取得 time quantum；只要工作持續留在 ready queue 且系統正常推進，便不會因新短工作或高優先序工作而永久被略過。",
+          "bullets": [
+            "Time quantum 太大時，Round Robin 趨近 FCFS",
+            "Time quantum 太小會增加 context-switch overhead",
+            "SJF 的理論優勢依賴已知或可準確預估 CPU burst",
+            "Aging 是逐步提高等待中 process 的 priority"
+          ]
+        },
+        {
+          "title": "MLFQ 以行為回饋調整優先序",
+          "body": "Multilevel feedback queue 使用多個不同優先序的 queues，process 可以依 CPU 使用行為與等待狀況在 queues 之間移動。常見設計讓新工作先進高優先序 queue；用完整個 quantum 的 CPU-bound 工作可能被降級，頻繁等待 I/O 的互動工作則較常留在高優先序。實際規則由系統政策決定，不能把 MLFQ 誤寫成所有工作終身固定在同一 queue。",
+          "bullets": [
+            "Feedback 的重點是 process 可跨 queue 移動",
+            "高優先序 queue 通常可搶占低優先序 queue",
+            "各 queue 可採不同 quantum 或排程規則",
+            "Periodic priority boost 可避免低層 queue starvation"
+          ]
+        },
+        {
+          "title": "Paging 用固定大小單位連接虛擬與實體記憶體",
+          "body": "Paging 把 virtual address space 切成固定大小 pages，把 physical memory 切成相同大小 frames。Virtual address 可拆成 virtual page number 與 offset；page table 將 page number 映射到 frame number，而 offset 保持不變。若目標 page 不在 memory，會觸發 page fault，由作業系統載入頁面。當配置的 frames 無法容納 active working sets，page faults 急升，系統可能把大部分時間花在 paging 而不是執行，形成 thrashing。",
+          "bullets": [
+            "4 KiB 是常見基本 page size，但架構也可能支援其他或 huge pages",
+            "Page table 的核心用途是 virtual-to-physical address mapping",
+            "Page fault 不等於程式錯誤；合法頁面可能只是尚未駐留",
+            "Thrashing 的症狀是頻繁換頁與有效 CPU 工作下降"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "三個 process 同時在時間 0 到達，CPU burst 分別為 P1=6、P2=2、P3=4。比較 non-preemptive FCFS（順序 P1,P2,P3）與 SJF 的平均等待時間。",
+          "steps": [
+            "FCFS 等待時間為 P1=0、P2=6、P3=8，平均 (0+6+8)/3=14/3。",
+            "SJF 順序為 P2、P3、P1。",
+            "SJF 等待時間為 P2=0、P3=2、P1=6，平均 (0+2+6)/3=8/3。",
+            "比較 8/3 < 14/3；本例符合 burst 已知且同時到達的前提。"
+          ],
+          "answer": "FCFS 平均等待時間為 14/3，SJF 為 8/3；在此明確前提下 SJF 較小。"
+        },
+        {
+          "prompt": "Round Robin 的 quantum=2，P1 與 P2 在時間 0 到達，CPU burst 分別為 5 與 3。忽略 context-switch cost，列出執行片段。",
+          "steps": [
+            "P1 先執行 2 單位，剩 3；ready queue 後方是 P2。",
+            "P2 執行 2 單位，剩 1；P1 回到前方。",
+            "P1 再執行 2 單位，剩 1。",
+            "P2 執行最後 1 單位完成，P1 再執行最後 1 單位完成。"
+          ],
+          "answer": "執行片段為 P1(0–2)、P2(2–4)、P1(4–6)、P2(6–7)、P1(7–8)。"
+        },
+        {
+          "prompt": "系統 page size=4 KiB；某 virtual address 的 page number=9、offset=100，page table 顯示 page 9 對應 frame 20。求 physical address；若 page 9 的 valid bit 為 0 又代表什麼？",
+          "steps": [
+            "4 KiB=4096 bytes，physical address = frame number × page size + offset。",
+            "代入得到 20×4096+100=81920+100。",
+            "Physical address 為 82020。",
+            "若 valid／present bit 為 0，這次合法存取通常觸發 page fault，由 OS 檢查並載入頁面；若位址本身非法，則會進一步形成存取錯誤。"
+          ],
+          "answer": "映射後 physical address=82020；page 不在 memory 時會觸發 page fault，而不是直接由 scheduler 解決。"
+        }
+      ],
+      "commonPitfalls": [
+        "宣稱某排程演算法在所有 workload 下都同時最佳化所有指標",
+        "忽略 SJF 最小平均等待時間依賴 burst 已知等前提",
+        "認為 Priority scheduling 與 SJF 天生不會 starvation",
+        "把 MLFQ 誤認為 process 永遠固定在單一 queue",
+        "把 page 與 frame 當成大小不同的單位",
+        "把 page table 誤當成儲存 PCB 或負責 CPU scheduling",
+        "把任何 page fault 都等同 thrashing 或非法記憶體存取"
+      ],
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-os-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-111-18",
+        "q-pp-im-it-111-19",
+        "q-pp-im-it-114-9",
+        "q-pp-im-it-115-11",
+        "q-pp-im-it-106-14",
+        "q-pp-im-it-112-7",
+        "q-pp-im-it-114-11",
+        "q-pp-im-it-115-12"
+      ],
+      "reviewStatus": "draft"
+    }
+  ],
+  "cards": [
+    {
+      "id": "card-im-it-arch-memory-data-representation-01",
+      "lessonId": "lesson-im-it-arch-memory-data-representation-01",
+      "subtopicId": "im-it-arch-data-representation",
+      "front": "Even parity 檢查通過，能否證明資料完全沒有錯？",
+      "back": "不能。它只表示沒有偵測到奇數個 bit flips；偶數個 bit flips 仍可能讓 parity 維持不變。",
+      "explanation": "單一 parity bit 能偵測任何奇數個位元翻轉，但不能定位錯誤，也可能漏掉偶數個位元翻轉。",
+      "sourceRefs": ["src-brookshear-13e"],
+      "pastPaperRefs": ["q-pp-im-it-106-11"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-arch-memory-data-representation-02",
+      "lessonId": "lesson-im-it-arch-memory-data-representation-01",
+      "subtopicId": "im-it-arch-data-representation",
+      "front": "Parity bit 的直接用途是 error detection 還是 error correction？",
+      "back": "是 error detection；單一 parity bit 通常無法指出錯誤位置，因此不能自行修正。",
+      "explanation": "接收端可從奇偶規則不符判斷有錯，但缺乏足夠資訊判斷哪個 bit 應翻回。",
+      "sourceRefs": ["src-brookshear-13e"],
+      "pastPaperRefs": ["q-pp-im-it-106-11"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-arch-memory-data-representation-03",
+      "lessonId": "lesson-im-it-arch-memory-data-representation-01",
+      "subtopicId": "im-it-arch-data-representation",
+      "front": "考題問靜態 image file format 時，JPEG、PNG、GIF、BMP、TIFF 與 MPEG 應如何區分？",
+      "back": "前五者常見於靜態影像；MPEG 是影音編碼標準家族，通常不是此類題目的靜態影像格式。",
+      "explanation": "仍應依題幹語境判斷；重點是媒體用途與格式規格，不是只看副檔名。",
+      "sourceRefs": ["src-brookshear-13e"],
+      "pastPaperRefs": ["q-pp-im-it-108-1", "q-pp-im-it-110-3"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-arch-memory-data-representation-04",
+      "lessonId": "lesson-im-it-arch-memory-data-representation-01",
+      "subtopicId": "im-it-arch-memory-hierarchy",
+      "front": "Register、L1、L2、DRAM、SSD 的典型速度階層為何？",
+      "back": "由快到慢通常是 register → L1 → L2 → DRAM → SSD；往下容量通常增加、每 bit 成本下降。",
+      "explanation": "這是典型階層關係，不代表每個產品都有固定相同的容量與延遲。",
+      "sourceRefs": ["src-brookshear-13e"],
+      "pastPaperRefs": ["q-pp-im-it-112-5", "q-pp-im-it-115-7"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-arch-memory-data-representation-05",
+      "lessonId": "lesson-im-it-arch-memory-data-representation-01",
+      "subtopicId": "im-it-arch-memory-hierarchy",
+      "front": "DDR RAM、ROM、flash 與 SSD 中，哪些通常是 non-volatile？",
+      "back": "ROM、flash 與 SSD 通常是 non-volatile；DDR RAM 是 volatile。",
+      "explanation": "Non-volatile 表示斷電後資料仍可保留，與裝置是否可快速讀寫是不同維度。",
+      "sourceRefs": ["src-brookshear-13e"],
+      "pastPaperRefs": ["q-pp-im-it-109-15", "q-pp-im-it-110-4"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-arch-memory-data-representation-06",
+      "lessonId": "lesson-im-it-arch-memory-data-representation-01",
+      "subtopicId": "im-it-arch-memory-hierarchy",
+      "front": "Cache 為何能降低 average memory access time？",
+      "back": "它利用 temporal 與 spatial locality，讓高比例存取在較快層級命中，避免每次都付出主記憶體延遲。",
+      "explanation": "簡化公式為 AMAT = hit time + miss rate × miss penalty；降低 miss rate 或 penalty 都可能改善平均值。",
+      "sourceRefs": ["src-brookshear-13e"],
+      "pastPaperRefs": ["q-pp-im-it-112-5", "q-pp-im-it-115-7"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-os-scheduling-memory-management-01",
+      "lessonId": "lesson-im-it-os-scheduling-memory-management-01",
+      "subtopicId": "im-it-os-cpu-scheduling",
+      "front": "CPU scheduling 常見的最佳化目標有哪些？",
+      "back": "提高 utilization 與 throughput、降低 waiting／turnaround／response time，並兼顧 fairness 與避免 starvation。",
+      "explanation": "不同 workload 對指標權重不同，目標之間也可能互相衝突。",
+      "sourceRefs": ["src-brookshear-13e", "src-nthu-os-course"],
+      "pastPaperRefs": ["q-pp-im-it-111-18"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-os-scheduling-memory-management-02",
+      "lessonId": "lesson-im-it-os-scheduling-memory-management-01",
+      "subtopicId": "im-it-os-cpu-scheduling",
+      "front": "SJF 為何能降低平均等待時間，又有什麼限制？",
+      "back": "在工作 burst 已知等前提下，先執行短工作可最小化該組工作的平均等待時間；但 burst 難以精確預知，長工作也可能 starvation。",
+      "explanation": "不能把有條件的理論最佳性誤寫成所有動態 workload 下都無條件最佳。",
+      "sourceRefs": ["src-nthu-os-course"],
+      "pastPaperRefs": ["q-pp-im-it-111-19", "q-pp-im-it-115-11"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-os-scheduling-memory-management-03",
+      "lessonId": "lesson-im-it-os-scheduling-memory-management-01",
+      "subtopicId": "im-it-os-cpu-scheduling",
+      "front": "MLFQ 與固定 multilevel queue 最重要的差異是什麼？",
+      "back": "MLFQ 允許 process 依行為與政策在不同優先序 queues 之間移動。",
+      "explanation": "使用完整 quantum 的工作常被降級；priority boost 等機制可降低低層工作 starvation。",
+      "sourceRefs": ["src-nthu-os-course"],
+      "pastPaperRefs": ["q-pp-im-it-114-9"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-os-scheduling-memory-management-04",
+      "lessonId": "lesson-im-it-os-scheduling-memory-management-01",
+      "subtopicId": "im-it-os-memory-management",
+      "front": "Paging 中 page、frame 與 page table 各扮演什麼角色？",
+      "back": "Page 是固定大小的虛擬位址區塊，frame 是同大小的實體記憶體區塊，page table 將 virtual page number 映射到 frame number。",
+      "explanation": "位址中的 offset 在映射前後保持不變；page 與 frame 必須同大小才能直接替換頁框。",
+      "sourceRefs": ["src-brookshear-13e", "src-nthu-os-course"],
+      "pastPaperRefs": ["q-pp-im-it-106-14", "q-pp-im-it-112-7", "q-pp-im-it-114-11"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-os-scheduling-memory-management-05",
+      "lessonId": "lesson-im-it-os-scheduling-memory-management-01",
+      "subtopicId": "im-it-os-memory-management",
+      "front": "Page fault 是否必然代表程式發生非法記憶體存取？",
+      "back": "不是。合法 virtual page 尚未駐留於 physical memory 時也會 page fault，OS 可將它載入後重啟指令。",
+      "explanation": "只有當位址或權限非法時，fault handler 才會把它當成存取錯誤，而不是正常 demand paging。",
+      "sourceRefs": ["src-nthu-os-course"],
+      "pastPaperRefs": ["q-pp-im-it-114-11", "q-pp-im-it-115-12"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-os-scheduling-memory-management-06",
+      "lessonId": "lesson-im-it-os-scheduling-memory-management-01",
+      "subtopicId": "im-it-os-memory-management",
+      "front": "Virtual memory 發生 thrashing 時，系統在做什麼？",
+      "back": "系統花在 page faults 與換頁的時間多於有效執行，通常因 active working sets 超過可用 frames。",
+      "explanation": "頻繁 paging 會使 CPU utilization 與 throughput 下降；增加 multiprogramming degree 反而可能惡化。",
+      "sourceRefs": ["src-nthu-os-course"],
+      "pastPaperRefs": ["q-pp-im-it-115-12"],
+      "reviewStatus": "draft"
+    }
+  ],
+  "sourceGaps": []
+}

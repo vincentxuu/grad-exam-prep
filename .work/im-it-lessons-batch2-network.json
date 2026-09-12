@@ -1,0 +1,192 @@
+{
+  "lessons": [
+    {
+      "id": "lesson-im-it-network-link-lan-01",
+      "subtopicId": "im-it-network-link-lan",
+      "title": "資料鏈結層與 LAN：從 MAC、Ethernet 到 VLAN 與無線存取",
+    "summary": "從一個 frame 如何在區域網路內送達開始，建立 MAC、ARP、shared/switched Ethernet、碰撞控制與 VLAN 的完整脈絡，再比較 Wi-Fi、Bluetooth、NFC、RFID 與 5G 的作用距離和用途。歷屆題 refs 用於定位原始題面；其答案另經人工技術覆核，均非官方答案。",
+      "estimatedMinutes": 34,
+      "learningObjectives": [
+        "說明 Ethernet frame、MAC address 與 ARP 在同一 IPv4 LAN 內的分工。",
+        "比較 shared half-duplex Ethernet 與 switched full-duplex Ethernet 的碰撞行為。",
+        "用 CSMA/CD、binary exponential backoff、CSMA/CA 與 sliding window 判斷媒體存取或可靠傳送情境。",
+        "區分 VLAN 與 Wi-Fi、Bluetooth、NFC、RFID、5G 的作用範圍及主要用途。"
+      ],
+      "sections": [
+        {
+          "title": "Frame、MAC 與 ARP：先找到同一鏈路上的下一跳",
+          "body": "資料鏈結層負責在一段鏈路上傳送 frame。Ethernet frame 內的來源與目的 MAC address 用來識別該鏈路上的網路介面；IP address 則供網路層做跨網路遞送。當 IPv4 主機知道下一跳 IP、卻不知道對應的 MAC 時，會用 ARP 在本地 broadcast domain 查詢。若目的主機不在同一 subnet，ARP 查的是 default gateway 的 MAC，而不是遠端主機的 MAC。",
+          "bullets": [
+            "MAC address 是資料鏈結層識別資訊；IP address 是可路由的網路層邏輯位址。",
+            "ARP 解析 IPv4 的同鏈路下一跳 IP 與 MAC 對應；IPv6 使用 Neighbor Discovery，不使用 ARP。",
+            "Router 每經過一跳會解開舊 frame，再用下一段鏈路的 MAC 資訊建立新 frame；端到端目的 IP 通常保持不變。",
+            "交換器會從收到 frame 的來源 MAC 學習『MAC → port』，再依目的 MAC 決定轉送、flood 或過濾。"
+          ]
+        },
+        {
+          "title": "Shared 與 Switched Ethernet 不能混為一談",
+          "body": "早期以 coaxial cable 或 hub 連接的 shared Ethernet，所有節點共享同一 collision domain，常以 half-duplex 運作；CSMA/CD 在傳送時偵測碰撞，碰撞後使用 binary exponential backoff 隨機等待再重傳。現代 switched Ethernet 通常每個 switch port 是獨立 collision domain，端點與 switch 採 full-duplex 時不會發生共享媒體碰撞，因此不需要在該鏈路執行 CSMA/CD。",
+          "bullets": [
+            "Carrier sense 只表示傳送前先聽；collision detection 是傳送期間偵測有無碰撞。",
+            "Binary exponential backoff 會隨連續碰撞次數擴大隨機等待範圍，降低再次同時重傳的機率。",
+            "Hub 只重送位元，所有連接埠共享頻寬與 collision domain；switch 依 MAC table 選擇輸出 port。",
+            "『Ethernet 一定使用 CSMA/CD』只適合 shared/half-duplex 情境，不適合一般現代 full-duplex switched LAN。"
+          ]
+        },
+        {
+          "title": "可靠傳送、Wi-Fi 存取與 VLAN",
+          "body": "Sliding window 允許傳送端在等待 acknowledgment 前保留多個尚未確認的 frame，提高鏈路利用率；window、sequence number 與重傳規則共同維持可靠與有序傳送。無線節點難以在傳送時可靠偵測碰撞，所以 Wi-Fi 使用 CSMA/CA，先感測媒體並以等待、隨機 backoff，必要時搭配 RTS/CTS 來降低碰撞機率。VLAN 則是交換式 LAN 的邏輯切割：IEEE 802.1Q tag 讓同一套實體交換設備承載多個彼此隔離的 broadcast domains。",
+          "bullets": [
+            "Sliding window 是流量與可靠傳送機制；CSMA/CA 是共享無線媒體的存取機制，兩者解決的問題不同。",
+            "CSMA/CA 是 collision avoidance，不代表能保證碰撞永遠不發生。",
+            "Access port 通常承載單一 VLAN；trunk link 可用 802.1Q tags 承載多個 VLAN。",
+            "不同 VLAN 間若要通訊，需要第 3 層 routing；VLAN 本身不是跨 Internet 的加密 VPN。"
+          ]
+        },
+        {
+          "title": "無線技術依範圍與任務選擇",
+        "body": "Wi-Fi、Bluetooth、NFC、RFID 與 5G 都使用無線電，但不是可互換的同類答案。Wi-Fi 主要提供建築物或熱點範圍的 WLAN；Bluetooth 主要是短距離個人裝置連線；NFC 強調刻意靠近、通常在數公分內的近場互動，可包含 passive tag 或 card emulation；RFID 的核心是用 tag 與 reader 識別或追蹤物件，距離依頻段與主被動設計而異；5G 是電信業者提供的廣域 cellular access，目標包括較高資料率、較低延遲與大量裝置連線。",
+          "bullets": [
+            "Wi-Fi：WLAN 網路存取，常經 access point 連到有線 LAN。",
+            "Bluetooth：短距離 PAN，例如耳機、鍵鼠與穿戴裝置；不等同 Wi-Fi LAN。",
+            "NFC：極近距離 tap 情境；RFID：識別/追蹤，讀取距離可從近距離到數公尺以上，不能一律說等同 NFC。",
+            "5G 是 cellular WAN/access，不是 Ethernet VLAN 或 Wi-Fi 的別名；理論峰值也不等於每位使用者隨時可得的實測速度。"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "主機 A 與 B 在同一 IPv4 subnet。A 已知 B 的 IP，但 ARP cache 沒有 B。A 要送一個 IP packet 給 B，鏈路上會先發生什麼？",
+          "steps": [
+            "A 先判斷 B 的 IP 位於同一 subnet，因此下一跳就是 B。",
+            "A 以 broadcast Ethernet frame 送出 ARP request，詢問誰持有 B 的 IP。",
+            "B 回覆自己的 MAC address，A 將對應暫存於 ARP cache。",
+            "A 建立目的 MAC 為 B、payload 為原 IP packet 的 Ethernet frame，switch 再依 MAC table 轉送。"
+          ],
+          "answer": "先用 ARP 取得 B 的 MAC，再以 B 的 MAC 封裝 Ethernet frame。若 B 在遠端 subnet，A 會改查 default gateway 的 MAC。"
+        },
+        {
+          "prompt": "四台電腦先接在同一個 half-duplex hub，之後改接 switch 並使用 full-duplex。碰撞與 CSMA/CD 的需求如何改變？",
+          "steps": [
+            "Hub 會把收到的訊號送往其他 ports，四台主機共享同一 collision domain。",
+            "兩台同時傳送可能碰撞，shared Ethernet 需偵測碰撞並以 exponential backoff 重傳。",
+            "換成 switch 後，每個 port 成為獨立 point-to-point link。",
+            "在 full-duplex switch link 上可同時收送，沒有共享媒體碰撞，因此不執行 CSMA/CD。"
+          ],
+          "answer": "Hub/shared half-duplex 環境會碰撞並使用 CSMA/CD；switch/full-duplex 將 collision domains 分開，正常情況不需 CSMA/CD。"
+        },
+        {
+          "prompt": "同一台 switch 上，財務部 ports 屬 VLAN 10、研發部 ports 屬 VLAN 20。兩部門都能連到同一條 trunk，但財務主機無法直接以第 2 層連到研發主機。為什麼？",
+          "steps": [
+            "802.1Q trunk 可同時承載 VLAN 10 與 20 的 tagged frames。",
+            "Switch 會把不同 VLAN 視為不同的邏輯 broadcast domains。",
+            "VLAN 10 的 broadcast 不會被一般第 2 層轉送到 VLAN 20。",
+            "若兩個 VLAN 要互通，需經 router 或 layer-3 switch 執行 inter-VLAN routing。"
+          ],
+          "answer": "Trunk 共用實體鏈路不代表 VLAN 合併；tag 仍維持邏輯隔離，跨 VLAN 需要第 3 層 routing。"
+        },
+        {
+          "prompt": "請為四個情境選主要技術：校園無線上網、手機連耳機、感應卡貼近讀卡機、倉庫批次辨識商品標籤。",
+          "steps": [
+            "校園無線上網需要 WLAN 與 access points，選 Wi-Fi。",
+            "手機與耳機是短距離個人裝置連線，選 Bluetooth。",
+            "貼近讀卡機、數公分互動，選 NFC。",
+            "倉庫辨識大量物件 tags，選 RFID；實際頻段與 tag 類型依距離需求決定。"
+          ],
+          "answer": "依序為 Wi-Fi、Bluetooth、NFC、RFID。若需求是電信商廣域行動連線，才考慮 5G cellular access。"
+        }
+      ],
+      "commonPitfalls": [
+        "把 MAC 當成可跨 Internet 路由的端到端位址；MAC frame 只服務當前鏈路，router 會重建下一跳 frame。",
+        "認為 ARP 能查任意遠端主機的 MAC；跨 subnet 時，送端 ARP 查的是 default gateway。",
+        "把所有 Ethernet 都說成會碰撞並使用 CSMA/CD；現代 full-duplex switched Ethernet 沒有共享 collision。",
+        "把 CSMA/CA 當成碰撞偵測；它是在無線媒體上降低碰撞機率，並非傳送時的 collision detection。",
+        "把 VLAN 當 VPN；VLAN 是 LAN 內的邏輯 broadcast-domain 分割，VPN 通常強調跨不可信網路的隧道與保護。",
+        "用單一固定距離描述 RFID，或把 NFC、RFID 視為完全相同；RFID 的距離高度依頻段、tag 與 reader 設計而異。",
+        "把 5G 峰值速率當成每個使用者的保證實測速度；實際 throughput 受頻譜、訊號、負載與部署影響。"
+      ],
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-network-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-109-8",
+        "q-pp-im-it-110-9",
+        "q-pp-im-it-111-3",
+        "q-pp-im-it-111-7",
+        "q-pp-im-it-111-9",
+        "q-pp-im-it-112-14",
+        "q-pp-im-it-112-15"
+      ],
+      "reviewStatus": "draft"
+    }
+  ],
+  "cards": [
+    {
+      "id": "card-im-it-network-link-lan-01",
+      "lessonId": "lesson-im-it-network-link-lan-01",
+      "subtopicId": "im-it-network-link-lan",
+      "front": "同一 IPv4 LAN 中，IP、MAC 與 ARP 各做什麼？",
+      "back": "IP 識別網路層目的地；MAC 識別當前鏈路上的介面；ARP 把同鏈路下一跳 IPv4 位址解析成 MAC。",
+      "explanation": "若目的地不在本 subnet，ARP 查的是 default gateway 的 MAC，而非遠端主機的 MAC。IPv6 的對應功能由 Neighbor Discovery 提供。",
+      "sourceRefs": ["src-brookshear-13e", "src-nthu-network-course"],
+      "pastPaperRefs": ["q-pp-im-it-111-7"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-network-link-lan-02",
+      "lessonId": "lesson-im-it-network-link-lan-01",
+      "subtopicId": "im-it-network-link-lan",
+      "front": "Shared Ethernet 與 switched full-duplex Ethernet 的碰撞行為有何不同？",
+      "back": "Shared half-duplex Ethernet 的節點共用 collision domain，可能碰撞；switched full-duplex link 是 point-to-point，可同時收送，正常情況沒有共享媒體碰撞。",
+      "explanation": "CSMA/CD 與 exponential backoff 屬於傳統 shared/half-duplex Ethernet 情境，不應套用到一般 full-duplex switch port。",
+      "sourceRefs": ["src-brookshear-13e", "src-nthu-network-course"],
+      "pastPaperRefs": ["q-pp-im-it-112-14"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-network-link-lan-03",
+      "lessonId": "lesson-im-it-network-link-lan-01",
+      "subtopicId": "im-it-network-link-lan",
+      "front": "CSMA/CD 與 CSMA/CA 的核心差別是什麼？",
+      "back": "CSMA/CD 在 shared Ethernet 傳送時偵測碰撞；CSMA/CA 在 Wi-Fi 傳送前以感測、等待與隨機 backoff 降低碰撞機率。",
+      "explanation": "無線節點難以一邊傳送一邊可靠聽出碰撞，因此採 avoidance；RTS/CTS 可協助處理 hidden-node 等情境，但不是每次都使用。",
+      "sourceRefs": ["src-brookshear-13e", "src-nthu-network-course"],
+      "pastPaperRefs": ["q-pp-im-it-111-9", "q-pp-im-it-112-14"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-network-link-lan-04",
+      "lessonId": "lesson-im-it-network-link-lan-01",
+      "subtopicId": "im-it-network-link-lan",
+      "front": "Sliding window 為何比每送一個 frame 就停等更有效率？",
+      "back": "它允許多個尚未確認的 frames 同時在途，減少等待 ACK 期間的鏈路閒置，並以 window、序號與重傳維持可靠有序傳送。",
+      "explanation": "Window 大小限制未確認資料量；收到 ACK 後視窗向前滑動。它解決可靠/流量控制，與媒體存取方法不是同一問題。",
+      "sourceRefs": ["src-brookshear-13e", "src-nthu-network-course"],
+      "pastPaperRefs": ["q-pp-im-it-111-3"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-network-link-lan-05",
+      "lessonId": "lesson-im-it-network-link-lan-01",
+      "subtopicId": "im-it-network-link-lan",
+      "front": "VLAN tag 如何讓同一套實體 switch 網路形成多個邏輯 LAN？",
+      "back": "IEEE 802.1Q tag 標示 frame 所屬 VLAN；switch 依 VLAN 分開轉送與 flooding，使各 VLAN 成為獨立 broadcast domain。",
+      "explanation": "Trunk 可承載多個 tagged VLAN；跨 VLAN 通訊仍需 router 或 layer-3 switch。VLAN 提供邏輯分段，不等同加密 VPN。",
+      "sourceRefs": ["src-brookshear-13e", "src-nthu-network-course"],
+      "pastPaperRefs": ["q-pp-im-it-112-15"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-network-link-lan-06",
+      "lessonId": "lesson-im-it-network-link-lan-01",
+      "subtopicId": "im-it-network-link-lan",
+      "front": "Wi-Fi、Bluetooth、NFC、RFID 與 5G 的主要作用範圍如何區分？",
+      "back": "Wi-Fi 是 WLAN 存取；Bluetooth 是短距離 PAN；NFC 是數公分近場互動；RFID 以 tag/reader 做識別追蹤且距離依系統而變；5G 是電信商的廣域 cellular access。",
+      "explanation": "不要只用『都是無線』分類。應先問需求是網路存取、個人裝置連線、貼近互動、物件識別，還是廣域行動連線；5G 峰值也不是個別使用者的保證 throughput。",
+      "sourceRefs": ["src-brookshear-13e", "src-nthu-network-course"],
+      "pastPaperRefs": ["q-pp-im-it-109-8", "q-pp-im-it-110-9", "q-pp-im-it-111-7"],
+      "reviewStatus": "draft"
+    }
+  ]
+}

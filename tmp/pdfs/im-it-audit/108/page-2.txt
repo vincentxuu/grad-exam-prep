@@ -1,0 +1,56 @@
+題 號 : 383 國 立 臺灣 大 學 108 學 年 度 碩士 班 招生 考試 試題
+科目 : 資 訊 科 技 概論 HAM: 383
+Ae .
+
+BR: 6 共 2 頁 之 第 之 頁
+
+13. {| Which of the following protocols, as part of X.500, is designed for enabling anyone to
+
+. locate organizations, individuals, and other resources such as files and devices in a network,
+whether on the public Internet or on a corporate intranet? (A) Free Directory Access Protocol
+(FDAP) (B) Internet Directory Access Protocol (IDAP) (C) Lightweight Directory Access
+Protocol (LDAP) (D) Root Directory Access Protocol (RDAP) (E) none of the above.
+
+14. [| Which of the following protocols provides a secure channel over an unsecured network
+in a client-server architecture, and was designed as a replacement for Telnet and for unsecured
+remote shell protocols such as the Berkeley rlogin and rsh? (A) Secure Shell (SSH) (B) Transport
+Layer Security (TLS) (C) Secure Sockets Layer (SSL) (D) Session Initiation Protocol (SIP) (E)
+none of the above.
+
+15. 中 Roughly speaking, the “deep” in “deep learning” neural networks refers to (A) the
+amount of data being trained (B) the number of tags in input data (C) the fan-in of a node (D) the
+fan-out of a node (E) none of the above.
+
+16. E] Which of the following is wrong about deep learning in AI? (A) deep learning requires
+training data to teach the model how to derive output from input (B) why an output is derived
+from the input may not be explained from the model (C) for decision making, a biased input may
+yield a bias output (D) training data usually have human marked information to teach the model
+what the input are (E) all of the above are correct (choose this one only if none of the above can be
+chosen).
+
+17. | Which of the following is wrong about information security? (A) Spyware is a type of
+malware designed to steal user data and sensitive information. (B) A Trojan horse is a type of
+malware that is often disguised as legitimate software so as to mislead users ofits true intent. (C)
+
+A virus usually refers to a type of malicious programs that are able to actively replicate themselves
+and spread to other computers. (D) A botnet refers to a network of hijacked zombie computers that
+are remotely controlled by a hacker. (E) all of the above are correct (choose this one only if none
+of the above can be chosen).
+
+18. [____] In information security, which of the following terms more commonly refers to
+psychological manipulation of people into performing actions or divulging confidential
+information? (A) Phishing (B) Honeypot (C) Spoofing (D) Social Engineering (E) Psychology
+Engineering.
+
+19. [| Which of the following helps protect computers by monitoring and controlling incoming
+
+“and outgoing network traffic based on predetermined security rules? (A) vulnerability scanner (B)
+authentication scanner (C) anti-virus software (D) firewall (E) eavesdropping software.
+
+20. [] Which of the following applications/protocols is typically not based on client-server
+architecture? (A) network printing (B) remote procedure call (C) emails (D) HTTP (E) all of the
+
+“above are based on client-server architecture.
+
+ay
+接 次 頁

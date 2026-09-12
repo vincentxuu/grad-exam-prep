@@ -1,0 +1,24 @@
+FAR > 324 圈 立 臺灣 大 學 112 學 年 度 碩士 班 招生 考試 試題
+科目 : 資 訊 科技 概論 HAR: 324
+BA: 6 共 頁 之 第 AR
+23. 上 The term has been coined to represent a digital counterpart of a real-world object
+for use such as simulation, integration, testing, monitoring, and maintenance. (A) avatar (B) digital twin
+(C) virtual reality (D) cloud object (E) none of the above.
+24, [___] Inblockchain technology like that used in Bitcoin, the process “mining” is designed mainly to
+(A) enforce concurrency control of transactions (B) ensure atomicity (C) distribute transaction (D)
+validate transaction (E) none of the above.
+25. [_____] Which of the following is wrong about B-tree? (A) B-tree is self-balancing (B) A non-leaf node
+with k children contains k keys (C) a B-tree of order m has at most m children (D) every internal node
+has at least [m/2] children (E) alf leaves appear on the same level.
+26. C7 Which of the following is wrong about spanning trees? (A) if all of ‘the edges of a graph G are
+also edges of a spanning tree T of G, then G is a tree (B) if all of the edges of a graph G are also edges of |
+a spanning tree T of G, then G is identical to T (C) if T is a spanning tree of G, and eis an edge of G that
+is not in T, then adding e to T will create a cycle (D) a graph may have more than one Spanning trees (E)
+all the above are correct (choose this one only if none of the above can be chosen).
+27. [____] Recall that a min heap is a complete binary tree such that the key stored in each node is
+greater than or equal to the keys in the node's children. Then, the time complexity for inserting a key
+into a min heap of n nodes can be done in (A) O(1) (B) O(log n) (C) O(n) (D) O(n log n) (E) none of the above.
+28. | The time complexity for finding an arbitrary element in a min heap of n nodes can be done in
+(A) O(4) (B) O(log n) (C) O(n) (D) O(n log n) (E) none of the above.
+RAR
+5 |

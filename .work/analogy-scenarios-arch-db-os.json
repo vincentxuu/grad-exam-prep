@@ -1,0 +1,172 @@
+{
+  "lesson-im-it-arch-cpu-organization": {
+    "title": "自動分貨中心的一張張工作單",
+    "hook": "想像一座自動分貨中心：倉庫同時放著待處理包裹與機器看得懂的工作單，控制台依序取出工作單、判讀動作，再指揮掃描、計算或搬運站執行。若把多張工作單分散在不同站點重疊處理，整體出貨可能更快；但後一站若必須等待前一站剛產生的標籤，就不能假裝兩件事完全獨立。",
+    "predict": "把四個處理站都加倍，整座中心就一定能在一半時間完成同一批工作嗎？先找出必須依序完成的步驟，再判斷加速上限。",
+    "mapping": [
+      {
+        "everyday": "控制台依工作單選擇並協調下一個站點動作",
+        "technical": "CPU 的 control unit 依 instruction 協調 instruction cycle 與所需執行資源"
+      },
+      {
+        "everyday": "標示下一張待取工作單位置的號碼牌",
+        "technical": "program counter 保存下一條預計 fetch 的 instruction address"
+      },
+      {
+        "everyday": "中心只接受一套明定格式與動作名稱的工作單",
+        "technical": "ISA 是 software 可見的 hardware contract，定義 instructions、registers 與 addressing modes 等"
+      },
+      {
+        "everyday": "不同包裹同時位於讀單、貼標與裝車等不同站點",
+        "technical": "pipeline 讓多條 instructions 重疊位於不同執行階段，以提高 throughput"
+      },
+      {
+        "everyday": "後一張工作單必須等前一站剛算出的重量標籤",
+        "technical": "後一條 instruction 依賴尚未可用的 operand，形成 data hazard，需 forwarding 或 stall"
+      }
+    ],
+    "boundary": "分貨故事只能幫助追蹤角色與相依關係：真實 CPU 處理的是 encoded instructions 與 data，不是彼此獨立的實體包裹；pipeline throughput 不等於單條 instruction latency，clock frequency 也不等於每秒完成的 instructions。工作單繁簡更不能直接證明 RISC 或 CISC 哪一方一定較快；Amdahl's law 的上限仍取決於不可平行比例。",
+    "examCues": [
+      "開機後先初始化硬體並交棒：BIOS／UEFI 是 firmware，不要和 CMOS 設定區或 OS kernel 混為一談。",
+      "下一條指令位置、取出、判讀、執行：對應 program counter 與 fetch-decode-execute。",
+      "software 看得見的 instructions／registers 是 ISA；pipeline、cache、execution units 是 microarchitecture。",
+      "後一條指令等前一條結果是 data hazard；算多核心上限時，把不可平行比例放進 Amdahl's law 的 serial 部分。"
+    ]
+  },
+  "lesson-im-it-db-relational-model-01": {
+    "title": "大學選課系統的三本名冊",
+    "hook": "教務處有學生、課程與選課三份名冊。學生編號能找到唯一學生，課號能找到唯一課程，而選課紀錄必須同時看學生編號與課號才知道是哪一次選課。若選課表寫了 S9，學生名冊卻沒有 S9，系統就留下了一筆找不到人的紀錄。",
+    "predict": "Enrollment 出現 (sid='S9', cid='DB01', grade=NULL)：Student 沒有 S9，而且 grade 沒有宣告 NOT NULL。哪一部分必然違反限制？",
+    "mapping": [
+      {
+        "everyday": "空白名冊先規定欄名、填寫格式與限制",
+        "technical": "relation schema 描述 attributes、domains 與 constraints"
+      },
+      {
+        "everyday": "今天名冊中實際填好的每一列資料",
+        "technical": "relation instance 是某一時刻的 tuples 集合"
+      },
+      {
+        "everyday": "從學號與 email 等唯一欄位中，正式選學號作主要識別",
+        "technical": "先找具唯一性與最小性的 candidate keys，再選一個作 primary key"
+      },
+      {
+        "everyday": "同一學生可修多門課，同一課也有多名學生，因此要用學號加課號識別選課紀錄",
+        "technical": "Enrollment 的 (sid, cid) 是 composite key"
+      },
+      {
+        "everyday": "選課名冊上的學號必須能回學生名冊找到本人",
+        "technical": "foreign key 與 referential integrity 限制跨 relation 的合法關係"
+      }
+    ],
+    "boundary": "紙本名冊容易讓人誤以為列的上下順序有意義，但 relation 在數學上是 tuples 的集合；欄名看起來像 ID 也不自動成為 key，仍要驗證唯一性與最小性。Foreign key 的作用是維持合法參照，不保證自動加速查詢；能否為 NULL、刪除時 CASCADE 或 RESTRICT，都取決於 schema 明定的政策。",
+    "examCues": [
+      "表的結構、欄位與限制是 schema；某一時刻實際資料是 instance。",
+      "能唯一識別只是 superkey；再滿足移除任何欄位就失去唯一性的最小性，才是 candidate key。",
+      "被選中的 candidate key 是 primary key，必須唯一且不可為 NULL；它也可能由多欄組成。",
+      "Foreign key 值必須找到被參照鍵，或在欄位允許時為 NULL；不要把所有 NULL 一律判錯。"
+    ]
+  },
+  "lesson-im-it-db-sql-querying": {
+    "title": "替活動主辦人整理報名名單",
+    "hook": "主辦人交給你 Customers 與 Orders 兩份表格，要求找出台灣的台北或高雄參加者、統計每個國家的人數，再把訂單配回姓名。你不需要逐列告訴資料庫怎麼翻資料，只要清楚描述要哪些欄位、哪些列、如何分組，以及兩張表用哪個欄位配對。",
+    "predict": "條件寫成 Country='Taiwan' AND City='Taipei' OR City='Kaohsiung'，日本的 Kaohsiung 紀錄會不會被選進來？你會如何加括號表達真正需求？",
+    "mapping": [
+      {
+        "everyday": "在整理需求上明列最後要抄出的欄位",
+        "technical": "SELECT 指定查詢輸出的 expressions"
+      },
+      {
+        "everyday": "逐筆檢查國家與城市，只留下符合條件的報名者",
+        "technical": "WHERE 在 grouping 前過濾 individual rows"
+      },
+      {
+        "everyday": "依國家把報名者分成不同疊，再計算每疊人數",
+        "technical": "GROUP BY 形成 groups，aggregate function 對每組彙整"
+      },
+      {
+        "everyday": "完成分疊後，只保留人數至少兩人的國家",
+        "technical": "HAVING 依 aggregate 結果篩選 groups"
+      },
+      {
+        "everyday": "用 CustomerID 把訂單名單配回客戶姓名",
+        "technical": "JOIN 依 join condition 組合不同 tables 的相關 rows"
+      }
+    ],
+    "boundary": "整理紙本名單只是邏輯提示，不代表 DBMS 真的依你朗讀的順序逐列搬紙；SQL 是 declarative，optimizer 可選不同執行方式。一般空白格也不能完整類比 SQL NULL 的語意；COUNT(column) 會忽略 NULL，而 JOIN 可能因一對多配對增加 rows，並不自動去除 duplicates。",
+    "examCues": [
+      "建立含 columns 的資料表用 CREATE TABLE，不是 CREATE DATABASE，也不是不存在的 BUILD TABLE。",
+      "AND 優先於 OR；遇到『A 且（B 或 C）』直接用括號，避免 C 脫離 A 的限制。",
+      "COUNT(*) 數 rows；COUNT(column) 忽略該欄 NULL；COUNT(DISTINCT column) 再去除重複值。",
+      "單列條件放 WHERE，aggregate 後的群組條件放 HAVING；跨表配對要寫正確 JOIN ... ON 條件。"
+    ]
+  },
+  "lesson-im-it-os-file-storage-io": {
+    "title": "機場如何從旅客名字找到行李",
+    "hook": "機場不會把旅客名字直接刻在行李存放格上。櫃檯先用目錄找到行李紀錄，紀錄保存擁有者、大小與存放位置，再去正確區塊取出內容。行李輸送設備也不直接理解每個應用程式的請求，需要作業系統中的專用控制軟體把通用 I/O 要求轉成裝置操作。",
+    "predict": "如果兩張不同的領取單都指向同一筆行李紀錄，撕掉其中一張後，行李是否必然立刻被丟棄？",
+    "mapping": [
+      {
+        "everyday": "櫃檯目錄把旅客使用的名稱連到一筆行李紀錄",
+        "technical": "directory entry 將 filename 對應到檔案識別資訊／inode"
+      },
+      {
+        "everyday": "行李紀錄保存權限、大小、時間與存放格位置，但不是行李本身",
+        "technical": "inode 保存 metadata 與 data-block pointers，通常不保存 filename 或完整內容"
+      },
+      {
+        "everyday": "輸送帶操作員把櫃檯的通用要求轉成特定機器命令",
+        "technical": "device driver 將 OS 的通用 I/O requests 轉成裝置操作並協調 interrupts／data transfer"
+      },
+      {
+        "everyday": "輸送帶旁的小暫存區吸收送入與取走速度差",
+        "technical": "buffering 以 memory 暫存資料流，吸收 producer／consumer 的速度或單位差異"
+      },
+      {
+        "everyday": "一整車一整車的行李工作先排隊，再由單一裝卸口依序處理",
+        "technical": "spooling 保存可獨立排程的完整 jobs，讓慢速裝置稍後依 queue 服務"
+      }
+    ],
+    "boundary": "機場故事不代表所有 file systems 都使用 inode，也不能完整呈現 hard link、link count、開啟中的 references 與空間回收規則；driver 更不是有自主判斷的人。Buffer 與 spool 的實際位置與實作可不同。Executable 的 loader／dynamic linker 流程也沒有直接的行李角色，仍要回到映射 shared libraries、解析 symbols 與 relocations 的原課定義。",
+    "examCues": [
+      "Filename 通常在 directory entry；inode 放 metadata 與 data-block pointers；實際 bytes 在 data blocks。",
+      "把通用 OS I/O request 轉成特定裝置操作的是 device driver，不是一般 application 或 firmware 的同義詞。",
+      "平滑持續資料流的速度差先想到 buffering；讓 printer 等慢速裝置排完整 jobs 先想到 spooling。",
+      "啟動時尋找 shared library、映射 code、解析 symbols／relocations 是 dynamic linker；它不是 compiler 或 assembler。"
+    ]
+  },
+  "lesson-im-it-os-virtualization-containers-01": {
+    "title": "共享辦公大樓裡的獨立公司",
+    "hook": "同一棟辦公大樓可以切成多個互相隔離的工作空間。某些公司租下包含自己完整設備的一整間套房，像擁有自己的作業環境；另一些團隊只帶應用與用品進共享辦公室，沿用大樓共同的核心設施。兩者都能隔開工作負載，但隔離邊界與額外成本並不相同。",
+    "predict": "一個舊系統必須使用與 host 不同的 kernel，只把它裝進一般 container 就能滿足需求嗎？還是需要有自己 guest OS 的 VM？",
+    "mapping": [
+      {
+        "everyday": "提供空間、電力與設備的整棟實體辦公大樓",
+        "technical": "host 提供 physical CPU、memory、storage 與 devices"
+      },
+      {
+        "everyday": "大樓管理者替各套房分配空間並避免互相占用",
+        "technical": "hypervisor 隔離並仲裁分配給 virtual machines 的 hardware resources"
+      },
+      {
+        "everyday": "擁有自己完整內部設施與管理規則的獨立套房",
+        "technical": "VM 看見 virtual hardware，通常包含自己的 guest OS 與 kernel"
+      },
+      {
+        "everyday": "多個團隊各有獨立房間，但共用大樓核心設施",
+        "technical": "containers 隔離 processes、filesystems 與 networks，但共享 host OS kernel"
+      },
+      {
+        "everyday": "臨時活動只預約使用時段，空間配置與收拾都交給場地方",
+        "technical": "serverless 由 provider 管理 provisioning、patching 與 scaling，常依實際呼叫與資源使用計量"
+      }
+    ],
+    "boundary": "辦公室的牆不能等同真實 security boundary：VM 通常有較強 kernel 隔離，但兩種方案都可能因漏洞或錯誤設定被攻擊，也都有 overhead 與 resource contention。多棟大樓組成的比喻也不會自動得到 cluster 的 replication、health check 與 failover；serverless 背後仍有實體機、VM 或 containers，並非真的沒有 servers。",
+    "examCues": [
+      "每個 instance 有自己的 guest OS／kernel、虛擬硬體：先想到 VM；多個 instances 共享 host kernel：先想到 containers。",
+      "分配並仲裁 VMs 的 CPU、memory 與 devices 是 hypervisor；Type 1 直接控制硬體，Type 2 位於 host OS 上。",
+      "Cluster 是多 nodes 協同以提升 capacity、performance 或 availability，不是 virtualization 的同義詞，也不自動提供 security。",
+      "Serverless 是 provider 隱藏 server management、常按使用量計費；仍要考慮 cold start、配額、外部狀態與下游瓶頸。"
+    ]
+  }
+}

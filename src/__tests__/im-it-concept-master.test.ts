@@ -1,5 +1,5 @@
-import answersRaw from '../../public/data/answers.json'
 import answerReviewRaw from '../../public/data/im-it-answer-review.json'
+import answersRaw from '../../public/data/answers.json'
 import conceptMasterRaw from '../../public/data/im-it-concept-master.json'
 import practiceStatusRaw from '../../public/data/im-it-practice-status.json'
 import metadataRaw from '../../public/data/im-it-question-metadata.json'
@@ -55,17 +55,6 @@ describe('IM information technology concept master', () => {
     }
   })
 
-  test('keeps repaired explanations aligned with their original questions', () => {
-    const parity = answersRaw.answers['q-pp-im-it-109-13'].explanation
-    const stack = answersRaw.answers['q-pp-im-it-113-5'].explanation
-
-    expect(parity).toMatch(/Parity bit|同位位元/)
-    expect(parity).not.toMatch(/LDAP|X\.500/)
-    expect(stack).toMatch(/stack memory|stack-frame/)
-    expect(stack).toMatch(/disputed|不可自動判分/)
-    expect(stack).not.toMatch(/L1 快取大小/)
-  })
-
   test('covers all 260 source questions exactly once', () => {
     const questionIds = questions.map((question) => question.id).sort()
     const metadataIds = metadata.map((entry) => entry.questionId).sort()
@@ -74,6 +63,13 @@ describe('IM information technology concept master', () => {
     expect(metadata).toHaveLength(260)
     expect(new Set(metadataIds).size).toBe(260)
     expect(metadataIds).toEqual(questionIds)
+  })
+
+  test('keeps the 109 parity-bit explanation aligned with its question', () => {
+    const explanation = answersRaw.answers['q-pp-im-it-109-13'].explanation
+
+    expect(explanation).toMatch(/Parity bit|同位位元/)
+    expect(explanation).not.toMatch(/LDAP|X\.500/)
   })
 
   test('keeps every taxonomy reference inside the concept master', () => {

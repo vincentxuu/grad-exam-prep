@@ -1,0 +1,170 @@
+im
+了
+題 號 : 277 國 立 臺灣 大 學 114 學 年 度 碩士 班 招生 考試 試題
+科目 資訊 科技 概論 共 4 nee rae
+節 次 : 6
+一 、 選 擇 題 ( 單 選 )24 題 , BRIS, 共 60 分 , 請 在 每 題 的 選項 內 選擇 最 適當 的 答案 。
+注意: 答 錯 倒 扣 1 分 , 扣 至 止 。( 不 答 不 倒 扣 )
+
+K 注意 : 請 用 565 鉛筆 作答 於 答 宗 卡 , 並 先 詳 閱 答 案 卡 上 之 「 畫 記 說 明 J。
+
+1.[ |」Which of the following best describes the purpose of recursion in programming? (A) To
+optimize memory usage by eliminating loops (B) To solve problems by breaking them down into
+smaller, similar subproblems (C) To execute multiple tasks simultaneously using threads (D) To
+perform operations on arrays more efficiently (E) To handle errors during runtime automatically.
+
+2. | In object-oriented programming, what is the primary purpose of polymorphism? (A) To
+allow objects to inherit multiple classes (B) To provide a single interface for different
+implementations (C) To encapsulate data within a single class (D) To reuse existing code in derived
+classes (E) none of the above.
+
+3. | Which of the following data structures is most suitable for implementing a priority queue?
+(A) Stack (B) Queue (C) Binary Heap (D) Linked List (E) Hash Table.
+
+4. [____] Which of the following traversal techniques produces a sorted order for a binary search tree
+(BST)? (A) Preorder traversal (B) Postorder traversal (C) Inorder traversal (D) Level-order traversal
+(E) Reverse level-order traversal.
+
+5. | Consider the following algorithm for sorting an array of N numbers. It starts from the 13
+element of the array and compares it with the 2 element. If the 1* element is greater than the 2", the
+two elements are swapped. Then, the 2™ element is compared with the 3 element, and the two
+swapped if the 24 clement is greater. The process continues until the end of the array. The entire
+process is repeated for the first N-1 elements, N~2, ... and so on if the array is not yet sorted. What is
+the worst-case time complexity to sort an array of N numbers? (A) O(N) (B) O(N log N) (C) O(N") (D)
+O(log? N) (E) none of the above.
+
+6. |] Continue the above question. What is the best-case time complexity (A) O(1) (B) O(N) (C)
+OW log N) (D) O(N) (E) O(log? N).
+
+7. | In file systems, what is the primary purpose of an inode? (A) To store the actual content of
+a file (B) To store metadata about a file, such as permissions and timestamps (C) To allocate disk
+blocks to a file (D) To index all files in a directory (E) none of the above.
+過
+題 號 : 277 國 立 臺灣 大 學 114 學 年 度 碩士 班 招生 考試 試題
+科目 : 資 訊 科技 概論 是 號 :277
+MAR: 6 共 4 頁 之 第 2 頁
+|
+|
+| !
+|
+8. [_] Which of the following best describes the Banker’s Algorithm in an operating system? (A)
+| It is a deadlock avoidance algorithm that checks resource allocation safety. (B) It ensures mutual
+| exclusion in critical section problems. (C) It schedules processes in a round-robin manner. ()It i
+| optimizes disk scheduling to reduce seek time. (E) It manages cache replacement in virtual memory |
+| systems.
+9. [| Ina muttilevel feedback queue scheduling algorithm, which of the following is true? (A)
+Processes are assigned to a single queue for their entire lifetime. (B) The algorithm ensures that all
+processes are executed in a round-robin manner. (C) Processes can move between queues based on
+their behavior and priority. (D) Only 1/0-bound processes are prioritized over CPU-bound processes. |
+| (E) The algorithm is non-preemptive by default. |
+10.[ |] What is the primary purpose of a semaphore in an operating system? (A) To manage CPU
+scheduling among processes (B) To ensure mutual exclusion in concurrent programming (C) To
+optimize memory allocation in virtual memory (D) To transfer data between user and kernel space (E)
+To prioritize processes in a scheduling queue.
+11.[-___] In the context of virtual memory, what is the purpose of a page table? (A) To map virtual
+addresses to physical addresses (B) To store process control information (C) To manage CPU
+| scheduling among processes (D) To optimize I/O device access (E) To allocate space in secondary
+| storage for processes.
+| 12.[ ~~] Which SQL clause is used to filter groups of data after applying an aggregate function? (A)
+| DISTINCT (B) GROUP BY (C) HAVING (D) ORDER BY (E) none of the above.
+| 13.[___] In the context of database normalization, what is the purpose of 3NF (Third Normal Form)?
+(A) To ensure that non-primary-keys are transitively dependent (B) To ensure that all attributes are
+dependent only on the primary key (C) To reduce the number of tables in a schema. (D) To ensure
+1 that no non-primary-key attribute is transitively dependent on the primary key (E) To ensure that
+foreign keys reference valid primary keys.
+14. | What is the primary purpose of the JOIN operation in SQL? (A) To create a temporary
+table from existing tables (B) To combine columns from two or more tables based on a related
+column (C) To remove duplicate rows from a table (D) To restrict the rows returned. by a query (E)
+To calculate aggregate values across multiple tables.
+15.[_____] Which of the following is true about NoSQL databases compared to relational databases? |
+(A) NoSQL databases do not support indexing. (B) NoSQL databases use a fixed schema for data |
+|
+i
+| |
+y
+接 次 頁 |
+RES: 277 國 立 臺灣 大 學 114 學 年 度 碩士 班 招生 考試 試題
+科目 : 資 訊 科 技 概論 HABE: 277
+fir: 6 # 4 頁 之 第 3 頁
+storage. (C) NoSQL databases are better suited for structured data. (D) NoSQL databases are
+typically more scalable for distributed systems. (E) NoSQL databases do not support transactions.
+
+16.[ __] Inan ER (Entity-Relationship) diagram, what does a diamond-shaped symbol represent?
+(A) An attribute of an entity (B) A primary key (C) A weak entity (D) A multivalued attribute (E)
+none of the above.
+
+17. ]} What is the primary purpose of a database transaction log? (A) To store the results of
+executed queries for future reference. (B) To keep a record of all changes made to the database for
+recovery purposes. (C) To optimize the execution of complex queries. (D) To maintain a backup
+copy of the entire database. (E) To store metadata about tables and indexes.
+
+18.[____] What is a composite key in a relational database? (A) A key that consists of multiple
+columns to uniquely identify a row. (B) A key that acts as a foreign key in multiple tables. (C) A
+primary key that has been indexed for performance optimization. (D) A key that references another
+table’s unique identifier. (E) A virtual key created by combining data from different tables.
+
+19.[ | What is the main purpose of a subnet mask in TCP/IP? (A) To identify the default gateway
+(B) To define the host and network portions of an IP address (C) To encrypt data packets (D) To limit
+the size of a packet (E) none of the above.
+
+20.[____] What is the purpose of the “window size” field in the TCP header? (A) to specify the
+number of bytes that can be sent before an acknowledgment is received (B) To determine the length
+of the TCP header (C) To indicate the size of the sliding window buffer (D) To synchronize the
+sequence numbers of the sender and receiver (E) none of the above.
+
+21.[_____] Which routing algorithm is used by OSPF (Open Shortest Path First)? (A) Distance Vector
+(B) Link State (C) Path Vector (D) Flooding (E) none of the above.
+
+22.[_____] Which of the following statements about NAT (Network Address Translation) is
+INCORRECT? (A) NAT can hide internal IP addresses from external networks. (B) NAT helps
+conserve IPv4 address space. (C) NAT can interfere with end-to-end connectivity for some
+applications. (D) NAT operates at the Network layer of the OSI model. (E) all of the above are
+correct (choose this one only if none of the above can be chosen).
+
+23.[____] What is the primary purpose of the Domain Name System (DNS)? (A) To assign IP
+addresses to devices on a network (B) To translate domain names into IP addresses (C) To encrypt
+communication between devices (D) To manage routing tables in a network (E) To speed up routing
+between Internet hosts.
+|
+題 號 : 277 國 立 臺灣 大 學 114 學 年 度 碩士 班 招生 考試 試題
+科目 : 資 訊 科 技 概論 題 號 :277
+: Bk: 6b 共 4 頁 之 第 4 頁
+| !
+| 24.[_~_] Which of the following is INCORRECT about Software-Defined Networking (SDN)? (A)
+Data and control planes are tightly integrated. (B) SDN separates the control plane from the data
+i plane (C) SDN enables programmable networks using APIs (D) SDN uses abstraction to enable
+dynamic and programmatically efficient network configuration (E) all of the above are correct
+| (choose this one only if none of the above can be chosen),
+二 、 問 答題 , 共 40 分 。
+K 本 大 題 請 於 試卷 內 之 「 非 選擇 題 作答 區 | 標明 題 號 依 序 作答 。
+! 1. The following shows a pointer-based implementation of ADT Queue, which stores non-negative
+: integers in a circular linked list with one pointer —backptzx pointing to the last item in the list.
+class Queue
+{
+public:
+// return -1 if there is no integer in the queue;
+// otherwise, return the front integer in the queue
+int dequeue () ;
+// return the number of integers in the queue
+int length();
+// reverse the order of the integers in the queue
+void reverse ();
+“private:
+j struct QueueNode
+| {int item;
+| QueueNode — *next
+} // end QueueNode |
+QueueNode *backPtr;
+he
+|
+{a) (5 points) Write the Queue: : length () function that returns the number of integers in the queue.
+| (b) (10 points) Write the Queue: :qaqueue () function that outputs the front integer in the queue. Note:
+| The function returns -1 if there is no integer in the queue.
+: (c) (25 points) Write the Queue: :reverse() function that reverses the order of the integers in the
+| queue. Note: No extra memory allocation for queue nodes!!! Only pointer manipulation is allowed
+i when reversing the integers.
+|
+1
+|
+|
+i

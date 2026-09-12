@@ -1,0 +1,40 @@
+MAR: 378 國 立 臺灣 大 學 109 學 年 度 碩士 班 招生 考試 試題
+AB: 資訊 科技 概論 HR: 378
+RA: 6 #3 頁 之 第 3H
+class List
+{
+public:
+/f value: the integer to remove
+// success: whether the removal is successful or not
+void remove(int value, bool& success);
+private:
+// double the size of the array pointed by p_items
+void doubleArraySize();
+// pointing to an integer array that stores integers
+// initialized as p_items = new int[arraySize];
+int *p_items;
+// size of item arra
+. int arraySize; i} default 20
+// number of list items .
+int itemCount; //default 0
+he
+22. HEAP is a complete binary tree that provides an efficient implementation of priority queues.
+Suppose we use a heap to manage a list of positive integers that large values mean high priority.
+The following C++ code fragment shows the class definition of the heap.
+class HEAP ,
+{
+public:
+// boost items[i]’s priority
+. void boostPriority(int i,int newPriorityValue)
+private:
+int itemCount; // number of heap items
+int items[100j; // array of heap items
+MF
+(a) (20 points) Complete the following C++ function that boosts the priority value of element
+HEAP: :items [i].
+// assume 0 <= i < itemCount,
+// and newPriorityValue > items[i]
+void Heap: :boostPriority(int i,int newPriorityValue)
+{
+}
+試題 隨 卷 繳 回

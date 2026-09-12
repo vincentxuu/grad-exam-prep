@@ -1,0 +1,172 @@
+[
+  {
+    "questionId": "q-pp-im-it-113-1",
+    "firstVerdict": "corrected",
+    "firstReviewedAnswer": "E",
+    "secondVerdict": "agree_corrected",
+    "secondReviewedAnswer": "E",
+    "reasoning": "FAT32、exFAT、NTFS 與 APFS 都是實際且廣泛部署的檔案系統；A 至 D 無一符合 not popularly used，故唯一答案是 E。",
+    "sourceBasis": ["public/papers/pp-im-it-113.pdf 題面", "public/data/questions.json 題目交叉核對", "獨立檔案系統概念推導；無官方答案 key"],
+    "consensus": true
+  },
+  {
+    "questionId": "q-pp-im-it-113-2",
+    "firstVerdict": "corrected",
+    "firstReviewedAnswer": "B",
+    "secondVerdict": "agree_corrected",
+    "secondReviewedAnswer": "B",
+    "reasoning": "由同一 parent spawn 的不同 processes 通常仍各有獨立位址空間、stack 與 program counter；需要 shared memory 或 message passing 才能交換資料，因此 B 錯。",
+    "sourceBasis": ["public/papers/pp-im-it-113.pdf 題面", "public/data/questions.json 題目交叉核對", "獨立行程模型推導；無官方答案 key"],
+    "consensus": true
+  },
+  {
+    "questionId": "q-pp-im-it-113-4",
+    "firstVerdict": "corrected",
+    "firstReviewedAnswer": "A",
+    "secondVerdict": "agree_corrected",
+    "secondReviewedAnswer": "A",
+    "reasoning": "Von Neumann 架構的四個功能單元是 processor、memory、input、output；A 逐項對應，其他選項遺漏或混入 program counter、GPU、disk 等次層元件。",
+    "sourceBasis": ["public/papers/pp-im-it-113.pdf 題面", "public/data/questions.json 題目交叉核對", "獨立電腦架構推導；無官方答案 key"],
+    "consensus": true
+  },
+  {
+    "questionId": "q-pp-im-it-113-5",
+    "firstVerdict": "disputed",
+    "firstReviewedAnswer": "B",
+    "secondVerdict": "agree_disputed",
+    "secondReviewedAnswer": null,
+    "reasoning": "B 把每次 function call 的 stack-frame 配置歸給 OS，實際通常由編譯器產生的 calling convention/runtime 調整 stack pointer；但 A 也把所有 local variables 一概放在 stack，忽略 register allocation、static local 與最佳化。至少兩項按嚴格語意不成立，沒有唯一答案。",
+    "sourceBasis": ["public/papers/pp-im-it-113.pdf 題面", "public/data/questions.json 題目交叉核對", "獨立 stack 與 calling-convention 推導；無官方答案 key"],
+    "consensus": true
+  },
+  {
+    "questionId": "q-pp-im-it-113-6",
+    "firstVerdict": "disputed",
+    "firstReviewedAnswer": "E",
+    "secondVerdict": "agree_disputed",
+    "secondReviewedAnswer": null,
+    "reasoning": "C 只在手動管理記憶體的環境成立；D 則只在具有 garbage collector 的環境成立。題目未指定語言或 runtime，卻把兩種互斥生命週期模型都當成普遍敘述，因此無法由 E 或單一錯項得到跨環境唯一答案。",
+    "sourceBasis": ["public/papers/pp-im-it-113.pdf 題面", "public/data/questions.json 題目交叉核對", "獨立 heap 生命週期推導；無官方答案 key"],
+    "consensus": true
+  },
+  {
+    "questionId": "q-pp-im-it-113-7",
+    "firstVerdict": "corrected",
+    "firstReviewedAnswer": "C",
+    "secondVerdict": "agree_corrected",
+    "secondReviewedAnswer": "C",
+    "reasoning": "polled interrupt 由 processor 逐一詢問裝置以辨識來源；由裝置提供向量直接導向 ISR 是 vectored interrupt 的特徵，因此 C 錯。",
+    "sourceBasis": ["public/papers/pp-im-it-113.pdf 題面", "public/data/questions.json 題目交叉核對", "獨立 interrupt model 推導；無官方答案 key"],
+    "consensus": true
+  },
+  {
+    "questionId": "q-pp-im-it-113-8",
+    "firstVerdict": "corrected",
+    "firstReviewedAnswer": "A",
+    "secondVerdict": "agree_corrected",
+    "secondReviewedAnswer": "A",
+    "reasoning": "p 已明定為不受增加 processors 影響的 serial fraction；正規化執行時間是 p+(1-p)/n，speedup 是其倒數，所以選 A。",
+    "sourceBasis": ["public/papers/pp-im-it-113.pdf 題面與公式", "public/data/questions.json 題目交叉核對", "獨立 Amdahl law 代數推導；無官方答案 key"],
+    "consensus": true
+  },
+  {
+    "questionId": "q-pp-im-it-113-10",
+    "firstVerdict": "corrected",
+    "firstReviewedAnswer": "C",
+    "secondVerdict": "agree_corrected",
+    "secondReviewedAnswer": "C",
+    "reasoning": "將資料暫存於記憶體或其他儲存區，直到裝置或程式請求使用，正是 buffering；spooling 特指把工作排入周邊裝置佇列。",
+    "sourceBasis": ["public/papers/pp-im-it-113.pdf 題面", "public/data/questions.json 題目交叉核對", "獨立 I/O storage 概念推導；無官方答案 key"],
+    "consensus": true
+  },
+  {
+    "questionId": "q-pp-im-it-113-14",
+    "firstVerdict": "corrected",
+    "firstReviewedAnswer": "E",
+    "secondVerdict": "agree_corrected",
+    "secondReviewedAnswer": "E",
+    "reasoning": "CIA 的 C 與 A 分別是 confidentiality、availability；C 正確描述 ISMS，ISO/IEC 27000 系列也涵蓋資訊安全管理最佳實務。A 至 D 皆正確，故選 E。",
+    "sourceBasis": ["public/papers/pp-im-it-113.pdf 題面", "public/data/questions.json 題目交叉核對", "獨立資訊安全術語推導；無官方答案 key"],
+    "consensus": true
+  },
+  {
+    "questionId": "q-pp-im-it-113-15",
+    "firstVerdict": "corrected",
+    "firstReviewedAnswer": "C",
+    "secondVerdict": "agree_corrected",
+    "secondReviewedAnswer": "C",
+    "reasoning": "決定使用者可存取哪些資源及允許哪些操作是 authorization；accountability 是讓行為可歸責與稽核，因此 C 將兩者混淆。",
+    "sourceBasis": ["public/papers/pp-im-it-113.pdf 題面", "public/data/questions.json 題目交叉核對", "獨立 access-control 概念推導；無官方答案 key"],
+    "consensus": true
+  },
+  {
+    "questionId": "q-pp-im-it-113-17",
+    "firstVerdict": "corrected",
+    "firstReviewedAnswer": "C",
+    "secondVerdict": "agree_corrected",
+    "secondReviewedAnswer": "C",
+    "reasoning": "HTTPS 是 HTTP over TLS，也能配置 mutual TLS；但 TLS 技術上可使用 self-signed certificate 或直接信任私有 CA，協定不強制由受信任第三方簽發 server certificate，因此 C 的 requires 過強。",
+    "sourceBasis": ["public/papers/pp-im-it-113.pdf 題面", "public/data/questions.json 題目交叉核對", "獨立 TLS trust-model 推導；無官方答案 key"],
+    "consensus": true
+  },
+  {
+    "questionId": "q-pp-im-it-113-18",
+    "firstVerdict": "corrected",
+    "firstReviewedAnswer": "A",
+    "secondVerdict": "agree_corrected",
+    "secondReviewedAnswer": "A",
+    "reasoning": "ACID 的 A 是 atomicity，不是 availability；C、I、D 的展開均正確，因此唯一錯項是 A。",
+    "sourceBasis": ["public/papers/pp-im-it-113.pdf 題面", "public/data/questions.json 題目交叉核對", "獨立 transaction-property 推導；無官方答案 key"],
+    "consensus": true
+  },
+  {
+    "questionId": "q-pp-im-it-113-21",
+    "firstVerdict": "corrected",
+    "firstReviewedAnswer": "B",
+    "secondVerdict": "agree_corrected",
+    "secondReviewedAnswer": "B",
+    "reasoning": "繼承不保證 subclass 可繼承或存取 superclass 的所有 attributes 與 methods，例如 private members；B 的全稱敘述錯誤，其他三項是 OOP 基本定義。",
+    "sourceBasis": ["public/papers/pp-im-it-113.pdf 題面", "public/data/questions.json 題目交叉核對", "獨立 OOP inheritance 推導；無官方答案 key"],
+    "consensus": true
+  },
+  {
+    "questionId": "q-pp-im-it-113-22",
+    "firstVerdict": "corrected",
+    "firstReviewedAnswer": "B",
+    "secondVerdict": "agree_corrected",
+    "secondReviewedAnswer": "B",
+    "reasoning": "member variable 宣告在 class body；在 method body 宣告的是 local variable。class variable 單份共享與 instance variable 每物件一份的敘述均正確，因此 B 是唯一錯項。",
+    "sourceBasis": ["public/papers/pp-im-it-113.pdf 題面", "public/data/questions.json 題目交叉核對", "獨立 OOP variable-scope 推導；無官方答案 key"],
+    "consensus": true
+  },
+  {
+    "questionId": "q-pp-im-it-114-22",
+    "firstVerdict": "corrected",
+    "firstReviewedAnswer": "E",
+    "secondVerdict": "agree_corrected",
+    "secondReviewedAnswer": "E",
+    "reasoning": "NAT 可隱藏內部位址、節省 IPv4 位址，且會破壞部分 end-to-end connectivity；基本 NAT 改寫 IP header，通常歸在 OSI network layer。A 至 D 均成立，故選 E。",
+    "sourceBasis": ["public/papers/pp-im-it-114.pdf 題面", "public/data/questions.json 題目交叉核對", "獨立 NAT 網路層推導；無官方答案 key"],
+    "consensus": true
+  },
+  {
+    "questionId": "q-pp-im-it-115-8",
+    "firstVerdict": "disputed",
+    "firstReviewedAnswer": "D",
+    "secondVerdict": "agree_disputed",
+    "secondReviewedAnswer": null,
+    "reasoning": "priority scheduling without aging 可讓低優先權工作無限等待；SRTF 也可能在短工作持續抵達時讓長工作飢餓。因此 D 與 E 都符合 may cause starvation，題目沒有唯一答案。",
+    "sourceBasis": ["public/papers/pp-im-it-115.pdf 題面", "public/data/questions.json 題目交叉核對", "獨立 CPU scheduling 反例推導；無官方答案 key"],
+    "consensus": true
+  },
+  {
+    "questionId": "q-pp-im-it-115-22",
+    "firstVerdict": "disputed",
+    "firstReviewedAnswer": "A",
+    "secondVerdict": "agree_disputed",
+    "secondReviewedAnswer": null,
+    "reasoning": "BCNF 的正式條件是每個 non-trivial functional dependency X→Y 中 X 必須是 superkey。A 省略 non-trivial；按字面連 trivial dependency 也要求 X 為 superkey，並非 iff 定義。A 顯然是命題意圖，但嚴格題面不足以形成完全正確選項。",
+    "sourceBasis": ["public/papers/pp-im-it-115.pdf 題面", "public/data/questions.json 題目交叉核對", "獨立 BCNF 定義推導；無官方答案 key"],
+    "consensus": true
+  }
+]

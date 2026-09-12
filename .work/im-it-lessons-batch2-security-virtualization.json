@@ -1,0 +1,364 @@
+{
+  "lessons": [
+    {
+      "id": "lesson-im-it-security-cryptography-01",
+      "subtopicId": "im-it-security-cryptography",
+      "title": "密碼學、PKI 與 TLS：從金鑰到可信連線",
+      "summary": "先分清對稱加密、公開金鑰、雜湊與數位簽章的用途，再以憑證、CA／RA 與 TLS 串起網站身分驗證、機密性及完整性。對應考古題答案均為非官方技術覆核。",
+      "estimatedMinutes": 34,
+      "learningObjectives": [
+        "依安全需求選擇對稱加密、非對稱加密、雜湊或數位簽章",
+        "說明 RSA 與 AES 的角色差異，以及混合式加密為何同時使用兩者",
+        "判讀 X.509 憑證的重要欄位及 CA、RA、subject 的責任",
+        "解釋 TLS 如何建立 HTTPS 連線，以及 server authentication 與 mutual TLS 的差異"
+      ],
+      "sections": [
+        {
+          "title": "先從安全目標選工具",
+          "body": "密碼學工具解決的問題不同。加密把明文轉成只有持有適當金鑰者能還原的密文，主要保護 confidentiality；cryptographic hash 把任意長度輸入映成固定長度摘要，常用來檢查 integrity，但不能靠摘要還原原文；digital signature 由私鑰產生、由公鑰驗證，用來驗證訊息來源及內容未被竄改。單獨加密不自動證明寄件者身分，單獨雜湊也無法阻止攻擊者同時替換資料與摘要。",
+          "bullets": [
+            "Confidentiality：避免未授權者讀懂資料，典型工具是 encryption",
+            "Integrity：偵測內容是否改變，可用帶金鑰的 MAC 或 digital signature",
+            "Authentication：確認通訊對象或訊息來源，需要金鑰與可信身分綁定",
+            "Hash 是單向摘要；encoding 與 compression 都不是 encryption"
+          ]
+        },
+        {
+          "title": "對稱、非對稱與混合式加密",
+          "body": "對稱加密由雙方共用同一把秘密金鑰，AES 是現代常見標準；DES 金鑰空間過小，已不適合保護新系統。非對稱密碼使用一對相關的 public/private keys，RSA 是代表性演算法。用接收者公鑰加密時，對應私鑰才能解密；用簽署者私鑰產生簽章時，公鑰可驗證。非對稱運算成本較高且有資料長度與 padding 限制，因此實務通常用它建立或保護短小的 session key，再用對稱演算法處理大量資料。",
+          "bullets": [
+            "AES、DES、IDEA 與 Caesar cipher 都是對稱式；RSA 是非對稱式",
+            "公開金鑰可以公開，private key 必須由持有者保護",
+            "RSA 安全性與大整數分解困難相關，但安全實作仍依賴正確 padding 與金鑰長度",
+            "不要直接用 textbook RSA 加密任意大型使用者資料"
+          ]
+        },
+        {
+          "title": "憑證把身分綁到公鑰",
+          "body": "只有一把 public key，尚不能知道它屬於誰。X.509 digital certificate 以結構化欄位記錄 subject、subject public key、issuer、有效期間、serial number 等資訊，並由 issuer 簽章。CA 負責簽發與簽署憑證；RA 可協助驗證申請者身分與核准申請，但通常不負責簽發憑證。Serial number 在同一 issuer 範圍內識別憑證，CRL 或 OCSP 等撤銷機制也會利用 issuer 與 serial number 定位憑證。",
+          "bullets": [
+            "Certificate 證明的是身分與 public key 的受信綁定，不會公開 private key",
+            "Issuer 欄位指出簽發者；subject 欄位指出憑證所描述的實體",
+            "RA 驗證／註冊，CA 簽發／簽章，兩者角色不可互換",
+            "憑證有效期內仍可能被撤銷，因此只看日期不一定足夠"
+          ]
+        },
+        {
+          "title": "TLS 如何讓 HTTP 變成 HTTPS",
+          "body": "HTTPS 是在 TLS 保護通道上傳送 HTTP。握手期間，雙方協商參數、建立共享祕密，client 驗證 server 提供的憑證與其持有私鑰的證明；之後通常用高效率的對稱式 authenticated encryption 保護應用資料。公開網站多使用受 client trust store 信任的 CA 憑證，但 TLS 協定本身也能搭配私有 CA 或預先信任的 self-signed certificate。若 server 也要求 client 出示並證明持有 client certificate，則形成 mutual TLS。",
+          "bullets": [
+            "TLS 同時保護機密性、完整性，並通常驗證 server 身分",
+            "憑證內有 public key；private key 留在持有者端，不隨憑證傳送",
+            "受信第三方 CA 是公開 Web PKI 的部署慣例，不是建立 TLS 密文通道的唯一方式",
+            "mTLS 是雙向憑證驗證，不等同一般網站的密碼登入"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+        "prompt": "系統要傳送 500 MB 備份檔；Bob 已透過可信憑證取得 Alice 的 public key，Alice 也已取得 Bob 的 public key。可用 AES、RSA 與 digital signature，應如何組合，才能讓 Bob 確認檔案來自 Alice？",
+          "steps": [
+            "隨機產生一把短期 AES session key，用 AES authenticated encryption 加密大型備份檔。",
+            "用接收者 Bob 的 public key 保護 session key，使只有 Bob 的 private key 能取得它。",
+            "Alice 對必要的檔案 metadata 與密文摘要產生 digital signature。",
+            "Bob 解開 session key、驗證 Alice 的 signature，再解密並檢查 authenticated-encryption tag。"
+          ],
+          "answer": "大型資料用 AES；session key 由 Bob 的公開金鑰機制保護；Alice 的數位簽章提供來源與完整性驗證。不要直接用 RSA 處理整個 500 MB 檔案。"
+        },
+        {
+          "prompt": "某憑證顯示 Subject=shop.example、Issuer=Example CA、Serial=42，申請者身分由 Example RA 核對。誰簽章？撤銷清單如何指出這張憑證？",
+          "steps": [
+            "RA 的工作是核對與註冊申請資訊，不因參與核對就成為憑證簽章者。",
+            "Issuer=Example CA 表示 CA 簽發並以其私鑰簽署憑證。",
+            "Serial=42 只需在 Example CA 的簽發範圍內唯一。",
+            "撤銷資料以 issuer 與 serial number 的組合定位該憑證。"
+          ],
+          "answer": "Example CA 簽章；Example RA 負責身分核對。撤銷機制以 Example CA 所簽發、serial number 42 的憑證為目標。"
+        },
+        {
+        "prompt": "內部測試站使用 self-signed certificate，管理員已把該憑證安全地安裝到所有測試裝置的 trust store；憑證的 SAN/hostname、有效期與 key usage 都符合該站。這能建立 TLS 嗎？是否等同公開網站的第三方 CA 模式？",
+          "steps": [
+            "TLS 需要 client 能建立信任路徑或直接信任 server certificate，不必然要求公開第三方 CA。",
+            "裝置預先安全安裝該 self-signed certificate 後，可把它當作 trust anchor。",
+            "握手仍需 server 證明持有對應 private key，並建立 session keys。",
+            "未預先安裝信任的外部使用者不會自然信任此憑證，所以它不等同公開 Web PKI。"
+          ],
+          "answer": "可以建立且驗證 TLS，但信任來自管理員的預先配置，不是公開第三方 CA。未配置該 trust anchor 的 client 應拒絕或警告。"
+        }
+      ],
+      "commonPitfalls": [
+        "把 RSA、AES 都當成可互換的大量資料加密工具，忽略非對稱運算成本與訊息長度限制",
+        "認為 digital certificate 內含 private key；憑證公開的是 public key 與身分資訊",
+        "把 RA 說成負責簽發與簽章憑證；一般角色分工是 RA 核驗、CA 簽發",
+        "把 hash 當成可解密的加密，或以為沒有祕密金鑰的 hash 就能驗證傳送者身分",
+        "認為 HTTPS 技術上只能使用公開第三方 CA，忽略 private CA 與預先信任模式",
+        "只檢查憑證有效日期，忽略 hostname、chain、key usage 與 revocation 等驗證條件"
+      ],
+      "sourceRefs": [
+        "src-mit-network-computer-security",
+        "src-nist-cryptographic-standards"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-107-11",
+        "q-pp-im-it-107-21",
+        "q-pp-im-it-110-17",
+        "q-pp-im-it-111-12",
+        "q-pp-im-it-113-16",
+        "q-pp-im-it-113-17"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "lesson-im-it-os-virtualization-containers-01",
+      "subtopicId": "im-it-os-virtualization-containers",
+      "title": "虛擬化、容器與 Serverless：分清隔離邊界",
+      "summary": "從 hypervisor 與 virtual machine 出發，比較 container 的共享 kernel 模型，再辨認 cluster、network virtualization 與 serverless 各自解決的問題。對應考古題答案均為非官方技術覆核。",
+      "estimatedMinutes": 32,
+      "learningObjectives": [
+        "說明 virtualization、hypervisor、host 與 guest OS 的關係",
+        "比較 virtual machine 與 container 的隔離邊界、啟動成本及相依條件",
+        "區分 virtualization 與 clustering，並判斷兩者對可用性和資安的影響",
+        "解釋 serverless 的資源管理與計費抽象，而不誤解為沒有伺服器"
+      ],
+      "sections": [
+        {
+          "title": "Virtualization 把實體資源變成邏輯資源",
+          "body": "Virtualization 是以軟體建立硬體平台、儲存或網路資源的虛擬版本。系統虛擬化中，hypervisor 將 CPU、memory、storage 與 devices 配置給多個 virtual machines。每個 VM 看見自己的 virtual hardware，並可執行自己的 guest OS。Type 1 hypervisor 直接控制硬體；Type 2 hypervisor 執行在 host OS 上，但兩者核心工作都是隔離並仲裁資源。",
+          "bullets": [
+            "Host 是提供實體資源的一方，guest 是 VM 內執行的作業系統與工作負載",
+            "CPU virtualization 讓多個 virtual CPUs 分享實體處理器時間",
+            "Network virtualization 可把一個實體網路切成多個邏輯網路，也可建立跨實體網路的 overlay",
+            "Virtualization 不只等於 VM；storage 與 network 也能虛擬化"
+          ]
+        },
+        {
+          "title": "VM 與 Container 的隔離層不同",
+          "body": "VM 虛擬化硬體邊界，每個 VM 通常包含完整 guest OS 與 kernel；container 則由 host OS kernel 提供 process、filesystem、network 等隔離機制，container image 主要帶應用程式與 user-space dependencies。因為不必為每個 instance 啟動一套 guest kernel，container 通常啟動更快、額外記憶體占用較低。代價是它依賴 host kernel 提供的介面，隔離邊界也不同於硬體 VM。",
+          "bullets": [
+            "多個 containers 可以共享同一 host kernel，但擁有隔離的 namespaces 與受限資源",
+            "VM 可在同一硬體上執行不同 guest operating systems",
+            "Container 較輕量不代表零 overhead，也不代表沒有 resource contention",
+            "VM 通常提供較強的 kernel 隔離；實際安全仍依設定與漏洞狀況"
+          ]
+        },
+        {
+          "title": "Cluster 與 Virtualization 不是同義詞",
+          "body": "Computer cluster 把多個可獨立運作的 nodes 透過網路協同，目標可能是提高 computing power、擴充容量或改善 fault tolerance；virtualization 則在資源之上建立抽象與隔離。一個 cluster 可由實體機或 VMs 組成，單一主機也能在沒有 cluster 的情況下執行多個 VMs。增加節點與備援能改善可用性，但不會自動修補漏洞、阻止入侵或取代 access control。",
+          "bullets": [
+            "Cluster 關注多節點協同，VM 關注單一工作負載看到的虛擬硬體邊界",
+            "Fault tolerance 需要 replication、health checks 與 failover，不能只靠節點數量",
+            "高效能 cluster 可平行處理工作，但仍受通訊與不可平行部分限制",
+            "Clustering 不是 security control；錯誤設定也可能在所有節點複製"
+          ]
+        },
+        {
+          "title": "Serverless 仍然有 Server",
+          "body": "Serverless computing 把 server provisioning、OS patching、instance scaling 等基礎設施管理交給 cloud provider。開發者部署 function 或其他受管理工作負載，平台依事件動態配置執行資源，常按呼叫次數、執行時間與實際資源使用量計費。實體與虛擬 servers 仍存在，只是被平台抽象化。Serverless 適合事件驅動與間歇性工作，但仍需考慮 cold start、執行時間限制、外部狀態與 provider-specific interfaces。",
+          "bullets": [
+            "Serverless 的 server 由 provider 管理，不是物理上消失",
+            "通常不需預先購買固定 instance capacity，但仍可能有最低費用或配額",
+            "自動擴縮不保證無限容量，也不消除 downstream bottlenecks",
+            "Function instance 通常視為短暫執行環境，持久狀態應放在外部服務"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "一台 host 有 16 GB RAM。三個應用各需 1 GB；若每個 VM 的 guest OS 另需 2 GB，而三個 containers 共用 host kernel、不另計 guest OS，兩種方案的工作負載與 guest OS 記憶體需求各是多少？",
+          "steps": [
+            "VM 方案每個 instance 需要 1 GB app + 2 GB guest OS，共 3 GB。",
+            "三個 VMs 合計 3 × 3 GB = 9 GB。",
+            "Container 方案只計三個應用的 3 × 1 GB = 3 GB，因題目明定共享 host kernel 且不另計 guest OS。",
+            "兩者仍會有未列出的 runtime、page cache 與管理 overhead，不能把 3 GB 當成真實系統總占用。"
+          ],
+          "answer": "依題目簡化條件，VM 方案 9 GB，container 方案增量 3 GB；差額 6 GB 來自三套 guest OS。"
+        },
+        {
+          "prompt": "團隊要在 Linux host 上同時跑兩個 Linux Web apps，要求秒級擴縮；另有一個必須使用不同 kernel 的舊系統。應選 containers 還是 VMs？",
+          "steps": [
+            "兩個 Linux apps 可使用 host kernel，且重視快速啟動與密度，適合 containers。",
+            "舊系統要求不同 kernel，不能只靠共享 host kernel 的一般 container 提供。",
+            "為舊系統建立 VM，讓它擁有自己的 guest OS 與 kernel。",
+            "兩種技術可以混用：containers 也能部署在 VMs 之上。"
+          ],
+          "answer": "兩個 Linux Web apps 用 containers；需要不同 kernel 的舊系統用 VM。VM 與 container 不是互斥部署選項。"
+        },
+        {
+          "prompt": "公司把同一服務部署到三個 cluster nodes，任一節點失效就由其他節點接手。這是否同時保證服務不會被攻擊？",
+          "steps": [
+            "多節點與 failover 主要改善 availability，讓單點故障不立即中斷服務。",
+            "攻擊者仍可能利用共用軟體漏洞、外洩憑證或錯誤設定入侵所有節點。",
+            "若惡意流量耗盡共享依賴或控制平面，單純增加 nodes 也不一定有效。",
+            "仍需 patching、authentication、network controls、monitoring 與 incident response。"
+          ],
+          "answer": "不保證。Cluster 能改善故障容忍與可用性，但不是自動的資安防護。"
+        },
+        {
+          "prompt": "某 function 每次配置 0.5 GB、執行 0.2 秒，一天執行 10,000 次。若平台按 GB-second 計費，先不計免費額與其他費用，總用量是多少？這是否代表沒有 servers？",
+          "steps": [
+            "每次使用量是 0.5 GB × 0.2 s = 0.1 GB-second。",
+            "10,000 次合計 0.1 × 10,000 = 1,000 GB-seconds。",
+            "按實際 execution resource 計量符合 serverless 的常見抽象。",
+            "平台背後仍以實體機、VM 或 containers 執行，只是 provisioning 由 provider 管理。"
+          ],
+          "answer": "總用量為 1,000 GB-seconds；serverless 仍有 servers，只是開發者不直接配置與維護它們。"
+        }
+      ],
+      "commonPitfalls": [
+        "把 virtualization 只理解成 virtual machine，忽略 storage 與 network virtualization",
+        "認為 containers 各自包含完整 guest kernel；一般 containers 共享 host OS kernel",
+        "把較低 overhead 誤解為零資源競爭、零啟動成本或保證即時效能",
+        "把 cluster 與 VM 當成同一層技術；cluster 是多節點協同，VM 是資源抽象與隔離",
+        "認為 clustering 能自動阻止 security attacks；高可用與安全是不同目標",
+        "把 serverless 解讀成沒有 server，或以為 provider 自動擴縮就不再有配額、冷啟動與狀態限制"
+      ],
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-os-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-107-17",
+        "q-pp-im-it-111-5",
+        "q-pp-im-it-111-6",
+        "q-pp-im-it-112-9",
+        "q-pp-im-it-115-23",
+        "q-pp-im-it-115-29"
+      ],
+      "reviewStatus": "draft"
+    }
+  ],
+  "cards": [
+    {
+      "id": "card-im-it-security-cryptography-01",
+      "lessonId": "lesson-im-it-security-cryptography-01",
+      "subtopicId": "im-it-security-cryptography",
+      "front": "AES 與 RSA 最核心的差別是什麼？",
+      "back": "AES 是使用共享秘密金鑰的對稱式加密；RSA 使用 public/private key pair，屬非對稱式密碼。",
+      "explanation": "大型資料通常用 AES 等對稱式演算法處理；公開金鑰機制常用來保護 session key 或產生／驗證簽章。",
+      "sourceRefs": ["src-mit-network-computer-security", "src-nist-cryptographic-standards"],
+      "pastPaperRefs": ["q-pp-im-it-107-21", "q-pp-im-it-111-12"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-security-cryptography-02",
+      "lessonId": "lesson-im-it-security-cryptography-01",
+      "subtopicId": "im-it-security-cryptography",
+      "front": "為什麼不直接用 RSA 加密大型檔案？",
+      "back": "RSA 運算成本高，且可安全處理的訊息長度受 modulus 與 padding 限制；實務用它保護短 session key，再以對稱加密處理資料。",
+      "explanation": "這種混合式設計結合公開金鑰的 key establishment 與對稱式加密的效率。",
+      "sourceRefs": ["src-mit-network-computer-security", "src-nist-cryptographic-standards"],
+      "pastPaperRefs": ["q-pp-im-it-111-12", "q-pp-im-it-107-21"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-security-cryptography-03",
+      "lessonId": "lesson-im-it-security-cryptography-01",
+      "subtopicId": "im-it-security-cryptography",
+      "front": "Digital certificate 主要把哪兩件事綁在一起？",
+      "back": "把 subject 的身分或名稱與其 public key 建立可驗證的綁定，並由 issuer 簽章。",
+      "explanation": "憑證不包含 subject private key；驗證者還要檢查信任鏈、名稱、有效期間與用途等條件。",
+      "sourceRefs": ["src-mit-network-computer-security", "src-nist-cryptographic-standards"],
+      "pastPaperRefs": ["q-pp-im-it-110-17", "q-pp-im-it-107-11"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-security-cryptography-04",
+      "lessonId": "lesson-im-it-security-cryptography-01",
+      "subtopicId": "im-it-security-cryptography",
+      "front": "PKI 中 CA 與 RA 的角色有何不同？",
+      "back": "RA 協助核驗與註冊申請者；CA 簽發並以私鑰簽署 digital certificate。",
+      "explanation": "實際組織可能合併職能，但概念題不能把 registration authority 說成必然負責簽發與簽章。",
+      "sourceRefs": ["src-mit-network-computer-security", "src-nist-cryptographic-standards"],
+      "pastPaperRefs": ["q-pp-im-it-113-16", "q-pp-im-it-107-11"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-security-cryptography-05",
+      "lessonId": "lesson-im-it-security-cryptography-01",
+      "subtopicId": "im-it-security-cryptography",
+      "front": "Certificate serial number 與撤銷有什麼關係？",
+      "back": "Serial number 在 issuer 範圍內唯一識別憑證；CRL 或 OCSP 可用 issuer 與 serial number 指定被撤銷或查詢的憑證。",
+      "explanation": "Serial number 的基本功能是唯一識別，不是把完整 revocation record 存在憑證裡。",
+      "sourceRefs": ["src-mit-network-computer-security", "src-nist-cryptographic-standards"],
+      "pastPaperRefs": ["q-pp-im-it-107-11", "q-pp-im-it-110-17"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-security-cryptography-06",
+      "lessonId": "lesson-im-it-security-cryptography-01",
+      "subtopicId": "im-it-security-cryptography",
+      "front": "HTTPS 是否在技術上必須使用公開第三方 CA 簽發的 server certificate？",
+      "back": "不必然。公開網站通常依賴受信 CA，但 TLS 也能使用 private CA 或由 client 預先信任的 self-signed certificate。",
+      "explanation": "關鍵是 client 能建立信任並驗證 server 持有對應 private key；mTLS 還會反向驗證 client certificate。",
+      "sourceRefs": ["src-mit-network-computer-security", "src-nist-cryptographic-standards"],
+      "pastPaperRefs": ["q-pp-im-it-113-17", "q-pp-im-it-113-16"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-os-virtualization-containers-01",
+      "lessonId": "lesson-im-it-os-virtualization-containers-01",
+      "subtopicId": "im-it-os-virtualization-containers",
+      "front": "Virtualization 的核心概念是什麼？",
+      "back": "以軟體建立硬體平台、storage 或 network resources 的虛擬版本，讓實體資源能被抽象、分割或組合。",
+      "explanation": "VM 只是 virtualization 的一種；virtual storage 與 virtual network 也屬於相同抽象思路。",
+      "sourceRefs": ["src-brookshear-13e", "src-nthu-os-course"],
+      "pastPaperRefs": ["q-pp-im-it-107-17", "q-pp-im-it-111-5"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-os-virtualization-containers-02",
+      "lessonId": "lesson-im-it-os-virtualization-containers-01",
+      "subtopicId": "im-it-os-virtualization-containers",
+      "front": "Hypervisor 在 VM 架構中負責什麼？",
+      "back": "建立並執行 VMs，將實體 CPU、memory、storage 與 devices 仲裁、映射給各 guest。",
+      "explanation": "Type 1 直接控制硬體；Type 2 位於 host OS 之上。兩者都讓 guest 看見 virtual hardware。",
+      "sourceRefs": ["src-brookshear-13e", "src-nthu-os-course"],
+      "pastPaperRefs": ["q-pp-im-it-111-6", "q-pp-im-it-111-5"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-os-virtualization-containers-03",
+      "lessonId": "lesson-im-it-os-virtualization-containers-01",
+      "subtopicId": "im-it-os-virtualization-containers",
+      "front": "Container 為何通常比 VM 輕量？",
+      "back": "Containers 共享 host OS kernel，不必為每個 instance 啟動完整 guest OS，因此通常啟動較快、額外資源占用較少。",
+      "explanation": "共享 kernel 不代表零 overhead 或零風險；container 仍需要 isolation、resource limits 與安全設定。",
+      "sourceRefs": ["src-brookshear-13e", "src-nthu-os-course"],
+      "pastPaperRefs": ["q-pp-im-it-115-23", "q-pp-im-it-111-6"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-os-virtualization-containers-04",
+      "lessonId": "lesson-im-it-os-virtualization-containers-01",
+      "subtopicId": "im-it-os-virtualization-containers",
+      "front": "需要在同一 host 執行不同 kernels 時，應優先考慮 VM 還是一般 container？",
+      "back": "VM。每個 VM 可執行自己的 guest OS 與 kernel；一般 container 依賴並共享 host kernel。",
+      "explanation": "Containers 可以部署在 VMs 裡，因此兩者可以組合，不是只能二選一。",
+      "sourceRefs": ["src-brookshear-13e", "src-nthu-os-course"],
+      "pastPaperRefs": ["q-pp-im-it-111-6", "q-pp-im-it-115-23"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-os-virtualization-containers-05",
+      "lessonId": "lesson-im-it-os-virtualization-containers-01",
+      "subtopicId": "im-it-os-virtualization-containers",
+      "front": "Cluster 能提高 fault tolerance，是否也會自動防止 security attacks？",
+      "back": "不會。備援與 failover 改善 availability；漏洞、憑證外洩與錯誤設定仍需獨立安全控制。",
+      "explanation": "多節點甚至可能複製同一漏洞。Clustering、virtualization 與 security controls 解決的是不同問題。",
+      "sourceRefs": ["src-brookshear-13e", "src-nthu-os-course"],
+      "pastPaperRefs": ["q-pp-im-it-112-9", "q-pp-im-it-111-5"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-os-virtualization-containers-06",
+      "lessonId": "lesson-im-it-os-virtualization-containers-01",
+      "subtopicId": "im-it-os-virtualization-containers",
+      "front": "Serverless computing 的 defining characteristic 是什麼？",
+      "back": "Cloud provider 動態管理執行資源與擴縮，使用者通常按實際執行所消耗的資源計費，而非自行預先配置固定 server capacity。",
+      "explanation": "背後仍有 servers；serverless 表示 infrastructure management 被平台抽象化，不表示容量、延遲或狀態限制消失。",
+      "sourceRefs": ["src-brookshear-13e", "src-nthu-os-course"],
+      "pastPaperRefs": ["q-pp-im-it-115-29"],
+      "reviewStatus": "draft"
+    }
+  ]
+}

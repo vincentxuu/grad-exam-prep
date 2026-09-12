@@ -1,0 +1,14 @@
+{
+  "approved": true,
+  "summary": {
+    "decision": "approved",
+    "blockingCount": 0,
+    "majorCount": 0,
+    "minorCount": 0,
+    "lessonTechnicalAssessment": "LAN/Ethernet/ARP、shared versus switched Ethernet、CSMA/CD、binary exponential backoff、CSMA/CA、sliding window、802.1Q VLAN、inter-VLAN routing 與無線技術定位的核心敘述正確。四個 worked examples 都有足夠輸入，可依 steps 重現答案。NFC 已改為刻意靠近的近場互動，並明確涵蓋 passive tag 與 card-emulation 情境。",
+    "referenceAssessment": "7 個 pastPaperRefs 全部存在、primarySubtopicId 均為 im-it-network-link-lan，且目前 autoGradeEligible=true；兩個 sourceRefs 均為 reviewed networking sources。6 張 cards 的 sourceRefs/pastPaperRefs 全為 lesson refs 子集。q-pp-im-it-109-8 已改為與 5G 題面相符的解析；q-pp-im-it-111-7 已修為 48 bits/6 bytes，並說明 locally administered 與 spoof 例外。",
+    "provenanceAssessment": "Summary 已清楚分開原卷題面 refs 與本站人工技術覆核答案，並明示答案均非官方。",
+    "approvalRule": "最終回歸後 blocking=0、major=0，符合 approved=true。"
+  },
+  "issues": []
+}

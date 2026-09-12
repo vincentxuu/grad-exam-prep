@@ -1,0 +1,151 @@
+{
+  "sourcePdf": "public/papers/pp-im-it-112.pdf",
+  "replacementCount": 29,
+  "answers": {
+    "q-pp-im-it-112-1": {
+      "questionId": "q-pp-im-it-112-1",
+      "answer": "C",
+      "explanation": "Von Neumann 架構採 stored-program concept，資料與指令共用同一記憶體；(C) 描述的是 Harvard 架構。其餘敘述皆為典型 Von Neumann 架構特徵。"
+    },
+    "q-pp-im-it-112-2": {
+      "questionId": "q-pp-im-it-112-2",
+      "answer": "D",
+      "explanation": "CISC 指令功能通常較複雜，完成相同工作時程式的動態指令數可能少於 RISC，單一指令也常需較多時脈；但 CISC 的指令集通常比 RISC 大，不是更小，因此 (D) 錯。"
+    },
+    "q-pp-im-it-112-3": {
+      "questionId": "q-pp-im-it-112-3",
+      "answer": "E",
+      "explanation": "32 位元位址匯流排在 byte-addressable 系統可表示 2^32 個位址；memory-mapped I/O 與記憶體共用位址空間及存取指令；處理器內部儲存稱為 registers。A-D 皆正確，故選 (E)。"
+    },
+    "q-pp-im-it-112-4": {
+      "questionId": "q-pp-im-it-112-4",
+      "answer": "E",
+      "explanation": "中斷驅動 I/O 由外部裝置送出中斷訊號，使 CPU 暫停目前工作並執行 interrupt service routine；DMA 則透過專用硬體讓裝置與記憶體直接傳輸，減少 CPU 持續搬移資料的負擔。因此 (A) 至 (D) 都是正確描述，題目問錯誤者時應選代表皆正確的 (E)。"
+    },
+    "q-pp-im-it-112-5": {
+      "questionId": "q-pp-im-it-112-5",
+      "answer": "C",
+      "explanation": "現代 CPU 的 L1 cache 通常以數十 KB 計，而不是數十至數百 bytes，因此 (C) 錯。暫存器延遲通常低於 L1，容量也遠小於 L1；L2 通常大於 L1。"
+    },
+    "q-pp-im-it-112-6": {
+      "questionId": "q-pp-im-it-112-6",
+      "answer": "E",
+      "explanation": "作業系統負責協調處理器、儲存與周邊等資源，也管理行程生命週期、記憶體配置及存取安全。(A) Resource Management、(B) Process Management、(C) Memory Management、(D) Security Management 全都是主要功能，沒有一項符合題目的 not，故選 (E)。"
+    },
+    "q-pp-im-it-112-7": {
+      "questionId": "q-pp-im-it-112-7",
+      "answer": "C",
+      "explanation": "虛擬記憶體把位址空間與實體記憶體切成固定大小的 page/frame。在 x86、x86-64 與多數主流作業系統中，4KB 是最常見的基本 page size；系統雖可能另支援 large pages，但 128 bytes、512 bytes、128KB 與 512KB 都不是一般預設基本頁面大小，因此選 (C)。"
+    },
+    "q-pp-im-it-112-8": {
+      "questionId": "q-pp-im-it-112-8",
+      "answer": "B",
+      "explanation": "每個行程通常有彼此隔離的虛擬位址空間，並非所有 user-mode 應用程式共享同一個空間，因此 (B) 錯。A、C、D 都是 user/kernel mode 的正確敘述。"
+    },
+    "q-pp-im-it-112-9": {
+      "questionId": "q-pp-im-it-112-9",
+      "answer": "C",
+      "explanation": "電腦叢集通常由可獨立運作的節點透過高速區域網路連接，可分散工作以增加運算能力，也可藉由備援改善 fault tolerance；但把多台電腦組成 cluster 並不會自動防止惡意入侵或其他資安攻擊，仍需另外的安全控制。因此錯誤敘述是 (C)。"
+    },
+    "q-pp-im-it-112-10": {
+      "questionId": "q-pp-im-it-112-10",
+      "answer": "E",
+      "explanation": "作業系統的 process management 涵蓋建立與刪除 user/system processes、暫停與恢復行程、提供 process synchronization 機制，以及偵測、避免或處理 deadlock。因此 (A) 至 (D) 都是作業系統的一般責任，題目問哪一項不是時，應選表示全部皆屬其責任的 (E)。"
+    },
+    "q-pp-im-it-112-11": {
+      "questionId": "q-pp-im-it-112-11",
+      "answer": "D",
+      "explanation": "OS 會提供檔案建立刪除、完整性支援、磁碟排程與檔案/目錄操作原語；把檔案備份到永久媒體通常是備份工具或管理作業的責任，不是 OS 核心儲存管理職責，故選 (D)。"
+    },
+    "q-pp-im-it-112-12": {
+      "questionId": "q-pp-im-it-112-12",
+      "answer": "D",
+      "explanation": "單處理器在任一瞬間只能執行一個行程，但排程器可把 CPU 時間切成短小的 time slices，在多個 ready processes 之間快速切換，使多個程式看似並行並維持 CPU 使用率。這種 CPU scheduling 方法是 time slicing，不是 dynamic allocation、process rotating 或指令 pipelining，因此選 (D)。"
+    },
+    "q-pp-im-it-112-13": {
+      "questionId": "q-pp-im-it-112-13",
+      "answer": "C",
+      "explanation": "典型 Unix 行程位址空間由低至高包含 text、data/BSS、heap、memory-mapped area 與高位址 stack；stack 不會緊接在 data section 上方，故 (C) 錯。"
+    },
+    "q-pp-im-it-112-14": {
+      "questionId": "q-pp-im-it-112-14",
+      "answer": "B",
+      "explanation": "傳統共享式 Ethernet 的 CSMA/CD 在偵測到碰撞後使用 binary exponential backoff 決定重傳等待時間，因此答案是 (B)。RTS/CTS 與 collision avoidance 主要屬無線網路機制。"
+    },
+    "q-pp-im-it-112-15": {
+      "questionId": "q-pp-im-it-112-15",
+      "answer": "A",
+      "explanation": "交換器可依 IEEE 802.1Q 在 Ethernet frame 加入 VLAN tag，將同一套實體交換網路劃分成不同的廣播網域。不同標籤的流量在邏輯上如同位於彼此分離的 LAN，這正是 Virtual LAN 的用途；VPN 則通常是在不受信任網路上建立加密通道，概念不同，因此選 (A)。"
+    },
+    "q-pp-im-it-112-16": {
+      "questionId": "q-pp-im-it-112-16",
+      "answer": "C",
+      "explanation": "Distance-vector routing 由每台路由器週期性向直接鄰居交換距離/下一跳資訊並更新路由表，故選 (C)。Link-state 則向整個 routing domain flooding 鏈路狀態。"
+    },
+    "q-pp-im-it-112-17": {
+      "questionId": "q-pp-im-it-112-17",
+      "answer": "A",
+      "explanation": "TCP 建立連線使用 three-way handshake，不是 two-way handshake，因此 (A) 錯。stream-oriented、sliding-window flow control 與 sequence-number ordering 均正確。"
+    },
+    "q-pp-im-it-112-18": {
+      "questionId": "q-pp-im-it-112-18",
+      "answer": "D",
+      "explanation": "「在修補程式發布或部署前利用未知弱點」通常稱為 zero-day attack，而不是 first-day attack，因此 (D) 錯；A-C 分別正確描述 MITM、buffer overflow 與 SQL injection。"
+    },
+    "q-pp-im-it-112-19": {
+      "questionId": "q-pp-im-it-112-19",
+      "answer": "E",
+      "explanation": "Assembler 產生 relocatable machine code；linker 解決跨檔案符號；可採 static/dynamic linking；lexical 與 syntax analysis 皆在編譯階段。A-D 皆正確，故選 (E)。"
+    },
+    "q-pp-im-it-112-20": {
+      "questionId": "q-pp-im-it-112-20",
+      "answer": "A",
+      "explanation": "Wide-column/column-family NoSQL 通常允許稀疏、動態欄位，並非固定「預先定義數量的 columns」；B-D 是 key-value、document 與 graph store 的合理描述，故選 (A)。"
+    },
+    "q-pp-im-it-112-21": {
+      "questionId": "q-pp-im-it-112-21",
+      "answer": "E",
+      "explanation": "關聯式資料庫以 rows/columns 組成 tables，key 唯一識別 row，row 表示 record，column 表示 attribute；A-D 皆正確，故選 (E)。"
+    },
+    "q-pp-im-it-112-22": {
+      "questionId": "q-pp-im-it-112-22",
+      "answer": "C",
+      "explanation": "Foreign key 欄位在沒有 NOT NULL 約束時可以是 NULL；外鍵可參照另一表的 primary/unique key，同一表也可有多個 foreign keys，故 (C) 錯。"
+    },
+    "q-pp-im-it-112-23": {
+      "questionId": "q-pp-im-it-112-23",
+      "answer": "B",
+      "explanation": "Digital twin 是實體物件、設備或系統在數位環境中的對應模型，並可隨真實世界資料更新，用於 simulation、integration、testing、monitoring 與 maintenance。Avatar 側重使用者化身，virtual reality 是沉浸式環境，cloud object 也不是題述術語，因此選 (B)。"
+    },
+    "q-pp-im-it-112-24": {
+      "questionId": "q-pp-im-it-112-24",
+      "answer": "D",
+      "explanation": "Bitcoin mining 透過 proof-of-work 競爭建立區塊並驗證交易、形成共識；題目選項中最符合主要目的的是 (D) validate transaction。"
+    },
+    "q-pp-im-it-112-25": {
+      "questionId": "q-pp-im-it-112-25",
+      "answer": "B",
+      "explanation": "B-tree 的非葉節點若有 k 個 children，應有 k-1 個 keys，不是 k 個，因此 (B) 錯。其餘為題目採用的 B-tree 標準性質（最低子節點數的敘述通常不含 root 例外）。"
+    },
+    "q-pp-im-it-112-26": {
+      "questionId": "q-pp-im-it-112-26",
+      "answer": "E",
+      "explanation": "若 G 的所有邊都也在其 spanning tree T 中，由於 T 的邊本來就是 G 的子集，兩者邊集相同，所以 G=T 且 G 為樹；向 T 加入非樹邊必產生 cycle；圖也可能有多棵 spanning trees。A-D 皆正確，故選 (E)。"
+    },
+    "q-pp-im-it-112-27": {
+      "questionId": "q-pp-im-it-112-27",
+      "answer": "B",
+      "explanation": "Binary heap 插入先放在完全二元樹末端，再沿父鏈 sift up；樹高為 O(log n)，故最壞時間為 O(log n)，選 (B)。題幹把 min-heap 的不等號方向印反，但不影響插入的漸近複雜度。"
+    },
+    "q-pp-im-it-112-28": {
+      "questionId": "q-pp-im-it-112-28",
+      "answer": "C",
+      "explanation": "Min heap 只保證每個父節點的鍵值不大於其子節點，兄弟節點及不同子樹之間沒有完整排序。除了根節點最小值可在 O(1) 取得外，搜尋任意指定元素時不能像 binary search tree 一樣依比較結果排除整個子樹；最壞情況必須檢查全部 n 個節點，所以時間複雜度為 O(n)，選 (C)。"
+    },
+    "q-pp-im-it-112-29": {
+      "questionId": "q-pp-im-it-112-29",
+      "answer": "(a) pattern occurs at 4; pattern occurs at 8. (b) O(mn). (c) O(n/m) for the search phase (plus O(m + 256) preprocessing).",
+      "explanation": "(a) txt 的索引 4-6 與 8-10 都是 ABC，所以程式依序輸出兩行：`pattern occurs at 4`、`pattern occurs at 8`。(b) 最壞情況每個 alignment 只移動 1，且最多比較 m 個字元，最多約 n-m+1 個 alignments，因此 search phase 為 O(mn)；PREPROCESS 另為 O(m + 256)，不改變最壞主項。(c) 最佳情況每次在最右字元立即 mismatch，且 bad-character shift 可一次前進 m，約檢查 n/m 個 alignments，因此 search phase 為 O(n/m)；若計入前處理，總計 O(m + 256 + n/m)。"
+    }
+  }
+}

@@ -1,0 +1,138 @@
+[
+  {
+    "questionId": "q-pp-im-mis-106-1",
+    "answer": "N/A",
+    "explanation": "此題為問答題，無選擇題選項。(1) 差異化策略的IS/IT應用範例：①企業可利用CRM系統（顧客關係管理系統）蒐集並分析顧客行為與偏好，提供個人化服務與推薦，使顧客感受到與眾不同的體驗，如Amazon的推薦引擎；②企業可透過ERP整合供應鏈與生產資訊，搭配IoT感測器即時監控產品品質，確保高品質產品一致性，如Apple透過精密的供應鏈管理系統保持產品品質差異化。(2) 針對採用差異化策略的企業，IT策略與管理建議：企業應將IT投資集中在能強化獨特價值主張的系統上，例如客製化平台、數據分析與AI能力；應建立靈活的IT架構（如微服務、雲端平台），以快速回應市場變化並持續創新；IT治理上需強調IT與業務策略的高度對齊（IT-Business Alignment），確保資訊系統真正支持差異化優勢而非僅降低成本；同時須保護核心IT資產與數據資產，避免競爭者模仿，並持續投入研發以維持技術領先。",
+    "evidencePages": [
+      1
+    ],
+    "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
+  },
+  {
+    "questionId": "q-pp-im-mis-106-2",
+    "answer": "N/A",
+    "explanation": "本題為論述題，無標準選項，以下提供參考答案。共享經濟的主要挑戰包括：(1) 信任與安全問題：陌生人之間交易缺乏信任基礎，存在詐欺、人身安全或財產損失風險；(2) 監管與法律問題：現行法規多針對傳統產業設計，共享經濟的服務提供者（如 Uber 司機、Airbnb 房東）常處於法律灰色地帶；(3) 品質不一致問題：服務品質因個人提供者而異，缺乏標準化機制難以保障消費者體驗；(4) 保險與責任歸屬問題：發生意外時，責任歸屬於平台、提供者或使用者不明確。針對信任問題，可開發一套基於區塊鏈的去中心化評價與身分驗證系統：將每位用戶的交易紀錄、評價與身分資訊儲存於不可竄改的區塊鏈上，並結合政府數位身分（eID）驗證真實身份，使雙方在交易前即可查閱對方的完整信用歷史，有效降低資訊不對稱、提升交易安全性與信任度。",
+    "evidencePages": [
+      1
+    ],
+    "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
+  },
+  {
+    "questionId": "q-pp-im-mis-106-3",
+    "answer": "N/A",
+    "explanation": "本題為問答題，無選項，以下為各小題解答摘要。(1) 開放原始碼軟體（OSS）是指原始碼公開、任何人均可自由使用、修改與散布的軟體，通常由社群共同維護與開發。(2) GPL授權的核心條款包含：必須公開修改後的原始碼（Copyleft原則）、衍生作品必須同樣採用GPL授權、散布時必須附上原始碼或提供取得方式，確保軟體的自由性得以延續。(3) 當開發者希望允許商業公司將程式碼納入閉源專有軟體中使用，或希望吸引更多企業採用而不強制要求公開衍生作品原始碼時，應選擇Apache License而非GPL，因為Apache License屬於寬鬆型授權（permissive license），不具有Copyleft的「傳染性」要求。(4) 企業參與OSS開發的策略優勢包括：可影響軟體發展方向以符合自身需求、透過社群貢獻建立品牌聲譽與技術影響力、降低對單一供應商的依賴（vendor lock-in）、以及藉由社群力量加速創新並分攤開發與維護成本。",
+    "evidencePages": [
+      1
+    ],
+    "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
+  },
+  {
+    "questionId": "q-pp-im-mis-106-4",
+    "answer": "N/A",
+    "explanation": "此題為開放式問答題，無選擇題選項。(1) ACID特性方面：關聯式資料庫嚴格遵守ACID，確保每筆交易的原子性、一致性、隔離性與持久性；NoSQL資料庫通常採用BASE模型（Basically Available, Soft state, Eventually consistent），為了高可用性與水平擴展而放寬一致性要求。Schema方面：關聯式資料庫採用固定schema，資料結構須預先定義；NoSQL則為schema-less或schema-flexible，允許儲存非結構化或半結構化資料。可擴展性方面：關聯式資料庫主要採垂直擴展（scale-up），NoSQL設計上支援水平擴展（scale-out），更容易應對大規模分散式環境。(2) 應選關聯式資料庫的情境：銀行帳戶轉帳系統。此類應用對資料一致性與交易完整性要求極高，任何一筆轉帳都必須保證原子性，不容許部分失敗，ACID特性是必要條件。(3) 應選NoSQL資料庫的情境：社群媒體的動態消息（news feed）系統。此類應用需儲存大量非結構化內容（文字、圖片、標籤等）且讀寫量極大，採用NoSQL（如文件型資料庫MongoDB）可靈活應對多樣化資料結構，並透過水平擴展輕鬆支撐億級用戶的高併發需求。",
+    "evidencePages": [
+      1
+    ],
+    "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
+  },
+  {
+    "questionId": "q-pp-im-mis-107-1",
+    "answer": "N/A",
+    "explanation": "本題為申論題，無選項，以下為完整解析。編碼化策略（Codification Strategy）適合提供標準化、重複性高之產品或服務的企業，例如大型顧問公司（如 McKinsey 處理例行性專案）或軟體開發公司，因為這類企業的知識可被系統化提取並儲存於知識庫中，讓其他員工重複利用，達到規模經濟的效果。連結化策略（Connectivity/Personalization Strategy）則適合提供高度客製化、創新性或複雜問題解決的企業，例如策略顧問公司（如 Bain 處理獨特策略問題）或研發型企業，因為這類企業的知識具有高度隱性（tacit knowledge）且難以文字化，需透過建立專家目錄讓員工直接與領域專家互動，才能有效傳遞與運用知識。兩種策略的選擇核心在於知識的可編碼性與業務的重複性：當知識可明確化且服務可標準化時採編碼化策略；當知識高度隱性且服務高度客製化時採連結化策略。",
+    "evidencePages": [
+      1
+    ],
+    "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
+  },
+  {
+    "questionId": "q-pp-im-mis-107-2",
+    "answer": "N/A",
+    "explanation": "本題為申論題，無選項，以下提供標準答題方向。(1) 高環境豐裕性（High Munificence）下的IT策略：企業面對資源充裕、成長機會豐富的環境，應採取進攻性IT策略，積極投資資訊系統以擴大市場份額與競爭優勢。建議聚焦於建置策略性資訊系統（SIS），如ERP、CRM，以整合資源、提升效率，並透過大數據分析挖掘新商機，同時投入IT基礎設施以支援業務快速擴張。(2) 高環境動態性（High Dynamism）下的IT策略：企業面對需求波動大、客戶偏好快速變化的環境，應採取敏捷性IT策略，強調系統的彈性與適應能力。建議導入模組化、雲端化的IT架構，以便快速調整與部署；善用商業智慧（BI）與即時分析工具，強化對市場變化的感知與反應能力；並建立IT治理機制，確保資訊系統能夠支援組織快速決策與動態調整。",
+    "evidencePages": [
+      1
+    ],
+    "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
+  },
+  {
+    "questionId": "q-pp-im-mis-107-3",
+    "answer": "N/A",
+    "explanation": "本題為問答題，並無選項，以下為完整解答內容。機構取得軟體系統的潛在來源主要有以下幾種：(1) 自行開發（In-house Development）：需要具備完整的軟體開發團隊，包含系統分析師、程式設計師與測試人員，適合需求高度客製化、現有市場產品無法滿足業務需求的情境。(2) 委外開發（Outsourcing / Custom Development）：內部僅需少數專案管理人員與需求分析師來協調外部廠商，適合機構缺乏開發人力但有充足預算、且對系統有特定功能需求的情況。(3) 購買套裝軟體（Commercial Off-the-Shelf, COTS）：內部需要系統管理員與少數 IT 人員負責安裝、設定與維護，適合需求與市場標準功能相符、希望快速導入並降低開發風險的機構。(4) 開源軟體（Open Source Software）：需要具備技術能力的開發人員以進行客製化與維護，適合預算有限但擁有技術能力、且願意接受社群支援模式的機構。(5) 雲端服務／SaaS（Software as a Service）：內部幾乎不需要 IT 開發人力，僅需業務人員與少量 IT 管理人員，適合希望降低基礎建設成本、快速部署且接受訂閱制收費的機構。",
+    "evidencePages": [
+      1
+    ],
+    "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
+  },
+  {
+    "questionId": "q-pp-im-mis-108-4",
+    "answer": "N/A",
+    "explanation": "(a) 定義(1)對應公平概念，是因為它要求演算法對所有職業群體都具備相同的校準性（calibration）：若模型預測某組人有z的違約機率，則該組中確實違約的比例應接近z，代表模型對每個群體都同樣誠實、不偏袒任何一方。(b) 定義(2)要求在未來真正違約的人（正例）中，不同職業群體所獲得的平均風險分數相同，確保同樣「危險」的人在不同群體中受到一致的對待，避免某個群體的違約者被系統性地低估或高估風險。(c) 定義(3)要求在未來不會違約的人（負例）中，不同職業群體所獲得的平均風險分數相同，確保同樣「安全」的人不因職業不同而被賦予不同的風險評分，防止對無辜群體造成不公平的高風險標記。(d) 定義(1)最為合理，因為校準性（calibration）是最根本的公平要求，它保證模型輸出的機率對每個群體都具有實際意義，而定義(2)和(3)若同時滿足則在數學上往往與定義(1)矛盾（即不可能三者同時成立，除非基率相同），且校準性更能確保決策的一致性與可解釋性。(e) 台泰銀行應採取以下措施：首先確認模型在各職業群體的校準性，若發現偏差則針對各群體分別重新校準；其次蒐集具代表性的訓練資料，確保各職業群體樣本充足；並定期監控模型在不同群體的表現，建立公平性審查機制；最後應透明揭露模型決策依據，並提供申訴管道供客戶質疑不公平評分。",
+    "evidencePages": [
+      1,
+      2
+    ],
+    "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
+  },
+  {
+    "questionId": "q-pp-im-mis-109-2",
+    "answer": "N/A",
+    "explanation": "本題為申論題，無選項，以A作為代表性標記。(a) 組織性互補資產包含：去中心化的決策架構（允許員工自主決策以快速回應變化）、精實且彈性的業務流程（能配合IT系統進行流程再造）、以及強調學習與創新的組織文化（鼓勵知識分享與持續改善）。(b) 當企業採取創新策略時，組織性互補資產最為重要，因為創新需要彈性的組織結構與支持冒險的文化，去中心化決策能加速創新循環，而精實流程則能讓IT投資迅速轉化為競爭優勢。(c) 當IT投資涉及企業不熟悉的新興技術時，管理性互補資產最為關鍵，因為管理者需具備足夠的IT知識與技能來評估、導入並監督新技術的部署，缺乏這類管理能力將導致技術無法被有效利用，進而降低IT投資的回報。",
+    "evidencePages": [
+      1
+    ],
+    "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
+  },
+  {
+    "questionId": "q-pp-im-mis-109-3",
+    "answer": "N/A",
+    "explanation": "本題為申論題，選項（一）對應A：給消費者免運費或低運費，藉此累積大量消費者，再向餐廳抽取較高佣金。在三邊平台中，消費者是需求端的核心，消費者數量直接決定平台對餐廳的議價能力，因此以「補貼消費者、向餐廳收費」的交叉補貼模式最符合網路效應的邏輯。餐廳為了觸及更多消費者願意接受較高抽成，平台可從每筆訂單中獲取穩定且可觀的佣金收入，整體利潤最大化潛力最高。相較之下，選項（二）補貼餐廳雖能增加餐廳多樣性，但消費者對餐廳多樣性的敏感度低於對運費的敏感度，且向消費者收費會降低訂單量，不利於平台規模擴張。因此，選項（一）透過補貼價格彈性高的消費者端，並從價格彈性較低的餐廳端獲利，是最能最大化平台預期利潤的定價策略。",
+    "evidencePages": [
+      2
+    ],
+    "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
+  },
+  {
+    "questionId": "q-pp-im-mis-109-4",
+    "answer": "N/A",
+    "explanation": "本題為開放式申論題，無標準選項，故以 A 作為佔位符。建議的需求估計方法可採用「試營運結合感測器資料分析」的混合策略：首先在候選站點附近部署低成本 IoT 感測器（如人流計數器、手機藍牙/Wi-Fi 探針），收集行人流量與駐留時間，作為潛在需求的代理指標。其次，可參考類似地理條件已有站點的歷史租借數據，利用迴歸或機器學習模型，以土地使用類型、人口密度、大眾運輸距離等特徵預測新站點需求。此外，可在目標區域發放小規模問卷或透過 App 推播調查，評估民眾的使用意願，成本低且可獲取主觀偏好資料。最後，可在少數候選站點進行短期試營運（例如 3 個月），以實際租借量修正模型預測值，再決定全面佈建優先順序，兼顧技術可行性與成本合理性。",
+    "evidencePages": [
+      2
+    ],
+    "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
+  },
+  {
+    "questionId": "q-pp-im-mis-110-1",
+    "answer": "N/A",
+    "explanation": "此題為申論題，無單一選項答案。針對(a)部分，從非貨幣制轉為貨幣制時，需新增或強化的業務流程包括：訂價與費率管理流程（決定如何向用戶收費）、金流與支付處理流程（整合第三方支付或金融機構）、財務對帳與稅務申報流程，以及爭議與退款處理流程。針對(b)部分的IT策略建議，平台需導入安全的支付閘道系統（如PCI DSS合規）、強化資料加密與隱私保護機制、建置財務報表與分析系統以監控收益，並考慮採用雲端擴展架構以因應貨幣化後用戶成長的需求。整體而言，IT策略應從支援社群信任為主，轉型為兼顧交易安全與財務管理的複合型資訊架構。",
+    "evidencePages": [
+      1
+    ],
+    "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
+  },
+  {
+    "questionId": "q-pp-im-mis-110-2",
+    "answer": "N/A",
+    "explanation": "(a) 在數位市場中，消費者與供應商之間的資訊不對稱將會被降低。透過網際網路，消費者可以輕易搜尋並比較多家供應商的價格、品質與評價，使得原本供應商掌握的資訊優勢大幅縮小；這種現象稱為「資訊透明化」。對企業的商業影響包括：價格競爭更加激烈（因消費者可即時比價）、品牌忠誠度可能降低、供應商必須更注重服務品質與差異化策略，而非僅依賴資訊優勢來獲利。(b) 在數位市場中，轉換成本較傳統市場更高的產品/服務特性包括：需要大量個人化設定或資料積累的服務（如雲端儲存平台、訂閱制軟體），因為用戶已在平台上建立大量資料與習慣，轉換需付出高昂的遷移成本；以及具有強烈網路外部性的產品（如社群媒體），用戶越多價值越高，離開意味著失去整個社交網絡。反之，轉換成本較傳統市場更低的產品/服務特性包括：標準化且易於數位化的商品（如電子書、音樂下載），消費者只需點擊即可切換至其他平台；以及實體搜尋成本高但網路搜尋成本低的商品（如家電、書籍），在數位市場中消費者可以極低成本找到並比較不同供應商，大幅降低轉換障礙。",
+    "evidencePages": [
+      1
+    ],
+    "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
+  },
+  {
+    "questionId": "q-pp-im-mis-110-3",
+    "answer": "N/A",
+    "explanation": "本題為申論題，考查 Scrum 敏捷開發方法的核心概念。(a) Scrum Master 負責確保團隊遵循 Scrum 流程、排除障礙並促進溝通；Product Owner 負責定義產品需求、管理 Product Backlog 並代表利害關係人設定優先順序；Team 是由跨職能成員組成的自組織開發團隊，負責在每個 Sprint 中完成承諾的工作項目。(b) 每日站立會議（Daily Scrum）每天固定時間舉行，時間控制在 15 分鐘以內，每位成員回答三個問題：昨天完成了什麼、今天計畫做什麼、有什麼障礙需要排除。(c) Sprint Backlog 是從 Product Backlog 中挑選出當前 Sprint 要完成的工作項目清單，由團隊在 Sprint Planning 會議中建立，並在 Sprint 進行中由團隊自行管理與更新。(d) Burn Down Chart 是追蹤 Sprint 剩餘工作量的圖表，X 軸為時間（Sprint 天數），Y 軸為剩餘工作量（Story Points 或小時），理想線為直線下降至零，實際線反映每日進度，若實際線高於理想線表示進度落後。",
+    "evidencePages": [
+      2
+    ],
+    "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
+  },
+  {
+    "questionId": "q-pp-im-mis-110-4",
+    "answer": "N/A",
+    "explanation": "本題為申論題，無單一選項答案，以下為各子題重點說明。(a) 除電子收費資料外，可補充的資料包括：天氣預報資料（雨天/連假前後）、社群媒體與行事曆（連假出遊意願）、加油站/服務區人流資料、高鐵與航空訂票率（替代運具使用率）、歷年同節日車流量歷史資料等。(b) 可透過部署路側 IoT 感測器、整合氣象 API、爬取社群媒體與訂票平台資料、以及在服務區安裝人流感測器，配合雲端資料平台進行即時收集與整合。(c) 將多源資料輸入機器學習模型（如 LSTM、隨機森林），可學習節日、天氣、歷史車流的複合影響，對未來 1–7 天各路段壅塞機率進行預測，並透過動態路徑規劃提供用路人建議。(d) 主要 Actor 包括：用路人、交通管理人員、系統管理員、氣象資料提供者；主要 Use Case 包括：查詢壅塞預測、接收路況通知、管理感測器資料、更新路況模型、產生交通報告。(e) Use Case Diagram 應以系統邊界框住上述 Use Case，並以線條連結各 Actor 與其對應的 Use Case，例如用路人連結「查詢壅塞預測」與「接收路況通知」，交通管理人員連結「管理感測器資料」與「產生交通報告」。",
+    "evidencePages": [
+      2
+    ],
+    "reason": "The PDF presents an open-ended essay question with no answer choices; a letter answer is not applicable."
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "include": [
+    "../next-env.d.ts",
+    "../cloudflare-env.d.ts",
+    "../src/types/content.ts",
+    "../src/types/storage.ts",
+    "../src/lib/today-learning.ts",
+    "../src/lib/daily-learning.ts",
+    "../src/store/study-plan.ts",
+    "../src/app/api/sync/route.ts",
+    "../src/app/[exam]/today/page.tsx",
+    "../src/app/[exam]/plan/page.tsx",
+    "../src/components/study-plan/learning-evidence-forms.tsx",
+    "../src/components/sync/sync-panel.tsx",
+    "../src/components/layout/header.tsx",
+    "../src/__tests__/today-learning.test.ts",
+    "../src/__tests__/daily-learning.test.ts",
+    "../src/__tests__/learning-evidence-forms.test.tsx",
+    "../src/__tests__/study-plan.test.ts",
+    "../src/__tests__/sync.test.ts"
+  ],
+  "exclude": ["../node_modules"]
+}

@@ -1,0 +1,375 @@
+{
+  "lessons": [
+    {
+      "id": "lesson-im-it-network-ip-routing-transport-01",
+      "subtopicId": "im-it-network-ip-addressing-routing",
+      "coveredSubtopicIds": [
+        "im-it-network-ip-addressing-routing",
+        "im-it-network-transport"
+      ],
+      "title": "IP 定址、路由與傳輸：封包如何找到路，資料如何抵達應用程式",
+      "summary": "從 CIDR 與 subnet mask 判斷目的地主機是否在同一子網路，接著比較 distance-vector 與 link-state routing，理解 IPv4 TTL 如何限制封包壽命；最後以 TCP、UDP、receive window 與 congestion window 串起端到端傳輸。所引用考古題答案皆為技術推導與人工覆核結果，並非官方答案。",
+      "estimatedMinutes": 40,
+      "minimumPastPaperRefs": 7,
+      "learningObjectives": [
+        "用 prefix length 或 subnet mask 分出 IPv4 位址的 network 與 host portions，並以 AND 運算求 network address",
+        "依 routing table 的 longest-prefix match 選擇 next hop，並說明 TTL 防止封包在 routing loop 中無限循環",
+        "比較 distance-vector 與 link-state routing 的資訊交換範圍、路由器已知狀態與代表協定",
+        "比較 TCP 與 UDP 的連線、資料邊界、可靠性、排序與 header overhead",
+        "區分 receiver window 的 flow control 與 congestion window 的 congestion control，判斷可送出的 outstanding data 上限"
+      ],
+      "learningScenario": {
+        "title": "一份文件如何穿過郵政轉運站",
+        "hook": "你把一份文件寄往外地：信封寫著最終地址，各轉運站依地址選下一站，並在『最多還能轉幾站』的計數上減 1。若文件必須完整且照順序抵達，你會選可編號、確認與補寄的服務；若是可容忍少量遺失、重視即時性的短訊息，則可能選不等待逐件確認的投遞方式。",
+        "predict": "兩條路線都能涵蓋目的地址時，轉運站應選範圍較廣還是地址前綴較具體的路線？若剩餘轉送計數為 1，下一站還能再把文件轉送一次嗎？即時語音又為何可能不想等待遺失資料補齊？",
+        "mapping": [
+          {
+            "everyday": "信封上的最終收件地址",
+            "technical": "IP destination address，用於跨網路 forwarding"
+          },
+          {
+            "everyday": "轉運站從所有涵蓋地址的路線中選最具體的區域路線",
+            "technical": "Router 對 forwarding table 執行 longest-prefix match"
+          },
+          {
+            "everyday": "每經一個轉運站就減 1 的剩餘轉送計數，歸零即停止轉送",
+            "technical": "IPv4 TTL 每次處理至少減 1，歸零丟棄以限制 routing loop"
+          },
+          {
+            "everyday": "把連續文件編序、取得確認，缺頁時補寄並按順序交付",
+            "technical": "TCP connection 提供 reliable、in-order byte stream，使用 sequence、ACK 與 retransmission"
+          },
+          {
+            "everyday": "每張短訊各自投遞，不承諾送達、去重或依寄出順序交付",
+            "technical": "UDP connectionless datagram service，不保證 delivery、duplicate protection 或 ordering"
+          }
+        ],
+        "boundary": "郵政故事只用來區分 forwarding、TTL 與 transport service。IP 本身不保證封包送達；TTL 在現代題型中常按 router processing/hop 理解，不是牆上時鐘或郵件日期。TCP 提供 byte stream，不保留應用程式每次 write 的文件／頁面邊界，也不能保證網路永不 loss；UDP 應用仍可自行加入 acknowledgment、重傳或安全機制。真實 route 還受 prefix、metric、policy 與狀態影響，TCP 可送資料也同時受 rwnd、cwnd、ACK、loss 與實作限制，不能從郵務速度直接推導網路效能。",
+        "examCues": [
+          "多條 route 同時匹配 destination：選最長、最具體的 prefix；/0 是最不具體的 default route。",
+          "防止 packet 在 routing loop 無限循環：想到 IPv4 TTL；逐次處理至少減 1，歸零丟棄。",
+          "Reliable、in-order、connection-oriented byte stream：TCP；不要誤稱它保留 application message boundaries。",
+          "Connectionless、8-byte header、datagram boundaries、無 delivery/order 保證：UDP；即時應用仍須自行處理 timing 與 loss。"
+        ]
+      },
+      "sections": [
+        {
+          "title": "CIDR 與 subnet mask：先判斷目的地在不在同一網路",
+          "body": "IPv4 位址共有 32 bits。CIDR 的 /n 表示前 n bits 是 network prefix，其餘 32-n bits 是 host portion；等價的 subnet mask 由前 n 個 1 與其後的 0 組成。把 IP address 與 mask 逐 bit AND，就得到 network address。主機比較自己與目的位址的 network address：相同時可在本地鏈路尋找目的主機，不同時通常把封包交給 default gateway。Subnet mask 的工作是劃分 network 與 host portions，不是指出 gateway、加密封包或決定 MTU。",
+          "bullets": [
+            "/24 對應 255.255.255.0；/26 對應 255.255.255.192",
+            "Network address = IP address AND subnet mask",
+            "同一 prefix 不代表應用程式一定可連線；防火牆、VLAN 與主機狀態仍可能阻擋通訊",
+            "在一般 IPv4 subnet 中，host bits 全 0 是 network address、全 1 是 directed broadcast address；特殊 prefix 另有規則"
+          ]
+        },
+        {
+          "title": "Forwarding、longest-prefix match 與 IPv4 TTL",
+          "body": "Router 收到 IPv4 datagram 後，依 destination address 查 forwarding table。若多個 prefix 都匹配，選最長、也就是最具體的 prefix；若沒有更具體項目，才使用 default route。每經過一個轉送 datagram 的 router，IPv4 TTL 都至少減 1；當 TTL 歸零，router 丟棄封包，通常回送 ICMP Time Exceeded。TTL 因此限制封包可經過的 hops，避免錯誤 route 形成 loop 時無限消耗網路資源。",
+          "bullets": [
+            "Route entry 通常包含 destination prefix、next hop／outgoing interface 與 metric",
+            "Longest-prefix match 看 prefix 長度，不是看 route 寫在表格的先後順序",
+            "0.0.0.0/0 可作 IPv4 default route，任何目的位址都能匹配，但最不具體",
+            "TTL 是 hop limit，不是封包建立時間戳記，也不負責 fragmentation reassembly ordering"
+          ]
+        },
+        {
+          "title": "Distance-vector 與 link-state：路由器如何學會路徑",
+          "body": "Distance-vector router 把自己目前到各目的地的 distance estimate 傳給直接鄰居，再利用鄰居提供的資訊更新路由；典型例子是 RIP。Link-state router 則散布自己的 link-state information，使同一 routing domain 內的路由器建立拓撲資料庫，再各自計算 shortest-path tree；OSPF 是 link-state protocol。兩者都能 adaptive 地回應拓撲變化，但交換的資訊、路由器掌握的網路視圖與收斂問題不同。",
+          "bullets": [
+            "Distance-vector：和鄰居交換距離資訊，不要求每台 router 先取得完整拓撲",
+            "Link-state：flood link-state advertisements，建立 topology database 後算 shortest paths",
+            "OSPF Version 2 是單一 autonomous system 內使用的 link-state routing protocol",
+            "Flooding 是 OSPF 散布 link-state information 的機制，不等於把 OSPF 分類成單純 flooding routing"
+          ]
+        },
+        {
+          "title": "Transport layer：TCP 與 UDP 把資料交給正確應用程式",
+          "body": "Transport protocol 使用 port numbers 在同一主機上 multiplex 與 demultiplex application flows。TCP 是 connection-oriented，向應用程式提供 reliable、in-order byte stream；它用 sequence numbers、acknowledgments、checksum 與 retransmission 處理遺失或錯誤，但不保留應用程式每次 write 的 message boundary。UDP 提供 datagram service，header 固定 8 bytes、機制較少，不保證 delivery、duplicate protection 或 ordering；應用程式若需要這些性質，必須自行設計或改用合適協定。",
+          "bullets": [
+            "TCP connection 以 endpoints 識別，建立連線時使用 three-way handshake",
+            "TCP 的 reliable byte stream 不代表每個應用訊息只會對應一個 TCP segment",
+            "UDP connectionless 且保留 datagram boundaries，但低 overhead 不等於永遠低 latency",
+            "選 TCP 或 UDP 要依可靠性、延遲、訊息模型及應用程式能否自行處理遺失來決定"
+          ]
+        },
+        {
+          "title": "TCP 的兩種窗口：flow control 不等於 congestion control",
+          "body": "Receiver advertised window（rwnd）由接收端通告，限制 sender 可送入接收窗口的資料範圍，以免壓垮 receiver buffer，這是 flow control。Congestion window（cwnd）是 sender 維護的新資料傳送限制，用來控制注入網路的資料量，這是 congestion control。在目前窗口固定、沒有因 cwnd 驟降而留下較大既有 flight 的簡化題型中，可送或維持的 outstanding data 上限可寫成 min(rwnd, cwnd)。若 loss 後 cwnd 突然縮小，已在途的 flight size 可能暫時大於新的 cwnd，此時 sender 不應再增加在途資料，而要等待 ACK 使 flight size 降低。Slow start 用 ACK 回饋逐步增加 cwnd，目的是探測未知的 network capacity；在常見的簡化題型中，每個 segment 都被 ACK 且無損失時，cwnd 約每 RTT 加倍，但實際初始窗口與成長會受標準、ACK 行為及實作影響。",
+          "bullets": [
+            "rwnd 保護 receiver；cwnd 保護 network，兩者控制的瓶頸不同",
+            "TCP header 的 Window field 通告接收端目前願意接受的資料範圍",
+            "窗口固定的簡化題型以 min(rwnd, cwnd) 限制可新增或維持的 outstanding data；cwnd 驟降後既有 flight 可暫時超過新 cwnd",
+            "Slow start 的 exponential growth 是常用近似；它不能保證完全避免 loss 或 retransmission"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "主機位址是 192.168.10.77/26。求 subnet mask、network address、broadcast address 與一般可用 host range，並判斷 192.168.10.120 與 192.168.10.130 是否在同一 subnet。",
+          "steps": [
+            "/26 的 mask 前 26 bits 為 1，因此是 255.255.255.192；最後一個 octet 的 block size 是 256-192=64。",
+            "最後一個 octet 的區段為 0–63、64–127、128–191、192–255；77 落在 64–127。",
+            "Network address 是 192.168.10.64，broadcast address 是 192.168.10.127。",
+            "一般可用 host range 排除 network 與 broadcast，為 192.168.10.65–192.168.10.126。",
+            "120 落在 64–127，因此同 subnet；130 落在 128–191，因此不同 subnet，通常交給 default gateway。"
+          ],
+          "answer": "Mask=255.255.255.192；network=192.168.10.64；broadcast=192.168.10.127；一般 hosts=.65–.126。位址 .120 同 subnet，.130 不同 subnet。"
+        },
+        {
+          "prompt": "Router 有四條 route：10.0.0.0/8→R1、10.20.0.0/16→R2、10.20.30.0/24→R3、0.0.0.0/0→R4。目的位址為 10.20.30.77，且抵達本 router 時 TTL=2。應選哪個 next hop？若之後還必須經過兩台 routers 才到目的端，封包會如何？",
+          "steps": [
+            "10.20.30.77 同時匹配 /8、/16、/24 與 /0。",
+            "最長匹配是 10.20.30.0/24，所以目前 router 選 R3，而不是第一條匹配 route。",
+            "目前 router 轉送前把 TTL 由 2 減為 1。",
+            "下一台 router 再轉送時 TTL 由 1 減為 0，必須丟棄封包；它通常送回 ICMP Time Exceeded，因此封包無法再經第三次 router forwarding 抵達目的端。"
+          ],
+          "answer": "使用 /24 的 R3。TTL 只能再支撐一次後續 router forwarding；下一台 router 將 TTL 減至 0 並丟棄，所以不能穿過所需的兩台後續 routers。"
+        },
+        {
+          "prompt": "協定甲只把目前的 destination-distance 資訊傳給直接鄰居；協定乙讓 routers 取得區域拓撲資料庫，再各自建立 shortest-path tree。判斷兩者類型，並指出 OSPF 屬於哪一種。",
+          "steps": [
+            "甲的交換對象是直接鄰居，內容是到各目的地的 distance estimate，符合 distance-vector。",
+            "乙先散布 link states 並建立拓撲圖，再計算 shortest-path tree，符合 link-state。",
+            "OSPF Version 2 規格明定它是 link-state protocol，因此屬於乙。",
+            "不要因 OSPF 使用 flooding 傳遞 advertisements，就把它誤判為 distance-vector 或單純 flooding routing。"
+          ],
+          "answer": "甲是 distance-vector；乙是 link-state；OSPF 屬於 link-state。"
+        },
+        {
+          "prompt": "某 TCP sender 目前 rwnd=12 MSS、cwnd=4 MSS，且沒有其他限制。最多可有多少尚未確認資料？若用簡化 slow-start 模型，起始 cwnd=1 MSS、每個 segment 都及時 ACK 且無 loss，三個 RTT 後 cwnd 約為多少？另說明即時語音若可容忍少量遺失，為何常考慮 UDP。",
+          "steps": [
+            "Outstanding data 上限是 min(rwnd,cwnd)=min(12,4)=4 MSS。",
+            "簡化 slow start 每 RTT 約加倍：起始 1 MSS，第一個 RTT 後 2 MSS。",
+            "第二個 RTT 後 4 MSS，第三個 RTT 後 8 MSS；這是題目明定 ACK 與無損失條件下的近似模型。",
+            "即時語音常重視延遲，且能容忍少量遺失；UDP 不需 TCP connection establishment、header 較小，也不強制 in-order retransmission。",
+            "UDP 本身不保證較快或可靠；應用程式仍需自行處理 timing、loss concealment 或安全。"
+          ],
+          "answer": "最多 4 MSS outstanding；簡化模型三個 RTT 後 cwnd≈8 MSS。可容忍少量遺失且重視延遲的即時語音常考慮 UDP，但必要的可靠性與時序機制須由應用層補足。"
+        }
+      ],
+      "commonPitfalls": [
+        "把 subnet mask 當成 default gateway；mask 只界定 network 與 host portions",
+        "看到多條 route 都匹配時選第一條，而不是 longest-prefix match",
+        "把 TTL 當 timestamp，或以為它負責 TCP segment ordering",
+        "把 OSPF 使用 flooding 的步驟誤解成 OSPF 不是 link-state protocol",
+        "以為 TCP 是 message-oriented；TCP 提供的是 byte stream，不保留 write boundaries",
+        "以為 UDP 完全沒有 checksum，或宣稱 UDP 必然比 TCP 快",
+        "混淆 rwnd 與 cwnd：前者是 receiver flow control，後者是 sender congestion control",
+        "把 slow start 的簡化倍增序列當成所有現代 TCP 實作在任何 ACK／loss 條件下的固定行為"
+      ],
+      "sourceRefs": [
+        "src-ietf-rfc4632-cidr",
+        "src-ietf-rfc791-ipv4",
+        "src-ietf-rfc2328-ospfv2",
+        "src-ietf-rfc9293-tcp",
+        "src-ietf-rfc768-udp",
+        "src-ietf-rfc5681-tcp-congestion"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-112-16",
+        "q-pp-im-it-114-19",
+        "q-pp-im-it-114-21",
+        "q-pp-im-it-115-13",
+        "q-pp-im-it-114-20",
+        "q-pp-im-it-115-14",
+        "q-pp-im-it-115-15"
+      ],
+      "reviewStatus": "draft"
+    }
+  ],
+  "cards": [
+    {
+      "id": "card-im-it-network-ip-routing-transport-01",
+      "lessonId": "lesson-im-it-network-ip-routing-transport-01",
+      "subtopicId": "im-it-network-ip-addressing-routing",
+      "front": "CIDR 的 /n 與 subnet mask 如何界定 IPv4 network address？",
+      "back": "/n 表示前 n bits 是 network prefix；mask 的前 n bits 為 1。將 IP address 與 mask 做 bitwise AND，即得 network address。",
+      "explanation": "例如 /24 是 255.255.255.0。Mask 不負責指出 default gateway、加密或 MTU；它的核心用途是區分 network 與 host portions。",
+      "sourceRefs": [
+        "src-ietf-rfc4632-cidr"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-114-19"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-network-ip-routing-transport-02",
+      "lessonId": "lesson-im-it-network-ip-routing-transport-01",
+      "subtopicId": "im-it-network-ip-addressing-routing",
+      "front": "Router 面對多條匹配 route 時如何選擇？IPv4 TTL 的主要目的又是什麼？",
+      "back": "選 longest-prefix match；每次 router forwarding 都將 TTL 至少減 1，TTL 歸零就丟棄，防止封包在 routing loop 中無限循環。",
+      "explanation": "Default route /0 最不具體，只在沒有更長匹配時使用。TTL 是 hop limit，不是建立時間或封包排序欄位。",
+      "sourceRefs": [
+        "src-ietf-rfc791-ipv4",
+        "src-ietf-rfc4632-cidr"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-115-13"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-network-ip-routing-transport-03",
+      "lessonId": "lesson-im-it-network-ip-routing-transport-01",
+      "subtopicId": "im-it-network-ip-addressing-routing",
+      "front": "Distance-vector 與 link-state routing 的核心差異是什麼？OSPF 屬於哪一類？",
+      "back": "Distance-vector 與直接鄰居交換到目的地的距離資訊；link-state 散布鏈路狀態、建立拓撲資料庫後計算 shortest paths。OSPF 是 link-state。",
+      "explanation": "OSPF 會用 flooding 散布 link-state advertisements，這是傳遞狀態的機制；RFC 2328 明確把 OSPF 定義為 link-state routing protocol。",
+      "sourceRefs": [
+        "src-ietf-rfc2328-ospfv2"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-112-16",
+        "q-pp-im-it-114-21"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-network-ip-routing-transport-04",
+      "lessonId": "lesson-im-it-network-ip-routing-transport-01",
+      "subtopicId": "im-it-network-transport",
+      "front": "TCP 與 UDP 在服務模型與 overhead 上有何差異？",
+      "back": "TCP 是 connection-oriented 的 reliable、in-order byte stream；UDP 是 connectionless datagram service，header 為 8 bytes，不保證 delivery、duplicate protection 或 ordering。",
+      "explanation": "UDP 機制較少，但不代表任何應用都一定更快；應依可靠性、延遲與訊息邊界需求選擇。TCP 也不保留應用程式 write boundaries。",
+      "sourceRefs": [
+        "src-ietf-rfc9293-tcp",
+        "src-ietf-rfc768-udp"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-115-14"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-network-ip-routing-transport-05",
+      "lessonId": "lesson-im-it-network-ip-routing-transport-01",
+      "subtopicId": "im-it-network-transport",
+      "front": "TCP header 的 Window field 主要支援哪一種控制？",
+      "back": "它通告 receiver window（rwnd），限制 sender 未經進一步 ACK 可送出的資料範圍，避免接收端 buffer 被壓垮，屬於 flow control。",
+      "explanation": "真正可送的 outstanding data 還會受 sender 的 congestion window（cwnd）限制；簡化表示為不超過 min(rwnd,cwnd)。",
+      "sourceRefs": [
+        "src-ietf-rfc9293-tcp",
+        "src-ietf-rfc5681-tcp-congestion"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-114-20"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-network-ip-routing-transport-06",
+      "lessonId": "lesson-im-it-network-ip-routing-transport-01",
+      "subtopicId": "im-it-network-transport",
+      "front": "TCP slow start 的主要目的與常見簡化成長規則是什麼？",
+      "back": "目的在逐步探測未知的 network capacity；在每個 segment 都獲 ACK 且無損失的簡化模型下，cwnd 約每 RTT 加倍。",
+      "explanation": "cwnd 是 sender-side congestion-control limit。實際 initial window 與成長受標準、ACK 行為、loss 與實作影響，不能把 1、2、4、8 當成所有連線的固定序列。",
+      "sourceRefs": [
+        "src-ietf-rfc5681-tcp-congestion"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-115-15"
+      ],
+      "reviewStatus": "draft"
+    }
+  ],
+  "proposedSourceRegistryEntries": [
+    {
+      "id": "src-ietf-rfc4632-cidr",
+      "title": "RFC 4632: Classless Inter-domain Routing (CIDR): The Internet Address Assignment and Aggregation Plan",
+      "author": "V. Fuller and T. Li",
+      "publisher": "RFC Editor / IETF",
+      "type": "documentation",
+      "url": "https://www.rfc-editor.org/rfc/rfc4632.html",
+      "scope": [
+        "networking",
+        "ipv4-addressing",
+        "cidr",
+        "routing-aggregation"
+      ],
+      "usage": "primary-specification",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-ietf-rfc791-ipv4",
+      "title": "RFC 791: Internet Protocol",
+      "author": "J. Postel",
+      "publisher": "RFC Editor",
+      "type": "documentation",
+      "url": "https://www.rfc-editor.org/rfc/rfc791.html",
+      "scope": [
+        "networking",
+        "ipv4",
+        "forwarding",
+        "time-to-live"
+      ],
+      "usage": "primary-specification",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-ietf-rfc2328-ospfv2",
+      "title": "RFC 2328: OSPF Version 2",
+      "author": "J. Moy",
+      "publisher": "RFC Editor / IETF",
+      "type": "documentation",
+      "url": "https://www.rfc-editor.org/rfc/rfc2328.html",
+      "scope": [
+        "networking",
+        "routing",
+        "link-state",
+        "ospf"
+      ],
+      "usage": "primary-specification",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-ietf-rfc9293-tcp",
+      "title": "RFC 9293: Transmission Control Protocol (TCP)",
+      "author": "W. Eddy (Ed.)",
+      "publisher": "RFC Editor / IETF",
+      "type": "documentation",
+      "url": "https://www.rfc-editor.org/rfc/rfc9293.html",
+      "scope": [
+        "networking",
+        "transport-layer",
+        "tcp",
+        "flow-control"
+      ],
+      "usage": "primary-specification",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-ietf-rfc768-udp",
+      "title": "RFC 768: User Datagram Protocol",
+      "author": "J. Postel",
+      "publisher": "RFC Editor",
+      "type": "documentation",
+      "url": "https://www.rfc-editor.org/rfc/rfc768.html",
+      "scope": [
+        "networking",
+        "transport-layer",
+        "udp"
+      ],
+      "usage": "primary-specification",
+      "status": "reviewed"
+    },
+    {
+      "id": "src-ietf-rfc5681-tcp-congestion",
+      "title": "RFC 5681: TCP Congestion Control",
+      "author": "M. Allman, V. Paxson, and E. Blanton",
+      "publisher": "RFC Editor / IETF",
+      "type": "documentation",
+      "url": "https://www.rfc-editor.org/rfc/rfc5681.html",
+      "scope": [
+        "networking",
+        "transport-layer",
+        "tcp",
+        "congestion-control",
+        "slow-start"
+      ],
+      "usage": "primary-specification",
+      "status": "reviewed"
+    }
+  ]
+}

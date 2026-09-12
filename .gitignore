@@ -53,6 +53,12 @@ next-env.d.ts
 # omc
 /.omc/
 
+# local research notes
+/.research/
+
+# local conflict-resolution backups
+/tmp/rebase-backup/
+
 # generated question files (regenerable from questions.json)
 /public/data/qfiles/
 
