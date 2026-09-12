@@ -1,0 +1,20 @@
+AAR: 375 國 立 臺 灣 大 學 110 學 年 度 碩士 班 招生 考試 試題
+科目 : 資 訊 科技 概論 題 號:375
+節 次 : 6 共 4 頁 之 第 4 頁
+(a) (10 points) Show the tree structure given the following data content.
+root_index: 0
+ane eftchild index rightehild_index
+0 Jane dees 38
+1 Bob -l 4
+2 Tom 2 則 Joe
+3 Alan a 5
+4 Ellen 2 4 st
+5 Nancy al a
+6 ? -t > BD
+7 ? a 8
+8 ? a 9
+(b) (20 points) Write the BinaryTree: : removeAliLeaf () that removes ALL leaf nodes from a
+binary tree. Note that you also need to implement the protected function .
+BinaryTree::recurRemoveLeaf() called by removeAllLeaf() that recursively
+traverses the tree to delete all the leaf nodes.
+試題 隨 卷 繳 回

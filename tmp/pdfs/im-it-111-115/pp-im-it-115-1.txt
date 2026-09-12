@@ -1,0 +1,56 @@
+題 號 : 258 國 立 臺 灣 大 學 115 學 年 度 碩士 班 招生 考試 試題
+
+AB: 資訊 科技 概論 MH 1 258
+a: 6 共 4 頁 之 第 1 頁
+> RAM ( 單 選 ) 30 題 , 每 題 2 分 , 共 0 分, 請 在 每 題 的 選項 內 選擇 最 適當 的 答案 。
+
+ee: 答 錯 倒 扣 0.5 分 , 扣 至 零 分 為 止 。( 不 答 不 倒 扣 )
+
+※ 注意 WA 2 急 筆 作答 於 答案 卡 , 並 先 詳 閥 答案 卡 上 之 「 畫 記 說 明 」*
+
+ih. [|] Which of the following data structures provides O(1) average-time complexity for insertion, deletion, and search? (A)
+Binary search tree (B) Balanced binary search tree (C) Hash table (D) Sorted array (E) Heap.
+
+b. [|] Which of the following best describes the worst-case time complexity of QuickSort? (A) O(n) (B) O(n log n) (C)
+O(log n) (D) O(n?) (E) O(n).
+
+b. [|] Whatis the time complexity of inserting an element into a binary heap? (A) O(1) (B) O(n) (C) O(log n) (D) O(n log n)
+{E) O(n)
+
+4. [____] Which data structure is most appropriate for checking if an expression has balanced parentheses (e.g., ( (a+b) *c) )?
+(A) Queue (B) Stack (C) Binary Search Tree (D) Hash Table (E) Graph.
+
+. [ __] Which of the following sorting algorithms is not stable? (Meaning relative order of equal elements is not guaranteed to
+be preserved). (A) Insertion Sort (B) Merge Sort (C) Bubble Sort (D) QuickSort (E) none of the above.
+
+6. “[_____] What is the prerequisite for performing a Topological Sort on a graph? (A) The graph must be undirected. (B) The
+graph must be a tree. (C) The graph must be a Directed Acyclic Graph (DAG). (D) The graph must be fully connected. (E) The
+graph must have non-negative edge weights.
+
+. [____] Which of the following best describes the role of a cache memory in a computer system? (A) To permanently store
+program instructions (B) To reduce average memory access time (C) To manage virtual memory (D) To schedule CPU processes
+(E) To translate virtual addresses to physical addresses.
+
+ls. [-____] Which of the following CPU scheduling algorithms may cause starvation? (A) Round Robin (B) First-Come,
+First-Served (C) Multilevel feedback queue (with aging) (D) Priority scheduling without aging (E) Shortest remaining time first.
+
+9, [|] Which of the following best describes a context switch? (A) Switching between CPU cores (B) Changing page tables
+(C) Reloading cache blocks (D) Switching from kernel mode to user mode (E) Saving and restoring process execution state
+
+lo. [____] ina pipelined processor, which situation most directly leads to a pipeline stall? (A) Instruction prefetching (B) Data
+hazard due to operand dependency (C) Branch prediction hit (D) Cache hit (E) Register renaming
+
+LE. | Which CPU scheduling algorithm has the smallest average waiting time for a given set of processes? (A) First-Come,
+
+| Fisst-Served (FCFS) (B) Shortest Job First (SJF) (C) Round Robin (RR) (D) Multilevel Queue (E) Priority Scheduling.
+
+12. 呈 ‘What is the phenomenon called “Thrashing” in a virtual memory system? (A) The system spends more time paging
+(swapping pages in and out) than executing processes, (B) The hard disk fails due to excessive read/write operations. (C) A
+process enters an infinite loop. (D) Multiple processes are deadlocked waiting for resources. (E) The CPU pipeline is constantly
+flushed due to branch mispredictions.
+
+13. [|] What is the primary function of the Time to Live (TTL) field in an IPv4 header? (A) To determine the timestamp of
+when the packet was created. (B) To prioritize the packet for Quality of Service (QoS). (C) To ensure the packet is reassembled
+in the correct order. (D) To prevent packets from circulating indefinitely in a routing loop. (E) none of the above.
+
+. 14. [_____] Which of the following is a characteristic of UDP (User Datagram Protocol) compared to TCP? (A) It guarantees

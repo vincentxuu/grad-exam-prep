@@ -1,0 +1,32 @@
+f
+
+y
+
+題 號 : 343 國 立 臺 灣 大 學 111 學 年 度 碩士 班 招生 考試 試題
+
+科目 : 資訊 科 技 概論 題 號 8343
+
+節 ak: 6 共 4 頁 之 第 3 頁
+an entity may be any object, class, person or place (C) attribute is used to describe the property of
+an entity (D) diamond shape is used to represent attribute (E) all of the above are correct (choose
+this one only if none of the above can be chosen).
+
+22. 上 refers to the part of an operating system that loads and links the shared libraries
+needed by an executable when it is executed at run time, by copying the content of libraries from
+persistent storage to RAM, filling jump tables and relocating pointers. (A) code generation (B)
+code loader (C) assembler (D) dynamic linker (E) none of the above.
+
+23. | Which of the following is wrong about “metaverse”? (A) it envisions a future of social
+connection in a 2D virtual world (B) VR is a key technology in metaverse (C) Facebook changed
+its name to “meta’’ to usher in the metaverse (D) blockchain is a key technology in metaverse to
+offer digital proof of ownership for assets in the metaverse (E) all of the above are correct (choose
+this one only if none of the above can be chosen).
+
+24. 上] Which of the following is wrong about non-fungible token (NFT)? (A) NFTs can be
+associated with digital files such as photos, videos, and audio to show ownerships (B) NFT is a unique
+and non-interchangeable unit of data stored on a blockchain (C) two copies of a digital file can be
+associated with two different NFTs (D) assets in the metaverse case be traded as NFTs (E) all of
+the above are correct (choose this one only if none of the above can be chosen).
+
+=) .
+見 背 面

@@ -1,0 +1,78 @@
+. ° ~
+
+題 號 : 386 圈 立 臺灣 大 學 107 學 年 度 碩士 班 招生 考試 試 是
+
+科目 : 資訊 科技 概論 BS? 386
+
+foe: 6 #3 頁 之 第 之 頁
+non-repeatable read (D) lost update (E) none of the above.
+
+8. Which of the following about Open Systems Interconnection (OSI) reference model is wrong? (A) Layer 3
+is Network Layer (B) Layer 6 is Presentation (C) IP belongs to Layer 3 (D) UDP belongs to Layer 4 (E) all
+of the above are correct (choose this only if none of the above can be chosen).
+
+9. Which of the following is a computer network authentication protocol that works on the basis of tickets to
+allow nodes communicating over a non-secure network to prove their identity to one another in a secure
+manner? (A) Kerkeros (B) Dynamic Host Configuration Protocol (C) Secure Remote Password protocol
+(SRP) (D) Internet Key Exchange (E) none of the above.
+
+10. Which of the following is relatively not a main concern of the HTTPS protocol? (A) authentication of the
+accessed website (B) protection of communication privacy (C) protection of man-in-the-middle attacks (D)
+fault tolerance (E) protection of tampering of the communication.
+
+11. Which of the following about digital certificate is wrong? (A) the “Serial Number” field in a digital certificate
+is used to track revocation information (B) the “Issuer” field specifies the entity that verified the information
+and signed the certificate (C) it needs to contain the certificate owner’s public key (D) X.509 is a standard
+that defines the format of public key certificates (E) all of the above are correct (choose this only if none of
+the above can be chosen).
+
+12. Which of the following about Single Sign-On (SSO) is wrong? (A) it reduces password fatigue from different
+user name and password combinations (B) it reduces time spent re-entering passwords for the same identity
+(C) log-in with Facebook account is an example of SSO (D) log-in with Google account is an example of
+SSO (E) all of the above are correct (choose this only if none of the above can be chosen).
+
+13. Which of the following enables users to send and receive data across shared or public networks as if their
+computing devices were directly connected to the private network? (A) Transport Layer Security (B) Secure
+Sockets Layer (C) Virtual Private Network (D) Network Address Translation (E) none of the above.
+
+14. Which of the following is not a file system? (A) Hierarchical File System (HFS) (B) New Technology File
+System (NTFS) (C) Extended File Allocation Table (exFAT) (D) third extended filesystem (ext3) (E)
+Microsoft Disk Operating System (MS-DOS).
+
+15. Which of the following best describes a specialized hardware-dependent computer program which is also
+operating system specific that enables another program to interact transparently with a hardware device? (A)
+firmware (B) device driver (C) application programming interface (D) hardware platform interface (E)
+intelligent platform management interface.
+
+16. Which of the following is wrong? (A) the primary goal of CISC (Complex Instruction Set Computer)
+architecture is to complete a task in as few lines of assembly code as possible (B) the RISC (Reduced
+Instruction Set Computer) approach is designed to execute computing tasks with the simplest instructions in
+the shortest amount of time possible (C) Intel x86 architecture is typically considered as a CISC approach
+(D) ARM architecture is typically considered as a RISC approach (E) all of the above are correct (choose
+this only if none of the above can be chosen).
+
+17. Which of the following refers to the act of creating a virtual version of something, including virtual computer
+hardware platforms, storage devices, and computer network resources? (A) virtual reality (B) augmented
+reality (C) virtualization (D) hypervisor (E) none of the above.
+
+18. Which of the following about Bitcoin is wrong? (A) “mining” is a process to use a user’s computing power
+to verify and record payments in the system (B) currently, new coins are created through the process of
+“mining” (C) there is no central administrator involved in the issue of new coins (D) both money sender and
+receiver do not need to know each other (other than a meaningless number) in money transfer (E) all of the
+above are correct (choose this only if none of the above can be chosen).
+
+19. Which of the following about the Blockchain technology used in Bitcoin is wrong? (A》 is a continuously
+growing list of “blocks” recording transaction history of the Bitcoin system (B) the blocks in a blockchain
+can be distributed to different peers so that no peer is required to maintain the complete list of the blocks in
+the system (C) all transactions in the blocks are kept anonymous and encrypted (D) blockchains are inherently
+resistant to modification of the data that have been recorded into blocks (E) all of the above are correct
+{choose this only tf none of the above can be chosen).
+
+20. Which of the following is correct about the CIA Triad of information security model? (A) “C” refers to
+Control (B) “C” refers to Cryptography (C) “I” refers to Identification (D) “A” refers to Anonymous (BE) “A”
+refers to Availability.
+
+21. Which of the following is not a symmetric encryption mechanism? (A) DES (B) IDEA (C) RSA (D) Caesar
+
+% »p> 買
+接 次 頁

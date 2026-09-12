@@ -1,0 +1,306 @@
+{
+  "lessons": [
+    {
+      "id": "lesson-im-it-os-processes-threads",
+      "subtopicId": "im-it-os-processes-threads",
+      "title": "行程、執行緒與作業系統如何管理執行",
+      "summary": "從作業系統的資源管理角色出發，辨認 process 與 thread 的資源邊界，理解 user mode、kernel mode、IPC 與 context switch，並能排除考題中常見的混淆敘述。",
+      "estimatedMinutes": 32,
+      "learningObjectives": [
+        "說明作業系統在行程生命週期與資源管理中的責任。",
+        "比較 process 與 thread 的位址空間、執行狀態與溝通成本。",
+        "解釋 user mode、kernel mode 與 system call 的控制轉移。",
+        "依 context switch 的保存與恢復流程判斷系統成本。"
+      ],
+      "sections": [
+        {
+          "title": "作業系統是資源管理者",
+          "body": "應用程式不直接任意控制 CPU、記憶體與裝置。作業系統建立抽象介面，追蹤資源擁有者，並在多個工作之間執行保護與分配。考題若問作業系統的主要功能，通常要從資源、行程、記憶體、儲存、I/O 與安全管理來判斷。",
+          "bullets": [
+            "行程管理包含建立、終止、暫停、恢復與同步行程。",
+            "CPU scheduling 決定下一個可執行工作，但排程演算法細節屬另一子主題。",
+            "deadlock handling 與 IPC 也是作業系統協調多個行程的重要工作。",
+            "Android 使用 Linux kernel；Linux 是 Unix-like，但不能把整個 Unix 家族一概視為開源。"
+          ]
+        },
+        {
+          "title": "Process：正在執行的程式實例",
+          "body": "program 是靜態的指令與資料，process 則是程式的一次執行實例。作業系統為 process 維護 PID、位址空間與已開啟資源，並為其中每個 thread 維護 program counter、register state 與 stack。不同 process 原則上受記憶體保護而隔離，不會因為由同一 parent 建立就自動共享位址空間。",
+          "bullets": [
+            "同一個 program 可以同時產生多個彼此獨立的 processes。",
+            "每個 process 有自己的執行狀態與受保護的 virtual address space。",
+            "父子 processes 若要交換資料，需使用 pipe、message passing、socket 或明確設定的 shared memory。",
+            "multiprocessing 可利用多核心平行執行，提高 throughput，但也增加協調成本。"
+          ]
+        },
+        {
+          "title": "Thread：共享資源的執行路徑",
+          "body": "thread 是 process 內的一條執行路徑。一個 process 可有多個 threads，共享 code、heap 與多數 process 資源；每個 thread 仍需保有自己的 program counter、register state 與 stack，才能獨立前進。共享位址空間讓 threads 溝通較便宜，也同時帶來 race condition 的風險。",
+          "bullets": [
+            "thread 通常比 process 更 lightweight，建立與切換成本較低。",
+            "同一 process 的 threads 可直接讀寫共享資料，不代表讀寫天然安全。",
+            "每個 thread 的 stack 分離，否則函式呼叫與區域狀態會互相破壞。",
+            "process isolation 較強；thread sharing 較快，兩者是隔離與成本的取捨。"
+          ]
+        },
+        {
+          "title": "User mode、Kernel mode 與 System Call",
+          "body": "一般應用程式在 user mode 執行，不能直接存取 kernel 保留的位址或執行特權指令。需要檔案、網路或建立行程等服務時，程式透過 system call 進入 kernel，由核心驗證參數並執行受保護操作，完成後再回到 user mode。mode switch 是權限層級改變，不一定等同 scheduler 切換到另一個 process/thread；本文的 context switch 專指這種 execution entity 的切換。",
+          "bullets": [
+            "不同 processes 通常各有自己的 user virtual address space，而不是全部應用共用一個。",
+            "kernel code 在 kernel mode 執行，可管理硬體與受保護資源。",
+            "system call、interrupt 或 exception 都可能使 CPU 進入核心處理流程。",
+            "只有當執行主體也更換時，才需要完整的 process/thread context switch。"
+          ]
+        },
+        {
+          "title": "Context Switch 保存了什麼",
+          "body": "CPU 從一個 thread 或 process 改執行另一個時，作業系統必須保存目前執行狀態，並恢復下一個工作的狀態。最低限度包含 program counter、stack pointer 與必要 registers；process switch 還可能更換 address-space mapping。這段時間沒有直接推進使用者工作，因此是多工的必要成本。",
+          "bullets": [
+            "context switch 的核心定義是保存與恢復 execution state。",
+            "在 CPU cores 之間移動工作可能伴隨 switch，但不是定義本身。",
+            "單純從 user mode 進入 kernel mode，若仍執行同一工作，不必然是 context switch。",
+            "過度切換會增加 scheduler、cache 與 TLB 等額外成本。"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "某瀏覽器的兩個分頁由不同 processes 執行。因為它們有同一 parent，所以是否自然共享 memory、stack 與 program counter？",
+          "steps": [
+            "先辨認執行單位是兩個 processes，而非同一 process 的 threads。",
+            "process 有各自受保護的位址空間與執行狀態。",
+            "parent-child 關係不會取消隔離；共享資料必須使用 IPC 或明確 shared memory。"
+          ],
+          "answer": "不會。兩個 processes 各有自己的受保護位址空間；各 process 內的 threads 分別持有 stack、program counter 與 registers，只有透過明確 IPC 機制才交換資料。"
+        },
+        {
+          "prompt": "同一 process 中兩個 threads 同時修改購物車總額。共享 heap 是否代表不需要同步？",
+          "steps": [
+            "threads 確實共享 process 的 heap，因此都能看到同一筆資料。",
+            "讀取、計算、寫回可能由多個機器指令組成。",
+            "兩條執行路徑交錯時可能遺失更新，形成 race condition。"
+          ],
+          "answer": "不是。共享讓溝通便宜，但仍需 mutex、atomic operation 或其他同步方法保護複合更新。"
+        },
+        {
+          "prompt": "程式呼叫 read() 讀檔，CPU 進入 kernel mode，完成後回到同一 thread。這一定是 process/thread context switch 嗎？",
+          "steps": [
+            "read() 是 system call，必須進入 kernel mode。",
+            "mode switch 描述 privilege level 改變。",
+            "若核心沒有改排程到另一個 thread，執行主體仍相同，沒有完整保存／恢復另一個 execution context。"
+          ],
+          "answer": "不一定。這一定發生 mode switch，但只有 scheduler 實際換到另一個 thread/process 時才是 process/thread context switch。"
+        },
+        {
+          "prompt": "排程器準備把 CPU 從 P1 切換到 P2。請列出最關鍵的動作。",
+          "steps": [
+            "保存 P1 的 program counter、stack pointer 與 registers。",
+            "更新 P1 狀態並選定 P2。",
+            "必要時切換 address-space mapping。",
+            "恢復 P2 的 registers 與 program counter，讓 P2 從上次位置繼續。"
+          ],
+          "answer": "context switch 的核心是保存 P1 execution state、恢復 P2 execution state；process switch 可能再加上位址空間切換。"
+        }
+      ],
+      "commonPitfalls": [
+        "把 program 與 process 當成同義詞；前者是靜態內容，後者是執行實例。",
+        "誤以為同一 parent 建立的 processes 自動共享 stack、registers 與全部 memory。",
+        "只記得 threads 共享 memory，卻忘記每條 thread 有獨立 stack、program counter 與 registers。",
+        "把 lightweight 說成 process 的特性；一般而言 thread 才較 lightweight。",
+        "把 mode switch、system call 與 context switch 全部混為一談。",
+        "看到共享位址空間便認為不需同步，忽略 race condition。"
+      ],
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-os-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-106-22",
+        "q-pp-im-it-108-5",
+        "q-pp-im-it-108-6",
+        "q-pp-im-it-111-16",
+        "q-pp-im-it-112-6",
+        "q-pp-im-it-112-8",
+        "q-pp-im-it-112-10",
+        "q-pp-im-it-113-2",
+        "q-pp-im-it-113-3",
+        "q-pp-im-it-115-9"
+      ],
+      "reviewStatus": "reviewed",
+      "learningScenario": {
+        "title": "一間忙碌的餐廳",
+        "hook": "把一個 process 想成一間有自己廚房、食材和設備的餐廳；同一間廚房裡可以有多位廚師同時工作，就像一個 process 裡有多條 threads。廚師共享廚房，所以傳遞材料很快，但兩個人同時改同一張訂單也可能互相覆蓋。",
+        "predict": "兩位廚師都看得到同一張訂單，是否代表他們可以同時修改，而且一定不會出錯？",
+        "mapping": [
+          {
+            "everyday": "各自獨立的餐廳與廚房",
+            "technical": "不同 processes 的受保護位址空間與資源"
+          },
+          {
+            "everyday": "同一間廚房裡的多位廚師",
+            "technical": "同一 process 裡共享 code、heap 與資源的 threads"
+          },
+          {
+            "everyday": "每位廚師自己的工作小抄與手上進度",
+            "technical": "每條 thread 獨立的 stack、program counter 與 registers"
+          },
+          {
+            "everyday": "分店之間透過電話或外送單傳話",
+            "technical": "processes 透過 IPC 或明確 shared memory 交換資料"
+          },
+          {
+            "everyday": "暫停一位廚師，讓另一位接著工作",
+            "technical": "保存與恢復 execution state 的 context switch"
+          }
+        ],
+        "boundary": "真實 thread 沒有人的自主判斷，何時執行由 scheduler 與硬體決定；餐廳也無法完整呈現記憶體保護、同步原語與切換成本。",
+        "examCues": [
+          "同一個 process、共享 code 與 heap：先想到 threads。",
+          "各自擁有 stack、program counter、registers：仍然是在描述每條 thread 的獨立狀態。",
+          "不同 processes 要交換資料：先找 pipe、message passing、socket 或 shared memory。",
+          "system call 進入 kernel：一定有 mode switch，但不一定換了執行主體。"
+        ]
+      }
+    }
+  ],
+  "cards": [
+    {
+      "id": "card-im-it-os-processes-threads-01",
+      "lessonId": "lesson-im-it-os-processes-threads",
+      "subtopicId": "im-it-os-processes-threads",
+      "front": "program 與 process 有什麼差別？",
+      "back": "program 是靜態的指令與資料；process 是 program 的一次執行實例，具有執行狀態、位址空間與作業系統管理的資源。",
+      "explanation": "同一 program 可以同時啟動多個 processes，各自有不同 PID 與執行狀態。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-os-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-111-16",
+        "q-pp-im-it-113-2"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-os-processes-threads-02",
+      "lessonId": "lesson-im-it-os-processes-threads",
+      "subtopicId": "im-it-os-processes-threads",
+      "front": "同一 process 的 threads 共享與不共享哪些重要狀態？",
+      "back": "通常共享 code、heap 與開啟的 process resources；每個 thread 各有 stack、program counter 與 register state。",
+      "explanation": "共享降低溝通成本，獨立 execution state 則讓每條 thread 能在不同位置執行。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-os-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-111-16",
+        "q-pp-im-it-113-3"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-os-processes-threads-03",
+      "lessonId": "lesson-im-it-os-processes-threads",
+      "subtopicId": "im-it-os-processes-threads",
+      "front": "為什麼 threads 通常比 processes lightweight？",
+      "back": "threads 共用所屬 process 的位址空間與多數資源，建立、溝通與切換通常不需配置或更換完整 process context。",
+      "explanation": "較低成本不代表沒有成本，也不代表共享資料天然安全。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-os-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-111-16",
+        "q-pp-im-it-113-3"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-os-processes-threads-04",
+      "lessonId": "lesson-im-it-os-processes-threads",
+      "subtopicId": "im-it-os-processes-threads",
+      "front": "不同 processes 如何交換資料？",
+      "back": "透過作業系統提供或協調的 IPC，例如 pipe、message queue、socket，或明確建立的 shared memory。",
+      "explanation": "process isolation 是預設保護邊界；IPC 是有控制地跨越邊界。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-os-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-113-2",
+        "q-pp-im-it-112-10"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-os-processes-threads-05",
+      "lessonId": "lesson-im-it-os-processes-threads",
+      "subtopicId": "im-it-os-processes-threads",
+      "front": "user mode 與 kernel mode 的核心差異是什麼？",
+      "back": "user mode 權限受限，不能直接操作受保護硬體與 kernel memory；kernel mode 可執行特權操作並管理系統資源。",
+      "explanation": "應用程式以 system call 請求核心代為執行受保護服務。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-os-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-112-8",
+        "q-pp-im-it-108-5"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-os-processes-threads-06",
+      "lessonId": "lesson-im-it-os-processes-threads",
+      "subtopicId": "im-it-os-processes-threads",
+      "front": "system call 一定會造成 process/thread context switch 嗎？",
+      "back": "不一定。system call 一定涉及進入 kernel 的控制轉移，但若完成後仍回到同一 thread，可能只有 mode switch，沒有換 execution context。",
+      "explanation": "只有排程到另一個 thread/process 時，才需保存目前狀態並恢復另一個狀態。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-os-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-112-8",
+        "q-pp-im-it-115-9"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-os-processes-threads-07",
+      "lessonId": "lesson-im-it-os-processes-threads",
+      "subtopicId": "im-it-os-processes-threads",
+      "front": "context switch 的核心動作是什麼？",
+      "back": "保存目前 process/thread 的 execution state，並恢復下一個 process/thread 的 execution state。",
+      "explanation": "典型狀態包含 program counter、stack pointer 與 registers；process switch 可能還要更換位址空間。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-os-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-115-9",
+        "q-pp-im-it-111-16"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "card-im-it-os-processes-threads-08",
+      "lessonId": "lesson-im-it-os-processes-threads",
+      "subtopicId": "im-it-os-processes-threads",
+      "front": "作業系統在 process management 中通常負責哪些工作？",
+      "back": "建立與刪除、暫停與恢復、同步與溝通 processes，並協助處理 deadlock 與資源分配。",
+      "explanation": "題目若列出這些職責，通常都屬於作業系統的 process management 範圍。",
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-nthu-os-course"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-112-6",
+        "q-pp-im-it-112-10",
+        "q-pp-im-it-108-5"
+      ],
+      "reviewStatus": "reviewed"
+    }
+  ]
+}

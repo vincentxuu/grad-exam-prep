@@ -1,0 +1,154 @@
+{
+  "reviewerScope": {
+    "draftFile": ".work/im-it-lessons-batch4-arch-os.json",
+    "taxonomyManifest": ".work/im-it-batch4-taxonomy-manifest.json",
+    "answerFixManifest": ".work/im-it-batch4-answer-fixes.json",
+    "applyScripts": [
+      ".work/apply-im-it-batch4-taxonomy.mjs",
+      ".work/apply-im-it-batch4-answer-fixes.mjs"
+    ],
+    "authority": {
+      "ref": "origin/main",
+      "commit": "6be3e75302159b1f4801d335916567f7e62f9ba8",
+      "files": [
+        "public/data/questions.json",
+        "public/data/answers.json",
+        "public/data/im-it-question-metadata.json",
+        "public/data/im-it-concept-master.json",
+        "public/data/im-it-source-registry.json"
+      ]
+    },
+    "lessonsReviewed": 2,
+    "cardsReviewed": 12
+  },
+  "approved": true,
+  "taxonomyReview": {
+    "approved": true,
+    "questionReviews": [
+      {
+        "questionId": "q-pp-im-it-109-13",
+        "proposedAction": "不做 taxonomy move，只修 explanation",
+        "approved": true,
+        "authorityFinding": "題幹明確定義 parity bit；origin/main metadata 已正確歸在 im-it-arch-data-representation。answers.json 的字母 C 正確，但 explanation 誤貼 LDAP。現行 taxonomy manifest 沒有移動本題，answer-fixes 只改 explanation，方向正確。"
+      },
+      {
+        "questionId": "q-pp-im-it-113-5",
+        "proposedAction": "保留 im-it-os-memory-management，只修錯貼 explanation",
+        "approved": true,
+        "authorityFinding": "origin/main 題幹問 stack memory、function call、local variables 與 stack overflow，不是 register/L1/L2 cache。錯誤 move 已從 taxonomy manifest 移除；answer-fixes 改為揭露 stack 題的 A/B 選項歧義，並保留既有 answer C、disputed 與 eligibility。"
+      },
+      {
+        "questionId": "q-pp-im-it-111-24",
+        "proposedAction": "im-it-db-distributed-nosql → im-it-security-blockchain",
+        "approved": true,
+        "authorityFinding": "題幹核心是 NFT 作為 blockchain 上唯一、不可互換的資料單位；移到 blockchain 比 NoSQL 精確。答案仍 disputed、autoGradeEligible=false，taxonomy move 不應改動 publication gates。"
+      },
+      {
+        "questionId": "q-pp-im-it-112-24",
+        "proposedAction": "im-it-db-distributed-nosql → im-it-security-blockchain",
+        "approved": true,
+        "authorityFinding": "題幹直接問 Bitcoin blockchain mining 與交易驗證，屬 blockchain，不是 distributed database / NoSQL。"
+      },
+      {
+        "questionId": "q-pp-im-it-115-25",
+        "proposedAction": "im-it-db-distributed-nosql → im-it-security-blockchain",
+        "approved": true,
+        "authorityFinding": "題幹直接以無中央權威、不可變且可驗證的交易紀錄描述 blockchain，移動正確。"
+      }
+    ],
+    "issues": []
+  },
+  "answerFixReview": {
+    "approved": true,
+    "changesReviewed": [
+      {
+        "questionId": "q-pp-im-it-109-13",
+        "approved": true,
+        "answerUnchanged": "C",
+        "assessment": "新 explanation 正確定義 even/odd parity、說明可偵測部分傳輸錯誤，且明示為非官方技術覆核；只修 explanation、不做 taxonomy move 是正確處置。"
+      },
+      {
+        "questionId": "q-pp-im-it-113-5",
+        "approved": true,
+        "answerUnchanged": "C",
+        "assessment": "新 explanation 正確指出題幹是 stack memory、舊 cache 解析為跨題誤貼，並具體說明 B 的 stack-frame 配置責任與 A 的 local-variable placement 都有嚴格語意問題；同時明示保留 disputed、不可自動判分且 C 並非唯一官方答案。"
+      }
+    ],
+    "issues": []
+  },
+  "applyScriptReview": {
+    "approved": true,
+    "syntaxValid": true,
+    "scripts": [
+      {
+        "file": ".work/apply-im-it-batch4-taxonomy.mjs",
+        "assessment": "語法正確；以 applyStatus=approved_for_application 作 gate，檢查 duplicate moves、question existence、target subtopic、expected from state，允許已在 target 的 idempotent rerun，最後驗證 topic/subtopic 一致性。Manifest 現只保留三個已核對正確的 blockchain moves。",
+        "issues": []
+      },
+      {
+        "file": ".work/apply-im-it-batch4-answer-fixes.mjs",
+        "assessment": "語法正確；以 reviewStatus=reviewed 作 gate，拒絕 duplicate question IDs，確認 answer row 與答案字母，並在覆寫前精確比對 expectedOldExplanation。若 explanation 已等於新值則計入 alreadyApplied 並安全跳過，因此兼具 drift guard 與 idempotency。",
+        "issues": []
+      }
+    ]
+  },
+  "lessonReviews": [
+    {
+      "lessonId": "lesson-im-it-arch-memory-data-representation-01",
+      "approved": true,
+      "shape": {
+        "sections": 4,
+        "workedExamples": 3,
+        "cards": 6,
+        "learningScenarioMappingRows": 5,
+        "learningScenarioExamCues": 4,
+        "minimumPastPaperRefs": 8,
+        "uniquePastPaperRefs": 8
+      },
+      "technicalAssessment": "Parity 的偵測邊界、靜態影像格式辨識、volatile/non-volatile、register/cache/DRAM/SSD 典型階層、RAID 定位、locality 與 AMAT 皆正確。三個 examples 可重現：1011001 有 4 個 1，even parity bit=0；典型速度序正確；2+0.05×80=6 ns。Learning scenario 以值班員的桌面、抽屜、辦公區與倉庫統一對應 register、cache、DRAM、SSD；boundary 明確撤銷實體收納的斷電持久性類比，並避免推論固定 cache 層數／容量。",
+      "sourceAssessment": "src-brookshear-13e 在 origin/main registry 為 reviewed，scope 包含 computer-architecture，能覆蓋資料表示、儲存與記憶體階層概念；沒有 dangling source refs。",
+      "referenceAssessment": "8 refs 全部存在、autoGradeEligible=true、非 disputed，且 primary subtopic 位於 coveredSubtopicIds。q109-13 雖已提出 explanation fix，仍未被用來湊 threshold；disputed 的 q113-5 也未被引用。",
+      "disclosureAssessment": "Summary 明示所有考古題答案均為非官方技術覆核。",
+      "issues": []
+    },
+    {
+      "lessonId": "lesson-im-it-os-scheduling-memory-management-01",
+      "approved": true,
+      "shape": {
+        "sections": 4,
+        "workedExamples": 3,
+        "cards": 6,
+        "learningScenarioMappingRows": 5,
+        "learningScenarioExamCues": 4,
+        "minimumPastPaperRefs": 8,
+        "uniquePastPaperRefs": 8
+      },
+      "technicalAssessment": "Scheduling metrics、FCFS/SJF/RR/Priority/MLFQ、paging、page table、page fault、working set 與 thrashing 的敘述均有必要前提。Examples 可重現：FCFS/SJF 平均等待時間 14/3 與 8/3；RR timeline 0–8 正確；20×4096+100=82020。Learning scenario 全程使用同一診所場景，分別映射 ready queue、scheduler、RR quantum、page-table 門牌與 thrashing；boundary 明確指出病人不可字面等同可搶占 process、page fault 不等於非法位址、一般候診壅塞也不等於 thrashing。",
+      "sourceAssessment": "src-brookshear-13e 與 src-nthu-os-course 均在 origin/main registry 為 reviewed，scope 涵蓋 operating-systems，足以支援 scheduling 與 virtual-memory 教材。",
+      "referenceAssessment": "8 refs 全部存在、autoGradeEligible=true、非 disputed，且 primary subtopic 位於 coveredSubtopicIds；card refs 與 source refs 都是 lesson boundary 的 subset。",
+      "disclosureAssessment": "Summary 明示非官方技術覆核，且 disputed／題面不完整題未列入 refs。",
+      "issues": []
+    }
+  ],
+  "referenceReview": {
+    "lessons": 2,
+    "cards": 12,
+    "uniquePastPaperRefs": 16,
+    "allRefsExist": true,
+    "allAutoGradeEligible": true,
+    "allNonDisputed": true,
+    "allWithinCoveredSubtopics": true,
+    "allSemanticallyRelevant": true,
+    "allCardRefsSubsetOfLessonRefs": true,
+    "allCardSourcesSubsetOfLessonSources": true,
+    "allSourcesExistAndReviewed": true,
+    "officialAnswerClaim": false
+  },
+  "summary": {
+    "blockingIssues": 0,
+    "majorIssues": 0,
+    "minorIssues": 0,
+    "approved": true,
+    "approvalRationale": "兩堂 lessons 與新增 learningScenario 的技術、examples、sources、refs、threshold、schema 和非官方揭露均通過。q113-5 錯誤 move 已移除，q109-13 與 q113-5 的 explanation-only fixes 均保留既有答案／eligibility 邊界；三個 blockchain moves 正確。Answer apply script 已加入 duplicate 與 expected-old guards，無 blocking/major/minor issues，故 approved=true。"
+  }
+}

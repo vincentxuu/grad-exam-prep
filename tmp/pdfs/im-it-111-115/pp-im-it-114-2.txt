@@ -1,0 +1,44 @@
+過
+題 號 : 277 國 立 臺灣 大 學 114 學 年 度 碩士 班 招生 考試 試題
+科目 : 資 訊 科技 概論 是 號 :277
+MAR: 6 共 4 頁 之 第 2 頁
+|
+|
+| !
+|
+8. [_] Which of the following best describes the Banker’s Algorithm in an operating system? (A)
+| It is a deadlock avoidance algorithm that checks resource allocation safety. (B) It ensures mutual
+| exclusion in critical section problems. (C) It schedules processes in a round-robin manner. ()It i
+| optimizes disk scheduling to reduce seek time. (E) It manages cache replacement in virtual memory |
+| systems.
+9. [| Ina muttilevel feedback queue scheduling algorithm, which of the following is true? (A)
+Processes are assigned to a single queue for their entire lifetime. (B) The algorithm ensures that all
+processes are executed in a round-robin manner. (C) Processes can move between queues based on
+their behavior and priority. (D) Only 1/0-bound processes are prioritized over CPU-bound processes. |
+| (E) The algorithm is non-preemptive by default. |
+10.[ |] What is the primary purpose of a semaphore in an operating system? (A) To manage CPU
+scheduling among processes (B) To ensure mutual exclusion in concurrent programming (C) To
+optimize memory allocation in virtual memory (D) To transfer data between user and kernel space (E)
+To prioritize processes in a scheduling queue.
+11.[-___] In the context of virtual memory, what is the purpose of a page table? (A) To map virtual
+addresses to physical addresses (B) To store process control information (C) To manage CPU
+| scheduling among processes (D) To optimize I/O device access (E) To allocate space in secondary
+| storage for processes.
+| 12.[ ~~] Which SQL clause is used to filter groups of data after applying an aggregate function? (A)
+| DISTINCT (B) GROUP BY (C) HAVING (D) ORDER BY (E) none of the above.
+| 13.[___] In the context of database normalization, what is the purpose of 3NF (Third Normal Form)?
+(A) To ensure that non-primary-keys are transitively dependent (B) To ensure that all attributes are
+dependent only on the primary key (C) To reduce the number of tables in a schema. (D) To ensure
+1 that no non-primary-key attribute is transitively dependent on the primary key (E) To ensure that
+foreign keys reference valid primary keys.
+14. | What is the primary purpose of the JOIN operation in SQL? (A) To create a temporary
+table from existing tables (B) To combine columns from two or more tables based on a related
+column (C) To remove duplicate rows from a table (D) To restrict the rows returned. by a query (E)
+To calculate aggregate values across multiple tables.
+15.[_____] Which of the following is true about NoSQL databases compared to relational databases? |
+(A) NoSQL databases do not support indexing. (B) NoSQL databases use a fixed schema for data |
+|
+i
+| |
+y
+接 次 頁 |

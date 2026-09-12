@@ -1,0 +1,195 @@
+{
+  "lessons": [
+    {
+      "id": "lesson-im-it-ai-foundations-ml-evaluation-01",
+      "subtopicId": "im-it-ai-ml-paradigms",
+      "coveredSubtopicIds": [
+        "im-it-ai-foundations-search",
+        "im-it-ai-ml-paradigms",
+        "im-it-ai-training-evaluation"
+      ],
+      "title": "AI 與機器學習基礎：從問題類型到模型評估",
+      "summary": "從 Turing test 與 AI 問題定義出發，區分 supervised、unsupervised 與 reinforcement learning，理解 linear regression 的預測形式，再以 confusion matrix 推導 precision、recall 與 accuracy。真題答案只有非官方技術覆核，Big Data 與 disputed 題不列入 refs。",
+    "estimatedMinutes": 36,
+    "minimumPastPaperRefs": 5,
+      "learningObjectives": [
+        "說明 Turing test 評估的是可觀察行為，而不是直接證明機器具有意識",
+        "依資料與回饋形式區分 supervised、unsupervised 與 reinforcement learning",
+        "解讀 linear regression 的輸入、輸出、係數與預測值",
+        "由 confusion matrix 計算 precision、recall 與 accuracy，並判斷指標限制"
+      ],
+      "sections": [
+        {
+          "title": "AI 問題先從可觀察目標開始",
+          "body": "Artificial intelligence 涵蓋讓機器執行感知、推理、搜尋、學習或決策等工作的技術。Turing test 以對話等可觀察行為，判斷評估者是否能把機器與人類區分；它不是意識、情感或全面智慧的直接證明。CAPTCHA 則把方向反過來，用容易由人完成、較難由自動程式完成的挑戰辨識使用者，但現代模型能力改變後，特定 CAPTCHA 不一定仍有效。",
+          "bullets": [
+            "Turing test 評估外在行為是否像人，不檢查內部實作方式",
+            "通過單一測試不代表具備 artificial general intelligence",
+            "CAPTCHA 是 human-versus-machine discrimination 的應用，不是訓練演算法",
+            "AI 問題還常以 state、action、goal 與 evaluation criterion 描述"
+          ]
+        },
+        {
+          "title": "從回饋形式區分學習典範",
+          "body": "Supervised learning 從帶有 target labels 的 examples 學習 input 到 output 的關係，常用於 classification 與 regression。Unsupervised learning 沒有指定正確 target，模型從資料尋找群組或結構。Reinforcement learning 中，agent 與 environment 互動，根據 reward 學習能累積長期報酬的 policy。題目要先看可用資料與回饋，不要只看演算法名稱。",
+          "bullets": [
+            "Classification 預測離散類別，例如 spam／not spam",
+            "Regression 預測連續數值，例如價格或需求量",
+            "Clustering 是常見 unsupervised task，不需要預先提供每筆資料的正確群組",
+            "Reinforcement learning 的 supervision 來自 reward signal，不是每一步的標準答案"
+          ]
+        },
+        {
+          "title": "Linear regression 把關係寫成可計算模型",
+          "body": "Linear regression 用線性方程描述 dependent variable 與一個或多個 features 的關係。單一 feature 時可寫成 y-hat=b0+b1x，其中 b0 是 intercept、b1 是 slope。訓練會選擇參數，使預測與觀測值的誤差在指定 loss 下盡量小。線性模型可用於預測與解釋關聯，但觀察到係數不等於證明因果。",
+          "bullets": [
+            "y-hat 是模型預測，不一定等於實際 y",
+            "Slope 表示其他條件固定時，x 增加一單位所對應的預測變化",
+            "多元 linear regression 仍對參數保持線性，不代表只能有一個 feature",
+            "Normal equation 是求參數的方法之一，不是另一種預測問題類型"
+          ]
+        },
+        {
+          "title": "訓練表現不等於泛化能力",
+          "body": "模型在 training data 上表現好，仍可能只記住訓練樣本而 overfit。常見流程把資料分成 training、validation 與 test sets：training 用來估計參數，validation 用來選模型或 hyperparameters，test 應留到最後評估泛化。Regularization、更多合適資料與控制模型複雜度可降低 overfitting 風險，但沒有任何單一技巧保證泛化。",
+          "bullets": [
+            "Test set 不應反覆拿來調參，否則會把測試資訊洩漏進模型選擇",
+            "Underfitting 表示模型連 training pattern 都無法充分學到",
+            "Data leakage 會讓離線評估過度樂觀",
+            "評估資料分布應盡量代表模型實際部署情境"
+          ]
+        },
+        {
+          "title": "用 Confusion Matrix 選對指標",
+          "body": "Binary classification 將結果分成 TP、FP、FN、TN。Precision=TP/(TP+FP)，回答「預測為 positive 的案例中有多少是真的」；Recall=TP/(TP+FN)，回答「所有實際 positive 中找到了多少」；Accuracy=(TP+TN)/(TP+FP+FN+TN)，衡量整體正確比例。當類別極度不平衡時，高 accuracy 可能掩蓋模型完全找不到少數類別，因此要依錯誤成本同時觀察 precision、recall 等指標。",
+          "bullets": [
+            "False positive 會降低 precision",
+            "False negative 會降低 recall",
+            "Accuracy 的分母是全部案例，分子是 TP+TN",
+            "沒有脫離情境永遠最好的單一 metric"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "prompt": "將三個任務分類：①以已標註郵件訓練 spam classifier；②把沒有標籤的客戶依行為分群；③遊戲 agent 依勝負 reward 學習策略。",
+          "steps": [
+            "① 有 input 與正確 class label，屬 supervised classification。",
+            "② 沒有目標群組標籤，要求從資料找結構，屬 unsupervised clustering。",
+            "③ agent 透過 action、environment 與 reward 學習 policy，屬 reinforcement learning。"
+          ],
+          "answer": "① supervised learning；② unsupervised learning；③ reinforcement learning。判斷依據是提供的回饋形式，不是應用領域名稱。"
+        },
+        {
+          "prompt": "房價模型為 y-hat=100+15x，y-hat 單位為萬元，x 是坪數。當 x=20 時預測多少？Slope 15 如何解讀？",
+          "steps": [
+            "代入 x=20：y-hat=100+15×20。",
+            "15×20=300，因此預測為 400 萬元。",
+            "Slope 15 表示在此模型與其他條件假設下，坪數每增加 1 坪，預測房價增加 15 萬元。",
+            "這是模型中的關聯解讀，單靠 regression coefficient 不能證明增加坪數造成價格上升。"
+          ],
+          "answer": "預測 400 萬元；slope 表示每增加 1 坪，模型預測值增加 15 萬元。"
+        },
+        {
+          "prompt": "某 classifier 有 TP=40、FP=10、FN=20、TN=30。計算 precision、recall 與 accuracy。",
+          "steps": [
+            "Precision=TP/(TP+FP)=40/(40+10)=0.80。",
+            "Recall=TP/(TP+FN)=40/(40+20)=2/3，約 0.667。",
+            "Accuracy=(TP+TN)/(TP+FP+FN+TN)=(40+30)/100=0.70。",
+            "三個值回答不同問題，不能只因 precision 最高就宣稱模型整體最好。"
+          ],
+          "answer": "Precision=0.80，recall≈0.667，accuracy=0.70。"
+        }
+      ],
+      "commonPitfalls": [
+        "把 Turing test 當成能直接證明意識或 AGI 的測驗",
+        "以為 supervised learning 只做 classification，忽略 regression 也是 supervised task",
+        "把 clustering 與 classification 混淆；前者通常沒有預先提供 class labels",
+        "把 linear regression 的相關係數或 slope 直接解讀成因果關係",
+        "反覆用 test set 選模型，造成 evaluation leakage",
+        "把 precision 的分母寫成 TP+FN，與 recall 對調",
+        "在高度 class imbalance 的資料上只看 accuracy"
+      ],
+      "sourceRefs": [
+        "src-brookshear-13e",
+        "src-ntu-machine-learning-2021"
+      ],
+      "pastPaperRefs": [
+        "q-pp-im-it-108-12",
+        "q-pp-im-it-113-24",
+        "q-pp-im-it-110-14",
+        "q-pp-im-it-110-15",
+        "q-pp-im-it-110-16"
+      ],
+      "reviewStatus": "draft"
+    }
+  ],
+  "cards": [
+    {
+      "id": "card-im-it-ai-foundations-ml-evaluation-01",
+      "lessonId": "lesson-im-it-ai-foundations-ml-evaluation-01",
+      "subtopicId": "im-it-ai-foundations-search",
+      "front": "Turing test 真正評估的是什麼？",
+      "back": "評估機器的可觀察回應是否讓人類評估者難以把它與人類區分。",
+      "explanation": "它不直接檢查 consciousness，也不保證通過者具備所有領域的 general intelligence。CAPTCHA 則常把 human/machine discrimination 用於存取控制。",
+      "sourceRefs": ["src-brookshear-13e"],
+      "pastPaperRefs": ["q-pp-im-it-108-12", "q-pp-im-it-113-24"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-ai-foundations-ml-evaluation-02",
+      "lessonId": "lesson-im-it-ai-foundations-ml-evaluation-01",
+      "subtopicId": "im-it-ai-ml-paradigms",
+      "front": "Linear regression 通常屬於哪一種 learning paradigm？判斷依據是什麼？",
+      "back": "通常屬於 supervised learning，因為訓練 examples 同時提供 input features 與連續 target values。",
+      "explanation": "Supervised learning 的關鍵是有 target feedback；target 是連續數值時，linear regression 用來學習 input 到數值 output 的關係。",
+      "sourceRefs": ["src-ntu-machine-learning-2021"],
+      "pastPaperRefs": ["q-pp-im-it-110-14"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-ai-foundations-ml-evaluation-03",
+      "lessonId": "lesson-im-it-ai-foundations-ml-evaluation-01",
+      "subtopicId": "im-it-ai-ml-paradigms",
+      "front": "Linear regression 解決哪一類問題？",
+      "back": "以線性方程估計一個連續 dependent variable 與一個或多個 features 的關係，常用於連續數值預測。",
+      "explanation": "y-hat=b0+b1x 中 b0 是 intercept、b1 是 slope；linear 指模型對參數呈線性，不代表只能有一個 feature。",
+      "sourceRefs": ["src-ntu-machine-learning-2021"],
+      "pastPaperRefs": ["q-pp-im-it-110-14"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-ai-foundations-ml-evaluation-04",
+      "lessonId": "lesson-im-it-ai-foundations-ml-evaluation-01",
+      "subtopicId": "im-it-ai-training-evaluation",
+      "front": "Precision 與 recall 的分母分別是什麼？",
+      "back": "Precision 的分母是 TP+FP；recall 的分母是 TP+FN。",
+      "explanation": "Precision 問預測 positive 有多準；recall 問實際 positive 找回多少。FP 增加會壓低 precision，FN 增加會壓低 recall。",
+      "sourceRefs": ["src-ntu-machine-learning-2021"],
+      "pastPaperRefs": ["q-pp-im-it-110-15"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-ai-foundations-ml-evaluation-05",
+      "lessonId": "lesson-im-it-ai-foundations-ml-evaluation-01",
+      "subtopicId": "im-it-ai-training-evaluation",
+      "front": "Binary classification 的 accuracy 公式是什麼？",
+      "back": "Accuracy=(TP+TN)/(TP+FP+FN+TN)。",
+      "explanation": "它計算全部案例中預測正確的比例；類別不平衡時，即使完全忽略少數類別也可能得到高 accuracy。",
+      "sourceRefs": ["src-ntu-machine-learning-2021"],
+      "pastPaperRefs": ["q-pp-im-it-110-16"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-im-it-ai-foundations-ml-evaluation-06",
+      "lessonId": "lesson-im-it-ai-foundations-ml-evaluation-01",
+      "subtopicId": "im-it-ai-training-evaluation",
+      "front": "為何類別不平衡時不能只看 accuracy？",
+      "back": "模型即使幾乎都猜多數類別，也可能得到很高 accuracy，卻完全找不到少數類別；應依錯誤成本同時看 precision、recall 等指標。",
+      "explanation": "Accuracy 計算全部案例的正確比例，無法單獨顯示 false positive 與 false negative 的代價。Confusion matrix 能讓各類錯誤分開檢查。",
+      "sourceRefs": ["src-ntu-machine-learning-2021"],
+      "pastPaperRefs": ["q-pp-im-it-110-15", "q-pp-im-it-110-16"],
+      "reviewStatus": "draft"
+    }
+  ]
+}

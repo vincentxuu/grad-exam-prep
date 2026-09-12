@@ -1,0 +1,5 @@
+{
+  "approved": true,
+  "summary": "重新審核結果：blocking=0、major=0、minor=0，因此核准。前次四項 major 均已修正：兩課 summary 已明示對應考古題答案為非官方技術覆核；Counter 題面已補上 value/createdCount 初值與 constructor 累加規則，可唯一推出 A.value=1、B.value=0、createdCount=2；INNER JOIN 題面已補齊兩表 schema、join key 語意與 Customers.CustomerID 唯一性，可重現輸出；OOP 語言細節已限縮為 Oracle Java Tutorials 可支撐的 Java 規則，不再以未引用來源主張 C++ 語意。OOP 與 SQL 技術敘述正確，worked examples 均可由題面重現，Oracle/DB sources 與內容範圍相符。所有 lesson 的 coveredSubtopicIds 均含 primary subtopic；lesson/card past-paper refs 全部 autoGradeEligible 且與 subtopic 相符；card refs 與 sourceRefs 皆為所屬 lesson 的子集，卡片內容亦與引用考題相關。",
+  "issues": []
+}

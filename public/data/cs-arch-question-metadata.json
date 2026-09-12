@@ -1,0 +1,248 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "cs-arch",
+  "status": "draft",
+  "coverage": "pipeline_candidate_refs_only",
+  "totalQuestions": 6,
+  "taxonomyMethod": "Manually scoped to the canonical cs-arch-pipeline topic from subjects-cs.json.",
+  "answerPolicy": "所有答案皆非官方且尚未核准自動判分；disputed/self-review 題不得轉成單一 grading key。",
+  "questions": [
+    {
+      "questionId": "q-pp-cs-arch-110-7",
+      "paperId": "pp-cs-arch-110",
+      "topicId": "cs-arch-pipeline",
+      "primarySubtopicId": "cs-arch-pipeline-hazards-forwarding",
+      "questionType": "multi_part",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "同時考 stage latency、load-use hazard、forwarding control 與 R-type control signals。",
+      "originQuestionTextSha256": "add2b7cee56e88faeecd9c5f34922e6b83acfc6ae8e6ad3ee998c02b686811ac",
+      "answerSource": {
+        "kind": "candidate_technical_derivation",
+        "official": false,
+        "reviewCount": 1,
+        "note": "依 origin/main 題面與現有解析建立的初審草稿，不是官方答案。"
+      },
+      "answerConfidence": {
+        "level": "unreviewed",
+        "basis": [
+          "題目是四小題的開放式計算題，answers.json 的單一 A 無法代表答案。",
+          "現有 explanation 可作推導草稿，但尚未逐項對照原卷圖與 datapath assumptions。"
+        ],
+        "unresolvedIssues": [
+          "開放式多小題沒有官方答案",
+          "含圖題尚待逐項 PDF 視覺覆核",
+          "現有 answer=A 是佔位值"
+        ]
+      },
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": false,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": [
+          "開放式多小題沒有官方答案",
+          "含圖題尚待逐項 PDF 視覺覆核",
+          "現有 answer=A 是佔位值"
+        ]
+      }
+    },
+    {
+      "questionId": "q-pp-cs-arch-111-5",
+      "paperId": "pp-cs-arch-111",
+      "topicId": "cs-arch-pipeline",
+      "primarySubtopicId": "cs-arch-pipeline-hazards-forwarding",
+      "questionType": "single_choice",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "要求在無 forwarding 且同週期 write/read 的明示假設下排出完成週期。",
+      "originQuestionTextSha256": "c8f9c253b62cb92c68ca3a6e1424658c2a915d07e6b19fae9abb4c0f0455740b",
+      "answerSource": {
+        "kind": "candidate_technical_derivation",
+        "official": false,
+        "reviewCount": 1,
+        "note": "依 origin/main 題面與現有解析建立的初審草稿，不是官方答案。"
+      },
+      "answerConfidence": {
+        "level": "medium",
+        "basis": [
+          "題面明示 register 可在同一 cycle 寫回後讀取。",
+          "#3 等待 #2 的 x29，#4 再等待 #3 的 x17，依五級管線草算完成於 cycle 9 與 12。"
+        ],
+        "unresolvedIssues": [
+          "沒有官方答案 key",
+          "尚缺第二位獨立 reviewer"
+        ]
+      },
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": false,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": [
+          "沒有官方答案 key",
+          "尚缺第二位獨立 reviewer"
+        ]
+      }
+    },
+    {
+      "questionId": "q-pp-cs-arch-112-7",
+      "paperId": "pp-cs-arch-112",
+      "topicId": "cs-arch-pipeline",
+      "primarySubtopicId": "cs-arch-pipeline-hazards-forwarding",
+      "questionType": "single_choice",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "要求在沒有 hazard detection 與 forwarding 時插入 NOP。",
+      "originQuestionTextSha256": "8aabfecf8d73dd346c010609393c714d745062dee7681bc4dfaae69e9a744699",
+      "answerSource": {
+        "kind": "candidate_technical_derivation",
+        "official": false,
+        "reviewCount": 1,
+        "note": "依 origin/main 題面與現有解析建立的初審草稿，不是官方答案。"
+      },
+      "answerConfidence": {
+        "level": "disputed",
+        "basis": [
+          "現有答案採 E=8，假設 consumer 的 ID 必須晚於 producer 的 WB。",
+          "若 register file 支援同週期先寫後讀，常見五級管線排程會得到 C=5。",
+          "題面未明示同週期 register write/read 語意，不能核准單一答案。"
+        ],
+        "unresolvedIssues": [
+          "register file timing assumption 未明示",
+          "現有解析與常見教科書假設產生不同答案",
+          "沒有官方答案 key"
+        ]
+      },
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": false,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": [
+          "register file timing assumption 未明示",
+          "現有解析與常見教科書假設產生不同答案",
+          "沒有官方答案 key"
+        ]
+      }
+    },
+    {
+      "questionId": "q-pp-cs-arch-113-2",
+      "paperId": "pp-cs-arch-113",
+      "topicId": "cs-arch-pipeline",
+      "primarySubtopicId": "cs-arch-pipeline-performance",
+      "questionType": "multiple_select",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "比較 sequential/pipelined latency、resource utilization、speedup 與 power 敘述。",
+      "originQuestionTextSha256": "74a5d402d1500baa7dfd9d79e7ae03d9018fb4b84ae10fc3a37d662258492e2a",
+      "answerSource": {
+        "kind": "candidate_technical_derivation",
+        "official": false,
+        "reviewCount": 1,
+        "note": "依 origin/main 題面與現有解析建立的初審草稿，不是官方答案。"
+      },
+      "answerConfidence": {
+        "level": "medium",
+        "basis": [
+          "Load/Store 比例為 40%，無 stall 時 data memory utilization 為 40%。",
+          "其餘敘述需依各 instruction 實際 stage path 與 pipeline-register overhead 再做第二次覆核。"
+        ],
+        "unresolvedIssues": [
+          "題幹使用 is/are true，可能是複選契約",
+          "沒有官方答案 key",
+          "尚缺第二位獨立 reviewer"
+        ]
+      },
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": false,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": [
+          "題幹使用 is/are true，可能是複選契約",
+          "沒有官方答案 key",
+          "尚缺第二位獨立 reviewer"
+        ]
+      }
+    },
+    {
+      "questionId": "q-pp-cs-arch-114-12",
+      "paperId": "pp-cs-arch-114",
+      "topicId": "cs-arch-pipeline",
+      "primarySubtopicId": "cs-arch-pipeline-performance",
+      "questionType": "multiple_select",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "用 stage latency 與 instruction mix 判斷 clock、instruction latency 與 utilization。",
+      "originQuestionTextSha256": "24f4e73cc092b5bf2970fc2b97b8ae558d406d58be3596035353212a6aa02da8",
+      "answerSource": {
+        "kind": "candidate_technical_derivation",
+        "official": false,
+        "reviewCount": 1,
+        "note": "依 origin/main 題面與現有解析建立的初審草稿，不是官方答案。"
+      },
+      "answerConfidence": {
+        "level": "disputed",
+        "basis": [
+          "現有 explanation 選 D，但同時承認 C 的 5×250 ps=1250 ps 數值成立。",
+          "在未確認原卷作答格式與 latency 定義前，不應壓成單一選項。"
+        ],
+        "unresolvedIssues": [
+          "C 與 D 可能同時成立",
+          "原卷選擇規則未在抽取文字中明示",
+          "沒有官方答案 key"
+        ]
+      },
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": false,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": [
+          "C 與 D 可能同時成立",
+          "原卷選擇規則未在抽取文字中明示",
+          "沒有官方答案 key"
+        ]
+      }
+    },
+    {
+      "questionId": "q-pp-cs-arch-114-13",
+      "paperId": "pp-cs-arch-114",
+      "topicId": "cs-arch-pipeline",
+      "primarySubtopicId": "cs-arch-pipeline-hazards-forwarding",
+      "questionType": "single_choice",
+      "scoringMode": "self_review",
+      "taxonomyConfidence": "high",
+      "taxonomyRationale": "以 load delay slot 追蹤緊鄰 consumer 讀到的新舊 register value。",
+      "originQuestionTextSha256": "b7282a2644f70f262f5b8ea4d1ca422af7926fe5c706042519f790e2f23f1e9d",
+      "answerSource": {
+        "kind": "candidate_technical_derivation",
+        "official": false,
+        "reviewCount": 1,
+        "note": "依 origin/main 題面與現有解析建立的初審草稿，不是官方答案。"
+      },
+      "answerConfidence": {
+        "level": "medium",
+        "basis": [
+          "addi 先把 x3 設為 24；忽略 load delay slot 時，緊鄰 add 仍讀到舊值 24。",
+          "x4 因而得到 24+24=48，對應 A。"
+        ],
+        "unresolvedIssues": [
+          "沒有官方答案 key",
+          "尚缺第二位獨立 reviewer"
+        ]
+      },
+      "publication": {
+        "browseEligible": true,
+        "practiceEligible": false,
+        "autoGradeEligible": false,
+        "fullMockEligible": false,
+        "blockers": [
+          "沒有官方答案 key",
+          "尚缺第二位獨立 reviewer"
+        ]
+      }
+    }
+  ]
+}

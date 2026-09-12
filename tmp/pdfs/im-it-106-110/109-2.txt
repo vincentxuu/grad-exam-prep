@@ -1,0 +1,64 @@
+MAB: 378 國 立 臺 灣 大 學 109 學 年 度 碩士 班 招生 考試 試題
+科目 : 資 訊 科技 概論 HM: 378
+HA: 6 #3 頁 之 第 25
+
+14. ‘| Bluetooth is popularly used in the following applications as a wireless communication
+technology except (A) between a mobile phone and a VR headset (B) between a mobile phone and
+a car stereo system (C) between a wearable device and a mobile phone (D) between a mouse and a
+laptop (E) all of the above are common applications of Bluetooth.
+
+15. | Which if the following is not a non-volatile memory/storage? (A) Solid-state drive
+(SSD) (B) DDR4 (C) read-only memory (ROM) (D) Flash memory (E) all of the above are non-
+volatile.
+
+16. [上 Which of the following standards is a specification for an information security
+management system (ISMS) intended to provide a framework of policies and procedures that
+includes all legal, physical and technical controls involved in an organization’s information risk
+management processes. (A) ISO 9001 (B) ISO 7700 (C) ISO 14000 (D) ISO 27001 (E) none of
+the above.
+
+17. [__] In the C1A triad, a model designed to guide policies for information security within an
+organization, the letters ‘CIA’ refers to (A) Confidentiality, Integrity and Availability (B) Content,
+Information and Access (C) Central Intelligence Agency (D) Centralized, Independent, and
+Assurance (E) none of the above.
+
+18. [_ | Which of the following SQL Commands creates a table “Customers” with two columns
+“CustomerID” and “CustomerName”:
+
+(A) CREATE TABLE Customers (CustomerID int, CustomerName varchar(255) );
+
+(B) CREATE DATABASE Customers (CustomerID int, CustomerName varchar(255) );
+
+(C) BUILD TABLE Customers (CustomerID int, CustomerName varchar(255) );
+
+(D) BUILD DATABASE Customers (CustomerID int, CustomerName varchar(255) );
+
+(E) none of the above.
+
+19. 上 Which of the following is acommunity-developed relational database management
+system intended to maintain high compatibility with MySQL and remain free and open-source due
+to the concerns over Oracle Corporation’s acquisition of MySQL in 2009? (A) MonetbB (B) SAP
+R3 (C) Sybase (D) MariaDB (E) Firebird.
+
+20. | In the age of Internet of Things (IoT), the number of connected devices has grown
+rapidly in the past 10 years. Which of the following best describes the estimated number of
+connected devices worldwide in 2020? (A) 10-100 million (B) 100-500 million (C) 1-5 billion (D)
+10-50 billion (E) 100-500 billion.
+
+二 、 問 答題 2 題 , 共 50 分 。
+
+※※ 本 大 題 請 於 試卷 內 之 【 非 選擇 是 作答 區 】 標 明 題 號 依 序 作答 。
+
+21. An ADT LIST contains items of the same type. The following C++ code fragment shows the class
+definition of an array-based implementation of ADT LIST that contains a list of integers.
+
+(a) (15 points) Write the List::remove(int value, bool& success) function that
+temoves value from the list. Note that the integers in the array are sorted in ascending order
+and the list has NO duplicate items.
+
+(b) (15 points) If the array pointed by p_items is full, the list must resize it in order to add integers
+to the list. Write the function List : :doubleArraySize () that doubles the size of the
+integer array.
+
+中
+BAR

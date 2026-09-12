@@ -1,0 +1,2698 @@
+{
+  "im-it": {
+    "subject": {
+      "name": "資訊科技概論（計概）",
+      "topics": 8,
+      "subtopics": 30,
+      "topicDefinitions": [
+        {
+          "id": "im-it-arch",
+          "title": "電腦架構基礎",
+          "importance": 2,
+          "subtopics": [
+            "進制轉換",
+            "數值表示法",
+            "布林代數"
+          ]
+        },
+        {
+          "id": "im-it-prog",
+          "title": "程式語言概念",
+          "importance": 3,
+          "subtopics": [
+            "Java/C++基礎語法",
+            "OOP概念（封裝/繼承/多型）",
+            "程式執行流程"
+          ]
+        },
+        {
+          "id": "im-it-ds",
+          "title": "資料結構",
+          "importance": 5,
+          "subtopics": [
+            "Tree基本概念",
+            "排序演算法",
+            "Graph基礎",
+            "Hash Table"
+          ]
+        },
+        {
+          "id": "im-it-db",
+          "title": "資料庫",
+          "importance": 4,
+          "subtopics": [
+            "SQL語法",
+            "正規化（1NF/2NF/3NF）",
+            "交易管理ACID",
+            "ER Diagram"
+          ]
+        },
+        {
+          "id": "im-it-network",
+          "title": "網路",
+          "importance": 4,
+          "subtopics": [
+            "OSI 7層模型",
+            "TCP/IP協定",
+            "HTTP/HTTPS",
+            "DNS/DHCP"
+          ]
+        },
+        {
+          "id": "im-it-os",
+          "title": "作業系統",
+          "importance": 4,
+          "subtopics": [
+            "Process與Thread",
+            "Memory Management",
+            "File System",
+            "Scheduling"
+          ]
+        },
+        {
+          "id": "im-it-security",
+          "title": "資安",
+          "importance": 3,
+          "subtopics": [
+            "加密技術（對稱/非對稱）",
+            "防火牆",
+            "常見攻擊（SQL Injection, XSS）"
+          ]
+        },
+        {
+          "id": "im-it-ai",
+          "title": "AI/ML（近年必考趨勢）",
+          "importance": 5,
+          "subtopics": [
+            "監督/非監督學習",
+            "CNN/RNN/Transformer",
+            "生成式AI原理",
+            "LLM與ChatGPT",
+            "AI應用倫理"
+          ]
+        }
+      ],
+      "materials": [
+        {
+          "title": "于天立《計算機概論》（台大開放式課程，21 講）",
+          "author": "于天立",
+          "type": "video",
+          "url": "https://ocw.aca.ntu.edu.tw/courses/101S210",
+          "note": "無補習路線的主幹課程，講義可下載。多篇上榜心得的第一門課"
+        },
+        {
+          "title": "Brookshear《Computer Science: An Overview》13/e",
+          "author": "J. Glenn Brookshear",
+          "type": "book",
+          "url": "https://www.tenlong.com.tw/products/9781292263427",
+          "note": "自學者的主力用書，有中譯本。心得共識：影音課講得淺，觀念要靠這本補"
+        },
+        {
+          "title": "孔令傑《程式設計（C++）— 完整課程》（15 講）",
+          "author": "孔令傑",
+          "type": "video",
+          "url": "https://www.youtube.com/playlist?list=PLMHSr8fseBzUvwjKtR6pX0Vv9Q9H-V3lY",
+          "note": "台大資管大一必修課本身。台大計概固定考兩題 C++ 手寫題"
+        },
+        {
+          "title": "周志遠《作業系統》（清大開放式課程，78 部）",
+          "author": "周志遠",
+          "type": "video",
+          "url": "https://www.youtube.com/playlist?list=PLS0SUwlYe8cxj8FCPRoPHAehIiN9Vo6VZ",
+          "note": "無補習考資管／資工所的共同推薦。覺得太難可改看杰哥數位教室的作業系統"
+        },
+        {
+          "title": "黃能富《計算機網路》（清大開放式課程）",
+          "author": "黃能富",
+          "type": "video",
+          "url": "https://www.youtube.com/playlist?list=PLS0SUwlYe8cxktXNovos9xleroaWyb-z5",
+          "note": "多位心得只看到無線區域網路／Ethernet 結束。台大網路題廣而不深，PowerCert 也夠用"
+        },
+        {
+          "title": "杰哥數位教室 資料結構／演算法／資料庫課程",
+          "author": "陳士杰",
+          "type": "video",
+          "url": "https://www.youtube.com/playlist?list=PLpbuzGqDFzkhHPz11AeGrU7K8AKNqp0fj",
+          "note": "免費且附投影片，音質較差。資料庫讀到正規化與 SQL 即可，交易管理很少考"
+        },
+        {
+          "title": "蔡明志《資料結構：使用C++》第五版",
+          "author": "蔡明志",
+          "type": "book",
+          "url": "https://www.books.com.tw/products/0010903831",
+          "note": "配影音課用。手寫題出在資結，程式碼要練到能默寫"
+        },
+        {
+          "title": "李宏毅《機器學習》與生成式 AI 課程",
+          "author": "李宏毅",
+          "type": "video",
+          "url": "https://www.youtube.com/playlist?list=PLJV_el3uVTsOePyfmkfivYZ7Rqr2nMk3W",
+          "note": "AI 是逐年加重的趨勢題。深度學習基礎可用 iThome 鐵人賽系列文補"
+        },
+        {
+          "title": "蝦皮資管所計概筆記（藍底白字那套）",
+          "type": "notes",
+          "note": "開讀前掃一遍建立地圖、後期當索引。心得明講資結與網路部分太簡略，不能當唯一教材"
+        },
+        {
+          "title": "補習班計概講義（大碩/TKB）",
+          "type": "cram-school",
+          "note": "非必需。心得評語：參考書要搭配上課才有效益，自學不如直接讀原文書"
+        }
+      ]
+    },
+    "flashcards": {
+      "count": 60,
+      "topicIds": {
+        "im-it-ai-ml": 7,
+        "im-it-algorithms": 3,
+        "im-it-cloud": 6,
+        "im-it-computer-org": 5,
+        "im-it-data-structures": 3,
+        "im-it-database": 8,
+        "im-it-networks": 7,
+        "im-it-os": 3,
+        "im-it-programming": 4,
+        "im-it-security": 7,
+        "im-it-software-eng": 7
+      },
+      "kinds": {
+        "missing": 60
+      },
+      "tiers": {
+        "missing": 60
+      },
+      "withPastPaperRef": 0,
+      "repeatedPromptGroups": 0,
+      "validCanonicalTopicIds": 10,
+      "invalidCanonicalTopicIds": 50,
+      "samples": [
+        {
+          "id": "fc-im-it-001",
+          "examId": "im",
+          "subjectId": "im-it",
+          "topicId": "im-it-data-structures",
+          "prompt": "Hash Table 的平均時間複雜度為何？在什麼情況下會退化為最壞情況？",
+          "answer": "Hash Table 對插入、刪除、搜尋的平均時間複雜度均為 O(1)。當發生大量碰撞（collision）時會退化：若所有 key 都被 hash 到同一個 bucket，時間複雜度退化為 O(n)。解決碰撞的方法有兩種：(1) Chaining（鏈結法）：每個 bucket 維護一個 linked list；(2) Open Addressing（開放定址法）：包含 linear probing、quadratic probing、double hashing。Load factor（載入因子）= 元素數 / bucket 數，當 load factor 過高時需 rehashing 以維持效能。",
+          "pastPaperRef": null
+        },
+        {
+          "id": "fc-im-it-002",
+          "examId": "im",
+          "subjectId": "im-it",
+          "topicId": "im-it-data-structures",
+          "prompt": "Binary Heap 的插入與刪除操作時間複雜度為何？請說明 heapify 過程。",
+          "answer": "Binary Heap（二元堆積）插入與刪除（extract-min/max）的時間複雜度均為 O(log n)。插入過程：將新元素加到末端，再執行 sift-up（bubble-up），與父節點比較並交換直到滿足堆積性質。刪除（extract root）過程：移除根節點，將末端元素移至根，再執行 sift-down（heapify-down），與子節點中較小（min-heap）或較大（max-heap）者交換，直到滿足堆積性質。建立 n 個元素的 heap 可使用 Floyd 演算法，時間複雜度為 O(n)，比逐一插入的 O(n log n) 更有效率。",
+          "pastPaperRef": null
+        },
+        {
+          "id": "fc-im-it-003",
+          "examId": "im",
+          "subjectId": "im-it",
+          "topicId": "im-it-data-structures",
+          "prompt": "Stack 與 Queue 的主要差異為何？各自適合解決哪類問題？",
+          "answer": "Stack（堆疊）遵循 LIFO（Last In First Out）原則，操作包含 push（推入）與 pop（彈出），均在頂端進行。Queue（佇列）遵循 FIFO（First In First Out）原則，enqueue 在尾端，dequeue 在首端。Stack 適合：函式呼叫堆疊（call stack）、括號匹配檢查、深度優先搜尋（DFS）、運算式求值（中序轉後序）。Queue 適合：廣度優先搜尋（BFS）、CPU 排程、印表機佇列、事件處理。變體：Deque（雙端佇列）兩端均可插入與刪除；Priority Queue 依優先權決定出隊順序，通常以 heap 實作。",
+          "pastPaperRef": null
+        },
+        {
+          "id": "fc-im-it-004",
+          "examId": "im",
+          "subjectId": "im-it",
+          "topicId": "im-it-algorithms",
+          "prompt": "QuickSort 的平均與最壞時間複雜度為何？如何避免最壞情況？",
+          "answer": "QuickSort 平均時間複雜度為 O(n log n)，最壞情況為 O(n²)，發生在每次 pivot 選到最小或最大值（如已排序陣列使用固定首/尾 pivot）。空間複雜度：遞迴堆疊平均 O(log n)，最壞 O(n)。避免最壞情況的策略：(1) Randomized QuickSort：隨機選 pivot；(2) Median-of-three：取首、中、尾三者中位數作為 pivot；(3) Introsort：結合 QuickSort、HeapSort 與 Insertion Sort，當遞迴深度超過閾值時切換為 HeapSort，保證 O(n log n) 最壞情況。QuickSort 為 in-place 排序，實際效能通常優於 MergeSort，因快取友好性較好。",
+          "pastPaperRef": null
+        },
+        {
+          "id": "fc-im-it-005",
+          "examId": "im",
+          "subjectId": "im-it",
+          "topicId": "im-it-algorithms",
+          "prompt": "說明 Topological Sort（拓撲排序）的前提條件與兩種主要演算法。",
+          "answer": "拓撲排序的前提：圖必須是有向無環圖（DAG, Directed Acyclic Graph）。若圖中存在環（cycle），則無法進行拓撲排序。兩種主要演算法：(1) Kahn's Algorithm（BFS 法）：計算所有節點的入度（in-degree），將入度為 0 的節點加入 queue，逐一取出並將其鄰居入度減 1，入度變 0 者加入 queue，重複直到 queue 為空。若最終處理節點數不等於總節點數，表示圖中有環。(2) DFS 法：對每個未訪問節點執行 DFS，在 DFS 返回時將節點加入 stack 頂端，最後反轉 stack 即為拓撲順序。兩者時間複雜度均為 O(V+E)。",
+          "pastPaperRef": null
+        }
+      ]
+    },
+    "questions": {
+      "count": 260,
+      "papers": {
+        "pp-im-it-106": 26,
+        "pp-im-it-107": 26,
+        "pp-im-it-108": 22,
+        "pp-im-it-109": 22,
+        "pp-im-it-110": 29,
+        "pp-im-it-111": 25,
+        "pp-im-it-112": 29,
+        "pp-im-it-113": 25,
+        "pp-im-it-114": 25,
+        "pp-im-it-115": 31
+      },
+      "years": {
+        "106": 26,
+        "107": 26,
+        "108": 22,
+        "109": 22,
+        "110": 29,
+        "111": 25,
+        "112": 29,
+        "113": 25,
+        "114": 25,
+        "115": 31
+      },
+      "withImages": 3,
+      "withSubQuestions": 4,
+      "answered": 257,
+      "answerCoverage": 0.9884615384615385,
+      "nonemptyExplanations": 257,
+      "samples": [
+        {
+          "id": "q-pp-im-it-106-1",
+          "paperId": "pp-im-it-106",
+          "examId": "im",
+          "subjectId": "im-it",
+          "year": 106,
+          "number": 1,
+          "text": "Which of the following design is better (although not the best) than the others?\n(A) A single table containing all fields of data needed for the database.\n(B) Two tables, one contains students' profiles (Student_ID, Student_Name, Student_Address), while the other contains all the other fields.\n(C) Three tables, the 1st table contains students' profiles (Student_ID, Student_Name, Student_Address), the 2nd table contains Student_ID and the courses (Course_ID, Course_Name) they registered, the instructors (Instructor_ID, Instructor_Name), and grades, and the 3rd table contains the classroom information (Course_Name, Classroom, Course_Schedule).\n(D) A table for students' profiles (Student_ID, Student_Name, Student_Address), a table for each course containing the registered students' names and their grades (i.e., Student_ID, Course_ID, GRADE), a table of instructors containing the faculty ID of each instructor, his name, and the courses s/he teaches (Instructor_ID, Instructor_Name, Course_ID), a table of classrooms containing the classrooms, the courses and time of the courses at each classroom (Classroom, Course_ID, Course_Schedule).\n(E) A table containing (Student_ID, Student_Name), a table containing (Student_Name, Student_Address), a table for each course containing the registered students' names and their grades (Student_Name, Grade), a table for each instructor containing his ID, name and the courses s/he teaches (Instructor_ID, Instructor_Name, Course), a table for each classroom containing the courses and time of the courses using the classroom (Classroom, Course_Name, Course_Schedule).\n\n[Context: Suppose we wish to build a campus database containing tables of records about student profiles, courses registered, and grades. Fields include: Student_ID, Student_Name, Student_Address, Course_ID, Course_Name, Instructor_ID, Instructor_Name, Classroom, Course_Schedule (e.g., Wed. 9~12AM), Grade. A good database design practice is to avoid too much data overlapping between tables.]",
+          "points": 2.5,
+          "hasImage": false,
+          "subQuestions": []
+        },
+        {
+          "id": "q-pp-im-it-106-2",
+          "paperId": "pp-im-it-106",
+          "examId": "im",
+          "subjectId": "im-it",
+          "year": 106,
+          "number": 2,
+          "text": "Suppose we wish to have a table for each course containing the grade of each registered student. Which of the following design is better than the others? (A) The table contains just two fields: Student_Name, Grade. (B) The table contains just two fields: Student_ID, Grade. (C) The table contains three fields: Student_ID, Student_Name, Grade. (D) The table contains three fields: Student_Name, Instructor_ID, Grade. (E) The table contains four fields: Student_ID, Student_Name, Instructor_ID, Grade.",
+          "points": 2.5,
+          "hasImage": false,
+          "subQuestions": []
+        },
+        {
+          "id": "q-pp-im-it-106-3",
+          "paperId": "pp-im-it-106",
+          "examId": "im",
+          "subjectId": "im-it",
+          "year": 106,
+          "number": 3,
+          "text": "Which of the following SQL command selects all the records in the \"Customers\" table whose \"Country\" field is \"Taiwan\" and \"City\" field is either \"Taipei\" or \"Kaohsiung\"?\n(A) SELECT * FROM Customers WHERE Country='Taiwan' AND (City='Taipei' OR City='Kaohsiung');\n(B) SELECT ALL FROM Customers WITH Country='Taiwan' AND (City='Taipei' OR City='Kaohsiung');\n(C) SELECT * FROM Customers WHERE Country='Taiwan', City='Taipei' OR 'Kaohsiung';\n(D) SELECT ALL FROM Customers AND Country='Taiwan' AND (City='Taipei' OR City='Kaohsiung')\n(E) none of the above.",
+          "points": 2.5,
+          "hasImage": false,
+          "subQuestions": []
+        }
+      ]
+    },
+    "pastPapers": [
+      {
+        "id": "pp-im-it-115",
+        "examId": "im",
+        "subjectId": "im-it",
+        "year": 115,
+        "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/115/115-258.pdf",
+        "source": "ntu_library",
+        "verified": true,
+        "localPath": "/papers/pp-im-it-115.pdf"
+      },
+      {
+        "id": "pp-im-it-114",
+        "examId": "im",
+        "subjectId": "im-it",
+        "year": 114,
+        "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/114/114-277.pdf",
+        "source": "ntu_library",
+        "verified": true,
+        "localPath": "/papers/pp-im-it-114.pdf"
+      },
+      {
+        "id": "pp-im-it-113",
+        "examId": "im",
+        "subjectId": "im-it",
+        "year": 113,
+        "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/113/113-294.pdf",
+        "source": "ntu_library",
+        "verified": true,
+        "localPath": "/papers/pp-im-it-113.pdf"
+      },
+      {
+        "id": "pp-im-it-112",
+        "examId": "im",
+        "subjectId": "im-it",
+        "year": 112,
+        "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/112/2023-324.pdf",
+        "source": "ntu_library",
+        "verified": true,
+        "localPath": "/papers/pp-im-it-112.pdf"
+      },
+      {
+        "id": "pp-im-it-111",
+        "examId": "im",
+        "subjectId": "im-it",
+        "year": 111,
+        "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/111/111-343.pdf",
+        "source": "ntu_library",
+        "verified": true,
+        "localPath": "/papers/pp-im-it-111.pdf"
+      },
+      {
+        "id": "pp-im-it-110",
+        "examId": "im",
+        "subjectId": "im-it",
+        "year": 110,
+        "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam/graduate/110/375.pdf",
+        "source": "ntu_library",
+        "verified": true,
+        "localPath": "/papers/pp-im-it-110.pdf"
+      },
+      {
+        "id": "pp-im-it-109",
+        "examId": "im",
+        "subjectId": "im-it",
+        "year": 109,
+        "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/109/378_graduate-109.pdf",
+        "source": "ntu_library",
+        "verified": true,
+        "localPath": "/papers/pp-im-it-109.pdf"
+      },
+      {
+        "id": "pp-im-it-108",
+        "examId": "im",
+        "subjectId": "im-it",
+        "year": 108,
+        "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam/graduate/108/108_graduate_383.pdf",
+        "source": "ntu_library",
+        "verified": true,
+        "localPath": "/papers/pp-im-it-108.pdf"
+      },
+      {
+        "id": "pp-im-it-107",
+        "examId": "im",
+        "subjectId": "im-it",
+        "year": 107,
+        "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam/graduate/107_1/107_graduate_386.pdf",
+        "source": "ntu_library",
+        "verified": true,
+        "localPath": "/papers/pp-im-it-107.pdf"
+      },
+      {
+        "id": "pp-im-it-106",
+        "examId": "im",
+        "subjectId": "im-it",
+        "year": 106,
+        "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam/graduate/106g/106_graduate_381.pdf",
+        "source": "ntu_library",
+        "verified": true,
+        "localPath": "/papers/pp-im-it-106.pdf"
+      }
+    ]
+  },
+  "im-mis": {
+    "subject": {
+      "name": "資訊管理導論（MIS）",
+      "topics": 5,
+      "subtopics": 24,
+      "topicDefinitions": [
+        {
+          "id": "im-mis-theory",
+          "title": "MIS基礎理論",
+          "importance": 5,
+          "subtopics": [
+            "系統生命週期SDLC",
+            "ERP/CRM/SCM系統",
+            "資訊系統分類",
+            "決策支援系統DSS"
+          ]
+        },
+        {
+          "id": "im-mis-strategy",
+          "title": "策略分析工具",
+          "importance": 5,
+          "subtopics": [
+            "Porter 五力分析",
+            "Porter 價值鏈（9大活動）",
+            "PEST分析",
+            "平衡計分卡BSC",
+            "CSF關鍵成功因素",
+            "SWOT分析"
+          ]
+        },
+        {
+          "id": "im-mis-digital",
+          "title": "數位轉型與新興技術",
+          "importance": 4,
+          "subtopics": [
+            "IoT物聯網",
+            "Blockchain區塊鏈",
+            "AI在企業中的應用",
+            "雲端運算",
+            "大數據分析"
+          ]
+        },
+        {
+          "id": "im-mis-management",
+          "title": "管理理論",
+          "importance": 4,
+          "subtopics": [
+            "創新擴散理論",
+            "平台策略與網路效應",
+            "知識管理",
+            "敏捷開發"
+          ]
+        },
+        {
+          "id": "im-mis-current",
+          "title": "時事申論題（每年必考）",
+          "importance": 5,
+          "subtopics": [
+            "生成式AI與ChatGPT對MIS的影響",
+            "ESG永續發展",
+            "元宇宙與AR/VR應用",
+            "Gartner科技趨勢",
+            "資安治理"
+          ]
+        }
+      ],
+      "materials": [
+        {
+          "title": "Laudon《管理資訊系統》16/e 中譯本",
+          "author": "Laudon & Laudon",
+          "type": "book",
+          "url": "https://www.tenlong.com.tw/products/9789867696397",
+          "note": "無補習者的主力。按章節對應考古題練習，先回想本章哪些概念能解釋題目"
+        },
+        {
+          "title": "林東清《資訊管理：智慧化企業的核心競爭能力》八版",
+          "author": "林東清",
+          "type": "book",
+          "url": "https://www.books.com.tw/products/0010932309",
+          "note": "即舊版《e化企業的核心競爭能力》改版，補理論深度"
+        },
+        {
+          "title": "每天一篇時事申論（科技新報／科技報橘／iThome）",
+          "type": "online",
+          "note": "111 正取者的做法：考前累積 30–40 篇並每天回頭複習。這科考產出速度，不是背誦量"
+        },
+        {
+          "title": "Podcast：矽谷輕鬆談、曼報",
+          "type": "online",
+          "note": "零碎時間用。心得說法：聽力輸入對口試比視覺輸入更有幫助"
+        },
+        {
+          "title": "補習班MIS講義（大碩/TKB）",
+          "type": "cram-school",
+          "note": "庫內意見分歧最大的一科：一派說沒有回饋就不知道怎麼進步，另一派（台清政交全正取）說補習班的答題框架只適合中字輩、台政考的是案例分析。共識是要練產出與回饋機制，不是模板"
+        }
+      ]
+    },
+    "flashcards": {
+      "count": 50,
+      "topicIds": {
+        "im-mis-bi": 4,
+        "im-mis-bpr": 4,
+        "im-mis-crm": 2,
+        "im-mis-dss": 2,
+        "im-mis-ecommerce": 8,
+        "im-mis-erp": 2,
+        "im-mis-it-governance": 7,
+        "im-mis-it-strategy": 11,
+        "im-mis-knowledge-management": 3,
+        "im-mis-porter-five-forces": 2,
+        "im-mis-scm": 3,
+        "im-mis-value-chain": 2
+      },
+      "kinds": {
+        "missing": 50
+      },
+      "tiers": {
+        "missing": 50
+      },
+      "withPastPaperRef": 0,
+      "repeatedPromptGroups": 0,
+      "validCanonicalTopicIds": 0,
+      "invalidCanonicalTopicIds": 50,
+      "samples": [
+        {
+          "id": "fc-im-mis-001",
+          "examId": "im",
+          "subjectId": "im-mis",
+          "topicId": "im-mis-porter-five-forces",
+          "prompt": "Porter Five Forces（波特五力分析）的五力是什麼？各力如何影響產業獲利潛力？",
+          "answer": "Porter五力分析評估產業競爭強度與獲利能力，五力為：\n\n1. **既有競爭者的威脅**：同業競爭激烈程度，受產業成長率、固定成本、差異化程度影響。\n2. **新進者的威脅**：進入障礙高低（規模經濟、品牌忠誠度、資本需求、政府法規）決定潛在競爭壓力。\n3. **替代品的威脅**：功能相似的替代產品存在，限制訂價上限（如串流影音取代光碟）。\n4. **買方的議價能力**：買方集中、轉換成本低、採購量大時，議價力強，壓縮利潤。\n5. **供應商的議價能力**：供應商集中、無替代投入、供應品為關鍵資源時，議價力強。\n\n**IS應用**：資訊系統可改變五力平衡，如電子商務降低進入障礙、CRM提高顧客轉換成本、供應鏈系統降低供應商議價力。整體五力越弱，產業獲利潛力越高。",
+          "pastPaperRef": null
+        },
+        {
+          "id": "fc-im-mis-002",
+          "examId": "im",
+          "subjectId": "im-mis",
+          "topicId": "im-mis-porter-five-forces",
+          "prompt": "資訊系統如何影響 Porter Five Forces？請舉例說明 IT 如何改變競爭態勢。",
+          "answer": "資訊系統（IS）能改變五力結構，創造競爭優勢：\n\n1. **降低新進者威脅**：建立高轉換成本系統（如 ERP 深度整合），使新進者難以競爭。\n2. **降低替代品威脅**：透過數位化服務差異化，如 Netflix 演算法推薦強化黏著度。\n3. **降低買方議價力**：CRM 系統累積顧客忠誠度與個人化服務，提高轉換成本。\n4. **降低供應商議價力**：SCM 系統串聯多家供應商，增加採購選項與透明度。\n5. **改變既有競爭**：線上銷售平台（如電商）改變競爭地理範圍，壓低邊際成本。\n\n**關鍵概念**：資訊系統的策略價值不只在效率提升，而在於重塑產業競爭結構。企業需分析五力後，選擇能強化競爭地位的 IT 投資。",
+          "pastPaperRef": null
+        },
+        {
+          "id": "fc-im-mis-003",
+          "examId": "im",
+          "subjectId": "im-mis",
+          "topicId": "im-mis-value-chain",
+          "prompt": "Porter Value Chain（價值鏈）分析中，主要活動（Primary Activities）與支援活動（Support Activities）各包含哪些？",
+          "answer": "Porter價值鏈將企業活動分為創造顧客價值的兩類：\n\n**主要活動（5項）**：\n1. **進料後勤（Inbound Logistics）**：原料接收、倉儲、庫存管理\n2. **生產作業（Operations）**：將投入轉化為產品\n3. **出貨後勤（Outbound Logistics）**：成品倉儲、配送\n4. **行銷與銷售（Marketing & Sales）**：廣告、定價、通路管理\n5. **服務（Service）**：售後服務、維修、客訴處理\n\n**支援活動（4項）**：\n1. **企業基礎設施（Firm Infrastructure）**：財務、法務、管理\n2. **人力資源管理（HRM）**：招募、訓練、薪酬\n3. **技術發展（Technology Development）**：R&D、流程自動化\n4. **採購（Procurement）**：購買投入要素\n\n**利潤（Margin）** = 顧客願付價格 − 各活動成本總和。IS 可在每個環節降低成本或提升差異化，創造競爭優勢。",
+          "pastPaperRef": null
+        },
+        {
+          "id": "fc-im-mis-004",
+          "examId": "im",
+          "subjectId": "im-mis",
+          "topicId": "im-mis-value-chain",
+          "prompt": "如何用 Value Chain 分析找出 IT 投資的優先項目？",
+          "answer": "步驟如下：\n\n1. **繪製企業價值鏈**：列出所有主要與支援活動，標示各活動的成本與差異化貢獻度。\n\n2. **識別痛點與瓶頸**：哪些活動成本最高？哪些最影響顧客滿意度？（如出貨後勤延誤導致客訴）\n\n3. **評估 IT 介入可行性**：\n   - 標準化、重複性高的活動 → 適合 ERP/自動化\n   - 顧客互動密集的活動 → 適合 CRM\n   - 跨企業協作的活動 → 適合 SCM\n\n4. **計算 ROI**：比較 IT 投入成本 vs. 降低成本或增加營收的預期效益。\n\n5. **與競爭者比較**：若競爭者已在某活動導入 IS，則跟進為保底；若尚未導入，則有先行者優勢。\n\n**實例**：電商業者優先投資出貨後勤（倉儲自動化、最後一哩配送追蹤），因為這是差異化關鍵且成本佔比高。",
+          "pastPaperRef": null
+        },
+        {
+          "id": "fc-im-mis-005",
+          "examId": "im",
+          "subjectId": "im-mis",
+          "topicId": "im-mis-erp",
+          "prompt": "ERP（Enterprise Resource Planning）系統的核心概念、主要模組，以及導入的主要挑戰為何？",
+          "answer": "**核心概念**：ERP 是整合企業所有職能（財務、製造、HR、供應鏈、銷售）於單一共享資料庫的資訊系統，消除資訊孤島，實現即時跨部門資訊流通。\n\n**主要模組**：\n- 財務會計（Financial Accounting）\n- 採購與庫存管理（MM）\n- 銷售與配送（SD）\n- 生產規劃（PP）\n- 人力資源（HCM）\n- 專案管理（PM）\n\n**主要挑戰**：\n1. **高成本**：授權費、顧問費、客製化費用龐大\n2. **業務流程再造（BPR）**：需配合系統調整既有流程，阻力大\n3. **變革管理**：員工抗拒、需大量培訓\n4. **資料移轉**：舊系統資料清理與轉換耗時\n5. **過度客製化**：偏離標準模組導致後續升級困難\n6. **導入時間長**：大型企業可能需 2-5 年\n\n**成功關鍵**：高層支持、清晰目標、選擇合適廠商（SAP、Oracle）、最小化客製化。",
+          "pastPaperRef": null
+        }
+      ]
+    },
+    "questions": {
+      "count": 37,
+      "papers": {
+        "pp-im-mis-106": 4,
+        "pp-im-mis-107": 4,
+        "pp-im-mis-108": 4,
+        "pp-im-mis-109": 4,
+        "pp-im-mis-110": 4,
+        "pp-im-mis-111": 4,
+        "pp-im-mis-112": 4,
+        "pp-im-mis-113": 4,
+        "pp-im-mis-114": 3,
+        "pp-im-mis-115": 2
+      },
+      "years": {
+        "106": 4,
+        "107": 4,
+        "108": 4,
+        "109": 4,
+        "110": 4,
+        "111": 4,
+        "112": 4,
+        "113": 4,
+        "114": 3,
+        "115": 2
+      },
+      "withImages": 1,
+      "withSubQuestions": 0,
+      "answered": 37,
+      "answerCoverage": 1,
+      "nonemptyExplanations": 37,
+      "samples": [
+        {
+          "id": "q-pp-im-mis-106-1",
+          "paperId": "pp-im-mis-106",
+          "examId": "im",
+          "subjectId": "im-mis",
+          "year": 106,
+          "number": 1,
+          "text": "Competitive strategies that firms can employ to deal with competitive forces include cost leadership strategy, differentiation strategy, innovation strategy, etc.\n(1) Please give two examples to explain how firms can use information systems (IS) or information technologies (IT) to support the differentiation strategy. (10%)\n(2) For firms that adopt the differentiation strategy, what recommendations will you suggest to the firms about their IT strategy and management? (15%)",
+          "points": 25,
+          "hasImage": false,
+          "subQuestions": []
+        },
+        {
+          "id": "q-pp-im-mis-106-2",
+          "paperId": "pp-im-mis-106",
+          "examId": "im",
+          "subjectId": "im-mis",
+          "year": 106,
+          "number": 2,
+          "text": "Sharing economy refers to \"peer-to-peer-based activities of obtaining, giving, or sharing the access to goods and services, coordinated through community-based online services.\" Uber and AirBnB represent two famous examples of the sharing economy.\n(1) What are the major challenges for the sharing economy? (12%)\n(2) Please select one challenge that you just answer in (1) and describe (or develop) an information system/technology solution to address this challenge. (13%)",
+          "points": 25,
+          "hasImage": false,
+          "subQuestions": []
+        },
+        {
+          "id": "q-pp-im-mis-106-3",
+          "paperId": "pp-im-mis-106",
+          "examId": "im",
+          "subjectId": "im-mis",
+          "year": 106,
+          "number": 3,
+          "text": "The rise of Android platform signals the business value and strategic importance of open source software (OSS). While OSS can greatly reduce system development barrier, its license restricts the use of OSS software, and is an important consideration when adopting OSS in system development. Answer the following questions regarding OSS.\n(1) What is open source software? (5%)\n(2) About 85% of open source software adopts the General Public License (GPL). What are the key terms of a GPL license? (7%)\n(3) Apache License is also quite popular in open source community. Explain the reason when the Apache License should be selected over the GPL license for an open source project. (7%)\n(4) What are the strategic advantages for a business to be involved in open source software development projects? (6%)",
+          "points": 25,
+          "hasImage": false,
+          "subQuestions": []
+        }
+      ]
+    },
+    "pastPapers": [
+      {
+        "id": "pp-im-mis-115",
+        "examId": "im",
+        "subjectId": "im-mis",
+        "year": 115,
+        "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/115/115-259.pdf",
+        "source": "ntu_library",
+        "verified": true,
+        "localPath": "/papers/pp-im-mis-115.pdf"
+      },
+      {
+        "id": "pp-im-mis-114",
+        "examId": "im",
+        "subjectId": "im-mis",
+        "year": 114,
+        "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/114/114-278.pdf",
+        "source": "ntu_library",
+        "verified": true,
+        "localPath": "/papers/pp-im-mis-114.pdf"
+      },
+      {
+        "id": "pp-im-mis-113",
+        "examId": "im",
+        "subjectId": "im-mis",
+        "year": 113,
+        "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/113/113-295.pdf",
+        "source": "ntu_library",
+        "verified": true,
+        "localPath": "/papers/pp-im-mis-113.pdf"
+      },
+      {
+        "id": "pp-im-mis-112",
+        "examId": "im",
+        "subjectId": "im-mis",
+        "year": 112,
+        "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/112/2023-325.pdf",
+        "source": "ntu_library",
+        "verified": true,
+        "localPath": "/papers/pp-im-mis-112.pdf"
+      },
+      {
+        "id": "pp-im-mis-111",
+        "examId": "im",
+        "subjectId": "im-mis",
+        "year": 111,
+        "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/111/111-344.pdf",
+        "source": "ntu_library",
+        "verified": true,
+        "localPath": "/papers/pp-im-mis-111.pdf"
+      },
+      {
+        "id": "pp-im-mis-110",
+        "examId": "im",
+        "subjectId": "im-mis",
+        "year": 110,
+        "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam/graduate/110/376.pdf",
+        "source": "ntu_library",
+        "verified": true,
+        "localPath": "/papers/pp-im-mis-110.pdf"
+      },
+      {
+        "id": "pp-im-mis-109",
+        "examId": "im",
+        "subjectId": "im-mis",
+        "year": 109,
+        "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/109/379_graduate-109.pdf",
+        "source": "ntu_library",
+        "verified": true,
+        "localPath": "/papers/pp-im-mis-109.pdf"
+      },
+      {
+        "id": "pp-im-mis-108",
+        "examId": "im",
+        "subjectId": "im-mis",
+        "year": 108,
+        "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam/graduate/108/108_graduate_384.pdf",
+        "source": "ntu_library",
+        "verified": true,
+        "localPath": "/papers/pp-im-mis-108.pdf"
+      },
+      {
+        "id": "pp-im-mis-107",
+        "examId": "im",
+        "subjectId": "im-mis",
+        "year": 107,
+        "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam/graduate/107_1/107_graduate_387.pdf",
+        "source": "ntu_library",
+        "verified": true,
+        "localPath": "/papers/pp-im-mis-107.pdf"
+      },
+      {
+        "id": "pp-im-mis-106",
+        "examId": "im",
+        "subjectId": "im-mis",
+        "year": 106,
+        "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam/graduate/106g/106_graduate_382.pdf",
+        "source": "ntu_library",
+        "verified": true,
+        "localPath": "/papers/pp-im-mis-106.pdf"
+      }
+    ]
+  },
+  "im-stat": {
+    "subject": {
+      "name": "統計學",
+      "topics": 4,
+      "subtopics": 16,
+      "topicDefinitions": [
+        {
+          "id": "im-stat-descriptive",
+          "title": "描述性統計",
+          "importance": 4,
+          "subtopics": [
+            "平均數/中位數/眾數",
+            "標準差與變異數",
+            "偏態與峰度",
+            "直方圖與盒鬚圖"
+          ]
+        },
+        {
+          "id": "im-stat-probability",
+          "title": "機率基礎",
+          "importance": 4,
+          "subtopics": [
+            "條件機率",
+            "貝氏定理",
+            "常見機率分佈（常態/二項/Poisson）"
+          ]
+        },
+        {
+          "id": "im-stat-inference",
+          "title": "推論統計",
+          "importance": 5,
+          "subtopics": [
+            "抽樣分佈與中央極限定理",
+            "信賴區間",
+            "假設檢定（t檢定/z檢定）",
+            "卡方檢定",
+            "ANOVA"
+          ]
+        },
+        {
+          "id": "im-stat-regression",
+          "title": "迴歸分析",
+          "importance": 4,
+          "subtopics": [
+            "單元線性迴歸",
+            "多元線性迴歸",
+            "迴歸係數解釋",
+            "R²與F檢定"
+          ]
+        }
+      ],
+      "materials": [
+        {
+          "title": "唐麗英《統計學(一) 基礎統計》（16 講）",
+          "author": "唐麗英",
+          "type": "video",
+          "url": "https://www.youtube.com/playlist?list=PLj6E8qlqmkFvsst4-ww1mrax1D65FQI1m",
+          "note": "免費影音，敘述統計到抽樣分佈。114 台大正取者兩三週看完這兩套"
+        },
+        {
+          "title": "唐麗英《統計學(二) 進階統計》（13 講）",
+          "author": "唐麗英",
+          "type": "video",
+          "url": "https://www.youtube.com/playlist?list=PLj6E8qlqmkFtFl1HFux0XUHiPjBmBoZno",
+          "note": "假設檢定、ANOVA、迴歸——正好是考試重心"
+        },
+        {
+          "title": "Lind《商用統計學》19e 中譯本",
+          "author": "Lind, Marchal & Wathen",
+          "type": "book",
+          "url": "https://www.books.com.tw/products/0010991598",
+          "note": "配影音課的習題來源，關鍵在大量練題提升解題速度"
+        },
+        {
+          "title": "補習班統計學講義",
+          "type": "cram-school",
+          "note": "非必需。統計是可自學度最高的一科，跨考生只要修過基礎統計就不吃虧"
+        }
+      ]
+    },
+    "flashcards": {
+      "count": 50,
+      "topicIds": {
+        "im-stat-anova": 3,
+        "im-stat-chi-square": 3,
+        "im-stat-descriptive": 3,
+        "im-stat-distribution-binomial": 3,
+        "im-stat-distribution-normal": 6,
+        "im-stat-distribution-poisson": 2,
+        "im-stat-estimation": 4,
+        "im-stat-hypothesis": 9,
+        "im-stat-probability": 2,
+        "im-stat-regression": 12,
+        "im-stat-sampling": 3
+      },
+      "kinds": {
+        "missing": 50
+      },
+      "tiers": {
+        "missing": 50
+      },
+      "withPastPaperRef": 0,
+      "repeatedPromptGroups": 0,
+      "validCanonicalTopicIds": 17,
+      "invalidCanonicalTopicIds": 33,
+      "samples": [
+        {
+          "id": "fc-im-stat-001",
+          "examId": "im",
+          "subjectId": "im-stat",
+          "topicId": "im-stat-descriptive",
+          "prompt": "樣本變異數 (sample variance) 的公式為何？為何除以 n−1 而非 n？",
+          "answer": "公式：S² = Σ(xᵢ − x̄)² / (n−1)\n\n除以 n−1（Bessel's correction）是為了使 S² 成為母體變異數 σ² 的不偏估計量（unbiased estimator）。\n\n若除以 n，E[S²] = (n−1)/n · σ² ≠ σ²，存在向下偏誤。\n\n直觀解釋：計算樣本偏差時已用掉 x̄，等於消耗了 1 個自由度，故有效自由度僅剩 n−1。\n\n使用時機：從樣本估計母體變異數、進行 t 檢定或 F 檢定時。",
+          "pastPaperRef": null
+        },
+        {
+          "id": "fc-im-stat-002",
+          "examId": "im",
+          "subjectId": "im-stat",
+          "topicId": "im-stat-descriptive",
+          "prompt": "偏度 (skewness) 與峰度 (kurtosis) 的定義及意義為何？",
+          "answer": "偏度：γ₁ = E[(X−μ)³] / σ³\n- γ₁ > 0：右偏（正偏），尾巴向右延伸，均值 > 中位數 > 眾數\n- γ₁ < 0：左偏（負偏），尾巴向左延伸\n- γ₁ = 0：對稱分配\n\n峰度：γ₂ = E[(X−μ)⁴] / σ⁴\n- 常態分配的峰度 = 3\n- 超額峰度（excess kurtosis）= γ₂ − 3\n- > 0 (leptokurtic)：尖峰厚尾；< 0 (platykurtic)：低峰薄尾\n\n使用時機：描述資料分佈形狀、檢驗常態性假設前的初步分析。",
+          "pastPaperRef": null
+        },
+        {
+          "id": "fc-im-stat-003",
+          "examId": "im",
+          "subjectId": "im-stat",
+          "topicId": "im-stat-descriptive",
+          "prompt": "Chebyshev 不等式的內容為何？與常態分配的比較？",
+          "answer": "Chebyshev 不等式：對任意分配（只要有限變異數），\nP(|X − μ| ≥ kσ) ≤ 1/k²\n等價地：P(|X − μ| < kσ) ≥ 1 − 1/k²\n\n常見數值：\n- k=2：P ≥ 75%（常態分配為 95.44%）\n- k=3：P ≥ 88.9%（常態分配為 99.73%）\n\n特點：\n- 適用於任何分配，是通用下界\n- 界限較寬鬆，實際機率往往更大\n- 無需知道分配形狀\n\n使用時機：母體分配未知時，保守估計資料落在均值附近某範圍的機率。",
+          "pastPaperRef": null
+        },
+        {
+          "id": "fc-im-stat-004",
+          "examId": "im",
+          "subjectId": "im-stat",
+          "topicId": "im-stat-probability",
+          "prompt": "說明條件機率 (conditional probability) 與 Bayes' theorem 的公式及應用。",
+          "answer": "條件機率：P(A|B) = P(A∩B) / P(B)，P(B) > 0\n\nBayes' theorem：\nP(A|B) = P(B|A) · P(A) / P(B)\n\n全機率公式展開分母：\nP(B) = Σᵢ P(B|Aᵢ) · P(Aᵢ)\n\n其中 {A₁,...,Aₙ} 為樣本空間的分割。\n\n術語：\n- P(A)：先驗機率 (prior)\n- P(A|B)：後驗機率 (posterior)\n- P(B|A)：概似函數 (likelihood)\n\n使用時機：疾病篩檢（已知陽性結果，求真正患病機率）、垃圾郵件過濾、分類問題中更新信念。",
+          "pastPaperRef": null
+        },
+        {
+          "id": "fc-im-stat-005",
+          "examId": "im",
+          "subjectId": "im-stat",
+          "topicId": "im-stat-probability",
+          "prompt": "隨機變數 X 的期望值 E[X] 與 Var(X) 的基本性質（線性運算規則）。",
+          "answer": "期望值性質：\n- E[c] = c（常數）\n- E[cX] = c·E[X]\n- E[X+Y] = E[X] + E[Y]（無論獨立與否）\n- E[XY] = E[X]·E[Y]（X, Y 獨立時）\n\n變異數性質：\n- Var(X) = E[X²] − (E[X])²\n- Var(c) = 0\n- Var(cX) = c²·Var(X)\n- Var(X+Y) = Var(X) + Var(Y) + 2Cov(X,Y)\n- Var(X+Y) = Var(X) + Var(Y)（X, Y 獨立時）\n- Var(X−Y) = Var(X) + Var(Y)（X, Y 獨立時）\n\n使用時機：推導估計量的分配、計算線性組合的期望值與變異數，是所有統計推論的基礎。",
+          "pastPaperRef": null
+        }
+      ]
+    },
+    "questions": {
+      "count": 5,
+      "papers": {
+        "pp-im-stat-114": 2,
+        "pp-im-stat-115": 3
+      },
+      "years": {
+        "114": 2,
+        "115": 3
+      },
+      "withImages": 2,
+      "withSubQuestions": 0,
+      "answered": 5,
+      "answerCoverage": 1,
+      "nonemptyExplanations": 5,
+      "samples": [
+        {
+          "id": "q-pp-im-stat-114-4",
+          "paperId": "pp-im-stat-114",
+          "examId": "im",
+          "subjectId": "im-stat",
+          "year": 114,
+          "number": 4,
+          "text": "Amy analyzes the factors that determine how much garbage a family produces per week. Factors including the size of the house, the number of children, and the number of adults who are usually home during the day are considered. Below is the report produced by a regression routine. Answer the following questions. You should provide reasoning and justifications for your solution.\n\nOLS Regression Results:\nDep. Variable: Garbage | R-squared: 0.170\nModel: OLS | Adj. R-squared: [UNK1]\nMethod: Least Squares | F-statistic: 29.80\nNo. Observations: 440 | Prob (F-statistic): 1.52e-17\nDf Residuals: [UNK2] | Log-Likelihood: -1194.7\nDf Model: 3 | AIC: 2397. | BIC: 2414.\n\nCoefficients:\nIntercept: coef=7.1943, std err=1.092, t=[UNK3], P>|t|=0.000\nQ(\"House Size\"): coef=0.0019, std err=0.001, P>|t|=0.001, [0.025]=0.001, [0.975]=0.003\nChildren: coef=1.1028, std err=0.141, P>|t|=0.000, [0.025]=0.826, [0.975]=1.379\nAdults: coef=1.0425, std err=0.233, P>|t|=0.000, [0.025]=0.585, [0.975]=1.500\n\nOmnibus: 0.193 | Durbin-Watson: 1.963\nProb(Omnibus): 0.908 | Jarque-Bera (JB): 0.272\nSkew: 0.044 | Prob(JB): 0.873\nKurtosis: 2.916 | Cond. No.: 1.14e+04\n\n(1) Compute the value of adjusted R-squared (UNK1) based on available information. (5%)\n\n(2) Compute the residual degree of freedom (UNK2) and the t-value of the Intercept (UNK3) based on available information. (4%)\n\n(3) Conduct the following hypothesis test (using 95% significance level):\nH0: Coefficients of all independent variables are jointly zero.\nH1: At least one independent variable has a non-zero coefficient. (6%)",
+          "points": 15,
+          "hasImage": true,
+          "subQuestions": []
+        },
+        {
+          "id": "q-pp-im-stat-114-5",
+          "paperId": "pp-im-stat-114",
+          "examId": "im",
+          "subjectId": "im-stat",
+          "year": 114,
+          "number": 5,
+          "text": "Let Y₁, Y₂, ..., Yₜ be an identical and independent sample from population Z with mean μ and variance σ². T is a multiple of 5. Define estimator m as:\n\nm = (1/T) Σ g(i) · Yᵢ\n\nwhere g(i) = 1 + (i mod 5) and mod is the modular operator.\n\n(1) Prove that m is an unbiased estimator for μ. (10%)\n\n(2) What is the variance of m? (10%)",
+          "points": 20,
+          "hasImage": false,
+          "subQuestions": []
+        },
+        {
+          "id": "q-pp-im-stat-115-3",
+          "paperId": "pp-im-stat-115",
+          "examId": "im",
+          "subjectId": "im-stat",
+          "year": 115,
+          "number": 3,
+          "text": "Let X₁ and X₂ have the joint probability mass function\n\nf(x₁, x₂) = c(|x₁| + |x₂| + |x₁ + x₂|) / (1+|x₁|)(1+|x₂|)(1+|x₁+x₂|),  x₁ ∈ {-1, 0, 1}, x₂ ∈ {0, 1}\n             0,  otherwise\n\n(A). Determine the normalizing constant c. (5%)\n(B). Find the joint probability mass function of Y₁ = X₁ + X₂ and Y₂ = X₁ - X₂. (5%)\n(C). Find the marginal probability mass function of Y₁. (5%)",
+          "points": 15,
+          "hasImage": false,
+          "subQuestions": []
+        }
+      ]
+    },
+    "pastPapers": [
+      {
+        "id": "pp-im-stat-115",
+        "examId": "im",
+        "subjectId": "im-stat",
+        "year": 115,
+        "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/115/115-259.pdf",
+        "source": "ntu_library",
+        "verified": true,
+        "note": "與資訊管理導論合併為同一份考卷",
+        "localPath": "/papers/pp-im-stat-115.pdf"
+      },
+      {
+        "id": "pp-im-stat-114",
+        "examId": "im",
+        "subjectId": "im-stat",
+        "year": 114,
+        "url": "https://exam.lib.ntu.edu.tw/sites/default/files/exam//graduate/114/114-278.pdf",
+        "source": "ntu_library",
+        "verified": true,
+        "note": "與資訊管理導論合併為同一份考卷",
+        "localPath": "/papers/pp-im-stat-114.pdf"
+      },
+      {
+        "id": "pp-im-stat-113",
+        "examId": "im",
+        "subjectId": "im-stat",
+        "year": 113,
+        "url": null,
+        "source": "ntu_library",
+        "verified": false,
+        "note": "統計卷 PDF 尚未取得（該年度資管導論卷內未含統計題）"
+      },
+      {
+        "id": "pp-im-stat-112",
+        "examId": "im",
+        "subjectId": "im-stat",
+        "year": 112,
+        "url": null,
+        "source": "ntu_library",
+        "verified": false,
+        "note": "統計卷 PDF 尚未取得（該年度資管導論卷內未含統計題）"
+      },
+      {
+        "id": "pp-im-stat-111",
+        "examId": "im",
+        "subjectId": "im-stat",
+        "year": 111,
+        "url": null,
+        "source": "ntu_library",
+        "verified": false,
+        "note": "統計卷 PDF 尚未取得（該年度資管導論卷內未含統計題）"
+      },
+      {
+        "id": "pp-im-stat-110",
+        "examId": "im",
+        "subjectId": "im-stat",
+        "year": 110,
+        "url": null,
+        "source": "ntu_library",
+        "verified": false,
+        "note": "統計卷 PDF 尚未取得（該年度資管導論卷內未含統計題）"
+      },
+      {
+        "id": "pp-im-stat-109",
+        "examId": "im",
+        "subjectId": "im-stat",
+        "year": 109,
+        "url": null,
+        "source": "ntu_library",
+        "verified": false,
+        "note": "統計卷 PDF 尚未取得（該年度資管導論卷內未含統計題）"
+      },
+      {
+        "id": "pp-im-stat-108",
+        "examId": "im",
+        "subjectId": "im-stat",
+        "year": 108,
+        "url": null,
+        "source": "ntu_library",
+        "verified": false,
+        "note": "統計卷 PDF 尚未取得（該年度資管導論卷內未含統計題）"
+      },
+      {
+        "id": "pp-im-stat-107",
+        "examId": "im",
+        "subjectId": "im-stat",
+        "year": 107,
+        "url": null,
+        "source": "ntu_library",
+        "verified": false,
+        "note": "統計卷 PDF 尚未取得（該年度資管導論卷內未含統計題）"
+      },
+      {
+        "id": "pp-im-stat-106",
+        "examId": "im",
+        "subjectId": "im-stat",
+        "year": 106,
+        "url": null,
+        "source": "ntu_library",
+        "verified": false,
+        "note": "統計卷 PDF 尚未取得（該年度資管導論卷內未含統計題）"
+      }
+    ]
+  },
+  "crossSubject": {
+    "relevantGuides": [
+      {
+        "id": "guide-dcard-115-im-tech",
+        "title": "115 資管所 資結組 目標臺大 各科準備與心態分享",
+        "subtitle": "臺科大資管系、非應屆，考取資管所資結組（科技組）",
+        "examRelevance": [
+          "im"
+        ],
+        "year": 115,
+        "tags": [
+          "資結組／科技組",
+          "非應屆",
+          "補習決策",
+          "生成式AI"
+        ],
+        "source": {
+          "platform": "Dcard 研究所版",
+          "url": "https://www.dcard.tw/f/graduate_school/p/261258186",
+          "author": "115 資管所上榜生"
+        },
+        "topics": [
+          "是否要報補習班的決策考量",
+          "生成式 AI 在備考時的用法與界線",
+          "自己整理筆記的方式",
+          "計概、資結、MIS、統計、英文的準備方向",
+          "讀書時間在各科之間的分配",
+          "備考期間的心態與觀念"
+        ]
+      },
+      {
+        "id": "guide-dcard-115-im-oral",
+        "title": "115資管所 臺大 政大 口試經驗分享",
+        "subtitle": "與上一篇同一位作者，台大資管所與政大資管科技組口試皆逾 91 分並正取",
+        "examRelevance": [
+          "im"
+        ],
+        "year": 115,
+        "tags": [
+          "二階口試",
+          "台大",
+          "政大"
+        ],
+        "source": {
+          "platform": "Dcard 研究所版",
+          "url": "https://www.dcard.tw/f/graduate_school/p/261225472",
+          "author": "115 資管所上榜生"
+        },
+        "topics": [
+          "口試分數與最終結果",
+          "台大資管所口試的四關組成",
+          "統計關、管理關的提問方向",
+          "技術關、生涯關的提問方向",
+          "政大科技組的英文閱讀與團體面試",
+          "政大的程式題與技術關",
+          "兩校口試的準備建議"
+        ]
+      },
+      {
+        "id": "guide-dcard-115-im-mgmt-cross",
+        "title": "115 資管所 管理組 企管系跨考資管所心得分享",
+        "subtitle": "企管系非應屆跨考、有補習，交大／政大資管正取、台大／中央資管備取",
+        "examRelevance": [
+          "im"
+        ],
+        "year": 115,
+        "tags": [
+          "管理組",
+          "跨考",
+          "非應屆"
+        ],
+        "source": {
+          "platform": "Dcard 研究所版",
+          "url": "https://www.dcard.tw/f/graduate_school/p/261452528",
+          "author": "115 資管所上榜生"
+        },
+        "topics": [
+          "考試成績",
+          "讀書計畫",
+          "計概／資結／MIS 的準備重點",
+          "考古題運用",
+          "補習班選擇",
+          "面試"
+        ]
+      },
+      {
+        "id": "guide-dcard-115-im-retake",
+        "title": "115資管所資結組重考上榜心得",
+        "subtitle": "私立大學非應屆重考、TOEIC 785、有報題庫班，交大與中央上榜",
+        "examRelevance": [
+          "im"
+        ],
+        "year": 115,
+        "tags": [
+          "資結組／科技組",
+          "重考",
+          "AI 趨勢題"
+        ],
+        "source": {
+          "platform": "Dcard 研究所版",
+          "url": "https://www.dcard.tw/f/graduate_school/p/261316410",
+          "author": "115 資管所上榜生"
+        },
+        "topics": [
+          "備考時程",
+          "計概與資結的學習資源",
+          "網路、資料庫、程式語言的補強",
+          "AI 與資訊科技趨勢題的準備",
+          "作息與運動安排",
+          "焦慮緩解"
+        ]
+      },
+      {
+        "id": "guide-hackmd-112-im-nocram-ordinary",
+        "title": "112 資管所考試：致普通背景且不想補習的人看",
+        "subtitle": "南投地區大學資管系，只補 MIS 單科、計概與資結全自學",
+        "examRelevance": [
+          "im"
+        ],
+        "year": 112,
+        "tags": [
+          "無補習",
+          "失分檢討",
+          "教材取捨",
+          "MIS 自學"
+        ],
+        "source": {
+          "platform": "HackMD",
+          "url": "https://hackmd.io/@eleanorLin/ryJWey7X2",
+          "author": "eleanorLin"
+        },
+        "topics": [
+          "逐科附上的「慘痛經驗」檢討",
+          "哪些章節讀了是浪費時間",
+          "網路與資安要讀到能回答什麼",
+          "資結的學習順序與圖論技巧",
+          "MIS 申論的打草稿流程"
+        ]
+      },
+      {
+        "id": "guide-dcard-114-im-ntu-cram",
+        "title": "114 資管所跨考／台大正取心得分享",
+        "subtitle": "四大管院 34%，有補習，114 學年度正取台大資管所",
+        "examRelevance": [
+          "im"
+        ],
+        "year": 114,
+        "tags": [
+          "有補習",
+          "跨考",
+          "正取台大",
+          "題庫班"
+        ],
+        "source": {
+          "platform": "Dcard 研究所版",
+          "url": "https://www.dcard.tw/f/graduate_school/p/258401429",
+          "author": "114 台大資管所正取生"
+        },
+        "topics": [
+          "補習班各科正課的實際覆蓋範圍",
+          "各科題庫班分別在做什麼",
+          "題庫班解答錯誤造成的效率損失",
+          "114 統計突然加考時的應對",
+          "手寫程式碼在台大的分數權重",
+          "英文分數不足被刷掉的實例",
+          "台大四關與台科兩關口試題目"
+        ]
+      }
+    ],
+    "relevantResources": [
+      {
+        "id": "res-ptt-im",
+        "title": "PTT graduate版 — 資管所上榜心得",
+        "type": "PTT",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.ptt.cc/bbs/graduate/search?q=%E8%B3%87%E7%AE%A1%E6%89%80%E5%BF%83%E5%BE%97",
+        "description": "PTT 研究所板的資管所心得文彙整，可按年份篩選，了解歷屆考試風格與各校錄取分數趨勢"
+      },
+      {
+        "id": "res-yt-ai",
+        "title": "YouTube — 蔡炎龍教授AI/ML課程（政大MOOCs）",
+        "type": "YouTube",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.youtube.com/playlist?list=PLpXfHEl2fzl4ipgEayqjo0veG0KPqQMwb",
+        "description": "政大蔡炎龍教授的生成式AI與機器學習入門課，涵蓋計概AI部分常見考點，免費且淺顯易懂"
+      },
+      {
+        "id": "res-notion-im",
+        "title": "Notion — Mavis IMPrepare 上榜學姐備考資源",
+        "type": "Notion",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://dapper-cacao-eac.notion.site/4ed093059f2d4c228aa0d8526af6f776",
+        "description": "整理完整的資管所備考資源連結，含科目分析、推薦書目、補習班比較與歷屆錄取率統計"
+      },
+      {
+        "id": "res-cram-tkb",
+        "title": "大碩/TKB補習班（台灣最主流）",
+        "type": "補習班",
+        "examRelevance": [
+          "im",
+          "cs"
+        ],
+        "url": "https://www.tkb.com.tw",
+        "description": "台灣資管所/資工所最大補習班，師資含黃子嘉（線代/離散）、林立宇（演算法）、洪逸（資結/OS）、張凡（計組）、丁祺（MIS申論）"
+      },
+      {
+        "id": "res-book-im-mis-lin",
+        "title": "林東清《資訊管理》（e化企業核心競爭能力）",
+        "type": "書目",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://search.books.com.tw/search/query/key/%E8%B3%87%E8%A8%8A%E7%AE%A1%E7%90%86+%E6%9E%97%E6%9D%B1%E6%B8%85",
+        "description": "台大資管所MIS科必讀，台灣最主流的MIS教科書，口試與申論題架構建立的核心參考書"
+      },
+      {
+        "id": "res-book-im-mis-laudon",
+        "title": "Laudon & Laudon《管理資訊系統》",
+        "type": "書目",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://search.books.com.tw/search/query/key/%E7%AE%A1%E7%90%86%E8%B3%87%E8%A8%8A%E7%B3%BB%E7%B5%B1+Laudon",
+        "description": "MIS國際標準教科書，補充理論深度，適合在林東清版之外建立英文概念術語能力"
+      },
+      {
+        "id": "res-book-cs-ds",
+        "title": "Discovering Computers 中譯本",
+        "type": "書目",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://search.books.com.tw/search/query/key/Discovering+Computers",
+        "description": "資管所計概必讀，涵蓋硬體、軟體、網路、資安、AI等大部分考點，適合建立廣泛計概知識架構"
+      },
+      {
+        "id": "res-dcard-cs",
+        "title": "Dcard 研究所板 — 歷屆統計表格",
+        "type": "Dcard",
+        "examRelevance": [
+          "im",
+          "cs"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school",
+        "description": "各年錄取率、分數分布彙整，也是最多考生分享當年考試感受與備考討論的社群平台"
+      },
+      {
+        "id": "res-official-ntu-lib",
+        "title": "台大圖書館歷屆考古題",
+        "type": "官方",
+        "examRelevance": [
+          "im",
+          "cs"
+        ],
+        "url": "https://exam.lib.ntu.edu.tw/exam",
+        "description": "資管所106–115（3科×10年）、資工所108–114（4科）官方PDF，免費公開，為備考考古題的首要來源"
+      },
+      {
+        "id": "res-dcard-im-114",
+        "title": "Dcard — 114資管所考試上榜心得分享",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/258500878",
+        "description": "以台大為首要目標、中央/中山為保底的四大資管所備考策略，從大三寒假1月開始備考，詳述各科雲端課程選擇"
+      },
+      {
+        "id": "res-medium-im-111-a",
+        "title": "Medium — 111年跨考台大/政大/清大/成大/中山資管組所正取心得",
+        "type": "部落格",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://medium.com/@106305019/111%E5%B9%B4%E8%B7%A8%E8%80%83%E5%8F%B0%E5%A4%A7-%E6%94%BF%E5%A4%A7-%E6%B8%85%E5%A4%A7-%E6%88%90%E5%A4%A7-%E4%B8%AD%E5%B1%B1%E8%B3%87%E7%AE%A1%E8%B3%87%E7%AE%A1%E7%B5%84%E6%89%80%E6%AD%A3%E5%8F%96%E5%BF%83%E5%BE%97-af6af59928b9",
+        "description": "跨考生五所正取（管理組），分享各科備考方式與資源整理，非本科轉考資管組的重要參考"
+      },
+      {
+        "id": "res-medium-im-111-b",
+        "title": "Medium — 111年跨考台大/政大/清大/中央資管所正取（含資源推薦）",
+        "type": "部落格",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://waanwu.medium.com/111%E5%B9%B4%E8%B7%A8%E8%80%83%E5%8F%B0%E5%A4%A7-%E6%94%BF%E5%A4%A7-%E6%B8%85%E5%A4%A7-%E4%B8%AD%E5%A4%AE%E8%B3%87%E7%AE%A1%E6%89%80%E6%AD%A3%E5%8F%96-%E8%80%83%E5%BF%83%E5%BE%97%E5%8F%8A%E8%B3%87%E6%BA%90%E6%8E%A8%E8%96%A6-1971168e8ded",
+        "description": "跨考生四所正取（MIS組），強調資結組vs管理組的選擇分析，附師資與備考資源推薦清單"
+      },
+      {
+        "id": "res-medium-im-109",
+        "title": "Medium — 109資管所考試心得（資結組含台大）",
+        "type": "部落格",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://ying861216.medium.com/109%E8%B3%87%E7%AE%A1%E6%89%80%E8%80%83%E8%A9%A6%E5%BF%83%E5%BE%97-5788fdea8432",
+        "description": "資結組備考完整心得，選擇台大為主要目標，詳細討論管理組vs資結組策略差異與各科準備方式"
+      },
+      {
+        "id": "res-official-ncku-im",
+        "title": "成大圖書館 — 成大資管所歷屆考古題",
+        "type": "官方",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://exam.lib.ncku.edu.tw/master_subject.php?department_code=BC08",
+        "description": "成大資管所106~115學年度官方考古題，三科（MIS、資結、計概）逐年PDF下載，免費公開，是台大圖書館之外的重要考古題來源"
+      },
+      {
+        "id": "res-dcard-im-115-tech",
+        "title": "Dcard — 115資管所資結組上榜心得（目標臺大）",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/261258186",
+        "description": "臺科大資管系延畢非應屆，臺／政／交／央資管全正取。庫內對「補習與否」分析最完整的一篇：逐條列出補習班的三個優點與四個缺點（學費四萬以上、課程不含 AI 與新科技、不含統計、老師解考古題會錯），並給出不補習者的替代讀法。另有生成式 AI 的使用界線與考古題 prompt、兩種筆記的分法、計概資結:MIS:統計 = 70:10:20 的時間比重"
+      },
+      {
+        "id": "res-dcard-im-115-admitted",
+        "title": "Dcard — 115台大資管所正取考研心得",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/261162089",
+        "description": "四大資管系考生正取台大資管所的心得，涵蓋讀書節奏設計、考古題訂正流程、各科在加權下的取捨、二階口試計分結構與考場實務"
+      },
+      {
+        "id": "res-dcard-im-115-schedule",
+        "title": "Dcard — 資管所考試時程與筆試內容整理",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/261238983",
+        "description": "同一位 115 上榜生（台大／政大／陽交大／中央資管所正取）整理的各校報名與考試時程、各校系筆試考科與內容，排考程與選校時可對照參考"
+      },
+      {
+        "id": "res-dcard-im-115-oral",
+        "title": "Dcard — 資管所口試內容與準備分享",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/261225472",
+        "description": "同一位 115 上榜生的台大資管所與政大資管科技組口試紀錄（兩校口試皆逾 91 分並正取），含台大四關的組成與政大的英文閱讀、團體面試、程式題"
+      },
+      {
+        "id": "res-dcard-im-115-stats",
+        "title": "Dcard — 115資管所考取心得（統計佔50分）",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/261224272",
+        "description": "國立本科應屆、有補習，台大／政大／交大／成大／中央資管五校全正取。含讀書計畫、各科準備、考古題與模擬考運用、書審"
+      },
+      {
+        "id": "res-dcard-im-115-mgmt",
+        "title": "Dcard — 115 資管所考試心得（管理組）",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/261358166",
+        "description": "清大應屆、有補習，台大／政大／成大資管正取、交大資管備取。管理組視角，含考試成績、讀書方法與面試"
+      },
+      {
+        "id": "res-dcard-im-115-mgmt-cross",
+        "title": "Dcard — 115資管所管理組 企管系跨考心得",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/261452528",
+        "description": "企管系非應屆跨考、有補習，交大／政大資管正取、台大／中央資管備取。含讀書計畫、考古題運用與面試"
+      },
+      {
+        "id": "res-dcard-im-115-drill",
+        "title": "Dcard — 115 資管所考試心得（刷題與錯題筆記派）",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/261639649",
+        "description": "資管本科（系排 68%），交大正取、台大／政大備取、成大／中央落榜。含背景、成績、考試準備與心態調整"
+      },
+      {
+        "id": "res-dcard-im-115-retake",
+        "title": "Dcard — 115資管所資結組重考上榜心得",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/261316410",
+        "description": "私立大學非應屆重考、TOEIC 785、有報題庫班，交大與中央上榜。含備考時程、計概／資結／網路／資料庫／程式語言／AI 各科學習資源、作息運動與焦慮緩解"
+      },
+      {
+        "id": "res-dcard-im-115-ds",
+        "title": "Dcard — 115資管所考試心得（資結考題分析）",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/261218467",
+        "description": "陽明交大學生，交大管科乙／成大資管乙／中央／中山資管正取、交大資管備取、政大科技組落榜。含補習建議、唸書時間、各科準備與逐校考試心得"
+      },
+      {
+        "id": "res-dcard-im-115-cross",
+        "title": "Dcard — 115資管所跨考心路歷程（半補習）",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/261184228",
+        "description": "重考跨考生、半補習，政大／中央資管正取，台大資管、清大資應、中正落榜。含跨考原因、備考時長、使用資源與逐校考試心得"
+      },
+      {
+        "id": "res-dcard-im-115-recommend",
+        "title": "Dcard — 115資管推甄心得【台大／交大／政大資管】",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/260556750",
+        "description": "中山資管（系排 12%），台大／交大／政大資管皆備前 10 並備上、中山逕取，最終就讀台大。含準備方式與台大、交大、政大三校的面試紀錄"
+      },
+      {
+        "id": "res-official-ntu-im-admission",
+        "title": "官方 — 台大資管系碩士班招生規定（考科與計分）",
+        "type": "官方",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://management.ntu.edu.tw/IM/admission/mba",
+        "description": "系網公告的考試入學與甄試入學相關規定：筆試三科、筆試60%／口試40%、資訊科技概論與資訊管理導論各加權100%、筆試前48名進口試、口試未達70分不錄取"
+      },
+      {
+        "id": "res-official-nccu-lib",
+        "title": "政大圖書館歷屆考古題",
+        "type": "官方",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.lib.nccu.edu.tw/p/426-1000-3.php?Lang=zh-tw",
+        "description": "選「商學院 → 碩士班」查政大資管所考古題，依院／所／學年度打包成 PDF。只提供試題不附解答；同頁另有 93–115 年歷屆招生簡章"
+      },
+      {
+        "id": "res-ocw-ntu-intro-cs",
+        "title": "臺大開放式課程 — 于天立《計算機概論》",
+        "type": "線上課程",
+        "examRelevance": [
+          "im",
+          "cs"
+        ],
+        "url": "https://ocw.aca.ntu.edu.tw/courses/101S210",
+        "description": "無補習路線最常被推薦的計概影音教材，21 講涵蓋資料型（儲存／資料結構／資料庫）、系統型（計算機結構／OS／網路）、科學型（演算法／程式語言／AI）。原為電機系課程，C/C++ 程式部分資管所可略過"
+      },
+      {
+        "id": "res-google-ml-crash",
+        "title": "Google Machine Learning Crash Course",
+        "type": "線上課程",
+        "examRelevance": [
+          "im",
+          "cs"
+        ],
+        "url": "https://developers.google.com/machine-learning/crash-course",
+        "description": "補計概與 MIS 的 AI 題型。近年 AI/ML 在資管所計概比重逐年上升，這門課涵蓋監督式學習、損失函數、過擬合、神經網路等常考名詞"
+      },
+      {
+        "id": "res-news-ithome",
+        "title": "iThome — 資訊科技時事",
+        "type": "時事",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.ithome.com.tw/",
+        "description": "MIS 申論舉例的主要案例來源。建議邊看邊建一本「案例筆記」，考場上直接調用；計概的新興科技題也常從這裡出"
+      },
+      {
+        "id": "res-news-bnext",
+        "title": "數位時代 — 數位轉型與商業科技",
+        "type": "時事",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.bnext.com.tw/",
+        "description": "偏商業視角的科技時事，適合補 MIS 的數位轉型、平台經濟、ESG 等申論題材"
+      },
+      {
+        "id": "res-book-im-brookshear",
+        "title": "Brookshear《Computer Science: An Overview》",
+        "type": "書目",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.tenlong.com.tw/products/9781292263427",
+        "description": "計概原文教材（13/e，有中譯本），無補習考生最常拿來搭配于天立開放式課程，與 Discovering Computers 互補。多篇心得指出影音課講得淺、觀念要靠這本補；書附線上練習題，有心得記載清大考出一模一樣的題目"
+      },
+      {
+        "id": "res-solutions-im-108",
+        "title": "108 年資管所計概試題＋解答（台大／政大／中央／成大／中山）",
+        "type": "HackMD",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.slideshare.net/slideshow/108-6efa/283753051",
+        "description": "張逸老師版五校計概解答，逐題標註題型（網路／作業系統／資料庫／資料結構）。台大圖書館只給試題不附解答，這是少數公開的解答來源"
+      },
+      {
+        "id": "res-blog-im-mavis",
+        "title": "Mavis — 112 資管所（管理組）正取心得（政/山/央/興/北）",
+        "type": "部落格",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://shinyu0430.github.io/2023/03/22/IMPrepare",
+        "description": "逐科拆解最完整的一篇：計概子科目一路拆到資安與 AI、題型三分類（不可掉分／部分人會／大家都不會）、MIS 與計概的時間分配檢討。既有的 Notion 版為同一份資源的整理"
+      },
+      {
+        "id": "res-medium-im-111-nocram",
+        "title": "Medium — 111 無補習跨考資管/資應準備心得",
+        "type": "部落格",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://medium.com/@lee920024/111-%E7%84%A1%E8%A3%9C%E7%BF%92%E8%B7%A8%E8%80%83%E8%B3%87%E7%AE%A1-%E8%B3%87%E6%87%89%E6%BA%96%E5%82%99%E5%BF%83%E5%BE%97-8905e66b3472",
+        "description": "無補習路線的教材配置：于天立計概開放式課程搭配 Computer Science: An Overview 原文書，並說明如何補足補習班講義的覆蓋率"
+      },
+      {
+        "id": "res-dcard-im-114-nocram",
+        "title": "Dcard — 114 資應/資管沒補習心路歷程（超長文）",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/258384284",
+        "description": "作者為政大資管科技組正取，對各校計概與資結的題型差異描述最直接，含各科準備方式與各校考場心得"
+      },
+      {
+        "id": "res-dcard-im-114-cross",
+        "title": "Dcard — 114 資管所跨考／台大正取心得分享",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/258401429",
+        "description": "跨考台大資管正取（其他考試學校全落榜或備取）。對自學者最有用的是補習班內部的實況：資料庫正課時數只有五小時、網路教得不夠、計概與資料庫題庫班「很多題目老師講的答案都是錯的」導致讀書效率慢五倍。另記該年台大考 40 分手寫程式碼、統計突然加考但身邊沒人特別準備、以及因英文較低被清大刷掉的教訓"
+      },
+      {
+        "id": "res-dcard-im-114-nocram-oral",
+        "title": "Dcard — 114 資管所｜無補習跨考心得＋台大口試",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/258482673",
+        "description": "無補習路線加上台大口試實錄，兩個最缺資料的環節都有寫。附各科成績"
+      },
+      {
+        "id": "res-dcard-im-114-mgmt",
+        "title": "Dcard — 114 資管所管理組考試心得分享",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/258426281",
+        "description": "管理組視角，有貼各科原始成績與準備過程，可用來校準各科該拿幾分"
+      },
+      {
+        "id": "res-dcard-im-114-retake",
+        "title": "Dcard — 114 資管所重考生考試上榜心得分享",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/258523027",
+        "description": "重考生視角。核心結論是計概範圍不能挑著唸——覺得冷門懶得準備的，考試就會遇到"
+      },
+      {
+        "id": "res-dcard-im-114-rejected",
+        "title": "Dcard — 114 資管所/資安所推甄考試心得與面試經驗分享",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/258527035",
+        "description": "台大沒上、交大資管正取的檢討文。落榜視角的失敗分析，補足上榜文看不到的部分"
+      },
+      {
+        "id": "res-cram-im-114-ntu-overview",
+        "title": "TKB — 掌握台大資管所｜考科簡介與四位學長姐上榜經驗",
+        "type": "補習班",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.tkbgo.com.tw/schoolZone/graduate/article/toDetail?article_id=2035",
+        "description": "四位 114 台大資管上榜者的心得，另附各科命題趨勢拆解：資訊科技概論的 OS／AI／資安比重、資結手寫題約佔四到五成、選擇題答錯倒扣。補習班業配文，考科分析部分仍有參考價值"
+      },
+      {
+        "id": "res-cram-im-114-liu",
+        "title": "TKB — 114 年考取台大資管所 劉O倫",
+        "type": "補習班",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.tkbgo.com.tw/schoolZone/graduate/comment/toDetail?comment_id=2429",
+        "description": "逐科準備重點，提到基礎計概與數位邏輯近年比重已降低。補習班學員見證，帶業配性質"
+      },
+      {
+        "id": "res-cram-im-114-huang",
+        "title": "TKB — 114 年考取台大資管所 黃O瑋",
+        "type": "補習班",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.tkbgo.com.tw/schoolZone/graduate/comment/toDetail?comment_id=2431",
+        "description": "重考生、技術組方向，講第一年因為「大範圍就好」的心態而落榜的教訓。補習班學員見證，帶業配性質"
+      },
+      {
+        "id": "res-cram-im-114-get-shen",
+        "title": "高點 — 114 台大資管／政大資管組／中山資管（成大經濟系跨考）",
+        "type": "補習班",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.get.com.tw/media/master/ListDetail.aspx?iS=67447&iC=3253",
+        "description": "大三上就起跑的長線時程表，一路排到大四上題庫班。補習班學員見證，帶業配性質"
+      },
+      {
+        "id": "res-cram-im-114-get-tsai",
+        "title": "高點 — 114 台大資管／清大資應／中央資管甲組",
+        "type": "補習班",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.get.com.tw/media/master/ListDetail.aspx?iS=67391&iC=3253",
+        "description": "在校成績不佳者的備考時程與心態調適。補習班學員見證，帶業配性質"
+      },
+      {
+        "id": "res-dcard-im-113-cross",
+        "title": "Dcard — 113 資管所跨考｜台大正取心得分享",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/255404730",
+        "description": "跨考台大正取。面試段落講怎麼把非本科經歷連結到資管特質，回答「為什麼要錄取你」"
+      },
+      {
+        "id": "res-dcard-im-113-admitted",
+        "title": "Dcard — 113 資管／資應上榜心得",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/255067859",
+        "description": "社科院背景跨考上台大資管，跨度最大的一篇"
+      },
+      {
+        "id": "res-dcard-im-113-mgmt",
+        "title": "Dcard — 113 研究所資管所管理組考試心得",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/255055090",
+        "description": "管理組長文，附作者自己備考時蒐集的資源清單"
+      },
+      {
+        "id": "res-blog-im-113-nocram",
+        "title": "巴哈姆特 — 113 無補習資管所跨考心得",
+        "type": "部落格",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://home.gamer.com.tw/artwork.php?sn=5969944",
+        "description": "少見的非 Dcard／Medium 來源，無補習跨考路線"
+      },
+      {
+        "id": "res-cram-im-113-ntu-nccu",
+        "title": "TKB — 113 年台大、政大資管所上榜學長姐分享",
+        "type": "補習班",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.tkbgo.com.tw/schoolZone/graduate/article/toDetail?article_id=1689",
+        "description": "四位 113 台大資管上榜者（含非本科、離職備考、只補 MIS 等不同路線）加上政大資管所心得。補習班業配文"
+      },
+      {
+        "id": "res-cram-im-113-get-huang",
+        "title": "高點 — 113 成大資管甲組狀元、台大資管所探花",
+        "type": "補習班",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.get.com.tw/media/master/ListDetail.aspx?iS=64815&iC=3253",
+        "description": "指出台大資訊科技概論固定出 30–40 分手寫題、基本上都考資料結構，建議找近十年考古加強。也提到台大／清大資應的 OS 題近年變多。補習班學員見證"
+      },
+      {
+        "id": "res-cram-im-113-get-cheng",
+        "title": "高點 — 113 成大資管乙組探花、台大資管所、交大資管所",
+        "type": "補習班",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.get.com.tw/media/master/ListDetail.aspx?iS=64817&iC=3253",
+        "description": "台大考題結構描述最具體的一篇：全選擇題加一題程式題、選擇題有倒扣、程式題常考 Heap／Hash Table／BST 的 C++ 實作且配分很重，建議練手寫程式碼。補習班學員見證"
+      },
+      {
+        "id": "res-ptt-im-108-ntu",
+        "title": "PTT — 資管所台大／交大資管甲組正取心得",
+        "type": "PTT",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.ptt.cc/bbs/graduate/M.1556902187.A.AC3.html",
+        "description": "108 年台大資管正取 7。成績為資訊科技 65.5／MIS 25／英文 58／口試 87.14——MIS 只有 25 分仍正取，具體印證口試 40% 的份量。含台大四關口試逐題記錄（統計關盧信銘＋孔令傑、技術關、生涯關魏志平、MIS 關吳玲玲＋陳靜枝），並提到該年非選題比重拉高到 50%、選擇題寫錯倒扣"
+      },
+      {
+        "id": "res-ptt-im-ten-schools",
+        "title": "PTT — 資管所十校正取心得",
+        "type": "PTT",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.ptt.cc/bbs/graduate/M.1523095685.A.A9E.html",
+        "description": "逐校拆解題型（台／政／交／成／中央／中山等十校），台大四關面試題目全記錄。另提到政大英文有前 80% 篩選門檻、政大 MIS 答案紙很少不要浪費空間、台大 MIS 常考系統分析"
+      },
+      {
+        "id": "res-medium-im-111-zheng",
+        "title": "Medium — 111 資管所正取心得",
+        "type": "部落格",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://medium.com/@vnaticzhock/111%E8%B3%87%E7%AE%A1%E6%89%80%E6%AD%A3%E5%8F%96-d121dd48cfc9",
+        "description": "MIS 準備法最具體的一篇：考前一個月每天寫一篇 Topic 心得、累積 30–40 篇，用電腦打字產出以專注思考而非筆速，刻意不寫補習班的起承轉合而採精煉寫法。另附 Laudon 的三種用法（含翻書末名詞索引逐條理解）與台大四關面試題目"
+      },
+      {
+        "id": "res-hackmd-im-tung",
+        "title": "HackMD — 商管類跨考資管所心路歷程",
+        "type": "HackMD",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://hackmd.io/@TUNG/SySealK4U",
+        "description": "商管背景跨考，各校題型比較很細，含台大四關面試（資訊科技趨勢／生涯規劃／程式設計／機率）。提到台大某年 MIS「竟然有中文沙必斯」，可佐證台大 MIS 常態為全英文命題"
+      },
+      {
+        "id": "res-blog-im-moli",
+        "title": "考研心酸血淚史 — 台/政/交/成/山 資管所．資結組考試心得",
+        "type": "部落格",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://blog.moli.rocks/2017/08/17/journey-of-becoming-a-graduate-student",
+        "description": "台大四關與政大口試逐題記錄（台大技術關問如何找 inorder successor、抽題關問 database schema 並無限追問為什麼）。作者最後選擇政大，文末有選校與報考間數的建議"
+      },
+      {
+        "id": "res-dcard-im-114-mgmt-cross2",
+        "title": "Dcard — 114 資管所（管理組）跨考心得",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/258715553",
+        "description": "談組別選擇的判斷依據：作者發現自己喜歡申論這種開放式答案、寫有標準答案的資結手感很差，建議依「答題手感」而不只是學科背景來選組"
+      },
+      {
+        "id": "res-cram-im-proposition",
+        "title": "高點 — 資管所命題趨勢（逐校逐科）",
+        "type": "補習班",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://master.get.com.tw/it/MIS/proposition.aspx",
+        "description": "台大／政大／陽明交大／成大各科的命題特色與年度差異對照。台大資訊科技概論段落載明選擇題答錯倒扣、資料結構手寫題每年約佔 40%~50%。補習班網頁，帶招生性質"
+      },
+      {
+        "id": "res-blog-im-ntu-oral-poc",
+        "title": "柏C的電影雜記 — 台大資管所碩甄口試經驗分享",
+        "type": "部落格",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://pocmovie.com/blog/post/ntu_im_application",
+        "description": "目前找到最詳細的台大四關口試紀錄：場地在管院一號館三樓玉山廳四小間研討室、一關四分鐘、四人同時錯開跑關。四關教授與題目全記錄（生涯關曹承礎、資管關孔令傑＋魏志平、統計數學關盧信銘＋林永松、技術關李瑞庭）。含「每個學生都說數據分析，好無聊」等教授實際回應"
+      },
+      {
+        "id": "res-medium-im-ntu-oral",
+        "title": "Medium — 班排第 10 也能推甄台大：資管所口試心得",
+        "type": "部落格",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://medium.com/@weichenglily/%E7%8F%AD%E6%8E%92%E7%AC%AC-10-%E4%B9%9F%E8%83%BD%E6%8E%A8%E7%94%84%E4%B8%8A%E5%8F%B0%E5%A4%A7-599946e1581e",
+        "description": "四關一關四分鐘的逐關紀錄，含統計數學關的實際題目。班排非頂尖仍上榜的案例"
+      },
+      {
+        "id": "res-tun-im-ntu-oral",
+        "title": "TUN 大學網 — 台大資管口試經驗分享",
+        "type": "部落格",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://university.1111.com.tw/zone/university/discussTopic.asp?cat=University&id=348642",
+        "description": "會計系跨考視角。資管關抽到「服飾店用攝影機記錄顧客行為可達到什麼效益、有什麼非技術阻礙」，數學邏輯關抽到擲骰期望值題。自介關被直球問「你是會計系的，為什麼我要錄取你」、「系上有哪些老師做這方面研究」（測你有沒有查過教授）"
+      },
+      {
+        "id": "res-cram-im-112-get-wu",
+        "title": "高點 — 112 台大資管所、清大資應所（台大經濟系跨考）",
+        "type": "補習班",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.get.com.tw/media/master/ListDetail.aspx?iS=62375&iC=3253",
+        "description": "明列台大口試四關為生涯關、數學關、MIS 關、技術關，一關四分鐘；數學關範圍涵蓋統計、線性代數、微積分、作業研究，技術關考資結與演算法。口試要訣「不能愣住」。補習班學員見證，帶業配性質"
+      },
+      {
+        "id": "res-dcard-im-115-oral-bank",
+        "title": "Dcard — 115 資管推甄/面試心得【政大/台科/央山】附歷屆口試題庫",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/261155179",
+        "description": "附歷屆口試題庫與 Notion 資源整理，是找到的唯一一份系統性口試題庫"
+      },
+      {
+        "id": "res-dcard-im-115-recommend2",
+        "title": "Dcard — 115 資管所推甄面試/考試心得分享",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/261166607",
+        "description": "同組三人被問不同題目的實例（有人被問被動式 AI 與代理式 AI 的差別），可看出抽題制下的題目分布"
+      },
+      {
+        "id": "res-dcard-im-115-nccu-ncku",
+        "title": "Dcard — 115 推甄分享【政大資管｜成大資管】",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/260810886",
+        "description": "強調如何把過往經歷與資管連結、非本系背景怎麼講出結合優勢"
+      },
+      {
+        "id": "res-dcard-im-115-nthu-nccu",
+        "title": "Dcard — 115 資管推甄面試心得分享【清大服科/政大資管】",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/260339730",
+        "description": "政大資管資管組團體面試細節（被作者形容為最硬的面試）：面試前先到教室閱讀英文文章 10 分鐘，同組每人拿到的文章不同，內容近似 paper 摘要"
+      },
+      {
+        "id": "res-hackmd-im-108-oral",
+        "title": "HackMD — 108【台大資管/交大資管/清大服科/中央資管】推甄面試+考試心得",
+        "type": "HackMD",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://hackmd.io/@25yaxaMGQC2Edo6cOCx_mw/Hk-8i4UHB",
+        "description": "結構最完整的一篇：台大考試與推甄兩場口試各四關、逐關標註教授與時間、逐題編號並附作者整理的參考答案。另有台大考古題寫 10 年份每份三次的做法、MIS 三遍讀法、加權公式（計概×2＋MIS×2＋英文×1），以及推薦看 Harvard Business Review 的 Technology topic 補 MIS 新觀念"
+      },
+      {
+        "id": "res-medium-im-2020-hanson",
+        "title": "Medium — 2020 資管所推甄＆考試分享",
+        "type": "部落格",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://medium.com/something-about-hanson/2020%E8%B3%87%E7%AE%A1%E6%89%80%E6%8E%A8%E7%94%84-%E8%80%83%E8%A9%A6%E5%88%86%E4%BA%AB-c9d9bada2ad1",
+        "description": "同一人推甄與考試兩次台大口試的對照（推甄落榜、考試正取 5）。技術關被問 Multilevel Queue Scheduling 圖並被連環追問、數學關的茶與咖啡混合濃度題，兩題都寫出了完整的被問倒過程"
+      },
+      {
+        "id": "res-cram-im-oral-bank-get",
+        "title": "高點 — 資管所甄試口試題庫（依題型與年份分類）",
+        "type": "補習班",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://master.get.com.tw/screen/big_data/interview/information.aspx",
+        "description": "把口試題分成個人探索題、想法反應題、專業相關題、團體面試題四類，每題標註年份與學校。台大部分涵蓋 111–114 年，是目前找到唯一有年份標註的口試題庫。補習班網頁，帶招生性質"
+      },
+      {
+        "id": "res-medium-im-oral-jimmy",
+        "title": "Medium — 台政資管所推甄心得（面試篇）",
+        "type": "部落格",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://medium.com/jimmyfu87/%E5%8F%B0%E6%94%BF%E8%B3%87%E7%AE%A1%E6%89%80%E6%8E%A8%E7%94%84%E5%BF%83%E5%BE%97-%E5%8F%A3%E8%A9%A6%E7%AF%87-88dc954bf46e",
+        "description": "台大與政大兩校面試的對照，描述台大跑關「每一關時間都非常趕，時間一到就會有人進來敲門」"
+      },
+      {
+        "id": "res-dcard-im-2021-oral",
+        "title": "Dcard — 2021 資管所推甄面試心得【台大資管/政大資管科技組/交大】",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/237588496",
+        "description": "政大團體面試的排序機制：按准考證序號排 10~11 人一組，回答順序有時 1→10 有時 10→1，排中間較有利可多想一下。強調要聽別人的回答"
+      },
+      {
+        "id": "res-dcard-im-115-cross-oral",
+        "title": "Dcard — 115 資管所跨考心得（含台大、政大面試）",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/261342021",
+        "description": "含台大與政大兩校面試。另記錄了備取遞補的實際時程：4/9 台大備取 2，5/13 才收到備取通知——備取生等待期比想像中長"
+      },
+      {
+        "id": "res-dcard-im-115-mgmt2",
+        "title": "Dcard — 115 資管所管理組考試心得",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/261316775",
+        "description": "管理組視角的完整準備過程與心態調適"
+      },
+      {
+        "id": "res-dcard-im-115-cross2",
+        "title": "Dcard — 115 資管所跨考心得分享",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/261340291",
+        "description": "記錄 115 年資結考題形式的變化（「一開始看到變全選擇還開心了一下，第一部份寫下去就知道大事不妙」），可看出年度題型會突變"
+      },
+      {
+        "id": "res-dcard-im-115-recommend3",
+        "title": "Dcard — 115 資管推甄心得【政大資管、成大資管、台科資管乙組】",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/260600298",
+        "description": "推甄與考試雙軌並行的案例，最後推甄上榜"
+      },
+      {
+        "id": "res-dcard-im-114-recommend",
+        "title": "Dcard — 114 推甄心得分享【台大資管、政大資管】",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/257446612",
+        "description": "台大二階落榜、政大正取的對照。明確記載台大面試「分成四關，共 16 分鐘」，佐證一關四分鐘的說法。另有自傳如何展現過往經歷與資管連結性的建議"
+      },
+      {
+        "id": "res-medium-im-2020-apply",
+        "title": "Medium — 2020 台大資管／台大商研／政大資管推甄心得",
+        "type": "部落格",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://medium.com/@j4427515/%E7%A0%94%E7%A9%B6%E6%89%80%E7%94%B3%E8%AB%8B-2020-%E5%8F%B0%E5%A4%A7%E8%B3%87%E7%AE%A1-%E5%8F%B0%E5%A4%A7%E5%95%86%E7%A0%94-%E6%94%BF%E5%A4%A7%E8%B3%87%E7%AE%A1%E6%8E%A8%E7%94%84%E5%BF%83%E5%BE%97-4714b1339bce",
+        "description": "台大資管推甄正取（書審 60%／面試 40%）。作者自評書審與面試成績都不算特別優異仍上榜，可作為期望值的參考點"
+      },
+      {
+        "id": "res-hackmd-im-114-oral-bank",
+        "title": "HackMD — 114【各校系】推甄口試題目總整理（多人共筆）",
+        "type": "HackMD",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://hackmd.io/@UgviSLEFQle1MBwe1D01uQ/SJYU-vNE1x",
+        "description": "六位考生協作的跨校口試題庫，台大資管、政大資管、交大資管、成大資管、中央資管都有逐關題目與回答過程。台大段落載明四關為管理／數學／技術／生涯、一對二教授、嚴格控時會響鈴敲門，並列出考生自己的準備清單（李宏毅生成式 AI 導論、孔令傑作業研究、科技浪 Podcast）"
+      },
+      {
+        "id": "res-dcard-im-114-ds",
+        "title": "Dcard — 114 資管所資結組考試心得",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/258562680",
+        "description": "資結組視角。指出政大資結「完全是考古題，題目都很簡單但很複雜然後寫不完」，大量刷題就能拿高分——政大資結拚的是速度不是難度"
+      },
+      {
+        "id": "res-dcard-im-114-scores",
+        "title": "Dcard — 114 資管所管理組考試心得（含成績單）",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/258498440",
+        "description": "貼出台大資管成績單的管理組心得，可用來校準各科實際分數落點"
+      },
+      {
+        "id": "res-medium-im-ntu-courses",
+        "title": "Medium — 114-1 台大資管所修課心得",
+        "type": "部落格",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://medium.com/@sangyz/114-1-%E5%8F%B0%E5%A4%A7%E8%B3%87%E7%AE%A1%E6%89%80-%E4%BF%AE%E8%AA%B2%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB-9d1858f74fe7",
+        "description": "入學後的修課心得，不是考試心得。用途是口試前了解系所實際課程內容與教授，回答「為什麼選台大資管」「想修什麼課」時能講得具體"
+      },
+      {
+        "id": "res-hackmd-im-114-recommend",
+        "title": "HackMD — 114【台大資管/清大資應/交大資管/中央資管】推甄心得",
+        "type": "HackMD",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://hackmd.io/tlKeHMLrQwqbcnpRosin7g",
+        "description": "四校推甄心得。作者在文中註明「千萬不要外流，only for 中央資管的學弟妹」，引用時建議改寫為歸納重點、勿整篇轉貼"
+      },
+      {
+        "id": "res-dcard-im-112-admitted",
+        "title": "Dcard — 112 資管所正取心得",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/241580712",
+        "description": "五校對照：台大資管正取、清大資應正取，政大／成大／中央資管備取。背景為兩份實習（其中一份與資管相關、有做小專案）"
+      },
+      {
+        "id": "res-dcard-im-111-cross",
+        "title": "Dcard — 111 年跨考台大/政大/清大/中央資管所正取｜考試心得及資源分享",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/238478758",
+        "description": "跨考四校正取。指出管理組的資結是所有科目裡最好準備的——把補習班正課筆記讀熟、多練題維持手感即可。內容與庫內同名的 Medium 版（waanwu）疑為同一作者跨平台發文，未逐字比對"
+      },
+      {
+        "id": "res-dcard-im-113-recommend",
+        "title": "Dcard — 113 年推甄心得【台大資管、政大資管、交大資管】",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/254871230",
+        "description": "台大資管正取、政大資管逕取、交大資管備取（已備上）。作者為政大資管系背景，本系推甄視角"
+      },
+      {
+        "id": "res-ptt-im-113-exam",
+        "title": "PTT — 113 資管所考試心得",
+        "type": "PTT",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.ptt.cc/bbs/graduate/M.1712921843.A.207.html",
+        "description": "成大工資管應屆、系排 66%、無實習無競賽無證照、多益約 700 的背景。條件普通者的考試路線參考"
+      },
+      {
+        "id": "res-medium-im-112-recommend",
+        "title": "Medium — 112 資管所推甄心得｜台大資管／政大資管",
+        "type": "部落格",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://medium.com/@miczzl/2022-%E8%B3%87%E7%AE%A1%E6%89%80%E6%8E%A8%E7%94%84%E5%BF%83%E5%BE%97-%E5%8F%B0%E5%A4%A7%E8%B3%87%E7%AE%A1-%E6%94%BF%E5%A4%A7%E8%B3%87%E7%AE%A1-%E6%AD%A3%E5%8F%96-c49e260589d9",
+        "description": "台大資管與政大資管推甄雙正取，含書審與面試的準備過程"
+      },
+      {
+        "id": "res-dcard-im-114-ds-admitted",
+        "title": "Dcard — 114 資管所資結組上岸心得",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/258572459",
+        "description": "記錄 114 年政大計概「改成全手寫」的題型變化，以及遇到題風突變時如何穩住心態"
+      },
+      {
+        "id": "res-dcard-im-114-ds-exam",
+        "title": "Dcard — 114 資管所資結組考試心得",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/258602544",
+        "description": "政大資管科技組面試細節：三人一組團體面試 20 分鐘，先在小房間閱讀英文文章，一頁 A4 有四段文章抽籤擇一。另提到台大該年計概偏簡單、MIS 多考歷年沒考過的統計題"
+      },
+      {
+        "id": "res-dcard-im-114-ds-three",
+        "title": "Dcard — 114 資管所資結組上岸心得（政大／清大／交大）",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/258608914",
+        "description": "很值得注意的一點：政大計概的程式題自估應有 80 分以上、實際開 IDE 跑也都正確，分數卻遠低於預期，作者推測是「程式寫法不合老師的想法」。手寫程式題的評分不只看跑不跑得出來"
+      },
+      {
+        "id": "res-dcard-im-115-screening",
+        "title": "Dcard — 115 推甄一階篩選結果請益（含背景與結果對照）",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/261375737",
+        "description": "不是心得文而是請益串，但貼出了完整背景（系排 10%、修過資管相關課程、交換一年、無實習無專題）與推甄一階結果（台大資管、台科資管皆一階被刷）。可用來校準推甄的一階門檻"
+      },
+      {
+        "id": "res-yt-im-ntu-daso",
+        "title": "YouTube — 從輔仁到台大資管所：大碩金榜生備考分享",
+        "type": "補習班",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.youtube.com/watch?v=VYntQ1eXKCs",
+        "description": "影片形式的上榜心得（台大資管所＋清大資應所），有分段時間軸涵蓋各科準備要領、正課班與題庫班的差異、口試模擬的幫助。補習班官方影片，帶招生性質"
+      },
+      {
+        "id": "res-medium-im-108-failed",
+        "title": "Medium — 108 年台大資管所落榜心得",
+        "type": "部落格",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://medium.com/@yzmsp7/108%E5%B9%B4%E5%8F%B0%E5%A4%A7%E8%B3%87%E7%AE%A1%E6%89%80%E8%90%BD%E6%A6%9C%E5%BF%83%E5%BE%97-bbe8b26dfa22",
+        "description": "手寫比例變化的歷史起點：「往年資結在計概佔比 30% 左右，今年提高到 50%」，該年資結考 Heap。落榜視角的檢討"
+      },
+      {
+        "id": "res-medium-im-111-recommend",
+        "title": "Medium — 111 年非本科／非應屆資管所甄試心得",
+        "type": "部落格",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://medium.com/@po_yk/111%E5%B9%B4-%E8%B3%87%E7%AE%A1%E6%89%80%E7%94%84%E8%A9%A6%E5%BF%83%E5%BE%97-367496423c5c",
+        "description": "非應屆視角的甄試心得，含書審撰寫邏輯與建議、中央／成大／政大面試紀錄，以及中央／成大／政大／台大的考古題整理"
+      },
+      {
+        "id": "res-dcard-im-112-seven",
+        "title": "Dcard — 112 應屆跨考資管/資應/財所七校心得（台清交成政央北）",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/exam/p/241819789",
+        "description": "七校對照。指出政大計概有越來越簡單的趨勢，但若目標是台大資管仍建議全部讀熟，尤其演算法與程式碼部分要越熟越好"
+      },
+      {
+        "id": "res-dcard-im-mgmt-ordinary",
+        "title": "Dcard — 平凡女子的資管所管理組備考心得",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/241587396",
+        "description": "管理組視角。記錄了把抽象概念轉成生活化比喻的記憶法（買蛋餅比喻 CPU-bound、引擎比喻 thread），複習時不必重新推導一次"
+      },
+      {
+        "id": "res-dcard-im-115-ds-exam",
+        "title": "Dcard — 115 資管所資結組考試心得",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/261414891",
+        "description": "115 年政大團體面試的實況，該年時間約 15 分鐘（其他年份心得記為 20 分鐘），逐關記錄英文關等流程"
+      },
+      {
+        "id": "res-dcard-im-114-ds-central",
+        "title": "Dcard — 114 資管所中字輩上榜心得（資結組）",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/258472832",
+        "description": "一個具體教訓：資結自認很簡單、檢查三遍提早交卷，後來發現考古題那題要全對才給分，而自己把 8 寫成 0。提早交卷與抄寫失誤的代價"
+      },
+      {
+        "id": "res-medium-im-112-ds",
+        "title": "Medium — 112 資管所資結組心得",
+        "type": "部落格",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://medium.com/@cloudoo/112-%E8%B3%87%E7%AE%A1%E6%89%80%E8%B3%87%E7%B5%90%E7%B5%84%E5%BF%83%E5%BE%97-53505ddca898",
+        "description": "資結組完整流程：背景、成績、時間規劃、各科準備方式"
+      },
+      {
+        "id": "res-medium-im-112-cross",
+        "title": "Medium — 112 資管所跨考心得",
+        "type": "部落格",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://medium.com/@wealthy_lawn_cattle_951/112%E8%B3%87%E7%AE%A1%E6%89%80%E8%B7%A8%E8%80%83%E5%BF%83%E5%BE%97-90654efa5af8",
+        "description": "跨考視角。提到政大科技組面試的準備方式：先讀前人的面試經驗掌握流程，再針對「如何用英文簡短摘要」「如何回答延伸問題」預先演練"
+      },
+      {
+        "id": "res-dcard-im-112-ntu-nccu",
+        "title": "Dcard — 112 資管所考試、面試、補習心得（台大、政大）",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/241626803",
+        "description": "台大與政大兩校的考試與面試對照，另有補習班選擇的評估。留言串有討論政大組別是否影響日後找教授"
+      },
+      {
+        "id": "res-dcard-im-111-ds-cross",
+        "title": "Dcard — 111 台/政/清/成資管所資結組跨考心得",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/238478427",
+        "description": "政大團體面試四人一組、分兩關：先到小房間念五分鐘英文短文，第一關唸短文第一句並翻譯，再依短文內容延伸提問"
+      },
+      {
+        "id": "res-dcard-im-110-ds",
+        "title": "Dcard — 110 資管所資結組考試心得",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/235744166",
+        "description": "政大資管科技組團體面試：面試前到另一間教室給五分鐘看一篇英文短文（大概六七行），面試有五位面試官，開場先英文自我介紹"
+      },
+      {
+        "id": "res-medium-im-2021-oral",
+        "title": "Medium — 2021 台政交山資管所推甄面試心得",
+        "type": "部落格",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://medium.com/@zihong518/2021-%E5%8F%B0%E6%94%BF%E4%BA%A4%E5%B1%B1-%E8%B3%87%E7%AE%A1%E6%8E%A8%E7%94%84%E9%9D%A2%E8%A9%A6%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB-e0e6821a5b3d",
+        "description": "四校面試對照。政大資管組為三人團體面試 20 分鐘，面試前 10 分鐘在小房間抽讀英文題目"
+      },
+      {
+        "id": "res-medium-im-111-ntu-oral",
+        "title": "Medium — 111 台大資管所推甄經驗分享（心理系跨考）",
+        "type": "部落格",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://medium.com/@jessiechin1056/2022-%E8%87%BA%E5%A4%A7%E8%B3%87%E7%AE%A1%E6%89%80%E6%8E%A8%E7%94%84%E7%B6%93%E9%A9%97%E5%88%86%E4%BA%AB-da0fa76bdc8c",
+        "description": "唯一一篇完整記錄「作業研究關」的心得：孔令傑與盧信銘給了一題生產排程的線性規劃（N 張訂單各有利潤、工時、原料，工廠工時與原料有上限，求利潤最大化），要當場列目標式與限制式，再追問整數解與 branch-and-bound。技術關被要求描述一段 destroy_tree 的遞迴行為。心理系跨考視角，另附書審章節架構與用 Notion 把考古題分四關歸檔的做法"
+      },
+      {
+        "id": "res-podcast-im-kung",
+        "title": "未來親子 Podcast EP135 — 台大教授的二階面試指南 ft. 孔令傑",
+        "type": "部落格",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://futureparenting.cwgv.com.tw/family/content/index/36139",
+        "description": "談的是大學個人申請的二階面試，不是研究所口試。收錄的理由是講者孔令傑為台大資管系副教授，正是研究所口試數學關的常見考官——可從口試委員本人的視角理解評分邏輯：面試在測抗壓性而非專業、中規中矩比標新立異安全、說實話最安全、最忌吹牛"
+      },
+      {
+        "id": "res-dcard-im-115-ntu-oral",
+        "title": "Dcard — 115 台大資管所考試二階口試題目分享",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/261162383",
+        "description": "115 考試入學二階的逐關題目。場地描述：門口有一道大門、每組時間到才開啟，進去後有四間小型會議室依序跑關，每關 4 分鐘且「時間控制非常精準，完全沒有延後」"
+      },
+      {
+        "id": "res-cram-im-ntu-top",
+        "title": "大碩 — 台大資管所榜首上榜心得",
+        "type": "補習班",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.daso.com.tw/winner/inside?str=38D6419864A231D974995EA569B2F5EF",
+        "description": "四關逐關題目：生涯關問專題與遇到的困難、研究計畫、非本科系能力是否足夠；數學關考機率與期望值；MIS 關問競合關係；技術關問 Dequeue。補習班學員見證，帶業配性質；該站網址含 session 參數，直接開啟可能被導回列表頁"
+      },
+      {
+        "id": "res-tun-im-nccu-tech",
+        "title": "TUN 大學網 — 政大資管科技組面試分享",
+        "type": "部落格",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://university.1111.com.tw/zone/university/discussTopic.asp?cat=University&id=243948",
+        "description": "科技組逐關流程：報到 → 抽英文文章 → 閱讀 → 英文文章朗讀及翻譯 → 程式問題（由郁方教授負責）。屬於早年「朗讀＋翻譯」版本的紀錄"
+      },
+      {
+        "id": "res-cram-im-114-nccu-tech",
+        "title": "TKB — 114 年考取政大資管所（科技組）榜眼",
+        "type": "補習班",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.tkbgo.com.tw/schoolZone/graduate/comment/toDetail?comment_id=2608",
+        "description": "政大面試三段：英文文章大綱（可用英文或中文回答）、程式題五小題搶答制、研究計畫或專題提問。特別提醒程式題「程式碼會 call 前面的 function，要看仔細一點」。補習班學員見證，帶業配性質"
+      },
+      {
+        "id": "res-cram-im-nccu-oral",
+        "title": "TKB — 政大資管所考試經驗談（科技組、資管組面試）",
+        "type": "補習班",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.tkbgo.com.tw/schoolZone/graduate/article/toDetail?article_id=2104",
+        "description": "多位 114 上榜者的政大面試紀錄。關鍵細節：程式關**分 AB 卷**，題目卷上共 7 題但老師不會每題都問，教授有時會出變化題（有考生說回答變化題是加分關鍵）。另強調搶答制下答錯也要繼續舉手，怯場機會就是別人的。補習班文章，帶招生性質"
+      },
+      {
+        "id": "res-ig-im-nccu-oral",
+        "title": "Instagram — 政大資管所資管組碩士班考試面試紀錄",
+        "type": "部落格",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.instagram.com/p/CSEpSeGJxkl",
+        "description": "另一種團面配置：共三關、六人一組、一關十分鐘，前兩關各三位面試官，英文關僅一名外師。人數偏多且為搶答制。IG 貼文，未登入可能無法完整瀏覽"
+      },
+      {
+        "id": "res-blog-im-nccu-joanne",
+        "title": "Joanne's Blog — 政大資管所推甄面試分享（資管組）",
+        "type": "部落格",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://blog.joannefei.com/nccu-mis-graduate-school-interview",
+        "description": "資管組推甄面試心得，文中另附了前兩年同樣詳細的心得連結，可做跨年度對照"
+      },
+      {
+        "id": "res-medium-im-111-ntu-oral-b",
+        "title": "Medium — 111 年資管所考試心得（台大四關逐關實錄）",
+        "type": "部落格",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://medium.com/@ryanlai880122/111%E5%B9%B4%E8%B3%87%E7%AE%A1%E6%89%80%E8%80%83%E8%A9%A6%E5%BF%83%E5%BE%97-97c1f29ba7b8",
+        "description": "四關全記錄：MIS 關抽到共享平台並被追問 Uber/foodpanda 為何走向中心化；數學關孔令傑出微積分體積最大化並全程引導；技術關李瑞庭從資料探勘一路追到 PCA 的 eigenvector 與 Gradient Boosting；生涯關莊裕澤只給三個問題「自介、你的優勢、說服我」。另記該年數學關考線代與微積分而非統計"
+      },
+      {
+        "id": "res-medium-im-111-cross-3",
+        "title": "Medium — 111 年跨考資管／資應／服科考試、面試心得",
+        "type": "部落格",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://medium.com/@positive_mantis_minnow_33/111%E5%B9%B4-%E8%B7%A8%E8%80%83%E8%B3%87%E7%AE%A1-%E8%B3%87%E6%87%89-%E6%9C%8D%E7%A7%91%E8%80%83%E8%A9%A6-%E9%9D%A2%E8%A9%A6%E5%BF%83%E5%BE%97-3152b6d035b8",
+        "description": "台大四關各 4 分鐘。MIS 關抽到電商 CIO 的隱私投訴題，答完還有時間又被要求再抽一題「如何導入大型 IS」；生涯關被問「為什麼台大要錄取你不錄取其他同學」；技術關 ER Model 二元一對一轉關聯，作者把完全／部分參與講成強弱關係而答錯；數學關準備統計卻遇作業研究，四分鐘空白。含跨考六科自學路線"
+      },
+      {
+        "id": "res-medium-im-112-cross-7",
+        "title": "Medium — 112 應屆跨考資管／應／財所（台清交成政央北）心得文",
+        "type": "部落格",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://medium.com/@s410879057/112%E6%87%89%E5%B1%86%E8%B7%A8%E8%80%83%E8%B3%87%E7%AE%A1-%E6%87%89-%E8%B2%A1%E6%89%80-%E5%8F%B0-%E6%B8%85-%E4%BA%A4-%E6%88%90-%E6%94%BF-%E5%A4%AE-%E5%8C%97-%E5%BF%83%E5%BE%97%E6%96%87-3fbf8189ca56",
+        "description": "七校逐校攻略。台大計概「出得很細」的具體例證（OS 的 page 大小），該年主題集中 OS、手寫題考類似 KMP 的演算法、MIS 第一題考供應鏈；口試四關各 4 分鐘（與「考試入學 5 分鐘」的說法相左）。另有依志願校決定資結該讀多深的分層建議"
+      },
+      {
+        "id": "res-medium-im-ntu-recommend-scores",
+        "title": "Medium — 台大跨領域推甄經驗（資科學程／電信丙／資管／工工）",
+        "type": "部落格",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://datafox-tw.medium.com/%E5%8F%B0%E7%81%A3%E5%A4%A7%E5%AD%B8%E8%B7%A8%E9%A0%98%E5%9F%9F%E6%8E%A8%E7%94%84%E7%B6%93%E9%A9%97%E8%88%87%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB-%E5%8F%B0%E5%A4%A7%E8%B3%87%E6%96%99%E7%A7%91%E5%AD%B8%E5%AD%B8%E7%A8%8B-%E9%9B%BB%E4%BF%A1%E4%B8%99-%E8%B3%87%E7%AE%A1-%E5%B7%A5%E6%A5%AD%E5%B7%A5%E7%A8%8B%E5%AD%B8-69eb3a1737bf",
+        "description": "推甄路線的門檻實證：資管所書審 76.13、最低錄取 86.38，連面試都沒進（名額 41／報名 232），同一人在資科學程與工工所都正取。附資管系教授的原話建議——要修過六大必修（程設、資結、演算法、網路、資料庫、OS）且拿 A，以及他各科的實際成績對照"
+      },
+      {
+        "id": "res-medium-im-112-ntu-priority",
+        "title": "Medium — 112 年臺大資訊相關科系推甄（資工／資工 AI／資管／資科／電信丙）",
+        "type": "部落格",
+        "examRelevance": [
+          "im",
+          "cs"
+        ],
+        "url": "https://medium.com/@JackChen89/112-%E5%B9%B4%E8%87%BA%E5%A4%A7%E8%B3%87%E8%A8%8A%E7%9B%B8%E9%97%9C%E7%A7%91%E7%B3%BB%E6%8E%A8%E7%94%84-%E8%B3%87%E5%B7%A5-%E8%B3%87%E5%B7%A5-ai-%E8%B3%87%E7%AE%A1-%E8%B3%87%E6%96%99%E7%A7%91%E5%AD%B8-%E9%9B%BB%E4%BF%A1%E4%B8%99-6a344fb306e8",
+        "description": "少見地記錄到台大資管所推甄的「優先錄取」——書審突出者直接錄取、不用面試。另記資管四關的另一種叫法（資訊應用、資訊技術、數學、生涯），以及備審四段式架構與找指導教授的時程提醒"
+      },
+      {
+        "id": "res-hackmd-im-112-nocram",
+        "title": "HackMD — 112 資管所資結組／科技組 無補習考試心得",
+        "type": "HackMD",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://hackmd.io/Jz_Xl2HKRNm0MN4IJvN7jw",
+        "description": "無補習路線最完整的一份教材清單：杰哥（資結／資料庫／OS）、清大黃能富網路 OCW、周志遠 OS OCW、李宏毅 ML、GeeksforGeeks 題庫、MySQL 練習 50 題。作者觀察各校資結每年題型差異大但反覆考同幾個題型，每校寫 6–7 年考古就抓得到"
+      },
+      {
+        "id": "res-medium-im-110-4schools",
+        "title": "Medium — 110 台政交成資管所考試心得",
+        "type": "部落格",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://joannachou713.medium.com/110-%E5%8F%B0%E6%94%BF%E4%BA%A4%E6%88%90%E8%B3%87%E7%AE%A1%E6%89%80%E8%80%83%E8%A9%A6%E5%BF%83%E5%BE%97-ea0665a47dea",
+        "description": "110 年四校同時報考的路線圖，全數位課（含題庫班）：洪逸計概與資結、丁祺 MIS、林瑋網路與資料庫"
+      },
+      {
+        "id": "res-medium-im-111-tools",
+        "title": "Medium — 111／2022 資管所考試心得（讀書工具與時程）",
+        "type": "部落格",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://medium.com/@michellechen58/111-2022-%E8%B3%87%E7%AE%A1%E6%89%80%E8%80%83%E8%A9%A6%E5%BF%83%E5%BE%97-fcff15c99498",
+        "description": "少見地把備考工具寫清楚：Notion 管報名狀態與時事、Excel 記錄各科讀書時間比例避免偏科、iPad 寫考古。政大面試部分是重要對照——雖然考的是資管組，第二關卻被問網路流量處理、hash、工作量證明等技術題"
+      },
+      {
+        "id": "res-get-im-110-top",
+        "title": "高點 — 110 台大資管所、成大資管所榜首（中央企管跨考）",
+        "type": "補習班",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.get.com.tw/media/master/ListDetail.aspx?iS=61830&iC=3271",
+        "description": "非本科系、升大四暑假才開始準備的雙榜首路線，可與「準備一年以上」的心得對照，判斷最短可行時程"
+      },
+      {
+        "id": "res-tkb-im-112-top",
+        "title": "TKB — 112 年台大資管所榜首 黃O綸",
+        "type": "補習班",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.tkbgo.com.tw/schoolZone/graduate/comment/toDetail?comment_id=1399",
+        "description": "推甄已正取政大資管，仍推辭大四下交換、續考台大並拿下榜首。資結的觀念串法值得看：從線性結構→Tree→偏斜引出的平衡樹（AVL／RB）→排序複雜度→非比較排序，一條線把整科串起來"
+      },
+      {
+        "id": "res-tkb-im-113-ntu",
+        "title": "TKB — 113 年台大資管所 黃O熹",
+        "type": "補習班",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.tkbgo.com.tw/schoolZone/graduate/comment/toDetail?comment_id=1774",
+        "description": "大一到大三忙社團、成績差到推甄無望，大三下才全面轉考試路線的時程樣本。內容偏補習班心得，主要價值在時間點"
+      },
+      {
+        "id": "res-tkb-nccu-113-case",
+        "title": "TKB — 113 年政大資管所 蔡O玄（國企系輔資工）",
+        "type": "補習班",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.tkbgo.com.tw/schoolZone/graduate/comment/toDetail?comment_id=1779",
+        "description": "MIS「案例庫」的具體練法：背熟理論後每週做 2–3 次案例分析、傳給老師討論，持續 2–3 個月再進題庫班練架構。遇到不會的題目就讀一本專書補（例：平台經濟題去讀《平台革命》）。另有依目標校決定手寫語言的建議（C++ 為主，成大／中山 C、中央 Java）"
+      },
+      {
+        "id": "res-tkb-im-review-oral",
+        "title": "TKB — 資管所書審、口面試心得一覽",
+        "type": "補習班",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.tkbgo.com.tw/schoolZone/graduate/article/toDetail?article_id=1729",
+        "description": "跨校的書審與口面試彙整入口，適合在推甄季開始前先掃一遍各校形式差異"
+      },
+      {
+        "id": "res-tkb-im-115-schedule",
+        "title": "TKB — 2026／115 全台資管所簡章、考科與報名時間",
+        "type": "補習班",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.tkbgo.com.tw/schoolZone/graduate/news/toDetail?news_id=5286",
+        "description": "115 各校考科與考試日期一覽（台大筆試 2/2、面試 3/13；政大筆試 2/6、面試 3/20）。次級來源，報名前仍以官方簡章為準"
+      },
+      {
+        "id": "res-tkb-im-115-exam-changes",
+        "title": "TKB 甄戰 — 115 研究所考試簡章總整理（含台大招生改制）",
+        "type": "補習班",
+        "examRelevance": [
+          "im",
+          "cs"
+        ],
+        "url": "https://www.reallygood.com.tw/newExam/inside?str=0AB98C37435A1716A3CA5BFEF5596942",
+        "description": "值得注意的趨勢整理：台大近年大幅壓縮面試準備時間（113 商研所公告名單到口試僅一週，114 已出現最短僅一天的校系），以及 115 有校系把考試入學從筆試改為書審＋面試。台大資管目前仍是筆試 60%＋口試 40%，但這個方向要持續盯"
+      },
+      {
+        "id": "res-pixnet-im-110-working",
+        "title": "痞客邦 — 110 年資管所考試心得（在職備考）",
+        "type": "部落格",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://pegglife.pixnet.net/blog/posts/16036962722",
+        "description": "在職邊上班邊考的時程樣本（一天 4–6 小時、共 7–8 個月），並附完整成績與最低錄取分對照。作者結論很直接：非必要不要在職準備。無台大成績，適合當中字輩校系的落點參考"
+      },
+      {
+        "id": "res-dcard-im-112-ntu-nocram",
+        "title": "Dcard — 112 臺大資管所正取心得｜無補習＋跨考",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/242348911",
+        "description": "成大文學院跨考、完全不補習而正取台大資管。逐科標出「讀不夠多／多讀的／份量完美的」，並警告某補習班網站賣的考古題解答錯誤率極高。附四關口試逐題紀錄（線代連問十題）"
+      },
+      {
+        "id": "res-dcard-im-113-nocram-tech",
+        "title": "Dcard — 113 台大／政大／成大資管所 資結組 無補習心得",
+        "type": "Dcard",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.dcard.tw/f/graduate_school/p/255151431",
+        "description": "本科生九、十月才起跑的無補習路線，逐科列出自己用的書與課（洪維恩 C++、王致強資結、杰哥、吳仁和系分）。開篇連寫三次「請先研究考古」，並整理考試迷思與台大四關實錄"
+      },
+      {
+        "id": "res-hackmd-im-112-nocram-ordinary",
+        "title": "HackMD — 112 資管所考試：致普通背景且不想補習的人看",
+        "type": "HackMD",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://hackmd.io/@eleanorLin/ryJWey7X2",
+        "description": "每一科都附「慘痛經驗」段落，是少見的失分歸因紀錄：資料庫交易處理讀太多、紅黑樹刪除白讀、時間複雜度只會算短程式導致台大程式題寫爛。並列出網路與資安該讀到能回答哪些問題"
+      },
+      {
+        "id": "res-github-im-resource-hub",
+        "title": "GitHub — 資管所考試資源整理（KartaYu）",
+        "type": "部落格",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://github.com/KartaYu/im-master-exam-resource",
+        "description": "公開彙整的資管所自學資源索引：各校開放式課程、計概名詞、MIS 與資訊倫理的延伸閱讀連結，另含心智圖與考古題練習目錄"
+      },
+      {
+        "id": "res-yt-ntu-cpp-kung",
+        "title": "YouTube — 孔令傑《程式設計（C++）— 完整課程》",
+        "type": "線上課程",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.youtube.com/playlist?list=PLMHSr8fseBzUvwjKtR6pX0Vv9Q9H-V3lY",
+        "description": "台大資管大一必修課本身，15 講共 150 部影片。台大資訊科技概論固定考兩題 C++ 手寫題，用出題系所的母課程準備最直接"
+      },
+      {
+        "id": "res-yt-nthu-os-chou",
+        "title": "YouTube — 周志遠《作業系統》（清大開放式課程，字幕版）",
+        "type": "線上課程",
+        "examRelevance": [
+          "im",
+          "cs"
+        ],
+        "url": "https://www.youtube.com/playlist?list=PLS0SUwlYe8cxj8FCPRoPHAehIiN9Vo6VZ",
+        "description": "78 部完整課程。多篇心得的原話是「無補習考取資管、資工所的朋友們肯定都會推薦」；台大近年 OS 比重在上升"
+      },
+      {
+        "id": "res-yt-stat-tang-1",
+        "title": "YouTube — 唐麗英《統計學(一) 基礎統計》",
+        "type": "線上課程",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.youtube.com/playlist?list=PLj6E8qlqmkFvsst4-ww1mrax1D65FQI1m",
+        "description": "16 講，敘述統計、機率、抽樣分佈。台大自 114 學年度起把統計併入資訊管理導論卷，這是無補習者最常用的統計課"
+      },
+      {
+        "id": "res-yt-stat-tang-2",
+        "title": "YouTube — 唐麗英《統計學(二) 進階統計》",
+        "type": "線上課程",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.youtube.com/playlist?list=PLj6E8qlqmkFtFl1HFux0XUHiPjBmBoZno",
+        "description": "13 講，假設檢定、變異數分析、迴歸、無母數——正好對應台大統計題的考試重心"
+      },
+      {
+        "id": "res-yt-hylee-genai",
+        "title": "YouTube — 李宏毅【機器學習 2023】(生成式 AI)",
+        "type": "線上課程",
+        "examRelevance": [
+          "im",
+          "cs"
+        ],
+        "url": "https://www.youtube.com/playlist?list=PLJV_el3uVTsOePyfmkfivYZ7Rqr2nMk3W",
+        "description": "30 部，ChatGPT 與生成式模型原理。AI 是計概逐年加重的趨勢題，也是口試技術關（Transformer、Self-Attention）的常見追問"
+      },
+      {
+        "id": "res-book-laudon-mis-16e",
+        "title": "Laudon《管理資訊系統》16/e 中譯本",
+        "type": "書目",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.tenlong.com.tw/products/9789867696397",
+        "description": "MIS 自學的主力教科書，幾乎每篇無補習心得都用。用法是按章節對應考古題練習，先想「本章哪些概念能解釋這題」"
+      },
+      {
+        "id": "res-book-lin-im-8e",
+        "title": "林東清《資訊管理：智慧化企業的核心競爭能力》八版",
+        "type": "書目",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.books.com.tw/products/0010932309",
+        "description": "即舊版《e化企業的核心競爭能力》改版（智勝，2022）。與 Laudon 互補，補理論深度與中文名詞"
+      },
+      {
+        "id": "res-book-lind-stat-19e",
+        "title": "Lind《商用統計學》19e 中譯本",
+        "type": "書目",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://www.books.com.tw/products/0010991598",
+        "description": "114 台大正取者搭配唐麗英線上課用的統計課本，重點是拿它的習題大量練，提升解題速度"
+      },
+      {
+        "id": "res-news-hbr-tech",
+        "title": "Harvard Business Review — Technology topic",
+        "type": "時事",
+        "examRelevance": [
+          "im"
+        ],
+        "url": "https://hbr.org/topic/subject/technology-and-analytics",
+        "description": "108 台大上榜者推薦的 MIS 補充讀物，理由是三點：MIS 是英文考題、觀念很新、內文是架構式說明還附背景知識連結。等公車之類的零碎時間就能讀"
+      }
+    ]
+  }
+}

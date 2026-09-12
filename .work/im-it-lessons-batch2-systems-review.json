@@ -1,0 +1,5 @@
+{
+  "approved": true,
+  "summary": "最終回歸複查通過：blocking=0、major=0。OS file/storage lesson 已依標準教材責任清單把 files/directories primitives、空間管理、disk scheduling 與備份至 stable storage 列為 storage management，並正確把 file integrity check 排除；card 06 與 pitfall 已同步，且補充實務可由 utilities/services 執行。CPU card 03 已改成 MHz/GHz 量級判讀並精確引用 q-pp-im-it-110-1。兩課 summary 均明示對應考古題答案為非官方技術覆核。重新驗證後，所有 source refs 存在；lesson/card past-paper refs 均為相同 subtopic、autoGradeEligible=true；card refs 全為所屬 lesson refs 子集；技術內容與 worked examples 可由題面重現。",
+  "issues": []
+}

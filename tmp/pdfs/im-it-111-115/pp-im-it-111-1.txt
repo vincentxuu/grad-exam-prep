@@ -1,0 +1,59 @@
+a
+
+題 號 : 343 國 立 臺 灣 大 學 111 學 年 度 碩士 班 招生 考試 試題 am ia
+科目 : 商 訊 科技 概論 共 4 頁 之 第 1 OE
+HR: 6 -
+
+一 、 選 擇 題 ( 單 選 ) 24 十, 每 題 2.5 分 , 共 60 分 , 請 在 每 題 的 選項 內 選擇 最 適當 的 答案 。
+
+1 上] Which of the following is wrong about OSI Model? (A) layer 8 is Application (B) layer
+5 is Session (C) layer 4 is Transport (D) layer 2 is Data Link (B) all of the above are correct
+(choose this one only if none of the above can be chosen).
+
+2. [___] Which of the following is the industry standard protocol for email sending? (A) Simple
+Mail Transfer Protocol (SMTP) (B) Internet Message Access Protocol (IMAP) (C) Post Office
+Protocol (D) Post Office Protocol 3 (POP3) (E) none of the above.
+
+3. [___] Which of the following technique is used in data link layer for reliable and sequential
+delivery of data packets while allowing multiple packets to be sent at a time to improve
+efficiency? (A) automatic repeat request protocol (B) sliding window protocol (C) request and
+acknowledgment protocol (D) multicast (E) none of the above.
+
+4. [上] Which of the following is wrong about Dynamic Host Configuration Protocol (DHCP)?
+(A) it is used on Internet Protocol (IP) networks (B) it uses a client-server architecture (C)it
+allows the automatic management of IP addresses (D) it offers great benefit to mobile users as
+valid configuration parameters are automatically obtained from the new network ©) all of the
+above are correct (choose this one only if none of the above can be chosen).
+
+5. [____] Which of the following is wrong about virtualization technology? (A) network
+virtualization divides one physical network into separate, independent virtual networks (B)
+network virtualization can combine multiple physical networks to one virtual, software-based
+network (C) CPU virtualization allows a single processor to act as if it was multiple individual
+CPUs (D) CPU virtualization allows one to run multiple different operating systems on one
+machine (E) all of the above are correct (choose this one only if none of the above can be chosen).
+
+6. [___] Which of the following is wrong about Virtual machines (VMs)? (A) a VM isa
+compute resource that uses software instead of a physical computer to run programs and deploy
+apps (B) when more than one VMs run on a physical host machine, each virtual machine runs its
+own operating system and functions separately from the other VMs (C) benefits of VMs include .
+easy provisioning and maintainability, and high availability (D) a software cailed hypervisor sits
+between the VMs and the host and is responsible for allocating the computing resources of the
+host to VMs (E) all of the above are correct (choose this one only if none of the above can be
+chosen).
+
+7. | is a unique identifier assigned to a network interface controller for use as a
+network address in communications within a network segment. It is used in most IEEE 802
+networking technologies, including Ethemet, Wi-Fi, and Bluetooth, (A) globally unique identifier
+(B) IP address (C) media access control address (D) transmission control address (E) none of the
+above.
+
+8. [上 Which of the following is wrong about packet switching? (A) packet switching
+transmits data across digital networks by breaking it down into blocks (B) in datagram packet
+switching, each packet has a header that includes the origin IP address, the destination IP address,
+the number of packets in the entire data file, and the sequence number (C) in datagram packet
+switching, the packets of a file go through the same route (D) in a virtual circuit, the connection
+appears to be a dedicated physical circuit (E) all of the above are correct (choose this one only if
+none of the above can be chosen).
+
+9 C7) is a network multiple access method in which carrier sensing is used, but nodes
+attempt to avoid collisions by beginning transmission only after the channel is sensed to be “idle”

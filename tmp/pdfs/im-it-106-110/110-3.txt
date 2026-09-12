@@ -1,0 +1,68 @@
+題 號 : 875 國 立 臺 灣 大 學 110 學 年 度 碩士 班 招生 考試 試題
+科目 : 資訊 科 技 概論 是 號 :375
+at 共 4 頁 之 第 3 頁
+AR: 6
+cryptocurrency? (A) mint coins (B) store transactions (C) compress transactions (D) validate
+transactions (E) encrypt transactions.
+
+27. [______] In clouding computing, the service model of Microsoft Azure is best characterized as a
+(A) Infrastructure as a service (laaS) (B) Platform as a service (PaaS) (C) Software as a Service
+(SaaS) (D) Everything as a Service (E) Data as a Service.
+
+28. [" ~~" ] Ifa company uses both its computer infrastructure and Amazon’s AWS to deliver
+services, then this type of cloud deployment model belongs to (A) Diverse Cloud (B) Community
+Cloud (C) Public Cloud (D) Hybrid Cloud (E) Distributed Cloud.
+
+二 、 問 答題 , 共 30 分 。
+
+六 本 大 題 ((a)、(b) 2 小 起) 請 於 試卷 內 之 「 非 選擇 題 作答 區 」 標明 題 號 依 序 作答 。
+
+‘The following C++ code fragment shows the class definition of an aray-based implementation of ADT
+
+Binary Tree that stores a list of person names.
+
+const int MAX_NODES = 100;
+
+class TreeNode
+
+{
+
+public:
+
+private:
+
+String name; J node data ~ person name
+
+int leftchild_index; i index to left child, -1 if no left child
+int rightchild_index; JF index to right child, -1 ifno right child
+friend class BinaryTree;
+
+bie
+
+class Binarytree
+
+{
+
+public:
+
+void removeAllLeaf () ;
+protected:
+
+void recurRemoveLeaf (int parent_id, int node_id, int left_or_right);
+
+// paxent_id: parent node id
+
+// node_id: visited node id
+
+// Aekt_or_right:0 ifnode_id is the left child of parent _id; ] otherwise.
+private:
+
+TreeNode tree [Max NODES]; // amay of tree nodes
+
+int root_index; Jl index of root, -1 if the tree is empty
+
+int free index; J/ index to the first free node
+
+Ji fcee nodes are chained by rightchild_index
+
+Vi

@@ -1,0 +1,1895 @@
+{
+  "im-it-arch-cpu-organization": {
+    "concept": {
+      "id": "im-it-arch-cpu-organization",
+      "topicId": "im-it-arch",
+      "title": "CPU 與指令架構",
+      "keywords": [
+        "instruction cycle",
+        "ISA",
+        "ALU",
+        "pipeline",
+        "hazard"
+      ],
+      "status": "reviewed",
+      "topicTitle": "電腦架構基礎"
+    },
+    "taxonomyCount": 9,
+    "autoGradeEligibleCount": 8,
+    "questions": [
+      {
+        "metadata": {
+          "questionId": "q-pp-im-it-106-13",
+          "paperId": "pp-im-it-106",
+          "topicId": "im-it-arch",
+          "primarySubtopicId": "im-it-arch-cpu-organization",
+          "questionType": "single_choice",
+          "scoringMode": "automatic_candidate",
+          "taxonomyConfidence": "high",
+          "taxonomyRationale": "考 BIOS 與開機初始化。",
+          "answerSource": {
+            "kind": "model_assisted_technical_derivation",
+            "official": false,
+            "reviewCount": 1,
+            "note": "依原卷題面與技術推導覆核，並非官方答案。"
+          },
+          "answerConfidence": {
+            "level": "medium",
+            "basis": [
+              "BIOS is firmware that initializes hardware during boot."
+            ],
+            "unresolvedIssues": []
+          },
+          "publication": {
+            "browseEligible": true,
+            "practiceEligible": true,
+            "autoGradeEligible": true,
+            "fullMockEligible": false,
+            "blockers": [
+              "非官方答案，完整模考需更高信心來源"
+            ]
+          }
+        },
+        "question": {
+          "id": "q-pp-im-it-106-13",
+          "paperId": "pp-im-it-106",
+          "examId": "im",
+          "subjectId": "im-it",
+          "year": 106,
+          "number": 13,
+          "text": "A type of firmware used to perform hardware initialization during the booting process of a computer: (A) BIOS (B) CMOS (C) ROM (D) kernel (E) DOS.",
+          "points": 2.5,
+          "hasImage": false,
+          "subQuestions": []
+        },
+        "answer": {
+          "questionId": "q-pp-im-it-106-13",
+          "answer": "A",
+          "explanation": "BIOS（Basic Input/Output System）是一種儲存在主機板晶片上的韌體，負責在電腦開機時執行硬體初始化，此過程稱為 POST（Power-On Self Test）。CMOS 是一種用來儲存 BIOS 設定值的記憶體晶片，本身並非韌體。ROM 是唯讀記憶體（記憶體類型），kernel 是作業系統核心，DOS 是磁碟作業系統，三者均不符合「用於開機時硬體初始化的韌體」定義。因此正確答案為 (A) BIOS。"
+        }
+      },
+      {
+        "metadata": {
+          "questionId": "q-pp-im-it-107-16",
+          "paperId": "pp-im-it-107",
+          "topicId": "im-it-arch",
+          "primarySubtopicId": "im-it-arch-cpu-organization",
+          "questionType": "single_choice",
+          "scoringMode": "automatic_candidate",
+          "taxonomyConfidence": "high",
+          "taxonomyRationale": "考 RISC/CISC 與 instruction pipeline。",
+          "answerSource": {
+            "kind": "model_assisted_technical_derivation",
+            "official": false,
+            "reviewCount": 1,
+            "note": "依原卷題面與技術推導覆核，並非官方答案。"
+          },
+          "answerConfidence": {
+            "level": "medium",
+            "basis": [
+              "The listed introductory CISC/RISC characterizations and x86/ARM examples are all accepted, so E applies."
+            ],
+            "unresolvedIssues": []
+          },
+          "publication": {
+            "browseEligible": true,
+            "practiceEligible": true,
+            "autoGradeEligible": true,
+            "fullMockEligible": false,
+            "blockers": [
+              "非官方答案，完整模考需更高信心來源"
+            ]
+          }
+        },
+        "question": {
+          "id": "q-pp-im-it-107-16",
+          "paperId": "pp-im-it-107",
+          "examId": "im",
+          "subjectId": "im-it",
+          "year": 107,
+          "number": 16,
+          "text": "Which of the following is wrong? (A) the primary goal of CISC (Complex Instruction Set Computer) approach is to complete a task in as few lines of assembly code as possible (B) the RISC (Reduced Instruction Set Computer) approach is designed to execute computing tasks with the simplest instructions in the shortest amount of time possible (C) Intel x86 architecture is typically considered as a CISC approach (D) ARM architecture is typically considered as a RISC approach (E) all of the above are correct (choose this only if none of the above can be chosen).",
+          "points": 2.5,
+          "hasImage": false,
+          "subQuestions": []
+        },
+        "answer": {
+          "questionId": "q-pp-im-it-107-16",
+          "answer": "E",
+          "explanation": "本題詢問哪個敘述是錯的。選項(A)正確：CISC的設計目標之一確實是以盡可能少的組合語言指令完成任務，透過複雜指令減少程式碼行數。選項(B)正確：RISC的設計理念是以最簡單的指令集在最短時間內執行運算，每條指令盡量在單一時脈週期內完成。選項(C)正確：Intel x86架構是CISC的典型代表，具有大量複雜指令。選項(D)正確：ARM架構是RISC的典型代表，廣泛應用於行動裝置等領域。由於(A)到(D)四個選項均為正確敘述，因此應選(E)「以上皆正確」。"
+        }
+      },
+      {
+        "metadata": {
+          "questionId": "q-pp-im-it-110-1",
+          "paperId": "pp-im-it-110",
+          "topicId": "im-it-arch",
+          "primarySubtopicId": "im-it-arch-cpu-organization",
+          "questionType": "single_choice",
+          "scoringMode": "automatic_candidate",
+          "taxonomyConfidence": "high",
+          "taxonomyRationale": "考 PC 硬體規格。",
+          "answerSource": {
+            "kind": "model_assisted_technical_derivation",
+            "official": false,
+            "reviewCount": 1,
+            "note": "依原卷題面與技術推導覆核，並非官方答案。"
+          },
+          "answerConfidence": {
+            "level": "medium",
+            "basis": [
+              "現代個人電腦 CPU 時脈通常以 GHz 計；2–4 MHz 明顯不符，其餘規格在題目年代均合理。"
+            ],
+            "unresolvedIssues": []
+          },
+          "publication": {
+            "browseEligible": true,
+            "practiceEligible": true,
+            "autoGradeEligible": true,
+            "fullMockEligible": false,
+            "blockers": [
+              "非官方答案，完整模考需更高信心來源"
+            ]
+          }
+        },
+        "question": {
+          "id": "q-pp-im-it-110-1",
+          "paperId": "pp-im-it-110",
+          "examId": "im",
+          "subjectId": "im-it",
+          "year": 110,
+          "number": 1,
+          "text": "Which of the following is wrong about the PCs you can buy nowadays? (A) floppy disc drive is typically not equipped (B) hard disc is typically in the range of 500GB-4TB (C) CPU clock ranges in 2-4 MHz (D) RAM is typically in the range of 4-16GB (E) all the above are correct (choose this one only if none of the above can be chosen).",
+          "points": 2.5,
+          "hasImage": false,
+          "subQuestions": []
+        },
+        "answer": {
+          "questionId": "q-pp-im-it-110-1",
+          "answer": "C",
+          "explanation": "選項 C 的敘述是錯誤的，因為現代 CPU 的時脈頻率應以 GHz（十億赫茲）為單位，通常介於 2-4 GHz，而非 2-4 MHz（百萬赫茲）。2-4 MHz 的時脈速度是 1970 至 1980 年代早期電腦（如 Apple II、早期 IBM PC）的規格，與現代處理器相差約一千倍。其他選項皆為正確描述：現代電腦確實不再配備軟碟機（A）、硬碟容量通常在 500GB 至 4TB 之間（B）、RAM 通常介於 4-16GB（D）。"
+        }
+      },
+      {
+        "metadata": {
+          "questionId": "q-pp-im-it-112-1",
+          "paperId": "pp-im-it-112",
+          "topicId": "im-it-arch",
+          "primarySubtopicId": "im-it-arch-cpu-organization",
+          "questionType": "single_choice",
+          "scoringMode": "automatic_candidate",
+          "taxonomyConfidence": "high",
+          "taxonomyRationale": "考儲存程式式 Von Neumann 架構。",
+          "answerSource": {
+            "kind": "model_assisted_technical_derivation",
+            "official": false,
+            "reviewCount": 1,
+            "note": "依原卷題面與技術推導覆核，並非官方答案。"
+          },
+          "answerConfidence": {
+            "level": "medium",
+            "basis": [
+              "Von Neumann 架構讓資料與指令共用記憶體；分離記憶體是 Harvard 架構特徵。"
+            ],
+            "unresolvedIssues": []
+          },
+          "publication": {
+            "browseEligible": true,
+            "practiceEligible": true,
+            "autoGradeEligible": true,
+            "fullMockEligible": false,
+            "blockers": [
+              "非官方答案，完整模考需更高信心來源"
+            ]
+          }
+        },
+        "question": {
+          "id": "q-pp-im-it-112-1",
+          "paperId": "pp-im-it-112",
+          "examId": "im",
+          "subjectId": "im-it",
+          "year": 112,
+          "number": 1,
+          "text": "Which of the following is wrong about Von Neumann architecture? (A) it has four main units: CPU, memory, input, and output (B) memory is simply a linear array of storage locations (C) data and instructions are separated into different memory (D) a central processing unit has a control unit and an arithmetic/logic unit (E) all the above are correct (choose this one only if none of the above can be chosen).",
+          "points": 2.5,
+          "hasImage": false,
+          "subQuestions": []
+        },
+        "answer": {
+          "questionId": "q-pp-im-it-112-1",
+          "answer": "C",
+          "explanation": "Von Neumann 架構採 stored-program concept，資料與指令共用同一記憶體；(C) 描述的是 Harvard 架構。其餘敘述皆為典型 Von Neumann 架構特徵。"
+        }
+      },
+      {
+        "metadata": {
+          "questionId": "q-pp-im-it-112-2",
+          "paperId": "pp-im-it-112",
+          "topicId": "im-it-arch",
+          "primarySubtopicId": "im-it-arch-cpu-organization",
+          "questionType": "single_choice",
+          "scoringMode": "automatic_candidate",
+          "taxonomyConfidence": "high",
+          "taxonomyRationale": "比較 CISC 與 RISC 指令集。",
+          "answerSource": {
+            "kind": "model_assisted_technical_derivation",
+            "official": false,
+            "reviewCount": 1,
+            "note": "依原卷題面與技術推導覆核，並非官方答案。"
+          },
+          "answerConfidence": {
+            "level": "medium",
+            "basis": [
+              "CISC 通常具有較大、較複雜的指令集，不是比 RISC 更小。"
+            ],
+            "unresolvedIssues": []
+          },
+          "publication": {
+            "browseEligible": true,
+            "practiceEligible": true,
+            "autoGradeEligible": true,
+            "fullMockEligible": false,
+            "blockers": [
+              "非官方答案，完整模考需更高信心來源"
+            ]
+          }
+        },
+        "question": {
+          "id": "q-pp-im-it-112-2",
+          "paperId": "pp-im-it-112",
+          "examId": "im",
+          "subjectId": "im-it",
+          "year": 112,
+          "number": 2,
+          "text": "Which of the following is wrong about process architecture? (A) in general, program compiled in CISC architecture has fewer instructions than that compiled in RISC architecture (B) the CISC approach tries to make each instruction more powerful (C) in general, instructions in a CISC approach will need more clock cycles to execute than in a RISC approach (D) in general, the instruction set in a CISC approach is typically smaller than the instruction set in a RISC approach (E) all the above are correct (choose this one only if none of the above can be chosen).",
+          "points": 2.5,
+          "hasImage": false,
+          "subQuestions": []
+        },
+        "answer": {
+          "questionId": "q-pp-im-it-112-2",
+          "answer": "D",
+          "explanation": "CISC 指令功能通常較複雜，完成相同工作時程式的動態指令數可能少於 RISC，單一指令也常需較多時脈；但 CISC 的指令集通常比 RISC 大，不是更小，因此 (D) 錯。"
+        }
+      },
+      {
+        "metadata": {
+          "questionId": "q-pp-im-it-113-4",
+          "paperId": "pp-im-it-113",
+          "topicId": "im-it-arch",
+          "primarySubtopicId": "im-it-arch-cpu-organization",
+          "questionType": "single_choice",
+          "scoringMode": "automatic_candidate",
+          "taxonomyConfidence": "high",
+          "taxonomyRationale": "考輸入、輸出、記憶體與處理單元。",
+          "answerSource": {
+            "kind": "model_assisted_technical_derivation",
+            "official": false,
+            "reviewCount": 2,
+            "note": "依原卷題面與技術推導覆核，並非官方答案。"
+          },
+          "answerConfidence": {
+            "level": "medium",
+            "basis": [
+              "馮紐曼架構的四個功能組成是 processor、memory、input 與 output；A 最直接對應。",
+              "Von Neumann 架構的四個功能單元是 processor、memory、input、output；A 逐項對應，其他選項遺漏或混入 program counter、GPU、disk 等次層元件。"
+            ],
+            "unresolvedIssues": []
+          },
+          "publication": {
+            "browseEligible": true,
+            "practiceEligible": true,
+            "autoGradeEligible": true,
+            "fullMockEligible": false,
+            "blockers": [
+              "非官方答案，完整模考需更高信心來源"
+            ]
+          }
+        },
+        "question": {
+          "id": "q-pp-im-it-113-4",
+          "paperId": "pp-im-it-113",
+          "examId": "im",
+          "subjectId": "im-it",
+          "year": 113,
+          "number": 4,
+          "text": "A von Neumann architecture consists of four main components, which are: (A) input, output, memory, processing (B) input, output, CPU, program counter (C) arithmetic control, logic control, register, program counter (D) CPU, GPU, RAM, hard disk (E) I/O, RAM, CPU, storage",
+          "points": 2.5,
+          "hasImage": false,
+          "subQuestions": []
+        },
+        "answer": {
+          "questionId": "q-pp-im-it-113-4",
+          "answer": "A",
+          "explanation": "答案經技術覆核後修正為 A（非官方答案）。馮紐曼架構的四個功能組成是 processor、memory、input 與 output；A 最直接對應。 二次覆核：Von Neumann 架構的四個功能單元是 processor、memory、input、output；A 逐項對應，其他選項遺漏或混入 program counter、GPU、disk 等次層元件。"
+        }
+      },
+      {
+        "metadata": {
+          "questionId": "q-pp-im-it-113-8",
+          "paperId": "pp-im-it-113",
+          "topicId": "im-it-arch",
+          "primarySubtopicId": "im-it-arch-cpu-organization",
+          "questionType": "single_choice",
+          "scoringMode": "automatic_candidate",
+          "taxonomyConfidence": "high",
+          "taxonomyRationale": "考 Amdahl's law 與平行加速。",
+          "answerSource": {
+            "kind": "model_assisted_technical_derivation",
+            "official": false,
+            "reviewCount": 2,
+            "note": "依原卷題面與技術推導覆核，並非官方答案。"
+          },
+          "answerConfidence": {
+            "level": "medium",
+            "basis": [
+              "p 已定義為不可平行化比例，平行時間為 p+(1-p)/n，speedup 為其倒數。",
+              "p 已明定為不受增加 processors 影響的 serial fraction；正規化執行時間是 p+(1-p)/n，speedup 是其倒數，所以選 A。"
+            ],
+            "unresolvedIssues": []
+          },
+          "publication": {
+            "browseEligible": true,
+            "practiceEligible": true,
+            "autoGradeEligible": true,
+            "fullMockEligible": false,
+            "blockers": [
+              "非官方答案，完整模考需更高信心來源"
+            ]
+          }
+        },
+        "question": {
+          "id": "q-pp-im-it-113-8",
+          "paperId": "pp-im-it-113",
+          "examId": "im",
+          "subjectId": "im-it",
+          "year": 113,
+          "number": 8,
+          "text": "Amdahl's law is used in parallel computing to formulate the theoretical speedup when using multiple processors. Let p be the fraction of a task that is unaffected by adding more processors, and n is the number of processors used to speed up the task. Then the theoretical speedup of the execution of the whole task is (A) 1/(p + (1-p)/n) (B) 1/((1-p) + p/n) (C) (1-p)/(np) (D) n(1-p)/p (E) none of the above.",
+          "points": 2.5,
+          "hasImage": false,
+          "subQuestions": []
+        },
+        "answer": {
+          "questionId": "q-pp-im-it-113-8",
+          "answer": "A",
+          "explanation": "答案經技術覆核後修正為 A（非官方答案）。p 已定義為不可平行化比例，平行時間為 p+(1-p)/n，speedup 為其倒數。 二次覆核：p 已明定為不受增加 processors 影響的 serial fraction；正規化執行時間是 p+(1-p)/n，speedup 是其倒數，所以選 A。"
+        }
+      },
+      {
+        "metadata": {
+          "questionId": "q-pp-im-it-115-10",
+          "paperId": "pp-im-it-115",
+          "topicId": "im-it-arch",
+          "primarySubtopicId": "im-it-arch-cpu-organization",
+          "questionType": "single_choice",
+          "scoringMode": "automatic_candidate",
+          "taxonomyConfidence": "high",
+          "taxonomyRationale": "考 data hazard 導致 pipeline stall。",
+          "answerSource": {
+            "kind": "model_assisted_technical_derivation",
+            "official": false,
+            "reviewCount": 1,
+            "note": "依原卷題面與技術推導覆核，並非官方答案。"
+          },
+          "answerConfidence": {
+            "level": "medium",
+            "basis": [
+              "尚未取得 producer result 的 operand dependency 造成 data hazard 與 stall。"
+            ],
+            "unresolvedIssues": []
+          },
+          "publication": {
+            "browseEligible": true,
+            "practiceEligible": true,
+            "autoGradeEligible": true,
+            "fullMockEligible": false,
+            "blockers": [
+              "非官方答案，完整模考需更高信心來源"
+            ]
+          }
+        },
+        "question": {
+          "id": "q-pp-im-it-115-10",
+          "paperId": "pp-im-it-115",
+          "examId": "im",
+          "subjectId": "im-it",
+          "year": 115,
+          "number": 10,
+          "text": "In a pipelined processor, which situation most directly leads to a pipeline stall? (A) Instruction prefetching (B) Data hazard due to operand dependency (C) Branch prediction hit (D) Cache hit (E) Register renaming.",
+          "points": 2,
+          "hasImage": false,
+          "subQuestions": []
+        },
+        "answer": {
+          "questionId": "q-pp-im-it-115-10",
+          "answer": "B",
+          "explanation": "在管線處理器中，資料危障（Data Hazard）是指某條指令需要使用前一條指令尚未寫回的運算結果，導致管線必須暫停等待，這是造成管線停頓（Pipeline Stall）最直接的原因。指令預先取得（Instruction Prefetching）是一種優化技術，目的是減少等待，並不會導致停頓。分支預測命中（Branch Prediction Hit）表示預測成功，管線可以正常繼續執行而不需停頓。快取命中（Cache Hit）代表資料已在快取中，存取速度快，不會引發停頓。暫存器重新命名（Register Renaming）是用來消除 WAR 與 WAW 等假相依性的技術，反而有助於減少停頓，而非造成停頓。"
+        }
+      }
+    ]
+  },
+  "im-it-security-cryptography": {
+    "concept": {
+      "id": "im-it-security-cryptography",
+      "topicId": "im-it-security",
+      "title": "密碼學",
+      "keywords": [
+        "AES",
+        "RSA",
+        "hash",
+        "signature",
+        "PKI",
+        "TLS"
+      ],
+      "status": "reviewed",
+      "topicTitle": "資安"
+    },
+    "taxonomyCount": 9,
+    "autoGradeEligibleCount": 6,
+    "questions": [
+      {
+        "metadata": {
+          "questionId": "q-pp-im-it-107-11",
+          "paperId": "pp-im-it-107",
+          "topicId": "im-it-security",
+          "primarySubtopicId": "im-it-security-cryptography",
+          "questionType": "single_choice",
+          "scoringMode": "automatic_candidate",
+          "taxonomyConfidence": "high",
+          "taxonomyRationale": "考數位憑證欄位。",
+          "answerSource": {
+            "kind": "model_assisted_technical_derivation",
+            "official": false,
+            "reviewCount": 3,
+            "note": "依原卷題面與技術推導覆核，並非官方答案。"
+          },
+          "answerConfidence": {
+            "level": "medium",
+            "basis": [
+              "certificate serial number 可作為 CRL/OCSP revocation tracking 的識別值；issuer、subject public key 與 X.509 敘述也正確，因此 A 至 D 均正確，應選 E。",
+              "X.509 certificate serial number 由 issuer 指派並唯一識別該 issuer 簽發的憑證；CRL entry 與 OCSP request 都以 issuer/serial number 識別要查詢或撤銷的憑證，所以 A 所稱用來追蹤 revocation information 是合理敘述。Issuer 欄位指出簽發與簽章實體，certificate 包含 subject public key，X.509 也確實規範 public-key certificate 格式，因此 B、C、D 均正確。不存在另一個合理錯項，應由現有 A 更正為 E。"
+            ],
+            "unresolvedIssues": []
+          },
+          "publication": {
+            "browseEligible": true,
+            "practiceEligible": true,
+            "autoGradeEligible": true,
+            "fullMockEligible": false,
+            "blockers": [
+              "非官方答案，完整模考需更高信心來源"
+            ]
+          }
+        },
+        "question": {
+          "id": "q-pp-im-it-107-11",
+          "paperId": "pp-im-it-107",
+          "examId": "im",
+          "subjectId": "im-it",
+          "year": 107,
+          "number": 11,
+          "text": "Which of the following about digital certificate is wrong? (A) the \"Serial Number\" field in a digital certificate is used to track revocation information (B) the \"Issuer\" field specifies the entity that verified the information and signed the certificate (C) it needs to contain the certificate owner's public key (D) X.509 is a standard that defines the format of public key certificates (E) all of the above are correct (choose this only if none of the above can be chosen).",
+          "points": 2.5,
+          "hasImage": false,
+          "subQuestions": []
+        },
+        "answer": {
+          "questionId": "q-pp-im-it-107-11",
+          "answer": "E",
+          "explanation": "答案經技術覆核後修正為 E（非官方答案）。certificate serial number 可作為 CRL/OCSP revocation tracking 的識別值；issuer、subject public key 與 X.509 敘述也正確，因此 A 至 D 均正確，應選 E。 二次覆核：X.509 certificate serial number 由 issuer 指派並唯一識別該 issuer 簽發的憑證；CRL entry 與 OCSP request 都以 issuer/serial number 識別要查詢或撤銷的憑證，所以 A 所稱用來追蹤 revocation information 是合理敘述。Issuer 欄位指出簽發與簽章實體，certificate 包含 subject public key，X.509 也確實規範 public-key certificate 格式，因此 B、C、D 均正確。不存在另一個合理錯項，應由現有 A 更正為 E。"
+        }
+      },
+      {
+        "metadata": {
+          "questionId": "q-pp-im-it-107-21",
+          "paperId": "pp-im-it-107",
+          "topicId": "im-it-security",
+          "primarySubtopicId": "im-it-security-cryptography",
+          "questionType": "single_choice",
+          "scoringMode": "automatic_candidate",
+          "taxonomyConfidence": "high",
+          "taxonomyRationale": "辨識對稱與非對稱加密。",
+          "answerSource": {
+            "kind": "model_assisted_technical_derivation",
+            "official": false,
+            "reviewCount": 1,
+            "note": "依原卷題面與技術推導覆核，並非官方答案。"
+          },
+          "answerConfidence": {
+            "level": "medium",
+            "basis": [
+              "RSA is asymmetric; DES, IDEA, Caesar, and AES are symmetric mechanisms."
+            ],
+            "unresolvedIssues": []
+          },
+          "publication": {
+            "browseEligible": true,
+            "practiceEligible": true,
+            "autoGradeEligible": true,
+            "fullMockEligible": false,
+            "blockers": [
+              "非官方答案，完整模考需更高信心來源"
+            ]
+          }
+        },
+        "question": {
+          "id": "q-pp-im-it-107-21",
+          "paperId": "pp-im-it-107",
+          "examId": "im",
+          "subjectId": "im-it",
+          "year": 107,
+          "number": 21,
+          "text": "Which of the following is not a symmetric encryption mechanism? (A) DES (B) IDEA (C) RSA (D) Caesar cipher (E) Advanced Encryption Standard (AES).",
+          "points": 2.5,
+          "hasImage": false,
+          "subQuestions": []
+        },
+        "answer": {
+          "questionId": "q-pp-im-it-107-21",
+          "answer": "C",
+          "explanation": "RSA 是非對稱加密演算法（公開金鑰密碼學），使用一對公鑰與私鑰進行加密與解密，因此它不是對稱加密機制。DES（資料加密標準）、IDEA（國際資料加密演算法）以及 AES（進階加密標準）都是對稱加密演算法，使用相同的金鑰進行加解密。凱薩密碼（Caesar cipher）是一種古典的對稱替換式加密方法，同樣屬於對稱加密。因此，選項中唯一不是對稱加密機制的是 RSA（選項 C）。"
+        }
+      },
+      {
+        "metadata": {
+          "questionId": "q-pp-im-it-110-17",
+          "paperId": "pp-im-it-110",
+          "topicId": "im-it-security",
+          "primarySubtopicId": "im-it-security-cryptography",
+          "questionType": "single_choice",
+          "scoringMode": "automatic_candidate",
+          "taxonomyConfidence": "high",
+          "taxonomyRationale": "考數位憑證與公鑰。",
+          "answerSource": {
+            "kind": "model_assisted_technical_derivation",
+            "official": false,
+            "reviewCount": 1,
+            "note": "依原卷題面與技術推導覆核，並非官方答案。"
+          },
+          "answerConfidence": {
+            "level": "medium",
+            "basis": [
+              "數位憑證把身分與 public key 綁定並由 CA 簽章，不會證明私鑰或秘密金鑰的所有權。"
+            ],
+            "unresolvedIssues": []
+          },
+          "publication": {
+            "browseEligible": true,
+            "practiceEligible": true,
+            "autoGradeEligible": true,
+            "fullMockEligible": false,
+            "blockers": [
+              "非官方答案，完整模考需更高信心來源"
+            ]
+          }
+        },
+        "question": {
+          "id": "q-pp-im-it-110-17",
+          "paperId": "pp-im-it-110",
+          "examId": "im",
+          "subjectId": "im-it",
+          "year": 110,
+          "number": 17,
+          "text": "The primary purpose of a digital certificate is to prove the ownership of a __________ (A) public key (B) private key (C) secret key (D) security level (E) signature.",
+          "points": 2.5,
+          "hasImage": false,
+          "subQuestions": []
+        },
+        "answer": {
+          "questionId": "q-pp-im-it-110-17",
+          "answer": "A",
+          "explanation": "數位憑證（digital certificate）的主要目的是證明某個實體（個人、組織或伺服器）對特定公鑰（public key）的所有權。憑證由受信任的憑證授權機構（CA）簽發，將持有者的身份資訊與其公鑰綁定在一起，並以CA的數位簽章加以認證。私鑰（private key）必須由持有者自行保管且絕不對外公開，因此不需要憑證來證明；秘密金鑰（secret key）屬於對稱加密，也不是憑證所要證明的對象。因此，數位憑證證明的是公鑰的所有權，答案為(A)。"
+        }
+      },
+      {
+        "metadata": {
+          "questionId": "q-pp-im-it-111-12",
+          "paperId": "pp-im-it-111",
+          "topicId": "im-it-security",
+          "primarySubtopicId": "im-it-security-cryptography",
+          "questionType": "single_choice",
+          "scoringMode": "automatic_candidate",
+          "taxonomyConfidence": "high",
+          "taxonomyRationale": "考 RSA 與公開金鑰密碼系統。",
+          "answerSource": {
+            "kind": "model_assisted_technical_derivation",
+            "official": false,
+            "reviewCount": 1,
+            "note": "依原卷題面與技術推導覆核，並非官方答案。"
+          },
+          "answerConfidence": {
+            "level": "medium",
+            "basis": [
+              "一般 public-key encryption 的加密金鑰是公開金鑰；RSA 的其他三項敘述均合理。"
+            ],
+            "unresolvedIssues": []
+          },
+          "publication": {
+            "browseEligible": true,
+            "practiceEligible": true,
+            "autoGradeEligible": true,
+            "fullMockEligible": false,
+            "blockers": [
+              "非官方答案，完整模考需更高信心來源"
+            ]
+          }
+        },
+        "question": {
+          "id": "q-pp-im-it-111-12",
+          "paperId": "pp-im-it-111",
+          "examId": "im",
+          "subjectId": "im-it",
+          "year": 111,
+          "number": 12,
+          "text": "Which of the following is wrong? (A) RSA algorithm is an asymmetric cryptography algorithm (B) RSA is based on the fact that it is difficult to factorize a large integer (C) in a public-key cryptosystem, the encryption key is private (D) RSA is not meant to be used to directly encrypt user data. (E) all of the above are correct (choose this one only if none of the above can be chosen).",
+          "points": 2.5,
+          "hasImage": false,
+          "subQuestions": []
+        },
+        "answer": {
+          "questionId": "q-pp-im-it-111-12",
+          "answer": "C",
+          "explanation": "在公開金鑰密碼系統（public-key cryptosystem）中，加密金鑰（encryption key）是公開的（public），而非私密的（private），任何人都可以使用公鑰來加密訊息，只有持有對應私鑰的人才能解密，因此選項 C 的說法是錯誤的。選項 A 正確，RSA 確實是非對稱加密演算法，使用一對公私金鑰。選項 B 正確，RSA 的安全性建立在大整數質因數分解（integer factorization）困難性的基礎上。選項 D 也正確，RSA 因運算效率較低，通常不直接用來加密大量的使用者資料，而是用來加密對稱式加密的會話金鑰（session key）。"
+        }
+      },
+      {
+        "metadata": {
+          "questionId": "q-pp-im-it-113-16",
+          "paperId": "pp-im-it-113",
+          "topicId": "im-it-security",
+          "primarySubtopicId": "im-it-security-cryptography",
+          "questionType": "single_choice",
+          "scoringMode": "automatic_candidate",
+          "taxonomyConfidence": "high",
+          "taxonomyRationale": "考 PKI、CA/RA 與數位憑證。",
+          "answerSource": {
+            "kind": "model_assisted_technical_derivation",
+            "official": false,
+            "reviewCount": 1,
+            "note": "依原卷題面與技術推導覆核，並非官方答案。"
+          },
+          "answerConfidence": {
+            "level": "medium",
+            "basis": [
+              "簽發與簽署憑證是 certificate authority 的職責；registration authority 主要驗證申請者身分。"
+            ],
+            "unresolvedIssues": []
+          },
+          "publication": {
+            "browseEligible": true,
+            "practiceEligible": true,
+            "autoGradeEligible": true,
+            "fullMockEligible": false,
+            "blockers": [
+              "非官方答案，完整模考需更高信心來源"
+            ]
+          }
+        },
+        "question": {
+          "id": "q-pp-im-it-113-16",
+          "paperId": "pp-im-it-113",
+          "examId": "im",
+          "subjectId": "im-it",
+          "year": 113,
+          "number": 16,
+          "text": "Which of the following is wrong about public key infrastructure (PKI)? (A) PKI uses public-key encryption (B) a registration authority stores, issues, and signs the digital certificates (C) digital certificate is used to prove the validity of a public key (D) RSA is an asymmetric encryption (E) all the above are correct (choose this one only if none of the above can be chosen).",
+          "points": 2.5,
+          "hasImage": false,
+          "subQuestions": []
+        },
+        "answer": {
+          "questionId": "q-pp-im-it-113-16",
+          "answer": "B",
+          "explanation": "B-tree 的基本性質是：擁有 k 個子節點的非葉節點包含 k-1 個鍵值，而非 k 個鍵值。選項 (B) 說「擁有 k 個子節點的非葉節點包含 k 個鍵值」，此敘述是錯誤的。其他選項皆正確：B-tree 是自我平衡的搜尋樹（A）、m 階 B-tree 最多有 m 個子節點（C）、每個內部節點至少有 ⌈m/2⌉ 個子節點（D）、所有葉節點都出現在同一層（E）。"
+        }
+      },
+      {
+        "metadata": {
+          "questionId": "q-pp-im-it-113-17",
+          "paperId": "pp-im-it-113",
+          "topicId": "im-it-security",
+          "primarySubtopicId": "im-it-security-cryptography",
+          "questionType": "single_choice",
+          "scoringMode": "automatic_candidate",
+          "taxonomyConfidence": "high",
+          "taxonomyRationale": "考 HTTPS 與 TLS 的安全通訊。",
+          "answerSource": {
+            "kind": "model_assisted_technical_derivation",
+            "official": false,
+            "reviewCount": 2,
+            "note": "依原卷題面與技術推導覆核，並非官方答案。"
+          },
+          "answerConfidence": {
+            "level": "medium",
+            "basis": [
+              "TLS 可使用自簽或私有 CA 憑證；建立 HTTPS 並不在協定上必然要求受信任第三方簽署。",
+              "HTTPS 是 HTTP over TLS，也能配置 mutual TLS；但 TLS 技術上可使用 self-signed certificate 或直接信任私有 CA，協定不強制由受信任第三方簽發 server certificate，因此 C 的 requires 過強。"
+            ],
+            "unresolvedIssues": []
+          },
+          "publication": {
+            "browseEligible": true,
+            "practiceEligible": true,
+            "autoGradeEligible": true,
+            "fullMockEligible": false,
+            "blockers": [
+              "非官方答案，完整模考需更高信心來源"
+            ]
+          }
+        },
+        "question": {
+          "id": "q-pp-im-it-113-17",
+          "paperId": "pp-im-it-113",
+          "examId": "im",
+          "subjectId": "im-it",
+          "year": 113,
+          "number": 17,
+          "text": "Which of the following is wrong about Hypertext Transfer Protocol Secure (HTTPS)? (A) Transport Layer Security (TLS) is a cryptographic protocol designed to provide secure communication over a computer network (B) HTTPS is basically an HTTP over TLS (C) HTTPS requires a trusted third party to sign server-side digital certificates (D) HTTPS supports a mutual authentication mode, allowing both server and client to authenticate each other (E) all the above are correct (choose this one only if none of the above can be chosen).",
+          "points": 2.5,
+          "hasImage": false,
+          "subQuestions": []
+        },
+        "answer": {
+          "questionId": "q-pp-im-it-113-17",
+          "answer": "C",
+          "explanation": "答案經技術覆核後修正為 C（非官方答案）。TLS 可使用自簽或私有 CA 憑證；建立 HTTPS 並不在協定上必然要求受信任第三方簽署。 二次覆核：HTTPS 是 HTTP over TLS，也能配置 mutual TLS；但 TLS 技術上可使用 self-signed certificate 或直接信任私有 CA，協定不強制由受信任第三方簽發 server certificate，因此 C 的 requires 過強。"
+        }
+      }
+    ]
+  },
+  "im-it-os-file-storage-io": {
+    "concept": {
+      "id": "im-it-os-file-storage-io",
+      "topicId": "im-it-os",
+      "title": "檔案、儲存與 I/O",
+      "keywords": [
+        "file system",
+        "inode",
+        "disk",
+        "buffering",
+        "spooling"
+      ],
+      "status": "reviewed",
+      "topicTitle": "作業系統"
+    },
+    "taxonomyCount": 8,
+    "autoGradeEligibleCount": 8,
+    "questions": [
+      {
+        "metadata": {
+          "questionId": "q-pp-im-it-107-14",
+          "paperId": "pp-im-it-107",
+          "topicId": "im-it-os",
+          "primarySubtopicId": "im-it-os-file-storage-io",
+          "questionType": "single_choice",
+          "scoringMode": "automatic_candidate",
+          "taxonomyConfidence": "high",
+          "taxonomyRationale": "辨識檔案系統。",
+          "answerSource": {
+            "kind": "model_assisted_technical_derivation",
+            "official": false,
+            "reviewCount": 1,
+            "note": "依原卷題面與技術推導覆核，並非官方答案。"
+          },
+          "answerConfidence": {
+            "level": "medium",
+            "basis": [
+              "MS-DOS is an operating system; HFS, NTFS, exFAT, and ext3 are file systems."
+            ],
+            "unresolvedIssues": []
+          },
+          "publication": {
+            "browseEligible": true,
+            "practiceEligible": true,
+            "autoGradeEligible": true,
+            "fullMockEligible": false,
+            "blockers": [
+              "非官方答案，完整模考需更高信心來源"
+            ]
+          }
+        },
+        "question": {
+          "id": "q-pp-im-it-107-14",
+          "paperId": "pp-im-it-107",
+          "examId": "im",
+          "subjectId": "im-it",
+          "year": 107,
+          "number": 14,
+          "text": "Which of the following is not a file system? (A) Hierarchical File System (HFS) (B) New Technology File System (NTFS) (C) Extended File Allocation Table (exFAT) (D) third extended filesystem (ext3) (E) Microsoft Disk Operating System (MS-DOS).",
+          "points": 2.5,
+          "hasImage": false,
+          "subQuestions": []
+        },
+        "answer": {
+          "questionId": "q-pp-im-it-107-14",
+          "answer": "E",
+          "explanation": "MS-DOS（Microsoft Disk Operating System）是一種磁碟作業系統，而非檔案系統。HFS（階層式檔案系統）是 Apple 所開發的檔案系統；NTFS（新技術檔案系統）是 Windows 所使用的檔案系統；exFAT（延伸檔案配置表）是專為快閃記憶體設計的檔案系統；ext3（第三代延伸檔案系統）則是 Linux 常用的檔案系統。MS-DOS 本身是一套完整的作業系統，其所使用的檔案系統為 FAT（File Allocation Table），因此 MS-DOS 本身不屬於檔案系統的範疇。"
+        }
+      },
+      {
+        "metadata": {
+          "questionId": "q-pp-im-it-107-15",
+          "paperId": "pp-im-it-107",
+          "topicId": "im-it-os",
+          "primarySubtopicId": "im-it-os-file-storage-io",
+          "questionType": "single_choice",
+          "scoringMode": "automatic_candidate",
+          "taxonomyConfidence": "high",
+          "taxonomyRationale": "考 device driver。",
+          "answerSource": {
+            "kind": "model_assisted_technical_derivation",
+            "official": false,
+            "reviewCount": 1,
+            "note": "依原卷題面與技術推導覆核，並非官方答案。"
+          },
+          "answerConfidence": {
+            "level": "medium",
+            "basis": [
+              "A device driver is hardware-dependent and OS-specific software mediating transparent device access."
+            ],
+            "unresolvedIssues": []
+          },
+          "publication": {
+            "browseEligible": true,
+            "practiceEligible": true,
+            "autoGradeEligible": true,
+            "fullMockEligible": false,
+            "blockers": [
+              "非官方答案，完整模考需更高信心來源"
+            ]
+          }
+        },
+        "question": {
+          "id": "q-pp-im-it-107-15",
+          "paperId": "pp-im-it-107",
+          "examId": "im",
+          "subjectId": "im-it",
+          "year": 107,
+          "number": 15,
+          "text": "Which of the following best describes a specialized hardware-dependent computer program which is also operating system specific that enables another program to interact transparently with a hardware device? (A) firmware (B) device driver (C) application programming interface (D) hardware platform interface (E) intelligent platform management interface.",
+          "points": 2.5,
+          "hasImage": false,
+          "subQuestions": []
+        },
+        "answer": {
+          "questionId": "q-pp-im-it-107-15",
+          "answer": "B",
+          "explanation": "裝置驅動程式（device driver）是一種專門針對特定硬體設計、且依賴作業系統的程式，它作為硬體與上層應用程式之間的橋樑，使應用程式能夠透明地（transparently）與硬體裝置互動，無需了解硬體底層細節。韌體（firmware）雖然也與硬體緊密相關，但它是燒錄在硬體內部的程式，而非作業系統層面的軟體。API（應用程式介面）是程式間溝通的抽象介面，並非專指硬體互動的驅動程式。因此，最符合題目描述「與硬體相依、作業系統特定，且讓程式透明與硬體互動」的答案是裝置驅動程式（B）。"
+        }
+      },
+      {
+        "metadata": {
+          "questionId": "q-pp-im-it-111-20",
+          "paperId": "pp-im-it-111",
+          "topicId": "im-it-os",
+          "primarySubtopicId": "im-it-os-file-storage-io",
+          "questionType": "single_choice",
+          "scoringMode": "automatic_candidate",
+          "taxonomyConfidence": "high",
+          "taxonomyRationale": "考慢速周邊裝置的 spooling。",
+          "answerSource": {
+            "kind": "model_assisted_technical_derivation",
+            "official": false,
+            "reviewCount": 1,
+            "note": "依原卷題面與技術推導覆核，並非官方答案。"
+          },
+          "answerConfidence": {
+            "level": "medium",
+            "basis": [
+              "將印表工作先排入磁碟佇列、讓程式交付後繼續執行，是 spooling。"
+            ],
+            "unresolvedIssues": []
+          },
+          "publication": {
+            "browseEligible": true,
+            "practiceEligible": true,
+            "autoGradeEligible": true,
+            "fullMockEligible": false,
+            "blockers": [
+              "非官方答案，完整模考需更高信心來源"
+            ]
+          }
+        },
+        "question": {
+          "id": "q-pp-im-it-111-20",
+          "paperId": "pp-im-it-111",
+          "examId": "im",
+          "subjectId": "im-it",
+          "year": 111,
+          "number": 20,
+          "text": "In operating systems, _____ refers to the technique for mediating between a computer application and a slow peripheral, such as a printer, that allows programs to \"hand off\" work to be done by the peripheral and then proceed to other tasks. (A) buffering (B) spooling (C) preemptive scheduling (D) non-preemptive scheduling (E) heap.",
+          "points": 2.5,
+          "hasImage": false,
+          "subQuestions": []
+        },
+        "answer": {
+          "questionId": "q-pp-im-it-111-20",
+          "answer": "B",
+          "explanation": "Spooling（Simultaneous Peripheral Operations On-Line）是指將程式要輸出至慢速週邊設備（如印表機）的資料先存入緩衝區或佇列，讓程式可以立即「交付」工作後繼續執行其他任務，不必等待週邊完成。這與 Buffering 的區別在於，Buffering 只是暫存傳輸中的資料，程式仍需等待，而 Spooling 允許程式完全脫手並繼續運行。Preemptive 與 Non-preemptive Scheduling 是 CPU 排程策略，與週邊設備的 I/O 管理無關。Heap 則是記憶體管理的資料結構，亦與本題無關。因此本題正確答案為 (B) spooling。"
+        }
+      },
+      {
+        "metadata": {
+          "questionId": "q-pp-im-it-111-22",
+          "paperId": "pp-im-it-111",
+          "topicId": "im-it-os",
+          "primarySubtopicId": "im-it-os-file-storage-io",
+          "questionType": "single_choice",
+          "scoringMode": "automatic_candidate",
+          "taxonomyConfidence": "medium",
+          "taxonomyRationale": "動態連結橫跨 OS 載入與編譯工具鏈。",
+          "answerSource": {
+            "kind": "model_assisted_technical_derivation",
+            "official": false,
+            "reviewCount": 1,
+            "note": "依原卷題面與技術推導覆核，並非官方答案。"
+          },
+          "answerConfidence": {
+            "level": "medium",
+            "basis": [
+              "執行期載入共享函式庫、處理 relocation 與符號跳轉的是 dynamic linker。"
+            ],
+            "unresolvedIssues": []
+          },
+          "publication": {
+            "browseEligible": true,
+            "practiceEligible": true,
+            "autoGradeEligible": true,
+            "fullMockEligible": false,
+            "blockers": [
+              "非官方答案，完整模考需更高信心來源"
+            ]
+          }
+        },
+        "question": {
+          "id": "q-pp-im-it-111-22",
+          "paperId": "pp-im-it-111",
+          "examId": "im",
+          "subjectId": "im-it",
+          "year": 111,
+          "number": 22,
+          "text": "_____ refers to the part of an operating system that loads and links the shared libraries needed by an executable when it is executed at run time, by copying the content of libraries from persistent storage to RAM, filling jump tables and relocating pointers. (A) code generation (B) code loader (C) assembler (D) dynamic linker (E) none of the above.",
+          "points": 2.5,
+          "hasImage": false,
+          "subQuestions": []
+        },
+        "answer": {
+          "questionId": "q-pp-im-it-111-22",
+          "answer": "D",
+          "explanation": "動態連結器（dynamic linker）是作業系統的一部分，負責在程式執行時期載入並連結所需的共享函式庫（shared libraries）。它的工作包括將函式庫內容從持久性儲存（如硬碟）複製到 RAM、填寫跳躍表（jump tables）以及重定位指標（relocating pointers）。這與靜態連結不同，靜態連結在編譯期就將函式庫整合進執行檔，而動態連結則延遲到執行時期才進行。code loader 雖然負責載入可執行檔本身，但不處理共享函式庫的連結；assembler 負責將組合語言轉換為機器碼；code generation 是編譯器的一個階段，均與題意不符。因此正確答案為 (D) dynamic linker。"
+        }
+      },
+      {
+        "metadata": {
+          "questionId": "q-pp-im-it-112-11",
+          "paperId": "pp-im-it-112",
+          "topicId": "im-it-os",
+          "primarySubtopicId": "im-it-os-file-storage-io",
+          "questionType": "single_choice",
+          "scoringMode": "automatic_candidate",
+          "taxonomyConfidence": "high",
+          "taxonomyRationale": "考檔案與儲存管理職責。",
+          "answerSource": {
+            "kind": "model_assisted_technical_derivation",
+            "official": false,
+            "reviewCount": 2,
+            "note": "依原卷題面與技術推導覆核，並非官方答案。"
+          },
+          "answerConfidence": {
+            "level": "medium",
+            "basis": [
+              "依作業系統教材的 file/storage management 責任，建立刪除檔案、disk scheduling、檔案操作 primitives 與備份至穩定儲存媒體都屬管理工作；「file integrity check」不是該標準責任清單，因此唯一可選的是 B，不是現有 D。",
+              "標準 OS file/storage management 責任包含建立刪除檔案、disk scheduling、提供檔案與目錄操作 primitives，以及把檔案備份到穩定儲存媒體；file integrity check 不在該典型責任清單。因此 B 是唯一符合『generally not the responsibility』的選項，現有 D 應更正為 B。"
+            ],
+            "unresolvedIssues": []
+          },
+          "publication": {
+            "browseEligible": true,
+            "practiceEligible": true,
+            "autoGradeEligible": true,
+            "fullMockEligible": false,
+            "blockers": [
+              "非官方答案，完整模考需更高信心來源"
+            ]
+          }
+        },
+        "question": {
+          "id": "q-pp-im-it-112-11",
+          "paperId": "pp-im-it-112",
+          "examId": "im",
+          "subjectId": "im-it",
+          "year": 112,
+          "number": 11,
+          "text": "With regard to storage management, which of the following is generally not the responsibility of operating systems? (A) creating and deleting files (B) file integrity check (C) disk scheduling (D) backing up files onto stable permanent storage media (E) supporting primitives for manipulating files and directories.",
+          "points": 2.5,
+          "hasImage": false,
+          "subQuestions": []
+        },
+        "answer": {
+          "questionId": "q-pp-im-it-112-11",
+          "answer": "B",
+          "explanation": "答案經技術覆核後修正為 B（非官方答案）。依作業系統教材的 file/storage management 責任，建立刪除檔案、disk scheduling、檔案操作 primitives 與備份至穩定儲存媒體都屬管理工作；「file integrity check」不是該標準責任清單，因此唯一可選的是 B，不是現有 D。 二次覆核：標準 OS file/storage management 責任包含建立刪除檔案、disk scheduling、提供檔案與目錄操作 primitives，以及把檔案備份到穩定儲存媒體；file integrity check 不在該典型責任清單。因此 B 是唯一符合『generally not the responsibility』的選項，現有 D 應更正為 B。"
+        }
+      },
+      {
+        "metadata": {
+          "questionId": "q-pp-im-it-113-1",
+          "paperId": "pp-im-it-113",
+          "topicId": "im-it-os",
+          "primarySubtopicId": "im-it-os-file-storage-io",
+          "questionType": "single_choice",
+          "scoringMode": "automatic_candidate",
+          "taxonomyConfidence": "high",
+          "taxonomyRationale": "辨識 FAT32、NTFS、APFS 等檔案系統。",
+          "answerSource": {
+            "kind": "model_assisted_technical_derivation",
+            "official": false,
+            "reviewCount": 2,
+            "note": "依原卷題面與技術推導覆核，並非官方答案。"
+          },
+          "answerConfidence": {
+            "level": "medium",
+            "basis": [
+              "FAT32、exFAT、NTFS、APFS 都是實際廣泛使用的檔案系統，故應選 none-of-the-above 型的 E。",
+              "FAT32、exFAT、NTFS 與 APFS 都是實際且廣泛部署的檔案系統；A 至 D 無一符合 not popularly used，故唯一答案是 E。"
+            ],
+            "unresolvedIssues": []
+          },
+          "publication": {
+            "browseEligible": true,
+            "practiceEligible": true,
+            "autoGradeEligible": true,
+            "fullMockEligible": false,
+            "blockers": [
+              "非官方答案，完整模考需更高信心來源"
+            ]
+          }
+        },
+        "question": {
+          "id": "q-pp-im-it-113-1",
+          "paperId": "pp-im-it-113",
+          "examId": "im",
+          "subjectId": "im-it",
+          "year": 113,
+          "number": 1,
+          "text": "Which of the following is not a popularly used file system? (A) FAT32 (B) exFAT (C) NTFS (D) APFS (E) all the above are popular file systems (choose this one only if none of the above can be chosen).",
+          "points": 2.5,
+          "hasImage": false,
+          "subQuestions": []
+        },
+        "answer": {
+          "questionId": "q-pp-im-it-113-1",
+          "answer": "E",
+          "explanation": "答案經技術覆核後修正為 E（非官方答案）。FAT32、exFAT、NTFS、APFS 都是實際廣泛使用的檔案系統，故應選 none-of-the-above 型的 E。 二次覆核：FAT32、exFAT、NTFS 與 APFS 都是實際且廣泛部署的檔案系統；A 至 D 無一符合 not popularly used，故唯一答案是 E。"
+        }
+      },
+      {
+        "metadata": {
+          "questionId": "q-pp-im-it-113-10",
+          "paperId": "pp-im-it-113",
+          "topicId": "im-it-os",
+          "primarySubtopicId": "im-it-os-file-storage-io",
+          "questionType": "single_choice",
+          "scoringMode": "automatic_candidate",
+          "taxonomyConfidence": "high",
+          "taxonomyRationale": "辨識資料暫存的 buffering。",
+          "answerSource": {
+            "kind": "model_assisted_technical_derivation",
+            "official": false,
+            "reviewCount": 2,
+            "note": "依原卷題面與技術推導覆核，並非官方答案。"
+          },
+          "answerConfidence": {
+            "level": "medium",
+            "basis": [
+              "把資料暫存在記憶體、等候程式或裝置使用的概念是 buffering。",
+              "將資料暫存於記憶體或其他儲存區，直到裝置或程式請求使用，正是 buffering；spooling 特指把工作排入周邊裝置佇列。"
+            ],
+            "unresolvedIssues": []
+          },
+          "publication": {
+            "browseEligible": true,
+            "practiceEligible": true,
+            "autoGradeEligible": true,
+            "fullMockEligible": false,
+            "blockers": [
+              "非官方答案，完整模考需更高信心來源"
+            ]
+          }
+        },
+        "question": {
+          "id": "q-pp-im-it-113-10",
+          "paperId": "pp-im-it-113",
+          "examId": "im",
+          "subjectId": "im-it",
+          "year": 113,
+          "number": 10,
+          "text": "______ refers to the process of temporary storage of data for use and execution by a device, program, or system. Data is sent to and stored in main memory or other storage until it is requested for execution by a program or computer. (A) pipelining (B) spooling (C) buffering (D) stacking (E) none of the above.",
+          "points": 2.5,
+          "hasImage": false,
+          "subQuestions": []
+        },
+        "answer": {
+          "questionId": "q-pp-im-it-113-10",
+          "answer": "C",
+          "explanation": "答案經技術覆核後修正為 C（非官方答案）。把資料暫存在記憶體、等候程式或裝置使用的概念是 buffering。 二次覆核：將資料暫存於記憶體或其他儲存區，直到裝置或程式請求使用，正是 buffering；spooling 特指把工作排入周邊裝置佇列。"
+        }
+      },
+      {
+        "metadata": {
+          "questionId": "q-pp-im-it-114-7",
+          "paperId": "pp-im-it-114",
+          "topicId": "im-it-os",
+          "primarySubtopicId": "im-it-os-file-storage-io",
+          "questionType": "single_choice",
+          "scoringMode": "automatic_candidate",
+          "taxonomyConfidence": "high",
+          "taxonomyRationale": "考 inode 儲存檔案 metadata。",
+          "answerSource": {
+            "kind": "model_assisted_technical_derivation",
+            "official": false,
+            "reviewCount": 1,
+            "note": "依原卷題面與技術推導覆核，並非官方答案。"
+          },
+          "answerConfidence": {
+            "level": "medium",
+            "basis": [
+              "inode 主要保存權限、時間戳、大小與 data-block pointer 等 metadata。"
+            ],
+            "unresolvedIssues": []
+          },
+          "publication": {
+            "browseEligible": true,
+            "practiceEligible": true,
+            "autoGradeEligible": true,
+            "fullMockEligible": false,
+            "blockers": [
+              "非官方答案，完整模考需更高信心來源"
+            ]
+          }
+        },
+        "question": {
+          "id": "q-pp-im-it-114-7",
+          "paperId": "pp-im-it-114",
+          "examId": "im",
+          "subjectId": "im-it",
+          "year": 114,
+          "number": 7,
+          "text": "In file systems, what is the primary purpose of an inode? (A) To store the actual content of a file (B) To store metadata about a file, such as permissions and timestamps (C) To allocate disk blocks to a file (D) To index all files in a directory (E) none of the above.",
+          "points": 2.5,
+          "hasImage": false,
+          "subQuestions": []
+        },
+        "answer": {
+          "questionId": "q-pp-im-it-114-7",
+          "answer": "B",
+          "explanation": "在檔案系統中，inode（索引節點）的主要用途是儲存檔案的元資料（metadata），包括檔案權限、擁有者、時間戳記（建立時間、修改時間）、檔案大小，以及指向實際資料區塊的指標。inode 本身並不儲存檔案的實際內容，檔案內容存放在資料區塊（data blocks）中，inode 只記錄這些區塊的位置。選項 A 錯誤，因為實際內容存於資料區塊；選項 C 部分正確但不完整，分配磁碟區塊只是 inode 功能之一；選項 D 錯誤，目錄索引由目錄項目（directory entries）負責，而非 inode。因此正確答案為 B。"
+        }
+      }
+    ]
+  },
+  "im-it-os-virtualization-containers": {
+    "concept": {
+      "id": "im-it-os-virtualization-containers",
+      "topicId": "im-it-os",
+      "title": "虛擬化與容器",
+      "keywords": [
+        "virtualization",
+        "hypervisor",
+        "VM",
+        "container",
+        "serverless"
+      ],
+      "status": "reviewed",
+      "topicTitle": "作業系統"
+    },
+    "taxonomyCount": 6,
+    "autoGradeEligibleCount": 6,
+    "questions": [
+      {
+        "metadata": {
+          "questionId": "q-pp-im-it-107-17",
+          "paperId": "pp-im-it-107",
+          "topicId": "im-it-os",
+          "primarySubtopicId": "im-it-os-virtualization-containers",
+          "questionType": "single_choice",
+          "scoringMode": "automatic_candidate",
+          "taxonomyConfidence": "high",
+          "taxonomyRationale": "考虛擬化。",
+          "answerSource": {
+            "kind": "model_assisted_technical_derivation",
+            "official": false,
+            "reviewCount": 1,
+            "note": "依原卷題面與技術推導覆核，並非官方答案。"
+          },
+          "answerConfidence": {
+            "level": "medium",
+            "basis": [
+              "Creating virtual versions of compute, storage, and network resources is virtualization, option C in the verified PDF."
+            ],
+            "unresolvedIssues": []
+          },
+          "publication": {
+            "browseEligible": true,
+            "practiceEligible": true,
+            "autoGradeEligible": true,
+            "fullMockEligible": false,
+            "blockers": [
+              "非官方答案，完整模考需更高信心來源"
+            ]
+          }
+        },
+        "question": {
+          "id": "q-pp-im-it-107-17",
+          "paperId": "pp-im-it-107",
+          "examId": "im",
+          "subjectId": "im-it",
+          "year": 107,
+          "number": 17,
+          "text": "Which of the following refers to the act of creating a virtual version of something, including virtual computer hardware platforms, storage devices, and computer network resources? (A) virtual reality (B) augmented reality (C) virtualization (D) hypervisor (E) none of the above.",
+          "points": 2.5,
+          "hasImage": false,
+          "subQuestions": []
+        },
+        "answer": {
+          "questionId": "q-pp-im-it-107-17",
+          "answer": "C",
+          "explanation": "建立電腦硬體平台、儲存裝置與網路資源之虛擬版本的行為稱為虛擬化（virtualization），所以原卷答案為 (C)。Hypervisor 是實作與管理虛擬化的軟體層，不是該行為本身。"
+        }
+      },
+      {
+        "metadata": {
+          "questionId": "q-pp-im-it-111-5",
+          "paperId": "pp-im-it-111",
+          "topicId": "im-it-os",
+          "primarySubtopicId": "im-it-os-virtualization-containers",
+          "questionType": "single_choice",
+          "scoringMode": "automatic_candidate",
+          "taxonomyConfidence": "medium",
+          "taxonomyRationale": "跨網路與 CPU 虛擬化，主軸仍是系統虛擬化。",
+          "answerSource": {
+            "kind": "model_assisted_technical_derivation",
+            "official": false,
+            "reviewCount": 1,
+            "note": "依原卷題面與技術推導覆核，並非官方答案。"
+          },
+          "answerConfidence": {
+            "level": "medium",
+            "basis": [
+              "網路虛擬化可拆分或聚合實體網路；處理器虛擬化讓多個虛擬 CPU 與不同 guest OS 共存。"
+            ],
+            "unresolvedIssues": []
+          },
+          "publication": {
+            "browseEligible": true,
+            "practiceEligible": true,
+            "autoGradeEligible": true,
+            "fullMockEligible": false,
+            "blockers": [
+              "非官方答案，完整模考需更高信心來源"
+            ]
+          }
+        },
+        "question": {
+          "id": "q-pp-im-it-111-5",
+          "paperId": "pp-im-it-111",
+          "examId": "im",
+          "subjectId": "im-it",
+          "year": 111,
+          "number": 5,
+          "text": "Which of the following is wrong about virtualization technology? (A) network virtualization divides one physical network into separate, independent virtual networks (B) network virtualization can combine multiple physical networks to one virtual, software-based network (C) CPU virtualization allows a single processor to act as if it was multiple individual CPUs (D) CPU virtualization allows one to run multiple different operating systems on one machine (E) all of the above are correct (choose this one only if none of the above can be chosen).",
+          "points": 2.5,
+          "hasImage": false,
+          "subQuestions": []
+        },
+        "answer": {
+          "questionId": "q-pp-im-it-111-5",
+          "answer": "E",
+          "explanation": "本題詢問關於虛擬化技術哪一項敘述是錯誤的。選項A說明網路虛擬化可以將一個實體網路分割成多個獨立的虛擬網路（如VLAN技術），此為正確敘述。選項B說明網路虛擬化也可以將多個實體網路合併成一個虛擬網路（如覆疊網路技術），同樣正確。選項C說明CPU虛擬化讓單一處理器能模擬成多個獨立CPU運作，此為CPU虛擬化的核心概念，屬於正確敘述。選項D說明CPU虛擬化允許在同一台機器上執行多個不同的作業系統（如透過VMware、Hyper-V等虛擬機器監視器），亦為正確敘述。由於A、B、C、D皆正確，因此應選E（以上皆正確）。"
+        }
+      },
+      {
+        "metadata": {
+          "questionId": "q-pp-im-it-111-6",
+          "paperId": "pp-im-it-111",
+          "topicId": "im-it-os",
+          "primarySubtopicId": "im-it-os-virtualization-containers",
+          "questionType": "single_choice",
+          "scoringMode": "automatic_candidate",
+          "taxonomyConfidence": "high",
+          "taxonomyRationale": "考 VM、guest OS 與 hypervisor。",
+          "answerSource": {
+            "kind": "model_assisted_technical_derivation",
+            "official": false,
+            "reviewCount": 1,
+            "note": "依原卷題面與技術推導覆核，並非官方答案。"
+          },
+          "answerConfidence": {
+            "level": "medium",
+            "basis": [
+              "A–D 都是 VM 與 hypervisor 的一般描述；易佈建、維護及支援高可用配置是常見效益。"
+            ],
+            "unresolvedIssues": []
+          },
+          "publication": {
+            "browseEligible": true,
+            "practiceEligible": true,
+            "autoGradeEligible": true,
+            "fullMockEligible": false,
+            "blockers": [
+              "非官方答案，完整模考需更高信心來源"
+            ]
+          }
+        },
+        "question": {
+          "id": "q-pp-im-it-111-6",
+          "paperId": "pp-im-it-111",
+          "examId": "im",
+          "subjectId": "im-it",
+          "year": 111,
+          "number": 6,
+          "text": "Which of the following is wrong about Virtual machines (VMs)? (A) a VM is a compute resource that uses software instead of a physical computer to run programs and deploy apps (B) when more than one VMs run on a physical host machine, each virtual machine runs its own operating system and functions separately from the other VMs (C) benefits of VMs include easy provisioning and maintainability, and high availability (D) a software called hypervisor sits between the VMs and the host and is responsible for allocating the computing resources of the host to VMs (E) all of the above are correct (choose this one only if none of the above can be chosen).",
+          "points": 2.5,
+          "hasImage": false,
+          "subQuestions": []
+        },
+        "answer": {
+          "questionId": "q-pp-im-it-111-6",
+          "answer": "E",
+          "explanation": "此題問哪個敘述關於虛擬機器（VM）是「錯誤的」。選項A正確描述了VM是以軟體取代實體電腦來執行程式；選項B正確說明每個VM各自運行獨立的作業系統；選項C正確列舉了VM的優點包含易於佈建、維護及高可用性；選項D正確說明了hypervisor（超管理程式）位於VM與主機之間並負責分配運算資源。由於A、B、C、D四個選項的描述均正確，沒有任何一項是錯誤的，因此答案選（E）「以上皆正確」。"
+        }
+      },
+      {
+        "metadata": {
+          "questionId": "q-pp-im-it-112-9",
+          "paperId": "pp-im-it-112",
+          "topicId": "im-it-os",
+          "primarySubtopicId": "im-it-os-virtualization-containers",
+          "questionType": "single_choice",
+          "scoringMode": "automatic_candidate",
+          "taxonomyConfidence": "medium",
+          "taxonomyRationale": "叢集橫跨架構與 OS，題意偏系統資源管理。",
+          "answerSource": {
+            "kind": "model_assisted_technical_derivation",
+            "official": false,
+            "reviewCount": 1,
+            "note": "依原卷題面與技術推導覆核，並非官方答案。"
+          },
+          "answerConfidence": {
+            "level": "medium",
+            "basis": [
+              "cluster 可提升運算能力與容錯，但不會因為組成叢集就自動防止資安攻擊。"
+            ],
+            "unresolvedIssues": []
+          },
+          "publication": {
+            "browseEligible": true,
+            "practiceEligible": true,
+            "autoGradeEligible": true,
+            "fullMockEligible": false,
+            "blockers": [
+              "非官方答案，完整模考需更高信心來源"
+            ]
+          }
+        },
+        "question": {
+          "id": "q-pp-im-it-112-9",
+          "paperId": "pp-im-it-112",
+          "examId": "im",
+          "subjectId": "im-it",
+          "year": 112,
+          "number": 9,
+          "text": "Which of the following is wrong about computer clusters? (A) nodes in a cluster are typically independent and connected by a high-speed LAN (B) clustering computers can increase computing power (C) clustering computers can prevent security attacks (D) clustering computers can improve fault tolerance (E) all the above are correct (choose this one only if none of the above can be chosen).",
+          "points": 2.5,
+          "hasImage": false,
+          "subQuestions": []
+        },
+        "answer": {
+          "questionId": "q-pp-im-it-112-9",
+          "answer": "C",
+          "explanation": "電腦叢集通常由可獨立運作的節點透過高速區域網路連接，可分散工作以增加運算能力，也可藉由備援改善 fault tolerance；但把多台電腦組成 cluster 並不會自動防止惡意入侵或其他資安攻擊，仍需另外的安全控制。因此錯誤敘述是 (C)。"
+        }
+      },
+      {
+        "metadata": {
+          "questionId": "q-pp-im-it-115-23",
+          "paperId": "pp-im-it-115",
+          "topicId": "im-it-os",
+          "primarySubtopicId": "im-it-os-virtualization-containers",
+          "questionType": "single_choice",
+          "scoringMode": "automatic_candidate",
+          "taxonomyConfidence": "high",
+          "taxonomyRationale": "比較 container 與 VM 的核心共享。",
+          "answerSource": {
+            "kind": "model_assisted_technical_derivation",
+            "official": false,
+            "reviewCount": 1,
+            "note": "依原卷題面與技術推導覆核，並非官方答案。"
+          },
+          "answerConfidence": {
+            "level": "medium",
+            "basis": [
+              "container 共用 host kernel，通常比完整 VM 有更低 virtualization overhead。"
+            ],
+            "unresolvedIssues": []
+          },
+          "publication": {
+            "browseEligible": true,
+            "practiceEligible": true,
+            "autoGradeEligible": true,
+            "fullMockEligible": false,
+            "blockers": [
+              "非官方答案，完整模考需更高信心來源"
+            ]
+          }
+        },
+        "question": {
+          "id": "q-pp-im-it-115-23",
+          "paperId": "pp-im-it-115",
+          "examId": "im",
+          "subjectId": "im-it",
+          "year": 115,
+          "number": 23,
+          "text": "Which of the following is a key advantage of containerization (e.g., Docker) compared to virtual machines? (A) Lower overhead due to sharing the host OS kernel (B) Stronger hardware-level isolation (C) No dependency on the host operating system (D) Elimination of resource contention (E) Guaranteed real-time performance.",
+          "points": 2,
+          "hasImage": false,
+          "subQuestions": []
+        },
+        "answer": {
+          "questionId": "q-pp-im-it-115-23",
+          "answer": "A",
+          "explanation": "容器化技術（如 Docker）相較於虛擬機器的主要優勢在於容器共用宿主機的作業系統核心（kernel），不需要為每個容器安裝完整的客作業系統，因此啟動速度更快、資源消耗更低。虛擬機器則需要透過 Hypervisor 模擬完整硬體環境，並在其上運行獨立的 Guest OS，導致較高的記憶體與 CPU 負擔。選項 B 錯誤，因為 VM 透過 Hypervisor 提供更強的硬體層隔離，容器的隔離性相對較弱。選項 C 錯誤，容器仍依賴宿主機的 OS kernel，並非完全獨立於宿主作業系統。選項 D 與 E 均為錯誤描述，容器並不能消除資源競爭，也無法保證即時效能。"
+        }
+      },
+      {
+        "metadata": {
+          "questionId": "q-pp-im-it-115-29",
+          "paperId": "pp-im-it-115",
+          "topicId": "im-it-os",
+          "primarySubtopicId": "im-it-os-virtualization-containers",
+          "questionType": "single_choice",
+          "scoringMode": "automatic_candidate",
+          "taxonomyConfidence": "medium",
+          "taxonomyRationale": "Serverless 跨雲端架構，歸入執行環境與資源管理。",
+          "answerSource": {
+            "kind": "model_assisted_technical_derivation",
+            "official": false,
+            "reviewCount": 1,
+            "note": "依原卷題面與技術推導覆核，並非官方答案。"
+          },
+          "answerConfidence": {
+            "level": "medium",
+            "basis": [
+              "serverless 由 provider 管理基礎資源並按 execution/resource usage 計費，並非沒有實體 server。"
+            ],
+            "unresolvedIssues": []
+          },
+          "publication": {
+            "browseEligible": true,
+            "practiceEligible": true,
+            "autoGradeEligible": true,
+            "fullMockEligible": false,
+            "blockers": [
+              "非官方答案，完整模考需更高信心來源"
+            ]
+          }
+        },
+        "question": {
+          "id": "q-pp-im-it-115-29",
+          "paperId": "pp-im-it-115",
+          "examId": "im",
+          "subjectId": "im-it",
+          "year": 115,
+          "number": 29,
+          "text": "What is the defining characteristic of \"Serverless Computing\" (e.g., AWS Lambda)? (A) There are physically no servers involved in the process. (B) The developer must manually patch and manage the operating system of the server. (C) The cloud provider dynamically manages the allocation of machine resources, and pricing is based on the actual amount of resources consumed by an application execution, not pre-purchased capacity. (D) It is a peer-to-peer network where every client is also a server. (E) Use commodity-grade PCs to replace high-cost servers.",
+          "points": 2,
+          "hasImage": false,
+          "subQuestions": []
+        },
+        "answer": {
+          "questionId": "q-pp-im-it-115-29",
+          "answer": "C",
+          "explanation": "無伺服器運算（Serverless Computing）的核心特性是由雲端供應商動態管理底層機器資源的分配，開發者無需預先購買或配置固定容量的伺服器。計費方式基於應用程式實際執行時所消耗的資源（如執行時間、記憶體），而非預先購買的容量。選項A錯誤，實際上伺服器依然存在，只是被抽象化了；選項B錯誤，作業系統的管理由雲端供應商負責，不需開發者介入。選項D描述的是點對點網路架構，選項E描述的是使用商用PC取代高成本伺服器，均與無伺服器運算無關。"
+        }
+      }
+    ]
+  },
+  "im-it-network-link-lan": {
+    "concept": {
+      "id": "im-it-network-link-lan",
+      "topicId": "im-it-network",
+      "title": "資料鏈結層與區域網路",
+      "keywords": [
+        "Ethernet",
+        "MAC",
+        "switch",
+        "VLAN",
+        "wireless"
+      ],
+      "status": "reviewed",
+      "topicTitle": "網路"
+    },
+    "taxonomyCount": 7,
+    "autoGradeEligibleCount": 7,
+    "questions": [
+      {
+        "metadata": {
+          "questionId": "q-pp-im-it-109-8",
+          "paperId": "pp-im-it-109",
+          "topicId": "im-it-network",
+          "primarySubtopicId": "im-it-network-link-lan",
+          "questionType": "single_choice",
+          "scoringMode": "automatic_candidate",
+          "taxonomyConfidence": "high",
+          "taxonomyRationale": "考 5G 速率。",
+          "answerSource": {
+            "kind": "model_assisted_technical_derivation",
+            "official": false,
+            "reviewCount": 1,
+            "note": "依原卷題面與技術推導覆核，並非官方答案。"
+          },
+          "answerConfidence": {
+            "level": "medium",
+            "basis": [
+              "The expected peak-rate range for 5G in these choices is 1-10 Gbps."
+            ],
+            "unresolvedIssues": []
+          },
+          "publication": {
+            "browseEligible": true,
+            "practiceEligible": true,
+            "autoGradeEligible": true,
+            "fullMockEligible": false,
+            "blockers": [
+              "非官方答案，完整模考需更高信心來源"
+            ]
+          }
+        },
+        "question": {
+          "id": "q-pp-im-it-109-8",
+          "paperId": "pp-im-it-109",
+          "examId": "im",
+          "subjectId": "im-it",
+          "year": 109,
+          "number": 8,
+          "text": "Which of the following best describes 5G's speed? (A) 10-100Mbps (B) 100-500Mbps (C) 300Mbps-1Gbps (D) 1-10Gbps (E) 10-100Gbps",
+          "points": 2.5,
+          "hasImage": false,
+          "subQuestions": []
+        },
+        "answer": {
+          "questionId": "q-pp-im-it-109-8",
+          "answer": "D",
+          "explanation": "GPS（全球定位系統）主要用於提供車輛的地理位置與導航路徑，並非用來感知周遭環境的即時障礙物、行人或車道線。自動駕駛車輛感知環境的核心技術包括光達（Lidar）、雷達（Radar）和電腦視覺（Computer Vision），這三者能直接偵測車輛周圍的物體與距離。相較之下，GPS 無法提供車輛周遭環境的細部資訊，因此在環境感知方面鮮少使用。選項 D 的 GPS 是最不被用於感知車輛周遭環境的技術。"
+        }
+      },
+      {
+        "metadata": {
+          "questionId": "q-pp-im-it-110-9",
+          "paperId": "pp-im-it-110",
+          "topicId": "im-it-network",
+          "primarySubtopicId": "im-it-network-link-lan",
+          "questionType": "single_choice",
+          "scoringMode": "automatic_candidate",
+          "taxonomyConfidence": "high",
+          "taxonomyRationale": "比較 4G/5G。",
+          "answerSource": {
+            "kind": "model_assisted_technical_derivation",
+            "official": false,
+            "reviewCount": 1,
+            "note": "依原卷題面與技術推導覆核，並非官方答案。"
+          },
+          "answerConfidence": {
+            "level": "medium",
+            "basis": [
+              "5G 的優勢是降低延遲，不是提高延遲；其他選項均為常見 5G 目標。"
+            ],
+            "unresolvedIssues": []
+          },
+          "publication": {
+            "browseEligible": true,
+            "practiceEligible": true,
+            "autoGradeEligible": true,
+            "fullMockEligible": false,
+            "blockers": [
+              "非官方答案，完整模考需更高信心來源"
+            ]
+          }
+        },
+        "question": {
+          "id": "q-pp-im-it-110-9",
+          "paperId": "pp-im-it-110",
+          "examId": "im",
+          "subjectId": "im-it",
+          "year": 110,
+          "number": 9,
+          "text": "Compared to 4G technology standard for broadband cellular networks, which of the following is not a major advantage of 5G? (A) higher data speeds (B) higher latency (C) massive network capacity (D) increased availability (E) lower network energy usage.",
+          "points": 2.5,
+          "hasImage": false,
+          "subQuestions": []
+        },
+        "answer": {
+          "questionId": "q-pp-im-it-110-9",
+          "answer": "B",
+          "explanation": "5G相較於4G的主要優勢包括：更高的資料傳輸速度、龐大的網路容量、更廣泛的可用性，以及更低的網路能源消耗。然而，「更高的延遲（higher latency）」並非5G的優勢，恰恰相反，5G的重要特點之一是極低的延遲（ultra-low latency），這與選項B所述相反。因此，選項B「更高的延遲」不是5G的優勢，而是一個缺點描述，故為正確答案。"
+        }
+      },
+      {
+        "metadata": {
+          "questionId": "q-pp-im-it-111-3",
+          "paperId": "pp-im-it-111",
+          "topicId": "im-it-network",
+          "primarySubtopicId": "im-it-network-link-lan",
+          "questionType": "single_choice",
+          "scoringMode": "automatic_candidate",
+          "taxonomyConfidence": "high",
+          "taxonomyRationale": "考資料鏈結層滑動視窗協定。",
+          "answerSource": {
+            "kind": "model_assisted_technical_derivation",
+            "official": false,
+            "reviewCount": 1,
+            "note": "依原卷題面與技術推導覆核，並非官方答案。"
+          },
+          "answerConfidence": {
+            "level": "medium",
+            "basis": [
+              "sliding window 允許確認前同時送出多個 frame，並以視窗與序號維持可靠有序傳輸。"
+            ],
+            "unresolvedIssues": []
+          },
+          "publication": {
+            "browseEligible": true,
+            "practiceEligible": true,
+            "autoGradeEligible": true,
+            "fullMockEligible": false,
+            "blockers": [
+              "非官方答案，完整模考需更高信心來源"
+            ]
+          }
+        },
+        "question": {
+          "id": "q-pp-im-it-111-3",
+          "paperId": "pp-im-it-111",
+          "examId": "im",
+          "subjectId": "im-it",
+          "year": 111,
+          "number": 3,
+          "text": "Which of the following technique is used in data link layer for reliable and sequential delivery of data packets while allowing multiple packets to be sent at a time to improve efficiency? (A) automatic repeat request protocol (B) sliding window protocol (C) request and acknowledgment protocol (D) multicast (E) none of the above.",
+          "points": 2.5,
+          "hasImage": false,
+          "subQuestions": []
+        },
+        "answer": {
+          "questionId": "q-pp-im-it-111-3",
+          "answer": "B",
+          "explanation": "滑動視窗協定（Sliding Window Protocol）是資料鏈結層中用於可靠且有序傳遞資料封包的技術，同時允許傳送端在未收到確認之前持續傳送多個封包，藉此提升傳輸效率。自動重複請求協定（ARQ）雖然也提供可靠傳輸，但它是錯誤控制的廣泛概念，而滑動視窗才是具體實現同時傳送多封包的機制。滑動視窗協定透過維護一個「視窗」來控制傳送中但尚未被確認的封包數量，接收方確認後視窗才向前滑動，確保封包按序遞送。此協定廣泛應用於 HDLC、LAPB 等資料鏈結層協定，是同時達成可靠性、有序性與高效率的標準做法。因此正確答案為 (B) sliding window protocol。"
+        }
+      },
+      {
+        "metadata": {
+          "questionId": "q-pp-im-it-111-7",
+          "paperId": "pp-im-it-111",
+          "topicId": "im-it-network",
+          "primarySubtopicId": "im-it-network-link-lan",
+          "questionType": "single_choice",
+          "scoringMode": "automatic_candidate",
+          "taxonomyConfidence": "high",
+          "taxonomyRationale": "辨識網卡的 MAC 位址。",
+          "answerSource": {
+            "kind": "model_assisted_technical_derivation",
+            "official": false,
+            "reviewCount": 1,
+            "note": "依原卷題面與技術推導覆核，並非官方答案。"
+          },
+          "answerConfidence": {
+            "level": "medium",
+            "basis": [
+              "IEEE 802 網段中配置給 NIC 的鏈路層識別碼是 MAC address。"
+            ],
+            "unresolvedIssues": []
+          },
+          "publication": {
+            "browseEligible": true,
+            "practiceEligible": true,
+            "autoGradeEligible": true,
+            "fullMockEligible": false,
+            "blockers": [
+              "非官方答案，完整模考需更高信心來源"
+            ]
+          }
+        },
+        "question": {
+          "id": "q-pp-im-it-111-7",
+          "paperId": "pp-im-it-111",
+          "examId": "im",
+          "subjectId": "im-it",
+          "year": 111,
+          "number": 7,
+          "text": "_____ is a unique identifier assigned to a network interface controller for use as a network address in communications within a network segment. It is used in most IEEE 802 networking technologies, including Ethernet, Wi-Fi, and Bluetooth. (A) globally unique identifier (B) IP address (C) media access control address (D) transmission control address (E) none of the above.",
+          "points": 2.5,
+          "hasImage": false,
+          "subQuestions": []
+        },
+        "answer": {
+          "questionId": "q-pp-im-it-111-7",
+          "answer": "C",
+          "explanation": "題目描述的是一種分配給網路介面控制器（NIC）的唯一識別碼，用於在網路段內作為網路位址進行通訊，並被大多數 IEEE 802 網路技術（包括乙太網路、Wi-Fi 和藍牙）所使用。這正是媒體存取控制位址（MAC address，媒體存取控制位址）的定義。MAC 位址通常由 48 位元組成，燒錄於網路介面卡的韌體中，具有全球唯一性。IP 位址（B）是網路層的邏輯位址，而非與硬體綁定的唯一識別碼；全球唯一識別碼（GUID，A）則是軟體層面的識別碼，非針對網路硬體介面。因此正確答案為 (C) media access control address。"
+        }
+      },
+      {
+        "metadata": {
+          "questionId": "q-pp-im-it-111-9",
+          "paperId": "pp-im-it-111",
+          "topicId": "im-it-network",
+          "primarySubtopicId": "im-it-network-link-lan",
+          "questionType": "single_choice",
+          "scoringMode": "automatic_candidate",
+          "taxonomyConfidence": "high",
+          "taxonomyRationale": "考 CSMA/CA 的媒體存取機制。",
+          "answerSource": {
+            "kind": "model_assisted_technical_derivation",
+            "official": false,
+            "reviewCount": 1,
+            "note": "依原卷題面與技術推導覆核，並非官方答案。"
+          },
+          "answerConfidence": {
+            "level": "medium",
+            "basis": [
+              "先偵測通道 idle 並企圖避免碰撞，對應 CSMA/CA；CSMA/CD 是碰撞偵測。"
+            ],
+            "unresolvedIssues": []
+          },
+          "publication": {
+            "browseEligible": true,
+            "practiceEligible": true,
+            "autoGradeEligible": true,
+            "fullMockEligible": false,
+            "blockers": [
+              "非官方答案，完整模考需更高信心來源"
+            ]
+          }
+        },
+        "question": {
+          "id": "q-pp-im-it-111-9",
+          "paperId": "pp-im-it-111",
+          "examId": "im",
+          "subjectId": "im-it",
+          "year": 111,
+          "number": 9,
+          "text": "_____ is a network multiple access method in which carrier sensing is used, but nodes attempt to avoid collisions by beginning transmission only after the channel is sensed to be \"idle\". (A) carrier-sense multiple access with collision avoidance (CSMA/CA) (B) carrier-sense multiple access with collision detection (CSMA/CD) (C) carrier-sense multiple access with collision reduction (CSMA/CR) (D) carrier-sense multiple access with channel idling (CSMA/CI) (E) none of the above.",
+          "points": 2.5,
+          "hasImage": false,
+          "subQuestions": []
+        },
+        "answer": {
+          "questionId": "q-pp-im-it-111-9",
+          "answer": "A",
+          "explanation": "CSMA/CA（Carrier-Sense Multiple Access with Collision Avoidance，載波感測多重存取／碰撞避免）是一種網路多重存取方法，節點在感測到通道為「閒置」狀態後才開始傳送資料，藉此主動避免碰撞的發生。題目描述「使用載波感測，且節點在通道閒置後才嘗試傳送以避免碰撞」，完全符合 CSMA/CA 的定義。CSMA/CD（選項B）是碰撞「偵測」，用於有線乙太網路，與避免碰撞不同。選項C（CSMA/CR）與選項D（CSMA/CI）並非標準通訊協定名稱，因此正確答案為A。"
+        }
+      },
+      {
+        "metadata": {
+          "questionId": "q-pp-im-it-112-14",
+          "paperId": "pp-im-it-112",
+          "topicId": "im-it-network",
+          "primarySubtopicId": "im-it-network-link-lan",
+          "questionType": "single_choice",
+          "scoringMode": "automatic_candidate",
+          "taxonomyConfidence": "high",
+          "taxonomyRationale": "考 Ethernet exponential backoff。",
+          "answerSource": {
+            "kind": "model_assisted_technical_derivation",
+            "official": false,
+            "reviewCount": 1,
+            "note": "依原卷題面與技術推導覆核，並非官方答案。"
+          },
+          "answerConfidence": {
+            "level": "medium",
+            "basis": [
+              "共享式 Ethernet 的 CSMA/CD 碰撞後使用 binary exponential backoff。"
+            ],
+            "unresolvedIssues": []
+          },
+          "publication": {
+            "browseEligible": true,
+            "practiceEligible": true,
+            "autoGradeEligible": true,
+            "fullMockEligible": false,
+            "blockers": [
+              "非官方答案，完整模考需更高信心來源"
+            ]
+          }
+        },
+        "question": {
+          "id": "q-pp-im-it-112-14",
+          "paperId": "pp-im-it-112",
+          "examId": "im",
+          "subjectId": "im-it",
+          "year": 112,
+          "number": 14,
+          "text": "In Ethernet, which of the following algorithm is used to resolve collision? (A) Carrier Sense (B) Exponential Backoff (C) Collision Avoidance (D) Request to Send/Clear to Send (RTS/CTS) (E) Round Robin.",
+          "points": 2.5,
+          "hasImage": false,
+          "subQuestions": []
+        },
+        "answer": {
+          "questionId": "q-pp-im-it-112-14",
+          "answer": "B",
+          "explanation": "傳統共享式 Ethernet 的 CSMA/CD 在偵測到碰撞後使用 binary exponential backoff 決定重傳等待時間，因此答案是 (B)。RTS/CTS 與 collision avoidance 主要屬無線網路機制。"
+        }
+      },
+      {
+        "metadata": {
+          "questionId": "q-pp-im-it-112-15",
+          "paperId": "pp-im-it-112",
+          "topicId": "im-it-network",
+          "primarySubtopicId": "im-it-network-link-lan",
+          "questionType": "single_choice",
+          "scoringMode": "automatic_candidate",
+          "taxonomyConfidence": "high",
+          "taxonomyRationale": "考 frame tagging 與虛擬區域網路。",
+          "answerSource": {
+            "kind": "model_assisted_technical_derivation",
+            "official": false,
+            "reviewCount": 1,
+            "note": "依原卷題面與技術推導覆核，並非官方答案。"
+          },
+          "answerConfidence": {
+            "level": "medium",
+            "basis": [
+              "IEEE 802.1Q frame tag 將單一實體 LAN 劃成多個邏輯 broadcast domains，即 VLAN。"
+            ],
+            "unresolvedIssues": []
+          },
+          "publication": {
+            "browseEligible": true,
+            "practiceEligible": true,
+            "autoGradeEligible": true,
+            "fullMockEligible": false,
+            "blockers": [
+              "非官方答案，完整模考需更高信心來源"
+            ]
+          }
+        },
+        "question": {
+          "id": "q-pp-im-it-112-15",
+          "paperId": "pp-im-it-112",
+          "examId": "im",
+          "subjectId": "im-it",
+          "year": 112,
+          "number": 15,
+          "text": "We can apply tags to network frames and handling these tags in a local area network to create the appearance and functionality of network traffic that is physically on a single network but acts as if it is split between separate networks. This effectively creates ______ (A) virtual LANs (B) VPN (C) domains (D) subdomains (E) private LANs.",
+          "points": 2.5,
+          "hasImage": false,
+          "subQuestions": []
+        },
+        "answer": {
+          "questionId": "q-pp-im-it-112-15",
+          "answer": "A",
+          "explanation": "交換器可依 IEEE 802.1Q 在 Ethernet frame 加入 VLAN tag，將同一套實體交換網路劃分成不同的廣播網域。不同標籤的流量在邏輯上如同位於彼此分離的 LAN，這正是 Virtual LAN 的用途；VPN 則通常是在不受信任網路上建立加密通道，概念不同，因此選 (A)。"
+        }
+      }
+    ]
+  }
+}

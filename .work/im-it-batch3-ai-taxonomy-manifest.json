@@ -1,0 +1,213 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "im-it",
+  "topicId": "im-it-trends",
+  "reviewStatus": "draft",
+  "basis": {
+    "conceptMaster": "public/data/im-it-concept-master.json",
+    "questionMetadata": "public/data/im-it-question-metadata.json",
+    "answerReview": "public/data/im-it-answer-review.json",
+    "officialAnswerKeyAvailable": false
+  },
+  "proposedSubtopics": [
+    {
+      "id": "im-it-trends-big-data-analytics",
+      "topicId": "im-it-trends",
+      "title": "Big Data 與資料分析",
+      "keywords": ["volume", "velocity", "variety", "veracity", "value", "analytics"],
+      "reason": "Big Data 的 V-characteristics 與應用不等於模型訓練、overfitting 或 evaluation metrics，因此放在中立的資料與數位趨勢主題。",
+      "status": "reviewed"
+    },
+    {
+      "id": "im-it-trends-emerging-digital-applications",
+      "topicId": "im-it-trends",
+      "title": "新興科技與數位應用",
+      "keywords": ["Fintech", "crowdfunding", "MOOC", "smart speaker", "autonomous vehicle", "mobile payment", "metaverse", "digital twin"],
+      "reason": "現行 ethics-governance 題組主要辨識數位服務與新興應用，沒有直接考 bias、fairness、hallucination、accountability 或治理控制。",
+      "status": "reviewed"
+    }
+  ],
+  "moves": [
+    {
+      "questionId": "q-pp-im-it-110-15",
+      "fromSubtopicId": "im-it-ai-ml-paradigms",
+      "toSubtopicId": "im-it-ai-training-evaluation",
+      "reason": "題目要求由 confusion matrix 計算 precision，屬模型評估指標，不是在區分 supervised、unsupervised、reinforcement learning 等學習典範。",
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-110-16",
+      "fromSubtopicId": "im-it-ai-ml-paradigms",
+      "toSubtopicId": "im-it-ai-training-evaluation",
+      "reason": "題目要求由 TP、FP、TN、FN 計算 accuracy，直接對應 evaluation metrics。",
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-106-8",
+      "fromSubtopicId": "im-it-ai-training-evaluation",
+      "toSubtopicId": "im-it-trends-big-data-analytics",
+      "reason": "題目比較 Big Data 的 3V／5V characteristics，與模型 training/evaluation 無關；本題答案仍 disputed，不得作自動判分 ref。",
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-it-108-10",
+      "fromSubtopicId": "im-it-ai-training-evaluation",
+      "toSubtopicId": "im-it-trends-big-data-analytics",
+      "reason": "題目辨認 volume、velocity、variety、veracity 等 Big Data attributes，不是 precision、recall、generalization 或 overfitting。",
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-108-11",
+      "fromSubtopicId": "im-it-ai-training-evaluation",
+      "toSubtopicId": "im-it-trends-big-data-analytics",
+      "reason": "題目辨認 Big Data 的應用情境，沒有評估任何 ML 模型或訓練流程。",
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-106-6",
+      "fromSubtopicId": "im-it-ai-ethics-governance",
+      "toSubtopicId": "im-it-trends-emerging-digital-applications",
+      "reason": "題目只要求辨識 Fintech 定義，未涉及 AI ethics 或 governance。",
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-106-16",
+      "fromSubtopicId": "im-it-ai-ethics-governance",
+      "toSubtopicId": "im-it-trends-emerging-digital-applications",
+      "reason": "題目辨識 Kickstarter 為 crowdfunding 平台，屬數位商業應用，不是 AI 治理。",
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-106-17",
+      "fromSubtopicId": "im-it-ai-ethics-governance",
+      "toSubtopicId": "im-it-trends-emerging-digital-applications",
+      "reason": "題目辨識 MOOC，內容是數位學習服務分類，沒有 AI ethics/governance 判斷。",
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-107-1",
+      "fromSubtopicId": "im-it-ai-ethics-governance",
+      "toSubtopicId": "im-it-trends-emerging-digital-applications",
+      "reason": "題目辨識 smart speaker 使用的 speech recognition、NLP、speech synthesis 與裝置控制，屬 AI-enabled application，不是倫理治理。",
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-108-8",
+      "fromSubtopicId": "im-it-ai-ethics-governance",
+      "toSubtopicId": "im-it-trends-emerging-digital-applications",
+      "reason": "題目比較 autonomous car 的 lidar、radar、computer vision 與 GPS，屬新興應用感測技術。",
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-109-7",
+      "fromSubtopicId": "im-it-ai-ethics-governance",
+      "toSubtopicId": "im-it-trends-emerging-digital-applications",
+      "reason": "題目辨識 mobile payment services，沒有 bias、fairness、privacy governance 或 accountability 內容。",
+      "autoGradeEligible": true
+    },
+    {
+      "questionId": "q-pp-im-it-111-23",
+      "fromSubtopicId": "im-it-ai-ethics-governance",
+      "toSubtopicId": "im-it-trends-emerging-digital-applications",
+      "reason": "題目討論 metaverse、VR 與 blockchain 的技術主張，主軸是 emerging technology；本題多個選項可爭議，仍不得作自動判分 ref。",
+      "autoGradeEligible": false
+    },
+    {
+      "questionId": "q-pp-im-it-112-23",
+      "fromSubtopicId": "im-it-ai-ethics-governance",
+      "toSubtopicId": "im-it-trends-emerging-digital-applications",
+      "reason": "題目辨識 digital twin 及其 simulation、monitoring、maintenance 用途，屬新興數位應用。",
+      "autoGradeEligible": true
+    }
+  ],
+  "unchangedQuestionIds": [
+    "q-pp-im-it-108-12",
+    "q-pp-im-it-113-24",
+    "q-pp-im-it-110-14",
+    "q-pp-im-it-106-7",
+    "q-pp-im-it-108-15",
+    "q-pp-im-it-108-16",
+    "q-pp-im-it-115-27",
+    "q-pp-im-it-113-23",
+    "q-pp-im-it-115-30"
+  ],
+  "groupedLesson": {
+    "id": "lesson-im-it-ai-foundations-ml-evaluation-01",
+    "coveredSubtopicIds": [
+      "im-it-ai-foundations-search",
+      "im-it-ai-ml-paradigms",
+      "im-it-ai-training-evaluation"
+    ],
+    "eligiblePastPaperRefsAfterMoves": [
+      "q-pp-im-it-108-12",
+      "q-pp-im-it-113-24",
+      "q-pp-im-it-110-14",
+      "q-pp-im-it-110-15",
+      "q-pp-im-it-110-16"
+    ],
+    "excludedRefs": [
+      {
+        "questionId": "q-pp-im-it-106-8",
+        "reason": "Big Data taxonomy move and disputed answer"
+      },
+      {
+        "questionId": "q-pp-im-it-108-10",
+        "reason": "Big Data taxonomy move"
+      },
+      {
+        "questionId": "q-pp-im-it-108-11",
+        "reason": "Big Data taxonomy move"
+      }
+    ],
+    "note": "修正後只有 5 個合格 refs；不得借用 Big Data 或 disputed 題湊第一批的 6-ref 門檻。"
+  },
+  "sourceRequirements": [
+    {
+      "sourceId": "src-brookshear-13e",
+      "requiredScope": ["artificial-intelligence"],
+      "usage": "AI foundations 與 Turing test 概念覆核",
+      "registryStatus": "reviewed"
+    },
+    {
+      "sourceId": "src-ntu-machine-learning-2021",
+      "requiredScope": ["artificial-intelligence", "machine-learning", "model-evaluation"],
+      "usage": "ML 課程主幹，涵蓋學習典範、regression、training/generalization 與 evaluation metrics",
+      "registryStatus": "reviewed"
+    }
+  ],
+  "proposedTopics": [
+    {
+      "id": "im-it-trends",
+      "title": "資料分析與新興科技",
+      "importance": 2,
+      "displaySubtopics": [
+        "Big Data 與資料分析",
+        "Fintech、數位平台與新興應用"
+      ],
+      "learningObjectives": [
+        {
+          "id": "im-it-trends-lo-1",
+          "statement": "辨識 Big Data 特性、資料分析用途與限制。"
+        },
+        {
+          "id": "im-it-trends-lo-2",
+          "statement": "比較新興數位服務、平台與應用情境。"
+        },
+        {
+          "id": "im-it-trends-lo-3",
+          "statement": "區分數位趨勢題與 AI、資安等相鄰領域概念。"
+        }
+      ],
+      "status": "reviewed"
+    }
+  ],
+  "subtopicReplacements": {
+    "im-it-ai-big-data-analytics": "im-it-trends-big-data-analytics",
+    "im-it-ai-emerging-tech-applications": "im-it-trends-emerging-digital-applications"
+  },
+  "applyStatus": "approved_for_application",
+  "publicationRules": [
+    "grouped lesson validator 必須驗證 coveredSubtopicIds 與跨 subtopic refs",
+    "稀疏 grouped lesson 可使用 5 個 autoGradeEligible refs，不借用不相干或 disputed 題湊數"
+  ]
+}

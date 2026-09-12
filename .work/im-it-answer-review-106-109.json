@@ -1,0 +1,1278 @@
+[
+  {
+    "questionId": "q-pp-im-it-106-1",
+    "currentAnswer": "D",
+    "reviewedAnswer": "D",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "D separates student, enrollment/grade, instructor, and classroom facts while retaining stable identifiers and minimizing redundancy.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-106-2",
+    "currentAnswer": "B",
+    "reviewedAnswer": "B",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "Because each course already identifies the course, Student_ID and Grade are the minimal nonredundant fields.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-106-3",
+    "currentAnswer": "A",
+    "reviewedAnswer": "A",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "A is the only syntactically valid SELECT with the required country condition and grouped city disjunction.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-106-4",
+    "currentAnswer": "E",
+    "reviewedAnswer": "E",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "A-D are standard relational-model statements, so the sentinel answer E applies.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-106-5",
+    "currentAnswer": "C",
+    "reviewedAnswer": "C/E",
+    "verdict": "disputed",
+    "confidence": "disputed",
+    "reasoning": "Whether primary-key identification is treated as part of 1NF or as a separate relational-model requirement varies by definition; C and E cannot be separated reliably.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": false
+  },
+  {
+    "questionId": "q-pp-im-it-106-6",
+    "currentAnswer": "C",
+    "reviewedAnswer": "C",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "Fintech is the standard term for technology-enabled financial-service applications, processes, products, and business models.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-106-7",
+    "currentAnswer": "C",
+    "reviewedAnswer": "C",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "AlphaGo centrally used deep neural networks together with tree search; C is the unique matching technique.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-106-8",
+    "currentAnswer": "E",
+    "reviewedAnswer": "D/E",
+    "verdict": "disputed",
+    "confidence": "disputed",
+    "reasoning": "Big-data V frameworks differ: many include value, while the classic 3V formulation does not; the wording “widely regarded” does not uniquely separate D from E.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": false
+  },
+  {
+    "questionId": "q-pp-im-it-106-9",
+    "currentAnswer": "B",
+    "reviewedAnswer": "B",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "Streaming is precisely continuous receipt and presentation while media is being delivered.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-106-10",
+    "currentAnswer": "C",
+    "reviewedAnswer": "C",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "Digital divide is the established term for socioeconomic inequality in ICT access, use, and effects.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-106-11",
+    "currentAnswer": "C",
+    "reviewedAnswer": "C",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "The even-parity word has an even number of ones, but parity cannot rule out an even number of bit errors; C overclaims certainty.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-106-12",
+    "currentAnswer": "C",
+    "reviewedAnswer": "A/C",
+    "verdict": "disputed",
+    "confidence": "disputed",
+    "reasoning": "No workload-independent ordering makes LRU universally better than LFU; “in general” leaves A versus C dependent on the reference model and workload.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": false
+  },
+  {
+    "questionId": "q-pp-im-it-106-13",
+    "currentAnswer": "A",
+    "reviewedAnswer": "A",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "BIOS is firmware that initializes hardware during boot.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-106-14",
+    "currentAnswer": "B",
+    "reviewedAnswer": "B",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "Paging divides virtual address space into pages that are moved between memory and backing storage.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-106-15",
+    "currentAnswer": "C",
+    "reviewedAnswer": "C",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "RAID targets capacity, performance, and/or fault tolerance, not confidentiality or access-control security.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-106-16",
+    "currentAnswer": "C",
+    "reviewedAnswer": "C",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "Kickstarter is a crowdfunding platform.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-106-17",
+    "currentAnswer": "B",
+    "reviewedAnswer": "B",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "Udacity, Coursera, and edX are commonly described as MOOC platforms.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-106-18",
+    "currentAnswer": "E",
+    "reviewedAnswer": "E",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "Under the conventional shared-Ethernet model used by the options, A-D are accepted descriptions and E is the intended sentinel.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-106-19",
+    "currentAnswer": "C",
+    "reviewedAnswer": "C/D",
+    "verdict": "disputed",
+    "confidence": "disputed",
+    "reasoning": "Ports are 16-bit values 0-65535, making C false; well-known ports are 0-1023, making D false as written, so the item has two wrong choices.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": false
+  },
+  {
+    "questionId": "q-pp-im-it-106-20",
+    "currentAnswer": "E",
+    "reviewedAnswer": "E",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "OSI layer 3/network, layer 5/session, SMTP/layer 7, and TCP/layer 4 are all correct.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-106-21",
+    "currentAnswer": "C",
+    "reviewedAnswer": "C",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "Inheritance, not polymorphism, is the primary mechanism named for implementation reuse in this introductory framing.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-106-22",
+    "currentAnswer": "C",
+    "reviewedAnswer": "C",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "Commercial proprietary Unix systems exist, so the entire Unix family is not open source.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-106-23",
+    "currentAnswer": "A",
+    "reviewedAnswer": "A",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "A describes a Gantt chart rather than a UML class diagram.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-106-24",
+    "currentAnswer": "D",
+    "reviewedAnswer": "D",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "Taiwan ETC uses dedicated short-range communication rather than LTE vehicle tracking.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-106.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-107-1",
+    "currentAnswer": "B",
+    "reviewedAnswer": "B",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "The original voice-only smart-speaker products use speech recognition, NLP, synthesis, and device control, not image recognition.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      ".work/im-it-107-repair-report.md (PDF repair evidence)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-107-2",
+    "currentAnswer": "A",
+    "reviewedAnswer": "A",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "Relational databases, not object-oriented databases, are the most widely used database model.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      ".work/im-it-107-repair-report.md (PDF repair evidence)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-107-3",
+    "currentAnswer": "C",
+    "reviewedAnswer": "C",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "A primary key identifies rows, not columns.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      ".work/im-it-107-repair-report.md (PDF repair evidence)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-107-4",
+    "currentAnswer": "C",
+    "reviewedAnswer": "C",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "COUNT(DISTINCT country) uniquely counts distinct countries.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      ".work/im-it-107-repair-report.md (PDF repair evidence)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-107-5",
+    "currentAnswer": "C",
+    "reviewedAnswer": "C",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "COUNT(id) with GROUP BY country computes customers per country.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      ".work/im-it-107-repair-report.md (PDF repair evidence)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-107-6",
+    "currentAnswer": "B",
+    "reviewedAnswer": "B",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "Multidimensional databases are optimized for data warehousing and OLAP cube queries.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      ".work/im-it-107-repair-report.md (PDF repair evidence)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-107-7",
+    "currentAnswer": "B",
+    "reviewedAnswer": "B",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "Reading data written by an uncommitted transaction is a dirty read.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      ".work/im-it-107-repair-report.md (PDF repair evidence)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-107-8",
+    "currentAnswer": "E",
+    "reviewedAnswer": "E",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "All four OSI statements are standard layer assignments, so E applies.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      ".work/im-it-107-repair-report.md (PDF repair evidence)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-107-9",
+    "currentAnswer": "A",
+    "reviewedAnswer": "A",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "Despite the PDF typo “Kerkeros,” the ticket-based authentication protocol described is Kerberos, option A.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      ".work/im-it-107-repair-report.md (PDF repair evidence)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-107-10",
+    "currentAnswer": "D",
+    "reviewedAnswer": "D",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "HTTPS/TLS addresses authentication, confidentiality, integrity, and MITM resistance; fault tolerance is outside its security goals.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      ".work/im-it-107-repair-report.md (PDF repair evidence)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-107-11",
+    "currentAnswer": "A",
+    "reviewedAnswer": "A/E",
+    "verdict": "disputed",
+    "confidence": "disputed",
+    "reasoning": "A certificate serial number uniquely identifies a certificate and is referenced by CRLs/OCSP workflows; whether that counts as “used to track revocation information” is wording-dependent, leaving A versus E unresolved.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      ".work/im-it-107-repair-report.md (PDF repair evidence)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": false
+  },
+  {
+    "questionId": "q-pp-im-it-107-12",
+    "currentAnswer": "E",
+    "reviewedAnswer": "E",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "Password-fatigue reduction and Facebook/Google federated login are all valid SSO examples in the item’s framing.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      ".work/im-it-107-repair-report.md (PDF repair evidence)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-107-13",
+    "currentAnswer": "C",
+    "reviewedAnswer": "C",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "A VPN makes communication over a shared/public network behave as access to a private network.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      ".work/im-it-107-repair-report.md (PDF repair evidence)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-107-14",
+    "currentAnswer": "E",
+    "reviewedAnswer": "E",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "MS-DOS is an operating system; HFS, NTFS, exFAT, and ext3 are file systems.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      ".work/im-it-107-repair-report.md (PDF repair evidence)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-107-15",
+    "currentAnswer": "B",
+    "reviewedAnswer": "B",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "A device driver is hardware-dependent and OS-specific software mediating transparent device access.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      ".work/im-it-107-repair-report.md (PDF repair evidence)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-107-16",
+    "currentAnswer": "E",
+    "reviewedAnswer": "E",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "The listed introductory CISC/RISC characterizations and x86/ARM examples are all accepted, so E applies.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      ".work/im-it-107-repair-report.md (PDF repair evidence)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-107-17",
+    "currentAnswer": "C",
+    "reviewedAnswer": "C",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "Creating virtual versions of compute, storage, and network resources is virtualization, option C in the verified PDF.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      ".work/im-it-107-repair-report.md (PDF repair evidence)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-107-18",
+    "currentAnswer": "E",
+    "reviewedAnswer": "E",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "A-D are standard high-level Bitcoin properties in the item’s historical framing, so E applies.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      ".work/im-it-107-repair-report.md (PDF repair evidence)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-107-19",
+    "currentAnswer": "B",
+    "reviewedAnswer": "B/C",
+    "verdict": "disputed",
+    "confidence": "disputed",
+    "reasoning": "B incorrectly describes Bitcoin as distributing partial block lists such that no peer needs the full chain, while C also incorrectly calls public pseudonymous transaction data anonymous and encrypted; the single-choice item has two defensible errors.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      ".work/im-it-107-repair-report.md (PDF repair evidence)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": false
+  },
+  {
+    "questionId": "q-pp-im-it-107-20",
+    "currentAnswer": "E",
+    "reviewedAnswer": "E",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "CIA expands to Confidentiality, Integrity, Availability; only E correctly identifies Availability.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      ".work/im-it-107-repair-report.md (PDF repair evidence)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-107-21",
+    "currentAnswer": "C",
+    "reviewedAnswer": "C",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "RSA is asymmetric; DES, IDEA, Caesar, and AES are symmetric mechanisms.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      ".work/im-it-107-repair-report.md (PDF repair evidence)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-107-22",
+    "currentAnswer": "B",
+    "reviewedAnswer": "B",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "Large populations of weak IoT devices make botnet-driven DDoS especially difficult to defend.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      ".work/im-it-107-repair-report.md (PDF repair evidence)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-107-23",
+    "currentAnswer": "D",
+    "reviewedAnswer": "D",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "ISO/IEC 27001 specifies requirements for an ISMS.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      ".work/im-it-107-repair-report.md (PDF repair evidence)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-107-24",
+    "currentAnswer": "D",
+    "reviewedAnswer": "D",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "ACID ends in Durability; the other expansions are wrong.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-107.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      ".work/im-it-107-repair-report.md (PDF repair evidence)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-108-1",
+    "currentAnswer": "B",
+    "reviewedAnswer": "B",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "JPEG, GIF, and BMP are image formats; MPEG is principally a moving-image/audio coding family.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-108.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-108-2",
+    "currentAnswer": "B",
+    "reviewedAnswer": "B",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "A browser cookie is website-supplied local state data.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-108.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-108-3",
+    "currentAnswer": "D",
+    "reviewedAnswer": "D",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "A 128-bit IPv6 address space contains 2^128 possible bit patterns.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-108.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-108-4",
+    "currentAnswer": "A",
+    "reviewedAnswer": "A",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "TCP/IP is the foundational Internet protocol suite among the choices.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-108.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-108-5",
+    "currentAnswer": "E",
+    "reviewedAnswer": "E",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "CPU scheduling, storage, memory, and I/O management are all operating-system tasks, so E applies.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-108.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-108-6",
+    "currentAnswer": "E",
+    "reviewedAnswer": "E",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "Linux is open source and Unix-like; Android uses the Linux kernel and AOSP is open source, so E applies.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-108.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-108-7",
+    "currentAnswer": "C",
+    "reviewedAnswer": "C",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "RFID is the dedicated identification/tracking technology among these options.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-108.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-108-8",
+    "currentAnswer": "D",
+    "reviewedAnswer": "D",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "GPS provides localization rather than direct perception of surrounding objects; lidar, radar, and vision do the latter.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-108.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-108-9",
+    "currentAnswer": "D",
+    "reviewedAnswer": "D",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "The regulation described is the EU General Data Protection Regulation.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-108.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-108-10",
+    "currentAnswer": "E",
+    "reviewedAnswer": "E",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "Volume, velocity, variety, and veracity are all established big-data attributes in the 4V formulation.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-108.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-108-11",
+    "currentAnswer": "E",
+    "reviewedAnswer": "E",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "All four listed domains can apply big-data analysis, so E applies.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-108.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-108-12",
+    "currentAnswer": "A",
+    "reviewedAnswer": "A",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "CAPTCHA explicitly expands to a public Turing test distinguishing computers and humans.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-108.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-108-13",
+    "currentAnswer": "C",
+    "reviewedAnswer": "C",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "LDAP is the lightweight directory-access protocol derived from the X.500 directory model.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-108.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-108-14",
+    "currentAnswer": "A",
+    "reviewedAnswer": "A",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "SSH was designed as the secure replacement for Telnet, rlogin, and rsh.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-108.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-108-15",
+    "currentAnswer": "E",
+    "reviewedAnswer": "E",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "“Deep” refers to network depth/layer count, which none of A-D names.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-108.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-108-16",
+    "currentAnswer": "D",
+    "reviewedAnswer": "D/E",
+    "verdict": "disputed",
+    "confidence": "disputed",
+    "reasoning": "Human labeling is common in supervised deep learning but not required in self-supervised or unsupervised learning; “usually” makes D versus E dependent on scope and era.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-108.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": false
+  },
+  {
+    "questionId": "q-pp-im-it-108-17",
+    "currentAnswer": "C",
+    "reviewedAnswer": "C/E",
+    "verdict": "disputed",
+    "confidence": "disputed",
+    "reasoning": "Viruses replicate by infecting hosts and can spread, while autonomous network propagation is the sharper worm distinction; the word “actively” does not uniquely force C rather than E.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-108.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": false
+  },
+  {
+    "questionId": "q-pp-im-it-108-18",
+    "currentAnswer": "D",
+    "reviewedAnswer": "D",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "Psychological manipulation of people is the definition of social engineering.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-108.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-108-19",
+    "currentAnswer": "D",
+    "reviewedAnswer": "D",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "A firewall filters incoming and outgoing traffic according to security rules.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-108.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-108-20",
+    "currentAnswer": "E",
+    "reviewedAnswer": "E",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "Network printing, RPC, email protocols, and HTTP all have standard client-server deployments, so E applies.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-108.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-109-1",
+    "currentAnswer": "B",
+    "reviewedAnswer": "B",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "Hiding internal state behind object methods is encapsulation.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-109.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      ".work/im-it-109-110-113-replacements-report.md (PDF repair evidence)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-109-2",
+    "currentAnswer": "B",
+    "reviewedAnswer": "C",
+    "verdict": "corrected",
+    "confidence": "medium",
+    "reasoning": "Protected, not private, grants access to the defining class and subclasses (and package peers in Java).",
+    "sourceBasis": [
+      "public/papers/pp-im-it-109.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      ".work/im-it-109-110-113-replacements-report.md (PDF repair evidence)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-109-3",
+    "currentAnswer": "D",
+    "reviewedAnswer": "E",
+    "verdict": "corrected",
+    "confidence": "medium",
+    "reasoning": "Python supports functional, object-oriented, procedural, and imperative styles, so E is the only “none wrong” answer.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-109.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      ".work/im-it-109-110-113-replacements-report.md (PDF repair evidence)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-109-4",
+    "currentAnswer": "A",
+    "reviewedAnswer": "B",
+    "verdict": "corrected",
+    "confidence": "medium",
+    "reasoning": "Python is dynamically typed, making B false; it is general-purpose, interpreted, and indentation-delimited.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-109.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      ".work/im-it-109-110-113-replacements-report.md (PDF repair evidence)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-109-5",
+    "currentAnswer": "E",
+    "reviewedAnswer": "A",
+    "verdict": "corrected",
+    "confidence": "medium",
+    "reasoning": "The model described is software delivered on demand over a vendor-managed cloud; among the provided options, A is the direct match.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-109.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      ".work/im-it-109-110-113-replacements-report.md (PDF repair evidence)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-109-6",
+    "currentAnswer": "E",
+    "reviewedAnswer": "D",
+    "verdict": "corrected",
+    "confidence": "medium",
+    "reasoning": "Google App Engine is a canonical platform-as-a-service offering.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-109.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      ".work/im-it-109-110-113-replacements-report.md (PDF repair evidence)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-109-7",
+    "currentAnswer": "E",
+    "reviewedAnswer": "E",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "LINE Pay, Pi wallet, JKo/街口, and Taiwan Pay are payment services; 嘖嘖 is crowdfunding.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-109.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      ".work/im-it-109-110-113-replacements-report.md (PDF repair evidence)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-109-8",
+    "currentAnswer": "D",
+    "reviewedAnswer": "D",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "The expected peak-rate range for 5G in these choices is 1-10 Gbps.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-109.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      ".work/im-it-109-110-113-replacements-report.md (PDF repair evidence)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-109-9",
+    "currentAnswer": "D",
+    "reviewedAnswer": "B",
+    "verdict": "corrected",
+    "confidence": "medium",
+    "reasoning": "A server intermediating client requests to origin servers is a proxy.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-109.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      ".work/im-it-109-110-113-replacements-report.md (PDF repair evidence)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-109-10",
+    "currentAnswer": "E",
+    "reviewedAnswer": "E",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "DNS performs name-to-address resolution, and no DNS server is listed, so E applies.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-109.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      ".work/im-it-109-110-113-replacements-report.md (PDF repair evidence)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-109-11",
+    "currentAnswer": "E",
+    "reviewedAnswer": "B",
+    "verdict": "corrected",
+    "confidence": "medium",
+    "reasoning": "IPv6 uses 128-bit, not 120-bit, addresses; B is the uniquely wrong statement.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-109.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      ".work/im-it-109-110-113-replacements-report.md (PDF repair evidence)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-109-12",
+    "currentAnswer": "A",
+    "reviewedAnswer": "A",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "Ethernet is the dominant LAN technology among the listed choices.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-109.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      ".work/im-it-109-110-113-replacements-report.md (PDF repair evidence)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-109-13",
+    "currentAnswer": "C",
+    "reviewedAnswer": "C",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "A parity bit makes the total number of one bits even or odd.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-109.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      ".work/im-it-109-110-113-replacements-report.md (PDF repair evidence)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-109-14",
+    "currentAnswer": "A",
+    "reviewedAnswer": "A",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "Bluetooth is not the usual high-bandwidth phone-to-VR-headset link; the other pairings are common Bluetooth uses.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-109.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      ".work/im-it-109-110-113-replacements-report.md (PDF repair evidence)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-109-15",
+    "currentAnswer": "E",
+    "reviewedAnswer": "B",
+    "verdict": "corrected",
+    "confidence": "medium",
+    "reasoning": "DDR4 RAM is volatile; SSD, ROM, and flash retain data without power.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-109.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      ".work/im-it-109-110-113-replacements-report.md (PDF repair evidence)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-109-16",
+    "currentAnswer": "D",
+    "reviewedAnswer": "D",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "ISO 27001 is the ISMS specification among the choices.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-109.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      ".work/im-it-109-110-113-replacements-report.md (PDF repair evidence)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-109-17",
+    "currentAnswer": "C",
+    "reviewedAnswer": "A",
+    "verdict": "corrected",
+    "confidence": "medium",
+    "reasoning": "The information-security CIA triad is Confidentiality, Integrity, and Availability.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-109.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      ".work/im-it-109-110-113-replacements-report.md (PDF repair evidence)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-109-18",
+    "currentAnswer": "D",
+    "reviewedAnswer": "A",
+    "verdict": "corrected",
+    "confidence": "medium",
+    "reasoning": "CREATE TABLE Customers (...) is the valid SQL table-creation statement.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-109.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      ".work/im-it-109-110-113-replacements-report.md (PDF repair evidence)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-109-19",
+    "currentAnswer": "D",
+    "reviewedAnswer": "D",
+    "verdict": "confirmed",
+    "confidence": "medium",
+    "reasoning": "MariaDB was community-developed as a MySQL-compatible open-source fork after Oracle’s acquisition.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-109.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      ".work/im-it-109-110-113-replacements-report.md (PDF repair evidence)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  },
+  {
+    "questionId": "q-pp-im-it-109-20",
+    "currentAnswer": "E",
+    "reviewedAnswer": "D",
+    "verdict": "corrected",
+    "confidence": "medium",
+    "reasoning": "Contemporary estimates commonly placed 2020 connected devices in the tens of billions, matching 10-50 billion.",
+    "sourceBasis": [
+      "public/papers/pp-im-it-109.pdf (original question face; no official answer key)",
+      ".work/im-it-pdf-audit-106-110.md (visual question-text parity audit)",
+      ".work/im-it-109-110-113-replacements-report.md (PDF repair evidence)",
+      "Independent technical derivation from the verified stem and choices; answers.json explanation used only as a cross-check"
+    ],
+    "autoGradeEligible": true
+  }
+]

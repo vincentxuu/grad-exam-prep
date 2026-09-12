@@ -1,0 +1,65 @@
+題 號 : 375 國 立 臺灣 大 學 110 學 年 度 碩士 班 招生 考試 試題
+科目 : 資 訊 科技 概論 題 號 :375
+fick: 6 共 4 頁 之 第 1 頁
+
+一 、 思 擇 題 CEE) 28 題 , 每 題 2.5 分 , 共 分 , 請 在 每 十 的 選項 內 思 擇 最 適當 的 答案 。
+
+注意 : 答 錯 倒 扣 1 分 。 扣 至 零 分 為 止 。( 不 答 不 倒 扣 )
+
+※ 注意 : 請 用 2B 鉛筆 作答 於 答 罕 卡 , 並 先 詳 閱 答案 卡 上 之 「 畫 記 說 明 j。
+
+1 世 Which of the following is wrong about the PCs you can buy nowadays? (A) floppy disc
+drive is typically not equipped (B) hard disc is typically in the range of 500GB-4TB (C) CPU
+clock ranges in 2-4 MHz (D) RAM is typically in the range of 4-16GB (E) all the above are
+correct (choose this one only if none of the above can be chosen).
+
+2. [_~_] Which of the following is wrong about file extension? (A) .py is a Python file (B) .bin
+is a Binary disc image (C) .iso is an ISO disc image (D) .tar is a UNIX-based archive file (E) all
+the above are correct (choose this one only if none of the above can be chosen).
+
+3. [上] Which of the following is not a file format for storing images? (A) JPEG (B) PNG (C)
+BMP (D) TIFF (E) all the above are image file format (choose this one only if none of the above
+can be chosen).
+
+4, [_~_] Which of the following storage is non-volatile? (A) ROM (B) RAM (C) DDR RAM (D)
+SDRAM (E) all the above are non-volatile (choose this one only if none of the above can be
+chosen).
+
+5. CL] Which of the following is wrong about CPUs? (A) CPU fetches instructions directly
+from RAM (B) an instruction may take several clock cycles to execute (C) ALU is the electronic
+circuitry that executes all arithmetic and logical operations (D) inside CPU, registers are
+temporary storage areas for instructions or data (E) all the above are correct (choose this one only
+if none of the above can be chosen).
+
+6. | Which of the following is wrong? (A) screen resolution is measured in “dpi” (B) printer
+resolution is measured in “dpi” (C) Full HD refers to a resolution of 1920x1080 pixels (D) Ultra
+HD refers to a screen resolution of 3840x2160 pixels (E) all the above are correct (choose this one
+only ifnone of the above can be chosen).
+
+7. ~~ ) Which of the following device allows the communication between dissimilar networks?
+(A) bridge (B) gateway (C) switch (D) hub (E) router.
+
+8. LC] Which of the following extends a private network across a public network and enables
+users to send and receive data across shared or public networks as if their computing devices were
+directly connected to the private network? (A) Broadband Global Area Network (B) virtual private
+network (VPN) (C) Extranet (D) Intranet (E) none of the above.
+
+9. [上 Compared to 4G technology standard for broadband cellular networks, which of the
+following is not a major advantage of 5G? (A) higher data speeds (B) higher latency (C) massive
+network capacity (D) increased availability (E) lower network energy usage.
+
+10. Co Which of the following is a general-purpose, developmental, modeling Janguage in the
+field of software engineering that is intended to provide a standard way to visualize the design of a
+system? (A) Smalltalk (B) Object-oriented programming (C) JavaScript (D) UML (E) Perl.
+
+11, | Which of the following is wrong? (A) assembly code is used to directly control a
+computer’s CPU (B) pseudocode is a plain language description of the steps in an algorithm (C)
+an interpreter is a computer program that directly executes instructions written in a programming
+language (D) a scripting language is used to write a series of commands that are interpreted one by
+one at runtime (E) all of the above are correct (choose this one only if none of the above can be
+chosen).
+
+12, | Which of the following is wrong? (A) imperative programming is a programming
+
+paradigm that uses statements that change a program’s state (B) functional programming is a
+見 背 面

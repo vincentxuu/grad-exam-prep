@@ -1,0 +1,35 @@
+. . 3 : &
+題 號 : (386 國 立 臺 灣 大 學 107 學 年 度 碩士 班 招生 考試 試題
+科目 : 資訊 科技 概論 題 號 : 386
+節 次 : 6 共 頁 之 第 S 頁
+cipher (E) Advanced Encryption Standard (AES).
+22. With the advent of Internet of Things (oT), which of the following types of security attacks become even
+more challenging to defend than the others? (A) social engineering (B) Distributed Denial of Service (DDoS)
+(C) Phishing (D) SQL injection (E) Session Hijacking.
+
+23. Which of the following is the best-known standard providing requirements for an information security
+management system (ISMS)? (A) [SO 9001 (B) ISO 14001 (C) ISO 26000 (D) ISO/TEC 27001 (B) ISO
+31000.
+
+24. Which of the following is correct about the ACID Database Properties? (A) “A” refers to Anonymity (B)“C™
+refers to Continuity (C) “I” refers to Integrity (D) “D” refers to Durability (E) none of the above is correct.
+
+二 、 癌 答題 2 題 , 每 題 20 分, 共和 分 。
+
+※ 本 大 題 請 於 試卷 內 之 「 非 惰 擇 題 作答 區 」 標 明 題 號 依 序 作 答 。
+
+I. You are given an array that stores # objects of three different types: Type 0, Type 1, and Type 2. The array
+elements are assumed to be indexed from 0 through 7 ~ |. Design an algorithm to rearrange the objects so
+that objects of the same type occupy consecutive locations in the array, with the objects of Type 0 in the
+front followed by those of Type 1 and then those of Type 2. Please present your algorithm in adequate
+pseudocode. Give an analysis of its time complexity. The more efficient your algorithm is and the less space
+it uses, the more points you will be awarded for this problem.
+
+2. The celebrated Prim’s algorithm for finding a minimum(-weight) spanning tree of a weighted undirected
+graph is based on the following theorem:
+
+Theorem: Given a connected weighted undirected graph G=(V,E), let Vi and V2 be a partition of V and
+E(V1,V2) be the set of edges connecting nodes in V| to nodes in V2, One of the edges with the minimum
+weight in E(Vi,V2) must belong to a minimum spanning tree of G.
+
+Prove the correctness of the above theorem.

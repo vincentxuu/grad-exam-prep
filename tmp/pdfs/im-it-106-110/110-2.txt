@@ -1,0 +1,66 @@
+題 號 : 375 國 立 臺灣 大 學 110 學 年 度 碩士 班 招生 考試 試題
+科目 : 資 訊 科技 概論 題 號 :375
+HR: 6 共 4 頁 之 第 % 頁
+programming paradigm where programs are constructed by applying and composing functions (C)
+C++ belongs to imperative programming paradigm (D) Python belongs to imperative
+programming paradigm (E) all the above are correct (choose this one only if none of the above can
+be chosen).
+
+13. [|] In programming languages, a(n) refers to a collection of rules that assign a
+property to various constructs in a computer program, such as variables, expressions, functions or
+modules, with the end goal of reducing the number of bugs by verifying that data is represented
+properly throughout a program. (A) variable system (B) type system (C) formal system (D) logical
+mode] (E) inference system.
+
+4. 」 is a basic and commonly used type of predictive analysis that attempts to model
+the relationship between one dependent variable and a series of other variables by fitting a linear
+equation to observed data. (A) trend estimation (B) normal equations (C) linear regression (D)
+decision tree (E) multivariate normal distribution.
+
+15. [-___] In confusion matrix, let 7 be the number of true positives, FP be the number of false
+positive, FN be the number of false negative, and 7N be the number of true negative. Then,
+
+ve TP TN TP Ty. TP
+precision refers 10 (A) ese (Be © Germ P) Gree © Germ
+
+16. [____] Continuous from the above question. Accuracy refers to (A) are @)
+
+ee
+【 ( CP+FP+7N+FA) (IP+FP4TN+FN) (TP+PP+TN+FN)
+
+17. [____] The primary purpose of a digital certificate is to prove the ownership of a (A)
+public key (B) private key (C) secret key (D) security level (E) signature.
+
+18. [____] Which of the following is wrong about HTTP cookies? (A) they are stored at server side
+(B) they can be used to record last session established (C) they can be used to remember pieces of
+information that users previously entered in a form (D) they can be used to authenticate users (E)
+all of the above are correct (choose this one only if none of the above can be chosen).
+
+19. [______] The key to a content delivery network is to geographically distribute many so
+that data can be accessed close to users. (A) load balance servers (B) proxy servers (C) routing
+servers (D) database servers (E) file servers.
+
+20.) refers to a method of breaking into a password-protected computer or server by
+systematically entering every word in a dictionary as a password. (A) exhaustive attack (B) brute-
+force attack (C) dictionary attack (D) alphabet attack (E) verbose attack.
+
+21. [_____] In information security, the ‘C’ in the “CIA triad” refers to (A) Consistency (B)
+Certification (C) Confidence (D) Confidentiality (E) Constancy.
+
+22. [____] Which of the following functions is often used in a data structure that implements an
+associative array that maps keys to values? (A) bin (B) point spread (C) hash (D) deconvolution
+©) filter.
+
+23. [|] Compared to file systems, which of the following is not an advantage of database? (A)
+separation of data definition and the problem (B) efficient access (C) data integrity (D) reduce
+redundancy (E) all the above are advantage.
+
+24.[  ] The logical structure of a database is referred to as (A) schema (B) data dictionary (C)
+template (D) data layout (E) data relation.
+
+25. [____] In the context of transaction processing, the acronym ACID refers to the four key
+properties for a database management system to have a valid transaction mechanism even in the
+event of failures. In the acronym, ‘A’ refers to (A) anonymity (B) availability (C) asynchrony (D)
+atomicity (E) none of the above.
+
+26. [_____] Which of the following is the primary purpose of mining in blockchain-based

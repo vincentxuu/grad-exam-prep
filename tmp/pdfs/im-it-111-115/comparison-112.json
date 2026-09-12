@@ -1,0 +1,176 @@
+[
+  {
+    "id": "q-pp-im-it-112-1",
+    "text": "Which of the following is wrong about Von Neumann architecture? (A) It has four main units: CPU, memory, input, and output (B) memory is simply a linear array of storage locations (C) data and instructions are stored in different memory (D) it has a control unit and an arithmetic/logic unit (choose this one only if none of the above can be chosen)",
+    "score": 0.807,
+    "ocr_window": "先 詳 閱 答案 卡 上 之 「 畫 記 說 明 1。 1 | Which of the following is wrong about Von Neumann architecture? (A) it has four main units: CPU, memory, input, and output (B) memory is simply a linear array of storage locations (C) data"
+  },
+  {
+    "id": "q-pp-im-it-112-2",
+    "text": "Which of the following is wrong about process architecture? (A) In general, program approaches will feed force opcodes to execute instructions that are defined in a RISC approach (B) the CISC approach typically has fewer instructions than that compiled in RISC architecture (C) the set is a CISC approach is typically smaller in instruction number than the one in RISC approach (D) all the above are correct (choose this one only if none of the above can be chosen)",
+    "score": 0.621,
+    "ocr_window": "all the above are correct (choose this one only if none of the above can be chosen). 2. C7] Which of the following is wrong about process architecture? (A) in general, program compiled in CISC architecture has fewer inst"
+  },
+  {
+    "id": "q-pp-im-it-112-3",
+    "text": "Which of the following is wrong about computer memory? (A) In a microprocessor with 32-bit address buses, devices and memory devices can access at most 2^32 bytes of memory (B) the internal data storage of a processor is known as its access I/O devices and memory devices (C) the internal data storage of a processor is known as its registers (D) all the above are correct (choose this one only if none of the above can be chosen)",
+    "score": 0.633,
+    "ocr_window": "if none of the above can be chosen). 3. [7] which of the following is wrong about computer architecture? (A) A processor with 32-bit address buses can access at most 222 bytes of memory (8) in memory-mapped I/O, I/O devi"
+  },
+  {
+    "id": "q-pp-im-it-112-4",
+    "text": "Which of the following is wrong about Input/Output in a computer system? (A) is a technique where a hardware device is needed to allow I/O devices to continuously access memory with less participation of the processor (B) Direct Memory Access (DMA) allows data to be transferred from I/O devices to memory without the external device interrupt the processor (C) a hardware device interrupts the processor by triggering an interrupt signal to Direct Memory Access (DMA) allows data to be transferred to memory (D) all the above are correct (choose this one only if none of the above can be chosen)",
+    "score": 0.715,
+    "ocr_window": "this one only if none of the above can be chosen). 4. Ce] Which of the following is wrong about Input/Output in a computer system? (A) in interrupt- driven 1/0, an external device interrupts the Processor to execute an i"
+  },
+  {
+    "id": "q-pp-im-it-112-5",
+    "text": "Which of the following is wrong about registers in CPU? (A) the number of registers in CPU is smaller than the size of L1 cache (B) the size of L2 cache is typically much bigger than L1 cache (C) the size of L2 cache is smaller than the size of L1 cache in CPU (D) current CPUs typically provides dozens to hundreds bytes (choose this one only if none of the above can be chosen)",
+    "score": 0.686,
+    "ocr_window": "one only if none of the above can be chosen). 5. [7 Which of the following is wrong about CPU cache? {A) register in CPU is usually faster than L1 cache (B) number of registers in CPU is smaller than the size of L1 cache"
+  },
+  {
+    "id": "q-pp-im-it-112-6",
+    "text": "Which of the following is NOT a major functionality of operating systems? (A) Resource Management (B) Process Management (C) Memory Management (D) Security Management (E) all the above are major functionalities.",
+    "score": 0.895,
+    "ocr_window": "6. [7 Which of the following is not a major functionality of operating systems? (A) Resource Management (8) Process Management (C) Memory Management (D) Security Management (E) all the . above are major functionalities, "
+  },
+  {
+    "id": "q-pp-im-it-112-7",
+    "text": "Operating systems divide virtual and physical memory into fixed-sized chunks called pages. Which of the following page size is currently most common than the other? (A) 128 byte (B) 512 bytes (C) 4KB (D) 12KB (E) 512KB.",
+    "score": 0.846,
+    "ocr_window": "班 招生 考試 試題 科目 : 資訊 科技 概論 we: 394 HA: 6 共 SRE 之 頁 | 7. Cc] Operating systems divide virtual and physical memory into fixed-sized chunks called Pages. Which of the following page size is currently most common than the othe"
+  },
+  {
+    "id": "q-pp-im-it-112-8",
+    "text": "Which of the following is wrong about operating systems? (A) user applications usually run in user-mode (B) applications running in user-mode shares a virtual address space (C) process running in user-mode can't access virtual addresses that are reserved for the operating system (D) core operating system components run in kernel mode (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "score": 0.808,
+    "ocr_window": "(C) 4KB (D) 128KB (E} 512KB. 8. | Which of the following is wrong for applications running in an operating system? (A) user applications usually run in user-mode {B) applications running in user-mode shares a virtual add"
+  },
+  {
+    "id": "q-pp-im-it-112-9",
+    "text": "Which of the following is wrong about computer cluster? (A) nodes in a cluster are typically independent and connected by a high-speed LAN (B) clustering computers can increase computing power (C) clustering computers can prevent security attacks (D) clustering computers can improve fault tolerance (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "score": 0.887,
+    "ocr_window": "components run in kernel mode (E) all the above are correct (choose this one only if none of the above can be chosen). 9. [____] Which of the following is wrong about computer clusters? (A) nodes in a cluster are typical"
+  },
+  {
+    "id": "q-pp-im-it-112-10",
+    "text": "With regard to process management, which of the following is generally not the responsibility of operating systems (OS)? (A) creating and deleting user processes (B) suspending and resuming processes (C) process synchronization (D) deadlock handling (E) all the above are OS's responsibility.",
+    "score": 0.906,
+    "ocr_window": "[____] With regard to process management, which of the following is generally not the responsibility of operating systems (OS)? (A) creating and deleting user processes (B) suspending and resuming processes (C) process s"
+  },
+  {
+    "id": "q-pp-im-it-112-11",
+    "text": "With regard to storage management, which of the following is generally not the responsibility of operating systems? (A) creating and deleting files and directories (B) disk scheduling (C) backing up files onto stable permanent storage media (D) supporting primitives for manipulating files and directories.",
+    "score": 0.636,
+    "ocr_window": "are OS's responsibility. 11. C7 With regard to storage management, which of the following is generally not the responsibility of operating systems? (A) creating and deleting files (B) file integrity check (C) disk schedu"
+  },
+  {
+    "id": "q-pp-im-it-112-12",
+    "text": "A uniprocessor system achieves multiprogramming by ___. (A) CPU scheduling (B) dynamic allocation (C) manipulating files and directories.",
+    "score": 0.487,
+    "ocr_window": "manipulating files and directories. 12. | A uniprocessor system achieves multiprogramming by in CPU scheduling. (A) dynamic allocation (B) process rotating (C) pipelining (D) time slicing (E) none of the above. 13. | Whe"
+  },
+  {
+    "id": "q-pp-im-it-112-13",
+    "text": "When a process is running in Unix/Linux system, which of the following is wrong about memory layout? (A) the stack section starts immediately above the data section (B) the stack section can grow and shrink dynamically with process life cycle (C) the data section (D) the stack section can grow and shrink dynamically during process life cycle (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "score": 0.693,
+    "ocr_window": "allocation (B) process rotating (C) pipelining (D) time slicing (E) none of the above. 13. | When a process is running in Unix-like systems, which of the following is wrong about its memory layout? (A) the code section s"
+  },
+  {
+    "id": "q-pp-im-it-112-14",
+    "text": "Which of the following is wrong about the Collision Avoidance (CA) algorithm? (A) Cache-Sense to Robin. (B) Exponential Backoff (C) Collision Avoidance (D) Request to Send/Clear to Send (RTS/CTS) (E) Round to Robin.",
+    "score": 0.462,
+    "ocr_window": "one only if none of the above can be chosen). 14. C77 In Ethernet, which of the following algorithm is used to resolve collision? (A) Carrier Sense (B) Exponential Backoff (C) Collision Avoidance (D} Request to Send/Clea"
+  },
+  {
+    "id": "q-pp-im-it-112-15",
+    "text": "We can apply logic to network frames and handling those at a local area network to create the appearance and functionality of network traffic that spans separate networks. This effectively creates ___. (A) virtual LAN (B) VPN (C) domains (D) subdomain (E) private LANs.",
+    "score": 0.621,
+    "ocr_window": "can apply tags to network frames and handling these tags in a local area network to create the appearance and functionality of network traffic that is physically on a single network but acts as if it is split between sep"
+  },
+  {
+    "id": "q-pp-im-it-112-16",
+    "text": "In router-table construction, which of the following is not using the following algorithms but instead routers build up their routing tables by periodically exchanging information with their immediately neighboring? (A) adaptive routing (B) link-state (C) distance-vector (D) incremental update (E) none of the above.",
+    "score": 0.784,
+    "ocr_window": "灣 大 學 112 學 年 度 碩士 班 招生 考試 試題 科目 : 資 訊 科技 概論 HAR: 324 Hick: 6 共 『y 頁 之 第 3 頁 16. CL] In router-table construction, which of the following algorithms let routers build up their routing tables by periodically exchanging in"
+  },
+  {
+    "id": "q-pp-im-it-112-17",
+    "text": "Which of the following is wrong about TCP? (A) TCP uses a sliding window for flow control (B) TCP uses a connection (C) TCP is stream-oriented (D) TCP uses sliding window for free control (E) all the above can be chosen.",
+    "score": 0.459,
+    "ocr_window": "none of the above. a7, 7 Which of the following is wrong about TCP? (A) it uses 2-way handshake to establish a connection (B) TCP is stream-oriented (C) TCP uses sliding window for flow control (D) TCP uses sequence numb"
+  },
+  {
+    "id": "q-pp-im-it-112-18",
+    "text": "Which of the following is wrong about buffer overflow attack? (A) in a buffer overflow attack, an attacker sends messages between two parties, and then steals and manipulates data between them (B) a buffer overflow attack typically overflows the buffer and overwrites subsequent portions of memory, typically containing the stack-frame pointers (C) In SQL injection, an attacker inputs malicious code into a server using some query language, forcing the server to deliver protected information (D) in none of them (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "score": 0.693,
+    "ocr_window": "(E) all the above are correct (choose this one only if none of the above can be chosen). 18. LJ Which of the following is wrong about security attacks? (A) In Man-in-the-Middle attack, an attacker intercepts messages bet"
+  },
+  {
+    "id": "q-pp-im-it-112-19",
+    "text": "Which of the following is wrong about relational databases? (A) a primary key is used to identify each record in a table (B) a foreign key is used to link two related tables by referring to the fields in this one which is the specific foreign key (C) both row (D) a foreign key doesn't need to refer to the fields which show NULL value (choose this one only if none of the above can be chosen).",
+    "score": 0.521,
+    "ocr_window": "records (E) all the above are correct (choose this one only if none of the above can be chosen). 22. Co) Which of the following is wrong about relational databases? (A) a primary key is used to ensure data in the specifi"
+  },
+  {
+    "id": "q-pp-im-it-112-20",
+    "text": "Which of the following is wrong about NoSQL database? (A) a column-oriented database organizes data in columns (B) document stores use an internal data model (i.e., XML, JSON) to associate arrays so that their data data model (C) document stores use documents (i.e., XML, JSON) to associate arrays so that their data how efficient data is maintained (D) graph stores use an arbitrary element to a min heap of n nodes can be done in (E) none of the above are correct (choose this one only if none of the above can be chosen).",
+    "score": 0.395,
+    "ocr_window": "if none of the above can be chosen). 20. | Which of the following is wrong about NoSQL databases? (A) in column-oriented structure, data is stored in cells grouped in a pre-defined number of columns (B) key-value stores "
+  },
+  {
+    "id": "q-pp-im-it-112-21",
+    "text": "Which of the following is wrong about relational databases? (A) data are organized into two-dimensional tables and rows (B) a foreign key is used to link two related tables by referring to the fields in this one (C) both row (D) a foreign key doesn't need to refer to (E) none of the above can be chosen.",
+    "score": 0.398,
+    "ocr_window": "data are organized into tables of columns and rows (B) a unique key is used to identify each row (C) each row represents a data record (D) columns correspond to attributes of records (E) all the above are correct (choose"
+  },
+  {
+    "id": "q-pp-im-it-112-22",
+    "text": "Which of the following is wrong about spanning trees? (A) If all the edges of a graph are edges of a spanning tree T of G, then adding it to T (B) if it is a graph this one only (C) a graph this one only if none of the above are correct (choose this one only if none of the above can be chosen).",
+    "score": 0.423,
+    "ocr_window": "G is a tree (B) if all of the edges of a graph G are also edges of | a spanning tree T of G, then G is identical to T (C) if T is a spanning tree of G, and eis an edge of G that is not in T, then adding e to T will creat"
+  },
+  {
+    "id": "q-pp-im-it-112-23",
+    "text": "The term ___ has been coined to represent a digital counterpart of a real-world object for use such as simulation, integration, testing, monitoring, and maintenance. (A) avatar (B) digital twin (C) virtual reality (D) cloud agent (E) none of the above.",
+    "score": 0.816,
+    "ocr_window": "立 臺灣 大 學 112 學 年 度 碩士 班 招生 考試 試題 科目 : 資 訊 科技 概論 HAR: 324 BA: 6 共 頁 之 第 AR 23. 上 The term has been coined to represent a digital counterpart of a real-world object for use such as simulation, integration, testing, monitor"
+  },
+  {
+    "id": "q-pp-im-it-112-24",
+    "text": "In blockchain technology like that used in Bitcoin, the process 'mining' is defined mainly to: (A) enforce concurrency control of transactions (B) ensure atomicity (C) distribute (D) validate transactions (E) none of the above.",
+    "score": 0.658,
+    "ocr_window": "cloud object (E) none of the above. 24, [___] Inblockchain technology like that used in Bitcoin, the process “mining” is designed mainly to (A) enforce concurrency control of transactions (B) ensure atomicity (C) distrib"
+  },
+  {
+    "id": "q-pp-im-it-112-25",
+    "text": "Which of the following is wrong about spanning trees? (A) it leaves appear on the same level (B) all leaves appear on the same level (C) a node has at least f(n/2) children (D) it leaves appear on the same level (E) every internal node.",
+    "score": 0.534,
+    "ocr_window": "has at most m children (D) every internal node has at least [m/2] children (E) alf leaves appear on the same level. 26. C7 Which of the following is wrong about spanning trees? (A) if all of ‘the edges of a graph G are a"
+  },
+  {
+    "id": "q-pp-im-it-112-26",
+    "text": "Which of the following is wrong about spanning trees? (A) If all the edges of a graph are edges of a spanning tree T of G (B) if it is not T (C) a spanning tree T of G is devoted to T (D) if it is and all the edges of a graph are edges of a spanning tree (E) none of the above are correct (choose this one only if none of the above can be chosen).",
+    "score": 0.384,
+    "ocr_window": "are also edges of a spanning tree T of G, then G is a tree (B) if all of the edges of a graph G are also edges of | a spanning tree T of G, then G is identical to T (C) if T is a spanning tree of G, and eis an edge of G "
+  },
+  {
+    "id": "q-pp-im-it-112-27",
+    "text": "Heapification of a given array is complete when there is a min heap of n nodes. (A) O(1) (B) O(log n) (C) O(n log n) (D) O(n) (E) O(n^2).",
+    "score": 0.248,
+    "ocr_window": "nodes can be done in (A) O(1) (B) O(log n) (C) O(n) (D) O(n log n) (E) none of the above. 28. | The time complexity for finding an arbitrary element in a min heap of n nodes can be done in (A) O(4) (B) O(log n) (C) O(n) "
+  },
+  {
+    "id": "q-pp-im-it-112-28",
+    "text": "The time complexity for finding an arbitrary element in a min heap of n nodes can be done in greater than or equal to the keys of the keys in the nodes children. Then a min heap of n nodes can be done in (A) O(1) (B) O(log n) (C) O(n log n) (D) O(n) (E) O(n^2) (F) none of the above.",
+    "score": 0.75,
+    "ocr_window": "than or equal to the keys in the node's children. Then, the time complexity for inserting a key into a min heap of n nodes can be done in (A) O(1) (B) O(log n) (C) O(n) (D) O(n log n) (E) none of the above. 28. | The tim"
+  },
+  {
+    "id": "q-pp-im-it-112-29",
+    "text": "二、問答題，共30分。Consider the following C++ code.\n\n#include <bits/stdc++.h>\nusing namespace std;\n# define NO_OF_CHARS 256\n\nvoid PREPROCESS(string str, int size, int badchar[NO_OF_CHARS])\n{\n    int i;\n    for (i = 0; i < NO_OF_CHARS; i++)\n        badchar[i] = -1;\n    for (i = 0; i < size; i++)\n        badchar[(int) str[i]] = i;\n}\n\nvoid search(string txt, string pat, string badchar)\n{\n    int m = pat.size();\n    int n = txt.size();\n    int badchar[NO_OF_CHARS];\n    PREPROCESS(pat, m, badchar);\n    int s = 0;\n    while (s <= (n - m))\n    {\n        int j = m - 1;\n        while (j >= 0 && pat[j] == txt[s + j])\n            j--;\n        if (j < 0)\n        {\n            cout << \"pattern occurs at \" << s << endl;\n            s += (s + m < n) ? m-badchar[txt[s + m]] : 1;\n        }\n        else\n            s += max(1, j - badchar[txt[s + j]]);\n    }\n}",
+    "score": 0.871,
+    "ocr_window": "作答 區 | 樑 明 題 號 依 序 作答 。 Consider the following C++ code. #include <bits/stdctt+.h> using namespace std; # define NO_OF_CHARS 256 void PREPROCESS (string str, int size, int badchar[NO_OF_CHARS]) { int i; for (i = 0; i < N"
+  }
+]

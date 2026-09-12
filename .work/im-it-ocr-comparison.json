@@ -1,0 +1,2979 @@
+{
+  "summary": {
+    "total": 260,
+    "below50": 0,
+    "below70": 1,
+    "lowest": [
+      {
+        "id": "q-pp-im-it-108-3",
+        "year": 108,
+        "number": 3,
+        "tokenCount": 14,
+        "matched": 9,
+        "recall": 0.643,
+        "missingTokens": [
+          "32",
+          "64",
+          "96",
+          "128",
+          "256"
+        ]
+      },
+      {
+        "id": "q-pp-im-it-109-7",
+        "year": 109,
+        "number": 7,
+        "tokenCount": 12,
+        "matched": 9,
+        "recall": 0.75,
+        "missingTokens": [
+          "街口",
+          "台灣",
+          "嘖嘖"
+        ]
+      },
+      {
+        "id": "q-pp-im-it-112-29",
+        "year": 112,
+        "number": 29,
+        "tokenCount": 39,
+        "matched": 32,
+        "recall": 0.821,
+        "missingTokens": [
+          "問答題",
+          "本大題",
+          "小題",
+          "請於試卷內之",
+          "非選擇題作答區",
+          "標明題號依序作答",
+          "stdc"
+        ]
+      },
+      {
+        "id": "q-pp-im-it-114-6",
+        "year": 114,
+        "number": 6,
+        "tokenCount": 10,
+        "matched": 9,
+        "recall": 0.9,
+        "missingTokens": [
+          "log2"
+        ]
+      },
+      {
+        "id": "q-pp-im-it-107-23",
+        "year": 107,
+        "number": 23,
+        "tokenCount": 18,
+        "matched": 17,
+        "recall": 0.944,
+        "missingTokens": [
+          "iec"
+        ]
+      },
+      {
+        "id": "q-pp-im-it-111-1",
+        "year": 111,
+        "number": 1,
+        "tokenCount": 19,
+        "matched": 18,
+        "recall": 0.947,
+        "missingTokens": [
+          "osi"
+        ]
+      },
+      {
+        "id": "q-pp-im-it-113-14",
+        "year": 113,
+        "number": 14,
+        "tokenCount": 38,
+        "matched": 36,
+        "recall": 0.947,
+        "missingTokens": [
+          "iso",
+          "iec"
+        ]
+      },
+      {
+        "id": "q-pp-im-it-112-25",
+        "year": 112,
+        "number": 25,
+        "tokenCount": 22,
+        "matched": 21,
+        "recall": 0.955,
+        "missingTokens": [
+          "ceil"
+        ]
+      },
+      {
+        "id": "q-pp-im-it-113-25",
+        "year": 113,
+        "number": 25,
+        "tokenCount": 89,
+        "matched": 85,
+        "recall": 0.955,
+        "missingTokens": [
+          "問答題",
+          "40",
+          "employeename",
+          "leftchildptr"
+        ]
+      },
+      {
+        "id": "q-pp-im-it-107-22",
+        "year": 107,
+        "number": 22,
+        "tokenCount": 25,
+        "matched": 24,
+        "recall": 0.96,
+        "missingTokens": [
+          "iot"
+        ]
+      },
+      {
+        "id": "q-pp-im-it-111-7",
+        "year": 111,
+        "number": 7,
+        "tokenCount": 26,
+        "matched": 25,
+        "recall": 0.962,
+        "missingTokens": [
+          "ethernet"
+        ]
+      },
+      {
+        "id": "q-pp-im-it-109-16",
+        "year": 109,
+        "number": 16,
+        "tokenCount": 28,
+        "matched": 27,
+        "recall": 0.964,
+        "missingTokens": [
+          "risk"
+        ]
+      },
+      {
+        "id": "q-pp-im-it-109-19",
+        "year": 109,
+        "number": 19,
+        "tokenCount": 28,
+        "matched": 27,
+        "recall": 0.964,
+        "missingTokens": [
+          "2009"
+        ]
+      },
+      {
+        "id": "q-pp-im-it-112-1",
+        "year": 112,
+        "number": 1,
+        "tokenCount": 32,
+        "matched": 31,
+        "recall": 0.969,
+        "missingTokens": [
+          "logic"
+        ]
+      },
+      {
+        "id": "q-pp-im-it-106-12",
+        "year": 106,
+        "number": 12,
+        "tokenCount": 35,
+        "matched": 34,
+        "recall": 0.971,
+        "missingTokens": [
+          "strategies"
+        ]
+      },
+      {
+        "id": "q-pp-im-it-106-24",
+        "year": 106,
+        "number": 24,
+        "tokenCount": 34,
+        "matched": 33,
+        "recall": 0.971,
+        "missingTokens": [
+          "悠遊卡"
+        ]
+      },
+      {
+        "id": "q-pp-im-it-114-5",
+        "year": 114,
+        "number": 5,
+        "tokenCount": 36,
+        "matched": 35,
+        "recall": 0.972,
+        "missingTokens": [
+          "log2"
+        ]
+      },
+      {
+        "id": "q-pp-im-it-106-1",
+        "year": 106,
+        "number": 1,
+        "tokenCount": 73,
+        "matched": 71,
+        "recall": 0.973,
+        "missingTokens": [
+          "context",
+          "include"
+        ]
+      },
+      {
+        "id": "q-pp-im-it-108-17",
+        "year": 108,
+        "number": 17,
+        "tokenCount": 47,
+        "matched": 46,
+        "recall": 0.979,
+        "missingTokens": [
+          "its"
+        ]
+      },
+      {
+        "id": "q-pp-im-it-115-30",
+        "year": 115,
+        "number": 30,
+        "tokenCount": 53,
+        "matched": 52,
+        "recall": 0.981,
+        "missingTokens": [
+          "learns"
+        ]
+      },
+      {
+        "id": "q-pp-im-it-114-25",
+        "year": 114,
+        "number": 25,
+        "tokenCount": 57,
+        "matched": 56,
+        "recall": 0.982,
+        "missingTokens": [
+          "問答題"
+        ]
+      },
+      {
+        "id": "q-pp-im-it-115-31",
+        "year": 115,
+        "number": 31,
+        "tokenCount": 68,
+        "matched": 67,
+        "recall": 0.985,
+        "missingTokens": [
+          "yourself"
+        ]
+      },
+      {
+        "id": "q-pp-im-it-111-25",
+        "year": 111,
+        "number": 25,
+        "tokenCount": 75,
+        "matched": 74,
+        "recall": 0.987,
+        "missingTokens": [
+          "hash_table_size"
+        ]
+      },
+      {
+        "id": "q-pp-im-it-106-2",
+        "year": 106,
+        "number": 2,
+        "tokenCount": 22,
+        "matched": 22,
+        "recall": 1,
+        "missingTokens": []
+      },
+      {
+        "id": "q-pp-im-it-106-3",
+        "year": 106,
+        "number": 3,
+        "tokenCount": 16,
+        "matched": 16,
+        "recall": 1,
+        "missingTokens": []
+      },
+      {
+        "id": "q-pp-im-it-106-4",
+        "year": 106,
+        "number": 4,
+        "tokenCount": 26,
+        "matched": 26,
+        "recall": 1,
+        "missingTokens": []
+      },
+      {
+        "id": "q-pp-im-it-106-5",
+        "year": 106,
+        "number": 5,
+        "tokenCount": 35,
+        "matched": 35,
+        "recall": 1,
+        "missingTokens": []
+      },
+      {
+        "id": "q-pp-im-it-106-6",
+        "year": 106,
+        "number": 6,
+        "tokenCount": 22,
+        "matched": 22,
+        "recall": 1,
+        "missingTokens": []
+      },
+      {
+        "id": "q-pp-im-it-106-7",
+        "year": 106,
+        "number": 7,
+        "tokenCount": 21,
+        "matched": 21,
+        "recall": 1,
+        "missingTokens": []
+      },
+      {
+        "id": "q-pp-im-it-106-8",
+        "year": 106,
+        "number": 8,
+        "tokenCount": 14,
+        "matched": 14,
+        "recall": 1,
+        "missingTokens": []
+      },
+      {
+        "id": "q-pp-im-it-106-9",
+        "year": 106,
+        "number": 9,
+        "tokenCount": 23,
+        "matched": 23,
+        "recall": 1,
+        "missingTokens": []
+      },
+      {
+        "id": "q-pp-im-it-106-10",
+        "year": 106,
+        "number": 10,
+        "tokenCount": 19,
+        "matched": 19,
+        "recall": 1,
+        "missingTokens": []
+      },
+      {
+        "id": "q-pp-im-it-106-11",
+        "year": 106,
+        "number": 11,
+        "tokenCount": 30,
+        "matched": 30,
+        "recall": 1,
+        "missingTokens": []
+      },
+      {
+        "id": "q-pp-im-it-106-13",
+        "year": 106,
+        "number": 13,
+        "tokenCount": 15,
+        "matched": 15,
+        "recall": 1,
+        "missingTokens": []
+      },
+      {
+        "id": "q-pp-im-it-106-14",
+        "year": 106,
+        "number": 14,
+        "tokenCount": 22,
+        "matched": 22,
+        "recall": 1,
+        "missingTokens": []
+      },
+      {
+        "id": "q-pp-im-it-106-15",
+        "year": 106,
+        "number": 15,
+        "tokenCount": 25,
+        "matched": 25,
+        "recall": 1,
+        "missingTokens": []
+      },
+      {
+        "id": "q-pp-im-it-106-16",
+        "year": 106,
+        "number": 16,
+        "tokenCount": 12,
+        "matched": 12,
+        "recall": 1,
+        "missingTokens": []
+      },
+      {
+        "id": "q-pp-im-it-106-17",
+        "year": 106,
+        "number": 17,
+        "tokenCount": 18,
+        "matched": 18,
+        "recall": 1,
+        "missingTokens": []
+      },
+      {
+        "id": "q-pp-im-it-106-18",
+        "year": 106,
+        "number": 18,
+        "tokenCount": 28,
+        "matched": 28,
+        "recall": 1,
+        "missingTokens": []
+      },
+      {
+        "id": "q-pp-im-it-106-19",
+        "year": 106,
+        "number": 19,
+        "tokenCount": 32,
+        "matched": 32,
+        "recall": 1,
+        "missingTokens": []
+      },
+      {
+        "id": "q-pp-im-it-106-20",
+        "year": 106,
+        "number": 20,
+        "tokenCount": 22,
+        "matched": 22,
+        "recall": 1,
+        "missingTokens": []
+      },
+      {
+        "id": "q-pp-im-it-106-21",
+        "year": 106,
+        "number": 21,
+        "tokenCount": 23,
+        "matched": 23,
+        "recall": 1,
+        "missingTokens": []
+      },
+      {
+        "id": "q-pp-im-it-106-22",
+        "year": 106,
+        "number": 22,
+        "tokenCount": 27,
+        "matched": 27,
+        "recall": 1,
+        "missingTokens": []
+      },
+      {
+        "id": "q-pp-im-it-106-23",
+        "year": 106,
+        "number": 23,
+        "tokenCount": 62,
+        "matched": 62,
+        "recall": 1,
+        "missingTokens": []
+      },
+      {
+        "id": "q-pp-im-it-106-25",
+        "year": 106,
+        "number": 25,
+        "tokenCount": 36,
+        "matched": 36,
+        "recall": 1,
+        "missingTokens": []
+      },
+      {
+        "id": "q-pp-im-it-106-26",
+        "year": 106,
+        "number": 26,
+        "tokenCount": 45,
+        "matched": 45,
+        "recall": 1,
+        "missingTokens": []
+      },
+      {
+        "id": "q-pp-im-it-107-1",
+        "year": 107,
+        "number": 1,
+        "tokenCount": 17,
+        "matched": 17,
+        "recall": 1,
+        "missingTokens": []
+      },
+      {
+        "id": "q-pp-im-it-107-2",
+        "year": 107,
+        "number": 2,
+        "tokenCount": 33,
+        "matched": 33,
+        "recall": 1,
+        "missingTokens": []
+      },
+      {
+        "id": "q-pp-im-it-107-3",
+        "year": 107,
+        "number": 3,
+        "tokenCount": 22,
+        "matched": 22,
+        "recall": 1,
+        "missingTokens": []
+      },
+      {
+        "id": "q-pp-im-it-107-4",
+        "year": 107,
+        "number": 4,
+        "tokenCount": 15,
+        "matched": 15,
+        "recall": 1,
+        "missingTokens": []
+      }
+    ],
+    "byYear": {
+      "106": {
+        "questions": 26,
+        "averageRecall": 0.997,
+        "below50": []
+      },
+      "107": {
+        "questions": 26,
+        "averageRecall": 0.996,
+        "below50": []
+      },
+      "108": {
+        "questions": 22,
+        "averageRecall": 0.983,
+        "below50": []
+      },
+      "109": {
+        "questions": 22,
+        "averageRecall": 0.985,
+        "below50": []
+      },
+      "110": {
+        "questions": 29,
+        "averageRecall": 1,
+        "below50": []
+      },
+      "111": {
+        "questions": 25,
+        "averageRecall": 0.996,
+        "below50": []
+      },
+      "112": {
+        "questions": 29,
+        "averageRecall": 0.991,
+        "below50": []
+      },
+      "113": {
+        "questions": 25,
+        "averageRecall": 0.996,
+        "below50": []
+      },
+      "114": {
+        "questions": 25,
+        "averageRecall": 0.994,
+        "below50": []
+      },
+      "115": {
+        "questions": 31,
+        "averageRecall": 0.999,
+        "below50": []
+      }
+    }
+  },
+  "rows": [
+    {
+      "id": "q-pp-im-it-106-1",
+      "year": 106,
+      "number": 1,
+      "tokenCount": 73,
+      "matched": 71,
+      "recall": 0.973,
+      "missingTokens": [
+        "context",
+        "include"
+      ]
+    },
+    {
+      "id": "q-pp-im-it-106-2",
+      "year": 106,
+      "number": 2,
+      "tokenCount": 22,
+      "matched": 22,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-106-3",
+      "year": 106,
+      "number": 3,
+      "tokenCount": 16,
+      "matched": 16,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-106-4",
+      "year": 106,
+      "number": 4,
+      "tokenCount": 26,
+      "matched": 26,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-106-5",
+      "year": 106,
+      "number": 5,
+      "tokenCount": 35,
+      "matched": 35,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-106-6",
+      "year": 106,
+      "number": 6,
+      "tokenCount": 22,
+      "matched": 22,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-106-7",
+      "year": 106,
+      "number": 7,
+      "tokenCount": 21,
+      "matched": 21,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-106-8",
+      "year": 106,
+      "number": 8,
+      "tokenCount": 14,
+      "matched": 14,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-106-9",
+      "year": 106,
+      "number": 9,
+      "tokenCount": 23,
+      "matched": 23,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-106-10",
+      "year": 106,
+      "number": 10,
+      "tokenCount": 19,
+      "matched": 19,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-106-11",
+      "year": 106,
+      "number": 11,
+      "tokenCount": 30,
+      "matched": 30,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-106-12",
+      "year": 106,
+      "number": 12,
+      "tokenCount": 35,
+      "matched": 34,
+      "recall": 0.971,
+      "missingTokens": [
+        "strategies"
+      ]
+    },
+    {
+      "id": "q-pp-im-it-106-13",
+      "year": 106,
+      "number": 13,
+      "tokenCount": 15,
+      "matched": 15,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-106-14",
+      "year": 106,
+      "number": 14,
+      "tokenCount": 22,
+      "matched": 22,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-106-15",
+      "year": 106,
+      "number": 15,
+      "tokenCount": 25,
+      "matched": 25,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-106-16",
+      "year": 106,
+      "number": 16,
+      "tokenCount": 12,
+      "matched": 12,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-106-17",
+      "year": 106,
+      "number": 17,
+      "tokenCount": 18,
+      "matched": 18,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-106-18",
+      "year": 106,
+      "number": 18,
+      "tokenCount": 28,
+      "matched": 28,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-106-19",
+      "year": 106,
+      "number": 19,
+      "tokenCount": 32,
+      "matched": 32,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-106-20",
+      "year": 106,
+      "number": 20,
+      "tokenCount": 22,
+      "matched": 22,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-106-21",
+      "year": 106,
+      "number": 21,
+      "tokenCount": 23,
+      "matched": 23,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-106-22",
+      "year": 106,
+      "number": 22,
+      "tokenCount": 27,
+      "matched": 27,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-106-23",
+      "year": 106,
+      "number": 23,
+      "tokenCount": 62,
+      "matched": 62,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-106-24",
+      "year": 106,
+      "number": 24,
+      "tokenCount": 34,
+      "matched": 33,
+      "recall": 0.971,
+      "missingTokens": [
+        "悠遊卡"
+      ]
+    },
+    {
+      "id": "q-pp-im-it-106-25",
+      "year": 106,
+      "number": 25,
+      "tokenCount": 36,
+      "matched": 36,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-106-26",
+      "year": 106,
+      "number": 26,
+      "tokenCount": 45,
+      "matched": 45,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-107-1",
+      "year": 107,
+      "number": 1,
+      "tokenCount": 17,
+      "matched": 17,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-107-2",
+      "year": 107,
+      "number": 2,
+      "tokenCount": 33,
+      "matched": 33,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-107-3",
+      "year": 107,
+      "number": 3,
+      "tokenCount": 22,
+      "matched": 22,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-107-4",
+      "year": 107,
+      "number": 4,
+      "tokenCount": 15,
+      "matched": 15,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-107-5",
+      "year": 107,
+      "number": 5,
+      "tokenCount": 14,
+      "matched": 14,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-107-6",
+      "year": 107,
+      "number": 6,
+      "tokenCount": 23,
+      "matched": 23,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-107-7",
+      "year": 107,
+      "number": 7,
+      "tokenCount": 12,
+      "matched": 12,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-107-8",
+      "year": 107,
+      "number": 8,
+      "tokenCount": 20,
+      "matched": 20,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-107-9",
+      "year": 107,
+      "number": 9,
+      "tokenCount": 29,
+      "matched": 29,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-107-10",
+      "year": 107,
+      "number": 10,
+      "tokenCount": 18,
+      "matched": 18,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-107-11",
+      "year": 107,
+      "number": 11,
+      "tokenCount": 30,
+      "matched": 30,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-107-12",
+      "year": 107,
+      "number": 12,
+      "tokenCount": 28,
+      "matched": 28,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-107-13",
+      "year": 107,
+      "number": 13,
+      "tokenCount": 25,
+      "matched": 25,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-107-14",
+      "year": 107,
+      "number": 14,
+      "tokenCount": 19,
+      "matched": 19,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-107-15",
+      "year": 107,
+      "number": 15,
+      "tokenCount": 24,
+      "matched": 24,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-107-16",
+      "year": 107,
+      "number": 16,
+      "tokenCount": 38,
+      "matched": 38,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-107-17",
+      "year": 107,
+      "number": 17,
+      "tokenCount": 18,
+      "matched": 18,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-107-18",
+      "year": 107,
+      "number": 18,
+      "tokenCount": 38,
+      "matched": 38,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-107-19",
+      "year": 107,
+      "number": 19,
+      "tokenCount": 36,
+      "matched": 36,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-107-20",
+      "year": 107,
+      "number": 20,
+      "tokenCount": 12,
+      "matched": 12,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-107-21",
+      "year": 107,
+      "number": 21,
+      "tokenCount": 12,
+      "matched": 12,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-107-22",
+      "year": 107,
+      "number": 22,
+      "tokenCount": 25,
+      "matched": 24,
+      "recall": 0.96,
+      "missingTokens": [
+        "iot"
+      ]
+    },
+    {
+      "id": "q-pp-im-it-107-23",
+      "year": 107,
+      "number": 23,
+      "tokenCount": 18,
+      "matched": 17,
+      "recall": 0.944,
+      "missingTokens": [
+        "iec"
+      ]
+    },
+    {
+      "id": "q-pp-im-it-107-24",
+      "year": 107,
+      "number": 24,
+      "tokenCount": 9,
+      "matched": 9,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-107-25",
+      "year": 107,
+      "number": 25,
+      "tokenCount": 46,
+      "matched": 46,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-107-26",
+      "year": 107,
+      "number": 26,
+      "tokenCount": 29,
+      "matched": 29,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-108-1",
+      "year": 108,
+      "number": 1,
+      "tokenCount": 10,
+      "matched": 10,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-108-2",
+      "year": 108,
+      "number": 2,
+      "tokenCount": 22,
+      "matched": 22,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-108-3",
+      "year": 108,
+      "number": 3,
+      "tokenCount": 14,
+      "matched": 9,
+      "recall": 0.643,
+      "missingTokens": [
+        "32",
+        "64",
+        "96",
+        "128",
+        "256"
+      ]
+    },
+    {
+      "id": "q-pp-im-it-108-4",
+      "year": 108,
+      "number": 4,
+      "tokenCount": 14,
+      "matched": 14,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-108-5",
+      "year": 108,
+      "number": 5,
+      "tokenCount": 14,
+      "matched": 14,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-108-6",
+      "year": 108,
+      "number": 6,
+      "tokenCount": 14,
+      "matched": 14,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-108-7",
+      "year": 108,
+      "number": 7,
+      "tokenCount": 12,
+      "matched": 12,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-108-8",
+      "year": 108,
+      "number": 8,
+      "tokenCount": 15,
+      "matched": 15,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-108-9",
+      "year": 108,
+      "number": 9,
+      "tokenCount": 28,
+      "matched": 28,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-108-10",
+      "year": 108,
+      "number": 10,
+      "tokenCount": 14,
+      "matched": 14,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-108-11",
+      "year": 108,
+      "number": 11,
+      "tokenCount": 15,
+      "matched": 15,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-108-12",
+      "year": 108,
+      "number": 12,
+      "tokenCount": 26,
+      "matched": 26,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-108-13",
+      "year": 108,
+      "number": 13,
+      "tokenCount": 31,
+      "matched": 31,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-108-14",
+      "year": 108,
+      "number": 14,
+      "tokenCount": 32,
+      "matched": 32,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-108-15",
+      "year": 108,
+      "number": 15,
+      "tokenCount": 17,
+      "matched": 17,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-108-16",
+      "year": 108,
+      "number": 16,
+      "tokenCount": 33,
+      "matched": 33,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-108-17",
+      "year": 108,
+      "number": 17,
+      "tokenCount": 47,
+      "matched": 46,
+      "recall": 0.979,
+      "missingTokens": [
+        "its"
+      ]
+    },
+    {
+      "id": "q-pp-im-it-108-18",
+      "year": 108,
+      "number": 18,
+      "tokenCount": 19,
+      "matched": 19,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-108-19",
+      "year": 108,
+      "number": 19,
+      "tokenCount": 21,
+      "matched": 21,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-108-20",
+      "year": 108,
+      "number": 20,
+      "tokenCount": 16,
+      "matched": 16,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-108-21",
+      "year": 108,
+      "number": 21,
+      "tokenCount": 54,
+      "matched": 54,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-108-22",
+      "year": 108,
+      "number": 22,
+      "tokenCount": 36,
+      "matched": 36,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-109-1",
+      "year": 109,
+      "number": 1,
+      "tokenCount": 19,
+      "matched": 19,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-109-2",
+      "year": 109,
+      "number": 2,
+      "tokenCount": 22,
+      "matched": 22,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-109-3",
+      "year": 109,
+      "number": 3,
+      "tokenCount": 18,
+      "matched": 18,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-109-4",
+      "year": 109,
+      "number": 4,
+      "tokenCount": 22,
+      "matched": 22,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-109-5",
+      "year": 109,
+      "number": 5,
+      "tokenCount": 23,
+      "matched": 23,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-109-6",
+      "year": 109,
+      "number": 6,
+      "tokenCount": 11,
+      "matched": 11,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-109-7",
+      "year": 109,
+      "number": 7,
+      "tokenCount": 12,
+      "matched": 9,
+      "recall": 0.75,
+      "missingTokens": [
+        "街口",
+        "台灣",
+        "嘖嘖"
+      ]
+    },
+    {
+      "id": "q-pp-im-it-109-8",
+      "year": 109,
+      "number": 8,
+      "tokenCount": 11,
+      "matched": 11,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-109-9",
+      "year": 109,
+      "number": 9,
+      "tokenCount": 23,
+      "matched": 23,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-109-10",
+      "year": 109,
+      "number": 10,
+      "tokenCount": 18,
+      "matched": 18,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-109-11",
+      "year": 109,
+      "number": 11,
+      "tokenCount": 22,
+      "matched": 22,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-109-12",
+      "year": 109,
+      "number": 12,
+      "tokenCount": 13,
+      "matched": 13,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-109-13",
+      "year": 109,
+      "number": 13,
+      "tokenCount": 18,
+      "matched": 18,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-109-14",
+      "year": 109,
+      "number": 14,
+      "tokenCount": 21,
+      "matched": 21,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-109-15",
+      "year": 109,
+      "number": 15,
+      "tokenCount": 14,
+      "matched": 14,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-109-16",
+      "year": 109,
+      "number": 16,
+      "tokenCount": 28,
+      "matched": 27,
+      "recall": 0.964,
+      "missingTokens": [
+        "risk"
+      ]
+    },
+    {
+      "id": "q-pp-im-it-109-17",
+      "year": 109,
+      "number": 17,
+      "tokenCount": 24,
+      "matched": 24,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-109-18",
+      "year": 109,
+      "number": 18,
+      "tokenCount": 15,
+      "matched": 15,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-109-19",
+      "year": 109,
+      "number": 19,
+      "tokenCount": 28,
+      "matched": 27,
+      "recall": 0.964,
+      "missingTokens": [
+        "2009"
+      ]
+    },
+    {
+      "id": "q-pp-im-it-109-20",
+      "year": 109,
+      "number": 20,
+      "tokenCount": 24,
+      "matched": 24,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-109-21",
+      "year": 109,
+      "number": 21,
+      "tokenCount": 44,
+      "matched": 44,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-109-22",
+      "year": 109,
+      "number": 22,
+      "tokenCount": 36,
+      "matched": 36,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-110-1",
+      "year": 110,
+      "number": 1,
+      "tokenCount": 28,
+      "matched": 28,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-110-2",
+      "year": 110,
+      "number": 2,
+      "tokenCount": 19,
+      "matched": 19,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-110-3",
+      "year": 110,
+      "number": 3,
+      "tokenCount": 16,
+      "matched": 16,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-110-4",
+      "year": 110,
+      "number": 4,
+      "tokenCount": 12,
+      "matched": 12,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-110-5",
+      "year": 110,
+      "number": 5,
+      "tokenCount": 34,
+      "matched": 34,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-110-6",
+      "year": 110,
+      "number": 6,
+      "tokenCount": 20,
+      "matched": 20,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-110-7",
+      "year": 110,
+      "number": 7,
+      "tokenCount": 11,
+      "matched": 11,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-110-8",
+      "year": 110,
+      "number": 8,
+      "tokenCount": 25,
+      "matched": 25,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-110-9",
+      "year": 110,
+      "number": 9,
+      "tokenCount": 24,
+      "matched": 24,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-110-10",
+      "year": 110,
+      "number": 10,
+      "tokenCount": 22,
+      "matched": 22,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-110-11",
+      "year": 110,
+      "number": 11,
+      "tokenCount": 32,
+      "matched": 32,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-110-12",
+      "year": 110,
+      "number": 12,
+      "tokenCount": 23,
+      "matched": 23,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-110-13",
+      "year": 110,
+      "number": 13,
+      "tokenCount": 33,
+      "matched": 33,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-110-14",
+      "year": 110,
+      "number": 14,
+      "tokenCount": 30,
+      "matched": 30,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-110-15",
+      "year": 110,
+      "number": 15,
+      "tokenCount": 12,
+      "matched": 12,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-110-16",
+      "year": 110,
+      "number": 16,
+      "tokenCount": 4,
+      "matched": 4,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-110-17",
+      "year": 110,
+      "number": 17,
+      "tokenCount": 13,
+      "matched": 13,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-110-18",
+      "year": 110,
+      "number": 18,
+      "tokenCount": 26,
+      "matched": 26,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-110-19",
+      "year": 110,
+      "number": 19,
+      "tokenCount": 19,
+      "matched": 19,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-110-20",
+      "year": 110,
+      "number": 20,
+      "tokenCount": 18,
+      "matched": 18,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-110-21",
+      "year": 110,
+      "number": 21,
+      "tokenCount": 10,
+      "matched": 10,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-110-22",
+      "year": 110,
+      "number": 22,
+      "tokenCount": 17,
+      "matched": 17,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-110-23",
+      "year": 110,
+      "number": 23,
+      "tokenCount": 16,
+      "matched": 16,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-110-24",
+      "year": 110,
+      "number": 24,
+      "tokenCount": 10,
+      "matched": 10,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-110-25",
+      "year": 110,
+      "number": 25,
+      "tokenCount": 22,
+      "matched": 22,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-110-26",
+      "year": 110,
+      "number": 26,
+      "tokenCount": 13,
+      "matched": 13,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-110-27",
+      "year": 110,
+      "number": 27,
+      "tokenCount": 16,
+      "matched": 16,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-110-28",
+      "year": 110,
+      "number": 28,
+      "tokenCount": 21,
+      "matched": 21,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-110-29",
+      "year": 110,
+      "number": 29,
+      "tokenCount": 68,
+      "matched": 68,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-111-1",
+      "year": 111,
+      "number": 1,
+      "tokenCount": 19,
+      "matched": 18,
+      "recall": 0.947,
+      "missingTokens": [
+        "osi"
+      ]
+    },
+    {
+      "id": "q-pp-im-it-111-2",
+      "year": 111,
+      "number": 2,
+      "tokenCount": 18,
+      "matched": 18,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-111-3",
+      "year": 111,
+      "number": 3,
+      "tokenCount": 25,
+      "matched": 25,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-111-4",
+      "year": 111,
+      "number": 4,
+      "tokenCount": 34,
+      "matched": 34,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-111-5",
+      "year": 111,
+      "number": 5,
+      "tokenCount": 33,
+      "matched": 33,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-111-6",
+      "year": 111,
+      "number": 6,
+      "tokenCount": 49,
+      "matched": 49,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-111-7",
+      "year": 111,
+      "number": 7,
+      "tokenCount": 26,
+      "matched": 25,
+      "recall": 0.962,
+      "missingTokens": [
+        "ethernet"
+      ]
+    },
+    {
+      "id": "q-pp-im-it-111-8",
+      "year": 111,
+      "number": 8,
+      "tokenCount": 37,
+      "matched": 37,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-111-9",
+      "year": 111,
+      "number": 9,
+      "tokenCount": 25,
+      "matched": 25,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-111-10",
+      "year": 111,
+      "number": 10,
+      "tokenCount": 23,
+      "matched": 23,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-111-11",
+      "year": 111,
+      "number": 11,
+      "tokenCount": 31,
+      "matched": 31,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-111-12",
+      "year": 111,
+      "number": 12,
+      "tokenCount": 29,
+      "matched": 29,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-111-13",
+      "year": 111,
+      "number": 13,
+      "tokenCount": 17,
+      "matched": 17,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-111-14",
+      "year": 111,
+      "number": 14,
+      "tokenCount": 38,
+      "matched": 38,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-111-15",
+      "year": 111,
+      "number": 15,
+      "tokenCount": 22,
+      "matched": 22,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-111-16",
+      "year": 111,
+      "number": 16,
+      "tokenCount": 21,
+      "matched": 21,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-111-17",
+      "year": 111,
+      "number": 17,
+      "tokenCount": 24,
+      "matched": 24,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-111-18",
+      "year": 111,
+      "number": 18,
+      "tokenCount": 17,
+      "matched": 17,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-111-19",
+      "year": 111,
+      "number": 19,
+      "tokenCount": 12,
+      "matched": 12,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-111-20",
+      "year": 111,
+      "number": 20,
+      "tokenCount": 29,
+      "matched": 29,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-111-21",
+      "year": 111,
+      "number": 21,
+      "tokenCount": 25,
+      "matched": 25,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-111-22",
+      "year": 111,
+      "number": 22,
+      "tokenCount": 29,
+      "matched": 29,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-111-23",
+      "year": 111,
+      "number": 23,
+      "tokenCount": 30,
+      "matched": 30,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-111-24",
+      "year": 111,
+      "number": 24,
+      "tokenCount": 34,
+      "matched": 34,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-111-25",
+      "year": 111,
+      "number": 25,
+      "tokenCount": 75,
+      "matched": 74,
+      "recall": 0.987,
+      "missingTokens": [
+        "hash_table_size"
+      ]
+    },
+    {
+      "id": "q-pp-im-it-112-1",
+      "year": 112,
+      "number": 1,
+      "tokenCount": 32,
+      "matched": 31,
+      "recall": 0.969,
+      "missingTokens": [
+        "logic"
+      ]
+    },
+    {
+      "id": "q-pp-im-it-112-2",
+      "year": 112,
+      "number": 2,
+      "tokenCount": 30,
+      "matched": 30,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-112-3",
+      "year": 112,
+      "number": 3,
+      "tokenCount": 32,
+      "matched": 32,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-112-4",
+      "year": 112,
+      "number": 4,
+      "tokenCount": 39,
+      "matched": 39,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-112-5",
+      "year": 112,
+      "number": 5,
+      "tokenCount": 28,
+      "matched": 28,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-112-6",
+      "year": 112,
+      "number": 6,
+      "tokenCount": 12,
+      "matched": 12,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-112-7",
+      "year": 112,
+      "number": 7,
+      "tokenCount": 22,
+      "matched": 22,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-112-8",
+      "year": 112,
+      "number": 8,
+      "tokenCount": 27,
+      "matched": 27,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-112-9",
+      "year": 112,
+      "number": 9,
+      "tokenCount": 28,
+      "matched": 28,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-112-10",
+      "year": 112,
+      "number": 10,
+      "tokenCount": 18,
+      "matched": 18,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-112-11",
+      "year": 112,
+      "number": 11,
+      "tokenCount": 26,
+      "matched": 26,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-112-12",
+      "year": 112,
+      "number": 12,
+      "tokenCount": 13,
+      "matched": 13,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-112-13",
+      "year": 112,
+      "number": 13,
+      "tokenCount": 29,
+      "matched": 29,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-112-14",
+      "year": 112,
+      "number": 14,
+      "tokenCount": 17,
+      "matched": 17,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-112-15",
+      "year": 112,
+      "number": 15,
+      "tokenCount": 29,
+      "matched": 29,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-112-16",
+      "year": 112,
+      "number": 16,
+      "tokenCount": 22,
+      "matched": 22,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-112-17",
+      "year": 112,
+      "number": 17,
+      "tokenCount": 26,
+      "matched": 26,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-112-18",
+      "year": 112,
+      "number": 18,
+      "tokenCount": 63,
+      "matched": 63,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-112-19",
+      "year": 112,
+      "number": 19,
+      "tokenCount": 37,
+      "matched": 37,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-112-20",
+      "year": 112,
+      "number": 20,
+      "tokenCount": 45,
+      "matched": 45,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-112-21",
+      "year": 112,
+      "number": 21,
+      "tokenCount": 24,
+      "matched": 24,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-112-22",
+      "year": 112,
+      "number": 22,
+      "tokenCount": 30,
+      "matched": 30,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-112-23",
+      "year": 112,
+      "number": 23,
+      "tokenCount": 22,
+      "matched": 22,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-112-24",
+      "year": 112,
+      "number": 24,
+      "tokenCount": 18,
+      "matched": 18,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-112-25",
+      "year": 112,
+      "number": 25,
+      "tokenCount": 22,
+      "matched": 21,
+      "recall": 0.955,
+      "missingTokens": [
+        "ceil"
+      ]
+    },
+    {
+      "id": "q-pp-im-it-112-26",
+      "year": 112,
+      "number": 26,
+      "tokenCount": 23,
+      "matched": 23,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-112-27",
+      "year": 112,
+      "number": 27,
+      "tokenCount": 25,
+      "matched": 25,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-112-28",
+      "year": 112,
+      "number": 28,
+      "tokenCount": 13,
+      "matched": 13,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-112-29",
+      "year": 112,
+      "number": 29,
+      "tokenCount": 39,
+      "matched": 32,
+      "recall": 0.821,
+      "missingTokens": [
+        "問答題",
+        "本大題",
+        "小題",
+        "請於試卷內之",
+        "非選擇題作答區",
+        "標明題號依序作答",
+        "stdc"
+      ]
+    },
+    {
+      "id": "q-pp-im-it-113-1",
+      "year": 113,
+      "number": 1,
+      "tokenCount": 16,
+      "matched": 16,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-113-2",
+      "year": 113,
+      "number": 2,
+      "tokenCount": 38,
+      "matched": 38,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-113-3",
+      "year": 113,
+      "number": 3,
+      "tokenCount": 31,
+      "matched": 31,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-113-4",
+      "year": 113,
+      "number": 4,
+      "tokenCount": 23,
+      "matched": 23,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-113-5",
+      "year": 113,
+      "number": 5,
+      "tokenCount": 38,
+      "matched": 38,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-113-6",
+      "year": 113,
+      "number": 6,
+      "tokenCount": 32,
+      "matched": 32,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-113-7",
+      "year": 113,
+      "number": 7,
+      "tokenCount": 43,
+      "matched": 43,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-113-8",
+      "year": 113,
+      "number": 8,
+      "tokenCount": 23,
+      "matched": 23,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-113-9",
+      "year": 113,
+      "number": 9,
+      "tokenCount": 27,
+      "matched": 27,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-113-10",
+      "year": 113,
+      "number": 10,
+      "tokenCount": 23,
+      "matched": 23,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-113-11",
+      "year": 113,
+      "number": 11,
+      "tokenCount": 27,
+      "matched": 27,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-113-12",
+      "year": 113,
+      "number": 12,
+      "tokenCount": 26,
+      "matched": 26,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-113-13",
+      "year": 113,
+      "number": 13,
+      "tokenCount": 35,
+      "matched": 35,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-113-14",
+      "year": 113,
+      "number": 14,
+      "tokenCount": 38,
+      "matched": 36,
+      "recall": 0.947,
+      "missingTokens": [
+        "iso",
+        "iec"
+      ]
+    },
+    {
+      "id": "q-pp-im-it-113-15",
+      "year": 113,
+      "number": 15,
+      "tokenCount": 39,
+      "matched": 39,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-113-16",
+      "year": 113,
+      "number": 16,
+      "tokenCount": 26,
+      "matched": 26,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-113-17",
+      "year": 113,
+      "number": 17,
+      "tokenCount": 43,
+      "matched": 43,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-113-18",
+      "year": 113,
+      "number": 18,
+      "tokenCount": 19,
+      "matched": 19,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-113-19",
+      "year": 113,
+      "number": 19,
+      "tokenCount": 18,
+      "matched": 18,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-113-20",
+      "year": 113,
+      "number": 20,
+      "tokenCount": 11,
+      "matched": 11,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-113-21",
+      "year": 113,
+      "number": 21,
+      "tokenCount": 37,
+      "matched": 37,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-113-22",
+      "year": 113,
+      "number": 22,
+      "tokenCount": 30,
+      "matched": 30,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-113-23",
+      "year": 113,
+      "number": 23,
+      "tokenCount": 17,
+      "matched": 17,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-113-24",
+      "year": 113,
+      "number": 24,
+      "tokenCount": 19,
+      "matched": 19,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-113-25",
+      "year": 113,
+      "number": 25,
+      "tokenCount": 89,
+      "matched": 85,
+      "recall": 0.955,
+      "missingTokens": [
+        "問答題",
+        "40",
+        "employeename",
+        "leftchildptr"
+      ]
+    },
+    {
+      "id": "q-pp-im-it-114-1",
+      "year": 114,
+      "number": 1,
+      "tokenCount": 34,
+      "matched": 34,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-114-2",
+      "year": 114,
+      "number": 2,
+      "tokenCount": 25,
+      "matched": 25,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-114-3",
+      "year": 114,
+      "number": 3,
+      "tokenCount": 15,
+      "matched": 15,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-114-4",
+      "year": 114,
+      "number": 4,
+      "tokenCount": 15,
+      "matched": 15,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-114-5",
+      "year": 114,
+      "number": 5,
+      "tokenCount": 36,
+      "matched": 35,
+      "recall": 0.972,
+      "missingTokens": [
+        "log2"
+      ]
+    },
+    {
+      "id": "q-pp-im-it-114-6",
+      "year": 114,
+      "number": 6,
+      "tokenCount": 10,
+      "matched": 9,
+      "recall": 0.9,
+      "missingTokens": [
+        "log2"
+      ]
+    },
+    {
+      "id": "q-pp-im-it-114-7",
+      "year": 114,
+      "number": 7,
+      "tokenCount": 19,
+      "matched": 19,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-114-8",
+      "year": 114,
+      "number": 8,
+      "tokenCount": 35,
+      "matched": 35,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-114-9",
+      "year": 114,
+      "number": 9,
+      "tokenCount": 33,
+      "matched": 33,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-114-10",
+      "year": 114,
+      "number": 10,
+      "tokenCount": 27,
+      "matched": 27,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-114-11",
+      "year": 114,
+      "number": 11,
+      "tokenCount": 26,
+      "matched": 26,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-114-12",
+      "year": 114,
+      "number": 12,
+      "tokenCount": 14,
+      "matched": 14,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-114-13",
+      "year": 114,
+      "number": 13,
+      "tokenCount": 25,
+      "matched": 25,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-114-14",
+      "year": 114,
+      "number": 14,
+      "tokenCount": 28,
+      "matched": 28,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-114-15",
+      "year": 114,
+      "number": 15,
+      "tokenCount": 23,
+      "matched": 23,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-114-16",
+      "year": 114,
+      "number": 16,
+      "tokenCount": 13,
+      "matched": 13,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-114-17",
+      "year": 114,
+      "number": 17,
+      "tokenCount": 29,
+      "matched": 29,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-114-18",
+      "year": 114,
+      "number": 18,
+      "tokenCount": 29,
+      "matched": 29,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-114-19",
+      "year": 114,
+      "number": 19,
+      "tokenCount": 19,
+      "matched": 19,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-114-20",
+      "year": 114,
+      "number": 20,
+      "tokenCount": 24,
+      "matched": 24,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-114-21",
+      "year": 114,
+      "number": 21,
+      "tokenCount": 13,
+      "matched": 13,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-114-22",
+      "year": 114,
+      "number": 22,
+      "tokenCount": 31,
+      "matched": 31,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-114-23",
+      "year": 114,
+      "number": 23,
+      "tokenCount": 21,
+      "matched": 21,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-114-24",
+      "year": 114,
+      "number": 24,
+      "tokenCount": 31,
+      "matched": 31,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-114-25",
+      "year": 114,
+      "number": 25,
+      "tokenCount": 57,
+      "matched": 56,
+      "recall": 0.982,
+      "missingTokens": [
+        "問答題"
+      ]
+    },
+    {
+      "id": "q-pp-im-it-115-1",
+      "year": 115,
+      "number": 1,
+      "tokenCount": 19,
+      "matched": 19,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-115-2",
+      "year": 115,
+      "number": 2,
+      "tokenCount": 10,
+      "matched": 10,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-115-3",
+      "year": 115,
+      "number": 3,
+      "tokenCount": 9,
+      "matched": 9,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-115-4",
+      "year": 115,
+      "number": 4,
+      "tokenCount": 17,
+      "matched": 17,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-115-5",
+      "year": 115,
+      "number": 5,
+      "tokenCount": 16,
+      "matched": 16,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-115-6",
+      "year": 115,
+      "number": 6,
+      "tokenCount": 18,
+      "matched": 18,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-115-7",
+      "year": 115,
+      "number": 7,
+      "tokenCount": 23,
+      "matched": 23,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-115-8",
+      "year": 115,
+      "number": 8,
+      "tokenCount": 20,
+      "matched": 20,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-115-9",
+      "year": 115,
+      "number": 9,
+      "tokenCount": 22,
+      "matched": 22,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-115-10",
+      "year": 115,
+      "number": 10,
+      "tokenCount": 21,
+      "matched": 21,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-115-11",
+      "year": 115,
+      "number": 11,
+      "tokenCount": 23,
+      "matched": 23,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-115-12",
+      "year": 115,
+      "number": 12,
+      "tokenCount": 39,
+      "matched": 39,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-115-13",
+      "year": 115,
+      "number": 13,
+      "tokenCount": 28,
+      "matched": 28,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-115-14",
+      "year": 115,
+      "number": 14,
+      "tokenCount": 31,
+      "matched": 31,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-115-15",
+      "year": 115,
+      "number": 15,
+      "tokenCount": 27,
+      "matched": 27,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-115-16",
+      "year": 115,
+      "number": 16,
+      "tokenCount": 16,
+      "matched": 16,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-115-17",
+      "year": 115,
+      "number": 17,
+      "tokenCount": 17,
+      "matched": 17,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-115-18",
+      "year": 115,
+      "number": 18,
+      "tokenCount": 29,
+      "matched": 29,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-115-19",
+      "year": 115,
+      "number": 19,
+      "tokenCount": 31,
+      "matched": 31,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-115-20",
+      "year": 115,
+      "number": 20,
+      "tokenCount": 32,
+      "matched": 32,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-115-21",
+      "year": 115,
+      "number": 21,
+      "tokenCount": 25,
+      "matched": 25,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-115-22",
+      "year": 115,
+      "number": 22,
+      "tokenCount": 21,
+      "matched": 21,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-115-23",
+      "year": 115,
+      "number": 23,
+      "tokenCount": 27,
+      "matched": 27,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-115-24",
+      "year": 115,
+      "number": 24,
+      "tokenCount": 25,
+      "matched": 25,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-115-25",
+      "year": 115,
+      "number": 25,
+      "tokenCount": 21,
+      "matched": 21,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-115-26",
+      "year": 115,
+      "number": 26,
+      "tokenCount": 30,
+      "matched": 30,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-115-27",
+      "year": 115,
+      "number": 27,
+      "tokenCount": 48,
+      "matched": 48,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-115-28",
+      "year": 115,
+      "number": 28,
+      "tokenCount": 36,
+      "matched": 36,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-115-29",
+      "year": 115,
+      "number": 29,
+      "tokenCount": 49,
+      "matched": 49,
+      "recall": 1,
+      "missingTokens": []
+    },
+    {
+      "id": "q-pp-im-it-115-30",
+      "year": 115,
+      "number": 30,
+      "tokenCount": 53,
+      "matched": 52,
+      "recall": 0.981,
+      "missingTokens": [
+        "learns"
+      ]
+    },
+    {
+      "id": "q-pp-im-it-115-31",
+      "year": 115,
+      "number": 31,
+      "tokenCount": 68,
+      "matched": 67,
+      "recall": 0.985,
+      "missingTokens": [
+        "yourself"
+      ]
+    }
+  ]
+}

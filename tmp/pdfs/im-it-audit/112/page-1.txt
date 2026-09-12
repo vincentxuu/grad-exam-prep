@@ -1,0 +1,38 @@
+題 號 : 324 國 立 臺 灣 大 學 112 學 年 度 碩士 班 招生 考試 試題
+科目 : 資訊 科技 概論 是 號 : 8324
+Bick: 6 共 5 頁 之 第 18
+一 、 選 擇 題 (BE) 28 題 , 每 題 2.5 分 , 共 70 分, 請 在 每 題 的 選項 內 選擇 最 適當 的 答案 。
+注意 : 答 錯 倒 扣 1 分 , 扣 至 零 分 為 止 。( 不 答 不 倒 扣 )
+請 用 8 鋁 筆 作答 於 答案 卡 。 並 先 詳 閱 答 貯 卡 上 之 「 畫 記 說 明 4°
+1. LC Which of the following is wrong about Von Neumann architecture? (A) it has four main units:
+CPU, memory, input, and output (B) memory is simply a linear array of storage locations (C) data and
+instructions are separated into different memory (D) a central processing unit has a control unit and an
+arithmetic/login unit (E) all the above are correct (choose this one only if none of the above can be
+chosen).
+2 中 Which of the following is wrong about process architecture? (A) in general, program
+compiled in CISC architecture has fewer instructions than that compiled in RISC architecture (B) the
+CISC approach tries to make each instruction more powerful (CO in general, instructions in a CISC
+approach will need more clock cycles to execute than in a RISC approach (D) in general, the instruction
+set in a CISC approach is typically smaller than the instruction set in a RISC approach (E) all the above
+are correct (choose this one only if none of the above can be chosen).
+3. [ Which of the following is wrong about computer architecture? (A) A processor with 32-bit
+address buses can access at most 222 bytes of memory (B) in memory-mapped 1/0, I/O devices use the
+same address space as memory devices (C) in memory-mapped I/O, the same instructions are used to
+access I/O devices and memory devices (Dj the internal data storage of a processor is known as its
+registers (E) all the above are correct (choose this one only if none of the above can be chosen).
+. 4, L Which of the following is wrong about Input/Output in a computer system? (A) in interrupt-
+driven 1/0, an external device interrupts the processor to execute an interrupt service routine (B) an
+external device interrupts the processor by triggering an interrupt signal to the processor (C) Direct
+Memory Access (DMA) allows data to be transferred from 1/0 devices to memory directly without the
+continuous involvement of the processor (D) a hardware device is needed to allow 1/0 devices to
+directly access memory with less participation of the processor (E) all the above are correct (choose
+this one only if none of the above can be chosen).
+5. [上 Which of the following is wrong about CPU cache? (A) register in CPU is usually faster than L1
+cache (B) number of registers in CPU is smaller than the size of L1 cache (C) the size of L1 cache in
+current CPUs typically ranges in dozens to hundreds bytes (D) the size of L2 cache is typically much
+bigger than L1 cache (E) all the above are correct (choose this one only if none of the above can be
+chosen). ,
+6. | Which of the following is not a major functionality of Operating systems? (A) Resource
+Management (B) Process Management (C) Memory Management (D) Security Management (E) all the :
+above are major functionalities.
+LL

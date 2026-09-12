@@ -1,0 +1,59 @@
+AH: 258 國 立 臺灣 大 學 115 學 年 度 碩士 班 招生 考試 試題
+
+科目 : 資訊 科技 概論 十 號 :258
+
+RR: 6 共 4 頁 之 第 2 頁
+delivery of data. (B) It provides flow control and congestion control mechanisms. (C) It is connectionless and has a smaller
+header overhead. (D) It sequences packets to ensure they arrive in order. (E) It performs a three-way handshake before sending
+data.
+
+15. 7 In TCP congestion control, what is the main purpose of the slow start phase? (A) To avoid retransmissions entirely (B)
+To probe available network capacity exponentially (C) To maintain a constant congestion window (D) To prioritize
+latency-sensitive flows (E) To prevent receiver buffer overflow.
+
+16. | Which index structure is most used in relational databases to support range queries efficiently? (A) Hash index (B)
+Bitmap index (C) B+ tree (D) Inverted index (E) Heap file,
+
+17. | Which of the following concurrency control techniques may result in deadlocks? (A) Timestamp ordering (B)
+Two-phase locking (2PL) (C) Optimistic concurrency control (D) Multiversion concurrency control (MVCC) (E) Snapshot
+isolation.
+
+18. [7 Which of the following best explains why hash-based indexing is generally unsuitable for range queries? (A) Hash
+functions destroy ordering information (B) Hash indexes require more storage (C) Hash collisions slow down inserts (D) Hash
+indexes cannot support equality queries (E) Hashing increases 1/O operations,
+
+19. a In write-ahead logging (WAL), which rule must be satisfied to ensure database recovery correctness? (A) Data pages
+must be written before log records (B) Log records are optional for read-only transactions (C) Checkpoints eliminate the need for
+redo (D) Log records must be written to stable storage before data pages (E) Logs are only needed for undo operations.
+
+bo. [___] Which statement best captures a fundamental trade-off in database system design? (A) Strong consistency always
+improves performance (B) Indexing eliminates the need for query optimization (C) Higher isolation levels can reduce
+concurrency (D) Normalization always improves query speed (E) Replication removes the need for recovery mechanisms.
+
+1. [| In the context of Distributed Database Systems, the CAP Theorem states that a distributed system can only
+simultaneously provide two out of which three guarantees? (A) Concurrency, Availability, Performance (B) Consistency,
+Atomicity, Partition Tolerance (C) Consistency, Authenticity, Persistence (D) Consistency, Availability, Partition Tolerance (E)
+Concurrency, Accuracy, Performance.
+
+了 2. [上] A relation Ris in Boyce-Codd Normal Form (BCNF) if and only if: (A) For every functional dependency YY, X isa
+superkey. (B) It is in 3NF and has no multivalued dependencies. (C) It is in 3NF and preserves all functional dependencies. (D) It
+contains atomic values only. (E) There are no partial dependencies.
+
+23, Cc. ] Which of the following is a key advantage of containerization (e.g., Docker) compared to virtual machines? (A) Lower
+overhead due to sharing the host OS kernel (B) Stronger hardware-level isolation (C) No dependency on the host operating
+system (D) Elimination of resource contention (E) Guaranteed real-time performance. .
+
+24, LC] Which of the following best describes the role of edge computing? (A) Centralizing all computation in large data
+centers (B) Replacing cloud computing entirely (C) Increasing storage capacity (D) Processing data closer to data sources to
+reduce latency (E) Encrypting data before transmission.
+
+25. | Which technology enables immutable and verifiable transaction records without relying on a central authority? (A)
+Distributed databases (B) Blockchain (C) Content delivery networks (D) Peer-to-peer file sharing (E) Federated learning.
+
+26. | Why are NoSQL databases often preferred in large-scale distributed applications? (A) They provide flexible schemas
+and horizontal scalability (B) They strictly enforce ACID properties (C) They eliminate network partitions (D) They guarantee
+strong consistency (E) They require less storage than relational databases.
+
+27. [| In the context of Large Language Models (LLMs) like GPT, what is the primary function of the “Self-Attention”
+
+| BARA

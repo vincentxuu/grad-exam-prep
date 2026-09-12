@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "cs-arch",
+  "status": "draft",
+  "coverage": "partial_pipeline_slice",
+  "canonicalTopicIds": [
+    "cs-arch-pipeline"
+  ],
+  "topics": [
+    {
+      "id": "cs-arch-pipeline",
+      "title": "Datapath 與 Pipeline",
+      "importance": 5,
+      "status": "draft",
+      "subtopics": [
+        {
+          "id": "cs-arch-pipeline-foundations",
+          "topicId": "cs-arch-pipeline",
+          "title": "五階段 Pipeline 與吞吐量",
+          "status": "draft"
+        },
+        {
+          "id": "cs-arch-pipeline-performance",
+          "topicId": "cs-arch-pipeline",
+          "title": "Stage latency、clock 與 utilization",
+          "status": "draft"
+        },
+        {
+          "id": "cs-arch-pipeline-hazards-forwarding",
+          "topicId": "cs-arch-pipeline",
+          "title": "Data hazard、stall、NOP 與 forwarding",
+          "status": "draft"
+        }
+      ]
+    }
+  ]
+}

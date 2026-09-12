@@ -1,0 +1,127 @@
+{
+  "reviewerScope": {
+    "draftFile": ".work/im-it-lessons-batch3-ds.json",
+    "taxonomyManifest": ".work/im-it-batch3-ds-taxonomy-manifest.json",
+    "lessonsReviewed": 2,
+    "cardsReviewed": 12,
+    "checks": [
+      "獨立核對兩個 heap code questions 的完整題幹、操作 invariant 與 proposed taxonomy move",
+      "重算 DS 各 subtopic move 前後 total 與 autoGradeEligible counts",
+      "檢查 grouped coveredSubtopicIds 與每個 lesson/card ref 的 primarySubtopicId",
+      "逐段檢查 complexity、sorting、BST、heap 與 priority queue 的技術正確性",
+      "逐一重演 8 個 worked examples 的步驟與答案",
+      "核對 source registry、past-paper eligibility、card refs subset 與非官方答案標示"
+    ]
+  },
+  "approved": true,
+  "taxonomyReview": {
+    "approved": true,
+    "auditedQuestionCount": 29,
+    "moveReviews": [
+      {
+        "questionId": "q-pp-im-it-108-21",
+        "approved": true,
+        "fromSubtopicId": "im-it-ds-trees-bst",
+        "toSubtopicId": "im-it-ds-heaps-priority-queues",
+        "reasoning": "題目直接定義 HEAP 為實作 priority queue 的 complete binary tree，並要求 root delete 與 insert。正確實作依 max-heap parent-child ordering、sift-down 與 sift-up，不使用 BST 的 left-subtree/right-subtree search ordering。",
+        "eligibilityImpact": "題型是 code_implementation，原本與移動後都 autoGradeEligible=false；只改 taxonomy，不改總 eligible 數。"
+      },
+      {
+        "questionId": "q-pp-im-it-109-22",
+        "approved": true,
+        "fromSubtopicId": "im-it-ds-trees-bst",
+        "toSubtopicId": "im-it-ds-heaps-priority-queues",
+        "reasoning": "題目明定 large values mean high priority，boostPriority 又保證 newPriorityValue>items[i]；恢復 max-heap ordering 的方法是沿 parent chain sift-up。這是 heap decrease/increase-key 類操作，不是 BST operation。",
+        "eligibilityImpact": "題型是 code_implementation，autoGradeEligible=false；移動不改 eligible counts。"
+      }
+    ],
+    "countsVerified": {
+      "before": {
+        "im-it-ds-trees-bst": {"total": 8, "autoGradeEligible": 1},
+        "im-it-ds-heaps-priority-queues": {"total": 4, "autoGradeEligible": 4}
+      },
+      "after": {
+        "im-it-ds-trees-bst": {"total": 6, "autoGradeEligible": 1},
+        "im-it-ds-heaps-priority-queues": {"total": 6, "autoGradeEligible": 4}
+      }
+    },
+    "issues": []
+  },
+  "lessonReviews": [
+    {
+      "lessonId": "lesson-im-it-ds-complexity-sorting-searching-01",
+      "approved": true,
+      "coverage": {
+        "coveredSubtopicIds": [
+          "im-it-ds-complexity-analysis",
+          "im-it-ds-sorting-searching"
+        ],
+        "pastPaperRefs": 4,
+        "eligibleRefs": 4,
+        "cards": 6
+      },
+      "technicalAssessment": "Big-O/Omega/Theta 與 case analysis 的區分正確；Bubble Sort 比較次數、early-stop best case、QuickSort 不平衡 partition recurrence、stable sort 與 binary-search 前提均表達正確。四個 examples 都可由輸入逐步重現。Complexity-analysis 目前零 primary refs，但以 sorting questions 的成本推導作 grouped lesson 應用是合理做法，沒有偽造 coverage。",
+      "issues": []
+    },
+    {
+      "lessonId": "lesson-im-it-ds-trees-heaps-01",
+      "approved": true,
+      "coverage": {
+        "coveredSubtopicIds": [
+          "im-it-ds-trees-bst",
+          "im-it-ds-heaps-priority-queues"
+        ],
+        "pastPaperRefs": 5,
+        "eligibleRefs": 5,
+        "cards": 6
+      },
+      "technicalAssessment": "Tree terminology、zero-based complete-tree mapping、BST inorder ordering、min/max heap invariant、sift-up/down、priority queue 與 arbitrary heap search 複雜度均正確。教材也明確揭露 Q112-27 原卷把 min-heap 不等號印反，並採正確定義教學；四個 examples 均可重現。",
+      "issues": [
+        {
+          "severity": "minor",
+          "location": "lessons[1].title",
+          "problem": "標題「同一形狀，不同順序規則」可能讓初學者誤以為 BST 與 binary heap 都必須是 complete binary tree。正文已正確說明 BST 形狀不必 complete，因此不構成技術內容錯誤。",
+          "suggestedFix": "可改成「Trees、BST 與 Heaps：相似樹形，不同結構規則」或「搜尋順序與優先順序」。"
+        }
+      ]
+    }
+  ],
+  "cardIssues": [
+    {
+      "cardId": "card-im-it-ds-trees-heaps-03",
+      "severity": "minor",
+      "location": "front/back",
+      "problem": "Parent=floor((i-1)/2) 只適用於 i>0；root i=0 沒有 parent。Back 的「前提是對應 index 存在」可推知此例外，但公式若直接背誦仍可能被套到 root。",
+      "suggestedFix": "在 back 明寫「i>0 時 parent=floor((i-1)/2)；root 沒有 parent」。"
+    }
+  ],
+  "referenceReview": {
+    "source": {
+      "id": "src-mit-algorithms-6006",
+      "exists": true,
+      "status": "reviewed",
+      "scopeRelevant": true,
+      "assessment": "Registry scope 包含 algorithms、data-structures、complexity-analysis，足以支撐兩堂課的概念摘要與 examples。"
+    },
+    "pastPaperRefs": {
+      "totalUnique": 9,
+      "allExist": true,
+      "allAutoGradeEligible": true,
+      "allWithinCoveredSubtopics": true,
+      "allRelevant": true
+    },
+    "cardRefs": {
+      "allSubsetOfLessonRefs": true,
+      "allSourceRefsSubsetOfLessonSources": true,
+      "allTechnicallyRelevant": true
+    },
+    "officialAnswerClaim": false
+  },
+  "summary": {
+    "blockingIssues": 0,
+    "majorIssues": 0,
+    "minorIssues": 2,
+    "approved": true,
+    "approvalRationale": "兩個 taxonomy moves、grouped coverage、技術內容、worked examples、source 與 refs 均通過獨立複查。只有一個 lesson title 與一張 index-formula card 的精確度 minor，未造成錯誤答案或不可重現內容，因此 approved=true。"
+  }
+}

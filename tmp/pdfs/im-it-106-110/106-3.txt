@@ -1,0 +1,48 @@
+AR: 381 國 立 臺灣 大 學 106 學 年 度 碩士 班 招生 考試 試題
+科目 : 資訊 科技 概論 MB: 381
+Mek: 6 #3 頁 之 第 ? 頁
+mainly via polymorphism (D) the concept of “data encapsulation” is used to hide data from misuse (E) all of
+the above are correct (choose this only if none of the above can be chosen).
+
+22. Which of the following about operating systems is wrong? (A) OS X is used in Appte’s desktops/laptops (B)
+Android is a mobile operating system based on the Linux kernel (C) Unix family are open source (D)
+currently Microsoft Windows dominates desktop operating systems (E) all of the above are correct (choose
+this only if none of the above can be chosen). .
+
+23. Which of the following about system development tools is wrong? (A) a class diagram is a visual
+representation of a project schedule such as the project status and the length of an activity and the time spent
+‘on completing a task. (B) a decision tree is a graph that uses a branching method to illustrate every possible
+outcome of a decision (C) an entity-relationship diagram (ERD) is a graphical representation of an
+information system that shows the relationship between people, objects, places, concepts or events within
+that system (D) a flowchart is a type of diagram that represents an algorithm, workflow or process, showing
+the steps as boxes of various kinds, and their order by connecting them with arrows (E) All of the above are
+correct (choose this only if none of the above can be chosen.)
+
+24. Which of the following technology descriptions is wrong? (A) 悠遊 卡 (Easy Card) uses NFC technology
+(B) RFID can be used in supply chain management to track products (C) animal tracking chips typically use
+RFID (D) currently our ETC (Electronic Toll Collection (Taiwan) uses LTE technology to track cars (E) All
+of the above are correct (choose this only if none of the above can be chosen.)
+
+二 、 問 答題 2 題 , 每 題 20 分 , 共 名 分
+
+請 在 答案 卷 內 依 序 作答 , 和 否則 不 子 以 計 分 。
+
+1. When implementing the operations for a binary search tree, the notion of “inorder successor” (alternatively,
+inorder predecessor) is very useful,
+(a) Define the notion and explain why it is needed using examples. .
+(b) Implement an algorithm in C, C++, or Java (choose one programming language) for finding the inorder
+successor of a given node. The more efficient your implementation is, the more points you will be
+credited.
+
+2. Balanced search trees, such as AVL, 2-3, and red-black trees, are very efficient data structures for storing
+
+and searching key values.
+
+(a) Insert the key values 1, 2, 5, 7, 6, 4, and 3 (in this order) into an empty AVL (or 2-3 or red-black) tree.
+Please show the resulting tree after the insertion of each key value. 。
+
+(b) Prove that the height of an AVL (or 2-3 or red-black) tree storing 1 key values is O(log x).
+
+Note again that you only need to complete the above tasks for one of the three kinds (AVL, 2-3, and red-
+
+black) of balanced search trees. .

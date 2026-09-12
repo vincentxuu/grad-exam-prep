@@ -1,0 +1,107 @@
+[
+  {
+    "id": "q-pp-im-it-107-1",
+    "text": "Which of the following technology is not used in Amazon Echo or Google Home? (A) speech recognition (B) image recognition (C) natural language processing (D) control of room devices (E) speech synthesis.",
+    "points": 2.5,
+    "hasImage": false,
+    "subQuestions": []
+  },
+  {
+    "id": "q-pp-im-it-107-2",
+    "text": "Which of the following is wrong about object-oriented databases? (A) object-oriented databases are the most widely used database model today (B) object databases store objects rather than data such as integers, strings or real numbers (C) objects basically consist of attributes and methods (D) objects contain both executable code and data (E) all of the above are correct (choose this only if none of the above can be chosen).",
+    "points": 2.5,
+    "hasImage": false,
+    "subQuestions": []
+  },
+  {
+    "id": "q-pp-im-it-107-4",
+    "text": "Which of the following SQL commands returns the number of countries of the records in the \"Customers\" table (see Table 1)?\n\n(A) SELECT NUMBER (*) FROM Customers;\n(B) SELECT COUNT (ALL country) FROM Customers;\n(C) SELECT COUNT (DISTINCT country) FROM Customers;\n(D) SELECT NUMBER (ALL country) FROM Customers;\n(E) SELECT NUMBER (DISTINCT * country) FROM Customers;",
+    "points": 2.5,
+    "hasImage": true,
+    "subQuestions": []
+  },
+  {
+    "id": "q-pp-im-it-107-5",
+    "text": "Which of the following SQL commands lists the number of customers in each country from the \"Customers\" table (see Table 1)?\n\n(A) SELECT NUMBER (id), country FROM Customers GROUP BY country;\n(B) SELECT NUMBER (id), country FROM Customers ORDER BY country;\n(C) SELECT COUNT (id), country FROM Customers GROUP BY country;\n(D) SELECT COUNT (id), country FROM Customers ASSEMBLY BY country;\n(E) none of the above.",
+    "points": 2.5,
+    "hasImage": true,
+    "subQuestions": []
+  },
+  {
+    "id": "q-pp-im-it-107-6",
+    "text": "Which of the following types of databases has been optimized for data warehousing and OLAP (online analytical processing) for complex analytical and ad hoc queries with a rapid execution time? (A) object-oriented databases (B) multidimensional databases (C) crossed relational databases (D) relational object-oriented databases (E) distributed databases.",
+    "points": 2.5,
+    "hasImage": false,
+    "subQuestions": []
+  },
+  {
+    "id": "q-pp-im-it-107-9",
+    "text": "Which of the following is a computer network authentication protocol that works on the basis of tickets to allow nodes communicating over a non-secure network to prove their identity to one another in a secure manner? (A) Kerkeros (B) Dynamic Host Configuration Protocol (C) Secure Remote Password protocol (SRP) (D) Internet Key Exchange (E) none of the above.",
+    "points": 2.5,
+    "hasImage": false,
+    "subQuestions": []
+  },
+  {
+    "id": "q-pp-im-it-107-10",
+    "text": "Which of the following is relatively not a main concern of the HTTPS protocol? (A) authentication of the accessed website (B) protection of communication privacy (C) protection of man-in-the-middle attacks (D) fault tolerance (E) protection of tampering of the communication.",
+    "points": 2.5,
+    "hasImage": false,
+    "subQuestions": []
+  },
+  {
+    "id": "q-pp-im-it-107-11",
+    "text": "Which of the following about digital certificate is wrong? (A) the \"Serial Number\" field in a digital certificate is used to track revocation information (B) the \"Issuer\" field specifies the entity that verified the information and signed the certificate (C) it needs to contain the certificate owner's public key (D) X.509 is a standard that defines the format of public key certificates (E) all of the above are correct (choose this only if none of the above can be chosen).",
+    "points": 2.5,
+    "hasImage": false,
+    "subQuestions": []
+  },
+  {
+    "id": "q-pp-im-it-107-12",
+    "text": "Which of the following about Single Sign-On (SSO) is wrong? (A) it reduces password fatigue from different user name and password combinations (B) it reduces time spent re-entering passwords for the same identity (C) log-in with Facebook account is an example of SSO (D) log-in with Google account is an example of SSO (E) all of the above are correct (choose this only if none of the above can be chosen).",
+    "points": 2.5,
+    "hasImage": false,
+    "subQuestions": []
+  },
+  {
+    "id": "q-pp-im-it-107-13",
+    "text": "Which of the following enables users to send and receive data across shared or public networks as if their computing devices were directly connected to the private network? (A) Transport Layer Security (B) Secure Sockets Layer (C) Virtual Private Network (D) Network Address Translation (E) none of the above.",
+    "points": 2.5,
+    "hasImage": false,
+    "subQuestions": []
+  },
+  {
+    "id": "q-pp-im-it-107-15",
+    "text": "Which of the following best describes a specialized hardware-dependent computer program which is also operating system specific that enables another program to interact transparently with a hardware device? (A) firmware (B) device driver (C) application programming interface (D) hardware platform interface (E) intelligent platform management interface.",
+    "points": 2.5,
+    "hasImage": false,
+    "subQuestions": []
+  },
+  {
+    "id": "q-pp-im-it-107-16",
+    "text": "Which of the following is wrong? (A) the primary goal of CISC (Complex Instruction Set Computer) approach is to complete a task in as few lines of assembly code as possible (B) the RISC (Reduced Instruction Set Computer) approach is designed to execute computing tasks with the simplest instructions in the shortest amount of time possible (C) Intel x86 architecture is typically considered as a CISC approach (D) ARM architecture is typically considered as a RISC approach (E) all of the above are correct (choose this only if none of the above can be chosen).",
+    "points": 2.5,
+    "hasImage": false,
+    "subQuestions": []
+  },
+  {
+    "id": "q-pp-im-it-107-17",
+    "text": "Which of the following refers to the act of creating a virtual version of something, including virtual computer hardware platforms, storage devices, and computer network resources? (A) virtual reality (B) augmented reality (C) virtualization (D) hypervisor (E) none of the above.",
+    "points": 2.5,
+    "hasImage": false,
+    "subQuestions": []
+  },
+  {
+    "id": "q-pp-im-it-107-19",
+    "text": "Which of the following about the Blockchain technology used in Bitcoin is wrong? (A) it is a continuously growing list of \"blocks\" recording transaction history of the Bitcoin system (B) the blocks in a blockchain can be distributed to different peers so that no peer is required to maintain the complete list of the blocks in the system (C) all transactions in the blocks are kept anonymous and encrypted (D) blockchains are inherently resistant to modification of the data that have been recorded into blocks (E) all of the above are correct (choose this only if none of the above can be chosen).",
+    "points": 2.5,
+    "hasImage": false,
+    "subQuestions": []
+  },
+  {
+    "id": "q-pp-im-it-107-20",
+    "text": "Which of the following is correct about the CIA Triad of information security model? (A) \"C\" refers to Control (B) \"C\" refers to Cryptography (C) \"I\" refers to Identification (D) \"A\" refers to Anonymous (E) \"A\" refers to Availability.",
+    "points": 2.5,
+    "hasImage": false,
+    "subQuestions": []
+  }
+]

@@ -1,0 +1,29 @@
+題 號 : 383 國 立 臺 灣 大 學 108 學 年 度 碩士 班 招生 考試 試題
+科目 : 資訊 科技 概論 ARE 383
+HR: 6 共 2 頁 之 第 》 頁
+二 、 問 答題 2 題 , 共 50 分 。
+※ 本 大 題 請 於 試卷 內 之 「 非 選擇 題 作答 區 」 標 明 題 號 依 序 作 答 。
+1. HEAP is a complete binary tree that provides an efficient implementation of priority queues. Suppose we use
+a heap to manage a list of positive integers that large values mean high priority. The following C++ code
+fragment shows the class definition of the heap.
+(a) (15 points) Write the member function delete () that removes the integer in the root of the heap.
+(b) (15 points) Write the member function insert () that inserts a new integer into the heap.
+i HEAP
+public:
+int delete();
+// return and delete the integer in the root of the heap
+// xveturn -1 if there is nothing to delete
+bool insert (int newValue) ;
+// insert newValue into the heap
+// veturn false if the insertion is not successful
+private:
+int itemCount; // number of heap items
+int items[100]; // array of heap items
+hi
+2. Double hashing is a popular collision resolution scheme that employs two hash functions to determine the
+location of an item in a hash table. One hash function computes the starting location of an item and the other
+one specifies the size of probe step.
+(a) (10 points) Explain the benefit of double hashing when resolving collisions.
+(b) (5 points) What is the problem if the hash table size and the probe step size are not relatively prime?
+(c) (5 points) Suggest a solution to the problem.
+試題 隨 卷 繳 回

@@ -1,0 +1,35 @@
+[
+  {
+    "questionId": "q-pp-im-it-106-5",
+    "verdict": "disputed",
+    "reviewedAnswer": null,
+    "reasoning": "嚴格關聯理論下，1NF 要求屬性值具原子性並排除 repeating groups，但不要求資料表必須宣告 designated primary key，因此 C 可判錯、與現有答案一致。然而不少實務教材把「每列可由 primary key 唯一識別」也列入 1NF 檢核規則；採該教材定義時 A、B、C、D 都成立，E 也會成為合理答案。A 的降低冗餘、B 的降低更新異常以改善完整性、D 的 normal-form 階層關係都沒有形成其他明確錯項。由於 C 與 E 取決於採用的 1NF 教材定義，無法保證唯一答案。",
+    "sourceBasis": [
+      "public/papers/pp-im-it-106.pdf 第 1–2 頁原題與選項",
+      "public/data/questions.json 題面交叉核對",
+      "1NF 嚴格 relational definition 與常見教學檢核定義之獨立比較；無官方答案 key"
+    ]
+  },
+  {
+    "questionId": "q-pp-im-it-106-8",
+    "verdict": "disputed",
+    "reviewedAnswer": null,
+    "reasoning": "Volume、velocity、variety 是最早且一致接受的 big-data 3Vs。後續廣泛使用的 5V 模型把 value 納入特徵，依該模型「potentially high value」成立，答案應為 E；若題目限定原始 3V 模型，D 則是未列入的選項。題幹只說 widely regarded，沒有指定 3V、4V 或 5V 模型及年代，因此 D 與 E 都有合理的教材依據，其他 A–C 沒有爭議。不能唯一確認現有 E。",
+    "sourceBasis": [
+      "public/papers/pp-im-it-106.pdf 第 2 頁原題與選項",
+      "public/data/questions.json 題面交叉核對",
+      "big-data 3V 與後續 5V taxonomy 的獨立定義比較；無官方答案 key"
+    ]
+  },
+  {
+    "questionId": "q-pp-im-it-107-11",
+    "verdict": "corrected",
+    "reviewedAnswer": "E",
+    "reasoning": "X.509 certificate serial number 由 issuer 指派並唯一識別該 issuer 簽發的憑證；CRL entry 與 OCSP request 都以 issuer/serial number 識別要查詢或撤銷的憑證，所以 A 所稱用來追蹤 revocation information 是合理敘述。Issuer 欄位指出簽發與簽章實體，certificate 包含 subject public key，X.509 也確實規範 public-key certificate 格式，因此 B、C、D 均正確。不存在另一個合理錯項，應由現有 A 更正為 E。",
+    "sourceBasis": [
+      "public/papers/pp-im-it-107.pdf 第 2 頁原題與選項",
+      "public/data/questions.json 題面交叉核對",
+      "X.509 certificate、CRL 與 OCSP serial-number semantics 的獨立技術推導；無官方答案 key"
+    ]
+  }
+]

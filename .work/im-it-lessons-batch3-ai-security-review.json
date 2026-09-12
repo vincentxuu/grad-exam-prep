@@ -1,0 +1,67 @@
+{
+  "approved": true,
+  "reviewerScope": "最終回歸 AI grouped lesson、AI/Security/DS taxonomy approval gate、reviewed evidence thresholds，以及 batch 3 taxonomy apply／learning build scripts；只更新本 review，不修改草稿或 product data。",
+  "summary": {
+    "decision": "approved",
+    "blockingCount": 0,
+    "majorCount": 0,
+    "minorCount": 0,
+    "aiAssessment": "AI lesson 技術內容與三個 worked examples 正確；5 個 refs 全部 unique、存在、autoGradeEligible 且落在 coveredSubtopicIds。Brookshear 支撐 Turing test，NTU ML 支撐 learning/regression/evaluation。Card 02 已縮窄為 linear regression 屬 supervised learning，q110-14 可直接支撐；card 06 與 q110-15/16 的 confusion-matrix 指標內容直接相關。",
+    "taxonomyAssessment": "AI 13 moves、Security 7 moves、im-it-trends top-level 與 blockchain subtopic 均合理；disputed 題保持不可自動判分。DS、AI、Security manifests 均為 approved_for_application，apply script 對任何未核准 manifest 會先拒絕。",
+    "evidenceThresholdAssessment": "五堂 incoming lessons 明列 4/5/5/6/6 的 minimumPastPaperRefs，均由相同數量的 unique eligible refs 滿足。既有 lessons migration 固定門檻 6，現有 refs 皆達標。4-ref complexity 例外精確反映題庫證據量，沒有借用不相干題湊數。",
+    "buildAssessment": "隔離完整 learning build 成功產出 15 lessons、19 covered subtopics、112 covered questions、92 cards。門檻低於 4、非整數及 unique refs 少於逐課門檻的負向測試均被 builder 拒絕。"
+  },
+  "issues": [],
+  "checks": {
+    "aiMoveCount": 13,
+    "aiMoveTargetMismatchCount": 0,
+    "aiLessonRefCount": 5,
+    "aiLessonUniqueRefCount": 5,
+    "aiCardCount": 6,
+    "aiStructuralRefErrors": 0,
+    "securityMoveCount": 7,
+    "securityMoveTargetMismatchCount": 0,
+    "allTaxonomyManifestsApprovedForApplication": true,
+    "taxonomyScriptSyntaxValid": true,
+    "taxonomyUnapprovedManifestRejected": true,
+    "learningBuildScriptSyntaxValid": true,
+    "incomingLessonThresholds": [
+      {
+        "lessonId": "lesson-im-it-ds-complexity-sorting-searching-01",
+        "minimumPastPaperRefs": 4,
+        "uniquePastPaperRefs": 4
+      },
+      {
+        "lessonId": "lesson-im-it-ds-trees-heaps-01",
+        "minimumPastPaperRefs": 5,
+        "uniquePastPaperRefs": 5
+      },
+      {
+        "lessonId": "lesson-im-it-ai-foundations-ml-evaluation-01",
+        "minimumPastPaperRefs": 5,
+        "uniquePastPaperRefs": 5
+      },
+      {
+        "lessonId": "lesson-im-it-prog-object-oriented",
+        "minimumPastPaperRefs": 6,
+        "uniquePastPaperRefs": 6
+      },
+      {
+        "lessonId": "lesson-im-it-db-sql-querying",
+        "minimumPastPaperRefs": 6,
+        "uniquePastPaperRefs": 6
+      }
+    ],
+    "legacyMigrationThreshold": 6,
+    "invalidLowThresholdRejected": true,
+    "nonIntegerThresholdRejected": true,
+    "insufficientUniqueRefsRejected": true,
+    "fullBatchLearningBuildSucceeded": true,
+    "fullBatchLearningBuildCounts": {
+      "lessons": 15,
+      "coveredSubtopics": 19,
+      "coveredQuestions": 112,
+      "cards": 92
+    }
+  }
+}

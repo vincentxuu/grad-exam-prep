@@ -1,0 +1,63 @@
+Ma: 381 國 立 臺灣 大 學 106 學 年 度 碩士 班 招生 考試 試題
+科目 : 資 訊 科技 概 論 Hi: 881
+HA: 6 #3 頁 之 第 人 頁
+一 、 選 擇 題 ( 單 選 ) 24 題 , 每 題 2.5 分 , 共 60 分, 請 在 每 題 的 遞 項 內 選擇 最 適當 的 答案 。
+Be: 等 錯 倒 扣 1 分 , 扣 至 零 分 為 止 。( 不 答 不 倒 扣 )
+
+※ 注意 : 請 用 6 鉛筆 作答 於 答案 卡 , 並 先 詳 開 答 案 卡 上 之 「 畫 記 說 明 SURF UD
+Suppose we wish to build a campus database containing tables of records about student profiles, courses registered,
+and grades, The following are some example fields and data in the database:
+
+Student_ID, Student_Name; Student_Address, Course ID, _Course_Name, _Instructor_ID,
+
+Instructor_Name, Classroom, Course_Schedule (e.g., Wed. 9~12AM), Grade ...
+
+A good database design practice is to avoid too much data overlapping between tables. Answer the following two
+
+questions related to this.
+
+1, Which of the following design is better (although not the best) than the others?
+(A) A single table containing all fields of data needed for the database.
+(B) Two tables, one contains students’ profiles (Student_ID, Student_Name, Student_Adadress), while the
+other contains ail the other fields.
+(C) Three tables, the 1* table contains students’ profiles (Student_ID, Student_Name, Student_Address), the
+24 table contains Student_ID and the courses (Course_ID, Course_Name) they registered, the instructors
+(Instructor_ID, Instructor_Name), and grades, and the 3" table contains the classroom information
+(Course_Name, Classroom, Course_Schedule).
+{D) A table for students’ profiles (Student_ID, Student_Name, Student_Address), a table for each course
+containing the registered students” names and their grades (ie., Student_ID, Course_ID; GRADE), a table
+of instructors containing the faculty ID of each instructor, his name, and the courses s/he teaches
+{Instructor_ID, Instructor_Name, Course_ID), a table of classrooms containing the classrooms, the courses
+and time of the courses at each classroom (Classroom, Course_ID, Course_Schedule).
+(E) A table containing (Student_ID, Student_Name), a table containing (Student_Name, Student_Address),
+a table for each course containing the registered students’ names and their grades (Student_Name, Grade), a
+table for each instructor containing his ID, name and the courses s/he teaches (instructor_ID, .
+Instructor_Name, Course), a table for each classroom containing the courses and time of the courses using .
+the classroom (Classroom, Course_Name, Course_Schedule).
+
+2. Suppose we wish to have a table for each course containing the grade of each registered student,’ Which of
+
+the following design is better than the others? (A) The table contains just two fields: Student_Name, Grade.
+(B) The table contains just two fields: Student_ID, Grade. (C) The table contains three fields: Student_ID,
+Student_Name, Grade. (D) The table contains three fields: Student_Name, Instructor_ID, Grade. (E) The
+table contains four fields: Student_iD, Student_Name, Instructor_ID, Grade.
+
++ 3. Which of the following SQL command selects;all the records in the “Customers” table whose “Country”
+field is “Taiwan” and “City” field is either “Taipei” or “Kaohsiung”?
+(A) SELECT * FROM Customers WHERE Country=’Taiwan’ AND (City='Taipe?’ OR City=’Kaohsiung’); .
+(B) SELECT ALL FROM Customers WITH Country="Taiwan’ AND (City="Taipel’ OR City="1 Kaohsiung’);
+(C) SELECT * FROM Customers WHERE Country='Taiwan’, City="Taipei’ OR Kaohsiung’;
+(D) SELECT ALL FROM Customers AND Country=’Taiwan’ AND {City='Taipei’ OR City=’Kaohsiung’)
+(E) none of the above.
+
+4. Which of the following about relational databases is wrong? (A) the model organizes data into one or more
+tables of columns and rows (B) a row ina table corresponds to a record of data (C) a primary key uniquely
+identifies each record in a table (D) a foreign key in one table corresponds to a primary key in another table
+(E) all of the above are correct (choose this only if none of the above can be chosen).
+
+5. Which of the following about database normalization is wrong? (A) the process reduces data redundancy (B)
+the process improve data integrity (C) the 1* normal form ensures that each row in a table should be identified
+by primary key and no rows of data should have repeating group of column values (D) if table satisfies 2
+normal form, then it must satisfy I normal form as well (E) all of the above are correct (choose this only if
+
+見 背面

@@ -1,0 +1,63 @@
+題 號 : 387 國 立 臺灣 大 學 107 學 年 度 碩士 班 招生 考試 試題
+AB: 資訊 管理 導論 題 號 : 387
+Mick: 7 共 2 頁 之 第 | 頁
+請 於 答案 卷 上 依 序 作答 。, 並 註明 作答 的 題 號
+試卷 共 四 大 題
+1. Codification and connectivity (ie., personalization) represent two major knowledge management
+strategies commonly adopted by firms. Specifically, the codification strategy for knowledge
+management aims to acquire/extract domain experts’ knowledge and store the acquired knowledge in
+knowledge repositories so that other users can access. In contrast, the connectivity strategy for
+knowledge management aims to record and make available who in the organization knows what by
+building knowledge directories (i.e., expert networks). Please identity the types of firms that should
+consider the codification strategy and the types of firms that should consider the connectivity strategy
+for their knowledge management initiatives. Please provide detailed explanations to justify your
+answer. (20%)
+
+2, Environmental uncertainty of a firm refers to the degree of uncertainty of the firm’s business (external)
+environment. In the literature, environmental uncertainty can be classified into two major dimensions:
+environmental munificence (環境 豐裕 性 ) and environmental dynamism (環境 動態 性 ). Environmental
+munificence refers to the degree to which a business environment provides firms with critical
+resources for their operations. For example, in a highly munificent environment, abundant resources
+and greater growth opportunities are available to firms. On the other hand, environmental dynamism
+denotes the extent to which firms face the unpredictability and volatility of changes in their business
+environments. For instance, a dynamic environment is characterized by fluctuations in product demand
+or changes in customer preferences.
+
+(1) For firms that operate in a highly munificent environment, what recommendations will you suggest
+to the firms about their IT (information technology) strategy? (15%)
+
+(2) For firms that operate in a highly dynamic environment, what recommendations will you suggestto -
+the firms about their IT (information technology) strategy? (15%)
+
+3. There are many options available when an institution needs to acquire a software system. List the
+potential sources of software systems for an institution. For each source, briefly explain the internal
+staffing requirements and conditions that may favor its selection. (25%)
+
+4. A private library in Taipei maintains a relational database that keeps the basic information of books.
+We are going to focus on the following tables: Book, Book_Author, Book_Copy, Library Branch,
+Publisher. Below is a list of the columns in these tables. Underscored columns are the primary key of a
+table.
+
+e Book (Bookld, Title, Publisherld)
+e Book _Copy (Bookld, Copyld, BranchId)
+‧ Library_Branch (BranchId, Name, Address)
+e Publisher (Publisherld, Name, Address, Phone)
+These tables have the following foreign key relations:
+‧ Bookld in Book_Copy references BookId in Book.
+‧ BranchId in Book_Copy references Branchld in Library_Bramch.
+‧  Publisherld in Book references PublishersId in Publisher.
+3b
+見 背面
+題 號 : 387 國 立 臺 灣 大 學 107 學 年 度 碩士 班 招生 考試 試題
+科目 : 資訊 管理 導論 題 號 : 387
+mk: 7 # 2 頁 之 第 2 頁
+Please answer the following questions:
+(1) Write down the SQL command that lists the Book Title, Branch Name, and Branch Address that
+owns books with the title “Twilight.” (8%)
+(2) Write down the SQL command that lists the BranchId, Branch Name, and the count of copies for
+books with the title “Fire and Fury.” The output should be ordered so that branches with the most
+copies are listed first. (9%)
+(3) Write down the SQL command that lists the BranchId and Branch Name of Library Branches that
+owns at least two copies for books with the title “Only the Rain.” The output should be ordered so
+that branches with the most copies are listed first. (8%)
+By q By y

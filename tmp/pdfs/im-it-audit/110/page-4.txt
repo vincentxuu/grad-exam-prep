@@ -1,0 +1,23 @@
+題 號 : 875 國 立 臺 灣 大 學 110 學 年 度 碩士 班 招生 考試 試題
+Aa: RMA ABBE + 375
+fick: 6 共 4 頁 之 第 4 頁
+(a) (10 points) Show the tree structure given the following data content.
+root_index: 0
+free_index: 6
+tree:
+name  leftchild index rightchild_index
+0 Jane ee
+‘ 1. Bob “1 4
+2 Tom A bee
+3. Alan “1 5
+4 Ellen 人
+5 Nancy “1 1
+7 ? -1 8
+8 ? ode ae)
+
+(b) (20 points) Write the BinaryTree: : removeAliLeaf () that removes ALL leaf nodes from a
+binary tree. Note that you also need to implement the protected function
+BinaryTree::recurRemoveLeaf() called by removeAllLeaf() that recursively
+traverses the tree to delete all the leaf nodes.
+
+試題 隨 卷 繳 回

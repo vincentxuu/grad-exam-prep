@@ -1,0 +1,42 @@
+RES: 277 國 立 臺灣 大 學 114 學 年 度 碩士 班 招生 考試 試題
+科目 : 資 訊 科 技 概論 HABE: 277
+fir: 6 # 4 頁 之 第 3 頁
+storage. (C) NoSQL databases are better suited for structured data. (D) NoSQL databases are
+typically more scalable for distributed systems. (E) NoSQL databases do not support transactions.
+
+16.[ __] Inan ER (Entity-Relationship) diagram, what does a diamond-shaped symbol represent?
+(A) An attribute of an entity (B) A primary key (C) A weak entity (D) A multivalued attribute (E)
+none of the above.
+
+17. ]} What is the primary purpose of a database transaction log? (A) To store the results of
+executed queries for future reference. (B) To keep a record of all changes made to the database for
+recovery purposes. (C) To optimize the execution of complex queries. (D) To maintain a backup
+copy of the entire database. (E) To store metadata about tables and indexes.
+
+18.[____] What is a composite key in a relational database? (A) A key that consists of multiple
+columns to uniquely identify a row. (B) A key that acts as a foreign key in multiple tables. (C) A
+primary key that has been indexed for performance optimization. (D) A key that references another
+table’s unique identifier. (E) A virtual key created by combining data from different tables.
+
+19.[ | What is the main purpose of a subnet mask in TCP/IP? (A) To identify the default gateway
+(B) To define the host and network portions of an IP address (C) To encrypt data packets (D) To limit
+the size of a packet (E) none of the above.
+
+20.[____] What is the purpose of the “window size” field in the TCP header? (A) to specify the
+number of bytes that can be sent before an acknowledgment is received (B) To determine the length
+of the TCP header (C) To indicate the size of the sliding window buffer (D) To synchronize the
+sequence numbers of the sender and receiver (E) none of the above.
+
+21.[_____] Which routing algorithm is used by OSPF (Open Shortest Path First)? (A) Distance Vector
+(B) Link State (C) Path Vector (D) Flooding (E) none of the above.
+
+22.[_____] Which of the following statements about NAT (Network Address Translation) is
+INCORRECT? (A) NAT can hide internal IP addresses from external networks. (B) NAT helps
+conserve IPv4 address space. (C) NAT can interfere with end-to-end connectivity for some
+applications. (D) NAT operates at the Network layer of the OSI model. (E) all of the above are
+correct (choose this one only if none of the above can be chosen).
+
+23.[____] What is the primary purpose of the Domain Name System (DNS)? (A) To assign IP
+addresses to devices on a network (B) To translate domain names into IP addresses (C) To encrypt
+communication between devices (D) To manage routing tables in a network (E) To speed up routing
+between Internet hosts.

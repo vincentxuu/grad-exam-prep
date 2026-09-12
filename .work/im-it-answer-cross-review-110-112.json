@@ -1,0 +1,142 @@
+[
+  {
+    "questionId": "q-pp-im-it-110-2",
+    "firstVerdict": "disputed",
+    "firstReviewedAnswer": null,
+    "secondVerdict": "agree_disputed",
+    "secondReviewedAnswer": "B/E",
+    "reasoning": ".py、.iso 與 .tar 的描述成立；.bin 雖是泛用二進位副檔名，但 raw CD/DVD images 也確實常以 BIN（通常搭配 CUE）表示。副檔名不具排他語義，因此無法由題面唯一判定 B 錯，B 與 E 取決於命題者是否把『是』誤讀為『只能是』。",
+    "sourceBasis": [
+      "public/papers/pp-im-it-110.pdf（原始題面；無官方答案）",
+      "public/data/questions.json（Q110-2 題幹與選項）",
+      "獨立依檔案格式與副檔名用途推導"
+    ],
+    "consensus": true
+  },
+  {
+    "questionId": "q-pp-im-it-110-5",
+    "firstVerdict": "disputed",
+    "firstReviewedAnswer": null,
+    "secondVerdict": "agree_disputed",
+    "secondReviewedAnswer": "A/E",
+    "reasoning": "在 stored-program／ISA 抽象中可說 CPU 從主記憶體 fetch instruction；在現代微架構中 instruction fetch 通常先命中 cache，cache miss 才經記憶體控制器取 RAM。題目未界定抽象層級，而『directly』正是歧義來源，因此不能穩定地在 A 與『A-D 都正確』的 E 間作唯一判定。",
+    "sourceBasis": [
+      "public/papers/pp-im-it-110.pdf（原始題面；無官方答案）",
+      "public/data/questions.json（Q110-5 題幹與選項）",
+      "獨立依 stored-program architecture 與現代 cache hierarchy 推導"
+    ],
+    "consensus": true
+  },
+  {
+    "questionId": "q-pp-im-it-110-27",
+    "firstVerdict": "disputed",
+    "firstReviewedAnswer": null,
+    "secondVerdict": "agree_disputed",
+    "secondReviewedAnswer": "A/B/C",
+    "reasoning": "Azure 不是單一服務：Virtual Machines 是 IaaS，App Service 等是 PaaS，Microsoft 也透過 Azure 生態提供 SaaS。Azure 早期常被教材概括為 PaaS，但題目只寫 Microsoft Azure、沒有指定服務或採用早期分類，因此 A、B、C 都可描述其部分服務，B 不能視為唯一可重現答案。",
+    "sourceBasis": [
+      "public/papers/pp-im-it-110.pdf（原始題面；無官方答案）",
+      "public/data/questions.json（Q110-27 題幹與選項）",
+      "獨立依 IaaS/PaaS/SaaS 服務模型定義推導"
+    ],
+    "consensus": true
+  },
+  {
+    "questionId": "q-pp-im-it-111-8",
+    "firstVerdict": "disputed",
+    "firstReviewedAnswer": null,
+    "secondVerdict": "agree_disputed",
+    "secondReviewedAnswer": "B/C",
+    "reasoning": "C 錯，因 datagram 各自路由，不保證同一路徑；B 也錯，IP datagram header 有來源與目的位址，但一般不含整份資料的封包總數與逐包 sequence number。IP fragmentation 的 identification/offset 也不是題述欄位組合，因此至少 B、C 兩項皆錯。",
+    "sourceBasis": [
+      "public/papers/pp-im-it-111.pdf（原始題面；無官方答案）",
+      ".work/im-it-pdf-audit-111-115.md（Q111 題文已逐頁核對）",
+      "獨立依 IP datagram 與 virtual-circuit routing 定義推導"
+    ],
+    "consensus": true
+  },
+  {
+    "questionId": "q-pp-im-it-111-23",
+    "firstVerdict": "disputed",
+    "firstReviewedAnswer": null,
+    "secondVerdict": "agree_disputed",
+    "secondReviewedAnswer": "A/D",
+    "reasoning": "A 將沉浸式 metaverse 願景寫成 2D，顯然可判錯；但 D 把 blockchain 稱為 metaverse 的 key technology 也是主張而非定義，許多 metaverse 實作不需要區塊鏈。區塊鏈可提供 token provenance，不代表它是 metaverse 必要或普遍的關鍵技術，所以題面無法保證只有 A 錯。",
+    "sourceBasis": [
+      "public/papers/pp-im-it-111.pdf（原始題面；無官方答案）",
+      ".work/im-it-pdf-audit-111-115.md（Q111 題文已逐頁核對）",
+      "獨立依 metaverse 技術定義與區塊鏈非必要性推導"
+    ],
+    "consensus": true
+  },
+  {
+    "questionId": "q-pp-im-it-111-24",
+    "firstVerdict": "disputed",
+    "firstReviewedAnswer": null,
+    "secondVerdict": "agree_disputed",
+    "secondReviewedAnswer": "A/E",
+    "reasoning": "B-D 在一般 NFT 描述下成立。A 的 NFT 可與檔案關聯也成立，但『show ownerships』若指鏈上 token 控制權則可接受，若指所連結檔案的著作權或法律所有權則不成立；NFT 本身不自動移轉這些權利。ownership 未限定對象，使 A 與 E 無法唯一區分。",
+    "sourceBasis": [
+      "public/papers/pp-im-it-111.pdf（原始題面；無官方答案）",
+      ".work/im-it-pdf-audit-111-115.md（Q111 題文已逐頁核對）",
+      "獨立區分 on-chain token control 與 underlying-file legal rights"
+    ],
+    "consensus": true
+  },
+  {
+    "questionId": "q-pp-im-it-112-11",
+    "firstVerdict": "corrected",
+    "firstReviewedAnswer": "B",
+    "secondVerdict": "agree_corrected",
+    "secondReviewedAnswer": "B",
+    "reasoning": "標準 OS file/storage management 責任包含建立刪除檔案、disk scheduling、提供檔案與目錄操作 primitives，以及把檔案備份到穩定儲存媒體；file integrity check 不在該典型責任清單。因此 B 是唯一符合『generally not the responsibility』的選項，現有 D 應更正為 B。",
+    "sourceBasis": [
+      "public/papers/pp-im-it-112.pdf（原始題面；無官方答案）",
+      ".work/im-it-pdf-audit-111-115.md（確認 PDF 的原始 A-E 選項及先前文字毀損）",
+      "獨立依作業系統 file-system 與 mass-storage management 標準責任推導"
+    ],
+    "consensus": true
+  },
+  {
+    "questionId": "q-pp-im-it-112-13",
+    "firstVerdict": "disputed",
+    "firstReviewedAnswer": null,
+    "secondVerdict": "agree_disputed",
+    "secondReviewedAnswer": "A/C",
+    "reasoning": "在教科書簡化的邏輯位址圖中，text 可畫在低位址 0、data 在其上、stack 位於高位址並動態增減，所以 C 是預期錯項；但題幹明指 Unix-like systems，實際行程常保留 null page、採 ASLR，code 不普遍從 address 0 開始，A 也不具普遍真值。缺少『simplified layout』限定使 A、C 均可判錯。",
+    "sourceBasis": [
+      "public/papers/pp-im-it-112.pdf（原始題面；無官方答案）",
+      ".work/im-it-pdf-audit-111-115.md（確認 PDF 原始 memory-layout 選項）",
+      "獨立比較教科書邏輯位址模型與實際 Unix virtual-address layout"
+    ],
+    "consensus": true
+  },
+  {
+    "questionId": "q-pp-im-it-112-22",
+    "firstVerdict": "disputed",
+    "firstReviewedAnswer": null,
+    "secondVerdict": "agree_disputed",
+    "secondReviewedAnswer": "A/B/C",
+    "reasoning": "C 明確錯，未加 NOT NULL 的 foreign key 可以是 NULL；但 A 把 primary key 限縮成『specific column』，忽略 composite primary key，B 又把 foreign key 可參照的 candidate/UNIQUE key 限縮成另一表的 primary key，且忽略複合欄位。按嚴格關聯模型至少 A、B、C 都不完整或錯誤，不能單選 C。",
+    "sourceBasis": [
+      "public/papers/pp-im-it-112.pdf（原始題面；無官方答案）",
+      ".work/im-it-pdf-audit-111-115.md（確認 PDF 原始 primary/foreign-key 題）",
+      "獨立依 composite key、candidate key 與 nullable foreign key 約束推導"
+    ],
+    "consensus": true
+  },
+  {
+    "questionId": "q-pp-im-it-112-25",
+    "firstVerdict": "disputed",
+    "firstReviewedAnswer": null,
+    "secondVerdict": "agree_disputed",
+    "secondReviewedAnswer": "B/D",
+    "reasoning": "B 錯，含 k 個 children 的非葉節點有 k-1 個 separator keys；D 也少了 root 例外，order-m B-tree 的非 root internal node 才至少有 ceil(m/2) children，internal root 可只有 2 個。題面未排除 root，因此至少 B、D 皆錯。",
+    "sourceBasis": [
+      "public/papers/pp-im-it-112.pdf（原始題面；無官方答案）",
+      ".work/im-it-pdf-audit-111-115.md（確認 PDF 原始 B-tree A-E 選項）",
+      "獨立依 order-m B-tree 節點鍵數與 root exception 推導"
+    ],
+    "consensus": true
+  }
+]

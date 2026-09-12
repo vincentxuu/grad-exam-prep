@@ -1,0 +1,54 @@
+UH: 258 園 立 臺 灣 大 學 115 學 年 度 碩士 班 招生 考試 試題
+
+AB: 資訊 科技 概論 是 號:258
+
+RR: 6 共 4 買 之 第 3 頁
+mechanism in the Transformer architecture? (A) To compress the input data into a smaller vector. (B) To allow the model to
+weigh the importance of different words in a sequence relative to each other, regardless of their distance. (C) To generate random
+variations of the output to increase creativity. (D) To convert text into speech. (E) To store long-term memory of previous
+conversations on a hard drive.
+
+28. | What is the core principle of the “Zero Trust” security architecture? (A) “Never trust, always verify”—no user or
+device is trusted by default, even if inside the corporate network. (B) All internal traffic is trusted, but external traffic is blocked.
+(C) Using only biometric authentication for all access. (D) Isolating the network from the internet completely. (E) Relying solely
+on firewalls to protect the network perimeter.
+
+29. | What is the defining characteristic of “Serverless Computing” (e.g., AWS Lambda)? (A) There are physically no
+servers involved in the process. (B) The developer must manually patch and manage the operating system of the server. (C) The
+cloud provider dynamically manages the allocation of machine resources, and pricing is based on the actual amount of resources
+consumed by an application execution, not pre-purchased capacity. (D) It is a peer-to-peer network where every client is also a
+server. (E) Use commodity-grade PCs to replace high-cost servers.
+
+0. [___] im the field of Generative Al, what does “RAG” (Retrieval-Augmented Generation) refer to? (A) A method to generate
+random answers to prevent overfitting. (B) A technique to reduce the size of the model by removing unused neurons. (C) A
+training process that relies solely on reinforcement learning from human feedback. (D) A technique that optimizes the output of
+an LLM by referencing an authoritative knowledge base outside its training data before generating a response. (E) An AI agent
+jearns to make decisions by interacting with an environment, taking actions, and receiving rewards or penalties,
+
+二 、 閃 答題, 共 40 分 。
+
+DK 本 大 題 請 於 試卷 內 之 「 非 選擇 題 作答 區 」 標 明 題 號 依 序 作 答 。
+
+Ht. The following shows an array-based implementation of ADT Stack that stores non-duplicated integers. NOTE: The stack
+class has NO member function of data swapping!! All item switching or swapping operations must be implemented by
+yourselft!
+
+const int MAXSIZE = 20; // the maximal stack size :
+class Stack
+{
+public:
+// insert an integer into the stack
+int push(int data);
+// reverse the order of the integers in the stack
+void reverse();
+// vank the integers in the stack in ascending order
+void rank(); mote 。
+private :
+int items[MAXSIZE]; // the array of the stacked integers
+int top; // the index of the top item, the initial is -1
+ye
+
+a) (10 points) Write the stack: :push () function that inserts an integer into the stack. Note that the function returns -1 if either the
+
+stack is full or the input integer has already existed in the stack; otherwise, it returns 0.
+| 見 背 面

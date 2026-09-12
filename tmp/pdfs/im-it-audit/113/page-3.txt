@@ -1,0 +1,55 @@
+題 號 : 294 “國 立 臺灣 大 學 113 學 年 度 碩士 班 招生 考試 試題
+科目 : 資訊 科技 概論 FAME: 294
+ek: 6 共 4 頁 之 第 3 頁
+
+19.[_ is a constraint that determines the relation of one attribute to another in a DBMS, and thus helps to maintain
+the quality of data in the database. (A) inclusion dependency (B) column dependency (C) functional dependency (D) join
+dependency (E) none of the above.
+
+20. | A relation is in normal form if and only if no attribute domain has relations as elements. (A) first (B) second (C)
+third (D) closed (E) none of the above.
+
+21. [| Which of the following is wrong about Object-Oriented Programming (OOP)? (A) encapsulation describes the
+bundling of data and methods operating on this data into one unit (B) a class that inherits from another class shares all the
+attributes and methods of the referenced class (C) multiple inheritance allows a subclass to inherit from two or more superclasses
+(D) abstract classes cannot be instantiated into objects (E) all the above are correct (choose this one only if none of the above can
+be chosen). . .
+
+22. [ Which of the following is wrong about variables in OOP? (A) a member variable is a variable that is associated with a
+particular object and accessible from all of its methods (B) a member variable must be declared within the body of a method (C)
+there is only one copy of each class variable (D) an instance variable is a variable defined in a class for which each instantiated
+object of the class has a separate copy (E) all the above are correct (choose this one only if none of the above can be chosen).
+
+23. {____] GPT is the large language model behind ChatGPT. “GPT” stands for (A) Generative Proficiency in Text (B) Grasping
+the Paradigm of Texts (C) Generative Prowess in Text (D) Generative Pathfinding Transformer (E) none of the above.
+
+4. [| Which of the following refers to an assessment to determine whether a machine can exhibit the same intelligence as a
+human? (A) artificial general intelligence (AGI) (B) Turing complete (C) Chinese room argument (D) Turing test (E) none of the
+above. ; i a
+
+二 、 問 答題 , 共 4 分 。
+
+M 本 大 題 請 於 試卷 內 之 「 非 民 擇 題 作 答 區 」 標 明 題 號 依 序 作答 。
+
+25. The following C++ code fragment shows the class definition of a pointer-based implementation of ADT Binary Search Tree
+that stores employee information of a company. Each tree node stands for an employee. The employeeID is the key and it
+cannot be duplicated!!
+
+class TreeNode
+{
+public:
+private: ~
+int employeeID; // employee ID, key value, never duplicated! !
+string emplyeeName; // employee name . .
+int age; // employee age
+TxeeNode *leftChildpPtr; // pointer to the left child, NULL if no left child
+TreeNode *rightChildptr; // pointer to the right child, NULL if no right child
+friend class BinarySearchTree;
+};
+class BinarySearchTree
+{
+public: .
+int InsertNewEmployee (int newID, string newName, int newAge);
+// veturn 1 if the insertion is successful; otherwise return 0 .
+void ListAllEmployee();
+// print all employee info in sorted order 、

@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "cs-arch",
+  "status": "draft",
+  "generationPolicy": "只從本 draft lesson 衍生；保留封閉 sourceRefs 與 candidate pastPaperRefs。",
+  "totalCards": 8,
+  "cards": [
+    {
+      "id": "card-cs-arch-pipeline-foundations-01",
+      "lessonId": "lesson-cs-arch-pipeline-foundations-01",
+      "subtopicId": "cs-arch-pipeline-foundations",
+      "front": "Pipeline 主要改善 latency 還是 throughput？",
+      "back": "主要改善 steady-state throughput；單一 instruction 仍需跨越各 stages。",
+      "explanation": "把整條線填滿後可頻繁完成工作，不代表第一件工作更早完成。",
+      "sourceRefs": [
+        "src-cs-arch-patterson-hennessy-2e",
+        "src-cs-arch-riscv-unprivileged"
+      ],
+      "pastPaperRefs": [
+        "q-pp-cs-arch-113-2",
+        "q-pp-cs-arch-114-12"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-cs-arch-pipeline-performance-01",
+      "lessonId": "lesson-cs-arch-pipeline-foundations-01",
+      "subtopicId": "cs-arch-pipeline-performance",
+      "front": "忽略 pipeline-register overhead 時，pipeline clock cycle time 如何決定？",
+      "back": "取所有 stage latency 的最大值。",
+      "explanation": "每次推進都必須等最慢 stage 完成。",
+      "sourceRefs": [
+        "src-cs-arch-patterson-hennessy-2e",
+        "src-cs-arch-riscv-unprivileged"
+      ],
+      "pastPaperRefs": [
+        "q-pp-cs-arch-110-7",
+        "q-pp-cs-arch-113-2",
+        "q-pp-cs-arch-114-12"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-cs-arch-pipeline-performance-02",
+      "lessonId": "lesson-cs-arch-pipeline-foundations-01",
+      "subtopicId": "cs-arch-pipeline-performance",
+      "front": "Data memory utilization 如何由 instruction mix 估算？",
+      "back": "在無 stall 的簡化模型下，加總會使用 data memory 的 instruction 比例，例如 load+store。",
+      "explanation": "Instruction fetch memory 與 data memory 必須依題目架構分開看。",
+      "sourceRefs": [
+        "src-cs-arch-patterson-hennessy-2e",
+        "src-cs-arch-riscv-unprivileged"
+      ],
+      "pastPaperRefs": [
+        "q-pp-cs-arch-113-2",
+        "q-pp-cs-arch-114-12"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-cs-arch-pipeline-hazard-01",
+      "lessonId": "lesson-cs-arch-pipeline-foundations-01",
+      "subtopicId": "cs-arch-pipeline-hazards-forwarding",
+      "front": "什麼是 RAW data hazard？",
+      "back": "後續 instruction 要讀取前一 instruction 尚未可用的寫入結果。",
+      "explanation": "先標 producer/consumer register，再比較 result available 與 operand needed 的 cycle。",
+      "sourceRefs": [
+        "src-cs-arch-patterson-hennessy-2e",
+        "src-cs-arch-riscv-unprivileged"
+      ],
+      "pastPaperRefs": [
+        "q-pp-cs-arch-110-7",
+        "q-pp-cs-arch-111-5"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-cs-arch-pipeline-forwarding-01",
+      "lessonId": "lesson-cs-arch-pipeline-foundations-01",
+      "subtopicId": "cs-arch-pipeline-hazards-forwarding",
+      "front": "Forwarding 為何能減少 stall？",
+      "back": "它把已產生的 result 從 pipeline register 直接送到後續 EX input，省去等待 register-file write-back。",
+      "explanation": "Forwarding 不會讓尚未完成的 load data 提早出現。",
+      "sourceRefs": [
+        "src-cs-arch-patterson-hennessy-2e",
+        "src-cs-arch-riscv-unprivileged"
+      ],
+      "pastPaperRefs": [
+        "q-pp-cs-arch-110-7"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-cs-arch-pipeline-load-use-01",
+      "lessonId": "lesson-cs-arch-pipeline-foundations-01",
+      "subtopicId": "cs-arch-pipeline-hazards-forwarding",
+      "front": "為何 load-use hazard 即使有 forwarding 仍常需 bubble？",
+      "back": "Load data 通常到 MEM 後才可用，而緊鄰 consumer 可能在下一 cycle 的 EX 就需要它。",
+      "explanation": "實際 stall 數仍以題目 datapath 與 timing 為準。",
+      "sourceRefs": [
+        "src-cs-arch-patterson-hennessy-2e",
+        "src-cs-arch-riscv-unprivileged"
+      ],
+      "pastPaperRefs": [
+        "q-pp-cs-arch-110-7",
+        "q-pp-cs-arch-114-13"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-cs-arch-pipeline-nop-01",
+      "lessonId": "lesson-cs-arch-pipeline-foundations-01",
+      "subtopicId": "cs-arch-pipeline-hazards-forwarding",
+      "front": "沒有 hazard detection 與 forwarding 時，插入 NOP 前先確認哪項假設？",
+      "back": "先確認 register file 是否允許同一 cycle 先 WB write、後 ID read。",
+      "explanation": "這個假設可能讓每段 dependency 相差一個 NOP；112 年候選題因此維持 disputed。",
+      "sourceRefs": [
+        "src-cs-arch-patterson-hennessy-2e",
+        "src-cs-arch-riscv-unprivileged"
+      ],
+      "pastPaperRefs": [
+        "q-pp-cs-arch-112-7"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "card-cs-arch-pipeline-delay-slot-01",
+      "lessonId": "lesson-cs-arch-pipeline-foundations-01",
+      "subtopicId": "cs-arch-pipeline-hazards-forwarding",
+      "front": "忽略 load delay slot 時，緊鄰 consumer 可能讀到什麼？",
+      "back": "可能讀到 destination register 的舊值，而不是尚未完成載入的新值。",
+      "explanation": "114 年第 13 題中 x3 舊值為 24，因此 add 得到 48。此答案仍是非官方候選。",
+      "sourceRefs": [
+        "src-cs-arch-patterson-hennessy-2e",
+        "src-cs-arch-riscv-unprivileged"
+      ],
+      "pastPaperRefs": [
+        "q-pp-cs-arch-114-13"
+      ],
+      "reviewStatus": "draft"
+    }
+  ]
+}

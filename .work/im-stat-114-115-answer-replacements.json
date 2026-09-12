@@ -1,0 +1,43 @@
+{
+  "authority": [
+    "public/papers/pp-im-stat-114.pdf",
+    "public/papers/pp-im-stat-115.pdf"
+  ],
+  "replacements": [
+    {
+      "questionId": "q-pp-im-stat-114-4",
+      "answer": "N/A",
+      "explanation": "本題為多元線性迴歸的計算與假設檢定題，沒有選項。(1) 調整後 R² = 1 - (1 - R²)(n-1)/(n-k-1)，代入 n=440、k=3、R²=0.170，得到 1 - 0.830×439/436 ≈ 0.1643。(2) 殘差自由度為 n-k-1=436；截距的 t 值為 7.1943/1.092 ≈ 6.59。(3) H₀ 為三個斜率係數同時等於零。卷面給定 F=29.80、p=1.52×10⁻¹⁷；p<0.05，故拒絕 H₀，至少一個自變數的係數不為零。",
+      "evidencePages": [2],
+      "reason": "Open-ended question; a letter answer is not applicable."
+    },
+    {
+      "questionId": "q-pp-im-stat-114-5",
+      "answer": "N/A",
+      "explanation": "本題為證明與計算題，沒有選項。因 T 為 5 的倍數，g(i)=1+(i mod 5) 每五項依序為 2、3、4、5、1，所以 Σg(i)=3T、Σg(i)²=11T。(1) E[m]=[Σg(i)E(Yᵢ)]/[Σg(i)]=μ，因此 m 是 μ 的不偏估計量。(2) 樣本獨立且各自變異數為 σ²，故 Var(m)=[Σg(i)²σ²]/[Σg(i)]²=(11Tσ²)/(3T)²=11σ²/(9T)。",
+      "evidencePages": [3],
+      "reason": "The current solution uses the mistranscribed denominator T, incorrectly concludes the estimator is biased, and gives variance 11σ²/T instead of 11σ²/(9T)."
+    },
+    {
+      "questionId": "q-pp-im-stat-115-3",
+      "answer": "N/A",
+      "explanation": "本題為三小題的機率計算題，(A)(B)(C) 是子題而非選項。(A) 在六個支撐點，分子權重分別為：(-1,0):2、(-1,1):2、(0,0):0、(0,1):2、(1,0):2、(1,1):4，總和為 12，因此 c=12。(B) 變換後的聯合 PMF 為 P(Y₁=-1,Y₂=-1)=1/6、P(0,-2)=1/6、P(0,0)=0、P(1,-1)=1/6、P(1,1)=1/6、P(2,0)=1/3，其餘為 0。(C) Y₁ 的邊際 PMF 為 P(Y₁=-1)=1/6、P(Y₁=0)=1/6、P(Y₁=1)=1/3、P(Y₁=2)=1/3，其餘為 0。",
+      "evidencePages": [2],
+      "reason": "The current solution answers a different, incorrectly transcribed PMF and therefore has the wrong c and probabilities."
+    },
+    {
+      "questionId": "q-pp-im-stat-115-4",
+      "answer": "N/A",
+      "explanation": "本題為三小題的估計量計算題，沒有選項。(A) m₁、m₂、m₃ 的權重和都為 1，因此三者對所有 α>0、β>0 都是不偏估計量。(B) Var(m₂)=σ²(1+α²)/(1+α)²，微分或利用等權重最小化可得 α=1。(C) Var(m₃)=σ²(5+β²)/(3+β)²，微分後令 6β-10=0，得到 β=5/3。",
+      "evidencePages": [2],
+      "reason": "Open-ended question; a letter answer is not applicable."
+    },
+    {
+      "questionId": "q-pp-im-stat-115-5",
+      "answer": "N/A",
+      "explanation": "本題為卡方獨立性檢定，沒有選項。H₀ 為購買高級寶藏與玩家等級獨立，自由度 (2-1)(3-1)=2。依列、欄合計得到期望次數：購買列為 40、56、64；未購買列為 10、14、16。卡方統計量為 25/40+36/56+1/64+25/10+36/14+1/16 ≈ 6.42。卷面給定 5% 臨界值 χ²₀.₀₅,₂=5.99；6.42>5.99，故在 5% 顯著水準拒絕 H₀，購買行為與累積有效遊戲時間分類存在顯著關聯。",
+      "evidencePages": [2],
+      "reason": "Open-ended question; a letter answer is not applicable."
+    }
+  ]
+}

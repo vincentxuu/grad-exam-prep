@@ -1,0 +1,18 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "incremental": false
+  },
+  "include": [
+    "../next-env.d.ts",
+    "../cloudflare-env.d.ts",
+    "../src/lib/llm/traditional-chinese.ts",
+    "../src/lib/llm/invoke.ts",
+    "../src/lib/lexicon/store.ts",
+    "../src/lib/chat/store.ts",
+    "../src/__tests__/traditional-chinese.test.ts",
+    "../src/__tests__/llm-cloudflare-workers-ai.test.ts",
+    "../src/__tests__/lexicon-store.test.ts"
+  ],
+  "exclude": ["../node_modules"]
+}

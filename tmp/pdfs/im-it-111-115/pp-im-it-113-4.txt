@@ -1,0 +1,26 @@
+AAR: 294 國 立 臺灣 大 學 113 學 年 度 碩士 班 招生 考試 試題
+科目 : 資訊 科技 概論 Aa: 294
+fick: 6 共 4 頁 之 第 4 頁
+
+protected:
+
+void inorder (TreeNode *treePtr) ;
+
+// a RECURSIVE inorder traversal that prints (ID, name, age) of all employees
+
+private:
+
+TreeNode *rootPtr; // pointer to the root of tree, NULL if the tree is empty
+
+hi
+
+‘a) (20 points) Write the BinarySearchTree: :InsertNewEmployee() that inserts a new employee into the binary search
+tree. Here, we assume the employee ID is never duplicated; and the ID is the key of a tree node.
+
+b) (20 points) Write the BinarySearchTree: :ListAllEmployee () that prints all employee information in ascending order
+in accordance with employeeID. Note that you also need to implement the protected function
+BinarySearchTree: : inorder () called by ListAllEmployee() that recursively traverses the tree for printing all
+employee information.
+
+3 :
+試題 隨 卷 繳 回

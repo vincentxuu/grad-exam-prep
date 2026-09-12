@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "im-it",
+  "reviewStatus": "reviewed",
+  "applyStatus": "approved_for_application",
+  "moves": [
+    {
+      "questionId": "q-pp-im-it-111-24",
+      "fromSubtopicId": "im-it-db-distributed-nosql",
+      "toSubtopicId": "im-it-security-blockchain",
+      "reason": "題目考 NFT 與 blockchain 上不可互換資料單位，不是 NoSQL data model；本題仍維持 disputed。"
+    },
+    {
+      "questionId": "q-pp-im-it-112-24",
+      "fromSubtopicId": "im-it-db-distributed-nosql",
+      "toSubtopicId": "im-it-security-blockchain",
+      "reason": "題目考 Bitcoin mining 驗證交易，與先前 mining 題一致應歸區塊鏈。"
+    },
+    {
+      "questionId": "q-pp-im-it-115-25",
+      "fromSubtopicId": "im-it-db-distributed-nosql",
+      "toSubtopicId": "im-it-security-blockchain",
+      "reason": "題目考無中央權威的不可變、可驗證交易帳本，直接對應 blockchain。"
+    }
+  ]
+}

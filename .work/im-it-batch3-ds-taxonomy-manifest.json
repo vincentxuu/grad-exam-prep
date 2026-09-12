@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "im-it",
+  "topicId": "im-it-ds",
+  "auditScope": {
+    "metadataFile": "public/data/im-it-question-metadata.json",
+    "auditedQuestionCount": 29,
+    "changedQuestionCount": 2,
+    "unchangedQuestionCount": 27
+  },
+  "changes": [
+    {
+      "questionId": "q-pp-im-it-108-21",
+      "oldPrimarySubtopicId": "im-it-ds-trees-bst",
+      "newPrimarySubtopicId": "im-it-ds-heaps-priority-queues",
+      "questionType": "code_implementation",
+      "autoGradeEligible": false,
+      "reason": "題目明確定義 max-heap 並要求實作 root delete 與 insert/sift 操作；核心 invariant 是 complete binary tree 的 heap order，不是 BST ordering、search 或 traversal。",
+      "evidence": [
+        "題幹原文：HEAP is a complete binary tree that provides an efficient implementation of priority queues",
+        "taxonomyRationale 現值：實作 max-heap 操作",
+        "要求實作 delete() 與 insert()，對應 sift-down 與 sift-up"
+      ]
+    },
+    {
+      "questionId": "q-pp-im-it-109-22",
+      "oldPrimarySubtopicId": "im-it-ds-trees-bst",
+      "newPrimarySubtopicId": "im-it-ds-heaps-priority-queues",
+      "questionType": "code_implementation",
+      "autoGradeEligible": false,
+      "reason": "題目要求在 large-values-high-priority 的 max-heap 實作 boostPriority 與向上恢復 heap order；不涉及 BST 的左右子樹 ordering。",
+      "evidence": [
+        "題幹原文：HEAP is a complete binary tree that provides an efficient implementation of priority queues",
+        "taxonomyRationale 現值：實作 max-heap priority update",
+        "boostPriority 需沿 parent chain sift-up，屬 heap/priority-queue 操作"
+      ]
+    }
+  ],
+  "countsBefore": {
+    "im-it-ds-complexity-analysis": { "total": 0, "autoGradeEligible": 0 },
+    "im-it-ds-linear-structures": { "total": 4, "autoGradeEligible": 1 },
+    "im-it-ds-trees-bst": { "total": 8, "autoGradeEligible": 1 },
+    "im-it-ds-heaps-priority-queues": { "total": 4, "autoGradeEligible": 4 },
+    "im-it-ds-hashing": { "total": 4, "autoGradeEligible": 2 },
+    "im-it-ds-graphs": { "total": 3, "autoGradeEligible": 2 },
+    "im-it-ds-sorting-searching": { "total": 6, "autoGradeEligible": 4 },
+    "im-it-ds-algorithm-design": { "total": 0, "autoGradeEligible": 0 }
+  },
+  "countsAfter": {
+    "im-it-ds-complexity-analysis": { "total": 0, "autoGradeEligible": 0 },
+    "im-it-ds-linear-structures": { "total": 4, "autoGradeEligible": 1 },
+    "im-it-ds-trees-bst": { "total": 6, "autoGradeEligible": 1 },
+    "im-it-ds-heaps-priority-queues": { "total": 6, "autoGradeEligible": 4 },
+    "im-it-ds-hashing": { "total": 4, "autoGradeEligible": 2 },
+    "im-it-ds-graphs": { "total": 3, "autoGradeEligible": 2 },
+    "im-it-ds-sorting-searching": { "total": 6, "autoGradeEligible": 4 },
+    "im-it-ds-algorithm-design": { "total": 0, "autoGradeEligible": 0 }
+  },
+  "auditConclusion": "逐筆檢查 29 個 im-it-ds metadata rows 後，只需變更上述兩題。其餘 27 題的 primarySubtopicId 與題目主要能力一致。兩題皆非 auto-grade 題，因此重分類不改變 subject 總 eligible 數，也不改變 trees/heaps 的 eligible counts。",
+  "applyStatus": "approved_for_application"
+}

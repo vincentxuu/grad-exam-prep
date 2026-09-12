@@ -1,0 +1,626 @@
+[
+  {
+    "id": "q-pp-im-it-113-1",
+    "year": 113,
+    "number": 1,
+    "text": "Which of the following is not a popularly used file system? (A) FAT32 (B) exFAT (C) NTFS (D) APFS (E) all the above are popular file systems (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "C",
+    "explanation": "馮紐曼架構（Von Neumann Architecture）的核心特徵之一，就是程式指令與資料共用同一記憶體空間，這被稱為「儲存程式概念」（stored-program concept）。選項 (C) 說「資料與指令被分離到不同的記憶體」，這描述的是哈佛架構（Harvard Architecture），而非馮紐曼架構，因此是錯誤的敘述。選項 (A) 正確描述了馮紐曼架構的四個主要組成：CPU、記憶體、輸入與輸出。選項 (B) 正確說明記憶體是一個線性的儲存位置陣列，選項 (D) 也正確指出 CPU 包含控制單元（CU）與算術邏輯單元（ALU）。"
+  },
+  {
+    "id": "q-pp-im-it-113-2",
+    "year": 113,
+    "number": 2,
+    "text": "Which of the following is wrong? (A) multiprocessing allows simultaneous execution of processes on separate cores or processors (B) in multiprocessing, two processes spawned by a parent process share their memory, stack, and program counter (C) processes in multiprocessing can communicate through mechanisms like shared memory or message passing (D) the main purpose of multiprocessing is to improve system throughput and performance (E) all of the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "D",
+    "explanation": "CISC（複雜指令集電腦）的指令集比 RISC（精簡指令集電腦）更大、更複雜，而非更小，因此選項 (D) 的說法是錯誤的。RISC 的設計哲學正是「精簡」指令集，每條指令功能單純；CISC 則相反，擁有龐大且多樣化的指令集以支援複雜操作。選項 (A) 正確，因為 CISC 指令功能強大，完成相同工作所需的指令數量通常較少。選項 (B) 正確，CISC 的核心設計目標就是讓每條指令能完成更多工作。選項 (C) 正確，CISC 指令較複雜，通常需要多個時脈週期執行，而 RISC 指令通常可在單一週期內完成。"
+  },
+  {
+    "id": "q-pp-im-it-113-3",
+    "year": 113,
+    "number": 3,
+    "text": "Which of the following is wrong? (A) a thread represents an independent path of execution within a program (B) multiple threads can run simultaneously within a single process (C) communication between threads is more lightweight and efficient than communication between processes (D) threads within a process sharing the same memory space (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "E",
+    "explanation": "本題詢問哪個關於計算機架構的敘述是錯誤的。選項(A)正確：32位元位址匯流排可定址2^32個位元組的記憶體空間。選項(B)正確：記憶體映射I/O（Memory-mapped I/O）確實讓I/O裝置與記憶體共用同一個位址空間。選項(C)正確：正因為共用位址空間，存取I/O裝置與記憶體使用相同的載入/儲存指令。選項(D)正確：處理器內部的資料儲存元件確實稱為暫存器（registers）。由於(A)(B)(C)(D)四個選項均為正確敘述，題目中沒有任何一個是錯誤的，因此應選(E)。"
+  },
+  {
+    "id": "q-pp-im-it-113-4",
+    "year": 113,
+    "number": 4,
+    "text": "A von Neumann architecture consists of four main components, which are: (A) input, output, memory, processing (B) input, output, CPU, program counter (C) arithmetic control, logic control, register, program counter (D) CPU, GPU, RAM, hard disk (E) I/O, RAM, CPU, storage",
+    "currentAnswer": "E",
+    "explanation": "選項 (A) 正確：中斷驅動 I/O 中，外部裝置會向處理器發出中斷，使其執行中斷服務常式。選項 (B) 正確：外部裝置透過觸發中斷訊號來中斷處理器，這是中斷機制的基本運作方式。選項 (C) 正確：直接記憶體存取（DMA）允許資料在 I/O 裝置與記憶體之間直接傳輸，無需處理器持續介入。選項 (D) 正確：DMA 控制器正是一種硬體裝置，使 I/O 裝置能夠直接存取記憶體，大幅減少處理器的參與。由於 (A)、(B)、(C)、(D) 四個選項均為正確敘述，因此答案為 (E)。"
+  },
+  {
+    "id": "q-pp-im-it-113-5",
+    "year": 113,
+    "number": 5,
+    "text": "Which of the following about stack memory in operating system is wrong? (A) local variables of a program are stored in stack (B) every time a function is called, the operating system allocates some stack memory for it (C) during a program's execution, allocation and deallocation for stack memory is automatically done (D) a stack overflow occurs when a program tries to use more memory space in the call stack than has been allocated (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "C",
+    "explanation": "此題問哪個關於 CPU 快取的敘述是錯誤的。選項 (C) 宣稱現代 CPU 的 L1 快取大小「通常在數十到數百位元組」，這是錯誤的。實際上，現代 CPU 的 L1 快取大小通常為 32KB 到 256KB（每個核心），遠遠超過數百位元組的範圍。其他選項均正確：(A) CPU 暫存器的存取速度確實比 L1 快取更快；(B) CPU 暫存器的數量（通常 16 至 32 個通用暫存器，僅數十位元組）確實少於 L1 快取的容量；(D) L2 快取的大小（通常數 MB）確實遠大於 L1 快取。"
+  },
+  {
+    "id": "q-pp-im-it-113-6",
+    "year": 113,
+    "number": 6,
+    "text": "Which of the following is wrong about heap memory in operating system? (A) objects dynamically created by a program are stored in the heap memory (B) the heap segment can suffer from fragmentation (C) memory allocated on the heap persists until explicitly deallocated by the programmer (D) garbage collection is invoked to clean up objects in the heap that are no longer being referenced (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "E",
+    "explanation": "作業系統的主要功能包含資源管理（Resource Management）、行程管理（Process Management）、記憶體管理（Memory Management）以及安全管理（Security Management）。資源管理負責分配與調度 CPU、記憶體、I/O 裝置等系統資源；行程管理負責排程、同步與通訊；記憶體管理負責記憶體的配置與保護；安全管理則負責存取控制與使用者認證。由於選項 A、B、C、D 皆屬於作業系統的主要功能，因此答案為 E，即「以上皆為主要功能」才是正確描述，題目問的是「不屬於」，但實際上所有選項都屬於，故選 E 表示全部皆是。"
+  },
+  {
+    "id": "q-pp-im-it-113-7",
+    "year": 113,
+    "number": 7,
+    "text": "Which of the following about interrupt in a computer is wrong? (A) an interrupt is a signal to the processor that an event has occurred, requiring its attention (B) when an interrupt occurs, the usual procedure is for the processor to save its state by pushing its registers and program counter onto the stack (C) in a polled interrupt system, the interrupting device directs the processor to the appropriate interrupt service routine (D) interrupts can be assigned priorities to allow a higher priority one to \"interrupt\" lower priorities (E) all of the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "E",
+    "explanation": "本題詢問哪一個「不是」藍牙的常見應用。選項A（手機與VR頭戴裝置）、選項B（手機與車用音響）、選項C（穿戴裝置與手機）、選項D（滑鼠與筆電）皆為藍牙技術的典型實際應用場景。由於A到D全部都是藍牙的常見用途，因此不存在任何例外，選項E「以上皆為藍牙的常見應用」為正確敘述，即為本題「except（除了……之外）」問法下的正確答案。"
+  },
+  {
+    "id": "q-pp-im-it-113-8",
+    "year": 113,
+    "number": 8,
+    "text": "Amdahl's law is used in parallel computing to formulate the theoretical speedup when using multiple processors. Let p be the fraction of a task that is unaffected by adding more processors, and n is the number of processors used to speed up the task. Then the theoretical speedup of the execution of the whole task is (A) 1/(p + (1-p)/n) (B) 1/((1-p) + p/n) (C) (1-p)/(np) (D) n(1-p)/p (E) none of the above.",
+    "currentAnswer": "B",
+    "explanation": "DDR4 是一種動態隨機存取記憶體（DRAM），屬於揮發性記憶體（volatile memory），斷電後資料即消失，因此它不是非揮發性記憶體。固態硬碟（SSD）使用快閃記憶體晶片儲存資料，屬於非揮發性儲存裝置。唯讀記憶體（ROM）和快閃記憶體（Flash memory）同樣屬於非揮發性記憶體，斷電後資料仍能保留。因此，四個選項中唯一不是非揮發性記憶體的是 DDR4，正確答案為 B。"
+  },
+  {
+    "id": "q-pp-im-it-113-9",
+    "year": 113,
+    "number": 9,
+    "text": "Which of the following is wrong about mutual exclusion in operating system? (A) mutual exclusion is used to ensure that a shared resource can be accessed by only one process at a time (B) if not designed properly, a mutual exclusion mechanism may result in starvation (C) if not designed properly, a mutual exclusion mechanism may result in deadlock (D) if not designed properly, a mutual exclusion mechanism may result in livelock (E) all of the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "E",
+    "explanation": "互斥可確保共享資源同一時間只由一個 process 存取；設計不當的互斥機制確實可能造成 starvation、deadlock 或 livelock。因此 (A)–(D) 都正確，依題意應選 (E)。"
+  },
+  {
+    "id": "q-pp-im-it-113-10",
+    "year": 113,
+    "number": 10,
+    "text": "______ refers to the process of temporary storage of data for use and execution by a device, program, or system. Data is sent to and stored in main memory or other storage until it is requested for execution by a program or computer. (A) pipelining (B) spooling (C) buffering (D) stacking (E) none of the above.",
+    "currentAnswer": "A",
+    "explanation": "CIA 三元組（CIA Triad）是資訊安全領域最基本的框架，其中 CIA 代表 Confidentiality（機密性）、Integrity（完整性）與 Availability（可用性）。機密性確保資訊只有授權的人才能存取；完整性確保資訊的正確性與不被未授權竄改；可用性確保授權使用者在需要時能夠存取資訊。此模型廣泛應用於組織制定資訊安全政策的依據，是資訊安全管理的核心基礎概念。選項 B、C、D 均為錯誤的展開，其中 C 的 Central Intelligence Agency 是美國中央情報局，與資訊安全框架無關。"
+  },
+  {
+    "id": "q-pp-im-it-113-11",
+    "year": 113,
+    "number": 11,
+    "text": "Which of the following is wrong about cookies? (A) cookie is stored both on user's computer and host website (B) cookies are created and updated when user visit websites (C) first-party cookies are generated by the visited website (D) third-party cookies are generated by domains separate from the primary website visited (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "A",
+    "explanation": "在 SQL 中，建立資料表的正確語法為 `CREATE TABLE`，後接資料表名稱及括號內的欄位定義。選項 A 使用 `CREATE TABLE Customers (CustomerID int, CustomerName varchar(255))` 語法完全正確。選項 B 使用 `CREATE DATABASE` 是用來建立資料庫而非資料表，語意錯誤。選項 C 和 D 使用的 `BUILD TABLE` 與 `BUILD DATABASE` 並非標準 SQL 指令，在 SQL 中並不存在此類關鍵字。因此正確答案為 A。"
+  },
+  {
+    "id": "q-pp-im-it-113-12",
+    "year": 113,
+    "number": 12,
+    "text": "Which of the following is wrong about Domain Name System (DNS)? (A) DNS is a hierarchical naming system (B) DNS is a centralized naming system (C) DNS translates human readable names (for example, www.im.ntu.tw) to machine readable IP addresses (D) .tw is a top-level domain (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "B",
+    "explanation": "DNS 是階層式且分散式的命名系統，不是 centralized naming system；它會把 www.im.ntu.tw 等人類可讀名稱解析成 IP address，而 .tw 是 top-level domain。因此錯誤敘述為 (B)。"
+  },
+  {
+    "id": "q-pp-im-it-113-13",
+    "year": 113,
+    "number": 13,
+    "text": "Which of the following is wrong about proxy servers? (A) it can help prevent cyber attacks (B) it can help improve performance (C) proxy servers can serve as content filtering (D) a forward proxy shields servers by handling client requests, ensuring they reach the right server, and returning the results to clients, who are unaware of the server's direct involvement (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "D",
+    "explanation": "根據多份產業研究報告（如 IoT Analytics、Ericsson、Cisco 等），2020 年全球物聯網連網裝置數量約為 100 億至 120 億台，落在 100 億至 500 億（10–50 billion）的範圍內。選項 A（1000 萬至 1 億）和 B（1 億至 5 億）遠低於實際數字，而選項 C（10 億至 50 億）也低估了 2020 年的實際規模。選項 E（1000 億至 5000 億）則嚴重高估，目前尚未達到此規模。因此正確答案為 D（100 億至 500 億），最符合 2020 年物聯網裝置的估計數量。"
+  },
+  {
+    "id": "q-pp-im-it-113-14",
+    "year": 113,
+    "number": 14,
+    "text": "Which of the following is wrong about information security? (A) \"C\" in CIA triad refers to confidentiality (B) \"A\" in CIA triad refers to availability (C) information security management describes the set of policies and procedural controls that IT and business organizations implement to secure their informational assets against threats and vulnerabilities (D) ISO/IEC 27000-series provides best practice recommendations on information security management (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "B",
+    "explanation": "Digital twin（數位孿生）是指現實世界物件的數位對應體，用於模擬、整合、測試、監控和維護等用途。這個概念最早由 NASA 等機構發展，現廣泛應用於工業 4.0 與智慧製造領域。Avatar 指的是使用者在虛擬環境中的化身，Virtual reality 是沉浸式虛擬環境技術，Cloud object 並非標準術語，均與題意不符。因此正確答案為 B，digital twin。"
+  },
+  {
+    "id": "q-pp-im-it-113-15",
+    "year": 113,
+    "number": 15,
+    "text": "Which of the following is wrong about access control in information security? (A) identification is an assertion of who someone is or what something is (B) authentication is the act of verifying a claim of identity (C) accountability determines what informational resources a user is permitted to access and what actions he/she will be allowed to perform (D) role-based access control assigns permissions to users based on their role within an organization. (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "D",
+    "explanation": "在比特幣區塊鏈中，「挖礦」（mining）的主要目的是透過工作量證明（Proof-of-Work）機制來驗證交易（validate transaction），只有經過挖礦確認並被納入區塊的交易才被網路認可為有效。挖礦節點競爭解決一道困難的數學難題，勝出者有權將一批待確認的交易打包成區塊加入鏈中，從而達成去中心化的共識。選項 (A) 並行控制與選項 (B) 原子性都是資料庫的 ACID 概念，與挖礦無關；選項 (C) 分發交易描述的是廣播機制，也不是挖礦的主要用途。因此正確答案為 (D) validate transaction。"
+  },
+  {
+    "id": "q-pp-im-it-113-16",
+    "year": 113,
+    "number": 16,
+    "text": "Which of the following is wrong about public key infrastructure (PKI)? (A) PKI uses public-key encryption (B) a registration authority stores, issues, and signs the digital certificates (C) digital certificate is used to prove the validity of a public key (D) RSA is an asymmetric encryption (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "B",
+    "explanation": "B-tree 的基本性質是：擁有 k 個子節點的非葉節點包含 k-1 個鍵值，而非 k 個鍵值。選項 (B) 說「擁有 k 個子節點的非葉節點包含 k 個鍵值」，此敘述是錯誤的。其他選項皆正確：B-tree 是自我平衡的搜尋樹（A）、m 階 B-tree 最多有 m 個子節點（C）、每個內部節點至少有 ⌈m/2⌉ 個子節點（D）、所有葉節點都出現在同一層（E）。"
+  },
+  {
+    "id": "q-pp-im-it-113-17",
+    "year": 113,
+    "number": 17,
+    "text": "Which of the following is wrong about Hypertext Transfer Protocol Secure (HTTPS)? (A) Transport Layer Security (TLS) is a cryptographic protocol designed to provide secure communication over a computer network (B) HTTPS is basically an HTTP over TLS (C) HTTPS requires a trusted third party to sign server-side digital certificates (D) HTTPS supports a mutual authentication mode, allowing both server and client to authenticate each other (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "E",
+    "explanation": "此題詢問關於生成樹（spanning tree）哪個敘述是錯誤的。選項(A)與(B)：若圖G的所有邊都是其生成樹T的邊，則G與T擁有相同的頂點集合與邊集合，因此G等同於T，且由於T是樹，G也是樹——(A)與(B)均正確。選項(C)：若T是G的生成樹，且e是G中不屬於T的邊，則將e加入T必然形成環（cycle），這是生成樹的基本性質——(C)正確。選項(D)：一個圖可以有多棵生成樹（例如含環的連通圖通常有多個生成樹）——(D)正確。由於(A)、(B)、(C)、(D)全部正確，故答案為(E)，表示以上皆正確（沒有任何錯誤敘述）。"
+  },
+  {
+    "id": "q-pp-im-it-113-18",
+    "year": 113,
+    "number": 18,
+    "text": "Which of the following is wrong about ACID Properties in Database Management System (DBMS)? (A) \"A\" stands for availability (B) \"C\" stands for consistency (C) \"I\" stands for isolation (D) \"D\" stands for durability (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "B",
+    "explanation": "在堆積（heap）中插入一個新鍵值時，首先將其放在完全二元樹的最後一個位置（O(1)），接著執行「上移（bubble up / sift up）」操作，不斷與父節點比較並交換，直到滿足堆積性質為止。由於完全二元樹的高度為 O(log n)，因此上移操作最多執行 O(log n) 次。故插入操作的時間複雜度為 O(log n)。"
+  },
+  {
+    "id": "q-pp-im-it-113-19",
+    "year": 113,
+    "number": 19,
+    "text": "___ is a constraint that determines the relation of one attribute to another in a DBMS, and thus helps to maintain the quality of data in the database. (A) inclusion dependency (B) column dependency (C) functional dependency (D) join dependency (E) none of the above.",
+    "currentAnswer": "C",
+    "explanation": "Functional dependency 描述一個屬性或屬性集合如何決定另一個屬性，是關聯式資料庫正規化與維持資料品質的重要約束，因此答案為 (C) functional dependency。"
+  },
+  {
+    "id": "q-pp-im-it-113-20",
+    "year": 113,
+    "number": 20,
+    "text": "A relation is in ______ normal form if and only if no attribute domain has relations as elements. (A) first (B) second (C) third (D) closed (E) none of the above.",
+    "currentAnswer": "A",
+    "explanation": "本題為申論/程式撰寫題，無選項。(a) List::remove 函式應先在已排序陣列中尋找 value（可用線性或二元搜尋），若找到則將其後的所有元素往前移動一格，並將 itemCount 減 1、將 success 設為 true；若未找到則將 success 設為 false。(b) List::doubleArraySize 函式應先配置一個大小為 2*arraySize 的新整數陣列，將 p_items 中的所有元素複製到新陣列，釋放原陣列記憶體（delete[] p_items），再將 p_items 指向新陣列，最後將 arraySize 乘以 2。此兩函式的關鍵在於正確管理動態記憶體，避免記憶體洩漏，並維護 itemCount 與 arraySize 的一致性。"
+  },
+  {
+    "id": "q-pp-im-it-113-21",
+    "year": 113,
+    "number": 21,
+    "text": "Which of the following is wrong about Object-Oriented Programming (OOP)? (A) encapsulation describes the bundling of data and methods operating on this data into one unit (B) a class that inherits from another class shares all the attributes and methods of the referenced class (C) multiple inheritance allows a subclass to inherit from two or more superclasses (D) abstract classes cannot be instantiated into objects (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "A",
+    "explanation": "此題為申論題，要求實作 max-heap 的 boostPriority 函式，並無選項 A/B/C/D/E。正確實作方式為：先將 items[i] 更新為 newPriorityValue，再執行「向上調整（bubble up / sift up）」操作。在 max-heap 中，父節點索引為 (i-1)/2，若更新後的節點值大於其父節點，則兩者交換並繼續向上比較，直到根節點或父節點值大於等於當前節點為止。此操作時間複雜度為 O(log n)，可確保堆積性質在 priority 提升後仍然維持。完整實作：items[i] = newPriorityValue; while (i > 0 && items[(i-1)/2] < items[i]) { swap(items[(i-1)/2], items[i]); i = (i-1)/2; }"
+  },
+  {
+    "id": "q-pp-im-it-113-22",
+    "year": 113,
+    "number": 22,
+    "text": "Which of the following is wrong about variables in OOP? (A) a member variable is a variable that is associated with a particular object and accessible from all of its methods (B) a member variable must be declared within the body of a method (C) there is only one copy of each class variable (D) an instance variable is a variable defined in a class for which each instantiated object of the class has a separate copy (E) all the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "A",
+    "explanation": "本題實作 Boyer-Moore 演算法的 Bad Character 啟發式搜尋。對於 txt=\"ABAAABCDABC\" 和 pat=\"ABC\"，PREPROCESS 建立 badchar 表：badchar['A']=0, badchar['B']=1, badchar['C']=2，其餘為 -1。執行 search 時，s=0 時 txt[2]='A' 與 pat[2]='C' 不符，位移 max(1,2-0)=2；s=2 時同樣不符再位移 2；s=4 時三個字元完全匹配，輸出 \"pattern occurs at 4\"，再位移 3-badchar['D']=4；s=8 時再次完全匹配，輸出 \"pattern occurs at 8\"。最壞時間複雜度為 O(n*m)（如全為相同字元時每次僅移動 1），最佳時間複雜度為 O(n/m)（模式末字元從未出現在文本中時每次可跳過 m 個字元）。"
+  },
+  {
+    "id": "q-pp-im-it-113-23",
+    "year": 113,
+    "number": 23,
+    "text": "GPT is the large language model behind ChatGPT. \"GPT\" stands for (A) Generative Proficiency in Text (B) Grasping the Paradigm of Texts (C) Generative Prowess in Text (D) Generative Pathfinding Transformer (E) none of the above.",
+    "currentAnswer": "E",
+    "explanation": "GPT 的完整名稱是 Generative Pre-trained Transformer（生成式預訓練 Transformer）。選項 (A) Generative Proficiency in Text、(B) Grasping the Paradigm of Texts、(C) Generative Prowess in Text 與 (D) Generative Pathfinding Transformer 都不是正確名稱，因此應選 (E) none of the above。三個組成詞分別指出模型可生成內容（Generative）、先在大量資料上預訓練（Pre-trained），以及採用 Transformer 架構。"
+  },
+  {
+    "id": "q-pp-im-it-113-24",
+    "year": 113,
+    "number": 24,
+    "text": "Which of the following refers to an assessment to determine whether a machine can exhibit the same intelligence as a human? (A) artificial general intelligence (AGI) (B) Turing complete (C) Chinese room argument (D) Turing test (E) none of the above.",
+    "currentAnswer": "D",
+    "explanation": "Turing test（圖靈測試）用來評估機器在對話互動中所呈現的行為，是否能讓人類評審無法可靠區分它與人類，因此正確答案為 (D)。AGI 指具有廣泛任務能力的通用人工智慧；Turing complete 描述計算系統能否模擬通用計算；Chinese room argument 則是質疑符號處理是否等同真正理解的思想實驗，三者都不是題目所問的評估方法。"
+  },
+  {
+    "id": "q-pp-im-it-114-1",
+    "year": 114,
+    "number": 1,
+    "text": "Which of the following best describes the purpose of recursion in programming? (A) To optimize memory usage by eliminating loops (B) To solve problems by breaking them down into smaller, similar subproblems (C) To execute multiple tasks simultaneously using threads (D) To perform operations on arrays more efficiently (E) To handle errors during runtime automatically.",
+    "currentAnswer": "B",
+    "explanation": "遞迴（Recursion）的核心目的是將問題分解為更小的、結構相似的子問題，並透過解決這些子問題來解決原本的問題。選項 A 錯誤，遞迴並非為了消除迴圈以節省記憶體，事實上遞迴通常比迴圈消耗更多的堆疊記憶體。選項 C 描述的是多執行緒（multi-threading），與遞迴無關。選項 D 描述的是陣列操作的效率優化，並非遞迴的目的。選項 E 描述的是例外處理（exception handling），也與遞迴無關。因此，最能描述遞迴用途的是選項 B：透過將問題拆解為更小的相似子問題來求解。"
+  },
+  {
+    "id": "q-pp-im-it-114-2",
+    "year": 114,
+    "number": 2,
+    "text": "In object-oriented programming, what is the primary purpose of polymorphism? (A) To allow objects to inherit multiple classes (B) To provide a single interface for different implementations (C) To encapsulate data within a single class (D) To reuse existing code in derived classes (E) none of the above.",
+    "currentAnswer": "B",
+    "explanation": "多型（Polymorphism）的核心目的是提供一個統一的介面，讓不同的類別或物件可以透過相同的方法名稱來執行各自不同的實作行為。例如，不同的子類別可以覆寫（override）父類別的同一方法，呼叫端只需使用統一介面即可得到對應的結果。選項A描述的是多重繼承（Multiple Inheritance），屬於不同概念；選項C描述的是封裝（Encapsulation）；選項D描述的是繼承（Inheritance）中的程式碼重用。因此，正確答案為B。"
+  },
+  {
+    "id": "q-pp-im-it-114-3",
+    "year": 114,
+    "number": 3,
+    "text": "Which of the following data structures is most suitable for implementing a priority queue? (A) Stack (B) Queue (C) Binary Heap (D) Linked List (E) Hash Table.",
+    "currentAnswer": "C",
+    "explanation": "優先佇列（Priority Queue）需要支援高效率的插入（insert）與取出最高/最低優先權元素（extract-min/max）操作。二元堆積（Binary Heap）能在 O(log n) 時間內完成插入與刪除最值，是實作優先佇列最常用且最有效率的資料結構。堆疊（Stack）與佇列（Queue）不支援依優先權取出元素；鏈結串列（Linked List）雖可實作，但操作效率為 O(n)；雜湊表（Hash Table）不保留順序關係，無法有效支援優先權操作。因此，Binary Heap 是最適合實作優先佇列的資料結構。"
+  },
+  {
+    "id": "q-pp-im-it-114-4",
+    "year": 114,
+    "number": 4,
+    "text": "Which of the following traversal techniques produces a sorted order for a binary search tree (BST)? (A) Preorder traversal (B) Postorder traversal (C) Inorder traversal (D) Level-order traversal (E) Reverse level-order traversal.",
+    "currentAnswer": "C",
+    "explanation": "對於二元搜尋樹（BST），中序走訪（Inorder traversal）依照「左子樹 → 根節點 → 右子樹」的順序進行。由於 BST 的性質保證左子樹的所有節點值小於根節點，右子樹的所有節點值大於根節點，因此中序走訪會依遞增順序拜訪所有節點。前序走訪（Preorder）和後序走訪（Postorder）分別以根節點優先或根節點最後的方式遍歷，不保證排序順序。層序走訪（Level-order）和反向層序走訪（Reverse level-order）則依層次遍歷，同樣無法產生排序結果。"
+  },
+  {
+    "id": "q-pp-im-it-114-5",
+    "year": 114,
+    "number": 5,
+    "text": "Consider the following algorithm for sorting an array of N numbers. It starts from the 1st element of the array and compares it with the 2nd element. If the 1st element is greater than the 2nd, the two elements are swapped. Then, the 2nd element is compared with the 3rd element, and the two swapped if the 2nd element is greater. The process continues until the end of the array. The entire process is repeated for the first N-1 elements, N-2, ... and so on if the array is not yet sorted. What is the worst-case time complexity to sort an array of N numbers? (A) O(N) (B) O(N log N) (C) O(N²) (D) O(log² N) (E) none of the above.",
+    "currentAnswer": "C",
+    "explanation": "此題描述的是氣泡排序法（Bubble Sort）的運作方式：從第一個元素開始，依序比較相鄰元素並在必要時交換，反覆對 N-1、N-2、...個元素進行這個過程直到排序完成。在最壞情況下（例如陣列為逆序排列），需要進行 N-1 輪比較，每輪最多需要 N-1 次比較，總共約需 N(N-1)/2 次比較。因此最壞時間複雜度為 O(N²)，答案為 (C)。"
+  },
+  {
+    "id": "q-pp-im-it-114-6",
+    "year": 114,
+    "number": 6,
+    "text": "Continue the above question. What is the best-case time complexity (A) O(1) (B) O(N) (C) O(N log N) (D) O(N²) (E) O(log² N).",
+    "currentAnswer": "B",
+    "explanation": "此題延續上題的泡沫排序法（Bubble Sort）。泡沫排序的最佳情況發生在輸入陣列已經完全排好序的時候。由於演算法描述中提到「若陣列尚未排序完成才繼續重複整個過程」，代表此演算法具備提前終止（early termination）的機制。當陣列已排序時，第一次從頭到尾掃描（共 N-1 次比較）不會發生任何交換，演算法即可判斷完成並停止。因此最佳情況時間複雜度為 O(N)，答案為 (B)。"
+  },
+  {
+    "id": "q-pp-im-it-114-7",
+    "year": 114,
+    "number": 7,
+    "text": "In file systems, what is the primary purpose of an inode? (A) To store the actual content of a file (B) To store metadata about a file, such as permissions and timestamps (C) To allocate disk blocks to a file (D) To index all files in a directory (E) none of the above.",
+    "currentAnswer": "B",
+    "explanation": "在檔案系統中，inode（索引節點）的主要用途是儲存檔案的元資料（metadata），包括檔案權限、擁有者、時間戳記（建立時間、修改時間）、檔案大小，以及指向實際資料區塊的指標。inode 本身並不儲存檔案的實際內容，檔案內容存放在資料區塊（data blocks）中，inode 只記錄這些區塊的位置。選項 A 錯誤，因為實際內容存於資料區塊；選項 C 部分正確但不完整，分配磁碟區塊只是 inode 功能之一；選項 D 錯誤，目錄索引由目錄項目（directory entries）負責，而非 inode。因此正確答案為 B。"
+  },
+  {
+    "id": "q-pp-im-it-114-8",
+    "year": 114,
+    "number": 8,
+    "text": "Which of the following best describes the Banker's Algorithm in an operating system? (A) It is a deadlock avoidance algorithm that checks resource allocation safety. (B) It ensures mutual exclusion in critical section problems. (C) It schedules processes in a round-robin manner. (D) It optimizes disk scheduling to reduce seek time. (E) It manages cache replacement in virtual memory systems.",
+    "currentAnswer": "A",
+    "explanation": "銀行家演算法（Banker's Algorithm）是由 Dijkstra 提出的死結避免（deadlock avoidance）演算法。它在分配資源之前，會模擬資源分配後系統是否仍處於安全狀態（safe state），若安全則允許分配，否則讓行程等待。其核心概念是系統像銀行一樣，只在能保證所有客戶（行程）最終都能完成的情況下才貸出資源。選項 B 描述的是互斥（mutual exclusion）問題；選項 C 描述的是排程演算法；選項 D 描述的是磁碟排程；選項 E 描述的是快取置換策略，均與銀行家演算法無關。"
+  },
+  {
+    "id": "q-pp-im-it-114-9",
+    "year": 114,
+    "number": 9,
+    "text": "In a multilevel feedback queue scheduling algorithm, which of the following is true? (A) Processes are assigned to a single queue for their entire lifetime. (B) The algorithm ensures that all processes are executed in a round-robin manner. (C) Processes can move between queues based on their behavior and priority. (D) Only I/O-bound processes are prioritized over CPU-bound processes. (E) The algorithm is non-preemptive by default.",
+    "currentAnswer": "C",
+    "explanation": "多層回饋佇列排班（Multilevel Feedback Queue）的核心特色是行程可以根據其行為與優先權在不同佇列之間移動，而非固定在同一個佇列中。若行程在時間量（time quantum）內未完成執行，通常會被降至較低優先權的佇列；反之，若行程主動放棄 CPU（如等待 I/O），可能被提升至較高優先權的佇列。選項 A 錯誤，因為行程不會固定在單一佇列；選項 B 錯誤，Round-Robin 只是各佇列內部可能採用的排班方式，並非整體演算法的保證；選項 D 錯誤，MLFQ 並非僅針對 I/O 密集型行程進行優先處理，而是透過行為動態調整；選項 E 錯誤，MLFQ 預設具有搶占（preemptive）能力，高優先權行程可搶占低優先權行程。"
+  },
+  {
+    "id": "q-pp-im-it-114-10",
+    "year": 114,
+    "number": 10,
+    "text": "What is the primary purpose of a semaphore in an operating system? (A) To manage CPU scheduling among processes (B) To ensure mutual exclusion in concurrent programming (C) To optimize memory allocation in virtual memory (D) To transfer data between user and kernel space (E) To prioritize processes in a scheduling queue.",
+    "currentAnswer": "B",
+    "explanation": "Semaphore（號誌）是作業系統中用於同步與互斥的核心機制，由 Dijkstra 提出，主要目的是確保並行程式設計中的互斥存取（mutual exclusion）。透過 P（wait）與 V（signal）兩個原子操作，semaphore 可防止多個行程同時進入臨界區段（critical section），避免競爭條件（race condition）的發生。選項 A 描述的是 CPU 排程器的功能，選項 C 描述的是虛擬記憶體管理，選項 D 描述的是系統呼叫或 DMA 的功能，選項 E 描述的是優先權排程，均非 semaphore 的主要用途。因此正確答案為 B。"
+  },
+  {
+    "id": "q-pp-im-it-114-11",
+    "year": 114,
+    "number": 11,
+    "text": "In the context of virtual memory, what is the purpose of a page table? (A) To map virtual addresses to physical addresses (B) To store process control information (C) To manage CPU scheduling among processes (D) To optimize I/O device access (E) To allocate space in secondary storage for processes.",
+    "currentAnswer": "A",
+    "explanation": "頁面表（Page Table）是虛擬記憶體系統中的核心資料結構，其主要目的是將虛擬位址（Virtual Address）對應到實體位址（Physical Address）。當程序存取某個虛擬位址時，作業系統透過頁面表查詢對應的實體框架號碼（Frame Number），從而找到資料在實體記憶體中的真實位置。選項B描述的是程序控制區塊（PCB）的功能，選項C是CPU排程的功能，選項D與I/O管理有關，選項E描述的是交換空間（Swap Space）的概念，皆與頁面表無關。因此正確答案為A。"
+  },
+  {
+    "id": "q-pp-im-it-114-12",
+    "year": 114,
+    "number": 12,
+    "text": "Which SQL clause is used to filter groups of data after applying an aggregate function? (A) DISTINCT (B) GROUP BY (C) HAVING (D) ORDER BY (E) none of the above.",
+    "currentAnswer": "C",
+    "explanation": "HAVING 子句用於在使用聚合函數（如 COUNT、SUM、AVG 等）並搭配 GROUP BY 分組後，對分組結果進行篩選。WHERE 子句是在分組前篩選列資料，而 HAVING 則是在分組後對群組進行條件過濾。例如，若要找出訂單數量超過 5 筆的客戶，可寫成 GROUP BY customer_id HAVING COUNT(*) > 5。DISTINCT 用於去除重複值，ORDER BY 用於排序結果，兩者皆不具備過濾分組的功能。因此正確答案為 (C) HAVING。"
+  },
+  {
+    "id": "q-pp-im-it-114-13",
+    "year": 114,
+    "number": 13,
+    "text": "In the context of database normalization, what is the purpose of 3NF (Third Normal Form)? (A) To ensure that non-primary-keys are transitively dependent (B) To ensure that all attributes are dependent only on the primary key (C) To reduce the number of tables in a schema. (D) To ensure that no non-primary-key attribute is transitively dependent on the primary key (E) To ensure that foreign keys reference valid primary keys.",
+    "currentAnswer": "D",
+    "explanation": "第三正規化（3NF）的目的是消除非主鍵屬性對主鍵的遞移依賴（transitive dependency）。遞移依賴是指某個非主鍵屬性 A 依賴另一個非主鍵屬性 B，而 B 又依賴主鍵，導致 A 間接依賴主鍵。選項 (D) 正確描述了 3NF：確保沒有任何非主鍵屬性對主鍵存在遞移依賴。選項 (A) 相反，選項 (B) 更接近 2NF 的描述，選項 (C) 錯誤（正規化通常增加資料表數量），選項 (E) 描述的是外鍵參照完整性，與 3NF 無關。"
+  },
+  {
+    "id": "q-pp-im-it-114-14",
+    "year": 114,
+    "number": 14,
+    "text": "What is the primary purpose of the JOIN operation in SQL? (A) To create a temporary table from existing tables (B) To combine columns from two or more tables based on a related column (C) To remove duplicate rows from a table (D) To restrict the rows returned by a query (E) To calculate aggregate values across multiple tables.",
+    "currentAnswer": "B",
+    "explanation": "SQL 中 JOIN 操作的主要目的是根據兩個或多個資料表之間的相關欄位，將這些資料表的欄位合併在一起。例如，INNER JOIN 會返回兩個資料表中符合連接條件的所有列。選項 A 的建立暫時資料表是 CREATE TEMP TABLE 的功能，選項 C 的去除重複列是 DISTINCT 的功能，選項 D 的限制查詢結果列數是 WHERE 子句的功能，而選項 E 的計算聚合值是 GROUP BY 搭配聚合函數（如 SUM、COUNT）的功能。因此，正確答案為 B。"
+  },
+  {
+    "id": "q-pp-im-it-114-15",
+    "year": 114,
+    "number": 15,
+    "text": "Which of the following is true about NoSQL databases compared to relational databases? (A) NoSQL databases do not support indexing. (B) NoSQL databases use a fixed schema for data storage. (C) NoSQL databases are better suited for structured data. (D) NoSQL databases are typically more scalable for distributed systems. (E) NoSQL databases do not support transactions.",
+    "currentAnswer": "D",
+    "explanation": "NoSQL 資料庫的設計目標之一就是支援水平擴展（horizontal scaling），能夠輕易地在多台機器上分散資料，因此在分散式系統中具有更高的可擴展性，選項 D 正確。選項 A 錯誤，NoSQL 資料庫（如 MongoDB）同樣支援索引（indexing）以加速查詢。選項 B 錯誤，NoSQL 資料庫採用靈活的動態 schema，而非固定 schema，這正是其相較於關聯式資料庫的重要特性之一。選項 C 錯誤，NoSQL 更適合處理非結構化或半結構化資料，結構化資料反而是關聯式資料庫的強項。選項 E 錯誤，許多 NoSQL 資料庫（如 MongoDB 4.0 以後版本）已支援交易（transactions）功能。"
+  },
+  {
+    "id": "q-pp-im-it-114-16",
+    "year": 114,
+    "number": 16,
+    "text": "In an ER (Entity-Relationship) diagram, what does a diamond-shaped symbol represent? (A) An attribute of an entity (B) A primary key (C) A weak entity (D) A multivalued attribute (E) none of the above.",
+    "currentAnswer": "E",
+    "explanation": "在 ER 圖中，菱形（diamond）符號代表的是「關係集合」（Relationship Set），用來表示兩個或多個實體之間的關聯。題目所列的選項中：屬性是以橢圓形表示，主鍵是以底線標示的屬性，弱實體是以雙矩形表示，多值屬性是以雙橢圓形表示。由於菱形對應的是「關係」而非上述任何一個選項，因此正確答案為 (E) none of the above。"
+  },
+  {
+    "id": "q-pp-im-it-114-17",
+    "year": 114,
+    "number": 17,
+    "text": "What is the primary purpose of a database transaction log? (A) To store the results of executed queries for future reference. (B) To keep a record of all changes made to the database for recovery purposes. (C) To optimize the execution of complex queries. (D) To maintain a backup copy of the entire database. (E) To store metadata about tables and indexes.",
+    "currentAnswer": "B",
+    "explanation": "資料庫交易日誌（transaction log）的主要目的是記錄所有對資料庫所做的變更，以便在系統發生故障時進行復原（recovery）。當資料庫崩潰或交易中途失敗時，系統可透過日誌執行 undo（撤銷未提交的變更）或 redo（重做已提交但尚未寫入磁碟的變更），確保資料的一致性與持久性。選項 A 描述的是查詢快取，選項 C 是查詢最佳化，選項 D 是備份機制，選項 E 是資料字典或系統目錄的功能，均非交易日誌的主要用途。"
+  },
+  {
+    "id": "q-pp-im-it-114-18",
+    "year": 114,
+    "number": 18,
+    "text": "What is a composite key in a relational database? (A) A key that consists of multiple columns to uniquely identify a row. (B) A key that acts as a foreign key in multiple tables. (C) A primary key that has been indexed for performance optimization. (D) A key that references another table's unique identifier. (E) A virtual key created by combining data from different tables.",
+    "currentAnswer": "A",
+    "explanation": "複合鍵（Composite Key）是由兩個或兩個以上的欄位組合而成，共同唯一識別關聯式資料庫中的一筆資料列。選項A正確描述了複合鍵的定義：由多個欄位組成以唯一識別一列資料。選項B描述的是在多個資料表中作為外來鍵使用的鍵，與複合鍵無關。選項C描述的是已建立索引的主鍵，是效能最佳化的概念，並非複合鍵。選項D描述的是參考另一個資料表唯一識別碼的外來鍵，而選項E描述的是將不同資料表資料合併產生的虛擬鍵，均非複合鍵的定義。"
+  },
+  {
+    "id": "q-pp-im-it-114-19",
+    "year": 114,
+    "number": 19,
+    "text": "What is the main purpose of a subnet mask in TCP/IP? (A) To identify the default gateway (B) To define the host and network portions of an IP address (C) To encrypt data packets (D) To limit the size of a packet (E) none of the above.",
+    "currentAnswer": "B",
+    "explanation": "子網路遮罩（subnet mask）的主要用途是區分 IP 位址中的「網路部分」與「主機部分」。透過將子網路遮罩與 IP 位址進行 AND 運算，可以得出該裝置所屬的網路位址，進而判斷目的地是否在同一子網路內。選項 A（識別預設閘道）錯誤，預設閘道是透過獨立的閘道 IP 設定來識別的。選項 C（加密資料封包）屬於 TLS/IPsec 等安全協定的功能，與子網路遮罩無關。選項 D（限制封包大小）是 MTU（Maximum Transmission Unit）的概念，同樣與子網路遮罩無關。"
+  },
+  {
+    "id": "q-pp-im-it-114-20",
+    "year": 114,
+    "number": 20,
+    "text": "What is the purpose of the \"window size\" field in the TCP header? (A) To specify the number of bytes that can be sent before an acknowledgment is received (B) To determine the length of the TCP header (C) To indicate the size of the sliding window buffer (D) To synchronize the sequence numbers of the sender and receiver (E) none of the above.",
+    "currentAnswer": "A",
+    "explanation": "TCP 標頭中的「視窗大小（window size）」欄位用於流量控制，指定接收方目前可接受的資料量，即在收到確認（ACK）之前傳送方最多可以傳送的位元組數。這是接收方告知傳送方其接收緩衝區剩餘空間大小的機制，稱為接收視窗（receive window）。選項 B 描述的是標頭長度欄位（Header Length），選項 C 的說法雖然相近，但「滑動視窗緩衝區大小」的描述不如選項 A 精確，視窗大小指的是可傳送的位元組數而非緩衝區本身的大小。因此正確答案為 A。"
+  },
+  {
+    "id": "q-pp-im-it-114-21",
+    "year": 114,
+    "number": 21,
+    "text": "Which routing algorithm is used by OSPF (Open Shortest Path First)? (A) Distance Vector (B) Link State (C) Path Vector (D) Flooding (E) none of the above.",
+    "currentAnswer": "B",
+    "explanation": "OSPF（開放最短路徑優先）採用鏈路狀態（Link State）路由演算法。在鏈路狀態演算法中，每台路由器會將自身直連鏈路的狀態資訊洪泛（flood）至網路中所有路由器，使每台路由器都能建立完整的網路拓撲圖。接著，每台路由器各自對此拓撲圖執行 Dijkstra 最短路徑演算法，計算出到達各目的地的最佳路徑。相較之下，距離向量（Distance Vector）演算法（如 RIP）僅與鄰居交換路由表，而路徑向量（Path Vector）演算法（如 BGP）則記錄完整路徑以防止路由迴圈，兩者皆與 OSPF 所使用的機制不同。"
+  },
+  {
+    "id": "q-pp-im-it-114-22",
+    "year": 114,
+    "number": 22,
+    "text": "Which of the following statements about NAT (Network Address Translation) is INCORRECT? (A) NAT can hide internal IP addresses from external networks. (B) NAT helps conserve IPv4 address space. (C) NAT can interfere with end-to-end connectivity for some applications. (D) NAT operates at the Network layer of the OSI model. (E) all of the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "D",
+    "explanation": "NAT（網路位址轉換）的運作並不僅限於 OSI 模型的網路層（第三層）。在實際應用中，最常見的 NAPT（Network Address Port Translation）還需要修改傳輸層（第四層）的 TCP/UDP 埠號，因此 NAT 實際上跨越了網路層與傳輸層兩個層次，選項 (D) 聲稱 NAT 僅在網路層運作是不正確的。選項 (A) 正確，NAT 確實能隱藏內部網路的 IP 位址，防止外部直接存取。選項 (B) 正確，NAT 讓多台內部裝置共用一個公有 IP，有效節省了 IPv4 位址空間。選項 (C) 也正確，NAT 破壞了網路的端對端連線能力，某些需要直接 IP 連線的應用（如 VoIP、P2P）會因此受到影響。"
+  },
+  {
+    "id": "q-pp-im-it-114-23",
+    "year": 114,
+    "number": 23,
+    "text": "What is the primary purpose of the Domain Name System (DNS)? (A) To assign IP addresses to devices on a network (B) To translate domain names into IP addresses (C) To encrypt communication between devices (D) To manage routing tables in a network (E) To speed up routing between Internet hosts.",
+    "currentAnswer": "B",
+    "explanation": "DNS（網域名稱系統）的主要功能是將人類易讀的網域名稱（例如 www.google.com）轉換成電腦網路溝通所需的 IP 位址。這個轉換過程讓使用者不需要記憶複雜的數字 IP 位址，只需輸入易記的網域名稱即可存取網站。選項 A 的 IP 位址分配是 DHCP 的功能；選項 C 的加密通訊是 TLS/SSL 的功能；選項 D 的路由表管理是路由協定（如 OSPF、BGP）的功能；選項 E 加速網際網路主機間路由並非 DNS 的功能。因此正確答案為 B。"
+  },
+  {
+    "id": "q-pp-im-it-114-24",
+    "year": 114,
+    "number": 24,
+    "text": "Which of the following is INCORRECT about Software-Defined Networking (SDN)? (A) Data and control planes are tightly integrated. (B) SDN separates the control plane from the data plane. (C) SDN enables programmable networks using APIs. (D) SDN uses abstraction to enable dynamic and programmatically efficient network configuration. (E) all of the above are correct (choose this one only if none of the above can be chosen).",
+    "currentAnswer": "A",
+    "explanation": "SDN（軟體定義網路）的核心概念正是將控制平面（Control Plane）與資料平面（Data Plane）分離，因此選項 (A) 所述「資料平面與控制平面緊密整合」是錯誤的描述。選項 (B) 正確說明了 SDN 的分離架構，選項 (C) 正確指出 SDN 透過 API 實現可程式化網路，選項 (D) 正確說明 SDN 利用抽象化達成動態且高效的網路配置。在「選出錯誤敘述」的題目中，(A) 與 SDN 定義相悖，為正確答案。"
+  },
+  {
+    "id": "q-pp-im-it-115-1",
+    "year": 115,
+    "number": 1,
+    "text": "Which of the following data structures provides O(1) average-time complexity for insertion, deletion, and search? (A) Binary search tree (B) Balanced binary search tree (C) Hash table (D) Sorted array (E) Heap.",
+    "currentAnswer": "C",
+    "explanation": "雜湊表（Hash Table）在平均情況下，插入、刪除與搜尋的時間複雜度均為 O(1)，這是透過雜湊函數將鍵值直接映射到對應的儲存位置來實現的。二元搜尋樹（BST）在平均情況下各操作為 O(log n)，最壞情況（退化為鏈結串列）甚至達 O(n)。平衡二元搜尋樹（如 AVL 樹、紅黑樹）雖保證 O(log n) 的效能，但仍無法達到 O(1)。已排序陣列的搜尋雖可達 O(log n)，但插入與刪除需移動元素，為 O(n)。堆積（Heap）的插入與刪除為 O(log n)，搜尋任意元素更需 O(n)，因此只有雜湊表符合題意。"
+  },
+  {
+    "id": "q-pp-im-it-115-2",
+    "year": 115,
+    "number": 2,
+    "text": "Which of the following best describes the worst-case time complexity of QuickSort? (A) O(n) (B) O(n log n) (C) O(log n) (D) O(n²) (E) O(n³).",
+    "currentAnswer": "D",
+    "explanation": "QuickSort 的最壞情況發生在每次選取的 pivot 都是當前子陣列的最大值或最小值時，例如對已排序或逆排序的陣列進行排序且每次選第一個元素為 pivot。此時每次分割只能將問題縮小 1，需要進行 n-1 次遞迴，每次遞迴分別處理 n、n-1、n-2、…、1 個元素。總比較次數為 n(n-1)/2，時間複雜度為 O(n²)。相比之下，平均情況下 QuickSort 的時間複雜度為 O(n log n)，但最壞情況下無法達到此效率。"
+  },
+  {
+    "id": "q-pp-im-it-115-3",
+    "year": 115,
+    "number": 3,
+    "text": "What is the time complexity of inserting an element into a binary heap? (A) O(1) (B) O(n) (C) O(log n) (D) O(n log n) (E) O(n²).",
+    "currentAnswer": "C",
+    "explanation": "在二元堆積（Binary Heap）中插入一個元素時，首先將新元素加到堆積的最末端（維持完全二元樹的結構），接著執行「上浮（sift-up / bubble-up）」操作，將該元素與父節點比較並在必要時交換，直到堆積性質恢復為止。由於含有 n 個元素的二元堆積高度為 ⌊log₂n⌋，上浮操作最多需要比較和交換 O(log n) 次。因此，插入操作的時間複雜度為 O(log n)，即選項 C。"
+  },
+  {
+    "id": "q-pp-im-it-115-4",
+    "year": 115,
+    "number": 4,
+    "text": "Which data structure is most appropriate for checking if an expression has balanced parentheses (e.g., ((a+b)*c))? (A) Queue (B) Stack (C) Binary Search Tree (D) Hash Table (E) Graph.",
+    "currentAnswer": "B",
+    "explanation": "檢查括號是否平衡是堆疊（Stack）的經典應用。演算法從左至右掃描字串，遇到左括號就將其推入（push）堆疊，遇到右括號時則從堆疊彈出（pop）頂端元素，並確認兩者是否匹配。若掃描結束時堆疊為空，則括號平衡；若中途發現不匹配或堆疊提前為空，則括號不平衡。堆疊的後進先出（LIFO）特性正好符合括號巢狀配對的需求，是解此問題最直接且高效的資料結構。"
+  },
+  {
+    "id": "q-pp-im-it-115-5",
+    "year": 115,
+    "number": 5,
+    "text": "Which of the following sorting algorithms is not stable? (Meaning relative order of equal elements is not guaranteed to be preserved). (A) Insertion Sort (B) Merge Sort (C) Bubble Sort (D) QuickSort (E) none of the above.",
+    "currentAnswer": "D",
+    "explanation": "QuickSort（快速排序）是典型的不穩定排序演算法，因為在進行分區（partition）操作時，相等元素可能會因為跨越樞紐（pivot）的交換而改變相對順序。Insertion Sort（插入排序）是穩定的，因為每次插入時只將元素向右移動，相等元素的相對順序不會改變。Merge Sort（合併排序）是穩定的，因為在合併時若兩個元素相等，優先取左側子陣列的元素，保留原始順序。Bubble Sort（氣泡排序）也是穩定的，因為相鄰交換只在嚴格大於時才發生，相等元素不會互換。因此，四個選項中唯有 QuickSort 不保證穩定性，答案為 D。"
+  },
+  {
+    "id": "q-pp-im-it-115-6",
+    "year": 115,
+    "number": 6,
+    "text": "What is the prerequisite for performing a Topological Sort on a graph? (A) The graph must be undirected. (B) The graph must be a tree. (C) The graph must be a Directed Acyclic Graph (DAG). (D) The graph must be fully connected. (E) The graph must have non-negative edge weights.",
+    "currentAnswer": "C",
+    "explanation": "拓撲排序（Topological Sort）的先決條件是圖必須為有向無環圖（Directed Acyclic Graph，DAG）。有向性是必要的，因為拓撲排序需要依據邊的方向來決定節點的先後順序。無環性同樣不可或缺，若圖中存在環（cycle），則環中的節點會形成循環依賴，無法建立一個有效的線性排序。選項A（無向圖）和B（樹）不符合，因為拓撲排序需要有向圖；選項D（完全連通）和E（非負權重）則與拓撲排序的條件無關。"
+  },
+  {
+    "id": "q-pp-im-it-115-7",
+    "year": 115,
+    "number": 7,
+    "text": "Which of the following best describes the role of a cache memory in a computer system? (A) To permanently store program instructions (B) To reduce average memory access time (C) To manage virtual memory (D) To schedule CPU processes (E) To translate virtual addresses to physical addresses.",
+    "currentAnswer": "B",
+    "explanation": "快取記憶體（Cache Memory）是位於 CPU 與主記憶體之間的高速小容量記憶體，其主要目的是儲存近期常用的資料與指令，以減少 CPU 存取主記憶體的次數。由於快取的存取速度遠快於主記憶體，當 CPU 所需資料在快取中命中（cache hit）時，可大幅縮短等待時間，從而降低平均記憶體存取時間（average memory access time）。選項 A（永久儲存程式指令）是 ROM 或儲存裝置的功能；選項 C（管理虛擬記憶體）是作業系統與 MMU 的職責；選項 D（排程 CPU 行程）屬於作業系統排程器的工作；選項 E（虛擬位址轉實體位址）是 MMU（記憶體管理單元）的功能。因此，最能描述快取記憶體角色的答案為 B。"
+  },
+  {
+    "id": "q-pp-im-it-115-8",
+    "year": 115,
+    "number": 8,
+    "text": "Which of the following CPU scheduling algorithms may cause starvation? (A) Round Robin (B) First-Come, First-Served (C) Multilevel feedback queue (with aging) (D) Priority scheduling without aging (E) Shortest remaining time first.",
+    "currentAnswer": "D",
+    "explanation": "優先權排程（Priority Scheduling）若未採用老化（aging）機制，低優先權的行程可能因高優先權行程持續抵達而永遠無法獲得 CPU 執行時間，造成飢餓（starvation）問題。Round Robin 與 FCFS 依序輪流或到達順序執行，不會發生飢餓。多層回饋佇列搭配老化機制（Multilevel Feedback Queue with aging）正是為了解決飢餓問題而設計，等待過久的行程會逐漸提升優先權。因此，在沒有老化機制的優先權排程（選項 D）中，飢餓問題最為明確且直接。"
+  },
+  {
+    "id": "q-pp-im-it-115-9",
+    "year": 115,
+    "number": 9,
+    "text": "Which of the following best describes a context switch? (A) Switching between CPU cores (B) Changing page tables (C) Reloading cache blocks (D) Switching from kernel mode to user mode (E) Saving and restoring process execution state.",
+    "currentAnswer": "E",
+    "explanation": "Context switch（情境切換）的核心定義是：作業系統將目前執行中行程的執行狀態（包含程式計數器、暫存器、堆疊指標等）儲存起來，再還原另一個行程的執行狀態，使其得以繼續執行。選項 E「Saving and restoring process execution state」正確描述了這個核心機制。選項 D 描述的是特權層級切換（kernel mode 與 user mode 互換），雖然可能伴隨 context switch 發生，但並非其定義。選項 B 的頁表切換是 context switch 的附帶動作，而非本質。因此正確答案為 E。"
+  },
+  {
+    "id": "q-pp-im-it-115-10",
+    "year": 115,
+    "number": 10,
+    "text": "In a pipelined processor, which situation most directly leads to a pipeline stall? (A) Instruction prefetching (B) Data hazard due to operand dependency (C) Branch prediction hit (D) Cache hit (E) Register renaming.",
+    "currentAnswer": "B",
+    "explanation": "在管線處理器中，資料危障（Data Hazard）是指某條指令需要使用前一條指令尚未寫回的運算結果，導致管線必須暫停等待，這是造成管線停頓（Pipeline Stall）最直接的原因。指令預先取得（Instruction Prefetching）是一種優化技術，目的是減少等待，並不會導致停頓。分支預測命中（Branch Prediction Hit）表示預測成功，管線可以正常繼續執行而不需停頓。快取命中（Cache Hit）代表資料已在快取中，存取速度快，不會引發停頓。暫存器重新命名（Register Renaming）是用來消除 WAR 與 WAW 等假相依性的技術，反而有助於減少停頓，而非造成停頓。"
+  },
+  {
+    "id": "q-pp-im-it-115-11",
+    "year": 115,
+    "number": 11,
+    "text": "Which CPU scheduling algorithm has the smallest average waiting time for a given set of processes? (A) First-Come, First-Served (FCFS) (B) Shortest Job First (SJF) (C) Round Robin (RR) (D) Multilevel Queue (E) Priority Scheduling.",
+    "currentAnswer": "B",
+    "explanation": "最短工作優先（SJF, Shortest Job First）排程演算法在所有非搶佔式排程演算法中，對於一組已知執行時間的行程，能達到最小的平均等待時間。其原理是每次選擇剩餘執行時間最短的行程先執行，使短工作不必在長工作後等待，從而降低整體等待時間。FCFS 依到達順序執行，若長工作先到會造成大量等待（護隊效應）。Round Robin 雖公平但因頻繁切換反而增加等待時間。Priority Scheduling 與 Multilevel Queue 的平均等待時間取決於優先權設定，不保證全局最小。SJF 已被數學證明是使平均等待時間最小化的最佳排程策略。"
+  },
+  {
+    "id": "q-pp-im-it-115-12",
+    "year": 115,
+    "number": 12,
+    "text": "What is the phenomenon called \"Thrashing\" in a virtual memory system? (A) The system spends more time paging (swapping pages in and out) than executing processes. (B) The hard disk fails due to excessive read/write operations. (C) A process enters an infinite loop. (D) Multiple processes are deadlocked waiting for resources. (E) The CPU pipeline is constantly flushed due to branch mispredictions.",
+    "currentAnswer": "A",
+    "explanation": "Thrashing（抖動）是虛擬記憶體系統中的一種現象，發生於系統花費大量時間在處理缺頁中斷（page fault）及在主記憶體與磁碟之間交換分頁（paging），而非實際執行程序。當多個程序同時競爭有限的記憶體頁框，導致每個程序持有的頁框數低於其工作集（working set）大小時，缺頁率急遽上升，系統幾乎將所有 CPU 時間用於 I/O 操作。此時 CPU 使用率反而大幅下降，系統效能嚴重惡化。選項 B 至 E 分別描述的是磁碟損壞、無窮迴圈、死結與分支預測失敗，均與 Thrashing 的定義不符。"
+  },
+  {
+    "id": "q-pp-im-it-115-13",
+    "year": 115,
+    "number": 13,
+    "text": "What is the primary function of the Time to Live (TTL) field in an IPv4 header? (A) To determine the timestamp of when the packet was created. (B) To prioritize the packet for Quality of Service (QoS). (C) To ensure the packet is reassembled in the correct order. (D) To prevent packets from circulating indefinitely in a routing loop. (E) none of the above.",
+    "currentAnswer": "D",
+    "explanation": "TTL（Time to Live）欄位的主要功能是防止封包在路由迴圈中無限流轉。每當封包經過一個路由器時，TTL 值就會遞減 1，當 TTL 降至 0 時，該封包會被丟棄並回傳一個 ICMP 錯誤訊息給來源端。這個機制有效地避免了因路由表錯誤或迴圈造成的網路資源浪費。其他選項皆為錯誤：時間戳記功能由其他欄位處理，QoS 優先順序由 DSCP/ToS 欄位負責，而封包重組順序則由分段偏移（Fragment Offset）欄位管理。"
+  },
+  {
+    "id": "q-pp-im-it-115-14",
+    "year": 115,
+    "number": 14,
+    "text": "Which of the following is a characteristic of UDP (User Datagram Protocol) compared to TCP? (A) It guarantees delivery of data. (B) It provides flow control and congestion control mechanisms. (C) It is connectionless and has a smaller header overhead. (D) It sequences packets to ensure they arrive in order. (E) It performs a three-way handshake before sending data.",
+    "currentAnswer": "C",
+    "explanation": "UDP（用戶資料報協定）是一種無連線（connectionless）的傳輸層協定，傳送資料前不需要建立連線，因此沒有 TCP 的三次握手（three-way handshake）流程。UDP 的標頭（header）只有 8 個位元組，遠小於 TCP 的 20 位元組，額外負擔（overhead）更小。相對地，TCP 才提供可靠傳輸保證、流量控制（flow control）、壅塞控制（congestion control）及封包排序等機制，這些都不是 UDP 的特性。因此，「無連線且標頭負擔較小」正是 UDP 相較於 TCP 的主要特徵，選項 C 正確。"
+  },
+  {
+    "id": "q-pp-im-it-115-15",
+    "year": 115,
+    "number": 15,
+    "text": "In TCP congestion control, what is the main purpose of the slow start phase? (A) To avoid retransmissions entirely (B) To probe available network capacity exponentially (C) To maintain a constant congestion window (D) To prioritize latency-sensitive flows (E) To prevent receiver buffer overflow.",
+    "currentAnswer": "B",
+    "explanation": "TCP 慢啟動（Slow Start）的主要目的是以指數方式探測網路的可用頻寬。在慢啟動階段，壅塞視窗（cwnd）每經過一個往返時間（RTT）就會加倍，從 1 MSS 開始快速增長，直到達到慢啟動閾值（ssthresh）為止。這種指數成長策略能讓 TCP 在不超載網路的前提下，迅速找到可用的網路容量。選項 A 錯誤，慢啟動無法完全避免重傳；選項 C 錯誤，慢啟動的視窗是動態增長而非固定；選項 D 和 E 分別描述的是 QoS 優先機制與流量控制（flow control），均非慢啟動的目的。"
+  },
+  {
+    "id": "q-pp-im-it-115-16",
+    "year": 115,
+    "number": 16,
+    "text": "Which index structure is most used in relational databases to support range queries efficiently? (A) Hash index (B) Bitmap index (C) B+ tree (D) Inverted index (E) Heap file.",
+    "currentAnswer": "C",
+    "explanation": "B+ 樹是關聯式資料庫中最廣泛使用的索引結構，特別適合支援範圍查詢（range queries）。B+ 樹的葉節點以排序順序儲存資料，並以鏈結串列相連，因此可以高效地執行如「大於某值」或「介於兩值之間」的範圍掃描。雜湊索引（Hash index）只能支援等值查詢（equality lookup），無法處理範圍查詢。點陣圖索引（Bitmap index）適合低基數欄位，倒排索引（Inverted index）主要用於全文搜尋，而堆積檔（Heap file）只是無序的資料儲存方式，不具備索引功能。因此，支援範圍查詢最有效率的索引結構為 B+ 樹。"
+  },
+  {
+    "id": "q-pp-im-it-115-17",
+    "year": 115,
+    "number": 17,
+    "text": "Which of the following concurrency control techniques may result in deadlocks? (A) Timestamp ordering (B) Two-phase locking (2PL) (C) Optimistic concurrency control (D) Multiversion concurrency control (MVCC) (E) Snapshot isolation.",
+    "currentAnswer": "B",
+    "explanation": "兩階段鎖定（2PL）要求交易在成長階段取得所有需要的鎖，並在縮減階段釋放鎖，若多個交易互相等待對方持有的鎖，就可能形成循環等待，進而產生死結（deadlock）。時間戳記排序（Timestamp Ordering）在發現衝突時會直接中止違反順序的交易，而非讓交易等待，因此不會產生死結。樂觀並行控制（OCC）在執行過程中完全不加鎖，只在提交時驗證衝突，衝突時直接回滾，也不會有死結。多版本並行控制（MVCC）與快照隔離（Snapshot Isolation）透過保存資料的多個版本，讓讀寫操作不互相阻塞，同樣不會產生死結。因此，五個選項中只有 2PL 可能導致死結。"
+  },
+  {
+    "id": "q-pp-im-it-115-18",
+    "year": 115,
+    "number": 18,
+    "text": "Which of the following best explains why hash-based indexing is generally unsuitable for range queries? (A) Hash functions destroy ordering information (B) Hash indexes require more storage (C) Hash collisions slow down inserts (D) Hash indexes cannot support equality queries (E) Hashing increases I/O operations.",
+    "currentAnswer": "A",
+    "explanation": "雜湊索引（Hash Index）透過雜湊函數將鍵值映射到特定的桶（bucket）位置，此過程會破壞鍵值之間的原始排序關係。例如鍵值 10、11、12 經過雜湊後可能分散在完全不相鄰的桶中，無法反映其大小順序。範圍查詢（如 WHERE age BETWEEN 20 AND 30）需要存取所有符合範圍的連續鍵值，但雜湊索引無法判斷哪些桶包含該範圍內的值，必須掃描全部桶才能完成查詢，效率極差。相較之下，B-tree 等樹狀索引保留了鍵值的排序資訊，可以高效地進行範圍掃描，因此更適合範圍查詢場景。"
+  },
+  {
+    "id": "q-pp-im-it-115-19",
+    "year": 115,
+    "number": 19,
+    "text": "In write-ahead logging (WAL), which rule must be satisfied to ensure database recovery correctness? (A) Data pages must be written before log records (B) Log records are optional for read-only transactions (C) Checkpoints eliminate the need for redo (D) Log records must be written to stable storage before data pages (E) Logs are only needed for undo operations.",
+    "currentAnswer": "D",
+    "explanation": "Write-Ahead Logging（WAL）的核心規則是：在資料頁面（data page）被寫入磁碟之前，對應的日誌紀錄必須先寫入穩定儲存體（stable storage）。這個規則確保系統崩潰後能夠正確地進行 redo 和 undo 操作，因為日誌中一定保有所有已執行操作的紀錄。選項 A 剛好相反，WAL 要求的是日誌先於資料頁面寫入，而非資料頁面先寫。選項 B、C、E 均為錯誤描述：唯讀交易雖不需 undo log，但 WAL 的核心規則仍以 D 為準；Checkpoint 並不能消除 redo 的需求；日誌也不僅用於 undo 操作，同樣用於 redo。"
+  },
+  {
+    "id": "q-pp-im-it-115-20",
+    "year": 115,
+    "number": 20,
+    "text": "Which statement best captures a fundamental trade-off in database system design? (A) Strong consistency always improves performance (B) Indexing eliminates the need for query optimization (C) Higher isolation levels can reduce concurrency (D) Normalization always improves query speed (E) Replication removes the need for recovery mechanisms.",
+    "currentAnswer": "C",
+    "explanation": "資料庫系統設計中一個根本性的權衡是隔離等級與並行性之間的取捨。較高的隔離等級（如 Serializable）為了保證資料一致性，需要使用更嚴格的鎖定機制，這會導致交易之間的等待時間增加，進而降低系統的並行處理能力。相反地，較低的隔離等級（如 Read Committed 或 Read Uncommitted）允許更多交易同時執行，提升了吞吐量，但可能引入髒讀、不可重複讀或幻讀等問題。選項 A 錯誤，強一致性通常會因為協調開銷而降低效能；選項 D 錯誤，正規化雖減少資料冗餘，但多表 JOIN 操作反而可能降低查詢速度。"
+  },
+  {
+    "id": "q-pp-im-it-115-21",
+    "year": 115,
+    "number": 21,
+    "text": "In the context of Distributed Database Systems, the CAP Theorem states that a distributed system can only simultaneously provide two out of which three guarantees? (A) Concurrency, Availability, Performance (B) Consistency, Atomicity, Partition Tolerance (C) Consistency, Authenticity, Persistence (D) Consistency, Availability, Partition Tolerance (E) Concurrency, Accuracy, Performance.",
+    "currentAnswer": "D",
+    "explanation": "CAP 定理（又稱 Brewer's Theorem）由 Eric Brewer 於 2000 年提出，指出分散式系統無法同時滿足三個保證：一致性（Consistency）、可用性（Availability）與分區容錯性（Partition Tolerance）。其中「一致性」代表所有節點在同一時間看到相同的資料；「可用性」代表每個請求都能收到回應（不論成功或失敗）；「分區容錯性」代表即使網路發生分區故障，系統仍能繼續運作。因此，分散式系統設計時只能從 CA、CP 或 AP 三種組合中擇一，無法三者兼得，正確答案為 (D) Consistency, Availability, Partition Tolerance。"
+  },
+  {
+    "id": "q-pp-im-it-115-22",
+    "year": 115,
+    "number": 22,
+    "text": "A relation R is in Boyce-Codd Normal Form (BCNF) if and only if: (A) For every functional dependency X→Y, X is a superkey. (B) It is in 3NF and has no multivalued dependencies. (C) It is in 3NF and preserves all functional dependencies. (D) It contains atomic values only. (E) There are no partial dependencies.",
+    "currentAnswer": "A",
+    "explanation": "BCNF（Boyce-Codd 正規化）的定義是：對於關係中每一個非平凡的函數相依 X→Y，X 必須是一個超鍵（superkey）。選項 A 正確描述了此定義。選項 B 錯誤，因為多值相依（multivalued dependency）是 4NF 的議題，與 BCNF 無關。選項 C 錯誤，因為 BCNF 分解不保證保留所有函數相依，這反而是 3NF 的特性之一。選項 D 描述的是 1NF（所有屬性值必須是原子值），選項 E 描述的是 2NF（無部分相依），兩者均與 BCNF 定義無關。"
+  },
+  {
+    "id": "q-pp-im-it-115-23",
+    "year": 115,
+    "number": 23,
+    "text": "Which of the following is a key advantage of containerization (e.g., Docker) compared to virtual machines? (A) Lower overhead due to sharing the host OS kernel (B) Stronger hardware-level isolation (C) No dependency on the host operating system (D) Elimination of resource contention (E) Guaranteed real-time performance.",
+    "currentAnswer": "A",
+    "explanation": "容器化技術（如 Docker）相較於虛擬機器的主要優勢在於容器共用宿主機的作業系統核心（kernel），不需要為每個容器安裝完整的客作業系統，因此啟動速度更快、資源消耗更低。虛擬機器則需要透過 Hypervisor 模擬完整硬體環境，並在其上運行獨立的 Guest OS，導致較高的記憶體與 CPU 負擔。選項 B 錯誤，因為 VM 透過 Hypervisor 提供更強的硬體層隔離，容器的隔離性相對較弱。選項 C 錯誤，容器仍依賴宿主機的 OS kernel，並非完全獨立於宿主作業系統。選項 D 與 E 均為錯誤描述，容器並不能消除資源競爭，也無法保證即時效能。"
+  },
+  {
+    "id": "q-pp-im-it-115-24",
+    "year": 115,
+    "number": 24,
+    "text": "Which of the following best describes the role of edge computing? (A) Centralizing all computation in large data centers (B) Replacing cloud computing entirely (C) Increasing storage capacity (D) Processing data closer to data sources to reduce latency (E) Encrypting data before transmission.",
+    "currentAnswer": "D",
+    "explanation": "邊緣運算（Edge Computing）的核心概念是將運算資源部署在靠近資料來源的位置，例如物聯網裝置或本地端伺服器，而非將所有資料傳送至遠端資料中心處理。這樣做的主要優點是大幅降低網路延遲（latency），使即時應用（如自動駕駛、工業控制）得以實現。選項A描述的是集中式雲端運算，與邊緣運算相反；選項B錯誤，邊緣運算是雲端運算的補充而非取代；選項C增加儲存容量和選項E加密資料均非邊緣運算的主要功能。因此正確答案為D。"
+  },
+  {
+    "id": "q-pp-im-it-115-25",
+    "year": 115,
+    "number": 25,
+    "text": "Which technology enables immutable and verifiable transaction records without relying on a central authority? (A) Distributed databases (B) Blockchain (C) Content delivery networks (D) Peer-to-peer file sharing (E) Federated learning.",
+    "currentAnswer": "B",
+    "explanation": "區塊鏈（Blockchain）是一種去中心化的分散式帳本技術，透過密碼學雜湊函數將每個區塊串連起來，使得記錄一旦寫入便無法篡改，具備不可變性（immutability）。每筆交易都會經過網路中多個節點的共識驗證，無需依賴任何中央機構即可確保資料的真實性與可驗證性。分散式資料庫（A）仍需中央協調機制；內容傳遞網路（C）僅用於加速內容分發；點對點檔案分享（D）不提供交易不可變性或驗證機制；聯邦學習（E）則是一種隱私保護的機器學習訓練方法，與帳本記錄無關。"
+  },
+  {
+    "id": "q-pp-im-it-115-26",
+    "year": 115,
+    "number": 26,
+    "text": "Why are NoSQL databases often preferred in large-scale distributed applications? (A) They provide flexible schemas and horizontal scalability (B) They strictly enforce ACID properties (C) They eliminate network partitions (D) They guarantee strong consistency (E) They require less storage than relational databases.",
+    "currentAnswer": "A",
+    "explanation": "NoSQL 資料庫在大規模分散式應用中受到青睞，主要原因是它們提供彈性的資料結構（無需固定 Schema）以及水平擴展能力（可透過新增節點來提升效能）。相較於關聯式資料庫，NoSQL 不需要預先定義嚴格的表格結構，能輕鬆應對多樣化的資料格式。NoSQL 通常採用 BASE 模型（基本可用、軟狀態、最終一致性），而非嚴格的 ACID 特性，因此放寬了強一致性的要求以換取更高的可用性與擴展性。根據 CAP 定理，任何分散式系統都無法同時避免網路分割，NoSQL 只是在一致性與可用性之間做出取捨，並非消除網路分割。因此選項 A 正確描述了 NoSQL 資料庫的核心優勢。"
+  },
+  {
+    "id": "q-pp-im-it-115-27",
+    "year": 115,
+    "number": 27,
+    "text": "In the context of Large Language Models (LLMs) like GPT, what is the primary function of the \"Self-Attention\" mechanism in the Transformer architecture? (A) To compress the input data into a smaller vector. (B) To allow the model to weigh the importance of different words in a sequence relative to each other, regardless of their distance. (C) To generate random variations of the output to increase creativity. (D) To convert text into speech. (E) To store long-term memory of previous conversations on a hard drive.",
+    "currentAnswer": "B",
+    "explanation": "Self-Attention（自注意力）機制是 Transformer 架構的核心，其主要功能是讓模型在處理序列中的每個詞時，能夠動態地計算該詞與序列中所有其他詞的相關程度（重要性權重）。不論兩個詞在序列中距離多遠，Self-Attention 都能直接建立它們之間的依賴關係，克服了 RNN 等傳統架構在長距離依賴上的限制。具體做法是將每個詞的表示投影為 Query、Key、Value 三個向量，透過 Query 與 Key 的點積計算注意力分數，再對 Value 加權求和，得到考量上下文語境的新表示。選項 A（壓縮輸入）、C（隨機變化）、D（文字轉語音）、E（硬碟長期記憶）均與 Self-Attention 的實際功能無關。"
+  },
+  {
+    "id": "q-pp-im-it-115-28",
+    "year": 115,
+    "number": 28,
+    "text": "What is the core principle of the \"Zero Trust\" security architecture? (A) \"Never trust, always verify\"—no user or device is trusted by default, even if inside the corporate network. (B) All internal traffic is trusted, but external traffic is blocked. (C) Using only biometric authentication for all access. (D) Isolating the network from the internet completely. (E) Relying solely on firewalls to protect the network perimeter.",
+    "currentAnswer": "A",
+    "explanation": "零信任（Zero Trust）安全架構的核心原則是「永不信任，始終驗證」（Never trust, always verify），無論使用者或裝置是否位於企業內部網路，都不會預設給予信任。這與傳統的邊界安全模型不同，傳統模型認為內部網路是安全的，但零信任假設威脅可能來自內外部任何地方。零信任要求每次存取請求都必須經過身份驗證、授權與持續的安全狀態確認，而非依賴單一的防火牆或網路位置來判斷信任程度。選項B、C、D、E分別描述的是傳統邊界安全、單一生物辨識、網路隔離及依賴防火牆等概念，均不符合零信任的核心精神。"
+  },
+  {
+    "id": "q-pp-im-it-115-29",
+    "year": 115,
+    "number": 29,
+    "text": "What is the defining characteristic of \"Serverless Computing\" (e.g., AWS Lambda)? (A) There are physically no servers involved in the process. (B) The developer must manually patch and manage the operating system of the server. (C) The cloud provider dynamically manages the allocation of machine resources, and pricing is based on the actual amount of resources consumed by an application execution, not pre-purchased capacity. (D) It is a peer-to-peer network where every client is also a server. (E) Use commodity-grade PCs to replace high-cost servers.",
+    "currentAnswer": "C",
+    "explanation": "無伺服器運算（Serverless Computing）的核心特性是由雲端供應商動態管理底層機器資源的分配，開發者無需預先購買或配置固定容量的伺服器。計費方式基於應用程式實際執行時所消耗的資源（如執行時間、記憶體），而非預先購買的容量。選項A錯誤，實際上伺服器依然存在，只是被抽象化了；選項B錯誤，作業系統的管理由雲端供應商負責，不需開發者介入。選項D描述的是點對點網路架構，選項E描述的是使用商用PC取代高成本伺服器，均與無伺服器運算無關。"
+  },
+  {
+    "id": "q-pp-im-it-115-30",
+    "year": 115,
+    "number": 30,
+    "text": "In the field of Generative AI, what does \"RAG\" (Retrieval-Augmented Generation) refer to? (A) A method to generate random answers to prevent overfitting. (B) A technique to reduce the size of the model by removing unused neurons. (C) A training process that relies solely on reinforcement learning from human feedback. (D) A technique that optimizes the output of an LLM by referencing an authoritative knowledge base outside its training data before generating a response. (E) An AI agent learns to make decisions by interacting with an environment, taking actions, and receiving rewards or penalties.",
+    "currentAnswer": "D",
+    "explanation": "RAG（Retrieval-Augmented Generation，檢索增強生成）是一種在大型語言模型（LLM）生成回應之前，先從訓練資料以外的外部權威知識庫中檢索相關資訊的技術。選項 D 正確描述了 RAG 的核心概念：透過參考外部知識庫來優化 LLM 的輸出，使其能夠提供更即時、更準確的資訊。選項 A 是對隨機生成的誤解，選項 B 描述的是模型壓縮或剪枝（Pruning）技術，選項 C 描述的是 RLHF（人類反饋強化學習），選項 E 描述的是強化學習代理（RL Agent），皆與 RAG 的定義不符。"
+  }
+]

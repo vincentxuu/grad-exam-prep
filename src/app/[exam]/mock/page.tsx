@@ -16,6 +16,7 @@ import {
   getReliableQuestions,
   getSubjectsByExam,
 } from '@/lib/content'
+import { getFullMockQuestions } from '@/lib/question-practice-policy'
 import { getUserId } from '@/lib/user-id'
 import type { ExamId, Question } from '@/types/content'
 
@@ -41,7 +42,8 @@ function MockExamContent({ params }: Props) {
 
   const allQuestions = getQuestionsByExam(exam as ExamId)
   // 模擬考會算分，內容不可信的卷子不能進來 —— 練到錯的選項比沒練更糟
-  const examQuestions = getReliableQuestions(allQuestions)
+  const reliableQuestions = getReliableQuestions(allQuestions)
+  const examQuestions = getFullMockQuestions(reliableQuestions)
   const years = [...new Set(allQuestions.map((q) => q.year))].sort((a, b) => b - a)
 
   const [phase, setPhase] = useState<Phase>('setup')
@@ -111,10 +113,13 @@ function MockExamContent({ params }: Props) {
   if (phase === 'setup') {
     const matches = (q: Question) => q.subjectId === selectedSubject && q.year === selectedYear
     const availableCount = examQuestions.filter(matches).length
+    const matchingReliableQuestions = reliableQuestions.filter(matches)
     // 這個組合完全沒題目時，要分得出來是「本來就沒收錄」還是「被我們擋掉了」
     const excludedPaper = availableCount
       ? undefined
       : getPaperContentIssue(allQuestions.find(matches)?.paperId ?? '')
+    const excludedOpenEnded =
+      availableCount === 0 && !excludedPaper && matchingReliableQuestions.length > 0
 
     return (
       <div className="space-y-6 max-w-lg">
@@ -182,8 +187,17 @@ function MockExamContent({ params }: Props) {
           </div>
         )}
 
+        {excludedOpenEnded && (
+          <div className="rounded-md border bg-muted/30 px-4 py-3 text-sm text-muted-foreground">
+            <p className="font-semibold text-foreground">這個組合只有申論或開放題</p>
+            <p className="mt-1">
+              這些題目仍可在題庫閱讀並依解析自我檢查，但不會放入需要自動計分的完整模擬考。
+            </p>
+          </div>
+        )}
+
         <Button className="w-full" disabled={availableCount === 0} onClick={startExam}>
-          {availableCount === 0 ? '這個組合沒有可用題目' : `開始考試（${availableCount} 題）`}
+          {availableCount === 0 ? '這個組合沒有可自動計分題目' : `開始考試（${availableCount} 題）`}
         </Button>
       </div>
     )

@@ -1,0 +1,169 @@
+import fs from "node:fs";
+
+const questionData = JSON.parse(fs.readFileSync("public/data/questions.json", "utf8"));
+const byId = new Map(questionData.questions.map((question) => [question.id, question]));
+
+function question(id, overrides = {}) {
+  const original = byId.get(id);
+  if (!original) throw new Error(`Missing question ${id}`);
+  return { ...original, ...overrides };
+}
+
+function qfile(id) {
+  return JSON.parse(fs.readFileSync(`public/data/qfiles/${id}.json`, "utf8")).text;
+}
+
+const q11029Text = `The following C++ code fragment shows the class definition of an array-based implementation of ADT Binary Tree that stores a list of person names.
+
+const int MAX_NODES = 100;
+
+class TreeNode
+{
+public:
+    ...
+private:
+    ...
+    string name;              // node data — person name
+    int leftchild_index;      // index to left child, -1 if no left child
+    int rightchild_index;     // index to right child, -1 if no right child
+    friend class BinaryTree;
+};
+
+class BinaryTree
+{
+public:
+    ...
+    void removeAllLeaf();
+protected:
+    void recurRemoveLeaf(int parent_id, int node_id, int left_or_right);
+    // parent_id: parent node id
+    // node_id: visited node id
+    // left_or_right: 0 if node_id is the left child of parent_id; 1 otherwise.
+private:
+    ...
+    TreeNode tree[MAX_NODES]; // array of tree nodes
+    int root_index;           // index of root, -1 if the tree is empty
+    int free_index;           // index to the first free node
+                              // free nodes are chained by rightchild_index
+};
+
+root_index: 0
+free_index: 6
+
+tree:
+index  name   leftchild_index  rightchild_index
+0      Jane    1                3
+1      Bob    -1                4
+2      Tom    -1               -1
+3      Alan   -1                5
+4      Ellen   2               -1
+5      Nancy  -1               -1
+6      ?      -1                7
+7      ?      -1                8
+8      ?      -1                9
+...    ...    ...              ...`;
+
+const replacements = [
+  question("q-pp-im-it-109-7", {
+    text: "Which of the following is generally not characterized as a mobile payment service? (A) LINE Pay (B) Pi 錢包 (C) 街口 (D) 台灣 Pay (E) 嘖嘖.",
+    points: 2.5,
+    hasImage: false,
+    subQuestions: [],
+  }),
+  question("q-pp-im-it-109-21", {
+    points: 30,
+    hasImage: false,
+  }),
+  question("q-pp-im-it-109-22", {
+    points: 20,
+    hasImage: false,
+  }),
+  question("q-pp-im-it-110-29", {
+    text: q11029Text,
+    points: 30,
+    hasImage: true,
+    subQuestions: [
+      {
+        label: "(a)",
+        text: "(10 points) Show the tree structure given the data content above.",
+        points: 10,
+      },
+      {
+        label: "(b)",
+        text: "(20 points) Write the BinaryTree::removeAllLeaf() that removes ALL leaf nodes from a binary tree. Note that you also need to implement the protected function BinaryTree::recurRemoveLeaf() called by removeAllLeaf() that recursively traverses the tree to delete all the leaf nodes.",
+        points: 20,
+      },
+    ],
+  }),
+  question("q-pp-im-it-113-9", {
+    text: qfile("q-pp-im-it-113-9"),
+    points: 2.5,
+    hasImage: false,
+    subQuestions: [],
+  }),
+  question("q-pp-im-it-113-12", {
+    text: qfile("q-pp-im-it-113-12"),
+    points: 2.5,
+    hasImage: false,
+    subQuestions: [],
+  }),
+  question("q-pp-im-it-113-19", {
+    text: qfile("q-pp-im-it-113-19"),
+    points: 2.5,
+    hasImage: false,
+    subQuestions: [],
+  }),
+  question("q-pp-im-it-113-25", {
+    points: 40,
+    hasImage: false,
+    subQuestions: [],
+  }),
+];
+
+const answerReplacements = [
+  {
+    questionId: "q-pp-im-it-109-7",
+    answer: "E",
+    explanation: "LINE Pay、Pi 錢包、街口與台灣 Pay 都是行動支付服務。嘖嘖是群眾募資平台，不屬於行動支付服務，因此答案為 (E) 嘖嘖。",
+  },
+  {
+    questionId: "q-pp-im-it-109-21",
+    answer: "N/A",
+    explanation: "本題是 C++ 實作題。(a) remove(value, success) 可利用陣列已排序的條件搜尋 value；找不到時令 success=false。找到索引後，將其後元素逐一左移一格、itemCount--，並令 success=true。(b) doubleArraySize() 應配置容量為 2*arraySize 的新陣列，複製前 itemCount 個元素，delete[] 舊 p_items，再令 p_items 指向新陣列並更新 arraySize。若搜尋採二分搜尋，查找為 O(log n)，但刪除移動元素最壞仍為 O(n)；擴充複製為 O(n)。",
+  },
+  {
+    questionId: "q-pp-im-it-109-22",
+    answer: "N/A",
+    explanation: "本題是 C++ 實作題。這是 large values mean high priority 的 max heap。先將 items[i] 設為 newPriorityValue；只要 i>0 且 items[i] 大於 items[(i-1)/2]，就交換目前節點與父節點，再把 i 更新為父節點索引。迴圈停止時 max-heap 性質恢復，時間複雜度為 O(log n)，額外空間為 O(1)。",
+  },
+  {
+    questionId: "q-pp-im-it-110-29",
+    answer: "N/A",
+    explanation: "本題是問答與 C++ 實作題。(a) root_index=0，所以 Jane 是根；Jane 的左子為 Bob(1)、右子為 Alan(3)；Bob 的右子為 Ellen(4)，Ellen 的左子為 Tom(2)；Alan 的右子為 Nancy(5)。free list 由 free_index=6 開始，依 rightchild_index 串成 6->7->8->9->...。(b) removeAllLeaf() 必須處理空樹與根本身是葉節點的情況，否則從根的左右子開始呼叫 recurRemoveLeaf(parent_id,node_id,left_or_right)。recurRemoveLeaf() 若遇到葉節點，先將父節點對應的 child index 設為 -1，再把該節點接回 free list；非葉節點則對原有左右子遞迴。要先保存左右 child index，且不能在刪除子葉後再把剛成為葉節點的父節點於同一輪刪除，才能只移除原本的所有 leaf nodes。",
+  },
+  {
+    questionId: "q-pp-im-it-113-9",
+    answer: "E",
+    explanation: "互斥可確保共享資源同一時間只由一個 process 存取；設計不當的互斥機制確實可能造成 starvation、deadlock 或 livelock。因此 (A)–(D) 都正確，依題意應選 (E)。",
+  },
+  {
+    questionId: "q-pp-im-it-113-12",
+    answer: "B",
+    explanation: "DNS 是階層式且分散式的命名系統，不是 centralized naming system；它會把 www.im.ntu.tw 等人類可讀名稱解析成 IP address，而 .tw 是 top-level domain。因此錯誤敘述為 (B)。",
+  },
+  {
+    questionId: "q-pp-im-it-113-19",
+    answer: "C",
+    explanation: "Functional dependency 描述一個屬性或屬性集合如何決定另一個屬性，是關聯式資料庫正規化與維持資料品質的重要約束，因此答案為 (C) functional dependency。",
+  },
+];
+
+fs.writeFileSync(
+  ".work/im-it-109-110-113-replacements.json",
+  `${JSON.stringify({ version: 1, authority: "rendered original PDFs", replacements }, null, 2)}\n`,
+);
+
+fs.writeFileSync(
+  ".work/im-it-109-110-113-answer-replacements.json",
+  `${JSON.stringify({ version: 1, replacements: answerReplacements }, null, 2)}\n`,
+);

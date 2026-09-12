@@ -1,0 +1,38 @@
+>
+Ss
+題 號 : 343 圈 立 臺灣 大 學 111 學 年 度 碩士 班 招生 考試 試題
+科目 : 資訊 科 技 概論 題 號 :343
+節 次 :6 共 4 頁 之 第 4 頁
+※ 注意 : 請 於 試卷 內 之 「 非 選擇 題 作答 區 」 標 明 題 號 依 序 作答 。
+The following C++ code fragment shows the class definition of an ADT hash table that
+stores student information. In this implementation, the chaining approach is adopted to
+resolve collisions.
+class ChainStudentNode
+{
+private:
+int studentID; // the ID (key) of a student
+string name; // the name of a student
+string dept; // the department. name of a student
+ChainStudentNode *next;
+friend class StudentHashTable;
+yi // end ChainStudentNode
+class StudentHashTable
+{
+public:
+void insertStudent (int sID, string sName, string sDept);
+string retrieveName(int sID);
+protected:
+int hashindex(int sID);
+// hash function; return the location of a student ID
+private:
+static const int HASH_TABLE_SIZE = 101;
+ChainStudentNode *table[HASH_TABLE SIZE]; // Hash table
+yi
+(a) (15 points) Write the insert Student () function that inserts a student’s record
+into the hash table. Here, we assume the inserted-student is never duplicated.
+(b) (15 points) Write the retrieveName()} function that returns the name of a
+student given the student’s ID. Note that the function returns an empty string if no .
+stored student matches the given ID.
+(c) (10 points) Write the hashIndex() function that generates the location (table
+index) by taking the modulo of the last three student ID digits. For example, the
+location of student ID 11725935 is 935%101 = 26.

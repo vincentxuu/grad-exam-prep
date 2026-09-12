@@ -1,0 +1,34 @@
+{
+  "reviewerScope": {
+    "file": ".work/im-it-lessons-os.json",
+    "lessonsReviewed": 1,
+    "cardsReviewed": 8,
+    "checks": [
+      "逐段檢查 process、thread、IPC、user/kernel mode、system call 與 context switch 的技術正確性",
+      "逐一重演四個 worked examples，確認條件足以支持答案",
+      "逐卡檢查 front/back 是否有多解、過度概括或名詞混淆",
+      "檢查內容沒有把既有非官方考題答案宣稱為官方答案",
+      "核對 sourceRefs 存在於 im-it source registry 且 scope 涵蓋 operating-systems",
+      "核對 10 個 pastPaperRefs 均存在、primarySubtopicId 相符且 autoGradeEligible=true",
+      "複查 process 與 per-thread execution state 的修正文句",
+      "複查 process/thread context switch 的術語定義、例題與卡片一致性"
+    ]
+  },
+  "approved": true,
+  "lessonReviews": [
+    {
+      "lessonId": "lesson-im-it-os-processes-threads",
+      "approved": true,
+      "issues": []
+    }
+  ],
+  "cardIssues": [],
+  "summary": {
+    "blockingIssues": 0,
+    "majorIssues": 0,
+    "minorIssues": 0,
+    "technicalAssessment": "複查後核心敘述正確：process 維護 PID、位址空間與 process resources，每個 thread 分別維護 program counter、register state 與 stack；父子 processes 不會自動共享位址空間。內容已明定 context switch 專指 scheduler 切換 process/thread execution entity，並與 system-call mode switch 清楚區分。四個 worked examples 的結論均可由給定條件重現。",
+    "provenanceAssessment": "全文沒有宣稱 past-paper answers 為官方答案，也沒有引用或改寫成官方背書。兩個 sourceRefs 都存在且標示 reviewed，scope 涵蓋 operating-systems；10 個 lesson pastPaperRefs 與所有 card refs 均存在、subtopic 相符且目前 autoGradeEligible=true。",
+    "approvalRationale": "前次四個 minor 均已修正：sections[1].body、workedExamples[0].answer、sections[3].body、workedExamples[2] 及 card-06 的術語現在一致且精確。複查未發現新的 blocking、major 或 minor issue，因此維持 approved=true。"
+  }
+}

@@ -1,0 +1,77 @@
+: 2
+MR: 381 國 立 臺 灣 大 學 106 學 年 度 碩士 班 招生 考試 試題
+Aa: 資訊 科技 概論 HAR: 381
+wk: 6 RO 頁 之 第 之 買
+none of the above can be chosen). .
+
+6. New applications, processes, products, or business models that aim at providing financial services by making
+use of software and modern technology: (A) Bank 3.0 (B) Bank 4.0 (C) Fintech (D) Digital Finance (E) ,
+Financial Revolution.
+
+7. Which of the following techniques plays a key role in AlphaGo that beat a 9-dan professional Go player in
+March 2016? (A) biomedical informatics (B) genetic algorithm (C) deep learning (D) expert system (E)
+cognitive learning.
+
+8. Which of the following is not widely regarded as a characteristic of big data? (A) high volume (B) high
+velocity (C) high variety (D) potentially high value (E) ail of the above are characteristics of big data.
+
+9. A technique for transferring multimedia so that media data can be constantly received by and presented to an
+end-user while being delivered by a provider: (A) multimedia authoring (B) streaming (C) live broadcasting
+(D) multicasting (E) real time media.
+
+10. Which of the following best describes economic and social inequality with regard to access to, use of, or
+impact of information and communication technologies (ICT)? (A) information asymmetry (B) information
+inequality (C) digital divide (D) knowledge gap (BE) digital right.
+
+11. Which of the following is wrong? (A) In an odd parity system the total number of bit ‘1’ in a word, including
+the added parity bit, is always an odd number (B) If the word (including parity bit) is 0110 1011 1, then in
+an odd parity system we can absolutely be sure that the word has an error inside (C) if the word (including
+parity bit) is 0110 1001 0, then in an even parity system we can absolutely be sure that the word has no error
+inside (D) parity bit is used to detect errors (E) all of the above are correct (choose this only if none of the
+above can be chosen).
+
+12. When cache is full, some elements need to be removed to empty space for new elements. Which of the
+following strategyies in general has better performance than the others? (A) remove the element which has
+been used the least number of times during its stay in the cache (B) remove the element which has been used
+the most number of times during its stay in the cache (C) remove the element which has not been used the
+longest time since it enters the cache (D) remove the element which stays in the cache the longest time (E)
+replace the element which stays in the cache the shortest time.
+
+13. A type of firmware used to perform hardware initialization during the booting process of a computer: (A)
+BIOS (B) CMOS (C) ROM (D) kemel (E) DOS.
+
+14, Animplementation of virtual memory usually divides a virtual address space into blocks of contiguous virtual
+memory addresses, referred to as so that they can be swapped between real memory and external
+
+. storage. (A) segments (B) pages (C) sectors (D) zones (E) none of the above.
+
+15. Which of the following is not a primary concern of using RAID (redundant array of independent disks)? (A)
+improve fault tolerance (B) improve system performance (C) improve data security (D) increase storage
+capacity (E) all of the above are correct (choose this one only if none of the above can be chosen),
+
+16. Which of the following best describes Kickstarter.com? (A) a P2P lending site (B) a crowdsourcing site (C)
+a crowdfunding site (D) a microfunding site (E) a C2C e-commerce site.
+
+17. Which of the following terms is commonly used to describe sites like Udacity, Coursera, and edX? (A) self-
+paced online courses (B) massive open online courses (C) major online open courses (D) self-learning open
+online courses (E) flipped open online courses. :
+
+18. Which of the following descriptions about Ethernet is wrong? (A) it is commonly used in local area networks
+(LANs) (B) it uses random backoff to resolve collisions (C) it is a bus based broadcast network (D) 10BASE-
+T and L00BASE-TX are commonly used cables for Ethernet networks (E) all of the above are correct (choose
+this only if none of the above can be chosen). .
+
+19. Which of the following about TCP/UDP port assignments is wrong? (A) HTTP uses port 80 (B) File Transfer
+Protocol (FTP) control uses port 21 (C) port numbers range from 0 to 65536 (D) port numbers 0~2048 are
+reserved for privileged services and designated as well-known ports (E) all of the above are correct (choose
+this only if none of the above can be chosen).
+
+20. Which of the following about the Open Systems Interconnection (OSI) reference model is wrong? (A) Layer
+3 is Network Layer (B) Layer 5 is Session Layer (C) SMTP belongs to Layer 7 (D) TCP belongs to Layer 4
+(E) all of the above are correct (choose this only if none of the above can be chosen).
+
+21. Which of the following about object-oriented programming is wrong? (A) Java is an object-oriented
+programming language (B) C++ is an object-oriented programming language (C) code reuse is achieved
+
+»
+BAH

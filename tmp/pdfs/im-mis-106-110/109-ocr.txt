@@ -1,0 +1,83 @@
+題 號 : 379 立 臺灣 大 學 109 學 年 度 碩士 班 招生 考試 試題
+科目 : 資 訊 管理 導論 JER: 379
+節 次 :.7 共 之 買 之 第 |) F
+請 於 答案 卷 上 依 序 作答 , 並 註明 作答 的 題 哇
+BES AM
+1. In economics, the Cobb-Douglas production function is widely used to represent the relationship
+between the amounts of two or more inputs a firm uses and the amount of output produced by those
+inputs, The most standard form of the Cobb-Douglas production function for firm i is defined as
+follows:
+Q=AxL* x Cb
+where Q = total production of firm i, L = labor input of firm i, C = capital input (e.g., the sum of
+machinery, equipment, and buildings) of firm i, A = total factor productivity, and a and B are the
+output elasticities of labor and capital, respectively.
+(a) Assume that firm i implements transaction processing systems to automate or facilitate daily
+routine transactions of the firm and allows staff and operational managers to monitor the status
+of business operations. Please describe how transaction processing systems can affect the ,
+Cobb-Douglas production function to improve the total production of firm i (1.¢., to increase
+| Q). (12%)
+(b) Assume that firm 7 plans to initiate a big data analytics project. Please describe how a big data
+"analytics technology can additionally affect the Cobb-Douglas production function to further
+improve the output of firm i.(12%) .
+2. Investing in information technology (IT) or information systems does not guarantee good returns.
+Prior research studies have indicated that firms generally receive superior returns from their IT 0
+investments if these IT investments are accompanied by investments in complementary assets. In
+contrast, if firms fail to make these complementary investments, the firms will receive less or no
+returns on their IT investments. According to the literature, complementary assets can be classified
+into, three types: organizational assets, managerial assets, and social assets.
+(a) Please list and describe three different organizational assets. (9%)
+(b) When a firm pursues an innovation strategy, which type(s) of complementary assets
+(organizational assets, managerial assets, or social assets) is more important for improving the
+returns on the firm’s IT investments? Please provide detailed explanations to justify your
+answer. (9%)
+(c) When a firm’s IT investment involves an emerging IT and the firm is not familiar with this
+particular IT, which type(s) of complementary investments (organizational assets, managerial
+assets, or social assets) is more important for improving the return on this specific IT investment?
+Please provide detailed explanations to justify your answer. (8%)
+見 背面
+MEH: 379 國 立 臺灣 大 學 109 學 年 度 碩士 班 招生 考試 試題
+科目 : 資訊 管 理 導 論 HR: 379
+. 節 次 : 了 7 共 之 頁 之 第 之 頁
+3. 在 共享 經 濟 的 時 代 , 出 現 許多 雙邊 或 多 邊 平 臺 。 平 臺 定價 方面 , 平 臺 經 常 利用 「 交 叉 補 貼 」
+
+拘 概 念 , 策 略 性 地 給 某 一 邊 優 惠 , 養 大 一 邊 之 後 跟 另 一 邊 收 取 更 多 費用 。 舉 例 來 說 ,104
+
+人 力 銀行 不 跟 求職 者 收費 , 讓 求職 者 免費 使用 , 擁 有 許多 求職 者 使用 後 , 藉 此 增強 面 對 公司
+
+的 議價 能 力 。
+
+現在 UberEats、Foodpanda 等 餐 點 外 送 服務 。 是 一 種 「 三 邊 平 臺 」, 連 結 餐廳 、 消 費 者 和 外
+
+送 員 , 平 臺 也 因此 有 各 種 螢 收 管道 。 舉 例 來 說 , 平 臺 可 以 跟 訂餐 的 消費 者 收 手續 費 或 會 員 費
+
+(例如 UberEats 的 優 饗 方案 ) , 也 可 以 跟 餐廳 針對 餐 費 做 抽 成 或 收取 月 費 , 將 這 些 營 收 中 的
+
+一 部 分 發 給 外 送 員 做 為 薪酬 。
+
+針對 餐 點 外 送 平臺 , 請 考慮 三 方 的 加 入 意願 與 平衡 考慮 交叉 補貼 的 可 能 性 。 具 體 來 說 , 外
+
+送 平 臺 至 少 有 以 下 三 個 選項 : (一 ) 給 消費 者 免 運 費 或 很 低 的 運費 。 藉 此 獲得 很 多 消費 者 訂
+Ko kA ES (=) 跟 餐廳 押 成 抽 很 少 , 藉 此 獲得 各 式 各 樣 的 餐廳 加 入 , 進
+
+耐 跟 消費 者 收取 較 多 費用 ; (三 ) 其 他 方案 。 請 選擇 你 認為 能 最 大 化 平臺 預期 利潤 的 收費 模
+
+武 , 並 說 明 你 的 理由 。(25%)
+
+4. 臺灣 許多 城市 都 有 YouBike 服務, 在 許多 地 點 設置 公共 腳踏車 停靠 站 , 讓 消費 者 可 以 共享 聊
+
+踏 車 , 在 站 點 租借 、 崎 乘 後 歸還 至 站 點 , 通 常 也 允許 甲 地 租 乜 地 還 。
+
+在 設置 停靠 站 點 的 時 候 , 顯 然 必 須 考 慮 許多 議題 , 其 中 「 需 求 」 就 是 最 重要 的 廊 題 之 一 。 理
+
+論 上 , 站 點 應 該 設置 在 需求 高 的 地 方 , 但 需求 的 估計 並 不 容易 。 許 多 地 方 看 似 沒 有 了 畸 乘 腳 踏 .
+
+車 的 需求 , 但 其 實 可 能 只 是 因為 該 地 過 往 都 沒 有 站 點 , 民 眾 的 使用 習慣 尚未 被 養成 , 站 點 建
+
+造 後 說 不 定 需求 量 其 實 很 大 。
+
+請 考慮 各 種 可 能 的 資訊 科技 與 管理 手法 , 設 計 一 個 估計 「 站 點 建造 完成 」 之 後 的 需求 量 的 方
+
+法 。 你 的 方法 除了 能 良好 地 估計 潛在 需求 , 也 應 該 具備 成 本 的 合理 性 、 技 術 的 可 行 性 與 民眾
+
+的 可 接受 性 。(25%)
+試題 隨 卷 繳 回

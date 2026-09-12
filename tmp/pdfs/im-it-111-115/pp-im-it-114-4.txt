@@ -1,0 +1,43 @@
+|
+題 號 : 277 國 立 臺灣 大 學 114 學 年 度 碩士 班 招生 考試 試題
+科目 : 資 訊 科 技 概論 題 號 :277
+: Bk: 6b 共 4 頁 之 第 4 頁
+| !
+| 24.[_~_] Which of the following is INCORRECT about Software-Defined Networking (SDN)? (A)
+Data and control planes are tightly integrated. (B) SDN separates the control plane from the data
+i plane (C) SDN enables programmable networks using APIs (D) SDN uses abstraction to enable
+dynamic and programmatically efficient network configuration (E) all of the above are correct
+| (choose this one only if none of the above can be chosen),
+二 、 問 答題 , 共 40 分 。
+K 本 大 題 請 於 試卷 內 之 「 非 選擇 題 作答 區 | 標明 題 號 依 序 作答 。
+! 1. The following shows a pointer-based implementation of ADT Queue, which stores non-negative
+: integers in a circular linked list with one pointer —backptzx pointing to the last item in the list.
+class Queue
+{
+public:
+// return -1 if there is no integer in the queue;
+// otherwise, return the front integer in the queue
+int dequeue () ;
+// return the number of integers in the queue
+int length();
+// reverse the order of the integers in the queue
+void reverse ();
+“private:
+j struct QueueNode
+| {int item;
+| QueueNode — *next
+} // end QueueNode |
+QueueNode *backPtr;
+he
+|
+{a) (5 points) Write the Queue: : length () function that returns the number of integers in the queue.
+| (b) (10 points) Write the Queue: :qaqueue () function that outputs the front integer in the queue. Note:
+| The function returns -1 if there is no integer in the queue.
+: (c) (25 points) Write the Queue: :reverse() function that reverses the order of the integers in the
+| queue. Note: No extra memory allocation for queue nodes!!! Only pointer manipulation is allowed
+i when reversing the integers.
+|
+1
+|
+|
+i

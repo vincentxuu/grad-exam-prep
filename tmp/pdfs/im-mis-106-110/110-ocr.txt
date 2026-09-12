@@ -1,0 +1,78 @@
+題 號 : 376 國 立 臺灣 大 學 110 學 年 度 碩士 班 招生 考試 試題
+Aa: 資訊 管理 導論 題 號 : 376
+Mat 7 共 2 頁 之 第 f 頁
+請 於 答 罕 卷 上 依 序 作答 , 並 註明 作答 的 是 號
+試卷 共 四 火 題
+1. Sharing economy platforms for physical assets and goods can be classified into two
+
+types: non-money-based and money-based. An example of non-money-based
+
+sharing economy platforms is Peerby, a peer-to-peer lending site for household items
+
+and appliances where users do not need to pay monetary fees for using household
+
+items and appliances borrowed from their owners. In contrast, in a money-based
+
+sharing economy platform (e.g., Airbnb), users need to pay monetary fees that allow
+
+the owners of the shared asset or goods to cover their costs and even generate
+
+additional incomes.
+
+When a non-money-based sharing economy platform decides to change to money-
+
+based, this movement essentially changes the business model of this sharing
+
+economy platform.
+
+(a) Please identify what business processes need to be substantially
+revised/enhanced or what new business processes need to be developed, when a
+sharing economy platform plans to move from non-money-based to money-
+based. (13%)
+
+(b) The movement from non-money-based to money-based should also trigger
+discussions of whether the IT strategy of the platform needs to be adjusted.
+What recommendations will you suggest to the sharing economy platform about
+its IT strategy when the sharing economy platform plans to move from non-
+money-based to money-based? (13%)
+
+2. One of the key concepts of electronic commerce is digital markets. That is, electronic
+commerce establishes digital markets in which consumers (can be businesses)
+transact with their suppliers online.
+
+(a) Ina digital market, will information asymmetry between consumers and
+suppliers be reduced or intensified? What are the business implications of such
+change of information asymmetry (either reduction or intensifying) in digital
+markets? (12%)
+
+(b) Some research studies indicate that “in a digital market, the switching cost (Ge,
+the cost of switching from one supplier to another supplier) of consumers can
+either be increased or be decreased, depending on the nature of the product or
+service being sold.” Please identify the characteristics of products/services that
+will have higher consumers’ switching costs in the digital markets than in the
+traditional markets. Please also identify the characteristics of products/services
+whose consumers’ switching costs will decrease when these products/services
+are sold in digital markets. (12%)
+題 號 : 376 國 立 臺灣 大 學 110 學 年 度 碩士 班 招生 考試 試題
+科目 : 資訊 管理 導論 題 號 : 376
+irk: 7 共 2 頁 之 第 2 頁
+| 3. Scrum 是 一 種 敏捷 軟體 開 發 方法 。 支持 者 認為 這 個 開 發 方法 可 以 在 快速 變化 的
+環境 中 產 出 高 商 業 價 值 的 軟體 系 統 。 請 回 答 下 列 問題 :
+(a) Scrum 方法 包含 三 個 主 要 角色 : Scrum Master > Product Owner + Team。 說
+明 這 三 個 角色 的 主 要 職責 與 工作 。(7%)
+(b) 說 明 Scrum 中 每 日 站 立 會 議 的 執行 方式 。(6%)
+(c) 什麼 是 Sprint Backlog? Sprint Backlog 如 何 建 立 與 管理 ? (6%)
+(4) 什麼 是 Burn Down Chart? Burn Down Chart 如 何 建立 與 管理 ? 提供 一 個 典型
+的 Bum Down Chart 的 圖 像 。 (6%)
+i
+|
+| 4 高 速 公 路 的 塞車 問題 表 十 年 來 持 纜 困 擬 用 路 人 。 這 個 問題 並 沒 有 因為 高 速 公 路
+電子 道路 收費 系 統 所 提供 的 大 數 據 而 獲得 解決 。 因此 我 們 需要 更 先 進 的 、 更 有
+效 的 方式 來 預測 與 舒緩 高 速 公 路 在 重大 節日 的 塞車 問題 。 請 回 答 以 下 問題 :
+(a) 除了 現有 的 資訊 系 統 (如 電子 收費 系 統 ) 的 資料 之 外 , 還 有 和 什麼 樣 的 資料 可
+以 幫助 我 們 預測 未 來 一 至 七 天 高 速 公 路 的 塞車 狀態 ? (5%)
+(b) 如 何 透過 資訊 系 統 的 建 置 與 佈 署 以 收集 這 類 的 資料 ? 6%)
+(6) 新 收集 的 資料 如 何 幫 助 我 們 預測 未 來 一 至 七 天 的 塞車 狀態 ? (5%)
+《d 這 個 系 統 的 主 要 Actor 與 Use Case 有 哪些 ? (5%)
+| (©) 繪製 這 個 系 統 的 Use Case Diagram + (5%)
+PRGA

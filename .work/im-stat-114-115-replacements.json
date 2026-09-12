@@ -1,0 +1,138 @@
+{
+  "authority": [
+    "public/papers/pp-im-stat-114.pdf",
+    "public/papers/pp-im-stat-115.pdf"
+  ],
+  "replacements": [
+    {
+      "id": "q-pp-im-stat-114-4",
+      "text": "Amy analyzes the factors that determine how much garbage a family produces per week. Factors including the size of the house, the number of children, and the number of adults who are usually home during the day are considered. Below is the report produced by a regression routine. Answer the following questions. You should provide reasoning and justifications for your solution.\n\nOLS Regression Results:\nDep. Variable: Garbage | R-squared: 0.170\nModel: OLS | Adj. R-squared: [UNK1]\nMethod: Least Squares | F-statistic: 29.80\nNo. Observations: 440 | Prob (F-statistic): 1.52e-17\nDf Residuals: [UNK2] | Log-Likelihood: -1194.7\nDf Model: 3 | AIC: 2397. | BIC: 2414.\n\nCoefficients:\nIntercept: coef=7.1943, std err=1.092, t=[UNK3], P>|t|=0.000\nQ(\"House Size\"): coef=0.0019, std err=0.001, P>|t|=0.001, [0.025]=0.001, [0.975]=0.003\nChildren: coef=1.1028, std err=0.141, P>|t|=0.000, [0.025]=0.826, [0.975]=1.379\nAdults: coef=1.0425, std err=0.233, P>|t|=0.000, [0.025]=0.585, [0.975]=1.500\n\nOmnibus: 0.193 | Durbin-Watson: 1.963\nProb(Omnibus): 0.908 | Jarque-Bera (JB): 0.272\nSkew: 0.044 | Prob(JB): 0.873\nKurtosis: 2.916 | Cond. No.: 1.14e+04\n\n(1) Compute the value of adjusted R-squared (UNK1) based on available information. (5%)\n\n(2) Compute the residual degree of freedom (UNK2) and the t-value of the Intercept (UNK3) based on available information. (4%)\n\n(3) Conduct the following hypothesis test (using 95% significance level):\nH0: Coefficients of all independent variables are jointly zero.\nH1: At least one independent variable has a non-zero coefficient. (6%)",
+      "points": 15,
+      "hasImage": true,
+      "subQuestions": [
+        "1",
+        "2",
+        "3"
+      ],
+      "evidencePages": [
+        2
+      ],
+      "reason": "The question text is correct, but its three explicitly numbered subquestions are missing from metadata."
+    },
+    {
+      "id": "q-pp-im-stat-114-5",
+      "text": "Let Y₁, Y₂, ..., Yₜ be an identical and independent sample from population Ω with mean μ and variance σ². T is a multiple of 5. Define estimator m as:\n\nm = [Σᵀᵢ₌₁ g(i)Yᵢ] / [Σᵀᵢ₌₁ g(i)],\n\nwhere g(i) = 1 + (i mod 5) and mod is the modular operator.\n\n(1) Prove that m is an unbiased estimator for μ. (10%)\n\n(2) What is the variance of m? (10%)",
+      "points": 20,
+      "hasImage": false,
+      "subQuestions": [
+        "1",
+        "2"
+      ],
+      "evidencePages": [
+        3
+      ],
+      "reason": "The current record incorrectly replaces the denominator Σg(i) with T and misreads population Ω as Z."
+    },
+    {
+      "id": "q-pp-im-stat-115-3",
+      "text": "Let X₁ and X₂ have the joint probability mass function\n\nf(x₁, x₂) = { (|x₁| + |x₂| + |x₁ + x₂|) / c,  x₁ ∈ {-1, 0, 1}, x₂ ∈ {0, 1};  0, otherwise. }\n\n(A) Determine the normalizing constant c. (5%)\n(B) Find the joint probability mass function of Y₁ = X₁ + X₂ and Y₂ = X₁ - X₂. (5%)\n(C) Find the marginal probability mass function of Y₁. (5%)",
+      "points": 15,
+      "hasImage": false,
+      "subQuestions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "evidencePages": [
+        2
+      ],
+      "reason": "The current record invents three factors (1+|.|) in the denominator and multiplies by c; the PDF has only the numerator divided by c."
+    },
+    {
+      "id": "q-pp-im-stat-115-4",
+      "text": "Let Y₁, Y₂, and Y₃ be an independent and identically distributed random sample from a distribution with mean μ and variance σ² < ∞. Consider the following estimators for μ:\n\nm₁ = Y₁,  m₂ = (Y₁ + αY₂) / (1 + α),  m₃ = (Y₁ + 2Y₂ + βY₃) / (1 + 2 + β),  where α > 0 and β > 0.\n\n(A). Determine which of the estimators m₁, m₂, and m₃ are unbiased for μ? (10%)\n(B). Find the value of α that minimize Var(m₂). (5%)\n(C). Find the value of β that minimize Var(m₃). (5%)",
+      "points": 20,
+      "hasImage": false,
+      "subQuestions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "evidencePages": [
+        2
+      ],
+      "reason": "The question text is correct, but its three explicitly lettered subquestions are missing from metadata."
+    }
+  ],
+  "qfilesToSynchronize": [
+    "public/data/qfiles/q-pp-im-stat-114-4.json",
+    "public/data/qfiles/q-pp-im-stat-114-5.json",
+    "public/data/qfiles/q-pp-im-stat-115-3.json",
+    "public/data/qfiles/q-pp-im-stat-115-4.json"
+  ],
+  "imageRepairs": {
+    "paperImageAssetsToRender": [
+      {
+        "paperId": "pp-im-stat-114",
+        "pages": [1, 2, 3],
+        "targetDirectory": "public/images/papers/pp-im-stat-114"
+      },
+      {
+        "paperId": "pp-im-stat-115",
+        "pages": [1, 2],
+        "targetDirectory": "public/images/papers/pp-im-stat-115"
+      }
+    ],
+    "questionImageMappings": [
+      {
+        "questionId": "q-pp-im-stat-114-4",
+        "current": [
+          "/images/papers/pp-im-mis-114/page-3.jpg"
+        ],
+        "replacement": [
+          "/images/papers/pp-im-stat-114/page-2.jpg"
+        ],
+        "reason": "The current page-3 image shows Question 5; the regression table for Question 4 is on PDF page 2."
+      }
+    ]
+  },
+  "staleQfilesToDelete": [
+    "public/data/qfiles/q-pp-im-stat-106-1.json",
+    "public/data/qfiles/q-pp-im-stat-106-2.json",
+    "public/data/qfiles/q-pp-im-stat-106-3.json",
+    "public/data/qfiles/q-pp-im-stat-106-4.json",
+    "public/data/qfiles/q-pp-im-stat-107-1.json",
+    "public/data/qfiles/q-pp-im-stat-107-2.json",
+    "public/data/qfiles/q-pp-im-stat-107-3.json",
+    "public/data/qfiles/q-pp-im-stat-107-4.json",
+    "public/data/qfiles/q-pp-im-stat-108-1.json",
+    "public/data/qfiles/q-pp-im-stat-108-2.json",
+    "public/data/qfiles/q-pp-im-stat-108-3.json",
+    "public/data/qfiles/q-pp-im-stat-108-4.json",
+    "public/data/qfiles/q-pp-im-stat-109-1.json",
+    "public/data/qfiles/q-pp-im-stat-109-2.json",
+    "public/data/qfiles/q-pp-im-stat-109-3.json",
+    "public/data/qfiles/q-pp-im-stat-109-4.json",
+    "public/data/qfiles/q-pp-im-stat-110-1.json",
+    "public/data/qfiles/q-pp-im-stat-110-2.json",
+    "public/data/qfiles/q-pp-im-stat-110-3.json",
+    "public/data/qfiles/q-pp-im-stat-110-4.json",
+    "public/data/qfiles/q-pp-im-stat-111-1.json",
+    "public/data/qfiles/q-pp-im-stat-111-2.json",
+    "public/data/qfiles/q-pp-im-stat-111-3.json",
+    "public/data/qfiles/q-pp-im-stat-111-4.json",
+    "public/data/qfiles/q-pp-im-stat-112-1.json",
+    "public/data/qfiles/q-pp-im-stat-112-2.json",
+    "public/data/qfiles/q-pp-im-stat-112-3.json",
+    "public/data/qfiles/q-pp-im-stat-112-4.json",
+    "public/data/qfiles/q-pp-im-stat-113-1.json",
+    "public/data/qfiles/q-pp-im-stat-113-2.json",
+    "public/data/qfiles/q-pp-im-stat-113-3.json",
+    "public/data/qfiles/q-pp-im-stat-113-4.json",
+    "public/data/qfiles/q-pp-im-stat-114-1.json",
+    "public/data/qfiles/q-pp-im-stat-114-2.json",
+    "public/data/qfiles/q-pp-im-stat-114-3.json",
+    "public/data/qfiles/q-pp-im-stat-115-1.json",
+    "public/data/qfiles/q-pp-im-stat-115-2.json"
+  ]
+}

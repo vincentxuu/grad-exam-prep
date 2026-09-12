@@ -1,0 +1,5 @@
+{
+  "approved": true,
+  "summary": "快速回歸複查通過：blocking=0、major=0、minor=0。Crypto example 已明訂 Bob 透過可信憑證取得 Alice public key，因此來源驗證前提完整；self-signed TLS example 已明訂 SAN/hostname、有效期與 key usage 均合格，因此預先信任後的驗證結論可由題面重現；serverless card 只保留直接測量該概念的 q-pp-im-it-115-29。原先通過的 source applicability、same-subtopic、autoGradeEligible、card refs subset、非官方揭露及 crypto 無 blockchain/mining 等檢查維持通過。",
+  "issues": []
+}
