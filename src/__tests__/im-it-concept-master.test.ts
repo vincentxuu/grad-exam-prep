@@ -44,7 +44,7 @@ describe('IM information technology concept master', () => {
       'q-pp-im-it-107-22': 'im-it-security-network-defense',
       'q-pp-im-it-108-17': 'im-it-security-malware-social',
       'q-pp-im-it-110-20': 'im-it-security-auth-access',
-      'q-pp-im-it-113-5': 'im-it-arch-memory-hierarchy',
+      'q-pp-im-it-113-5': 'im-it-os-memory-management',
       'q-pp-im-it-111-24': 'im-it-security-blockchain',
       'q-pp-im-it-112-24': 'im-it-security-blockchain',
       'q-pp-im-it-115-25': 'im-it-security-blockchain',
